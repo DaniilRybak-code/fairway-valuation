@@ -3,165 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fairway — Banker-Reviewed Startup Valuation Check</title>
-<meta name="description" content="An indicative pre-money valuation range for your startup, reviewed by a team of former investment bankers, plus the objections investors will raise against it. Free.">
-<style>
-  :root {
-    --ink:#14181f; --ink-soft:#5b6272; --line:#e6e8ec; --paper:#fff; --bg:#f6f7f9;
-    --accent:#1d4ed8; --accent-soft:#eef2ff; --good:#0f7a45; --lock:#9aa1b0; --warn:#b45309;
-  }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
-  .wrap { max-width:640px; margin:0 auto; padding:0 20px; }
-  .screen { display:none; }
-  .screen.active { display:block; }
-  .hero { padding:52px 0 34px; background:var(--paper); text-align:center; }
-  .kicker { display:inline-block; font-size:13px; font-weight:700; color:var(--accent); background:var(--accent-soft); padding:5px 14px; border-radius:999px; margin-bottom:16px; }
-  h1 { font-size:32px; line-height:1.18; letter-spacing:-0.02em; margin:0 0 14px; }
-  .sub { font-size:17px; color:var(--ink-soft); margin:0 auto 24px; max-width:510px; }
-  .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:15px 28px; border-radius:10px; font-weight:700; font-size:16px; border:none; cursor:pointer; font-family:inherit; }
-  .btn:hover { opacity:0.92; }
-  .btn[disabled] { opacity:.45; cursor:not-allowed; }
-  .btn-ghost { background:none; border:none; color:var(--ink-soft); font-size:14px; cursor:pointer; text-decoration:underline; font-family:inherit; padding:8px; }
-  .microcopy { font-size:13px; color:var(--ink-soft); margin-top:10px; }
-  .how { background:var(--paper); border-top:1px solid var(--line); padding:28px 0 4px; }
-  .how-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:560px; margin:0 auto; }
-  .how-step { text-align:left; }
-  .how-step .n { display:inline-flex; width:24px; height:24px; border-radius:7px; background:var(--accent-soft); color:var(--accent); font-size:12px; font-weight:700; align-items:center; justify-content:center; margin-bottom:8px; }
-  .how-step h3 { font-size:14px; margin:0 0 3px; }
-  .how-step p { font-size:13px; color:var(--ink-soft); margin:0; }
-  .getlist { background:var(--paper); padding:28px 0 34px; }
-  .getlist h2 { font-size:14px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin:0 0 14px; text-align:center; }
-  .getlist ul { list-style:none; padding:0; margin:0 auto; max-width:480px; }
-  .getlist li { font-size:15px; padding:9px 0 9px 26px; position:relative; }
-  .getlist li::before { content:"✓"; color:var(--good); font-weight:700; position:absolute; left:0; }
-  .team-note { max-width:480px; margin:22px auto 0; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-soft); text-align:center; }
-  .quiz-shell { background:var(--paper); border-radius:16px; border:1px solid var(--line); padding:32px 28px; margin:32px auto; max-width:520px; }
-  .progress-track { height:6px; background:var(--line); border-radius:999px; margin-bottom:22px; overflow:hidden; }
-  .progress-fill { height:100%; background:var(--accent); border-radius:999px; transition:width .25s ease; width:12.5%; }
-  .step-label { font-size:12px; font-weight:700; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; }
-  .q-title { font-size:22px; font-weight:700; margin:0 0 6px; letter-spacing:-0.01em; }
-  .q-help { font-size:14px; color:var(--ink-soft); margin:0 0 18px; }
-  .opt-grid { display:grid; gap:10px; }
-  .opt { display:block; width:100%; text-align:left; padding:14px 16px; border:1.5px solid var(--line); border-radius:10px; background:#fff; font-size:15px; font-weight:600; cursor:pointer; color:var(--ink); font-family:inherit; }
-  .opt:hover { border-color:var(--accent); background:var(--accent-soft); }
-  .opt-cols { grid-template-columns:1fr 1fr; }
-  @media (max-width:520px) { .opt-cols { grid-template-columns:1fr; } .how-grid { grid-template-columns:1fr; } }
-  .field { width:100%; padding:13px 14px; border:1.5px solid var(--line); border-radius:10px; font-size:15px; font-family:inherit; color:var(--ink); margin-bottom:12px; background:#fff; }
-  .field:focus { outline:none; border-color:var(--accent); }
-  textarea.field { min-height:104px; resize:vertical; }
-  .field-label { display:block; font-size:13px; font-weight:600; margin:0 0 6px; }
-  .quiz-nav { display:flex; justify-content:space-between; align-items:center; margin-top:18px; }
-  .back-link { font-size:13px; color:var(--ink-soft); text-decoration:none; cursor:pointer; }
-  .result-shell { max-width:600px; margin:32px auto; padding:0 0 60px; }
-  .result-card { background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:28px 26px; margin-bottom:14px; }
-  .result-label { font-size:13px; font-weight:700; color:var(--good); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; }
-  .range { font-size:36px; font-weight:800; letter-spacing:-0.02em; margin:0 0 6px; }
-  .range-note { font-size:14px; color:var(--ink-soft); margin:0; }
-  .review-badge { display:flex; gap:10px; align-items:flex-start; margin-top:16px; padding-top:16px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-soft); text-align:left; }
-  .review-badge .dot { flex:none; width:8px; height:8px; border-radius:50%; background:var(--good); margin-top:6px; }
-  .gap-card { background:#fffaf3; border:1px solid #f0dcc0; border-radius:16px; padding:24px 26px; margin-bottom:14px; }
-  .gap-card .result-label { color:var(--warn); }
-  .gap-headline { font-size:19px; font-weight:700; margin:0 0 8px; letter-spacing:-0.01em; }
-  .gap-card p { font-size:14px; color:var(--ink-soft); margin:0; }
-  .list-card { background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:26px 26px 20px; margin-bottom:14px; }
-  .list-card > h2 { font-size:19px; font-weight:700; margin:0 0 4px; letter-spacing:-0.01em; }
-  .list-card > .lead { font-size:14px; color:var(--ink-soft); margin:0 0 18px; }
-  .item { display:flex; gap:14px; padding:15px 0; border-top:1px solid var(--line); }
-  .item .num { flex:none; width:26px; height:26px; border-radius:8px; background:var(--accent-soft); color:var(--accent); font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; }
-  .item.locked .num { background:#eef0f3; color:var(--lock); }
-  .item h3 { font-size:15px; margin:0 0 4px; }
-  .item p { font-size:14px; color:var(--ink-soft); margin:0; }
-  .item .body-lock { filter:blur(4.5px); user-select:none; pointer-events:none; }
-  .lock-tag { display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--lock); border:1px solid var(--line); border-radius:5px; padding:1px 6px; margin-left:8px; vertical-align:1px; }
-  .list-foot { font-size:12px; color:var(--lock); margin:14px 0 0; padding-top:12px; border-top:1px solid var(--line); }
-  .sharpen { background:var(--accent-soft); border:1px solid #d6ddfb; border-radius:16px; padding:24px 26px; margin-bottom:14px; }
-  .sharpen h2 { font-size:17px; margin:0 0 6px; }
-  .sharpen p { font-size:14px; color:var(--ink-soft); margin:0 0 14px; }
-  .sharpen .field { margin-bottom:10px; }
-  .unlock-box { background:var(--ink); color:#fff; border-radius:16px; padding:30px 28px; text-align:center; margin-top:22px; }
-  .unlock-box .price { font-size:38px; font-weight:800; margin:6px 0 2px; }
-  .unlock-box .price span { font-size:14px; font-weight:500; opacity:.7; }
-  .anchor { font-size:13px; opacity:.75; margin:0 0 6px; }
-  .includes { list-style:none; padding:0; margin:16px auto 0; max-width:400px; text-align:left; font-size:14px; }
-  .includes li { padding:6px 0 6px 22px; position:relative; opacity:.9; }
-  .includes li::before { content:"→"; position:absolute; left:0; opacity:.6; }
-  .btn-light { display:inline-block; background:#fff; color:var(--ink); text-decoration:none; padding:15px 28px; border-radius:10px; font-weight:700; font-size:16px; margin-top:18px; }
-  .cta-sub { font-size:13px; margin-top:10px; opacity:.85; }
-  .urgency { font-size:13px; margin-top:10px; opacity:.9; font-weight:600; }
-  .guarantee { font-size:13px; margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,.15); opacity:.85; }
-  .soft-cta { text-align:center; margin-top:18px; font-size:14px; color:var(--ink-soft); }
-  .soft-cta a { color:var(--accent); }
-  .faq { max-width:600px; margin:34px auto 0; }
-  .faq h2 { font-size:14px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin:0 0 12px; }
-  .faq-item { background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:10px; }
-  .faq-item h3 { font-size:15px; margin:0 0 5px; }
-  .faq-item p { font-size:14px; color:var(--ink-soft); margin:0; }
-  footer { padding:30px 0 50px; }
-  .disclaimer { font-size:11px; color:#9aa1b0; max-width:600px; margin:0 auto; text-align:center; }
-  @media (max-width:640px) { h1 { font-size:26px; } .range { font-size:28px; } }
-</style>
+<title>Fairway | Banker-Reviewed Startup Valuation Check</title>
+<meta name="description" content="An indicative pre-money valuation range for your startup, the concerns investors will raise against it, and the funds backing this profile. Reviewed by former bulge bracket bankers. Free.">
+<link rel="stylesheet" href="/shared.css">
 </head>
 <body>
 
 <div class="screen active" id="screen-hero">
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">Fairway</a>
+      <a class="link" href="/why.html">Why Fairway</a>
+    </div>
+  </nav>
+
   <div class="hero">
     <div class="wrap">
-      <span class="kicker" id="hook-kicker">Free · reviewed by investment bankers, not a calculator</span>
-      <h1 id="hook-headline">What is your startup worth — and can you defend it?</h1>
-      <p class="sub" id="hook-sub">Answer seven questions and get an indicative pre-money valuation range for your stage, sector and traction — plus the objections investors will use to argue it down. Every range is reviewed by a person before it reaches you.</p>
-      <button class="btn" onclick="startQuiz()" id="hook-cta">Get my valuation range →</button>
-      <div class="microcopy" id="hook-micro">Free. No card. About four minutes.</div>
-    </div>
-  </div>
-
-  <div class="how">
-    <div class="wrap">
-      <div class="how-grid">
-        <div class="how-step">
-          <span class="n">1</span>
-          <h3>Seven questions</h3>
-          <p>Stage, sector, revenue, growth, profitability and how much you're raising.</p>
-        </div>
-        <div class="how-step">
-          <span class="n">2</span>
-          <h3>Your range, on screen</h3>
-          <p>An indicative pre-money valuation range, and what its width costs you in dilution.</p>
-        </div>
-        <div class="how-step">
-          <span class="n">3</span>
-          <h3>Reviewed by hand</h3>
-          <p>A member of the team checks it and emails the confirmed or corrected number within 24 hours.</p>
-        </div>
+      <span class="kicker" id="hook-kicker">For founders raising in the next 90 days</span>
+      <h1 id="hook-headline">You know what your company is worth. The hard part is proving it in the room.</h1>
+      <p class="sub" id="hook-sub">Every investor pushes back on the number. Answer nine quick questions and get an indicative pre-money range, the specific concerns that will be raised against it, and the funds actively backing this profile. Checked by hand before it reaches you.</p>
+      <button class="btn" onclick="startQuiz()" id="hook-cta">Start the quiz</button>
+      <div class="cta-facts">
+        <span>Takes about four minutes</span>
+        <span>Completely free</span>
+        <span>Range on screen at the end</span>
       </div>
     </div>
   </div>
 
-  <div class="getlist">
+  <div class="section">
     <div class="wrap">
-      <h2>The Banker-Reviewed Valuation Check — free</h2>
-      <ul>
-        <li>An indicative pre-money valuation range for your stage, sector and traction</li>
-        <li>What the width of that range costs you in dilution at your target raise</li>
-        <li>The first of three objections investors will raise against your number</li>
-        <li>One fund actively investing at your stage in your sector</li>
-        <li>A reviewed range — confirmed or corrected by email within 24 hours</li>
+      <p class="eyebrow">What the nine questions buy you</p>
+      <h2>Three things, in the order they matter</h2>
+      <p class="section-sub">Price the round, defend the price, then know who to take it to.</p>
+      <ul class="vp">
+        <li>
+          <div class="vp-n">1</div>
+          <div>
+            <h3>Price it</h3>
+            <p>An indicative pre-money range built from your stage, sector, traction and profitability, not a generic multiple.</p>
+          </div>
+        </li>
+        <li>
+          <div class="vp-n">2</div>
+          <div>
+            <h3>Defend it</h3>
+            <p>The three concerns investors raise at that number, and the evidence that answers each one.</p>
+          </div>
+        </li>
+        <li>
+          <div class="vp-n">3</div>
+          <div>
+            <h3>Place it</h3>
+            <p>The funds writing cheques into your sector at your stage right now, and how to reach them.</p>
+          </div>
+        </li>
       </ul>
-      <p class="team-note">Fairway is a team of former investment bankers and operators who have run and raised rounds. Every range is checked by one of them before it is sent — the free check as well as the paid report.</p>
-      <p class="microcopy" style="text-align:center;">The method-by-method workup, the remaining objections and the ranked investor list are in the paid report.</p>
+      <p class="microcopy" style="text-align:center; max-width:480px; margin:20px auto 0;">Every output is read by a person before it is sent. Nothing here is a calculator result with a badge on it.</p>
     </div>
   </div>
+
+  <div class="section alt">
+    <div class="wrap">
+      <p class="eyebrow">Who reviews it</p>
+      <h2>A reviewing team from the bulge bracket</h2>
+      <p class="section-sub" id="team-line">Former investment bankers with over 100 years of combined coverage and execution experience, alongside operators who have raised rounds themselves. One of them checks every range that leaves here.</p>
+      <div class="stats">
+        <div class="stat">
+          <span class="n">70%</span>
+          <p>of VC-backed startups that shut down ran out of capital</p>
+        </div>
+        <div class="stat">
+          <span class="n">43%</span>
+          <p>of the same cohort cited poor product-market fit</p>
+        </div>
+        <div class="stat">
+          <span class="n">11.4%</span>
+          <p>of priced rounds in Q1 2026 were down rounds</p>
+        </div>
+      </div>
+      <p class="stat-src">Sources: CB Insights analysis of 431 VC-backed shutdowns since 2023; Carta State of Private Markets, Q1 2026. Fundraising is not the only reason companies fail, but the round you price badly is the one you have to re-price later.</p>
+      <p style="text-align:center; margin:24px 0 0;"><button class="btn" onclick="startQuiz()">Start the quiz</button></p>
+      <p class="microcopy" style="text-align:center;">Free. No card. Nine questions, about four minutes.</p>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <p class="label">Reviewing team with experience from</p>
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p class="disclaimer">Fairway provides informational valuation ranges and investor-fit analysis. This is not investment advice, a fairness opinion, or a regulated valuation, and should not be relied upon for legal, tax, or audit purposes. Flat fee, paid upfront; nothing is tied to whether or at what price you raise. Firm names indicate the prior employers of members of the reviewing team and do not imply any endorsement by, or affiliation with, those firms. Investor information is drawn from public sources and is not an introduction, solicitation, or recommendation.</p>
+    </div>
+  </footer>
 </div>
 
 <div class="screen" id="screen-quiz">
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">Fairway</a>
+      <a class="link" href="#" onclick="backToStart(); return false;">Back to start</a>
+    </div>
+  </nav>
   <div class="wrap">
     <div class="quiz-shell">
       <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
-      <div class="step-label" id="step-label">Step 1 of 8</div>
+      <div class="step-label" id="step-label">Step 1 of 9</div>
 
       <div class="q-block" data-step="1">
         <h2 class="q-title">What stage are you at?</h2>
-        <p class="q-help">Whatever you'd call the round you're raising next.</p>
+        <p class="q-help">Whatever you would call the round you are raising next.</p>
         <div class="opt-grid">
           <button class="opt" onclick="answer('stage','Pre-seed')">Pre-seed</button>
           <button class="opt" onclick="answer('stage','Seed')">Seed</button>
@@ -171,17 +125,17 @@
 
       <div class="q-block" data-step="2">
         <h2 class="q-title">What sector are you in?</h2>
-        <p class="q-help">Pick the closest — it sets which comparables and which funds we look at.</p>
+        <p class="q-help">Pick the closest. It sets which comparables and which funds we look at.</p>
         <div class="opt-grid opt-cols" id="sector-grid"></div>
         <div id="sector-other-wrap" style="display:none; margin-top:12px;">
           <label class="field-label" for="sector-other">What do you do?</label>
           <input class="field" id="sector-other" type="text" placeholder="e.g. carbon accounting for shipping" autocomplete="off">
-          <button class="btn" style="width:100%;" onclick="submitSectorOther()">Continue →</button>
+          <button class="btn" style="width:100%;" onclick="submitSectorOther()">Continue</button>
         </div>
       </div>
 
       <div class="q-block" data-step="3">
-        <h2 class="q-title">What's your current monthly revenue?</h2>
+        <h2 class="q-title">What is your current monthly revenue?</h2>
         <div class="opt-grid">
           <button class="opt" onclick="answer('revenue','Pre-revenue')">Pre-revenue</button>
           <button class="opt" onclick="answer('revenue','Under $10k/mo')">Under $10k/mo</button>
@@ -193,21 +147,26 @@
 
       <div class="q-block" data-step="4">
         <h2 class="q-title">How would you describe your growth?</h2>
-        <div class="opt-grid">
-          <button class="opt" onclick="answer('growth','Early / pre-traction')">Early / pre-traction</button>
-          <button class="opt" onclick="answer('growth','Steady, under 15%/mo')">Steady, under 15%/mo</button>
-          <button class="opt" onclick="answer('growth','Fast, 15%+/mo')">Fast, 15%+/mo</button>
+        <div class="opt-grid" id="growth-grid">
+          <button class="opt" onclick="pickGrowth('Early / pre-traction')">Early / pre-traction</button>
+          <button class="opt" onclick="pickGrowth('Steady, under 15%/mo')">Steady, under 15%/mo</button>
+          <button class="opt" onclick="pickGrowth('Fast, 15%+/mo')">Fast, 15%+/mo</button>
+        </div>
+        <div id="growth-detail-wrap" style="display:none; margin-top:16px;">
+          <label class="field-label" for="growth-detail">Anything worth adding? <span class="optional">Optional. Actual numbers help.</span></label>
+          <textarea class="field" id="growth-detail" placeholder="e.g. 11% MoM for six months, but two enterprise deals distort Q2. Net revenue retention 118%."></textarea>
+          <button class="btn" style="width:100%;" onclick="submitGrowth()">Continue</button>
         </div>
       </div>
 
       <div class="q-block" data-step="5">
         <h2 class="q-title">Where are you on profitability?</h2>
-        <p class="q-help">This moves the range more than most founders expect — and it decides which objection you get first.</p>
+        <p class="q-help">This moves the range more than most founders expect, and it decides which concern you get first.</p>
         <div class="opt-grid">
           <button class="opt" onclick="answer('profit','Profitable')">Profitable</button>
           <button class="opt" onclick="answer('profit','Around break-even')">Around break-even</button>
-          <button class="opt" onclick="answer('profit','Burning — 12+ months runway')">Burning — 12+ months runway</button>
-          <button class="opt" onclick="answer('profit','Burning — under 12 months runway')">Burning — under 12 months runway</button>
+          <button class="opt" onclick="answer('profit','Burning, 12+ months runway')">Burning, 12+ months runway</button>
+          <button class="opt" onclick="answer('profit','Burning, under 12 months runway')">Burning, under 12 months runway</button>
         </div>
       </div>
 
@@ -225,27 +184,37 @@
       </div>
 
       <div class="q-block" data-step="7">
-        <h2 class="q-title">Anything that changes the picture?</h2>
-        <p class="q-help">Optional — but this is what turns pattern-level advice into advice about your company. Gross margin, unit economics, retention, contracted pipeline, an unusual structure.</p>
-        <label class="field-label" for="ctx-notes">In your own words</label>
-        <textarea class="field" id="ctx-notes" placeholder="e.g. 82% gross margin, CAC payback 7 months, two enterprise pilots signed for Q4, prior SAFE at $6M cap"></textarea>
-        <label class="field-label" for="ctx-link">Link to a deck, model or data room</label>
-        <input class="field" id="ctx-link" type="url" placeholder="https://" autocomplete="off">
-        <p class="microcopy" style="margin-top:0;">Read only by the reviewer. Not shared with investors or anyone else.</p>
-        <button class="btn" style="width:100%; margin-top:12px;" onclick="submitContext()">Continue →</button>
-        <div style="text-align:center;"><button class="btn-ghost" onclick="submitContext(true)">Skip — I'll keep it high level</button></div>
+        <h2 class="q-title">Where are you in the process?</h2>
+        <div class="opt-grid">
+          <button class="opt" onclick="answer('timing','In conversations now')">In conversations with investors now</button>
+          <button class="opt" onclick="answer('timing','Opening within 90 days')">Opening a round within 90 days</button>
+          <button class="opt" onclick="answer('timing','Raising in 3 to 6 months')">Raising in three to six months</button>
+          <button class="opt" onclick="answer('timing','Not raising yet')">Not raising yet, I want the number</button>
+        </div>
       </div>
 
       <div class="q-block" data-step="8">
+        <h2 class="q-title">What have investors been pushing back on?</h2>
+        <p class="q-help">The single most useful answer on this page. Tap any that have come up, then add detail if you have it.</p>
+        <div class="chips" id="concern-chips"></div>
+        <label class="field-label" for="concern-notes">In their words, or yours <span class="optional">Optional</span></label>
+        <textarea class="field" id="concern-notes" placeholder="e.g. two funds said the market looks too small outside the UK, one said our CAC will not hold at scale"></textarea>
+        <label class="field-label" for="ctx-link">Link to a deck, model or data room <span class="optional">Optional. Read only by the reviewer.</span></label>
+        <input class="field" id="ctx-link" type="url" placeholder="https://" autocomplete="off">
+        <button class="btn" style="width:100%; margin-top:4px;" onclick="submitConcerns()">Continue</button>
+        <div style="text-align:center;"><button class="btn-ghost" onclick="submitConcerns(true)">Skip, nothing specific yet</button></div>
+      </div>
+
+      <div class="q-block" data-step="9">
         <h2 class="q-title">Where should the review go?</h2>
-        <p class="q-help">Everything you've answered is already saved. Add an email and your range appears on the next screen.</p>
+        <p class="q-help">Everything you have answered is already saved. Add an email and your range appears on the next screen.</p>
         <label class="field-label" for="lead-email">Work email</label>
-        <input class="field" id="lead-email" type="email" placeholder="you@company.com" autocomplete="email">
-        <label class="field-label" for="lead-company">Company</label>
+        <input class="field" id="lead-email" type="email" placeholder="you@company.com" autocomplete="email" inputmode="email">
+        <label class="field-label" for="lead-company">Company <span class="optional">Optional</span></label>
         <input class="field" id="lead-company" type="text" placeholder="Company name" autocomplete="organization">
-        <label class="field-label" for="lead-phone">Phone <span style="font-weight:400; color:var(--ink-soft);">— optional, only if you'd rather talk</span></label>
+        <label class="field-label" for="lead-phone">Phone <span class="optional">Optional. Only if you would rather talk than read.</span></label>
         <input class="field" id="lead-phone" type="tel" placeholder="+44" autocomplete="tel">
-        <button class="btn" style="width:100%;" id="final-submit" onclick="submitLead()">Show me my range →</button>
+        <button class="btn" style="width:100%;" id="final-submit" onclick="submitLead()">Show me my range</button>
         <p class="microcopy" id="submit-error" style="color:#b42318; display:none;">Please enter a valid email address.</p>
       </div>
 
@@ -257,6 +226,12 @@
 </div>
 
 <div class="screen" id="screen-result">
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">Fairway</a>
+      <a class="link" href="/why.html">Why Fairway</a>
+    </div>
+  </nav>
   <div class="result-shell">
     <div class="wrap">
 
@@ -271,14 +246,22 @@
       </div>
 
       <div class="gap-card">
-        <div class="result-label">The part that costs you money</div>
-        <h3 class="gap-headline" id="gap-headline">That's a $1.6M spread — about 13 points of your company.</h3>
-        <p id="gap-body">At your target raise, the bottom of that range costs you 35.7% of the company and the top costs 22.7%. Nothing about your business changes between those two numbers — only whether you can defend the higher one in the room.</p>
+        <div class="result-label">What the uncertainty costs you</div>
+        <h3 class="gap-headline" id="gap-headline">That spread is about 13 points of your company.</h3>
+        <p id="gap-body">On your target raise, the bottom of that range costs you 35.7% of the company and the top costs 22.7%. Nothing about the business changes between those two numbers, only whether you can defend the higher one.</p>
+        <p id="gap-future"></p>
+      </div>
+
+      <div class="cta-bar">
+        <p>Narrow the range and answer the pushback.
+          <small>The full report, reviewed by the team, back within 48 hours.</small></p>
+        <a href="#unlock" id="cta-bar-link">Full report, $750</a>
       </div>
 
       <div class="list-card">
-        <h2>Three objections you'll face at this range</h2>
-        <p class="lead" id="fix-lead">Pattern-level, from your stage, sector, growth and profitability. The first is open; the evidence that answers the other two is in the report.</p>
+        <h2>Three concerns you will face at this range</h2>
+        <p class="lead">Drawn from your stage, sector, growth and profitability. The first is open; the evidence that answers the other two is in the report.</p>
+        <div class="noted" id="concern-echo" style="display:none;"></div>
 
         <div class="item" id="fix-1">
           <div class="num">1</div>
@@ -291,7 +274,7 @@
         <div class="item locked" id="fix-2">
           <div class="num">2</div>
           <div>
-            <h3 id="fix-2-title">Objection two<span class="lock-tag">Locked</span></h3>
+            <h3 id="fix-2-title">Concern two<span class="lock-tag">Locked</span></h3>
             <p class="body-lock" id="fix-2-body">The evidence that answers it, and where it goes in the deck.</p>
           </div>
         </div>
@@ -299,34 +282,23 @@
         <div class="item locked" id="fix-3">
           <div class="num">3</div>
           <div>
-            <h3 id="fix-3-title">Objection three<span class="lock-tag">Locked</span></h3>
+            <h3 id="fix-3-title">Concern three<span class="lock-tag">Locked</span></h3>
             <p class="body-lock" id="fix-3-body">The evidence that answers it, and where it goes in the deck.</p>
           </div>
         </div>
 
-        <p class="list-foot" id="fix-foot">These are drawn from what companies at your stage and profile get asked. They are not yet about your numbers.</p>
-      </div>
-
-      <div class="sharpen" id="sharpen-card">
-        <h2 id="sharpen-title">Want these to be about your company, not your category?</h2>
-        <p id="sharpen-body">Margins, unit economics and retention are where a range actually gets defended, and we can't see any of that from six multiple-choice answers. Add it and the reviewer works from your numbers instead of your sector.</p>
-        <label class="field-label" for="late-notes">Your numbers, in your own words</label>
-        <textarea class="field" id="late-notes" placeholder="Gross margin, CAC payback, retention, contracted pipeline, existing SAFEs or notes…"></textarea>
-        <label class="field-label" for="late-link">Link to a deck, model or data room</label>
-        <input class="field" id="late-link" type="url" placeholder="https://">
-        <button class="btn" onclick="sendExtra()" id="sharpen-btn">Send this to the reviewer</button>
-        <p class="microcopy" id="sharpen-done" style="display:none; color:var(--good);">Sent — it's attached to your review.</p>
+        <p class="list-foot" id="fix-foot">These come from what companies at your stage and profile get asked. They are not yet about your numbers.</p>
       </div>
 
       <div class="list-card">
         <h2 id="inv-heading">Three funds active in your sector at your stage</h2>
-        <p class="lead">Early-stage funds writing cheques into this space now. The report ranks them against your specific range and traction, and gives you the route in.</p>
+        <p class="lead">Early-stage funds writing cheques into this space now. In the full report each name comes with the partner who covers your space and the route to reach them, rather than a generic contact address.</p>
 
         <div class="item" id="inv-1">
           <div class="num">1</div>
           <div>
             <h3 id="inv-1-name">Playfair Capital</h3>
-            <p id="inv-1-body">AI, enterprise software and developer tools. First cheques £100k–£1.5M.</p>
+            <p id="inv-1-body">AI, enterprise software and developer tools. First cheques £100k to £1.5M.</p>
           </div>
         </div>
 
@@ -334,7 +306,7 @@
           <div class="num">2</div>
           <div>
             <h3 id="inv-2-name">Fund two<span class="lock-tag">Locked</span></h3>
-            <p class="body-lock" id="inv-2-body">Focus, cheque size and the warm route in.</p>
+            <p class="body-lock" id="inv-2-body">Focus, cheque size, the partner who covers you and the route in.</p>
           </div>
         </div>
 
@@ -342,411 +314,68 @@
           <div class="num">3</div>
           <div>
             <h3 id="inv-3-name">Fund three<span class="lock-tag">Locked</span></h3>
-            <p class="body-lock" id="inv-3-body">Focus, cheque size and the warm route in.</p>
+            <p class="body-lock" id="inv-3-body">Focus, cheque size, the partner who covers you and the route in.</p>
           </div>
         </div>
 
-        <p class="list-foot">Sector-level matches, not a personalised shortlist. The report matches funds to your range and traction specifically.</p>
+        <p class="list-foot">Sector-level matches, not a personalised shortlist. The report ranks funds against your range and traction specifically.</p>
       </div>
 
-      <div class="unlock-box">
+      <div class="unlock-box" id="unlock">
         <div class="step-label" style="color:rgba(255,255,255,.6);">The Defensible Range Report</div>
         <p class="anchor" id="price-anchor">One point of a $2.6M company is worth about $26,000.</p>
         <div class="price" id="price-figure">$750<span> one-time</span></div>
         <ul class="includes">
           <li>All four valuation methods worked through, with the data behind each</li>
-          <li>A narrowed range and a written rationale, reviewed by the team</li>
-          <li>All three objections, with the evidence that answers each</li>
-          <li>A ranked investor shortlist with the route in for each name</li>
-          <li>Your own numbers read properly — margins, unit economics, cohorts</li>
+          <li>A narrowed range and a written rationale you can argue from</li>
+          <li>All three concerns, with the evidence that answers each</li>
+          <li>A ranked investor shortlist with a named contact and route for each</li>
+          <li>Your own numbers read properly: margins, unit economics, cohorts</li>
         </ul>
-        <a class="btn-light" href="#" id="unlock-cta">Unlock my full report — $750</a>
+        <p class="cta-sub" style="margin-top:16px;">The free check works from nine multiple-choice answers. The report works from whatever you are willing to share, under NDA if you prefer, which is what makes it specific rather than typical.</p>
+        <a class="btn-light" href="#" id="unlock-cta">Unlock my full report, $750</a>
         <div class="cta-sub">Back in your inbox within 48 hours, reviewed by the team.</div>
-        <div class="urgency" id="capacity-line">Every report is reviewed by hand — 5 a week. 2 left this week.</div>
-        <div class="guarantee">If the report isn't worth what you paid, tell us and we'll refund it. No form to fill in.</div>
+        <div class="urgency" id="capacity-line">Every report is reviewed by hand. Five a week, two left this week.</div>
+        <div class="guarantee">If the report is not worth what you paid, tell us and we will refund it. No form to fill in.</div>
       </div>
 
-      <p class="soft-cta">Not raising for a few months? <a href="#" onclick="track('nurture_click',{}); return false;">Stay on the list</a> and we'll send the comp data when your quarter comes round.</p>
+      <p class="soft-cta">Not raising for a few months? <a href="#" onclick="track('nurture_click',{}); return false;">Stay on the list</a> and we will send the comp data when your quarter comes round.</p>
 
       <div class="faq">
         <h2>Before you ask</h2>
         <div class="faq-item">
           <h3>Is this a real valuation?</h3>
-          <p>No. It's an informational range and a written rationale — the thing you argue from. It isn't a 409A, a fairness opinion, or a regulated valuation.</p>
+          <p>No. It is an informational range and a written rationale, the thing you argue from. It is not a 409A, a fairness opinion, or a regulated valuation.</p>
         </div>
         <div class="faq-item">
-          <h3>What does "banker-reviewed" actually mean here?</h3>
-          <p>A person with investment banking coverage experience reads your inputs and the range before anything is sent to you — on the free check as well as the paid report. It is not a model output with a badge on it.</p>
+          <h3>What does banker-reviewed actually mean here?</h3>
+          <p>A person with bulge bracket investment banking experience reads your inputs and the range before anything is sent to you, on the free check as well as the paid report.</p>
         </div>
         <div class="faq-item">
           <h3>Why is the free range so wide?</h3>
-          <p>Because six multiple-choice answers can't see your margins, retention or unit economics. Narrowing it is exactly what the review and the report do.</p>
+          <p>Because nine multiple-choice answers cannot see your margins, retention or unit economics. Narrowing it is exactly what the review and the report do.</p>
         </div>
         <div class="faq-item">
           <h3>Who sees my numbers?</h3>
-          <p>Only the reviewer. Your inputs, notes and any link you share aren't sold, shared, or shown to investors — the investor list is one-way, from us to you.</p>
+          <p>Only the reviewer. Your inputs, notes and any link you share are not sold, shared, or shown to investors. The investor list is one-way, from us to you.</p>
         </div>
       </div>
 
     </div>
   </div>
+
+  <div class="marquee">
+    <p class="label">Reviewing team with experience from</p>
+    <div class="marquee-track" id="marquee-track-2"></div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p class="disclaimer">Fairway provides informational valuation ranges and investor-fit analysis. This is not investment advice, a fairness opinion, or a regulated valuation, and should not be relied upon for legal, tax, or audit purposes. Flat fee, paid upfront; nothing is tied to whether or at what price you raise. Firm names indicate the prior employers of members of the reviewing team and do not imply any endorsement by, or affiliation with, those firms. Investor information is drawn from public sources and is not an introduction, solicitation, or recommendation.</p>
+    </div>
+  </footer>
 </div>
 
-<footer>
-  <div class="wrap">
-    <p class="disclaimer">Fairway provides informational valuation ranges and investor-fit analysis. This is not investment advice, a fairness opinion, or a regulated valuation, and should not be relied upon for legal, tax, or audit purposes. Flat fee, paid upfront — nothing tied to whether or at what price you raise. Investor information is drawn from public sources and is not an introduction, solicitation, or recommendation.</p>
-  </div>
-</footer>
-
-<script>
-  const CONFIG = {
-    stripeLink: 'https://buy.stripe.com/bJe6oG3Xf5Tp1Sf1n1cjS00',
-    spotsLeft: 2,
-    spotsPerWeek: 5,
-    price: 750,
-    leadEndpoint: '/api/lead'
-  };
-
-  const SECTORS = [
-    'SaaS / B2B software', 'AI / ML', 'Fintech', 'Insurtech',
-    'Healthtech / Digital health', 'Biotech / Life sciences', 'Consumer / D2C',
-    'Marketplaces', 'Climate / Energy', 'Deeptech / Hardware', 'Cybersecurity',
-    'Logistics / Supply chain', 'Proptech', 'Edtech', 'Other'
-  ];
-
-  const INVESTORS = {
-    'SaaS / B2B software': [
-      { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. First cheques £100k–£1.5M.' },
-      { name: 'Episode 1 Ventures', note: 'UK-only B2B software. £250k–£3M.' },
-      { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. ~£1M average first cheque.' }
-    ],
-    'AI / ML': [
-      { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. ~£1M average first cheque.' },
-      { name: 'MMC Ventures', note: 'AI-first companies. ~$3.2M average seed cheque.' },
-      { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. £100k–£1.5M.' }
-    ],
-    'Fintech': [
-      { name: 'Seedcamp', note: 'Fintech, AI, developer tools and marketplaces. First cheques $350k–$1M.' },
-      { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. £1M–£2M.' },
-      { name: 'LocalGlobe / Latitude', note: 'Fintech, health, climate and marketplaces. £500k–£2M at seed.' }
-    ],
-    'Insurtech': [
-      { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. £1M–£2M.' },
-      { name: 'Octopus Ventures', note: 'Fintech, B2B SaaS, health and climate; active seed through Series A.' },
-      { name: 'Seedcamp', note: 'Fintech, AI, developer tools and marketplaces. $350k–$1M.' }
-    ],
-    'Healthtech / Digital health': [
-      { name: 'Octopus Ventures', note: 'Healthtech and biotech alongside B2B SaaS; active seed through Series A.' },
-      { name: 'Ada Ventures', note: 'Healthy ageing and economic empowerment theses. £250k–£1.5M.' },
-      { name: 'Mercia Ventures', note: 'Life sciences, software and deeptech; among the most active UK early-stage funds by deal count.' }
-    ],
-    'Biotech / Life sciences': [
-      { name: 'Mercia Ventures', note: 'Life sciences, software and deeptech; among the most active UK early-stage funds by deal count.' },
-      { name: 'Future Planet Capital', note: 'Deeptech, health and engineering biology out of the university ecosystem.' },
-      { name: 'Backed VC', note: 'AI therapeutics and frontier science. $500k–$5M.' }
-    ],
-    'Consumer / D2C': [
-      { name: 'Hoxton Ventures', note: 'Broad tech with a consumer and fintech lean. $500k–$5M.' },
-      { name: 'Fuel Ventures', note: 'B2C and B2B via SEIS/EIS; high early-stage deal volume. £100k–£1M.' },
-      { name: 'Cherry Ventures', note: 'Europe-wide, sector-agnostic at seed. €2M–€7M.' }
-    ],
-    'Marketplaces': [
-      { name: 'Seedcamp', note: 'Marketplaces, fintech, AI and developer tools. First cheques $350k–$1M.' },
-      { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k–£1M.' },
-      { name: 'Passion Capital', note: 'Marketplaces, fintech and insurtech. £1M–£2M.' }
-    ],
-    'Climate / Energy': [
-      { name: 'Octopus Ventures', note: 'Climate tech alongside B2B SaaS and deeptech; active seed through Series A.' },
-      { name: 'Ada Ventures', note: 'Climate equity thesis. £250k–£1.5M.' },
-      { name: 'Future Planet Capital', note: 'Climate, deeptech and engineering biology. High early-stage deal volume.' }
-    ],
-    'Deeptech / Hardware': [
-      { name: 'Concept Ventures', note: 'Deep tech, AI and infrastructure software. ~£1M average first cheque.' },
-      { name: 'Mercia Ventures', note: 'Deeptech, life sciences and software; among the most active UK early-stage funds.' },
-      { name: 'Future Planet Capital', note: 'Deeptech, space, defence and engineering biology.' }
-    ],
-    'Cybersecurity': [
-      { name: 'Playfair Capital', note: 'Enterprise software, AI and developer tools. £100k–£1.5M.' },
-      { name: 'Episode 1 Ventures', note: 'UK-only B2B software including infrastructure and security. £250k–£3M.' },
-      { name: 'Octopus Ventures', note: 'B2B SaaS and deeptech; active seed through Series A.' }
-    ],
-    'Logistics / Supply chain': [
-      { name: 'Maven Capital Partners', note: 'SaaS, transport and energy; among the most active UK early-stage investors by deal count.' },
-      { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k–£1M.' },
-      { name: 'Backed VC', note: 'Manufacturing and automation alongside frontier tech. $500k–$5M.' }
-    ],
-    'Proptech': [
-      { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k–£1M.' },
-      { name: 'Concept Ventures', note: 'Infrastructure software and AI. ~£1M average first cheque.' },
-      { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k–£300k.' }
-    ],
-    'Edtech': [
-      { name: 'Founders Factory', note: 'Multi-sector early-stage via corporate partners. £30k–£250k.' },
-      { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k–£300k.' },
-      { name: 'Mercia Ventures', note: 'Software and consumer alongside deeptech; high early-stage deal volume.' }
-    ],
-    'Other': [
-      { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k–£300k.' },
-      { name: 'SyndicateRoom', note: 'Sector-agnostic, high-volume early-stage syndicate.' },
-      { name: 'Fuel Ventures', note: 'B2B SaaS, marketplaces and fintech via SEIS/EIS. £100k–£1M.' }
-    ]
-  };
-
-  const FIX_BY_REVENUE = {
-    'Pre-revenue': { title: 'Turn your pipeline into signed evidence.', body: 'Three named design partners with a start date and a price on the page does more for a pre-revenue range than any traction slide. At this stage the range is priced on proof of demand, not product.' },
-    'Under $10k/mo': { title: 'Show retention before you show growth.', body: 'At this revenue the first question is whether the early customers stay. A three-month cohort chart pre-empts it and defends the top of your range; a cumulative revenue line invites it.' },
-    '$10k–$50k/mo': { title: 'Lead with gross margin and net revenue retention, not top line.', body: 'At this level the range is set by the quality of the revenue rather than the size of it. Gross margin, NRR and payback are the three numbers that move it — and none of them are visible from what you have told us so far.' },
-    '$50k–$150k/mo': { title: 'Bring CAC payback by channel.', body: 'At this revenue the objection is efficiency, not demand. Payback in months, split by channel, moves the range further than another month of growth does.' },
-    '$150k+/mo': { title: 'Expect the range to be argued on multiples, not story.', body: 'Above this level the conversation moves to ARR multiples against recent comparable rounds. The defensible argument is why your growth and margin profile sits above the median for that comp set.' }
-  };
-
-  const FIX_BY_GROWTH = {
-    'Early / pre-traction': { title: 'The team is currently the only asset being priced.', body: 'Pre-traction ranges are argued on founder-market fit and on what the first 90 days after close will prove. Both need to be explicit and dated, or the range defaults to the bottom of the band.' },
-    'Steady, under 15%/mo': { title: 'This growth rate will be read as a market-size problem.', body: 'Steady growth invites the question of whether the ceiling is low. The answer is a segment-level breakdown showing where growth is constrained by your capacity rather than by demand.' },
-    'Fast, 15%+/mo': { title: 'This growth is probably being attributed to one channel.', body: 'Fast growth gets discounted when it looks like a single acquisition channel that will saturate. Two channels with independent payback curves removes the discount.' }
-  };
-
-  const FIX_BY_PROFIT = {
-    'Profitable': { title: 'Profitability at this stage invites a growth-ceiling question.', body: 'Investors read early profitability either as discipline or as under-investment. The defence is showing what happens to growth when the round is deployed — a modelled, not asserted, use of funds.' },
-    'Around break-even': { title: 'Break-even makes the raise itself the question.', body: 'If you do not need the money to survive, the round has to be justified by what it accelerates. Tie the raise to a specific milestone and the timeline to reach it without the money.' },
-    'Burning — 12+ months runway': { title: 'Your burn multiple will be checked before your growth rate.', body: 'Net new revenue divided by net burn is the number that decides whether growth is being bought or earned. Bring it before you are asked for it.' },
-    'Burning — under 12 months runway': { title: 'Your runway is shorter than the raise will take.', body: 'Under twelve months, the round gets priced against your deadline rather than your business. Either extend runway before opening the process or come with a bridge already committed — this is the single largest downward pressure on your range.' }
-  };
-
-  function track(event, props) {
-    const payload = Object.assign({ hook_variant: variant }, props || {});
-    if (window.posthog && typeof window.posthog.capture === 'function') { window.posthog.capture(event, payload); }
-    if (window.dataLayer) { window.dataLayer.push(Object.assign({ event: event }, payload)); }
-    console.log('[fairway]', event, payload);
-  }
-
-  const hooks = {
-    combo: {
-      kicker: "Free · reviewed by investment bankers, not a calculator",
-      headline: "What is your startup worth — and can you defend it?",
-      sub: "Answer seven questions and get an indicative pre-money valuation range for your stage, sector and traction — plus the objections investors will use to argue it down. Every range is reviewed by a person before it reaches you.",
-      cta: "Get my valuation range →",
-      micro: "Free. No card. About four minutes."
-    },
-    reveal: {
-      kicker: "The number problem",
-      headline: "Two founders with the same metrics raise at $2M and $4M.",
-      sub: "The difference usually isn't the business — it's whether the number survives being pushed on. Seven questions gets you an indicative pre-money range, the objections coming at it, and a banker's review of both.",
-      cta: "Show me my range →",
-      micro: "Free. About four minutes. Reviewed by a person within 24 hours."
-    },
-    free: {
-      kicker: "For founders raising in the next 90 days",
-      headline: "A banker-reviewed valuation range for your startup, free.",
-      sub: "Seven questions and you have an indicative pre-money range, what its width costs you in dilution, and a reviewer's check on the number by email within 24 hours.",
-      cta: "Start my valuation check →",
-      micro: "Free. No card. About four minutes."
-    }
-  };
-
-  const params = new URLSearchParams(window.location.search);
-  const variant = hooks[params.get('hook')] ? params.get('hook') : 'combo';
-  const h = hooks[variant];
-  document.getElementById('hook-kicker').textContent = h.kicker;
-  document.getElementById('hook-headline').textContent = h.headline;
-  document.getElementById('hook-sub').textContent = h.sub;
-  document.getElementById('hook-cta').textContent = h.cta;
-  document.getElementById('hook-micro').textContent = h.micro;
-
-  document.getElementById('capacity-line').textContent = `Every report is reviewed by hand — ${CONFIG.spotsPerWeek} a week. ${CONFIG.spotsLeft} left this week.`;
-  document.getElementById('price-figure').innerHTML = `$${CONFIG.price}<span> one-time</span>`;
-  const unlockCta = document.getElementById('unlock-cta');
-  unlockCta.textContent = `Unlock my full report — $${CONFIG.price}`;
-  unlockCta.addEventListener('click', function (e) {
-    track('unlock_click', { price: CONFIG.price });
-    if (!CONFIG.stripeLink) { e.preventDefault(); console.warn('[fairway] CONFIG.stripeLink is not set'); return; }
-    unlockCta.href = CONFIG.stripeLink;
-  });
-
-  const sectorGrid = document.getElementById('sector-grid');
-  SECTORS.forEach(function (s) {
-    const b = document.createElement('button');
-    b.className = 'opt';
-    b.textContent = s;
-    b.onclick = function () {
-      if (s === 'Other') {
-        document.getElementById('sector-other-wrap').style.display = 'block';
-        document.getElementById('sector-other').focus();
-        track('sector_other_opened', {});
-        return;
-      }
-      answer('sector', s);
-    };
-    sectorGrid.appendChild(b);
-  });
-
-  track('page_view', { utm_source: params.get('utm_source') || null });
-
-  let currentStep = 1;
-  const totalSteps = 8;
-  const responses = { variant: variant, started_at: new Date().toISOString() };
-
-  function showScreen(id) {
-    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    window.scrollTo(0,0);
-  }
-
-  function startQuiz() { track('quiz_start', {}); showScreen('screen-quiz'); renderStep(); }
-
-  function renderStep() {
-    document.querySelectorAll('.q-block').forEach(b => b.style.display = (parseInt(b.dataset.step) === currentStep ? 'block' : 'none'));
-    document.getElementById('step-label').textContent = `Step ${currentStep} of ${totalSteps}`;
-    document.getElementById('progress-fill').style.width = (currentStep/totalSteps*100) + '%';
-    document.getElementById('back-link').style.visibility = currentStep === 1 ? 'hidden' : 'visible';
-    track('quiz_step_view', { step: currentStep });
-  }
-
-  function answer(key, value) {
-    responses[key] = value;
-    track('quiz_answer', { step: currentStep, key: key, value: value });
-    if (currentStep < totalSteps) { currentStep++; renderStep(); }
-  }
-
-  function submitSectorOther() {
-    const v = document.getElementById('sector-other').value.trim();
-    responses.sector = 'Other';
-    responses.sector_detail = v || null;
-    track('quiz_answer', { step: 2, key: 'sector', value: 'Other', detail: v });
-    currentStep = 3; renderStep();
-  }
-
-  function submitContext(skipped) {
-    responses.context_notes = skipped ? null : (document.getElementById('ctx-notes').value.trim() || null);
-    responses.context_link  = skipped ? null : (document.getElementById('ctx-link').value.trim() || null);
-    track('context_step', { skipped: !!skipped, has_notes: !!responses.context_notes, has_link: !!responses.context_link });
-    currentStep = 8; renderStep();
-  }
-
-  function goBack() { if (currentStep > 1) { currentStep--; renderStep(); } }
-
-  function validEmail(v) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); }
-
-  async function submitLead() {
-    const email = document.getElementById('lead-email').value.trim();
-    const err = document.getElementById('submit-error');
-    if (!validEmail(email)) { err.style.display = 'block'; return; }
-    err.style.display = 'none';
-
-    responses.email   = email;
-    responses.company = document.getElementById('lead-company').value.trim() || null;
-    responses.phone   = document.getElementById('lead-phone').value.trim() || null;
-
-    const btn = document.getElementById('final-submit');
-    btn.disabled = true; btn.textContent = 'Saving…';
-
-    const result = computeResult();
-    try {
-      await fetch(CONFIG.leadEndpoint, {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(Object.assign({}, responses, { computed: result }))
-      });
-      track('lead_captured', {});
-    } catch (e) {
-      console.error('[fairway] lead post failed', e);
-      track('lead_post_failed', {});
-    }
-    renderResult(result);
-    btn.disabled = false; btn.textContent = 'Show me my range →';
-  }
-
-  async function sendExtra() {
-    const notes = document.getElementById('late-notes').value.trim();
-    const link  = document.getElementById('late-link').value.trim();
-    if (!notes && !link) return;
-    document.getElementById('sharpen-btn').disabled = true;
-    try {
-      await fetch(CONFIG.leadEndpoint, {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ type: 'context_addendum', email: responses.email || null, notes: notes || null, link: link || null })
-      });
-    } catch (e) { console.error('[fairway] addendum failed', e); }
-    track('context_addendum', { has_notes: !!notes, has_link: !!link });
-    document.getElementById('sharpen-done').style.display = 'block';
-    document.getElementById('sharpen-btn').textContent = 'Sent';
-  }
-
-  const RAISE_MIDPOINT = {
-    'Under $500k': 0.35, '$500k–$1M': 0.75, '$1M–$2.5M': 1.75,
-    '$2.5M–$5M': 3.75, '$5M–$10M': 7.5, 'Over $10M': 12
-  };
-
-  function computeResult() {
-    const stageBase   = { 'Pre-seed': 1.5, 'Seed': 3.5, 'Series A': 9 }[responses.stage] || 2;
-    const revenueBump = { 'Pre-revenue': 0, 'Under $10k/mo': 0.4, '$10k–$50k/mo': 1.2, '$50k–$150k/mo': 3, '$150k+/mo': 6 }[responses.revenue] || 0;
-    const growthMult  = { 'Early / pre-traction': 1, 'Steady, under 15%/mo': 1.15, 'Fast, 15%+/mo': 1.4 }[responses.growth] || 1;
-    const profitMult  = { 'Profitable': 1.15, 'Around break-even': 1.05, 'Burning — 12+ months runway': 1, 'Burning — under 12 months runway': 0.9 }[responses.profit] || 1;
-
-    const base = (stageBase + revenueBump) * growthMult * profitMult;
-    const low  = base * 0.85;
-    const high = base * 1.55;
-    const raise = RAISE_MIDPOINT[responses.raise] || 1.0;
-    const mid   = (low + high) / 2;
-
-    return {
-      low: low, high: high, mid: mid, raise: raise,
-      dilLow:  raise / (low  + raise) * 100,
-      dilHigh: raise / (high + raise) * 100,
-      dilMid:  raise / (mid  + raise) * 100
-    };
-  }
-
-  function setItem(prefix, title, body, locked) {
-    document.getElementById(prefix + '-title').innerHTML = locked ? escapeHtml(title) + '<span class="lock-tag">Locked</span>' : escapeHtml(title);
-    document.getElementById(prefix + '-body').textContent = body;
-  }
-
-  function escapeHtml(s) { return String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c])); }
-
-  function renderResult(r) {
-    const sectorLabel = responses.sector === 'Other' ? (responses.sector_detail || 'your sector') : (responses.sector || 'your sector');
-
-    document.getElementById('range-output').textContent = `$${r.low.toFixed(1)}M – $${r.high.toFixed(1)}M`;
-    document.getElementById('range-stage-sector').textContent = `${responses.stage || 'your stage'} · ${sectorLabel}`;
-
-    const points = r.dilLow - r.dilHigh;
-    const spread = r.high - r.low;
-    document.getElementById('gap-headline').textContent = `That's a $${spread.toFixed(1)}M spread — about ${points.toFixed(0)} points of your company.`;
-    document.getElementById('gap-body').textContent = `On a $${r.raise.toFixed(2)}M raise, the bottom of that range costs you ${r.dilLow.toFixed(1)}% of the company and the top costs ${r.dilHigh.toFixed(1)}%. Nothing about your business changes between those two numbers — only whether you can defend the higher one in the room.`;
-
-    const f1 = FIX_BY_REVENUE[responses.revenue] || FIX_BY_REVENUE['Pre-revenue'];
-    const f2 = FIX_BY_GROWTH[responses.growth]   || FIX_BY_GROWTH['Early / pre-traction'];
-    const f3 = FIX_BY_PROFIT[responses.profit]   || FIX_BY_PROFIT['Burning — 12+ months runway'];
-    setItem('fix-1', f1.title, f1.body, false);
-    setItem('fix-2', f2.title, f2.body, true);
-    setItem('fix-3', f3.title, f3.body, true);
-
-    const gaveContext = !!(responses.context_notes || responses.context_link);
-    if (gaveContext) {
-      document.getElementById('fix-foot').textContent = 'Your notes are attached to the review — the reviewer will replace these with objections drawn from your actual numbers.';
-      const s = document.getElementById('sharpen-card');
-      document.getElementById('sharpen-title').textContent = 'Anything else worth attaching?';
-      document.getElementById('sharpen-body').textContent = 'We have your notes. If there is a model, a cohort file or a data room link that would change the read, add it here and it goes to the same reviewer.';
-      s.querySelector('.field-label').textContent = 'More detail';
-    }
-
-    const list = INVESTORS[responses.sector] || INVESTORS['Other'];
-    document.getElementById('inv-heading').textContent = `Three funds active in ${sectorLabel} at ${responses.stage || 'your stage'}`;
-    document.getElementById('inv-1-name').textContent = list[0].name;
-    document.getElementById('inv-1-body').textContent = list[0].note;
-
-    document.getElementById('price-anchor').textContent = `One point of a $${r.mid.toFixed(1)}M company is worth about $${Math.round(r.mid * 10000).toLocaleString()}.`;
-
-    track('result_view', {
-      low: +r.low.toFixed(2), high: +r.high.toFixed(2), spread: +spread.toFixed(2),
-      dilution_points: +points.toFixed(1), sector: responses.sector || null,
-      profit: responses.profit || null, gave_context: gaveContext
-    });
-    showScreen('screen-result');
-  }
-</script>
-
+<script src="/app.js"></script>
 </body>
 </html>
