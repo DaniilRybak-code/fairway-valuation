@@ -30,7 +30,17 @@
 
     const payload = typeof responses !== 'undefined' ? {
       stage: responses.stage, sector: responses.sector, sector_detail: responses.sector_detail,
-      revenue: responses.revenue, growth: responses.growth, growth_detail: responses.growth_detail,
+      /* Exact figures where the founder gave them. The bands are still sent so the
+         engine keeps working for pre-revenue and for anyone who skipped the numbers. */
+      currency: responses.currency || 'USD',
+      revenue: responses.revenue,
+      revenue_exact: responses.revenue_exact != null ? responses.revenue_exact : null,
+      arr_exact: responses.revenue_exact != null ? responses.revenue_exact * 12 : null,
+      recurring_pct: responses.recurring_pct != null ? responses.recurring_pct : null,
+      revenue_model: responses.revenue_model || null,
+      growth: responses.growth,
+      growth_exact: responses.growth_exact != null ? responses.growth_exact : null,
+      growth_detail: responses.growth_detail,
       profit: responses.profit, raise: responses.raise, timing: responses.timing,
       concerns: responses.concerns || [], concern_notes: responses.concern_notes
     } : {};
@@ -53,6 +63,7 @@
     if (!card) return;
 
     if (!data || !Array.isArray(data.reference_points) || !data.reference_points.length) {
+      // Nothing sourced survived the guard rails. Say nothing rather than something thin.
       card.remove();
       if (data && data.basis_sentence) setBasis(data.basis_sentence, data);
       return;
@@ -71,9 +82,6 @@
     const visible = typeof data.visible_reference_points === 'number'
       ? data.visible_reference_points : VISIBLE_DEFAULT;
 
-    document.getElementById('reveal-lead').textContent =
-      'The anchors this number rests on. Sources shown so you can check them.';
-
     const list = document.getElementById('reveal-list');
     list.innerHTML = '';
     data.reference_points.forEach(function (p, i) {
@@ -89,10 +97,12 @@
       list.appendChild(row);
     });
 
-    document.getElementById('reveal-foot').textContent =
-      (data.reference_points.length - visible) + ' of the ' + data.reference_points.length +
+    const foot = document.getElementById('reveal-foot');
+    foot.textContent = (data.reference_points.length - visible) +
+      ' of the ' + data.reference_points.length +
       ' anchors behind this range are in the full report, with the working shown for each.';
 
+    // Replace the pattern-level concerns when the engine produced better ones.
     if (Array.isArray(data.concerns) && data.concerns.length === 3) {
       ['fix-1', 'fix-2', 'fix-3'].forEach(function (id, i) {
         const title = document.getElementById(id + '-title');
@@ -146,7 +156,9 @@
   }
 
   function money(m) {
-    return m >= 1 ? '$' + m.toFixed(1) + 'M' : '$' + Math.round(m * 1000) + 'k';
+    /* curSymbol lives in app.js, which loads first. Falls back to $ if it is ever absent. */
+    const c = (typeof curSymbol === 'function') ? curSymbol() : '$';
+    return m >= 1 ? c + m.toFixed(1) + 'M' : c + Math.round(m * 1000) + 'k';
   }
 
   function esc(v) {
