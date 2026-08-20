@@ -87,7 +87,9 @@ export default async function handler(req, res) {
   console.log('[fairway-lead]', JSON.stringify(record));
 
   let forwarded = false;
+  let sinkError = null;
   const hook = process.env.LEAD_WEBHOOK_URL;
+
   if (hook) {
     try {
       const r = await fetch(hook, {
@@ -100,17 +102,29 @@ export default async function handler(req, res) {
           record: record
         })
       });
-      forwarded = r.ok;
-      if (!r.ok) console.error('[fairway-lead] webhook returned', r.status);
+
+      /* Apps Script answers 200 even when it rejects the payload, so an HTTP
+         status alone is not evidence of delivery. Read what it actually said. */
+      const text = await r.text();
+      let sink = null;
+      try { sink = JSON.parse(text); } catch (e) { sink = null; }
+
+      forwarded = r.ok && (!sink || sink.ok !== false);
+      if (!forwarded) {
+        sinkError = (sink && sink.error) || ('http_' + r.status);
+        console.error('[fairway-lead] sink rejected:', sinkError, text.slice(0, 300));
+      }
     } catch (err) {
+      sinkError = 'fetch_failed';
       console.error('[fairway-lead] forward failed:', err && err.message);
     }
   } else {
+    sinkError = 'no_webhook_url';
     console.warn('[fairway-lead] LEAD_WEBHOOK_URL is not set, this lead exists only in the logs');
   }
 
   /* Always 200. A storage failure must never cost the founder their result. */
-  res.status(200).json({ ok: true, forwarded, lead_id: record.lead_id });
+  res.status(200).json({ ok: true, forwarded, sink_error: sinkError, lead_id: record.lead_id });
 }
 
 function safeParse(s) { try { return JSON.parse(s); } catch (e) { return { raw: s }; } }
