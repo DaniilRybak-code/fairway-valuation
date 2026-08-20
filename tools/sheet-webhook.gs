@@ -31,14 +31,42 @@ function doPost(e) {
     let sheet = ss.getSheetByName(SHEET_NAME);
     if (!sheet) sheet = ss.insertSheet(SHEET_NAME);
 
-    // First write creates the header row from the fields the API sent.
-    if (sheet.getLastRow() === 0 && body.fields) {
-      sheet.appendRow(body.fields);
-      sheet.getRange(1, 1, 1, body.fields.length).setFontWeight('bold');
+    // Header-aware write. The field list grows over time (exact revenue, currency,
+    // recurring share and so on were added after the first leads landed), so we map each
+    // field onto the column that already holds it and append genuinely new fields on the
+    // right. Existing rows keep their meaning and nothing shifts underneath them.
+    const fields = body.fields || [];
+    const width = Math.max(sheet.getLastColumn(), 1);
+    let header = sheet.getLastRow() === 0
+      ? []
+      : sheet.getRange(1, 1, 1, width).getValues()[0].filter(function (h) { return h !== ''; });
+
+    if (!header.length) {
+      header = fields.slice();
+      sheet.getRange(1, 1, 1, header.length).setValues([header]).setFontWeight('bold');
       sheet.setFrozenRows(1);
+    } else {
+      const added = fields.filter(function (f) { return header.indexOf(f) === -1; });
+      if (added.length) {
+        sheet.getRange(1, header.length + 1, 1, added.length)
+          .setValues([added]).setFontWeight('bold');
+        header = header.concat(added);
+      }
     }
 
-    sheet.appendRow(body.values);
+    const row = sheet.getLastRow() + 1;
+    const out = new Array(header.length).fill('');
+    fields.forEach(function (f, i) {
+      const col = header.indexOf(f);
+      if (col > -1) out[col] = body.values[i];
+    });
+    sheet.getRange(row, 1, 1, out.length).setValues([out]);
+
+    // Phone is written last, as plain text, so Sheets does not strip the leading plus.
+    const phoneCol = header.indexOf('phone') + 1;
+    if (phoneCol > 0) {
+      sheet.getRange(row, phoneCol).setNumberFormat('@').setValue(String(out[phoneCol - 1] || ''));
+    }
 
     const r = body.record || {};
     if (r.type === 'lead') {
@@ -67,8 +95,10 @@ function notify(r) {
     'Phone:        ' + (r.phone || 'not given'),
     'Stage:        ' + r.stage,
     'Sector:       ' + r.sector + (r.sector_detail ? ' (' + r.sector_detail + ')' : ''),
-    'Revenue:      ' + r.revenue,
-    'Growth:       ' + r.growth,
+    'Revenue:      ' + (r.revenue_exact_monthly ? (r.currency || 'USD') + ' ' + r.revenue_exact_monthly + '/mo (ARR ' + r.arr_exact + ')' : r.revenue),
+    'Recurring:    ' + (r.recurring_pct !== '' && r.recurring_pct != null ? r.recurring_pct + '%' : 'not given'),
+    'Model:        ' + (r.revenue_model || 'not given'),
+    'Growth:       ' + (r.growth_pct_monthly !== '' && r.growth_pct_monthly != null ? r.growth_pct_monthly + '%/mo' : r.growth),
     'Growth notes: ' + (r.growth_detail || 'none'),
     'Profitability:' + r.profitability,
     'Raise:        ' + r.raise_band,
@@ -92,7 +122,7 @@ function notify(r) {
 function createDraft(r) {
   const subject = 'Your valuation range, reviewed';
   const body = [
-    'Hi,',
+    'Hi' + (r.company ? '' : '') + ',',
     '',
     'I looked at what you sent through for ' + (r.company || 'your company') + '.',
     '',

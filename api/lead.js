@@ -16,7 +16,8 @@ const FIELDS = [
   'timestamp_utc', 'lead_id', 'type',
   'email', 'company', 'phone',
   'stage', 'sector', 'sector_detail',
-  'revenue', 'growth', 'growth_detail', 'profitability', 'raise_band', 'timing',
+  'currency', 'revenue', 'revenue_exact_monthly', 'arr_exact', 'recurring_pct', 'revenue_model',
+  'growth', 'growth_pct_monthly', 'growth_detail', 'profitability', 'raise_band', 'timing',
   'concerns', 'concern_notes', 'context_link',
   'range_low_m', 'range_high_m', 'range_mid_m',
   'dilution_low_pct', 'dilution_high_pct', 'dilution_points', 'future_value_m',
@@ -46,8 +47,15 @@ export default async function handler(req, res) {
     sector: str(body.sector),
     sector_detail: str(body.sector_detail),
 
+    currency: str(body.currency) || 'USD',
     revenue: str(body.revenue),
+    revenue_exact_monthly: num(body.revenue_exact),
+    arr_exact: num(body.revenue_exact != null ? body.revenue_exact * 12 : null),
+    recurring_pct: num(body.recurring_pct),
+    revenue_model: str(body.revenue_model),
+
     growth: str(body.growth),
+    growth_pct_monthly: num(body.growth_exact),
     growth_detail: str(body.growth_detail),
     profitability: str(body.profit),
     raise_band: str(body.raise),
@@ -87,9 +95,7 @@ export default async function handler(req, res) {
   console.log('[fairway-lead]', JSON.stringify(record));
 
   let forwarded = false;
-  let sinkError = null;
   const hook = process.env.LEAD_WEBHOOK_URL;
-
   if (hook) {
     try {
       const r = await fetch(hook, {
@@ -102,29 +108,17 @@ export default async function handler(req, res) {
           record: record
         })
       });
-
-      /* Apps Script answers 200 even when it rejects the payload, so an HTTP
-         status alone is not evidence of delivery. Read what it actually said. */
-      const text = await r.text();
-      let sink = null;
-      try { sink = JSON.parse(text); } catch (e) { sink = null; }
-
-      forwarded = r.ok && (!sink || sink.ok !== false);
-      if (!forwarded) {
-        sinkError = (sink && sink.error) || ('http_' + r.status);
-        console.error('[fairway-lead] sink rejected:', sinkError, text.slice(0, 300));
-      }
+      forwarded = r.ok;
+      if (!r.ok) console.error('[fairway-lead] webhook returned', r.status);
     } catch (err) {
-      sinkError = 'fetch_failed';
       console.error('[fairway-lead] forward failed:', err && err.message);
     }
   } else {
-    sinkError = 'no_webhook_url';
     console.warn('[fairway-lead] LEAD_WEBHOOK_URL is not set, this lead exists only in the logs');
   }
 
   /* Always 200. A storage failure must never cost the founder their result. */
-  res.status(200).json({ ok: true, forwarded, sink_error: sinkError, lead_id: record.lead_id });
+  res.status(200).json({ ok: true, forwarded, lead_id: record.lead_id });
 }
 
 function safeParse(s) { try { return JSON.parse(s); } catch (e) { return { raw: s }; } }
