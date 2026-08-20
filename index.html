@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- ================= SCREEN 1: START ================= -->
 <div class="screen active" id="screen-hero">
 
   <nav class="nav">
@@ -32,6 +33,7 @@
     </div>
   </div>
 
+  <!-- VALUE PROPOSITION -->
   <div class="section">
     <div class="wrap">
       <p class="eyebrow">What the nine questions buy you</p>
@@ -64,6 +66,7 @@
     </div>
   </div>
 
+  <!-- CREDIBILITY -->
   <div class="section alt">
     <div class="wrap">
       <p class="eyebrow">Who reviews it</p>
@@ -101,6 +104,7 @@
   </footer>
 </div>
 
+<!-- ================= SCREEN 2: QUIZ ================= -->
 <div class="screen" id="screen-quiz">
   <nav class="nav">
     <div class="nav-inner">
@@ -136,27 +140,79 @@
 
       <div class="q-block" data-step="3">
         <h2 class="q-title">What is your current monthly revenue?</h2>
-        <div class="opt-grid">
-          <button class="opt" onclick="answer('revenue','Pre-revenue')">Pre-revenue</button>
-          <button class="opt" onclick="answer('revenue','Under $10k/mo')">Under $10k/mo</button>
-          <button class="opt" onclick="answer('revenue','$10k–$50k/mo')">$10k–$50k/mo</button>
-          <button class="opt" onclick="answer('revenue','$50k–$150k/mo')">$50k–$150k/mo</button>
-          <button class="opt" onclick="answer('revenue','$150k+/mo')">$150k+/mo</button>
+        <p class="q-help">Exact, not a band. A band of $50k to $150k is a three times spread in ARR before any multiple touches it, which makes the answer wider than the method it came from.</p>
+
+        <div class="num-row">
+          <select class="field field-cur" id="rev-currency" onchange="onCurrency()" aria-label="Reporting currency">
+            <option value="USD">USD $</option>
+            <option value="GBP">GBP £</option>
+            <option value="EUR">EUR €</option>
+            <option value="CAD">CAD $</option>
+            <option value="AUD">AUD $</option>
+            <option value="CHF">CHF</option>
+            <option value="SEK">SEK kr</option>
+            <option value="NOK">NOK kr</option>
+            <option value="DKK">DKK kr</option>
+            <option value="SGD">SGD $</option>
+            <option value="HKD">HKD $</option>
+            <option value="JPY">JPY ¥</option>
+            <option value="INR">INR ₹</option>
+            <option value="AED">AED</option>
+            <option value="SAR">SAR</option>
+            <option value="ILS">ILS ₪</option>
+            <option value="ZAR">ZAR R</option>
+            <option value="BRL">BRL R$</option>
+            <option value="MXN">MXN $</option>
+            <option value="PLN">PLN zł</option>
+          </select>
+          <input class="field field-num" id="rev-exact" type="number" inputmode="numeric" min="0" step="500"
+                 placeholder="Monthly revenue" oninput="onRevType()" aria-label="Monthly revenue, exact">
+          <span class="unit">per month</span>
         </div>
+        <input class="slider" id="rev-slider" type="range" min="0" max="100" value="0" step="1"
+               oninput="onRevSlide()" aria-label="Monthly revenue slider">
+        <p class="slider-read" id="rev-read">Type the number or drag the slider.
+          <button type="button" class="link-btn" onclick="setPreRevenue()">We are pre-revenue</button>
+        </p>
+
+        <div id="rev-followups" style="display:none;">
+          <hr class="q-rule">
+          <label class="field-label" for="rec-slider">How much of that recurs without a new sale?
+            <span class="optional" id="rec-read">50% recurring</span>
+          </label>
+          <input class="slider" id="rec-slider" type="range" min="0" max="100" value="50" step="5"
+                 oninput="onRecurring()" aria-label="Percentage of revenue that is recurring">
+          <p class="q-help">Contracted or subscription revenue that renews on its own. This decides whether you are priced against software or against services, and the gap between those two multiple sets is usually larger than anything else on this page.</p>
+
+          <label class="field-label">How is the revenue generated?</label>
+          <div class="chip-wrap" id="model-chips"></div>
+        </div>
+
+        <button class="btn" style="width:100%; margin-top:18px;" onclick="submitRevenue()">Continue</button>
       </div>
 
       <div class="q-block" data-step="4">
-        <h2 class="q-title">How would you describe your growth?</h2>
-        <div class="opt-grid" id="growth-grid">
-          <button class="opt" onclick="pickGrowth('Early / pre-traction')">Early / pre-traction</button>
-          <button class="opt" onclick="pickGrowth('Steady, under 15%/mo')">Steady, under 15%/mo</button>
-          <button class="opt" onclick="pickGrowth('Fast, 15%+/mo')">Fast, 15%+/mo</button>
+        <h2 class="q-title">How fast is revenue growing?</h2>
+        <p class="q-help">Growth is the strongest single input into the multiple, which makes this the number that moves your range most. Month on month, averaged over the last three months.</p>
+
+        <div class="num-row">
+          <input class="field field-num" id="growth-exact" type="number" step="0.5" min="-50" max="100"
+                 placeholder="e.g. 12" oninput="onGrowthType()" aria-label="Monthly revenue growth, percent">
+          <span class="unit">% per month</span>
         </div>
+        <input class="slider" id="growth-slider" type="range" min="-20" max="60" value="0" step="0.5"
+               oninput="onGrowthSlide()" aria-label="Monthly growth slider">
+        <p class="slider-read" id="growth-read">Type the number or drag the slider.
+          <button type="button" class="link-btn" onclick="setPreTraction()">Too early to measure</button>
+        </p>
+        <p class="q-annual" id="growth-annual"></p>
+
         <div id="growth-detail-wrap" style="display:none; margin-top:16px;">
-          <label class="field-label" for="growth-detail">Anything worth adding? <span class="optional">Optional. Actual numbers help.</span></label>
-          <textarea class="field" id="growth-detail" placeholder="e.g. 11% MoM for six months, but two enterprise deals distort Q2. Net revenue retention 118%."></textarea>
-          <button class="btn" style="width:100%;" onclick="submitGrowth()">Continue</button>
+          <label class="field-label" for="growth-detail">Anything that distorts the trend? <span class="optional">Optional, and it is read by a human.</span></label>
+          <textarea class="field" id="growth-detail" placeholder="e.g. two enterprise deals landed in the same month, so the three month average flatters us. Net revenue retention 118%."></textarea>
         </div>
+
+        <button class="btn" style="width:100%; margin-top:16px;" onclick="submitGrowth()">Continue</button>
       </div>
 
       <div class="q-block" data-step="5">
@@ -225,6 +281,7 @@
   </div>
 </div>
 
+<!-- ================= SCREEN 3: RESULT ================= -->
 <div class="screen" id="screen-result">
   <nav class="nav">
     <div class="nav-inner">
@@ -256,6 +313,13 @@
         <p>Narrow the range and answer the pushback.
           <small>The full report, reviewed by the team, back within 48 hours.</small></p>
         <a href="#unlock" id="cta-bar-link">Full report, $750</a>
+      </div>
+
+      <div class="list-card" id="drivers-card">
+        <h2 id="drivers-title">What moves your valuation</h2>
+        <p class="lead" id="drivers-lead">Not a general list. These are the levers that price a company of your sector, stage, size and revenue model, in the order they matter for you.</p>
+        <div id="drivers-list"></div>
+        <p class="list-foot" id="drivers-foot"></p>
       </div>
 
       <div class="list-card">
