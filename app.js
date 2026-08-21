@@ -1,5 +1,6 @@
 /* Fairway landing funnel. Config first, then data, then flow.
- * The valuation content layer lives in drivers.js, which loads after this file. */
+ * The valuation content layer lives in drivers.js and the football field in field.js,
+ * both of which load after this file. */
 
 const CONFIG = {
   stripeLink: 'https://buy.stripe.com/bJe6oG3Xf5Tp1Sf1n1cjS00',
@@ -347,8 +348,10 @@ function setPreRevenue() {
    conversion anywhere and nothing to get wrong. Correctable next to the range. */
 function setCurrency(code, source) {
   responses.currency = CURRENCY_SYMBOL[code] ? code : 'USD';
-  const prefix = document.getElementById('rev-cur-prefix');
-  if (prefix) prefix.textContent = curSymbol().trim() || responses.currency;
+  ['rev-cur-prefix', 'ebitda-cur-prefix'].forEach(function (id) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = curSymbol().trim() || responses.currency;
+  });
   const sel = document.getElementById('range-currency');
   if (sel) sel.value = responses.currency;
   if (source !== 'boot') track('currency_set', { currency: responses.currency, source: source });
@@ -591,7 +594,10 @@ function monthsSince(ym) {
 }
 
 async function applyNarrowing() {
-  onGrossMargin(); onLastRound();
+  /* The margin slider always has a value, so it must only count once the founder has
+     actually moved it. onGrossMargin fires on input and nowhere else, deliberately.
+     The other two read empty fields as null, so they are safe to call here. */
+  onLastRound(); onEbitda();
   const btn = document.getElementById('narrow-btn');
   btn.disabled = true; btn.textContent = 'Recalculating';
 
@@ -624,6 +630,7 @@ async function applyNarrowing() {
     track('narrowing_applied', {
       has_margin: responses.gross_margin != null,
       has_last_round: responses.last_round_value != null,
+      has_ebitda: responses.ebitda_ltm != null,
       narrowed: tighter > 0
     });
   } catch (e) {
@@ -633,6 +640,18 @@ async function applyNarrowing() {
   renderResult(after);
   btn.disabled = false; btn.textContent = 'Update my range';
   document.getElementById('narrow-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function onEbitda() {
+  const v = parseFloat(document.getElementById('ebitda-ltm').value);
+  responses.ebitda_ltm = isNaN(v) ? null : v;
+  const help = document.getElementById('ebitda-help');
+  if (!help) return;
+  if (responses.ebitda_ltm !== null && responses.ebitda_ltm <= 0) {
+    help.textContent = 'Negative or zero EBITDA means an EBITDA multiple does not apply, and no honest field would draw the line. It still goes to the reviewer, because burn against growth is its own argument.';
+  } else if (responses.ebitda_ltm > 0) {
+    help.textContent = 'Positive EBITDA gives you a second independent lens, and investors will run it whether or not you do. It does not change the free range above. The line and its peer set are in the report.';
+  }
 }
 
 /* ---------------- result ---------------- */
@@ -691,22 +710,14 @@ function computeResult() {
 
   let mid = base;
 
-  /* A last round is the strongest anchor available, carried forward in line with the
-     founder's own revenue growth, which is the argument they will make in the room. */
+  /* The last round is a MARKER, not an input. It is plotted as a point on the field so
+     the founder can see where they were priced against where the methods land, and it
+     touches no calculation anywhere. Carrying it forward and blending it would be us
+     deciding the answer from the last answer, which is the thing a football field
+     exists to avoid. */
   const lrValue = responses.last_round_value;
+  const markerM = lrValue > 0 ? lrValue / 1e6 : null;
   const months = monthsSince(responses.last_round_date);
-  let anchorM = null;
-  if (lrValue > 0 && months !== null) {
-    const gm2 = (responses.growth_exact === null || responses.growth_exact === undefined) ? 0 : responses.growth_exact;
-    const revenueFactor = Math.pow(1 + Math.max(0, gm2) / 100, months);
-    /* Value does not track revenue one for one, because the multiple compresses as
-       you scale. The 0.75 exponent damps for that, and the 4x cap is a guard rail
-       rather than the mechanism. Both are stated on screen. */
-    const carried = Math.min(4, Math.pow(revenueFactor, 0.75));
-    anchorM = (lrValue / 1e6) * carried;
-    mid = 0.6 * base + 0.4 * anchorM;
-    spreadLow = Math.max(spreadLow, 0.9); spreadHigh = Math.min(spreadHigh, 1.35);
-  }
 
   const low = mid * spreadLow;
   const high = mid * spreadHigh;
@@ -723,9 +734,13 @@ function computeResult() {
        Illustration on a doubling assumption, not a forecast. */
     futureValue: ((dilLow - dilHigh) / 100) * CONFIG.valuationGrowth12m * (mid + raise),
     /* Surfaced so the copy can say what the range is standing on. */
-    anchorM: anchorM,
     usedMargin: gm !== null && gm !== undefined,
-    monthsSinceRound: months
+    /* Marker only. Never read by any calculation above. */
+    markerM: markerM,
+    monthsSinceRound: months,
+    /* EBITDA multiple is a locked row, and only exists when the founder gave a
+       positive figure. It does not touch the free ranges. */
+    ebitdaM: (responses.ebitda_ltm > 0) ? responses.ebitda_ltm / 1e6 : null
   };
 }
 
@@ -754,24 +769,24 @@ function renderResult(r) {
   document.getElementById('range-output').textContent = money(r.low) + ' – ' + money(r.high);
   document.getElementById('range-stage-sector').textContent = (responses.stage || 'your stage') + ' · ' + sectorLabel;
 
-  const built = [];
-  if (r.usedMargin) built.push('your gross margin');
-  if (r.anchorM) {
-    built.push('your last round carried forward ' + r.monthsSinceRound + ' months in line with revenue, damped for multiple compression, weighted 40%');
-  }
   const note = document.getElementById('range-note');
-  if (built.length && note) {
-    const lastM = responses.last_round_value ? responses.last_round_value / 1e6 : null;
-    let verdict = 'Still a first pass. The reviewer replaces it.';
-    if (lastM) {
-      if (r.high < lastM) {
-        verdict = 'Said plainly: the whole of this range sits below your last round, so on these inputs you would be pricing a down round. That is the argument to prepare for rather than to discover in the meeting.';
-      } else if (r.mid < lastM * 1.1) {
-        verdict = 'Said plainly: the middle of this range is roughly where your last round was, so you are arguing for a flat round unless something has changed that these inputs cannot see. That is what the reviewer will look for.';
-      }
+  if (note) {
+    const bits = [];
+    if (r.usedMargin) bits.push('Gross margin is in this range.');
+    if (r.markerM) {
+      /* The marker is a comparison, never an input, so the copy compares rather than
+         explains. What it says is the whole point of plotting it. */
+      bits.push(r.high < r.markerM
+        ? 'Your last round sits above the whole of this range, so on these inputs you would be pricing a down round. Better to know now than in the meeting.'
+        : (r.low > r.markerM
+          ? 'Your last round sits below this range, which is the up round you are arguing for. The report is where that argument gets evidenced.'
+          : 'Your last round sits inside this range, so you are arguing for a flat to modest up round unless something has changed that these inputs cannot see.'));
     }
-    note.textContent = 'Built on ' + built.join(', ') + '. ' + verdict;
+    if (!bits.length) bits.push('First pass. The reviewer replaces it.');
+    note.textContent = bits.join(' ');
   }
+
+  renderField(r);
 
   const points = r.dilLow - r.dilHigh;
   const spread = r.high - r.low;
