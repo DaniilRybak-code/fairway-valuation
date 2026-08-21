@@ -7,6 +7,7 @@
 <meta name="description" content="Every method that prices your startup, the reference metrics behind each one and where each metric came from, the concerns investors will raise, and the funds backing this profile. Reviewed by former bulge bracket bankers. Free.">
 <link rel="stylesheet" href="/shared.css">
 <link rel="stylesheet" href="/result-metrics.css">
+<link rel="stylesheet" href="/showcase.css">
 </head>
 <body>
 
@@ -31,6 +32,101 @@
         <span>Completely free</span>
         <span>Every number shows its source</span>
       </div>
+    </div>
+  </div>
+
+  <!-- ================= SHOWCASE: the finished field, before the quiz ================= -->
+  <div class="showcase">
+    <div class="showcase-inner">
+
+      <div class="showcase-copy">
+        <p class="eyebrow">What you get</p>
+        <h2>Every number on it, reproducible with a calculator</h2>
+        <p>A valuation is not one figure. It is a set of methods that disagree, and the argument you have with an investor is about which one they are using. So we show all of them, side by side, with the metric each one prices and the multiple each one applies.</p>
+        <p>Take any row. Multiply the reference metric by the multiple range next to it. You get the bar. There is nothing else in there.</p>
+        <ul class="showcase-points">
+          <li><span class="pt">01</span><span><strong>The multiples are sourced, not typed in</strong><span class="sub">Tap any figure and it names the publication and the date it came from.</span></span></li>
+          <li><span class="pt">02</span><span><strong>The comparable set is chosen for your business</strong><span class="sub">Read from what you actually do, not from the sector box you ticked. The peers are named.</span></span></li>
+          <li><span class="pt">03</span><span><strong>What we cannot source, we do not draw</strong><span class="sub">A locked row says what it needs. No calculator prints a number it cannot defend.</span></span></li>
+          <li><span class="pt">04</span><span><strong>A person checks it</strong><span class="sub">A former bulge bracket banker reads every one and emails you where inside these methods you actually sit.</span></span></li>
+        </ul>
+        <div class="showcase-cta"><button class="btn" onclick="startQuiz()">Build mine, four minutes</button></div>
+      </div>
+
+      <div class="showcase-panel" id="showcase-panel">
+        <div class="showcase-frame">
+          <div class="showcase-head">
+            <div>
+              <div class="co">Northsteer <span class="showcase-tag">Example</span></div>
+              <div class="meta">Seed &middot; B2B SaaS &middot; &pound;50k MRR, &pound;0.60m ARR &middot; grew 74%, plans 60%</div>
+            </div>
+            <div class="meta">Implied pre-money, &pound;m</div>
+          </div>
+
+          <div style="overflow-x:auto;">
+          <table class="ex-grid">
+            <thead>
+              <tr>
+                <th>Method</th><th>Reference metric</th><th>Multiple</th><th class="th-track">Implied</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="ex-row">
+                <td class="r-name">Last round<small>marker only</small></td>
+                <td class="r-met">&pound;4.0m pre, Mar 25</td>
+                <td class="r-mult">&mdash;</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-dot" style="left:7.7%"></div><div class="ex-val" style="left:7.7%">4.0</div></div></td>
+              </tr>
+              <tr class="ex-row">
+                <td class="r-name">Unrefined range<small>listed sector aggregate</small></td>
+                <td class="r-met">ARR 0.60 &middot; NTM 0.78</td>
+                <td class="r-mult">11.4x</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-bar soft" style="left:50.8%;width:32.3%"></div><div class="ex-val" style="left:50.8%">6.8 &ndash; 8.9</div></div></td>
+              </tr>
+              <tr class="ex-row">
+                <td class="r-name">NTM revenue<small>12 core peers</small></td>
+                <td class="r-met">&pound;0.78m</td>
+                <td class="r-mult">6.2x &ndash; 9.2x</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-bar" style="left:20.0%;width:36.9%"></div><div class="ex-val" style="left:20.0%">4.8 &ndash; 7.2</div></div></td>
+              </tr>
+              <tr class="ex-row">
+                <td class="r-name">ARR, month 12<small>same peers</small></td>
+                <td class="r-met">&pound;0.96m</td>
+                <td class="r-mult">5.4x &ndash; 8.0x</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-bar" style="left:26.2%;width:38.5%"></div><div class="ex-val" style="left:26.2%">5.2 &ndash; 7.7</div></div></td>
+              </tr>
+              <tr class="ex-row">
+                <td class="r-name">Growth-adjusted<small>fitted on the peer set</small></td>
+                <td class="r-met">&pound;0.78m</td>
+                <td class="r-mult">7.6x &ndash; 8.6x</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-bar" style="left:36.9%;width:12.3%"></div><div class="ex-val" style="left:36.9%">5.9 &ndash; 6.7</div></div></td>
+              </tr>
+              <tr class="ex-row">
+                <td class="r-name">Discounted cash flow<small>peer beta, relevered</small></td>
+                <td class="r-met">Plan, 11.4% WACC</td>
+                <td class="r-mult">&mdash;</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-bar" style="left:30.8%;width:29.2%"></div><div class="ex-val" style="left:30.8%">5.5 &ndash; 7.4</div></div></td>
+              </tr>
+              <tr class="ex-row">
+                <td class="r-name">Private rounds<small>9 matched precedents</small></td>
+                <td class="r-met">&pound;0.78m</td>
+                <td class="r-mult">7.5x &ndash; 12.0x</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-bar" style="left:36.9%;width:53.8%"></div><div class="ex-val" style="left:36.9%">5.9 &ndash; 9.4</div></div></td>
+              </tr>
+              <tr class="ex-row">
+                <td class="r-name">Reviewer band<small>the banker&rsquo;s read</small></td>
+                <td class="r-met">All of the above</td>
+                <td class="r-mult">&mdash;</td>
+                <td class="r-track"><div class="ex-bar-wrap"><div class="ex-axis"></div><div class="ex-bar band" style="left:38.5%;width:23.1%"></div><div class="ex-val" style="left:38.5%">6.0 &ndash; 7.5</div></div></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+
+          <p class="showcase-foot"><strong>Check it yourself.</strong> &pound;0.78m of next-twelve-months revenue at 6.2x is &pound;4.8m; at 9.2x it is &pound;7.2m. That is the third row. Every other row works the same way. Northsteer is an illustration, the arithmetic is not.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -197,7 +293,7 @@
 
       <div class="q-block" data-step="4">
         <h2 class="q-title">How much has revenue grown over the last twelve months?</h2>
-        <p class="q-help">Compare revenue now against revenue a year ago. A trailing rate is a fact, where a monthly rate is an estimate, and it is the basis every forward multiple on the next screen is built on.</p>
+        <p class="q-help">Two numbers: what you actually did, and what you plan to do. The forward multiples on the next screen are built from your plan, as you give it.</p>
 
         <div class="num-row">
           <input class="field field-num" id="growth-exact" type="number" step="1" min="-90" max="1000"
@@ -221,6 +317,23 @@
           <label class="field-label" for="growth-detail">Anything that distorts the trend? <span class="optional">Optional, and it is read by a human.</span></label>
           <textarea class="field" id="growth-detail" placeholder="e.g. two enterprise deals landed late in the year, so the trailing figure flatters us. Net revenue retention 118%."></textarea>
         </div>
+
+        <hr class="q-rule">
+
+        <label class="field-label" for="plan-exact">And what do you plan for the next twelve months?
+          <span class="optional">Your forecast, used exactly as you give it. We apply no haircut and no coefficient of our own to it.</span>
+        </label>
+        <div class="num-row">
+          <input class="field field-num" id="plan-exact" type="number" step="1" min="-90" max="1000"
+                 placeholder="e.g. 90" oninput="onPlanType()" aria-label="Planned revenue growth for the next twelve months, percent">
+          <span class="unit">% next year</span>
+        </div>
+        <input class="slider" id="plan-slider" type="range" min="-50" max="400" value="0" step="5"
+               oninput="onPlanSlide()" aria-label="Planned growth slider">
+        <p class="slider-read" id="plan-read">Type the number or drag the slider.
+          <button type="button" class="link-btn" onclick="clearPlan()">Use my last twelve months instead</button>
+        </p>
+        <p class="q-annual" id="plan-note"></p>
 
         <button class="btn" style="width:100%; margin-top:16px;" onclick="submitGrowth()">Continue</button>
       </div>
@@ -327,7 +440,7 @@
 
       <div class="list-card" id="ff-card">
         <h2>Every method, and what each one says</h2>
-        <p class="lead">A valuation is not one number, it is a set of methods that disagree. Each row below is one of them, with the reference metric it prices and the source behind that metric. Tap any metric to see exactly where it came from. Rows marked in build are being wired to live comparable-company data now, and they say so rather than pretending to be a paywall.</p>
+        <p class="lead">A valuation is not one number, it is a set of methods that disagree. Each row below is one of them, with the reference metric it prices and the source behind that metric. Multiply the metric by the multiple and you get the bar. Tap any metric to see exactly where it came from. Rows marked in build are being wired to live comparable-company data now, and they say so rather than pretending to be a paywall.</p>
         <div class="ff" id="ff"></div>
       </div>
 
@@ -499,12 +612,16 @@
           <p>Because we would have to invent it. A headline range that is not derived from the methods below is a guess with a font size, and every calculator that prints one is doing exactly that. The methods are the evidence, and a banker's read on where inside them you sit is what comes back by email.</p>
         </div>
         <div class="faq-item">
+          <h3>Do you adjust my growth rate?</h3>
+          <p>No. You give us two numbers, what you grew last year and what you plan for next year, and the forward figures are built from your plan exactly as you gave it. There is no haircut and no coefficient of ours anywhere in the arithmetic. That also means the plan has to survive the meeting on your evidence, which is the conversation the reviewer will have with you.</p>
+        </div>
+        <div class="faq-item">
           <h3>Where do your numbers come from?</h3>
-          <p>Tap any reference metric on the field and it tells you, with the publication and the date. Listed sector multiples come from Damodaran at NYU Stern, stage medians from Carta, exchange rates from the ECB, and the growth persistence factor from Point Nine's published work. Anything we cannot source is drawn locked rather than filled in with something plausible.</p>
+          <p>Tap any reference metric on the field and it tells you, with the publication and the date. Listed sector multiples come from Damodaran at NYU Stern, stage medians from Carta, exchange rates from the ECB. Anything we cannot source is drawn locked rather than filled in with something plausible.</p>
         </div>
         <div class="faq-item">
           <h3>Why are some rows marked in build?</h3>
-          <p>Because they are. Those rows will be priced from a live set of comparable companies chosen for your business, refreshed nightly, with every peer named on hover. Until that is wired up they show the metric they will price rather than a number we made up. We would rather tell you than fill the gap.</p>
+          <p>Because they are. Those rows will be priced from a live set of comparable companies chosen for your business, with every peer named on hover. Until that is wired up they show the metric they will price rather than a number we made up. We would rather tell you than fill the gap.</p>
         </div>
         <div class="faq-item">
           <h3>Who sees my numbers?</h3>
@@ -527,6 +644,7 @@
   </footer>
 </div>
 
+<script src="/data-content.js"></script>
 <script src="/app-growth.js"></script>
 <script src="/app.js"></script>
 <script src="/data-public-comps.js"></script>
@@ -535,5 +653,6 @@
 <script src="/app-result.js"></script>
 <script src="/app-site.js"></script>
 <script src="/reveal-client.js"></script>
+<script src="/showcase.js"></script>
 </body>
 </html>
