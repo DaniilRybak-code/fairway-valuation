@@ -1,6 +1,7 @@
 /* Fairway landing funnel. Config first, then data, then flow.
  * The valuation content layer lives in drivers.js and the football field in field.js,
- * both of which load after this file. */
+ * both of which load after this file. Growth and the forward revenue bridge live in
+ * app-growth.js, which loads before it; the result-screen metrics in app-result.js. */
 
 const CONFIG = {
   stripeLink: 'https://buy.stripe.com/bJe6oG3Xf5Tp1Sf1n1cjS00',
@@ -139,9 +140,9 @@ const FIX_BY_REVENUE = {
 };
 
 const FIX_BY_GROWTH = {
-  'Early / pre-traction': { title: 'The team is currently the only asset being priced.', body: 'Pre-traction ranges are argued on founder-market fit and on what the first 90 days after close will prove. Both need to be explicit and dated, or the range defaults to the bottom of the band.' },
-  'Steady, under 15%/mo': { title: 'This growth rate will be read as a market-size problem.', body: 'Steady growth invites the question of whether the ceiling is low. The answer is a segment-level breakdown showing where growth is constrained by your capacity rather than by demand.' },
-  'Fast, 15%+/mo': { title: 'This growth is probably being attributed to one channel.', body: 'Fast growth gets discounted when it looks like a single acquisition channel that will saturate. Two channels with independent payback curves removes the discount.' }
+  'Too early to measure': { title: 'The team is currently the only asset being priced.', body: 'Pre-traction ranges are argued on founder-market fit and on what the first 90 days after close will prove. Both need to be explicit and dated, or the range defaults to the bottom of the band.' },
+  'Growing, under 100% a year': { title: 'This growth rate will be read as a market-size problem.', body: 'Steady growth invites the question of whether the ceiling is low. The answer is a segment-level breakdown showing where growth is constrained by your capacity rather than by demand.' },
+  'Growing, 100% or more a year': { title: 'This growth is probably being attributed to one channel.', body: 'Fast growth gets discounted when it looks like a single acquisition channel that will saturate. Two channels with independent payback curves removes the discount.' }
 };
 
 const FIX_BY_PROFIT = {
@@ -169,20 +170,20 @@ const hooks = {
   frustration: {
     kicker: 'For founders raising in the next 90 days',
     headline: 'You know what your company is worth. The hard part is proving it in the room.',
-    sub: 'Every investor pushes back on the number. Answer nine quick questions and get an indicative pre-money range, the specific concerns that will be raised against it, and the funds actively backing this profile. Checked by hand before it reaches you.',
+    sub: 'Every investor pushes back on the number. Answer nine quick questions and see every method that prices your company, the reference metrics behind each one, the concerns that will be raised, and the funds actively backing this profile. Checked by hand before it reaches you.',
     cta: 'Start the quiz'
   },
   readiness: {
     kicker: 'Before your next raise',
     headline: 'Are you actually ready to defend your valuation?',
-    sub: 'Nine questions, four minutes. You get an indicative pre-money range, the three concerns investors will raise against it, and the funds writing cheques into your sector right now. Reviewed by former bulge bracket bankers.',
+    sub: 'Nine questions, four minutes. You get the football field a banker would build, the three concerns investors will raise against it, and the funds writing cheques into your sector right now. Reviewed by former bulge bracket bankers.',
     cta: 'Find out in four minutes'
   },
   reveal: {
     kicker: 'The number problem',
     headline: 'Two founders with the same metrics raise at $2M and $4M.',
-    sub: 'The difference is rarely the business. It is whether the number survives being pushed on. Nine questions gets you the range, the concerns coming at it, and a banker review of both.',
-    cta: 'Show me my range'
+    sub: 'The difference is rarely the business. It is whether the number survives being pushed on. Nine questions gets you every method that prices you, the concerns coming at it, and a banker review of both.',
+    cta: 'Show me the methods'
   }
 };
 
@@ -300,11 +301,8 @@ function revenueBand(monthly) {
   return '$150k+/mo';
 }
 
-function growthBand(pct) {
-  if (pct === null || pct === undefined) return 'Early / pre-traction';
-  if (pct < 15) return 'Steady, under 15%/mo';
-  return 'Fast, 15%+/mo';
-}
+/* growthBand, GROWTH_PERSISTENCE and forwardAnnualGrowth live in app-growth.js,
+   which loads before this file. */
 
 function fmtPlain(n) {
   return curSymbol() + Math.round(n).toLocaleString('en-GB');
@@ -344,7 +342,7 @@ function setPreRevenue() {
 }
 
 /* Currency is guessed from the edge and then shown, at the revenue question and
-   again beside the range, because nobody converts their own revenue into a
+   again beside the metrics, because nobody converts their own revenue into a
    currency the page picked for them. Both selectors stay in step. */
 function setCurrency(code, source) {
   responses.currency = CURRENCY_SYMBOL[code] ? code : 'USD';
@@ -362,7 +360,7 @@ function onCurrencyChange(el) {
   paintRevenue(responses.revenue_exact || 0, null);
   if (lastResult) renderResult(lastResult);
 }
-/* Kept so an older cached page does not break on the range selector. */
+/* Kept so an older cached page does not break on the selector. */
 function onCurrency() {
   const el = document.getElementById('range-currency');
   if (el) onCurrencyChange(el);
@@ -445,6 +443,7 @@ function showGrowthBands() {
 }
 function pickGrowthBand(band) {
   responses.growth = band;
+  responses.growth_yoy = null;
   responses.growth_exact = null;
   document.getElementById('growth-detail-wrap').style.display = 'block';
   track('quiz_answer', { step: 4, key: 'growth', value: band, exact: null, fallback: true });
@@ -462,18 +461,19 @@ function submitRevenue() {
   currentStep = 4; renderStep();
 }
 
-/* ---------------- growth, exact ---------------- */
+/* ---------------- growth, year on year ---------------- */
 
 function paintGrowth(pct, source) {
+  responses.growth_yoy = pct;
   responses.growth_exact = pct;
   responses.growth = growthBand(pct);
   if (source !== 'type') document.getElementById('growth-exact').value = pct;
   if (source !== 'slide') document.getElementById('growth-slider').value = pct;
-  const annual = (Math.pow(1 + pct / 100, 12) - 1) * 100;
   document.getElementById('growth-read').innerHTML =
-    '<strong>' + pct + '% a month.</strong> <button type="button" class="link-btn" onclick="setPreTraction()">Too early to measure</button>';
+    '<strong>' + pct + '% over the last twelve months.</strong> <button type="button" class="link-btn" onclick="setPreTraction()">Too early to measure</button>';
+  const fwd = Math.max(-50, pct * GROWTH_PERSISTENCE);
   document.getElementById('growth-annual').textContent = pct > 0
-    ? 'Held for twelve months that compounds to about ' + Math.round(annual) + '% a year, which is the figure the multiple is read against.'
+    ? 'We carry that forward at ' + Math.round(fwd) + '%, not at ' + Math.round(pct) + '%. Growth decelerates, and the haircut is the 0.75 persistence factor Point Nine measured across early-stage SaaS. You will see the working on the result screen.'
     : (pct < 0 ? 'Revenue is contracting. That is priced, and the report is where it gets explained rather than hidden.' : '');
   document.getElementById('growth-detail-wrap').style.display = 'block';
 }
@@ -481,14 +481,15 @@ function paintGrowth(pct, source) {
 function onGrowthType() {
   const v = parseFloat(document.getElementById('growth-exact').value);
   if (isNaN(v)) return;
-  paintGrowth(Math.max(-50, Math.min(100, v)), 'type');
+  paintGrowth(Math.max(-90, Math.min(1000, v)), 'type');
 }
 function onGrowthSlide() {
   paintGrowth(parseFloat(document.getElementById('growth-slider').value), 'slide');
 }
 function setPreTraction() {
+  responses.growth_yoy = null;
   responses.growth_exact = null;
-  responses.growth = 'Early / pre-traction';
+  responses.growth = 'Too early to measure';
   document.getElementById('growth-exact').value = '';
   document.getElementById('growth-annual').textContent = '';
   document.getElementById('growth-read').innerHTML =
@@ -497,11 +498,11 @@ function setPreTraction() {
 }
 
 function submitGrowth() {
-  if (!responses.growth) responses.growth = 'Early / pre-traction';
+  if (!responses.growth) responses.growth = 'Too early to measure';
   responses.growth_detail = document.getElementById('growth-detail').value.trim() || null;
   track('quiz_answer', {
     step: 4, key: 'growth', value: responses.growth,
-    exact: responses.growth_exact, has_detail: !!responses.growth_detail
+    yoy: responses.growth_yoy, has_detail: !!responses.growth_detail
   });
   currentStep = 5; renderStep();
 }
@@ -563,13 +564,12 @@ async function submitLead() {
     track('lead_post_failed', {});
   }
   renderResult(result);
-  btn.disabled = false; btn.textContent = 'Show me my range';
+  btn.disabled = false; btn.textContent = 'Show me the methods';
 }
 
 /* ---------------- optional enrichment on the result screen ----------------
-   Everything here is optional, free and ungated. Each field removes a reason the
-   range is wide, and the narrowing happens in front of the founder rather than
-   being promised in an email. */
+   Everything here is optional, free and ungated. Each field opens or sharpens a
+   row of the field, in front of the founder rather than promised in an email. */
 
 let lastResult = null;
 
@@ -606,25 +606,17 @@ async function applyNarrowing() {
   const btn = document.getElementById('narrow-btn');
   btn.disabled = true; btn.textContent = 'Recalculating';
 
-  const before = lastResult;
   const after = computeResult();
   lastResult = after;
 
   const foot = document.getElementById('narrow-foot');
-  /* Width measured relative to the mid-point, because that is what precision means
-     here. An absolute spread can widen while the answer gets more precise, simply
-     because the mid-point moved. */
-  const relBefore = before ? (before.high - before.low) / before.mid : null;
-  const relAfter = (after.high - after.low) / after.mid;
-  const tighter = relBefore ? Math.round((1 - relAfter / relBefore) * 100) : 0;
-  if (before) {
-    foot.textContent = 'Was ' + money(before.low) + ' to ' + money(before.high) +
-      '. Now ' + money(after.low) + ' to ' + money(after.high) +
-      (tighter > 0 ? ', and the range is ' + tighter + '% tighter relative to its mid-point.' : '.') +
-      ' What you added goes to the reviewer, so the email you get back is built on it too.';
-  } else {
-    foot.textContent = 'Added and sent to the reviewer.';
-  }
+  const added = [];
+  if (after.usedMargin) added.push('gross margin');
+  if (after.ebitdaM) added.push('EBITDA');
+  if (after.markerM) added.push('your last round');
+  foot.textContent = added.length
+    ? 'Added: ' + added.join(', ') + '. Each one opens or sharpens a row below, and all of it goes to the reviewer, so the email you get back is built on it too.'
+    : 'Added and sent to the reviewer.';
 
   try {
     await fetch(CONFIG.leadEndpoint, {
@@ -636,14 +628,14 @@ async function applyNarrowing() {
       has_margin: responses.gross_margin != null,
       has_last_round: responses.last_round_value != null,
       has_ebitda: responses.ebitda_ltm != null,
-      narrowed: tighter > 0
+      opened: added.length
     });
   } catch (e) {
     console.error('[fairway] enrichment post failed', e);
   }
 
   renderResult(after);
-  btn.disabled = false; btn.textContent = 'Update my range';
+  btn.disabled = false; btn.textContent = 'Update the field';
   document.getElementById('narrow-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
@@ -655,102 +647,18 @@ function onEbitda() {
   if (responses.ebitda_ltm !== null && responses.ebitda_ltm <= 0) {
     help.textContent = 'Negative or zero EBITDA means an EBITDA multiple does not apply, and no honest field would draw the line. It still goes to the reviewer, because burn against growth is its own argument.';
   } else if (responses.ebitda_ltm > 0) {
-    help.textContent = 'Positive EBITDA gives you a second independent lens, and investors will run it whether or not you do. It does not change the free range above. The line and its peer set are in the report.';
+    help.textContent = 'Positive EBITDA gives you a second independent lens, and investors will run it whether or not you do. The line and its peer set are in the report, and it is priced forward like the revenue rows because that is the basis listed companies trade on.';
   }
 }
 
 /* ---------------- result ---------------- */
-/* First-pass range only. Deliberately coarse, and replaced on screen by the engine
-   when it returns a sourced range. Continuous in ARR so that two founders £1 apart do
-   not get different answers, which is what the old bands did. */
-function firstPassRevenueValue(arrM) {
-  if (arrM <= 0) return 0;
-  const pts = [[0, 0], [0.06, 0.4], [0.36, 1.2], [1.2, 3], [2.4, 6], [6, 13]];
-  for (let i = 1; i < pts.length; i++) {
-    if (arrM <= pts[i][0]) {
-      const a = pts[i - 1], b = pts[i];
-      return a[1] + (b[1] - a[1]) * (arrM - a[0]) / (b[0] - a[0]);
-    }
-  }
-  return arrM * 2.2;
-}
-
-function computeResult() {
-  const stageBase = { 'Pre-seed': 1.5, 'Seed': 3.5, 'Series A': 9 }[responses.stage] || 2;
-
-  const monthly = responses.revenue_exact || 0;
-  const arrM = monthly * 12 / 1e6;
-  const revenueBump = monthly > 0
-    ? firstPassRevenueValue(arrM)
-    : ({ 'Pre-revenue': 0, 'Under $10k/mo': 0.4, '$10k–$50k/mo': 1.2, '$50k–$150k/mo': 3, '$150k+/mo': 6 }[responses.revenue] || 0);
-
-  const g = responses.growth_exact;
-  const growthMult = (g === null || g === undefined)
-    ? ({ 'Early / pre-traction': 1, 'Steady, under 15%/mo': 1.15, 'Fast, 15%+/mo': 1.4 }[responses.growth] || 1)
-    : 1 + Math.min(0.55, Math.max(-0.15, g / 100 * 1.6));
-
-  /* Recurring share is applied once, here, rather than also inside the revenue model,
-     so the two do not compound into a discount nobody can trace. */
-  const rec = responses.recurring_pct;
-  const recurringMult = (monthly > 0 && rec !== null && rec !== undefined)
-    ? 0.7 + 0.4 * (rec / 100)
-    : 1;
-
-  const profitMult = { 'Profitable': 1.15, 'Around break-even': 1.05, 'Burning, 12+ months runway': 1, 'Burning, under 12 months runway': 0.9 }[responses.profit] || 1;
-
-  /* Gross margin decides which multiple set you belong to at all. Combined with the
-     recurring share it is floored, so two related discounts cannot compound into a
-     haircut nobody can trace back to a cause. */
-  const gm = responses.gross_margin;
-  const marginMult = (gm === null || gm === undefined) ? 1
-    : (gm < 50 ? 0.75 + 0.005 * gm : Math.min(1.18, 1 + 0.004 * (gm - 50)));
-  const qualityMult = Math.max(0.6, recurringMult * marginMult);
-
-  const base = (stageBase + revenueBump) * growthMult * qualityMult * profitMult;
-
-  /* Each thing we know removes a reason to be wide. Stated here rather than tuned
-     invisibly, because the width is the number founders actually complain about. */
-  let spreadLow = 0.85, spreadHigh = 1.55;
-  if (gm !== null && gm !== undefined) { spreadLow = 0.88; spreadHigh = 1.45; }
-
-  let mid = base;
-
-  /* The last round is a MARKER, not an input. It is plotted as a point on the field so
-     the founder can see where they were priced against where the methods land, and it
-     touches no calculation anywhere. Carrying it forward and blending it would be us
-     deciding the answer from the last answer, which is the thing a football field
-     exists to avoid. */
-  const lrValue = responses.last_round_value;
-  const markerM = lrValue > 0 ? lrValue / 1e6 : null;
-  const months = monthsSince(responses.last_round_date);
-
-  const low = mid * spreadLow;
-  const high = mid * spreadHigh;
-  const raise = RAISE_MIDPOINT[responses.raise] || 1.0;
-  mid = (low + high) / 2;
-  const dilLow = raise / (low + raise) * 100;
-  const dilHigh = raise / (high + raise) * 100;
-
-  return {
-    low: low, high: high, mid: mid, raise: raise,
-    dilLow: dilLow, dilHigh: dilHigh,
-    dilMid: raise / (mid + raise) * 100,
-    /* Computed here rather than in renderResult so that it reaches the leads sheet.
-       Illustration on a doubling assumption, not a forecast. */
-    futureValue: ((dilLow - dilHigh) / 100) * CONFIG.valuationGrowth12m * (mid + raise),
-    /* Surfaced so the copy can say what the range is standing on. */
-    usedMargin: gm !== null && gm !== undefined,
-    /* Marker only. Never read by any calculation above. */
-    markerM: markerM,
-    monthsSinceRound: months,
-    /* EBITDA multiple is a locked row, and only exists when the founder gave a
-       positive figure. It does not touch the free ranges. */
-    ebitdaM: (responses.ebitda_ltm > 0) ? responses.ebitda_ltm / 1e6 : null
-  };
-}
+/* firstPassRevenueValue lived here. It turned ARR into a currency amount for the
+   indicative range, on a curve chosen by us and sourced from nothing. The range
+   is gone, so the curve is gone with it. */
 
 function money(m) {
   const c = curSymbol();
+  if (!m) return c + '0';
   if (m >= 1) return c + m.toFixed(1) + 'M';
   return c + Math.round(m * 1000) + 'k';
 }
@@ -765,53 +673,66 @@ function setItem(prefix, title, body, locked) {
   document.getElementById(prefix + '-body').textContent = body;
 }
 
+function computeResult() {
+  /* This function no longer produces a valuation. It produces the reference
+     metrics that the football field prices, and nothing else.
+
+     The indicative range that used to live here was a chain of coefficients
+     chosen by us, none of them sourced. It has been deleted rather than
+     improved, because a headline number nobody can trace is worse than no
+     headline number. The valuation is implied by the rows. */
+
+  const monthly = responses.revenue_exact || 0;
+  const runRateM = monthly * 12 / 1e6;
+  const fwd = forwardAnnualGrowth();
+
+  const fwdRev = forwardRevenue(monthly, fwd);
+
+  /* The last round is a MARKER. It is plotted so the founder can see where they
+     were priced against where the methods land, and it touches no calculation. */
+  const lrValue = responses.last_round_value;
+
+  return {
+    raise: RAISE_MIDPOINT[responses.raise] || 1.0,
+    runRateM: runRateM,
+    ntmM: fwdRev.ntmM,
+    exitArrM: fwdRev.exitArrM,
+    trailingGrowth: (responses.growth_yoy === null || responses.growth_yoy === undefined) ? null : responses.growth_yoy,
+    forwardGrowth: (fwd === null) ? null : fwd * 100,
+    persistence: GROWTH_PERSISTENCE,
+    recurringPct: (responses.recurring_pct === null || responses.recurring_pct === undefined) ? null : responses.recurring_pct,
+    usedMargin: responses.gross_margin !== null && responses.gross_margin !== undefined,
+    markerM: lrValue > 0 ? lrValue / 1e6 : null,
+    monthsSinceRound: monthsSince(responses.last_round_date),
+    ebitdaM: (responses.ebitda_ltm > 0) ? responses.ebitda_ltm / 1e6 : null
+  };
+}
+
+/* stageAnchorLocal, metricTile, paintMetrics and paintGapCard live in
+   app-result.js, which loads after this file. */
+
 function renderResult(r) {
   lastResult = r;
   const sectorLabel = responses.sector === 'Other'
     ? (responses.sector_detail || 'your sector')
     : (responses.sector || 'your sector');
 
-  document.getElementById('range-output').textContent = money(r.low) + ' – ' + money(r.high);
+  paintMetrics(r);
   document.getElementById('range-stage-sector').textContent = (responses.stage || 'your stage') + ' · ' + sectorLabel;
 
   const note = document.getElementById('range-note');
   if (note) {
-    const bits = [];
-    if (r.usedMargin) bits.push('Gross margin is in this range.');
-    if (r.markerM) {
-      /* The marker is a comparison, never an input, so the copy compares rather than
-         explains. What it says is the whole point of plotting it. */
-      bits.push(r.high < r.markerM
-        ? 'Your last round sits above the whole of this range, so on these inputs you would be pricing a down round. Better to know now than in the meeting.'
-        : (r.low > r.markerM
-          ? 'Your last round sits below this range, which is the up round you are arguing for. The report is where that argument gets evidenced.'
-          : 'Your last round sits inside this range, so you are arguing for a flat to modest up round unless something has changed that these inputs cannot see.'));
-    }
-    if (!bits.length) bits.push('First pass. Every method behind it is set out below, with its sources.');
-    note.textContent = bits.join(' ');
+    note.textContent = 'There is no single headline number here, deliberately. Each method below is a separate piece of evidence with its own sources, and a reviewer’s read on where inside them you actually sit is what comes back by email.';
   }
 
   renderField(r);
 
-  const points = r.dilLow - r.dilHigh;
-  const spread = r.high - r.low;
-  const futureValue = r.futureValue;
-
-  document.getElementById('gap-headline').textContent =
-    'That spread is about ' + points.toFixed(0) + ' points of your company.';
-  document.getElementById('gap-body').textContent =
-    'On a ' + money(r.raise) + ' raise, the bottom of that range costs you ' + r.dilLow.toFixed(1) +
-    '% of the company and the top costs ' + r.dilHigh.toFixed(1) +
-    '%. Nothing about the business changes between those two numbers, only whether you can defend the higher one.';
-  document.getElementById('gap-future').innerHTML =
-    '<strong>In cash terms: if the company is worth twice this valuation in twelve months, those ' +
-    points.toFixed(0) + ' points are worth about ' + money(futureValue) +
-    '.</strong> That is an illustration on a doubling assumption, not a forecast, and it is the reason the number is worth an argument.';
+  paintGapCard(r);
 
   renderDrivers();
 
   const f1 = FIX_BY_REVENUE[responses.revenue] || FIX_BY_REVENUE['Pre-revenue'];
-  const f2 = FIX_BY_GROWTH[responses.growth] || FIX_BY_GROWTH['Early / pre-traction'];
+  const f2 = FIX_BY_GROWTH[responses.growth] || FIX_BY_GROWTH['Too early to measure'];
   const f3 = FIX_BY_PROFIT[responses.profit] || FIX_BY_PROFIT['Burning, 12+ months runway'];
   setItem('fix-1', f1.title, f1.body, false);
   setItem('fix-2', f2.title, f2.body, true);
@@ -822,8 +743,8 @@ function renderResult(r) {
     const el = document.getElementById('concern-echo');
     el.style.display = 'block';
     el.textContent = named.length
-      ? 'You told us investors are pushing on ' + named.join(', ').toLowerCase() + '. That goes to the reviewer with your range, and the report answers those directly alongside the three below.'
-      : 'Your notes are with the reviewer and will shape the range you get back by email.';
+      ? 'You told us investors are pushing on ' + named.join(', ').toLowerCase() + '. That goes to the reviewer with your answers, and the report answers those directly alongside the three below.'
+      : 'Your notes are with the reviewer and will shape what comes back by email.';
     document.getElementById('fix-foot').textContent =
       'These are pattern-level. The report replaces them with concerns drawn from your own numbers.';
   }
@@ -834,12 +755,16 @@ function renderResult(r) {
   document.getElementById('inv-1-name').textContent = list[0].name;
   document.getElementById('inv-1-body').textContent = list[0].note;
 
-  document.getElementById('price-anchor').textContent =
-    'One point of a ' + money(r.mid) + ' company is worth about ' + curSymbol() + Math.round(r.mid * 10000).toLocaleString() + '.';
+  const anchorM = stageAnchorLocal();
+  document.getElementById('price-anchor').textContent = anchorM
+    ? 'One point of a ' + money(anchorM) + ' company, the median post-money at your stage, is worth about ' + curSymbol() + Math.round(anchorM * 10000).toLocaleString() + '.'
+    : 'A single point of the company is usually worth many times what this report costs.';
 
   track('result_view', {
-    low: +r.low.toFixed(2), high: +r.high.toFixed(2), spread: +spread.toFixed(2),
-    dilution_points: +points.toFixed(1), future_value_m: +futureValue.toFixed(2),
+    ntm_revenue_m: (r.ntmM === null || r.ntmM === undefined) ? null : +r.ntmM.toFixed(3),
+    exit_arr_m: (r.exitArrM === null || r.exitArrM === undefined) ? null : +r.exitArrM.toFixed(3),
+    trailing_growth: r.trailingGrowth,
+    forward_growth: r.forwardGrowth === null ? null : Math.round(r.forwardGrowth),
     sector: responses.sector || null, profit: responses.profit || null,
     timing: responses.timing || null, concerns: (responses.concerns || []).length
   });
