@@ -1,21 +1,16 @@
 /* Growth, and the bridge from MRR to the two forward revenue figures.
  *
- * Loaded BEFORE app.js. Kept separate because it is the part of the funnel most
- * likely to be argued about, and it should be readable without scrolling past
- * three hundred lines of investor lists to find it.
+ * Loaded BEFORE app.js.
+ *
+ * There are no coefficients in this file, deliberately. An earlier build applied
+ * a growth persistence factor to haircut the founder's own rate. It was removed:
+ * a number the founder cannot see the reason for is a number they cannot argue
+ * with, and a haircut we impose is our forecast wearing their clothes.
+ *
+ * Instead we ask two questions and use the answers as given. The founder owns
+ * the forward number. Our job is to price it, and to show the reviewer both
+ * figures so they can say whether the plan is credible.
  */
-
-/* Growth persistence: the observed ratio of next year's growth rate to this
-   year's. Point Nine measured a median of 75% across 29 early-stage SaaS
-   companies and 96 data pairs, against 89% for public SaaS (75 companies, 218
-   data pairs, regression slope 0.775) and Scale Venture Partners' 80 to 85%.
-   Our users are the early-stage sample.
-
-   It is applied to a TRAILING twelve-month growth rate, which is what the
-   research measured. It is not applied to a spot monthly rate: that is a
-   different claim, and it is the reason the quiz question changed.
-   https://medium.com/point-nine-news/persistence-and-predictability-of-saas-growth-bd7b90ee20d3 */
-const GROWTH_PERSISTENCE = 0.75;
 
 const GROWTH_BAND_PROXY = {
   'Roughly flat': 0,
@@ -29,23 +24,38 @@ function growthBand(pct) {
   return 'Growing, 100% or more a year';
 }
 
-/* Forward twelve-month growth, as a decimal. Null when we have nothing to go on,
-   which is a state the field draws rather than papers over. */
+/* Forward twelve-month growth, as a decimal.
+ *
+ * The founder's plan if they gave one. Their trailing rate if they did not, and
+ * the page says so on the row rather than passing it off as a forecast. Null
+ * when we have neither, which is a state the field draws rather than papers over. */
 function forwardAnnualGrowth() {
+  const plan = responses.growth_plan;
+  if (plan !== null && plan !== undefined) return Math.max(-0.9, plan / 100);
+
   const y = responses.growth_yoy;
-  if (y === null || y === undefined) {
-    const proxy = GROWTH_BAND_PROXY[responses.growth];
-    if (proxy === undefined) return null;
-    return (proxy / 100) * GROWTH_PERSISTENCE;
-  }
-  return Math.max(-0.5, (y / 100) * GROWTH_PERSISTENCE);
+  if (y !== null && y !== undefined) return Math.max(-0.9, y / 100);
+
+  const proxy = GROWTH_BAND_PROXY[responses.growth];
+  if (proxy === undefined) return null;
+  return proxy / 100;
+}
+
+/* Which of the two the forward figure actually came from, so the row can say it. */
+function forwardGrowthBasis() {
+  if (responses.growth_plan !== null && responses.growth_plan !== undefined) return 'plan';
+  if (responses.growth_yoy !== null && responses.growth_yoy !== undefined) return 'trailing';
+  if (GROWTH_BAND_PROXY[responses.growth] !== undefined) return 'band';
+  return null;
 }
 
 /* NTM revenue is the SUM of the next twelve months, because consensus forward
    revenue is a sum and the two have to be on the same basis to be divided by the
    same multiple. Month-twelve ARR is an exit run-rate and is a different, larger
-   number: at 8% monthly growth the two differ by about 47%, at 15% by 93%.
-   Using one where the other belongs moves a valuation by more than half. */
+   number: at 100% annual growth the two differ by about 40%.
+
+   Both are plain arithmetic on the founder's own two numbers. Anyone with a
+   calculator can reproduce either from what the page shows them. */
 function forwardRevenue(monthlyRevenue, forwardGrowth) {
   if (!(monthlyRevenue > 0)) return { ntmM: null, exitArrM: null };
   const f = (forwardGrowth === null || forwardGrowth === undefined) ? 0 : forwardGrowth;

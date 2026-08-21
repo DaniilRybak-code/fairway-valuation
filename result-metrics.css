@@ -27,3 +27,8 @@
 /* Step 2 website field. Sits above the sector grid so it is answered before the
    click that advances the step, and reads as an offer rather than a data grab. */
 .site-row{ margin:0 0 18px; }
+
+/* An unrefined row is drawn hollow so the eye reads it as provisional against
+   the solid bars of the rows that replace it. */
+.ff-bar.unrefined{ background:transparent; border:1px dashed currentColor; opacity:.6; }
+.lock-tag.unrefined-tag{ opacity:.75; }
