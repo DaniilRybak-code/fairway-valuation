@@ -17,7 +17,8 @@ const FIELDS = [
   'email', 'company', 'phone',
   'stage', 'sector', 'sector_detail',
   'currency', 'revenue', 'revenue_exact_monthly', 'arr_exact', 'recurring_pct', 'revenue_model',
-  'growth', 'growth_pct_monthly', 'growth_detail', 'profitability', 'raise_band', 'timing',
+  'growth', 'growth_pct_monthly', 'growth_detail', 'gross_margin_pct', 'profitability', 'raise_band', 'timing',
+  'last_round_amount', 'last_round_value', 'last_round_type', 'last_round_date',
   'concerns', 'concern_notes', 'context_link',
   'range_low_m', 'range_high_m', 'range_mid_m',
   'dilution_low_pct', 'dilution_high_pct', 'dilution_points', 'future_value_m',
@@ -57,9 +58,15 @@ export default async function handler(req, res) {
     growth: str(body.growth),
     growth_pct_monthly: num(body.growth_exact),
     growth_detail: str(body.growth_detail),
+    gross_margin_pct: num(body.gross_margin),
     profitability: str(body.profit),
     raise_band: str(body.raise),
     timing: str(body.timing),
+
+    last_round_amount: num(body.last_round_amount),
+    last_round_value: num(body.last_round_value),
+    last_round_type: str(body.last_round_type),
+    last_round_date: str(body.last_round_date),
 
     concerns: Array.isArray(body.concerns) ? body.concerns.join('; ') : str(body.concerns),
     concern_notes: str(body.concern_notes || body.notes),
@@ -85,7 +92,7 @@ export default async function handler(req, res) {
     user_agent: header(req, 'user-agent').slice(0, 180),
 
     /* Reviewer workflow columns, filled in by a human in the sheet. */
-    status: body.type === 'partial' ? 'abandoned' : 'new',
+    status: body.type === 'partial' ? 'abandoned' : (body.type === 'enrichment' ? 'enriched' : 'new'),
     reviewer_notes: '',
     sent_at: ''
   };
