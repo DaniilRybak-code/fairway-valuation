@@ -17,11 +17,10 @@ const FIELDS = [
   'email', 'company', 'phone',
   'stage', 'sector', 'sector_detail',
   'currency', 'revenue', 'revenue_exact_monthly', 'arr_exact', 'recurring_pct', 'revenue_model',
-  'growth', 'growth_pct_monthly', 'growth_detail', 'gross_margin_pct', 'profitability', 'raise_band', 'timing',
+  'growth', 'growth_pct_yoy', 'growth_fwd_pct', 'growth_detail', 'gross_margin_pct', 'profitability', 'raise_band', 'timing',
   'ebitda_ltm', 'last_round_amount', 'last_round_value', 'last_round_type', 'last_round_date',
   'concerns', 'concern_notes', 'context_link',
-  'range_low_m', 'range_high_m', 'range_mid_m',
-  'dilution_low_pct', 'dilution_high_pct', 'dilution_points', 'future_value_m',
+  'ntm_revenue_m', 'exit_arr_m', 'run_rate_arr_m',
   'hook_variant', 'utm_source', 'country', 'region', 'city',
   'user_agent', 'status', 'reviewer_notes', 'sent_at'
 ];
@@ -56,7 +55,8 @@ export default async function handler(req, res) {
     revenue_model: str(body.revenue_model),
 
     growth: str(body.growth),
-    growth_pct_monthly: num(body.growth_exact),
+    growth_pct_yoy: num(body.growth_yoy != null ? body.growth_yoy : body.growth_exact),
+    growth_fwd_pct: num(c.forwardGrowth),
     growth_detail: str(body.growth_detail),
     gross_margin_pct: num(body.gross_margin),
     profitability: str(body.profit),
@@ -73,13 +73,11 @@ export default async function handler(req, res) {
     concern_notes: str(body.concern_notes || body.notes),
     context_link: str(body.context_link || body.link),
 
-    range_low_m: num(c.low),
-    range_high_m: num(c.high),
-    range_mid_m: num(c.mid),
-    dilution_low_pct: num(c.dilLow),
-    dilution_high_pct: num(c.dilHigh),
-    dilution_points: num(c.dilLow != null && c.dilHigh != null ? c.dilLow - c.dilHigh : null),
-    future_value_m: num(c.futureValue),
+    /* The indicative range was removed from the product, so there is no range to
+       log. What the reviewer needs is the metrics the field prices. */
+    ntm_revenue_m: num(c.ntmM),
+    exit_arr_m: num(c.exitArrM),
+    run_rate_arr_m: num(c.runRateM),
 
     hook_variant: str(body.variant),
     utm_source: str(body.utm_source),

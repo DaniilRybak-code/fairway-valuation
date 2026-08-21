@@ -2,8 +2,7 @@
  * already there. Loaded after app.js and field.js.
  *
  * Everything degrades: if the endpoint is missing, slow or unhappy, the founder
- * keeps the first-pass range and the field that are already on screen, and never
- * sees an error.
+ * keeps the field that is already on screen, and never sees an error.
  */
 (function () {
   let started = false;
@@ -35,7 +34,7 @@
       recurring_pct: responses.recurring_pct != null ? responses.recurring_pct : null,
       revenue_model: responses.revenue_model || null,
       growth: responses.growth,
-      growth_exact: responses.growth_exact != null ? responses.growth_exact : null,
+      growth_yoy: responses.growth_yoy != null ? responses.growth_yoy : null,
       growth_detail: responses.growth_detail,
       profit: responses.profit, raise: responses.raise, timing: responses.timing,
       concerns: responses.concerns || [], concern_notes: responses.concern_notes
@@ -56,20 +55,9 @@
   function apply(data) {
     if (!data) return;
 
-    /* If the engine moved the range, move it, then redraw the field so every bar
-       and the axis move with it rather than describing the old number. */
-    if (typeof data.range_low_m === 'number' && typeof data.range_high_m === 'number'
-        && typeof lastResult === 'object' && lastResult) {
-      lastResult.low = data.range_low_m;
-      lastResult.high = data.range_high_m;
-      lastResult.mid = (data.range_low_m + data.range_high_m) / 2;
-      const el = document.getElementById('range-output');
-      if (el) {
-        el.textContent = money(data.range_low_m) + ' – ' + money(data.range_high_m);
-        el.classList.add('range-refined');
-      }
-      if (typeof renderField === 'function') renderField(lastResult);
-    }
+    /* The engine no longer returns a range and this client no longer applies one.
+       A model may never move a number on this page. It writes the concerns below,
+       which are prose about the founder's own answers, and nothing else. */
 
     /* Replace the pattern-level concerns when the engine produced better ones. */
     if (Array.isArray(data.concerns) && data.concerns.length === 3) {
