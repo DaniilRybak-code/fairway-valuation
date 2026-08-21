@@ -298,7 +298,14 @@
             <option value="SAR">SAR</option><option value="ILS">ILS</option><option value="ZAR">ZAR</option>
             <option value="BRL">BRL</option><option value="MXN">MXN</option>
           </select>, taken from where you are. Change it if that is wrong.</p>
-        <p class="range-note" id="range-note">First pass for <span id="range-stage-sector">your stage and sector</span>.</p>
+        <p class="range-meta" id="range-stage-sector">your stage and sector</p>
+        <p class="range-note" id="range-note">First pass. The reviewer replaces it.</p>
+
+        <div class="ff" id="ff" style="display:none;">
+          <div id="ff-rows"></div>
+          <div class="ff-axis"><span id="ff-lo"></span><span id="ff-hi"></span></div>
+          <p class="ff-foot" id="ff-foot"></p>
+        </div>
         <div class="review-badge">
           <span class="dot"></span>
           <span><strong>Under review now.</strong> A reviewer checks every range that comes through here by hand and emails you the confirmed or corrected number within 24 hours. That part is free.</span>
@@ -325,7 +332,18 @@
 
         <hr class="q-rule">
 
-        <label class="field-label">Your last round <span class="optional">If you have raised before. The strongest single anchor there is, and nobody asks for it.</span></label>
+        <label class="field-label" for="ebitda-ltm">EBITDA, last twelve months
+          <span class="optional">Optional. Only useful if it is positive, and most companies at this stage are not.</span>
+        </label>
+        <div class="num-row">
+          <span class="cur-prefix" id="ebitda-cur-prefix">$</span>
+          <input class="field field-num" id="ebitda-ltm" type="number" step="1000" placeholder="e.g. 240000" oninput="onEbitda()">
+        </div>
+        <p class="q-help" id="ebitda-help">If you are profitable, an EBITDA multiple is a second independent lens and investors will run it whether or not you do. It does not change the free range above, and it appears as its own line in the report.</p>
+
+        <hr class="q-rule">
+
+        <label class="field-label">Your last round <span class="optional">If you have raised before. Plotted on the field for comparison, never used to calculate the range.</span></label>
         <div class="lr-grid">
           <div>
             <label class="field-label field-label-sm" for="lr-amount">Amount raised</label>
@@ -488,6 +506,7 @@
 
 <script src="/app.js"></script>
 <script src="/drivers.js"></script>
+<script src="/field.js"></script>
 <script src="/reveal-client.js"></script>
 </body>
 </html>
