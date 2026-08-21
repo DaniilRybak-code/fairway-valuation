@@ -193,3 +193,14 @@ footer { padding:28px 0 46px; }
 /* Sector list is long by design, so it reads as chips rather than 29 full-width rows. */
 #sector-grid { display:flex; flex-wrap:wrap; gap:8px; }
 #sector-grid .opt { display:inline-block; width:auto; padding:10px 14px; border-radius:999px; font-size:14px; }
+
+/* Currency is shown, not asked: a prefix at the input and a toggle by the range. */
+.cur-prefix { flex:none; font-size:16px; font-weight:700; color:var(--ink-soft); min-width:22px; text-align:right; }
+.range-cur { font-size:12px; color:var(--lock); margin:0 0 8px; }
+.range-cur select { font:inherit; font-size:12px; color:var(--ink); border:1px solid var(--line);
+  border-radius:6px; padding:2px 4px; background:#fff; }
+#narrow-card .num-row { margin-bottom:10px; }
+#narrow-card .num-row .field { margin-bottom:0; }
+.lr-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.lr-grid .field { margin-bottom:0; }
+.field-label-sm { font-size:12px; color:var(--ink-soft); }
