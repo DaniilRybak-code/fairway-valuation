@@ -1,0 +1,25 @@
+/* Result screen metric tiles.
+ *
+ * These replaced the headline range. They are the founder's own numbers
+ * restated on the basis a forward multiple is quoted on, not our opinion of
+ * what the company is worth.
+ */
+.metric-row{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:14px; margin:6px 0 14px;
+}
+.metric{
+  border:1px solid var(--rule,rgba(0,0,0,.12)); border-radius:8px;
+  padding:14px 15px; min-width:0;
+}
+.metric-val{
+  font-size:26px; line-height:1.1; font-weight:700; letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums; overflow-wrap:anywhere;
+}
+.metric-cap{ font-size:13px; font-weight:600; margin-top:5px; }
+.metric-hint{ font-size:12px; line-height:1.45; opacity:.68; margin-top:5px; }
+.metric-caveat{ font-size:13.5px; line-height:1.55; margin:0 0 14px; opacity:.85; }
+@media (max-width:520px){
+  .metric-row{ grid-template-columns:1fr 1fr; gap:10px; }
+  .metric-val{ font-size:21px; }
+}
