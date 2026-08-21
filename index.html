@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fairway | Banker-Reviewed Startup Valuation Check</title>
-<meta name="description" content="An indicative pre-money valuation range for your startup, the concerns investors will raise against it, and the funds backing this profile. Reviewed by former bulge bracket bankers. Free.">
+<meta name="description" content="An indicative pre-money valuation range for your startup, every method it is built from with its sources, the concerns investors will raise, and the funds backing this profile. Reviewed by former bulge bracket bankers. Free.">
 <link rel="stylesheet" href="/shared.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
       <div class="cta-facts">
         <span>Takes about four minutes</span>
         <span>Completely free</span>
-        <span>Range on screen at the end</span>
+        <span>Every number shows its source</span>
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@
           <div class="vp-n">2</div>
           <div>
             <h3>Defend it</h3>
-            <p>The three concerns investors raise at that number, and the evidence that answers each one.</p>
+            <p>Every method the range is built from, the reference metrics behind each one, and the source of each metric on tap. Other calculators print a number. This one shows the working.</p>
           </div>
         </li>
         <li>
@@ -129,7 +129,7 @@
 
       <div class="q-block" data-step="2">
         <h2 class="q-title">What sector are you in?</h2>
-        <p class="q-help">Pick the closest. It sets which comparables and which funds we look at.</p>
+        <p class="q-help">Pick the closest. It sets which listed comparables and which funds we look at, and the field shows you which set was used.</p>
         <div class="opt-grid opt-cols" id="sector-grid"></div>
         <div id="sector-other-wrap" style="display:none; margin-top:12px;">
           <label class="field-label" for="sector-other">What do you do?</label>
@@ -143,11 +143,19 @@
         <p class="q-help">Exact, not a band. A band of 50k to 150k is a three times spread in ARR before any multiple touches it, which makes the answer wider than the method it came from.</p>
 
         <div class="num-row">
-          <span class="cur-prefix" id="rev-cur-prefix">$</span>
+          <select class="field field-cur" id="rev-currency" onchange="onCurrencyChange(this)" aria-label="Reporting currency">
+            <option value="USD">USD $</option><option value="GBP">GBP £</option><option value="EUR">EUR €</option>
+            <option value="CAD">CAD $</option><option value="AUD">AUD $</option><option value="CHF">CHF</option>
+            <option value="SEK">SEK kr</option><option value="NOK">NOK kr</option><option value="DKK">DKK kr</option>
+            <option value="PLN">PLN zł</option><option value="SGD">SGD $</option><option value="HKD">HKD $</option>
+            <option value="JPY">JPY ¥</option><option value="INR">INR ₹</option><option value="AED">AED</option>
+            <option value="SAR">SAR</option><option value="ILS">ILS ₪</option><option value="ZAR">ZAR R</option>
+            <option value="BRL">BRL R$</option><option value="MXN">MXN $</option>
+          </select>
           <input class="field field-num" id="rev-exact" type="number" inputmode="numeric" min="0" step="500"
                  placeholder="Monthly revenue" oninput="onRevType()" aria-label="Monthly revenue, exact">
-          <span class="unit">per month</span>
         </div>
+        <p class="q-help" style="margin:0 0 4px;">Your own currency, picked from where you are. Change it if that is wrong. Nothing is converted anywhere.</p>
         <input class="slider" id="rev-slider" type="range" min="0" max="100" value="0" step="1"
                oninput="onRevSlide()" aria-label="Monthly revenue slider">
         <p class="slider-read" id="rev-read">Type the number or drag the slider.
@@ -172,7 +180,7 @@
             </label>
             <input class="slider" id="rec-slider" type="range" min="0" max="100" value="50" step="5"
                    oninput="onRecurring()" aria-label="Percentage of revenue that is recurring">
-            <p class="q-help" id="rec-help">Contracted or subscription revenue that renews on its own. This decides whether you are priced against software or against services, and the gap between those two multiple sets is usually larger than anything else on this page.</p>
+            <p class="q-help" id="rec-help">Revenue that renews without a new sale. Recurring revenue is a signal of how visible next year's performance is, and revenue an investor can see coming is consistently valued on a higher multiple than revenue that has to be won again.</p>
           </div>
         </div>
 
@@ -289,7 +297,7 @@
         <div class="result-label">Your indicative pre-money range</div>
         <div class="range" id="range-output">$1.8M – $3.4M</div>
         <p class="range-cur">Shown in
-          <select id="range-currency" onchange="onCurrency()" aria-label="Reporting currency">
+          <select id="range-currency" onchange="onCurrencyChange(this)" aria-label="Reporting currency">
             <option value="USD">USD</option><option value="GBP">GBP</option><option value="EUR">EUR</option>
             <option value="CAD">CAD</option><option value="AUD">AUD</option><option value="CHF">CHF</option>
             <option value="SEK">SEK</option><option value="NOK">NOK</option><option value="DKK">DKK</option>
@@ -299,17 +307,18 @@
             <option value="BRL">BRL</option><option value="MXN">MXN</option>
           </select>, taken from where you are. Change it if that is wrong.</p>
         <p class="range-meta" id="range-stage-sector">your stage and sector</p>
-        <p class="range-note" id="range-note">First pass. The reviewer replaces it.</p>
+        <p class="range-note" id="range-note">First pass. Every method behind it is set out below, with its sources.</p>
 
-        <div class="ff" id="ff" style="display:none;">
-          <div id="ff-rows"></div>
-          <div class="ff-axis"><span id="ff-lo"></span><span id="ff-hi"></span></div>
-          <p class="ff-foot" id="ff-foot"></p>
-        </div>
         <div class="review-badge">
           <span class="dot"></span>
           <span><strong>Under review now.</strong> A reviewer checks every range that comes through here by hand and emails you the confirmed or corrected number within 24 hours. That part is free.</span>
         </div>
+      </div>
+
+      <div class="list-card" id="ff-card">
+        <h2>How that range is built</h2>
+        <p class="lead">Every parameter, the reference metrics behind it, and what each one implies. Tap any metric to see exactly where the number came from. Nothing here is a fixed multiple typed in by us.</p>
+        <div class="ff" id="ff"></div>
       </div>
 
       <div class="gap-card">
@@ -454,7 +463,7 @@
         <p class="anchor" id="price-anchor">One point of a $2.6M company is worth about $26,000.</p>
         <div class="price" id="price-figure">$750<span> one-time</span></div>
         <ul class="includes">
-          <li>All four valuation methods worked through, with the data behind each</li>
+          <li>Every locked row on the field opened, with its reference metrics and sources</li>
           <li>A narrowed range and a written rationale you can argue from</li>
           <li>All three concerns, with the evidence that answers each</li>
           <li>A ranked investor shortlist with a named contact and route for each</li>
@@ -476,12 +485,12 @@
           <p>No. It is an informational range and a written rationale, the thing you argue from. It is not a 409A, a fairness opinion, or a regulated valuation.</p>
         </div>
         <div class="faq-item">
-          <h3>What does banker-reviewed actually mean here?</h3>
-          <p>A person with bulge bracket investment banking experience reads your inputs and the range before anything is sent to you, on the free check as well as the paid report.</p>
+          <h3>Where do your numbers come from?</h3>
+          <p>Tap any reference metric on the field and it tells you, with the publication and the date. Listed sector multiples come from Damodaran at NYU Stern, stage medians from Carta, exchange rates from the ECB. Anything we cannot source is drawn locked rather than filled in with something plausible.</p>
         </div>
         <div class="faq-item">
           <h3>Why is the free range so wide?</h3>
-          <p>Because nine multiple-choice answers cannot see your margins, retention or unit economics. Narrowing it is exactly what the review and the report do.</p>
+          <p>Because nine multiple-choice answers cannot see your margins, retention or unit economics, and because two of the strongest methods on the field are not built yet. Both are stated on the page rather than hidden.</p>
         </div>
         <div class="faq-item">
           <h3>Who sees my numbers?</h3>
@@ -505,6 +514,7 @@
 </div>
 
 <script src="/app.js"></script>
+<script src="/data-public-comps.js"></script>
 <script src="/drivers.js"></script>
 <script src="/field.js"></script>
 <script src="/reveal-client.js"></script>
