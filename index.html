@@ -140,31 +140,10 @@
 
       <div class="q-block" data-step="3">
         <h2 class="q-title">What is your current monthly revenue?</h2>
-        <p class="q-help">Exact, not a band. A band of $50k to $150k is a three times spread in ARR before any multiple touches it, which makes the answer wider than the method it came from.</p>
+        <p class="q-help">Exact, not a band. A band of 50k to 150k is a three times spread in ARR before any multiple touches it, which makes the answer wider than the method it came from.</p>
 
         <div class="num-row">
-          <select class="field field-cur" id="rev-currency" onchange="onCurrency()" aria-label="Reporting currency">
-            <option value="USD">USD $</option>
-            <option value="GBP">GBP £</option>
-            <option value="EUR">EUR €</option>
-            <option value="CAD">CAD $</option>
-            <option value="AUD">AUD $</option>
-            <option value="CHF">CHF</option>
-            <option value="SEK">SEK kr</option>
-            <option value="NOK">NOK kr</option>
-            <option value="DKK">DKK kr</option>
-            <option value="SGD">SGD $</option>
-            <option value="HKD">HKD $</option>
-            <option value="JPY">JPY ¥</option>
-            <option value="INR">INR ₹</option>
-            <option value="AED">AED</option>
-            <option value="SAR">SAR</option>
-            <option value="ILS">ILS ₪</option>
-            <option value="ZAR">ZAR R</option>
-            <option value="BRL">BRL R$</option>
-            <option value="MXN">MXN $</option>
-            <option value="PLN">PLN zł</option>
-          </select>
+          <span class="cur-prefix" id="rev-cur-prefix">$</span>
           <input class="field field-num" id="rev-exact" type="number" inputmode="numeric" min="0" step="500"
                  placeholder="Monthly revenue" oninput="onRevType()" aria-label="Monthly revenue, exact">
           <span class="unit">per month</span>
@@ -174,18 +153,27 @@
         <p class="slider-read" id="rev-read">Type the number or drag the slider.
           <button type="button" class="link-btn" onclick="setPreRevenue()">We are pre-revenue</button>
         </p>
+        <p class="slider-read"><button type="button" class="link-btn" id="rev-band-toggle" onclick="showRevBands()">I would rather give a range</button></p>
+        <div class="opt-grid" id="rev-bands" style="display:none; margin-top:10px;">
+          <button class="opt" onclick="pickRevBand('Under $10k/mo')">Under 10k/mo</button>
+          <button class="opt" onclick="pickRevBand('$10k–$50k/mo')">10k to 50k/mo</button>
+          <button class="opt" onclick="pickRevBand('$50k–$150k/mo')">50k to 150k/mo</button>
+          <button class="opt" onclick="pickRevBand('$150k+/mo')">Over 150k/mo</button>
+        </div>
 
         <div id="rev-followups" style="display:none;">
           <hr class="q-rule">
-          <label class="field-label" for="rec-slider">How much of that recurs without a new sale?
-            <span class="optional" id="rec-read">50% recurring</span>
-          </label>
-          <input class="slider" id="rec-slider" type="range" min="0" max="100" value="50" step="5"
-                 oninput="onRecurring()" aria-label="Percentage of revenue that is recurring">
-          <p class="q-help">Contracted or subscription revenue that renews on its own. This decides whether you are priced against software or against services, and the gap between those two multiple sets is usually larger than anything else on this page.</p>
-
           <label class="field-label">How is the revenue generated?</label>
           <div class="chip-wrap" id="model-chips"></div>
+
+          <div id="rec-wrap" style="display:none; margin-top:18px;">
+            <label class="field-label" for="rec-slider">How much of that recurs without a new sale?
+              <span class="optional" id="rec-read">50% recurring</span>
+            </label>
+            <input class="slider" id="rec-slider" type="range" min="0" max="100" value="50" step="5"
+                   oninput="onRecurring()" aria-label="Percentage of revenue that is recurring">
+            <p class="q-help" id="rec-help">Contracted or subscription revenue that renews on its own. This decides whether you are priced against software or against services, and the gap between those two multiple sets is usually larger than anything else on this page.</p>
+          </div>
         </div>
 
         <button class="btn" style="width:100%; margin-top:18px;" onclick="submitRevenue()">Continue</button>
@@ -206,6 +194,11 @@
           <button type="button" class="link-btn" onclick="setPreTraction()">Too early to measure</button>
         </p>
         <p class="q-annual" id="growth-annual"></p>
+        <p class="slider-read"><button type="button" class="link-btn" id="growth-band-toggle" onclick="showGrowthBands()">I would rather give a range</button></p>
+        <div class="opt-grid" id="growth-bands" style="display:none; margin-top:10px;">
+          <button class="opt" onclick="pickGrowthBand('Steady, under 15%/mo')">Steady, under 15% a month</button>
+          <button class="opt" onclick="pickGrowthBand('Fast, 15%+/mo')">Fast, 15% a month or more</button>
+        </div>
 
         <div id="growth-detail-wrap" style="display:none; margin-top:16px;">
           <label class="field-label" for="growth-detail">Anything that distorts the trend? <span class="optional">Optional, and it is read by a human.</span></label>
@@ -295,6 +288,16 @@
       <div class="result-card">
         <div class="result-label">Your indicative pre-money range</div>
         <div class="range" id="range-output">$1.8M – $3.4M</div>
+        <p class="range-cur">Shown in
+          <select id="range-currency" onchange="onCurrency()" aria-label="Reporting currency">
+            <option value="USD">USD</option><option value="GBP">GBP</option><option value="EUR">EUR</option>
+            <option value="CAD">CAD</option><option value="AUD">AUD</option><option value="CHF">CHF</option>
+            <option value="SEK">SEK</option><option value="NOK">NOK</option><option value="DKK">DKK</option>
+            <option value="PLN">PLN</option><option value="SGD">SGD</option><option value="HKD">HKD</option>
+            <option value="JPY">JPY</option><option value="INR">INR</option><option value="AED">AED</option>
+            <option value="SAR">SAR</option><option value="ILS">ILS</option><option value="ZAR">ZAR</option>
+            <option value="BRL">BRL</option><option value="MXN">MXN</option>
+          </select>, taken from where you are. Change it if that is wrong.</p>
         <p class="range-note" id="range-note">First pass for <span id="range-stage-sector">your stage and sector</span>.</p>
         <div class="review-badge">
           <span class="dot"></span>
@@ -307,6 +310,49 @@
         <h3 class="gap-headline" id="gap-headline">That spread is about 13 points of your company.</h3>
         <p id="gap-body">On your target raise, the bottom of that range costs you 35.7% of the company and the top costs 22.7%. Nothing about the business changes between those two numbers, only whether you can defend the higher one.</p>
         <p id="gap-future"></p>
+      </div>
+
+      <div class="list-card" id="narrow-card">
+        <h2>Narrow it yourself, in about a minute</h2>
+        <p class="lead">Every field here is optional and every one of them tightens the range in front of you. Nothing is paid, and nothing is gated. This is the information the range is currently missing.</p>
+
+        <label class="field-label" for="gm-slider">Gross margin
+          <span class="optional" id="gm-read">not given</span>
+        </label>
+        <input class="slider" id="gm-slider" type="range" min="0" max="95" value="70" step="1"
+               oninput="onGrossMargin()" aria-label="Gross margin percent">
+        <p class="q-help">Revenue less the direct cost of delivering it. A 45% margin business does not get a software multiple however fast it grows, so this moves the range more than another month of revenue does.</p>
+
+        <hr class="q-rule">
+
+        <label class="field-label">Your last round <span class="optional">If you have raised before. The strongest single anchor there is, and nobody asks for it.</span></label>
+        <div class="lr-grid">
+          <div>
+            <label class="field-label field-label-sm" for="lr-amount">Amount raised</label>
+            <input class="field" id="lr-amount" type="number" min="0" step="10000" placeholder="e.g. 750000" oninput="onLastRound()">
+          </div>
+          <div>
+            <label class="field-label field-label-sm" for="lr-value">Pre-money or cap</label>
+            <input class="field" id="lr-value" type="number" min="0" step="100000" placeholder="e.g. 4500000" oninput="onLastRound()">
+          </div>
+        </div>
+        <div class="lr-grid">
+          <div>
+            <label class="field-label field-label-sm" for="lr-type">Priced or capped</label>
+            <select class="field" id="lr-type" onchange="onLastRound()">
+              <option value="">Select</option>
+              <option value="Priced pre-money">Priced, pre-money</option>
+              <option value="SAFE or note cap">SAFE or note cap</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label field-label-sm" for="lr-date">When</label>
+            <input class="field" id="lr-date" type="month" onchange="onLastRound()">
+          </div>
+        </div>
+
+        <button class="btn" style="width:100%; margin-top:14px;" id="narrow-btn" onclick="applyNarrowing()">Update my range</button>
+        <p class="list-foot" id="narrow-foot">Whatever you add goes to the reviewer with everything else, so the email you get back is built on it too.</p>
       </div>
 
       <div class="cta-bar">
@@ -441,6 +487,7 @@
 </div>
 
 <script src="/app.js"></script>
+<script src="/drivers.js"></script>
 <script src="/reveal-client.js"></script>
 </body>
 </html>
