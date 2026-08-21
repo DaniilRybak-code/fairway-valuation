@@ -19,10 +19,13 @@ const PUBLIC_COMPS = {
   universe: '5,994 US listed firms',
   url: 'https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/psdata.html',
 
-  /* Illiquidity discount applied to a listed multiple before it is used on a
-     private company. A stated judgement, not a market observation, and shown on
-     the row as a range rather than a single number because that is what it is. */
-  illiquidity: { low: 0.20, high: 0.40, note: 'Discount for lack of marketability, set by the reviewing team' },
+  /* There was an illiquidity discount here. It has been removed.
+
+     It was a judgement of ours, invented to bridge a listed industry aggregate
+     to a private company, and it was doing the work that a properly selected
+     peer set should do. Nothing on this page may be a number we made up, so it
+     is gone rather than re-tuned. The listed multiple below is now shown as
+     market context only, and is not converted into a valuation of anybody. */
 
   sectors: {
     'SaaS / B2B software':            { industry: 'Software (System & Application)', ev_sales: 11.41, n: 309 },
