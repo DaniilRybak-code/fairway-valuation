@@ -4,9 +4,11 @@
  * metrics that went into it, and the implied value. The middle column is the
  * product. Every competitor prints a number with a pre-fixed multiple and no
  * sourcing, so a field without a reference-metrics column is just a calculator
- * with bars on it. Every metric that has a source carries one, revealed on tap
- * or hover, and a row we cannot source honestly is drawn locked rather than
- * filled with something plausible.
+ * with bars on it.
+ *
+ * THE RULE THIS FILE EXISTS TO SERVE: every bar must be reproducible with a
+ * calculator from the reference metrics and the multiple printed beside it. If
+ * a row cannot show its own arithmetic, it does not belong here.
  *
  * Locked rows are drawn at a fixed decorative position, never their true one,
  * and the axis is scaled from visible rows only, so the hidden answer cannot be
@@ -94,23 +96,45 @@ function ffBuildRows(r) {
     });
   }
 
-  /* ---- 2. Where listed multiples currently sit. Shown as context and never
-     converted into a valuation of this company. An industry aggregate on a
-     trailing basis cannot be applied to a private company without a discount
-     somebody invented, and we removed ours rather than keep using it. */
+  /* ---- 2. The unrefined range.
+     A listed sector aggregate, applied to the founder's own revenue and plotted.
+     It is deliberately kept and deliberately labelled unrefined: it is the range
+     you get before anybody has chosen a comparable set, and the rows below exist
+     to replace it. Width comes from applying one multiple to two disclosed
+     revenue figures, today's and next year's, so a founder with a calculator can
+     reproduce both ends from what is printed next to them. */
   const pc = PUBLIC_COMPS.sectors[sector];
-  if (pc) {
+  const runRateM = r.runRateM;
+  if (pc && runRateM > 0 && r.ntmM) {
+    const a = runRateM * pc.ev_sales;
+    const b = r.ntmM * pc.ev_sales;
+    const lo = Math.min(a, b), hi = Math.max(a, b);
     rows.push({
-      parameter: 'Where listed multiples sit',
-      basis: 'Market context. The listed sector aggregate, not applied to you',
+      parameter: 'Unrefined range',
+      basis: 'Listed sector aggregate, before any comparable set is chosen',
       metrics: [
+        { label: 'Your ARR today', value: ffMoney(runRateM) },
+        { label: 'Your NTM revenue', value: ffMoney(r.ntmM) },
         { label: pc.industry + ', ' + pc.n + ' firms', value: pc.ev_sales.toFixed(1) + 'x EV/Sales',
           source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' +
             (pc.note ? ' ' + pc.note : '') +
-            ' This is a trailing industry aggregate across every size of company, so it is context rather than a comparable. The rows below replace it with a peer set chosen for your business.' }
+            ' The low end is ' + pc.ev_sales.toFixed(1) + 'x on your ARR today, the high end is ' + pc.ev_sales.toFixed(1) + 'x on your next twelve months. Multiply either yourself and you will get the number on the bar.' },
+        { label: 'Why unrefined', value: 'no peer set, no size adjustment',
+          source: 'This is every listed company in the industry, from the largest in the world down, on a trailing basis, with no adjustment for the fact that you are private and small. It is the number a calculator gives you. The rows below narrow it to companies actually like yours, which is the whole point of the exercise and the reason this one is shown rather than hidden.' }
       ],
-      unplotted: 'An industry aggregate is not a comparable set, and turning one into a valuation needs a discount we would have to invent. We used to. We stopped.',
-      locked: false, context: true
+      low: lo, high: hi, locked: false, unrefined: true
+    });
+  } else if (pc) {
+    rows.push({
+      parameter: 'Unrefined range',
+      basis: 'Listed sector aggregate, before any comparable set is chosen',
+      metrics: [
+        { label: pc.industry + ', ' + pc.n + ' firms', value: pc.ev_sales.toFixed(1) + 'x EV/Sales',
+          source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' },
+        { label: 'Your revenue', value: 'none given yet' }
+      ],
+      unplotted: 'Nothing to apply the multiple to until there is a revenue figure.',
+      locked: false, unrefined: true
     });
   }
 
@@ -122,10 +146,14 @@ function ffBuildRows(r) {
     metrics: [
       { label: 'Your NTM revenue', value: r.ntmM === null ? 'needs an exact revenue figure' : ffMoney(r.ntmM),
         source: r.ntmM === null ? 'Give an exact monthly revenue figure and this becomes a number.'
-          : 'The sum of your next twelve months, built from ' + fmtPlain(responses.revenue_exact || 0) + ' a month carried forward at ' +
-            (r.forwardGrowth === null ? 'no assumed growth' : Math.round(r.forwardGrowth) + '% a year') +
-            '. That forward rate is your trailing ' + (r.trailingGrowth === null ? 'growth' : Math.round(r.trailingGrowth) + '%') +
-            ' multiplied by a growth persistence factor of 0.75, the median Point Nine measured across 29 early-stage SaaS companies and 96 data pairs. Consensus forward revenue is a sum, so ours is a sum, which is a different and smaller number than your run-rate a year out.' },
+          : 'The sum of your next twelve months, built from ' + fmtPlain(responses.revenue_exact || 0) + ' a month growing at ' +
+            (r.forwardGrowth === null ? 'no assumed growth' : Math.round(r.forwardGrowth) + '% a year') + '. ' +
+            (r.forwardBasis === 'plan'
+              ? 'That is the growth you told us you plan, used exactly as you gave it. We apply no haircut and no coefficient of our own to it, which also means it has to survive the meeting on your evidence rather than ours.'
+              : (r.forwardBasis === 'trailing'
+                ? 'You did not give a plan, so that is your last twelve months carried forward unchanged. It is the most neutral assumption available, and giving us a plan replaces it.'
+                : 'Derived from the growth band you chose. An exact figure replaces it.')) +
+            ' Consensus forward revenue is a sum, so ours is a sum, which is a different and smaller number than your run-rate a year out.' },
       { label: 'Peer median multiple', value: 'in build', source: IN_BUILD }
     ],
     locked: true, pending: true
@@ -138,7 +166,7 @@ function ffBuildRows(r) {
     metrics: [
       { label: 'Your ARR at month twelve', value: r.exitArrM === null ? 'needs an exact revenue figure' : ffMoney(r.exitArrM),
         source: r.exitArrM === null ? 'Give an exact monthly revenue figure and this becomes a number.'
-          : 'Your run-rate a year from now, not the twelve-month sum, which is why it is the larger of the two. This row values you at a future date, so it reads high against the row above by design. The more of your revenue that recurs, the better that basis holds.' },
+          : 'Your run-rate a year from now, at the growth you gave us, not the twelve-month sum. That is why it is the larger of the two. This row values you at a future date, so it reads high against the row above by design. The more of your revenue that recurs, the better that basis holds.' },
       { label: 'Peer median multiple', value: 'in build', source: IN_BUILD }
     ],
     locked: true, pending: true
@@ -150,6 +178,7 @@ function ffBuildRows(r) {
     basis: 'Fitted EV/revenue at your growth rate, from a regression across the peer set',
     metrics: [
       { label: 'Your growth, trailing', value: r.trailingGrowth === null ? (responses.growth || 'not given') : Math.round(r.trailingGrowth) + '% year on year' },
+      { label: 'Your growth, planned', value: r.plannedGrowth === null ? 'not given' : Math.round(r.plannedGrowth) + '% next twelve months' },
       { label: 'Fitted multiple at that rate', value: 'in the report' }
     ],
     locked: true
@@ -231,8 +260,7 @@ function renderField(r) {
 
   const rows = ffBuildRows(r);
 
-  /* Axis from visible values only. Locked rows never contribute, and there is no
-     headline range feeding it any more, so it can legitimately be near empty. */
+  /* Axis from visible values only. Locked rows never contribute. */
   const plotted = [];
   if (r.markerM) plotted.push(r.markerM);
   rows.forEach(function (row) {
@@ -286,7 +314,7 @@ function renderField(r) {
         : '<div class="ff-end lo" style="left:' + l.toFixed(2) + '%">' + escapeHtml(ffMoney(row.low)) + '</div>' +
           '<div class="ff-end hi" style="left:' + h.toFixed(2) + '%">' + escapeHtml(ffMoney(row.high)) + '</div>';
       cell = '<div class="ff-track"><div class="ff-line"></div>' +
-        '<div class="ff-bar" style="left:' + l.toFixed(2) + '%;width:' + Math.max(1.5, h - l).toFixed(2) + '%"></div>' +
+        '<div class="ff-bar' + (row.unrefined ? ' unrefined' : '') + '" style="left:' + l.toFixed(2) + '%;width:' + Math.max(1.5, h - l).toFixed(2) + '%"></div>' +
         labels + '</div>';
     } else if (typeof row.point === 'number') {
       const at = pct(row.point);
@@ -300,6 +328,7 @@ function renderField(r) {
     html += '<div class="ff-row' + (row.locked ? ' locked' : '') + (row.context ? ' context' : '') + '">' +
       '<div class="ff-param"><strong>' + escapeHtml(row.parameter) +
         (row.locked ? '<span class="lock-tag">' + (row.pending ? 'In build' : 'Locked') + '</span>' : '') +
+        (row.unrefined ? '<span class="lock-tag unrefined-tag">Unrefined</span>' : '') +
         '</strong><span>' + escapeHtml(row.basis) + '</span></div>' +
       '<div class="ff-metrics">' +
         row.metrics.map(function (m, j) { return ffMetric(m, 'ffs-' + i + '-' + j); }).join('') +
@@ -314,13 +343,13 @@ function renderField(r) {
   const buildRows = rows.filter(function (x) { return x.locked && x.pending; }).length;
   const lockedRows = rows.filter(function (x) { return x.locked && !x.pending; }).length;
   const bits = [];
-  if (openRows) bits.push(openRows + ' method' + (openRows === 1 ? '' : 's') + ' priced');
+  if (openRows) bits.push(openRows + ' range' + (openRows === 1 ? '' : 's') + ' drawn');
   if (contextRows) bits.push(contextRows + ' market context');
   if (buildRows) bits.push(buildRows + ' being wired to live peer data');
   if (lockedRows) bits.push(lockedRows + ' in the report');
   html += '<p class="ff-foot">Tap any reference metric to see where it came from. ' +
-    bits.join(', ') + '. Locked bars are drawn in a neutral position, not their real one, ' +
-    'and nothing on this page is a multiple we typed in ourselves.</p>';
+    bits.join(', ') + '. Every drawn bar is the reference metric times the multiple beside it, ' +
+    'so you can check any of them with a calculator. Locked bars are drawn in a neutral position, not their real one.</p>';
 
   wrap.innerHTML = html;
   wrap.style.display = 'block';
