@@ -112,10 +112,13 @@ function buildDrivers() {
         ' is roughly a three times spread in ARR before a multiple is applied. That alone spreads the methods further than the evidence behind them warrants. An exact figure, here or in the reply to the review email, is the single cheapest thing you can do about it.'
     });
   } else if (monthly > 0 && g !== null && g !== undefined && g !== 0) {
-    const fwd = Math.round(Math.max(-50, g * 0.75));
+    const plan = responses.growth_plan;
+    const planLine = (plan !== null && plan !== undefined)
+      ? ' Everything forward on this page is built from the ' + Math.round(plan) + '% you plan, used exactly as you gave it. We do not haircut it, which means the plan has to survive the meeting on its own evidence.'
+      : ' Without a plan we carry that rate forward unchanged, which is the most neutral assumption available and the easiest one for an investor to challenge.';
     out.push({
       title: 'Growth of ' + Math.round(g) + '% year on year is the largest single lever you have',
-      body: 'We carry it forward at ' + fwd + '%, not at ' + Math.round(g) + '%, because growth decelerates and 0.75 is the persistence factor Point Nine measured across early-stage SaaS. Forward revenue multiples are not flat, they are fitted against growth, so this is the input the methods are most sensitive to. ' +
+      body: 'Forward revenue multiples are not flat, they are fitted against growth, so this is the input the methods are most sensitive to.' + planLine + ' ' +
         (g >= 100
           ? 'At this rate the risk is not the number, it is that a single acquisition channel is doing all of it. Two channels with independent payback curves removes the discount that assumption creates.'
           : 'At this rate expect the market-size question. The answer is a segment-level view showing growth constrained by your own capacity rather than by demand.')
