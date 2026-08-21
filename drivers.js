@@ -70,23 +70,23 @@ const MODEL_NOTE = {
 
 function stageNote(stage, arrM) {
   if (stage === 'Series A') {
-    return 'At Series A the range is argued on multiples against recent comparable rounds, and the burden of proof sits on why your growth and margin profile deserves to sit above the median of that comp set.';
+    return 'At Series A the price is argued on multiples against recent comparable rounds, and the burden of proof sits on why your growth and margin profile deserves to sit above the median of that comp set.';
   }
   if (stage === 'Seed') {
     return arrM >= 0.5
       ? 'At seed with real revenue you are in the narrow band where a multiple can actually be applied. That is an advantage, because a sourced multiple is far easier to defend than a story.'
       : 'At seed with limited revenue, price is usually set by the intersection of the round size and the lead fund ownership target rather than by any multiple. Knowing that target before the meeting is worth more than another slide.';
   }
-  return 'At pre-seed there is no published median to anchor against, which is why ranges at this stage are wide. What narrows them is evidence of demand with a date and a price attached to it.';
+  return 'At pre-seed there is no published median to anchor against, which is why the methods spread so widely at this stage. What narrows them is evidence of demand with a date and a price attached to it.';
 }
 
 function sizeNote(arrM) {
   if (arrM <= 0) return null;
   if (arrM < 0.25) {
-    return { title: 'Size, and why the discount is large here', body: 'At roughly ' + Math.round(arrM * 1000) + 'k of ARR, a listed peer multiple cannot be applied without a substantial size and illiquidity discount. The report states that discount as a number with a reason, rather than burying it inside the range.' };
+    return { title: 'Size, and what comparability can honestly mean here', body: 'At roughly ' + Math.round(arrM * 1000) + 'k of ARR, no listed company is comparable to you in size, so the comparability claim has to be about how your revenue behaves rather than how big it is. The report names the peers that were chosen, says why, and states what the size gap does to the read instead of burying it in a discount.' };
   }
   if (arrM < 1) {
-    return { title: 'Size, and the discount that comes with it', body: 'At about ' + arrM.toFixed(2).replace(/0$/, '') + 'M of ARR you are below the level where a comparable round set gets dense, so the range stays wider than it will be at 1M. The discount to listed peers is still material and should be shown, not assumed.' };
+    return { title: 'Size, and how dense the comparable set is', body: 'At about ' + arrM.toFixed(2).replace(/0$/, '') + 'M of ARR you are below the level where a comparable round set gets dense, so the methods stay further apart than they will at 1M. The gap to listed peers is material and the report states it rather than assuming it away.' };
   }
   return { title: 'Size, and where the argument moves next', body: 'Above 1M of ARR the conversation stops being about the story and starts being about which comparable set you belong in. Getting into the right comp set is worth more than any single metric, because it resets the multiple before anything else is discussed.' };
 }
@@ -97,7 +97,7 @@ function buildDrivers() {
   const sd = SECTOR_DRIVERS[sector] || SECTOR_DRIVERS['Other'];
   const monthly = responses.revenue_exact || 0;
   const arrM = monthly * 12 / 1e6;
-  const g = responses.growth_exact;
+  const g = responses.growth_yoy;
   const rec = responses.recurring_pct;
   const nonRev = NON_REVENUE_SECTORS.indexOf(sector) !== -1;
   /* A founder who chose the band fallback still has revenue, they just have not
@@ -109,21 +109,21 @@ function buildDrivers() {
     out.push({
       title: 'The band you gave is wider than any method behind it',
       body: 'You chose a revenue range rather than a figure, which is fine, but ' + (responses.revenue || 'that band') +
-        ' is roughly a three times spread in ARR before a multiple is applied. That alone makes this range wider than the methods that produced it. An exact figure, here or in the reply to the review email, is the single cheapest thing you can do to narrow it.'
+        ' is roughly a three times spread in ARR before a multiple is applied. That alone spreads the methods further than the evidence behind them warrants. An exact figure, here or in the reply to the review email, is the single cheapest thing you can do about it.'
     });
   } else if (monthly > 0 && g !== null && g !== undefined && g !== 0) {
-    const annual = Math.round((Math.pow(1 + g / 100, 12) - 1) * 100);
+    const fwd = Math.round(Math.max(-50, g * 0.75));
     out.push({
-      title: 'Growth at ' + g + '% a month is the largest single lever you have',
-      body: 'That compounds to roughly ' + annual + '% a year. Revenue multiples are not flat, they are fitted against growth, so this is the input the range is most sensitive to. ' +
-        (g >= 15
+      title: 'Growth of ' + Math.round(g) + '% year on year is the largest single lever you have',
+      body: 'We carry it forward at ' + fwd + '%, not at ' + Math.round(g) + '%, because growth decelerates and 0.75 is the persistence factor Point Nine measured across early-stage SaaS. Forward revenue multiples are not flat, they are fitted against growth, so this is the input the methods are most sensitive to. ' +
+        (g >= 100
           ? 'At this rate the risk is not the number, it is that a single acquisition channel is doing all of it. Two channels with independent payback curves removes the discount that assumption creates.'
           : 'At this rate expect the market-size question. The answer is a segment-level view showing growth constrained by your own capacity rather than by demand.')
     });
   } else {
     out.push({
-      title: 'With no revenue to multiply, demand evidence is the range',
-      body: 'Pre-revenue ranges are argued on proof that someone will pay, not on product. Three named design partners with a start date and a price moves the number further than any traction slide, because it converts an opinion into a dated commitment.'
+      title: 'With no revenue to multiply, demand evidence is the argument',
+      body: 'Pre-revenue companies are argued on proof that someone will pay, not on product. Three named design partners with a start date and a price moves the number further than any traction slide, because it converts an opinion into a dated commitment.'
     });
   }
 
@@ -131,7 +131,7 @@ function buildDrivers() {
   if (hasRevenue && rec !== null && rec !== undefined) {
     let lead;
     if (rec >= 80) {
-      lead = rec + '% of your revenue recurs without a new sale. That is what puts you in the software multiple set rather than the services one, and the gap between those two sets is usually wider than any other single factor on this page.';
+      lead = rec + '% of your revenue recurs without a new sale. That is what puts you in the software multiple set rather than the services one, and the gap between those two sets is usually wider than any other single factor on this page. It is also what makes the month-twelve run-rate a defensible basis rather than an optimistic one.';
     } else if (rec >= 40) {
       lead = rec + '% of your revenue recurs and the rest has to be re-won each period. Investors will value the two parts separately, so present them separately. Blended, the lower multiple tends to get applied to the whole.';
     } else {
@@ -150,7 +150,7 @@ function buildDrivers() {
   /* 4. size and stage */
   const sz = sizeNote(arrM);
   if (sz && !nonRev) out.push(sz);
-  out.push({ title: 'Your stage sets how wide the range starts', body: stageNote(responses.stage, arrM) });
+  out.push({ title: 'Your stage sets how far apart the methods start', body: stageNote(responses.stage, arrM) });
 
   /* 5. runway, only when it is the binding constraint */
   if (responses.profit === 'Burning, under 12 months runway') {
@@ -183,6 +183,6 @@ function renderDrivers() {
     list.appendChild(row);
   });
   document.getElementById('drivers-foot').textContent =
-    'These are selected for your sector, stage, size and revenue model. They are the levers, not the arithmetic. The report shows which of them your range is actually sitting on, and what each one is worth in points.';
+    'These are selected for your sector, stage, size and revenue model. They are the levers, not the arithmetic. The report shows which of them the methods above are actually sitting on, and what each one is worth in points.';
   track('drivers_view', { count: drivers.length, sector: responses.sector || null });
 }
