@@ -131,6 +131,13 @@
       <div class="q-block" data-step="2">
         <h2 class="q-title">What sector are you in?</h2>
         <p class="q-help">Pick the closest. It sets which listed comparables and which funds we look at, and the field shows you which set was used.</p>
+        <div class="site-row">
+          <label class="field-label" for="site-url">Your website
+            <span class="optional">Optional, and the single most useful box on this page. We read what you actually do from it, which is how the comparable set gets picked for your business rather than for your sector code.</span>
+          </label>
+          <input class="field" id="site-url" type="url" inputmode="url" placeholder="yourcompany.com" autocomplete="url">
+        </div>
+
         <div class="opt-grid opt-cols" id="sector-grid"></div>
         <div id="sector-other-wrap" style="display:none; margin-top:12px;">
           <label class="field-label" for="sector-other">What do you do?</label>
@@ -526,6 +533,7 @@
 <script src="/drivers.js"></script>
 <script src="/field.js"></script>
 <script src="/app-result.js"></script>
+<script src="/app-site.js"></script>
 <script src="/reveal-client.js"></script>
 </body>
 </html>
