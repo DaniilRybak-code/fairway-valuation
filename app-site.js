@@ -29,7 +29,7 @@
      re-read the field on the way out of the step rather than trusting that one
      of the handlers above ran. Capture phase, so it lands before the click
      handler that advances the step. */
-  ['sector-grid', 'sector-other-wrap'].forEach(function (id) {
+  ['sector-grid', 'sector-other-wrap', 'sector-continue'].forEach(function (id) {
     const wrap = document.getElementById(id);
     if (wrap) wrap.addEventListener('click', captureSite, true);
   });
