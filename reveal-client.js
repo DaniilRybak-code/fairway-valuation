@@ -1,12 +1,11 @@
-/* Calls the reveal engine once the result screen appears, then fills in the
- * basis sentence and the reference points, and updates the range if the engine
- * moved it. Loaded after app.js, which is where `responses` is declared.
+/* Calls the reveal engine once the result screen appears and refines what is
+ * already there. Loaded after app.js and field.js.
  *
  * Everything degrades: if the endpoint is missing, slow or unhappy, the founder
- * keeps the first-pass range that is already on screen and never sees an error.
+ * keeps the first-pass range and the field that are already on screen, and never
+ * sees an error.
  */
 (function () {
-  const VISIBLE_DEFAULT = 2;
   let started = false;
 
   injectStyles();
@@ -22,12 +21,9 @@
   }).observe(result, { attributes: true, attributeFilter: ['class'] });
 
   function run() {
-    const card = buildCard();
-    const rangeCard = document.querySelector('#screen-result .result-card');
-    if (rangeCard && rangeCard.parentNode) {
-      rangeCard.parentNode.insertBefore(card, rangeCard.nextSibling);
-    }
-
+    /* No card of its own any more. The football field is the single place the
+       working is shown, so a second list of reference points beside it would be
+       the same information twice, in two formats, disagreeing at the edges. */
     const payload = typeof responses !== 'undefined' ? {
       stage: responses.stage, sector: responses.sector, sector_detail: responses.sector_detail,
       /* Exact figures where the founder gave them. The bands are still sent so the
@@ -54,55 +50,28 @@
       .then(apply)
       .catch(function (e) {
         console.warn('[fairway] reveal unavailable', e);
-        card.remove();
       });
   }
 
   function apply(data) {
-    const card = document.getElementById('reveal-card');
-    if (!card) return;
+    if (!data) return;
 
-    if (!data || !Array.isArray(data.reference_points) || !data.reference_points.length) {
-      // Nothing sourced survived the guard rails. Say nothing rather than something thin.
-      card.remove();
-      if (data && data.basis_sentence) setBasis(data.basis_sentence, data);
-      return;
-    }
-
-    if (typeof data.range_low_m === 'number' && typeof data.range_high_m === 'number') {
+    /* If the engine moved the range, move it, then redraw the field so every bar
+       and the axis move with it rather than describing the old number. */
+    if (typeof data.range_low_m === 'number' && typeof data.range_high_m === 'number'
+        && typeof lastResult === 'object' && lastResult) {
+      lastResult.low = data.range_low_m;
+      lastResult.high = data.range_high_m;
+      lastResult.mid = (data.range_low_m + data.range_high_m) / 2;
       const el = document.getElementById('range-output');
       if (el) {
         el.textContent = money(data.range_low_m) + ' – ' + money(data.range_high_m);
         el.classList.add('range-refined');
       }
+      if (typeof renderField === 'function') renderField(lastResult);
     }
 
-    setBasis(data.basis_sentence, data);
-
-    const visible = typeof data.visible_reference_points === 'number'
-      ? data.visible_reference_points : VISIBLE_DEFAULT;
-
-    const list = document.getElementById('reveal-list');
-    list.innerHTML = '';
-    data.reference_points.forEach(function (p, i) {
-      const locked = i >= visible;
-      const row = document.createElement('div');
-      row.className = 'item' + (locked ? ' locked' : '');
-      row.innerHTML =
-        '<div class="num">' + (i + 1) + '</div><div>' +
-        '<h3>' + esc(p.label) + (locked ? '<span class="lock-tag">Locked</span>' : '') + '</h3>' +
-        '<p' + (locked ? ' class="body-lock"' : '') + '>' + esc(p.detail) + '</p>' +
-        (locked ? '' : '<p class="reveal-src">' + esc(p.source) + '</p>') +
-        '</div>';
-      list.appendChild(row);
-    });
-
-    const foot = document.getElementById('reveal-foot');
-    foot.textContent = (data.reference_points.length - visible) +
-      ' of the ' + data.reference_points.length +
-      ' anchors behind this range are in the full report, with the working shown for each.';
-
-    // Replace the pattern-level concerns when the engine produced better ones.
+    /* Replace the pattern-level concerns when the engine produced better ones. */
     if (Array.isArray(data.concerns) && data.concerns.length === 3) {
       ['fix-1', 'fix-2', 'fix-3'].forEach(function (id, i) {
         const title = document.getElementById(id + '-title');
@@ -115,41 +84,11 @@
     }
   }
 
-  function setBasis(text, data) {
-    if (!text) return;
-    const note = document.getElementById('range-note');
-    if (!note) return;
-    const bits = [text];
-    if (data && data.vintage) bits.push('Market data vintage ' + data.vintage + '.');
-    if (data && data.verified_anchor === false) {
-      bits.push('No published anchor exists for this stage yet, so the range is wider than it will be.');
-    }
-    note.textContent = bits.join(' ');
-  }
-
-  function buildCard() {
-    const card = document.createElement('div');
-    card.className = 'list-card';
-    card.id = 'reveal-card';
-    card.innerHTML =
-      '<h2>What the range is built on</h2>' +
-      '<p class="lead" id="reveal-lead">Working through the comparables and the methods. A few seconds.</p>' +
-      '<div id="reveal-list"><div class="reveal-skel"></div><div class="reveal-skel"></div>' +
-      '<div class="reveal-skel"></div><div class="reveal-skel"></div></div>' +
-      '<p class="list-foot" id="reveal-foot"></p>';
-    return card;
-  }
-
   function injectStyles() {
     const css =
-      '.reveal-skel{height:46px;border-radius:10px;margin:10px 0;' +
-      'background:linear-gradient(90deg,#eef0f3 25%,#f7f8fa 50%,#eef0f3 75%);' +
-      'background-size:400% 100%;animation:revealpulse 1.4s ease infinite;}' +
-      '@keyframes revealpulse{0%{background-position:100% 0}100%{background-position:0 0}}' +
-      '.reveal-src{font-size:12px;color:var(--lock);margin-top:5px;}' +
       '.range-refined{animation:revealfade .5s ease;}' +
       '@keyframes revealfade{from{opacity:.35}to{opacity:1}}' +
-      '@media (prefers-reduced-motion: reduce){.reveal-skel,.range-refined{animation:none;}}';
+      '@media (prefers-reduced-motion: reduce){.range-refined{animation:none;}}';
     const tag = document.createElement('style');
     tag.textContent = css;
     document.head.appendChild(tag);
