@@ -54,8 +54,8 @@ function forwardGrowthBasis() {
    same multiple. Month-twelve ARR is an exit run-rate and is a different, larger
    number: at 100% annual growth the two differ by about 40%.
 
-   Both are plain arithmetic on the founder's own two numbers. Anyone with a
-   calculator can reproduce either from what the page shows them. */
+   Both are plain arithmetic on the founder's own two numbers. Either can be
+   reproduced by hand from what the page shows. */
 function forwardRevenue(monthlyRevenue, forwardGrowth) {
   if (!(monthlyRevenue > 0)) return { ntmM: null, exitArrM: null };
   const f = (forwardGrowth === null || forwardGrowth === undefined) ? 0 : forwardGrowth;
