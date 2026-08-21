@@ -1,6 +1,6 @@
 # The valuation engine: rows, inputs, and where the data comes from
 
-**Status:** plan, v3. 20 Aug 2026. Revised after the competitive scan. Supersedes the row set in `football-field-plan.md`; the front-end and blur design in that doc still stand, with one change noted in section 4.
+**Status:** plan, v4. 20 Aug 2026. Revised after the competitive scan. Supersedes the row set in `football-field-plan.md`; the front-end and blur design in that doc still stand, with one change noted in section 4.
 
 ## 1. Where the earlier plan was wrong
 
@@ -34,14 +34,15 @@ The quiz now collects exact figures:
 | Revenue model | Which multiple set applies at all | **Collected** |
 | Revenue growth, exact, per month | A2 | **Collected** |
 | Gross margin | A1, A2 | **Collected**, optional, on the result screen |
+| EBITDA, last twelve months | A3 only | **Collected**, optional. Draws a locked line when positive, and nothing when it is not. |
 | Net revenue retention | A2 | Not yet. Next field to add to the result screen. |
 | Net burn and runway months | Concerns, and the deadline discount | Band only |
 | Country | A1, B1 | Inferred from the edge header |
-| Last round: date, amount, pre or cap | All rows | **Collected**, optional, on the result screen |
+| Last round: date, amount, pre or cap | **Marker only** | **Collected**, optional. Plotted, never calculated with. |
 
 Both revenue and growth keep a band fallback for anyone who would rather not give a figure, so nothing in the quiz is mandatory. A founder who takes the fallback is told what the band costs them in precision rather than being quietly treated as pre-revenue.
 
-Everything optional lives on the **result screen**, not in the quiz, and every field says on screen that it is optional and that it narrows the range. Precision is bought with information rather than money, which is the direct answer to the mandatory-form problem every competitor has. It also qualifies hard, because founders who type real numbers are actually raising, and it produces exactly what the reviewer needs before the 48 hour email. Adding gross margin and a last round currently takes the range about 30% tighter relative to its mid-point, and the page says by how much.
+Everything optional lives on the **result screen**, not in the quiz, and every field says on screen that it is optional and that it narrows the range. Precision is bought with information rather than money, which is the direct answer to the mandatory-form problem every competitor has. It also qualifies hard, because founders who type real numbers are actually raising, and it produces exactly what the reviewer needs before the 48 hour email. Adding gross margin currently takes the range about 30% tighter relative to its mid-point, and the page says by how much.
 
 ## 4. Two blocks, two convergence lines
 
@@ -49,14 +50,19 @@ Revised after the competitive review. The finding that drives it: every competit
 
 The field splits into two blocks, and the gap between them is the insight nobody else can show.
 
+**The marker line, above both blocks.** The founder's last round is plotted as a single point, a diamond, on its own line at the top of the field. It is not a row and not a method, and no calculation anywhere reads it. That separation is deliberate: a field that lets the last price set the next price is not a field, it is an echo, and it would quietly reproduce whatever mispricing the founder is trying to escape. What the diamond does is let them see at a glance whether the methods land above, below or on top of where they were priced, which is the first question any investor asks and the one the page should answer without being asked. The copy under the range says which of the three it is.
+
 **Block A, public market.** Always computable, any geography, no vendor licence.
 
 | Row | Visible free? |
 |---|---|
 | **A1. Revenue multiple.** ARR times sector EV/Revenue, size and illiquidity discounts stated separately | Yes |
 | **A2. Growth adjusted.** Fitted EV/Revenue at this company's growth rate, from a listed peer regression | Yes |
+| **A3. EBITDA multiple.** Only exists when the founder gives a positive EBITDA figure | Locked |
 
-Both rows are **revenue based, never EBITDA**. Our companies mostly do not have positive EBITDA, and a regression on a metric half the peer set lacks is a decoration rather than a method. A2 is the anchor: A1 says what the market pays for revenue in this sector, A2 says what it pays for revenue *growing at this rate*, and the gap between them is the argument the founder will have in the room. "The sector trades at 4.1x, but at our growth rate the fitted multiple is 7.8x, and here is the regression."
+The two free rows are **revenue based, never EBITDA**. Our companies mostly do not have positive EBITDA, and a regression on a metric half the peer set lacks is a decoration rather than a method. A2 is the anchor: A1 says what the market pays for revenue in this sector, A2 says what it pays for revenue *growing at this rate*, and the gap between them is the argument the founder will have in the room. "The sector trades at 4.1x, but at our growth rate the fitted multiple is 7.8x, and here is the regression."
+
+A3 is the exception, and it is conditional twice over. It only appears when the founder volunteers an EBITDA figure, and only when that figure is positive, because an EV/EBITDA multiple on negative EBITDA is not a conservative estimate, it is a category error. When it does appear it is locked, it does not touch the free ranges, and the working goes in the paid report. Most companies at this stage will never see the line, which is correct. For the minority who are profitable it is a genuinely independent second lens and their investors will run it whether or not we do, so being the page that acknowledges it is worth more than being the page that pretends revenue is the only method.
 
 **Block B, private market.** Thin outside the US and UK, and this is where the money goes.
 
@@ -132,8 +138,8 @@ Rules for this section:
 
 ## 8. Build order
 
-1. **Exact numeric intake.** Done. Revenue, recurring share, revenue model, growth, gross margin and last round are collected, with currency inferred rather than asked, and all of it flows to the lead sheet and the reveal engine.
+1. **Exact numeric intake.** Done. Revenue, recurring share, revenue model, growth, gross margin, EBITDA and last round are collected, with currency inferred rather than asked, and all of it flows to the lead sheet and the reveal engine.
 2. **Damodaran sector table into `data/`.** Gives row A1. One day plus a data session with the reviewers to set the discount stack.
 3. **Peer sets and the regression** for the top four sectors, from EDGAR plus a quarterly reviewer price pull. Gives row A2, the anchor.
-4. **Football field front end.** Block A live with sources on hover and tap, block B redacted at a decorative position rather than its true one, and the two convergence lines.
+4. **Football field front end.** First lines shipped: the last-round marker, the indicative range and the locked EBITDA line, with locked rows drawn at a fixed decorative position and the axis scaled from visible rows only. Still to come: sources on hover and tap, the remaining rows as their data lands, and the two convergence lines. Lives in `field.js`.
 5. **Companies House ingestion** for B1 in the UK. Separate project.
