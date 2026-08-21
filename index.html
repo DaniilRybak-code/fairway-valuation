@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fairway | Banker-Reviewed Startup Valuation Check</title>
-<meta name="description" content="An indicative pre-money valuation range for your startup, every method it is built from with its sources, the concerns investors will raise, and the funds backing this profile. Reviewed by former bulge bracket bankers. Free.">
+<meta name="description" content="Every method that prices your startup, the reference metrics behind each one and where each metric came from, the concerns investors will raise, and the funds backing this profile. Reviewed by former bulge bracket bankers. Free.">
 <link rel="stylesheet" href="/shared.css">
+<link rel="stylesheet" href="/result-metrics.css">
 </head>
 <body>
 
@@ -23,7 +24,7 @@
     <div class="wrap">
       <span class="kicker" id="hook-kicker">For founders raising in the next 90 days</span>
       <h1 id="hook-headline">You know what your company is worth. The hard part is proving it in the room.</h1>
-      <p class="sub" id="hook-sub">Every investor pushes back on the number. Answer nine quick questions and get an indicative pre-money range, the specific concerns that will be raised against it, and the funds actively backing this profile. Checked by hand before it reaches you.</p>
+      <p class="sub" id="hook-sub">Every investor pushes back on the number. Answer nine quick questions and see every method that prices your company, the reference metrics behind each one, the concerns that will be raised, and the funds actively backing this profile. Checked by hand before it reaches you.</p>
       <button class="btn" onclick="startQuiz()" id="hook-cta">Start the quiz</button>
       <div class="cta-facts">
         <span>Takes about four minutes</span>
@@ -44,14 +45,14 @@
           <div class="vp-n">1</div>
           <div>
             <h3>Price it</h3>
-            <p>An indicative pre-money range built from your stage, sector, traction and profitability, not a generic multiple.</p>
+            <p>Your revenue restated the way an investor reads it, and every method that prices it. No single headline number, because a valuation is a set of methods that disagree.</p>
           </div>
         </li>
         <li>
           <div class="vp-n">2</div>
           <div>
             <h3>Defend it</h3>
-            <p>Every method the range is built from, the reference metrics behind each one, and the source of each metric on tap. Other calculators print a number. This one shows the working.</p>
+            <p>Every method, the reference metrics behind each one, and the source of each metric on tap. Other calculators print a number. This one shows the working, and says plainly what it does not yet know.</p>
           </div>
         </li>
         <li>
@@ -71,7 +72,7 @@
     <div class="wrap">
       <p class="eyebrow">Who reviews it</p>
       <h2>A reviewing team from the bulge bracket</h2>
-      <p class="section-sub" id="team-line">Former investment bankers with over 100 years of combined coverage and execution experience, alongside operators who have raised rounds themselves. One of them checks every range that leaves here.</p>
+      <p class="section-sub" id="team-line">Former investment bankers with over 100 years of combined coverage and execution experience, alongside operators who have raised rounds themselves. One of them checks every reveal that leaves here.</p>
       <div class="stats">
         <div class="stat">
           <span class="n">70%</span>
@@ -180,7 +181,7 @@
             </label>
             <input class="slider" id="rec-slider" type="range" min="0" max="100" value="50" step="5"
                    oninput="onRecurring()" aria-label="Percentage of revenue that is recurring">
-            <p class="q-help" id="rec-help">Revenue that renews without a new sale. Recurring revenue is a signal of how visible next year's performance is, and revenue an investor can see coming is consistently valued on a higher multiple than revenue that has to be won again.</p>
+            <p class="q-help" id="rec-help">Revenue that renews without a new sale. Recurring revenue is a signal of how visible next year's performance is, and revenue an investor can see coming is consistently valued on a higher multiple than revenue that has to be won again. It also decides how much weight the month-twelve run-rate can carry.</p>
           </div>
         </div>
 
@@ -188,29 +189,30 @@
       </div>
 
       <div class="q-block" data-step="4">
-        <h2 class="q-title">How fast is revenue growing?</h2>
-        <p class="q-help">Growth is the strongest single input into the multiple, which makes this the number that moves your range most. Month on month, averaged over the last three months.</p>
+        <h2 class="q-title">How much has revenue grown over the last twelve months?</h2>
+        <p class="q-help">Compare revenue now against revenue a year ago. A trailing rate is a fact, where a monthly rate is an estimate, and it is the basis every forward multiple on the next screen is built on.</p>
 
         <div class="num-row">
-          <input class="field field-num" id="growth-exact" type="number" step="0.5" min="-50" max="100"
-                 placeholder="e.g. 12" oninput="onGrowthType()" aria-label="Monthly revenue growth, percent">
-          <span class="unit">% per month</span>
+          <input class="field field-num" id="growth-exact" type="number" step="1" min="-90" max="1000"
+                 placeholder="e.g. 120" oninput="onGrowthType()" aria-label="Revenue growth over the last twelve months, percent">
+          <span class="unit">% year on year</span>
         </div>
-        <input class="slider" id="growth-slider" type="range" min="-20" max="60" value="0" step="0.5"
-               oninput="onGrowthSlide()" aria-label="Monthly growth slider">
+        <input class="slider" id="growth-slider" type="range" min="-50" max="400" value="0" step="5"
+               oninput="onGrowthSlide()" aria-label="Year on year growth slider">
         <p class="slider-read" id="growth-read">Type the number or drag the slider.
           <button type="button" class="link-btn" onclick="setPreTraction()">Too early to measure</button>
         </p>
         <p class="q-annual" id="growth-annual"></p>
         <p class="slider-read"><button type="button" class="link-btn" id="growth-band-toggle" onclick="showGrowthBands()">I would rather give a range</button></p>
         <div class="opt-grid" id="growth-bands" style="display:none; margin-top:10px;">
-          <button class="opt" onclick="pickGrowthBand('Steady, under 15%/mo')">Steady, under 15% a month</button>
-          <button class="opt" onclick="pickGrowthBand('Fast, 15%+/mo')">Fast, 15% a month or more</button>
+          <button class="opt" onclick="pickGrowthBand('Roughly flat')">Roughly flat</button>
+          <button class="opt" onclick="pickGrowthBand('Growing, under 100% a year')">Growing, under 100% a year</button>
+          <button class="opt" onclick="pickGrowthBand('Growing, 100% or more a year')">Growing, 100% a year or more</button>
         </div>
 
         <div id="growth-detail-wrap" style="display:none; margin-top:16px;">
           <label class="field-label" for="growth-detail">Anything that distorts the trend? <span class="optional">Optional, and it is read by a human.</span></label>
-          <textarea class="field" id="growth-detail" placeholder="e.g. two enterprise deals landed in the same month, so the three month average flatters us. Net revenue retention 118%."></textarea>
+          <textarea class="field" id="growth-detail" placeholder="e.g. two enterprise deals landed late in the year, so the trailing figure flatters us. Net revenue retention 118%."></textarea>
         </div>
 
         <button class="btn" style="width:100%; margin-top:16px;" onclick="submitGrowth()">Continue</button>
@@ -218,7 +220,7 @@
 
       <div class="q-block" data-step="5">
         <h2 class="q-title">Where are you on profitability?</h2>
-        <p class="q-help">This moves the range more than most founders expect, and it decides which concern you get first.</p>
+        <p class="q-help">This moves the multiple more than most founders expect, and it decides which concern you get first.</p>
         <div class="opt-grid">
           <button class="opt" onclick="answer('profit','Profitable')">Profitable</button>
           <button class="opt" onclick="answer('profit','Around break-even')">Around break-even</button>
@@ -256,7 +258,7 @@
         <div class="chips" id="concern-chips"></div>
         <label class="field-label" for="concern-notes">In their words, or yours <span class="optional">Optional</span></label>
         <textarea class="field" id="concern-notes" placeholder="e.g. two funds said the market looks too small outside the UK, one said our CAC will not hold at scale"></textarea>
-        <label class="field-label" for="ctx-link">Link to a deck, model or data room <span class="optional">Optional. Read only by the reviewer.</span></label>
+        <label class="field-label" for="ctx-link">Link to a deck, model or data room <span class="optional">Optional. Read only by the reviewer, and it is what unlocks the DCF.</span></label>
         <input class="field" id="ctx-link" type="url" placeholder="https://" autocomplete="off">
         <button class="btn" style="width:100%; margin-top:4px;" onclick="submitConcerns()">Continue</button>
         <div style="text-align:center;"><button class="btn-ghost" onclick="submitConcerns(true)">Skip, nothing specific yet</button></div>
@@ -264,14 +266,14 @@
 
       <div class="q-block" data-step="9">
         <h2 class="q-title">Where should the review go?</h2>
-        <p class="q-help">Everything you have answered is already saved. Add an email and your range appears on the next screen.</p>
+        <p class="q-help">Everything you have answered is already saved. Add an email and the full field appears on the next screen.</p>
         <label class="field-label" for="lead-email">Work email</label>
         <input class="field" id="lead-email" type="email" placeholder="you@company.com" autocomplete="email" inputmode="email">
         <label class="field-label" for="lead-company">Company <span class="optional">Optional</span></label>
         <input class="field" id="lead-company" type="text" placeholder="Company name" autocomplete="organization">
         <label class="field-label" for="lead-phone">Phone <span class="optional">Optional. Only if you would rather talk than read.</span></label>
         <input class="field" id="lead-phone" type="tel" placeholder="+44" autocomplete="tel">
-        <button class="btn" style="width:100%;" id="final-submit" onclick="submitLead()">Show me my range</button>
+        <button class="btn" style="width:100%;" id="final-submit" onclick="submitLead()">Show me the methods</button>
         <p class="microcopy" id="submit-error" style="color:#b42318; display:none;">Please enter a valid email address.</p>
       </div>
 
@@ -294,8 +296,9 @@
     <div class="wrap">
 
       <div class="result-card">
-        <div class="result-label">Your indicative pre-money range</div>
-        <div class="range" id="range-output">$1.8M – $3.4M</div>
+        <div class="result-label">Your revenue, as an investor reads it</div>
+        <div class="metric-row" id="metric-row"></div>
+        <p class="metric-caveat" id="metric-caveat"></p>
         <p class="range-cur">Shown in
           <select id="range-currency" onchange="onCurrencyChange(this)" aria-label="Reporting currency">
             <option value="USD">USD</option><option value="GBP">GBP</option><option value="EUR">EUR</option>
@@ -307,37 +310,37 @@
             <option value="BRL">BRL</option><option value="MXN">MXN</option>
           </select>, taken from where you are. Change it if that is wrong.</p>
         <p class="range-meta" id="range-stage-sector">your stage and sector</p>
-        <p class="range-note" id="range-note">First pass. Every method behind it is set out below, with its sources.</p>
+        <p class="range-note" id="range-note">There is no single headline number here, deliberately.</p>
 
         <div class="review-badge">
           <span class="dot"></span>
-          <span><strong>Under review now.</strong> A reviewer checks every range that comes through here by hand and emails you the confirmed or corrected number within 24 hours. That part is free.</span>
+          <span><strong>Under review now.</strong> A reviewer reads every set of answers that comes through here by hand and emails you their read on where inside these methods you actually sit, within 24 hours. That part is free.</span>
         </div>
       </div>
 
       <div class="list-card" id="ff-card">
-        <h2>How that range is built</h2>
-        <p class="lead">Every parameter, the reference metrics behind it, and what each one implies. Tap any metric to see exactly where the number came from. Nothing here is a fixed multiple typed in by us.</p>
+        <h2>Every method, and what each one says</h2>
+        <p class="lead">A valuation is not one number, it is a set of methods that disagree. Each row below is one of them, with the reference metric it prices and the source behind that metric. Tap any metric to see exactly where it came from. Rows marked in build are being wired to live comparable-company data now, and they say so rather than pretending to be a paywall.</p>
         <div class="ff" id="ff"></div>
       </div>
 
       <div class="gap-card">
-        <div class="result-label">What the uncertainty costs you</div>
-        <h3 class="gap-headline" id="gap-headline">That spread is about 13 points of your company.</h3>
-        <p id="gap-body">On your target raise, the bottom of that range costs you 35.7% of the company and the top costs 22.7%. Nothing about the business changes between those two numbers, only whether you can defend the higher one.</p>
+        <div class="result-label">What the price is worth</div>
+        <h3 class="gap-headline" id="gap-headline">What a ten per cent move in price is worth to you.</h3>
+        <p id="gap-body">Measured against the published median post-money for your stage, and your own target raise.</p>
         <p id="gap-future"></p>
       </div>
 
       <div class="list-card" id="narrow-card">
-        <h2>Narrow it yourself, in about a minute</h2>
-        <p class="lead">Every field here is optional and every one of them tightens the range in front of you. Nothing is paid, and nothing is gated. This is the information the range is currently missing.</p>
+        <h2>Open more of it yourself, in about a minute</h2>
+        <p class="lead">Every field here is optional and every one of them opens or sharpens a row of the field in front of you. Nothing is paid, and nothing is gated. This is what the methods above are currently missing.</p>
 
         <label class="field-label" for="gm-slider">Gross margin
           <span class="optional" id="gm-read">not given</span>
         </label>
         <input class="slider" id="gm-slider" type="range" min="0" max="95" value="70" step="1"
                oninput="onGrossMargin()" aria-label="Gross margin percent">
-        <p class="q-help">Revenue less the direct cost of delivering it. A 45% margin business does not get a software multiple however fast it grows, so this moves the range more than another month of revenue does.</p>
+        <p class="q-help">Revenue less the direct cost of delivering it. A 45% margin business does not get a software multiple however fast it grows, so this changes which peer set you belong to more than another month of revenue does.</p>
 
         <hr class="q-rule">
 
@@ -348,11 +351,11 @@
           <span class="cur-prefix" id="ebitda-cur-prefix">$</span>
           <input class="field field-num" id="ebitda-ltm" type="number" step="1000" placeholder="e.g. 240000" oninput="onEbitda()">
         </div>
-        <p class="q-help" id="ebitda-help">If you are profitable, an EBITDA multiple is a second independent lens and investors will run it whether or not you do. It does not change the free range above, and it appears as its own line in the report.</p>
+        <p class="q-help" id="ebitda-help">If you are profitable, an EBITDA multiple is a second independent lens and investors will run it whether or not you do. It opens its own row on the field, priced forward like the revenue rows.</p>
 
         <hr class="q-rule">
 
-        <label class="field-label">Your last round <span class="optional">If you have raised before. Plotted on the field for comparison, never used to calculate the range.</span></label>
+        <label class="field-label">Your last round <span class="optional">If you have raised before. Plotted on the field for comparison, and it feeds no calculation anywhere.</span></label>
         <div class="lr-grid">
           <div>
             <label class="field-label field-label-sm" for="lr-amount">Amount raised</label>
@@ -378,12 +381,12 @@
           </div>
         </div>
 
-        <button class="btn" style="width:100%; margin-top:14px;" id="narrow-btn" onclick="applyNarrowing()">Update my range</button>
+        <button class="btn" style="width:100%; margin-top:14px;" id="narrow-btn" onclick="applyNarrowing()">Update the field</button>
         <p class="list-foot" id="narrow-foot">Whatever you add goes to the reviewer with everything else, so the email you get back is built on it too.</p>
       </div>
 
       <div class="cta-bar">
-        <p>Narrow the range and answer the pushback.
+        <p>Sharpen the field and answer the pushback.
           <small>The full report, reviewed by the team, back within 48 hours.</small></p>
         <a href="#unlock" id="cta-bar-link">Full report, $750</a>
       </div>
@@ -396,7 +399,7 @@
       </div>
 
       <div class="list-card">
-        <h2>Three concerns you will face at this range</h2>
+        <h2>Three concerns you will face on these numbers</h2>
         <p class="lead">Drawn from your stage, sector, growth and profitability. The first is open; the evidence that answers the other two is in the report.</p>
         <div class="noted" id="concern-echo" style="display:none;"></div>
 
@@ -404,7 +407,7 @@
           <div class="num">1</div>
           <div>
             <h3 id="fix-1-title">Turn your pipeline into signed evidence.</h3>
-            <p id="fix-1-body">Three named design partners with a start date and a price does more for a pre-revenue range than any traction slide.</p>
+            <p id="fix-1-body">Three named design partners with a start date and a price does more for a pre-revenue company than any traction slide.</p>
           </div>
         </div>
 
@@ -455,16 +458,16 @@
           </div>
         </div>
 
-        <p class="list-foot">Sector-level matches, not a personalised shortlist. The report ranks funds against your range and traction specifically.</p>
+        <p class="list-foot">Sector-level matches, not a personalised shortlist. The report ranks funds against your own metrics and traction specifically.</p>
       </div>
 
       <div class="unlock-box" id="unlock">
         <div class="step-label" style="color:rgba(255,255,255,.6);">The Defensible Range Report</div>
-        <p class="anchor" id="price-anchor">One point of a $2.6M company is worth about $26,000.</p>
+        <p class="anchor" id="price-anchor">A single point of the company is usually worth many times what this report costs.</p>
         <div class="price" id="price-figure">$750<span> one-time</span></div>
         <ul class="includes">
           <li>Every locked row on the field opened, with its reference metrics and sources</li>
-          <li>A narrowed range and a written rationale you can argue from</li>
+          <li>The banker's read on where inside those methods you actually sit, written so you can argue from it</li>
           <li>All three concerns, with the evidence that answers each</li>
           <li>A ranked investor shortlist with a named contact and route for each</li>
           <li>Your own numbers read properly: margins, unit economics, cohorts</li>
@@ -482,15 +485,19 @@
         <h2>Before you ask</h2>
         <div class="faq-item">
           <h3>Is this a real valuation?</h3>
-          <p>No. It is an informational range and a written rationale, the thing you argue from. It is not a 409A, a fairness opinion, or a regulated valuation.</p>
+          <p>No. It is a set of methods, the metrics behind them and a written rationale, which is the thing you argue from. It is not a 409A, a fairness opinion, or a regulated valuation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Why is there no single number at the top?</h3>
+          <p>Because we would have to invent it. A headline range that is not derived from the methods below is a guess with a font size, and every calculator that prints one is doing exactly that. The methods are the evidence, and a banker's read on where inside them you sit is what comes back by email.</p>
         </div>
         <div class="faq-item">
           <h3>Where do your numbers come from?</h3>
-          <p>Tap any reference metric on the field and it tells you, with the publication and the date. Listed sector multiples come from Damodaran at NYU Stern, stage medians from Carta, exchange rates from the ECB. Anything we cannot source is drawn locked rather than filled in with something plausible.</p>
+          <p>Tap any reference metric on the field and it tells you, with the publication and the date. Listed sector multiples come from Damodaran at NYU Stern, stage medians from Carta, exchange rates from the ECB, and the growth persistence factor from Point Nine's published work. Anything we cannot source is drawn locked rather than filled in with something plausible.</p>
         </div>
         <div class="faq-item">
-          <h3>Why is the free range so wide?</h3>
-          <p>Because nine multiple-choice answers cannot see your margins, retention or unit economics, and because two of the strongest methods on the field are not built yet. Both are stated on the page rather than hidden.</p>
+          <h3>Why are some rows marked in build?</h3>
+          <p>Because they are. Those rows will be priced from a live set of comparable companies chosen for your business, refreshed nightly, with every peer named on hover. Until that is wired up they show the metric they will price rather than a number we made up. We would rather tell you than fill the gap.</p>
         </div>
         <div class="faq-item">
           <h3>Who sees my numbers?</h3>
@@ -513,10 +520,12 @@
   </footer>
 </div>
 
+<script src="/app-growth.js"></script>
 <script src="/app.js"></script>
 <script src="/data-public-comps.js"></script>
 <script src="/drivers.js"></script>
 <script src="/field.js"></script>
+<script src="/app-result.js"></script>
 <script src="/reveal-client.js"></script>
 </body>
 </html>
