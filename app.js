@@ -37,8 +37,8 @@ const REVENUE_MODELS = [
 ];
 
 /* Display only. All maths runs in the founder's own currency, because a multiple is a
-   ratio and does not need converting. The only cross-currency comparison is against the
-   US market anchors, and that is stated in the copy rather than silently converted. */
+   ratio and does not need converting. The one place a rate is used is the US dollar
+   stage anchor on the field, and that is converted at a published ECB rate with a date. */
 const CURRENCY_SYMBOL = {
   USD: '$', GBP: '£', EUR: '€', CAD: 'C$', AUD: 'A$', CHF: 'CHF ',
   SEK: 'kr', NOK: 'kr', DKK: 'kr', SGD: 'S$', HKD: 'HK$', JPY: '¥',
@@ -343,29 +343,34 @@ function setPreRevenue() {
   currentStep = 4; renderStep();
 }
 
-/* Currency is inferred from the edge, not asked. The founder types a number in
-   whatever they report in; all we need is which symbol to print, so there is no
-   conversion anywhere and nothing to get wrong. Correctable next to the range. */
+/* Currency is guessed from the edge and then shown, at the revenue question and
+   again beside the range, because nobody converts their own revenue into a
+   currency the page picked for them. Both selectors stay in step. */
 function setCurrency(code, source) {
   responses.currency = CURRENCY_SYMBOL[code] ? code : 'USD';
-  ['rev-cur-prefix', 'ebitda-cur-prefix'].forEach(function (id) {
+  ['rev-currency', 'range-currency'].forEach(function (id) {
     const el = document.getElementById(id);
-    if (el) el.textContent = curSymbol().trim() || responses.currency;
+    if (el) el.value = responses.currency;
   });
-  const sel = document.getElementById('range-currency');
-  if (sel) sel.value = responses.currency;
+  const pfx = document.getElementById('ebitda-cur-prefix');
+  if (pfx) pfx.textContent = curSymbol().trim() || responses.currency;
   if (source !== 'boot') track('currency_set', { currency: responses.currency, source: source });
 }
 
-function onCurrency() {
-  setCurrency(document.getElementById('range-currency').value, 'user');
+function onCurrencyChange(el) {
+  setCurrency(el.value, 'user');
   paintRevenue(responses.revenue_exact || 0, null);
   if (lastResult) renderResult(lastResult);
 }
+/* Kept so an older cached page does not break on the range selector. */
+function onCurrency() {
+  const el = document.getElementById('range-currency');
+  if (el) onCurrencyChange(el);
+}
 
 (function bootCurrency() {
-  /* Best guess from the browser first, so the prefix is never empty, then the
-     edge header refines it. Falls back to USD and stays silent on failure. */
+  /* Best guess from the browser first, so nothing is ever blank, then the edge
+     header refines it. Falls back to USD and stays silent on failure. */
   const lang = (navigator.language || '').toUpperCase();
   const byLang = { GB: 'GBP', IE: 'EUR', DE: 'EUR', FR: 'EUR', ES: 'EUR', IT: 'EUR', NL: 'EUR',
     CH: 'CHF', SE: 'SEK', NO: 'NOK', DK: 'DKK', PL: 'PLN', CA: 'CAD', AU: 'AUD',
@@ -782,7 +787,7 @@ function renderResult(r) {
           ? 'Your last round sits below this range, which is the up round you are arguing for. The report is where that argument gets evidenced.'
           : 'Your last round sits inside this range, so you are arguing for a flat to modest up round unless something has changed that these inputs cannot see.'));
     }
-    if (!bits.length) bits.push('First pass. The reviewer replaces it.');
+    if (!bits.length) bits.push('First pass. Every method behind it is set out below, with its sources.');
     note.textContent = bits.join(' ');
   }
 
