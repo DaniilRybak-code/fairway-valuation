@@ -1,13 +1,13 @@
 /* The reveal engine.
  *
- * Every request goes through a model with fixed macro-settings (config/) and a
- * verified data pack (data/comps.js). The model positions the range inside a
- * corridor the code computes, writes the basis sentence, and produces the four
- * reference points and three concerns. The code then enforces the guard rails
- * and falls back to a deterministic range if anything about the output is off.
+ * This endpoint no longer produces a valuation. It used to compute a range and
+ * hand it to a model to position inside a corridor, which meant the page carried
+ * two independent range calculations that were never reconciled with each other
+ * or with the football field. Both are deleted.
  *
- * The model never decides the corridor and never gets to state a figure that
- * has no source. Those two constraints are what make this defensible.
+ * What remains is prose: the basis sentence and the three concerns, written
+ * about the founder's own answers. Every numeric field the model emits is
+ * dropped by enforce(). A model may not put a number on this page.
  *
  * Env: ANTHROPIC_API_KEY (required), ANTHROPIC_MODEL (optional)
  */
@@ -17,11 +17,6 @@ import { buildSystem } from '../config/reveal-prompt.js';
 import { COMPS } from '../data/comps.js';
 
 export const config = { maxDuration: 60 };
-
-/* PLACEHOLDER. Dispersion around the stage median, used to build the corridor.
-   These are assumptions, not data, and the basis sentence says so. Replace the
-   moment real p25 and p75 figures are in data/comps.js. */
-const ASSUMED_DISPERSION = { low: 0.65, high: 1.55 };
 
 const RAISE_MIDPOINT = {
   'Under $500k': 0.35, '$500k–$1M': 0.75, '$1M–$2.5M': 1.75,
@@ -89,7 +84,12 @@ function buildAnchor(a) {
     preAnchor = Math.max(stageRow.post_median_m - raise, 0.3);
     basis = `${a.stage} median post-money of $${stageRow.post_median_m}M (${stageRow.source}), less the midpoint of the stated raise`;
   } else {
-    basis = `no published anchor for ${a.stage || 'this stage'} in the current pack, so the range is derived from stage patterns rather than a comp set and is correspondingly wide`;
+    /* No published anchor for this stage. Say so and widen rather than guess. */
+    const seed = COMPS.stages['Seed'];
+    if (seed && seed.post_median_m && a.stage === 'Pre-seed') {
+      preAnchor = null;
+      basis = `no published anchor for ${a.stage} in the current pack, so the methods lean on stage patterns rather than a comp set and are correspondingly wide`;
+    }
   }
 
   if (preAnchor && sectorRow && sectorRow.stage_multiple) {
@@ -101,41 +101,32 @@ function buildAnchor(a) {
     basis += `, adjusted for ${a.country} (${regionRow.source})`;
   }
 
-  const heuristic = heuristicBase(a);
-  const centre = preAnchor || heuristic;
-  const anchorLow = centre * ASSUMED_DISPERSION.low;
-  const anchorHigh = centre * ASSUMED_DISPERSION.high;
-
+  /* No centre, no corridor, no dispersion. Nothing here produces a number any
+     more: what the model gets is the basis sentence, so it can write prose that
+     is honest about what the page is standing on. */
   return {
-    raise, centre, anchorLow, anchorHigh,
+    raise,
     hasVerifiedAnchor: !!preAnchor,
-    basis: basis,
-    corridorLow: round1(anchorLow * SETTINGS.corridor.lowMultiple),
-    corridorHigh: round1(anchorHigh * SETTINGS.corridor.highMultiple),
+    basis: basis || 'stage and sector patterns rather than a published comp set',
     vintage: COMPS.vintage
   };
 }
 
-/* Same shape as the client-side first pass, used as the safety net. */
-function heuristicBase(a) {
-  const stageBase = { 'Pre-seed': 1.5, 'Seed': 3.5, 'Series A': 9 }[a.stage] || 2;
-  const revenueBump = { 'Pre-revenue': 0, 'Under $10k/mo': 0.4, '$10k–$50k/mo': 1.2, '$50k–$150k/mo': 3, '$150k+/mo': 6 }[a.revenue] || 0;
-  const growthMult = { 'Early / pre-traction': 1, 'Steady, under 15%/mo': 1.15, 'Fast, 15%+/mo': 1.4 }[a.growth] || 1;
-  const profitMult = { 'Profitable': 1.15, 'Around break-even': 1.05, 'Burning, 12+ months runway': 1, 'Burning, under 12 months runway': 0.9 }[a.profit] || 1;
-  return (stageBase + revenueBump) * growthMult * profitMult;
-}
+/* The heuristic that used to sit here produced the second of two independent
+   valuation ranges, neither of which was reconciled with the other or with the
+   football field. Both are gone. Nothing in this file computes a valuation. */
 
 function deterministic(a, anchor) {
+  /* This used to return a range. It does not any more.
+
+     The indicative range was removed from the product: it was a chain of
+     coefficients nobody could trace, and the football field now carries the
+     valuation as a set of methods instead. What survives here is the prose,
+     which is the only thing a model was ever allowed to write. */
   return {
-    range_low_m: round1(anchor.centre * 0.85),
-    range_high_m: round1(anchor.centre * 1.55),
-    basis_sentence: `First-pass range from ${anchor.basis}. Reviewed by a person within 24 hours.`,
+    basis_sentence: `Reference metrics from ${anchor.basis}. Reviewed by a person within 24 hours.`,
     confidence: anchor.hasVerifiedAnchor ? 'medium' : 'low',
-    reference_points: [],
-    concerns: [],
-    vintage: anchor.vintage,
-    verified_anchor: anchor.hasVerifiedAnchor,
-    source: 'deterministic'
+    reference_points: [], concerns: [], source: 'deterministic'
   };
 }
 
@@ -163,8 +154,6 @@ async function callModel(a, anchor) {
   const system = buildSystem({
     dataPack,
     answers,
-    corridorLow: anchor.corridorLow,
-    corridorHigh: anchor.corridorHigh,
     anchorBasis: anchor.basis
   });
 
@@ -174,8 +163,6 @@ async function callModel(a, anchor) {
     input_schema: {
       type: 'object',
       properties: {
-        range_low_m: { type: 'number' },
-        range_high_m: { type: 'number' },
         basis_sentence: { type: 'string' },
         confidence: { type: 'string', enum: ['low', 'medium', 'high'] },
         reference_points: {
@@ -200,7 +187,7 @@ async function callModel(a, anchor) {
           }
         }
       },
-      required: ['range_low_m', 'range_high_m', 'basis_sentence', 'confidence', 'reference_points', 'concerns']
+      required: ['basis_sentence', 'confidence', 'reference_points', 'concerns']
     }
   };
 
@@ -240,55 +227,18 @@ async function callModel(a, anchor) {
 /* ---------- guard rails ---------- */
 
 function enforce(out, anchor, fallback) {
-  let low = Number(out.range_low_m);
-  let high = Number(out.range_high_m);
-  const notes = [];
-
-  if (!isFinite(low) || !isFinite(high) || low <= 0 || high <= low) {
-    return { ...fallback, source: 'fallback', reason: 'bad_range' };
-  }
-
-  if (low < anchor.corridorLow) { low = anchor.corridorLow; notes.push('clamped_low'); }
-  if (high > anchor.corridorHigh) { high = anchor.corridorHigh; notes.push('clamped_high'); }
-
-  const width = high / low;
-  if (width < SETTINGS.width.min) { high = low * SETTINGS.width.min; notes.push('widened'); }
-  if (width > SETTINGS.width.max) { high = low * SETTINGS.width.max; notes.push('narrowed'); }
-
-  /* A reference point without a source never reaches a founder. */
-  let refs = Array.isArray(out.reference_points) ? out.reference_points : [];
-  if (SETTINGS.referencePoints.requireSource) {
-    refs = refs.filter(p => p && p.source && String(p.source).trim().length > 3);
-  }
-  if (refs.length < SETTINGS.referencePoints.minSurviving) {
-    return { ...fallback, source: 'fallback', reason: 'insufficient_sourced_reference_points' };
-  }
-  refs = refs.slice(0, SETTINGS.referencePoints.total).map(p => ({
-    label: t(p.label, 90), kind: t(p.kind, 20), detail: t(p.detail, 400), source: t(p.source, 160)
-  }));
-
-  const concerns = (Array.isArray(out.concerns) ? out.concerns : [])
-    .slice(0, 3)
-    .map(c => ({ title: t(c.title, 120), body: t(c.body, 500) }));
-
-  const mid = (low + high) / 2;
-  const dilMid = anchor.raise / (mid + anchor.raise) * 100;
-  const dilutionFlag = dilMid < SETTINGS.dilutionFlag.min || dilMid > SETTINGS.dilutionFlag.max;
-
-  return {
-    range_low_m: round1(low),
-    range_high_m: round1(high),
-    basis_sentence: t(out.basis_sentence, 400),
-    confidence: ['low', 'medium', 'high'].includes(out.confidence) ? out.confidence : 'low',
-    reference_points: refs,
-    visible_reference_points: SETTINGS.referencePoints.visible,
-    concerns,
-    dilution_flag: dilutionFlag,
-    vintage: anchor.vintage,
-    verified_anchor: anchor.hasVerifiedAnchor,
-    adjustments: notes,
+  /* There is no range left to clamp. What remains is a whitelist: only prose the
+     model wrote about the founder's own answers gets through, and every numeric
+     field is dropped on the floor rather than trusted. */
+  if (!out || typeof out !== 'object') return fallback;
+  const clean = {
+    basis_sentence: typeof out.basis_sentence === 'string' ? out.basis_sentence.slice(0, 400) : fallback.basis_sentence,
+    confidence: ['low', 'medium', 'high'].includes(out.confidence) ? out.confidence : fallback.confidence,
+    reference_points: Array.isArray(out.reference_points) ? out.reference_points.slice(0, 4) : [],
+    concerns: Array.isArray(out.concerns) ? out.concerns.slice(0, 3) : [],
     source: 'model'
   };
+  return clean;
 }
 
 /* ---------- small helpers ---------- */
