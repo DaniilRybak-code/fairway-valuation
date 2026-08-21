@@ -43,8 +43,14 @@ function paintMetrics(r) {
   }
 
   if (r.trailingGrowth !== null && r.trailingGrowth !== undefined) {
-    tiles.push(metricTile(Math.round(r.trailingGrowth) + '%', 'Growth, last twelve months',
-      'Carried forward at ' + Math.round(r.forwardGrowth) + '%, after the 0.75 persistence haircut.'));
+    tiles.push(metricTile(Math.round(r.trailingGrowth) + '%', 'Growth, last twelve months', 'What you actually did.'));
+  }
+  if (r.plannedGrowth !== null && r.plannedGrowth !== undefined) {
+    tiles.push(metricTile(Math.round(r.plannedGrowth) + '%', 'Growth, planned',
+      'Your number, used as given. Everything forward on this page is built from it.'));
+  } else if (r.forwardGrowth !== null && r.forwardGrowth !== undefined && r.trailingGrowth !== null) {
+    tiles.push(metricTile(Math.round(r.forwardGrowth) + '%', 'Growth, carried forward',
+      'Your last twelve months, carried forward unchanged, because you did not give a plan.'));
   }
 
   el.innerHTML = tiles.join('');
@@ -57,8 +63,8 @@ function paintMetrics(r) {
   cav.style.display = 'block';
   const rec = r.recurringPct;
   cav.innerHTML = (rec !== null && rec !== undefined && rec >= 70)
-    ? '<strong>Two dates, not two opinions.</strong> The first figure values you today. The second values you in twelve months, if you hold this growth. With ' + Math.round(rec) + '% of your revenue recurring there is a real case for pricing off the month-twelve run-rate, because recurring revenue is the part a buyer can actually count on repeating. That case is exactly what the reviewed report argues.'
-    : '<strong>Two dates, not two opinions.</strong> The first figure values you today. The second values you in twelve months, if you hold this growth. The more of your revenue that recurs, the stronger the case for pricing off the month-twelve run-rate rather than the twelve-month sum.';
+    ? '<strong>Two dates, not two opinions.</strong> The first figure values you today. The second values you in twelve months, if you hit your plan. With ' + Math.round(rec) + '% of your revenue recurring there is a real case for pricing off the month-twelve run-rate, because recurring revenue is the part a buyer can actually count on repeating. That case is exactly what the reviewed report argues.'
+    : '<strong>Two dates, not two opinions.</strong> The first figure values you today. The second values you in twelve months, if you hit your plan. The more of your revenue that recurs, the stronger the case for pricing off the month-twelve run-rate rather than the twelve-month sum.';
 }
 
 /* What the price is worth, keyed to a published median rather than to a range we
