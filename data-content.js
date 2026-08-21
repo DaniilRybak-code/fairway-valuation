@@ -32,10 +32,7 @@ const REVENUE_MODELS = [
    ratio and does not need converting. The one place a rate is used is the US dollar
    stage anchor on the field, and that is converted at a published ECB rate with a date. */
 const CURRENCY_SYMBOL = {
-  USD: '$', GBP: '£', EUR: '€', CAD: 'C$', AUD: 'A$', CHF: 'CHF ',
-  SEK: 'kr', NOK: 'kr', DKK: 'kr', SGD: 'S$', HKD: 'HK$', JPY: '¥',
-  INR: '₹', AED: 'AED ', SAR: 'SAR ', ILS: '₪', ZAR: 'R',
-  BRL: 'R$', MXN: 'MX$', PLN: 'zł'
+  USD: '$', EUR: '€', GBP: '£', CAD: 'C$'
 };
 
 const CONCERNS = [
