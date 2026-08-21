@@ -1,4 +1,5 @@
-/* Fairway landing funnel. Config first, then data, then flow. */
+/* Fairway landing funnel. Config first, then data, then flow.
+ * The valuation content layer lives in drivers.js, which loads after this file. */
 
 const CONFIG = {
   stripeLink: 'https://buy.stripe.com/bJe6oG3Xf5Tp1Sf1n1cjS00',
@@ -22,7 +23,8 @@ const SECTORS = [
   'Legaltech / Regtech', 'HR tech / Future of work', 'Adtech / Martech',
   'Media / Content', 'Gaming', 'Travel / Hospitality', 'Food / Beverage',
   'Agritech', 'Web3 / Digital assets', 'Defence / Gov tech',
-  'Telecoms / Connectivity', 'Professional services', 'Other'
+  'Telecoms / Connectivity', 'Mobility / Automotive',
+  'Agencies / Professional services', 'Other'
 ];
 
 /* How the revenue is earned. Single select. This changes which multiple set applies
@@ -126,46 +128,6 @@ const INVESTORS = {
     { name: 'Fuel Ventures', note: 'B2B SaaS, marketplaces and fintech via SEIS/EIS. £100k to £1M.' }
   ]
 };
-
-/* ---------------- what actually moves the multiple, by sector ----------------
-   One entry per sector. `pays` is what that market rewards, `cuts` is what compresses
-   the multiple there, `metric` is the number investors index on before anything else.
-   Written to be specific enough that a founder in the sector recognises it. */
-const SECTOR_DRIVERS = {
-  'SaaS / B2B software': { metric: 'Net revenue retention', pays: 'Net revenue retention above 110% is what separates a software multiple from a services one, because it means the installed base grows without new sales.', cuts: 'Logo churn above 2% a month caps the multiple regardless of new business, since it implies the revenue has to be re-won every three years.' },
-  'AI / ML': { metric: 'Gross margin after inference cost', pays: 'Proprietary data or a workflow the model is embedded in, rather than the model itself, because the model is the part that commoditises fastest.', cuts: 'Inference cost inside cost of sales. AI companies routinely report 40% to 60% gross margins where buyers price 75%+, and that gap is applied straight to the multiple.' },
-  'Fintech': { metric: 'Revenue net of interchange and funding cost', pays: 'Net revenue after partner and interchange costs, plus a regulatory permission that takes a competitor two years to obtain.', cuts: 'Gross transaction value quoted as revenue. Investors restate it, and the restated multiple is what gets discussed.' },
-  'Insurtech': { metric: 'Loss ratio and commission share', pays: 'Distribution economics with a stable loss ratio, or an MGA model where you keep commission without carrying underwriting risk.', cuts: 'Any balance sheet risk. Carrying underwriting moves you from a software multiple to an insurance one, which is a different order of magnitude.' },
-  'Healthtech / Digital health': { metric: 'Contracted lives or sites, and reimbursement route', pays: 'A live reimbursement pathway and multi-year contracts with providers or payers, because both make the revenue predictable through a long sales cycle.', cuts: 'Pilot revenue counted as recurring. Pilots that have not converted are valued as pipeline, not as ARR.' },
-  'Biotech / Life sciences': { metric: 'Programme stage and IP position', pays: 'Programmes past a de-risking milestone, with composition of matter protection and a credible route to partnering.', cuts: 'Revenue multiples do not apply here at all. Value is priced on risk-adjusted programme value, so the football field is built on precedent rounds and licensing deals instead.' },
-  'Medtech / Devices': { metric: 'Regulatory clearance and reimbursement code', pays: 'Clearance already in hand and a reimbursement code, since together they convert a science risk into a commercial one.', cuts: 'Hardware gross margin. Device margins sit well below software and the multiple follows the margin.' },
-  'Consumer / D2C': { metric: 'Contribution margin after CAC, and repeat rate', pays: 'Repeat purchase inside 90 days and contribution margin that survives paid acquisition, because that is what makes growth self-funding.', cuts: 'Revenue bought with paid media. Consumer businesses are priced on contribution margin, and a large paid mix pulls the multiple towards retail rather than tech.' },
-  'E-commerce / Retail': { metric: 'Contribution margin and inventory turns', pays: 'Own brand with pricing power, high repeat rate and inventory that turns quickly enough not to consume the raise.', cuts: 'Reselling third-party product. Thin gross margin puts you on a retail multiple, typically well under 2x revenue.' },
-  'Marketplaces': { metric: 'Net revenue, take rate and liquidity', pays: 'Take rate holding as volume grows, plus repeat activity on both sides, which is the evidence that the marketplace and not the subsidy is doing the work.', cuts: 'Quoting GMV. Investors price net revenue, and a founder who leads with GMV usually gets a lower number than one who leads with take rate.' },
-  'Climate / Energy': { metric: 'Contracted offtake and unit economics without subsidy', pays: 'Signed offtake agreements and economics that work at unsubsidised prices, because subsidy risk is what buyers discount hardest.', cuts: 'Project-heavy capital intensity, which shifts pricing towards infrastructure returns rather than software multiples.' },
-  'Deeptech / Hardware': { metric: 'Technology readiness level and first commercial contract', pays: 'A first paid commercial deployment and defensible IP, since together they mark the transition from grant funding to a priced business.', cuts: 'Time to revenue. Long development timelines are discounted for the capital needed to reach the next milestone.' },
-  'Cybersecurity': { metric: 'Net revenue retention and displacement rate', pays: 'Displacing an incumbent tool rather than adding to the stack, plus expansion inside existing accounts.', cuts: 'A crowded category with a large incumbent. Buyers assume the incumbent ships a good-enough feature and discount accordingly.' },
-  'Logistics / Supply chain': { metric: 'Revenue quality: software fee versus freight margin', pays: 'A software or data fee separated cleanly from freight, since that part earns a software multiple and the rest does not.', cuts: 'Blended revenue. Mixing freight and software gets you the lower multiple applied to everything until it is separated.' },
-  'Proptech': { metric: 'Recurring share and transaction dependence', pays: 'Revenue tied to a recurring service or a software fee rather than to transaction volume in a cyclical market.', cuts: 'Dependence on transaction volumes, which are priced with a cycle discount because the market can halve.' },
-  'Edtech': { metric: 'Retention past the first cohort and B2B mix', pays: 'Institutional or employer contracts that renew, which is what moves you off consumer churn rates.', cuts: 'Consumer subscription churn. High first-90-day churn caps the multiple whatever the growth rate is.' },
-  'Legaltech / Regtech': { metric: 'Seats or matters under contract, and renewal rate', pays: 'Multi-year enterprise contracts and a compliance mandate that makes the spend non-discretionary.', cuts: 'Long procurement cycles at law firms and banks, which lengthen payback and are discounted for it.' },
-  'HR tech / Future of work': { metric: 'Net revenue retention against headcount changes', pays: 'Pricing that is not purely per-seat, so that revenue does not fall when a customer freezes hiring.', cuts: 'Seat-based pricing in a soft hiring market, where net retention drops below 100% without a single logo lost.' },
-  'Adtech / Martech': { metric: 'Net revenue and platform dependence', pays: 'Direct relationships with advertisers and revenue that does not sit inside one platform.', cuts: 'Gross billings quoted as revenue, and dependence on a single platform whose policy change can remove the business.' },
-  'Media / Content': { metric: 'Owned audience and revenue per user', pays: 'A first-party audience and diversified revenue, since owned distribution is the asset being bought.', cuts: 'Advertising cyclicality and algorithm dependence, both of which are discounted heavily at seed.' },
-  'Gaming': { metric: 'D30 retention and lifetime value against CAC', pays: 'Retention curves that flatten, plus a live-ops cadence that lifts revenue per user over time.', cuts: 'Hit-driven revenue concentration in one title, which is priced as a single-product risk.' },
-  'Travel / Hospitality': { metric: 'Net revenue and repeat booking rate', pays: 'Repeat bookings and direct relationships rather than paid intermediated demand.', cuts: 'Seasonality and cyclicality, which widen the range and pull the mid-point down.' },
-  'Food / Beverage': { metric: 'Gross margin and velocity per point of distribution', pays: 'Rate of sale in existing doors, which is what a retailer and an investor both look at first.', cuts: 'Physical gross margin and working capital. This is priced on consumer packaged goods multiples, usually a small multiple of revenue.' },
-  'Agritech': { metric: 'Contracted acreage or output, and season-over-season retention', pays: 'Multi-season contracts and measurable yield or cost improvement per hectare.', cuts: 'Single-season sales cycles, which mean one bad season resets the growth rate.' },
-  'Web3 / Digital assets': { metric: 'Protocol or platform revenue excluding token effects', pays: 'Real fee revenue that would exist without token incentives.', cuts: 'Token-driven activity and regulatory uncertainty, which together produce the widest ranges of any sector we see.' },
-  'Defence / Gov tech': { metric: 'Contract vehicle and framework position', pays: 'A place on a framework or an incumbent programme, since that is what converts a long sales cycle into predictable revenue.', cuts: 'Budget cycle timing and procurement length, which stretch payback well beyond commercial norms.' },
-  'Telecoms / Connectivity': { metric: 'ARPU, churn and capital intensity', pays: 'Low churn on a contracted base, and asset-light delivery.', cuts: 'Network capital expenditure, which moves the pricing towards infrastructure multiples on EBITDA rather than revenue.' },
-  'Professional services': { metric: 'Utilisation, and revenue per head', pays: 'Productised delivery or a recurring retainer, which is the only route to a multiple above the services range.', cuts: 'Revenue that scales with headcount. This is priced on a small multiple of profit, not of revenue, and no growth rate changes that.' },
-  'Other': { metric: 'Recurring share and gross margin', pays: 'Contracted, repeatable revenue at software-like gross margin.', cuts: 'Revenue that has to be re-won each period, which is priced on profit rather than on revenue.' }
-};
-
-/* Where the multiple set is not revenue-based at all. Used to change the copy honestly
-   rather than showing a revenue multiple that no investor in that sector would use. */
-const NON_REVENUE_SECTORS = ['Biotech / Life sciences', 'Medtech / Devices'];
 
 const FIX_BY_REVENUE = {
   'Pre-revenue': { title: 'Turn your pipeline into signed evidence.', body: 'Three named design partners with a start date and a price does more for a pre-revenue range than any traction slide. At this stage the range is priced on proof of demand, not on product.' },
@@ -379,18 +341,55 @@ function setPreRevenue() {
   track('quiz_answer', { step: 3, key: 'revenue', value: 'Pre-revenue' });
   currentStep = 4; renderStep();
 }
-function onCurrency() {
-  responses.currency = document.getElementById('rev-currency').value;
-  paintRevenue(responses.revenue_exact || 0, null);
-  track('currency_set', { currency: responses.currency });
+
+/* Currency is inferred from the edge, not asked. The founder types a number in
+   whatever they report in; all we need is which symbol to print, so there is no
+   conversion anywhere and nothing to get wrong. Correctable next to the range. */
+function setCurrency(code, source) {
+  responses.currency = CURRENCY_SYMBOL[code] ? code : 'USD';
+  const prefix = document.getElementById('rev-cur-prefix');
+  if (prefix) prefix.textContent = curSymbol().trim() || responses.currency;
+  const sel = document.getElementById('range-currency');
+  if (sel) sel.value = responses.currency;
+  if (source !== 'boot') track('currency_set', { currency: responses.currency, source: source });
 }
+
+function onCurrency() {
+  setCurrency(document.getElementById('range-currency').value, 'user');
+  paintRevenue(responses.revenue_exact || 0, null);
+  if (lastResult) renderResult(lastResult);
+}
+
+(function bootCurrency() {
+  /* Best guess from the browser first, so the prefix is never empty, then the
+     edge header refines it. Falls back to USD and stays silent on failure. */
+  const lang = (navigator.language || '').toUpperCase();
+  const byLang = { GB: 'GBP', IE: 'EUR', DE: 'EUR', FR: 'EUR', ES: 'EUR', IT: 'EUR', NL: 'EUR',
+    CH: 'CHF', SE: 'SEK', NO: 'NOK', DK: 'DKK', PL: 'PLN', CA: 'CAD', AU: 'AUD',
+    SG: 'SGD', HK: 'HKD', JP: 'JPY', IN: 'INR', AE: 'AED', IL: 'ILS', ZA: 'ZAR', BR: 'BRL', MX: 'MXN' };
+  setCurrency(byLang[lang.split('-')[1]] || 'USD', 'boot');
+  fetch('/api/geo')
+    .then(r => r.json())
+    .then(function (g) {
+      if (g && g.currency) { responses.country = g.country || null; setCurrency(g.currency, 'boot'); }
+    })
+    .catch(function () { /* keep the browser guess */ });
+})();
+
 function onRecurring() {
   const v = parseInt(document.getElementById('rec-slider').value, 10);
   responses.recurring_pct = v;
   document.getElementById('rec-read').textContent = v + '% recurring';
 }
 
-/* revenue model chips, single select */
+/* Revenue model is asked before the recurring share, because the model decides
+   whether the recurring question is worth asking at all and what it should default to. */
+const RECURRING_DEFAULT = {
+  'Subscription / SaaS': 90, 'Usage or consumption': 70, 'Transaction fee / take rate': 20,
+  'Marketplace commission': 20, 'One-off sales or licences': null, 'Services / retainer': 30,
+  'Advertising': 30, 'Hardware plus software': 30, 'Interest / spread': 60, 'Other': 50
+};
+
 const modelWrap = document.getElementById('model-chips');
 if (modelWrap) {
   REVENUE_MODELS.forEach(function (m) {
@@ -400,13 +399,51 @@ if (modelWrap) {
       responses.revenue_model = m;
       modelWrap.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
       b.classList.add('on');
+      applyModel(m);
     };
     modelWrap.appendChild(b);
   });
 }
 
+function applyModel(m) {
+  const wrap = document.getElementById('rec-wrap');
+  const def = RECURRING_DEFAULT[m];
+  if (def === null) {
+    /* One-off revenue has no meaningful recurring share, so we do not ask. */
+    responses.recurring_pct = 0;
+    wrap.style.display = 'none';
+    return;
+  }
+  responses.recurring_pct = def;
+  document.getElementById('rec-slider').value = def;
+  document.getElementById('rec-read').textContent = def + '% recurring';
+  wrap.style.display = 'block';
+}
+
+/* Band fallbacks, for anyone who would rather not give a figure. */
+function showRevBands() {
+  document.getElementById('rev-bands').style.display = 'grid';
+  document.getElementById('rev-band-toggle').style.display = 'none';
+}
+function pickRevBand(band) {
+  responses.revenue = band;
+  responses.revenue_exact = null;
+  document.getElementById('rev-followups').style.display = 'block';
+  track('quiz_answer', { step: 3, key: 'revenue', value: band, exact: null, fallback: true });
+}
+function showGrowthBands() {
+  document.getElementById('growth-bands').style.display = 'grid';
+  document.getElementById('growth-band-toggle').style.display = 'none';
+}
+function pickGrowthBand(band) {
+  responses.growth = band;
+  responses.growth_exact = null;
+  document.getElementById('growth-detail-wrap').style.display = 'block';
+  track('quiz_answer', { step: 4, key: 'growth', value: band, exact: null, fallback: true });
+}
+
 function submitRevenue() {
-  if (!responses.currency) responses.currency = document.getElementById('rev-currency').value || 'USD';
+  if (!responses.currency) responses.currency = 'USD';
   if (responses.revenue_exact === undefined) paintRevenue(0, null);
   if (responses.revenue_exact > 0 && responses.recurring_pct === undefined) responses.recurring_pct = 50;
   track('quiz_answer', {
@@ -521,6 +558,83 @@ async function submitLead() {
   btn.disabled = false; btn.textContent = 'Show me my range';
 }
 
+/* ---------------- optional enrichment on the result screen ----------------
+   Everything here is optional, free and ungated. Each field removes a reason the
+   range is wide, and the narrowing happens in front of the founder rather than
+   being promised in an email. */
+
+let lastResult = null;
+
+function onGrossMargin() {
+  const v = parseInt(document.getElementById('gm-slider').value, 10);
+  responses.gross_margin = v;
+  document.getElementById('gm-read').textContent = v + '%';
+}
+
+function onLastRound() {
+  const amount = parseFloat(document.getElementById('lr-amount').value);
+  const value = parseFloat(document.getElementById('lr-value').value);
+  responses.last_round_amount = isNaN(amount) ? null : amount;
+  responses.last_round_value = isNaN(value) ? null : value;
+  responses.last_round_type = document.getElementById('lr-type').value || null;
+  responses.last_round_date = document.getElementById('lr-date').value || null;
+}
+
+/* Months between a YYYY-MM string and today. Returns null if unusable. */
+function monthsSince(ym) {
+  if (!ym || !/^\d{4}-\d{2}$/.test(ym)) return null;
+  const parts = ym.split('-');
+  const then = new Date(Number(parts[0]), Number(parts[1]) - 1, 1);
+  const now = new Date();
+  const m = (now.getFullYear() - then.getFullYear()) * 12 + (now.getMonth() - then.getMonth());
+  return m >= 0 && m < 120 ? m : null;
+}
+
+async function applyNarrowing() {
+  onGrossMargin(); onLastRound();
+  const btn = document.getElementById('narrow-btn');
+  btn.disabled = true; btn.textContent = 'Recalculating';
+
+  const before = lastResult;
+  const after = computeResult();
+  lastResult = after;
+
+  const foot = document.getElementById('narrow-foot');
+  /* Width measured relative to the mid-point, because that is what precision means
+     here. An absolute spread can widen while the answer gets more precise, simply
+     because the mid-point moved. */
+  const relBefore = before ? (before.high - before.low) / before.mid : null;
+  const relAfter = (after.high - after.low) / after.mid;
+  const tighter = relBefore ? Math.round((1 - relAfter / relBefore) * 100) : 0;
+  if (before) {
+    foot.textContent = 'Was ' + money(before.low) + ' to ' + money(before.high) +
+      '. Now ' + money(after.low) + ' to ' + money(after.high) +
+      (tighter > 0 ? ', and the range is ' + tighter + '% tighter relative to its mid-point.' : '.') +
+      ' What you added goes to the reviewer, so the email you get back is built on it too.';
+  } else {
+    foot.textContent = 'Added and sent to the reviewer.';
+  }
+
+  try {
+    await fetch(CONFIG.leadEndpoint, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(Object.assign({}, responses, { type: 'enrichment', computed: after }))
+    });
+    track('narrowing_applied', {
+      has_margin: responses.gross_margin != null,
+      has_last_round: responses.last_round_value != null,
+      narrowed: tighter > 0
+    });
+  } catch (e) {
+    console.error('[fairway] enrichment post failed', e);
+  }
+
+  renderResult(after);
+  btn.disabled = false; btn.textContent = 'Update my range';
+  document.getElementById('narrow-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
 /* ---------------- result ---------------- */
 /* First-pass range only. Deliberately coarse, and replaced on screen by the engine
    when it returns a sourced range. Continuous in ARR so that two founders £1 apart do
@@ -560,11 +674,44 @@ function computeResult() {
 
   const profitMult = { 'Profitable': 1.15, 'Around break-even': 1.05, 'Burning, 12+ months runway': 1, 'Burning, under 12 months runway': 0.9 }[responses.profit] || 1;
 
-  const base = (stageBase + revenueBump) * growthMult * recurringMult * profitMult;
-  const low = base * 0.85;
-  const high = base * 1.55;
+  /* Gross margin decides which multiple set you belong to at all. Combined with the
+     recurring share it is floored, so two related discounts cannot compound into a
+     haircut nobody can trace back to a cause. */
+  const gm = responses.gross_margin;
+  const marginMult = (gm === null || gm === undefined) ? 1
+    : (gm < 50 ? 0.75 + 0.005 * gm : Math.min(1.18, 1 + 0.004 * (gm - 50)));
+  const qualityMult = Math.max(0.6, recurringMult * marginMult);
+
+  const base = (stageBase + revenueBump) * growthMult * qualityMult * profitMult;
+
+  /* Each thing we know removes a reason to be wide. Stated here rather than tuned
+     invisibly, because the width is the number founders actually complain about. */
+  let spreadLow = 0.85, spreadHigh = 1.55;
+  if (gm !== null && gm !== undefined) { spreadLow = 0.88; spreadHigh = 1.45; }
+
+  let mid = base;
+
+  /* A last round is the strongest anchor available, carried forward in line with the
+     founder's own revenue growth, which is the argument they will make in the room. */
+  const lrValue = responses.last_round_value;
+  const months = monthsSince(responses.last_round_date);
+  let anchorM = null;
+  if (lrValue > 0 && months !== null) {
+    const gm2 = (responses.growth_exact === null || responses.growth_exact === undefined) ? 0 : responses.growth_exact;
+    const revenueFactor = Math.pow(1 + Math.max(0, gm2) / 100, months);
+    /* Value does not track revenue one for one, because the multiple compresses as
+       you scale. The 0.75 exponent damps for that, and the 4x cap is a guard rail
+       rather than the mechanism. Both are stated on screen. */
+    const carried = Math.min(4, Math.pow(revenueFactor, 0.75));
+    anchorM = (lrValue / 1e6) * carried;
+    mid = 0.6 * base + 0.4 * anchorM;
+    spreadLow = Math.max(spreadLow, 0.9); spreadHigh = Math.min(spreadHigh, 1.35);
+  }
+
+  const low = mid * spreadLow;
+  const high = mid * spreadHigh;
   const raise = RAISE_MIDPOINT[responses.raise] || 1.0;
-  const mid = (low + high) / 2;
+  mid = (low + high) / 2;
   const dilLow = raise / (low + raise) * 100;
   const dilHigh = raise / (high + raise) * 100;
 
@@ -574,7 +721,11 @@ function computeResult() {
     dilMid: raise / (mid + raise) * 100,
     /* Computed here rather than in renderResult so that it reaches the leads sheet.
        Illustration on a doubling assumption, not a forecast. */
-    futureValue: ((dilLow - dilHigh) / 100) * CONFIG.valuationGrowth12m * (mid + raise)
+    futureValue: ((dilLow - dilHigh) / 100) * CONFIG.valuationGrowth12m * (mid + raise),
+    /* Surfaced so the copy can say what the range is standing on. */
+    anchorM: anchorM,
+    usedMargin: gm !== null && gm !== undefined,
+    monthsSinceRound: months
   };
 }
 
@@ -594,142 +745,33 @@ function setItem(prefix, title, body, locked) {
   document.getElementById(prefix + '-body').textContent = body;
 }
 
-
-/* ---------------- what moves your valuation, tailored ----------------
-   Built from sector, stage, size, growth, recurring share and revenue model. Nothing in
-   here is a fixed paragraph: every driver either quotes the founder's own number back or
-   is drawn from the sector table. If we cannot tailor a driver, we do not show it. */
-
-const MODEL_NOTE = {
-  'Subscription / SaaS': 'On a subscription model the argument is won on net revenue retention. Gross retention tells an investor whether the base holds; net tells them whether it grows on its own.',
-  'Usage or consumption': 'Usage pricing has no floor, so investors discount for the month a large customer runs less. A committed minimum on your largest accounts removes most of that discount.',
-  'Transaction fee / take rate': 'Transaction revenue is priced on whether the take rate holds as volume grows. If it has compressed, show why, before someone assumes it will keep compressing.',
-  'Marketplace commission': 'Lead with net revenue, not GMV. Investors restate GMV to net revenue in their own model anyway, and the founder who quotes GMV usually ends up defending a lower number than the one who quoted take rate.',
-  'One-off sales or licences': 'One-off revenue has to be re-won every period, so it is valued closer to a services multiple. Any maintenance, support or renewal component should be separated out and shown on its own line.',
-  'Services / retainer': 'Services revenue scales with headcount, which is why it is priced on a multiple of profit rather than of revenue. The route to a higher multiple is productising a repeatable part of the delivery.',
-  'Advertising': 'Advertising revenue is cyclical and usually concentrated. Show the share coming from your largest three advertisers before you are asked for it.',
-  'Hardware plus software': 'Split hardware from software revenue explicitly. Blended, the whole thing gets the hardware multiple; split, the software line can carry its own.',
-  'Interest / spread': 'Spread revenue is rate sensitive, so investors will want to see the range at a lower rate environment. Model it rather than waiting for the question.',
-  'Other': 'The first thing an investor will do is work out how much of this revenue repeats without a new sale. Answer it before they ask.'
-};
-
-function stageNote(stage, arrM) {
-  if (stage === 'Series A') {
-    return 'At Series A the range is argued on multiples against recent comparable rounds, and the burden of proof sits on why your growth and margin profile deserves to sit above the median of that comp set.';
-  }
-  if (stage === 'Seed') {
-    return arrM >= 0.5
-      ? 'At seed with real revenue you are in the narrow band where a multiple can actually be applied. That is an advantage, because a sourced multiple is far easier to defend than a story.'
-      : 'At seed with limited revenue, price is usually set by the intersection of the round size and the lead fund ownership target rather than by any multiple. Knowing that target before the meeting is worth more than another slide.';
-  }
-  return 'At pre-seed there is no published median to anchor against, which is why ranges at this stage are wide. What narrows them is evidence of demand with a date and a price attached to it.';
-}
-
-function sizeNote(arrM) {
-  if (arrM <= 0) return null;
-  if (arrM < 0.25) {
-    return { title: 'Size, and why the discount is large here', body: 'At roughly ' + Math.round(arrM * 1000) + 'k of ARR, a listed peer multiple cannot be applied without a substantial size and illiquidity discount. The report states that discount as a number with a reason, rather than burying it inside the range.' };
-  }
-  if (arrM < 1) {
-    return { title: 'Size, and the discount that comes with it', body: 'At about ' + arrM.toFixed(2).replace(/0$/, '') + 'M of ARR you are below the level where a comparable round set gets dense, so the range stays wider than it will be at 1M. The discount to listed peers is still material and should be shown, not assumed.' };
-  }
-  return { title: 'Size, and where the argument moves next', body: 'Above 1M of ARR the conversation stops being about the story and starts being about which comparable set you belong in. Getting into the right comp set is worth more than any single metric, because it resets the multiple before anything else is discussed.' };
-}
-
-function buildDrivers() {
-  const out = [];
-  const sector = responses.sector === 'Other' ? 'Other' : (responses.sector || 'Other');
-  const sd = SECTOR_DRIVERS[sector] || SECTOR_DRIVERS['Other'];
-  const monthly = responses.revenue_exact || 0;
-  const arrM = monthly * 12 / 1e6;
-  const g = responses.growth_exact;
-  const rec = responses.recurring_pct;
-  const nonRev = NON_REVENUE_SECTORS.indexOf(sector) !== -1;
-
-  /* 1. growth, or proof of demand when there is nothing to multiply */
-  if (monthly > 0 && g !== null && g !== undefined && g !== 0) {
-    const annual = Math.round((Math.pow(1 + g / 100, 12) - 1) * 100);
-    out.push({
-      title: 'Growth at ' + g + '% a month is the largest single lever you have',
-      body: 'That compounds to roughly ' + annual + '% a year. Revenue multiples are not flat, they are fitted against growth, so this is the input the range is most sensitive to. ' +
-        (g >= 15
-          ? 'At this rate the risk is not the number, it is that a single acquisition channel is doing all of it. Two channels with independent payback curves removes the discount that assumption creates.'
-          : 'At this rate expect the market-size question. The answer is a segment-level view showing growth constrained by your own capacity rather than by demand.')
-    });
-  } else {
-    out.push({
-      title: 'With no revenue to multiply, demand evidence is the range',
-      body: 'Pre-revenue ranges are argued on proof that someone will pay, not on product. Three named design partners with a start date and a price moves the number further than any traction slide, because it converts an opinion into a dated commitment.'
-    });
-  }
-
-  /* 2. revenue quality, from the recurring share and the model */
-  if (monthly > 0 && rec !== null && rec !== undefined) {
-    let lead;
-    if (rec >= 80) {
-      lead = rec + '% of your revenue recurs without a new sale. That is what puts you in the software multiple set rather than the services one, and the gap between those two sets is usually wider than any other single factor on this page.';
-    } else if (rec >= 40) {
-      lead = rec + '% of your revenue recurs and the rest has to be re-won each period. Investors will value the two parts separately, so present them separately. Blended, the lower multiple tends to get applied to the whole.';
-    } else {
-      lead = 'Only ' + rec + '% of your revenue recurs. Expect the non-recurring part to be priced closer to a services multiple, which is typically a small multiple of revenue rather than a software one. Moving this number is the highest-value change available to you.';
-    }
-    const note = MODEL_NOTE[responses.revenue_model] || MODEL_NOTE['Other'];
-    out.push({ title: 'Revenue quality, not revenue size', body: lead + ' ' + note });
-  }
-
-  /* 3. the sector, from the table */
-  out.push({
-    title: 'In ' + (responses.sector === 'Other' ? (responses.sector_detail || 'your sector') : sector) + ', the number they index on is ' + sd.metric.toLowerCase(),
-    body: sd.pays + ' The other side of it: ' + sd.cuts.charAt(0).toLowerCase() + sd.cuts.slice(1)
-  });
-
-  /* 4. size and stage */
-  const sz = sizeNote(arrM);
-  if (sz && !nonRev) out.push(sz);
-  out.push({ title: 'Your stage sets how wide the range starts', body: stageNote(responses.stage, arrM) });
-
-  /* 5. runway, only when it is the binding constraint */
-  if (responses.profit === 'Burning, under 12 months runway') {
-    out.push({
-      title: 'Under twelve months of runway is priced before anything else',
-      body: 'A round takes longer than the runway you have, so the price gets set against your deadline rather than against the business. Nothing else in this list outweighs it. Either extend runway before opening the process or arrive with a bridge already committed.'
-    });
-  }
-
-  if (nonRev) {
-    out.splice(1, 0, {
-      title: 'Revenue multiples do not apply in this sector',
-      body: 'Companies here are priced on programme stage, regulatory position and precedent transactions, not on a multiple of revenue. The football field in your report is built from those instead, which is why it looks different from the software version.'
-    });
-  }
-
-  return out;
-}
-
-function renderDrivers() {
-  const list = document.getElementById('drivers-list');
-  if (!list) return;
-  const drivers = buildDrivers();
-  list.innerHTML = '';
-  drivers.forEach(function (d, i) {
-    const row = document.createElement('div');
-    row.className = 'item';
-    row.innerHTML = '<div class="num">' + (i + 1) + '</div><div><h3>' +
-      escapeHtml(d.title) + '</h3><p>' + escapeHtml(d.body) + '</p></div>';
-    list.appendChild(row);
-  });
-  document.getElementById('drivers-foot').textContent =
-    'These are selected for your sector, stage, size and revenue model. They are the levers, not the arithmetic. The report shows which of them your range is actually sitting on, and what each one is worth in points.';
-  track('drivers_view', { count: drivers.length, sector: responses.sector || null });
-}
-
 function renderResult(r) {
+  lastResult = r;
   const sectorLabel = responses.sector === 'Other'
     ? (responses.sector_detail || 'your sector')
     : (responses.sector || 'your sector');
 
   document.getElementById('range-output').textContent = money(r.low) + ' – ' + money(r.high);
   document.getElementById('range-stage-sector').textContent = (responses.stage || 'your stage') + ' · ' + sectorLabel;
+
+  const built = [];
+  if (r.usedMargin) built.push('your gross margin');
+  if (r.anchorM) {
+    built.push('your last round carried forward ' + r.monthsSinceRound + ' months in line with revenue, damped for multiple compression, weighted 40%');
+  }
+  const note = document.getElementById('range-note');
+  if (built.length && note) {
+    const lastM = responses.last_round_value ? responses.last_round_value / 1e6 : null;
+    let verdict = 'Still a first pass. The reviewer replaces it.';
+    if (lastM) {
+      if (r.high < lastM) {
+        verdict = 'Said plainly: the whole of this range sits below your last round, so on these inputs you would be pricing a down round. That is the argument to prepare for rather than to discover in the meeting.';
+      } else if (r.mid < lastM * 1.1) {
+        verdict = 'Said plainly: the middle of this range is roughly where your last round was, so you are arguing for a flat round unless something has changed that these inputs cannot see. That is what the reviewer will look for.';
+      }
+    }
+    note.textContent = 'Built on ' + built.join(', ') + '. ' + verdict;
+  }
 
   const points = r.dilLow - r.dilHigh;
   const spread = r.high - r.low;
