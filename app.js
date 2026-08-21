@@ -1,7 +1,8 @@
-/* Fairway landing funnel. Config first, then data, then flow.
- * The valuation content layer lives in drivers.js and the football field in field.js,
- * both of which load after this file. Growth and the forward revenue bridge live in
- * app-growth.js, which loads before it; the result-screen metrics in app-result.js. */
+/* Fairway landing funnel. Config first, then flow.
+ * Content tables live in data-content.js and growth in app-growth.js, both of
+ * which load before this file. The drivers layer is drivers.js, the football
+ * field is field.js, and the result-screen metrics are app-result.js, all of
+ * which load after it. */
 
 const CONFIG = {
   stripeLink: 'https://buy.stripe.com/bJe6oG3Xf5Tp1Sf1n1cjS00',
@@ -16,141 +17,8 @@ const CONFIG = {
   valuationGrowth12m: 2
 };
 
-const SECTORS = [
-  'SaaS / B2B software', 'AI / ML', 'Fintech', 'Insurtech',
-  'Healthtech / Digital health', 'Biotech / Life sciences', 'Medtech / Devices',
-  'Consumer / D2C', 'E-commerce / Retail', 'Marketplaces',
-  'Climate / Energy', 'Deeptech / Hardware', 'Cybersecurity',
-  'Logistics / Supply chain', 'Proptech', 'Edtech',
-  'Legaltech / Regtech', 'HR tech / Future of work', 'Adtech / Martech',
-  'Media / Content', 'Gaming', 'Travel / Hospitality', 'Food / Beverage',
-  'Agritech', 'Web3 / Digital assets', 'Defence / Gov tech',
-  'Telecoms / Connectivity', 'Mobility / Automotive',
-  'Agencies / Professional services', 'Other'
-];
-
-/* How the revenue is earned. Single select. This changes which multiple set applies
-   more than sector does in several cases, which is why it is asked separately. */
-const REVENUE_MODELS = [
-  'Subscription / SaaS', 'Usage or consumption', 'Transaction fee / take rate',
-  'Marketplace commission', 'One-off sales or licences', 'Services / retainer',
-  'Advertising', 'Hardware plus software', 'Interest / spread', 'Other'
-];
-
-/* Display only. All maths runs in the founder's own currency, because a multiple is a
-   ratio and does not need converting. The one place a rate is used is the US dollar
-   stage anchor on the field, and that is converted at a published ECB rate with a date. */
-const CURRENCY_SYMBOL = {
-  USD: '$', GBP: '£', EUR: '€', CAD: 'C$', AUD: 'A$', CHF: 'CHF ',
-  SEK: 'kr', NOK: 'kr', DKK: 'kr', SGD: 'S$', HKD: 'HK$', JPY: '¥',
-  INR: '₹', AED: 'AED ', SAR: 'SAR ', ILS: '₪', ZAR: 'R',
-  BRL: 'R$', MXN: 'MX$', PLN: 'zł'
-};
-
-const CONCERNS = [
-  'Valuation looks high', 'Market size', 'Traction is early', 'Unit economics',
-  'Churn or retention', 'Competition', 'Team gaps', 'Regulatory risk',
-  'Concentration in a few customers', 'Nothing specific yet'
-];
-
-const INVESTORS = {
-  'SaaS / B2B software': [
-    { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. First cheques £100k to £1.5M.' },
-    { name: 'Episode 1 Ventures', note: 'UK-only B2B software. £250k to £3M.' },
-    { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. Around £1M average first cheque.' }
-  ],
-  'AI / ML': [
-    { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. Around £1M average first cheque.' },
-    { name: 'MMC Ventures', note: 'AI-first companies. Around $3.2M average seed cheque.' },
-    { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. £100k to £1.5M.' }
-  ],
-  'Fintech': [
-    { name: 'Seedcamp', note: 'Fintech, AI, developer tools and marketplaces. First cheques $350k to $1M.' },
-    { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. £1M to £2M.' },
-    { name: 'LocalGlobe / Latitude', note: 'Fintech, health, climate and marketplaces. £500k to £2M at seed.' }
-  ],
-  'Insurtech': [
-    { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. £1M to £2M.' },
-    { name: 'Octopus Ventures', note: 'Fintech, B2B SaaS, health and climate. Active seed through Series A.' },
-    { name: 'Seedcamp', note: 'Fintech, AI, developer tools and marketplaces. $350k to $1M.' }
-  ],
-  'Healthtech / Digital health': [
-    { name: 'Octopus Ventures', note: 'Healthtech and biotech alongside B2B SaaS. Active seed through Series A.' },
-    { name: 'Ada Ventures', note: 'Healthy ageing and economic empowerment theses. £250k to £1.5M.' },
-    { name: 'Mercia Ventures', note: 'Life sciences, software and deeptech. Among the most active UK early-stage funds by deal count.' }
-  ],
-  'Biotech / Life sciences': [
-    { name: 'Mercia Ventures', note: 'Life sciences, software and deeptech. Among the most active UK early-stage funds by deal count.' },
-    { name: 'Future Planet Capital', note: 'Deeptech, health and engineering biology out of the university ecosystem.' },
-    { name: 'Backed VC', note: 'AI therapeutics and frontier science. $500k to $5M.' }
-  ],
-  'Consumer / D2C': [
-    { name: 'Hoxton Ventures', note: 'Broad tech with a consumer and fintech lean. $500k to $5M.' },
-    { name: 'Fuel Ventures', note: 'B2C and B2B via SEIS/EIS. High early-stage deal volume. £100k to £1M.' },
-    { name: 'Cherry Ventures', note: 'Europe-wide, sector-agnostic at seed. €2M to €7M.' }
-  ],
-  'Marketplaces': [
-    { name: 'Seedcamp', note: 'Marketplaces, fintech, AI and developer tools. First cheques $350k to $1M.' },
-    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k to £1M.' },
-    { name: 'Passion Capital', note: 'Marketplaces, fintech and insurtech. £1M to £2M.' }
-  ],
-  'Climate / Energy': [
-    { name: 'Octopus Ventures', note: 'Climate tech alongside B2B SaaS and deeptech. Active seed through Series A.' },
-    { name: 'Ada Ventures', note: 'Climate equity thesis. £250k to £1.5M.' },
-    { name: 'Future Planet Capital', note: 'Climate, deeptech and engineering biology. High early-stage deal volume.' }
-  ],
-  'Deeptech / Hardware': [
-    { name: 'Concept Ventures', note: 'Deep tech, AI and infrastructure software. Around £1M average first cheque.' },
-    { name: 'Mercia Ventures', note: 'Deeptech, life sciences and software. Among the most active UK early-stage funds.' },
-    { name: 'Future Planet Capital', note: 'Deeptech, space, defence and engineering biology.' }
-  ],
-  'Cybersecurity': [
-    { name: 'Playfair Capital', note: 'Enterprise software, AI and developer tools. £100k to £1.5M.' },
-    { name: 'Episode 1 Ventures', note: 'UK-only B2B software including infrastructure and security. £250k to £3M.' },
-    { name: 'Octopus Ventures', note: 'B2B SaaS and deeptech. Active seed through Series A.' }
-  ],
-  'Logistics / Supply chain': [
-    { name: 'Maven Capital Partners', note: 'SaaS, transport and energy. Among the most active UK early-stage investors by deal count.' },
-    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k to £1M.' },
-    { name: 'Backed VC', note: 'Manufacturing and automation alongside frontier tech. $500k to $5M.' }
-  ],
-  'Proptech': [
-    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k to £1M.' },
-    { name: 'Concept Ventures', note: 'Infrastructure software and AI. Around £1M average first cheque.' },
-    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k to £300k.' }
-  ],
-  'Edtech': [
-    { name: 'Founders Factory', note: 'Multi-sector early-stage via corporate partners. £30k to £250k.' },
-    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k to £300k.' },
-    { name: 'Mercia Ventures', note: 'Software and consumer alongside deeptech. High early-stage deal volume.' }
-  ],
-  'Other': [
-    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k to £300k.' },
-    { name: 'SyndicateRoom', note: 'Sector-agnostic, high-volume early-stage syndicate.' },
-    { name: 'Fuel Ventures', note: 'B2B SaaS, marketplaces and fintech via SEIS/EIS. £100k to £1M.' }
-  ]
-};
-
-const FIX_BY_REVENUE = {
-  'Pre-revenue': { title: 'Turn your pipeline into signed evidence.', body: 'Three named design partners with a start date and a price does more for a pre-revenue range than any traction slide. At this stage the range is priced on proof of demand, not on product.' },
-  'Under $10k/mo': { title: 'Show retention before you show growth.', body: 'At this revenue the first question is whether the early customers stay. A three-month cohort chart pre-empts it and defends the top of your range. A cumulative revenue line invites it.' },
-  '$10k–$50k/mo': { title: 'Lead with gross margin and net revenue retention, not top line.', body: 'At this level the range is set by the quality of the revenue rather than the size of it. Gross margin, NRR and payback are the three numbers that move it.' },
-  '$50k–$150k/mo': { title: 'Bring CAC payback by channel.', body: 'At this revenue the objection is efficiency, not demand. Payback in months, split by channel, moves the range further than another month of growth does.' },
-  '$150k+/mo': { title: 'Expect the range to be argued on multiples, not story.', body: 'Above this level the conversation moves to ARR multiples against recent comparable rounds. The defensible argument is why your growth and margin profile sits above the median for that comp set.' }
-};
-
-const FIX_BY_GROWTH = {
-  'Too early to measure': { title: 'The team is currently the only asset being priced.', body: 'Pre-traction ranges are argued on founder-market fit and on what the first 90 days after close will prove. Both need to be explicit and dated, or the range defaults to the bottom of the band.' },
-  'Growing, under 100% a year': { title: 'This growth rate will be read as a market-size problem.', body: 'Steady growth invites the question of whether the ceiling is low. The answer is a segment-level breakdown showing where growth is constrained by your capacity rather than by demand.' },
-  'Growing, 100% or more a year': { title: 'This growth is probably being attributed to one channel.', body: 'Fast growth gets discounted when it looks like a single acquisition channel that will saturate. Two channels with independent payback curves removes the discount.' }
-};
-
-const FIX_BY_PROFIT = {
-  'Profitable': { title: 'Profitability at this stage invites a growth-ceiling question.', body: 'Investors read early profitability either as discipline or as under-investment. The defence is showing what happens to growth once the round is deployed, modelled rather than asserted.' },
-  'Around break-even': { title: 'Break-even makes the raise itself the question.', body: 'If you do not need the money to survive, the round has to be justified by what it accelerates. Tie the raise to a specific milestone and to the timeline for reaching it without the money.' },
-  'Burning, 12+ months runway': { title: 'Your burn multiple will be checked before your growth rate.', body: 'Net new revenue divided by net burn is the number that decides whether growth is being bought or earned. Bring it before you are asked for it.' },
-  'Burning, under 12 months runway': { title: 'Your runway is shorter than the raise will take.', body: 'Under twelve months, the round gets priced against your deadline rather than your business. Either extend runway before opening the process or arrive with a bridge already committed. This is the single largest downward pressure on your range.' }
-};
+/* SECTORS, REVENUE_MODELS, CURRENCY_SYMBOL, CONCERNS, INVESTORS, FIX_BY_* and
+   the hook copy live in data-content.js, which loads before this file. */
 
 const RAISE_MIDPOINT = {
   'Under $500k': 0.35, '$500k–$1M': 0.75, '$1M–$2.5M': 1.75,
@@ -166,27 +34,6 @@ function track(event, props) {
 }
 
 /* ---------------- hooks ---------------- */
-const hooks = {
-  frustration: {
-    kicker: 'For founders raising in the next 90 days',
-    headline: 'You know what your company is worth. The hard part is proving it in the room.',
-    sub: 'Every investor pushes back on the number. Answer nine quick questions and see every method that prices your company, the reference metrics behind each one, the concerns that will be raised, and the funds actively backing this profile. Checked by hand before it reaches you.',
-    cta: 'Start the quiz'
-  },
-  readiness: {
-    kicker: 'Before your next raise',
-    headline: 'Are you actually ready to defend your valuation?',
-    sub: 'Nine questions, four minutes. You get the football field a banker would build, the three concerns investors will raise against it, and the funds writing cheques into your sector right now. Reviewed by former bulge bracket bankers.',
-    cta: 'Find out in four minutes'
-  },
-  reveal: {
-    kicker: 'The number problem',
-    headline: 'Two founders with the same metrics raise at $2M and $4M.',
-    sub: 'The difference is rarely the business. It is whether the number survives being pushed on. Nine questions gets you every method that prices you, the concerns coming at it, and a banker review of both.',
-    cta: 'Show me the methods'
-  }
-};
-
 const params = new URLSearchParams(window.location.search);
 const variant = hooks[params.get('hook')] ? params.get('hook') : 'frustration';
 
@@ -269,7 +116,7 @@ function submitSectorOther() {
   const v = document.getElementById('sector-other').value.trim();
   responses.sector = 'Other';
   responses.sector_detail = v || null;
-  track('quiz_answer', { step: 2, key: 'sector', value: 'Other', detail: v });
+  track('quiz_answer', { step: 2, key: 'sector', value: 'Other', detail: v, has_website: !!responses.website });
   currentStep = 3; renderStep();
 }
 
@@ -301,7 +148,7 @@ function revenueBand(monthly) {
   return '$150k+/mo';
 }
 
-/* growthBand, GROWTH_PERSISTENCE and forwardAnnualGrowth live in app-growth.js,
+/* growthBand, forwardAnnualGrowth and forwardRevenue live in app-growth.js,
    which loads before this file. */
 
 function fmtPlain(n) {
@@ -471,11 +318,11 @@ function paintGrowth(pct, source) {
   if (source !== 'slide') document.getElementById('growth-slider').value = pct;
   document.getElementById('growth-read').innerHTML =
     '<strong>' + pct + '% over the last twelve months.</strong> <button type="button" class="link-btn" onclick="setPreTraction()">Too early to measure</button>';
-  const fwd = Math.max(-50, pct * GROWTH_PERSISTENCE);
-  document.getElementById('growth-annual').textContent = pct > 0
-    ? 'We carry that forward at ' + Math.round(fwd) + '%, not at ' + Math.round(pct) + '%. Growth decelerates, and the haircut is the 0.75 persistence factor Point Nine measured across early-stage SaaS. You will see the working on the result screen.'
-    : (pct < 0 ? 'Revenue is contracting. That is priced, and the report is where it gets explained rather than hidden.' : '');
+  document.getElementById('growth-annual').textContent = pct < 0
+    ? 'Revenue is contracting. That is priced, and the report is where it gets explained rather than hidden.'
+    : '';
   document.getElementById('growth-detail-wrap').style.display = 'block';
+  paintPlanFallback();
 }
 
 function onGrowthType() {
@@ -497,12 +344,74 @@ function setPreTraction() {
   document.getElementById('growth-detail-wrap').style.display = 'block';
 }
 
+/* ---------------- planned growth, the founder's own forecast ----------------
+   This is the number the forward revenue figures are built from. We use it as
+   given: no haircut, no persistence factor, no coefficient of ours anywhere in
+   it. If the plan is not credible that is a conversation for the reviewer, not
+   something to silently correct on the founder's behalf. */
+
+function paintPlan(pct) {
+  responses.growth_plan = pct;
+  document.getElementById('plan-exact').value = pct;
+  document.getElementById('plan-slider').value = pct;
+  document.getElementById('plan-read').innerHTML =
+    '<strong>' + pct + '% planned for the next twelve months.</strong> ' +
+    '<button type="button" class="link-btn" onclick="clearPlan()">Use my last twelve months instead</button>';
+  paintPlanNote();
+}
+
+/* Says out loud what the two numbers imply about each other. A plan far above
+   the trailing rate is the single most common thing an investor pushes on, so
+   the page raises it here rather than letting it surface in the meeting. */
+function paintPlanNote() {
+  const el = document.getElementById('plan-note');
+  if (!el) return;
+  const p = responses.growth_plan, y = responses.growth_yoy;
+  if (p === null || p === undefined) { el.textContent = ''; return; }
+  if (y === null || y === undefined) { el.textContent = 'Everything forward on the next screen is built from this number, exactly as you gave it.'; return; }
+  if (y > 0 && p > y * 1.25) {
+    el.textContent = 'That is an acceleration on the ' + Math.round(y) + '% you just did. It is the first thing an investor will test, so bring what changes to make it happen: a channel, a hire, a price move.';
+  } else if (y > 0 && p < y * 0.6) {
+    el.textContent = 'That is a deceleration on the ' + Math.round(y) + '% you just did. Planning conservatively is fine, but say why, or the multiple gets read against the lower number without the reason attached.';
+  } else {
+    el.textContent = 'Broadly in line with the ' + Math.round(y) + '% you just did, which is the easiest version of this to defend.';
+  }
+}
+
+/* Prefill the plan with the trailing rate the first time, so the founder edits a
+   sensible starting point rather than facing an empty box. Never overwrites a
+   number they have already typed. */
+function paintPlanFallback() {
+  if (responses.growth_plan !== null && responses.growth_plan !== undefined) { paintPlanNote(); return; }
+  const y = responses.growth_yoy;
+  const el = document.getElementById('plan-exact');
+  if (!el || y === null || y === undefined) return;
+  if (el.value === '') { el.value = Math.round(y); document.getElementById('plan-slider').value = Math.round(y); }
+}
+
+function onPlanType() {
+  const v = parseFloat(document.getElementById('plan-exact').value);
+  if (isNaN(v)) return;
+  paintPlan(Math.max(-90, Math.min(1000, v)));
+}
+function onPlanSlide() { paintPlan(parseFloat(document.getElementById('plan-slider').value)); }
+
+function clearPlan() {
+  responses.growth_plan = null;
+  document.getElementById('plan-exact').value = '';
+  document.getElementById('plan-read').innerHTML =
+    'Type the number or drag the slider. <button type="button" class="link-btn" onclick="onPlanSlide()">Enter a plan</button>';
+  document.getElementById('plan-note').textContent =
+    'Without a plan we carry your last twelve months forward unchanged, and the row says that is what we did.';
+}
+
 function submitGrowth() {
   if (!responses.growth) responses.growth = 'Too early to measure';
+  if (responses.growth_plan === undefined) responses.growth_plan = null;
   responses.growth_detail = document.getElementById('growth-detail').value.trim() || null;
   track('quiz_answer', {
     step: 4, key: 'growth', value: responses.growth,
-    yoy: responses.growth_yoy, has_detail: !!responses.growth_detail
+    yoy: responses.growth_yoy, plan: responses.growth_plan, has_detail: !!responses.growth_detail
   });
   currentStep = 5; renderStep();
 }
@@ -652,9 +561,6 @@ function onEbitda() {
 }
 
 /* ---------------- result ---------------- */
-/* firstPassRevenueValue lived here. It turned ARR into a currency amount for the
-   indicative range, on a curve chosen by us and sourced from nothing. The range
-   is gone, so the curve is gone with it. */
 
 function money(m) {
   const c = curSymbol();
@@ -674,13 +580,13 @@ function setItem(prefix, title, body, locked) {
 }
 
 function computeResult() {
-  /* This function no longer produces a valuation. It produces the reference
+  /* This function does not produce a valuation. It produces the reference
      metrics that the football field prices, and nothing else.
 
-     The indicative range that used to live here was a chain of coefficients
-     chosen by us, none of them sourced. It has been deleted rather than
-     improved, because a headline number nobody can trace is worse than no
-     headline number. The valuation is implied by the rows. */
+     There is no coefficient of ours anywhere in it. Every number it returns is
+     either something the founder typed or plain arithmetic on two things they
+     typed, which is what makes every bar on the field reproducible with a
+     calculator from what is printed beside it. */
 
   const monthly = responses.revenue_exact || 0;
   const runRateM = monthly * 12 / 1e6;
@@ -698,8 +604,9 @@ function computeResult() {
     ntmM: fwdRev.ntmM,
     exitArrM: fwdRev.exitArrM,
     trailingGrowth: (responses.growth_yoy === null || responses.growth_yoy === undefined) ? null : responses.growth_yoy,
+    plannedGrowth: (responses.growth_plan === null || responses.growth_plan === undefined) ? null : responses.growth_plan,
     forwardGrowth: (fwd === null) ? null : fwd * 100,
-    persistence: GROWTH_PERSISTENCE,
+    forwardBasis: forwardGrowthBasis(),
     recurringPct: (responses.recurring_pct === null || responses.recurring_pct === undefined) ? null : responses.recurring_pct,
     usedMargin: responses.gross_margin !== null && responses.gross_margin !== undefined,
     markerM: lrValue > 0 ? lrValue / 1e6 : null,
@@ -764,7 +671,9 @@ function renderResult(r) {
     ntm_revenue_m: (r.ntmM === null || r.ntmM === undefined) ? null : +r.ntmM.toFixed(3),
     exit_arr_m: (r.exitArrM === null || r.exitArrM === undefined) ? null : +r.exitArrM.toFixed(3),
     trailing_growth: r.trailingGrowth,
+    planned_growth: r.plannedGrowth,
     forward_growth: r.forwardGrowth === null ? null : Math.round(r.forwardGrowth),
+    forward_basis: r.forwardBasis,
     sector: responses.sector || null, profit: responses.profit || null,
     timing: responses.timing || null, concerns: (responses.concerns || []).length
   });
