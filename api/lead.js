@@ -15,7 +15,7 @@
 const FIELDS = [
   'timestamp_utc', 'lead_id', 'type',
   'email', 'company', 'phone',
-  'stage', 'sector', 'sector_detail',
+  'stage', 'sector', 'sector_detail', 'website',
   'currency', 'revenue', 'revenue_exact_monthly', 'arr_exact', 'recurring_pct', 'revenue_model',
   'growth', 'growth_pct_yoy', 'growth_fwd_pct', 'growth_detail', 'gross_margin_pct', 'profitability', 'raise_band', 'timing',
   'ebitda_ltm', 'last_round_amount', 'last_round_value', 'last_round_type', 'last_round_date',
@@ -46,6 +46,7 @@ export default async function handler(req, res) {
     stage: str(body.stage),
     sector: str(body.sector),
     sector_detail: str(body.sector_detail),
+    website: str(body.website),
 
     currency: str(body.currency) || 'USD',
     revenue: str(body.revenue),
