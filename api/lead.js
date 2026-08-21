@@ -18,7 +18,7 @@ const FIELDS = [
   'stage', 'sector', 'sector_detail',
   'currency', 'revenue', 'revenue_exact_monthly', 'arr_exact', 'recurring_pct', 'revenue_model',
   'growth', 'growth_pct_monthly', 'growth_detail', 'gross_margin_pct', 'profitability', 'raise_band', 'timing',
-  'last_round_amount', 'last_round_value', 'last_round_type', 'last_round_date',
+  'ebitda_ltm', 'last_round_amount', 'last_round_value', 'last_round_type', 'last_round_date',
   'concerns', 'concern_notes', 'context_link',
   'range_low_m', 'range_high_m', 'range_mid_m',
   'dilution_low_pct', 'dilution_high_pct', 'dilution_points', 'future_value_m',
@@ -63,6 +63,7 @@ export default async function handler(req, res) {
     raise_band: str(body.raise),
     timing: str(body.timing),
 
+    ebitda_ltm: num(body.ebitda_ltm),
     last_round_amount: num(body.last_round_amount),
     last_round_value: num(body.last_round_value),
     last_round_type: str(body.last_round_type),
