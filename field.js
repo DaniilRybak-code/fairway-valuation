@@ -17,6 +17,7 @@
 
 function ffMoney(m) {
   const c = (typeof curSymbol === 'function') ? curSymbol() : '$';
+  if (!m) return c + '0';
   if (m >= 1) return c + (m < 10 ? m.toFixed(1) : Math.round(m)) + 'M';
   return c + Math.round(m * 1000) + 'k';
 }
@@ -55,13 +56,14 @@ function ffLabel(posPct, text, extraClass) {
 function ffBuildRows(r) {
   const rows = [];
   const sector = responses.sector === 'Other' ? 'Other' : (responses.sector || 'Other');
-  const arrM = (responses.revenue_exact || 0) * 12 / 1e6;
   const cur = responses.currency || 'USD';
   const raiseM = r.raise;
 
-  /* 1. Stage benchmark. A median is a point, so it is drawn as a point, and it is
-     labelled market context rather than a valuation: half the companies in a
-     median sit below it. */
+  const IN_BUILD = 'Being wired to live comparable-company data. Until it is, this row shows the metric it will price rather than a number we invented.';
+
+  /* ---- 1. Stage benchmark. A median is a point, so it is drawn as a point, and
+     it is labelled market context rather than a valuation: half the companies in
+     a median sit below it. */
   const anchor = STAGE_ANCHOR[responses.stage];
   if (anchor && anchor.post_median_m) {
     const medianLocal = cur === 'USD' ? anchor.post_median_m : fxConvert(anchor.post_median_m, 'USD', cur);
@@ -80,8 +82,7 @@ function ffBuildRows(r) {
       metrics: metrics,
       point: medianLocal ? medianLocal - raiseM : null,
       unplotted: medianLocal ? null : 'The ECB does not publish a reference rate for ' + cur + ', so this is left unconverted rather than converted at a rate we cannot source.',
-      locked: false,
-      context: true
+      locked: false, context: true
     });
   } else {
     rows.push({
@@ -93,96 +94,121 @@ function ffBuildRows(r) {
     });
   }
 
-  /* 2. Public market comparable. Real, sourced, and computable today. */
+  /* ---- 2. Where listed multiples currently sit. Shown as context and never
+     converted into a valuation of this company. An industry aggregate on a
+     trailing basis cannot be applied to a private company without a discount
+     somebody invented, and we removed ours rather than keep using it. */
   const pc = PUBLIC_COMPS.sectors[sector];
-  if (pc && arrM > 0) {
-    const gross = arrM * pc.ev_sales;
-    const lo = gross * (1 - PUBLIC_COMPS.illiquidity.high);
-    const hi = gross * (1 - PUBLIC_COMPS.illiquidity.low);
-    const metrics = [
-      { label: 'Your ARR', value: ffMoney(arrM) },
-      { label: pc.industry + ', ' + pc.n + ' firms', value: pc.ev_sales.toFixed(2) + 'x EV/Sales',
-        source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' +
-          (pc.note ? ' ' + pc.note : '') },
-      { label: 'Less illiquidity discount', value: Math.round(PUBLIC_COMPS.illiquidity.low * 100) + '% to ' + Math.round(PUBLIC_COMPS.illiquidity.high * 100) + '%',
-        source: PUBLIC_COMPS.illiquidity.note + '. It is a judgement, not a market observation, which is why it is shown as a range and shown at all.' }
-    ];
+  if (pc) {
     rows.push({
-      parameter: 'Public market comparable',
-      basis: 'Listed sector EV/Revenue applied to your ARR',
-      metrics: metrics, low: lo, high: hi, locked: false
-    });
-  } else if (pc) {
-    rows.push({
-      parameter: 'Public market comparable',
-      basis: 'Listed sector EV/Revenue applied to your ARR',
+      parameter: 'Where listed multiples sit',
+      basis: 'Market context. The listed sector aggregate, not applied to you',
       metrics: [
-        { label: pc.industry + ', ' + pc.n + ' firms', value: pc.ev_sales.toFixed(2) + 'x EV/Sales',
-          source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' },
-        { label: 'Your ARR', value: 'none yet' }
+        { label: pc.industry + ', ' + pc.n + ' firms', value: pc.ev_sales.toFixed(1) + 'x EV/Sales',
+          source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' +
+            (pc.note ? ' ' + pc.note : '') +
+            ' This is a trailing industry aggregate across every size of company, so it is context rather than a comparable. The rows below replace it with a peer set chosen for your business.' }
       ],
-      unplotted: 'Nothing to apply the multiple to until there is revenue.',
-      locked: false
+      unplotted: 'An industry aggregate is not a comparable set, and turning one into a valuation needs a discount we would have to invent. We used to. We stopped.',
+      locked: false, context: true
     });
   }
 
-  /* 3. Growth adjusted. The anchor row, and the one still in build. It says so
-     rather than pretending to be a paywall. */
-  const g = responses.growth_exact;
+  /* ---- 3. NTM revenue multiple. The reference metric is real and computed from
+     the founder's own answers today. The multiple is what is still being built. */
   rows.push({
-    parameter: 'Growth-adjusted multiple',
-    basis: 'Fitted EV/Revenue at your growth rate, from a listed peer regression',
+    parameter: 'NTM revenue multiple',
+    basis: 'Peer median EV / next twelve months’ revenue, plus or minus 1.5 turns',
     metrics: [
-      { label: 'Your growth', value: (g === null || g === undefined)
-        ? (responses.growth || 'not given')
-        : g + '% a month, ' + Math.round((Math.pow(1 + g / 100, 12) - 1) * 100) + '% a year' },
-      { label: 'Fitted multiple at that rate', value: 'in the report' }
+      { label: 'Your NTM revenue', value: r.ntmM === null ? 'needs an exact revenue figure' : ffMoney(r.ntmM),
+        source: r.ntmM === null ? 'Give an exact monthly revenue figure and this becomes a number.'
+          : 'The sum of your next twelve months, built from ' + fmtPlain(responses.revenue_exact || 0) + ' a month carried forward at ' +
+            (r.forwardGrowth === null ? 'no assumed growth' : Math.round(r.forwardGrowth) + '% a year') +
+            '. That forward rate is your trailing ' + (r.trailingGrowth === null ? 'growth' : Math.round(r.trailingGrowth) + '%') +
+            ' multiplied by a growth persistence factor of 0.75, the median Point Nine measured across 29 early-stage SaaS companies and 96 data pairs. Consensus forward revenue is a sum, so ours is a sum, which is a different and smaller number than your run-rate a year out.' },
+      { label: 'Peer median multiple', value: 'in build', source: IN_BUILD }
     ],
     locked: true, pending: true
   });
 
-  /* 4. EBITDA. Only when the founder gave a positive figure. */
-  if (responses.ebitda_ltm > 0) {
+  /* ---- 4. The same peers, read against the run-rate the company exits on. */
+  rows.push({
+    parameter: 'ARR multiple, month twelve',
+    basis: 'The same peers, applied to your run-rate in twelve months',
+    metrics: [
+      { label: 'Your ARR at month twelve', value: r.exitArrM === null ? 'needs an exact revenue figure' : ffMoney(r.exitArrM),
+        source: r.exitArrM === null ? 'Give an exact monthly revenue figure and this becomes a number.'
+          : 'Your run-rate a year from now, not the twelve-month sum, which is why it is the larger of the two. This row values you at a future date, so it reads high against the row above by design. The more of your revenue that recurs, the better that basis holds.' },
+      { label: 'Peer median multiple', value: 'in build', source: IN_BUILD }
+    ],
+    locked: true, pending: true
+  });
+
+  /* ---- 5. Growth-adjusted. */
+  rows.push({
+    parameter: 'Growth-adjusted multiple',
+    basis: 'Fitted EV/revenue at your growth rate, from a regression across the peer set',
+    metrics: [
+      { label: 'Your growth, trailing', value: r.trailingGrowth === null ? (responses.growth || 'not given') : Math.round(r.trailingGrowth) + '% year on year' },
+      { label: 'Fitted multiple at that rate', value: 'in the report' }
+    ],
+    locked: true
+  });
+
+  /* ---- 6. DCF. The unlock is the plan, which is a better qualifier than an
+     email address, and the blur has a stated reason. */
+  rows.push({
+    parameter: 'Discounted cash flow',
+    basis: 'Cost of capital built from your peer set’s beta',
+    metrics: [
+      { label: 'Cost of equity', value: 'from peer beta, relevered',
+        source: 'Unlevered beta for each company in your peer set at its own capital structure, median taken, relevered. Risk-free rate from the government curve, equity risk premium from Damodaran, who publishes it monthly. The size and stage premium is the reviewer’s judgement, and it is the part you cannot get anywhere else.' },
+      { label: 'Needs', value: 'your plan or model', source: 'A DCF needs forecast cash flows, and at this stage the terminal value assumption does most of the work, which is exactly why a person should be behind it. Send a link to your plan or model and the reviewer builds it.' }
+    ],
+    locked: true, pending: true
+  });
+
+  /* ---- 7. EBITDA, forward, only when the founder gave a positive figure. */
+  if (r.ebitdaM) {
     rows.push({
-      parameter: 'EBITDA multiple',
-      basis: 'Sector EV/EBITDA applied to your last twelve months',
+      parameter: 'NTM EBITDA multiple',
+      basis: 'Peer median EV / next twelve months’ EBITDA',
       metrics: [
-        { label: 'Your LTM EBITDA', value: ffMoney(responses.ebitda_ltm / 1e6) },
-        { label: 'Sector EV/EBITDA', value: 'in the report' }
+        { label: 'Your EBITDA, last twelve months', value: ffMoney(r.ebitdaM) },
+        { label: 'Peer median multiple', value: 'in the report', source: 'Forward, like the revenue rows, because that is the basis listed companies trade on.' }
       ],
       locked: true
     });
   }
 
-  /* 5. Comparable private rounds. The filter is the interesting part, so it shows. */
+  /* ---- 8. Private rounds. A valuation cannot be handed to a company with
+     different metrics, so this row is a multiple or it is nothing. */
   const revLabel = responses.revenue_exact > 0
     ? ffMoney((responses.revenue_exact * 0.8) / 1e6) + ' to ' + ffMoney((responses.revenue_exact * 1.25) / 1e6) + ' MRR'
     : (responses.revenue || 'pre-revenue');
   rows.push({
     parameter: 'Comparable private rounds',
-    basis: 'Real rounds filtered to companies like yours',
+    basis: 'Revenue multiples paid in recent rounds by companies like yours',
     metrics: [
       { label: 'Filter', value: [responses.stage, sector, revLabel, responses.country || 'your market', 'last 12 months'].join(' · ') },
-      { label: 'Rounds matching', value: 'in the report' }
+      { label: 'Multiples paid', value: 'in build',
+        source: 'The multiple, never the valuation. Another company’s post-money tells you nothing without the revenue underneath it, so every round in this set carries a revenue figure and a link to where it came from, or it is not in the set.' }
     ],
-    locked: true
+    locked: true, pending: true
   });
 
-  /* 6. Ownership target. Arithmetic on the founder's own answer. */
+  /* ---- 9. The same precedents, read against growth. */
   rows.push({
-    parameter: 'Ownership-target implied',
-    basis: 'What the round size implies at a lead fund ownership target',
-    metrics: [
-      { label: 'Your raise', value: ffMoney(raiseM) },
-      { label: 'Divided by target ownership', value: 'in the report' }
-    ],
+    parameter: 'Precedents, growth-adjusted',
+    basis: 'Fitted across the matched rounds at your growth rate',
+    metrics: [{ label: 'Fitted multiple', value: 'in the report' }],
     locked: true
   });
 
-  /* 7. The conclusion, not a method. */
+  /* ---- 10. The conclusion, not a method. */
   rows.push({
     parameter: 'Reviewer band',
-    basis: 'The banker’s view after reading everything you sent',
+    basis: 'The banker’s read on where inside all of the above you actually sit',
     metrics: [{ label: 'Reviewed by hand', value: 'in the report' }],
     locked: true
   });
@@ -190,32 +216,12 @@ function ffBuildRows(r) {
   return rows;
 }
 
-/* The conclusion row states plainly what it is and is not. It is a first pass
-   positioned from the answers, not an average of the rows above, and saying so is
-   cheaper than being caught implying otherwise. The implied multiple is the
-   cross-check a banker would run on it, so it is shown rather than left to the
-   founder to work out. */
-function ffTotalMetrics(r) {
-  const arrM = (responses.revenue_exact || 0) * 12 / 1e6;
-  const sector = responses.sector === 'Other' ? 'Other' : (responses.sector || 'Other');
-  const pc = PUBLIC_COMPS.sectors[sector];
-  const out = [ffMetric({
-    label: 'First pass, positioned from your answers',
-    value: ffMoney(r.low) + ' to ' + ffMoney(r.high),
-    source: 'Not an average of the rows above. It is positioned from your stage, sector, revenue, growth, recurring share and margin, and it is wider than any single method because the two strongest methods are not built yet. A person replaces it within 24 hours.'
-  }, 'ffs-total-a')];
-  if (arrM > 0 && pc) {
-    const impliedMult = r.mid / arrM;
-    out.push(ffMetric({
-      label: 'Implied EV/Revenue at the mid-point',
-      value: impliedMult.toFixed(1) + 'x, against ' + pc.ev_sales.toFixed(2) + 'x listed',
-      source: impliedMult > pc.ev_sales
-        ? 'This range prices your revenue above the listed sector, which is normal at your stage: the venture market pays a premium to public fundamentals for growth. The size of that premium is what the report has to defend.'
-        : 'This range prices your revenue at or below the listed sector. That is unusual at seed and worth understanding before you open a round, because it usually points at revenue quality rather than at the market.'
-    }, 'ffs-total-b'));
-  }
-  return out.join('');
-}
+/* ffTotalMetrics used to build the reference metrics for a concluding
+   "Indicative range" row at the foot of the field. That row was the headline
+   range in another costume: it was positioned from our own coefficients rather
+   than derived from anything above it, and it quietly became the number every
+   founder read. It is gone, along with the function that fed it. The field ends
+   with the reviewer row, because the reviewer is the conclusion. */
 
 /* ---------------- render ---------------- */
 
@@ -225,16 +231,22 @@ function renderField(r) {
 
   const rows = ffBuildRows(r);
 
-  /* Axis from visible values only. Locked rows never contribute. */
-  const plotted = [r.low, r.high];
+  /* Axis from visible values only. Locked rows never contribute, and there is no
+     headline range feeding it any more, so it can legitimately be near empty. */
+  const plotted = [];
   if (r.markerM) plotted.push(r.markerM);
   rows.forEach(function (row) {
     if (row.locked) return;
     if (typeof row.low === 'number') plotted.push(row.low, row.high);
     if (typeof row.point === 'number') plotted.push(row.point);
   });
-  const lo = Math.min.apply(null, plotted);
-  const hi = Math.max.apply(null, plotted);
+  if (!plotted.length) plotted.push(0, Math.max(1, r.raise * 4));
+  let lo = Math.min.apply(null, plotted);
+  let hi = Math.max.apply(null, plotted);
+  /* One plotted point on its own gives a degenerate axis, a couple of hundred
+     thousand wide, which makes a single tick look like a precise reading. Show
+     it against zero instead, which is honest about how little is on the chart. */
+  if (hi - lo < hi * 0.05) { lo = 0; hi = hi * 1.6; }
   const span = Math.max(hi - lo, hi * 0.2, 0.1);
   const aLo = Math.max(0, lo - span * 0.12);
   const aHi = hi + span * 0.12;
@@ -295,22 +307,20 @@ function renderField(r) {
       '<div class="ff-cell">' + cell + '</div></div>';
   });
 
-  /* The conclusion row. Emphasised, because it is the answer. */
-  const cl = pct(r.low), ch = pct(r.high);
-  html += '<div class="ff-row total">' +
-    '<div class="ff-param"><strong>Indicative range</strong><span>Where the reviewer starts from</span></div>' +
-    '<div class="ff-metrics">' + ffTotalMetrics(r) + '</div>' +
-    '<div class="ff-cell"><div class="ff-track"><div class="ff-line"></div>' +
-      '<div class="ff-bar total" style="left:' + cl.toFixed(2) + '%;width:' + Math.max(1.5, ch - cl).toFixed(2) + '%"></div>' +
-    '</div></div></div>';
-
   html += '<div class="ff-axis"><span>' + escapeHtml(ffMoney(aLo)) + '</span><span>' + escapeHtml(ffMoney(aHi)) + '</span></div>';
 
-  const openRows = rows.filter(function (x) { return !x.locked; }).length;
-  const lockedRows = rows.length - openRows;
+  const contextRows = rows.filter(function (x) { return !x.locked && x.context; }).length;
+  const openRows = rows.filter(function (x) { return !x.locked && !x.context; }).length;
+  const buildRows = rows.filter(function (x) { return x.locked && x.pending; }).length;
+  const lockedRows = rows.filter(function (x) { return x.locked && !x.pending; }).length;
+  const bits = [];
+  if (openRows) bits.push(openRows + ' method' + (openRows === 1 ? '' : 's') + ' priced');
+  if (contextRows) bits.push(contextRows + ' market context');
+  if (buildRows) bits.push(buildRows + ' being wired to live peer data');
+  if (lockedRows) bits.push(lockedRows + ' in the report');
   html += '<p class="ff-foot">Tap any reference metric to see where it came from. ' +
-    openRows + ' method' + (openRows === 1 ? '' : 's') + ' open, ' + lockedRows +
-    ' in the report. Locked bars are drawn in a neutral position, not their real one.</p>';
+    bits.join(', ') + '. Locked bars are drawn in a neutral position, not their real one, ' +
+    'and nothing on this page is a multiple we typed in ourselves.</p>';
 
   wrap.innerHTML = html;
   wrap.style.display = 'block';
