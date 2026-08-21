@@ -25,6 +25,9 @@
        the same information twice, in two formats, disagreeing at the edges. */
     const payload = typeof responses !== 'undefined' ? {
       stage: responses.stage, sector: responses.sector, sector_detail: responses.sector_detail,
+      /* The website is what lets the model read the business rather than the box
+         it ticked. It is the input the peer selection will lean on hardest. */
+      website: responses.website || null,
       /* Exact figures where the founder gave them. The bands are still sent so the
          engine keeps working for pre-revenue and for anyone who skipped the numbers. */
       currency: responses.currency || 'USD',
