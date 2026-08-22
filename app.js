@@ -21,7 +21,7 @@ const CONFIG = {
    the hook copy live in data-content.js, which loads before this file. */
 
 const RAISE_MIDPOINT = {
-  'Under $500k': 0.35, '$500k–$1M': 0.75, '$1M–$2.5M': 1.75,
+  'Under $500k': 0.35, '$500k–1M': 0.75, '$1M–$2.5M': 1.75,
   '$2.5M–$5M': 3.75, '$5M–$10M': 7.5, 'Over $10M': 12
 };
 
@@ -92,31 +92,64 @@ function goBack() {
   else { backToStart(); }
 }
 
-/* sector */
+/* ---------------- sector, multi-select ----------------
+   A company is rarely one box. Picking several is more informative than forcing
+   a single choice, and the first one picked leads: it decides which peer set and
+   which investor list we start from, and the rest sharpen the peer selection.
+   Nothing advances the step, so the website field below can actually be typed in. */
+
+const chosenSectors = [];
+
 const sectorGrid = document.getElementById('sector-grid');
 if (sectorGrid) {
   SECTORS.forEach(function (s) {
     const b = document.createElement('button');
     b.className = 'opt';
+    b.type = 'button';
     b.textContent = s;
-    b.onclick = function () {
-      if (s === 'Other') {
-        document.getElementById('sector-other-wrap').style.display = 'block';
-        document.getElementById('sector-other').focus();
-        track('sector_other_opened', {});
-        return;
-      }
-      answer('sector', s);
-    };
+    b.onclick = function () { toggleSector(s, b); };
     sectorGrid.appendChild(b);
   });
 }
 
-function submitSectorOther() {
+function toggleSector(s, btn) {
+  const i = chosenSectors.indexOf(s);
+  if (i === -1) {
+    if (chosenSectors.length >= 3) return;
+    chosenSectors.push(s); btn.classList.add('on');
+  } else {
+    chosenSectors.splice(i, 1); btn.classList.remove('on');
+  }
+  const other = document.getElementById('sector-other-wrap');
+  if (other) other.style.display = chosenSectors.indexOf('Other') !== -1 ? 'block' : 'none';
+  paintSectorState();
+}
+
+function paintSectorState() {
+  const read = document.getElementById('sector-read');
+  const btn = document.getElementById('sector-continue');
+  const n = chosenSectors.length;
+  if (read) {
+    read.textContent = n === 0
+      ? 'Pick the closest. You can pick up to three, and the first one leads.'
+      : (n === 1 ? chosenSectors[0] + '. Add a second if you straddle two.'
+        : chosenSectors.join(' · ') + '. The first one leads.');
+  }
+  if (btn) btn.disabled = n === 0;
+}
+
+function submitSector() {
+  if (!chosenSectors.length) return;
+  responses.sectors = chosenSectors.slice();
+  /* The first pick is the primary: peer set, investor list and copy tables all
+     key off it. The others go to the reviewer and to the peer selection. */
+  responses.sector = chosenSectors[0];
   const v = document.getElementById('sector-other').value.trim();
-  responses.sector = 'Other';
-  responses.sector_detail = v || null;
-  track('quiz_answer', { step: 2, key: 'sector', value: 'Other', detail: v, has_website: !!responses.website });
+  responses.sector_detail = (chosenSectors.indexOf('Other') !== -1 ? (v || null) : (v || null));
+  track('quiz_answer', {
+    step: 2, key: 'sector', value: responses.sector,
+    all: responses.sectors, detail: responses.sector_detail, has_website: !!responses.website
+  });
   currentStep = 3; renderStep();
 }
 
@@ -189,7 +222,7 @@ function setPreRevenue() {
 }
 
 /* Currency is guessed from the edge and then shown, at the revenue question and
-   again beside the metrics, because nobody converts their own revenue into a
+   again beside the field, because nobody converts their own revenue into a
    currency the page picked for them. Both selectors stay in step. */
 function setCurrency(code, source) {
   responses.currency = CURRENCY_SYMBOL[code] ? code : 'USD';
@@ -215,11 +248,11 @@ function onCurrency() {
 
 (function bootCurrency() {
   /* Best guess from the browser first, so nothing is ever blank, then the edge
-     header refines it. Falls back to USD and stays silent on failure. */
+     header refines it. Anything outside the four we support falls back to USD. */
   const lang = (navigator.language || '').toUpperCase();
-  const byLang = { GB: 'GBP', IE: 'EUR', DE: 'EUR', FR: 'EUR', ES: 'EUR', IT: 'EUR', NL: 'EUR',
-    CH: 'CHF', SE: 'SEK', NO: 'NOK', DK: 'DKK', PL: 'PLN', CA: 'CAD', AU: 'AUD',
-    SG: 'SGD', HK: 'HKD', JP: 'JPY', IN: 'INR', AE: 'AED', IL: 'ILS', ZA: 'ZAR', BR: 'BRL', MX: 'MXN' };
+  const byLang = { GB: 'GBP', CA: 'CAD',
+    IE: 'EUR', DE: 'EUR', FR: 'EUR', ES: 'EUR', IT: 'EUR', NL: 'EUR',
+    BE: 'EUR', AT: 'EUR', PT: 'EUR', FI: 'EUR', GR: 'EUR', EE: 'EUR', LT: 'EUR', LV: 'EUR' };
   setCurrency(byLang[lang.split('-')[1]] || 'USD', 'boot');
   fetch('/api/geo')
     .then(r => r.json())
@@ -303,7 +336,8 @@ function submitRevenue() {
   track('quiz_answer', {
     step: 3, key: 'revenue', value: responses.revenue,
     exact: responses.revenue_exact, currency: responses.currency,
-    recurring_pct: responses.recurring_pct, revenue_model: responses.revenue_model || null
+    recurring_pct: responses.recurring_pct, revenue_model: responses.revenue_model || null,
+    gross_margin: responses.gross_margin
   });
   currentStep = 4; renderStep();
 }
@@ -405,6 +439,31 @@ function clearPlan() {
     'Without a plan we carry your last twelve months forward unchanged, and the row says that is what we did.';
 }
 
+function submitProfit(v) {
+  responses.profit = v;
+  onEbitda();
+  track('quiz_answer', { step: 5, key: 'profit', value: v, ebitda: responses.ebitda_ltm });
+  currentStep = 6; renderStep();
+}
+
+function submitRaise() {
+  onLastRound();
+  track('quiz_answer', {
+    step: 6, key: 'raise', value: responses.raise,
+    has_last_round: responses.last_round_value != null
+  });
+  currentStep = 7; renderStep();
+}
+
+function pickRaise(v, btn) {
+  responses.raise = v;
+  const grid = btn && btn.parentNode;
+  if (grid) grid.querySelectorAll('.opt').forEach(o => o.classList.remove('on'));
+  if (btn) btn.classList.add('on');
+  const c = document.getElementById('raise-continue');
+  if (c) c.disabled = false;
+}
+
 function submitGrowth() {
   if (!responses.growth) responses.growth = 'Too early to measure';
   if (responses.growth_plan === undefined) responses.growth_plan = null;
@@ -473,12 +532,13 @@ async function submitLead() {
     track('lead_post_failed', {});
   }
   renderResult(result);
-  btn.disabled = false; btn.textContent = 'Show me the methods';
+  btn.disabled = false; btn.textContent = 'Show me the Football Field';
 }
 
-/* ---------------- optional enrichment on the result screen ----------------
-   Everything here is optional, free and ungated. Each field opens or sharpens a
-   row of the field, in front of the founder rather than promised in an email. */
+/* ---------------- inputs that used to sit on the result screen ----------------
+   Gross margin, EBITDA and the last round are quiz questions now. Asking them
+   after the founder has already seen the field means building the field with
+   less than we could have had. */
 
 let lastResult = null;
 
@@ -505,47 +565,6 @@ function monthsSince(ym) {
   const now = new Date();
   const m = (now.getFullYear() - then.getFullYear()) * 12 + (now.getMonth() - then.getMonth());
   return m >= 0 && m < 120 ? m : null;
-}
-
-async function applyNarrowing() {
-  /* The margin slider always has a value, so it must only count once the founder has
-     actually moved it. onGrossMargin fires on input and nowhere else, deliberately.
-     The other two read empty fields as null, so they are safe to call here. */
-  onLastRound(); onEbitda();
-  const btn = document.getElementById('narrow-btn');
-  btn.disabled = true; btn.textContent = 'Recalculating';
-
-  const after = computeResult();
-  lastResult = after;
-
-  const foot = document.getElementById('narrow-foot');
-  const added = [];
-  if (after.usedMargin) added.push('gross margin');
-  if (after.ebitdaM) added.push('EBITDA');
-  if (after.markerM) added.push('your last round');
-  foot.textContent = added.length
-    ? 'Added: ' + added.join(', ') + '. Each one opens or sharpens a row below, and all of it goes to the reviewer, so the email you get back is built on it too.'
-    : 'Added and sent to the reviewer.';
-
-  try {
-    await fetch(CONFIG.leadEndpoint, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(Object.assign({}, responses, { type: 'enrichment', computed: after }))
-    });
-    track('narrowing_applied', {
-      has_margin: responses.gross_margin != null,
-      has_last_round: responses.last_round_value != null,
-      has_ebitda: responses.ebitda_ltm != null,
-      opened: added.length
-    });
-  } catch (e) {
-    console.error('[fairway] enrichment post failed', e);
-  }
-
-  renderResult(after);
-  btn.disabled = false; btn.textContent = 'Update the field';
-  document.getElementById('narrow-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function onEbitda() {
@@ -585,8 +604,8 @@ function computeResult() {
 
      There is no coefficient of ours anywhere in it. Every number it returns is
      either something the founder typed or plain arithmetic on two things they
-     typed, which is what makes every bar on the field reproducible with a
-     calculator from what is printed beside it. */
+     typed, which is what makes every bar on the field reproducible by hand from
+     what is printed beside it. */
 
   const monthly = responses.revenue_exact || 0;
   const runRateM = monthly * 12 / 1e6;
@@ -615,8 +634,8 @@ function computeResult() {
   };
 }
 
-/* stageAnchorLocal, metricTile, paintMetrics and paintGapCard live in
-   app-result.js, which loads after this file. */
+/* stageAnchorLocal and paintCostCard live in app-result.js, which loads after
+   this file. */
 
 function renderResult(r) {
   lastResult = r;
@@ -624,17 +643,18 @@ function renderResult(r) {
     ? (responses.sector_detail || 'your sector')
     : (responses.sector || 'your sector');
 
-  paintMetrics(r);
-  document.getElementById('range-stage-sector').textContent = (responses.stage || 'your stage') + ' · ' + sectorLabel;
-
-  const note = document.getElementById('range-note');
-  if (note) {
-    note.textContent = 'There is no single headline number here, deliberately. Each method below is a separate piece of evidence with its own sources, and a reviewer’s read on where inside them you actually sit is what comes back by email.';
+  const ctx = document.getElementById('ff-context');
+  if (ctx) {
+    const bits = [responses.stage || 'your stage', sectorLabel];
+    if (r.runRateM > 0) bits.push(ffMoney(r.runRateM) + ' ARR');
+    if (r.trailingGrowth !== null) bits.push('grew ' + Math.round(r.trailingGrowth) + '%');
+    if (r.plannedGrowth !== null) bits.push('plans ' + Math.round(r.plannedGrowth) + '%');
+    ctx.textContent = bits.join(' · ');
   }
 
   renderField(r);
 
-  paintGapCard(r);
+  paintCostCard(r);
 
   renderDrivers();
 
@@ -644,6 +664,7 @@ function renderResult(r) {
   setItem('fix-1', f1.title, f1.body, false);
   setItem('fix-2', f2.title, f2.body, true);
   setItem('fix-3', f3.title, f3.body, true);
+  void f2; void f3;
 
   const named = (responses.concerns || []).filter(c => c !== 'Nothing specific yet');
   if (named.length || responses.concern_notes || responses.context_link) {
