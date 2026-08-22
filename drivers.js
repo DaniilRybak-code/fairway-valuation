@@ -173,19 +173,27 @@ function buildDrivers() {
   return out;
 }
 
+/* The first driver is open. The rest are blurred.
+ *
+ * They are real, they are tailored, and they are visible enough that a founder
+ * can see the shape of what they are missing. That is the honest version of a
+ * paywall: the value is demonstrably there rather than asserted. */
 function renderDrivers() {
   const list = document.getElementById('drivers-list');
   if (!list) return;
   const drivers = buildDrivers();
   list.innerHTML = '';
   drivers.forEach(function (d, i) {
+    const locked = i > 0;
     const row = document.createElement('div');
-    row.className = 'item';
-    row.innerHTML = '<div class="num">' + (i + 1) + '</div><div><h3>' +
-      escapeHtml(d.title) + '</h3><p>' + escapeHtml(d.body) + '</p></div>';
+    row.className = 'item' + (locked ? ' driver-locked' : '');
+    row.innerHTML = '<div class="num">' + (i + 1) + '</div><div>' +
+      '<h3>' + escapeHtml(d.title) + (locked ? '<span class="lock-tag paid-tag">Locked</span>' : '') + '</h3>' +
+      '<p' + (locked ? ' class="body-blur"' : '') + '>' + escapeHtml(d.body) + '</p></div>';
     list.appendChild(row);
   });
-  document.getElementById('drivers-foot').textContent =
-    'These are selected for your sector, stage, size and revenue model. They are the levers, not the arithmetic. The report shows which of them the methods above are actually sitting on, and what each one is worth in points.';
+  document.getElementById('drivers-foot').innerHTML =
+    'The first one is open. The other ' + (drivers.length - 1) + ' are selected for your sector, stage, size and revenue model in exactly the same way, and the report says what each is worth in points against your own numbers. ' +
+    '<a class="driver-unlock" href="#unlock">Open all ' + drivers.length + '</a>';
   track('drivers_view', { count: drivers.length, sector: responses.sector || null });
 }
