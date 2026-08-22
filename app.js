@@ -20,8 +20,10 @@ const CONFIG = {
 /* SECTORS, REVENUE_MODELS, CURRENCY_SYMBOL, CONCERNS, INVESTORS, FIX_BY_* and
    the hook copy live in data-content.js, which loads before this file. */
 
+/* Keys must match the button values in index.html exactly, or the band falls
+   through to the 1.0 default and the dilution arithmetic runs on the wrong raise. */
 const RAISE_MIDPOINT = {
-  'Under $500k': 0.35, '$500k–1M': 0.75, '$1M–$2.5M': 1.75,
+  'Under $500k': 0.35, '$500k–$1M': 0.75, '$1M–$2.5M': 1.75,
   '$2.5M–$5M': 3.75, '$5M–$10M': 7.5, 'Over $10M': 12
 };
 
