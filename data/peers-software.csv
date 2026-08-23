@@ -2,7 +2,7 @@
 # as_of=2026-08-21  currency=USD  money columns in USD millions. One input for the whole set.
 # This file is refreshed from the screen. It contains no judgements, only what the screen returned.
 # Positioning tags live in peers-software-tags.csv, joined on exchange_ticker rather than row,
-# because row numbers shift between pulls and tickers do not.
+# because row numbers shift between pulls and tickers do not. The row column is a display ordinal.
 row,company_name,exchange_ticker,country,market_cap_musd,enterprise_value_musd,revenue_ntm_musd,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_ntm_pct,nrr_pct
 9,74Software,ENXTPA:74SW,United States,1321,1589,879,577,1.8,2.8,4,
 11,"ACI Worldwide, Inc.",NASDAQGS:ACIW,United States,5236,5932,1959,907,3.0,6.5,9,
@@ -166,3 +166,4 @@ row,company_name,exchange_ticker,country,market_cap_musd,enterprise_value_musd,r
 173,Check Point Software Technologies Ltd.,NASDAQGS:CHKP,Israel,13329,11101,2879,2541,3.9,4.4,3,
 174,NICE Ltd.,NASDAQGS:NICE,Israel,5867,5601,3317,2302,1.7,2.4,8,
 175,Dassault Systemes SE,ENXTPA:DSY,France,34665,32064,7655,6430,4.2,5.0,0,
+176,Wix.com Ltd.,NASDAQGS:WIX,Israel,3435,4509,2373,1629,1.9,2.8,13,
