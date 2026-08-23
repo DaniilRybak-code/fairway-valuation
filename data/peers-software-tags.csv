@@ -1,18 +1,24 @@
 "# Fairway peer positioning tags for listed software. Keyed on exchange_ticker."
 # These are Fairway's tags, not CapIQ's. They exist so the reveal can narrow the set to the four
 # or five names a given founder should actually be compared against.
-# There is deliberately no peer_role column. Whether a name is a peer, a directional reference or
-# context only depends on the size of the company being valued, so it is computed at match time:
-#   serial acquirer  = either archetype is Software Consolidator (different valuation logic entirely)
-#   context only     = peer enterprise value more than 300x the subject
-#   directional      = 50x to 300x
-#   peer             = under 50x
+#
+# SIZE IS NOT A SELECTION CRITERION. A comparable is chosen on profile, end market, end customer,
+# business model, growth and profitability. How big the peer is does not make it more or less
+# comparable. Relative size is shown NEXT TO each comparable, because a founder needs it to read
+# the multiple, but it never includes or excludes a name. If the best comparable in a category is
+# forty times the size of the subject, it is still the best comparable and it gets shown.
+#
+# Serial acquirers need no special rule either. Software Consolidator is an archetype, so a founder
+# who is not an acquirer simply does not match one. The reason it matters: Constellation trades at
+# 3.3x because it buys about a hundred businesses a year at around 1x revenue, not because its
+# software earns 3.3x. That is a different business, and the archetype says so.
+#
 # acv_usd_disclosed is derived from what the company itself discloses: its published ACV or ARPU
 # where it gives one, otherwise NTM revenue divided by a disclosed customer count. Blank where the
 # company discloses no count. Counting bases differ (accounts, sites, seats, locations, users), so
 # treat it as an order of magnitude, not a figure. Provenance is in the workbook.
 # product_tags are the category names a founder or their website would actually use. They are for
-# semantic matching, not exact string matching: 699 distinct tags, most of them deliberately narrow.
+# semantic matching, not exact string matching: most tags are deliberately narrow.
 # in_stats=0 means the row stays in the set but comes out of medians and regressions.
 exchange_ticker,company_name,archetype,archetype_secondary,industry,function,buyer,gtm_motion,revenue_model,product_role,ai_stance,acv_usd_disclosed,in_stats,product_tags,what_it_does
 ENXTPA:74SW,74Software,Vertical Software,Cloud & Infrastructure,Financial Services,IT & Integration,ENT_IT,ENT_SALES,PLATFORM,PLATFORM_SUITE,AI_NEUTRAL,73000,1,API Management|Integration Platform|Managed File Transfer|Core Banking,"API management and B2B integration, formerly Axway, plus core banking software after the Sopra Banking acquisition"
@@ -177,3 +183,4 @@ NYSE:VEEV,Veeva Systems Inc.,Vertical Software,,Healthcare & Life Sciences,Opera
 NASDAQGS:CHKP,Check Point Software Technologies Ltd.,Cybersecurity,,Horizontal,Security,ENT_IT,CHANNEL,LICENSE_MAINT,INFRA_LAYER,AI_EMBEDDED,,1,Firewall|Network Security|Endpoint Security|Email Security|Cloud Security|Threat Prevention,network firewalls and a consolidated security platform
 NASDAQGS:NICE,NICE Ltd.,Marketing & Customer Engagement,"Data, AI & Developer Tools",Horizontal,Customer Service,LOB,ENT_SALES,SEATS,SOE,AI_EXPOSED,133000,1,Contact Center|CCaaS|Workforce Engagement Management|WEM|Call Recording|Financial Crime|AML|Conversational AI,"contact centre software, workforce optimisation and financial crime compliance"
 ENXTPA:DSY,Dassault Systemes SE,Design & Engineering,Business Applications,Manufacturing,Engineering & Design,LOB,ENT_SALES,SEATS,SOR,AI_EMBEDDED,19600,1,CAD|PLM|Product Lifecycle Management|3D Design|Simulation|CAE|Clinical Trial Software|Digital Twin,"3D design, simulation and product lifecycle management (CATIA, SOLIDWORKS, 3DEXPERIENCE) plus Medidata clinical trial software for life sciences"
+NASDAQGS:WIX,Wix.com Ltd.,Cloud & Infrastructure,Commerce & Payments Software,Horizontal,IT & Integration,SMB,PLG,PLATFORM,PLATFORM_SUITE,AI_EMBEDDED,,1,Website Builder|AI Website Builder|No-Code|Web Design|CMS|Web Hosting|Online Store Builder|E-commerce Platform|Domain Registration|Landing Page Builder,"website builder with hosting, CMS, commerce and business apps, sold self-serve to small businesses and the agencies that serve them"
