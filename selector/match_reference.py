@@ -200,9 +200,31 @@ def family_of(x):
 for _r in private:
     _r['family'] = family_of(_r)
 
+#   FAMILY IS THE GATE, END MARKET IS THE BRIDGE. A pure family gate is too blunt in one
+#   direction. Toast sits in fintech because most of its revenue is card processing, while a
+#   restaurant point-of-sale profile sits in software, so family alone shuts Toast out of a
+#   set it obviously belongs in. What connects them is the end market: both sell to
+#   restaurants, and Toast's industry is already tagged Hospitality. So a candidate passes
+#   the gate if it shares the family OR shares a SPECIFIC end market.
+#
+#   "Specific" is doing real work. Horizontal is not an end market, it is the absence of one,
+#   so it never bridges: otherwise every horizontal fintech would qualify as a peer for every
+#   horizontal software company and the gate would dissolve.
+#
+#   Note what this gate does NOT do, because it matters for calibration. Huel and a
+#   language-learning app are BOTH consumer family, so no family gate was ever going to
+#   separate them. FLOOR_TAG_EVIDENCE is what separates those two, by requiring shared product
+#   vocabulary. The two mechanisms catch different failures and both are needed: the gate stops
+#   an SMB payments profile being shown consumer marketplaces, and the tag floor stops a
+#   nutrition brand being shown to an edtech company inside the same family.
 def same_family(prof, universe):
-    f = family_of(prof)
-    return [r for r in universe if not f or family_of(r) == f] or universe
+    f, ind = family_of(prof), (prof.get('industry') or '').strip()
+    if not f: return universe
+    bridged = ind and ind != 'Horizontal'
+    out = [r for r in universe
+           if family_of(r) == f
+           or (bridged and (r.get('industry') or '').strip() == ind)]
+    return out or universe
 
 
 def size_note(a, b):

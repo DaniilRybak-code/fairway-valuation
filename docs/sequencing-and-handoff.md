@@ -235,11 +235,14 @@ the score, which is the right weight for a strong signal that is sometimes too n
 
 **What the gate found.** The measurement is more interesting than the gate.
 
-*A core banking profile was being priced off payment processors.* Its listed core set was nCino, Jack
-Henry, FIS, Temenos and EVERTEC. FIS and EVERTEC are payment processors, in the set only because they
-share the fintech family and score on adjacent tags. The set is now nCino, Temenos, 74Software, Q2
-Holdings and Blend Labs, which are actually core banking and digital banking software. The range moves
-from 5.7x to 10.2x gross profit down to 2.3x to 5.9x revenue, so this was not a cosmetic change.
+*A core banking profile appeared to be priced off payment processors, and I called that a win. I was
+wrong, and the correction is recorded here rather than quietly reversed.* A pure family gate replaced
+nCino, Jack Henry, FIS, Temenos and EVERTEC with nCino, Temenos, 74Software, Q2 Holdings and Blend
+Labs. On a second look that was a downgrade, not an upgrade. Jack Henry runs core processing for
+community banks and FIS owns core banking platforms; both are legitimate core banking comparables and
+the gate had thrown them out on a family label. Q2 and Blend Labs are digital banking front ends, not
+core systems. With the end-market bridge in place the original five return, and only EVERTEC, a Latin
+American payment processor, is a weak fit. It ranks fifth of five.
 
 *An SMB payments profile was being shown consumer marketplaces as private comparables.* Whatnot,
 Faire and Meesho were three of its five. That is precisely the failure Daniil described, and it was
@@ -252,14 +255,20 @@ payments and digital business banking respectively. Retagged, the private fintec
 companies to three, and a consumer neobank profile gains Qonto as its first private comparable. This
 was the real bug; the gate is what made it visible.
 
-**The honest caveat: the gate itself changes very little on its own.** Once the three retags are made,
-the family gate alters exactly one listed set, and that one is a judgement call rather than a clear
-win. A restaurant point-of-sale profile loses Toast, because Toast is classified fintech, which is
-defensible given how much of its revenue is payment processing, but a reader might well want Toast in
-a restaurant POS set. **Daniil should decide that one.** Everything else the gate would have caught,
-the scoring was already catching. Its value is that it makes the guarantee explicit instead of
-emergent, so it cannot quietly stop holding the next time the tag corpus grows, which is exactly how
-`FLOOR_ADEQUATE` failed.
+**Toast, and why the gate needed an end-market bridge.** A pure family gate shut Toast out of a
+restaurant point-of-sale set, because Toast sits in fintech on the strength of its card-processing
+revenue while the profile sits in software. Toast is the market-leading restaurant POS product, so
+that is plainly wrong. The bridge is the end market: a candidate now passes the gate if it shares the
+family OR shares a specific, non-Horizontal industry. Toast is already tagged Hospitality, so it comes
+back in. Horizontal never bridges, since it is the absence of an end market rather than one, and
+letting it bridge would dissolve the gate entirely.
+
+**What separates the two failure modes, which is the thing to hold on to.** Huel and a
+language-learning app are BOTH consumer family, so no family gate was ever going to separate them.
+`FLOOR_TAG_EVIDENCE` is what separates those two, by requiring shared product vocabulary. The gate and
+the tag floor catch different failures and both are needed. The gate stops an SMB payments profile
+being shown Whatnot, Faire and Meesho. The tag floor stops a nutrition brand being offered to an
+edtech company inside the same family. Neither substitutes for the other.
 
 ---
 
