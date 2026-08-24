@@ -5,36 +5,36 @@
     "company": "CarGurus, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 40.9,
-    "ticker": "NASDAQ:CARG"
+    "score": 41.0,
+    "ticker": "NASDAQGS:CARG"
    },
    {
     "company": "Cars.com Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 39.0,
+    "score": 39.1,
     "ticker": "NYSE:CARS"
-   },
-   {
-    "company": "Autotrader Group plc",
-    "family": "consumer",
-    "in_medians": true,
-    "score": 37.9,
-    "ticker": "LSE:AUTO"
    },
    {
     "company": "Autohome Inc.",
     "family": "consumer",
     "in_medians": false,
-    "score": 35.7,
+    "score": 38.1,
     "ticker": "NYSE:ATHM"
+   },
+   {
+    "company": "Autotrader Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 37.8,
+    "ticker": "LSE:AUTO"
    },
    {
     "company": "ACV Auctions Inc.",
     "family": "consumer",
     "in_medians": true,
     "score": 23.8,
-    "ticker": "NASDAQ:ACVA"
+    "ticker": "NYSE:ACVA"
    }
   ],
   "core_range": {
@@ -44,48 +44,107 @@
    "mid": 2.7,
    "n": 3
   },
+  "private": [
+   {
+    "basis": "GMV_ONLY",
+    "bound": "",
+    "company": "Whatnot",
+    "date": "Aug-26",
+    "in_medians": false,
+    "mult": null,
+    "score": 12.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vinted",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 7.3,
+    "score": 8.5,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Rokt",
+    "date": "Jan-25",
+    "in_medians": false,
+    "mult": 5.8,
+    "score": 9.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Meesho",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 4.2,
+    "score": 10.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Gorgias",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": null,
+    "score": 10.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_range": {
+   "high": 7.3,
+   "low": 4.2,
+   "mid": 7.3,
+   "n": 2
+  },
+  "private_window_months": 48,
   "secondary": [
    {
     "company": "SEEK Limited",
     "family": "consumer",
     "in_medians": true,
-    "score": 22.4,
+    "score": 22.5,
     "ticker": "ASX:SEK"
+   },
+   {
+    "company": "Hemnet Group AB (publ)",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.3,
+    "ticker": "OM:HEM"
    },
    {
     "company": "Zillow Group, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 22.4,
-    "ticker": "NASDAQ:ZG"
+    "score": 22.2,
+    "ticker": "NASDAQGS:Z"
    },
    {
     "company": "Scout24 SE",
     "family": "consumer",
     "in_medians": true,
-    "score": 21.4,
+    "score": 20.9,
     "ticker": "XTRA:G24"
    },
    {
-    "company": "trivago N.V.",
+    "company": "REA Group Limited",
     "family": "consumer",
     "in_medians": true,
-    "score": 20.5,
-    "ticker": "NASDAQ:TRVG"
-   },
-   {
-    "company": "CoStar Group, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "score": 20.4,
-    "ticker": "NASDAQ:CSGP"
+    "score": 20.1,
+    "ticker": "ASX:REA"
    }
   ],
   "secondary_range": {
    "denominator": "rev",
-   "high": 7.4,
-   "low": 2.6,
-   "mid": 3.3,
+   "high": 11.9,
+   "low": 3.7,
+   "mid": 6.2,
    "n": 5
   }
  },

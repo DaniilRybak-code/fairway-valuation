@@ -94,12 +94,40 @@ for mfile, tfile, fam in [('peers-software.csv','peers-software-tags.csv','softw
         r['gp_mult'] = _f(m.get('ev_ntm_gp_x'))
         r['gm']   = 100*gp/r['rev'] if (gp and r['rev']) else None
         r['acv']  = _f(r.get('acv_usd_disclosed'))
+        r['mix_note'] = r.get('mix_note','')
         # in_stats on the software file, in_medians on the consumer file. Same idea:
         # the row is visible to the founder and out of every median.
         flag = r.get('in_medians', r.get('in_stats', '1'))
         r['in_medians'] = str(flag).strip() not in ('0','')
         listed[k] = r
 listed = list(listed.values())
+
+# ---------------------------------------------------------------------------
+# PRIVATE UNIVERSE
+# Two files today: the software rounds and the consumer rounds. They share a schema.
+# A round is only eligible for a RANGE if in_medians is 1; every other row stays visible
+# and is shown as context with its valuation and, where that is all that exists, its GMV.
+# transaction_type must reach the reveal: a SECONDARY is a mark, not a priced round.
+# ---------------------------------------------------------------------------
+private = []
+for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
+                     ('private-rounds-consumer.csv','private-companies-consumer-tags.csv')]:
+    try:
+        ptags = {r['company_key']: r for r in load(D+tfile)}
+        for r in load(D+rfile):
+            t = ptags.get(r['company_key'])
+            if not t: continue
+            row = {**t, **r}
+            row['post'] = _f(r.get('post_money_musd'))
+            row['rev']  = _f(r.get('revenue_musd'))
+            row['mult'] = _f(r.get('ev_revenue_x'))
+            row['in_medians'] = str(r.get('in_medians', '1')).strip() not in ('0', '')
+            row['transaction_type'] = r.get('transaction_type', 'PRIMARY')
+            row['denominator_basis'] = r.get('denominator_basis', '')
+            row['bound'] = r.get('bound', '')
+            private.append(row)
+    except FileNotFoundError:
+        pass
 
 W = dict(tags_cap=12.0, arch=3.0, arch_soft=1.5, industry=3.0, function=2.0,
          buyer=2.5, acv=1.5, rev_model=2.5, gtm=2.0, role=1.0,
@@ -152,9 +180,26 @@ def size_note(a, b):
 # not a peer, and the reveal shows three names rather than padding to five with noise.
 FLOOR_REL, FLOOR_ABS = 0.45, 8.0
 
-def qualifying(scored):
+# AND AN ADEQUACY GATE, added 24-Aug-2026 after the golden fixtures caught the failure it fixes.
+# A relative floor is useless when the BEST match is itself bad: 45% of a bad score is a worse score.
+# Once the private universe gained 31 consumer companies, a consumer language-learning profile
+# returned Huel, AG1 and Harry's as its private comparables, all scoring 9.7 on nothing but "sells a
+# subscription to a consumer" - end customer plus revenue model plus purchase frequency, three
+# low-information tags coinciding. That is the Perplexity-at-142.9x failure in a new costume.
+#
+# Calibration is the observed gap between a profile that HAS private neighbours and one that does not:
+#   direct-to-consumer skincare   best 40.5   Glossier, Quince, SKIMS, Vuori. Real.
+#   grocery quick commerce        best 23.6   SHEIN, Trendyol. Real, if imperfect.
+#   UK car marketplace            best 13.5   Faire, Back Market. Marketplaces, wrong end market.
+#   consumer language learning    best  9.7   nothing. There is no private edtech in the set.
+# Anything below the gate means THERE IS NO COMPARABLE SET, and the reveal must say so rather than
+# show five names. This is the same rule as "three names rather than padding to five", taken to zero.
+FLOOR_ADEQUATE = 12.0
+
+def qualifying(scored, gate=FLOOR_ADEQUATE):
     if not scored: return []
     best = scored[0][0][0]
+    if best < gate: return []          # no comparable set exists; say so, do not pad
     cut = max(FLOOR_REL * best, FLOOR_ABS)
     return [x for x in scored if x[0][0] >= cut]
 
@@ -207,9 +252,9 @@ def peer_groups(prof, universe, scorer=None, want=5):
 # For software this never came up: gross margin runs 24-98% with a median of 77%,
 # so revenue means roughly the same thing from one name to the next. In the
 # consumer set it runs 8-100% and it is bimodal, and the consequence is measured:
-# across the 62 usable rows the median EV/NTM revenue moves 4.4x between the
+# across the 63 usable rows the median EV/NTM revenue moves 4.3x between the
 # lowest and highest gross margin buckets while the median EV/NTM gross profit
-# moves 2.1x. Comparing a 25% margin business to a 90% margin business on revenue
+# moves 1.8x. Comparing a 25% margin business to a 90% margin business on revenue
 # is not a valuation, it is an accounting artefact.
 # ---------------------------------------------------------------------------
 MARGIN_GAP = 15.0

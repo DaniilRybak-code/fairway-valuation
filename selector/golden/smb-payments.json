@@ -33,7 +33,7 @@
     "company": "GMO Payment Gateway, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "score": 22.1,
+    "score": 22.0,
     "ticker": "TSE:3769"
    }
   ],
@@ -44,6 +44,65 @@
    "mid": 3.4,
    "n": 5
   },
+  "private": [
+   {
+    "basis": "GMV_ONLY",
+    "bound": "",
+    "company": "Whatnot",
+    "date": "Aug-26",
+    "in_medians": false,
+    "mult": null,
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "",
+    "bound": "",
+    "company": "Notion",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 18.0,
+    "score": 9.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "",
+    "bound": "",
+    "company": "Ramp",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 32.0,
+    "score": 9.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Meesho",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 4.2,
+    "score": 8.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "",
+    "bound": "",
+    "company": "Apollo.io",
+    "date": "Aug-23",
+    "in_medians": true,
+    "mult": 16.0,
+    "score": 9.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_range": {
+   "high": 32.0,
+   "low": 4.2,
+   "mid": 18.0,
+   "n": 4
+  },
+  "private_window_months": 36,
   "secondary": [
    {
     "company": "Adyen N.V.",

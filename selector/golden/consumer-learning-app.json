@@ -5,14 +5,14 @@
     "company": "Duolingo, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 39.2,
-    "ticker": "NASDAQ:DUOL"
+    "score": 38.9,
+    "ticker": "NASDAQGS:DUOL"
    },
    {
     "company": "Coursera, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 30.8,
+    "score": 28.8,
     "ticker": "NYSE:COUR"
    },
    {
@@ -30,27 +30,30 @@
    "mid": 0.4,
    "n": 3
   },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
   "secondary": [
    {
     "company": "Grindr Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 24.2,
+    "score": 23.6,
     "ticker": "NYSE:GRND"
    },
    {
     "company": "Match Group, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 20.3,
-    "ticker": "NASDAQ:MTCH"
+    "score": 20.6,
+    "ticker": "NASDAQGS:MTCH"
    },
    {
     "company": "Bumble Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 19.7,
-    "ticker": "NASDAQ:BMBL"
+    "score": 19.9,
+    "ticker": "NASDAQGS:BMBL"
    }
   ],
   "secondary_range": {

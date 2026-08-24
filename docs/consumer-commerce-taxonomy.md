@@ -21,11 +21,11 @@ line and are not flagged out of medians:
 
 | gross margin bucket | names | median EV / NTM revenue | median EV / NTM gross profit |
 |---|---|---|---|
-| under 30% | 7 | 0.7x | 2.4x |
+| under 30% | 8 | 0.7x | 2.8x |
 | 30 to 50% | 13 | 2.2x | 5.0x |
 | 50 to 70% | 14 | 1.8x | 3.0x |
 | 70% and above | 28 | 3.2x | 3.6x |
-| **spread, highest over lowest** | | **4.4x** | **2.1x** |
+| **spread, highest over lowest** | | **4.3x** | **1.8x** |
 
 Most of the apparent valuation gap between Carvana at 1.7x and Rightmove at 7.9x is an accounting
 difference, not a valuation one: one books the price of the car as revenue and the other books the
@@ -190,3 +190,63 @@ The screens carry entity name and country and no ticker. Every `exchange_ticker`
 before the file is used as a join key: WSE:ALE, XTRA:ZAL, AIM:ASC, LSE:AUTO, LSE:RMV, XTRA:G24,
 ASX:REA, OM:HEM, ASX:SEK, LSE:MONY, SEHK:3690, NSEI:ETERNAL, NSEI:SWIGGY, NSEI:NAUKRI,
 NSEI:JUSTDIAL.
+
+---
+
+## The private consumer set, and what verification did to it
+
+Added 24 August 2026 as `data/private-rounds-consumer.csv`, `data/private-companies-consumer-tags.csv`
+and `data/private-round-investors-consumer.csv`. 48 transactions were supplied. 44 are kept, 4 were
+deleted, and 40 of the 44 are marked CORRECTED.
+
+**Every supplied multiple reconciled arithmetically. Most did not survive the at-pricing rule.** The
+corrections run in one direction, because every error divided a fixed valuation by a later and larger
+revenue figure:
+
+| row | was | is | why |
+|---|---|---|---|
+| AG1, Jan-22 | 2.0x | 8.8x | the $600m is a December 2024 figure; the round saw a $150m run-rate |
+| Meesho, Sep-21 | 9.8x | 45.8x | $500m matched no fiscal year; FY2021 actual was about $107m |
+| Quince, Mar-26 | 5.1x | at most 10.1x | the $2bn was published four and a half months after pricing, and the round was $500m not $200m |
+| Vinted, May-21 | 18.4x | 20.4x | the denominator was FY2021, reported thirteen months later; FY2020 was EUR 184m |
+| Harry's, Mar-21 | 4.3x | 4.6x | FY2020 sales were $370m, not $400m |
+| Huel, Nov-22 | 3.0x | 3.3x | the "$184m" is GBP 184.5m and it is the year to July 2023 |
+
+**Six companies have never published net revenue in any period**: Faire, Back Market, GOAT Group,
+Whatnot, Trendyol and Ankorstore. They publish GMV or volume, and the revenue figures in the supplied
+sheet were those volumes haircut at an assumed take rate. Loop Returns has never published any
+revenue figure at all, which is why the 72.3x, the highest multiple in the batch, had no denominator.
+
+**Three fields were added to the private schema.**
+
+`transaction_type` is PRIMARY, SECONDARY or MIXED. A secondary share sale is a mark, not a priced
+round, and it must be labelled exactly as control transactions are in the software set. Both Vuori
+rounds were secondary tenders with nothing reaching the balance sheet; both Rokt rounds are pure
+secondaries; StockX was 76% secondary; Flipkart July 2023 was Walmart buying out Tiger Global. Ten of
+the 44 rows are affected and the supplied sheet had several of them the wrong way round.
+
+`denominator_basis` is DISCLOSED_ACTUAL, DISCLOSED_FORECAST, DISCLOSED_THRESHOLD, FILED_ACCOUNTS,
+GMV_ONLY, THIRD_PARTY_ESTIMATE or NONE. This is the field that stops an analyst back-solve being
+presented to a founder as a disclosure.
+
+`bound` is `<=` where the denominator is a "more than" floor, so the multiple is a ceiling and must
+be printed as "at most", and `>=` where the valuation itself is a floor.
+
+**Seventeen rows across thirteen companies carry a denominator good enough for a median, and their
+median is 7.3x.** The other twenty-seven stay visible with their valuation and, where that is all
+that exists, their GMV.
+
+---
+
+## What the golden fixtures caught on their first day
+
+Adding thirty-one private consumer companies broke private matching for any profile with no private
+neighbours. A consumer language-learning app was returned Huel, AG1 and Harry's, all scoring 9.7 on
+nothing but "sells a subscription to a consumer": end customer, revenue model and purchase frequency
+coinciding, three low-information tags. A relative quality floor cannot catch that, because 45% of a
+bad best score is a worse score.
+
+`FLOOR_ADEQUATE = 12.0` now returns an EMPTY set rather than a bad one. Calibration is the observed
+gap between profiles that have private neighbours and one that does not: skincare 40.5, quick
+commerce 23.6, car marketplace 13.5, language learning 9.7. The fixture diff showed exactly one
+profile changing, which is what the fixtures are for.

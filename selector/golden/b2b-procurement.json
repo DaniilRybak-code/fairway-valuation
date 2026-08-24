@@ -5,7 +5,7 @@
     "company": "Kinaxis Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 21.4,
+    "score": 21.3,
     "ticker": "TSX:KXS"
    },
    {
@@ -23,12 +23,71 @@
    "mid": 4.55,
    "n": 2
   },
+  "private": [
+   {
+    "basis": "",
+    "bound": "",
+    "company": "Ramp",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 32.0,
+    "score": 16.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "",
+    "bound": "",
+    "company": "Deel",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 17.3,
+    "score": 11.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "",
+    "bound": "",
+    "company": "Vanta",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 24.5,
+    "score": 9.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "",
+    "bound": "",
+    "company": "AlphaSense",
+    "date": "Jun-24",
+    "in_medians": true,
+    "mult": 20.0,
+    "score": 8.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "",
+    "bound": "",
+    "company": "Wiz",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 34.3,
+    "score": 8.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_range": {
+   "high": 34.3,
+   "low": 17.3,
+   "mid": 24.5,
+   "n": 5
+  },
+  "private_window_months": 36,
   "secondary": [
    {
     "company": "SAP SE",
     "family": "software",
     "in_medians": true,
-    "score": 22.9,
+    "score": 22.8,
     "ticker": "XTRA:SAP"
    },
    {

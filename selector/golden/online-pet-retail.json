@@ -12,59 +12,125 @@
     "company": "Wayfair Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 30.9,
+    "score": 30.7,
     "ticker": "NYSE:W"
+   },
+   {
+    "company": "BARK, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 20.2,
+    "ticker": "NYSE:BARK"
    }
   ],
   "core_range": {
-   "denominator": "rev",
-   "high": 1.2,
-   "low": 0.7,
-   "mid": 0.95,
-   "n": 2
+   "denominator": "gp",
+   "high": 3.9,
+   "low": 0.5,
+   "mid": 2.4,
+   "n": 3
   },
-  "secondary": [
+  "private": [
    {
-    "company": "Zalando SE",
-    "family": "consumer",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Quince",
+    "date": "Mar-26",
     "in_medians": true,
-    "score": 29.3,
-    "ticker": "XTRA:ZAL"
+    "mult": 10.1,
+    "score": 16.1,
+    "type": "PRIMARY"
    },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "<=",
+    "company": "SKIMS",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 5.0,
+    "score": 11.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "OLIPOP",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 4.6,
+    "score": 11.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Liquid Death",
+    "date": "Mar-24",
+    "in_medians": false,
+    "mult": 5.3,
+    "score": 11.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "SHEIN",
+    "date": "Jan-24",
+    "in_medians": false,
+    "mult": 1.4,
+    "score": 21.1,
+    "type": "SECONDARY"
+   }
+  ],
+  "private_range": {
+   "high": 10.1,
+   "low": 4.6,
+   "mid": 5.0,
+   "n": 3
+  },
+  "private_window_months": 36,
+  "secondary": [
    {
     "company": "Vipshop Holdings Limited",
     "family": "consumer",
     "in_medians": true,
-    "score": 29.2,
+    "score": 29.0,
     "ticker": "NYSE:VIPS"
    },
    {
-    "company": "Revolve Group, Inc.",
+    "company": "Zalando SE",
     "family": "consumer",
     "in_medians": true,
-    "score": 28.2,
-    "ticker": "NYSE:RVLV"
+    "score": 28.7,
+    "ticker": "XTRA:ZAL"
    },
    {
     "company": "Coupang, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 27.8,
+    "score": 28.3,
     "ticker": "NYSE:CPNG"
+   },
+   {
+    "company": "Carvana Co.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 27.9,
+    "ticker": "NYSE:CVNA"
    },
    {
     "company": "ASOS Plc",
     "family": "consumer",
     "in_medians": true,
-    "score": 26.6,
-    "ticker": "AIM:ASC"
+    "score": 27.6,
+    "ticker": "LSE:ASC"
    }
   ],
   "secondary_range": {
-   "denominator": "gp",
-   "high": 2.4,
-   "low": 0.9,
-   "mid": 1.0,
+   "denominator": "rev",
+   "high": 1.7,
+   "low": 0.4,
+   "mid": 0.4,
    "n": 5
   }
  },

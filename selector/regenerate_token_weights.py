@@ -26,13 +26,13 @@ def eat(label, rows):
         for tg in [x.strip() for x in r['product_tags'].split('|') if x.strip()]:
             for t in toks(tg): comp[t].add(key); tags[t].add(tg.lower())
 for f,_ in SRC: eat(f, loads(gitshow(f)))
-eat('data/peers-ecommerce-tags.csv',
-    loads(open(REPO+'/data/peers-ecommerce-tags.csv',encoding='utf-8').read()))
+for local in ('data/peers-ecommerce-tags.csv','data/private-companies-consumer-tags.csv'):
+    eat(local, loads(open(REPO+'/'+local,encoding='utf-8').read()))
 
 rows=[(t,len(c),len(tags[t]),round(5/len(c),2)) for t,c in comp.items() if len(c)>5]
 rows.sort(key=lambda r:(-r[1],r[0]))
 HDR='''# Generic-token down-weights for the selector's product-tag token matching. COMPUTED from the
-# four tag files; regenerate when tags change, never hand-edit.
+# five tag files; regenerate when tags change, never hand-edit.
 #
 # WHY. Token-level matching (0.6 per shared token) pulls false comps on generic words: "Agent
 # Network" (Western Union, human money-transfer agents) shares a token with every AI-agent

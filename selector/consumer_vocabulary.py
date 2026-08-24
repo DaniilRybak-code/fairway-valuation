@@ -15,15 +15,15 @@ Neither shape survives contact with this set, for one measurable reason.
 
 Everything follows from that. In software, revenue means roughly the same thing
 from one company to the next, so EV/revenue is a fair comparison. Here it is not.
-Measured on the 62 names in this set that carry a usable gross profit line:
+Measured on the 63 names in this set that carry a usable gross profit line:
 
     gross margin      median EV/NTM revenue      median EV/NTM gross profit
-    under 30%   n=7           0.7x                        2.4x
+    under 30%   n=8           0.7x                        2.8x
     30-50%      n=13          2.2x                        5.0x
     50-70%      n=14          1.8x                        3.0x
     70% and up  n=28          3.2x                        3.6x
 
-EV/revenue moves 4.4x across the margin buckets. EV/gross profit moves 2.1x.
+EV/revenue moves 4.3x across the margin buckets. EV/gross profit moves 1.8x.
 Most of what looks like a valuation difference between Carvana and Rightmove is
 not a valuation difference, it is an accounting one: one of them books the price
 of the car as revenue and the other books the listing fee.
