@@ -11,11 +11,13 @@
 # EXACT full-tag matches (3.0 points) are NEVER down-weighted - "AI Agents" as a whole tag is a
 # real category; only its loose tokens are cheap.
 #
-# REGENERATED 24-Aug-2026 to include data/peers-ecommerce-tags.csv, the fourth tag file. The
-# consumer set adds 298 distinct tags, which changes the frequency of shared words: "marketplace",
-# "commerce", "delivery", "subscription" and "brand" all become generic and lose weight, which is
-# the mechanism working as intended. One row from the previous version is gone: 'of'. The
-# tokeniser strips it as a stopword, so it never scored.
+# REGENERATED 24-Aug-2026 over FIVE tag files: the three original ones plus the listed consumer set
+# and the private consumer set. Those two add 298 and 217 distinct tags, which changes which words
+# are generic. "marketplace" goes from 6 carriers to 41 and its token weight from 0.83 to 0.12;
+# "online" 16 to 53; "commerce" 10 to 46; "retail" 8 to 31. Without this a B2B procurement founder
+# whose site says "supplier marketplace" starts pulling eBay into scoring range on one shared word,
+# which is what the b2b-procurement golden fixture exists to catch. One row from the previous
+# version is gone: 'of'. The tokeniser strips it as a stopword, so it never scored.
 token,companies_carrying,distinct_tags_containing,weight_factor
 management,110,120,0.05
 software,80,81,0.06

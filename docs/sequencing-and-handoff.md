@@ -1,122 +1,116 @@
-# Sequencing and handoff, 24 August 2026 (late)
+# Sequencing and status, 24 August 2026 (evening update)
 
-Two sessions worked on Fairway today and neither could see the other's conversation. This is the
-one place that reconciles them. It SUPERSEDES the seven-item sequencing list at the foot of
-`claude/Fairway_profiler_website_test.md`, which is otherwise still accurate and still the best
-account of the profiler field test.
+Two sessions worked on Fairway today and neither could see the other's conversation. This is the one
+place that reconciles them. It supersedes the seven-item list at the foot of
+`claude/Fairway_profiler_website_test.md`, which remains the best account of the profiler field test.
 
 ---
 
-## Status of the agreed seven items
+## Status against the seven items
 
 | # | Item | Status |
 |---|---|---|
-| 1 | Batch 2 + at-pricing rule merged to main | **Done** (28b900a, other session) |
-| 2 | E-commerce / D2C data + a new taxonomy branch | **Done for LISTED. Private transactions still outstanding.** |
-| 3 | Wire the selector against the data + token weights | **Done**, `selector/match_reference.py` |
-| 4 | Golden test: snapshot expected comps as fixtures before tuning | **Harness built, 12 fixtures frozen. The 21 website profiles are not in it yet, see below.** |
-| 5 | Reveal copy: pre-revenue positioning mode, control-transaction labels | Not started |
-| 6 | Batch 3: scraping APIs, email deliverability | Not started |
-| 7 | Second random-20 profiler test on the broadened scope | Not started, now unblocked |
+| 1 | Batch 2 plus the at-pricing rule merged to main | **Done** (28b900a, other session) |
+| 2 | E-commerce and D2C data, plus a new taxonomy branch | **Done.** 72 listed names, 44 private transactions across 31 companies, and a third vocabulary family with two new fields |
+| 3 | Wire the selector against the data and the token weights | **Done.** `selector/match_reference.py`, 318 listed and 110 private rows, token weights regenerated over five tag files |
+| 4 | Golden test, fixtures before any tuning | **Done for 12 profiles.** Core, secondary AND private comps, denominators and ranges are snapshotted. It has already caught one real defect. The 21 website profiles are still not in it, for the reason below |
+| 5 | Reveal copy: pre-revenue positioning mode, control-transaction labels | **Not started.** The private set now carries `transaction_type`, so the labelling that copy needs exists in the data |
+| 6 | Batch 3: scraping APIs, email deliverability | **Not started** |
+| 7 | Second random-20 profiler test on the broadened scope | **Not started, now unblocked** |
 
 ---
 
-## What item 2 actually delivered, and how it differs from the plan
+## Item 2: what landed, and the one thing that did not
 
-The plan expected a private transaction dump in the shape of batch 2. What arrived was a LISTED
-screen: 74 consumer, commerce and marketplace names, rows 9 to 82 of two CapIQ screenshots. So the
-family is a public-comps family today. `data/peers-ecommerce.csv` and
-`data/peers-ecommerce-tags.csv` are the result and `docs/consumer-commerce-taxonomy.md` is the
-full write-up.
+The listed set is refreshed to 72 names. It now carries a ticker column, a revenue FY+2 column, and
+growth restated as FY+2 over FY+1, which removes the currency-translation effect that made ASOS,
+Autohome and Hemnet read as declining businesses. Hemnet goes from -14% to +24%.
 
-The plan's guess at what the taxonomy would need was right on every count: physical and D2C
-archetypes, a UNIT_SALES-type revenue model (it is called PRODUCT_SALES), and margin structure. The
-margin structure turned out to be the load-bearing part and it needed a new FIELD, not a new value,
-which is the first time a vocabulary change has required a matcher change.
+The private set is 44 rows from 48 supplied, and it needed a rebuild rather than an import. Details
+are in `docs/consumer-commerce-taxonomy.md`. The short version: every supplied multiple reconciled
+arithmetically and most did not survive the at-pricing rule.
 
-**Still outstanding for this family:** the private consumer and D2C rounds. Without them the
-consumer reveal can show a public range and no private range, which breaks the lead-with-private
-design. Vinted, ThredUp, Depop, Faire, Whatnot, Gopuff, Getir, Oda, Glossier, Ro and Cider are the
-obvious candidates.
+**Still outstanding for this family:** private consumer rounds in the categories the 44 do not reach.
+There is no private edtech, no private food delivery or quick commerce, no private travel, and no
+private auto or property marketplace. The golden fixtures show the consequence directly: a consumer
+language-learning profile now correctly returns NO private comparable set, because there is nothing
+to return.
 
 ---
 
-## What item 4 froze, and what it deliberately did not
+## Item 4: what the fixtures caught on day one
 
-`selector/golden.py` snapshots core and secondary lists plus the chosen denominator and quartile
-range for twelve frozen profiles, four consumer, three software, three fintech, two crossover.
-`python selector/golden.py` prints a readable diff and exits non-zero when anything moves.
+Adding 31 private consumer companies broke private matching for any profile with no private
+neighbours. A consumer language-learning app was returned Huel, AG1 and Harry's, each scoring 9.7 on
+nothing but "sells a subscription to a consumer": end customer, revenue model and purchase frequency
+coinciding, three low-information tags. A relative quality floor cannot catch this, because 45% of a
+bad best score is a worse score.
 
-The 21 website profiles from the field test are NOT in the fixtures. That document's appendix gives
-nine of the ten fields for each company but not `product_tags`, and `product_tags` is the heaviest
-weight in the matcher at a cap of 12 points against 3 for archetype. Freezing them without it would
-freeze a weak fixture that passes for the wrong reason. They should go in as soon as the profiler
-run that produced them can supply the tags.
+`FLOOR_ADEQUATE = 12.0` now returns an empty set rather than a bad one, calibrated on the observed
+gap between profiles that have private neighbours and one that does not: skincare 40.5, quick
+commerce 23.6, car marketplace 13.5, language learning 9.7. The fixture diff showed exactly one
+profile changing.
 
----
-
-## An error found in a file already on main
-
-`data/peers-fintech.csv` had MercadoLibre's NTM revenue as 46,939. Both source screens show 46,874.
-Corrected, with the reason in the file header.
-
-The instructive part is why nothing caught it. Both figures produce 2.2x after rounding, so the
-ratio reconciliation passed on both. It surfaced only because MercadoLibre appears in two pulls and
-every other field matched byte for byte. The consumer pull carries revenue FY+0 and FY+1, which the
-software and fintech pulls do not, and those give a growth reconciliation that a wrong revenue
-figure fails. **Ask for FY+0 and FY+1 on the next refresh of the other two screens.**
+The 21 website profiles from the field test still are not in the fixtures. That document's appendix
+gives nine of the ten fields for each company but not `product_tags`, which is the heaviest weight in
+the matcher at a cap of 12 points against 3 for archetype. Freezing them without it would freeze a
+fixture that passes for the wrong reason.
 
 ---
 
-## Two things that need a decision, not a default
+## Two errors found in files already on main
 
-**1. The private set has diverged between the two sessions.**
+**MercadoLibre.** `data/peers-fintech.csv` had NTM revenue as 46,939; both source screens say 46,874.
+Corrected. Both figures round to 2.2x, so no ratio check could have caught it; the duplicate name
+across two pulls did.
 
-`origin/main` carries the other session's version: 66 rows, 60 companies, the at-pricing rule
-applied row by row, threshold markers, a primary URL for the round and one for the revenue on every
-row. That is the more rigorous artifact and it should be the base.
-
-This session's container holds a different version on the local branch `wip/private-merge-local`:
-95 transactions across 71 companies, because it merged in 50 private FINTECH transactions that
-`origin/main` does not have, plus an investor file at 184 houses against 145 with lead separated
-from participant on all 93 rounds.
-
-Neither is a superset of the other and they must not be merged by taking one wholesale. The right
-move is to re-verify the 50 fintech rows against the at-pricing rule and add them to the 66, which
-is a data job of a few hours, not a merge. **Nothing in this session has been pushed over the
-other session's work, and nothing should be until that is done.**
-
-**2. The selector is Python and the site is Node.**
-
-`selector/match_reference.py` is an executable specification, not a shippable component. The reveal
-runs in `api/reveal.js` on Vercel. Porting is mechanical and should be done against the golden
-fixtures rather than by eye, so the port is correct by construction the moment
-`selector/golden.py` passes from the JS side.
+**Autohome minority interest, not changed, needs your eye.** The screen carries +179. The company
+reports a noncontrolling interest deficit of US$(148)m at 30 June 2026. That is a 327 swing against a
+29 enterprise value and would put the aggregate value at roughly -298. It has been left alone in case
+the screen is picking up a redeemable or mezzanine interest the summary balance sheet does not
+separate.
 
 ---
 
-## Two findings worth acting on, neither of them acted on here
+## Two things that still need a decision
 
-**AI stance is underweighted, and the education category proves it.** The `consumer-learning-app`
-fixture returns Duolingo at 4.4x, Coursera at 0.4x and Chegg at 0.4x. Those three differ on almost
-nothing in the tag grid except `ai_stance`, which carries 1.0 point out of roughly 35. An
-eleven-fold multiple spread driven by a 1.0-point field is a weight that does not reflect what the
-market is pricing. Chegg is the cleanest observed price of AI displacement anywhere in the three
-sets: NTM revenue down 47%, enterprise value 0.4x revenue. This should be tuned deliberately
-against the fixtures, and it has not been touched.
+**1. The private software set has diverged between the two sessions.** `origin/main` carries the
+other session's 66 rows across 60 companies with the at-pricing rule applied row by row. This
+session's container holds a different branch, `wip/private-merge-local`, with 95 transactions
+including 50 private FINTECH rows that main does not have, and an investor file at 184 houses against
+145. Neither is a superset. The right move is to re-verify the 50 fintech rows under the at-pricing
+rule and add them to the 66. Nothing has been pushed over the other session's work. The golden
+fixtures are deliberately generated against the data on MAIN so they reproduce for anyone else.
 
-**Token weights had to be regenerated and that is now a standing rule.** Adding 298 consumer tags
-moved 45 tokens into the generic band and pushed ten hard: "marketplace" from 6 carriers to 29,
-"online" 16 to 44, "commerce" 10 to 31. Without regenerating, a B2B procurement founder whose site
-says "supplier marketplace" starts pulling eBay into scoring range on one shared word. Any tag
-change must be followed by `python selector/regenerate_token_weights.py` and then
-`python selector/golden.py`.
+**2. The selector is Python and the site is Node.** `selector/match_reference.py` is an executable
+specification, not a shippable component. The port should be done against the fixtures rather than by
+eye, so it is correct by construction the moment `selector/golden.py` passes from the JS side.
 
 ---
 
-## Still true, still blocked
+## Data quality: what this batch changed about how the reveal must behave
 
-`git push` to `DaniilRybak-code/fairway-valuation` is refused by the proxy in this session. The
-error names the fix: the repository has to be added to the session's authorised sources. Read
-access works, so the session can see main and diff against it; only writing is blocked. Until that
-is set, files are delivered directly and applied by hand.
+Three rules came out of the verification and are now enforced in the data rather than in copy.
+
+**A secondary is a mark, not a priced round.** Ten of the 44 private rows are secondary or mixed, and
+the supplied sheet had several of them the wrong way round. `transaction_type` carries it.
+
+**A "more than" figure makes the multiple a ceiling.** `bound` carries it, and the reveal must print
+"at most" where it is set.
+
+**An analyst back-solve is not a disclosure.** `denominator_basis` carries it. Six of the companies in
+this batch have never published net revenue in any period; what circulates as their revenue is GMV
+haircut at an assumed take rate.
+
+And one that applies to the listed set: `mix_note` is a display requirement, not a comment. Amazon's
+multiple is not a commerce multiple while a third of its gross profit is AWS, and a founder comparing
+themselves to it has to be told so on the same line.
+
+---
+
+## Still blocked
+
+`git push` to `DaniilRybak-code/fairway-valuation` is refused by the proxy in this session. The error
+names the fix: the repository has to be added to the session's authorised sources. Read access works,
+so the session can diff against main; only writing is blocked. Until that is set, work is delivered as
+a patch that applies cleanly on top of `origin/main`.
