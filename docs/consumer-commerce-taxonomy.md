@@ -199,6 +199,30 @@ Added 24 August 2026 as `data/private-rounds-consumer.csv`, `data/private-compan
 and `data/private-round-investors-consumer.csv`. 48 transactions were supplied. 44 are kept, 4 were
 deleted, and 40 of the 44 are marked CORRECTED.
 
+**The funnel, because 44 is not the usable number.**
+
+| stage | rows | companies |
+|---|---|---|
+| supplied | 48 | 33 |
+| deleted outright, neither valuation nor denominator verifies | -4 | |
+| kept as verified transaction records | 44 | 31 |
+| of those, carrying a defensible multiple (`in_medians=1`) | **17** | **13** |
+| of those 17, point estimates rather than ceilings | 12 | |
+
+The 27 records with no printed multiple are not junk and are not deleted. Date, round type,
+PRIMARY or SECONDARY, capital raised, post-money and lead investor are all verified on them, and
+that is what the tagging and the investor file are built from. What they lack is a denominator that
+survives the at-pricing rule, so they never print a multiple and never enter a median. Fourteen have
+no revenue disclosure in any period, six publish GMV only, two rest on a third-party estimate, and
+five are excluded on the specific grounds recorded in the row: Rokt on gross versus net network
+revenue, Liquid Death on retail scanned sales rather than company net revenue, SHEIN because the
+$45bn was an indicative holder ask at a reported discount and not a completed print, and both
+Flipkart rows because the only filed revenue belongs to the B2B wholesale entity rather than the
+group.
+
+Median of the 17 is 7.3x. Median of the 12 point multiples is 6.3x. Neither is a large enough set to
+carry a reveal on its own, which is the honest read on where this batch leaves us.
+
 **Every supplied multiple reconciled arithmetically. Most did not survive the at-pricing rule.** The
 corrections run in one direction, because every error divided a fixed valuation by a later and larger
 revenue figure:

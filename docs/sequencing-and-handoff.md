@@ -11,7 +11,7 @@ place that reconciles them. It supersedes the seven-item list at the foot of
 | # | Item | Status |
 |---|---|---|
 | 1 | Batch 2 plus the at-pricing rule merged to main | **Done** (28b900a, other session) |
-| 2 | E-commerce and D2C data, plus a new taxonomy branch | **Done.** 72 listed names, 44 private transactions across 31 companies, and a third vocabulary family with two new fields |
+| 2 | E-commerce and D2C data, plus a new taxonomy branch | **Done.** 72 listed names; 44 verified private transaction records across 31 companies, of which **17 rows across 13 companies carry a defensible multiple**; and a third vocabulary family with two new fields |
 | 3 | Wire the selector against the data and the token weights | **Done.** `selector/match_reference.py`, 318 listed and 110 private rows, token weights regenerated over five tag files |
 | 4 | Golden test, fixtures before any tuning | **Done for 12 profiles.** Core, secondary AND private comps, denominators and ranges are snapshotted. It has already caught one real defect. The 21 website profiles are still not in it, for the reason below |
 | 5 | Reveal copy: pre-revenue positioning mode, control-transaction labels | **Not started.** The private set now carries `transaction_type`, so the labelling that copy needs exists in the data |
@@ -26,7 +26,12 @@ The listed set is refreshed to 72 names. It now carries a ticker column, a reven
 growth restated as FY+2 over FY+1, which removes the currency-translation effect that made ASOS,
 Autohome and Hemnet read as declining businesses. Hemnet goes from -14% to +24%.
 
-The private set is 44 rows from 48 supplied, and it needed a rebuild rather than an import. Details
+The private set is 44 rows from 48 supplied, and it needed a rebuild rather than an import. **The
+number that matters is not 44.** 44 is the count of verified transaction *records*. Only 17 rows
+across 13 companies carry a multiple defensible enough to price against, and 5 of those 17 are
+ceilings rather than point estimates, so 12 are point multiples. The other 27 rows are real,
+verified transactions kept for their date, structure and investor record, with no printed multiple.
+Median of the 17 is 7.3x; of the 12 point multiples, 6.3x. Details
 are in `docs/consumer-commerce-taxonomy.md`. The short version: every supplied multiple reconciled
 arithmetically and most did not survive the at-pricing rule.
 

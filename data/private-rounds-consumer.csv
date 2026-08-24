@@ -1,4 +1,8 @@
-# Fairway private consumer, commerce and commerce-software transactions. 44 rows, 31 companies.
+# Fairway private consumer, commerce and commerce-software transactions.
+# 44 verified transaction records across 31 companies. ONLY 17 ROWS ACROSS 13 COMPANIES CARRY A
+# DEFENSIBLE MULTIPLE (in_medians=1), and 5 of those 17 are ceilings, not point estimates. The other
+# 27 rows are real, verified transactions kept for their date, structure and investor record; they
+# have no denominator that survives the at-pricing rule and must never be counted as comparables.
 # Supplied 24-Aug-2026 as 48 rows. Every row was independently verified against company press
 # releases, investor releases, filed accounts and, for Klaviyo, the S-1. USD unless the currency
 # column says otherwise; multiples are currency-neutral.
