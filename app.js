@@ -44,16 +44,20 @@ const variant = hooks[params.get('hook')] ? params.get('hook') : 'frustration';
   const k = document.getElementById('hook-kicker');
   if (!k) return;
   k.textContent = h.kicker;
+  k.style.display = h.kicker ? '' : 'none';
   document.getElementById('hook-headline').textContent = h.headline;
   document.getElementById('hook-sub').textContent = h.sub;
   document.getElementById('hook-cta').textContent = h.cta;
 })();
 
-/* marquee: duplicate the list so the loop is seamless */
+/* marquee: repeat the list six times so the -50% loop never shows a gap on any
+   viewport width. With an even repeat count, translateX(-50%) lands on an
+   identical arrangement, so the loop point is invisible. */
 function renderMarquee(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  const firms = CONFIG.teamFirms.concat(CONFIG.teamFirms);
+  let firms = [];
+  for (let i = 0; i < 6; i++) firms = firms.concat(CONFIG.teamFirms);
   el.innerHTML = firms.map(f => '<span>' + f + '</span>').join('');
 }
 renderMarquee('marquee-track');
