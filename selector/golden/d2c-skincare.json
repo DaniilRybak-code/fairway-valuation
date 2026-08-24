@@ -1,0 +1,72 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "FIGS, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 39.8,
+    "ticker": "NYSE:FIGS"
+   },
+   {
+    "company": "e.l.f. Beauty, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 34.5,
+    "ticker": "NYSE:ELF"
+   },
+   {
+    "company": "Warby Parker Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 27.8,
+    "ticker": "NYSE:WRBY"
+   },
+   {
+    "company": "On Holding AG",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 27.2,
+    "ticker": "NYSE:ONON"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev",
+   "high": 3.3,
+   "low": 1.9,
+   "mid": 3.0,
+   "n": 4
+  },
+  "secondary": [
+   {
+    "company": "BARK, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 24.0,
+    "ticker": "NYSE:BARK"
+   },
+   {
+    "company": "YETI Holdings, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.8,
+    "ticker": "NYSE:YETI"
+   },
+   {
+    "company": "Hims & Hers Health, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.7,
+    "ticker": "NYSE:HIMS"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 2.3,
+   "low": 0.3,
+   "mid": 1.6,
+   "n": 3
+  }
+ },
+ "label": "Direct-to-consumer skincare brand, own formulations, paid social"
+}

@@ -1,5 +1,11 @@
 # Fairway listed fintech and financial-technology screen. 87 names.
 # as_of=2026-08-21 currency=USD
+# CORRECTION 24-Aug-2026: MercadoLibre revenue_ntm_musd read 46939 and the source screen says
+# 46874. Found because the same name appears in the listed consumer and commerce pull, where
+# every other MercadoLibre field is byte-identical. Both figures round to the same 2.2x, so no
+# ratio check could have caught it; only the cross-set duplicate did. Verified against the
+# original screenshot at 5x before the change was made.
+#
 # THE AS-OF DATE IS INFERRED, NOT SUPPLIED. BILL, Q2 and nCino appear in both this pull and the
 # listed software pull with byte-identical enterprise value and NTM revenue, which can only be
 # true if both were pulled on the same date. Confirm before this is used in anger.
@@ -78,7 +84,7 @@ row,company_name,exchange_ticker,country,market_cap_musd,net_debt_musd,minority_
 64,Deutsche Boerse AG,XTRA:DB1,Germany,59542,5041,431,142,5330,64871,7793,0,,8.3,,8
 65,Euronext N.V.,ENXTPA:ENX,Netherlands,19326,1883,216,19,2080,21406,2485,0,,8.6,,14
 66,Al Ansari Financial Services PJSC,DFM:ALANSARI,United Arab Emirates,1940,-139,0,0,-139,1801,,0,,,,-100
-67,"MercadoLibre, Inc.",NASDAQ:MELI,Uruguay,97476,7462,0,0,7462,104938,46939,44,20781,2.2,5.0,46
+67,"MercadoLibre, Inc.",NASDAQ:MELI,Uruguay,97476,7462,0,0,7462,104938,46874,44,20781,2.2,5.0,46
 68,Nu Holdings Ltd.,NYSE:NU,Brazil,70431,,2,93,-91,70340,25112,43,10868,2.8,6.5,46
 69,StoneCo Ltd.,NASDAQ:STNE,Cayman Islands,2158,1692,8,14,1686,3845,2965,57,1678,1.3,2.3,11
 70,PagSeguro Digital Ltd.,NYSE:PAGS,Brazil,2376,75,0,0,75,2451,4250,38,1621,0.6,1.5,11

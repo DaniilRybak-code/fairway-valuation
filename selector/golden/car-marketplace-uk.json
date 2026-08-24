@@ -1,0 +1,93 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "CarGurus, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 40.9,
+    "ticker": "NASDAQ:CARG"
+   },
+   {
+    "company": "Cars.com Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 39.0,
+    "ticker": "NYSE:CARS"
+   },
+   {
+    "company": "Autotrader Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 37.9,
+    "ticker": "LSE:AUTO"
+   },
+   {
+    "company": "Autohome Inc.",
+    "family": "consumer",
+    "in_medians": false,
+    "score": 35.7,
+    "ticker": "NYSE:ATHM"
+   },
+   {
+    "company": "ACV Auctions Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 23.8,
+    "ticker": "NASDAQ:ACVA"
+   }
+  ],
+  "core_range": {
+   "denominator": "gp",
+   "high": 3.5,
+   "low": 1.7,
+   "mid": 2.7,
+   "n": 3
+  },
+  "secondary": [
+   {
+    "company": "SEEK Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.4,
+    "ticker": "ASX:SEK"
+   },
+   {
+    "company": "Zillow Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.4,
+    "ticker": "NASDAQ:ZG"
+   },
+   {
+    "company": "Scout24 SE",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 21.4,
+    "ticker": "XTRA:G24"
+   },
+   {
+    "company": "trivago N.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 20.5,
+    "ticker": "NASDAQ:TRVG"
+   },
+   {
+    "company": "CoStar Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 20.4,
+    "ticker": "NASDAQ:CSGP"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 7.4,
+   "low": 2.6,
+   "mid": 3.3,
+   "n": 5
+  }
+ },
+ "label": "UK car marketplace charging dealers a monthly listing subscription"
+}

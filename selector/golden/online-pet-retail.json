@@ -1,0 +1,72 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Chewy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 41.3,
+    "ticker": "NYSE:CHWY"
+   },
+   {
+    "company": "Wayfair Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 30.9,
+    "ticker": "NYSE:W"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev",
+   "high": 1.2,
+   "low": 0.7,
+   "mid": 0.95,
+   "n": 2
+  },
+  "secondary": [
+   {
+    "company": "Zalando SE",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 29.3,
+    "ticker": "XTRA:ZAL"
+   },
+   {
+    "company": "Vipshop Holdings Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 29.2,
+    "ticker": "NYSE:VIPS"
+   },
+   {
+    "company": "Revolve Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 28.2,
+    "ticker": "NYSE:RVLV"
+   },
+   {
+    "company": "Coupang, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 27.8,
+    "ticker": "NYSE:CPNG"
+   },
+   {
+    "company": "ASOS Plc",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 26.6,
+    "ticker": "AIM:ASC"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "gp",
+   "high": 2.4,
+   "low": 0.9,
+   "mid": 1.0,
+   "n": 5
+  }
+ },
+ "label": "Online pet food and supplies retailer on an autoship subscription"
+}

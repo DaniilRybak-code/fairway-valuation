@@ -1,0 +1,72 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Figma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 32.9,
+    "ticker": "NYSE:FIG"
+   },
+   {
+    "company": "Autodesk, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 17.7,
+    "ticker": "NASDAQGS:ADSK"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev",
+   "high": 7.9,
+   "low": 6.3,
+   "mid": 7.1,
+   "n": 2
+  },
+  "secondary": [
+   {
+    "company": "Nemetschek SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 16.7,
+    "ticker": "XTRA:NEM"
+   },
+   {
+    "company": "Bentley Systems, Incorporated",
+    "family": "software",
+    "in_medians": true,
+    "score": 16.5,
+    "ticker": "NASDAQGS:BSY"
+   },
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 16.0,
+    "ticker": "NASDAQGS:ADBE"
+   },
+   {
+    "company": "PTC Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 16.0,
+    "ticker": "NASDAQGS:PTC"
+   },
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 15.5,
+    "ticker": "ENXTPA:DSY"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 7.1,
+   "low": 4.2,
+   "mid": 4.9,
+   "n": 5
+  }
+ },
+ "label": "Collaborative browser-based design and prototyping tool"
+}

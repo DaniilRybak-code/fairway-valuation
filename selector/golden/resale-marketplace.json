@@ -1,0 +1,65 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "The RealReal, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 31.1,
+    "ticker": "NASDAQ:REAL"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev",
+   "high": 2.0,
+   "low": 2.0,
+   "mid": 2.0,
+   "n": 1
+  },
+  "secondary": [
+   {
+    "company": "eBay Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 35.2,
+    "ticker": "NASDAQ:EBAY"
+   },
+   {
+    "company": "1stdibs.Com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 32.0,
+    "ticker": "NASDAQ:DIBS"
+   },
+   {
+    "company": "Etsy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 30.4,
+    "ticker": "NASDAQ:ETSY"
+   },
+   {
+    "company": "PDD Holdings Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 30.2,
+    "ticker": "NASDAQ:PDD"
+   },
+   {
+    "company": "MercadoLibre, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 27.4,
+    "ticker": "NASDAQ:MELI"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 3.9,
+   "low": 1.2,
+   "mid": 2.2,
+   "n": 5
+  }
+ },
+ "label": "Peer-to-peer resale marketplace for second-hand clothing"
+}

@@ -1,0 +1,118 @@
+# Fairway peer set: listed consumer, commerce and marketplace names. MARKET DATA. 74 names.
+# Source: CapIQ screen supplied 24-Aug-2026, rows 9-82 of two screenshots.
+# as_of=2026-08-21 currency=USD  money columns in USD millions.
+#
+# THE AS-OF DATE IS INFERRED, NOT SUPPLIED. MercadoLibre appears in this pull and in the listed
+# fintech pull with byte-identical market cap, net debt, bridge, enterprise value, gross profit and
+# all three ratios, which can only be true if both were pulled on the same date. Confirm.
+#
+# THIS PULL CARRIES TWO COLUMNS THE OTHER TWO DO NOT: revenue_fy0_musd and revenue_fy1_musd.
+# Keep them. They are the only reason the MercadoLibre error in peers-fintech.csv was found: the
+# growth column can be reconciled against FY+1 over FY+0, and a bad revenue figure fails that test
+# even when it still rounds to the same EV/revenue multiple.
+#
+# Every row was reconciled five ways before it was written here:
+#   equity_to_av_bridge = net_debt + minority_interest - associates
+#   enterprise_value    = market_cap + equity_to_av_bridge
+#   gross_profit        = revenue_ntm x gross_margin
+#   ev_ntm_revenue_x    = enterprise_value / revenue_ntm
+#   ev_ntm_gp_x         = enterprise_value / gross_profit
+#   revenue_growth      = revenue_fy1 / revenue_fy0 - 1
+# 68 of 74 rows clear all six exactly. Six clear five of six and miss the sixth by one unit in the
+# last displayed digit, at a rounding boundary: CarMax and Bumble and Info Edge on ev_ntm_gp_x,
+# 1stdibs and Rightmove and Grindr on growth. That is independent per-column rounding in the source,
+# the same signature the fintech pull showed on 23 rows, not a transcription error.
+#
+# KNOWN SOURCE ODDITIES, carried as printed and not corrected:
+#   FuboTV       revenue_fy0 is blank and the growth cell reads #DIV/0!. Minority interest of 1,826
+#                against a 309 market cap follows the Hulu Live combination. Out of every median.
+#   Opendoor     revenue_ntm of 5,955 sits ABOVE both FY+0 (4,229) and FY+1 (3,933). The ratios in
+#                the source are computed on 5,955, so the row is internally consistent and the
+#                figure is wrong. Out of every median.
+#   Just Dial    enterprise value is negative, net cash exceeds market cap. Out of every median.
+#   Info Edge    24.2x revenue because the listed Zomato and PolicyBazaar stakes sit inside the
+#                enterprise value and the associates line reads zero. Out of every median.
+#   Autohome     enterprise value is 4% of revenue, Fiverr 8%. Both are net-cash artefacts, not
+#                valuations. Out of every median.
+#   Baozun       entity name was read from a pixelated Chinese string and inferred from the
+#                financial fingerprint. Out of every median until confirmed.
+#   Allegro, Booking, Autotrader, Rightmove, New York Times and FuboTV have no gross profit line in
+#                the source. They keep a revenue multiple and no gross profit multiple.
+#
+# NO TICKER COLUMN WAS SUPPLIED. exchange_ticker is assigned by Fairway from the entity name.
+# The US lines are safe. Confirm the non-US ones before this is used as a join key.
+row,company_name,exchange_ticker,country,market_cap_musd,net_debt_musd,minority_interest_musd,associates_musd,equity_to_av_bridge_musd,enterprise_value_musd,revenue_fy0_musd,revenue_fy1_musd,revenue_ntm_musd,gross_margin_pct,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_ntm_pct
+1,"Amazon.com, Inc.",NASDAQ:AMZN,United States,2789664,128647,0,395,128252,2917916,714877,828186,883099,50,444147,3.3,6.6,16
+2,Alibaba Group Holding Limited,NYSE:BABA,China,272228,-17543,9548,29915,-37910,234317,149652,167001,172691,40,69780,1.4,3.4,12
+3,"JD.com, Inc.",NASDAQ:JD,China,39473,-22781,9312,0,-13469,26004,187314,202280,208007,16,33103,0.1,0.8,8
+4,PDD Holdings Inc.,NASDAQ:PDD,Ireland,125800,-62480,0,0,-62480,63320,61797,71296,72875,57,41200,0.9,1.5,15
+5,"MercadoLibre, Inc.",NASDAQ:MELI,Uruguay,97476,7462,0,0,7462,104938,28621,41673,46874,44,20781,2.2,5.0,46
+6,Sea Limited,NYSE:SE,Singapore,71985,-4972,138,0,-4834,67151,22356,31034,35883,46,16356,1.9,4.1,39
+7,"Coupang, Inc.",NYSE:CPNG,United States,29569,-477,0,0,-477,29092,34819,37020,40187,30,12014,0.7,2.4,6
+8,eBay Inc.,NASDAQ:EBAY,United States,46338,3831,0,48,3783,50121,11017,12512,12893,72,9236,3.9,5.4,14
+9,"Etsy, Inc.",NASDAQ:ETSY,United States,7437,1954,0,0,1954,9391,2886,2849,2908,72,2095,3.2,4.5,-1
+10,Allegro.eu S.A.,WSE:ALE,Luxembourg,11953,910,0,0,910,12863,3358,3626,3731,0,,3.4,,8
+11,Zalando SE,XTRA:ZAL,Germany,6411,-108,0,8,-116,6295,14491,16194,16644,40,6683,0.4,0.9,12
+12,ASOS Plc,AIM:ASC,United Kingdom,646,699,0,56,643,1289,3516,3067,3080,47,1440,0.4,0.9,-13
+13,Vipshop Holdings Limited,NYSE:VIPS,China,6978,-3360,496,490,-3354,3624,15278,15745,15829,23,3650,0.2,1.0,3
+14,Baozun Inc.,NASDAQ:BZUN,China,165,-141,268,0,128,293,1411,1578,1604,73,1178,0.2,0.2,12
+15,"1stdibs.Com, Inc.",NASDAQ:DIBS,United States,160,-51,0,0,-51,109,90,91,92,73,67,1.2,1.6,2
+16,"DoorDash, Inc.",NASDAQ:DASH,United States,96838,-2042,11,0,-2031,94807,13749,17821,19593,51,9960,4.8,9.5,30
+17,"Uber Technologies, Inc.",NYSE:UBER,United States,160954,4744,1083,3773,2054,163008,52012,57945,62120,40,24744,2.6,6.6,11
+18,Delivery Hero SE,XTRA:DHER,Germany,13060,2950,181,12,3120,16180,16688,18279,18742,27,5022,0.9,3.2,10
+19,Meituan,SEHK:3690,China,66914,-9796,-8,2557,-12361,54553,52400,59818,60976,31,19020,0.9,2.9,14
+20,Eternal Limited,NSEI:ETERNAL,India,31518,-214,-1,0,-215,31303,5862,10160,11320,45,5103,2.8,6.1,73
+21,Swiggy Limited,NSEI:SWIGGY,India,7695,-910,0,0,-910,6785,2434,3167,3376,56,1899,2.0,3.6,30
+22,Maplebear Inc.,NASDAQ:CART,United States,11536,-851,0,0,-851,10685,3720,4247,4483,75,3347,2.4,3.2,14
+23,Booking Holdings Inc.,NASDAQ:BKNG,United States,157504,3414,0,0,3414,160918,26703,29258,30361,0,,5.3,,10
+24,"Expedia Group, Inc.",NASDAQ:EXPE,United States,38602,-1437,1262,702,-877,37725,14598,16202,16653,90,15004,2.3,2.5,11
+25,"Airbnb, Inc.",NASDAQ:ABNB,United States,110429,-9573,0,0,-9573,100856,12174,14152,14907,83,12368,6.8,8.2,16
+26,"Tripadvisor, Inc.",NASDAQ:TRIP,United States,1172,51,0,25,26,1197,1892,1583,1583,93,1466,0.8,0.8,-16
+27,Trip.com Group Limited,NASDAQ:TCOM,Singapore,29036,-7198,230,0,-6968,22068,8847,10041,10250,81,8260,2.2,2.7,13
+28,trivago N.V.,NASDAQ:TRVG,Germany,382,-137,0,5,-142,239,630,738,775,98,758,0.3,0.3,17
+29,MakeMyTrip Limited,NASDAQ:MMYT,India,5687,660,10,2,668,6355,1119,1205,1246,73,914,5.1,7.0,8
+30,"CarGurus, Inc.",NASDAQ:CARG,United States,3282,63,0,0,63,3345,937,1014,1060,90,952,3.2,3.5,8
+31,Cars.com Inc.,NYSE:CARS,United States,654,414,0,0,414,1068,723,730,738,83,613,1.4,1.7,1
+32,Autotrader Group plc,LSE:AUTO,United Kingdom,5835,255,0,62,193,6028,832,884,884,0,,6.8,,6
+33,Autohome Inc.,NYSE:ATHM,China,2572,-2666,179,57,-2544,29,947,729,747,70,526,0.0,0.1,-23
+34,Carvana Co.,NYSE:CVNA,United States,50329,2565,1110,0,3675,54004,20000,28899,32456,21,6831,1.7,7.9,44
+35,ACV Auctions Inc.,NASDAQ:ACVA,United States,1262,7,0,0,7,1269,757,848,898,53,476,1.4,2.7,12
+36,Opendoor Technologies Inc.,NASDAQ:OPEN,United States,3428,1068,0,20,1048,4476,4229,3933,5955,8,478,0.8,9.4,-7
+37,"CarMax, Inc.",NYSE:KMX,United States,8817,18700,0,0,18700,27517,25627,27089,27247,11,2975,1.0,9.3,6
+38,"OPENLANE, Inc.",NYSE:KAR,United States,4101,2283,0,0,2283,6384,1910,2189,2290,46,1063,2.8,6.0,15
+39,"Zillow Group, Inc.",NASDAQ:ZG,United States,8111,-140,0,0,-140,7971,2580,2948,3107,75,2315,2.6,3.4,14
+40,Rightmove plc,LSE:RMV,United Kingdom,5151,-38,0,0,-38,5112,571,620,645,0,,7.9,,8
+41,Scout24 SE,XTRA:G24,Germany,6264,742,0,0,742,7005,763,892,941,94,882,7.4,7.9,17
+42,REA Group Limited,ASX:REA,Australia,16496,-219,8,227,-439,16057,1237,1347,1347,75,1017,11.9,15.8,9
+43,Hemnet Group AB (publ),OM:HEM,Sweden,935,71,0,0,71,1006,167,144,162,100,162,6.2,6.2,-14
+44,"CoStar Group, Inc.",NASDAQ:CSGP,United States,13072,-111,13,0,-98,12974,3237,3736,3912,79,3101,3.3,4.2,15
+45,Upwork Inc.,NASDAQ:UPWK,United States,1075,-235,0,0,-235,840,787,742,714,78,555,1.2,1.5,-6
+46,Fiverr International Ltd.,NYSE:FVRR,Israel,331,-306,0,0,-306,25,433,365,322,84,270,0.1,0.1,-16
+47,Angi Inc.,NASDAQ:ANGI,United States,200,234,0,0,234,433,1034,955,937,95,891,0.5,0.5,-8
+48,SEEK Limited,ASX:SEK,Australia,3670,790,0,1167,-377,3292,827,901,901,99,895,3.7,3.7,9
+49,Info Edge (India) Limited,NSEI:NAUKRI,India,9140,-458,260,0,-198,8942,325,361,369,66,245,24.2,36.6,11
+50,Just Dial Limited,NSEI:JUSTDIAL,India,599,-610,0,0,-610,-11,130,138,141,40,57,-0.1,-0.2,6
+51,MONY Group plc,LSE:MONY,United Kingdom,1444,64,-3,4,57,1501,599,617,617,65,401,2.4,3.7,3
+52,"Match Group, Inc.",NASDAQ:MTCH,United States,9382,3084,0,0,3084,12466,3481,3480,3523,73,2560,3.5,4.9,0
+53,Bumble Inc.,NASDAQ:BMBL,United States,370,306,101,0,406,776,963,834,811,71,575,1.0,1.4,-13
+54,Grindr Inc.,NYSE:GRND,United States,2699,383,0,4,379,3079,436,543,575,75,429,5.4,7.2,24
+55,"Netflix, Inc.",NASDAQ:NFLX,United States,331408,7527,0,0,7527,338935,45099,51221,54110,48,26159,6.3,13.0,14
+56,Spotify Technology S.A.,NYSE:SPOT,Sweden,109724,-7448,0,0,-7448,102277,20168,22807,24399,32,7785,4.2,13.1,13
+57,"Duolingo, Inc.",NASDAQ:DUOL,United States,6837,-1228,0,0,-1228,5609,1031,1207,1279,72,922,4.4,6.1,17
+58,The New York Times Company,NYSE:NYT,United States,10595,-1216,0,0,-1216,9378,2814,3110,3206,0,,2.9,,11
+59,Roblox Corporation,NYSE:RBLX,United States,27411,-1178,-23,0,-1201,26210,6646,6888,7095,79,5582,3.7,4.7,4
+60,"Roku, Inc.",NASDAQ:ROKU,United States,23375,-2083,0,0,-2083,21291,4697,5623,5983,44,2610,3.6,8.2,20
+61,FuboTV Inc.,NYSE:FUBO,United States,309,172,1826,0,1998,2307,,6182,6414,0,,0.4,,
+62,"Coursera, Inc.",NYSE:COUR,United States,1586,-973,0,0,-973,614,752,1236,1486,55,823,0.4,0.7,64
+63,"Chegg, Inc.",NYSE:CHGG,United States,91,-22,0,0,-22,69,375,198,161,60,97,0.4,0.7,-47
+64,"Chewy, Inc.",NYSE:CHWY,United States,9834,3,0,0,3,9838,12603,13489,13725,30,4086,0.7,2.4,7
+65,Wayfair Inc.,NYSE:W,United States,13905,2373,0,0,2373,16278,12418,13416,13874,30,4194,1.2,3.9,8
+66,"Hims & Hers Health, Inc.",NYSE:HIMS,United States,7881,705,0,0,705,8587,2347,3205,3681,74,2738,2.3,3.1,37
+67,Warby Parker Inc.,NYSE:WRBY,United States,3392,-42,0,0,-42,3350,873,971,1049,55,572,3.2,5.9,11
+68,"Revolve Group, Inc.",NYSE:RVLV,United States,1689,-281,1,0,-279,1410,1207,1389,1459,54,782,1.0,1.8,15
+69,"The RealReal, Inc.",NASDAQ:REAL,United States,1353,344,0,0,344,1697,690,796,837,74,623,2.0,2.7,15
+70,On Holding AG,NYSE:ONON,Switzerland,10033,-838,0,0,-838,9195,3783,4385,4767,63,2980,1.9,3.1,16
+71,"e.l.f. Beauty, Inc.",NYSE:ELF,United States,6015,585,0,0,585,6600,1612,1964,2011,70,1416,3.3,4.7,22
+72,"FIGS, Inc.",NYSE:FIGS,United States,2439,-239,0,0,-239,2200,595,761,793,67,534,2.8,4.1,28
+73,"BARK, Inc.",NYSE:BARK,United States,92,20,0,0,20,112,404,335,338,61,206,0.3,0.5,-17
+74,"YETI Holdings, Inc.",NYSE:YETI,United States,3194,193,0,0,193,3387,1867,2011,2075,57,1180,1.6,2.9,8

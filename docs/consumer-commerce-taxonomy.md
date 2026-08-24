@@ -1,0 +1,192 @@
+# The third vocabulary family: consumer, commerce and marketplace
+
+Added 24 August 2026 with `data/peers-ecommerce.csv` (74 listed names) and
+`data/peers-ecommerce-tags.csv`. This is step 2 of the sequencing agreed the same day, with one
+difference from what was planned: the data supplied was a LISTED screen, not a set of private
+transactions, so this is a public-comps family. The private consumer and D2C transaction dump is
+still outstanding.
+
+---
+
+## Why the software vocabulary could not simply be extended
+
+One measurement decides it.
+
+    gross margin, listed software     24% to 98%, median 77%
+    gross margin, this set             8% to 100%, and it is bimodal
+
+In software, revenue means roughly the same thing from one company to the next, so EV/revenue is a
+fair comparison. Here it is not. Across the 62 rows in this set that carry a usable gross profit
+line and are not flagged out of medians:
+
+| gross margin bucket | names | median EV / NTM revenue | median EV / NTM gross profit |
+|---|---|---|---|
+| under 30% | 7 | 0.7x | 2.4x |
+| 30 to 50% | 13 | 2.2x | 5.0x |
+| 50 to 70% | 14 | 1.8x | 3.0x |
+| 70% and above | 28 | 3.2x | 3.6x |
+| **spread, highest over lowest** | | **4.4x** | **2.1x** |
+
+Most of the apparent valuation gap between Carvana at 1.7x and Rightmove at 7.9x is an accounting
+difference, not a valuation one: one books the price of the car as revenue and the other books the
+listing fee. Moving to gross profit halves the distortion. It does not remove it, and the doc
+should not claim it does.
+
+**The rule that follows.** For any subject tagged into this family, gross profit is the PRIMARY
+denominator and revenue is the secondary one. The reveal shows both, and leads with gross profit
+whenever the subject's gross margin sits more than 15 points from the peer group median, or the
+group itself spans more than 30 points. `denominator()` in the selector implements exactly that.
+
+---
+
+## What the family contains
+
+**Twelve archetypes**, each defined by the economic engine rather than the sector, on the same
+discipline as the ten fintech archetypes:
+
+| archetype | names | what makes it its own engine |
+|---|---|---|
+| Classifieds & Listings | 16 | the supply side pays to be listed; no transaction, no inventory |
+| Third-Party Marketplace | 12 | take rate on volume it never funded |
+| Owned-Inventory Retail | 11 | revenue is the full ticket price of goods it bought |
+| Local Delivery & On-Demand | 7 | a physical fulfilment leg and city-level density |
+| Consumer Brand | 7 | owns the brand; gross margin is a brand outcome |
+| Travel Booking & OTA | 5 | commission on inventory it does not hold |
+| Streaming & Digital Media | 5 | the content is an asset and a cost |
+| Freelance & Services Marketplace | 3 | matches labour, and leaks off-platform |
+| Dating & Social Network | 3 | monetises a graph with no supply side to pay |
+| Online Learning | 3 | the category most directly exposed to generative AI |
+| Commerce Enablement & Fulfilment | 1 | operates someone else's store for a fee |
+| Gaming & Virtual Economy | 1 | earns on virtual goods inside a world it runs |
+
+The last two have one member each and need a data batch before they can select anything.
+
+**Four functions** describing the operating core, orthogonal to the archetype, which is what makes
+the core/secondary split work: Commerce Operations (27), Marketplace Operations (18), Listings &
+Discovery (17), Content & Community (12). A cars-classifieds founder and a jobs-classifieds
+founder share the function and differ on the end market, so one lands in core and the other in
+secondary. That is the mechanism, not a coincidence.
+
+**Four new revenue models**: GMV_RETAIL, LISTING_FEE, SUBSCRIPTION_CONSUMER, PRODUCT_SALES.
+TAKE_RATE, ADVERTISING and SERVICES_LED carry over unchanged. GMV_RETAIL versus TAKE_RATE is the
+Carvana versus eBay distinction and it is worth roughly 3x of multiple on its own.
+
+**Six new industry values**, used as the consumer category: Travel, Food & Grocery, Apparel &
+Beauty, Education, Recruitment & Work, Dating & Relationships. Automotive, Real Estate, Media &
+Gaming, Retail & E-commerce, Healthcare & Life Sciences, Home & Field Services, Financial Services
+and Horizontal all carry over.
+
+**Three new go-to-market motions**: PAID_ACQUISITION, ORGANIC_BRAND, NETWORK_EFFECT. ENT_SALES and
+CHANNEL keep their software meaning where they are literally true.
+
+**Three new product roles**: DESTINATION, AGGREGATOR, BRAND.
+
+---
+
+## Two new FIELDS, which is a first
+
+Every previous vocabulary change was a new VALUE in an existing field, and the architecture doc's
+guarantee held: no engine change. This set needed two new FIELDS, and that is a two-line matcher
+change plus two weights. Recording it plainly because the guarantee is now qualified.
+
+**`asset_intensity`**: RESALE_INVENTORY, OWN_PRODUCT, CONTENT, FLEET_OPS, NONE, MIXED. This is
+what makes the margin bimodal, so it must be matched before almost anything else. Weight 3.5,
+just above the end market.
+
+The first cut of this field did not survive the data and was rebuilt. A single INVENTORY value put
+Chewy and e.l.f. Beauty in the same bucket and produced a range from 8% to 74% gross margin, which
+is no bucket at all. A retailer's cost of goods is the wholesale price it paid; a brand's is what
+it cost to make. Split apart, both hold:
+
+| value | names | median gross margin | median EV / revenue |
+|---|---|---|---|
+| NONE | 30 | 75% | 3.0x |
+| OWN_PRODUCT | 7 | 63% | 2.3x |
+| CONTENT | 3 | 48% | 4.2x |
+| MIXED | 9 | 46% | 2.0x |
+| FLEET_OPS | 3 | 40% | 2.6x |
+| RESALE_INVENTORY | 10 | 30% | 0.7x |
+
+**`purchase_frequency`**: SUBSCRIPTION, REPEAT_TRANSACTION, EPISODIC. Separates Rightmove from
+eBay inside the same end market and Netflix from Carvana inside the same margin band. Weight 2.0.
+
+**A field is only scored when BOTH sides carry a value.** A blank never scores. That is what stops
+the two consumer-only fields from giving a uniform lift to the 250 software and fintech rows that
+do not have them, and it is why no existing file needed editing.
+
+---
+
+## The buyer convention for two-sided businesses
+
+`buyer` survives into this family unchanged, and it does real work, because it encodes who pays.
+
+> **buyer is the side that bears the monetisation, not the side that clicks.**
+
+eBay and Etsy are SMB, the seller pays. Booking and Expedia are SMB, the hotel pays. Airbnb is
+CONSUMER, the guest pays the larger half. DoorDash is SMB, the restaurant commission is the larger
+half. REA, Rightmove and SEEK are SMB. CoStar is LOB. Netflix, Match and YETI are CONSUMER.
+
+---
+
+## Token weights were regenerated, and had to be
+
+`data/tag-token-weights.csv` is computed from the tag corpus, and adding 298 distinct consumer
+tags changes which words are generic. Forty-five tokens became generic that were not before, and
+ten jumped hard: "marketplace" went from 6 carriers to 29, so its token weight fell from 0.83 to
+0.17; "online" 16 to 44; "commerce" 10 to 31; "retail" 8 to 26.
+
+Without regenerating, a B2B procurement founder whose site says "supplier marketplace" would start
+pulling eBay and Etsy into scoring range on one shared word. The regression fixture
+`b2b-procurement` exists to catch exactly that, and it returns Kinaxis and Dassault.
+
+---
+
+## Seven rows are visible and out of every median
+
+The row still shows to the founder. It comes out of the arithmetic. The reason is on each row.
+
+| name | why |
+|---|---|
+| Baozun | entity name read from a pixelated Chinese string and inferred from the financial fingerprint; confirm before use |
+| Opendoor | NTM revenue of 5,955 sits above both FY+0 of 4,229 and FY+1 of 3,933 |
+| FuboTV | no FY+0, growth reads #DIV/0!, minority interest of 1,826 against a 309 market cap |
+| Just Dial | enterprise value is negative |
+| Autohome | enterprise value is 4% of revenue, a net-cash artefact |
+| Fiverr | enterprise value is 8% of revenue, same |
+| Info Edge | 24.2x revenue because the listed Zomato and PolicyBazaar stakes sit inside the enterprise value and the associates line reads zero |
+
+---
+
+## Known limitations, stated rather than hidden
+
+**Segment contamination on the largest names.** Amazon's reported gross profit includes AWS,
+Alibaba's includes cloud and logistics, Sea's includes Garena. They are tagged MIXED and kept in
+the medians, because excluding every name with a segment would empty the set. A founder comparing
+to Amazon should be told the multiple is not a pure commerce read, and `what_it_does` says so.
+
+**Non-USD reporters have a translation effect in the growth column.** ASOS at -13%, Autohome at
+-23% and Hemnet at -14% are FY+1 over FY+0 in USD. Hemnet in particular is a growing business
+whose FY+0 and FY+1 in this pull do not reflect that. The NTM figure and all three ratios are
+internally consistent, so the rows are usable; the growth column is the one to treat carefully for
+those names.
+
+**The education category is where the current weights are most obviously wrong.** The
+`consumer-learning-app` fixture returns Duolingo at 4.4x, Coursera at 0.4x and Chegg at 0.4x, and
+a median of 0.4x. Those three companies differ on almost nothing in the tag grid except AI stance,
+which is weighted 1.0 out of roughly 35. An eleven-fold multiple spread driven by one 1.0-point
+field is a weight that does not reflect what is being priced. This should be tuned, deliberately,
+against the golden fixtures. It has NOT been changed here.
+
+**Apparel resale has one listed comparable.** The `resale-marketplace` fixture returns a core group
+of one, The RealReal, and correctly refuses to pad it. Vinted, ThredUp and Depop-class names would
+fix it.
+
+---
+
+## No ticker column was supplied
+
+The screens carry entity name and country and no ticker. Every `exchange_ticker` in
+`peers-ecommerce.csv` is assigned by Fairway from the name. The US lines are safe. Confirm these
+before the file is used as a join key: WSE:ALE, XTRA:ZAL, AIM:ASC, LSE:AUTO, LSE:RMV, XTRA:G24,
+ASX:REA, OM:HEM, ASX:SEK, LSE:MONY, SEHK:3690, NSEI:ETERNAL, NSEI:SWIGGY, NSEI:NAUKRI,
+NSEI:JUSTDIAL.
