@@ -142,10 +142,10 @@ const FIX_BY_PROFIT = {
 
 const hooks = {
   frustration: {
-    kicker: 'For founders raising in the next 90 days',
-    headline: 'You know what your company is worth. The hard part is proving it in the room.',
-    sub: 'Every investor pushes back on the number. Answer nine quick questions and see every method that prices your company, the reference metrics behind each one, the concerns that will be raised, and the funds actively backing this profile. Checked by hand before it reaches you.',
-    cta: 'Start the quiz'
+    kicker: '',
+    headline: 'A valuation you can defend.',
+    sub: 'Nine questions. What your company is worth, every number sourced. The pushback you will face, with answers ready. The funds backing companies like yours.',
+    cta: 'Try it free'
   },
   readiness: {
     kicker: 'Before your next raise',
