@@ -196,10 +196,41 @@ FLOOR_REL, FLOOR_ABS = 0.45, 8.0
 # show five names. This is the same rule as "three names rather than padding to five", taken to zero.
 FLOOR_ADEQUATE = 12.0
 
-def qualifying(scored, gate=FLOOR_ADEQUATE):
+# A SUM IS NOT EVIDENCE. FLOOR_ADEQUATE alone was defeated the first time the tag corpus grew.
+# Adding Rent the Runway to the private set gave a consumer language-learning profile a best match of
+# 14.11, clearing the 12.0 gate, on end customer + revenue model + GTM + purchase frequency, that is,
+# "sells a subscription to consumers and acquires them organically". Product tags contributed 0.1 of a
+# possible 12.0. Huel, AG1 and Harry's had scored 9.69 on three of those four coincidences; Rent the
+# Runway simply hit a fourth. Nothing about the match got better, the sum just got longer.
+#
+# So adequacy needs a second, orthogonal condition: the heaviest and most specific axis, what the
+# product actually IS, must carry real weight. Measured across the twelve golden profiles, the best
+# private match scores on product tags as follows:
+#
+#   d2c-skincare        12.0 Glossier      resale-marketplace  10.5 StockX
+#   design-tool         11.1 Figma         b2b-procurement      7.2 Spendesk
+#   consumer-neobank     3.8 Qonto         smb-payments         3.3 Qonto
+#   ---------------------------------------- gap ----------------------------------------
+#   quick-commerce       0.1 SHEIN         online-pet-retail    0.1 SHEIN
+#   consumer-learning    0.1 Rent the Rway core-banking         0.1 CommerceIQ
+#   car-marketplace-uk   0.0 Faire         restaurant-pos       0.0 Guesty
+#
+# The gap between 3.3 and 0.1 is an order of magnitude and it falls exactly where the categories we
+# know are missing from the private set fall: edtech, quick commerce, auto and property marketplaces,
+# pet retail, restaurant technology, core banking. The floor is set inside that gap.
+FLOOR_TAG_EVIDENCE = 3.0
+
+def _tag_points(why):
+    for w in why:
+        m = re.match(r'tags ([\d.]+)', str(w))
+        if m: return float(m.group(1))
+    return 0.0
+
+def qualifying(scored, gate=FLOOR_ADEQUATE, tag_gate=FLOOR_TAG_EVIDENCE):
     if not scored: return []
-    best = scored[0][0][0]
-    if best < gate: return []          # no comparable set exists; say so, do not pad
+    (best, why) = scored[0][0]
+    if best < gate: return []                    # no comparable set exists; say so, do not pad
+    if _tag_points(why) < tag_gate: return []    # coincidence without product commonality is not a set
     cut = max(FLOOR_REL * best, FLOOR_ABS)
     return [x for x in scored if x[0][0] >= cut]
 

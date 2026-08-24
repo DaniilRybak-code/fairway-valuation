@@ -199,29 +199,53 @@ Added 24 August 2026 as `data/private-rounds-consumer.csv`, `data/private-compan
 and `data/private-round-investors-consumer.csv`. 48 transactions were supplied. 44 are kept, 4 were
 deleted, and 40 of the 44 are marked CORRECTED.
 
-**The funnel, because 44 is not the usable number.**
+**The funnel, because the row count is not the usable number.**
+
+Revised 24 August 2026 after a second verification pass against a corrected sheet.
 
 | stage | rows | companies |
 |---|---|---|
-| supplied | 48 | 33 |
-| deleted outright, neither valuation nor denominator verifies | -4 | |
-| kept as verified transaction records | 44 | 31 |
-| of those, carrying a defensible multiple (`in_medians=1`) | **17** | **13** |
-| of those 17, point estimates rather than ceilings | 12 | |
+| verified transaction records on file | 50 | 34 |
+| of those, carrying a defensible REVENUE multiple (`in_medians=1`) | **16** | **13** |
+| of those 16, point estimates rather than ceilings | 10 | |
+| separately, carrying a defensible GMV multiple (`in_gmv_medians=1`) | 4 | 4 |
 
-The 27 records with no printed multiple are not junk and are not deleted. Date, round type,
-PRIMARY or SECONDARY, capital raised, post-money and lead investor are all verified on them, and
-that is what the tagging and the investor file are built from. What they lack is a denominator that
-survives the at-pricing rule, so they never print a multiple and never enter a median. Fourteen have
-no revenue disclosure in any period, six publish GMV only, two rest on a third-party estimate, and
-five are excluded on the specific grounds recorded in the row: Rokt on gross versus net network
-revenue, Liquid Death on retail scanned sales rather than company net revenue, SHEIN because the
-$45bn was an indicative holder ask at a reported discount and not a completed print, and both
-Flipkart rows because the only filed revenue belongs to the B2B wholesale entity rather than the
-group.
+Median of the 16 revenue multiples is 7.8x. Median of the 10 point multiples is 6.3x. The four GMV
+multiples are 1.9x, 2.1x, 2.5x and 12.4x, and they must never be pooled with the revenue multiples.
 
-Median of the 17 is 7.3x. Median of the 12 point multiples is 6.3x. Neither is a large enough set to
-carry a reveal on its own, which is the honest read on where this batch leaves us.
+The thirty rows with no printed multiple are not junk and are not deleted. Date, round type, PRIMARY
+or SECONDARY, capital raised, post-money and lead investor are all verified on them, and that is what
+the tagging and the investor file are built from. What they lack is a denominator that survives the
+at-pricing rule.
+
+**The GMV lane.** Seven columns were added: `gmv_metric`, `gmv_period`, `gmv_musd`, `gmv_basis`,
+`gmv_bound`, `ev_gmv_x`, `in_gmv_medians`. A marketplace that publishes volume and not revenue used to
+sit in the file with `denominator_basis = GMV_ONLY` and nothing else, which threw away a real number.
+It now carries its volume in its own lane. Two rules govern it. A GMV multiple never enters a revenue
+median, because the two differ by a take rate that is usually undisclosed: StockX is the only name in
+the set that published both sides, GAAP revenue over $400m on GMV of $1.8bn, an implied take rate of
+about 22%, and Contrary Research openly borrows that 22% to estimate GOAT's revenue, which is exactly
+the contamination to avoid. And a non-company measure is not GMV: Liquid Death's $263m is SPINS
+register data relayed by the company, so it sits in the lane with no multiple printed at all.
+
+**Six rows are marked CORRECTED-AGAIN, meaning the defect was in Fairway's own previous entry rather
+than in the supplied sheet.** These matter more than the sheet's errors, because nobody else was going
+to catch them.
+
+| row | was | is | why |
+|---|---|---|---|
+| Vinted, May-21 | 20.4x on EUR 184m | no multiple | EUR 184m is not Vinted's FY2020 revenue and appears in no source; the filed figure is EUR 149.89m. FY2020 first became public on 30-Aug-2021, 111 days AFTER pricing, and on 12-May-2021 the company said it did not disclose its financials in detail. The only at-pricing figure is FY2019 at EUR 83.92m, which would make the round about 45x. Capital was also EUR 250m, not USD 303m. |
+| AG1, Jan-22 | 8.8x | no multiple | the ">$150m run-rate" describes the period before the July 2021 round, not January 2022, and TechCrunch reported growth approaching 200% in between |
+| SHEIN, May-23 | 2.9x on $23.0bn | no multiple, figure corrected to $22.7bn | a WSJ figure sourced to "people close to the company" and disclaimed by the company; $23.0bn is a rounding, and the row's own cited source says $22.7bn |
+| Liquid Death, Mar-24 | 5.3x | moved to the GMV lane, no multiple | $263m is SPINS retail scan data, not company revenue, which has never been disclosed in any period |
+| Rokt, Jan-25 | 5.8x | no multiple | Rokt says seven of every eight dollars go back to partners and has never reconciled that to the $600m; Wellington also belonged to the Dec-2021 Series E, not this one |
+| Trendyol, Aug-21 | GMV proxy | recorded, no multiple | a USD-quoted lira forecast with no disclosed conversion rate, in the year USD/TRY went from 7.4 to 13.5 |
+
+**Three rows were added and one was refused.** Away (May-19, 9.3x), Glossier (Mar-19, at most 12.0x,
+upgraded from estimate to company disclosure) and Rent the Runway (Mar-19, record only) join the set,
+along with both Thrasio rounds and the Faire November 2025 tender. Packable was refused: an announced
+SPAC that was repriced from $1.55bn to $1.346bn, whose PIPE collapsed from $180m to $70m, that was
+terminated on 24 March 2022 and followed by Chapter 11. Nothing cleared, so it is not a transaction.
 
 **Every supplied multiple reconciled arithmetically. Most did not survive the at-pricing rule.** The
 corrections run in one direction, because every error divided a fixed valuation by a later and larger

@@ -44,65 +44,9 @@
    "mid": 3.6,
    "n": 5
   },
-  "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Quince",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 10.1,
-    "score": 16.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "<=",
-    "company": "SKIMS",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 5.0,
-    "score": 11.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "OLIPOP",
-    "date": "Feb-25",
-    "in_medians": true,
-    "mult": 4.6,
-    "score": 15.4,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Liquid Death",
-    "date": "Mar-24",
-    "in_medians": false,
-    "mult": 5.3,
-    "score": 15.4,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "SHEIN",
-    "date": "Jan-24",
-    "in_medians": false,
-    "mult": 1.4,
-    "score": 23.6,
-    "type": "SECONDARY"
-   }
-  ],
-  "private_range": {
-   "high": 10.1,
-   "low": 4.6,
-   "mid": 5.0,
-   "n": 3
-  },
-  "private_window_months": 36,
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
   "secondary": [
    {
     "company": "Uber Technologies, Inc.",

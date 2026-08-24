@@ -38,6 +38,16 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "DISCLOSED_RUNRATE",
+    "bound": "<=",
+    "company": "Faire",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 26.1,
+    "type": "SECONDARY"
+   },
+   {
     "basis": "FILED_ACCOUNTS",
     "bound": "",
     "company": "Meesho",
@@ -56,16 +66,6 @@
     "mult": 5.2,
     "score": 28.0,
     "type": "SECONDARY"
-   },
-   {
-    "basis": "GMV_ONLY",
-    "bound": "",
-    "company": "Back Market",
-    "date": "Jan-22",
-    "in_medians": false,
-    "mult": null,
-    "score": 33.7,
-    "type": "PRIMARY"
    }
   ],
   "private_range": {
@@ -74,7 +74,7 @@
    "mid": 7.3,
    "n": 2
   },
-  "private_window_months": 60,
+  "private_window_months": 48,
   "secondary": [
    {
     "company": "eBay Inc.",

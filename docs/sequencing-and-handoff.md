@@ -11,9 +11,9 @@ place that reconciles them. It supersedes the seven-item list at the foot of
 | # | Item | Status |
 |---|---|---|
 | 1 | Batch 2 plus the at-pricing rule merged to main | **Done** (28b900a, other session) |
-| 2 | E-commerce and D2C data, plus a new taxonomy branch | **Done.** 72 listed names; 44 verified private transaction records across 31 companies, of which **17 rows across 13 companies carry a defensible multiple**; and a third vocabulary family with two new fields |
+| 2 | E-commerce and D2C data, plus a new taxonomy branch | **Done, second pass complete.** 72 listed names; 50 verified private transaction records across 34 companies, of which **16 rows across 13 companies carry a defensible REVENUE multiple** and 4 carry a GMV multiple in a separate lane; and a third vocabulary family with two new fields |
 | 3 | Wire the selector against the data and the token weights | **Done.** `selector/match_reference.py`, 318 listed and 110 private rows, token weights regenerated over five tag files |
-| 4 | Golden test, fixtures before any tuning | **Done for 12 profiles.** Core, secondary AND private comps, denominators and ranges are snapshotted. It has already caught one real defect. The 21 website profiles are still not in it, for the reason below |
+| 4 | Golden test, fixtures before any tuning | **Done for 12 profiles, and it has now caught two real defects.** Core, secondary AND private comps, denominators and ranges are snapshotted. It has already caught one real defect. The 21 website profiles are still not in it, for the reason below |
 | 5 | Reveal copy: pre-revenue positioning mode, control-transaction labels | **Not started.** The private set now carries `transaction_type`, so the labelling that copy needs exists in the data |
 | 6 | Batch 3: scraping APIs, email deliverability | **Not started** |
 | 7 | Second random-20 profiler test on the broadened scope | **Not started, now unblocked** |
@@ -119,3 +119,59 @@ themselves to it has to be told so on the same line.
 names the fix: the repository has to be added to the session's authorised sources. Read access works,
 so the session can diff against main; only writing is blocked. Until that is set, work is delivered as
 a patch that applies cleanly on top of `origin/main`.
+
+
+---
+
+## What the second verification pass changed, 24 August 2026
+
+A revised sheet was supplied covering 23 e-commerce transactions. Every one of the 23 reconciled
+arithmetically, as before. Nine were verified against primary sources by parallel agents, and the
+work found more in Fairway's own file than in the sheet.
+
+**The sheet's own errors.** OLIPOP was given a 2024 sales RANGE of $400m to $450m producing 4.1x to
+4.6x. Nothing anywhere supports $450m: every contemporaneous account says sales "surpassed $400
+million". The likely origin is splitting the difference between a Bloomberg story that the company
+"eyes $500 million" and the $400m actually delivered, a target it missed. The 4.1x end was invented,
+and presenting it as a range disguised that the only real figure is a floor. Investor lists were also
+wrong on five rows in the same way each time, names imported from a different round of the same
+company: Wellington into Rokt's 2025 secondary from its 2021 Series E, Tiger Global and Whale Rock
+into StockX's April 2021 round from its December 2020 one, Founders Fund and Sequoia into Faire's
+November 2021 round from its May 2022 extension.
+
+**What the sheet got right that we had missed.** It separated GMV from revenue into its own columns
+with an explicit proxy label. That was the right idea and the file now carries it as a full lane. It
+also surfaced Away, Rent the Runway and both Thrasio rounds, three of which are keepers.
+
+**What the sheet dropped that should not have been.** The revision covered 21 companies against the
+44 rows already on the branch. Klaviyo and Meesho both price and both were verified, Klaviyo against
+its S-1. They have been retained rather than dropped, along with twelve other companies the revision
+does not reach.
+
+---
+
+## Item 4, the second defect the fixtures caught
+
+`FLOOR_ADEQUATE = 12.0` was defeated the first time the tag corpus grew. Adding Rent the Runway gave
+the consumer language-learning profile a best private match of 14.11, clearing the gate, on end
+customer plus revenue model plus GTM plus purchase frequency: "sells a subscription to consumers and
+acquires them organically". Product tags contributed 0.1 of a possible 12.0. Huel, AG1 and Harry's had
+scored 9.69 on three of those four coincidences. Rent the Runway simply hit a fourth. Nothing about
+the match got better; the sum just got longer.
+
+The lesson is that a sum is not evidence, and an absolute gate on a sum of independent low-information
+coincidences will always be crossed eventually. `FLOOR_TAG_EVIDENCE = 3.0` adds an orthogonal
+condition: the heaviest and most specific axis, what the product actually IS, must carry real weight.
+
+Freezing the fixtures is what exposed something worse. Four profiles had been passing for the wrong
+reason all along. A restaurant point-of-sale profile was being shown Clio, Vanta, Guesty, Rippling and
+Spendesk as its private comparables, with zero product-tag overlap against any of them. A core banking
+profile was being shown CommerceIQ, Wiz and Celonis, all scoring between 12.00 and 12.07, right on the
+gate. A UK car marketplace was being shown Faire. Those sets are now empty, which is the correct
+answer.
+
+Seven of the twelve profiles now return no private comparable set: language learning, quick commerce,
+online pet retail, restaurant technology, core banking, consumer neobanking and car marketplaces. That
+is not a regression. It is the honest map of what the private set covers, which today is D2C brands,
+resale marketplaces, B2B procurement software, design tools and SMB payments, and nothing else. No
+listed core group was emptied, because listed peers have real product-tag overlap.
