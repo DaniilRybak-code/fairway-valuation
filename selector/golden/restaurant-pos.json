@@ -9,13 +9,6 @@
     "ticker": "NYSE:PAR"
    },
    {
-    "company": "Toast, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "score": 31.0,
-    "ticker": "NYSE:TOST"
-   },
-   {
     "company": "Agilysys, Inc.",
     "family": "software",
     "in_medians": true,
@@ -24,11 +17,11 @@
    }
   ],
   "core_range": {
-   "denominator": "gp",
-   "high": 12.9,
-   "low": 4.8,
-   "mid": 8.8,
-   "n": 3
+   "denominator": "rev",
+   "high": 8.0,
+   "low": 2.1,
+   "mid": 5.05,
+   "n": 2
   },
   "private": [],
   "private_range": {},

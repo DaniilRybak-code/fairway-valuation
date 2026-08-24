@@ -9,20 +9,6 @@
     "ticker": "NASDAQGS:NCNO"
    },
    {
-    "company": "Jack Henry & Associates, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "score": 28.7,
-    "ticker": "NASDAQ:JKHY"
-   },
-   {
-    "company": "Fidelity National Information Services, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "score": 28.3,
-    "ticker": "NYSE:FIS"
-   },
-   {
     "company": "Temenos AG",
     "family": "software",
     "in_medians": true,
@@ -30,31 +16,38 @@
     "ticker": "SWX:TEMN"
    },
    {
-    "company": "EVERTEC, Inc.",
-    "family": "fintech",
+    "company": "74Software",
+    "family": "software",
     "in_medians": true,
-    "score": 22.9,
-    "ticker": "NYSE:EVTC"
+    "score": 22.7,
+    "ticker": "ENXTPA:74SW"
+   },
+   {
+    "company": "Q2 Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 21.7,
+    "ticker": "NYSE:QTWO"
+   },
+   {
+    "company": "Blend Labs, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 21.0,
+    "ticker": "NYSE:BLND"
    }
   ],
   "core_range": {
-   "denominator": "gp",
-   "high": 10.2,
-   "low": 5.7,
-   "mid": 7.1,
+   "denominator": "rev",
+   "high": 5.9,
+   "low": 2.3,
+   "mid": 3.8,
    "n": 5
   },
   "private": [],
   "private_range": {},
   "private_window_months": 24,
   "secondary": [
-   {
-    "company": "Fiserv, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "score": 25.1,
-    "ticker": "NASDAQ:FISV"
-   },
    {
     "company": "Guidewire Software, Inc.",
     "family": "software",
@@ -77,17 +70,24 @@
     "ticker": "NASDAQGS:AGYS"
    },
    {
-    "company": "Donnelley Financial Solutions, Inc.",
-    "family": "fintech",
+    "company": "Kinaxis Inc.",
+    "family": "software",
     "in_medians": true,
-    "score": 16.2,
-    "ticker": "NYSE:DFIN"
+    "score": 16.0,
+    "ticker": "TSX:KXS"
+   },
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 15.5,
+    "ticker": "NASDAQGS:INTA"
    }
   ],
   "secondary_range": {
    "denominator": "rev",
    "high": 10.3,
-   "low": 2.7,
+   "low": 4.9,
    "mid": 8.0,
    "n": 5
   }

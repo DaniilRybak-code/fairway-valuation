@@ -217,3 +217,80 @@ A row marked `<=` contributes its ceiling to the low, mid and high as though it 
 bounded rows in the software set and 6 in the consumer set, roughly a fifth of the private universe is
 a ceiling being read as a price. Fixing that is reveal work rather than data work and belongs with
 item 5, but it should not be forgotten: the honest statement is "at most 14.0x", not "14.0x".
+
+---
+
+## Family as the first gate, and what it exposed
+
+Daniil's rule: do not compare product tags until you have established the two things are the same
+kind of business in the first place. Gate first, then rank. That is now how the selector works.
+
+**The gate is family, not archetype.** Family is learned from the 318 listed rows, where it is already
+assigned, by taking the family each archetype sits in. Every private archetype has a listed
+counterpart, so the mapping is complete; only Vertical Software is mixed, 38 software against 9
+fintech, and takes the majority. Archetype itself is deliberately NOT a hard gate. Measured across the
+twelve profiles, gating on exact archetype equality costs real peers: a consumer neobank drops from 5
+listed peers to 3, and a B2B procurement profile from 2 to 0. Archetype already carries 4.0 points in
+the score, which is the right weight for a strong signal that is sometimes too narrow.
+
+**What the gate found.** The measurement is more interesting than the gate.
+
+*A core banking profile was being priced off payment processors.* Its listed core set was nCino, Jack
+Henry, FIS, Temenos and EVERTEC. FIS and EVERTEC are payment processors, in the set only because they
+share the fintech family and score on adjacent tags. The set is now nCino, Temenos, 74Software, Q2
+Holdings and Blend Labs, which are actually core banking and digital banking software. The range moves
+from 5.7x to 10.2x gross profit down to 2.3x to 5.9x revenue, so this was not a cosmetic change.
+
+*An SMB payments profile was being shown consumer marketplaces as private comparables.* Whatnot,
+Faire and Meesho were three of its five. That is precisely the failure Daniil described, and it was
+happening in the shipped fixtures. It now returns nothing, which is correct, because the private
+fintech set contains three companies.
+
+*Three private companies were filed in the wrong family.* Airwallex, GoCardless and Qonto all carried
+the archetype "Commerce & Payments Software", which maps to software. They are cross-border FX, bank
+payments and digital business banking respectively. Retagged, the private fintech set goes from zero
+companies to three, and a consumer neobank profile gains Qonto as its first private comparable. This
+was the real bug; the gate is what made it visible.
+
+**The honest caveat: the gate itself changes very little on its own.** Once the three retags are made,
+the family gate alters exactly one listed set, and that one is a judgement call rather than a clear
+win. A restaurant point-of-sale profile loses Toast, because Toast is classified fintech, which is
+defensible given how much of its revenue is payment processing, but a reader might well want Toast in
+a restaurant POS set. **Daniil should decide that one.** Everything else the gate would have caught,
+the scoring was already catching. Its value is that it makes the guarantee explicit instead of
+emergent, so it cannot quietly stop holding the next time the tag corpus grows, which is exactly how
+`FLOOR_ADEQUATE` failed.
+
+---
+
+## Software and fintech private set, first verification batch
+
+Eight of the highest-risk rows checked against primary sources. Five needed changing.
+
+**Three rows are control transactions sitting inside a minority-financing median.** Semrush November
+2025 is Adobe taking the whole company private at $12.00 a share. Mailchimp September 2021 is Intuit
+buying 100%. And Scale AI June 2025, which was coded as a "strategic investment", is Meta paying about
+$14.3bn for 49% of the equity, with the proceeds distributed straight out to existing shareholders
+rather than retained, and the founder-CEO leaving to run Meta's superintelligence effort. A large part
+of that consideration is talent, not enterprise value for the data-labelling business. All three are
+now `CONTROL` and out of the medians.
+
+**Two rows failed at-pricing on dates.** Figma's ">$700m ARR" was first published on 17 July 2024 at
+the tender's close, two months after the 16 May pricing, and is sourced to people with knowledge
+rather than to Figma, which declined to confirm. Canva's May 2024 row is wrong twice: the secondary
+actually completed in early April 2024, and the $2,300m denominator matches no published figure. The
+real number is "more than US$2.2 billion", published 24 May 2024, six weeks after the sale closed, and
+the A$3.3bn in that same sentence is the AUD translation of it, which is where both the phantom 2,300
+and 3,300 came from.
+
+**Semrush also carried an equity-versus-enterprise error.** The $1,900m is equity value. Net cash was
+about $262m, so enterprise value is about $1,638m and the comparable M&A multiple is roughly 3.7x, not
+4.3x. That is the same class of error as the Trendyol row on the consumer side.
+
+Also worth recording for the reveal: the denominators in this file are not interchangeable. Semrush is
+guided GAAP revenue, Mailchimp a press estimate, both Scale rows are forward ARR forecasts, Canva and
+Ramp are annualised run-rate, Figma is ARR. Only Semrush is anything close to trailing GAAP revenue.
+Figma's own IPO filing shows Q1 2024 GAAP revenue of $156.2m, about $625m annualised, against the
+">$700m" ARR, so an ARR multiple and a revenue multiple on the same company differ by about a tenth.
+
+24 of the 32 in-medians rows in this file are still unverified. That is the next batch.

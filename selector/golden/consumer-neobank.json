@@ -44,9 +44,20 @@
    "mid": 17.5,
    "n": 5
   },
-  "private": [],
+  "private": [
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Qonto",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 41.7,
+    "score": 15.3,
+    "type": "PRIMARY"
+   }
+  ],
   "private_range": {},
-  "private_window_months": 24,
+  "private_window_months": 60,
   "secondary": [
    {
     "company": "Affirm Holdings, Inc.",

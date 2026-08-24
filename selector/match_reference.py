@@ -28,7 +28,7 @@ THREE VOCABULARY FAMILIES now feed one universe:
 A field is only scored when BOTH sides have a value for it. A blank never scores,
 so the two consumer-only fields cannot quietly inflate every software row.
 """
-import csv, io, re, sys, statistics as st
+import csv, io, re, sys, collections, statistics as st
 
 def load(p):
     return list(csv.DictReader(io.StringIO('\n'.join(
@@ -171,6 +171,40 @@ WP = dict(tags_cap=12.0, arch=4.0, arch_soft=2.0, industry=4.0, function=3.0,
           buyer=3.5, acv=0.0, rev_model=3.5, gtm=3.0, role=1.5,
           asset=4.5, freq=2.5, growth=0, profitability=0, ai=2.0)
 
+# ---------------------------------------------------------------------------
+# FAMILY, THE FIRST GATE
+#   Compare like with like BEFORE comparing detail. A D2C nutrition brand and a
+#   language-learning app can share "sells a subscription to consumers" and score on it,
+#   but one buys, makes and ships physical goods and the other does not, and no amount of
+#   product-tag work fixes that. So family decides WHETHER two things may be compared, and
+#   tags decide HOW WELL they compare. Ordering matters: gate first, then rank.
+#
+#   Family is not guessed. It is learned from the 318 listed rows, where family is already
+#   assigned, by taking the family each archetype sits in. Every private archetype has a
+#   listed counterpart, so the mapping is complete. Only "Vertical Software" is mixed
+#   (38 software, 9 fintech) and takes the majority.
+#
+#   Deliberately NOT a hard gate on archetype itself. Measured across the twelve golden
+#   profiles, gating on exact archetype equality costs real peers: a consumer neobank drops
+#   from 5 listed peers to 3, a B2B procurement profile from 2 to 0. Archetype already
+#   carries 4.0 points in the score, which is the right weight for a strong signal that is
+#   sometimes too narrow. Family is the level where the gate belongs.
+_FAMILY_OF = {}
+for _r in listed:
+    _FAMILY_OF.setdefault(_r['archetype'], collections.Counter())[_r['family']] += 1
+_FAMILY_OF = {a: c.most_common(1)[0][0] for a, c in _FAMILY_OF.items()}
+
+def family_of(x):
+    return x.get('family') or _FAMILY_OF.get(x.get('archetype'), '')
+
+for _r in private:
+    _r['family'] = family_of(_r)
+
+def same_family(prof, universe):
+    f = family_of(prof)
+    return [r for r in universe if not f or family_of(r) == f] or universe
+
+
 def size_note(a, b):
     if not a or not b: return ''
     x = b/a
@@ -235,6 +269,7 @@ def qualifying(scored, gate=FLOOR_ADEQUATE, tag_gate=FLOOR_TAG_EVIDENCE):
     return [x for x in scored if x[0][0] >= cut]
 
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
+    priv = same_family(prof, priv)                   # same gate on the private side
     scored = sorted(((score(prof, r, WP, use_fin=False), r) for r in priv), key=lambda z: -z[0][0])
     best = {}
     for (sc, why), r in scored:
@@ -260,6 +295,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
 # ---------------------------------------------------------------------------
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
+    universe = same_family(prof, universe)          # gate on business nature before ranking on detail
     ranked = qualifying(sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0]))
 
     def axis_b(r):

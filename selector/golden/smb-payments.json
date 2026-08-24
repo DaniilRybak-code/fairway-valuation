@@ -44,65 +44,9 @@
    "mid": 3.4,
    "n": 5
   },
-  "private": [
-   {
-    "basis": "GMV_ONLY",
-    "bound": "",
-    "company": "Whatnot",
-    "date": "Aug-26",
-    "in_medians": false,
-    "mult": null,
-    "score": 10.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Notion",
-    "date": "Jan-26",
-    "in_medians": false,
-    "mult": 18.0,
-    "score": 9.5,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Ramp",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 32.0,
-    "score": 9.5,
-    "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_RUNRATE",
-    "bound": "<=",
-    "company": "Faire",
-    "date": "Nov-25",
-    "in_medians": false,
-    "mult": null,
-    "score": 9.0,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "FILED_ACCOUNTS",
-    "bound": "",
-    "company": "Meesho",
-    "date": "May-24",
-    "in_medians": true,
-    "mult": 4.2,
-    "score": 8.1,
-    "type": "PRIMARY"
-   }
-  ],
-  "private_range": {
-   "high": 32.0,
-   "low": 4.2,
-   "mid": 32.0,
-   "n": 2
-  },
-  "private_window_months": 36,
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
   "secondary": [
    {
     "company": "Adyen N.V.",
@@ -126,25 +70,25 @@
     "ticker": "NYSE:PSFE"
    },
    {
-    "company": "ACI Worldwide, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 17.9,
-    "ticker": "NASDAQGS:ACIW"
-   },
-   {
     "company": "EVERTEC, Inc.",
     "family": "fintech",
     "in_medians": true,
     "score": 17.6,
     "ticker": "NYSE:EVTC"
+   },
+   {
+    "company": "Klarna Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 17.6,
+    "ticker": "NYSE:KLAR"
    }
   ],
   "secondary_range": {
    "denominator": "gp",
    "high": 7.8,
-   "low": 4.3,
-   "mid": 5.3,
+   "low": 2.6,
+   "mid": 4.3,
    "n": 5
   }
  },

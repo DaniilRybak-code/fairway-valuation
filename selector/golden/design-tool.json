@@ -39,8 +39,8 @@
     "bound": "<=",
     "company": "Figma",
     "date": "May-24",
-    "in_medians": true,
-    "mult": 17.9,
+    "in_medians": false,
+    "mult": null,
     "score": 31.1,
     "type": "SECONDARY"
    },
@@ -56,10 +56,10 @@
    }
   ],
   "private_range": {
-   "high": 17.9,
+   "high": 12.7,
    "low": 12.7,
-   "mid": 17.9,
-   "n": 2
+   "mid": 12.7,
+   "n": 1
   },
   "private_window_months": 60,
   "secondary": [
