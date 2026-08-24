@@ -1,0 +1,124 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "The RealReal, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 30.7,
+    "ticker": "NASDAQGS:REAL"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev",
+   "high": 2.0,
+   "low": 2.0,
+   "mid": 2.0,
+   "n": 1
+  },
+  "private": [
+   {
+    "basis": "GMV_ONLY",
+    "bound": "",
+    "company": "Whatnot",
+    "date": "Aug-26",
+    "in_medians": false,
+    "mult": null,
+    "score": 34.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vinted",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 7.3,
+    "score": 35.9,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_RUNRATE",
+    "bound": "<=",
+    "company": "Faire",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 26.1,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Meesho",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 4.2,
+    "score": 32.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Flipkart",
+    "date": "Jul-23",
+    "in_medians": false,
+    "mult": 5.2,
+    "score": 28.0,
+    "type": "SECONDARY"
+   }
+  ],
+  "private_range": {
+   "high": 7.3,
+   "low": 4.2,
+   "mid": 7.3,
+   "n": 2
+  },
+  "private_window_months": 48,
+  "secondary": [
+   {
+    "company": "eBay Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 34.2,
+    "ticker": "NASDAQGS:EBAY"
+   },
+   {
+    "company": "1stdibs.Com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 31.5,
+    "ticker": "NASDAQGM:DIBS"
+   },
+   {
+    "company": "Etsy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 30.6,
+    "ticker": "NYSE:ETSY"
+   },
+   {
+    "company": "PDD Holdings Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 29.7,
+    "ticker": "NASDAQGS:PDD"
+   },
+   {
+    "company": "MercadoLibre, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 26.7,
+    "ticker": "NASDAQGS:MELI"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 3.9,
+   "low": 1.2,
+   "mid": 2.2,
+   "n": 5
+  }
+ },
+ "label": "Peer-to-peer resale marketplace for second-hand clothing"
+}

@@ -1,0 +1,96 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Eternal Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 29.8,
+    "ticker": "NSEI:ETERNAL"
+   },
+   {
+    "company": "Meituan",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 28.6,
+    "ticker": "SEHK:3690"
+   },
+   {
+    "company": "Swiggy Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 27.5,
+    "ticker": "NSEI:SWIGGY"
+   },
+   {
+    "company": "Delivery Hero SE",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 26.8,
+    "ticker": "XTRA:DHER"
+   },
+   {
+    "company": "DoorDash, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 21.9,
+    "ticker": "NASDAQGS:DASH"
+   }
+  ],
+  "core_range": {
+   "denominator": "gp",
+   "high": 9.5,
+   "low": 3.2,
+   "mid": 3.6,
+   "n": 5
+  },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [
+   {
+    "company": "Uber Technologies, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 19.1,
+    "ticker": "NYSE:UBER"
+   },
+   {
+    "company": "Opendoor Technologies Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 18.8,
+    "ticker": "NASDAQGS:OPEN"
+   },
+   {
+    "company": "Vipshop Holdings Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 17.4,
+    "ticker": "NYSE:VIPS"
+   },
+   {
+    "company": "Chewy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 17.1,
+    "ticker": "NYSE:CHWY"
+   },
+   {
+    "company": "Zalando SE",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 16.1,
+    "ticker": "XTRA:ZAL"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "gp",
+   "high": 9.4,
+   "low": 1.0,
+   "mid": 2.4,
+   "n": 5
+  }
+ },
+ "label": "Grocery quick commerce, own dark stores, 20-minute delivery"
+}

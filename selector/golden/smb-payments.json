@@ -1,0 +1,96 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "StoneCo Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 26.9,
+    "ticker": "NASDAQ:STNE"
+   },
+   {
+    "company": "PagSeguro Digital Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 26.4,
+    "ticker": "NYSE:PAGS"
+   },
+   {
+    "company": "PayPal Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 26.1,
+    "ticker": "NASDAQ:PYPL"
+   },
+   {
+    "company": "Global Payments Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 24.4,
+    "ticker": "NYSE:GPN"
+   },
+   {
+    "company": "GMO Payment Gateway, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 22.0,
+    "ticker": "TSE:3769"
+   }
+  ],
+  "core_range": {
+   "denominator": "gp",
+   "high": 8.0,
+   "low": 2.3,
+   "mid": 3.4,
+   "n": 5
+  },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [
+   {
+    "company": "Adyen N.V.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 21.0,
+    "ticker": "ENXTAM:ADYEN"
+   },
+   {
+    "company": "Block, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 18.9,
+    "ticker": "NYSE:XYZ"
+   },
+   {
+    "company": "Paysafe Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 18.9,
+    "ticker": "NYSE:PSFE"
+   },
+   {
+    "company": "EVERTEC, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 17.6,
+    "ticker": "NYSE:EVTC"
+   },
+   {
+    "company": "Klarna Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 17.6,
+    "ticker": "NYSE:KLAR"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "gp",
+   "high": 7.8,
+   "low": 2.6,
+   "mid": 4.3,
+   "n": 5
+  }
+ },
+ "label": "Payments and working capital for small online merchants"
+}

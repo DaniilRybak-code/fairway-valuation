@@ -1,0 +1,96 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "nCino, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 29.0,
+    "ticker": "NASDAQGS:NCNO"
+   },
+   {
+    "company": "Jack Henry & Associates, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 28.7,
+    "ticker": "NASDAQ:JKHY"
+   },
+   {
+    "company": "Fidelity National Information Services, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 28.3,
+    "ticker": "NYSE:FIS"
+   },
+   {
+    "company": "Temenos AG",
+    "family": "software",
+    "in_medians": true,
+    "score": 24.0,
+    "ticker": "SWX:TEMN"
+   },
+   {
+    "company": "EVERTEC, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 22.9,
+    "ticker": "NYSE:EVTC"
+   }
+  ],
+  "core_range": {
+   "denominator": "gp",
+   "high": 10.2,
+   "low": 5.7,
+   "mid": 7.1,
+   "n": 5
+  },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [
+   {
+    "company": "Guidewire Software, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 20.3,
+    "ticker": "NYSE:GWRE"
+   },
+   {
+    "company": "Manhattan Associates, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 16.4,
+    "ticker": "NASDAQGS:MANH"
+   },
+   {
+    "company": "Agilysys, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 16.3,
+    "ticker": "NASDAQGS:AGYS"
+   },
+   {
+    "company": "Kinaxis Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 16.0,
+    "ticker": "TSX:KXS"
+   },
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 15.5,
+    "ticker": "NASDAQGS:INTA"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 10.3,
+   "low": 4.9,
+   "mid": 8.0,
+   "n": 5
+  }
+ },
+ "label": "Cloud core banking software sold to mid-size banks"
+}

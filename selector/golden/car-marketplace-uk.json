@@ -1,0 +1,96 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "CarGurus, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 41.0,
+    "ticker": "NASDAQGS:CARG"
+   },
+   {
+    "company": "Cars.com Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 39.1,
+    "ticker": "NYSE:CARS"
+   },
+   {
+    "company": "Autohome Inc.",
+    "family": "consumer",
+    "in_medians": false,
+    "score": 38.1,
+    "ticker": "NYSE:ATHM"
+   },
+   {
+    "company": "Autotrader Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 37.8,
+    "ticker": "LSE:AUTO"
+   },
+   {
+    "company": "ACV Auctions Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 23.8,
+    "ticker": "NYSE:ACVA"
+   }
+  ],
+  "core_range": {
+   "denominator": "gp",
+   "high": 3.5,
+   "low": 1.7,
+   "mid": 2.7,
+   "n": 3
+  },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [
+   {
+    "company": "SEEK Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.5,
+    "ticker": "ASX:SEK"
+   },
+   {
+    "company": "Hemnet Group AB (publ)",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.3,
+    "ticker": "OM:HEM"
+   },
+   {
+    "company": "Zillow Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.2,
+    "ticker": "NASDAQGS:Z"
+   },
+   {
+    "company": "Scout24 SE",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 20.9,
+    "ticker": "XTRA:G24"
+   },
+   {
+    "company": "REA Group Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 20.1,
+    "ticker": "ASX:REA"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 11.9,
+   "low": 3.7,
+   "mid": 6.2,
+   "n": 5
+  }
+ },
+ "label": "UK car marketplace charging dealers a monthly listing subscription"
+}
