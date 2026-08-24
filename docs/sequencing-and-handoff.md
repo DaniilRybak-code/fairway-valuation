@@ -175,3 +175,45 @@ online pet retail, restaurant technology, core banking, consumer neobanking and 
 is not a regression. It is the honest map of what the private set covers, which today is D2C brands,
 resale marketplaces, B2B procurement software, design tools and SMB payments, and nothing else. No
 listed core group was emptied, because listed peers have real product-tag overlap.
+
+
+---
+
+## The private software and fintech set, which had never had this pass run on it
+
+The consumer file has now been through full primary-source verification twice. `private-rounds.csv`,
+which is the larger of the two at 66 rows across 60 companies, had never had it run at all. It had no
+`in_medians`, no `bound`, no `denominator_basis` and no `transaction_type` column, so **every one of
+its 66 rows fed medians as an unbounded point multiple from a primary round.** It has now been
+triaged against its own labels, which is a floor rather than a verification.
+
+What the file itself already admitted, once someone read the `revenue_status` column:
+
+| what the row says about its own denominator | rows | now |
+|---|---|---|
+| Disclosed, or Reported contemporaneously | 32 | stay in medians |
+| Third-party estimate | 28 | demoted |
+| Estimated or reported proxy, range midpoint, at-round construction | 6 | demoted |
+
+The median falls from **27.8x to 19.9x**, and the top of the range from 150.0x to 105.3x. The three
+highest multiples in the whole set were all estimates: Decagon at 150.0x on a reported estimate,
+Perplexity at 142.9x on a third-party estimate, Cohere at 95.5x on a third-party estimate. One row was
+an explicit range midpoint, which is the same defect as the fabricated $450m on OLIPOP.
+
+Two more structural fixes in the same pass. **18 rows carry "(> threshold)" in the metric and were
+printing as point multiples**, because there was no bound column to carry the ceiling; they are now
+bound `<=`. **10 rows are secondaries or tenders** identifiable only from free text in `round_type`,
+including Canva, Figma, Notion, Gong and Clay; they are now labelled `SECONDARY` or `MIXED`. They stay
+in medians, because a secondary can be a perfectly good mark and two of the consumer set's cleanest
+rows are Vinted secondaries, but the reveal has to say which is which.
+
+Every row in that file is now marked `STATUS-TRIAGE`, which means exactly what it says: the rule has
+been applied to the file's own labels and not to primary sources. Until those 32 surviving rows are
+checked the way the 23 consumer rows were, they are weaker than the consumer multiples no matter what
+`in_medians` says. That is the next batch and it is the largest remaining data risk in the product.
+
+**One thing the range maths still does not do.** `group_range` treats a bounded multiple as a point.
+A row marked `<=` contributes its ceiling to the low, mid and high as though it were a value. With 18
+bounded rows in the software set and 6 in the consumer set, roughly a fifth of the private universe is
+a ceiling being read as a price. Fixing that is reveal work rather than data work and belongs with
+item 5, but it should not be forgotten: the honest statement is "at most 14.0x", not "14.0x".

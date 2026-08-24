@@ -56,24 +56,24 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "",
+    "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
     "company": "Notion",
     "date": "Jan-26",
-    "in_medians": true,
+    "in_medians": false,
     "mult": 18.0,
     "score": 9.5,
-    "type": "PRIMARY"
+    "type": "SECONDARY"
    },
    {
-    "basis": "",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Ramp",
     "date": "Nov-25",
     "in_medians": true,
     "mult": 32.0,
     "score": 9.5,
-    "type": "PRIMARY"
+    "type": "MIXED"
    },
    {
     "basis": "DISCLOSED_RUNRATE",
@@ -99,8 +99,8 @@
   "private_range": {
    "high": 32.0,
    "low": 4.2,
-   "mid": 18.0,
-   "n": 3
+   "mid": 32.0,
+   "n": 2
   },
   "private_window_months": 36,
   "secondary": [

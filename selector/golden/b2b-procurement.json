@@ -25,18 +25,18 @@
   },
   "private": [
    {
-    "basis": "",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Ramp",
     "date": "Nov-25",
     "in_medians": true,
     "mult": 32.0,
     "score": 16.2,
-    "type": "PRIMARY"
+    "type": "MIXED"
    },
    {
-    "basis": "",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Deel",
     "date": "Oct-25",
     "in_medians": true,
@@ -45,8 +45,8 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Vanta",
     "date": "Jul-24",
     "in_medians": true,
@@ -55,8 +55,8 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "AlphaSense",
     "date": "Jun-24",
     "in_medians": true,
@@ -65,7 +65,7 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "",
+    "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Wiz",
     "date": "May-24",
