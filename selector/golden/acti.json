@@ -60,6 +60,16 @@
     "type": "MIXED"
    },
    {
+    "basis": "PRESS_REPORTED",
+    "bound": ">=",
+    "company": "Perplexity",
+    "date": "Sep-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 15.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Canva",
@@ -87,16 +97,6 @@
     "in_medians": false,
     "mult": 41.3,
     "score": 8.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Perplexity",
-    "date": "Dec-24",
-    "in_medians": false,
-    "mult": 142.9,
-    "score": 15.1,
     "type": "PRIMARY"
    }
   ],

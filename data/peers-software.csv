@@ -3,6 +3,9 @@
 # This file is refreshed from the screen. It contains no judgements, only what the screen returned.
 # Positioning tags live in peers-software-tags.csv, joined on exchange_ticker rather than row,
 # because row numbers shift between pulls and tickers do not. The row column is a display ordinal.
+# Rows 177 and 178 (Similarweb, ZoomInfo) were added on 25-Aug-2026 from a separate pull on the same
+# as_of date, to close two named gaps: web and app traffic intelligence, and B2B contact data. They are
+# appended rather than sorted in, so the ordinals stay stable against the original screen.
 row,company_name,exchange_ticker,country,market_cap_musd,enterprise_value_musd,revenue_ntm_musd,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_ntm_pct,nrr_pct
 9,74Software,ENXTPA:74SW,United States,1321,1589,879,577,1.8,2.8,4,
 11,"ACI Worldwide, Inc.",NASDAQGS:ACIW,United States,5236,5932,1959,907,3.0,6.5,9,
@@ -167,3 +170,5 @@ row,company_name,exchange_ticker,country,market_cap_musd,enterprise_value_musd,r
 174,NICE Ltd.,NASDAQGS:NICE,Israel,5867,5601,3317,2302,1.7,2.4,8,
 175,Dassault Systemes SE,ENXTPA:DSY,France,34665,32064,7655,6430,4.2,5.0,0,
 176,Wix.com Ltd.,NASDAQGS:WIX,Israel,3435,4509,2373,1629,1.9,2.8,13,
+177,Similarweb Ltd.,NYSE:SMWB,Israel,727,699,336,271,2.1,2.6,11,
+178,ZoomInfo Technologies Inc.,NASDAQGS:GTM,United States,1156,2521,1179,1037,2.1,2.4,-2,

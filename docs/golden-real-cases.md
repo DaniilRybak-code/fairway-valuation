@@ -78,3 +78,52 @@ twenty-one get a private set against three listed, and the private matches are b
 OpenSEO to Semrush, Skybridge to Anthropic, InsForge to Databricks, Fyle to Quince and SKIMS.
 That is consistent with the product thesis on the landing page: for a seed-stage founder, what
 matters most is what companies like them raised at.
+
+---
+
+## 25 August, evening: what the batch did to the 21, and two defects it exposed
+
+Ten private rows and two listed rows were added. Ten of the twenty-one profiles moved. Five of
+those moves are the gap closing exactly as predicted, and two are regressions that are worth more
+attention than the wins.
+
+**Where it worked.** Oxylabs is now the leading private comparable for BrowserAct, Context.dev,
+AnySearch and AgentX, and it is the only web-data company in the file with a clean, at-pricing,
+point multiple. BrowserAct is the clearest case: it was being shown Sierra, Clay and Decagon, which
+are AI customer-service and GTM companies with nothing to do with running scrapers, and its range
+was 33.0x to 105.3x. It is now Oxylabs first at 10.3x with a 10.3x to 33.0x range. Similarweb
+entered OpenSEO's listed set and ZoomInfo entered Fundraisly's core listed set, both on the first
+pass, which is what the two names were bought for.
+
+**Defect one: one narrow tag promotes a candidate past four better ones.** InsForge, a
+backend-as-a-service for AI coding agents, previously drew a four-name private range from Lovable,
+LangChain, Replit and Cursor. It now draws a single-name DIAMOND on Algolia at most 22.5x. The
+reason is that Algolia and InsForge share exactly one product tag, "Vector Search", which is worth
+3.0 points, which is exactly `FLOOR_TAG_EVIDENCE`. That single tag makes Algolia DIRECT, DIRECT
+beats ADJACENT outright, and the ladder stops at the first tier that has any member at all. So one
+coincidence evicts four reasonable comparables. Its listed set collapsed the same way, to Elastic
+alone.
+
+This is the same failure shape as the two gate defects already recorded above: an absolute
+threshold crossed by a single low-information signal. The candidate fix is that the ladder should
+FILL from the best tier downward until it has the names it wants, rather than STOP at the best tier
+that has one, and the group should then be labelled by its WEAKEST member rather than its best.
+InsForge would read: Algolia, Lovable, LangChain, Replit, Cursor, labelled ADJACENT. That is not
+implemented, deliberately, because it changes the meaning of the tier label and that is a product
+decision rather than a bug fix.
+
+**Defect two: an ADJACENT set can carry no product-tag evidence at all.** Publora, a social
+publishing API, draws five private names of which the best scores 0.3 on product tags and the other
+four score 0.0. They qualify on archetype, buyer, go-to-market and revenue model: all five are
+developer-facing, consumption-priced infrastructure. That is a real similarity and it is not
+nothing, but it is not a product similarity, and the reveal will draw a range from it. This is
+pre-existing rather than new; the batch only made it visible by putting Oxylabs at the top of a list
+it does not belong at the top of. `FLOOR_TAG_EVIDENCE` guards the DIRECT label, not admission to
+the set, so a set with zero tag overlap can still be shown as ADJACENT.
+
+**Leave-one-out, measured on today's data.** Each tagged company is turned into a profile, removed
+from its own universe, and we ask what share of the returned group carries its archetype. Listed 78
+percent across 320 companies with 9 empty sets; private 83 percent across 127 companies with none.
+On the looser test that also accepts a secondary-archetype match, 98 and 97 percent. The private
+lane is now the stronger of the two, which was not true a week ago and is the right way round for
+this product.

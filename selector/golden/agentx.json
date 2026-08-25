@@ -50,6 +50,16 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
+    "in_medians": true,
+    "mult": 10.3,
+    "score": 11.8,
+    "type": "MIXED"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
@@ -60,12 +70,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
     "date": "Oct-25",
     "in_medians": false,
-    "mult": 78.1,
+    "mult": null,
     "score": 19.2,
     "type": "PRIMARY"
    },
@@ -88,24 +98,14 @@
     "mult": 14.9,
     "score": 8.9,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Anysphere / Cursor",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 19.8,
-    "score": 16.9,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "bounded": true,
+   "bounded": false,
    "display": "RANGE",
    "high": 33.0,
-   "low": 14.9,
+   "low": 10.3,
    "mid": 30.0,
    "n": 4,
    "thin": false

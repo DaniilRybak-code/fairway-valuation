@@ -50,6 +50,16 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
+    "in_medians": true,
+    "mult": 10.3,
+    "score": 13.3,
+    "type": "MIXED"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
@@ -70,45 +80,35 @@
     "type": "CONTROL"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
     "date": "Oct-25",
     "in_medians": false,
-    "mult": 78.1,
+    "mult": null,
     "score": 16.5,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Replit",
+    "basis": "PRESS_REPORTED",
+    "bound": ">=",
+    "company": "Perplexity",
     "date": "Sep-25",
-    "in_medians": true,
-    "mult": 30.0,
-    "score": 8.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Anysphere / Cursor",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 19.8,
-    "score": 15.0,
+    "in_medians": false,
+    "mult": null,
+    "score": 9.5,
     "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "bounded": true,
+   "bounded": false,
    "display": "RANGE",
    "high": 33.0,
-   "low": 19.8,
-   "mid": 30.0,
-   "n": 3,
-   "thin": false
+   "low": 10.3,
+   "mid": 33.0,
+   "n": 2,
+   "thin": true
   },
   "private_window_months": 24,
   "secondary": [

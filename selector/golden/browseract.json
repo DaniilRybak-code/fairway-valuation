@@ -50,34 +50,14 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "Sierra",
-    "date": "May-26",
-    "in_medians": true,
-    "mult": 105.3,
-    "score": 8.7,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "Clay",
-    "date": "Jan-26",
+    "company": "Oxylabs",
+    "date": "Jul-26",
     "in_medians": true,
-    "mult": 50.0,
-    "score": 9.7,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Decagon",
-    "date": "Jan-26",
-    "in_medians": false,
-    "mult": 150.0,
-    "score": 8.9,
-    "type": "PRIMARY"
+    "mult": 10.3,
+    "score": 22.1,
+    "type": "MIXED"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -90,23 +70,43 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
     "date": "Oct-25",
     "in_medians": false,
-    "mult": 78.1,
+    "mult": null,
     "score": 15.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 30.0,
+    "score": 14.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": ">=",
+    "company": "Perplexity",
+    "date": "Sep-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 11.7,
     "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "bounded": true,
+   "bounded": false,
    "display": "RANGE",
-   "high": 105.3,
-   "low": 33.0,
-   "mid": 50.0,
+   "high": 33.0,
+   "low": 10.3,
+   "mid": 30.0,
    "n": 3,
    "thin": false
   },

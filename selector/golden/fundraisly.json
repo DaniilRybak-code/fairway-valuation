@@ -16,6 +16,13 @@
     "ticker": "NYSE:HUBS"
    },
    {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.5,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
     "company": "Text S.A.",
     "family": "software",
     "in_medians": true,
@@ -28,22 +35,15 @@
     "in_medians": true,
     "score": 5.5,
     "ticker": "NYSE:SPGI"
-   },
-   {
-    "company": "Moody's Corporation",
-    "family": "fintech",
-    "in_medians": true,
-    "score": 5.5,
-    "ticker": "NYSE:MCO"
    }
   ],
   "core_range": {
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 10.9,
-   "low": 3.4,
-   "mid": 6.9,
+   "high": 9.5,
+   "low": 2.8,
+   "mid": 3.4,
    "n": 5,
    "thin": false
   },
@@ -142,18 +142,18 @@
     "ticker": "NASDAQGS:ALKT"
    },
    {
-    "company": "MSCI Inc.",
+    "company": "Moody's Corporation",
     "family": "fintech",
     "in_medians": true,
     "score": 5.5,
-    "ticker": "NYSE:MSCI"
+    "ticker": "NYSE:MCO"
    }
   ],
   "secondary_range": {
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 12.9,
+   "high": 10.9,
    "low": 1.9,
    "mid": 2.7,
    "n": 5,

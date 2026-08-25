@@ -51,6 +51,13 @@
   "private_window_months": 24,
   "secondary": [
    {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 13.7,
+    "ticker": "NYSE:SMWB"
+   },
+   {
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
@@ -77,13 +84,6 @@
     "in_medians": true,
     "score": 8.0,
     "ticker": "NASDAQGM:MDB"
-   },
-   {
-    "company": "TeamViewer SE",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.5,
-    "ticker": "XTRA:TMV"
    }
   ],
   "secondary_range": {

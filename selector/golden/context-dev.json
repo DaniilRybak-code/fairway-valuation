@@ -52,6 +52,16 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
+    "in_medians": true,
+    "mult": 10.3,
+    "score": 22.6,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
     "company": "Clay",
     "date": "Jan-26",
     "in_medians": true,
@@ -70,12 +80,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
     "date": "Oct-25",
     "in_medians": false,
-    "mult": 78.1,
+    "mult": null,
     "score": 13.4,
     "type": "PRIMARY"
    },
@@ -88,16 +98,6 @@
     "mult": 30.0,
     "score": 11.5,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Invisible Technologies",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 14.9,
-    "score": 9.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -105,7 +105,7 @@
    "bounded": false,
    "display": "RANGE",
    "high": 50.0,
-   "low": 14.9,
+   "low": 10.3,
    "mid": 33.0,
    "n": 4,
    "thin": false
