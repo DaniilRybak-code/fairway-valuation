@@ -7,18 +7,38 @@
     "in_medians": true,
     "score": 10.7,
     "ticker": "NASDAQGS:DUOL"
+   },
+   {
+    "company": "Docebo Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "TSX:DCBO"
+   },
+   {
+    "company": "Coursera, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 6.0,
+    "ticker": "NYSE:COUR"
+   },
+   {
+    "company": "Chegg, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 6.0,
+    "ticker": "NYSE:CHGG"
    }
   ],
   "core_range": {
    "bounded": false,
    "denominator": "rev",
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 4.4,
-   "low": 4.4,
-   "mid": 4.4,
-   "n": 1,
-   "sole": "Duolingo, Inc.",
-   "thin": true
+   "low": 0.4,
+   "mid": 1.35,
+   "n": 4,
+   "thin": false
   },
   "listed_proximity": "DIRECT",
   "private": [],

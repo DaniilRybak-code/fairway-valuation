@@ -14,6 +14,13 @@
     "in_medians": true,
     "score": 9.5,
     "ticker": "WSE:TXT"
+   },
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.0,
+    "ticker": "NASDAQGS:FRSH"
    }
   ],
   "core_range": {
@@ -21,10 +28,10 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 3.4,
-   "low": 2.8,
-   "mid": 3.1,
-   "n": 2,
-   "thin": true
+   "low": 2.7,
+   "mid": 2.8,
+   "n": 3,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -104,6 +111,27 @@
     "in_medians": true,
     "score": 8.7,
     "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "Sprout Social, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.0,
+    "ticker": "NASDAQCM:SPT"
+   },
+   {
+    "company": "IONOS Group SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.0,
+    "ticker": "XTRA:IOS"
+   },
+   {
+    "company": "Yext, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.6,
+    "ticker": "NYSE:YEXT"
    }
   ],
   "secondary_range": {
@@ -111,10 +139,10 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 3.7,
-   "low": 2.7,
-   "mid": 3.2,
-   "n": 2,
-   "thin": true
+   "low": 1.7,
+   "mid": 2.7,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "Email warm-up and deliverability across a network of aged real inboxes"

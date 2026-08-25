@@ -113,23 +113,50 @@
   "private_window_months": 24,
   "secondary": [
    {
-    "company": "Amplitude, Inc.",
+    "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQCM:AMPL"
+    "score": 9.1,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.6,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NASDAQGS:TEAM"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.3,
+    "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.3,
+    "ticker": "NYSE:TWLO"
    }
   ],
   "secondary_range": {
    "bounded": false,
    "denominator": "rev",
-   "display": "DIAMOND",
-   "high": 3.4,
-   "low": 3.4,
-   "mid": 3.4,
-   "n": 1,
-   "sole": "Amplitude, Inc.",
-   "thin": true
+   "display": "RANGE",
+   "high": 31.8,
+   "low": 5.0,
+   "mid": 5.2,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "Privacy-first real-time search infrastructure built for agents rather than humans"

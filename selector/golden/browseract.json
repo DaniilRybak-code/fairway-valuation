@@ -113,6 +113,27 @@
   "private_window_months": 24,
   "secondary": [
    {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.8,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Backblaze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NASDAQGM:BLZE"
+   },
+   {
+    "company": "DigitalOcean Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NYSE:DOCN"
+   },
+   {
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
@@ -120,25 +141,11 @@
     "ticker": "NYSE:SNOW"
    },
    {
-    "company": "SoundHound AI, Inc.",
+    "company": "JFrog Ltd.",
     "family": "software",
     "in_medians": true,
-    "score": 8.6,
-    "ticker": "NASDAQGM:SOUN"
-   },
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQCM:RDVT"
-   },
-   {
-    "company": "Amplitude, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQCM:AMPL"
+    "score": 9.5,
+    "ticker": "NASDAQGS:FROG"
    }
   ],
   "secondary_range": {
@@ -146,9 +153,9 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 17.6,
-   "low": 3.4,
-   "mid": 10.7,
-   "n": 4,
+   "low": 5.3,
+   "mid": 10.4,
+   "n": 5,
    "thin": false
   }
  },

@@ -28,6 +28,13 @@
     "in_medians": true,
     "score": 8.0,
     "ticker": "NASDAQGS:GEN"
+   },
+   {
+    "company": "F-Secure Oyj",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.5,
+    "ticker": "HLSE:FSECURE"
    }
   ],
   "core_range": {
@@ -35,9 +42,9 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.6,
-   "low": 1.9,
-   "mid": 3.75,
-   "n": 4,
+   "low": 3.0,
+   "mid": 3.1,
+   "n": 5,
    "thin": false
   },
   "listed_proximity": "ADJACENT",
@@ -51,6 +58,16 @@
     "mult": 21.0,
     "score": 14.6,
     "type": "MIXED"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Canva",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 12.7,
+    "score": 7.5,
+    "type": "SECONDARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -81,32 +98,38 @@
     "mult": 142.9,
     "score": 15.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Calendly",
-    "date": "Jan-21",
-    "in_medians": true,
-    "mult": 42.9,
-    "score": 10.5,
-    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "bounded": true,
    "display": "RANGE",
-   "high": 42.9,
-   "low": 21.0,
-   "mid": 42.9,
+   "high": 21.0,
+   "low": 12.7,
+   "mid": 21.0,
    "n": 2,
    "thin": true
   },
-  "private_window_months": 72,
-  "secondary": [],
+  "private_window_months": 24,
+  "secondary": [
+   {
+    "company": "Dropbox, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.0,
+    "ticker": "NASDAQGS:DBX"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "bounded": false,
+   "denominator": "rev",
+   "display": "DIAMOND",
+   "high": 4.1,
+   "low": 4.1,
+   "mid": 4.1,
+   "n": 1,
+   "sole": "Dropbox, Inc.",
+   "thin": true
   }
  },
  "label": "A free mobile keyboard that embeds AI agents into any text field"

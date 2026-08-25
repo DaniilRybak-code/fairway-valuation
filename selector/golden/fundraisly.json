@@ -7,18 +7,45 @@
     "in_medians": true,
     "score": 8.0,
     "ticker": "NSEI:CRISIL"
+   },
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.9,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 5.5,
+    "ticker": "WSE:TXT"
+   },
+   {
+    "company": "S&P Global Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 5.5,
+    "ticker": "NYSE:SPGI"
+   },
+   {
+    "company": "Moody's Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 5.5,
+    "ticker": "NYSE:MCO"
    }
   ],
   "core_range": {
    "bounded": false,
    "denominator": "rev",
-   "display": "DIAMOND",
-   "high": 6.9,
-   "low": 6.9,
+   "display": "RANGE",
+   "high": 10.9,
+   "low": 3.4,
    "mid": 6.9,
-   "n": 1,
-   "sole": "CRISIL Limited",
-   "thin": true
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -33,6 +60,36 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": 4.3,
+    "score": 7.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gong",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 7.0,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_UNDEFINED_BASIS",
+    "bound": "",
+    "company": "Rokt",
+    "date": "Jan-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 6.0,
+    "type": "SECONDARY"
+   },
+   {
     "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
     "company": "Apollo.io",
@@ -41,52 +98,66 @@
     "mult": 16.0,
     "score": 13.0,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Mailchimp",
-    "date": "Sep-21",
-    "in_medians": false,
-    "mult": 15.0,
-    "score": 9.5,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "CONSTRUCTED",
-    "bound": "",
-    "company": "Outreach",
-    "date": "Jun-21",
-    "in_medians": false,
-    "mult": 22.0,
-    "score": 9.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Klaviyo",
-    "date": "May-21",
-    "in_medians": true,
-    "mult": 32.6,
-    "score": 9.5,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "bounded": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "high": 50.0,
-   "low": 32.6,
+   "low": 50.0,
    "mid": 50.0,
-   "n": 2,
+   "n": 1,
+   "sole": "Clay",
    "thin": true
   },
-  "private_window_months": 72,
-  "secondary": [],
+  "private_window_months": 36,
+  "secondary": [
+   {
+    "company": "Weave Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.0,
+    "ticker": "NYSE:WEAV"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.5,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Qualco Group S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.5,
+    "ticker": "ATSE:QLCO"
+   },
+   {
+    "company": "Alkami Technology, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.0,
+    "ticker": "NASDAQGS:ALKT"
+   },
+   {
+    "company": "MSCI Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 5.5,
+    "ticker": "NYSE:MSCI"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "bounded": false,
+   "denominator": "rev",
+   "display": "RANGE",
+   "high": 12.9,
+   "low": 1.9,
+   "mid": 2.7,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "Investor matching and outreach run as a productized agency for founders raising"

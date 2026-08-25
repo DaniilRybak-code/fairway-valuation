@@ -113,6 +113,20 @@
   "private_window_months": 24,
   "secondary": [
    {
+    "company": "JFrog Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGS:FROG"
+   },
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGM:MDB"
+   },
+   {
     "company": "Adobe Inc.",
     "family": "software",
     "in_medians": true,
@@ -138,10 +152,10 @@
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 4.0,
-   "low": 2.7,
-   "mid": 3.4,
-   "n": 3,
+   "high": 15.0,
+   "low": 3.4,
+   "mid": 4.0,
+   "n": 5,
    "thin": false
   }
  },

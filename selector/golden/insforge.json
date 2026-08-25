@@ -84,9 +84,52 @@
    "thin": false
   },
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.9,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Backblaze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.6,
+    "ticker": "NASDAQGM:BLZE"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.0,
+    "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "DigitalOcean Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.0,
+    "ticker": "NYSE:DOCN"
+   },
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.6,
+    "ticker": "NASDAQGM:MDB"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "bounded": false,
+   "denominator": "rev",
+   "display": "RANGE",
+   "high": 31.8,
+   "low": 5.3,
+   "mid": 10.4,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "Backend-as-a-service built so AI coding agents can operate every service end to end"

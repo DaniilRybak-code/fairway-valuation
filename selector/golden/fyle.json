@@ -111,9 +111,52 @@
    "thin": false
   },
   "private_window_months": 72,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "YETI Holdings, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 15.6,
+    "ticker": "NYSE:YETI"
+   },
+   {
+    "company": "BARK, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 15.1,
+    "ticker": "NYSE:BARK"
+   },
+   {
+    "company": "Hims & Hers Health, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 15.0,
+    "ticker": "NYSE:HIMS"
+   },
+   {
+    "company": "Revolve Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 14.0,
+    "ticker": "NYSE:RVLV"
+   },
+   {
+    "company": "Zalando SE",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 14.0,
+    "ticker": "XTRA:ZAL"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "bounded": false,
+   "denominator": "rev",
+   "display": "RANGE",
+   "high": 2.3,
+   "low": 0.4,
+   "mid": 1.0,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "UK direct-to-consumer nail-care brand selling a blade-free manicure kit and its refills"

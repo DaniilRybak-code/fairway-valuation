@@ -28,16 +28,23 @@
     "in_medians": true,
     "score": 9.5,
     "ticker": "XTRA:TMV"
+   },
+   {
+    "company": "Intuit Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.2,
+    "ticker": "NASDAQGS:INTU"
    }
   ],
   "core_range": {
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 2.8,
-   "low": 2.0,
-   "mid": 2.55,
-   "n": 4,
+   "high": 4.4,
+   "low": 2.4,
+   "mid": 2.7,
+   "n": 5,
    "thin": false
   },
   "listed_proximity": "ADJACENT",
@@ -125,16 +132,30 @@
     "in_medians": true,
     "score": 8.1,
     "ticker": "NYSE:RNG"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "WSE:TXT"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.5,
+    "ticker": "NASDAQGS:TEAM"
    }
   ],
   "secondary_range": {
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 4.6,
-   "low": 2.3,
-   "mid": 2.5,
-   "n": 3,
+   "high": 5.8,
+   "low": 2.5,
+   "mid": 3.4,
+   "n": 5,
    "thin": false
   }
  },

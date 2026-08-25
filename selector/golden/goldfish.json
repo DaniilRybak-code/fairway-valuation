@@ -84,9 +84,52 @@
    "thin": false
   },
   "private_window_months": 72,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Truecaller AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.2,
+    "ticker": "OM:TRUE B"
+   },
+   {
+    "company": "Opera Limited",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.0,
+    "ticker": "NASDAQGS:OPRA"
+   },
+   {
+    "company": "Life360, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.0,
+    "ticker": "ASX:360"
+   },
+   {
+    "company": "Gen Digital Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 5.5,
+    "ticker": "NASDAQGS:GEN"
+   },
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 5.5,
+    "ticker": "NASDAQGS:ADBE"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "bounded": false,
+   "denominator": "rev",
+   "display": "RANGE",
+   "high": 4.6,
+   "low": 3.0,
+   "mid": 4.0,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "Local-first AI memory layer for Mac and Windows that drafts in your own tone"

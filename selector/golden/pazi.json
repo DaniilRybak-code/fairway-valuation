@@ -21,6 +21,20 @@
     "in_medians": true,
     "score": 8.5,
     "ticker": "XTRA:TMV"
+   },
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.1,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.0,
+    "ticker": "WSE:TXT"
    }
   ],
   "core_range": {
@@ -28,9 +42,9 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.4,
-   "low": 2.4,
-   "mid": 2.7,
-   "n": 3,
+   "low": 2.7,
+   "mid": 2.8,
+   "n": 5,
    "thin": false
   },
   "listed_proximity": "ADJACENT",
@@ -118,16 +132,30 @@
     "in_medians": true,
     "score": 8.4,
     "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "Pegasystems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.3,
+    "ticker": "NASDAQGS:PEGA"
+   },
+   {
+    "company": "innoscripta SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.6,
+    "ticker": "XTRA:1INN"
    }
   ],
   "secondary_range": {
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 4.0,
-   "low": 2.3,
+   "high": 5.4,
+   "low": 2.7,
    "mid": 2.7,
-   "n": 3,
+   "n": 5,
    "thin": false
   }
  },

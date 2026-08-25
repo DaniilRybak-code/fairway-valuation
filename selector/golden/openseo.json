@@ -14,6 +14,13 @@
     "in_medians": true,
     "score": 9.5,
     "ticker": "WSE:TXT"
+   },
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.0,
+    "ticker": "NASDAQGS:FRSH"
    }
   ],
   "core_range": {
@@ -21,10 +28,10 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 3.4,
-   "low": 2.8,
-   "mid": 3.1,
-   "n": 2,
-   "thin": true
+   "low": 2.7,
+   "mid": 2.8,
+   "n": 3,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -70,6 +77,13 @@
     "in_medians": true,
     "score": 8.0,
     "ticker": "NASDAQGM:MDB"
+   },
+   {
+    "company": "TeamViewer SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.5,
+    "ticker": "XTRA:TMV"
    }
   ],
   "secondary_range": {
@@ -78,8 +92,8 @@
    "display": "RANGE",
    "high": 16.4,
    "low": 2.7,
-   "mid": 7.1,
-   "n": 4,
+   "mid": 3.7,
+   "n": 5,
    "thin": false
   }
  },

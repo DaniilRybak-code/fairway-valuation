@@ -65,23 +65,50 @@
   "private_window_months": 24,
   "secondary": [
    {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGM:MDB"
+   },
+   {
     "company": "TomTom N.V.",
     "family": "software",
     "in_medians": true,
     "score": 9.1,
     "ticker": "ENXTAM:TOM2"
+   },
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.5,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.1,
+    "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "DigitalOcean Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.9,
+    "ticker": "NYSE:DOCN"
    }
   ],
   "secondary_range": {
    "bounded": false,
    "denominator": "rev",
-   "display": "DIAMOND",
-   "high": 0.6,
-   "low": 0.6,
-   "mid": 0.6,
-   "n": 1,
-   "sole": "TomTom N.V.",
-   "thin": true
+   "display": "RANGE",
+   "high": 10.5,
+   "low": 0.8,
+   "mid": 4.1,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "MIT-licensed TypeScript and React framework for building MCP apps"

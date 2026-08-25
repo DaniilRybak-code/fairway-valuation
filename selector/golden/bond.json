@@ -120,6 +120,13 @@
     "ticker": "NASDAQGS:FRSH"
    },
    {
+    "company": "Sidetrade SA",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.7,
+    "ticker": "ENXTPA:ALBFR"
+   },
+   {
     "company": "TeamViewer SE",
     "family": "software",
     "in_medians": true,
@@ -146,9 +153,9 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.6,
-   "low": 2.0,
-   "mid": 2.55,
-   "n": 4,
+   "low": 2.4,
+   "mid": 2.7,
+   "n": 5,
    "thin": false
   }
  },

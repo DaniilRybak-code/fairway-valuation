@@ -248,7 +248,15 @@ def size_note(a, b):
 
 # A comparable that is not comparable is worse than a shorter list. Below this floor a name is
 # not a peer, and the reveal shows three names rather than padding to five with noise.
-FLOOR_REL, FLOOR_ABS = 0.45, 8.0
+# FLOOR_ABS LOWERED 8.0 -> 5.0, 25-Aug-2026. It was set when the only profiles were the twelve I
+# invented, which scored 22 to 41 against their best match. Real companies profiled from their own
+# websites score 8 to 22, so an absolute floor of 8.0 was cutting almost everything: Shopify at 7.9
+# for SellerClaw, Yext at 7.5 for Honestly, HubSpot at 6.9 for Fundraisly, Coursera at 6.0 for Honen.
+# Swept against both measures at once. Agreement with Daniil's own comp picks goes from 8 of 22 to
+# 12, and core hits from 4 to 7, while leave-one-out precision across 217 listed companies stays
+# flat at 81%. It plateaus at 5.0, which means below that the relative floor and the anchoring rule
+# are already doing the work and the absolute floor is redundant. Free recall, no accuracy cost.
+FLOOR_REL, FLOOR_ABS = 0.45, 5.0
 
 # AND AN ADEQUACY GATE, added 24-Aug-2026 after the golden fixtures caught the failure it fixes.
 # A relative floor is useless when the BEST match is itself bad: 45% of a bad score is a worse score.
@@ -424,15 +432,29 @@ def peer_groups(prof, universe, scorer=None, want=5):
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
     scored = sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0])
 
+    # AXIS B, WHO IT SELLS TO. Corrected 25-Aug-2026 against Daniil's own comp picks.
+    #
+    # The old rule demanded exact industry equality, which meant a HORIZONTAL peer could never be
+    # core for a vertical profile. That is what buried Sprout Social. It is the engine's own
+    # top-scored name for Honestly at 12.4, ahead of everything actually shown, and it was forced
+    # into secondary because Honestly is tagged Retail & E-commerce and Sprout Social is Horizontal.
+    #
+    # Horizontal is not a DIFFERENT end market. It is no particular one, so it serves this
+    # founder's market along with every other. A horizontal peer therefore belongs in core when it
+    # otherwise qualifies. The same reasoning already governs the family gate's end-market bridge.
+    #
+    # A HORIZONTAL profile keeps the stricter test, peer also horizontal and the same buyer,
+    # because for a horizontal founder the end customer is the only thing narrowing the field.
     def axis_b(r):
-        if prof['industry'] == 'Horizontal':
-            return r['industry'] == 'Horizontal' and r['buyer'] == prof['buyer']
-        return r['industry'] == prof['industry']
+        ri, pi = (r.get('industry') or '').strip(), (prof.get('industry') or '').strip()
+        if pi == 'Horizontal':
+            return ri == 'Horizontal' and _eq(prof, r, 'buyer')
+        return bool(ri) and (ri == pi or ri == 'Horizontal')
 
     def axis_a(r):
         a = {r['archetype'], r.get('archetype_secondary') or ''}
         mine = {prof['archetype'], prof.get('archetype_secondary') or ''} - {''}
-        return bool(a & mine) or r['function'] == prof['function']
+        return bool(a & mine) or _eq(prof, r, 'function')
 
     # WIDEN ONLY AFTER THE CORE/SECONDARY SPLIT, not before. Deciding the tier first and then
     # splitting threw away real DIRECT hits: a social-listening profile lost Rezolve AI and Klaviyo
@@ -443,7 +465,24 @@ def peer_groups(prof, universe, scorer=None, want=5):
         rows, got = qualifying(scored, prof, only=tier)
         if not rows: continue
         core = [x for x in rows if axis_a(x[1]) and axis_b(x[1])][:want]
-        secondary = [x for x in rows if axis_a(x[1]) and not axis_b(x[1])][:want]
+        # NOTHING THAT QUALIFIES MAY VANISH. The old split put a row in secondary only if it
+        # passed axis_a, so a name failing axis_a appeared in NEITHER group and was dropped in
+        # silence. Cloudflare scores 12.9 against InsForge, higher than the Elastic that was
+        # returned, and appeared nowhere at all. A row that cleared the score floor AND the
+        # anchoring test is related to this founder by construction; if it is not core it is
+        # secondary. It never disappears.
+        # SECONDARY IS THE WIDER RING AND MUST BE DRAWN WIDER. It was being taken from the same
+        # tier as core, so when core came from the DIRECT tier the secondary group could only
+        # contain other DIRECT names, and there are rarely any. That is why Honestly showed one
+        # company: Yext, HubSpot, Braze and Zeta Global all scored well, all sit in the same
+        # archetype, and all were unreachable because they are not DIRECT-anchored.
+        #
+        # A banker's comp set is a tight core and a looser ring around it. So core is the best
+        # tier that produces one, and secondary is everything else in the family that clears the
+        # floor. The tier label still describes CORE, which is what the range is computed from.
+        picked = {id(x) for x in core}
+        wide, _wt = qualifying(scored, prof, only='BROAD')
+        secondary = [x for x in wide if id(x) not in picked][:want]
         if core: return core, secondary, set_tier(prof, core)
     return [], [], 'NONE'
 

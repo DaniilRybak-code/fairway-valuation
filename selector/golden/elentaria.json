@@ -70,6 +70,16 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "score": 7.3,
+    "type": "SECONDARY"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Gong",
@@ -82,22 +92,12 @@
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
-    "company": "Deel",
-    "date": "Oct-25",
+    "company": "Ramp",
+    "date": "Nov-25",
     "in_medians": true,
-    "mult": 17.3,
-    "score": 8.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Invisible Technologies",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 14.9,
-    "score": 8.1,
-    "type": "PRIMARY"
+    "mult": 32.0,
+    "score": 6.6,
+    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -105,8 +105,8 @@
    "bounded": true,
    "display": "RANGE",
    "high": 105.3,
-   "low": 14.9,
-   "mid": 17.3,
+   "low": 32.0,
+   "mid": 50.0,
    "n": 3,
    "thin": false
   },
@@ -127,6 +127,13 @@
     "ticker": "NASDAQGS:PEGA"
    },
    {
+    "company": "BlackLine, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.6,
+    "ticker": "NASDAQGS:BL"
+   },
+   {
     "company": "SAP SE",
     "family": "software",
     "in_medians": true,
@@ -134,11 +141,11 @@
     "ticker": "XTRA:SAP"
    },
    {
-    "company": "PAR Technology Corporation",
+    "company": "Asana, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NYSE:PAR"
+    "score": 8.5,
+    "ticker": "NYSE:ASAN"
    }
   ],
   "secondary_range": {
@@ -146,9 +153,9 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 5.1,
-   "low": 2.1,
-   "mid": 3.35,
-   "n": 4,
+   "low": 2.5,
+   "mid": 2.7,
+   "n": 5,
    "thin": false
   }
  },

@@ -2,29 +2,22 @@
  "expected": {
   "core": [
    {
-    "company": "Rezolve AI PLC",
-    "family": "software",
-    "in_medians": false,
-    "score": 9.3,
-    "ticker": "NASDAQGM:RZLV"
-   },
-   {
-    "company": "Klaviyo, Inc.",
+    "company": "Sprout Social, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 9.0,
-    "ticker": "NYSE:KVYO"
+    "score": 12.4,
+    "ticker": "NASDAQCM:SPT"
    }
   ],
   "core_range": {
    "bounded": false,
    "denominator": "rev",
    "display": "DIAMOND",
-   "high": 2.7,
-   "low": 2.7,
-   "mid": 2.7,
+   "high": 1.1,
+   "low": 1.1,
+   "mid": 1.1,
    "n": 1,
-   "sole": "Klaviyo, Inc.",
+   "sole": "Sprout Social, Inc.",
    "thin": true
   },
   "listed_proximity": "DIRECT",
@@ -83,13 +76,6 @@
   "private_window_months": 72,
   "secondary": [
    {
-    "company": "Sprout Social, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 12.4,
-    "ticker": "NASDAQCM:SPT"
-   },
-   {
     "company": "Sprinklr, Inc.",
     "family": "software",
     "in_medians": true,
@@ -111,11 +97,18 @@
     "ticker": "NYSE:ZETA"
    },
    {
-    "company": "LiveRamp Holdings, Inc.",
+    "company": "Rezolve AI PLC",
+    "family": "software",
+    "in_medians": false,
+    "score": 9.3,
+    "ticker": "NASDAQGM:RZLV"
+   },
+   {
+    "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NYSE:RAMP"
+    "score": 9.0,
+    "ticker": "NYSE:KVYO"
    }
   ],
   "secondary_range": {
@@ -124,8 +117,8 @@
    "display": "RANGE",
    "high": 3.7,
    "low": 1.5,
-   "mid": 2.1,
-   "n": 5,
+   "mid": 3.05,
+   "n": 4,
    "thin": false
   }
  },

@@ -14,6 +14,13 @@
     "in_medians": false,
     "score": 9.0,
     "ticker": "NASDAQGS:BZUN"
+   },
+   {
+    "company": "Rezolve AI PLC",
+    "family": "software",
+    "in_medians": false,
+    "score": 5.9,
+    "ticker": "NASDAQGM:RZLV"
    }
   ],
   "core_range": {
@@ -29,6 +36,26 @@
   },
   "listed_proximity": "DIRECT",
   "private": [
+   {
+    "basis": "DISCLOSED_UNDEFINED_BASIS",
+    "bound": "",
+    "company": "Rokt",
+    "date": "Jan-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 6.0,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": ">=",
+    "company": "CommerceIQ",
+    "date": "Mar-22",
+    "in_medians": false,
+    "mult": null,
+    "score": 6.6,
+    "type": "PRIMARY"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -61,9 +88,52 @@
    "thin": true
   },
   "private_window_months": 72,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Shoper S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.9,
+    "ticker": "WSE:SHO"
+   },
+   {
+    "company": "Shopify Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.9,
+    "ticker": "NASDAQGS:SHOP"
+   },
+   {
+    "company": "Klarna Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "score": 7.5,
+    "ticker": "NYSE:KLAR"
+   },
+   {
+    "company": "SPS Commerce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 6.0,
+    "ticker": "NASDAQGS:SPSC"
+   },
+   {
+    "company": "Maplebear Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 6.0,
+    "ticker": "NASDAQGS:CART"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "bounded": false,
+   "denominator": "rev",
+   "display": "RANGE",
+   "high": 11.0,
+   "low": 2.4,
+   "mid": 3.4,
+   "n": 5,
+   "thin": false
   }
  },
  "label": "A supervised team of AI agents that runs a merchant Shopify, eBay and Amazon stores"

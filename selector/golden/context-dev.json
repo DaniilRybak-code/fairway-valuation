@@ -113,6 +113,20 @@
   "private_window_months": 24,
   "secondary": [
    {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.7,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "DigitalOcean Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.5,
+    "ticker": "NYSE:DOCN"
+   },
+   {
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
@@ -120,41 +134,27 @@
     "ticker": "NYSE:SNOW"
    },
    {
-    "company": "Red Violet, Inc.",
+    "company": "Backblaze, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 10.2,
-    "ticker": "NASDAQCM:RDVT"
+    "score": 10.5,
+    "ticker": "NASDAQGM:BLZE"
    },
    {
-    "company": "Amplitude, Inc.",
+    "company": "JFrog Ltd.",
     "family": "software",
     "in_medians": true,
-    "score": 9.0,
-    "ticker": "NASDAQCM:AMPL"
-   },
-   {
-    "company": "Dynatrace, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NYSE:DT"
-   },
-   {
-    "company": "Teradata Corporation",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.1,
-    "ticker": "NYSE:TDC"
+    "score": 10.5,
+    "ticker": "NASDAQGS:FROG"
    }
   ],
   "secondary_range": {
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 17.6,
-   "low": 3.4,
-   "mid": 5.5,
+   "high": 31.8,
+   "low": 10.4,
+   "mid": 15.0,
    "n": 5,
    "thin": false
   }

@@ -2,6 +2,13 @@
  "expected": {
   "core": [
    {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.6,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
     "company": "Agilysys, Inc.",
     "family": "software",
     "in_medians": true,
@@ -14,6 +21,20 @@
     "in_medians": true,
     "score": 8.5,
     "ticker": "NYSE:PAR"
+   },
+   {
+    "company": "GoDaddy Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NYSE:GDDY"
+   },
+   {
+    "company": "Intuit Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NASDAQGS:INTU"
    }
   ],
   "core_range": {
@@ -22,9 +43,9 @@
    "display": "RANGE",
    "high": 8.0,
    "low": 2.1,
-   "mid": 5.05,
-   "n": 2,
-   "thin": true
+   "mid": 2.8,
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -44,27 +65,6 @@
   "private_window_months": 36,
   "secondary": [
    {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.6,
-    "ticker": "NASDAQGS:WIX"
-   },
-   {
-    "company": "GoDaddy Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NYSE:GDDY"
-   },
-   {
-    "company": "Intuit Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQGS:INTU"
-   },
-   {
     "company": "EverCommerce Inc.",
     "family": "software",
     "in_medians": true,
@@ -77,6 +77,27 @@
     "in_medians": true,
     "score": 8.1,
     "ticker": "NASDAQGS:TTAN"
+   },
+   {
+    "company": "Weave Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.1,
+    "ticker": "NYSE:WEAV"
+   },
+   {
+    "company": "Alarm.com Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQGS:ALRM"
+   },
+   {
+    "company": "SPS Commerce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQGS:SPSC"
    }
   ],
   "secondary_range": {
@@ -84,7 +105,7 @@
    "denominator": "rev",
    "display": "RANGE",
    "high": 7.4,
-   "low": 2.8,
+   "low": 2.5,
    "mid": 3.3,
    "n": 5,
    "thin": false
