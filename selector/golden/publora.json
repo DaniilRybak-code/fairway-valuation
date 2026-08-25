@@ -1,15 +1,139 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.1,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.1,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.0,
+    "ticker": "NASDAQGS:TEAM"
+   },
+   {
+    "company": "PagerDuty, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.6,
+    "ticker": "NYSE:PD"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGS:DDOG"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 16.4,
+   "low": 3.9,
+   "mid": 5.0,
+   "n": 5
   },
-  "private": [],
-  "private_range": {},
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": 4.3,
+    "score": 11.5,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 78.1,
+    "score": 16.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "score": 15.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 33.0,
+   "low": 19.8,
+   "mid": 20.0,
+   "n": 3
+  },
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQGS:ADBE"
+   },
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "WSE:TXT"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.0,
+   "low": 2.7,
+   "mid": 3.4,
+   "n": 3
   }
  },
  "label": "One API and MCP server for publishing and engagement across ten social networks"

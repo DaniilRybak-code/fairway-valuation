@@ -1,15 +1,146 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 14.0,
+    "ticker": "NASDAQGM:MDB"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.6,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.0,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.3,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.8,
+    "ticker": "NASDAQGS:API"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 31.8,
+   "low": 4.1,
+   "mid": 10.5,
+   "n": 5
   },
-  "private": [],
-  "private_range": {},
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "score": 8.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "score": 9.7,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 150.0,
+    "score": 8.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "score": 14.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 78.1,
+    "score": 15.3,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 105.3,
+   "low": 33.0,
+   "mid": 50.0,
+   "n": 3
+  },
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.6,
+    "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "SoundHound AI, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.6,
+    "ticker": "NASDAQGM:SOUN"
+   },
+   {
+    "company": "Red Violet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "Amplitude, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQCM:AMPL"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 17.6,
+   "low": 3.4,
+   "mid": 10.7,
+   "n": 4
   }
  },
  "label": "Describe the data you want and it builds, hosts and runs the scraper"

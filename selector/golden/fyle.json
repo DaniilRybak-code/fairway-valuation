@@ -44,6 +44,7 @@
    "mid": 2.8,
    "n": 5
   },
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -96,6 +97,7 @@
     "type": "PRIMARY"
    }
   ],
+  "private_proximity": "DIRECT",
   "private_range": {
    "high": 10.1,
    "low": 4.6,

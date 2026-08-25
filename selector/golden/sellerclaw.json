@@ -1,12 +1,59 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.6,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Baozun Inc.",
+    "family": "consumer",
+    "in_medians": false,
+    "score": 9.0,
+    "ticker": "NASDAQGS:BZUN"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 2.7,
+   "low": 2.7,
+   "mid": 2.7,
+   "n": 1
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Klaviyo",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 32.6,
+    "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Yotpo",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 14.0,
+    "score": 12.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 32.6,
+   "low": 14.0,
+   "mid": 32.6,
+   "n": 2
+  },
+  "private_window_months": 72,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

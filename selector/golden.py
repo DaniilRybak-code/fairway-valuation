@@ -12,7 +12,7 @@ from golden_profiles import PROFILES
 FIX = os.path.join(HERE, 'golden')
 
 def snap(prof):
-    core, sec = M.peer_groups(prof, M.listed)
+    core, sec, listed_tier = M.peer_groups(prof, M.listed)
     out = {}
     for name, grp in (('core', core), ('secondary', sec)):
         out[name] = [{'company': r['company_name'], 'ticker': r['exchange_ticker'],
@@ -23,13 +23,15 @@ def snap(prof):
         out[name + '_range'] = {'denominator': which, **({k: round(v, 2) if isinstance(v, float) else v
                                                           for k, v in rng.items()} if rng else {})}
     # private comparables: business nature selects, recency only orders
-    picked, months = M.select_private(prof, M.private)
+    picked, months, priv_tier = M.select_private(prof, M.private)
     out['private'] = [{'company': r['company_name'], 'date': r['date'],
                        'type': r['transaction_type'], 'mult': r.get('mult'),
                        'basis': r.get('denominator_basis',''), 'bound': r.get('bound',''),
                        'in_medians': r['in_medians'], 'score': round(s, 1)}
                       for (s, _w), r in picked]
     out['private_window_months'] = months
+    out['listed_proximity'] = listed_tier
+    out['private_proximity'] = priv_tier
     priced = [r['mult'] for (_s, r) in picked if r['in_medians'] and r.get('mult')]
     out['private_range'] = ({'n': len(priced), 'low': min(priced), 'mid': sorted(priced)[len(priced)//2],
                              'high': max(priced)} if priced else {})

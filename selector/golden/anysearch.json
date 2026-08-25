@@ -1,15 +1,125 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.5,
+    "ticker": "NASDAQGM:MDB"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.1,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.7,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "JFrog Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGS:FROG"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "HLSE:QTCOM"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 16.4,
+   "low": 4.1,
+   "mid": 10.5,
+   "n": 5
   },
-  "private": [],
-  "private_range": {},
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 78.1,
+    "score": 15.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Invisible Technologies",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 14.9,
+    "score": 11.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "score": 10.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "score": 13.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 33.0,
+   "low": 14.9,
+   "mid": 20.0,
+   "n": 4
+  },
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Amplitude, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQCM:AMPL"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 3.4,
+   "low": 3.4,
+   "mid": 3.4,
+   "n": 1
   }
  },
  "label": "Privacy-first real-time search infrastructure built for agents rather than humans"

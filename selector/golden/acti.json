@@ -1,12 +1,103 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Truecaller AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.7,
+    "ticker": "OM:TRUE B"
+   },
+   {
+    "company": "Opera Limited",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGS:OPRA"
+   },
+   {
+    "company": "Life360, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "ASX:360"
+   },
+   {
+    "company": "Gen Digital Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQGS:GEN"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.6,
+   "low": 1.9,
+   "mid": 3.75,
+   "n": 4
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gamma",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 21.0,
+    "score": 14.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "OpenAI",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 54.5,
+    "score": 13.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "ElevenLabs",
+    "date": "Jan-25",
+    "in_medians": false,
+    "mult": 41.3,
+    "score": 8.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Perplexity",
+    "date": "Dec-24",
+    "in_medians": false,
+    "mult": 142.9,
+    "score": 15.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Calendly",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 42.9,
+    "score": 10.5,
+    "type": "MIXED"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 42.9,
+   "low": 21.0,
+   "mid": 42.9,
+   "n": 2
+  },
+  "private_window_months": 72,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

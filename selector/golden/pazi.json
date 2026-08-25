@@ -1,15 +1,125 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "Intuit Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NASDAQGS:INTU"
+   },
+   {
+    "company": "TeamViewer SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "XTRA:TMV"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.4,
+   "low": 2.4,
+   "mid": 2.7,
+   "n": 3
   },
-  "private": [],
-  "private_range": {},
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "score": 9.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Notion",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 18.0,
+    "score": 11.1,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "score": 9.7,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 150.0,
+    "score": 8.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": 4.3,
+    "score": 9.8,
+    "type": "CONTROL"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 105.3,
+   "low": 50.0,
+   "mid": 105.3,
+   "n": 2
+  },
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.6,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Asana, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.6,
+    "ticker": "NYSE:ASAN"
+   },
+   {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.4,
+    "ticker": "NYSE:PATH"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.0,
+   "low": 2.3,
+   "mid": 2.7,
+   "n": 3
   }
  },
  "label": "Turns a business idea into an AI agent team that runs the operating work on credits"

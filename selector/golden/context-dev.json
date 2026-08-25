@@ -1,15 +1,153 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 15.0,
+    "ticker": "NASDAQGM:MDB"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 13.4,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "score": 13.0,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.9,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.8,
+    "ticker": "NASDAQGS:API"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 16.4,
+   "low": 4.1,
+   "mid": 5.2,
+   "n": 5
   },
-  "private": [],
-  "private_range": {},
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "score": 12.2,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "score": 12.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 78.1,
+    "score": 13.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "score": 11.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Invisible Technologies",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 14.9,
+    "score": 9.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 50.0,
+   "low": 14.9,
+   "mid": 33.0,
+   "n": 4
+  },
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.6,
+    "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "Red Violet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.2,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "Amplitude, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.0,
+    "ticker": "NASDAQCM:AMPL"
+   },
+   {
+    "company": "Dynatrace, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NYSE:DT"
+   },
+   {
+    "company": "Teradata Corporation",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.1,
+    "ticker": "NYSE:TDC"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 17.6,
+   "low": 3.4,
+   "mid": 5.5,
+   "n": 5
   }
  },
  "label": "One API that turns any URL into LLM-ready markdown, plus crawling and enrichment"

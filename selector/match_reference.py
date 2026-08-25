@@ -330,18 +330,69 @@ def _anchored(p, r, why):
             and _eq(p, r, 'industry')
             and (p['archetype'] == r['archetype'] or p['archetype'] == r.get('archetype_secondary')))
 
-def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE):
-    if not scored: return []
-    if scored[0][0][0] < gate: return []           # no comparable set exists; say so, do not pad
-    cut = max(FLOOR_REL * scored[0][0][0], FLOOR_ABS)
-    out = [x for x in scored if x[0][0] >= cut]
-    # EVERY MEMBER MUST BE ANCHORED, not just the leader. Anchoring only the top candidate let a
-    # restaurant point-of-sale profile keep Clio and Vanta as private comparables, because Guesty
-    # anchored the set on Hospitality and the relative floor carried the rest in behind it. A peer
-    # that cannot itself be anchored is padding.
-    if prof is not None:
-        out = [x for x in out if _anchored(prof, x[1], x[0][1])]
-    return out
+# ---------------------------------------------------------------------------
+# THE COMPARABILITY LADDER
+#
+# Returning nothing is honest but it is not useful, and on the twenty-one real companies it was
+# happening fifteen times. A banker with no direct comparable does not stop; they widen, and they
+# say out loud how far they widened. So does this.
+#
+#   DIRECT    the peer shares real product vocabulary, or shares a specific end market AND an
+#             archetype. This is a comparable in the ordinary sense.
+#   ADJACENT  the peer does the same KIND of thing, sharing an archetype, but the products
+#             themselves have nothing in common. An agent-evals company against a database
+#             company: both developer infrastructure, different businesses.
+#   BROAD     same family only. Software against software, consumer against consumer. This is
+#             "how this corner of the market trades", not "here are your peers".
+#
+# The set takes the best tier that has any members, never a mixture, and the tier travels with
+# the result so the reveal can say which one it is showing. A BROAD set presented as though it
+# were DIRECT would be the most dishonest thing this engine could do.
+#
+# A miss is still a miss: if nothing in the family clears FLOOR_ABS the answer is still no set,
+# and that event is what the gap log records.
+_TIER_ORDER = {'DIRECT': 0, 'ADJACENT': 1, 'BROAD': 2}
+
+def set_tier(prof, members):
+    """A set is labelled by its BEST member, not by how far the search had to widen.
+    Widening to ADJACENT to find a core group that then turns out to contain direct hits
+    should report DIRECT, because that is what the founder is actually being shown."""
+    if not members: return 'NONE'
+    return min((_tier(prof, r, why) for (sc, why), r in members), key=lambda t: _TIER_ORDER[t])
+
+def _tier(p, r, why):
+    if _anchored(p, r, why):
+        return 'DIRECT'
+    mine = {p.get('archetype'), p.get('archetype_secondary')} - {None, ''}
+    theirs = {r.get('archetype'), r.get('archetype_secondary')} - {None, ''}
+    if mine & theirs:
+        return 'ADJACENT'
+    return 'BROAD'
+
+def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE, only=None):
+    """Returns (rows, tier). tier is DIRECT, ADJACENT, BROAD or NONE.
+    `only` restricts to one tier; otherwise the best tier with members wins."""
+    if not scored: return [], 'NONE'
+    if prof is None:
+        cut = max(FLOOR_REL * scored[0][0][0], FLOOR_ABS)
+        return [x for x in scored if x[0][0] >= cut], 'DIRECT'
+    tiers = {}
+    for x in scored:
+        tiers.setdefault(_tier(prof, x[1], x[0][1]), []).append(x)
+    if only == 'ADJACENT':   want = ('DIRECT', 'ADJACENT')   # a direct hit is also adjacent
+    elif only == 'BROAD':    want = ('DIRECT', 'ADJACENT', 'BROAD')
+    elif only:               want = (only,)
+    else:                    want = ('DIRECT', 'ADJACENT', 'BROAD')
+    for t in (want if only else ('DIRECT', 'ADJACENT', 'BROAD')):
+        rows = [y for tt in (want if only else (t,)) for y in tiers.get(tt, [])] if only else list(tiers.get(t, []))
+        # DIRECT must clear the adequacy gate. A widened tier only has to clear the absolute
+        # floor, because its job is to be the next best thing rather than a peer.
+        floor = gate if (only or t) == 'DIRECT' else FLOOR_ABS
+        rows = sorted([x for x in rows if x[0][0] >= floor], key=lambda z: -z[0][0])
+        if not rows: continue
+        cut = max(FLOOR_REL * rows[0][0][0], FLOOR_ABS)
+        return [x for x in rows if x[0][0] >= cut], (only or t)
+    return [], 'NONE'
 
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
@@ -351,15 +402,15 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
         k = r['company_key']
         if k not in best or r['date_iso'] > best[k][1]['date_iso']:
             if k not in best or sc >= best[k][0][0]: best[k] = ((sc, why), r)
-    cands = qualifying(sorted(best.values(), key=lambda z: -z[0][0]), prof)
+    cands, tier = qualifying(sorted(best.values(), key=lambda z: -z[0][0]), prof)
     months = window_months
     while months <= 120:
         cut = '%04d-%02d' % (asof[0] - months//12, asof[1])
         inwin = sorted([c for c in cands if c[1]['date_iso'] >= cut],
                        key=lambda z: z[1]['date_iso'], reverse=True)
-        if len(inwin) >= min(want, len(cands)): return inwin[:want], months
+        if len(inwin) >= min(want, len(cands)): return inwin[:want], months, set_tier(prof, inwin[:want])
         months += 12
-    return cands[:want], months
+    return cands[:want], months, set_tier(prof, cands[:want])
 
 
 # ---------------------------------------------------------------------------
@@ -371,7 +422,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
-    ranked = qualifying(sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0]), prof)
+    scored = sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0])
 
     def axis_b(r):
         if prof['industry'] == 'Horizontal':
@@ -383,9 +434,18 @@ def peer_groups(prof, universe, scorer=None, want=5):
         mine = {prof['archetype'], prof.get('archetype_secondary') or ''} - {''}
         return bool(a & mine) or r['function'] == prof['function']
 
-    core = [x for x in ranked if axis_a(x[1]) and axis_b(x[1])][:want]
-    secondary = [x for x in ranked if axis_a(x[1]) and not axis_b(x[1])][:want]
-    return core, secondary
+    # WIDEN ONLY AFTER THE CORE/SECONDARY SPLIT, not before. Deciding the tier first and then
+    # splitting threw away real DIRECT hits: a social-listening profile lost Rezolve AI and Klaviyo
+    # because the DIRECT tier's members happened to fail the end-market axis, leaving the core group
+    # empty even though the tier was non-empty. Try each tier in turn and stop at the first that
+    # actually produces a core group.
+    for tier in ('DIRECT', 'ADJACENT', 'BROAD'):
+        rows, got = qualifying(scored, prof, only=tier)
+        if not rows: continue
+        core = [x for x in rows if axis_a(x[1]) and axis_b(x[1])][:want]
+        secondary = [x for x in rows if axis_a(x[1]) and not axis_b(x[1])][:want]
+        if core: return core, secondary, set_tier(prof, core)
+    return [], [], 'NONE'
 
 
 # ---------------------------------------------------------------------------

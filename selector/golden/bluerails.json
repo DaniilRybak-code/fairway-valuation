@@ -1,9 +1,29 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Agilysys, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.9,
+    "ticker": "NASDAQGS:AGYS"
+   },
+   {
+    "company": "PAR Technology Corporation",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NYSE:PAR"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 8.0,
+   "low": 2.1,
+   "mid": 5.05,
+   "n": 2
   },
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -16,11 +36,52 @@
     "type": "PRIMARY"
    }
   ],
+  "private_proximity": "DIRECT",
   "private_range": {},
   "private_window_months": 36,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.6,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
+    "company": "GoDaddy Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NYSE:GDDY"
+   },
+   {
+    "company": "Intuit Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NASDAQGS:INTU"
+   },
+   {
+    "company": "EverCommerce Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.1,
+    "ticker": "NASDAQGS:EVCM"
+   },
+   {
+    "company": "ServiceTitan, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.1,
+    "ticker": "NASDAQGS:TTAN"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 7.4,
+   "low": 2.8,
+   "mid": 3.3,
+   "n": 5
   }
  },
  "label": "Makes hotels discoverable and bookable by AI travel agents, bypassing OTA commission"

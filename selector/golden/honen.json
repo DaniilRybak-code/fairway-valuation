@@ -1,10 +1,24 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Duolingo, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 10.7,
+    "ticker": "NASDAQGS:DUOL"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.4,
+   "low": 4.4,
+   "mid": 4.4,
+   "n": 1
   },
+  "listed_proximity": "DIRECT",
   "private": [],
+  "private_proximity": "NONE",
   "private_range": {},
   "private_window_months": 24,
   "secondary": [],

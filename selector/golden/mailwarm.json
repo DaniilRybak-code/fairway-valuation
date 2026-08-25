@@ -1,15 +1,111 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.7,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "WSE:TXT"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 3.4,
+   "low": 2.8,
+   "mid": 3.1,
+   "n": 2
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
-  "secondary": [],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "score": 8.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "score": 13.0,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 150.0,
+    "score": 8.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": 4.3,
+    "score": 16.0,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Apollo.io",
+    "date": "Aug-23",
+    "in_medians": false,
+    "mult": 16.0,
+    "score": 13.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 105.3,
+   "low": 50.0,
+   "mid": 105.3,
+   "n": 2
+  },
+  "private_window_months": 36,
+  "secondary": [
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.2,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.7,
+    "ticker": "NYSE:ZETA"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 3.7,
+   "low": 2.7,
+   "mid": 3.2,
+   "n": 2
   }
  },
  "label": "Email warm-up and deliverability across a network of aged real inboxes"

@@ -1,15 +1,146 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Planisware SAS",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "ENXTPA:PLNW"
+   },
+   {
+    "company": "Sidetrade SA",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.1,
+    "ticker": "ENXTPA:ALBFR"
+   },
+   {
+    "company": "Workiva Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NYSE:WK"
+   },
+   {
+    "company": "DocuSign, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.1,
+    "ticker": "NASDAQGS:DOCU"
+   },
+   {
+    "company": "Workday, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.9,
+    "ticker": "NASDAQGS:WDAY"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 6.6,
+   "low": 3.6,
+   "mid": 4.0,
+   "n": 5
   },
-  "private": [],
-  "private_range": {},
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "score": 12.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 150.0,
+    "score": 11.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gong",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 15.0,
+    "score": 13.3,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Deel",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 17.3,
+    "score": 8.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Invisible Technologies",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 14.9,
+    "score": 8.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 105.3,
+   "low": 14.9,
+   "mid": 17.3,
+   "n": 4
+  },
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.7,
+    "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "Pegasystems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.9,
+    "ticker": "NASDAQGS:PEGA"
+   },
+   {
+    "company": "SAP SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "XTRA:SAP"
+   },
+   {
+    "company": "PAR Technology Corporation",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NYSE:PAR"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 5.1,
+   "low": 2.1,
+   "mid": 3.35,
+   "n": 4
   }
  },
  "label": "One system that runs commercial operations from acquisition through retention"

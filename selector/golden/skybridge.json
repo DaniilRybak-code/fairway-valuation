@@ -1,9 +1,50 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.5,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "JFrog Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.5,
+    "ticker": "NASDAQGS:FROG"
+   },
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.1,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NASDAQGS:TEAM"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGS:DDOG"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 16.4,
+   "low": 5.0,
+   "mid": 5.8,
+   "n": 5
   },
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -16,11 +57,24 @@
     "type": "PRIMARY"
    }
   ],
+  "private_proximity": "DIRECT",
   "private_range": {},
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.1,
+    "ticker": "ENXTAM:TOM2"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 0.6,
+   "low": 0.6,
+   "mid": 0.6,
+   "n": 1
   }
  },
  "label": "MIT-licensed TypeScript and React framework for building MCP apps"

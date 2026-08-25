@@ -1,9 +1,29 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.5,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "WSE:TXT"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 3.4,
+   "low": 2.8,
+   "mid": 3.1,
+   "n": 2
   },
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_FORECAST",
@@ -16,11 +36,45 @@
     "type": "CONTROL"
    }
   ],
+  "private_proximity": "DIRECT",
   "private_range": {},
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 13.2,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.1,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQGM:MDB"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 16.4,
+   "low": 2.7,
+   "mid": 7.1,
+   "n": 4
   }
  },
  "label": "Open-source alternative to Ahrefs and Semrush, billed by usage and exposed over MCP"

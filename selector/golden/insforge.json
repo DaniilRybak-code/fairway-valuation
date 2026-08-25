@@ -16,20 +16,67 @@
    "mid": 4.1,
    "n": 1
   },
+  "listed_proximity": "DIRECT",
   "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "score": 9.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "score": 15.2,
+    "type": "PRIMARY"
+   },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
-    "company": "Databricks",
-    "date": "Sep-23",
+    "company": "LangChain",
+    "date": "Oct-25",
     "in_medians": false,
-    "mult": 26.9,
-    "score": 11.9,
+    "mult": 78.1,
+    "score": 16.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "score": 15.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "score": 15.2,
     "type": "PRIMARY"
    }
   ],
-  "private_range": {},
-  "private_window_months": 36,
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 50.0,
+   "low": 19.8,
+   "mid": 33.0,
+   "n": 4
+  },
+  "private_window_months": 24,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

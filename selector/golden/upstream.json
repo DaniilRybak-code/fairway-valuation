@@ -1,15 +1,132 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Ooma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.0,
+    "ticker": "NYSE:OOMA"
+   },
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.7,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "TeamViewer SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "XTRA:TMV"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 2.8,
+   "low": 2.0,
+   "mid": 2.55,
+   "n": 4
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
-  "secondary": [],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Notion",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 18.0,
+    "score": 18.9,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gamma",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 21.0,
+    "score": 14.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Glean",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 72.0,
+    "score": 10.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Rippling",
+    "date": "Apr-24",
+    "in_medians": true,
+    "mult": 38.6,
+    "score": 10.0,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Factorial",
+    "date": "Oct-22",
+    "in_medians": false,
+    "mult": 33.3,
+    "score": 10.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 72.0,
+   "low": 21.0,
+   "mid": 38.6,
+   "n": 3
+  },
+  "private_window_months": 48,
+  "secondary": [
+   {
+    "company": "Zoom Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.1,
+    "ticker": "NASDAQGS:ZM"
+   },
+   {
+    "company": "Asana, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.6,
+    "ticker": "NYSE:ASAN"
+   },
+   {
+    "company": "RingCentral, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.1,
+    "ticker": "NYSE:RNG"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.6,
+   "low": 2.3,
+   "mid": 2.5,
+   "n": 3
   }
  },
  "label": "AI layer over Gmail that triages, drafts and tracks follow-ups for a team"

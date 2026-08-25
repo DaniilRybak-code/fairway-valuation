@@ -8,6 +8,18 @@
 # consumer ones no matter what in_medians says. 18 rows carry a '> threshold' metric and are now bound
 # '<=' rather than printing as points. 10 rows are secondaries or tenders and are now labelled as such:
 # a secondary is a mark, not a priced round, and must be shown that way even when it stays in medians.
+#
+# DENOMINATOR POLICY FOR AI-NATIVE NAMES, agreed 25-Aug-2026.
+# Across fourteen candidate companies in AI scraping and agent ops, only three ever published an
+# absolute revenue figure. The rest publish growth rates: '834% growth', '15-fold', '15x'. A growth
+# multiple with no base is not a denominator, so a strict at-pricing rule would leave the AI-native
+# rows permanently empty, which is where most of our inbound is going to land.
+#
+# EXEMPTION: for AI-native companies ONLY, a reputable third-party estimate (Sacra and equivalents)
+# may be used as a denominator. It must carry denominator_basis = THIRD_PARTY_ESTIMATE, a note naming
+# the source and its publication date, and it must still satisfy the at-pricing rule on that date.
+# It is an exemption and it is scoped: it does not extend to consumer, commerce or fintech rows,
+# where company disclosure is the norm and an estimate is a shortcut rather than a necessity.
 transaction_id,company_key,company_name,date,date_iso,round_type,capital_raised_musd,post_money_musd,valuation_status,revenue_metric,revenue_musd,revenue_status,ev_revenue_x,subsector_as_supplied,screening_category_as_supplied,lead_key_investors,round_source_url,revenue_source_url,notes,transaction_type,denominator_basis,bound,in_medians,verification
 lovable-2025-12,lovable,Lovable,Dec-25,2025-12,Series B,330.0,6600.0,Disclosed,ARR (> threshold),200.0,Disclosed,33.0,AI application development / vibe coding,"Data, AI & Developer Tools",CapitalG; Menlo Anthology; NVentures; Salesforce Ventures; Databricks Ventures,https://lovable.dev/blog/series-b,https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/,Uses $200mm threshold for >$200mm ARR; multiple is a maximum.,PRIMARY,DISCLOSED_THRESHOLD,<=,1,STATUS-TRIAGE
 ramp-2025-11,ramp,Ramp,Nov-25,2025-11,Primary financing + tender,300.0,32000.0,Disclosed,Annualized revenue (> threshold),1000.0,Disclosed,32.0,Spend management / corporate cards,Vertical Software,Lightspeed; Alpha Wave; Bessemer; Founders Fund; Coatue; Thrive,https://techcrunch.com/2025/11/17/ramp-hits-32b-valuation-just-three-months-after-hitting-22-5b/,https://techcrunch.com/2025/11/17/ramp-hits-32b-valuation-just-three-months-after-hitting-22-5b/,"Kept, bounded. $300m primary led by Lightspeed at $32bn post on 17-Nov-2025, three months after the $22.5bn round, PLUS an employee tender whose size was never disclosed, so it cannot be presented as a clean primary. Denominator is company-stated and at-pricing: Ramp's 9-Sep-2025 release says it 'surpassed $1 billion in annualized revenue'. Because that is a floor, 32.0x is a maximum and the true multiple is lower; the same release says revenue and customers doubled year on year.",MIXED,DISCLOSED_THRESHOLD,<=,1,VERIFIED

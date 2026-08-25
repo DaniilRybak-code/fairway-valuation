@@ -1,12 +1,82 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Dropbox, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NASDAQGS:DBX"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.1,
+   "low": 4.1,
+   "mid": 4.1,
+   "n": 1
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gamma",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 21.0,
+    "score": 18.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Canva",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 12.7,
+    "score": 11.0,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "OpenAI",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 54.5,
+    "score": 10.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Perplexity",
+    "date": "Dec-24",
+    "in_medians": false,
+    "mult": 142.9,
+    "score": 11.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Calendly",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 42.9,
+    "score": 14.0,
+    "type": "MIXED"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 42.9,
+   "low": 12.7,
+   "mid": 21.0,
+   "n": 3
+  },
+  "private_window_months": 72,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

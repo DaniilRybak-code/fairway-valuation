@@ -1,15 +1,146 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Asana, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.6,
+    "ticker": "NYSE:ASAN"
+   },
+   {
+    "company": "BlackLine, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.1,
+    "ticker": "NASDAQGS:BL"
+   },
+   {
+    "company": "ATOSS Software SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.0,
+    "ticker": "XTRA:AOF"
+   },
+   {
+    "company": "DocuSign, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.0,
+    "ticker": "NASDAQGS:DOCU"
+   },
+   {
+    "company": "Planisware SAS",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.0,
+    "ticker": "ENXTPA:PLNW"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 6.6,
+   "low": 2.5,
+   "mid": 3.1,
+   "n": 5
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
-  "secondary": [],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Notion",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 18.0,
+    "score": 12.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gamma",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 21.0,
+    "score": 14.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Deel",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 17.3,
+    "score": 12.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Glean",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 72.0,
+    "score": 10.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "FloQast",
+    "date": "Apr-24",
+    "in_medians": true,
+    "mult": 16.0,
+    "score": 13.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "high": 72.0,
+   "low": 16.0,
+   "mid": 21.0,
+   "n": 4
+  },
+  "private_window_months": 36,
+  "secondary": [
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.5,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "TeamViewer SE",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "XTRA:TMV"
+   },
+   {
+    "company": "Ooma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NYSE:OOMA"
+   },
+   {
+    "company": "Zoom Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NASDAQGS:ZM"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 4.6,
+   "low": 2.0,
+   "mid": 2.55,
+   "n": 4
   }
  },
  "label": "AI chief of staff in Slack that captures commitments and works a prioritised list"
