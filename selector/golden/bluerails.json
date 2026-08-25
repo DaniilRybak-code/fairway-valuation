@@ -17,6 +17,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 8.0,
@@ -79,6 +80,7 @@
    }
   ],
   "secondary_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 7.4,

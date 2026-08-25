@@ -31,6 +31,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.6,
@@ -49,7 +50,7 @@
     "in_medians": true,
     "mult": 21.0,
     "score": 14.6,
-    "type": "PRIMARY"
+    "type": "MIXED"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -94,6 +95,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": true,
    "display": "RANGE",
    "high": 42.9,
    "low": 21.0,

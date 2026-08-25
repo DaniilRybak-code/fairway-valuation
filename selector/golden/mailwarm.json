@@ -17,6 +17,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 3.4,
@@ -80,6 +81,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": true,
    "display": "RANGE",
    "high": 105.3,
    "low": 50.0,
@@ -105,6 +107,7 @@
    }
   ],
   "secondary_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 3.7,

@@ -10,6 +10,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "DIAMOND",
    "high": 4.1,
@@ -33,7 +34,7 @@
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
+    "bound": "",
     "company": "Lovable",
     "date": "Dec-25",
     "in_medians": true,
@@ -57,7 +58,7 @@
     "company": "Replit",
     "date": "Sep-25",
     "in_medians": true,
-    "mult": 20.0,
+    "mult": 30.0,
     "score": 15.4,
     "type": "PRIMARY"
    },
@@ -74,6 +75,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": true,
    "display": "RANGE",
    "high": 50.0,
    "low": 19.8,

@@ -10,6 +10,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "DIAMOND",
    "high": 6.9,
@@ -74,6 +75,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": false,
    "display": "RANGE",
    "high": 50.0,
    "low": 32.6,

@@ -10,6 +10,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "DIAMOND",
    "high": 4.1,
@@ -29,7 +30,7 @@
     "in_medians": true,
     "mult": 21.0,
     "score": 18.1,
-    "type": "PRIMARY"
+    "type": "MIXED"
    },
    {
     "basis": "REPORTED_CONTEMPORANEOUS",
@@ -74,6 +75,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": true,
    "display": "RANGE",
    "high": 42.9,
    "low": 12.7,

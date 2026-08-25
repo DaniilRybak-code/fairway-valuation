@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 6.6,
@@ -66,7 +67,7 @@
     "in_medians": true,
     "mult": 21.0,
     "score": 14.6,
-    "type": "PRIMARY"
+    "type": "MIXED"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -90,7 +91,7 @@
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
+    "bound": "",
     "company": "FloQast",
     "date": "Apr-24",
     "in_medians": true,
@@ -101,6 +102,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": true,
    "display": "RANGE",
    "high": 72.0,
    "low": 16.0,
@@ -140,6 +142,7 @@
    }
   ],
   "secondary_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.6,

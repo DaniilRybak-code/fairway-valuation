@@ -518,7 +518,8 @@ def group_range(group, which='rev', tier='DIRECT'):
     v = sorted(x for x, _ in priced)
     n = len(v)
     out = dict(n=n, low=v[max(0, (n-1)//4)], mid=st.median(v), high=v[min(n-1, (3*(n-1))//4 + 1)],
-               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3)
+               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
+               bounded=any((r.get('bound') or '').strip() == '<=' for _x, r in priced))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out
@@ -531,8 +532,14 @@ def private_range(picked, tier):
     if not priced: return {}
     v = sorted(x for x, _ in priced)
     n = len(v)
+    # A CEILING DRAWN AS A POINT IS THE DIAMOND'S OWN VERSION OF THE BAR PROBLEM. After the
+    # software verification pass, Mailwarm's private lane is a single diamond at 105.3x, which is
+    # Sierra, whose ARR is a 'more than $150m' threshold three months stale at pricing. Drawing
+    # that as a point is exactly the overstatement the ladder was built to stop, so the range
+    # carries whether any contributing row is bounded and the copy must say "at most".
     out = dict(n=n, low=min(v), mid=v[n // 2], high=max(v),
-               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3)
+               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
+               bounded=any((r.get('bound') or '').strip() == '<=' for _x, r in priced))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out

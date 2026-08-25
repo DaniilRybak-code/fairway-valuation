@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 6.6,
@@ -73,8 +74,8 @@
     "bound": "<=",
     "company": "Gong",
     "date": "Nov-25",
-    "in_medians": true,
-    "mult": 15.0,
+    "in_medians": false,
+    "mult": null,
     "score": 13.3,
     "type": "SECONDARY"
    },
@@ -90,7 +91,7 @@
    },
    {
     "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
+    "bound": ">=",
     "company": "Invisible Technologies",
     "date": "Sep-25",
     "in_medians": true,
@@ -101,11 +102,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": true,
    "display": "RANGE",
    "high": 105.3,
    "low": 14.9,
    "mid": 17.3,
-   "n": 4,
+   "n": 3,
    "thin": false
   },
   "private_window_months": 24,
@@ -140,6 +142,7 @@
    }
   ],
   "secondary_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 5.1,

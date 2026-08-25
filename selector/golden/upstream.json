@@ -31,6 +31,7 @@
    }
   ],
   "core_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 2.8,
@@ -59,7 +60,7 @@
     "in_medians": true,
     "mult": 21.0,
     "score": 14.6,
-    "type": "PRIMARY"
+    "type": "MIXED"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -72,7 +73,7 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
+    "basis": "PRESS_REPORTED",
     "bound": "<=",
     "company": "Rippling",
     "date": "Apr-24",
@@ -94,6 +95,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "bounded": true,
    "display": "RANGE",
    "high": 72.0,
    "low": 21.0,
@@ -126,6 +128,7 @@
    }
   ],
   "secondary_range": {
+   "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.6,
