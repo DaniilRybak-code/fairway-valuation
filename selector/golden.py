@@ -19,7 +19,7 @@ def snap(prof):
                       'family': r['family'], 'score': round(s, 1),
                       'in_medians': r['in_medians']} for (s, _w), r in grp]
         which, _reason = M.denominator(prof, grp)
-        rng = M.group_range(grp, which)
+        rng = M.group_range(grp, which, listed_tier)
         out[name + '_range'] = {'denominator': which, **({k: round(v, 2) if isinstance(v, float) else v
                                                           for k, v in rng.items()} if rng else {})}
     # private comparables: business nature selects, recency only orders
@@ -32,7 +32,9 @@ def snap(prof):
     out['private_window_months'] = months
     out['listed_proximity'] = listed_tier
     out['private_proximity'] = priv_tier
-    priced = [r['mult'] for (_s, r) in picked if r['in_medians'] and r.get('mult')]
+    # A BROAD private set is context only and must not reach the football field.
+    priced = ([r['mult'] for (_s, r) in picked if r['in_medians'] and r.get('mult')]
+              if priv_tier in M.RANGE_TIERS else [])
     out['private_range'] = ({'n': len(priced), 'low': min(priced), 'mid': sorted(priced)[len(priced)//2],
                              'high': max(priced)} if priced else {})
     return out

@@ -479,8 +479,22 @@ def denominator(prof, group):
                       'multiple to mean the same thing twice' % (min(gms), max(gms)))
     return 'rev', 'gross margin is close enough across the group for revenue to be comparable'
 
-def group_range(group, which='rev'):
-    """Quartile range of the group, excluding rows flagged out of medians."""
+# A BROAD SET IS CONTEXT, NEVER A NUMBER.
+#
+# Daniil, 25-Aug-2026: a BROAD set may be shown, but it must not reach the football field.
+# The reason is not squeamishness about the label. A consumer language-learning app and Huel
+# share a family and nothing else that governs a multiple: different business model, different
+# gross margin, different scalability. Putting their multiples in the same bar would not be a
+# wide range, it would be a meaningless one, and a founder cannot tell the difference by looking.
+#
+# So the ladder splits into two jobs. DIRECT and ADJACENT sets price. A BROAD set is shown as
+# "how this corner of the market trades", named companies and all, and computes no range.
+RANGE_TIERS = ('DIRECT', 'ADJACENT')
+
+def group_range(group, which='rev', tier='DIRECT'):
+    """Quartile range of the group, excluding rows flagged out of medians.
+    Returns None for a BROAD group: it is context, not a price."""
+    if tier not in RANGE_TIERS: return None
     key = 'mult' if which == 'rev' else 'gp_mult'
     v = sorted(r[key] for (_s, r) in group if r.get(key) is not None and r.get('in_medians', True))
     if not v: return None
