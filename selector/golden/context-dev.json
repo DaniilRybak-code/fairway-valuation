@@ -1,0 +1,16 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "One API that turns any URL into LLM-ready markdown, plus crawling and enrichment"
+}

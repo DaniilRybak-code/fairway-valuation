@@ -1,0 +1,27 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "private": [
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": 4.3,
+    "score": 28.0,
+    "type": "CONTROL"
+   }
+  ],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "Open-source alternative to Ahrefs and Semrush, billed by usage and exposed over MCP"
+}

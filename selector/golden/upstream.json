@@ -1,0 +1,16 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "AI layer over Gmail that triages, drafts and tracks follow-ups for a team"
+}

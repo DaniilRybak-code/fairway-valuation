@@ -1,0 +1,27 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "private": [
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Anthropic",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 61.5,
+    "score": 17.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "MIT-licensed TypeScript and React framework for building MCP apps"
+}

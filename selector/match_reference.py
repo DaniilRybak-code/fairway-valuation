@@ -137,29 +137,43 @@ def _both(p, r, f):
     a, b = (p.get(f) or '').strip(), (r.get(f) or '').strip()
     return a and b and a == b
 
+# A BLANK NEVER SCORES. Only asset_intensity and purchase_frequency used to enforce this, via
+# _both(). Everything else compared with plain equality, so two blanks matched and paid full
+# points. The tag files happen to be complete today, so nothing was scoring wrongly, but the
+# rule has to live in the code rather than in the luck of the data: a real founder profile is
+# routinely missing revenue_model (six of the twenty-one field-test companies publish no
+# pricing at all), and the moment one of those met a peer row with a gap it would have been
+# paid 3.5 points for the two of them being equally silent.
+def _eq(p, r, f):
+    a, b = (p.get(f) or '').strip(), (r.get(f) or '').strip()
+    return a and b and a == b
+
 def score(p, r, weights=W, use_fin=True):
     s = 0.0; why = []
     ta = tag_overlap(p['product_tags'], r['product_tags'])
     if ta: s += min(ta, weights['tags_cap']); why.append('tags %.1f' % min(ta, weights['tags_cap']))
     ra, rb = r['archetype'], r['archetype_secondary']
-    if p['archetype'] == ra: s += weights['arch']; why.append('archetype')
-    elif p['archetype'] == rb or p.get('archetype_secondary') in (ra, rb):
+    if p['archetype'] and p['archetype'] == ra: s += weights['arch']; why.append('archetype')
+    elif p['archetype'] and (p['archetype'] == rb or p.get('archetype_secondary') in (ra, rb) and p.get('archetype_secondary')):
         s += weights['arch_soft']; why.append('archetype~')
-    if p['industry'] != 'Horizontal' and p['industry'] == r['industry']:
+    if p['industry'] != 'Horizontal' and _eq(p, r, 'industry'):
         s += weights['industry']; why.append('end market')
     elif p['industry'] == 'Horizontal' and r['industry'] == 'Horizontal': s += 1.0
-    if p['function'] == r['function']: s += weights['function']; why.append('function')
-    if p['buyer'] == r['buyer']: s += weights['buyer']; why.append('end customer')
-    if p['revenue_model'] == r['revenue_model']: s += weights['rev_model']; why.append('revenue model')
-    if p['gtm_motion'] == r['gtm_motion']: s += weights['gtm']; why.append('GTM')
-    if p['product_role'] == r['product_role']: s += weights['role']
+    if _eq(p, r, 'function'): s += weights['function']; why.append('function')
+    if _eq(p, r, 'buyer'): s += weights['buyer']; why.append('end customer')
+    if _eq(p, r, 'revenue_model'): s += weights['rev_model']; why.append('revenue model')
+    if _eq(p, r, 'gtm_motion'): s += weights['gtm']; why.append('GTM')
+    if _eq(p, r, 'product_role'): s += weights['role']
     # Consumer-family only. A blank on either side scores nothing, so these two never
     # give a uniform lift to the 250 rows that do not carry them.
     if _both(p, r, 'asset_intensity'):    s += weights['asset']; why.append('cost structure')
     if _both(p, r, 'purchase_frequency'): s += weights['freq'];  why.append('purchase frequency')
-    if p['ai_stance'] == r['ai_stance']: s += weights['ai']; why.append('AI stance')
+    if _eq(p, r, 'ai_stance'): s += weights['ai']; why.append('AI stance')
     if use_fin:
-        if r.get('g') is not None:
+        # The profile side can be genuinely empty. A pre-revenue founder has no growth rate and
+        # no gross margin, and neither does a company profiled from its website alone. Scoring
+        # must degrade to the qualitative axes rather than raise TypeError on None.
+        if r.get('g') is not None and p.get('growth') is not None:
             v = max(0, weights['growth']*(1 - abs(p['growth']-r['g'])/60.0)); s += v
             if v > weights['growth']*0.5: why.append('growth')
         if r.get('gm') is not None and p.get('gm') is not None:
@@ -282,13 +296,52 @@ def _tag_points(why):
         if m: return float(m.group(1))
     return 0.0
 
-def qualifying(scored, gate=FLOOR_ADEQUATE, tag_gate=FLOOR_TAG_EVIDENCE):
+# ANCHORING REPLACES THE BARE TAG FLOOR, 25 August 2026.
+#
+# The tag floor was calibrated against twelve profiles I had invented, whose tag scores ran
+# 7.3 to 12.0 because I had unconsciously written them in the dataset's own vocabulary. Run
+# against twenty-one real companies profiled from their own websites, tag scores run 0.0 to
+# 3.9 and the floor blocked twenty of twenty-one. It was not measuring comparability; it was
+# measuring how closely a founder's words happen to echo our tag file.
+#
+# What the real cases show is that there are TWO honest ways a match can be anchored in
+# something specific about the business, and the tag floor only knew one of them:
+#
+#   Fyle, a nail-care brand, best-matches FIGS with 0.1 tag points and yet shares archetype
+#   Consumer Brand, end market Apparel & Beauty, product role BRAND and asset intensity
+#   OWN_PRODUCT. That is a real comparable and the tag floor killed it.
+#
+#   Context.dev best-matches MongoDB with 0.0 tag points and shares only the archetype
+#   "Data, AI & Developer Tools", which spans everything from a database to a scraper. That
+#   is not a comparable and it must stay blocked.
+#
+# The difference is a SPECIFIC end market. So a match qualifies on either route: real product
+# vocabulary in common, or a shared non-Horizontal end market plus a shared archetype.
+# Horizontal is not an end market and never anchors, which is what keeps Context.dev out.
+#
+# Both regression cases still fail, checked: Huel against a language-learning app (different
+# end markets, 0.1 tag points) and consumer marketplaces against SMB payments (Horizontal).
+FLOOR_TAG_EVIDENCE = 3.0
+
+def _anchored(p, r, why):
+    if _tag_points(why) >= FLOOR_TAG_EVIDENCE:
+        return True
+    return (p.get('industry') and p['industry'] != 'Horizontal'
+            and _eq(p, r, 'industry')
+            and (p['archetype'] == r['archetype'] or p['archetype'] == r.get('archetype_secondary')))
+
+def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE):
     if not scored: return []
-    (best, why) = scored[0][0]
-    if best < gate: return []                    # no comparable set exists; say so, do not pad
-    if _tag_points(why) < tag_gate: return []    # coincidence without product commonality is not a set
-    cut = max(FLOOR_REL * best, FLOOR_ABS)
-    return [x for x in scored if x[0][0] >= cut]
+    if scored[0][0][0] < gate: return []           # no comparable set exists; say so, do not pad
+    cut = max(FLOOR_REL * scored[0][0][0], FLOOR_ABS)
+    out = [x for x in scored if x[0][0] >= cut]
+    # EVERY MEMBER MUST BE ANCHORED, not just the leader. Anchoring only the top candidate let a
+    # restaurant point-of-sale profile keep Clio and Vanta as private comparables, because Guesty
+    # anchored the set on Hospitality and the relative floor carried the rest in behind it. A peer
+    # that cannot itself be anchored is padding.
+    if prof is not None:
+        out = [x for x in out if _anchored(prof, x[1], x[0][1])]
+    return out
 
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
@@ -298,7 +351,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
         k = r['company_key']
         if k not in best or r['date_iso'] > best[k][1]['date_iso']:
             if k not in best or sc >= best[k][0][0]: best[k] = ((sc, why), r)
-    cands = qualifying(sorted(best.values(), key=lambda z: -z[0][0]))
+    cands = qualifying(sorted(best.values(), key=lambda z: -z[0][0]), prof)
     months = window_months
     while months <= 120:
         cut = '%04d-%02d' % (asof[0] - months//12, asof[1])
@@ -318,7 +371,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
-    ranked = qualifying(sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0]))
+    ranked = qualifying(sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0]), prof)
 
     def axis_b(r):
         if prof['industry'] == 'Horizontal':
