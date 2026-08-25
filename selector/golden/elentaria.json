@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 6.6,
    "low": 3.6,
    "mid": 4.0,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -99,10 +101,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 105.3,
    "low": 14.9,
    "mid": 17.3,
-   "n": 4
+   "n": 4,
+   "thin": false
   },
   "private_window_months": 24,
   "secondary": [
@@ -137,10 +141,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 5.1,
    "low": 2.1,
    "mid": 3.35,
-   "n": 4
+   "n": 4,
+   "thin": false
   }
  },
  "label": "One system that runs commercial operations from acquisition through retention"

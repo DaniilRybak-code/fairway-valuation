@@ -32,10 +32,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 2.8,
    "low": 2.0,
    "mid": 2.55,
-   "n": 4
+   "n": 4,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -92,10 +94,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 72.0,
    "low": 21.0,
    "mid": 38.6,
-   "n": 3
+   "n": 3,
+   "thin": false
   },
   "private_window_months": 48,
   "secondary": [
@@ -123,10 +127,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 4.6,
    "low": 2.3,
    "mid": 2.5,
-   "n": 3
+   "n": 3,
+   "thin": false
   }
  },
  "label": "AI layer over Gmail that triages, drafts and tracks follow-ups for a team"

@@ -32,11 +32,7 @@ def snap(prof):
     out['private_window_months'] = months
     out['listed_proximity'] = listed_tier
     out['private_proximity'] = priv_tier
-    # A BROAD private set is context only and must not reach the football field.
-    priced = ([r['mult'] for (_s, r) in picked if r['in_medians'] and r.get('mult')]
-              if priv_tier in M.RANGE_TIERS else [])
-    out['private_range'] = ({'n': len(priced), 'low': min(priced), 'mid': sorted(priced)[len(priced)//2],
-                             'high': max(priced)} if priced else {})
+    out['private_range'] = M.private_range(picked, priv_tier)
     return out
 
 def main():

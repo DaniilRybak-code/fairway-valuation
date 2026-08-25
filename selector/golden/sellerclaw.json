@@ -18,10 +18,13 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "DIAMOND",
    "high": 2.7,
    "low": 2.7,
    "mid": 2.7,
-   "n": 1
+   "n": 1,
+   "sole": "Klaviyo, Inc.",
+   "thin": true
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -48,10 +51,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 32.6,
    "low": 14.0,
    "mid": 32.6,
-   "n": 2
+   "n": 2,
+   "thin": true
   },
   "private_window_months": 72,
   "secondary": [],

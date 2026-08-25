@@ -18,10 +18,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 8.0,
    "low": 2.1,
    "mid": 5.05,
-   "n": 2
+   "n": 2,
+   "thin": true
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -78,10 +80,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 7.4,
    "low": 2.8,
    "mid": 3.3,
-   "n": 5
+   "n": 5,
+   "thin": false
   }
  },
  "label": "Makes hotels discoverable and bookable by AI travel agents, bypassing OTA commission"

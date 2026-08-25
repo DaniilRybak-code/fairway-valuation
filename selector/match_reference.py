@@ -491,12 +491,48 @@ def denominator(prof, group):
 # "how this corner of the market trades", named companies and all, and computes no range.
 RANGE_TIERS = ('DIRECT', 'ADJACENT')
 
+# ONE COMPANY IS A DIAMOND, NOT A BAR.
+#
+# Gating BROAD exposed the same deception one layer down. Nine of the twenty-one real profiles
+# drew a football field from fewer than three names and six drew one from a SINGLE name: Honen's
+# "4.4x to 4.4x" is Duolingo and nothing else; Honestly's "2.7x to 2.7x" is Rezolve AI. A bar
+# implies a distribution. Drawn from one observation there is no distribution, and the picture
+# beats any caption you put under it.
+#
+# Daniil, 25-Aug-2026: draw it as a DIAMOND rather than a range, name the single comparable, and
+# caveat it. Resolve it over time with more data, better tags and live traffic rather than by
+# hiding it. So the range carries its own display instruction:
+#
+#   display DIAMOND  exactly one priced comparable. Draw a point, name it, caveat it.
+#   display RANGE    two or more. Draw a bar.
+#   thin             fewer than three. True for a two-name bar as well, so the copy can hedge.
+#
+# `sole` names the single company so the reveal never has to reach back into the group to find it.
 def group_range(group, which='rev', tier='DIRECT'):
     """Quartile range of the group, excluding rows flagged out of medians.
     Returns None for a BROAD group: it is context, not a price."""
     if tier not in RANGE_TIERS: return None
     key = 'mult' if which == 'rev' else 'gp_mult'
-    v = sorted(r[key] for (_s, r) in group if r.get(key) is not None and r.get('in_medians', True))
-    if not v: return None
+    priced = [(r[key], r) for (_s, r) in group if r.get(key) is not None and r.get('in_medians', True)]
+    if not priced: return None
+    v = sorted(x for x, _ in priced)
     n = len(v)
-    return dict(n=n, low=v[max(0, (n-1)//4)], mid=st.median(v), high=v[min(n-1, (3*(n-1))//4 + 1)])
+    out = dict(n=n, low=v[max(0, (n-1)//4)], mid=st.median(v), high=v[min(n-1, (3*(n-1))//4 + 1)],
+               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3)
+    if n == 1:
+        out['sole'] = priced[0][1].get('company_name', '')
+    return out
+
+def private_range(picked, tier):
+    """The same rule on the private lane, kept here rather than in the caller so the two cannot
+    drift apart. BROAD returns nothing; a single priced round returns a diamond."""
+    if tier not in RANGE_TIERS: return {}
+    priced = [(r['mult'], r) for (_s, r) in picked if r.get('in_medians') and r.get('mult')]
+    if not priced: return {}
+    v = sorted(x for x, _ in priced)
+    n = len(v)
+    out = dict(n=n, low=min(v), mid=v[n // 2], high=max(v),
+               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3)
+    if n == 1:
+        out['sole'] = priced[0][1].get('company_name', '')
+    return out

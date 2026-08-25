@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 16.4,
    "low": 3.9,
    "mid": 5.0,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -99,10 +101,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 33.0,
    "low": 19.8,
    "mid": 20.0,
-   "n": 3
+   "n": 3,
+   "thin": false
   },
   "private_window_months": 24,
   "secondary": [
@@ -130,10 +134,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 4.0,
    "low": 2.7,
    "mid": 3.4,
-   "n": 3
+   "n": 3,
+   "thin": false
   }
  },
  "label": "One API and MCP server for publishing and engagement across ten social networks"

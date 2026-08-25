@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 16.4,
    "low": 5.0,
    "mid": 5.8,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -71,10 +73,13 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "DIAMOND",
    "high": 0.6,
    "low": 0.6,
    "mid": 0.6,
-   "n": 1
+   "n": 1,
+   "sole": "TomTom N.V.",
+   "thin": true
   }
  },
  "label": "MIT-licensed TypeScript and React framework for building MCP apps"

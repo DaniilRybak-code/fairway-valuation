@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 16.4,
    "low": 4.1,
    "mid": 10.5,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -99,10 +101,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 33.0,
    "low": 14.9,
    "mid": 20.0,
-   "n": 4
+   "n": 4,
+   "thin": false
   },
   "private_window_months": 24,
   "secondary": [
@@ -116,10 +120,13 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "DIAMOND",
    "high": 3.4,
    "low": 3.4,
    "mid": 3.4,
-   "n": 1
+   "n": 1,
+   "sole": "Amplitude, Inc.",
+   "thin": true
   }
  },
  "label": "Privacy-first real-time search infrastructure built for agents rather than humans"

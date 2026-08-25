@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 3.3,
    "low": 1.9,
    "mid": 2.8,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -99,10 +101,12 @@
   ],
   "private_proximity": "DIRECT",
   "private_range": {
+   "display": "RANGE",
    "high": 10.1,
    "low": 4.6,
    "mid": 5.0,
-   "n": 3
+   "n": 3,
+   "thin": false
   },
   "private_window_months": 72,
   "secondary": [],

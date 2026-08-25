@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 6.6,
    "low": 2.5,
    "mid": 3.1,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -99,10 +101,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 72.0,
    "low": 16.0,
    "mid": 21.0,
-   "n": 4
+   "n": 4,
+   "thin": false
   },
   "private_window_months": 36,
   "secondary": [
@@ -137,10 +141,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 4.6,
    "low": 2.0,
    "mid": 2.55,
-   "n": 4
+   "n": 4,
+   "thin": false
   }
  },
  "label": "AI chief of staff in Slack that captures commitments and works a prioritised list"

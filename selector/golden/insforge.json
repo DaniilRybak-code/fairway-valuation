@@ -11,10 +11,13 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "DIAMOND",
    "high": 4.1,
    "low": 4.1,
    "mid": 4.1,
-   "n": 1
+   "n": 1,
+   "sole": "Elastic N.V.",
+   "thin": true
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -71,10 +74,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 50.0,
    "low": 19.8,
    "mid": 33.0,
-   "n": 4
+   "n": 4,
+   "thin": false
   },
   "private_window_months": 24,
   "secondary": [],

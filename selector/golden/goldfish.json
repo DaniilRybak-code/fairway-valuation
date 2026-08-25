@@ -11,10 +11,13 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "DIAMOND",
    "high": 4.1,
    "low": 4.1,
    "mid": 4.1,
-   "n": 1
+   "n": 1,
+   "sole": "Dropbox, Inc.",
+   "thin": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -71,10 +74,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 42.9,
    "low": 12.7,
    "mid": 21.0,
-   "n": 3
+   "n": 3,
+   "thin": false
   },
   "private_window_months": 72,
   "secondary": [],

@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 31.8,
    "low": 4.1,
    "mid": 10.5,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -99,10 +101,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 105.3,
    "low": 33.0,
    "mid": 50.0,
-   "n": 3
+   "n": 3,
+   "thin": false
   },
   "private_window_months": 24,
   "secondary": [
@@ -137,10 +141,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 17.6,
    "low": 3.4,
    "mid": 10.7,
-   "n": 4
+   "n": 4,
+   "thin": false
   }
  },
  "label": "Describe the data you want and it builds, hosts and runs the scraper"

@@ -39,10 +39,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 16.4,
    "low": 4.1,
    "mid": 5.2,
-   "n": 5
+   "n": 5,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -99,10 +101,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 50.0,
    "low": 14.9,
    "mid": 33.0,
-   "n": 4
+   "n": 4,
+   "thin": false
   },
   "private_window_months": 24,
   "secondary": [
@@ -144,10 +148,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 17.6,
    "low": 3.4,
    "mid": 5.5,
-   "n": 5
+   "n": 5,
+   "thin": false
   }
  },
  "label": "One API that turns any URL into LLM-ready markdown, plus crawling and enrichment"

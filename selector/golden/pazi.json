@@ -25,10 +25,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 4.4,
    "low": 2.4,
    "mid": 2.7,
-   "n": 3
+   "n": 3,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -85,10 +87,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 105.3,
    "low": 50.0,
    "mid": 105.3,
-   "n": 2
+   "n": 2,
+   "thin": true
   },
   "private_window_months": 24,
   "secondary": [
@@ -116,10 +120,12 @@
   ],
   "secondary_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 4.0,
    "low": 2.3,
    "mid": 2.7,
-   "n": 3
+   "n": 3,
+   "thin": false
   }
  },
  "label": "Turns a business idea into an AI agent team that runs the operating work on credits"

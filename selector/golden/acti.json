@@ -32,10 +32,12 @@
   ],
   "core_range": {
    "denominator": "rev",
+   "display": "RANGE",
    "high": 4.6,
    "low": 1.9,
    "mid": 3.75,
-   "n": 4
+   "n": 4,
+   "thin": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -92,10 +94,12 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "display": "RANGE",
    "high": 42.9,
    "low": 21.0,
    "mid": 42.9,
-   "n": 2
+   "n": 2,
+   "thin": true
   },
   "private_window_months": 72,
   "secondary": [],
