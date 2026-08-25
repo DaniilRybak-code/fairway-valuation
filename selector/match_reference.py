@@ -296,13 +296,52 @@ def _tag_points(why):
         if m: return float(m.group(1))
     return 0.0
 
-def qualifying(scored, gate=FLOOR_ADEQUATE, tag_gate=FLOOR_TAG_EVIDENCE):
+# ANCHORING REPLACES THE BARE TAG FLOOR, 25 August 2026.
+#
+# The tag floor was calibrated against twelve profiles I had invented, whose tag scores ran
+# 7.3 to 12.0 because I had unconsciously written them in the dataset's own vocabulary. Run
+# against twenty-one real companies profiled from their own websites, tag scores run 0.0 to
+# 3.9 and the floor blocked twenty of twenty-one. It was not measuring comparability; it was
+# measuring how closely a founder's words happen to echo our tag file.
+#
+# What the real cases show is that there are TWO honest ways a match can be anchored in
+# something specific about the business, and the tag floor only knew one of them:
+#
+#   Fyle, a nail-care brand, best-matches FIGS with 0.1 tag points and yet shares archetype
+#   Consumer Brand, end market Apparel & Beauty, product role BRAND and asset intensity
+#   OWN_PRODUCT. That is a real comparable and the tag floor killed it.
+#
+#   Context.dev best-matches MongoDB with 0.0 tag points and shares only the archetype
+#   "Data, AI & Developer Tools", which spans everything from a database to a scraper. That
+#   is not a comparable and it must stay blocked.
+#
+# The difference is a SPECIFIC end market. So a match qualifies on either route: real product
+# vocabulary in common, or a shared non-Horizontal end market plus a shared archetype.
+# Horizontal is not an end market and never anchors, which is what keeps Context.dev out.
+#
+# Both regression cases still fail, checked: Huel against a language-learning app (different
+# end markets, 0.1 tag points) and consumer marketplaces against SMB payments (Horizontal).
+FLOOR_TAG_EVIDENCE = 3.0
+
+def _anchored(p, r, why):
+    if _tag_points(why) >= FLOOR_TAG_EVIDENCE:
+        return True
+    return (p.get('industry') and p['industry'] != 'Horizontal'
+            and _eq(p, r, 'industry')
+            and (p['archetype'] == r['archetype'] or p['archetype'] == r.get('archetype_secondary')))
+
+def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE):
     if not scored: return []
-    (best, why) = scored[0][0]
-    if best < gate: return []                    # no comparable set exists; say so, do not pad
-    if _tag_points(why) < tag_gate: return []    # coincidence without product commonality is not a set
-    cut = max(FLOOR_REL * best, FLOOR_ABS)
-    return [x for x in scored if x[0][0] >= cut]
+    if scored[0][0][0] < gate: return []           # no comparable set exists; say so, do not pad
+    cut = max(FLOOR_REL * scored[0][0][0], FLOOR_ABS)
+    out = [x for x in scored if x[0][0] >= cut]
+    # EVERY MEMBER MUST BE ANCHORED, not just the leader. Anchoring only the top candidate let a
+    # restaurant point-of-sale profile keep Clio and Vanta as private comparables, because Guesty
+    # anchored the set on Hospitality and the relative floor carried the rest in behind it. A peer
+    # that cannot itself be anchored is padding.
+    if prof is not None:
+        out = [x for x in out if _anchored(prof, x[1], x[0][1])]
+    return out
 
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
@@ -312,7 +351,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
         k = r['company_key']
         if k not in best or r['date_iso'] > best[k][1]['date_iso']:
             if k not in best or sc >= best[k][0][0]: best[k] = ((sc, why), r)
-    cands = qualifying(sorted(best.values(), key=lambda z: -z[0][0]))
+    cands = qualifying(sorted(best.values(), key=lambda z: -z[0][0]), prof)
     months = window_months
     while months <= 120:
         cut = '%04d-%02d' % (asof[0] - months//12, asof[1])
@@ -332,7 +371,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
-    ranked = qualifying(sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0]))
+    ranked = qualifying(sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0]), prof)
 
     def axis_b(r):
         if prof['industry'] == 'Horizontal':

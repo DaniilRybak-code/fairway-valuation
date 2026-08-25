@@ -23,9 +23,55 @@
    "mid": 2.7,
    "n": 1
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
+  "private": [
+   {
+    "basis": "DISCLOSED_UNDEFINED_BASIS",
+    "bound": "",
+    "company": "Rokt",
+    "date": "Jan-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 16.0,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": ">=",
+    "company": "CommerceIQ",
+    "date": "Mar-22",
+    "in_medians": false,
+    "mult": null,
+    "score": 16.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Klaviyo",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 32.6,
+    "score": 13.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Yotpo",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 14.0,
+    "score": 13.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_range": {
+   "high": 32.6,
+   "low": 14.0,
+   "mid": 32.6,
+   "n": 2
+  },
+  "private_window_months": 72,
   "secondary": [
    {
     "company": "Sprout Social, Inc.",
@@ -40,35 +86,14 @@
     "in_medians": true,
     "score": 11.4,
     "ticker": "NYSE:CXM"
-   },
-   {
-    "company": "Braze, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 10.5,
-    "ticker": "NASDAQGS:BRZE"
-   },
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "score": 10.5,
-    "ticker": "NYSE:ZETA"
-   },
-   {
-    "company": "LiveRamp Holdings, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.0,
-    "ticker": "NYSE:RAMP"
    }
   ],
   "secondary_range": {
    "denominator": "rev",
-   "high": 3.7,
-   "low": 1.5,
-   "mid": 2.1,
-   "n": 5
+   "high": 1.5,
+   "low": 1.1,
+   "mid": 1.3,
+   "n": 2
   }
  },
  "label": "Verifies and structures what people say about a product across social platforms"

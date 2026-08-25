@@ -6,16 +6,6 @@
   },
   "private": [
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Clay",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 50.0,
-    "score": 15.4,
-    "type": "SECONDARY"
-   },
-   {
     "basis": "DISCLOSED_FORECAST",
     "bound": "",
     "company": "Semrush",
@@ -24,45 +14,10 @@
     "mult": 4.3,
     "score": 28.0,
     "type": "CONTROL"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Apollo.io",
-    "date": "Aug-23",
-    "in_medians": false,
-    "mult": 16.0,
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Mailchimp",
-    "date": "Sep-21",
-    "in_medians": false,
-    "mult": 15.0,
-    "score": 16.5,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Klaviyo",
-    "date": "May-21",
-    "in_medians": true,
-    "mult": 32.6,
-    "score": 15.7,
-    "type": "PRIMARY"
    }
   ],
-  "private_range": {
-   "high": 50.0,
-   "low": 32.6,
-   "mid": 50.0,
-   "n": 2
-  },
-  "private_window_months": 72,
+  "private_range": {},
+  "private_window_months": 24,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

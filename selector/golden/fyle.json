@@ -1,12 +1,108 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "FIGS, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 22.6,
+    "ticker": "NYSE:FIGS"
+   },
+   {
+    "company": "e.l.f. Beauty, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 21.2,
+    "ticker": "NYSE:ELF"
+   },
+   {
+    "company": "Warby Parker Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 21.0,
+    "ticker": "NYSE:WRBY"
+   },
+   {
+    "company": "On Holding AG",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 18.6,
+    "ticker": "NYSE:ONON"
+   },
+   {
+    "company": "ASOS Plc",
+    "family": "consumer",
+    "in_medians": true,
+    "score": 14.1,
+    "ticker": "LSE:ASC"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "denominator": "rev",
+   "high": 3.3,
+   "low": 1.9,
+   "mid": 2.8,
+   "n": 5
   },
-  "private": [],
-  "private_range": {},
-  "private_window_months": 24,
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Quince",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 10.1,
+    "score": 32.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "<=",
+    "company": "SKIMS",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 5.0,
+    "score": 28.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Vuori",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": null,
+    "score": 26.1,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Glossier",
+    "date": "Jul-21",
+    "in_medians": false,
+    "mult": null,
+    "score": 29.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Harry's",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 4.6,
+    "score": 23.2,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_range": {
+   "high": 10.1,
+   "low": 4.6,
+   "mid": 5.0,
+   "n": 3
+  },
+  "private_window_months": 72,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"
