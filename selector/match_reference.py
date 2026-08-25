@@ -137,29 +137,43 @@ def _both(p, r, f):
     a, b = (p.get(f) or '').strip(), (r.get(f) or '').strip()
     return a and b and a == b
 
+# A BLANK NEVER SCORES. Only asset_intensity and purchase_frequency used to enforce this, via
+# _both(). Everything else compared with plain equality, so two blanks matched and paid full
+# points. The tag files happen to be complete today, so nothing was scoring wrongly, but the
+# rule has to live in the code rather than in the luck of the data: a real founder profile is
+# routinely missing revenue_model (six of the twenty-one field-test companies publish no
+# pricing at all), and the moment one of those met a peer row with a gap it would have been
+# paid 3.5 points for the two of them being equally silent.
+def _eq(p, r, f):
+    a, b = (p.get(f) or '').strip(), (r.get(f) or '').strip()
+    return a and b and a == b
+
 def score(p, r, weights=W, use_fin=True):
     s = 0.0; why = []
     ta = tag_overlap(p['product_tags'], r['product_tags'])
     if ta: s += min(ta, weights['tags_cap']); why.append('tags %.1f' % min(ta, weights['tags_cap']))
     ra, rb = r['archetype'], r['archetype_secondary']
-    if p['archetype'] == ra: s += weights['arch']; why.append('archetype')
-    elif p['archetype'] == rb or p.get('archetype_secondary') in (ra, rb):
+    if p['archetype'] and p['archetype'] == ra: s += weights['arch']; why.append('archetype')
+    elif p['archetype'] and (p['archetype'] == rb or p.get('archetype_secondary') in (ra, rb) and p.get('archetype_secondary')):
         s += weights['arch_soft']; why.append('archetype~')
-    if p['industry'] != 'Horizontal' and p['industry'] == r['industry']:
+    if p['industry'] != 'Horizontal' and _eq(p, r, 'industry'):
         s += weights['industry']; why.append('end market')
     elif p['industry'] == 'Horizontal' and r['industry'] == 'Horizontal': s += 1.0
-    if p['function'] == r['function']: s += weights['function']; why.append('function')
-    if p['buyer'] == r['buyer']: s += weights['buyer']; why.append('end customer')
-    if p['revenue_model'] == r['revenue_model']: s += weights['rev_model']; why.append('revenue model')
-    if p['gtm_motion'] == r['gtm_motion']: s += weights['gtm']; why.append('GTM')
-    if p['product_role'] == r['product_role']: s += weights['role']
+    if _eq(p, r, 'function'): s += weights['function']; why.append('function')
+    if _eq(p, r, 'buyer'): s += weights['buyer']; why.append('end customer')
+    if _eq(p, r, 'revenue_model'): s += weights['rev_model']; why.append('revenue model')
+    if _eq(p, r, 'gtm_motion'): s += weights['gtm']; why.append('GTM')
+    if _eq(p, r, 'product_role'): s += weights['role']
     # Consumer-family only. A blank on either side scores nothing, so these two never
     # give a uniform lift to the 250 rows that do not carry them.
     if _both(p, r, 'asset_intensity'):    s += weights['asset']; why.append('cost structure')
     if _both(p, r, 'purchase_frequency'): s += weights['freq'];  why.append('purchase frequency')
-    if p['ai_stance'] == r['ai_stance']: s += weights['ai']; why.append('AI stance')
+    if _eq(p, r, 'ai_stance'): s += weights['ai']; why.append('AI stance')
     if use_fin:
-        if r.get('g') is not None:
+        # The profile side can be genuinely empty. A pre-revenue founder has no growth rate and
+        # no gross margin, and neither does a company profiled from its website alone. Scoring
+        # must degrade to the qualitative axes rather than raise TypeError on None.
+        if r.get('g') is not None and p.get('growth') is not None:
             v = max(0, weights['growth']*(1 - abs(p['growth']-r['g'])/60.0)); s += v
             if v > weights['growth']*0.5: why.append('growth')
         if r.get('gm') is not None and p.get('gm') is not None:

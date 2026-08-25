@@ -1,0 +1,75 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Rezolve AI PLC",
+    "family": "software",
+    "in_medians": false,
+    "score": 9.3,
+    "ticker": "NASDAQGM:RZLV"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 9.0,
+    "ticker": "NYSE:KVYO"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev",
+   "high": 2.7,
+   "low": 2.7,
+   "mid": 2.7,
+   "n": 1
+  },
+  "private": [],
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [
+   {
+    "company": "Sprout Social, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 12.4,
+    "ticker": "NASDAQCM:SPT"
+   },
+   {
+    "company": "Sprinklr, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.4,
+    "ticker": "NYSE:CXM"
+   },
+   {
+    "company": "Braze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "LiveRamp Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NYSE:RAMP"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev",
+   "high": 3.7,
+   "low": 1.5,
+   "mid": 2.1,
+   "n": 5
+  }
+ },
+ "label": "Verifies and structures what people say about a product across social platforms"
+}
