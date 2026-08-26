@@ -45,6 +45,9 @@
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -134,6 +137,10 @@
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
+   "basis_mix": {
+    "ARR": 1,
+    "NET_REVENUE": 1
+   },
    "bounded": true,
    "control_n": 0,
    "control_names": [],
@@ -198,6 +205,9 @@
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
    "bounded": false,
    "control_n": 0,
    "control_names": [],

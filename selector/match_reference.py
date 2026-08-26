@@ -128,6 +128,7 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             row['bound'] = r.get('bound', '')
             row['growth_band'] = (r.get('growth_band') or '').strip().upper()
             row['target_was_listed'] = str(r.get('target_was_listed', '')).strip() == '1'
+            row['revenue_basis'] = (r.get('revenue_basis') or '').strip().upper()
             private.append(row)
     except FileNotFoundError:
         pass
@@ -817,6 +818,27 @@ def _control(rows):
 #
 # So the range carries how many of its contributors were listed targets, and the reveal must say it
 # on the name. Not excluded: Daniil's rule is that a control deal is a benchmark and it prices.
+# LIKE FOR LIKE, OR SAY SO.
+#
+# Daniil, 26-Aug-2026: "We should just be asking for the same metric we store in our database. We
+# should be asking for a like for like one." Right, and the precondition is knowing what we store,
+# which until today we did not: `revenue_metric` was free text and the basis lived in prose.
+#
+# Every private row now carries revenue_basis: ARR, ARR_RUNRATE, NET_REVENUE, GROSS_REVENUE,
+# BANK_NOI or NONE. Across the 58 rows that actually price, 24 are contracted ARR, 6 are a run rate,
+# 24 are net revenue, 2 are a bank revenue line before credit losses, and ONE is gross sales. That
+# last one is OLIPOP, the only priced consumer row on a gross basis while every other one is net,
+# and it is exactly the comparison this field exists to catch.
+#
+# So the range reports the mix of bases behind it. If a founder gives us ARR and the number they are
+# shown was built from gross sales, the copy owes them that sentence.
+def _basis_mix(rows):
+    m = {}
+    for (_sw, r) in rows:
+        b = r.get('revenue_basis') or 'UNKNOWN'
+        m[b] = m.get(b, 0) + 1
+    return m
+
 def _listed_targets(rows):
     names = [r.get('company_name', '') for (_sw, r) in rows if r.get('target_was_listed')]
     return len(names), names
@@ -880,6 +902,7 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
+               basis_mix=_basis_mix(priced),
                band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
@@ -909,6 +932,7 @@ def private_range(prof, picked, tier):
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
+               basis_mix=_basis_mix(priced),
                band=band, positioning=_positioning(prof, weaker, 'mult'))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
