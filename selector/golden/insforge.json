@@ -49,6 +49,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -90,6 +91,10 @@
      "tier": "ADJACENT",
      "transaction_type": ""
     }
+   ],
+   "shared_words": [
+    "search",
+    "vector"
    ],
    "sole": "Elastic N.V.",
    "spread": 1.0,
@@ -163,6 +168,7 @@
     "ARR": 1
    },
    "bounded": true,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -189,6 +195,10 @@
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
+   ],
+   "shared_words": [
+    "search",
+    "vector"
    ],
    "sole": "Algolia",
    "spread": 1.0,
@@ -246,6 +256,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -259,10 +270,16 @@
    "n": 5,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "ai",
+    "authentication",
+    "edge",
+    "service"
+   ],
    "spread": 2.7,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Backend-as-a-service built so AI coding agents can operate every service end to end"

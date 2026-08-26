@@ -41,6 +41,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -62,10 +63,14 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [
+    "hotel",
+    "payments"
+   ],
    "spread": 3.8,
    "tag_evidence": 0.4,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -100,6 +105,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -112,6 +118,13 @@
    "n": 1,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "booking",
+    "channel",
+    "hotel",
+    "manager",
+    "payments"
+   ],
    "sole": "Mews",
    "spread": 1.0,
    "tag_evidence": 5.0,
@@ -168,6 +181,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -189,10 +203,14 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [
+    "commerce",
+    "payments"
+   ],
    "spread": 3.9,
    "tag_evidence": 0.1,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Makes hotels discoverable and bookable by AI travel agents, bypassing OTA commission"

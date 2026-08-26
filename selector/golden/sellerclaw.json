@@ -25,6 +25,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -38,6 +39,9 @@
    "n": 1,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "automation"
+   ],
    "sole": "Klaviyo, Inc.",
    "spread": 1.0,
    "tag_evidence": 0.1,
@@ -100,6 +104,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -112,10 +117,14 @@
    "n": 2,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "automation",
+    "shopify"
+   ],
    "spread": 2.3,
    "tag_evidence": 0.7,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 65,
   "secondary": [
@@ -167,6 +176,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -216,10 +226,16 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "fulfilment",
+    "management",
+    "order",
+    "store"
+   ],
    "spread": 18.3,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "A supervised team of AI agents that runs a merchant Shopify, eBay and Amazon stores"

@@ -49,6 +49,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -98,10 +99,17 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "agent",
+    "ai",
+    "api",
+    "infrastructure",
+    "web"
+   ],
    "spread": 39.8,
    "tag_evidence": 0.8,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -170,6 +178,7 @@
     "ARR_RUNRATE": 2
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -182,10 +191,22 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "agent",
+    "ai",
+    "api",
+    "browser",
+    "code",
+    "no",
+    "proxy",
+    "scraper",
+    "scraping",
+    "web"
+   ],
    "spread": 3.2,
    "tag_evidence": 2.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 11,
   "secondary": [
@@ -237,6 +258,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -286,10 +308,14 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "ai",
+    "infrastructure"
+   ],
    "spread": 8.7,
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Describe the data you want and it builds, hosts and runs the scraper"

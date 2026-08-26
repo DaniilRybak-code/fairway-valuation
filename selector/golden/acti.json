@@ -17,6 +17,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -30,6 +31,9 @@
    "n": 1,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "app"
+   ],
    "sole": "Truecaller AB (publ)",
    "spread": 1.0,
    "tag_evidence": 0.2,
@@ -91,6 +95,7 @@
     "ARR": 1
    },
    "bounded": true,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -103,6 +108,9 @@
    "n": 1,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "ai"
+   ],
    "sole": "Gamma",
    "spread": 1.0,
    "tag_evidence": 0.1,

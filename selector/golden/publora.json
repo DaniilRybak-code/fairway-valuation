@@ -33,6 +33,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -46,10 +47,14 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "platform",
+    "scheduling"
+   ],
    "spread": 2.6,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -117,6 +122,7 @@
     "ARR": 2
    },
    "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -129,10 +135,14 @@
    "n": 2,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "api",
+    "platform"
+   ],
    "spread": 1.9,
    "tag_evidence": 0.3,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 26,
   "secondary": [
@@ -184,6 +194,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -212,10 +223,18 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [
+    "api",
+    "engagement",
+    "media",
+    "platform",
+    "scheduling",
+    "social"
+   ],
    "spread": 3.5,
    "tag_evidence": 1.1,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "One API and MCP server for publishing and engagement across ten social networks"

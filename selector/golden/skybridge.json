@@ -25,6 +25,7 @@
     "UNKNOWN": 2
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -38,10 +39,15 @@
    "n": 2,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "developer",
+    "framework",
+    "source"
+   ],
    "spread": 1.3,
    "tag_evidence": 1.0,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -110,6 +116,7 @@
     "ARR_RUNRATE": 2
    },
    "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -122,10 +129,14 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "app",
+    "developer"
+   ],
    "spread": 1.7,
    "tag_evidence": 0.4,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 17,
   "secondary": [
@@ -161,6 +172,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -188,6 +200,9 @@
      "tier": "BROAD",
      "transaction_type": ""
     }
+   ],
+   "shared_words": [
+    "sdk"
    ],
    "sole": "TomTom N.V.",
    "spread": 1.0,

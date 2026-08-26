@@ -502,3 +502,55 @@ loses Semrush. Before the refit the gate moved almost nothing, because almost ev
 The constants in the selector are its outputs. **n = 40 is thin and biased toward companies that
 chose to publish a growth rate, so expect the boundaries to fall as coverage widens.** Rerun the
 tool; do not adjust by taste.
+
+---
+
+## 27 August: closeness is a grade, not a pass mark. And the sector fork is built.
+
+### "No shared vocabulary" was wrong, and the flag was mislabelling its own data
+
+Daniil: *"What do you mean no contributing company shares real vocabulary with the founder? Means no
+100% coincidences? As I mentioned, this is ok, we need to look for CLOSEST peers possible, if 100%
+coincidence is not available."*
+
+He is right and I described it badly. `triangulated` fired whenever no contributing row scored 3.0 on
+product tags, and 3.0 means one EXACT tag match. So BrowserAct was flagged identically to Goldfish,
+even though BrowserAct's comparables share **ten words** with it (agent, ai, api, browser, code,
+proxy, scraper, scraping, web, no-code) and Goldfish's share exactly one, "ai". Calling both "no
+shared vocabulary" was wrong about the first and useless for separating them.
+
+Closeness is now graded on what the contributing rows actually share, and `shared_words` travels with
+it so the reveal can print the overlap rather than assert it:
+
+| grade | test | profiles |
+|---|---|---|
+| SHARED_PRODUCT | an exact product tag in common | OpenSEO, Bluerails, InsForge |
+| STRONG_OVERLAP | four or more shared words | BrowserAct, AgentX, Context.dev, Elentaria, Pazi |
+| PARTIAL_OVERLAP | two or three | AnySearch, Bond, Fyle, Upstream, Publora, SellerClaw, Skybridge |
+| THIN_OVERLAP | one or none, usually generic | Fundraisly, Goldfish, Mailwarm, Honestly, Acti |
+
+3 / 5 / 7 / 5. `triangulated` survives as an alias for THIN_OVERLAP only, so it now means what its
+name says, and the honest headline is that **five of twenty sets are thin**, not seventeen.
+
+### The sector fork, built as `selector/quiz_fork.py`
+
+One rule enforced in code: `unbacked()` returns every question asking for a metric with no peer field
+to compare it against, and it must stay empty. It caught one on the first run.
+
+Two answers do real work today. `growth_pct` places the founder in a growth band, which gates the
+private comparables and decides whether the regression can run at all. `gross_margin` decides whether
+the reveal leads on revenue or gross profit, which for a consumer founder moves the multiple from
+0.9x to 2.8x. The rest are stored and shown beside the peer figure.
+
+**AI-native is a modifier, not a fork, and the first version got that wrong.** Treating it as its own
+branch sent 13 of the 21 profiles down a path that asked only for a run rate and a three-month growth
+rate. OpenSEO and Context.dev are AI-native SaaS: losing the retention and margin questions for them
+is a straight loss, and being AI-native says nothing about which yardstick applies. The archetype
+picks the fork; AI-native adds one question.
+
+Nine to ten questions in total, six or seven of them required, which fits the promise on the page.
+
+**What is untested.** Of the 21 real profiles, 19 take the software fork and 2 take e-commerce.
+Marketplace, payments, lending, subscription and delivery have never been exercised against a real
+company, because the test set is 20 software businesses and one D2C brand. That is the strongest
+argument yet for the 20 additional test cases, and they should be chosen to hit those five forks.

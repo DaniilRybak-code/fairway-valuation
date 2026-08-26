@@ -33,6 +33,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -46,10 +47,14 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "automation",
+    "credit"
+   ],
    "spread": 2.5,
    "tag_evidence": 0.1,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -118,6 +123,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Semrush"
@@ -156,10 +162,16 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "ai",
+    "automation",
+    "based",
+    "content"
+   ],
    "spread": 24.5,
    "tag_evidence": 0.8,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 9,
   "secondary": [
@@ -211,6 +223,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -232,10 +245,16 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [
+    "agent",
+    "automation",
+    "business",
+    "team"
+   ],
    "spread": 1.7,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Turns a business idea into an AI agent team that runs the operating work on credits"

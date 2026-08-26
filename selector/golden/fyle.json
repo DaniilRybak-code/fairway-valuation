@@ -49,6 +49,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -98,10 +99,15 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "beauty",
+    "brand",
+    "home"
+   ],
    "spread": 8.2,
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -169,6 +175,7 @@
     "NET_REVENUE": 3
    },
    "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -181,10 +188,15 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "brand",
+    "care",
+    "home"
+   ],
    "spread": 2.2,
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 65,
   "secondary": [
@@ -236,6 +248,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -278,6 +291,7 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [],
    "sole": "Revolve Group, Inc.",
    "spread": 1.0,
    "tag_evidence": 0.0,

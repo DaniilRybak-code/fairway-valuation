@@ -48,6 +48,7 @@
     "ARR": 1
    },
    "bounded": true,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -60,6 +61,9 @@
    "n": 1,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "ai"
+   ],
    "sole": "Gamma",
    "spread": 1.0,
    "tag_evidence": 0.1,

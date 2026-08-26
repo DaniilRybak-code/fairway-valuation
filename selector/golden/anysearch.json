@@ -49,6 +49,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -98,10 +99,18 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "agent",
+    "ai",
+    "api",
+    "infrastructure",
+    "search",
+    "source"
+   ],
    "spread": 39.8,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -171,6 +180,7 @@
     "NET_REVENUE": 1
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -183,10 +193,15 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "agent",
+    "ai",
+    "api"
+   ],
    "spread": 3.2,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 11,
   "secondary": [
@@ -238,6 +253,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -287,10 +303,15 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "ai",
+    "api",
+    "integration"
+   ],
    "spread": 69.7,
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Privacy-first real-time search infrastructure built for agents rather than humans"

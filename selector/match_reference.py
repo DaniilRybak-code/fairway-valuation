@@ -788,13 +788,52 @@ RANGE_TIERS = ('DIRECT', 'ADJACENT')
 # neither of which shares a single product tag with them, while the one name they would recognise
 # as their comparable contributes nothing. Showing that without saying it would be the worst kind
 # of quiet dishonesty: the set looks authoritative precisely because of the name that is not in it.
-def _evidence(contributing, whole=None):
+# HOW CLOSE, NOT PASS OR FAIL. Reworked 27-Aug-2026.
+#
+# Daniil: "What do you mean no contributing company shares real vocabulary with the founder? Means
+# no 100% coincidences? As I mentioned, this is ok, we need to look for CLOSEST peers possible, if
+# 100% coincidence is not available."
+#
+# He is right and the old flag was mislabelling its own data. `triangulated` fired whenever no
+# contributing row scored 3.0 on product tags, and 3.0 means one EXACT tag match. So BrowserAct was
+# flagged the same way as Goldfish, even though BrowserAct's comparables share ten tokens with it
+# (agent, ai, api, browser, code, proxy, scraper, scraping, web, no-code) and Goldfish's share
+# exactly one, "ai". Calling both of those "no shared vocabulary" was wrong about the first and
+# useless for telling them apart.
+#
+# So closeness is now GRADED on what the contributing rows actually share:
+#
+#   SHARED_PRODUCT   an exact product tag in common. openseo, bluerails, insforge.
+#   STRONG_OVERLAP   four or more shared words. browseract, agentx, context-dev, elentaria, pazi.
+#   PARTIAL_OVERLAP  two or three. anysearch, bond, fyle, upstream, publora, sellerclaw, skybridge.
+#   THIN_OVERLAP     one or none, and usually a generic one like "ai". fundraisly, goldfish,
+#                    mailwarm, honestly, acti. These are the sets that genuinely deserve a caveat.
+#
+# `triangulated` survives as an alias for THIN_OVERLAP only, so it now means what its name says.
+CLOSENESS = ('SHARED_PRODUCT', 'STRONG_OVERLAP', 'PARTIAL_OVERLAP', 'THIN_OVERLAP')
+
+def _shared_tokens(prof, rows):
+    mine = toks(prof.get('product_tags') or '')
+    out = set()
+    for (_sw, r) in rows:
+        out |= (mine & toks(r.get('product_tags') or ''))
+    return out
+
+def _closeness(points, shared_n):
+    if points >= FLOOR_TAG_EVIDENCE: return 'SHARED_PRODUCT'
+    if shared_n >= 4: return 'STRONG_OVERLAP'
+    if shared_n >= 2: return 'PARTIAL_OVERLAP'
+    return 'THIN_OVERLAP'
+
+def _evidence(contributing, whole=None, prof=None):
     """Both arguments are lists of ((score, why), record).
-    Returns (best tag points AMONG THE ROWS THAT FEED THE NUMBER, triangulated, anchor_dropped)."""
+    Returns (best tag points among the rows that feed the number, closeness, anchor_dropped,
+    the shared words themselves)."""
     def best(rows): return max([_tag_points(why) for (_sc, why), _r in rows] or [0.0])
     b = best(contributing)
     w = best(whole) if whole is not None else b
-    return round(b, 1), b < FLOOR_TAG_EVIDENCE, (b < FLOOR_TAG_EVIDENCE <= w)
+    shared = sorted(_shared_tokens(prof, contributing)) if prof is not None else []
+    return round(b, 1), _closeness(b, len(shared)), (b < FLOOR_TAG_EVIDENCE <= w), shared
 
 
 # A CONTROL DEAL IS A BENCHMARK. IT IS ALSO A PREMIUM. BOTH FACTS TRAVEL.
@@ -934,14 +973,15 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
     band, priced, weaker = _bands(prof, allpriced)
     v = sorted(r[key] for _sw, r in priced)
     n = len(v)
-    ev, tri, dropped = _evidence(priced, group)
+    ev, close, dropped, shared = _evidence(priced, group, prof)
     dispersed = n >= 2 and v[0] > 0 and (v[-1] / v[0]) > DISPERSION_MAX
     out = dict(n=n, low=v[max(0, (n-1)//4)], mid=st.median(v), high=v[min(n-1, (3*(n-1))//4 + 1)],
                display=('DIAMOND' if n == 1 else ('SCATTER' if dispersed else 'RANGE')),
                dispersed=dispersed, spread=round(v[-1] / v[0], 1) if v[0] else None,
                points=(_positioning(prof, priced, key) if dispersed else []), thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
-               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
+               tag_evidence=ev, closeness=close, shared_words=shared,
+               triangulated=(close == 'THIN_OVERLAP'), anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced),
@@ -959,7 +999,7 @@ def private_range(prof, picked, tier):
     band, priced, weaker = _bands(prof, allpriced)
     v = sorted(r['mult'] for _sw, r in priced)
     n = len(v)
-    ev, tri, dropped = _evidence(priced, picked)
+    ev, close, dropped, shared = _evidence(priced, picked, prof)
     # A CEILING DRAWN AS A POINT IS THE DIAMOND'S OWN VERSION OF THE BAR PROBLEM. After the
     # software verification pass, Mailwarm's private lane is a single diamond at 105.3x, which is
     # Sierra, whose ARR is a 'more than $150m' threshold three months stale at pricing. Drawing
@@ -971,7 +1011,8 @@ def private_range(prof, picked, tier):
                dispersed=dispersed, spread=round(v[-1] / v[0], 1) if v[0] else None,
                points=(_positioning(prof, priced, 'mult') if dispersed else []), thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
-               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
+               tag_evidence=ev, closeness=close, shared_words=shared,
+               triangulated=(close == 'THIN_OVERLAP'), anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced),

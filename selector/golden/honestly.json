@@ -49,6 +49,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -69,6 +70,10 @@
      "tier": "ADJACENT",
      "transaction_type": ""
     }
+   ],
+   "shared_words": [
+    "listening",
+    "social"
    ],
    "spread": 2.5,
    "tag_evidence": 3.9,
@@ -142,6 +147,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -162,6 +168,7 @@
      "transaction_type": "CONTROL"
     }
    ],
+   "shared_words": [],
    "spread": 2.3,
    "tag_evidence": 0.0,
    "thin": true,
@@ -209,6 +216,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -251,6 +259,9 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "product"
+   ],
    "spread": 7.9,
    "tag_evidence": 0.3,
    "thin": false,

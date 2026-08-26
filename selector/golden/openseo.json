@@ -17,6 +17,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -30,6 +31,14 @@
    "n": 1,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "analysis",
+    "keyword",
+    "rank",
+    "research",
+    "seo",
+    "tracking"
+   ],
    "sole": "Similarweb Ltd.",
    "spread": 1.0,
    "tag_evidence": 9.2,
@@ -102,6 +111,7 @@
     "NET_REVENUE": 1
    },
    "bounded": false,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 1,
    "control_names": [
     "Semrush"
@@ -139,6 +149,17 @@
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     }
+   ],
+   "shared_words": [
+    "ai",
+    "analysis",
+    "backlink",
+    "keyword",
+    "rank",
+    "research",
+    "seo",
+    "tracking",
+    "visibility"
    ],
    "sole": "Semrush",
    "spread": 1.0,
@@ -196,6 +217,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -246,10 +268,15 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [
+    "ai",
+    "data",
+    "platform"
+   ],
    "spread": 6.1,
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Open-source alternative to Ahrefs and Semrush, billed by usage and exposed over MCP"

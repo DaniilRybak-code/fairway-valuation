@@ -49,6 +49,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -62,6 +63,9 @@
    "n": 5,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "crm"
+   ],
    "spread": 4.6,
    "tag_evidence": 0.4,
    "thin": false,
@@ -123,6 +127,7 @@
     "NET_REVENUE": 2
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Semrush"
@@ -161,6 +166,9 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "ai"
+   ],
    "spread": 11.6,
    "tag_evidence": 0.1,
    "thin": false,
@@ -216,6 +224,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -244,6 +253,7 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [],
    "spread": 1.5,
    "tag_evidence": 0.0,
    "thin": false,

@@ -41,6 +41,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -83,6 +84,10 @@
      "tier": "ADJACENT",
      "transaction_type": ""
     }
+   ],
+   "shared_words": [
+    "ai",
+    "tutor"
    ],
    "spread": 11.0,
    "tag_evidence": 3.7,

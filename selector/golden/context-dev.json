@@ -49,6 +49,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -98,10 +99,16 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "api",
+    "data",
+    "llm",
+    "web"
+   ],
    "spread": 39.8,
    "tag_evidence": 0.4,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -170,6 +177,7 @@
     "ARR_RUNRATE": 1
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -182,10 +190,18 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "api",
+    "data",
+    "enrichment",
+    "scraping",
+    "web",
+    "website"
+   ],
    "spread": 4.9,
    "tag_evidence": 1.1,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 17,
   "secondary": [
@@ -237,6 +253,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -286,10 +303,16 @@
     }
    ],
    "positioning": [],
+   "shared_words": [
+    "data",
+    "enrichment",
+    "scraping",
+    "web"
+   ],
    "spread": 12.6,
    "tag_evidence": 0.8,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "One API that turns any URL into LLM-ready markdown, plus crawling and enrichment"

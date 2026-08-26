@@ -33,6 +33,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -46,10 +47,15 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "ai",
+    "task",
+    "to"
+   ],
    "spread": 1.7,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -118,6 +124,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -130,10 +137,15 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "ai",
+    "assistant",
+    "meeting"
+   ],
    "spread": 3.4,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 67,
   "secondary": [
@@ -169,6 +181,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -182,10 +195,15 @@
    "n": 3,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "ai",
+    "company",
+    "to"
+   ],
    "spread": 1.2,
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "AI chief of staff in Slack that captures commitments and works a prioritised list"

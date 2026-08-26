@@ -17,6 +17,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -30,6 +31,9 @@
    "n": 1,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "email"
+   ],
    "sole": "HubSpot, Inc.",
    "spread": 1.0,
    "tag_evidence": 0.2,
@@ -80,6 +84,7 @@
     "NET_REVENUE": 2
    },
    "bounded": false,
+   "closeness": "THIN_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Mailchimp"
@@ -94,6 +99,9 @@
    "n": 2,
    "points": [],
    "positioning": [],
+   "shared_words": [
+    "email"
+   ],
    "spread": 2.2,
    "tag_evidence": 0.2,
    "thin": true,
@@ -149,6 +157,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -177,10 +186,14 @@
      "transaction_type": ""
     }
    ],
+   "shared_words": [
+    "email",
+    "reputation"
+   ],
    "spread": 2.2,
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Email warm-up and deliverability across a network of aged real inboxes"
