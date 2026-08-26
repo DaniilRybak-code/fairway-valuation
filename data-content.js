@@ -144,7 +144,7 @@ const hooks = {
   frustration: {
     kicker: '',
     headline: 'A valuation you can defend.',
-    sub: 'Nine questions. What your company is worth, every number sourced. The pushback you will face, with answers ready. The funds backing companies like yours.',
+    sub: 'See what your company is worth — every valuation metric sourced and observable. Then the arguments that earn the higher range, and the funds that back companies like yours.',
     cta: 'Try it free'
   },
   readiness: {
