@@ -20,6 +20,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -29,6 +30,7 @@
    "low": 3.9,
    "mid": 4.45,
    "n": 2,
+   "positioning": [],
    "tag_evidence": 1.0,
    "thin": true,
    "triangulated": true
@@ -94,6 +96,7 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": true,
+   "band": "ADJACENT",
    "bounded": true,
    "control_n": 0,
    "control_names": [],
@@ -102,6 +105,7 @@
    "low": 19.8,
    "mid": 30.0,
    "n": 3,
+   "positioning": [],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
@@ -135,17 +139,35 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
-   "high": 10.4,
+   "display": "DIAMOND",
+   "high": 0.6,
    "low": 0.6,
-   "mid": 0.8,
-   "n": 3,
+   "mid": 0.6,
+   "n": 1,
+   "positioning": [
+    {
+     "company": "Agora, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of sdk; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "DigitalOcean Holdings, Inc.",
+     "mult": 10.4,
+     "reason": "shares the language of developer; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "sole": "TomTom N.V.",
    "tag_evidence": 0.6,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   }
  },

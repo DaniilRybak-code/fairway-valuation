@@ -44,6 +44,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "DIRECT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -53,6 +54,7 @@
    "low": 1.9,
    "mid": 2.8,
    "n": 5,
+   "positioning": [],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": true
@@ -118,6 +120,7 @@
   "private_proximity": "DIRECT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "DIRECT",
    "bounded": true,
    "control_n": 0,
    "control_names": [],
@@ -126,6 +129,7 @@
    "low": 4.6,
    "mid": 5.0,
    "n": 3,
+   "positioning": [],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": true
@@ -175,17 +179,49 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "DIRECT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
-   "high": 1.6,
-   "low": 0.3,
-   "mid": 0.4,
-   "n": 5,
-   "tag_evidence": 0.1,
-   "thin": false,
+   "display": "DIAMOND",
+   "high": 1.0,
+   "low": 1.0,
+   "mid": 1.0,
+   "n": 1,
+   "positioning": [
+    {
+     "company": "Vipshop Holdings Limited",
+     "mult": 0.2,
+     "reason": "related type of business; same end market; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "BARK, Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Zalando SE",
+     "mult": 0.4,
+     "reason": "related type of business; same end market; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "YETI Holdings, Inc.",
+     "mult": 1.6,
+     "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "sole": "Revolve Group, Inc.",
+   "tag_evidence": 0.0,
+   "thin": true,
    "triangulated": true
   }
  },

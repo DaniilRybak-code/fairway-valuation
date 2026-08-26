@@ -723,13 +723,53 @@ def _control(rows):
              if (r.get('transaction_type') or '').strip() == 'CONTROL']
     return len(names), names
 
-def group_range(group, which='rev', tier='DIRECT'):
+# YOU CANNOT AVERAGE 4.3x AND 50x.
+#
+# Daniil, 26-Aug-2026, on OpenSEO: "If the closest peer reads 4.3x, this is what needs to be shown
+# (as a diamond). THEN if some other peers (with lower relevance) trade higher, we could show them
+# separately at the end of the field with indication of their multiples, indicating that we can
+# position towards them with right arguments. We cannot take an average of 4.3x and 50x, this
+# discredits the whole range."
+#
+# He is right and it is the flaw in the filling ladder as I first built it. Filling the SET was
+# correct; letting the whole filled set compute ONE number was not. OpenSEO's set is Semrush at
+# 4.3x, which is its business almost exactly, plus Clay at 50.0x, Klaviyo at 32.6x and Apollo.io
+# at 16.0x, which are adjacent at best. Blending those gave a midpoint of 32.6x, a number no
+# banker would put their name to and no founder should be shown.
+#
+# So the range is computed from the CLOSEST BAND THAT HAS A PRICE, and nothing weaker joins it.
+# Everything priced in a weaker band becomes `positioning`: named, with its multiple, drawn at the
+# end of the field rather than inside the bar. That is not a demotion, it is the real argument. A
+# founder who can show why they belong nearer Clay than Semrush has a case to make, and the field
+# should hand them the case rather than quietly average it away.
+def _bands(prof, priced):
+    """Split priced rows into the closest band that has any, and everything weaker.
+    Returns (band_tier, headline_rows, positioning_rows)."""
+    by = {}
+    for (sw, r) in priced:
+        by.setdefault(_tier(prof, r, sw[1]), []).append((sw, r))
+    order = ('DIRECT', 'ADJACENT', 'BROAD')
+    for i, t in enumerate(order):
+        if by.get(t):
+            weaker = [x for tt in order[i+1:] for x in by.get(tt, [])]
+            return t, by[t], weaker
+    return 'NONE', [], []
+
+def _positioning(prof, rows, key):
+    out = [{'company': r.get('company_name', ''), 'mult': r[key],
+            'tier': _tier(prof, r, sw[1]),
+            'transaction_type': r.get('transaction_type', ''),
+            'reason': why_text(prof, r, sw[1])} for (sw, r) in rows if r.get(key) is not None]
+    return sorted(out, key=lambda z: z['mult'])
+
+def group_range(prof, group, which='rev', tier='DIRECT'):
     """Quartile range of the group, excluding rows flagged out of medians.
     Returns None for a BROAD group: it is context, not a price."""
     if tier not in RANGE_TIERS: return None
     key = 'mult' if which == 'rev' else 'gp_mult'
-    priced = [(sw, r) for (sw, r) in group if r.get(key) is not None and r.get('in_medians', True)]
-    if not priced: return None
+    allpriced = [(sw, r) for (sw, r) in group if r.get(key) is not None and r.get('in_medians', True)]
+    if not allpriced: return None
+    band, priced, weaker = _bands(prof, allpriced)
     v = sorted(r[key] for _sw, r in priced)
     n = len(v)
     ev, tri, dropped = _evidence(priced, group)
@@ -737,17 +777,19 @@ def group_range(group, which='rev', tier='DIRECT'):
                display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
-               control_n=_control(priced)[0], control_names=_control(priced)[1])
+               control_n=_control(priced)[0], control_names=_control(priced)[1],
+               band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out
 
-def private_range(picked, tier):
+def private_range(prof, picked, tier):
     """The same rule on the private lane, kept here rather than in the caller so the two cannot
     drift apart. BROAD returns nothing; a single priced round returns a diamond."""
     if tier not in RANGE_TIERS: return {}
-    priced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get('mult')]
-    if not priced: return {}
+    allpriced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get('mult')]
+    if not allpriced: return {}
+    band, priced, weaker = _bands(prof, allpriced)
     v = sorted(r['mult'] for _sw, r in priced)
     n = len(v)
     ev, tri, dropped = _evidence(priced, picked)
@@ -760,7 +802,8 @@ def private_range(picked, tier):
                display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
-               control_n=_control(priced)[0], control_names=_control(priced)[1])
+               control_n=_control(priced)[0], control_names=_control(priced)[1],
+               band=band, positioning=_positioning(prof, weaker, 'mult'))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out

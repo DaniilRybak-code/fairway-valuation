@@ -44,6 +44,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -53,6 +54,7 @@
    "low": 6.9,
    "mid": 9.5,
    "n": 5,
+   "positioning": [],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
@@ -96,6 +98,7 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 1,
    "control_names": [
@@ -106,6 +109,7 @@
    "low": 4.3,
    "mid": 50.0,
    "n": 2,
+   "positioning": [],
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
@@ -155,6 +159,7 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -162,8 +167,24 @@
    "display": "RANGE",
    "high": 5.2,
    "low": 3.5,
-   "mid": 4.3,
-   "n": 5,
+   "mid": 4.6,
+   "n": 3,
+   "positioning": [
+    {
+     "company": "Qualco Group S.A.",
+     "mult": 1.8,
+     "reason": "same end market; same revenue model; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Alkami Technology, Inc.",
+     "mult": 4.3,
+     "reason": "same end market; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true

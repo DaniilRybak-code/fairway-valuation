@@ -28,6 +28,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -37,6 +38,7 @@
    "low": 2.7,
    "mid": 2.7,
    "n": 1,
+   "positioning": [],
    "sole": "Klaviyo, Inc.",
    "tag_evidence": 0.1,
    "thin": true,
@@ -92,6 +94,7 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": true,
    "control_n": 0,
    "control_names": [],
@@ -100,6 +103,7 @@
    "low": 14.0,
    "mid": 32.6,
    "n": 2,
+   "positioning": [],
    "tag_evidence": 0.7,
    "thin": true,
    "triangulated": true
@@ -149,6 +153,7 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "BROAD",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -158,6 +163,7 @@
    "low": 0.7,
    "mid": 3.4,
    "n": 5,
+   "positioning": [],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true

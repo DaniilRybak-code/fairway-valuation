@@ -36,15 +36,25 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "DIRECT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 8.0,
-   "low": 1.9,
-   "mid": 2.25,
-   "n": 4,
+   "low": 2.1,
+   "mid": 2.4,
+   "n": 3,
+   "positioning": [
+    {
+     "company": "Wix.com Ltd.",
+     "mult": 1.9,
+     "reason": "shares the language of ai, commerce; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
@@ -110,16 +120,26 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 7.4,
-   "low": 3.3,
-   "mid": 3.7,
-   "n": 5,
-   "tag_evidence": 0.3,
+   "low": 1.9,
+   "mid": 3.9,
+   "n": 4,
+   "positioning": [
+    {
+     "company": "IONOS Group SE",
+     "mult": 3.7,
+     "reason": "shares the language of infrastructure; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
   }

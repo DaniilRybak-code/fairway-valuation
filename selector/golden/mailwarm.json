@@ -12,6 +12,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -21,6 +22,7 @@
    "low": 2.8,
    "mid": 2.8,
    "n": 1,
+   "positioning": [],
    "sole": "HubSpot, Inc.",
    "tag_evidence": 0.2,
    "thin": true,
@@ -65,6 +67,7 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 1,
    "control_names": [
@@ -75,6 +78,7 @@
    "low": 15.0,
    "mid": 32.6,
    "n": 2,
+   "positioning": [],
    "tag_evidence": 0.2,
    "thin": true,
    "triangulated": true
@@ -124,16 +128,33 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 16.4,
-   "low": 2.7,
-   "mid": 3.7,
-   "n": 5,
-   "tag_evidence": 0.7,
+   "high": 3.7,
+   "low": 1.7,
+   "mid": 2.7,
+   "n": 3,
+   "positioning": [
+    {
+     "company": "IONOS Group SE",
+     "mult": 3.7,
+     "reason": "shares the language of email, infrastructure; same kind of customer; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "both do Infrastructure Monitoring; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
   }

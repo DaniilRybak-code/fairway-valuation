@@ -28,6 +28,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -37,6 +38,7 @@
    "low": 2.2,
    "mid": 2.8,
    "n": 3,
+   "positioning": [],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -102,6 +104,7 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": true,
    "control_n": 1,
    "control_names": [
@@ -112,6 +115,7 @@
    "low": 4.3,
    "mid": 50.0,
    "n": 3,
+   "positioning": [],
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": true
@@ -161,6 +165,7 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -169,7 +174,16 @@
    "high": 4.0,
    "low": 2.3,
    "mid": 2.7,
-   "n": 5,
+   "n": 4,
+   "positioning": [
+    {
+     "company": "Wix.com Ltd.",
+     "mult": 1.9,
+     "reason": "shares the language of ai; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true

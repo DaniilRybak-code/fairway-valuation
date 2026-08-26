@@ -278,3 +278,34 @@ private set. Those are gap-log entries, not failures.
 Seventeen of nineteen ranges are still triangulations. **That is now the single number to manage.**
 We are not short of comparables any more; we are short of close ones, and every future data batch
 should be judged on whether it moves the triangulation count down rather than the coverage count up.
+
+## 26 August, last change of the day: the range is priced off the closest band only
+
+Daniil, on OpenSEO: *"If the closest peer reads 4.3x, this is what needs to be shown (as a
+diamond). THEN if some other peers (with lower relevance) trade higher, we could show them
+separately at the end of the field with indication of their multiples, indicating that we can
+position towards them with right arguments. We cannot take an average of 4.3x and 50x, this
+discredits the whole range."*
+
+He is right, and it is the flaw in the filling ladder as first built. Filling the SET was correct.
+Letting the whole filled set compute ONE number was not.
+
+OpenSEO's set is Semrush at 4.3x, which is almost exactly its business, plus Clay at 50.0x and
+Klaviyo at 32.6x, which are adjacent at best. Blending them produced a midpoint of 32.6x. No banker
+would sign that and no founder should be shown it.
+
+So the range is now computed from the closest band that has a price, and nothing weaker joins it.
+Everything priced in a weaker band becomes `positioning`: named, with its multiple, drawn at the end
+of the field rather than inside the bar. That is not a demotion. A founder who can argue they belong
+nearer Clay than Semrush has a real case, and the field should hand them the case instead of quietly
+averaging it away.
+
+OpenSEO now reads a diamond at 4.3x on Semrush, with Klaviyo at 32.6x and Clay at 50.0x listed as
+positioning. InsForge reads a diamond at 22.5x on Algolia, with Oxylabs at 10.3x and Lovable at
+33.0x as positioning.
+
+**What this does not fix.** Banding only separates names that sit in different bands. Pazi still
+reads 4.3x to 105.3x and Fundraisly 4.3x to 50.0x, because every one of their names is ADJACENT and
+they genuinely span the market. Those ranges are flagged `triangulated`, which is true but is a
+weaker warning than the range deserves. If a spread inside a single band is this wide, the honest
+answer may be that we have no range at all, only a set of positions.

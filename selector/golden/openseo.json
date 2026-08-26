@@ -12,6 +12,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "DIRECT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -21,6 +22,7 @@
    "low": 2.1,
    "mid": 2.1,
    "n": 1,
+   "positioning": [],
    "sole": "Similarweb Ltd.",
    "tag_evidence": 9.2,
    "thin": true,
@@ -76,18 +78,36 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "DIRECT",
    "bounded": false,
    "control_n": 1,
    "control_names": [
     "Semrush"
    ],
-   "display": "RANGE",
-   "high": 50.0,
+   "display": "DIAMOND",
+   "high": 4.3,
    "low": 4.3,
-   "mid": 32.6,
-   "n": 3,
+   "mid": 4.3,
+   "n": 1,
+   "positioning": [
+    {
+     "company": "Klaviyo",
+     "mult": 32.6,
+     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    }
+   ],
+   "sole": "Semrush",
    "tag_evidence": 12.0,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 63,
@@ -135,6 +155,7 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -142,8 +163,24 @@
    "display": "RANGE",
    "high": 16.4,
    "low": 2.7,
-   "mid": 5.2,
-   "n": 5,
+   "mid": 9.6,
+   "n": 3,
+   "positioning": [
+    {
+     "company": "Wix.com Ltd.",
+     "mult": 1.9,
+     "reason": "shares the language of ai, platform; same kind of customer; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true

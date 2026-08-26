@@ -28,6 +28,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -37,6 +38,7 @@
    "low": 2.3,
    "mid": 2.5,
    "n": 3,
+   "positioning": [],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -102,6 +104,7 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": true,
    "control_n": 0,
    "control_names": [],
@@ -110,6 +113,7 @@
    "low": 21.0,
    "mid": 42.9,
    "n": 3,
+   "positioning": [],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -143,6 +147,7 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
+   "band": "BROAD",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -152,6 +157,7 @@
    "low": 1.7,
    "mid": 2.0,
    "n": 3,
+   "positioning": [],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": true

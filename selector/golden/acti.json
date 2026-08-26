@@ -12,6 +12,7 @@
   ],
   "core_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": false,
    "control_n": 0,
    "control_names": [],
@@ -21,6 +22,7 @@
    "low": 3.0,
    "mid": 3.0,
    "n": 1,
+   "positioning": [],
    "sole": "Truecaller AB (publ)",
    "tag_evidence": 0.2,
    "thin": true,
@@ -76,6 +78,7 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
+   "band": "ADJACENT",
    "bounded": true,
    "control_n": 0,
    "control_names": [],
@@ -84,6 +87,7 @@
    "low": 21.0,
    "mid": 21.0,
    "n": 1,
+   "positioning": [],
    "sole": "Gamma",
    "tag_evidence": 0.1,
    "thin": true,
