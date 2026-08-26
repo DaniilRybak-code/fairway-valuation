@@ -10,6 +10,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "DIAMOND",
@@ -18,7 +19,9 @@
    "mid": 4.1,
    "n": 1,
    "sole": "Dropbox, Inc.",
-   "thin": true
+   "tag_evidence": 0.0,
+   "thin": true,
+   "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -75,15 +78,18 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": true,
    "display": "RANGE",
    "high": 42.9,
    "low": 12.7,
    "mid": 21.0,
    "n": 3,
-   "thin": false
+   "tag_evidence": 0.1,
+   "thin": false,
+   "triangulated": true
   },
-  "private_window_months": 72,
+  "private_window_months": 67,
   "secondary": [
    {
     "company": "Truecaller AB (publ)",
@@ -122,6 +128,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -129,7 +136,9 @@
    "low": 3.0,
    "mid": 4.0,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.2,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Local-first AI memory layer for Mac and Windows that drafts in your own tone"

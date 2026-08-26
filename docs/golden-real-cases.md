@@ -127,3 +127,66 @@ percent across 320 companies with 9 empty sets; private 83 percent across 127 co
 On the looser test that also accepts a secondary-archetype match, 98 and 97 percent. The private
 lane is now the stronger of the two, which was not true a week ago and is the right way round for
 this product.
+
+---
+
+## 26 August: the ladder fills instead of stopping, and coverage goes from 6 of 21 to 20 of 21
+
+Daniil ruled on both defects the same morning they were raised.
+
+On defect one: *"One coincidence for sure should not evict four decent comps. The point is not to get
+a comp that is 100% same business, close enough is good enough."*
+
+On defect two: *"If nothing matches very closely, we need to broaden the set and triangulate between
+most similar comps."*
+
+Three changes follow, and they are one idea.
+
+**The ladder fills, it does not stop.** The core group is now built by walking DIRECT and then
+ADJACENT, taking anchored names first and topping up behind them, and it falls to BROAD only if
+neither pricing tier produces anything at all. InsForge reads Databricks, Algolia, Oxylabs, Lovable
+and LangChain instead of a single Algolia diamond.
+
+**A mixed set is labelled by its weakest member.** `set_tier` returns the maximum rather than the
+minimum on the tier order. One direct hit does not make four adjacent names direct, and claiming
+otherwise would be the same overstatement the diamond rule was built to stop.
+
+**Business nature leads and recency orders within it.** The widening 24-month window is gone. It had
+quietly become a selection criterion: the first version of the filling ladder pushed Algolia, the
+only anchored comparable InsForge has, out of its own set because five adjacent names happened to be
+more recent. Candidates are now sorted by tier and then by date inside the tier, and `months` stopped
+being an input the loop widens and became an output, the age of the oldest transaction actually
+shown, so the reveal can caveat it.
+
+### What that costs and what it buys
+
+| | before | after |
+|---|---|---|
+| of 21 real profiles, listed core set returned | 3 | **21** |
+| of 21, private set returned | 6 | **20** |
+| of 21, private range printed | 6 | **19** |
+| leave-one-out, listed, strict archetype | 78% | 74% |
+| leave-one-out, private, strict archetype | 83% | 78% |
+| leave-one-out, both, loose archetype | 98% / 97% | 98% / 97% |
+
+Strict precision falls because we return more names and more of them sit one rung out. Loose
+precision does not move at all, which says the extra names still share an archetype rather than
+being noise. That is the trade Daniil asked for, stated in numbers.
+
+### Two flags so the copy can tell the truth about what it is showing
+
+Coverage is now close to total, and **18 of the 19 private ranges are triangulations**: not one
+contributing company shares real product vocabulary with the founder. That is a fact the reveal owes
+the founder, so every range now carries it.
+
+- `tag_evidence` the best product-tag score among the rows that actually feed the number.
+- `triangulated` True when that score is below `FLOOR_TAG_EVIDENCE`, meaning no contributing
+  company shares product vocabulary with this founder. It is still the best answer we have; it is
+  not the same claim as a comparable set, and the sentence underneath it should differ.
+- `anchor_dropped` True when the set's own best-anchored name scores above the floor but the
+  contributing rows do not, meaning **the closest comparable is named in the set and prices
+  nothing.** OpenSEO is the case: Semrush matches at 12.0 tag points and leads the set, but its only
+  transaction is the Adobe take-private, which is a control deal and can never sit in a median of
+  minority financings. The number the founder sees is built from Clay at 50.0x and Klaviyo at 32.6x.
+  Showing that without saying it would be the worst kind of quiet dishonesty, because the set looks
+  authoritative precisely because of the name that is not in it.

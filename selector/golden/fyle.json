@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -45,7 +46,9 @@
    "low": 1.9,
    "mid": 2.8,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": true
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -102,15 +105,18 @@
   ],
   "private_proximity": "DIRECT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": true,
    "display": "RANGE",
    "high": 10.1,
    "low": 4.6,
    "mid": 5.0,
    "n": 3,
-   "thin": false
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": true
   },
-  "private_window_months": 72,
+  "private_window_months": 65,
   "secondary": [
    {
     "company": "YETI Holdings, Inc.",
@@ -149,6 +155,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -156,7 +163,9 @@
    "low": 0.4,
    "mid": 1.0,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.1,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "UK direct-to-consumer nail-care brand selling a blade-free manicure kit and its refills"

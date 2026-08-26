@@ -31,6 +31,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -38,9 +39,11 @@
    "low": 0.4,
    "mid": 1.35,
    "n": 4,
-   "thin": false
+   "tag_evidence": 3.7,
+   "thin": false,
+   "triangulated": false
   },
-  "listed_proximity": "DIRECT",
+  "listed_proximity": "ADJACENT",
   "private": [],
   "private_proximity": "NONE",
   "private_range": {},

@@ -7,45 +7,7 @@
     "in_medians": true,
     "score": 12.3,
     "ticker": "NYSE:ESTC"
-   }
-  ],
-  "core_range": {
-   "bounded": false,
-   "denominator": "rev",
-   "display": "DIAMOND",
-   "high": 4.1,
-   "low": 4.1,
-   "mid": 4.1,
-   "n": 1,
-   "sole": "Elastic N.V.",
-   "thin": true
-  },
-  "listed_proximity": "DIRECT",
-  "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Algolia",
-    "date": "Jul-21",
-    "in_medians": true,
-    "mult": 22.5,
-    "score": 21.3,
-    "type": "PRIMARY"
-   }
-  ],
-  "private_proximity": "DIRECT",
-  "private_range": {
-   "bounded": true,
-   "display": "DIAMOND",
-   "high": 22.5,
-   "low": 22.5,
-   "mid": 22.5,
-   "n": 1,
-   "sole": "Algolia",
-   "thin": true
-  },
-  "private_window_months": 72,
-  "secondary": [
+   },
    {
     "company": "Cloudflare, Inc.",
     "family": "software",
@@ -73,24 +35,137 @@
     "in_medians": true,
     "score": 12.0,
     "ticker": "NYSE:DOCN"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "bounded": false,
+   "denominator": "rev",
+   "display": "RANGE",
+   "high": 31.8,
+   "low": 4.1,
+   "mid": 5.3,
+   "n": 5,
+   "tag_evidence": 3.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Databricks",
+    "date": "Sep-23",
+    "in_medians": false,
+    "mult": 26.9,
+    "score": 11.9,
+    "type": "PRIMARY"
    },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Algolia",
+    "date": "Jul-21",
+    "in_medians": true,
+    "mult": 22.5,
+    "score": 21.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
+    "in_medians": true,
+    "mult": 10.3,
+    "score": 14.8,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "score": 15.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 16.7,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "bounded": true,
+   "display": "RANGE",
+   "high": 33.0,
+   "low": 10.3,
+   "mid": 22.5,
+   "n": 3,
+   "tag_evidence": 3.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 61,
+  "secondary": [
    {
     "company": "MongoDB, Inc.",
     "family": "software",
     "in_medians": true,
     "score": 11.6,
     "ticker": "NASDAQGM:MDB"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.2,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.9,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Fastly, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.6,
+    "ticker": "NASDAQGS:FSLY"
+   },
+   {
+    "company": "JFrog Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.0,
+    "ticker": "NASDAQGS:FROG"
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 31.8,
-   "low": 5.3,
-   "mid": 10.4,
+   "high": 16.4,
+   "low": 5.2,
+   "mid": 10.5,
    "n": 5,
-   "thin": false
+   "tag_evidence": 1.1,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Backend-as-a-service built so AI coding agents can operate every service end to end"

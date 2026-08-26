@@ -24,6 +24,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "DIAMOND",
@@ -32,9 +33,11 @@
    "mid": 2.7,
    "n": 1,
    "sole": "Klaviyo, Inc.",
-   "thin": true
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   },
-  "listed_proximity": "DIRECT",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_UNDEFINED_BASIS",
@@ -79,15 +82,18 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": true,
    "display": "RANGE",
    "high": 32.6,
    "low": 14.0,
    "mid": 32.6,
    "n": 2,
-   "thin": true
+   "tag_evidence": 0.7,
+   "thin": true,
+   "triangulated": true
   },
-  "private_window_months": 72,
+  "private_window_months": 65,
   "secondary": [
    {
     "company": "Shoper S.A.",
@@ -126,6 +132,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -133,7 +140,9 @@
    "low": 2.4,
    "mid": 3.4,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.5,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "A supervised team of AI agents that runs a merchant Shopify, eBay and Amazon stores"

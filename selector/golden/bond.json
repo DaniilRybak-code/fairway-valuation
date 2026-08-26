@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -45,7 +46,9 @@
    "low": 2.5,
    "mid": 3.1,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -102,15 +105,18 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": true,
    "display": "RANGE",
    "high": 72.0,
    "low": 16.0,
    "mid": 21.0,
    "n": 4,
-   "thin": false
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": true
   },
-  "private_window_months": 36,
+  "private_window_months": 28,
   "secondary": [
    {
     "company": "Freshworks Inc.",
@@ -149,6 +155,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -156,7 +163,9 @@
    "low": 2.4,
    "mid": 2.7,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.2,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "AI chief of staff in Slack that captures commitments and works a prioritised list"

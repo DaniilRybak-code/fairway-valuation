@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -45,7 +46,9 @@
    "low": 4.1,
    "mid": 10.5,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.8,
+   "thin": false,
+   "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -102,15 +105,18 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "display": "RANGE",
    "high": 33.0,
    "low": 10.3,
    "mid": 30.0,
    "n": 3,
-   "thin": false
+   "tag_evidence": 2.6,
+   "thin": false,
+   "triangulated": true
   },
-  "private_window_months": 24,
+  "private_window_months": 11,
   "secondary": [
    {
     "company": "Twilio Inc.",
@@ -149,6 +155,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -156,7 +163,9 @@
    "low": 5.3,
    "mid": 10.4,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Describe the data you want and it builds, hosts and runs the scraper"

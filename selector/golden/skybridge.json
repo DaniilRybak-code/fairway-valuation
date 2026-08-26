@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -45,7 +46,9 @@
    "low": 5.0,
    "mid": 5.8,
    "n": 5,
-   "thin": false
+   "tag_evidence": 1.0,
+   "thin": false,
+   "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -58,11 +61,62 @@
     "mult": 61.5,
     "score": 17.1,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
+    "in_medians": true,
+    "mult": 10.3,
+    "score": 13.0,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": null,
+    "score": 19.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 30.0,
+    "score": 13.2,
+    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "DIRECT",
-  "private_range": {},
-  "private_window_months": 24,
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": true,
+   "bounded": false,
+   "display": "RANGE",
+   "high": 33.0,
+   "low": 10.3,
+   "mid": 30.0,
+   "n": 3,
+   "tag_evidence": 0.2,
+   "thin": false,
+   "triangulated": true
+  },
+  "private_window_months": 17,
   "secondary": [
    {
     "company": "MongoDB, Inc.",
@@ -101,6 +155,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -108,7 +163,9 @@
    "low": 0.8,
    "mid": 4.1,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "MIT-licensed TypeScript and React framework for building MCP apps"

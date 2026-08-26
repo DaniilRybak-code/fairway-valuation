@@ -353,20 +353,35 @@ def _anchored(p, r, why):
 #   BROAD     same family only. Software against software, consumer against consumer. This is
 #             "how this corner of the market trades", not "here are your peers".
 #
-# The set takes the best tier that has any members, never a mixture, and the tier travels with
-# the result so the reveal can say which one it is showing. A BROAD set presented as though it
-# were DIRECT would be the most dishonest thing this engine could do.
+# THE LADDER FILLS, IT DOES NOT STOP. Changed 26-Aug-2026 on Daniil's instruction: "one
+# coincidence should not evict four decent comps. The point is not to get a comp that is 100%
+# the same business, close enough is good enough."
+#
+# The rule it replaces stopped at the best tier that had ANY member. InsForge, a
+# backend-as-a-service for AI coding agents, shares exactly one product tag with Algolia,
+# "Vector Search". One exact tag is worth 3.0 points and FLOOR_TAG_EVIDENCE is 3.0, so that
+# single coincidence made Algolia DIRECT, DIRECT beat ADJACENT outright, and a four-name range
+# built from Lovable, LangChain, Replit and Cursor collapsed to a one-name diamond on a search
+# API. Third time an absolute threshold has been crossed by a single low-information signal.
+#
+# So the set now fills from DIRECT downward through ADJACENT until it has the names it wants,
+# and only falls to BROAD if those two produce nothing at all. DIRECT names still come first,
+# because being anchored on real shared vocabulary is information the ordering should carry.
+#
+# AND THE LABEL FOLLOWS THE WEAKEST MEMBER, not the best. A group of one DIRECT hit and four
+# ADJACENT names is an ADJACENT group: that is what the founder is being shown, and claiming
+# DIRECT for it would be the same overstatement in a different place.
 #
 # A miss is still a miss: if nothing in the family clears FLOOR_ABS the answer is still no set,
 # and that event is what the gap log records.
 _TIER_ORDER = {'DIRECT': 0, 'ADJACENT': 1, 'BROAD': 2}
+PRICING_TIERS = ('DIRECT', 'ADJACENT')
 
 def set_tier(prof, members):
-    """A set is labelled by its BEST member, not by how far the search had to widen.
-    Widening to ADJACENT to find a core group that then turns out to contain direct hits
-    should report DIRECT, because that is what the founder is actually being shown."""
+    """A mixed set is labelled by its WEAKEST member. One direct hit does not make four
+    adjacent names direct."""
     if not members: return 'NONE'
-    return min((_tier(prof, r, why) for (sc, why), r in members), key=lambda t: _TIER_ORDER[t])
+    return max((_tier(prof, r, why) for (sc, why), r in members), key=lambda t: _TIER_ORDER[t])
 
 def _tier(p, r, why):
     if _anchored(p, r, why):
@@ -402,6 +417,10 @@ def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE, only=None):
         return [x for x in rows if x[0][0] >= cut], (only or t)
     return [], 'NONE'
 
+def _neg_date(d):
+    """Sort key that puts the most recent date first while the key beside it sorts ascending."""
+    return tuple(-int(x) for x in (d[:4], d[5:7]))
+
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
     scored = sorted(((score(prof, r, WP, use_fin=False), r) for r in priv), key=lambda z: -z[0][0])
@@ -410,15 +429,34 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
         k = r['company_key']
         if k not in best or r['date_iso'] > best[k][1]['date_iso']:
             if k not in best or sc >= best[k][0][0]: best[k] = ((sc, why), r)
-    cands, tier = qualifying(sorted(best.values(), key=lambda z: -z[0][0]), prof)
-    months = window_months
-    while months <= 120:
-        cut = '%04d-%02d' % (asof[0] - months//12, asof[1])
-        inwin = sorted([c for c in cands if c[1]['date_iso'] >= cut],
-                       key=lambda z: z[1]['date_iso'], reverse=True)
-        if len(inwin) >= min(want, len(cands)): return inwin[:want], months, set_tier(prof, inwin[:want])
-        months += 12
-    return cands[:want], months, set_tier(prof, cands[:want])
+    pool = sorted(best.values(), key=lambda z: -z[0][0])
+    # FILL, DO NOT STOP. Same rule as peer_groups: walk DIRECT then ADJACENT, keeping the order
+    # so anchored names lead, and only fall to BROAD if neither pricing tier returns anything.
+    cands, seen = [], set()
+    for t in PRICING_TIERS:
+        rows, _t = qualifying(pool, prof, only=t)
+        for x in rows:
+            if id(x) in seen: continue
+            seen.add(id(x)); cands.append(x)
+    if not cands:
+        cands, _t = qualifying(pool, prof, only='BROAD')
+    # BUSINESS NATURE LEADS, RECENCY ORDERS WITHIN IT. The widening window this replaces started
+    # at 24 months and reached back only when it could not fill. That was fine while the candidate
+    # list held one name, and broke the moment the ladder started filling: InsForge's only
+    # anchored comparable, Algolia at Jul-2021, was pushed out by five adjacent names from the
+    # last two years. Recency had quietly become a selection criterion, which is the same mistake
+    # as letting size be one.
+    #
+    # So the order is tier first, then date within tier. A DIRECT name is never displaced by a
+    # more recent ADJACENT one. `months` is no longer an input the loop widens; it is an output,
+    # the age of the OLDEST transaction actually shown, so the reveal can caveat it honestly.
+    ordered = sorted(cands, key=lambda z: (_TIER_ORDER[_tier(prof, z[1], z[0][1])],
+                                           _neg_date(z[1]['date_iso'])))[:want]
+    if not ordered: return [], window_months, 'NONE'
+    oldest = min(c[1]['date_iso'] for c in ordered)
+    y, m = int(oldest[:4]), int(oldest[5:7])
+    months = max(0, (asof[0] - y) * 12 + (asof[1] - m))
+    return ordered, months, set_tier(prof, ordered)
 
 
 # ---------------------------------------------------------------------------
@@ -459,12 +497,22 @@ def peer_groups(prof, universe, scorer=None, want=5):
     # WIDEN ONLY AFTER THE CORE/SECONDARY SPLIT, not before. Deciding the tier first and then
     # splitting threw away real DIRECT hits: a social-listening profile lost Rezolve AI and Klaviyo
     # because the DIRECT tier's members happened to fail the end-market axis, leaving the core group
-    # empty even though the tier was non-empty. Try each tier in turn and stop at the first that
-    # actually produces a core group.
-    for tier in ('DIRECT', 'ADJACENT', 'BROAD'):
-        rows, got = qualifying(scored, prof, only=tier)
-        if not rows: continue
+    # empty even though the tier was non-empty. So walk the tiers and FILL the core group, taking
+    # DIRECT names first and topping up from ADJACENT, rather than stopping at the first tier that
+    # produces a single name. See the note above set_tier for why.
+    core, seen = [], set()
+    for tier in PRICING_TIERS:
+        rows, _got = qualifying(scored, prof, only=tier)
+        for x in rows:
+            if len(core) >= want: break
+            if id(x) in seen: continue
+            if axis_a(x[1]) and axis_b(x[1]):
+                seen.add(id(x)); core.append(x)
+        if len(core) >= want: break
+    if not core:
+        rows, _got = qualifying(scored, prof, only='BROAD')
         core = [x for x in rows if axis_a(x[1]) and axis_b(x[1])][:want]
+    if core:
         # NOTHING THAT QUALIFIES MAY VANISH. The old split put a row in secondary only if it
         # passed axis_a, so a name failing axis_a appeared in NEITHER group and was dropped in
         # silence. Cloudflare scores 12.9 against InsForge, higher than the Elastic that was
@@ -477,13 +525,13 @@ def peer_groups(prof, universe, scorer=None, want=5):
         # company: Yext, HubSpot, Braze and Zeta Global all scored well, all sit in the same
         # archetype, and all were unreachable because they are not DIRECT-anchored.
         #
-        # A banker's comp set is a tight core and a looser ring around it. So core is the best
-        # tier that produces one, and secondary is everything else in the family that clears the
-        # floor. The tier label still describes CORE, which is what the range is computed from.
+        # A banker's comp set is a tight core and a looser ring around it. So core is filled from
+        # the pricing tiers in order, and secondary is everything else in the family that clears
+        # the floor. The tier label still describes CORE, which is what the range is computed from.
         picked = {id(x) for x in core}
         wide, _wt = qualifying(scored, prof, only='BROAD')
         secondary = [x for x in wide if id(x) not in picked][:want]
-        if core: return core, secondary, set_tier(prof, core)
+        return core, secondary, set_tier(prof, core)
     return [], [], 'NONE'
 
 
@@ -547,18 +595,56 @@ RANGE_TIERS = ('DIRECT', 'ADJACENT')
 #   thin             fewer than three. True for a two-name bar as well, so the copy can hedge.
 #
 # `sole` names the single company so the reveal never has to reach back into the group to find it.
+# TRIANGULATION IS AN ANSWER, BUT IT HAS TO SAY SO.
+#
+# Daniil, 26-Aug-2026: "If nothing matches very closely, we need to broaden the set and
+# triangulate between most similar comps." Agreed, and the broadening is what the filling ladder
+# above now does. The remaining job is to say which kind of answer the founder is looking at.
+#
+# Publora is the case. A social-media publishing API draws five private names of which the best
+# scores 0.3 on product tags and the other four score 0.0. They qualify on archetype, buyer,
+# go-to-market and revenue model: every one is developer-facing, consumption-priced
+# infrastructure. That is a real similarity and it is not a product similarity, and a bar drawn
+# from it is a triangulation rather than a comparable set.
+#
+# So every range carries two extra facts:
+#   tag_evidence   the best product-tag score among the rows that actually feed the number
+#   triangulated   True when that best score is below FLOOR_TAG_EVIDENCE, meaning NOT ONE
+#                  contributing company shares real product vocabulary with this founder
+#
+# The copy owes the founder a different sentence in that case. It is still the best answer we
+# have; it is not the same claim.
+# AND ONE MORE THING THE FOUNDER HAS TO BE TOLD: WHEN THE CLOSEST NAME DOES NOT PRICE.
+#
+# OpenSEO is the case that forced this. Its best private comparable is Semrush at 12.0 tag points,
+# a perfect match, and Semrush is named at the top of the set. But Semrush's only transaction is
+# the Adobe take-private, which is a CONTROL deal and can never sit in a median of minority
+# financings. So the number the founder sees is built from Clay at 50.0x and Klaviyo at 32.6x,
+# neither of which shares a single product tag with them, while the one name they would recognise
+# as their comparable contributes nothing. Showing that without saying it would be the worst kind
+# of quiet dishonesty: the set looks authoritative precisely because of the name that is not in it.
+def _evidence(contributing, whole=None):
+    """Both arguments are lists of ((score, why), record).
+    Returns (best tag points AMONG THE ROWS THAT FEED THE NUMBER, triangulated, anchor_dropped)."""
+    def best(rows): return max([_tag_points(why) for (_sc, why), _r in rows] or [0.0])
+    b = best(contributing)
+    w = best(whole) if whole is not None else b
+    return round(b, 1), b < FLOOR_TAG_EVIDENCE, (b < FLOOR_TAG_EVIDENCE <= w)
+
 def group_range(group, which='rev', tier='DIRECT'):
     """Quartile range of the group, excluding rows flagged out of medians.
     Returns None for a BROAD group: it is context, not a price."""
     if tier not in RANGE_TIERS: return None
     key = 'mult' if which == 'rev' else 'gp_mult'
-    priced = [(r[key], r) for (_s, r) in group if r.get(key) is not None and r.get('in_medians', True)]
+    priced = [(sw, r) for (sw, r) in group if r.get(key) is not None and r.get('in_medians', True)]
     if not priced: return None
-    v = sorted(x for x, _ in priced)
+    v = sorted(r[key] for _sw, r in priced)
     n = len(v)
+    ev, tri, dropped = _evidence(priced, group)
     out = dict(n=n, low=v[max(0, (n-1)//4)], mid=st.median(v), high=v[min(n-1, (3*(n-1))//4 + 1)],
                display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
-               bounded=any((r.get('bound') or '').strip() == '<=' for _x, r in priced))
+               bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
+               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped)
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out
@@ -567,10 +653,11 @@ def private_range(picked, tier):
     """The same rule on the private lane, kept here rather than in the caller so the two cannot
     drift apart. BROAD returns nothing; a single priced round returns a diamond."""
     if tier not in RANGE_TIERS: return {}
-    priced = [(r['mult'], r) for (_s, r) in picked if r.get('in_medians') and r.get('mult')]
+    priced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get('mult')]
     if not priced: return {}
-    v = sorted(x for x, _ in priced)
+    v = sorted(r['mult'] for _sw, r in priced)
     n = len(v)
+    ev, tri, dropped = _evidence(priced, picked)
     # A CEILING DRAWN AS A POINT IS THE DIAMOND'S OWN VERSION OF THE BAR PROBLEM. After the
     # software verification pass, Mailwarm's private lane is a single diamond at 105.3x, which is
     # Sierra, whose ARR is a 'more than $150m' threshold three months stale at pricing. Drawing
@@ -578,7 +665,8 @@ def private_range(picked, tier):
     # carries whether any contributing row is bounded and the copy must say "at most".
     out = dict(n=n, low=min(v), mid=v[n // 2], high=max(v),
                display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
-               bounded=any((r.get('bound') or '').strip() == '<=' for _x, r in priced))
+               bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
+               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped)
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out

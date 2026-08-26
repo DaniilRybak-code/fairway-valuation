@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -45,7 +46,9 @@
    "low": 5.0,
    "mid": 5.8,
    "n": 5,
-   "thin": false
+   "tag_evidence": 1.2,
+   "thin": false,
+   "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -102,15 +105,18 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "display": "RANGE",
    "high": 33.0,
    "low": 10.3,
    "mid": 30.0,
    "n": 4,
-   "thin": false
+   "tag_evidence": 1.9,
+   "thin": false,
+   "triangulated": true
   },
-  "private_window_months": 24,
+  "private_window_months": 11,
   "secondary": [
    {
     "company": "Amplitude, Inc.",
@@ -149,6 +155,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -156,7 +163,9 @@
    "low": 3.4,
    "mid": 4.8,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.1,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Build, evaluate and deploy multi-agent systems with CI/CD against test sets"

@@ -7,20 +7,50 @@
     "in_medians": true,
     "score": 12.4,
     "ticker": "NASDAQCM:SPT"
+   },
+   {
+    "company": "Sprinklr, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 11.4,
+    "ticker": "NYSE:CXM"
+   },
+   {
+    "company": "Braze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "score": 10.5,
+    "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "Rezolve AI PLC",
+    "family": "software",
+    "in_medians": false,
+    "score": 9.3,
+    "ticker": "NASDAQGM:RZLV"
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
-   "display": "DIAMOND",
-   "high": 1.1,
+   "display": "RANGE",
+   "high": 3.7,
    "low": 1.1,
-   "mid": 1.1,
-   "n": 1,
-   "sole": "Sprout Social, Inc.",
-   "thin": true
+   "mid": 2.45,
+   "n": 4,
+   "tag_evidence": 3.9,
+   "thin": false,
+   "triangulated": false
   },
-  "listed_proximity": "DIRECT",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_UNDEFINED_BASIS",
@@ -61,65 +91,81 @@
     "mult": 14.0,
     "score": 13.0,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "score": 10.5,
+    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "DIRECT",
+  "private_proximity": "ADJACENT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": true,
    "display": "RANGE",
-   "high": 32.6,
+   "high": 105.3,
    "low": 14.0,
    "mid": 32.6,
-   "n": 2,
-   "thin": true
+   "n": 3,
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
   },
-  "private_window_months": 72,
+  "private_window_months": 65,
   "secondary": [
-   {
-    "company": "Sprinklr, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 11.4,
-    "ticker": "NYSE:CXM"
-   },
-   {
-    "company": "Braze, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 10.5,
-    "ticker": "NASDAQGS:BRZE"
-   },
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "score": 10.5,
-    "ticker": "NYSE:ZETA"
-   },
-   {
-    "company": "Rezolve AI PLC",
-    "family": "software",
-    "in_medians": false,
-    "score": 9.3,
-    "ticker": "NASDAQGM:RZLV"
-   },
    {
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
     "score": 9.0,
     "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Riskified Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.5,
+    "ticker": "NYSE:RSKD"
+   },
+   {
+    "company": "LiveRamp Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 8.0,
+    "ticker": "NYSE:RAMP"
+   },
+   {
+    "company": "Five9, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.5,
+    "ticker": "NASDAQGM:FIVN"
+   },
+   {
+    "company": "Yext, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "score": 7.5,
+    "ticker": "NYSE:YEXT"
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
-   "high": 3.7,
-   "low": 1.5,
-   "mid": 3.05,
-   "n": 4,
-   "thin": false
+   "high": 2.7,
+   "low": 1.7,
+   "mid": 2.0,
+   "n": 5,
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Verifies and structures what people say about a product across social platforms"

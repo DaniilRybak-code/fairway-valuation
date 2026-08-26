@@ -38,6 +38,7 @@
    }
   ],
   "core_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -45,7 +46,9 @@
    "low": 2.8,
    "mid": 3.4,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -102,6 +105,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "display": "DIAMOND",
    "high": 50.0,
@@ -109,7 +113,9 @@
    "mid": 50.0,
    "n": 1,
    "sole": "Clay",
-   "thin": true
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   },
   "private_window_months": 36,
   "secondary": [
@@ -150,6 +156,7 @@
    }
   ],
   "secondary_range": {
+   "anchor_dropped": false,
    "bounded": false,
    "denominator": "rev",
    "display": "RANGE",
@@ -157,7 +164,9 @@
    "low": 1.9,
    "mid": 2.7,
    "n": 5,
-   "thin": false
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Investor matching and outreach run as a productized agency for founders raising"
