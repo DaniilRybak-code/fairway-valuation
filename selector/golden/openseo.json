@@ -20,6 +20,8 @@
    "dispersed": false,
    "display": "DIAMOND",
    "high": 2.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
    "low": 2.1,
    "mid": 2.1,
    "n": 1,
@@ -101,6 +103,10 @@
    "dispersed": false,
    "display": "DIAMOND",
    "high": 4.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
    "low": 4.3,
    "mid": 4.3,
    "n": 1,
@@ -187,6 +193,8 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 16.4,
+   "listed_target_n": 0,
+   "listed_target_names": [],
    "low": 2.7,
    "mid": 9.6,
    "n": 3,

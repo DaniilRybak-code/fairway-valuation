@@ -360,3 +360,39 @@ Recording the Baozun reason precisely, because the instruction and the file's ow
 different ways. Daniil asked for it out "given it is small", and size is not a criterion here. It is
 out on the data: a minority interest of $268m against a $165m market cap means the enterprise-value
 bridge cannot be defended, so the 0.2x it printed was never a number we could stand behind.
+
+---
+
+## 26 August, late: growth bands, and what they do and do not fix
+
+Daniil: *"I do not think we can source growth for private rounds, this is not something that is
+routinely disclosed. If not, we should simply tag peers as mature (<15%), growing (15-30%) and hyper
+growth (30%+). It is ok to have growing and hyper growth peers together, same as mature and growth.
+It is somewhat not right to have mature and hyper growth in the same comparison. FOR PRIVATE ROUNDS
+ONLY."*
+
+**He was right that it is not routinely disclosed.** Sourcing across 39 rounds found a stated, dated
+growth rate for 23 and nothing for the other 16. Blanks are therefore permissive: an unknown band
+never excludes a comparable. Inventing one would be worse than not having it.
+
+**The finding underneath is more useful than the gate.** Of the 23 rounds with a published rate, **21
+are above 30%**. The only two that are not are Mailchimp at 20% and Semrush at 15%. The private file
+is a hyper-growth file, so the band gate is a narrow instrument: it keeps Mailchimp and Semrush away
+from a hyper-growth founder and that is all it can currently do.
+
+**And it does not fix Pazi.** Semrush at 15% is GROWING, one band from HYPER, so the rule correctly
+leaves it in. The 4.3x-against-105.3x spread survives.
+
+### What actually explains Pazi
+
+**Semrush was NYSE-listed.** Adobe bought it at the multiple the public market was already paying.
+Sierra and Decagon are private rounds negotiated with one investor. Those are different KINDS of
+price, not fast and slow versions of the same kind, and growth explains almost none of the gap.
+
+So rows now carry `target_was_listed`, and every range carries `listed_target_n` and
+`listed_target_names`. Not excluded, because a control deal is a benchmark and it prices. Named, so
+the reveal can say the one thing a founder needs to hear: this comparable was priced by the stock
+market, the others were priced by a venture investor.
+
+That is a better lever than the growth band for the case that prompted the growth band, and it cost
+one column.

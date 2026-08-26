@@ -126,6 +126,8 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             row['transaction_type'] = r.get('transaction_type', 'PRIMARY')
             row['denominator_basis'] = r.get('denominator_basis', '')
             row['bound'] = r.get('bound', '')
+            row['growth_band'] = (r.get('growth_band') or '').strip().upper()
+            row['target_was_listed'] = str(r.get('target_was_listed', '')).strip() == '1'
             private.append(row)
     except FileNotFoundError:
         pass
@@ -489,12 +491,52 @@ def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE, only=None):
         return [x for x in rows if x[0][0] >= cut], (only or t)
     return [], 'NONE'
 
+# MATURE AND HYPER DO NOT BELONG IN THE SAME PRIVATE COMPARISON.
+#
+# Daniil, 26-Aug-2026: "Tag peers as mature (<15% growth), growing (15-30%) and hyper growth (30%+).
+# Then match the profile of the user company to the database and select the peers accordingly. It is
+# ok to have growing and hyper growth peers together, same as mature and growth. It is somewhat not
+# right to have mature and hyper growth in the same comparison. FOR PRIVATE ROUNDS ONLY, PUBLIC
+# COMPS ARE WHAT THEY ARE, MOST OF THEM ARE MATURE. The growth discrepancy will be more directly
+# resolved in growth-adjusted valuation ranges."
+#
+# So the gate is: adjacent bands may sit together, opposite ends may not. It applies to the private
+# lane and NOWHERE ELSE, by design: peer_groups is untouched.
+#
+# AN UNKNOWN BAND NEVER EXCLUDES ANYTHING. Growth at the time of a private round is not routinely
+# disclosed and we will not invent it. Sourcing across 39 rounds found a stated, dated growth rate
+# for 23 and nothing for the rest, so a blank has to be a permissive value rather than a guess.
+#
+# WHAT THE SOURCING ACTUALLY SHOWED, and it is worth knowing before relying on this gate: the
+# private file is almost entirely hyper-growth. Of 23 rounds with a published rate, 21 are above
+# 30% and the only two that are not are Mailchimp at 20% and Semrush at 15%. The band gate is
+# therefore a narrow instrument here. It will keep Semrush and Mailchimp away from a hyper-growth
+# founder, and that is all it can do until more rows carry a rate.
+GROWTH_BANDS = ('MATURE', 'GROWING', 'HYPER')
+_BAND_ORDER = {b: i for i, b in enumerate(GROWTH_BANDS)}
+
+def band_of(growth_pct):
+    """MATURE under 15%, GROWING 15 to 30, HYPER above 30. None for an unknown growth rate."""
+    if growth_pct is None: return ''
+    try: g = float(growth_pct)
+    except (TypeError, ValueError): return ''
+    return 'MATURE' if g < 15 else ('GROWING' if g <= 30 else 'HYPER')
+
+def band_compatible(prof_band, row_band):
+    a, b = _BAND_ORDER.get(prof_band or ''), _BAND_ORDER.get(row_band or '')
+    if a is None or b is None: return True          # unknown on either side never excludes
+    return abs(a - b) < 2
+
+
 def _neg_date(d):
     """Sort key that puts the most recent date first while the key beside it sorts ascending."""
     return tuple(-int(x) for x in (d[:4], d[5:7]))
 
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
+    pband = (prof.get('growth_band') or band_of(prof.get('growth'))).upper()
+    if pband:
+        priv = [r for r in priv if band_compatible(pband, r.get('growth_band'))] or priv
     scored = sorted(((score(prof, r, WP, use_fin=False), r) for r in priv), key=lambda z: -z[0][0])
     best = {}
     for (sc, why), r in scored:
@@ -763,6 +805,22 @@ def _control(rows):
              if (r.get('transaction_type') or '').strip() == 'CONTROL']
     return len(names), names
 
+
+# A TAKE-PRIVATE OF A LISTED COMPANY IS A PUBLIC-MARKET PRICE.
+#
+# This is what actually explains Pazi, and growth does not. Pazi's band ran Semrush 4.3x against
+# Sierra 105.3x and Decagon 150.0x. Semrush was growing 15% and the venture names 100% and more, so
+# the growth gate labels them one band apart and correctly leaves them together. The real difference
+# is that Semrush was NYSE-listed and Adobe bought it at the multiple the public market was already
+# paying, while the others are private rounds negotiated with one investor. Those are different
+# kinds of price, not fast and slow versions of the same kind.
+#
+# So the range carries how many of its contributors were listed targets, and the reveal must say it
+# on the name. Not excluded: Daniil's rule is that a control deal is a benchmark and it prices.
+def _listed_targets(rows):
+    names = [r.get('company_name', '') for (_sw, r) in rows if r.get('target_was_listed')]
+    return len(names), names
+
 # YOU CANNOT AVERAGE 4.3x AND 50x.
 #
 # Daniil, 26-Aug-2026, on OpenSEO: "If the closest peer reads 4.3x, this is what needs to be shown
@@ -821,6 +879,7 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
+               listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
@@ -849,6 +908,7 @@ def private_range(prof, picked, tier):
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
+               listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                band=band, positioning=_positioning(prof, weaker, 'mult'))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')

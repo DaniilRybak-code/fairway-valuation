@@ -52,6 +52,8 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 12.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
    "low": 6.9,
    "mid": 9.5,
    "n": 5,
@@ -121,6 +123,10 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 50.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
    "low": 4.3,
    "mid": 33.3,
    "n": 3,
@@ -206,6 +212,8 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 5.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
    "low": 3.5,
    "mid": 4.6,
    "n": 3,
