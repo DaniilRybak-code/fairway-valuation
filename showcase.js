@@ -44,3 +44,26 @@
     cue.style.transition = 'opacity .3s ease';
   }
 })();
+
+
+/* Hero field opening animation: bars grow from their midpoint, numbers fade in
+   behind them, staggered top to bottom. Skipped under prefers-reduced-motion. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var field = document.querySelector('.hero-field');
+  if (!field || reduce || !('IntersectionObserver' in window)) return;
+  field.classList.add('hf-animate');
+  field.querySelectorAll('.hf-row').forEach(function (row, i) {
+    row.querySelectorAll('.hf-bar, .hf-track > b').forEach(function (el) {
+      el.style.setProperty('--d', (i * 90) + 'ms');
+    });
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      requestAnimationFrame(function () { field.classList.add('hf-play'); });
+      io.disconnect();
+    });
+  }, { threshold: 0.3 });
+  io.observe(field);
+})();
