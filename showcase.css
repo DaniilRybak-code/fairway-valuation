@@ -317,8 +317,8 @@ h1,h2,h3 { font-family:var(--sans); }
 /* hero: copy left, miniature field right (Juro pattern) */
 #screen-hero .hero .hero-grid { display:grid; grid-template-columns:minmax(0,8fr) minmax(0,12fr);
   gap:24px 56px; align-items:center; text-align:left; }
-#screen-hero .hero .hero-copy h1 { font-family:var(--serif); font-size:clamp(34px,4vw,52px);
-  line-height:1.06; letter-spacing:-.02em; max-width:14ch; margin:0 0 22px; }
+#screen-hero .hero .hero-copy h1 { font-family:var(--serif); font-size:clamp(28px,3.1vw,41px);
+  line-height:1.12; letter-spacing:-.02em; max-width:24ch; margin:0 0 20px; }
 #screen-hero .hero .hero-grid .sub { margin:0 0 32px; }
 .sub-strong { font-size:15px; font-weight:600; color:var(--ff-ink); margin:0 0 10px; }
 #screen-hero .hero .hero-grid .kicker { margin-bottom:20px; }
@@ -434,13 +434,13 @@ h1,h2,h3 { font-family:var(--sans); }
 .hf-cap { font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ff-mute);
   font-weight:600; white-space:nowrap; }
 .hf-row { display:grid; grid-template-columns:170px 1fr; gap:0 16px; align-items:center;
-  min-height:72px; position:relative; }
+  min-height:52px; position:relative; }
 .hf-row.band { background:var(--ff-panel); margin:0 -30px; padding:0 30px;
   border-top:1px solid var(--ff-rule-hard); }
 .hf-name { font-size:14px; font-weight:600; letter-spacing:-.005em; line-height:1.25; }
 .hf-name span { display:block; font-family:var(--mono); font-size:9.5px; font-weight:400;
   color:var(--ff-mute); margin-top:3px; }
-.hf-track { position:relative; height:100%; min-height:72px; }
+.hf-track { position:relative; height:100%; min-height:52px; }
 
 .hf-bar { position:absolute; height:18px; top:calc(50% - 9px); border-radius:3px; }
 .hf-bar.pub { background:#a4adbd; }
@@ -457,9 +457,9 @@ h1,h2,h3 { font-family:var(--sans); }
   color:var(--ff-rust); white-space:nowrap; pointer-events:none; }
 .hf-anno svg { width:20px; height:13px; vertical-align:-2px; }
 .hf-anno svg path { stroke:var(--ff-rust); stroke-width:1.5; stroke-linecap:round; fill:none; }
-.hf-anno.pub-anno { left:56%; top:calc(50% + 12px); }
-.hf-anno.unref-anno { left:3%; top:calc(50% - 7px); }
-.hf-anno.priv-anno { left:2%; bottom:2px; }
+.hf-anno.pub-anno { left:48.5%; top:calc(50% + 4px); }
+.hf-anno.unref-anno { left:56.5%; top:calc(50% + 2px); }
+.hf-anno.priv-anno { left:2%; top:calc(50% + 9px); }
 .hf-gap-row { margin-top:2px; }
 .hf-gap-track { position:relative; margin-left:186px; height:24px; }
 .hf-gap-band { position:absolute; top:2px; height:20px; border-radius:4px;
@@ -539,3 +539,93 @@ h1,h2,h3 { font-family:var(--sans); }
   .hf-animate .hf-bar { transform:none; }
   .hf-animate .hf-track > b { opacity:1; }
 }
+
+/* ================= v7, 27-Aug-2026: the field restructured by source.
+   Blocks unite methodologies by where the evidence comes from; colour is the
+   argument — grey is what they get without us. Spec: Fairway_football_field_spec_27Aug. */
+
+:root { --ff-purple:#7c3aed; --ff-reg:#5b7cfa; }
+
+/* nav sits on the page colour, no white band; the wordmark earns its size */
+.nav { background:var(--bg); border-bottom:1px solid transparent; box-shadow:none; }
+#screen-quiz .nav, #screen-result .nav { background:var(--paper); border-bottom:1px solid var(--line); }
+.nav .brand { font-size:23px; font-weight:800; letter-spacing:-.028em; }
+
+/* two-tone headline: the problem in ink, the move in the accent */
+.h1-ink { display:block; color:var(--ff-ink); }
+.h1-acc { display:block; color:var(--accent); }
+
+/* use cases, one quiet line under the CTA */
+.use-line { font-family:var(--mono); font-size:10.5px; color:var(--ff-soft);
+  margin:16px 0 0; line-height:1.7; letter-spacing:.01em; }
+.use-line span { text-transform:uppercase; letter-spacing:.13em; font-size:9px;
+  color:var(--ff-mute); font-weight:600; margin-right:10px; }
+
+/* hero stats: figure and claim always; the working appears on hover */
+.hero-stats .hs span { display:none; }
+.hero-stats .hs:hover span { display:block; }
+.hero-stats .hs { cursor:default; }
+
+/* driver cards: same rule */
+.ds p { display:none; }
+.ds:hover p { display:block; }
+
+/* the drivers + investors strip, now its own section below the first viewport */
+.hero-below.standalone { margin-top:8px; padding-top:0; border-top:none; }
+
+/* source-block labels inside the hero field */
+.hf-group { font-size:9px; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  color:var(--ff-mute); padding:11px 0 3px; border-top:1px solid var(--ff-rule); margin-top:3px; }
+.hf-head + .hf-group { border-top:none; margin-top:0; padding-top:9px; }
+.hf-name.cont { font-weight:400; }
+.hf-new { font-style:normal; font-family:var(--mono); font-size:8px; letter-spacing:.1em;
+  text-transform:uppercase; font-weight:700; color:var(--ff-reg); border:1px solid #c7d4f8;
+  padding:1px 5px; border-radius:3px; margin-left:7px; vertical-align:2px; }
+
+/* bar colours: one per source, with a soft glow in the bar's own hue.
+   The unrefined range is the only bar that earns no glow. */
+.hf-bar.pub  { background:#a4adbd; box-shadow:0 0 12px rgba(122,132,152,.45); }
+.hf-bar.pub2 { background:#bcc4d1; box-shadow:0 0 10px rgba(122,132,152,.35); }
+.hf-bar.reg  { background:var(--ff-reg); box-shadow:0 0 14px rgba(91,124,250,.45); }
+.hf-bar.priv { background:var(--ff-purple); box-shadow:0 0 14px rgba(124,58,237,.42); }
+.hf-bar.dcf  { background:var(--ff-teal); box-shadow:0 0 14px rgba(14,116,144,.4); }
+.hf-bar.bandbar { background:repeating-linear-gradient(-45deg,#14181f 0 5px,#2e323a 5px 10px);
+  box-shadow:0 0 14px rgba(20,24,31,.4); }
+.hf-row.band { border-top:none; background:none; margin:0; padding:0; }
+
+/* axis on the new 3-to-14 scale: positioned labels, not flex guesses */
+.hf-axis { display:block; position:relative; height:20px; margin-left:186px; padding:0;
+  border-top:1px solid var(--ff-rule); }
+.hf-axis b { position:absolute; top:5px; transform:translateX(-50%); font-weight:400; }
+
+/* the premium callout: a staircase, one step per block, and the one line that matters */
+.hf-prem { display:flex; align-items:center; gap:14px; margin:10px 0 0 186px;
+  padding:10px 14px; background:var(--accent-soft); border:1px solid #dbe4fb; border-radius:8px; }
+.hf-prem svg { width:54px; height:30px; flex:none; }
+.hf-prem p { margin:0; font-size:11px; color:var(--ff-soft); line-height:1.5; }
+.hf-prem p b { font-family:var(--mono); font-size:17px; font-weight:600; color:var(--ff-ink);
+  margin-right:7px; letter-spacing:-.02em; }
+
+/* section-2 field: same blocks, same colours */
+.ff-group { color:var(--ff-soft); border-top:1px solid var(--ff-rule); padding:13px 0 4px; }
+.ff-bar.grey  { background:#a4adbd; box-shadow:0 0 10px rgba(122,132,152,.4); }
+.ff-bar.grey2 { background:#bcc4d1; box-shadow:0 0 9px rgba(122,132,152,.3); }
+.ff-bar.reg   { background:var(--ff-reg); box-shadow:0 0 12px rgba(91,124,250,.42); }
+.ff-bar.priv  { background:var(--ff-purple); box-shadow:0 0 12px rgba(124,58,237,.4); }
+.ff-bar.teal-soft { background:var(--ff-teal); opacity:1; box-shadow:0 0 12px rgba(14,116,144,.38); }
+.ff-bar.band { background:repeating-linear-gradient(-45deg,#14181f 0 5px,#2e323a 5px 10px);
+  box-shadow:0 0 12px rgba(20,24,31,.38); }
+.ff-bar.unrefined { background:repeating-linear-gradient(-45deg,#d3d8e1 0 5px,#e8ebf1 5px 10px);
+  border:1px dashed #a4adbd; }
+.ff-row.unref { opacity:1; }
+
+@media (max-width:900px) {
+  .hf-axis, .hf-prem { margin-left:0; }
+  .hf-row { min-height:44px; }
+  .hf-track { min-height:44px; }
+  .use-line { display:none; }
+}
+
+/* section-2 annotations match the hero: sentence case, italic, no shouting */
+.ff-anno { font-family:var(--sans); font-style:italic; font-weight:500; font-size:11.5px;
+  letter-spacing:0; text-transform:none; color:var(--ff-rust); }
