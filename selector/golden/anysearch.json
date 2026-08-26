@@ -2,16 +2,10 @@
  "expected": {
   "core": [
    {
-    "company": "MongoDB, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 11.5,
-    "ticker": "NASDAQGM:MDB"
-   },
-   {
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; sold the same way",
     "score": 10.1,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -19,32 +13,45 @@
     "company": "Elastic N.V.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of search; same type of business; same business function; same kind of customer",
     "score": 9.7,
     "ticker": "NYSE:ESTC"
    },
    {
-    "company": "JFrog Ltd.",
+    "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGS:FROG"
+    "reason": "shares the language of source; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "NASDAQGS:GTLB"
    },
    {
-    "company": "Qt Group Oyj",
+    "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 9.5,
-    "ticker": "HLSE:QTCOM"
+    "reason": "both do AI Agent Infrastructure; related type of business; same kind of customer; sold the same way",
+    "score": 8.6,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
+    "score": 8.3,
+    "ticker": "NASDAQGS:API"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 16.4,
+   "high": 31.8,
    "low": 4.1,
-   "mid": 10.5,
+   "mid": 5.0,
    "n": 5,
    "tag_evidence": 0.6,
    "thin": false,
@@ -59,6 +66,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
+    "reason": "shares the language of agent, ai, api; same type of business; same business function; same kind of customer",
     "score": 16.6,
     "type": "MIXED"
    },
@@ -69,6 +77,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
+    "reason": "shares the language of ai; same type of business; sold the same way; same AI stance",
     "score": 10.1,
     "type": "PRIMARY"
    },
@@ -79,6 +88,7 @@
     "date": "Oct-25",
     "in_medians": false,
     "mult": null,
+    "reason": "shares the language of agent, source; same type of business; same kind of customer; sold the same way",
     "score": 15.9,
     "type": "PRIMARY"
    },
@@ -89,6 +99,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 14.9,
+    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
     "score": 11.6,
     "type": "PRIMARY"
    },
@@ -99,6 +110,7 @@
     "date": "Sep-25",
     "in_medians": false,
     "mult": null,
+    "reason": "both do AI Search; related type of business; same business function; sold the same way",
     "score": 11.3,
     "type": "PRIMARY"
    }
@@ -107,6 +119,8 @@
   "private_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "display": "RANGE",
    "high": 33.0,
    "low": 10.3,
@@ -119,51 +133,58 @@
   "private_window_months": 11,
   "secondary": [
    {
-    "company": "GitLab Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.1,
-    "ticker": "NASDAQGS:GTLB"
-   },
-   {
-    "company": "Cloudflare, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.6,
-    "ticker": "NYSE:NET"
-   },
-   {
-    "company": "Atlassian Corporation",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQGS:TEAM"
-   },
-   {
-    "company": "Agora, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.3,
-    "ticker": "NASDAQGS:API"
-   },
-   {
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
     "score": 8.3,
     "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Palantir Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
+    "score": 7.7,
+    "ticker": "NASDAQGS:PLTR"
+   },
+   {
+    "company": "C3.ai, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+    "score": 7.1,
+    "ticker": "NYSE:AI"
+   },
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same business function",
+    "score": 7.1,
+    "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same type of business; same kind of customer",
+    "score": 6.8,
+    "ticker": "ENXTAM:TOM2"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 31.8,
-   "low": 5.0,
+   "high": 41.8,
+   "low": 4.8,
    "mid": 5.2,
    "n": 5,
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": true
   }

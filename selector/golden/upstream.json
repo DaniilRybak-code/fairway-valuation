@@ -2,37 +2,18 @@
  "expected": {
   "core": [
    {
-    "company": "Ooma, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 12.0,
-    "ticker": "NYSE:OOMA"
-   },
-   {
-    "company": "Freshworks Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 10.5,
-    "ticker": "NASDAQGS:FRSH"
-   },
-   {
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of email; related type of business; same kind of customer; same revenue model",
     "score": 9.7,
     "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "TeamViewer SE",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "XTRA:TMV"
    },
    {
     "company": "Intuit Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of email; related type of business; same kind of customer; sold the same way",
     "score": 7.2,
     "ticker": "NASDAQGS:INTU"
    }
@@ -40,14 +21,16 @@
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.4,
-   "low": 2.4,
-   "mid": 2.7,
-   "n": 5,
+   "low": 2.8,
+   "mid": 3.6,
+   "n": 2,
    "tag_evidence": 0.2,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
   "listed_proximity": "ADJACENT",
@@ -59,6 +42,7 @@
     "date": "Jan-26",
     "in_medians": false,
     "mult": 18.0,
+    "reason": "both do Email Client; same type of business; same business function; same kind of customer",
     "score": 18.9,
     "type": "SECONDARY"
    },
@@ -69,6 +53,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 21.0,
+    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
     "score": 14.6,
     "type": "MIXED"
    },
@@ -79,18 +64,9 @@
     "date": "Jun-25",
     "in_medians": true,
     "mult": 72.0,
+    "reason": "shares the language of ai, assistant; related type of business; same revenue model; same AI stance",
     "score": 10.4,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "PRESS_REPORTED",
-    "bound": "<=",
-    "company": "Rippling",
-    "date": "Apr-24",
-    "in_medians": true,
-    "mult": 38.6,
-    "score": 10.0,
-    "type": "SECONDARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -99,7 +75,19 @@
     "date": "Oct-22",
     "in_medians": false,
     "mult": 33.3,
+    "reason": "shares the language of tracking; related type of business; same kind of customer; same revenue model",
     "score": 10.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Gorgias",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
+    "score": 13.6,
     "type": "PRIMARY"
    }
   ],
@@ -107,21 +95,24 @@
   "private_range": {
    "anchor_dropped": false,
    "bounded": true,
+   "control_n": 0,
+   "control_names": [],
    "display": "RANGE",
    "high": 72.0,
    "low": 21.0,
-   "mid": 38.6,
-   "n": 3,
+   "mid": 72.0,
+   "n": 2,
    "tag_evidence": 0.4,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
-  "private_window_months": 46,
+  "private_window_months": 48,
   "secondary": [
    {
     "company": "Zoom Communications, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of team; same type of business; same revenue model; sold the same way",
     "score": 10.1,
     "ticker": "NASDAQGS:ZM"
    },
@@ -129,6 +120,7 @@
     "company": "Asana, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of team; related type of business; same revenue model; sold the same way",
     "score": 8.6,
     "ticker": "NYSE:ASAN"
    },
@@ -136,32 +128,37 @@
     "company": "RingCentral, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of team; same type of business; same revenue model",
     "score": 8.1,
     "ticker": "NYSE:RNG"
-   },
-   {
-    "company": "Text S.A.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.0,
-    "ticker": "WSE:TXT"
    },
    {
     "company": "Atlassian Corporation",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of tracking; related type of business; same revenue model; sold the same way",
     "score": 7.5,
     "ticker": "NASDAQGS:TEAM"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same type of business; sold the same way",
+    "score": 6.2,
+    "ticker": "NYSE:TWLO"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 5.8,
    "low": 2.5,
-   "mid": 3.4,
+   "mid": 4.6,
    "n": 5,
    "tag_evidence": 0.6,
    "thin": false,

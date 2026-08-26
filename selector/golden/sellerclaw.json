@@ -5,6 +5,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
     "score": 11.6,
     "ticker": "NYSE:KVYO"
    },
@@ -12,6 +13,7 @@
     "company": "Baozun Inc.",
     "family": "consumer",
     "in_medians": false,
+    "reason": "both do Fulfilment; same type of business; same end market; same business function",
     "score": 9.0,
     "ticker": "NASDAQGS:BZUN"
    },
@@ -19,6 +21,7 @@
     "company": "Rezolve AI PLC",
     "family": "software",
     "in_medians": false,
+    "reason": "shares the language of ai, product; related type of business; same end market; same AI stance",
     "score": 5.9,
     "ticker": "NASDAQGM:RZLV"
    }
@@ -26,6 +29,8 @@
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "DIAMOND",
    "high": 2.7,
@@ -46,6 +51,7 @@
     "date": "Jan-25",
     "in_medians": false,
     "mult": null,
+    "reason": "related type of business; same end market",
     "score": 6.0,
     "type": "SECONDARY"
    },
@@ -56,6 +62,7 @@
     "date": "Mar-22",
     "in_medians": false,
     "mult": null,
+    "reason": "shares the language of amazon, management; related type of business; same end market",
     "score": 6.6,
     "type": "PRIMARY"
    },
@@ -66,6 +73,7 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 32.6,
+    "reason": "shares the language of automation, shopify; related type of business; same end market; same kind of customer",
     "score": 13.2,
     "type": "PRIMARY"
    },
@@ -76,6 +84,7 @@
     "date": "Mar-21",
     "in_medians": true,
     "mult": 14.0,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
     "score": 12.5,
     "type": "PRIMARY"
    }
@@ -84,6 +93,8 @@
   "private_range": {
    "anchor_dropped": false,
    "bounded": true,
+   "control_n": 0,
+   "control_names": [],
    "display": "RANGE",
    "high": 32.6,
    "low": 14.0,
@@ -99,6 +110,7 @@
     "company": "Shoper S.A.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
     "score": 7.9,
     "ticker": "WSE:SHO"
    },
@@ -106,6 +118,7 @@
     "company": "Shopify Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
     "score": 7.9,
     "ticker": "NASDAQGS:SHOP"
    },
@@ -113,6 +126,7 @@
     "company": "Klarna Group plc",
     "family": "fintech",
     "in_medians": true,
+    "reason": "same end market; same kind of customer; sold the same way",
     "score": 7.5,
     "ticker": "NYSE:KLAR"
    },
@@ -120,27 +134,31 @@
     "company": "SPS Commerce, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "both do Order Management; same end market; same kind of customer",
     "score": 6.0,
     "ticker": "NASDAQGS:SPSC"
    },
    {
-    "company": "Maplebear Inc.",
+    "company": "Chewy, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "score": 6.0,
-    "ticker": "NASDAQGS:CART"
+    "reason": "both do Fulfilment; same end market; same business function",
+    "score": 5.6,
+    "ticker": "NYSE:CHWY"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 11.0,
-   "low": 2.4,
+   "low": 0.7,
    "mid": 3.4,
    "n": 5,
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
   }

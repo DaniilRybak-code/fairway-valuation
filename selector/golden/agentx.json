@@ -2,16 +2,10 @@
  "expected": {
   "core": [
    {
-    "company": "JFrog Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "score": 13.0,
-    "ticker": "NASDAQGS:FROG"
-   },
-   {
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "both do CI/CD; same type of business; same business function; same kind of customer",
     "score": 12.7,
     "ticker": "NASDAQGS:GTLB"
    },
@@ -19,20 +13,15 @@
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of framework; same type of business; same business function; same kind of customer",
     "score": 11.1,
     "ticker": "HLSE:QTCOM"
-   },
-   {
-    "company": "Atlassian Corporation",
-    "family": "software",
-    "in_medians": true,
-    "score": 10.5,
-    "ticker": "NASDAQGS:TEAM"
    },
    {
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "both do AI Agent Monitoring; same type of business; same kind of customer; sold the same way",
     "score": 9.2,
     "ticker": "NASDAQGS:DDOG"
    }
@@ -40,12 +29,14 @@
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 16.4,
-   "low": 5.0,
-   "mid": 5.8,
-   "n": 5,
+   "low": 3.9,
+   "mid": 5.0,
+   "n": 3,
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": true
@@ -59,6 +50,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
+    "reason": "shares the language of agent, ai; same type of business; same kind of customer; sold the same way",
     "score": 11.8,
     "type": "MIXED"
    },
@@ -69,6 +61,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
+    "reason": "both do No-Code; same type of business; same business function; sold the same way",
     "score": 14.4,
     "type": "PRIMARY"
    },
@@ -79,6 +72,7 @@
     "date": "Oct-25",
     "in_medians": false,
     "mult": null,
+    "reason": "both do Agent Orchestration, Agent Framework, Agent Evaluation; same type of business; same business function; same kind of customer",
     "score": 19.2,
     "type": "PRIMARY"
    },
@@ -89,6 +83,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 30.0,
+    "reason": "shares the language of agent, ai, builder; same type of business; same business function; sold the same way",
     "score": 15.8,
     "type": "PRIMARY"
    },
@@ -99,6 +94,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 14.9,
+    "reason": "shares the language of ai, deployment, evaluation; same type of business; same AI stance",
     "score": 8.9,
     "type": "PRIMARY"
    }
@@ -107,6 +103,8 @@
   "private_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "display": "RANGE",
    "high": 33.0,
    "low": 10.3,
@@ -119,16 +117,10 @@
   "private_window_months": 11,
   "secondary": [
    {
-    "company": "Amplitude, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQCM:AMPL"
-   },
-   {
     "company": "C3.ai, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
     "score": 8.6,
     "ticker": "NYSE:AI"
    },
@@ -136,6 +128,7 @@
     "company": "Coveo Solutions Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
     "score": 8.6,
     "ticker": "TSX:CVO"
    },
@@ -143,27 +136,39 @@
     "company": "Palantir Technologies Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
     "score": 8.6,
     "ticker": "NASDAQGS:PLTR"
    },
    {
-    "company": "MongoDB, Inc.",
+    "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQGM:MDB"
+    "reason": "both do No-Code; same revenue model; sold the same way",
+    "score": 7.9,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Agent Orchestration; related type of business; same revenue model; same AI stance",
+    "score": 7.9,
+    "ticker": "NYSE:PATH"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 41.8,
-   "low": 3.4,
-   "mid": 4.8,
+   "low": 1.9,
+   "mid": 4.0,
    "n": 5,
-   "tag_evidence": 0.1,
+   "tag_evidence": 1.4,
    "thin": false,
    "triangulated": true
   }

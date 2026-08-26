@@ -5,6 +5,7 @@
     "company": "Asana, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of task; same type of business; same kind of customer; same revenue model",
     "score": 12.6,
     "ticker": "NYSE:ASAN"
    },
@@ -12,40 +13,30 @@
     "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of to; same type of business; same kind of customer; same revenue model",
     "score": 9.1,
     "ticker": "NASDAQGS:BL"
    },
    {
-    "company": "ATOSS Software SE",
+    "company": "Sidetrade SA",
     "family": "software",
     "in_medians": true,
-    "score": 9.0,
-    "ticker": "XTRA:AOF"
-   },
-   {
-    "company": "DocuSign, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.0,
-    "ticker": "NASDAQGS:DOCU"
-   },
-   {
-    "company": "Planisware SAS",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.0,
-    "ticker": "ENXTPA:PLNW"
+    "reason": "shares the language of ai, to; same type of business; same kind of customer; same AI stance",
+    "score": 8.7,
+    "ticker": "ENXTPA:ALBFR"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 6.6,
-   "low": 2.5,
-   "mid": 3.1,
-   "n": 5,
+   "high": 4.0,
+   "low": 2.3,
+   "mid": 2.5,
+   "n": 3,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -59,6 +50,7 @@
     "date": "Jan-26",
     "in_medians": false,
     "mult": 18.0,
+    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
     "score": 12.6,
     "type": "SECONDARY"
    },
@@ -69,18 +61,9 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 21.0,
+    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
     "score": 14.6,
     "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Deel",
-    "date": "Oct-25",
-    "in_medians": true,
-    "mult": 17.3,
-    "score": 12.0,
-    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -89,81 +72,87 @@
     "date": "Jun-25",
     "in_medians": true,
     "mult": 72.0,
+    "reason": "shares the language of ai, assistant; related type of business; same revenue model; same AI stance",
     "score": 10.4,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
+    "basis": "NONE",
     "bound": "",
-    "company": "FloQast",
-    "date": "Apr-24",
-    "in_medians": true,
-    "mult": 16.0,
-    "score": 13.5,
+    "company": "Gorgias",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+    "score": 10.1,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Calendly",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 42.9,
+    "reason": "shares the language of meeting; related type of business; same business function; same revenue model",
+    "score": 13.1,
+    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
    "bounded": true,
+   "control_n": 0,
+   "control_names": [],
    "display": "RANGE",
    "high": 72.0,
-   "low": 16.0,
-   "mid": 21.0,
-   "n": 4,
-   "tag_evidence": 0.4,
+   "low": 21.0,
+   "mid": 42.9,
+   "n": 3,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
   },
-  "private_window_months": 28,
+  "private_window_months": 67,
   "secondary": [
    {
-    "company": "Freshworks Inc.",
+    "company": "Five9, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGS:FRSH"
+    "reason": "shares the language of ai; same kind of customer; same revenue model",
+    "score": 7.1,
+    "ticker": "NASDAQGM:FIVN"
    },
    {
-    "company": "Sidetrade SA",
+    "company": "NICE Ltd.",
     "family": "software",
     "in_medians": true,
-    "score": 8.7,
-    "ticker": "ENXTPA:ALBFR"
+    "reason": "shares the language of ai; same kind of customer; same revenue model",
+    "score": 7.1,
+    "ticker": "NASDAQGS:NICE"
    },
    {
-    "company": "TeamViewer SE",
+    "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 8.5,
-    "ticker": "XTRA:TMV"
-   },
-   {
-    "company": "Ooma, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.0,
-    "ticker": "NYSE:OOMA"
-   },
-   {
-    "company": "Zoom Communications, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQGS:ZM"
+    "reason": "shares the language of company, to; same kind of customer; same revenue model",
+    "score": 6.7,
+    "ticker": "NASDAQGS:GTM"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 4.6,
-   "low": 2.4,
-   "mid": 2.7,
-   "n": 5,
-   "tag_evidence": 0.2,
+   "high": 2.1,
+   "low": 1.7,
+   "mid": 2.0,
+   "n": 3,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": true
   }

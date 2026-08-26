@@ -1,29 +1,10 @@
 {
  "expected": {
-  "core": [
-   {
-    "company": "Dropbox, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQGS:DBX"
-   }
-  ],
+  "core": [],
   "core_range": {
-   "anchor_dropped": false,
-   "bounded": false,
-   "denominator": "rev",
-   "display": "DIAMOND",
-   "high": 4.1,
-   "low": 4.1,
-   "mid": 4.1,
-   "n": 1,
-   "sole": "Dropbox, Inc.",
-   "tag_evidence": 0.0,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   },
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "NONE",
   "private": [
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -32,6 +13,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 21.0,
+    "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
     "score": 18.1,
     "type": "MIXED"
    },
@@ -42,18 +24,9 @@
     "date": "Sep-25",
     "in_medians": false,
     "mult": null,
+    "reason": "shares the language of ai, assistant; same type of business; sold the same way; same AI stance",
     "score": 11.9,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Canva",
-    "date": "Aug-25",
-    "in_medians": true,
-    "mult": 12.7,
-    "score": 11.0,
-    "type": "SECONDARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -62,83 +35,31 @@
     "date": "Mar-25",
     "in_medians": false,
     "mult": 54.5,
+    "reason": "both do AI Assistant; same type of business; sold the same way; same AI stance",
     "score": 10.4,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Calendly",
-    "date": "Jan-21",
-    "in_medians": true,
-    "mult": 42.9,
-    "score": 14.0,
-    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
    "bounded": true,
-   "display": "RANGE",
-   "high": 42.9,
-   "low": 12.7,
+   "control_n": 0,
+   "control_names": [],
+   "display": "DIAMOND",
+   "high": 21.0,
+   "low": 21.0,
    "mid": 21.0,
-   "n": 3,
+   "n": 1,
+   "sole": "Gamma",
    "tag_evidence": 0.1,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
-  "private_window_months": 67,
-  "secondary": [
-   {
-    "company": "Truecaller AB (publ)",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.2,
-    "ticker": "OM:TRUE B"
-   },
-   {
-    "company": "Opera Limited",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.0,
-    "ticker": "NASDAQGS:OPRA"
-   },
-   {
-    "company": "Life360, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 6.0,
-    "ticker": "ASX:360"
-   },
-   {
-    "company": "Gen Digital Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 5.5,
-    "ticker": "NASDAQGS:GEN"
-   },
-   {
-    "company": "Adobe Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 5.5,
-    "ticker": "NASDAQGS:ADBE"
-   }
-  ],
+  "private_window_months": 17,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "bounded": false,
-   "denominator": "rev",
-   "display": "RANGE",
-   "high": 4.6,
-   "low": 3.0,
-   "mid": 4.0,
-   "n": 5,
-   "tag_evidence": 0.2,
-   "thin": false,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Local-first AI memory layer for Mac and Windows that drafts in your own tone"

@@ -2,50 +2,41 @@
  "expected": {
   "core": [
    {
-    "company": "Freshworks Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQGS:FRSH"
-   },
-   {
-    "company": "Intuit Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQGS:INTU"
-   },
-   {
-    "company": "TeamViewer SE",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "XTRA:TMV"
-   },
-   {
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
     "score": 7.1,
     "ticker": "NYSE:HUBS"
    },
    {
-    "company": "Text S.A.",
+    "company": "innoscripta SE",
     "family": "software",
     "in_medians": true,
-    "score": 7.0,
-    "ticker": "WSE:TXT"
+    "reason": "shares the language of credit; same type of business; same kind of customer",
+    "score": 6.6,
+    "ticker": "XTRA:1INN"
+   },
+   {
+    "company": "BILL Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; related type of business; same kind of customer",
+    "score": 5.1,
+    "ticker": "NYSE:BILL"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 4.4,
-   "low": 2.7,
+   "high": 5.4,
+   "low": 2.2,
    "mid": 2.8,
-   "n": 5,
+   "n": 3,
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -59,6 +50,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 105.3,
+    "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
     "score": 9.3,
     "type": "PRIMARY"
    },
@@ -69,6 +61,7 @@
     "date": "Jan-26",
     "in_medians": false,
     "mult": 18.0,
+    "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
     "score": 11.1,
     "type": "SECONDARY"
    },
@@ -79,6 +72,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
+    "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
     "score": 9.7,
     "type": "SECONDARY"
    },
@@ -89,6 +83,7 @@
     "date": "Jan-26",
     "in_medians": false,
     "mult": 150.0,
+    "reason": "shares the language of agent, ai, automation; related type of business; same revenue model; same AI stance",
     "score": 8.9,
     "type": "PRIMARY"
    },
@@ -97,8 +92,9 @@
     "bound": "",
     "company": "Semrush",
     "date": "Nov-25",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 4.3,
+    "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
     "score": 9.8,
     "type": "CONTROL"
    }
@@ -107,13 +103,17 @@
   "private_range": {
    "anchor_dropped": false,
    "bounded": true,
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
    "display": "RANGE",
    "high": 105.3,
-   "low": 50.0,
-   "mid": 105.3,
-   "n": 2,
+   "low": 4.3,
+   "mid": 50.0,
+   "n": 3,
    "tag_evidence": 0.8,
-   "thin": true,
+   "thin": false,
    "triangulated": true
   },
   "private_window_months": 9,
@@ -122,6 +122,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
     "score": 8.6,
     "ticker": "NYSE:KVYO"
    },
@@ -129,6 +130,7 @@
     "company": "Asana, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of team; same type of business; same business function; sold the same way",
     "score": 8.6,
     "ticker": "NYSE:ASAN"
    },
@@ -136,6 +138,7 @@
     "company": "UiPath, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of agent, automation; same type of business; same business function; same AI stance",
     "score": 8.4,
     "ticker": "NYSE:PATH"
    },
@@ -143,24 +146,28 @@
     "company": "Pegasystems Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of automation, business; same type of business; same business function",
     "score": 7.3,
     "ticker": "NASDAQGS:PEGA"
    },
    {
-    "company": "innoscripta SE",
+    "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of ai; same kind of customer; sold the same way",
     "score": 6.6,
-    "ticker": "XTRA:1INN"
+    "ticker": "NASDAQGS:WIX"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 5.4,
-   "low": 2.7,
+   "high": 4.0,
+   "low": 2.3,
    "mid": 2.7,
    "n": 5,
    "tag_evidence": 0.6,

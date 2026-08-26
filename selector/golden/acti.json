@@ -5,49 +5,25 @@
     "company": "Truecaller AB (publ)",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of app; same type of business; same kind of customer; sold the same way",
     "score": 9.7,
     "ticker": "OM:TRUE B"
-   },
-   {
-    "company": "Opera Limited",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGS:OPRA"
-   },
-   {
-    "company": "Life360, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "ASX:360"
-   },
-   {
-    "company": "Gen Digital Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQGS:GEN"
-   },
-   {
-    "company": "F-Secure Oyj",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.5,
-    "ticker": "HLSE:FSECURE"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
-   "high": 4.6,
+   "display": "DIAMOND",
+   "high": 3.0,
    "low": 3.0,
-   "mid": 3.1,
-   "n": 5,
+   "mid": 3.0,
+   "n": 1,
+   "sole": "Truecaller AB (publ)",
    "tag_evidence": 0.2,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
   "listed_proximity": "ADJACENT",
@@ -59,6 +35,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 21.0,
+    "reason": "shares the language of ai; same type of business; same business function; sold the same way",
     "score": 14.6,
     "type": "MIXED"
    },
@@ -69,18 +46,9 @@
     "date": "Sep-25",
     "in_medians": false,
     "mult": null,
+    "reason": "shares the language of ai; same type of business; same kind of customer; sold the same way",
     "score": 15.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Canva",
-    "date": "Aug-25",
-    "in_medians": true,
-    "mult": 12.7,
-    "score": 7.5,
-    "type": "SECONDARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -89,6 +57,7 @@
     "date": "Mar-25",
     "in_medians": false,
     "mult": 54.5,
+    "reason": "shares the language of ai, api; same type of business; same kind of customer; sold the same way",
     "score": 13.9,
     "type": "PRIMARY"
    },
@@ -99,6 +68,7 @@
     "date": "Jan-25",
     "in_medians": false,
     "mult": 41.3,
+    "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
     "score": 8.1,
     "type": "PRIMARY"
    }
@@ -107,38 +77,22 @@
   "private_range": {
    "anchor_dropped": false,
    "bounded": true,
-   "display": "RANGE",
+   "control_n": 0,
+   "control_names": [],
+   "display": "DIAMOND",
    "high": 21.0,
-   "low": 12.7,
+   "low": 21.0,
    "mid": 21.0,
-   "n": 2,
+   "n": 1,
+   "sole": "Gamma",
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
   },
   "private_window_months": 19,
-  "secondary": [
-   {
-    "company": "Dropbox, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 6.0,
-    "ticker": "NASDAQGS:DBX"
-   }
-  ],
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "bounded": false,
-   "denominator": "rev",
-   "display": "DIAMOND",
-   "high": 4.1,
-   "low": 4.1,
-   "mid": 4.1,
-   "n": 1,
-   "sole": "Dropbox, Inc.",
-   "tag_evidence": 0.0,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "A free mobile keyboard that embeds AI agents into any text field"

@@ -17,7 +17,8 @@ def snap(prof):
     for name, grp in (('core', core), ('secondary', sec)):
         out[name] = [{'company': r['company_name'], 'ticker': r['exchange_ticker'],
                       'family': r['family'], 'score': round(s, 1),
-                      'in_medians': r['in_medians']} for (s, _w), r in grp]
+                      'in_medians': r['in_medians'],
+                      'reason': M.why_text(prof, r, _w)} for (s, _w), r in grp]
         which, _reason = M.denominator(prof, grp)
         rng = M.group_range(grp, which, listed_tier)
         out[name + '_range'] = {'denominator': which, **({k: round(v, 2) if isinstance(v, float) else v
@@ -27,7 +28,8 @@ def snap(prof):
     out['private'] = [{'company': r['company_name'], 'date': r['date'],
                        'type': r['transaction_type'], 'mult': r.get('mult'),
                        'basis': r.get('denominator_basis',''), 'bound': r.get('bound',''),
-                       'in_medians': r['in_medians'], 'score': round(s, 1)}
+                       'in_medians': r['in_medians'], 'score': round(s, 1),
+                       'reason': M.why_text(prof, r, _w)}
                       for (s, _w), r in picked]
     out['private_window_months'] = months
     out['listed_proximity'] = listed_tier

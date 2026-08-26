@@ -5,6 +5,7 @@
     "company": "Duolingo, Inc.",
     "family": "consumer",
     "in_medians": true,
+    "reason": "both do AI Tutor; same type of business; same end market; same AI stance",
     "score": 10.7,
     "ticker": "NASDAQGS:DUOL"
    },
@@ -12,6 +13,7 @@
     "company": "Docebo Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "both do LMS, Corporate Training; related type of business; same end market; same business function",
     "score": 8.0,
     "ticker": "TSX:DCBO"
    },
@@ -19,6 +21,7 @@
     "company": "Coursera, Inc.",
     "family": "consumer",
     "in_medians": true,
+    "reason": "same type of business; same end market",
     "score": 6.0,
     "ticker": "NYSE:COUR"
    },
@@ -26,6 +29,7 @@
     "company": "Chegg, Inc.",
     "family": "consumer",
     "in_medians": true,
+    "reason": "same type of business; same end market",
     "score": 6.0,
     "ticker": "NYSE:CHGG"
    }
@@ -33,6 +37,8 @@
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 4.4,

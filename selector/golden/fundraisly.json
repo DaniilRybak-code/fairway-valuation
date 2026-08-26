@@ -5,6 +5,7 @@
     "company": "CRISIL Limited",
     "family": "fintech",
     "in_medians": true,
+    "reason": "related type of business; same end market; same revenue model; same AI stance",
     "score": 8.0,
     "ticker": "NSEI:CRISIL"
    },
@@ -12,39 +13,45 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "both do CRM; same type of business; same kind of customer; same AI stance",
     "score": 6.9,
     "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 6.5,
-    "ticker": "NASDAQGS:GTM"
-   },
-   {
-    "company": "Text S.A.",
-    "family": "software",
-    "in_medians": true,
-    "score": 5.5,
-    "ticker": "WSE:TXT"
    },
    {
     "company": "S&P Global Inc.",
     "family": "fintech",
     "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
     "score": 5.5,
     "ticker": "NYSE:SPGI"
+   },
+   {
+    "company": "Moody's Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 5.5,
+    "ticker": "NYSE:MCO"
+   },
+   {
+    "company": "MSCI Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 5.5,
+    "ticker": "NYSE:MSCI"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 9.5,
-   "low": 2.8,
-   "mid": 3.4,
+   "high": 12.9,
+   "low": 6.9,
+   "mid": 9.5,
    "n": 5,
    "tag_evidence": 0.4,
    "thin": false,
@@ -59,6 +66,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
+    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
     "score": 9.1,
     "type": "SECONDARY"
    },
@@ -67,30 +75,11 @@
     "bound": "",
     "company": "Semrush",
     "date": "Nov-25",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 4.3,
+    "reason": "shares the language of ai; same type of business; same kind of customer",
     "score": 7.6,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Gong",
-    "date": "Nov-25",
-    "in_medians": false,
-    "mult": null,
-    "score": 7.0,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_UNDEFINED_BASIS",
-    "bound": "",
-    "company": "Rokt",
-    "date": "Jan-25",
-    "in_medians": false,
-    "mult": null,
-    "score": 6.0,
-    "type": "SECONDARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -99,6 +88,7 @@
     "date": "Aug-23",
     "in_medians": false,
     "mult": 16.0,
+    "reason": "shares the language of database; same type of business; same business function; same kind of customer",
     "score": 13.0,
     "type": "PRIMARY"
    }
@@ -107,12 +97,15 @@
   "private_range": {
    "anchor_dropped": false,
    "bounded": false,
-   "display": "DIAMOND",
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
+   "display": "RANGE",
    "high": 50.0,
-   "low": 50.0,
+   "low": 4.3,
    "mid": 50.0,
-   "n": 1,
-   "sole": "Clay",
+   "n": 2,
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
@@ -120,23 +113,10 @@
   "private_window_months": 36,
   "secondary": [
    {
-    "company": "Weave Communications, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.0,
-    "ticker": "NYSE:WEAV"
-   },
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 6.5,
-    "ticker": "NYSE:KVYO"
-   },
-   {
     "company": "Qualco Group S.A.",
     "family": "software",
     "in_medians": true,
+    "reason": "same end market; same revenue model; same AI stance",
     "score": 6.5,
     "ticker": "ATSE:QLCO"
    },
@@ -144,25 +124,45 @@
     "company": "Alkami Technology, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "same end market; sold the same way; same AI stance",
     "score": 6.0,
     "ticker": "NASDAQGS:ALKT"
    },
    {
-    "company": "Moody's Corporation",
+    "company": "FactSet Research Systems Inc.",
     "family": "fintech",
     "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
     "score": 5.5,
-    "ticker": "NYSE:MCO"
+    "ticker": "NYSE:FDS"
+   },
+   {
+    "company": "Morningstar, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 5.5,
+    "ticker": "NASDAQ:MORN"
+   },
+   {
+    "company": "London Stock Exchange Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 5.5,
+    "ticker": "LSE:LSEG"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 10.9,
-   "low": 1.9,
-   "mid": 2.7,
+   "high": 5.2,
+   "low": 3.5,
+   "mid": 4.3,
    "n": 5,
    "tag_evidence": 0.0,
    "thin": false,

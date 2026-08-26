@@ -5,79 +5,29 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
     "score": 10.7,
     "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "Text S.A.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "WSE:TXT"
-   },
-   {
-    "company": "Freshworks Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.0,
-    "ticker": "NASDAQGS:FRSH"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
-   "high": 3.4,
-   "low": 2.7,
+   "display": "DIAMOND",
+   "high": 2.8,
+   "low": 2.8,
    "mid": 2.8,
-   "n": 3,
+   "n": 1,
+   "sole": "HubSpot, Inc.",
    "tag_evidence": 0.2,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "Sierra",
-    "date": "May-26",
-    "in_medians": true,
-    "mult": 105.3,
-    "score": 8.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Clay",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 50.0,
-    "score": 13.0,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Decagon",
-    "date": "Jan-26",
-    "in_medians": false,
-    "mult": 150.0,
-    "score": 8.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "",
-    "company": "Semrush",
-    "date": "Nov-25",
-    "in_medians": false,
-    "mult": 4.3,
-    "score": 16.0,
-    "type": "CONTROL"
-   },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
@@ -85,29 +35,57 @@
     "date": "Aug-23",
     "in_medians": false,
     "mult": 16.0,
+    "reason": "both do Cold Email; same type of business; same kind of customer; sold the same way",
     "score": 13.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Mailchimp",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
+    "score": 14.7,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Klaviyo",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 32.6,
+    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
+    "score": 13.7,
     "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "bounded": true,
+   "bounded": false,
+   "control_n": 1,
+   "control_names": [
+    "Mailchimp"
+   ],
    "display": "RANGE",
-   "high": 105.3,
-   "low": 50.0,
-   "mid": 105.3,
+   "high": 32.6,
+   "low": 15.0,
+   "mid": 32.6,
    "n": 2,
-   "tag_evidence": 0.0,
+   "tag_evidence": 0.2,
    "thin": true,
    "triangulated": true
   },
-  "private_window_months": 36,
+  "private_window_months": 63,
   "secondary": [
    {
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
     "score": 12.2,
     "ticker": "NYSE:KVYO"
    },
@@ -115,20 +93,15 @@
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of email; same type of business; same business function; same revenue model",
     "score": 8.7,
     "ticker": "NYSE:ZETA"
-   },
-   {
-    "company": "Sprout Social, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.0,
-    "ticker": "NASDAQCM:SPT"
    },
    {
     "company": "IONOS Group SE",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of email, infrastructure; same kind of customer; sold the same way; same AI stance",
     "score": 7.0,
     "ticker": "XTRA:IOS"
    },
@@ -136,20 +109,31 @@
     "company": "Yext, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of reputation; same type of business; same business function",
     "score": 6.6,
     "ticker": "NYSE:YEXT"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Infrastructure Monitoring; same revenue model; sold the same way",
+    "score": 6.2,
+    "ticker": "NASDAQGS:DDOG"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 3.7,
-   "low": 1.7,
-   "mid": 2.7,
+   "high": 16.4,
+   "low": 2.7,
+   "mid": 3.7,
    "n": 5,
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": true
   }

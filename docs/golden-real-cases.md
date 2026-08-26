@@ -190,3 +190,91 @@ the founder, so every range now carries it.
   minority financings. The number the founder sees is built from Clay at 50.0x and Klaviyo at 32.6x.
   Showing that without saying it would be the worst kind of quiet dishonesty, because the set looks
   authoritative precisely because of the name that is not in it.
+
+## 26 August, later: a control deal prices, and nothing unrelated is shown
+
+Two rulings from Daniil, and they pull in opposite directions on purpose.
+
+*"Why are you excluding take private from the median? In the absence of clean comps, we should not
+exclude data based on the fact that this was a controlled deal. We should have the respective note
+(visible when someone hovers over the range), but we should not exclude this entirely."*
+
+*"It is ok not to have 100% comparables. It is important NOT TO SHOW COMPARABLES THAT HAVE
+ABSOLUTELY NOTHING TO DO WITH THE FOUNDER'S BUSINESS. And important to explain the selection."*
+
+### Rule four: a control deal is a benchmark and it prices
+
+Four control rows carrying a sound multiple now feed medians: Scale AI Jun-25 at 14.5x, Mailchimp
+Sep-21 at 15.0x, Semrush Nov-25 at 4.3x, Salesloft/Vista Dec-21 at most 23.0x. The software median
+moved from 24.8x on 30 rows to **22.8x on 34**.
+
+OpenSEO is the case that forced it, and it is the same case that produced the `anchor_dropped` flag
+the day before. Its best comparable by a distance is Semrush at 12.0 tag points, and Semrush's only
+transaction is the Adobe take-private. Under the old rule the founder saw Semrush named at the top of
+the set and a range built from Clay at 50.0x and Klaviyo at 32.6x, neither of which shares a tag with
+them. **The exclusion made the answer both worse and less honest.** OpenSEO now reads 4.3x to 50.0x
+with `tag_evidence` 12.0 and `triangulated` False, and `anchor_dropped` no longer fires.
+
+What does not change: a buyer of the whole company pays for control, so these multiples sit above
+what the same business would fetch in a minority round. Every range carries `control_n` and
+`control_names`, and the reveal must surface them on the name rather than in a footnote.
+
+### The relevance gate: something, or nothing
+
+A candidate now reaches no tier at all, secondary included, unless it has one of two things:
+
+- **any shared product vocabulary**, however weak. Not the 3.0 that anchors a DIRECT label, just
+  more than nothing.
+- **the same specific, non-Horizontal end market.** This is what keeps Rokt and Yotpo next to
+  SellerClaw: no shared tag, but all three live in Retail & E-commerce and that is a real
+  relationship. Horizontal never counts, because it is the absence of an end market rather than one.
+
+It removed 28 of 97 private members across the 21. **Mailwarm is the case that shows what it buys.**
+An email warm-up and deliverability product was being shown Sierra, Clay, Decagon and Semrush, four
+companies with no connection to email whatsoever. It now reads Apollo.io ("both do Cold Email"),
+Mailchimp and Klaviyo. Nothing was added to the data to achieve that; the noise was simply removed
+and what was underneath it turned out to be right.
+
+Publora falls from five names to a set led by Oxylabs and Anthropic ("both do MCP"), which is thinner
+and true. Zero of the 87 remaining private members now have no relationship at all to their founder.
+
+### One more route through axis B, because the two changes together went too far
+
+The relevance gate emptied OpenSEO's listed core set. OpenSEO is Horizontal, so axis B demanded a
+horizontal peer with the same END CUSTOMER, and Similarweb sells to a line of business while OpenSEO
+sells to developers. Similarweb shares two exact product tags with it, Keyword Research and Rank
+Tracking, and is plainly its closest listed comparable. Being told who someone sells to is a proxy
+for what they do; sharing the product vocabulary is the thing itself, so it should not lose to its
+own proxy. Anchored product evidence now satisfies axis B for a Horizontal profile. OpenSEO's listed
+core is Similarweb, at tier DIRECT, reasoned "both do Keyword Research, SEO, Rank Tracking".
+
+### Explaining the selection
+
+Every member of every set now carries a `reason`, built from the score's own working, and it is
+recorded in the fixtures so it is tested rather than decorative. Examples from tonight's run:
+
+- Fyle to Glossier: "both do Beauty; same type of business; same end market; same business function"
+- InsForge to Algolia: "both do Vector Search; related type of business; same business function"
+- SellerClaw to Rokt: "related type of business; same end market"
+- Publora to Anthropic: "both do MCP; same type of business; same kind of customer"
+
+### Where it lands
+
+| | before today | after |
+|---|---|---|
+| of 21, listed core set returned | 3 | **20** |
+| of 21, private set returned | 6 | **20** |
+| of 21, private range printed | 6 | **19** |
+| private members with no relationship at all | 28 of 97 | **0 of 87** |
+| ranges flagged `anchor_dropped` | 2 | 1 |
+| ranges flagged `triangulated` | 18 of 19 | 17 of 19 |
+| leave-one-out, listed / private, strict | 78% / 83% | 74% / 80% |
+| leave-one-out, listed / private, loose | 98% / 97% | 98% / 97% |
+
+The two profiles that return nothing are the honest ones. Goldfish, a local-first AI memory layer,
+has no listed core set because personal productivity is still an empty cluster, and Honen has no
+private set. Those are gap-log entries, not failures.
+
+Seventeen of nineteen ranges are still triangulations. **That is now the single number to manage.**
+We are not short of comparables any more; we are short of close ones, and every future data batch
+should be judged on whether it moves the triangulation count down rather than the coverage count up.

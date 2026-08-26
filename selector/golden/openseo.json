@@ -2,49 +2,40 @@
  "expected": {
   "core": [
    {
-    "company": "HubSpot, Inc.",
+    "company": "Similarweb Ltd.",
     "family": "software",
     "in_medians": true,
-    "score": 11.5,
-    "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "Text S.A.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "WSE:TXT"
-   },
-   {
-    "company": "Freshworks Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.0,
-    "ticker": "NASDAQGS:FRSH"
+    "reason": "both do Keyword Research, SEO, Rank Tracking; related type of business; same AI stance",
+    "score": 13.7,
+    "ticker": "NYSE:SMWB"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
-   "high": 3.4,
-   "low": 2.7,
-   "mid": 2.8,
-   "n": 3,
-   "tag_evidence": 0.0,
-   "thin": false,
-   "triangulated": true
+   "display": "DIAMOND",
+   "high": 2.1,
+   "low": 2.1,
+   "mid": 2.1,
+   "n": 1,
+   "sole": "Similarweb Ltd.",
+   "tag_evidence": 9.2,
+   "thin": true,
+   "triangulated": false
   },
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "DISCLOSED_FORECAST",
     "bound": "",
     "company": "Semrush",
     "date": "Nov-25",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 4.3,
+    "reason": "both do SEO, Keyword Research, Backlink Analysis; same type of business; same business function; same kind of customer",
     "score": 28.0,
     "type": "CONTROL"
    },
@@ -55,6 +46,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
+    "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
     "score": 15.4,
     "type": "SECONDARY"
    },
@@ -65,18 +57,9 @@
     "date": "Aug-23",
     "in_medians": false,
     "mult": 16.0,
+    "reason": "shares the language of data; same type of business; same kind of customer; sold the same way",
     "score": 15.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Mailchimp",
-    "date": "Sep-21",
-    "in_medians": false,
-    "mult": 15.0,
-    "score": 16.5,
-    "type": "CONTROL"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -85,73 +68,85 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 32.6,
+    "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
     "score": 15.7,
     "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "anchor_dropped": true,
+   "anchor_dropped": false,
    "bounded": false,
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
    "display": "RANGE",
    "high": 50.0,
-   "low": 32.6,
-   "mid": 50.0,
-   "n": 2,
-   "tag_evidence": 0.4,
-   "thin": true,
-   "triangulated": true
+   "low": 4.3,
+   "mid": 32.6,
+   "n": 3,
+   "tag_evidence": 12.0,
+   "thin": false,
+   "triangulated": false
   },
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Similarweb Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "score": 13.7,
-    "ticker": "NYSE:SMWB"
-   },
-   {
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
     "score": 13.2,
     "ticker": "NYSE:KVYO"
-   },
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "NYSE:ZETA"
    },
    {
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
     "score": 8.1,
     "ticker": "NASDAQGS:DDOG"
    },
    {
-    "company": "MongoDB, Inc.",
+    "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQGM:MDB"
+    "reason": "shares the language of data; related type of business; same revenue model; same AI stance",
+    "score": 7.1,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, platform; same kind of customer; sold the same way; same AI stance",
+    "score": 6.7,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
+    "score": 6.7,
+    "ticker": "NYSE:TWLO"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 16.4,
    "low": 2.7,
-   "mid": 3.7,
+   "mid": 5.2,
    "n": 5,
-   "tag_evidence": 9.2,
+   "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Open-source alternative to Ahrefs and Semrush, billed by usage and exposed over MCP"

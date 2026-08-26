@@ -5,6 +5,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of ai, commerce; related type of business; same kind of customer; same revenue model",
     "score": 9.6,
     "ticker": "NASDAQGS:WIX"
    },
@@ -12,6 +13,7 @@
     "company": "Agilysys, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of hotel; same type of business; same end market; same revenue model",
     "score": 8.9,
     "ticker": "NASDAQGS:AGYS"
    },
@@ -19,33 +21,30 @@
     "company": "PAR Technology Corporation",
     "family": "software",
     "in_medians": true,
+    "reason": "same type of business; same end market; same revenue model",
     "score": 8.5,
     "ticker": "NYSE:PAR"
    },
    {
-    "company": "GoDaddy Inc.",
-    "family": "software",
+    "company": "Toast, Inc.",
+    "family": "fintech",
     "in_medians": true,
-    "score": 8.5,
-    "ticker": "NYSE:GDDY"
-   },
-   {
-    "company": "Intuit Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 8.5,
-    "ticker": "NASDAQGS:INTU"
+    "reason": "shares the language of payments; related type of business; same end market; same kind of customer",
+    "score": 7.1,
+    "ticker": "NYSE:TOST"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 8.0,
-   "low": 2.1,
-   "mid": 2.8,
-   "n": 5,
+   "low": 1.9,
+   "mid": 2.25,
+   "n": 4,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
@@ -59,38 +58,20 @@
     "date": "Apr-24",
     "in_medians": false,
     "mult": 5.5,
+    "reason": "both do Channel Manager; same type of business; same end market; same kind of customer",
     "score": 19.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Spendesk",
-    "date": "Jan-22",
-    "in_medians": false,
-    "mult": 22.8,
-    "score": 9.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Loop Returns",
-    "date": "Jul-21",
-    "in_medians": false,
-    "mult": null,
-    "score": 12.0,
     "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
+  "private_proximity": "DIRECT",
   "private_range": {},
-  "private_window_months": 61,
+  "private_window_months": 28,
   "secondary": [
    {
     "company": "EverCommerce Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same kind of customer; same revenue model",
     "score": 8.1,
     "ticker": "NASDAQGS:EVCM"
    },
@@ -98,6 +79,7 @@
     "company": "ServiceTitan, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same kind of customer; same revenue model",
     "score": 8.1,
     "ticker": "NASDAQGS:TTAN"
    },
@@ -105,34 +87,39 @@
     "company": "Weave Communications, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "both do Payments; same type of business; same kind of customer; same revenue model",
     "score": 8.1,
     "ticker": "NYSE:WEAV"
    },
    {
-    "company": "Alarm.com Holdings, Inc.",
+    "company": "IONOS Group SE",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQGS:ALRM"
+    "reason": "shares the language of infrastructure; same kind of customer; same revenue model; sold the same way",
+    "score": 7.3,
+    "ticker": "XTRA:IOS"
    },
    {
-    "company": "SPS Commerce, Inc.",
+    "company": "Shoper S.A.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQGS:SPSC"
+    "reason": "both do Payments; related type of business; same kind of customer; sold the same way",
+    "score": 6.1,
+    "ticker": "WSE:SHO"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
    "high": 7.4,
-   "low": 2.5,
-   "mid": 3.3,
+   "low": 3.3,
+   "mid": 3.7,
    "n": 5,
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": true
   }

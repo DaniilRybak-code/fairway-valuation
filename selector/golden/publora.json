@@ -5,6 +5,7 @@
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
     "score": 12.1,
     "ticker": "HLSE:QTCOM"
    },
@@ -12,40 +13,30 @@
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
     "score": 11.1,
     "ticker": "NASDAQGS:GTLB"
-   },
-   {
-    "company": "Atlassian Corporation",
-    "family": "software",
-    "in_medians": true,
-    "score": 11.0,
-    "ticker": "NASDAQGS:TEAM"
    },
    {
     "company": "PagerDuty, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of scheduling; same type of business; same kind of customer; same revenue model",
     "score": 9.6,
     "ticker": "NYSE:PD"
-   },
-   {
-    "company": "Datadog, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGS:DDOG"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 16.4,
-   "low": 3.9,
-   "mid": 5.0,
-   "n": 5,
+   "high": 5.0,
+   "low": 1.9,
+   "mid": 3.9,
+   "n": 3,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -59,111 +50,125 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
+    "reason": "shares the language of api; same type of business; same kind of customer; sold the same way",
     "score": 13.3,
     "type": "MIXED"
    },
    {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Anthropic",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 61.5,
+    "reason": "both do MCP; same type of business; same kind of customer",
+    "score": 10.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "OpenAI",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 54.5,
+    "reason": "shares the language of api; related type of business; same revenue model; sold the same way",
+    "score": 9.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Writer",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": 40.4,
+    "reason": "shares the language of platform; same type of business; same revenue model",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Lovable",
-    "date": "Dec-25",
+    "bound": "<=",
+    "company": "AlphaSense",
+    "date": "Jun-24",
     "in_medians": true,
-    "mult": 33.0,
-    "score": 8.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "",
-    "company": "Semrush",
-    "date": "Nov-25",
-    "in_medians": false,
-    "mult": 4.3,
-    "score": 11.5,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "PRESS_REPORTED",
-    "bound": "",
-    "company": "LangChain",
-    "date": "Oct-25",
-    "in_medians": false,
-    "mult": null,
-    "score": 16.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "PRESS_REPORTED",
-    "bound": ">=",
-    "company": "Perplexity",
-    "date": "Sep-25",
-    "in_medians": false,
-    "mult": null,
-    "score": 9.5,
+    "mult": 20.0,
+    "reason": "shares the language of platform; same type of business; same revenue model",
+    "score": 7.6,
     "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "bounded": false,
+   "bounded": true,
+   "control_n": 0,
+   "control_names": [],
    "display": "RANGE",
-   "high": 33.0,
+   "high": 20.0,
    "low": 10.3,
-   "mid": 33.0,
+   "mid": 20.0,
    "n": 2,
    "tag_evidence": 0.3,
    "thin": true,
    "triangulated": true
   },
-  "private_window_months": 11,
+  "private_window_months": 26,
   "secondary": [
    {
-    "company": "JFrog Ltd.",
+    "company": "Sprout Social, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGS:FROG"
+    "reason": "both do Social Scheduling; related type of business; same revenue model; same AI stance",
+    "score": 7.1,
+    "ticker": "NASDAQCM:SPT"
    },
    {
-    "company": "MongoDB, Inc.",
+    "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGM:MDB"
+    "reason": "shares the language of engagement, platform; same type of business; same revenue model",
+    "score": 7.0,
+    "ticker": "NASDAQGS:GTM"
    },
    {
-    "company": "Adobe Inc.",
+    "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQGS:ADBE"
+    "reason": "shares the language of api, platform; same kind of customer; sold the same way",
+    "score": 6.9,
+    "ticker": "NYSE:TWLO"
    },
    {
-    "company": "Freshworks Inc.",
+    "company": "TomTom N.V.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "NASDAQGS:FRSH"
+    "reason": "shares the language of api; same type of business; same kind of customer",
+    "score": 6.8,
+    "ticker": "ENXTAM:TOM2"
    },
    {
-    "company": "Text S.A.",
+    "company": "Agora, Inc.",
     "family": "software",
     "in_medians": true,
-    "score": 8.0,
-    "ticker": "WSE:TXT"
+    "reason": "shares the language of api; same kind of customer; sold the same way",
+    "score": 6.8,
+    "ticker": "NASDAQGS:API"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 15.0,
-   "low": 3.4,
-   "mid": 4.0,
+   "high": 5.2,
+   "low": 0.8,
+   "mid": 1.1,
    "n": 5,
-   "tag_evidence": 0.0,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": true
   }

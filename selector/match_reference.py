@@ -392,6 +392,62 @@ def _tier(p, r, why):
         return 'ADJACENT'
     return 'BROAD'
 
+# NOTHING WITH ABSOLUTELY NOTHING TO DO WITH THE FOUNDER.
+#
+# Daniil, 26-Aug-2026: "It is ok not to have 100% comparables. It is important NOT TO SHOW
+# COMPARABLES THAT HAVE ABSOLUTELY NOTHING TO DO WITH THE FOUNDER'S BUSINESS. And important to
+# explain the selection."
+#
+# This is the counterweight to the filling ladder, and it was needed the same day. Filling took
+# coverage from 6 of 21 to 20 of 21, and the way it got there was partly by handing Publora, a
+# social-media publishing API, four private names scoring exactly 0.0 on product tags: Lovable,
+# Semrush, LangChain and Perplexity. They qualified on being developer-facing, consumption-priced
+# infrastructure. That is a real similarity and it is not a business relationship, and a founder
+# looking at Perplexity in their own comp set would rightly stop believing the rest of the page.
+#
+# So a candidate must have SOMETHING, by either of two routes:
+#   product vocabulary  any shared tag token at all, however weak. Not the 3.0 that ANCHORS a
+#                       DIRECT label, just more than nothing.
+#   the same end market  a shared, specific, non-Horizontal industry. This is what keeps Rokt and
+#                       Yotpo next to SellerClaw: no shared tag, but all three live in
+#                       Retail & E-commerce and that is a genuine relationship.
+# Horizontal never counts, because it is the absence of an end market rather than one.
+#
+# Measured across the 21 real profiles this removes 28 of 97 private members. Publora and Mailwarm
+# fall to a single name each, which is the honest answer for them: one loosely related company,
+# drawn as a diamond and captioned as one.
+def _relevant(p, r, why):
+    if _tag_points(why) > 0: return True
+    pi = (p.get('industry') or '').strip()
+    return bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip()
+
+
+# AND EXPLAIN THE SELECTION. `why` is already the score's own working; this turns it into the
+# sentence the reveal shows when a founder asks why a name is there.
+_WHY_LABEL = {'archetype': 'same type of business', 'archetype~': 'related type of business',
+              'end market': 'same end market', 'function': 'same business function',
+              'end customer': 'same kind of customer', 'revenue model': 'same revenue model',
+              'GTM': 'sold the same way', 'cost structure': 'same cost structure',
+              'purchase frequency': 'same purchase frequency', 'AI stance': 'same AI stance',
+              'growth': 'similar growth', 'margin': 'similar gross margin'}
+
+def why_text(prof, rec, why):
+    """A short, honest reason this company is in the set. Shared product vocabulary is named
+    explicitly, because it is the strongest thing we can say and the easiest to check."""
+    parts = []
+    shared = sorted(toks(prof.get('product_tags') or '') & toks(rec.get('product_tags') or ''))
+    tp = _tag_points(why)
+    if tp > 0:
+        named = [t for t in (rec.get('product_tags') or '').split('|')
+                 if toks(t) and toks(t) <= toks(prof.get('product_tags') or '')]
+        if named: parts.append('both do ' + ', '.join(named[:3]))
+        elif shared: parts.append('shares the language of ' + ', '.join(shared[:3]))
+    for w in why:
+        lab = _WHY_LABEL.get(str(w))
+        if lab and lab not in parts: parts.append(lab)
+    return '; '.join(parts[:4]) or 'same business family only'
+
+
 def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE, only=None):
     """Returns (rows, tier). tier is DIRECT, ADJACENT, BROAD or NONE.
     `only` restricts to one tier; otherwise the best tier with members wins."""
@@ -399,6 +455,10 @@ def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE, only=None):
     if prof is None:
         cut = max(FLOOR_REL * scored[0][0][0], FLOOR_ABS)
         return [x for x in scored if x[0][0] >= cut], 'DIRECT'
+    # The relevance gate runs before the tiers, so a candidate with no relationship to this
+    # founder cannot reach any tier, secondary included.
+    scored = [x for x in scored if _relevant(prof, x[1], x[0][1])]
+    if not scored: return [], 'NONE'
     tiers = {}
     for x in scored:
         tiers.setdefault(_tier(prof, x[1], x[0][1]), []).append(x)
@@ -483,10 +543,18 @@ def peer_groups(prof, universe, scorer=None, want=5):
     #
     # A HORIZONTAL profile keeps the stricter test, peer also horizontal and the same buyer,
     # because for a horizontal founder the end customer is the only thing narrowing the field.
-    def axis_b(r):
+    # ONE MORE ROUTE THROUGH AXIS B: REAL PRODUCT EVIDENCE. Added 26-Aug-2026 alongside the
+    # relevance gate, because the two together emptied OpenSEO's listed core set. OpenSEO is
+    # Horizontal, so axis B demanded a horizontal peer with the SAME END CUSTOMER, and Similarweb
+    # sells to a line of business while OpenSEO sells to developers. Similarweb shares two exact
+    # product tags with it, Keyword Research and Rank Tracking, and is plainly its closest listed
+    # comparable. Being told who someone sells to is a proxy for what they do; sharing the product
+    # vocabulary is the thing itself, so it should not lose to its own proxy.
+    def axis_b(r, why=None):
         ri, pi = (r.get('industry') or '').strip(), (prof.get('industry') or '').strip()
         if pi == 'Horizontal':
-            return ri == 'Horizontal' and _eq(prof, r, 'buyer')
+            return ((ri == 'Horizontal' and _eq(prof, r, 'buyer'))
+                    or _tag_points(why or []) >= FLOOR_TAG_EVIDENCE)
         return bool(ri) and (ri == pi or ri == 'Horizontal')
 
     def axis_a(r):
@@ -506,12 +574,12 @@ def peer_groups(prof, universe, scorer=None, want=5):
         for x in rows:
             if len(core) >= want: break
             if id(x) in seen: continue
-            if axis_a(x[1]) and axis_b(x[1]):
+            if axis_a(x[1]) and axis_b(x[1], x[0][1]):
                 seen.add(id(x)); core.append(x)
         if len(core) >= want: break
     if not core:
         rows, _got = qualifying(scored, prof, only='BROAD')
-        core = [x for x in rows if axis_a(x[1]) and axis_b(x[1])][:want]
+        core = [x for x in rows if axis_a(x[1]) and axis_b(x[1], x[0][1])][:want]
     if core:
         # NOTHING THAT QUALIFIES MAY VANISH. The old split put a row in secondary only if it
         # passed axis_a, so a name failing axis_a appeared in NEITHER group and was dropped in
@@ -631,6 +699,30 @@ def _evidence(contributing, whole=None):
     w = best(whole) if whole is not None else b
     return round(b, 1), b < FLOOR_TAG_EVIDENCE, (b < FLOOR_TAG_EVIDENCE <= w)
 
+
+# A CONTROL DEAL IS A BENCHMARK. IT IS ALSO A PREMIUM. BOTH FACTS TRAVEL.
+#
+# Daniil, 26-Aug-2026: "Why are you excluding take private from the median? In the absence of clean
+# comps, we should not exclude data based on the fact that this was a controlled deal. We should
+# have the respective note (visible when someone hovers over the range), but we should not exclude
+# this entirely."
+#
+# Right, and it is the fourth instance of the same principle as the three rules settled the day
+# before: replace an exclusion with a label. OpenSEO was the proof. Semrush is its best comparable
+# by a distance, matching at 12.0 tag points, and Semrush's only transaction is the Adobe
+# take-private. Under the old rule the founder saw Semrush named at the top of the set and a range
+# built from Clay at 50.0x and Klaviyo at 32.6x, neither of which shares a tag with them. Excluding
+# the one relevant data point made the answer worse AND less honest.
+#
+# What does not change: a buyer of the whole company pays for control, so a control multiple sits
+# above what the same business would fetch in a minority round. The range therefore carries how
+# many of its contributors are control deals and which they are, and the reveal must surface that
+# on the name rather than bury it in a footnote.
+def _control(rows):
+    names = [r.get('company_name', '') for (_sw, r) in rows
+             if (r.get('transaction_type') or '').strip() == 'CONTROL']
+    return len(names), names
+
 def group_range(group, which='rev', tier='DIRECT'):
     """Quartile range of the group, excluding rows flagged out of medians.
     Returns None for a BROAD group: it is context, not a price."""
@@ -644,7 +736,8 @@ def group_range(group, which='rev', tier='DIRECT'):
     out = dict(n=n, low=v[max(0, (n-1)//4)], mid=st.median(v), high=v[min(n-1, (3*(n-1))//4 + 1)],
                display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
-               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped)
+               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
+               control_n=_control(priced)[0], control_names=_control(priced)[1])
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out
@@ -666,7 +759,8 @@ def private_range(picked, tier):
     out = dict(n=n, low=min(v), mid=v[n // 2], high=max(v),
                display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
-               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped)
+               tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
+               control_n=_control(priced)[0], control_names=_control(priced)[1])
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out

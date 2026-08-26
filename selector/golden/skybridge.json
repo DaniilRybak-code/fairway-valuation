@@ -5,49 +5,32 @@
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of developer, framework; same type of business; same business function; same kind of customer",
     "score": 12.5,
     "ticker": "HLSE:QTCOM"
-   },
-   {
-    "company": "JFrog Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "score": 11.5,
-    "ticker": "NASDAQGS:FROG"
    },
    {
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of source; same type of business; same business function; same kind of customer",
     "score": 11.1,
     "ticker": "NASDAQGS:GTLB"
-   },
-   {
-    "company": "Atlassian Corporation",
-    "family": "software",
-    "in_medians": true,
-    "score": 10.5,
-    "ticker": "NASDAQGS:TEAM"
-   },
-   {
-    "company": "Datadog, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGS:DDOG"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 16.4,
-   "low": 5.0,
-   "mid": 5.8,
-   "n": 5,
+   "high": 5.0,
+   "low": 3.9,
+   "mid": 4.45,
+   "n": 2,
    "tag_evidence": 1.0,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
   "listed_proximity": "ADJACENT",
@@ -59,18 +42,9 @@
     "date": "Mar-25",
     "in_medians": false,
     "mult": 61.5,
+    "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
     "score": 17.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Oxylabs",
-    "date": "Jul-26",
-    "in_medians": true,
-    "mult": 10.3,
-    "score": 13.0,
-    "type": "MIXED"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -79,6 +53,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
+    "reason": "shares the language of app; same type of business; same business function; sold the same way",
     "score": 13.2,
     "type": "PRIMARY"
    },
@@ -89,6 +64,7 @@
     "date": "Oct-25",
     "in_medians": false,
     "mult": null,
+    "reason": "both do Open Source; same type of business; same business function; same kind of customer",
     "score": 19.8,
     "type": "PRIMARY"
    },
@@ -99,50 +75,52 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 30.0,
+    "reason": "shares the language of app; same type of business; same business function; sold the same way",
     "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
+    "score": 16.9,
     "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": true,
-   "bounded": false,
+   "bounded": true,
+   "control_n": 0,
+   "control_names": [],
    "display": "RANGE",
    "high": 33.0,
-   "low": 10.3,
+   "low": 19.8,
    "mid": 30.0,
    "n": 3,
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
   },
   "private_window_months": 17,
   "secondary": [
    {
-    "company": "MongoDB, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "score": 9.5,
-    "ticker": "NASDAQGM:MDB"
-   },
-   {
     "company": "TomTom N.V.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of sdk; same type of business; same business function; same kind of customer",
     "score": 9.1,
     "ticker": "ENXTAM:TOM2"
-   },
-   {
-    "company": "Elastic N.V.",
-    "family": "software",
-    "in_medians": true,
-    "score": 7.5,
-    "ticker": "NYSE:ESTC"
    },
    {
     "company": "Agora, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of sdk; same kind of customer; sold the same way",
     "score": 7.1,
     "ticker": "NASDAQGS:API"
    },
@@ -150,6 +128,7 @@
     "company": "DigitalOcean Holdings, Inc.",
     "family": "software",
     "in_medians": true,
+    "reason": "shares the language of developer; same kind of customer; sold the same way",
     "score": 6.9,
     "ticker": "NYSE:DOCN"
    }
@@ -157,12 +136,14 @@
   "secondary_range": {
    "anchor_dropped": false,
    "bounded": false,
+   "control_n": 0,
+   "control_names": [],
    "denominator": "rev",
    "display": "RANGE",
-   "high": 10.5,
-   "low": 0.8,
-   "mid": 4.1,
-   "n": 5,
+   "high": 10.4,
+   "low": 0.6,
+   "mid": 0.8,
+   "n": 3,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
