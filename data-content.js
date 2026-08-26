@@ -143,7 +143,9 @@ const FIX_BY_PROFIT = {
 const hooks = {
   frustration: {
     kicker: '',
-    headline: 'We pick your comparables. Then we defend them.',
+    /* Two lines, two tones: the first names the problem in ink, the second is
+       Fairway's move in the accent. Rendered with innerHTML in initHero. */
+    headline: '<span class="h1-ink">The generic number is not your valuation.</span> <span class="h1-acc">We build the one you can defend.</span>',
     sub: 'The number depends entirely on which companies you are held against. We choose yours deliberately, show you why each one is in the set, and source every figure behind it.',
     cta: 'Try it free'
   },

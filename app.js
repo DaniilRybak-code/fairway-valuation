@@ -45,7 +45,9 @@ const variant = hooks[params.get('hook')] ? params.get('hook') : 'frustration';
   if (!k) return;
   k.textContent = h.kicker;
   k.style.display = h.kicker ? '' : 'none';
-  document.getElementById('hook-headline').textContent = h.headline;
+  /* Headlines carry two-tone <span> markup written by us in data-content.js;
+     nothing user-supplied ever reaches this string. */
+  document.getElementById('hook-headline').innerHTML = h.headline;
   document.getElementById('hook-sub').textContent = h.sub;
   document.getElementById('hook-cta').textContent = h.cta;
 })();
