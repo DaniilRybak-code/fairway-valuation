@@ -143,8 +143,8 @@ const FIX_BY_PROFIT = {
 const hooks = {
   frustration: {
     kicker: '',
-    headline: 'A valuation you can defend.',
-    sub: 'See what your company is worth — every valuation metric sourced and observable. Then the arguments that earn the higher range, and the funds that back companies like yours.',
+    headline: 'We pick your comparables. Then we defend them.',
+    sub: 'The number depends entirely on which companies you are held against. We choose yours deliberately, show you why each one is in the set, and source every figure behind it.',
     cta: 'Try it free'
   },
   readiness: {
