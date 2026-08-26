@@ -23,52 +23,65 @@
     </div>
   </nav>
 
-  <!-- SECTION ONE: the hero, with a miniature of the product beside it -->
+  <!-- SECTION ONE: the hero. Copy left, a real-size cut of the product right,
+       and one strip of drivers + funds underneath. -->
   <div class="snap first">
     <div class="hero">
-      <div class="wrap-wide hero-grid">
-        <div class="hero-copy">
-          <span class="kicker" id="hook-kicker">For founders raising in the next 90 days</span>
-          <h1 id="hook-headline">You know what your company is worth. The hard part is proving it in the room.</h1>
-          <p class="sub" id="hook-sub">Every investor pushes back on the number. Answer nine quick questions and see every method that prices your company, the reference metrics behind each one, the concerns that will be raised, and the funds actively backing this profile. Checked by hand before it reaches you.</p>
-          <button class="btn" onclick="startQuiz()" id="hook-cta">Start the quiz</button>
-          <div class="cta-facts">
-            <span>Four minutes, free</span>
-            <span>Every number shows its source</span>
-            <span>Never shared with investors</span>
+      <div class="wrap-wide">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="kicker" id="hook-kicker"></span>
+            <h1 id="hook-headline">A valuation you can defend.</h1>
+            <p class="sub" id="hook-sub">See what your company is worth &mdash; every valuation metric sourced and observable. Then the arguments that earn the higher range, and the funds that back companies like yours.</p>
+            <div class="cta-stack">
+              <button class="btn" onclick="startQuiz()" id="hook-cta">Try it free</button>
+              <span class="cta-note">Nine questions &middot; about four minutes &middot; no card</span>
+            </div>
+            <div class="hero-stats">
+              <div class="hs"><em>320</em><span>listed comparables, every one named and sourced</span></div>
+              <div class="hs"><em>127</em><span>private rounds with the revenue behind the price</span></div>
+            </div>
+          </div>
+          <div class="hero-vis rv in">
+            <div class="hero-field" aria-label="Example: the valuation ranges Fairway builds for a seed B2B software company">
+              <div class="hf-head">
+                <div class="hf-co"><b>Northsteer</b><span class="lock-tag unrefined-tag">Example</span><em>seed &middot; B2B software &middot; &pound;0.60m ARR</em></div>
+                <span class="hf-cap">Implied pre-money, &pound;m</span>
+              </div>
+              <div class="hf-row">
+                <div class="hf-name">Public comps<span>6.2x &ndash; 9.2x &middot; 12 named peers</span></div>
+                <div class="hf-track"><div class="hf-bar ink" style="left:13.3%;width:40%"></div><b style="left:13.3%">4.8</b><b class="hi" style="left:53.3%">7.2</b><span class="hf-anno pub">what investors see first
+                  <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M36 22 C 26 20, 14 14, 6 5" fill="none"/><path d="M11 6 L6 5 L8 11" fill="none"/></svg></span></div>
+              </div>
+              <div class="hf-row">
+                <div class="hf-name">Growth-adjusted<span>your 74% vs peers&rsquo; 11%</span></div>
+                <div class="hf-track"><div class="hf-bar ink soft" style="left:30%;width:38.3%"></div><b style="left:30%">5.8</b><b class="hi" style="left:68.3%">8.1</b></div>
+              </div>
+              <div class="hf-row">
+                <div class="hf-name">Private rounds<span>7.5x &ndash; 12.0x &middot; 9 matched</span></div>
+                <div class="hf-track"><div class="hf-bar acc" style="left:31.7%;width:58.3%"></div><b style="left:31.7%">5.9</b><b class="hi" style="left:90%">9.4</b><span class="hf-anno priv">your read-across &mdash; argue from here
+                  <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 4 C 14 8, 26 14, 34 21" fill="none"/><path d="M28 20 L34 21 L31 15" fill="none"/></svg></span></div>
+              </div>
+              <div class="hf-row">
+                <div class="hf-name">Discounted cash flow<span>on your own plan</span></div>
+                <div class="hf-track"><div class="hf-bar teal" style="left:26.7%;width:36.6%"></div><b style="left:26.7%">5.6</b><b class="hi" style="left:63.3%">7.8</b></div>
+              </div>
+              <div class="hf-row band">
+                <div class="hf-name">Reviewer band<span>signed off by a banker</span></div>
+                <div class="hf-track"><div class="hf-bar bandbar" style="left:40%;width:36.7%"></div><b style="left:40%">6.4</b><b class="hi" style="left:76.7%">8.6</b></div>
+              </div>
+              <div class="hf-axis"><b>4</b><b>6</b><b>8</b><b>10</b></div>
+              <div class="hf-foot">Public data anchors the number. We build the arguments that earn the private range.</div>
+            </div>
           </div>
         </div>
-        <div class="hero-vis rv in">
-          <div class="mini-ff" aria-label="Example valuation ranges: a blind calculator, public comparables, and private rounds">
-            <div class="mini-head"><span>Implied pre-money, &pound;m</span><em>seed &middot; B2B software</em></div>
-            <div class="mini-row">
-              <div class="mini-name">Blind calculator</div>
-              <div class="mini-track"><div class="mini-bar dim" style="left:46.7%;width:35%"></div><b class="mini-lo" style="left:46.7%">6.8</b><b class="mini-hi" style="left:81.7%">8.9</b></div>
-              <span class="mini-anno a1">one multiple, no peers
-                <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 22 C 16 20, 28 14, 35 4" fill="none"/><path d="M30 6 L35 4 L34 10" fill="none"/></svg>
-              </span>
-            </div>
-            <div class="mini-row">
-              <div class="mini-name">Public comps</div>
-              <div class="mini-track"><div class="mini-bar ink" style="left:13.3%;width:40%"></div><b class="mini-lo" style="left:13.3%">4.8</b><b class="mini-hi" style="left:53.3%">7.2</b></div>
-              <span class="mini-anno a2">investors anchor here
-                <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M36 22 C 26 20, 14 14, 6 5" fill="none"/><path d="M11 6 L6 5 L8 11" fill="none"/></svg>
-              </span>
-            </div>
-            <div class="mini-row">
-              <div class="mini-name">Private rounds</div>
-              <div class="mini-track"><div class="mini-bar acc" style="left:31.7%;width:58.3%"></div><b class="mini-lo" style="left:31.7%">5.9</b><b class="mini-hi" style="left:90%">9.4</b></div>
-              <span class="mini-anno a3">you argue from here
-                <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 4 C 14 8, 26 14, 34 21" fill="none"/><path d="M28 20 L34 21 L31 15" fill="none"/></svg>
-              </span>
-            </div>
-            <div class="mini-axis"><b>4</b><b>6</b><b>8</b><b>10</b></div>
-            <div class="mini-foot">The gap between public and private is the argument. Your field shows what closes it.</div>
-          </div>
+        <div class="hero-strips rv in">
+          <div class="strip"><span class="strip-k">What moves your number</span><span class="chip">Growth vs peers</span><span class="chip">Net revenue retention</span><span class="chip">Recurring share</span></div>
+          <div class="strip"><span class="strip-k">Funds behind the reference rounds</span><span class="chip name">Accel</span><span class="chip name">Index Ventures</span><span class="chip name">ICONIQ Growth</span></div>
         </div>
       </div>
     </div>
-    <div class="scroll-cue"><span>See one</span><i></i></div>
+    <div class="scroll-cue"><span>See the full field</span><i></i></div>
   </div>
 
   <!-- SECTION TWO: the field, then the highlights, one at a time -->
@@ -94,72 +107,78 @@
           <div class="ff-param"><strong>Last round</strong><span>Marker only, feeds nothing</span></div>
           <div class="ff-metric">&pound;4.0m<span class="sub">March 2025</span></div>
           <div class="ff-mult">&mdash;</div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-diamond" style="left:7.69%"></div><div class="ff-point-label marker" style="left:7.69%">4.0</div></div></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-diamond" style="left:7.69%"></div><div class="ff-point-label marker" style="left:7.69%">4.0</div></div></div>
         </div>
 
-        <div class="ff-row">
-          <div class="ff-param"><strong>Unrefined range<span class="lock-tag unrefined-tag">Unrefined</span></strong><span>Before any comparable set is chosen</span></div>
-          <div class="ff-metric">0.60 &middot; 0.78<span class="sub">ARR &middot; NTM</span></div>
-          <div class="ff-mult has-tip" data-tip="One market-wide median across 309 listed software companies, no peer selection. This is where a generic calculator stops.">11.4x<span class="sub">309 listed firms</span></div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar unrefined" style="left:50.77%;width:32.31%"></div><div class="ff-end lo" style="left:50.77%">6.8</div><div class="ff-end hi" style="left:83.08%">8.9</div></div><span class="ff-anno" style="right:2%; top:-12px;">a blind calculator stops here</span></div>
-        </div>
-
+        <div class="ff-group">Public data</div>
         <div class="ff-row">
           <div class="ff-param"><strong>NTM revenue</strong><span>Median of your core peer set</span></div>
           <div class="ff-metric">&pound;0.78m<span class="sub">next twelve months</span></div>
           <div class="ff-mult has-tip" data-tip="EV / next-twelve-months revenue across 12 named core peers, analyst consensus, refreshed against the market. Every peer is named on the row.">6.2x &ndash; 9.2x<span class="sub">12 core peers</span></div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:20.0%;width:36.92%"></div><div class="ff-end lo" style="left:20.0%">4.8</div><div class="ff-end hi" style="left:56.92%">7.2</div></div><span class="ff-anno" style="left:60%; top:-12px;">what investors will push for</span></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:20.0%;width:36.92%"></div><div class="ff-end lo" style="left:20.0%">4.8</div><div class="ff-end hi" style="left:56.92%">7.2</div></div><span class="ff-anno" style="left:4%; bottom:0;">market data investors see immediately
+            <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M36 22 C 26 20, 14 14, 6 6" fill="none"/><path d="M11 7 L6 6 L8 12" fill="none"/></svg></span></div>
         </div>
 
         <div class="ff-row">
           <div class="ff-param"><strong>ARR, month 12</strong><span>Same peers, forward run-rate</span></div>
           <div class="ff-metric">&pound;0.96m<span class="sub">run-rate in a year</span></div>
           <div class="ff-mult has-tip" data-tip="The same 12 peers applied to your month-12 run-rate, the basis that favours a high recurring share.">5.4x &ndash; 8.0x<span class="sub">same peers</span></div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:26.15%;width:38.46%"></div><div class="ff-end lo" style="left:26.15%">5.2</div><div class="ff-end hi" style="left:64.61%">7.7</div></div></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:26.15%;width:38.46%"></div><div class="ff-end lo" style="left:26.15%">5.2</div><div class="ff-end hi" style="left:64.61%">7.7</div></div></div>
         </div>
 
         <div class="ff-row">
-          <div class="ff-param"><strong>Comparable private rounds</strong><span>Seed &middot; B2B software</span></div>
+          <div class="ff-param"><strong>Growth-adjusted</strong><span>Fitted on the peer regression</span></div>
+          <div class="ff-metric">&pound;0.78m<span class="sub">NTM revenue</span></div>
+          <div class="ff-mult has-tip" data-tip="The peer set's multiple-versus-growth regression, applied to your 74% against the peers' 11% median.">7.4x &ndash; 10.4x<span class="sub">peer regression</span></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:35.38%;width:35.39%"></div><div class="ff-end lo" style="left:35.38%">5.8</div><div class="ff-end hi" style="left:70.77%">8.1</div></div></div>
+        </div>
+
+        <div class="ff-group">Private data</div>
+        <div class="ff-row">
+          <div class="ff-param"><strong>Comparable private rounds</strong><span>Revenue multiple at pricing</span></div>
           <div class="ff-metric">&pound;0.78m<span class="sub">9 matched rounds</span></div>
           <div class="ff-mult has-tip" data-tip="9 disclosed rounds matched to this profile: post-money over the revenue investors had at pricing, each linked to its source. A round without one is a headline, not a comparable.">7.5x &ndash; 12.0x<span class="sub">disclosed revenue</span></div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:36.92%;width:53.85%"></div><div class="ff-end lo" style="left:36.92%">5.9</div><div class="ff-end hi" style="left:90.77%">9.4</div></div><span class="ff-anno accent" style="left:38%; top:-12px;">what founders like you raised at &mdash; argue from here</span></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:36.92%;width:53.85%"></div><div class="ff-end lo" style="left:36.92%">5.9</div><div class="ff-end hi" style="left:90.77%">9.4</div></div><span class="ff-anno accent" style="left:16%; bottom:0;">directly comparable rounds &mdash; your read-across
+            <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 4 C 14 8, 26 14, 34 21" fill="none"/><path d="M28 20 L34 21 L31 15" fill="none"/></svg></span></div>
         </div>
 
-        <div class="ff-row locked">
-          <div class="ff-param"><strong>Growth-adjusted<span class="lock-tag paid-tag">Locked</span></strong><span>Fitted on the peer regression</span></div>
+        <div class="ff-row">
+          <div class="ff-param"><strong>Precedents, growth-adjusted</strong><span>Fitted across the matched rounds</span></div>
           <div class="ff-metric">&pound;0.78m<span class="sub">NTM revenue</span></div>
-          <div class="ff-mult">&mdash;</div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar redacted" style="left:24%;width:30%"></div></div></div>
+          <div class="ff-mult has-tip" data-tip="The matched rounds' own multiple-versus-growth fit, applied to your growth.">8.1x &ndash; 11.5x<span class="sub">round regression</span></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:43.08%;width:41.54%"></div><div class="ff-end lo" style="left:43.08%">6.3</div><div class="ff-end hi" style="left:84.62%">9.0</div></div></div>
         </div>
 
-        <div class="ff-row locked">
-          <div class="ff-param"><strong>Discounted cash flow<span class="lock-tag paid-tag">Locked</span></strong><span>Cost of capital from peer beta</span></div>
-          <div class="ff-metric">your plan<span class="sub">send a link and it opens</span></div>
-          <div class="ff-mult">&mdash;</div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar redacted" style="left:18%;width:33%"></div></div></div>
+        <div class="ff-group">Fundamental</div>
+        <div class="ff-row">
+          <div class="ff-param"><strong>Discounted cash flow</strong><span>Cost of capital from peer beta</span></div>
+          <div class="ff-metric">your plan<span class="sub">share it and this runs on it</span></div>
+          <div class="ff-mult has-tip" data-tip="Your own plan discounted at a cost of capital derived from the peer set's beta. The one method that prices the plan, not the market.">&mdash;<span class="sub">peer-beta WACC</span></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar teal-soft" style="left:32.31%;width:33.84%"></div><div class="ff-end lo" style="left:32.31%">5.6</div><div class="ff-end hi" style="left:66.15%">7.8</div></div></div>
         </div>
 
-        <div class="ff-row locked">
-          <div class="ff-param"><strong>Precedents, growth-adjusted<span class="lock-tag paid-tag">Locked</span></strong><span>Fitted across the matched rounds</span></div>
-          <div class="ff-metric">&pound;0.78m<span class="sub">NTM revenue</span></div>
-          <div class="ff-mult">&mdash;</div>
-          <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar redacted" style="left:28%;width:26%"></div></div></div>
+        <div class="ff-row unref">
+          <div class="ff-param"><strong>Unrefined range<span class="lock-tag unrefined-tag">Unrefined</span></strong><span>Before any comparable set is chosen</span></div>
+          <div class="ff-metric">0.60 &middot; 0.78<span class="sub">ARR &middot; NTM</span></div>
+          <div class="ff-mult has-tip" data-tip="One market-wide median across 309 listed software companies, before anyone looked at your business. Shown so you can see what refinement changes.">11.4x<span class="sub">309 listed firms</span></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar unrefined" style="left:50.77%;width:32.31%"></div><div class="ff-end lo" style="left:50.77%">6.8</div><div class="ff-end hi" style="left:83.08%">8.9</div></div><span class="ff-anno" style="left:4%; bottom:0;">no specific comps to argue from
+            <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 4 C 14 8, 26 14, 34 21" fill="none"/><path d="M28 20 L34 21 L31 15" fill="none"/></svg></span></div>
         </div>
 
-          <div class="ff-row conclusion locked">
-            <div class="ff-param"><strong>Reviewer band<span class="lock-tag paid-tag">Locked</span></strong><span>Where inside these you actually sit</span></div>
+          <div class="ff-row conclusion">
+            <div class="ff-param"><strong>Reviewer band</strong><span>The reviewer&rsquo;s view of what is feasible</span></div>
             <div class="ff-metric">all rows<span class="sub">read by a banker</span></div>
-            <div class="ff-mult"><span class="ff-dash">&mdash;</span></div>
-            <div class="ff-cell"><span class="ffx-plot"><i style="left:7.69%"></i><i style="left:23.08%"></i><i style="left:38.46%"></i><i style="left:53.85%"></i><i style="left:69.23%"></i><i style="left:84.62%"></i><i style="left:100%"></i></span><div class="ff-track"><div class="ff-line"></div><div class="ff-bar redacted" style="left:34%;width:24%"></div></div></div>
+            <div class="ff-mult has-tip" data-tip="A person who has priced companies for a living reads every row and says where inside them you can actually argue &mdash; with the written rationale.">&mdash;<span class="sub">written rationale</span></div>
+            <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar band" style="left:44.62%;width:33.84%"></div><div class="ff-end lo" style="left:44.62%">6.4</div><div class="ff-end hi" style="left:78.46%">8.6</div></div></div>
           </div>
           <div class="ffx-axis"><div></div><div></div><div></div><div class="ff-cell">
             <b style="left:7.69%">4</b><b style="left:23.08%">5</b><b style="left:38.46%">6</b><b style="left:53.85%">7</b><b style="left:69.23%">8</b><b style="left:84.62%">9</b><b style="left:100%">10</b>
           </div></div>
-          <p class="ff-foot">&pound;0.78m of next-twelve-months revenue at 6.2x is &pound;4.8m, at 9.2x it is &pound;7.2m. That is the third row, and every other row works the same way. Northsteer is an illustration; the arithmetic is not.</p>
+          <p class="ff-foot">&pound;0.78m of next-twelve-months revenue at 6.2x is &pound;4.8m, at 9.2x it is &pound;7.2m. That is the first public row, and every other row works the same way. Northsteer is an illustration; the arithmetic is not.</p>
           <div class="ff-delta">
-            <span class="d-num">+31%</span>
-            <p>Public comps top out at <b>&pound;7.2m</b>. Matched private rounds reach <b>&pound;9.4m</b>. That gap is the argument &mdash; and a short list of drivers decides whether you can claim it.</p>
-            <a class="d-link" href="#drivers">see what closes it &darr;</a>
+            <span class="d-num">+96%</span>
+            <p>Between the lowest and highest defensible row, <b>&pound;4.8m</b> to <b>&pound;9.4m</b>. Your field names the arguments that close it.</p>
+            <a class="d-link" href="#drivers">see the drivers &darr;</a>
           </div>
         </div>
       </div>
