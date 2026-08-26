@@ -456,3 +456,49 @@ growth inside a cloud spanning 3% to 30%; it does not run the line off the page.
 refuses when the founder's growth sits more than 25% beyond the peer set's own maximum, and returns
 the reason so the reveal can say it: at that growth rate there is no listed company to regress
 against. That is a data gap with a name.
+
+---
+
+## 27 August: the growth bands were measuring the wrong population
+
+Daniil: *"We need to reconsider the definitions, otherwise it does not make sense to have 90% of
+names in hyper. Let's apply Gaussian distribution and derive growth definitions from it."*
+
+**The 15 / 30 cut-offs were not wrong. They were calibrated to public markets.** On the 323 listed
+companies we hold, the terciles of forward revenue growth fall at **8% and 17%**, so 15 and 30
+describe a stock market almost exactly. On private rounds the terciles fall at **60% and 124%**.
+Applying a public-market ruler to venture rounds put 36 of 40 rows in one bucket, which is a
+constant rather than a classification.
+
+**And a Gaussian on the raw rate is the wrong model, which is worth stating rather than quietly
+fixing.** Growth is bounded below at -100% and unbounded above, so it is heavily right-skewed: on our
+data, skew +3.16 and excess kurtosis +11.77 against 0 and 0 for a normal. A mean and a standard
+deviation on that produce boundaries no data sits near. Taking ln(1+g) pulls it to +1.22 and +1.74,
+and a Kolmogorov-Smirnov test gives D = 0.160 against a 5% critical value of 0.215, so log-normality
+is not rejected. **That is the Gaussian to fit.**
+
+Fitted on the 40 private rounds carrying a dated growth rate: mu 0.734, sd 0.462 in log space, so the
+typical private round in this file grows **108% a year**. Boundaries at plus and minus half a
+standard deviation, which splits a normal into roughly 31 / 38 / 31:
+
+| band | range | rows |
+|---|---|---|
+| MATURE | below 65% | 14 |
+| GROWING | 65% to 162% | 15 |
+| HYPER | above 162% | 11 |
+
+**These bands are relative to private rounds, deliberately.** A company growing 50% a year is not
+mature in any ordinary sense. It is slow *for a venture-backed company being priced against other
+venture-backed companies*, which is the only comparison this gate governs. The founder is banded on
+the same scale for the same reason, and listed companies are never banded at all: public comps are
+what they are. The reveal should use the display labels rather than the machine values, because
+telling a founder growing 50% that they are "mature" is a fight nobody needs.
+
+**The gate now does real work.** On the same profile: a founder at 40% growth loses Lovable, Replit
+and Clay and picks up Invisible, Turing and Scale AI; a founder at 250% keeps the fast names and
+loses Semrush. Before the refit the gate moved almost nothing, because almost everything was HYPER.
+
+`tools/refit_growth_bands.py` recomputes the fit, reports the KS test, and prints the boundaries.
+The constants in the selector are its outputs. **n = 40 is thin and biased toward companies that
+chose to publish a growth rate, so expect the boundaries to fall as coverage widens.** Rerun the
+tool; do not adjust by taste.

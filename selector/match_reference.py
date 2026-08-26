@@ -513,15 +513,57 @@ def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE, only=None):
 # 30% and the only two that are not are Mailchimp at 20% and Semrush at 15%. The band gate is
 # therefore a narrow instrument here. It will keep Semrush and Mailchimp away from a hyper-growth
 # founder, and that is all it can do until more rows carry a rate.
+# THE BOUNDARIES ARE FITTED, NOT CHOSEN. Refitted 27-Aug-2026.
+#
+# Daniil: "We need to reconsider the definitions, otherwise it does not make sense to have 90% of
+# names in hyper. Let's apply Gaussian distribution and derive growth definitions from it."
+#
+# He is right and the diagnosis is precise: the original 15 / 30 cut-offs were not wrong, they were
+# calibrated to the WRONG POPULATION. On the 323 listed companies we hold, the terciles of forward
+# growth fall at 8% and 17%, so 15 and 30 describe public markets almost exactly. On private rounds
+# the terciles fall at 60% and 124%. Applying a public-market ruler to venture rounds put 36 of 40
+# rows in one bucket, which is not a classification, it is a constant.
+#
+# A GAUSSIAN ON THE RAW RATE IS THE WRONG MODEL and it is worth saying why rather than just fixing
+# it. Growth is bounded below at -100% and unbounded above, so the distribution is heavily right
+# skewed: on our data, skew +3.16 and excess kurtosis +11.77 against 0 and 0 for a normal. A mean
+# and a standard deviation on that produce boundaries that no data sits near. Taking ln(1+g) pulls
+# it to skew +1.22 and excess kurtosis +1.74, and a Kolmogorov-Smirnov test gives D = 0.160 against
+# a 5% critical value of 0.215, so log-normality is not rejected. That is the Gaussian to fit.
+#
+# Fitted on the 40 private rounds that carry a dated growth rate: mu = 0.734, sd = 0.462 in log
+# space, so the typical private round in this file grows 108% a year. Boundaries at plus and minus
+# half a standard deviation, which splits a normal into roughly 31 / 38 / 31 per cent:
+#
+#     MATURE   below 65%          14 rows
+#     GROWING  65% to 162%        15 rows
+#     HYPER    above 162%         11 rows
+#
+# THESE BANDS ARE RELATIVE TO PRIVATE ROUNDS, and that is deliberate. A company growing 50% a year
+# is not mature in any ordinary sense; it is slow FOR A VENTURE-BACKED COMPANY BEING PRICED AGAINST
+# OTHER VENTURE-BACKED COMPANIES, which is the only comparison this gate governs. The founder is
+# banded on the same scale for the same reason. Listed companies are never banded: public comps are
+# what they are.
+#
+# The numbers below are OUTPUTS of tools/refit_growth_bands.py. Rerun it when growth coverage grows
+# materially and update them from it rather than by taste. n = 40 is thin, and the sample is biased
+# toward companies that chose to disclose a growth rate, which skews it high; expect the boundaries
+# to fall as coverage widens.
 GROWTH_BANDS = ('MATURE', 'GROWING', 'HYPER')
 _BAND_ORDER = {b: i for i, b in enumerate(GROWTH_BANDS)}
+BAND_FIT = dict(n=40, mu=0.734, sd=0.462, typical_pct=108, fitted='2026-08-27',
+                source='tools/refit_growth_bands.py')
+BAND_LOW, BAND_HIGH = 65.0, 162.0
+BAND_LABEL = {'MATURE':  'slower than most rounds in the set',
+              'GROWING': 'in line with the set',
+              'HYPER':   'faster than most rounds in the set'}
 
 def band_of(growth_pct):
-    """MATURE under 15%, GROWING 15 to 30, HYPER above 30. None for an unknown growth rate."""
+    """Band a growth rate against the PRIVATE-ROUND distribution. Empty for an unknown rate."""
     if growth_pct is None: return ''
     try: g = float(growth_pct)
     except (TypeError, ValueError): return ''
-    return 'MATURE' if g < 15 else ('GROWING' if g <= 30 else 'HYPER')
+    return 'MATURE' if g < BAND_LOW else ('GROWING' if g <= BAND_HIGH else 'HYPER')
 
 def band_compatible(prof_band, row_band):
     a, b = _BAND_ORDER.get(prof_band or ''), _BAND_ORDER.get(row_band or '')
