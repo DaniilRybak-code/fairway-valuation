@@ -19,7 +19,11 @@
   <nav class="nav">
     <div class="nav-inner">
       <a class="brand" href="/">Fairway</a>
-      <a class="link" href="/why.html">Why Fairway</a>
+      <div class="nav-links">
+        <a class="link" href="#field">See the football field</a>
+        <a class="link" href="/why.html">Why Fairway</a>
+        <button class="btn-nav" onclick="startQuiz()">Try it free</button>
+      </div>
     </div>
   </nav>
 
@@ -50,8 +54,7 @@
               </div>
               <div class="hf-row">
                 <div class="hf-name">Public comps<span>6.2x &ndash; 9.2x &middot; 12 named peers</span></div>
-                <div class="hf-track"><div class="hf-bar ink" style="left:13.3%;width:40%"></div><b style="left:13.3%">4.8</b><b class="hi" style="left:53.3%">7.2</b><span class="hf-anno pub">what investors see first
-                  <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M36 22 C 26 20, 14 14, 6 5" fill="none"/><path d="M11 6 L6 5 L8 11" fill="none"/></svg></span></div>
+                <div class="hf-track"><div class="hf-bar ink" style="left:13.3%;width:40%"></div><b style="left:13.3%">4.8</b><b class="hi" style="left:53.3%">7.2</b><span class="hf-anno pub">what investors see first</span></div>
               </div>
               <div class="hf-row">
                 <div class="hf-name">Growth-adjusted<span>your 74% vs peers&rsquo; 11%</span></div>
@@ -59,8 +62,7 @@
               </div>
               <div class="hf-row">
                 <div class="hf-name">Private rounds<span>7.5x &ndash; 12.0x &middot; 9 matched</span></div>
-                <div class="hf-track"><div class="hf-bar acc" style="left:31.7%;width:58.3%"></div><b style="left:31.7%">5.9</b><b class="hi" style="left:90%">9.4</b><span class="hf-anno priv">your read-across &mdash; argue from here
-                  <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 4 C 14 8, 26 14, 34 21" fill="none"/><path d="M28 20 L34 21 L31 15" fill="none"/></svg></span></div>
+                <div class="hf-track"><div class="hf-bar acc" style="left:31.7%;width:58.3%"></div><b style="left:31.7%">5.9</b><b class="hi" style="left:90%">9.4</b><span class="hf-anno priv">your read-across &mdash; argue from here</span></div>
               </div>
               <div class="hf-row">
                 <div class="hf-name">Discounted cash flow<span>on your own plan</span></div>
@@ -75,9 +77,29 @@
             </div>
           </div>
         </div>
-        <div class="hero-strips rv in">
-          <div class="strip"><span class="strip-k">What moves your number</span><span class="chip">Growth vs peers</span><span class="chip">Net revenue retention</span><span class="chip">Recurring share</span></div>
-          <div class="strip"><span class="strip-k">Funds behind the reference rounds</span><span class="chip name">Accel</span><span class="chip name">Index Ventures</span><span class="chip name">ICONIQ Growth</span></div>
+        <div class="hero-below rv in">
+          <div class="hb-block">
+            <p class="hb-k">What moves your number <span class="hb-hint">hover for the data</span></p>
+            <div class="drv-stats">
+              <div class="ds has-tip" data-tip="Across the 165 listed software names in our set, the top quarter by forward growth trades at 8.3x forward revenue; the bottom quarter at 2.3x.">
+                <em>3.6&times;</em><b>Growth vs peers</b><span>top-quartile growers vs bottom, same universe</span>
+              </div>
+              <div class="ds has-tip" data-tip="Among the 24 listed names that disclose net revenue retention, the top quarter trades at 16.3x forward revenue; the bottom quarter at 3.9x.">
+                <em>4.2&times;</em><b>Retention premium</b><span>top-quartile NRR vs bottom, where disclosed</span>
+              </div>
+              <div class="ds has-tip" data-tip="In the worked example, matched private rounds reach &pound;9.4m against a &pound;7.2m public-comps ceiling. The drivers above decide whether you can claim it.">
+                <em>+31%</em><b>Private over public</b><span>the range the arguments are for</span>
+              </div>
+            </div>
+          </div>
+          <div class="hb-block">
+            <p class="hb-k">Who invests in your space</p>
+            <table class="inv-table">
+              <tr><td class="f">Accel</td><td>Cursor &middot; Snyk &middot; Miro <i>+11 more</i></td><td class="n">14 rounds</td></tr>
+              <tr><td class="f">Index Ventures</td><td>Notion &middot; Remote &middot; Personio <i>+2 more</i></td><td class="n">5 rounds</td></tr>
+              <tr><td class="f">ICONIQ Growth</td><td>Sierra &middot; Writer &middot; dbt Labs <i>+5 more</i></td><td class="n">9 rounds</td></tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -85,7 +107,7 @@
   </div>
 
   <!-- SECTION TWO: the field, then the highlights, one at a time -->
-  <div class="snap field-sec">
+  <div class="snap field-sec" id="field">
     <div class="wrap-wide">
       <div class="sec-band">
         <p class="sec-eyebrow rv">What you get</p>
@@ -99,7 +121,7 @@
             <div class="co">Northsteer <span class="lock-tag unrefined-tag">Example</span></div>
             <div class="meta">Seed &middot; B2B software &middot; &pound;0.60m ARR &middot; grew 74%, plans 60%</div>
           </div>
-          <div class="cap">Implied pre-money, &pound;m<span class="hover-hint">hover any multiple for its source</span></div>
+          <div class="cap">Implied pre-money, &pound;m<span class="hover-hint">hover a multiple or a bar for its source and peers</span></div>
         </div>
         <div class="ffcard-body ffx">
           <div class="ffx-head"><div>Method</div><div>Metric</div><div>Multiple</div><div>Implied</div></div>
@@ -115,22 +137,21 @@
           <div class="ff-param"><strong>NTM revenue</strong><span>Median of your core peer set</span></div>
           <div class="ff-metric">&pound;0.78m<span class="sub">next twelve months</span></div>
           <div class="ff-mult has-tip" data-tip="EV / next-twelve-months revenue across 12 named core peers, analyst consensus, refreshed against the market. Every peer is named on the row.">6.2x &ndash; 9.2x<span class="sub">12 core peers</span></div>
-          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:20.0%;width:36.92%"></div><div class="ff-end lo" style="left:20.0%">4.8</div><div class="ff-end hi" style="left:56.92%">7.2</div></div><span class="ff-anno" style="left:4%; bottom:0;">market data investors see immediately
-            <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M36 22 C 26 20, 14 14, 6 6" fill="none"/><path d="M11 7 L6 6 L8 12" fill="none"/></svg></span></div>
+          <div class="ff-cell"><div class="ff-track has-tip" data-tip="The 12 core peers include Asana, HubSpot, Braze, Klaviyo, Sprout Social, Appian, Pegasystems and Intapp — every one named on the row in your field."><div class="ff-line"></div><div class="ff-bar" style="left:20.0%;width:36.92%"></div><div class="ff-end lo" style="left:20.0%">4.8</div><div class="ff-end hi" style="left:56.92%">7.2</div></div><span class="ff-anno" style="left:20%; bottom:3px;">market data investors see immediately</span></div>
         </div>
 
         <div class="ff-row">
           <div class="ff-param"><strong>ARR, month 12</strong><span>Same peers, forward run-rate</span></div>
           <div class="ff-metric">&pound;0.96m<span class="sub">run-rate in a year</span></div>
           <div class="ff-mult has-tip" data-tip="The same 12 peers applied to your month-12 run-rate, the basis that favours a high recurring share.">5.4x &ndash; 8.0x<span class="sub">same peers</span></div>
-          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:26.15%;width:38.46%"></div><div class="ff-end lo" style="left:26.15%">5.2</div><div class="ff-end hi" style="left:64.61%">7.7</div></div></div>
+          <div class="ff-cell"><div class="ff-track has-tip" data-tip="The 12 core peers include Asana, HubSpot, Braze, Klaviyo, Sprout Social, Appian, Pegasystems and Intapp — every one named on the row in your field."><div class="ff-line"></div><div class="ff-bar" style="left:26.15%;width:38.46%"></div><div class="ff-end lo" style="left:26.15%">5.2</div><div class="ff-end hi" style="left:64.61%">7.7</div></div></div>
         </div>
 
         <div class="ff-row">
           <div class="ff-param"><strong>Growth-adjusted</strong><span>Fitted on the peer regression</span></div>
           <div class="ff-metric">&pound;0.78m<span class="sub">NTM revenue</span></div>
           <div class="ff-mult has-tip" data-tip="The peer set's multiple-versus-growth regression, applied to your 74% against the peers' 11% median.">7.4x &ndash; 10.4x<span class="sub">peer regression</span></div>
-          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:35.38%;width:35.39%"></div><div class="ff-end lo" style="left:35.38%">5.8</div><div class="ff-end hi" style="left:70.77%">8.1</div></div></div>
+          <div class="ff-cell"><div class="ff-track has-tip" data-tip="The 12 core peers include Asana, HubSpot, Braze, Klaviyo, Sprout Social, Appian, Pegasystems and Intapp — every one named on the row in your field."><div class="ff-line"></div><div class="ff-bar" style="left:35.38%;width:35.39%"></div><div class="ff-end lo" style="left:35.38%">5.8</div><div class="ff-end hi" style="left:70.77%">8.1</div></div></div>
         </div>
 
         <div class="ff-group">Private data</div>
@@ -138,15 +159,14 @@
           <div class="ff-param"><strong>Comparable private rounds</strong><span>Revenue multiple at pricing</span></div>
           <div class="ff-metric">&pound;0.78m<span class="sub">9 matched rounds</span></div>
           <div class="ff-mult has-tip" data-tip="9 disclosed rounds matched to this profile: post-money over the revenue investors had at pricing, each linked to its source. A round without one is a headline, not a comparable.">7.5x &ndash; 12.0x<span class="sub">disclosed revenue</span></div>
-          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:36.92%;width:53.85%"></div><div class="ff-end lo" style="left:36.92%">5.9</div><div class="ff-end hi" style="left:90.77%">9.4</div></div><span class="ff-anno accent" style="left:16%; bottom:0;">directly comparable rounds &mdash; your read-across
-            <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 4 C 14 8, 26 14, 34 21" fill="none"/><path d="M28 20 L34 21 L31 15" fill="none"/></svg></span></div>
+          <div class="ff-cell"><div class="ff-track has-tip" data-tip="The 9 matched rounds include Vanta, FloQast, Miro, Personio, Factorial, Spendesk and HiBob — each linked to the source of its revenue figure."><div class="ff-line"></div><div class="ff-bar" style="left:36.92%;width:53.85%"></div><div class="ff-end lo" style="left:36.92%">5.9</div><div class="ff-end hi" style="left:90.77%">9.4</div></div><span class="ff-anno accent" style="left:36.92%; bottom:3px;">directly comparable rounds &mdash; your read-across</span></div>
         </div>
 
         <div class="ff-row">
           <div class="ff-param"><strong>Precedents, growth-adjusted</strong><span>Fitted across the matched rounds</span></div>
           <div class="ff-metric">&pound;0.78m<span class="sub">NTM revenue</span></div>
           <div class="ff-mult has-tip" data-tip="The matched rounds' own multiple-versus-growth fit, applied to your growth.">8.1x &ndash; 11.5x<span class="sub">round regression</span></div>
-          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar" style="left:43.08%;width:41.54%"></div><div class="ff-end lo" style="left:43.08%">6.3</div><div class="ff-end hi" style="left:84.62%">9.0</div></div></div>
+          <div class="ff-cell"><div class="ff-track has-tip" data-tip="The 9 matched rounds include Vanta, FloQast, Miro, Personio, Factorial, Spendesk and HiBob — each linked to the source of its revenue figure."><div class="ff-line"></div><div class="ff-bar" style="left:43.08%;width:41.54%"></div><div class="ff-end lo" style="left:43.08%">6.3</div><div class="ff-end hi" style="left:84.62%">9.0</div></div></div>
         </div>
 
         <div class="ff-group">Fundamental</div>
@@ -161,8 +181,7 @@
           <div class="ff-param"><strong>Unrefined range<span class="lock-tag unrefined-tag">Unrefined</span></strong><span>Before any comparable set is chosen</span></div>
           <div class="ff-metric">0.60 &middot; 0.78<span class="sub">ARR &middot; NTM</span></div>
           <div class="ff-mult has-tip" data-tip="One market-wide median across 309 listed software companies, before anyone looked at your business. Shown so you can see what refinement changes.">11.4x<span class="sub">309 listed firms</span></div>
-          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar unrefined" style="left:50.77%;width:32.31%"></div><div class="ff-end lo" style="left:50.77%">6.8</div><div class="ff-end hi" style="left:83.08%">8.9</div></div><span class="ff-anno" style="left:4%; bottom:0;">no specific comps to argue from
-            <svg viewBox="0 0 40 26" aria-hidden="true"><path d="M4 4 C 14 8, 26 14, 34 21" fill="none"/><path d="M28 20 L34 21 L31 15" fill="none"/></svg></span></div>
+          <div class="ff-cell"><div class="ff-track"><div class="ff-line"></div><div class="ff-bar unrefined" style="left:50.77%;width:32.31%"></div><div class="ff-end lo" style="left:50.77%">6.8</div><div class="ff-end hi" style="left:83.08%">8.9</div></div><span class="ff-anno" style="left:50.77%; bottom:3px;">no specific comps to argue from</span></div>
         </div>
 
           <div class="ff-row conclusion">
