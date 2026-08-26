@@ -7,6 +7,31 @@ field the engine already reads, because that was the rule the whole design turne
 
     ONLY ASK FOR A METRIC WE CAN PUT A PEER NUMBER NEXT TO.
 
+AND A SECOND RULE, from Daniil on 27-Aug: DO NOT ASK FOR A FIELD THAT DOES NOT IMPACT THE VALUATION.
+"We should not be asking for the sake of asking." Applied literally, question by question:
+
+  DROPPED, because he said they do not move the range:  seats versus usage pricing, take rate
+  (marketplace and payments), cohort retention, originations, loss rate, ARPU, churn, content cost,
+  orders per customer, contribution margin per order, and TOTAL PAYMENT VOLUME.
+
+  GROSS MARGIN IS NOW ASKED IN ONE FORK ONLY, e-commerce. He endorsed it there and it earns its
+  place: across our listed consumer set the revenue multiple moves 0.9x to 2.8x between the lowest
+  and highest margin quartile while the gross-profit multiple sits at 3.6x and 3.1x. For software the
+  same measurement gives 3.4x against 5.0x on revenue, a much smaller effect, and he explicitly said
+  margin does not enter the valuation for an AI-native company. So it comes out of every other fork.
+  The peer-side column stays populated everywhere, and `denominator()` still switches to gross profit
+  on a wide peer-group margin spread without needing the founder to answer anything.
+
+  VOLUME (GMV, GTV) IS OPTIONAL AND LABELLED AS A CROSS-CHECK, never a valuation input. TPV is gone
+  altogether on his instruction. Recording one dissent and then dropping it: a founder who says
+  "$40m revenue" when they mean $40m of processed volume is out by about a hundred times, and holding
+  both numbers is the only way to catch that. His call stands.
+
+  NRR STAYS, and that one is mine rather than his. He asked to enrich the database, not to ask the
+  founder. I have kept the question because it is the largest gap we can measure: across the 51
+  listed software names that disclose it, the top quarter trades at 11.1x forward revenue and the
+  bottom at 2.9x. It is optional. Say the word and it goes.
+
 A question the peer set cannot answer makes the reveal look thinner, not richer. So every field
 below names the peer-side column it is compared against, and `unbacked()` fails loudly if a question
 is ever added without one.
@@ -56,23 +81,19 @@ FORKS = {
            maps_to='profile.nrr', peer_field='nrr_pct',
            why='51 of 165 listed software names disclose it. The top quarter trades at 11.1x '
                'forward revenue and the bottom at 2.9x, which is the largest gap we can measure.'),
-      dict(key='gross_margin', label='Gross margin', kind='percent', required=False,
-           maps_to='profile.gm', peer_field='gross_margin_pct',
-           why='Decides whether we lead on revenue or gross profit.'),
     ]),
  'marketplace': dict(
     archetypes=('Third-Party Marketplace', 'Classifieds & Listings', 'Freelance & Services Marketplace',
                 'Travel Booking & OTA', 'Gaming & Virtual Economy'),
     questions=[
-      dict(key='gmv', label='Gross merchandise value over the last twelve months', kind='money',
-           required=True, maps_to='profile.volume', peer_field='gmv_musd / volume_musd',
-           why='The number a marketplace founder will volunteer, and the one that is not revenue. '
-               'We hold both sides so the take rate falls out rather than being asked for.'),
+      dict(key='gmv', label='Gross merchandise value, if you have it to hand', kind='money',
+           required=False, maps_to='profile.volume', peer_field='gmv_musd / volume_musd',
+           why='NOT a valuation input. We price on net revenue. This is a cross-check: a founder '
+               'who gives GMV when they mean revenue is out by roughly the take rate, and holding '
+               'both numbers is the only way to catch it.'),
       dict(key='net_revenue', label='Net revenue over the same period', kind='money', required=True,
            maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='The figure we actually price on.'),
-      dict(key='gross_margin', label='Gross margin', kind='percent', required=False,
-           maps_to='profile.gm', peer_field='gross_margin_pct'),
     ]),
  'ecommerce': dict(
     archetypes=('Consumer Brand', 'Owned-Inventory Retail', 'Commerce Enablement & Fulfilment'),
@@ -98,13 +119,6 @@ FORKS = {
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='Gross and net revenue on a payments business differ by roughly an order of '
                'magnitude, and we store net.'),
-      dict(key='tpv', label='Total payment volume over the same period', kind='money', required=False,
-           maps_to='profile.volume', peer_field='volume_musd',
-           why='NOT a valuation input, and we do not price on it. It is a sanity check: a founder '
-               'who says $40m revenue when they mean $40m of processed volume is out by about a '
-               'hundred times, and holding both numbers is the only way to catch that.'),
-      dict(key='gross_margin', label='Gross margin', kind='percent', required=False,
-           maps_to='profile.gm', peer_field='gross_margin_pct'),
     ]),
  'lending': dict(
     archetypes=('Lending & Credit', 'Digital Bank & Deposits', 'Insurance Technology'),
@@ -128,22 +142,17 @@ FORKS = {
            maps_to='profile.paying_users_k', peer_field='paying_users_k',
            why='Paying, not registered or monthly active. Lets us show an enterprise value per '
                'subscriber alongside the revenue multiple.'),
-      dict(key='gross_margin', label='Gross margin', kind='percent', required=False,
-           maps_to='profile.gm', peer_field='gross_margin_pct',
-           why='For a media or creator business most of the revenue leaves again as content or '
-               'creator cost, and the margin is the only thing that shows it.'),
     ]),
  'delivery': dict(
     archetypes=('Local Delivery & On-Demand',),
     questions=[
-      dict(key='gmv', label='Gross transaction value over the last twelve months', kind='money',
-           required=True, maps_to='profile.volume', peer_field='volume_musd'),
+      dict(key='gmv', label='Gross transaction value, if you have it to hand', kind='money',
+           required=False, maps_to='profile.volume', peer_field='volume_musd',
+           why='Cross-check only, not a valuation input, same as GMV on a marketplace.'),
       dict(key='net_revenue', label='Your own revenue over the same period', kind='money',
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='Flink reports the full basket as gross revenue and Glovo reports a commission. Same '
                'category, revenue figures about ten times apart, so we have to know which one this is.'),
-      dict(key='gross_margin', label='Gross margin', kind='percent', required=False,
-           maps_to='profile.gm', peer_field='gross_margin_pct'),
     ]),
 }
 

@@ -554,3 +554,31 @@ Nine to ten questions in total, six or seven of them required, which fits the pr
 Marketplace, payments, lending, subscription and delivery have never been exercised against a real
 company, because the test set is 20 software businesses and one D2C brand. That is the strongest
 argument yet for the 20 additional test cases, and they should be chosen to hit those five forks.
+
+### And then cut against Daniil's own rule
+
+*"Fields that do not impact valuation are not asked."* Applied literally, question by question, the
+fork lost a third of its questions the same day it was built.
+
+Gone because he said they do not move the range: seats versus usage pricing, take rate on both
+marketplace and payments, cohort retention, originations, loss rate, ARPU, churn, content cost,
+orders per customer, contribution margin per order, and total payment volume.
+
+**Gross margin is now asked in one fork only, e-commerce.** He endorsed it there and it earns its
+place: across the listed consumer set the revenue multiple moves 0.9x to 2.8x between the lowest and
+highest margin quartile while the gross-profit multiple sits at 3.6x and 3.1x. For software the same
+measurement gives 3.4x against 5.0x, a much smaller effect, and he said plainly that margin does not
+enter the valuation for an AI-native company. It comes out of every other fork. Nothing is lost on
+the peer side: the column stays populated everywhere, and `denominator()` still switches to gross
+profit on a wide peer-group margin spread without the founder answering anything.
+
+**Volume is a cross-check, never an input.** GMV and GTV are optional and labelled as such. TPV is
+gone entirely on his instruction, with one dissent recorded and then dropped: a founder who says
+"$40m revenue" when they mean $40m of processed volume is out by about a hundred times.
+
+**One question in the set is mine rather than his.** He asked to enrich the retention data, not to
+ask the founder for it. NRR stays as an optional question because it is the largest gap we can
+measure, 11.1x against 2.9x across the 51 listed names that disclose it. It is flagged in the file as
+a call to be overruled.
+
+The fork is now eight to ten questions with six or seven required.
