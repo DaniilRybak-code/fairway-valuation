@@ -396,3 +396,63 @@ market, the others were priced by a venture investor.
 
 That is a better lever than the growth band for the case that prompted the growth band, and it cost
 one column.
+
+---
+
+## 27 August: retention, gross margin, and a regression that knows when to stay quiet
+
+### Net revenue retention: 24 names became 51, and the headline stat moved
+
+Sourced NRR from filings and calls for 48 listed software names that had none. **27 disclose it, 21
+do not.** The 21 are now marked `DOES_NOT_DISCLOSE` with what they publish instead, so nobody
+re-sources them.
+
+The stat on the landing page has to change with it. On 24 names the top quarter by NRR traded at
+16.3x and the bottom at 3.9x. On 51 names it is **11.1x against 2.9x**. The direction holds and the
+gap is still the largest driver we can measure, but the magnitude was overstated by a thin sample.
+Restricting to company-wide definitions only (43 names) gives 8.4x against 3.4x.
+
+**The definitions are not interchangeable and the file now says so.** `nrr_scope` marks RESTRICTED
+where a company publishes a cohort rather than a company-wide figure: Intapp's is cloud-only,
+Samsara's counts only customers above $25,000 ARR, BILL's only customers using both products,
+DocuSign's only direct customers, Teradata's only cloud and last printed in Q4-2025. `nrr_source`
+marks the ten that exist only in an earnings-call transcript and appear in no filing. Datadog and
+Atlassian publish a band, never a number.
+
+### Gross margin: we did have it, except where it matters most
+
+Daniil asked whether we already held it. The honest answer is three-quarters yes:
+
+| file | before | now |
+|---|---|---|
+| listed consumer and commerce | `gross_margin_pct` on all 71 | unchanged |
+| listed fintech | on all 87 | unchanged |
+| listed software | not as a column, but derivable | **derived and stored, 158 of 165** |
+| private rounds, both files | **nothing** | still nothing, and this is the real gap |
+
+We price the consumer family on gross profit because EV/revenue moves from 0.9x to 2.8x across
+margin quartiles while EV/gross profit sits at 3.6x and 3.1x. We cannot do that on the private side
+at all, for any company, because no private row carries a margin. That is the single most valuable
+missing field in the database.
+
+### The regression method, and the two things that stop it
+
+Built as `regression_range`. It fits the multiple against growth across the founder's own extended
+peer set, wider than the football field's five, and reads a range off the line at their growth rate
+plus and minus a tenth. Two gates, and both of them refuse more often than they permit.
+
+**R2 must clear 50%, and it doubles as a test of the peer set.** Measured: the whole listed software
+universe fits at 40%, and 27% once trimmed. By archetype it ranges from 15% for Business
+Applications to 85% for Data, AI and Developer Tools. On the founder's own top 15 relevant peers it
+clears 50% for 12 of the 21 real profiles at a 74% growth rate. So a regression on a broad "software"
+bucket is worthless and a regression on a tight set is often excellent. If the multiples of the
+companies we picked cannot be explained by their growth, we do not have a coherent set and we should
+not draw a line through it.
+
+**A line is only evidence inside the range it was fitted on.** The first version produced implied
+multiples of 27x to 39x for a founder growing 74%, by extrapolating a fit far past the fastest peer
+in it. Excellent R2, fictional answer. The banker's chart this copies reads its range at 17% to 22%
+growth inside a cloud spanning 3% to 30%; it does not run the line off the page. The method now
+refuses when the founder's growth sits more than 25% beyond the peer set's own maximum, and returns
+the reason so the reveal can say it: at that growth rate there is no listed company to regress
+against. That is a data gap with a name.

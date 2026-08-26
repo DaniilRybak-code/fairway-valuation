@@ -913,3 +913,93 @@ def private_range(prof, picked, tier):
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out
+
+
+# ---------------------------------------------------------------------------
+# REGRESSION ON GROWTH: THE METHOD THAT HANDLES A DIFFERENT GROWTH PROFILE
+#
+# Daniil, 26-Aug-2026: "Build a regression with larger than usual 5 set of peers (taking other
+# close peers that did not make into 5), build regression of multiple vs growth, apply user's
+# given annual growth +/-10%, and infer the range of multiples that way. Important to make sure
+# R2 is above 50% at least for the regression we build."
+#
+# This is the honest answer to the problem the comp set cannot solve on its own. A founder growing
+# 74% against peers growing 11% is not worth the peer median, and no amount of peer selection fixes
+# that: the peers are the right businesses at the wrong speed. A regression prices the difference
+# instead of arguing about it, which is exactly what a banker does with a scatter and a trendline.
+#
+# THE R2 BAR IS NOT A FORMALITY, IT IS THE POINT. Measured across the 21 real profiles:
+#   whole listed software universe, EV/revenue on growth   R2 = 40%   FAILS
+#   the same, trimmed of the top and bottom 5%             R2 = 27%   FAILS
+#   by archetype: Business Applications 15%, Vertical 26%, Data/AI/Dev 85%
+#   the founder's OWN top 15 relevant peers                clears 50% for 6 of the 21
+# So a regression built on a broad "software" bucket is worthless, and a regression built on a
+# tight, relevant set is often excellent. R2 therefore doubles as a TEST OF THE PEER SET: if the
+# multiples of the companies we chose cannot be explained by their growth, we do not have a
+# coherent set and we should not draw a line through it. Below the bar we return nothing and the
+# reveal simply omits the row.
+#
+# The peer set is deliberately WIDER than the football field's five, because a regression needs
+# points. It is the same ranking, taken further down.
+REGRESSION_N = 15
+REGRESSION_MIN_POINTS = 6
+REGRESSION_MIN_R2 = 0.50
+REGRESSION_GROWTH_SPAN = 0.10          # the founder's growth rate plus and minus a tenth of itself
+
+# AND A LINE IS ONLY EVIDENCE INSIDE THE RANGE IT WAS FITTED ON.
+#
+# Found the moment the first version ran. A founder growing 74% against listed software peers whose
+# fastest name grows about 26% produced implied multiples of 27x to 39x, because the fit was being
+# extrapolated to nearly three times the highest growth rate any peer actually exhibits. The R2 was
+# excellent and the answer was fiction. The banker's chart this method copies reads its range at
+# 17% to 22% growth, comfortably inside a cloud of points spanning 3% to 30%; it does not run the
+# line off the edge of the page.
+#
+# So the founder's growth must sit inside the peer set's own growth range, or no more than
+# EXTRAPOLATION_LIMIT beyond its top. Outside that we return nothing, and the honest reason is
+# worth showing the founder: at that growth rate there is no listed company to regress them
+# against. That is a data gap with a name, not a failure of method, and the private lane is where
+# it gets resolved once more rounds carry a growth rate.
+EXTRAPOLATION_LIMIT = 0.25
+
+def _ols(xs, ys):
+    n = len(xs)
+    if n < REGRESSION_MIN_POINTS: return None
+    mx, my = sum(xs)/n, sum(ys)/n
+    sxx = sum((x-mx)**2 for x in xs)
+    sst = sum((y-my)**2 for y in ys)
+    if sxx == 0 or sst == 0: return None
+    b = sum((x-mx)*(y-my) for x, y in zip(xs, ys)) / sxx
+    a = my - b*mx
+    ssr = sum((y-(a+b*x))**2 for x, y in zip(xs, ys))
+    return a, b, 1 - ssr/sst
+
+def regression_range(prof, universe, which='rev', want=REGRESSION_N):
+    """Fit EV/denominator against growth across the founder's own extended peer set, then read the
+    range off the line at their growth rate. Returns None when the fit is too weak to publish."""
+    growth = prof.get('growth')
+    if growth is None: return None
+    univ = same_family(prof, universe)
+    scored = sorted(((score(prof, r), r) for r in univ), key=lambda z: -z[0][0])
+    scored = [x for x in scored if _relevant(prof, x[1], x[0][1])][:want]
+    key = 'mult' if which == 'rev' else 'gp_mult'
+    pts = [(r['g'], r[key], r) for _s, r in scored if r.get('g') is not None and r.get(key) is not None]
+    fit = _ols([p[0] for p in pts], [p[1] for p in pts])
+    if not fit: return None
+    a, b, r2 = fit
+    if r2 < REGRESSION_MIN_R2: return None
+    gs = [p[0] for p in pts]
+    lo_g, hi_g = growth*(1-REGRESSION_GROWTH_SPAN), growth*(1+REGRESSION_GROWTH_SPAN)
+    ceiling = max(gs) * (1 + EXTRAPOLATION_LIMIT)
+    floor = min(gs) - abs(min(gs)) * EXTRAPOLATION_LIMIT - 5.0
+    if hi_g > ceiling or lo_g < floor:
+        return dict(refused='OUT_OF_RANGE', n=len(pts), r2=round(r2, 3), growth=growth,
+                    peer_growth_low=round(min(gs), 1), peer_growth_high=round(max(gs), 1),
+                    denominator=which)
+    v = sorted([a + b*lo_g, a + b*hi_g])
+    if v[1] <= 0: return None                      # a downward line can imply a negative multiple
+    return dict(n=len(pts), r2=round(r2, 3), intercept=round(a, 3), slope=round(b, 4),
+                denominator=which, growth=growth, growth_low=round(lo_g, 1), growth_high=round(hi_g, 1),
+                low=round(max(0.0, v[0]), 1), mid=round((v[0]+v[1])/2, 1), high=round(v[1], 1),
+                peers=[{'company': r['company_name'], 'ticker': r.get('exchange_ticker', ''),
+                        'growth': r['g'], 'mult': r[key]} for _g, _m, r in pts])
