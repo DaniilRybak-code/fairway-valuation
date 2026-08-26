@@ -49,12 +49,15 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 4.5,
    "low": 3.1,
    "mid": 3.4,
    "n": 5,
+   "points": [],
    "positioning": [],
+   "spread": 1.8,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": true
@@ -124,12 +127,15 @@
    "bounded": true,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "RANGE",
    "high": 105.3,
    "low": 32.0,
    "mid": 50.0,
    "n": 3,
+   "points": [],
    "positioning": [],
+   "spread": 3.3,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": true
@@ -184,11 +190,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 5.1,
    "low": 2.7,
    "mid": 4.0,
    "n": 3,
+   "points": [],
    "positioning": [
     {
      "company": "Intapp, Inc.",
@@ -205,6 +213,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 1.9,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": true

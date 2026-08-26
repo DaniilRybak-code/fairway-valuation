@@ -49,11 +49,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 2.7,
    "low": 1.1,
    "mid": 1.5,
    "n": 3,
+   "points": [],
    "positioning": [
     {
      "company": "Similarweb Ltd.",
@@ -63,6 +65,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 2.5,
    "tag_evidence": 3.9,
    "thin": false,
    "triangulated": false
@@ -132,11 +135,13 @@
    "bounded": true,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "RANGE",
    "high": 32.6,
    "low": 14.0,
    "mid": 32.6,
    "n": 2,
+   "points": [],
    "positioning": [
     {
      "company": "Semrush",
@@ -146,6 +151,7 @@
      "transaction_type": "CONTROL"
     }
    ],
+   "spread": 2.3,
    "tag_evidence": 0.0,
    "thin": true,
    "triangulated": true
@@ -159,14 +165,6 @@
     "reason": "same end market; same kind of customer; sold the same way",
     "score": 8.5,
     "ticker": "NYSE:RSKD"
-   },
-   {
-    "company": "Baozun Inc.",
-    "family": "consumer",
-    "in_medians": false,
-    "reason": "same end market; same kind of customer; sold the same way",
-    "score": 7.5,
-    "ticker": "NASDAQGS:BZUN"
    },
    {
     "company": "Manhattan Associates, Inc.",
@@ -200,12 +198,44 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 10.3,
    "low": 1.3,
    "mid": 5.35,
    "n": 4,
+   "points": [
+    {
+     "company": "Riskified Ltd.",
+     "mult": 1.3,
+     "reason": "same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "mult": 4.2,
+     "reason": "shares the language of product; same kind of customer; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "PTC Inc.",
+     "mult": 6.5,
+     "reason": "shares the language of product; same kind of customer; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Manhattan Associates, Inc.",
+     "mult": 10.3,
+     "reason": "same end market; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 7.9,
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": true

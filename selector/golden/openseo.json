@@ -17,13 +17,16 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "DIAMOND",
    "high": 2.1,
    "low": 2.1,
    "mid": 2.1,
    "n": 1,
+   "points": [],
    "positioning": [],
    "sole": "Similarweb Ltd.",
+   "spread": 1.0,
    "tag_evidence": 9.2,
    "thin": true,
    "triangulated": false
@@ -64,6 +67,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
+    "score": 16.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Klaviyo",
@@ -84,16 +98,25 @@
    "control_names": [
     "Semrush"
    ],
+   "dispersed": false,
    "display": "DIAMOND",
    "high": 4.3,
    "low": 4.3,
    "mid": 4.3,
    "n": 1,
+   "points": [],
    "positioning": [
     {
      "company": "Klaviyo",
      "mult": 32.6,
      "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -106,6 +129,7 @@
     }
    ],
    "sole": "Semrush",
+   "spread": 1.0,
    "tag_evidence": 12.0,
    "thin": true,
    "triangulated": false
@@ -160,11 +184,35 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 16.4,
    "low": 2.7,
    "mid": 9.6,
    "n": 3,
+   "points": [
+    {
+     "company": "Klaviyo, Inc.",
+     "mult": 2.7,
+     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "mult": 9.6,
+     "reason": "shares the language of data; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [
     {
      "company": "Wix.com Ltd.",
@@ -181,6 +229,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 6.1,
    "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true

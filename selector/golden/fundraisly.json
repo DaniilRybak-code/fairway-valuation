@@ -49,12 +49,15 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 12.9,
    "low": 6.9,
    "mid": 9.5,
    "n": 5,
+   "points": [],
    "positioning": [],
+   "spread": 4.6,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
@@ -93,6 +96,17 @@
     "reason": "shares the language of database; same type of business; same business function; same kind of customer",
     "score": 13.0,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of ai; same type of business; same kind of customer",
+    "score": 7.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -104,17 +118,42 @@
    "control_names": [
     "Semrush"
    ],
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 50.0,
    "low": 4.3,
-   "mid": 50.0,
-   "n": 2,
+   "mid": 33.3,
+   "n": 3,
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "shares the language of ai; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "shares the language of ai; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    }
+   ],
    "positioning": [],
+   "spread": 11.6,
    "tag_evidence": 0.1,
-   "thin": true,
+   "thin": false,
    "triangulated": true
   },
-  "private_window_months": 36,
+  "private_window_months": 46,
   "secondary": [
    {
     "company": "Qualco Group S.A.",
@@ -164,11 +203,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 5.2,
    "low": 3.5,
    "mid": 4.6,
    "n": 3,
+   "points": [],
    "positioning": [
     {
      "company": "Qualco Group S.A.",
@@ -185,6 +226,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 1.5,
    "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true

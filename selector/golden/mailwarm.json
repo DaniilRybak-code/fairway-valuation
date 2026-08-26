@@ -17,13 +17,16 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "DIAMOND",
    "high": 2.8,
    "low": 2.8,
    "mid": 2.8,
    "n": 1,
+   "points": [],
    "positioning": [],
    "sole": "HubSpot, Inc.",
+   "spread": 1.0,
    "tag_evidence": 0.2,
    "thin": true,
    "triangulated": true
@@ -73,12 +76,15 @@
    "control_names": [
     "Mailchimp"
    ],
+   "dispersed": false,
    "display": "RANGE",
    "high": 32.6,
    "low": 15.0,
    "mid": 32.6,
    "n": 2,
+   "points": [],
    "positioning": [],
+   "spread": 2.2,
    "tag_evidence": 0.2,
    "thin": true,
    "triangulated": true
@@ -133,11 +139,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 3.7,
    "low": 1.7,
    "mid": 2.7,
    "n": 3,
+   "points": [],
    "positioning": [
     {
      "company": "IONOS Group SE",
@@ -154,6 +162,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 2.2,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true

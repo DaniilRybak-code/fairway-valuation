@@ -41,11 +41,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 8.0,
    "low": 2.1,
    "mid": 2.4,
    "n": 3,
+   "points": [],
    "positioning": [
     {
      "company": "Wix.com Ltd.",
@@ -55,12 +57,24 @@
      "transaction_type": ""
     }
    ],
+   "spread": 3.8,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Mews",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 12.5,
+    "reason": "both do Channel Manager, Payments; same type of business; same end market; same kind of customer",
+    "score": 20.0,
+    "type": "PRIMARY"
+   },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
@@ -74,7 +88,26 @@
    }
   ],
   "private_proximity": "DIRECT",
-  "private_range": {},
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "bounded": true,
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 12.5,
+   "low": 12.5,
+   "mid": 12.5,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "sole": "Mews",
+   "spread": 1.0,
+   "tag_evidence": 5.0,
+   "thin": true,
+   "triangulated": false
+  },
   "private_window_months": 28,
   "secondary": [
    {
@@ -125,11 +158,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 7.4,
    "low": 1.9,
    "mid": 3.9,
    "n": 4,
+   "points": [],
    "positioning": [
     {
      "company": "IONOS Group SE",
@@ -139,6 +174,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 3.9,
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true

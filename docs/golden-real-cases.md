@@ -309,3 +309,54 @@ reads 4.3x to 105.3x and Fundraisly 4.3x to 50.0x, because every one of their na
 they genuinely span the market. Those ranges are flagged `triangulated`, which is true but is a
 weaker warning than the range deserves. If a spread inside a single band is this wide, the honest
 answer may be that we have no range at all, only a set of positions.
+
+---
+
+## 26 August, evening: a bar that spans 4x to 105x is not a range
+
+Daniil on Pazi and Fundraisly: *"What drives such a huge delta in comps multiples? Are we 100% sure
+these are comparable? Was there differential in growth? Showing such a huge range is not an option
+really, defeats the whole purpose."*
+
+**The investigation.** Pazi's band was Semrush 4.3x, Notion 18.0x, Clay 50.0x, Sierra 105.3x, Decagon
+150.0x. Two things drive it and only one of them is fixable today.
+
+First, the comps are barely comps. Product-tag evidence across the whole set runs 0.1 to 0.8 out of a
+possible 12. They share the token "AI" and almost nothing else.
+
+Second, and this is the real answer to the question: **the spread is a growth spread.** Semrush is a
+mature SEO suite taken private by Adobe. Sierra and Decagon went from nothing to nine-figure ARR
+inside two years. On the listed side we can measure this effect exactly, and it is the largest single
+driver in the data: the fastest quarter of 164 software names trades at 8.3x forward revenue and the
+slowest quarter at 2.3x.
+
+**The root cause is that the private lane is blind to growth.** `WP` sets `growth=0` and
+`profitability=0`, and `select_private` calls the scorer with `use_fin=False`, because the private
+rows carry no growth field at all. The one variable that best explains the spread is the one variable
+the private matcher cannot see. Fixing that means adding growth to the private rows wherever it was
+disclosed, and it is the next real piece of work on this engine.
+
+**The temporary fix Daniil asked for, built.** Where the band's own high is more than
+`DISPERSION_MAX` times its low, we stop drawing a bar and draw each contributor as its own diamond,
+named, with its multiple. Measured across the 21 real profiles the spreads cluster between 1.7x and
+4.9x; Pazi at 24.5x and Fundraisly at 11.6x are the only two outside that, so 6.0 separates the
+genuine ranges from the non-ranges without catching anything healthy.
+
+## And a gate that fell over when one row was deleted
+
+Baozun was removed the same day, and it broke SellerClaw.
+
+Baozun was the **only** listed company carrying the archetype "Commerce Enablement & Fulfilment".
+With it gone that archetype had no family, so `family_of()` returned blank for SellerClaw, and
+`same_family()` **fails open on a blank family** and handed back the entire universe. A merchant
+account operator was then shown Sierra, Clay, Decagon and Semrush. Deleting one row silently disabled
+the first gate for a whole archetype.
+
+The map is now seeded from the consumer vocabulary, so every declared consumer archetype has a family
+whether or not a listed row happens to carry it. Worth remembering as a shape: **a lookup learned
+from data fails open when the data thins out, and fail-open on a gate is the wrong default.**
+
+Recording the Baozun reason precisely, because the instruction and the file's own rule pointed
+different ways. Daniil asked for it out "given it is small", and size is not a criterion here. It is
+out on the data: a minority interest of $268m against a $165m market cap means the enterprise-value
+bridge cannot be defended, so the 0.2x it printed was never a number we could stand behind.

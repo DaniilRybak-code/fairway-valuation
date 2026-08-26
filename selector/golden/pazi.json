@@ -33,12 +33,15 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 5.4,
    "low": 2.2,
    "mid": 2.8,
    "n": 3,
+   "points": [],
    "positioning": [],
+   "spread": 2.5,
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -110,12 +113,37 @@
    "control_names": [
     "Semrush"
    ],
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 105.3,
    "low": 4.3,
    "mid": 50.0,
    "n": 3,
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Sierra",
+     "mult": 105.3,
+     "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
+   "spread": 24.5,
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": true
@@ -170,11 +198,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 4.0,
    "low": 2.3,
    "mid": 2.7,
    "n": 4,
+   "points": [],
    "positioning": [
     {
      "company": "Wix.com Ltd.",
@@ -184,6 +214,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 1.7,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true

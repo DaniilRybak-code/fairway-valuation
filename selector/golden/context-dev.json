@@ -49,12 +49,51 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 31.8,
    "low": 1.4,
    "mid": 5.2,
    "n": 5,
+   "points": [
+    {
+     "company": "Agora, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of api, data; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "shares the language of llm; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 31.8,
+     "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 39.8,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
@@ -124,12 +163,15 @@
    "bounded": false,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "RANGE",
    "high": 50.0,
    "low": 10.3,
    "mid": 33.0,
    "n": 3,
+   "points": [],
    "positioning": [],
+   "spread": 4.9,
    "tag_evidence": 1.1,
    "thin": false,
    "triangulated": true
@@ -184,12 +226,51 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 17.6,
    "low": 2.1,
    "mid": 4.3,
    "n": 5,
+   "points": [
+    {
+     "company": "Teradata Corporation",
+     "mult": 1.4,
+     "reason": "shares the language of data; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "mult": 2.1,
+     "reason": "both do Web Scraping; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Akamai Technologies, Inc.",
+     "mult": 4.3,
+     "reason": "shares the language of web; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "mult": 9.6,
+     "reason": "both do Data Enrichment; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 17.6,
+     "reason": "shares the language of data; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 12.6,
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": true

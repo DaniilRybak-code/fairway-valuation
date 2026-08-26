@@ -33,12 +33,15 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 5.0,
    "low": 1.9,
    "mid": 3.9,
    "n": 3,
+   "points": [],
    "positioning": [],
+   "spread": 2.6,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -108,12 +111,15 @@
    "bounded": true,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "RANGE",
    "high": 20.0,
    "low": 10.3,
    "mid": 20.0,
    "n": 2,
+   "points": [],
    "positioning": [],
+   "spread": 1.9,
    "tag_evidence": 0.3,
    "thin": true,
    "triangulated": true
@@ -168,11 +174,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 2.1,
    "low": 0.6,
    "mid": 1.1,
    "n": 3,
+   "points": [],
    "positioning": [
     {
      "company": "Agora, Inc.",
@@ -189,6 +197,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 3.5,
    "tag_evidence": 1.1,
    "thin": false,
    "triangulated": true

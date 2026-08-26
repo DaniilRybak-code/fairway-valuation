@@ -49,11 +49,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "DIAMOND",
    "high": 4.1,
    "low": 4.1,
    "mid": 4.1,
    "n": 1,
+   "points": [],
    "positioning": [
     {
      "company": "Backblaze, Inc.",
@@ -85,6 +87,7 @@
     }
    ],
    "sole": "Elastic N.V.",
+   "spread": 1.0,
    "tag_evidence": 3.8,
    "thin": true,
    "triangulated": false
@@ -154,11 +157,13 @@
    "bounded": true,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "DIAMOND",
    "high": 22.5,
    "low": 22.5,
    "mid": 22.5,
    "n": 1,
+   "points": [],
    "positioning": [
     {
      "company": "Oxylabs",
@@ -176,6 +181,7 @@
     }
    ],
    "sole": "Algolia",
+   "spread": 1.0,
    "tag_evidence": 3.8,
    "thin": true,
    "triangulated": false
@@ -230,12 +236,15 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "RANGE",
    "high": 11.8,
    "low": 5.1,
    "mid": 5.2,
    "n": 5,
+   "points": [],
    "positioning": [],
+   "spread": 2.7,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true

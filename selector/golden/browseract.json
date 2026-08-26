@@ -49,12 +49,51 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 31.8,
    "low": 1.4,
    "mid": 5.2,
    "n": 5,
+   "points": [
+    {
+     "company": "Agora, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 31.8,
+     "reason": "both do AI Agent Infrastructure; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 39.8,
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": true
@@ -124,12 +163,15 @@
    "bounded": false,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "RANGE",
    "high": 33.0,
    "low": 10.3,
    "mid": 30.0,
    "n": 3,
+   "points": [],
    "positioning": [],
+   "spread": 3.2,
    "tag_evidence": 2.6,
    "thin": false,
    "triangulated": true
@@ -184,12 +226,51 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 41.8,
    "low": 5.5,
    "mid": 11.8,
    "n": 5,
+   "points": [
+    {
+     "company": "C3.ai, Inc.",
+     "mult": 4.8,
+     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Dynatrace, Inc.",
+     "mult": 5.5,
+     "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SoundHound AI, Inc.",
+     "mult": 11.8,
+     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 17.6,
+     "reason": "shares the language of ai; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "mult": 41.8,
+     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 8.7,
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": true

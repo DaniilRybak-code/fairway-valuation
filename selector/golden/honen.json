@@ -41,11 +41,35 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 4.4,
    "low": 0.4,
    "mid": 0.4,
    "n": 3,
+   "points": [
+    {
+     "company": "Coursera, Inc.",
+     "mult": 0.4,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Chegg, Inc.",
+     "mult": 0.4,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "mult": 4.4,
+     "reason": "both do AI Tutor; same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [
     {
      "company": "Docebo Inc.",
@@ -55,6 +79,7 @@
      "transaction_type": ""
     }
    ],
+   "spread": 11.0,
    "tag_evidence": 3.7,
    "thin": false,
    "triangulated": false

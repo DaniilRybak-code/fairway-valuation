@@ -10,14 +10,6 @@
     "ticker": "NYSE:KVYO"
    },
    {
-    "company": "Baozun Inc.",
-    "family": "consumer",
-    "in_medians": false,
-    "reason": "both do Fulfilment; same type of business; same end market; same business function",
-    "score": 9.0,
-    "ticker": "NASDAQGS:BZUN"
-   },
-   {
     "company": "Rezolve AI PLC",
     "family": "software",
     "in_medians": false,
@@ -33,13 +25,16 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
+   "dispersed": false,
    "display": "DIAMOND",
    "high": 2.7,
    "low": 2.7,
    "mid": 2.7,
    "n": 1,
+   "points": [],
    "positioning": [],
    "sole": "Klaviyo, Inc.",
+   "spread": 1.0,
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
@@ -98,12 +93,15 @@
    "bounded": true,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "RANGE",
    "high": 32.6,
    "low": 14.0,
    "mid": 32.6,
    "n": 2,
+   "points": [],
    "positioning": [],
+   "spread": 2.3,
    "tag_evidence": 0.7,
    "thin": true,
    "triangulated": true
@@ -158,12 +156,51 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 11.0,
    "low": 0.7,
    "mid": 3.4,
    "n": 5,
+   "points": [
+    {
+     "company": "Klarna Group plc",
+     "mult": 0.6,
+     "reason": "same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Chewy, Inc.",
+     "mult": 0.7,
+     "reason": "both do Fulfilment; same end market; same business function",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "SPS Commerce, Inc.",
+     "mult": 3.4,
+     "reason": "both do Order Management; same end market; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Shoper S.A.",
+     "mult": 4.5,
+     "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Shopify Inc.",
+     "mult": 11.0,
+     "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 18.3,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true

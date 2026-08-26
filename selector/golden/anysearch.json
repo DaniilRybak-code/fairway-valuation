@@ -49,12 +49,51 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 31.8,
    "low": 4.1,
    "mid": 5.0,
    "n": 5,
+   "points": [
+    {
+     "company": "Agora, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Elastic N.V.",
+     "mult": 4.1,
+     "reason": "shares the language of search; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GitLab Inc.",
+     "mult": 5.0,
+     "reason": "shares the language of source; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 31.8,
+     "reason": "both do AI Agent Infrastructure; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 39.8,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -124,12 +163,15 @@
    "bounded": false,
    "control_n": 0,
    "control_names": [],
+   "dispersed": false,
    "display": "RANGE",
    "high": 33.0,
    "low": 10.3,
    "mid": 14.9,
    "n": 3,
+   "points": [],
    "positioning": [],
+   "spread": 3.2,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -184,12 +226,51 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 41.8,
    "low": 4.8,
    "mid": 5.2,
    "n": 5,
+   "points": [
+    {
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of api; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "C3.ai, Inc.",
+     "mult": 4.8,
+     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 17.6,
+     "reason": "shares the language of ai; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "mult": 41.8,
+     "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "spread": 69.7,
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": true

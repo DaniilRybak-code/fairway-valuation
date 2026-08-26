@@ -29,6 +29,7 @@ A field is only scored when BOTH sides have a value for it. A blank never scores
 so the two consumer-only fields cannot quietly inflate every software row.
 """
 import csv, io, re, sys, collections, statistics as st
+import consumer_vocabulary as CV
 
 def load(p):
     return list(csv.DictReader(io.StringIO('\n'.join(
@@ -203,10 +204,21 @@ WP = dict(tags_cap=12.0, arch=4.0, arch_soft=2.0, industry=4.0, function=3.0,
 #   from 5 listed peers to 3, a B2B procurement profile from 2 to 0. Archetype already
 #   carries 4.0 points in the score, which is the right weight for a strong signal that is
 #   sometimes too narrow. Family is the level where the gate belongs.
-_FAMILY_OF = {}
+#   ONE ARCHETYPE, ONE LISTED ROW, AND THE GATE FALLS OVER. Found 26-Aug-2026 the moment Baozun
+#   was removed. Baozun was the ONLY listed company carrying the archetype "Commerce Enablement &
+#   Fulfilment". With it gone, that archetype had no family, so family_of() returned blank for
+#   SellerClaw, and same_family() fails OPEN on a blank family and handed back the entire universe.
+#   SellerClaw, a merchant-account operator, was then shown Sierra, Clay, Decagon and Semrush.
+#   Deleting one listed row silently disabled the first gate for a whole archetype.
+#
+#   Two fixes, both needed. The map is now seeded from the consumer vocabulary so that every
+#   declared consumer archetype has a family whether or not a listed row happens to carry it, and
+#   the private rows contribute to the learning as well as consuming it.
+_FAMILY_OF = {a: 'consumer' for a in getattr(CV, 'ECOM_ARCHETYPES', {})}
+_learned = {}
 for _r in listed:
-    _FAMILY_OF.setdefault(_r['archetype'], collections.Counter())[_r['family']] += 1
-_FAMILY_OF = {a: c.most_common(1)[0][0] for a, c in _FAMILY_OF.items()}
+    _learned.setdefault(_r['archetype'], collections.Counter())[_r['family']] += 1
+_FAMILY_OF.update({a: c.most_common(1)[0][0] for a, c in _learned.items()})
 
 def family_of(x):
     return x.get('family') or _FAMILY_OF.get(x.get('archetype'), '')
@@ -718,6 +730,34 @@ def _evidence(contributing, whole=None):
 # above what the same business would fetch in a minority round. The range therefore carries how
 # many of its contributors are control deals and which they are, and the reveal must surface that
 # on the name rather than bury it in a footnote.
+# A BAR THAT SPANS 4x TO 105x IS NOT A RANGE. IT IS TWO ANSWERS.
+#
+# Daniil, 26-Aug-2026: "What drives such a huge delta in comps multiples? Are we 100% sure these
+# are comparable? Was there differential in growth? Showing such a huge range is not an option
+# really, defeats the whole purpose. For now as temporary fix, let's show separate diamonds with
+# annotation, but we need to investigate the source of the discrepancy."
+#
+# The investigation, on Pazi: the band runs Semrush 4.3x, Notion 18.0x, Clay 50.0x, Sierra 105.3x,
+# Decagon 150.0x. Product-tag evidence across the whole set is 0.1 to 0.8, meaning they share the
+# token "AI" and almost nothing else. And the spread is a GROWTH spread, not a business-model
+# spread: Semrush is a mature SEO suite taken private, Sierra and Decagon went from nothing to
+# nine-figure ARR inside two years. On the listed side we can measure exactly this effect, and it
+# is the largest single driver we have: the fastest quarter of 164 software names trades at 8.3x
+# and the slowest at 2.3x.
+#
+# THE ROOT CAUSE IS THAT THE PRIVATE LANE IS BLIND TO GROWTH. `WP` sets growth=0 and
+# profitability=0 and select_private calls score with use_fin=False, because the private rows
+# carry no growth field at all. So the one variable that best explains the spread is the one
+# variable the private matcher cannot see. Fixing that means adding growth to the private rows
+# wherever it was disclosed, and it is the next real piece of work on this engine.
+#
+# UNTIL THEN, SAY IT RATHER THAN AVERAGE IT. Where the band's own high is more than DISPERSION_MAX
+# times its low, we stop drawing a bar and draw each contributor as its own diamond, named, with
+# its multiple. Measured across the 21 real profiles the spreads cluster between 1.7x and 4.9x;
+# Pazi at 24.5x and Fundraisly at 11.6x are the only two outside that, so 6.0 separates the
+# genuine ranges from the non-ranges without catching anything healthy.
+DISPERSION_MAX = 6.0
+
 def _control(rows):
     names = [r.get('company_name', '') for (_sw, r) in rows
              if (r.get('transaction_type') or '').strip() == 'CONTROL']
@@ -773,8 +813,11 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
     v = sorted(r[key] for _sw, r in priced)
     n = len(v)
     ev, tri, dropped = _evidence(priced, group)
+    dispersed = n >= 2 and v[0] > 0 and (v[-1] / v[0]) > DISPERSION_MAX
     out = dict(n=n, low=v[max(0, (n-1)//4)], mid=st.median(v), high=v[min(n-1, (3*(n-1))//4 + 1)],
-               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
+               display=('DIAMOND' if n == 1 else ('SCATTER' if dispersed else 'RANGE')),
+               dispersed=dispersed, spread=round(v[-1] / v[0], 1) if v[0] else None,
+               points=(_positioning(prof, priced, key) if dispersed else []), thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
@@ -798,8 +841,11 @@ def private_range(prof, picked, tier):
     # Sierra, whose ARR is a 'more than $150m' threshold three months stale at pricing. Drawing
     # that as a point is exactly the overstatement the ladder was built to stop, so the range
     # carries whether any contributing row is bounded and the copy must say "at most".
+    dispersed = n >= 2 and v[0] > 0 and (v[-1] / v[0]) > DISPERSION_MAX
     out = dict(n=n, low=min(v), mid=v[n // 2], high=max(v),
-               display='DIAMOND' if n == 1 else 'RANGE', thin=n < 3,
+               display=('DIAMOND' if n == 1 else ('SCATTER' if dispersed else 'RANGE')),
+               dispersed=dispersed, spread=round(v[-1] / v[0], 1) if v[0] else None,
+               points=(_positioning(prof, priced, 'mult') if dispersed else []), thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
                tag_evidence=ev, triangulated=tri, anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
