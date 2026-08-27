@@ -106,6 +106,17 @@
     "reason": "shares the language of credit; same type of business; same AI stance",
     "score": 6.1,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Zopa",
+    "date": "Oct-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of credit; same type of business; same business function; same AI stance",
+    "score": 9.1,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -145,7 +156,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 57,
+  "private_window_months": 58,
   "secondary": [
    {
     "company": "Klarna Group plc",

@@ -132,6 +132,17 @@
     "reason": "shares the language of credit, lending; same type of business; sold the same way; same AI stance",
     "score": 10.8,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Zopa",
+    "date": "Oct-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "score": 14.3,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -165,7 +176,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 57,
+  "private_window_months": 58,
   "secondary": [
    {
     "company": "1stdibs.Com, Inc.",

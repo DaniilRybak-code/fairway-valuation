@@ -75,20 +75,20 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "NONE",
+    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "Loft",
-    "date": "Mar-21",
+    "company": "Zopa",
+    "date": "Oct-21",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of mortgage; same end market; same kind of customer; same AI stance",
-    "score": 9.9,
+    "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
+    "score": 18.4,
     "type": "PRIMARY"
    }
   ],
-  "private_proximity": "BROAD",
+  "private_proximity": "ADJACENT",
   "private_range": {},
-  "private_window_months": 65,
+  "private_window_months": 58,
   "secondary": [
    {
     "company": "Hemnet Group AB (publ)",

@@ -116,11 +116,22 @@
     "reason": "shares the language of credit, lending; same type of business; same end market; same AI stance",
     "score": 11.8,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Zopa",
+    "date": "Oct-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
+    "score": 21.3,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "DIRECT",
   "private_range": {},
-  "private_window_months": 57,
+  "private_window_months": 58,
   "secondary": [
    {
     "company": "MONY Group plc",

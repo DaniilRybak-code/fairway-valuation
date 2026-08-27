@@ -138,11 +138,17 @@ FORKS = {
     archetypes=('Lending & Credit', 'Digital Bank & Deposits', 'Insurance Technology'),
     valuation_basis='BOOK',
     questions=[
-      dict(key='book_value', label='Net loan book outstanding today', kind='money',
+      dict(key='book_value', label='Book value of the business today', kind='money',
            required=True, maps_to='profile.book_value', peer_field='book_value_musd',
            basis='BOOK', period_required=True,
-           why='A lender is priced on its book, not its revenue. This is a STOCK at a date, not a '
-               'total of everything ever lent.'),
+           why='A lender is priced on price to book, because book value nets the funding off the '
+               'assets. A multiple of the loan book alone ignores the liabilities that financed it, '
+               'so two lenders with the same book and different leverage would read identically.'),
+      dict(key='net_loan_book', label='Net loan book outstanding today', kind='money',
+           required=True, maps_to='profile.net_loan_book', peer_field='net_loan_book_musd',
+           basis='LOAN_BOOK', period_required=True,
+           why='Carried alongside book value so the leverage is visible, and as the fallback where '
+               'book value is immaterial. A STOCK at a date, never a total of everything ever lent.'),
       dict(key='originations', label='Amount lent over the last twelve months', kind='money',
            required=False, maps_to='profile.originations', peer_field='originations_musd',
            basis='ORIGINATIONS', period_required=True,
