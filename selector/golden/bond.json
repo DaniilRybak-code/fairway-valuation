@@ -60,12 +60,12 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Notion",
     "date": "Jan-26",
     "in_medians": false,
-    "mult": 18.0,
+    "mult": 22.0,
     "reason": "shares the language of ai; related type of business; same business function; same revenue model",
     "score": 12.6,
     "type": "SECONDARY"

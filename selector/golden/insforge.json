@@ -105,12 +105,12 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Databricks",
     "date": "Sep-23",
     "in_medians": false,
-    "mult": 26.9,
+    "mult": 28.7,
     "reason": "both do Vector Search; related type of business; same revenue model",
     "score": 11.9,
     "type": "PRIMARY"

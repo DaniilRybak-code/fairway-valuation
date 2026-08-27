@@ -65,7 +65,7 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "OpenAI",
     "date": "Mar-25",
@@ -76,12 +76,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "ElevenLabs",
     "date": "Jan-25",
     "in_medians": false,
-    "mult": 41.3,
+    "mult": 36.7,
     "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
     "score": 8.1,
     "type": "PRIMARY"

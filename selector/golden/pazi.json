@@ -70,12 +70,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Notion",
     "date": "Jan-26",
     "in_medians": false,
-    "mult": 18.0,
+    "mult": 22.0,
     "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
     "score": 11.1,
     "type": "SECONDARY"
@@ -92,8 +92,8 @@
     "type": "SECONDARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Decagon",
     "date": "Jan-26",
     "in_medians": false,

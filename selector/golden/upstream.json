@@ -50,12 +50,12 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Notion",
     "date": "Jan-26",
     "in_medians": false,
-    "mult": 18.0,
+    "mult": 22.0,
     "reason": "both do Email Client; same type of business; same business function; same kind of customer",
     "score": 18.9,
     "type": "SECONDARY"
@@ -83,8 +83,8 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": ">=",
     "company": "Factorial",
     "date": "Oct-22",
     "in_medians": false,
