@@ -44,6 +44,8 @@
   "private_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1
    },

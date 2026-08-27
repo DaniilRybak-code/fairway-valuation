@@ -93,6 +93,8 @@ for mfile, tfile, fam in [('peers-software.csv','peers-software-tags.csv','softw
         gp        = _f(m.get('gross_profit_musd'))
         r['gp']   = gp
         r['gp_mult'] = _f(m.get('ev_ntm_gp_x'))
+        r['pb_mult'] = _f(m.get('p_bv_x'))          # balance-sheet lenders only
+        r['pe_mult'] = _f(m.get('p_e_x'))           # balance-sheet lenders only
         r['gm']   = 100*gp/r['rev'] if (gp and r['rev']) else None
         r['acv']  = _f(r.get('acv_usd_disclosed'))
         r['mix_note'] = r.get('mix_note','')
@@ -122,6 +124,8 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             row['post'] = _f(r.get('post_money_musd'))
             row['rev']  = _f(r.get('revenue_musd'))
             row['mult'] = _f(r.get('ev_revenue_x'))
+            row['mult_book'] = _f(r.get('ev_book_x'))
+            row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
             row['in_medians'] = str(r.get('in_medians', '1')).strip() not in ('0', '')
             row['transaction_type'] = r.get('transaction_type', 'PRIMARY')
             row['denominator_basis'] = r.get('denominator_basis', '')
@@ -725,10 +729,44 @@ def peer_groups(prof, universe, scorer=None, want=5):
 # ---------------------------------------------------------------------------
 MARGIN_GAP = 15.0
 
+# ---------------------------------------------------------------------------
+# BALANCE-SHEET COMPANIES ARE PRICED ON A DIFFERENT AXIS
+#
+# Daniil, 27-Aug-2026: wire price to book and price to earnings into the football field FOR
+# LENDERS AND BALANCE-SHEET-DRIVEN COMPANIES ONLY. Ecommerce, marketplaces, payments and software
+# do not trade on book value or on net income, and must never be fed these.
+#
+# The reason a lender needs its own axis: revenue contains interest earned on BORROWED money, so
+# it scales with leverage rather than with value, and enterprise value adds back the debt that IS
+# the product. Our own listed pull proves the damage. Multitude AG returns a NEGATIVE enterprise
+# value and therefore a negative multiple; Japan Post minus $105bn. OSB Group shows a 2% gross
+# margin and 168x EV/gross profit, Banca IFIS 262x, Cholamandalam 239x. All artefacts of a screen
+# putting gross interest income on the revenue line and interest expense in cost of revenue.
+#
+# Book value rather than the loan book, because book value nets the funding off the assets. Two
+# lenders with the same loan book and different leverage would read identically on a loan-book
+# multiple and correctly differently on price to book.
+BALANCE_SHEET_ARCHETYPES = ('Lending & Credit', 'Digital Bank & Deposits')
+
+def is_balance_sheet(prof):
+    """True when this company is priced on its balance sheet rather than its revenue."""
+    a = {prof.get('archetype'), prof.get('archetype_secondary')} - {None, ''}
+    return bool(a & set(BALANCE_SHEET_ARCHETYPES))
+
+def basis_for(prof):
+    return 'BOOK' if is_balance_sheet(prof) else 'REVENUE'
+
+# private lane key, listed lane key, and what the reveal should call it
+BASIS_KEYS = {'BOOK':    ('mult_book', 'pb_mult', 'price to book'),
+              'REVENUE': ('mult',      'mult',    'enterprise value to revenue')}
+
 def denominator(prof, group):
     """Return ('gp'|'rev', reason). Gross profit leads when the subject's margin
     sits more than MARGIN_GAP points from the peer group median, or when the group
     itself spans more than 30 points of margin."""
+    if is_balance_sheet(prof):
+        return 'rev', ('a lender is priced on its book rather than its revenue, because revenue '
+                       'scales with how much it has borrowed')
     gms = [r['gm'] for (_s, r) in group if r.get('gm') is not None]
     if not gms or prof.get('gm') is None:
         return 'rev', 'no usable gross margin on the subject or the group'
@@ -979,7 +1017,7 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
     """Quartile range of the group, excluding rows flagged out of medians.
     Returns None for a BROAD group: it is context, not a price."""
     if tier not in RANGE_TIERS: return None
-    key = 'mult' if which == 'rev' else 'gp_mult'
+    key = BASIS_KEYS['BOOK'][1] if is_balance_sheet(prof) else ('mult' if which == 'rev' else 'gp_mult')
     allpriced = [(sw, r) for (sw, r) in group if r.get(key) is not None and r.get('in_medians', True)]
     if not allpriced: return None
     band, priced, weaker = _bands(prof, allpriced)
@@ -1006,10 +1044,12 @@ def private_range(prof, picked, tier):
     """The same rule on the private lane, kept here rather than in the caller so the two cannot
     drift apart. BROAD returns nothing; a single priced round returns a diamond."""
     if tier not in RANGE_TIERS: return {}
-    allpriced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get('mult')]
+    basis = basis_for(prof)
+    key = BASIS_KEYS[basis][0]
+    allpriced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get(key)]
     if not allpriced: return {}
     band, priced, weaker = _bands(prof, allpriced)
-    v = sorted(r['mult'] for _sw, r in priced)
+    v = sorted(r[key] for _sw, r in priced)
     n = len(v)
     ev, close, dropped, shared = _evidence(priced, picked, prof)
     # A CEILING DRAWN AS A POINT IS THE DIAMOND'S OWN VERSION OF THE BAR PROBLEM. After the
@@ -1021,14 +1061,15 @@ def private_range(prof, picked, tier):
     out = dict(n=n, low=min(v), mid=v[n // 2], high=max(v),
                display=('DIAMOND' if n == 1 else ('SCATTER' if dispersed else 'RANGE')),
                dispersed=dispersed, spread=round(v[-1] / v[0], 1) if v[0] else None,
-               points=(_positioning(prof, priced, 'mult') if dispersed else []), thin=n < 3,
+               points=(_positioning(prof, priced, key) if dispersed else []), thin=n < 3,
                bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
                tag_evidence=ev, closeness=close, shared_words=shared,
                triangulated=(close == 'THIN_OVERLAP'), anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced),
-               band=band, positioning=_positioning(prof, weaker, 'mult'))
+               basis=basis, basis_label=BASIS_KEYS[basis][2],
+               band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
     return out

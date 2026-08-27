@@ -43,34 +43,7 @@
    }
   ],
   "core_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 5
-   },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 4.5,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 2.2,
-   "mid": 2.8,
-   "n": 5,
-   "points": [],
-   "positioning": [],
-   "shared_words": [
-    "bank",
-    "mortgage"
-   ],
-   "spread": 4.1,
-   "tag_evidence": 0.6,
-   "thin": false,
-   "triangulated": false
+   "denominator": "rev"
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -79,7 +52,7 @@
     "bound": "",
     "company": "Zopa",
     "date": "Oct-21",
-    "in_medians": false,
+    "in_medians": true,
     "mult": null,
     "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
     "score": 18.4,
@@ -87,7 +60,38 @@
    }
   ],
   "private_proximity": "ADJACENT",
-  "private_range": {},
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "BOOK",
+   "basis_label": "price to book",
+   "basis_mix": {
+    "NONE": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 5.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 5.6,
+   "mid": 5.6,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "bank",
+    "uk"
+   ],
+   "sole": "Zopa",
+   "spread": 1.0,
+   "tag_evidence": 0.9,
+   "thin": true,
+   "triangulated": false
+  },
   "private_window_months": 58,
   "secondary": [
    {
@@ -132,69 +136,7 @@
    }
   ],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "BROAD",
-   "basis_mix": {
-    "UNKNOWN": 5
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 11.9,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 2.6,
-   "mid": 6.2,
-   "n": 5,
-   "points": [
-    {
-     "company": "Opendoor Technologies Inc.",
-     "mult": 0.8,
-     "reason": "same end market; same kind of customer; same purchase frequency; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Zillow Group, Inc.",
-     "mult": 2.6,
-     "reason": "both do Mortgage; same end market; same cost structure; same purchase frequency",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Hemnet Group AB (publ)",
-     "mult": 6.2,
-     "reason": "same end market; same cost structure; same purchase frequency; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Rightmove plc",
-     "mult": 7.9,
-     "reason": "same end market; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "REA Group Limited",
-     "mult": 11.9,
-     "reason": "shares the language of mortgage; same end market; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [],
-   "shared_words": [
-    "mortgage"
-   ],
-   "spread": 14.9,
-   "tag_evidence": 0.4,
-   "thin": false,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "UK bank offering long-term fixed-rate mortgages funded by covered bonds, sold through brokers"

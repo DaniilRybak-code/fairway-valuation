@@ -27,61 +27,7 @@
    }
   ],
   "core_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 3
-   },
-   "bounded": false,
-   "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 8.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 0.7,
-   "mid": 5.3,
-   "n": 3,
-   "points": [
-    {
-     "company": "One MobiKwik Systems Limited",
-     "mult": 0.7,
-     "reason": "both do Buy Now Pay Later; related type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "GMO Payment Gateway, Inc.",
-     "mult": 5.3,
-     "reason": "shares the language of merchant, payment; related type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "One97 Communications Limited",
-     "mult": 8.0,
-     "reason": "shares the language of merchant, payment; related type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [],
-   "shared_words": [
-    "buy",
-    "credit",
-    "later",
-    "merchant",
-    "now",
-    "pay",
-    "payment"
-   ],
-   "spread": 11.4,
-   "tag_evidence": 2.6,
-   "thin": false,
-   "triangulated": false
+   "denominator": "rev"
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -112,7 +58,7 @@
     "bound": "",
     "company": "Zopa",
     "date": "Oct-21",
-    "in_medians": false,
+    "in_medians": true,
     "mult": null,
     "reason": "shares the language of credit; same type of business; same business function; same AI stance",
     "score": 9.1,
@@ -121,40 +67,35 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "anchor_dropped": false,
-   "band": "DIRECT",
+   "anchor_dropped": true,
+   "band": "ADJACENT",
+   "basis": "BOOK",
+   "basis_label": "price to book",
    "basis_mix": {
-    "BANK_NOI": 1
+    "NONE": 1
    },
    "bounded": false,
-   "closeness": "SHARED_PRODUCT",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "DIAMOND",
-   "high": 5.1,
+   "high": 5.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.1,
-   "mid": 5.1,
+   "low": 5.6,
+   "mid": 5.6,
    "n": 1,
    "points": [],
    "positioning": [],
    "shared_words": [
-    "buy",
-    "checkout",
-    "credit",
-    "financing",
-    "later",
-    "merchant",
-    "now",
-    "pay"
+    "credit"
    ],
-   "sole": "Klarna",
+   "sole": "Zopa",
    "spread": 1.0,
-   "tag_evidence": 3.7,
+   "tag_evidence": 0.1,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 58,
   "secondary": [
@@ -200,68 +141,7 @@
    }
   ],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "DIRECT",
-   "basis_mix": {
-    "UNKNOWN": 1
-   },
-   "bounded": false,
-   "closeness": "SHARED_PRODUCT",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 1.6,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 1.6,
-   "mid": 1.6,
-   "n": 1,
-   "points": [],
-   "positioning": [
-    {
-     "company": "Klarna Group plc",
-     "mult": 0.6,
-     "reason": "both do Buy Now Pay Later; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Tyro Payments Limited",
-     "mult": 0.8,
-     "reason": "shares the language of merchant; same kind of customer; sold the same way; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Upstart Holdings, Inc.",
-     "mult": 2.8,
-     "reason": "shares the language of credit, risk; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SoFi Technologies, Inc.",
-     "mult": 4.5,
-     "reason": "shares the language of credit; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
-   "shared_words": [
-    "buy",
-    "checkout",
-    "later",
-    "merchant",
-    "now",
-    "pay"
-   ],
-   "sole": "PayPal Holdings, Inc.",
-   "spread": 1.0,
-   "tag_evidence": 3.0,
-   "thin": true,
-   "triangulated": false
+   "denominator": "rev"
   }
  },
  "label": "B2B deferred payment terms where the provider takes the credit risk from the seller"
