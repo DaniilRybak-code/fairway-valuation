@@ -143,22 +143,22 @@ const FIX_BY_PROFIT = {
 const hooks = {
   frustration: {
     kicker: '',
-    /* Two lines, two tones: the first names the problem in ink, the second is
-       Fairway's move in the accent. Rendered with innerHTML in initHero. */
-    headline: '<span class="h1-ink">The generic number is not your valuation.</span> <span class="h1-acc">We build the one you can defend.</span>',
-    sub: 'The number depends entirely on which companies you are held against. We choose yours deliberately, show you why each one is in the set, and source every figure behind it.',
+    /* Two lines, two tones: the promise in ink, the second act in the accent.
+       Rendered with innerHTML in initHero. */
+    headline: '<span class="h1-ink">Build a valuation you can defend.</span> <span class="h1-acc">Find the funds to take it to.</span>',
+    sub: 'We refine the valuation range. You see the evidence. You know who to call.',
     cta: 'Try it free'
   },
   readiness: {
     kicker: 'Before your next raise',
     headline: 'Are you actually ready to defend your valuation?',
-    sub: 'Nine questions, four minutes. You get the football field a banker would build, the three concerns investors will raise against it, and the funds writing cheques into your sector right now. Reviewed by former bulge bracket bankers.',
+    sub: 'About four minutes. You get the football field a banker would build, the three concerns investors will raise against it, and the funds writing cheques into your sector right now. Reviewed by former bulge bracket bankers.',
     cta: 'Find out in four minutes'
   },
   reveal: {
     kicker: 'The number problem',
     headline: 'Two founders with the same metrics raise at $2M and $4M.',
-    sub: 'The difference is rarely the business. It is whether the number survives being pushed on. Nine questions gets you every method that prices you, the concerns coming at it, and a banker review of both.',
+    sub: 'The difference is rarely the business. It is whether the number survives being pushed on. Four minutes gets you every method that prices you, the concerns coming at it, and a banker review of both.',
     cta: 'Show me the methods'
   }
 };

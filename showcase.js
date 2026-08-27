@@ -67,3 +67,29 @@
   }, { threshold: 0.3 });
   io.observe(field);
 })();
+
+/* v8: the example field expands as it arrives (light genie), and the metric and
+   multiple columns spawn once it is nearly full size. Removed entirely under
+   prefers-reduced-motion. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var card = document.querySelector('#field .ffcard');
+  if (!card || reduce) return;
+  card.classList.add('ffx-expand');
+  var spawn = card.querySelectorAll('.ff-metric, .ff-mult, .ff-anno');
+  spawn.forEach(function (el, i) { el.style.setProperty('--sd', (i * 45) + 'ms'); });
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var r = card.getBoundingClientRect();
+    var vh = window.innerHeight || 1;
+    var p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.72)));
+    card.style.setProperty('--exp', p.toFixed(3));
+    if (p > 0.92) card.classList.add('ffx-spawned');
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  update();
+})();

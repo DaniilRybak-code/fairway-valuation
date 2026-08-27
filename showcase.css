@@ -629,3 +629,95 @@ h1,h2,h3 { font-family:var(--sans); }
 /* section-2 annotations match the hero: sentence case, italic, no shouting */
 .ff-anno { font-family:var(--sans); font-style:italic; font-weight:500; font-size:11.5px;
   letter-spacing:0; text-transform:none; color:var(--ff-rust); }
+
+/* ================= v8, 28-Aug-2026: Daniil's second field review.
+   Grey annotations for grey facts, colour only where we argue; the premium
+   line grows up; peers appear under the multiple on hover; the field breathes. */
+
+/* annotations: grey for market facts, purple where we argue, teal for the DCF */
+.hf-anno.grey { color:var(--ff-mute); }
+.hf-anno.args { color:var(--ff-purple); font-weight:600; }
+.hf-anno.teal { color:var(--ff-teal); }
+.hf-anno svg path { stroke:currentColor; }
+.hf-anno svg.dn { width:13px; height:17px; vertical-align:-4px; }
+.hf-anno.args-anno { left:65%; top:calc(50% - 15px); white-space:normal; width:165px; line-height:1.4; font-size:11px; }
+.hf-anno.dcf-anno { left:0; top:calc(50% - 15px); white-space:normal; width:170px; line-height:1.4; font-size:11px; }
+.ff-anno.grey { color:var(--ff-mute); }
+.ff-anno.args { color:var(--ff-purple); font-weight:600; }
+.ff-anno.teal { color:var(--ff-teal); }
+.ff-anno.grey::before, .ff-anno.teal::before, .ff-anno.args::before { background:currentColor; }
+
+/* the premium block: number twice the size, no diagram, drivers beneath */
+.hf-prem { display:block; }
+.hf-prem-line { margin:0; font-size:12px; color:var(--ff-soft); }
+.hf-prem-line b { font-family:var(--mono); font-size:34px; font-weight:600; color:var(--ff-ink);
+  letter-spacing:-.02em; margin-right:10px; vertical-align:-2px; }
+.hf-kvd { margin-top:6px; padding-top:8px; border-top:1px solid #dbe4fb;
+  font-family:var(--mono); font-size:10.5px; color:var(--ff-ink); line-height:1.6; }
+.hf-kvd span { display:block; font-size:8.5px; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:700; color:var(--ff-mute); margin-bottom:3px; }
+.hf-kvd i { font-style:normal; color:var(--ff-mute); }
+.ff-delta .d-num { font-size:40px; }
+.ff-delta .d-body { flex:1; min-width:240px; }
+.ff-delta .d-body p { margin:0; font-size:12.5px; color:var(--ff-soft); line-height:1.5; }
+.ff-delta .d-kvd { margin-top:6px !important; font-family:var(--mono); font-size:10.5px;
+  color:var(--ff-ink); }
+.ff-delta .d-kvd span { display:inline-block; font-size:8.5px; letter-spacing:.14em;
+  text-transform:uppercase; font-weight:700; color:var(--ff-mute); margin-right:8px; }
+.ff-delta .d-kvd i { font-style:normal; color:var(--ff-mute); }
+
+/* subtle pulse on the coloured bars only; greys and the unrefined range stay still */
+.hf-bar.reg, .ff-bar.reg { --glow:91,124,250; }
+.hf-bar.priv, .ff-bar.priv { --glow:124,58,237; }
+.hf-bar.dcf, .ff-bar.teal-soft { --glow:14,116,144; }
+.hf-bar.bandbar, .ff-bar.band { --glow:20,24,31; }
+.hf-bar.reg, .hf-bar.priv, .hf-bar.dcf, .hf-bar.bandbar,
+.ff-bar.reg, .ff-bar.priv, .ff-bar.teal-soft, .ff-bar.band {
+  animation:barGlow 3.4s ease-in-out infinite; }
+@keyframes barGlow {
+  0%, 100% { box-shadow:0 0 10px 0 rgba(var(--glow), .26); }
+  50%      { box-shadow:0 0 20px 2px rgba(var(--glow), .52); }
+}
+
+/* peers under the multiple, on hover */
+.ff-mult.has-peers { cursor:help; position:relative; }
+.ff-mult.has-peers:hover { color:var(--ff-rust); }
+.peer-tip { display:none; position:absolute; right:0; bottom:calc(100% + 8px); z-index:24;
+  width:220px; background:var(--ff-paper); border:1px solid var(--ff-rule-hard); border-radius:8px;
+  padding:10px 12px 8px; box-shadow:0 14px 34px -14px rgba(20,24,31,.35); text-align:left; }
+.ff-mult.has-peers:hover .peer-tip { display:block; }
+.peer-tip b { display:block; font-family:var(--sans); font-size:8.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ff-mute); font-weight:700; margin-bottom:6px; }
+.peer-tip i { display:flex; justify-content:space-between; gap:12px; font-style:normal;
+  font-family:var(--sans); font-size:11.5px; font-weight:500; color:var(--ff-ink); padding:2.5px 0; }
+.peer-tip i em { font-style:normal; font-family:var(--mono); color:var(--ff-soft); }
+.peer-tip u { display:block; text-decoration:none; font-family:var(--sans); font-size:10px;
+  color:var(--ff-mute); margin-top:5px; }
+
+/* use cases */
+.uc-grid { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; margin-top:30px; }
+.uc { background:var(--ff-paper); border:1px solid var(--ff-rule); border-radius:10px;
+  padding:20px 22px 18px; }
+.uc b { display:block; font-size:14.5px; font-weight:600; letter-spacing:-.005em; margin-bottom:8px; }
+.uc p { margin:0; font-size:12.5px; color:var(--ff-soft); line-height:1.55; }
+
+/* the field expands as it arrives (a light genie): the card scales up with scroll,
+   then the metric and multiple columns spawn onto it */
+.ffx-expand { transform:scale(calc(.84 + .16 * var(--exp, 0))); transform-origin:50% 0; }
+.ffx-expand .ff-metric, .ffx-expand .ff-mult, .ffx-expand .ff-anno {
+  opacity:0; transform:translateY(8px); }
+.ffx-expand.ffx-spawned .ff-metric, .ffx-expand.ffx-spawned .ff-mult,
+.ffx-expand.ffx-spawned .ff-anno { opacity:1; transform:none;
+  transition:opacity .5s ease var(--sd, 0ms), transform .5s ease var(--sd, 0ms); }
+
+@media (max-width:900px) {
+  .uc-grid { grid-template-columns:1fr; }
+  .hf-anno.args-anno { display:none; }
+  .peer-tip { right:auto; left:0; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hf-bar.reg, .hf-bar.priv, .hf-bar.dcf, .hf-bar.bandbar,
+  .ff-bar.reg, .ff-bar.priv, .ff-bar.teal-soft, .ff-bar.band { animation:none; }
+  .ffx-expand { transform:none; }
+  .ffx-expand .ff-metric, .ffx-expand .ff-mult, .ffx-expand .ff-anno { opacity:1; transform:none; }
+}
