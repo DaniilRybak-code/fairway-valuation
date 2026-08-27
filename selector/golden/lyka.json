@@ -1,0 +1,120 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "listed_proximity": "NONE",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "OLIPOP",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 4.6,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 22.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Liquid Death",
+    "date": "Mar-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 22.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Huel",
+    "date": "Nov-22",
+    "in_medians": true,
+    "mult": 3.3,
+    "reason": "both do Nutrition; same type of business; same end market; same business function",
+    "score": 33.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Quince",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 10.1,
+    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "score": 21.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "<=",
+    "company": "SKIMS",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 5.0,
+    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "score": 18.7,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "GROSS_REVENUE": 1,
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.3,
+   "mid": 4.6,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "SKIMS",
+     "mult": 5.0,
+     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Quince",
+     "mult": 10.1,
+     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "shared_words": [
+    "direct",
+    "meal",
+    "nutrition",
+    "subscription"
+   ],
+   "spread": 1.4,
+   "tag_evidence": 1.5,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 45,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "Personalised fresh dog food on a recurring plan, portioned and delivered frozen"
+}

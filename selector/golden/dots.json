@@ -1,0 +1,138 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Payoneer Global Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Marketplace Payouts; same type of business; same business function; sold the same way",
+    "score": 12.3,
+    "ticker": "NASDAQ:PAYO"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 1.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.8,
+   "mid": 1.8,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "marketplace",
+    "multi",
+    "payments",
+    "payouts"
+   ],
+   "sole": "Payoneer Global Inc.",
+   "spread": 1.0,
+   "tag_evidence": 4.3,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Airwallex",
+    "date": "Oct-22",
+    "in_medians": false,
+    "mult": 27.5,
+    "reason": "both do Payouts; same type of business; same business function; same AI stance",
+    "score": 12.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {},
+  "private_window_months": 46,
+  "secondary": [
+   {
+    "company": "OFX Group Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of multi, payments; same type of business; same business function; sold the same way",
+    "score": 9.7,
+    "ticker": "ASX:OFX"
+   },
+   {
+    "company": "Al Ansari Financial Services PJSC",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; sold the same way",
+    "score": 9.1,
+    "ticker": "DFM:ALANSARI"
+   },
+   {
+    "company": "Wise plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of multi, payments; same type of business; same business function; sold the same way",
+    "score": 8.7,
+    "ticker": "LSE:WISE"
+   },
+   {
+    "company": "Marqeta, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same business function; same kind of customer",
+    "score": 8.3,
+    "ticker": "NASDAQ:MQ"
+   },
+   {
+    "company": "The Western Union Company",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
+    "score": 8.1,
+    "ticker": "NYSE:WU"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 1.1,
+   "n": 4,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "api",
+    "multi",
+    "payments"
+   ],
+   "spread": 5.6,
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Payouts API sending money by any method to marketplace sellers and gig workers"
+}

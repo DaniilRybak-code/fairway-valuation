@@ -1,0 +1,254 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Carvana Co.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of car, owned; same type of business; same end market; same business function",
+    "score": 15.0,
+    "ticker": "NYSE:CVNA"
+   },
+   {
+    "company": "CarMax, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of car, owned; same type of business; same end market; same business function",
+    "score": 13.0,
+    "ticker": "NYSE:KMX"
+   },
+   {
+    "company": "Coupang, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
+    "score": 9.7,
+    "ticker": "NYSE:CPNG"
+   },
+   {
+    "company": "JD.com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
+    "score": 8.6,
+    "ticker": "NASDAQGS:JD"
+   },
+   {
+    "company": "Amazon.com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+    "score": 7.1,
+    "ticker": "NASDAQGS:AMZN"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.0,
+   "mid": 1.35,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "JD.com, Inc.",
+     "mult": 0.1,
+     "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coupang, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Amazon.com, Inc.",
+     "mult": 3.3,
+     "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "car",
+    "owned"
+   ],
+   "spread": 1.7,
+   "tag_evidence": 0.5,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Quince",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 10.1,
+    "reason": "shares the language of owned, to; related type of business; same business function; same kind of customer",
+    "score": 13.7,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "NET_REVENUE": 1
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 10.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.1,
+   "mid": 10.1,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "owned",
+    "to"
+   ],
+   "sole": "Quince",
+   "spread": 1.0,
+   "tag_evidence": 0.2,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 5,
+  "secondary": [
+   {
+    "company": "BARK, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned, subscription, to; related type of business; same business function; same kind of customer",
+    "score": 13.8,
+    "ticker": "NYSE:BARK"
+   },
+   {
+    "company": "Hims & Hers Health, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of subscription, to; related type of business; same business function; same kind of customer",
+    "score": 13.7,
+    "ticker": "NYSE:HIMS"
+   },
+   {
+    "company": "Chewy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
+    "score": 11.7,
+    "ticker": "NYSE:CHWY"
+   },
+   {
+    "company": "Zalando SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "XTRA:ZAL"
+   },
+   {
+    "company": "ASOS Plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "LSE:ASC"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.4,
+   "n": 5,
+   "points": [
+    {
+     "company": "BARK, Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of owned, subscription, to; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Zalando SE",
+     "mult": 0.4,
+     "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "ASOS Plc",
+     "mult": 0.4,
+     "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Chewy, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "mult": 2.3,
+     "reason": "shares the language of subscription, to; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "owned",
+    "subscription",
+    "to"
+   ],
+   "spread": 7.7,
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "All-inclusive monthly car subscription on an owned fleet, delivered to the door"
+}

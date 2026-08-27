@@ -1,0 +1,265 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Affirm Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
+    "score": 8.8,
+    "ticker": "NASDAQ:AFRM"
+   },
+   {
+    "company": "Klarna Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same end market; same kind of customer",
+    "score": 8.8,
+    "ticker": "NYSE:KLAR"
+   },
+   {
+    "company": "Zip Co Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
+    "score": 8.8,
+    "ticker": "ASX:ZIP"
+   },
+   {
+    "company": "LendingClub Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "NYSE:LC"
+   },
+   {
+    "company": "Enova International, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "NYSE:ENVA"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 6.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.6,
+   "mid": 3.5,
+   "n": 3,
+   "points": [
+    {
+     "company": "Klarna Group plc",
+     "mult": 0.6,
+     "reason": "shares the language of credit, lending; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Zip Co Limited",
+     "mult": 3.5,
+     "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Affirm Holdings, Inc.",
+     "mult": 6.7,
+     "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [
+    {
+     "company": "LendingClub Corporation",
+     "mult": 1.1,
+     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Enova International, Inc.",
+     "mult": 2.6,
+     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "credit",
+    "lending"
+   ],
+   "spread": 11.2,
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Klarna",
+    "date": "Jul-22",
+    "in_medians": true,
+    "mult": 5.1,
+    "reason": "shares the language of credit, financing; same type of business; same end market; sold the same way",
+    "score": 11.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Upgrade",
+    "date": "Nov-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of credit, lending; same type of business; sold the same way; same AI stance",
+    "score": 10.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "BANK_NOI": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 5.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 5.1,
+   "mid": 5.1,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "credit",
+    "financing"
+   ],
+   "sole": "Klarna",
+   "spread": 1.0,
+   "tag_evidence": 0.7,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 57,
+  "secondary": [
+   {
+    "company": "1stdibs.Com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same cost structure; same AI stance",
+    "score": 10.0,
+    "ticker": "NASDAQGM:DIBS"
+   },
+   {
+    "company": "SoFi Technologies, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function; same revenue model",
+    "score": 8.6,
+    "ticker": "NASDAQ:SOFI"
+   },
+   {
+    "company": "Lightspeed Commerce Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of inventory; same end market; same kind of customer; same AI stance",
+    "score": 7.8,
+    "ticker": "TSX:LSPD"
+   },
+   {
+    "company": "Shoper S.A.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same AI stance",
+    "score": 7.5,
+    "ticker": "WSE:SHO"
+   },
+   {
+    "company": "Nu Holdings Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; related type of business; same business function; same revenue model",
+    "score": 7.3,
+    "ticker": "NYSE:NU"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.8,
+   "mid": 3.65,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Lightspeed Commerce Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of inventory; same end market; same kind of customer; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "1stdibs.Com, Inc.",
+     "mult": 1.2,
+     "reason": "same end market; same kind of customer; same cost structure; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Shoper S.A.",
+     "mult": 4.5,
+     "reason": "same end market; same kind of customer; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "credit",
+    "lending"
+   ],
+   "spread": 1.6,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "Weekly working-capital credit letting Latin American shopkeepers pay distributors"
+}

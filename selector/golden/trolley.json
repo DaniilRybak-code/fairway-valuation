@@ -1,0 +1,159 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "EML Payments Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+    "score": 9.1,
+    "ticker": "ASX:EML"
+   },
+   {
+    "company": "Corpay, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
+    "score": 8.4,
+    "ticker": "NYSE:CPAY"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 6.4,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.7,
+   "mid": 3.55,
+   "n": 2,
+   "points": [
+    {
+     "company": "EML Payments Limited",
+     "mult": 0.7,
+     "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Corpay, Inc.",
+     "mult": 6.4,
+     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "border",
+    "cross",
+    "payments"
+   ],
+   "spread": 9.1,
+   "tag_evidence": 0.4,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Airwallex",
+    "date": "Oct-22",
+    "in_medians": false,
+    "mult": 27.5,
+    "reason": "both do Cross-Border Payments, Payouts; same type of business; same business function; sold the same way",
+    "score": 16.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {},
+  "private_window_months": 46,
+  "secondary": [
+   {
+    "company": "Tyro Payments Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; sold the same way",
+    "score": 8.6,
+    "ticker": "ASX:TYR"
+   },
+   {
+    "company": "The Western Union Company",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+    "score": 8.4,
+    "ticker": "NYSE:WU"
+   },
+   {
+    "company": "CAB Payments Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+    "score": 7.4,
+    "ticker": "LSE:CABP"
+   },
+   {
+    "company": "OFX Group Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+    "score": 7.4,
+    "ticker": "ASX:OFX"
+   },
+   {
+    "company": "Al Ansari Financial Services PJSC",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
+    "score": 7.1,
+    "ticker": "DFM:ALANSARI"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 0.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": -2.3,
+   "mid": 0.65,
+   "n": 4,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "border",
+    "cross",
+    "payments"
+   ],
+   "spread": -0.4,
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Global payouts platform for businesses paying creators, artists and freelancers at scale"
+}

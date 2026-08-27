@@ -1,0 +1,30 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "listed_proximity": "NONE",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Airwallex",
+    "date": "Oct-22",
+    "in_medians": false,
+    "mult": 27.5,
+    "reason": "shares the language of embedded, payments; same business function; sold the same way; same AI stance",
+    "score": 11.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "BROAD",
+  "private_range": {},
+  "private_window_months": 46,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "Payfac-as-a-service that lets vertical software platforms own payments without the risk"
+}

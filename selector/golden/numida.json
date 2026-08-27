@@ -1,0 +1,220 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "LendingClub Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Loan Origination; same type of business; same business function; same revenue model",
+    "score": 9.8,
+    "ticker": "NYSE:LC"
+   },
+   {
+    "company": "Upstart Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Loan Origination; same type of business; same end market; same business function",
+    "score": 9.3,
+    "ticker": "NASDAQ:UPST"
+   },
+   {
+    "company": "SoFi Technologies, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, loan; same type of business; same business function; same revenue model",
+    "score": 9.0,
+    "ticker": "NASDAQ:SOFI"
+   },
+   {
+    "company": "Enova International, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "NYSE:ENVA"
+   },
+   {
+    "company": "Nu Holdings Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending, mobile; related type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "NYSE:NU"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 2.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.8,
+   "mid": 2.8,
+   "n": 1,
+   "points": [],
+   "positioning": [
+    {
+     "company": "LendingClub Corporation",
+     "mult": 1.1,
+     "reason": "both do Loan Origination; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Enova International, Inc.",
+     "mult": 2.6,
+     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nu Holdings Ltd.",
+     "mult": 2.8,
+     "reason": "shares the language of credit, lending, mobile; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SoFi Technologies, Inc.",
+     "mult": 4.5,
+     "reason": "shares the language of credit, loan; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "credit",
+    "lending",
+    "loan",
+    "origination"
+   ],
+   "sole": "Upstart Holdings, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 1.3,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Upgrade",
+    "date": "Nov-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of credit, lending; same type of business; same end market; same AI stance",
+    "score": 11.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {},
+  "private_window_months": 57,
+  "secondary": [
+   {
+    "company": "MONY Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; sold the same way; same cost structure",
+    "score": 8.5,
+    "ticker": "LSE:MONY"
+   },
+   {
+    "company": "Inter & Co, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending; related type of business; same business function; same revenue model",
+    "score": 7.2,
+    "ticker": "NASDAQ:INTR"
+   },
+   {
+    "company": "Fidelity National Information Services, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of capital; same end market; same business function",
+    "score": 6.4,
+    "ticker": "NYSE:FIS"
+   },
+   {
+    "company": "Jack Henry & Associates, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same end market; same business function",
+    "score": 6.3,
+    "ticker": "NASDAQ:JKHY"
+   },
+   {
+    "company": "Affirm Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same revenue model",
+    "score": 5.8,
+    "ticker": "NASDAQ:AFRM"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 6.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 4.45,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "MONY Group plc",
+     "mult": 2.4,
+     "reason": "same end market; sold the same way; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Fidelity National Information Services, Inc.",
+     "mult": 3.0,
+     "reason": "shares the language of capital; same end market; same business function",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Jack Henry & Associates, Inc.",
+     "mult": 4.4,
+     "reason": "shares the language of credit, lending; same end market; same business function",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "credit",
+    "lending"
+   ],
+   "spread": 3.0,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "Unsecured working-capital loans to African micro and small businesses in under a day"
+}

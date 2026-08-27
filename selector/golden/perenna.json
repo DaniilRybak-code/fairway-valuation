@@ -1,0 +1,201 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "SoFi Technologies, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NASDAQ:SOFI"
+   },
+   {
+    "company": "LendingClub Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank; same type of business; same business function; same kind of customer",
+    "score": 11.3,
+    "ticker": "NYSE:LC"
+   },
+   {
+    "company": "Nu Holdings Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+    "score": 9.8,
+    "ticker": "NYSE:NU"
+   },
+   {
+    "company": "Inter & Co, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+    "score": 9.8,
+    "ticker": "NASDAQ:INTR"
+   },
+   {
+    "company": "Chime Financial, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+    "score": 7.3,
+    "ticker": "NASDAQ:CHYM"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 2.8,
+   "n": 5,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "bank",
+    "mortgage"
+   ],
+   "spread": 4.1,
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Loft",
+    "date": "Mar-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of mortgage; same end market; same kind of customer; same AI stance",
+    "score": 9.9,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "BROAD",
+  "private_range": {},
+  "private_window_months": 65,
+  "secondary": [
+   {
+    "company": "Hemnet Group AB (publ)",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same cost structure; same purchase frequency; same AI stance",
+    "score": 9.5,
+    "ticker": "OM:HEM"
+   },
+   {
+    "company": "Zillow Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Mortgage; same end market; same cost structure; same purchase frequency",
+    "score": 8.9,
+    "ticker": "NASDAQGS:Z"
+   },
+   {
+    "company": "Opendoor Technologies Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same purchase frequency; same AI stance",
+    "score": 8.5,
+    "ticker": "NASDAQGS:OPEN"
+   },
+   {
+    "company": "REA Group Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of mortgage; same end market; same cost structure",
+    "score": 6.9,
+    "ticker": "ASX:REA"
+   },
+   {
+    "company": "Rightmove plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same cost structure",
+    "score": 6.5,
+    "ticker": "LSE:RMV"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 11.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.6,
+   "mid": 6.2,
+   "n": 5,
+   "points": [
+    {
+     "company": "Opendoor Technologies Inc.",
+     "mult": 0.8,
+     "reason": "same end market; same kind of customer; same purchase frequency; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Zillow Group, Inc.",
+     "mult": 2.6,
+     "reason": "both do Mortgage; same end market; same cost structure; same purchase frequency",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Hemnet Group AB (publ)",
+     "mult": 6.2,
+     "reason": "same end market; same cost structure; same purchase frequency; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Rightmove plc",
+     "mult": 7.9,
+     "reason": "same end market; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "REA Group Limited",
+     "mult": 11.9,
+     "reason": "shares the language of mortgage; same end market; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "mortgage"
+   ],
+   "spread": 14.9,
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": true
+  }
+ },
+ "label": "UK bank offering long-term fixed-rate mortgages funded by covered bonds, sold through brokers"
+}

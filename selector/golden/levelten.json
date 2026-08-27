@@ -1,0 +1,132 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Indian Energy Exchange Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
+    "score": 10.7,
+    "ticker": "NSEI:IEX"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 13.4,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 13.4,
+   "mid": 13.4,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "energy",
+    "power",
+    "renewable"
+   ],
+   "sole": "Indian Energy Exchange Limited",
+   "spread": 1.0,
+   "tag_evidence": 1.7,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "DIRECT",
+  "private": [],
+  "private_proximity": "NONE",
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [
+   {
+    "company": "CME Group Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
+    "score": 6.6,
+    "ticker": "NASDAQ:CME"
+   },
+   {
+    "company": "Multi Commodity Exchange of India Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of energy; same type of business; sold the same way; same AI stance",
+    "score": 6.5,
+    "ticker": "NSEI:MCX"
+   },
+   {
+    "company": "PSI Software SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of energy; same end market; sold the same way; same AI stance",
+    "score": 6.5,
+    "ticker": "XTRA:PSAN"
+   },
+   {
+    "company": "Deutsche Boerse AG",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of index; same type of business; sold the same way",
+    "score": 5.6,
+    "ticker": "XTRA:DB1"
+   },
+   {
+    "company": "Intercontinental Exchange, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of energy; same type of business; sold the same way",
+    "score": 5.5,
+    "ticker": "NYSE:ICE"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 25.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 8.3,
+   "mid": 11.95,
+   "n": 4,
+   "points": [],
+   "positioning": [
+    {
+     "company": "PSI Software SE",
+     "mult": 2.4,
+     "reason": "shares the language of energy; same end market; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "energy",
+    "index"
+   ],
+   "spread": 3.0,
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Two-sided marketplace for renewable power purchase agreements and clean energy transactions"
+}

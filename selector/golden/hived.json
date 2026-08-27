@@ -1,0 +1,214 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Uber Technologies, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, network; same type of business; same cost structure; same purchase frequency",
+    "score": 8.8,
+    "ticker": "NYSE:UBER"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 2.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.6,
+   "mid": 2.6,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "delivery",
+    "network"
+   ],
+   "sole": "Uber Technologies, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Flink",
+    "date": "Sep-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
+    "score": 9.8,
+    "type": "MIXED"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Glovo",
+    "date": "Dec-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
+    "score": 9.3,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Wolt",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 8.2,
+    "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
+    "score": 9.3,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Gopuff",
+    "date": "Jul-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
+    "score": 9.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Wolt"
+   ],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 8.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 8.2,
+   "mid": 8.2,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "delivery",
+    "network"
+   ],
+   "sole": "Wolt",
+   "spread": 1.0,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 61,
+  "secondary": [
+   {
+    "company": "Delivery Hero SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, network; same type of business; same cost structure; same purchase frequency",
+    "score": 9.8,
+    "ticker": "XTRA:DHER"
+   },
+   {
+    "company": "DoorDash, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, network; same type of business; same cost structure; same purchase frequency",
+    "score": 8.8,
+    "ticker": "NASDAQGS:DASH"
+   },
+   {
+    "company": "NCR Voyix Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same business function; sold the same way; same AI stance",
+    "score": 8.0,
+    "ticker": "NYSE:VYX"
+   },
+   {
+    "company": "Rezolve AI PLC",
+    "family": "software",
+    "in_medians": false,
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NASDAQGM:RZLV"
+   },
+   {
+    "company": "Riskified Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NYSE:RSKD"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.9,
+   "mid": 2.85,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "NCR Voyix Corporation",
+     "mult": 1.0,
+     "reason": "same end market; same business function; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Riskified Ltd.",
+     "mult": 1.3,
+     "reason": "same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "delivery",
+    "network"
+   ],
+   "spread": 5.3,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "All-electric parcel delivery network operating its own couriers for ecommerce brands"
+}

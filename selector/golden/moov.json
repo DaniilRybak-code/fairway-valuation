@@ -1,0 +1,41 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "listed_proximity": "NONE",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Airwallex",
+    "date": "Oct-22",
+    "in_medians": false,
+    "mult": 27.5,
+    "reason": "shares the language of payments; same business function; same AI stance",
+    "score": 7.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Upgrade",
+    "date": "Nov-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of card; same business function; same AI stance",
+    "score": 5.2,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "BROAD",
+  "private_range": {},
+  "private_window_months": 57,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "Developer payments platform to accept, store and send money on one set of rails"
+}

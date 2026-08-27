@@ -1,0 +1,296 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "PDD Holdings Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 12.1,
+    "ticker": "NASDAQGS:PDD"
+   },
+   {
+    "company": "eBay Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 12.1,
+    "ticker": "NASDAQGS:EBAY"
+   },
+   {
+    "company": "Etsy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 12.1,
+    "ticker": "NYSE:ETSY"
+   },
+   {
+    "company": "Veeva Systems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of clinical, trial; related type of business; same end market; same kind of customer",
+    "score": 11.2,
+    "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "TSX:TCS"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 8.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.1,
+   "mid": 3.2,
+   "n": 5,
+   "points": [
+    {
+     "company": "PDD Holdings Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tecsys Inc.",
+     "mult": 2.1,
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Etsy, Inc.",
+     "mult": 3.2,
+     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "eBay Inc.",
+     "mult": 3.9,
+     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "mult": 8.8,
+     "reason": "shares the language of clinical, trial; related type of business; same end market; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "clinical",
+    "marketplace",
+    "trial"
+   ],
+   "spread": 11.0,
+   "tag_evidence": 1.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "GMV_ONLY",
+    "bound": "",
+    "company": "Whatnot",
+    "date": "Aug-26",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 17.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vinted",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 7.3,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 17.1,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_RUNRATE",
+    "bound": "<=",
+    "company": "Faire",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 18.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Meesho",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 4.2,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 15.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Flipkart",
+    "date": "Jul-23",
+    "in_medians": false,
+    "mult": 5.2,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "type": "SECONDARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "NET_REVENUE": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 7.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.2,
+   "mid": 7.3,
+   "n": 2,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "marketplace"
+   ],
+   "spread": 1.7,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 37,
+  "secondary": [
+   {
+    "company": "1stdibs.Com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 13.1,
+    "ticker": "NASDAQGM:DIBS"
+   },
+   {
+    "company": "Airbnb, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, network; related type of business; same business function; same revenue model",
+    "score": 12.7,
+    "ticker": "NASDAQGS:ABNB"
+   },
+   {
+    "company": "Booking Holdings Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+    "score": 11.1,
+    "ticker": "NASDAQGS:BKNG"
+   },
+   {
+    "company": "Expedia Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+    "score": 11.1,
+    "ticker": "NASDAQGS:EXPE"
+   },
+   {
+    "company": "Trip.com Group Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+    "score": 11.1,
+    "ticker": "NASDAQGS:TCOM"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 6.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.2,
+   "mid": 4.0,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Trip.com Group Limited",
+     "mult": 2.2,
+     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Expedia Group, Inc.",
+     "mult": 2.3,
+     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Booking Holdings Inc.",
+     "mult": 5.3,
+     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "marketplace",
+    "network"
+   ],
+   "spread": 5.7,
+   "tag_evidence": 0.2,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "Marketplace connecting pharmaceutical trial sponsors with community research sites"
+}

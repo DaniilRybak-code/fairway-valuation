@@ -1,0 +1,156 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Lightspeed Commerce Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of processing; same end market; same business function; same kind of customer",
+    "score": 10.7,
+    "ticker": "TSX:LSPD"
+   },
+   {
+    "company": "Shoper S.A.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer; same AI stance",
+    "score": 8.5,
+    "ticker": "WSE:SHO"
+   },
+   {
+    "company": "Shopify Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of processing; same end market; same business function; same kind of customer",
+    "score": 7.7,
+    "ticker": "NASDAQGS:SHOP"
+   },
+   {
+    "company": "NCR Voyix Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same business function; same AI stance",
+    "score": 6.0,
+    "ticker": "NYSE:VYX"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "listed_proximity": "BROAD",
+  "private": [
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Glovo",
+    "date": "Dec-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of network; same type of business; same business function; same AI stance",
+    "score": 9.1,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Wolt",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 8.2,
+    "reason": "shares the language of network; same type of business; same business function; same AI stance",
+    "score": 9.1,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "GMV_ONLY",
+    "bound": "",
+    "company": "Trendyol",
+    "date": "Aug-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of party, third; related type of business; same kind of customer; same cost structure",
+    "score": 14.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Wolt"
+   ],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 8.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 8.2,
+   "mid": 8.2,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "network"
+   ],
+   "sole": "Wolt",
+   "spread": 1.0,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 60,
+  "secondary": [
+   {
+    "company": "Meituan",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
+    "score": 12.1,
+    "ticker": "SEHK:3690"
+   },
+   {
+    "company": "Eternal Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
+    "score": 12.1,
+    "ticker": "NSEI:ETERNAL"
+   },
+   {
+    "company": "Swiggy Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
+    "score": 12.1,
+    "ticker": "NSEI:SWIGGY"
+   },
+   {
+    "company": "Maplebear Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
+    "score": 11.1,
+    "ticker": "NASDAQGS:CART"
+   },
+   {
+    "company": "SPS Commerce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of network; same end market; same kind of customer; sold the same way",
+    "score": 9.6,
+    "ticker": "NASDAQGS:SPSC"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "European third-party logistics running pick, pack and returns from its own warehouse network"
+}

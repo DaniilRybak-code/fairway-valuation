@@ -1,0 +1,246 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "BARK, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Direct-to-Consumer, Consumables; same type of business; same end market; same business function",
+    "score": 24.1,
+    "ticker": "NYSE:BARK"
+   },
+   {
+    "company": "YETI Holdings, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Direct-to-Consumer; same type of business; same end market; same business function",
+    "score": 16.9,
+    "ticker": "NYSE:YETI"
+   },
+   {
+    "company": "Chewy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Consumables; related type of business; same end market; same business function",
+    "score": 12.7,
+    "ticker": "NYSE:CHWY"
+   },
+   {
+    "company": "Wayfair Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; related type of business; same end market; same business function",
+    "score": 12.2,
+    "ticker": "NYSE:W"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.3,
+   "mid": 0.95,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Chewy, Inc.",
+     "mult": 0.7,
+     "reason": "both do Consumables; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Wayfair Inc.",
+     "mult": 1.2,
+     "reason": "shares the language of delivery; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "consumables",
+    "consumer",
+    "direct",
+    "products",
+    "subscription",
+    "to"
+   ],
+   "spread": 5.3,
+   "tag_evidence": 1.6,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Thrasio",
+    "date": "Oct-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 21.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Quince",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 10.1,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 21.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "<=",
+    "company": "SKIMS",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 5.0,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 18.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Vuori",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 18.9,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Huel",
+    "date": "Nov-22",
+    "in_medians": true,
+    "mult": 3.3,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 28.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "NET_REVENUE": 3
+   },
+   "bounded": true,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.3,
+   "mid": 5.0,
+   "n": 3,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "consumer",
+    "direct",
+    "subscription",
+    "to"
+   ],
+   "spread": 3.1,
+   "tag_evidence": 0.5,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 58,
+  "secondary": [
+   {
+    "company": "Hims & Hers Health, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Consumer Subscription; same type of business; same business function; same kind of customer",
+    "score": 20.0,
+    "ticker": "NYSE:HIMS"
+   },
+   {
+    "company": "FIGS, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 16.0,
+    "ticker": "NYSE:FIGS"
+   },
+   {
+    "company": "Warby Parker Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 15.4,
+    "ticker": "NYSE:WRBY"
+   },
+   {
+    "company": "On Holding AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 13.4,
+    "ticker": "NYSE:ONON"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.9,
+   "mid": 2.55,
+   "n": 4,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "consumer",
+    "direct",
+    "repeat",
+    "subscription",
+    "to"
+   ],
+   "spread": 1.7,
+   "tag_evidence": 1.0,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Subscription refills of own-brand laundry capsules and cleaning products by post"
+}

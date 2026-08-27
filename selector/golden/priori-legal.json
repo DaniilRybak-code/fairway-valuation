@@ -1,0 +1,184 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of legal, management; related type of business; same end market; same kind of customer",
+    "score": 9.6,
+    "ticker": "NASDAQGS:INTA"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 4.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.6,
+   "mid": 4.6,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "legal",
+    "management"
+   ],
+   "sole": "Intapp, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "Harvey",
+    "date": "Jun-25",
+    "in_medians": false,
+    "mult": 66.7,
+    "reason": "shares the language of legal, management; related type of business; same end market; same kind of customer",
+    "score": 13.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Clio",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "shares the language of legal, management; related type of business; same end market",
+    "score": 6.6,
+    "type": "MIXED"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "ARR": 1
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 15.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 15.0,
+   "mid": 15.0,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "legal",
+    "management"
+   ],
+   "sole": "Clio",
+   "spread": 1.0,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 25,
+  "secondary": [
+   {
+    "company": "Angi Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same revenue model; same cost structure",
+    "score": 12.1,
+    "ticker": "NASDAQGS:ANGI"
+   },
+   {
+    "company": "Trip.com Group Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+    "score": 12.1,
+    "ticker": "NASDAQGS:TCOM"
+   },
+   {
+    "company": "Upwork Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Talent Marketplace; same type of business; same business function; same revenue model",
+    "score": 11.7,
+    "ticker": "NASDAQGS:UPWK"
+   },
+   {
+    "company": "Cars.com Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of in; related type of business; sold the same way; same cost structure",
+    "score": 11.2,
+    "ticker": "NYSE:CARS"
+   },
+   {
+    "company": "Fiverr International Ltd.",
+    "family": "consumer",
+    "in_medians": false,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 11.1,
+    "ticker": "NYSE:FVRR"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.4,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 1.2,
+   "n": 3,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Trip.com Group Limited",
+     "mult": 2.2,
+     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "in",
+    "marketplace",
+    "talent"
+   ],
+   "spread": 2.8,
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Marketplace of flexible legal talent plus panel and RFP management for in-house teams"
+}

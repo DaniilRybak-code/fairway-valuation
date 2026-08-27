@@ -1,0 +1,264 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Coupang, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Online Retail, Grocery; same type of business; same business function; same kind of customer",
+    "score": 18.2,
+    "ticker": "NYSE:CPNG"
+   },
+   {
+    "company": "JD.com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
+    "score": 16.8,
+    "ticker": "NASDAQGS:JD"
+   },
+   {
+    "company": "Amazon.com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
+    "score": 12.4,
+    "ticker": "NASDAQGS:AMZN"
+   },
+   {
+    "company": "Eternal Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
+    "score": 11.1,
+    "ticker": "NSEI:ETERNAL"
+   },
+   {
+    "company": "Swiggy Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
+    "score": 11.1,
+    "ticker": "NSEI:SWIGGY"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.0,
+   "mid": 2.4,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "JD.com, Inc.",
+     "mult": 0.1,
+     "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coupang, Inc.",
+     "mult": 0.7,
+     "reason": "both do Online Retail, Grocery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Amazon.com, Inc.",
+     "mult": 3.3,
+     "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "delivery",
+    "grocery"
+   ],
+   "spread": 1.4,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": false
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Flink",
+    "date": "Sep-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Grocery Delivery, Own Inventory; related type of business; same end market; same kind of customer",
+    "score": 12.9,
+    "type": "MIXED"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Gopuff",
+    "date": "Jul-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Own Inventory; related type of business; same end market; same kind of customer",
+    "score": 13.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Quince",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 10.1,
+    "reason": "shares the language of home; related type of business; same business function; same kind of customer",
+    "score": 16.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "SHEIN",
+    "date": "Jan-24",
+    "in_medians": false,
+    "mult": 1.4,
+    "reason": "shares the language of online; same type of business; same business function; same kind of customer",
+    "score": 21.1,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Glovo",
+    "date": "Dec-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of delivery; related type of business; same end market; same kind of customer",
+    "score": 11.7,
+    "type": "CONTROL"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "NET_REVENUE": 1
+   },
+   "bounded": true,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 10.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.1,
+   "mid": 10.1,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "home"
+   ],
+   "sole": "Quince",
+   "spread": 1.0,
+   "tag_evidence": 0.4,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 61,
+  "secondary": [
+   {
+    "company": "Vipshop Holdings Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
+    "score": 20.5,
+    "ticker": "NYSE:VIPS"
+   },
+   {
+    "company": "Chewy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Fulfilment; same type of business; same business function; same kind of customer",
+    "score": 20.5,
+    "ticker": "NYSE:CHWY"
+   },
+   {
+    "company": "ASOS Plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of inventory, online, own; same type of business; same business function; same kind of customer",
+    "score": 20.4,
+    "ticker": "LSE:ASC"
+   },
+   {
+    "company": "Zalando SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of inventory, online; same type of business; same business function; same kind of customer",
+    "score": 19.8,
+    "ticker": "XTRA:ZAL"
+   },
+   {
+    "company": "Revolve Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of inventory, online; same type of business; same business function; same kind of customer",
+    "score": 19.8,
+    "ticker": "NYSE:RVLV"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.4,
+   "n": 5,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "fulfilment",
+    "inventory",
+    "online",
+    "own",
+    "price",
+    "retail"
+   ],
+   "spread": 5.0,
+   "tag_evidence": 1.0,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Online grocery holding its own inventory and delivering on scheduled slots"
+}

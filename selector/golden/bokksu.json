@@ -1,0 +1,244 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Coupang, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NYSE:CPNG"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 0.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.7,
+   "mid": 0.7,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "subscription"
+   ],
+   "sole": "Coupang, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  },
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "OLIPOP",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 4.6,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 18.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Liquid Death",
+    "date": "Mar-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 18.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Huel",
+    "date": "Nov-22",
+    "in_medians": true,
+    "mult": 3.3,
+    "reason": "shares the language of subscription; same type of business; same end market; same business function",
+    "score": 27.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "AG1",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+    "score": 23.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Harry's",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 4.6,
+    "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+    "score": 20.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "GROSS_REVENUE": 1,
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.3,
+   "mid": 4.6,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Harry's",
+     "mult": 4.6,
+     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "shared_words": [
+    "subscription"
+   ],
+   "spread": 1.4,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 65,
+  "secondary": [
+   {
+    "company": "BARK, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Subscription Box; same type of business; same business function; same kind of customer",
+    "score": 19.7,
+    "ticker": "NYSE:BARK"
+   },
+   {
+    "company": "Hims & Hers Health, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+    "score": 16.1,
+    "ticker": "NYSE:HIMS"
+   },
+   {
+    "company": "Chewy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+    "score": 12.6,
+    "ticker": "NYSE:CHWY"
+   },
+   {
+    "company": "Match Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
+    "score": 9.4,
+    "ticker": "NASDAQGS:MTCH"
+   },
+   {
+    "company": "Bumble Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
+    "score": 9.4,
+    "ticker": "NASDAQGS:BMBL"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 0.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.3,
+   "mid": 0.3,
+   "n": 1,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Chewy, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Bumble Inc.",
+     "mult": 1.0,
+     "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "mult": 2.3,
+     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Match Group, Inc.",
+     "mult": 3.5,
+     "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "box",
+    "subscription"
+   ],
+   "sole": "BARK, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 3.7,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "Prepaid monthly subscription box of curated Japanese snacks shipped from Japan"
+}

@@ -1,0 +1,74 @@
+{
+ "expected": {
+  "core": [],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "listed_proximity": "NONE",
+  "private": [
+   {
+    "basis": "GMV_ONLY",
+    "bound": "",
+    "company": "Whatnot",
+    "date": "Aug-26",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+    "score": 14.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vinted",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 7.3,
+    "reason": "shares the language of marketplace; same revenue model; same cost structure; same purchase frequency",
+    "score": 10.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_RUNRATE",
+    "bound": "<=",
+    "company": "Faire",
+    "date": "Nov-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+    "score": 15.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Meesho",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 4.2,
+    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+    "score": 16.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Flipkart",
+    "date": "Jul-23",
+    "in_medians": false,
+    "mult": 5.2,
+    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same purchase frequency",
+    "score": 11.6,
+    "type": "SECONDARY"
+   }
+  ],
+  "private_proximity": "BROAD",
+  "private_range": {},
+  "private_window_months": 37,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "Per-diem shift marketplace matching healthcare facilities with local licensed clinicians"
+}
