@@ -129,6 +129,10 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             row['growth_band'] = (r.get('growth_band') or '').strip().upper()
             row['target_was_listed'] = str(r.get('target_was_listed', '')).strip() == '1'
             row['revenue_basis'] = (r.get('revenue_basis') or '').strip().upper()
+            row['revenue_period'] = (r.get('revenue_period') or '').strip().upper()
+            row['display_gate'] = (r.get('display_gate') or '').strip().upper()
+            row['mult_low'] = _f(r.get('ev_revenue_low_x'))
+            row['mult_high'] = _f(r.get('ev_revenue_high_x'))
             private.append(row)
     except FileNotFoundError:
         pass
@@ -581,6 +585,13 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     if pband:
         priv = [r for r in priv if band_compatible(pband, r.get('growth_band'))] or priv
     scored = sorted(((score(prof, r, WP, use_fin=False), r) for r in priv), key=lambda z: -z[0][0])
+    # CLOSE_MATCH_ONLY. A row whose denominator is a range rather than a figure earns its place
+    # only where the business nature is genuinely close, which here means the row shares real
+    # product language with the founder rather than merely landing in the same tier. Without
+    # this a 25x-to-50x band would drift into sets it has no business informing.
+    scored = [(sw, r) for (sw, r) in scored
+              if r.get('display_gate') != 'CLOSE_MATCH_ONLY'
+              or _tag_points(sw[1]) >= FLOOR_TAG_EVIDENCE]
     best = {}
     for (sc, why), r in scored:
         k = r['company_key']
