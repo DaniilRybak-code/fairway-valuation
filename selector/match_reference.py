@@ -555,9 +555,9 @@ def qualifying(scored, prof=None, gate=FLOOR_ADEQUATE, only=None):
 # to fall as coverage widens.
 GROWTH_BANDS = ('MATURE', 'GROWING', 'HYPER')
 _BAND_ORDER = {b: i for i, b in enumerate(GROWTH_BANDS)}
-BAND_FIT = dict(n=40, mu=0.734, sd=0.462, typical_pct=108, fitted='2026-08-27',
+BAND_FIT = dict(n=51, mu=0.845, sd=0.543, typical_pct=133, fitted='2026-08-27b',
                 source='tools/refit_growth_bands.py')
-BAND_LOW, BAND_HIGH = 65.0, 162.0
+BAND_LOW, BAND_HIGH = 77.0, 206.0
 BAND_LABEL = {'MATURE':  'slower than most rounds in the set',
               'GROWING': 'in line with the set',
               'HYPER':   'faster than most rounds in the set'}
@@ -589,6 +589,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     # only where the business nature is genuinely close, which here means the row shares real
     # product language with the founder rather than merely landing in the same tier. Without
     # this a 25x-to-50x band would drift into sets it has no business informing.
+    scored = [(sw, r) for (sw, r) in scored if r.get('display_gate') != 'NO_FIELD']
     scored = [(sw, r) for (sw, r) in scored
               if r.get('display_gate') != 'CLOSE_MATCH_ONLY'
               or _tag_points(sw[1]) >= FLOOR_TAG_EVIDENCE]

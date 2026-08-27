@@ -478,14 +478,27 @@ and a Kolmogorov-Smirnov test gives D = 0.160 against a 5% critical value of 0.2
 is not rejected. **That is the Gaussian to fit.**
 
 Fitted on the 40 private rounds carrying a dated growth rate: mu 0.734, sd 0.462 in log space, so the
-typical private round in this file grows **108% a year**. Boundaries at plus and minus half a
-standard deviation, which splits a normal into roughly 31 / 38 / 31:
+typical private round in this file grew **108% a year**, with boundaries at 65% and 162% splitting
+14 / 15 / 11.
+
+**REFITTED 27-AUG-2026 AFTER THE TRIAGE VERIFICATION.** Sourcing the triage rows added eleven dated
+growth rates, most of them company disclosures rather than derivations, and the sample went from 40
+to 51. The distribution got better behaved as it grew: skew fell from +1.22 to +1.06 and excess
+kurtosis from +1.74 to +0.78, and KS D = 0.159 against a 5% critical value of 0.190. mu 0.845,
+sd 0.543, so the typical private round grows **133% a year**. Boundaries again at plus and minus
+half a standard deviation:
 
 | band | range | rows |
 |---|---|---|
-| MATURE | below 65% | 14 |
-| GROWING | 65% to 162% | 15 |
-| HYPER | above 162% | 11 |
+| MATURE | below 77% | 21 |
+| GROWING | 77% to 206% | 19 |
+| HYPER | above 206% | 11 |
+
+The split is more even than the first fit's, which is what a larger and less skewed sample should
+do. Twelve rows changed band. The direction of travel is that the old boundaries were too low: names
+we had called HYPER at 200%, including Writer, Miro, Airwallex, Apollo.io and Decagon, are simply
+in line with the set, and names at around 70%, including PayFit, Guesty, 1Password and TravelPerk,
+are slower than the set rather than in line with it.
 
 **These bands are relative to private rounds, deliberately.** A company growing 50% a year is not
 mature in any ordinary sense. It is slow *for a venture-backed company being priced against other
