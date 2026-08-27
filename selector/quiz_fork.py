@@ -120,18 +120,44 @@ FORKS = {
            why='Gross and net revenue on a payments business differ by roughly an order of '
                'magnitude, and we store net.'),
     ]),
+ # A LENDER IS NOT ASKED FOR REVENUE. For a lending business, revenue contains interest earned on
+ # BORROWED money, so it scales with leverage rather than with value, and enterprise value adds back
+ # the debt that IS the product. EV/revenue double-counts the funding book: once in the numerator as
+ # debt, once in the denominator as the interest that debt generates. Two lenders with identical
+ # economics at 3x and 10x leverage price 3x apart on revenue and identically on book.
+ #
+ # Evidence from our own listed pull: Multitude AG returns a NEGATIVE enterprise value and therefore
+ # a negative multiple; Japan Post minus $105bn. OSB Group shows a 2% gross margin and 168x EV/gross
+ # profit, Banca IFIS 262x, Cholamandalam 239x. All artefacts of a screen putting gross interest
+ # income on the revenue line and interest expense in cost of revenue.
+ #
+ # And the revenue question cannot be answered from the comparables anyway. Across 30 private lending
+ # rounds, net interest income after funding cost was disclosed in 0, and tangible equity in 0. So we
+ # ask for the two things a lending founder always knows and a listed lender always reports.
  'lending': dict(
     archetypes=('Lending & Credit', 'Digital Bank & Deposits', 'Insurance Technology'),
+    valuation_basis='BOOK',
     questions=[
-      dict(key='net_revenue', label='Net revenue, or net interest income plus fees', kind='money',
-           required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
-           why='Two of our five private lending rows are record-only because the announcements gave '
-               'originations and never a revenue line.'),
+      dict(key='book_value', label='Net loan book outstanding today', kind='money',
+           required=True, maps_to='profile.book_value', peer_field='book_value_musd',
+           basis='BOOK', period_required=True,
+           why='A lender is priced on its book, not its revenue. This is a STOCK at a date, not a '
+               'total of everything ever lent.'),
+      dict(key='originations', label='Amount lent over the last twelve months', kind='money',
+           required=False, maps_to='profile.originations', peer_field='originations_musd',
+           basis='ORIGINATIONS', period_required=True,
+           why='The alternative denominator where the book is sold on rather than held. This is a '
+               'FLOW over a stated period. A since-inception total is not an answer and is rejected: '
+               'in 43% of the lending announcements we read, the only monetary number offered was an '
+               'undated lifetime total, and three rounds disclosed both stock and flow differing by '
+               '5x to 6x (Oxyzo $350m AUM against $2bn cumulative; Stenn $6bn since 2015 against '
+               '$1bn in 2022; iwoca £2.5bn since 2012 with no book at all).'),
       dict(key='funding_model', label='How are the loans funded?', kind='choice',
            choices=('Our own balance sheet', 'Marketplace or forward-flow', 'Both'),
            required=True, maps_to='profile.funding_model', peer_field='funding_model',
-           why='Decides whether a bank multiple or a software multiple applies, and they are not '
-               'close to each other.'),
+           why='Decides which line the founder is priced on. Retained credit risk goes on the book '
+               'basis; originate-and-distribute for a fee is the only lending shape where a revenue '
+               'multiple is defensible.'),
     ]),
  'subscription': dict(
     archetypes=('Streaming & Digital Media', 'Dating & Social Network', 'Online Learning'),
