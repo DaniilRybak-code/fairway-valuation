@@ -68,26 +68,27 @@
   io.observe(field);
 })();
 
-/* v8.1: the genie. The field section pins for two extra viewports and scroll
-   scrubs --exp from 0 to 1: the card arrives at hero size on the right, then
-   stretches across the page while the metric and multiple columns spawn on.
-   Fully reversible on scroll up. Skipped on small screens and under
-   prefers-reduced-motion, where the section renders as a normal full field. */
+/* v8.2: the genie, on the hero itself. The hero pins for two extra viewports;
+   the first scroll expands the hero's own field card across the page while the
+   copy gives way and the metric and multiple columns spawn on. Reversible.
+   Skipped on small screens and under prefers-reduced-motion. */
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var pin = document.getElementById('field');
-  if (!pin || !pin.querySelector('.ffcard') || reduce || window.innerWidth < 900) return;
-  var sticky = pin.querySelector('.field-sticky');
-  pin.classList.add('genie-on');
+  var wrap = document.querySelector('#screen-hero .snap.first');
+  var hero = wrap && wrap.querySelector('.hero');
+  var card = wrap && wrap.querySelector('.ffcard');
+  if (!wrap || !hero || !card || reduce || window.innerWidth < 900) return;
+  wrap.classList.add('hero-genie-on');
   var ticking = false;
   function update() {
     ticking = false;
-    var top = pin.getBoundingClientRect().top;
-    var travel = pin.offsetHeight - sticky.offsetHeight;
+    var top = wrap.getBoundingClientRect().top;
+    var travel = wrap.offsetHeight - hero.offsetHeight;
     if (travel < 120) travel = 120;
     var p = Math.min(1, Math.max(0, -top / travel));
-    pin.style.setProperty('--exp', p.toFixed(3));
-    pin.classList.toggle('genie-done', p > 0.97);
+    wrap.style.setProperty('--exp', p.toFixed(3));
+    wrap.classList.toggle('hero-genie-mid', p > 0.55);
+    wrap.classList.toggle('genie-done', p > 0.97);
   }
   function onScroll() {
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
