@@ -166,13 +166,17 @@
     </div>
   </div>
 
-  <!-- SECTION TWO: the field, then the highlights, one at a time -->
-  <div class="snap field-sec" id="field">
+  <!-- SECTION TWO: the field. The wrapper pins while scroll drives the genie
+       expansion: the card arrives at hero size and stretches to the full page,
+       the metric and multiple columns spawning on as it grows. JS adds
+       .genie-on; without it the section renders as a normal full field. -->
+  <div class="field-pin" id="field">
+    <div class="field-sticky">
     <div class="wrap-wide">
       <div class="sec-band">
-        <p class="sec-eyebrow rv">What you get</p>
-        <h2 class="sec-title rv">The field your investor is already building.</h2>
-        <p class="sec-lede rv">Every method that prices you, the metric each one uses, and the multiple each one applies. The engine builds your peer set, ranges and reasoning in four minutes. A banker checks the peers and sharpens the arguments within 24 hours.</p>
+        <p class="sec-eyebrow">What you get</p>
+        <h2 class="sec-title">The field your investor is already building.</h2>
+        <p class="sec-lede">Every method that prices you, the metric each one uses, and the multiple each one applies. The engine builds your peer set, ranges and reasoning in four minutes. A banker checks the peers and sharpens the arguments within 24 hours.</p>
       </div>
 
       <div class="ffcard compact">
@@ -264,7 +268,13 @@
           </div>
         </div>
       </div>
+    </div>
+    </div>
+  </div>
 
+  <!-- the four highlights follow the field once it has fully expanded -->
+  <div class="snap-lite">
+    <div class="wrap-wide">
       <div class="hl-grid tight">
         <div class="hl rv">
           <span class="n">01</span>
