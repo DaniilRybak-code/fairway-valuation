@@ -701,14 +701,6 @@ h1,h2,h3 { font-family:var(--sans); }
 .uc b { display:block; font-size:14.5px; font-weight:600; letter-spacing:-.005em; margin-bottom:8px; }
 .uc p { margin:0; font-size:12.5px; color:var(--ff-soft); line-height:1.55; }
 
-/* the field expands as it arrives (a light genie): the card scales up with scroll,
-   then the metric and multiple columns spawn onto it */
-.ffx-expand { transform:scale(calc(.84 + .16 * var(--exp, 0))); transform-origin:50% 0; }
-.ffx-expand .ff-metric, .ffx-expand .ff-mult, .ffx-expand .ff-anno {
-  opacity:0; transform:translateY(8px); }
-.ffx-expand.ffx-spawned .ff-metric, .ffx-expand.ffx-spawned .ff-mult,
-.ffx-expand.ffx-spawned .ff-anno { opacity:1; transform:none;
-  transition:opacity .5s ease var(--sd, 0ms), transform .5s ease var(--sd, 0ms); }
 
 @media (max-width:900px) {
   .uc-grid { grid-template-columns:1fr; }
@@ -718,6 +710,56 @@ h1,h2,h3 { font-family:var(--sans); }
 @media (prefers-reduced-motion:reduce) {
   .hf-bar.reg, .hf-bar.priv, .hf-bar.dcf, .hf-bar.bandbar,
   .ff-bar.reg, .ff-bar.priv, .ff-bar.teal-soft, .ff-bar.band { animation:none; }
-  .ffx-expand { transform:none; }
-  .ffx-expand .ff-metric, .ffx-expand .ff-mult, .ffx-expand .ff-anno { opacity:1; transform:none; }
+}
+
+/* ================= v8.1, 28-Aug-2026: the genie.
+   The field section pins while scroll drives --exp from 0 to 1: the card
+   arrives at the hero card's size on the right and stretches across the page,
+   the metric and multiple columns spawning on as it grows. Scrubs both ways.
+   Active only when JS adds .genie-on to #field; without JS, on small screens
+   and under prefers-reduced-motion the section is a normal full field. */
+
+.field-sticky { padding:44px 0 56px; }
+.snap-lite { padding:10px 0 72px; }
+
+.genie-on { height:300vh; }
+.genie-on .field-sticky { position:sticky; top:0; padding:26px 0 0; }
+
+/* the section band gives way as the card takes the screen */
+.genie-on .sec-band { opacity:calc(1 - var(--exp, 0) * 2.4);
+  max-height:clamp(0px, calc(170px - var(--exp, 0) * 430px), 170px);
+  overflow:hidden; margin-bottom:calc(18px * (1 - var(--exp, 0))); }
+
+/* width: hero-card size on the right -> the full page */
+.genie-on .ffcard.compact { width:calc(57% + 43% * var(--exp, 0)); margin-left:auto; }
+
+/* the method table spawns: metric and multiple columns grow from nothing */
+.genie-on .ffx-head, .genie-on .ff-row, .genie-on .ffx-axis {
+  grid-template-columns:minmax(140px,200px) calc(92px * var(--exp, 0)) calc(114px * var(--exp, 0)) minmax(0,1fr);
+  gap:0 calc(4px + 14px * var(--exp, 0)); }
+.genie-on .ff-metric, .genie-on .ff-mult,
+.genie-on .ffx-head div:nth-child(2), .genie-on .ffx-head div:nth-child(3) {
+  opacity:calc((var(--exp, 0) - 0.55) / 0.4); min-width:0; }
+/* clip the growing cells until the genie is done, then free them so the
+   peer tables can escape the cell on hover */
+.genie-on:not(.genie-done) .ff-metric, .genie-on:not(.genie-done) .ff-mult { overflow:hidden; }
+.genie-on .ff-anno, .genie-on .hover-hint { opacity:calc((var(--exp, 0) - 0.7) / 0.3); }
+
+@media (max-width:900px) {
+  .genie-on { height:auto; }
+  .genie-on .field-sticky { position:static; padding:44px 0 56px; }
+  .genie-on .sec-band { opacity:1; max-height:none; margin-bottom:18px; }
+  .genie-on .ffcard.compact { width:100%; }
+  .genie-on .ffx-head, .genie-on .ff-row, .genie-on .ffx-axis {
+    grid-template-columns:1fr auto; gap:4px 12px; }
+  .genie-on .ff-metric, .genie-on .ff-mult, .genie-on .ff-anno,
+  .genie-on .hover-hint { opacity:1; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .genie-on { height:auto; }
+  .genie-on .field-sticky { position:static; }
+  .genie-on .sec-band { opacity:1; max-height:none; }
+  .genie-on .ffcard.compact { width:100%; }
+  .genie-on .ff-metric, .genie-on .ff-mult, .genie-on .ff-anno,
+  .genie-on .hover-hint { opacity:1; }
 }

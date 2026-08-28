@@ -68,28 +68,31 @@
   io.observe(field);
 })();
 
-/* v8: the example field expands as it arrives (light genie), and the metric and
-   multiple columns spawn once it is nearly full size. Removed entirely under
-   prefers-reduced-motion. */
+/* v8.1: the genie. The field section pins for two extra viewports and scroll
+   scrubs --exp from 0 to 1: the card arrives at hero size on the right, then
+   stretches across the page while the metric and multiple columns spawn on.
+   Fully reversible on scroll up. Skipped on small screens and under
+   prefers-reduced-motion, where the section renders as a normal full field. */
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var card = document.querySelector('#field .ffcard');
-  if (!card || reduce) return;
-  card.classList.add('ffx-expand');
-  var spawn = card.querySelectorAll('.ff-metric, .ff-mult, .ff-anno');
-  spawn.forEach(function (el, i) { el.style.setProperty('--sd', (i * 45) + 'ms'); });
+  var pin = document.getElementById('field');
+  if (!pin || !pin.querySelector('.ffcard') || reduce || window.innerWidth < 900) return;
+  var sticky = pin.querySelector('.field-sticky');
+  pin.classList.add('genie-on');
   var ticking = false;
   function update() {
     ticking = false;
-    var r = card.getBoundingClientRect();
-    var vh = window.innerHeight || 1;
-    var p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.72)));
-    card.style.setProperty('--exp', p.toFixed(3));
-    if (p > 0.92) card.classList.add('ffx-spawned');
+    var top = pin.getBoundingClientRect().top;
+    var travel = pin.offsetHeight - sticky.offsetHeight;
+    if (travel < 120) travel = 120;
+    var p = Math.min(1, Math.max(0, -top / travel));
+    pin.style.setProperty('--exp', p.toFixed(3));
+    pin.classList.toggle('genie-done', p > 0.97);
   }
   function onScroll() {
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   update();
 })();
