@@ -734,11 +734,10 @@ h1,h2,h3 { font-family:var(--sans); }
   transform:translateX(calc(-50px * var(--exp, 0))); }
 .hero-genie-mid .hero-copy { visibility:hidden; }
 #screen-hero .hero-genie-on .hero-vis { position:absolute; right:0; top:calc(50% + 8px);
-  transform:translateY(-50%) scale(calc(0.76 + 0.24 * var(--exp, 0)));
-  transform-origin:right center; width:calc(60% + 40% * var(--exp, 0)); }
+  transform:translateY(-50%); width:calc(60% + 40% * var(--exp, 0)); }
 /* rows start at the hero card's roomier height and settle to the field's */
-.hero-genie-on .ff-row { min-height:calc(54px - 12px * var(--exp, 0)); }
-.hero-genie-on .ff-track { min-height:calc(54px - 12px * var(--exp, 0)); }
+.hero-genie-on .ff-row { min-height:calc(52px - 10px * var(--exp, 0)); }
+.hero-genie-on .ff-track { min-height:calc(52px - 10px * var(--exp, 0)); }
 /* the arithmetic footnote joins late, once there is room for it */
 .hero-genie-on .ff-foot { opacity:calc((var(--exp, 0) - 0.6) / 0.4);
   max-height:calc(8px + 52px * var(--exp, 0)); overflow:hidden;
@@ -787,3 +786,76 @@ h1,h2,h3 { font-family:var(--sans); }
   #screen-hero .hero-genie-on .hero-copy { opacity:1; transform:none; visibility:visible; }
   .hero-genie-on .ff-metric, .hero-genie-on .ff-mult, .hero-genie-on .hover-hint { opacity:1; }
 }
+
+/* ================= v8.3, 29-Aug-2026: the hero card reads like v7 at rest.
+   At --exp 0 the card is the clean hand-drawn field — no table headers, no
+   last-round row, no row rules — and the table chrome fades in as it expands.
+   Plus Fairway's read: four Northsteer-specific blocks under the full field. */
+
+/* table chrome, hidden at rest and spawning with the expansion */
+.hero-genie-on .ffx-head { max-height:calc(28px * var(--exp, 0));
+  opacity:calc((var(--exp, 0) - 0.45) / 0.3); overflow:hidden;
+  padding-bottom:calc(9px * var(--exp, 0)); }
+.hero-genie-on .lr-row { min-height:0;
+  max-height:calc(64px * var(--exp, 0));
+  opacity:calc((var(--exp, 0) - 0.45) / 0.3); overflow:hidden; }
+.hero-genie-on .lr-row .ff-track { min-height:0; height:calc(42px * var(--exp, 0)); }
+
+/* the horizontal rules between rows belong to the table, not the hero card */
+.hero-genie-on .ff-row { border-top-color:rgba(230,232,236, var(--exp, 0));
+  border-bottom-color:rgba(230,232,236, var(--exp, 0)); }
+.hero-genie-on .ff-row:first-of-type { border-top-color:rgba(20,24,31, var(--exp, 0)); }
+.hero-genie-on .ff-row.conclusion { border-top-color:rgba(20,24,31, var(--exp, 0));
+  background:rgba(243,245,249, var(--exp, 0)); }
+
+/* larger, hero-weight names at rest, settling to table size */
+.hero-genie-on .ff-param strong { font-size:calc(14px - 2px * var(--exp, 0)); }
+.hero-genie-on .ff-param > span { font-size:calc(10px - 0.5px * var(--exp, 0)); }
+
+/* ---------- Fairway's read ---------- */
+.read-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:30px; }
+.rd { background:var(--ff-paper); border:1px solid var(--ff-rule); border-radius:12px;
+  padding:20px 24px 18px; }
+.rd.wide { grid-column:1 / -1; }
+.rd-t { display:block; font-size:15px; font-weight:600; letter-spacing:-.005em; margin-bottom:12px; }
+.uni-table { width:100%; border-collapse:collapse; }
+.uni-table td { padding:7px 10px 7px 0; font-size:12.5px; border-top:1px solid var(--ff-rule);
+  vertical-align:top; text-align:left; }
+.uni-table tr.uh td { border-top:none; padding-top:12px; font-family:var(--mono); font-size:9px;
+  letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--ff-mute); }
+.uni-table tr.uh:first-child td { padding-top:0; }
+.uni-table td.n { font-weight:600; white-space:nowrap; width:1%; padding-right:22px; }
+.uni-table td.m { font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap;
+  width:1%; padding-right:22px; color:var(--ff-ink); }
+.uni-table td.r { color:var(--ff-soft); }
+.rd-list { margin:0; padding:0; list-style:none; }
+.rd-list li { position:relative; padding:0 0 0 18px; margin-bottom:11px; font-size:13px;
+  line-height:1.5; color:var(--ff-soft); }
+.rd-list li:last-child { margin-bottom:0; }
+.rd-list li b { color:var(--ff-ink); }
+.rd-list li::before { content:""; position:absolute; left:0; top:7px; width:7px; height:7px;
+  border-radius:2px; background:var(--accent); }
+.rd-list.con li::before { background:var(--ff-mute); border-radius:50%; }
+.inv-nice { display:grid; gap:0; }
+.ivn { display:flex; align-items:center; gap:22px; padding:12px 0; border-top:1px solid var(--ff-rule); }
+.ivn:first-child { border-top:none; padding-top:2px; }
+.ivn-logo { font-family:var(--serif); font-size:17px; font-weight:700; letter-spacing:-.02em;
+  min-width:110px; }
+.ivn-rounds { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.ivn-rounds i { font-style:normal; font-size:12px; font-weight:600; background:var(--ff-panel);
+  border-radius:999px; padding:4px 11px; white-space:nowrap; }
+.ivn-rounds i em { font-style:normal; font-weight:400; font-family:var(--mono); font-size:10px;
+  color:var(--ff-mute); margin-left:6px; }
+.ivn-rounds u { text-decoration:none; font-size:11px; color:var(--ff-mute); }
+
+@media (max-width:900px) {
+  .read-grid { grid-template-columns:1fr; }
+  .ivn { flex-direction:column; align-items:flex-start; gap:8px; }
+  .hero-genie-on .ffx-head, .hero-genie-on .lr-row { max-height:none; opacity:1; overflow:visible; }
+  .hero-genie-on .ff-row { border-top-color:var(--ff-rule); }
+}
+
+/* at rest the long annotations use the empty space left of their bars,
+   sliding to their inline (table) positions as the card expands */
+.hero-genie-on .ff-anno.accent { left:calc(4% + 55.09% * var(--exp, 0)) !important; }
+.hero-genie-on .ff-anno.teal   { left:calc(2% + 44.36% * var(--exp, 0)) !important; }
