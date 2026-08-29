@@ -146,7 +146,7 @@ const hooks = {
     /* Two lines, two tones: the promise in ink, the second act in the accent.
        Rendered with innerHTML in initHero. */
     headline: '<span class="h1-ink">Build a valuation you can defend.</span> <span class="h1-acc">Find the funds to take it to.</span>',
-    sub: 'We refine the valuation range. You see the evidence. You know who to call.',
+    sub: 'We refine the valuation range.<br>You see the evidence.<br>You know who to call.',
     cta: 'Try it free'
   },
   readiness: {

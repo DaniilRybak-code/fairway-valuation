@@ -723,7 +723,7 @@ h1,h2,h3 { font-family:var(--sans); }
 .snap-lite { padding:10px 0 72px; }
 .field-anchor { scroll-margin-top:100vh; }
 
-#screen-hero .snap.first.hero-genie-on { height:300vh; min-height:0; display:block; }
+#screen-hero .snap.first.hero-genie-on { height:calc(300vh + 320px); min-height:0; display:block; }
 #screen-hero .hero-genie-on .hero { position:sticky; top:0; min-height:100vh; }
 
 /* the card owns the right 60% at rest and takes the page as --exp grows */
@@ -733,11 +733,14 @@ h1,h2,h3 { font-family:var(--sans); }
   opacity:calc(1 - var(--exp, 0) * 1.7);
   transform:translateX(calc(-50px * var(--exp, 0))); }
 .hero-genie-mid .hero-copy { visibility:hidden; }
-#screen-hero .hero-genie-on .hero-vis { position:absolute; right:0; top:calc(50% + 8px);
-  transform:translateY(-50%); width:calc(60% + 40% * var(--exp, 0)); }
+#screen-hero .hero-genie-on .hero-vis { position:absolute; right:0;
+  top:calc((50% + 8px) * (1 - var(--exp, 0)) + 16px * var(--exp, 0));
+  transform:translateY(calc(-50% * (1 - var(--exp, 0))));
+  width:calc(60% + 40% * var(--exp, 0)); }
 /* rows start at the hero card's roomier height and settle to the field's */
-.hero-genie-on .ff-row { min-height:calc(52px - 10px * var(--exp, 0)); }
-.hero-genie-on .ff-track { min-height:calc(52px - 10px * var(--exp, 0)); }
+.hero-genie-on .ff-row { min-height:calc(47px - 5px * var(--exp, 0)); }
+.hero-genie-on .ff-track { min-height:calc(47px - 5px * var(--exp, 0)); }
+.hero-genie-on .ff-group { padding:calc(8px + 5px * var(--exp, 0)) 0 3px; }
 /* the arithmetic footnote joins late, once there is room for it */
 .hero-genie-on .ff-foot { opacity:calc((var(--exp, 0) - 0.6) / 0.4);
   max-height:calc(8px + 52px * var(--exp, 0)); overflow:hidden;
@@ -761,10 +764,10 @@ h1,h2,h3 { font-family:var(--sans); }
 .hero-genie-on:not(.genie-done) .ff-mult { overflow:hidden; white-space:nowrap; }
 .hero-genie-on .hover-hint { opacity:calc((var(--exp, 0) - 0.7) / 0.3); }
 
-/* annotations stay through the whole journey; they wrap while the card is
-   narrow and stretch back to one line as it widens */
-.hero-genie-on .ff-anno { white-space:normal; line-height:1.3; font-size:10.5px;
-  max-width:calc(210px + 380px * var(--exp, 0)); }
+/* annotations belong to the expanded field: hidden on the hero, fading in
+   as the card takes the page */
+.hero-genie-on .ff-anno { opacity:calc((var(--exp, 0) - 0.6) / 0.3);
+  white-space:normal; line-height:1.3; font-size:10.5px; max-width:560px; }
 
 /* the scroll cue sits under the copy column and fades as the journey starts */
 .hero-genie-on .scroll-cue { left:22%; opacity:calc(1 - var(--exp, 0) * 4); }
@@ -796,16 +799,10 @@ h1,h2,h3 { font-family:var(--sans); }
 .hero-genie-on .ffx-head { max-height:calc(28px * var(--exp, 0));
   opacity:calc((var(--exp, 0) - 0.45) / 0.3); overflow:hidden;
   padding-bottom:calc(9px * var(--exp, 0)); }
-.hero-genie-on .lr-row { min-height:0;
-  max-height:calc(64px * var(--exp, 0));
-  opacity:calc((var(--exp, 0) - 0.45) / 0.3); overflow:hidden; }
-.hero-genie-on .lr-row .ff-track { min-height:0; height:calc(42px * var(--exp, 0)); }
-
-/* the horizontal rules between rows belong to the table, not the hero card */
-.hero-genie-on .ff-row { border-top-color:rgba(230,232,236, var(--exp, 0));
-  border-bottom-color:rgba(230,232,236, var(--exp, 0)); }
-.hero-genie-on .ff-row:first-of-type { border-top-color:rgba(20,24,31, var(--exp, 0)); }
-.hero-genie-on .ff-row.conclusion { border-top-color:rgba(20,24,31, var(--exp, 0));
+/* no rules between rows at any width — the group separators carry the structure */
+.hero-genie-on .ff-row, .hero-genie-on .ff-row:first-of-type {
+  border-top-color:transparent; border-bottom-color:transparent; }
+.hero-genie-on .ff-row.conclusion { border-top-color:transparent;
   background:rgba(243,245,249, var(--exp, 0)); }
 
 /* larger, hero-weight names at rest, settling to table size */
@@ -855,7 +852,95 @@ h1,h2,h3 { font-family:var(--sans); }
   .hero-genie-on .ff-row { border-top-color:var(--ff-rule); }
 }
 
-/* at rest the long annotations use the empty space left of their bars,
-   sliding to their inline (table) positions as the card expands */
-.hero-genie-on .ff-anno.accent { left:calc(4% + 55.09% * var(--exp, 0)) !important; }
-.hero-genie-on .ff-anno.teal   { left:calc(2% + 44.36% * var(--exp, 0)) !important; }
+
+/* ================= v8.4, 29-Aug-2026: Daniil's full review round.
+   Flat clear colours, no glow anywhere; core is blue, the arguments are purple,
+   the reviewer wears navy instead of mourning. The premium strip becomes
+   +40% plus a mini comp table; "Our read" spawns at the card's foot on page 2
+   and expands into the full section on page 3. */
+
+/* flat colours, no glow, no pulse */
+.ff-bar { box-shadow:none !important; animation:none !important; }
+.ff-bar.grey  { background:#8ea9dd; }
+.ff-bar.grey2 { background:#a9bde6; }
+.ff-bar.reg   { background:#8b5cf6; }
+.ff-bar.priv  { background:#7c3aed; }
+.ff-bar.band  { background:repeating-linear-gradient(-45deg,#33415f 0 5px,#4a5b80 5px 10px); }
+
+/* hero stats: mono double-space tamed, hover text glides down instead of popping */
+.hero-stats em { word-spacing:-7px; }
+.hero-stats .hs span { display:block; max-height:0; opacity:0; overflow:hidden;
+  transform:translateY(-5px);
+  transition:max-height .4s ease, opacity .3s ease .05s, transform .35s ease; }
+.hero-stats .hs:hover span { max-height:140px; opacity:1; transform:none; }
+
+/* the premium strip: the number on the left, key comps on the right */
+.ff-delta { display:flex; align-items:stretch; gap:26px; }
+.ff-delta .d-left { display:flex; flex-direction:column; justify-content:center; min-width:170px; }
+.ff-delta .d-left p { margin:4px 0 0; font-size:11.5px; color:var(--ff-soft); line-height:1.4; }
+.ff-delta .d-mini { display:flex; gap:34px; flex:1; align-items:flex-start; }
+.dm-col { display:grid; gap:3px; min-width:150px; }
+.dm-col b { font-family:var(--mono); font-size:8.5px; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:700; color:var(--ff-mute); margin-bottom:3px; }
+.dm-col i { display:flex; justify-content:space-between; gap:14px; font-style:normal;
+  font-size:12px; font-weight:600; color:var(--ff-ink); }
+.dm-col i em { font-style:normal; font-family:var(--mono); font-weight:500; color:var(--ff-soft); }
+.dm-col u { text-decoration:none; font-size:12px; color:var(--ff-mute); }
+/* the mini table hands over to Our read as the field expands */
+.hero-genie-on .d-mini { opacity:calc(1 - (var(--exp, 0) - 0.45) / 0.3);
+  max-height:calc(250px - 250px * var(--exp, 0)); overflow:hidden; }
+
+/* Our read: collapsed on the hero, spawning at the foot of the expanded field */
+.our-read { margin-top:14px; }
+.hero-genie-on .our-read { max-height:calc(380px * var(--exp, 0)); overflow:hidden;
+  opacity:calc((var(--exp, 0) - 0.55) / 0.35); margin-top:calc(14px * var(--exp, 0)); }
+.or-k { margin:0 0 8px; font-family:var(--mono); font-size:9px; letter-spacing:.16em;
+  text-transform:uppercase; font-weight:700; color:var(--ff-mute); }
+.or-grid { display:grid; grid-template-columns:5fr 3fr 3fr; gap:12px; }
+.or { background:var(--ff-panel); border-radius:10px; padding:14px 16px 12px; }
+.or > b { display:block; font-size:12.5px; font-weight:600; margin-bottom:9px; }
+.or-cols { display:flex; gap:26px; }
+.or-col { display:grid; gap:2px; flex:1; }
+.or-col i { display:flex; justify-content:space-between; gap:12px; font-style:normal;
+  font-size:11px; font-weight:600; color:var(--ff-ink); }
+.or-col i.oh { font-family:var(--mono); font-size:8px; letter-spacing:.14em;
+  text-transform:uppercase; font-weight:700; color:var(--ff-mute); margin-bottom:2px; }
+.or-col i em { font-style:normal; font-family:var(--mono); font-weight:500; color:var(--ff-soft); }
+.or-col u { text-decoration:none; font-size:10.5px; color:var(--ff-mute); }
+.or ul { margin:0; padding:0; list-style:none; }
+.or ul li { position:relative; padding-left:14px; margin-bottom:6px; font-size:11.5px;
+  font-weight:600; color:var(--ff-ink); line-height:1.35; }
+.or ul li::before { content:""; position:absolute; left:0; top:5px; width:5px; height:5px;
+  border-radius:2px; background:var(--accent); }
+.or-inv { margin:10px 0 0; font-size:12px; font-weight:600; color:var(--ff-ink); }
+.or-inv span { font-family:var(--mono); font-size:8.5px; letter-spacing:.14em;
+  text-transform:uppercase; font-weight:700; color:var(--ff-mute); margin-right:12px; }
+.or-inv i { font-style:normal; font-weight:400; font-size:11px; color:var(--ff-mute); margin-left:8px; }
+
+/* the universe table loses its rules and gains its dates */
+.uni-table td { border-top:none; padding:4.5px 10px 4.5px 0; }
+.uni-table tr.uh td { padding-top:14px; }
+.uni-table td.dt { font-family:var(--mono); font-size:10.5px; color:var(--ff-mute);
+  white-space:nowrap; width:1%; padding-right:18px; }
+
+@media (max-width:900px) {
+  .ff-delta { flex-direction:column; gap:14px; }
+  .hero-genie-on .d-mini { opacity:1; }
+  .hero-genie-on .our-read { max-height:none; opacity:1; overflow:visible; }
+  .or-grid { grid-template-columns:1fr; }
+  .hero-genie-on .ff-anno { opacity:1; max-width:none; }
+}
+
+/* the axis keeps its numbers but loses its line — the reviewer band closes the field */
+.hero-genie-on .ffx-axis { border-top-color:transparent; }
+
+/* on the expanded field the strip hugs the +40%; the mini table has handed
+   over to Our read below */
+.hero-genie-on .ff-delta { max-width:calc(100% - 68% * var(--exp, 0)); }
+
+/* the private-rounds note sits on one line just under its bar */
+.hero-genie-on .ff-anno.accent { white-space:nowrap; left:auto !important; right:1%; }
+
+/* the expanded card's tail rides below the sticky hero; the anchor becomes a
+   spacer so the read section starts clear of it */
+#screen-hero .hero-genie-on + .field-anchor { height:320px; }
