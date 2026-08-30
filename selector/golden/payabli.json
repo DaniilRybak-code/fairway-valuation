@@ -7,50 +7,20 @@
   "listed_proximity": "NONE",
   "private": [
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Klarna",
-    "date": "Jul-22",
-    "in_medians": true,
-    "mult": 5.1,
-    "reason": "both do Payments; related type of business; same business function",
-    "score": 5.1,
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Airwallex",
+    "date": "Oct-22",
+    "in_medians": false,
+    "mult": 27.5,
+    "reason": "shares the language of embedded, payment, payments; same business function; sold the same way; same AI stance",
+    "score": 11.1,
     "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
-  "private_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis": "REVENUE",
-   "basis_label": "enterprise value to revenue",
-   "basis_mix": {
-    "BANK_NOI": 1
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 5.1,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 5.1,
-   "mid": 5.1,
-   "n": 1,
-   "points": [],
-   "positioning": [],
-   "shared_words": [
-    "payments"
-   ],
-   "sole": "Klarna",
-   "spread": 1.0,
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
-  },
-  "private_window_months": 49,
+  "private_proximity": "BROAD",
+  "private_range": {},
+  "private_window_months": 46,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

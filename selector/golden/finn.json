@@ -10,14 +10,6 @@
     "ticker": "NYSE:CVNA"
    },
    {
-    "company": "CarMax, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of car, owned; same type of business; same end market; same business function",
-    "score": 13.0,
-    "ticker": "NYSE:KMX"
-   },
-   {
     "company": "Coupang, Inc.",
     "family": "consumer",
     "in_medians": true,
@@ -46,7 +38,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -54,13 +46,13 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "high": 1.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.0,
-   "mid": 1.35,
-   "n": 2,
+   "low": 1.7,
+   "mid": 1.7,
+   "n": 1,
    "points": [],
    "positioning": [
     {
@@ -89,7 +81,8 @@
     "car",
     "owned"
    ],
-   "spread": 1.7,
+   "sole": "Carvana Co.",
+   "spread": 1.0,
    "tag_evidence": 0.5,
    "thin": true,
    "triangulated": false

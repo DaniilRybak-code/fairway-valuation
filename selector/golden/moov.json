@@ -16,22 +16,11 @@
     "reason": "shares the language of payments; same business function; same AI stance",
     "score": 7.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Upgrade",
-    "date": "Nov-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of card; same business function; same AI stance",
-    "score": 5.2,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "BROAD",
   "private_range": {},
-  "private_window_months": 57,
+  "private_window_months": 46,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

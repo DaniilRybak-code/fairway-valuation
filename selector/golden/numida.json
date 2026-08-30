@@ -106,14 +106,6 @@
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "MONY Group plc",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; sold the same way; same cost structure",
-    "score": 8.5,
-    "ticker": "LSE:MONY"
-   },
-   {
     "company": "Inter & Co, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -122,28 +114,36 @@
     "ticker": "NASDAQ:INTR"
    },
    {
-    "company": "Fidelity National Information Services, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of capital; same end market; same business function",
-    "score": 6.4,
-    "ticker": "NYSE:FIS"
-   },
-   {
-    "company": "Jack Henry & Associates, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit, lending; same end market; same business function",
-    "score": 6.3,
-    "ticker": "NASDAQ:JKHY"
-   },
-   {
     "company": "Affirm Holdings, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same revenue model",
     "score": 5.8,
     "ticker": "NASDAQ:AFRM"
+   },
+   {
+    "company": "Klarna Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same kind of customer",
+    "score": 5.8,
+    "ticker": "NYSE:KLAR"
+   },
+   {
+    "company": "Zip Co Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same revenue model",
+    "score": 5.8,
+    "ticker": "ASX:ZIP"
+   },
+   {
+    "company": "One97 Communications Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending; related type of business; same kind of customer",
+    "score": 5.2,
+    "ticker": "NSEI:PAYTM"
    }
   ],
   "secondary_range": {

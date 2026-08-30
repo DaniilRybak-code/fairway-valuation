@@ -117,14 +117,6 @@
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "1stdibs.Com, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; same cost structure; same AI stance",
-    "score": 10.0,
-    "ticker": "NASDAQGM:DIBS"
-   },
-   {
     "company": "SoFi Technologies, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -133,28 +125,36 @@
     "ticker": "NASDAQ:SOFI"
    },
    {
-    "company": "Lightspeed Commerce Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of inventory; same end market; same kind of customer; same AI stance",
-    "score": 7.8,
-    "ticker": "TSX:LSPD"
-   },
-   {
-    "company": "Shoper S.A.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; same AI stance",
-    "score": 7.5,
-    "ticker": "WSE:SHO"
-   },
-   {
     "company": "Nu Holdings Ltd.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; related type of business; same business function; same revenue model",
     "score": 7.3,
     "ticker": "NYSE:NU"
+   },
+   {
+    "company": "Inter & Co, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending; related type of business; same business function; same revenue model",
+    "score": 7.2,
+    "ticker": "NASDAQ:INTR"
+   },
+   {
+    "company": "StoneCo Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Working Capital; same kind of customer; sold the same way",
+    "score": 6.5,
+    "ticker": "NASDAQ:STNE"
+   },
+   {
+    "company": "Upstart Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same business function",
+    "score": 5.3,
+    "ticker": "NASDAQ:UPST"
    }
   ],
   "secondary_range": {

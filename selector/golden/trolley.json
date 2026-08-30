@@ -2,14 +2,6 @@
  "expected": {
   "core": [
    {
-    "company": "EML Payments Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
-    "score": 9.1,
-    "ticker": "ASX:EML"
-   },
-   {
     "company": "Corpay, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -22,44 +14,30 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "DIAMOND",
    "high": 6.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 3.55,
-   "n": 2,
-   "points": [
-    {
-     "company": "EML Payments Limited",
-     "mult": 0.7,
-     "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Corpay, Inc.",
-     "mult": 6.4,
-     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "low": 6.4,
+   "mid": 6.4,
+   "n": 1,
+   "points": [],
    "positioning": [],
    "shared_words": [
     "border",
     "cross",
     "payments"
    ],
-   "spread": 9.1,
+   "sole": "Corpay, Inc.",
+   "spread": 1.0,
    "tag_evidence": 0.4,
    "thin": true,
    "triangulated": false
@@ -99,14 +77,6 @@
     "ticker": "NYSE:WU"
    },
    {
-    "company": "CAB Payments Holdings plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 7.4,
-    "ticker": "LSE:CABP"
-   },
-   {
     "company": "OFX Group Limited",
     "family": "fintech",
     "in_medians": true,
@@ -121,6 +91,14 @@
     "reason": "shares the language of payments; same type of business; same business function; same AI stance",
     "score": 7.1,
     "ticker": "DFM:ALANSARI"
+   },
+   {
+    "company": "DLocal Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; related type of business; same business function; same AI stance",
+    "score": 6.9,
+    "ticker": "NASDAQ:DLO"
    }
   ],
   "secondary_range": {
@@ -136,11 +114,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 0.9,
+   "high": 2.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": -2.3,
-   "mid": 0.65,
+   "low": 0.5,
+   "mid": 0.85,
    "n": 4,
    "points": [],
    "positioning": [],
@@ -149,7 +127,7 @@
     "cross",
     "payments"
    ],
-   "spread": -0.4,
+   "spread": 4.0,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false

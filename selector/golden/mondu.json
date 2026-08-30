@@ -108,22 +108,6 @@
     "ticker": "NYSE:KLAR"
    },
    {
-    "company": "Tyro Payments Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of merchant; same kind of customer; sold the same way; same AI stance",
-    "score": 7.6,
-    "ticker": "ASX:TYR"
-   },
-   {
-    "company": "PayPal Holdings, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Checkout, Buy Now Pay Later; same kind of customer",
-    "score": 6.5,
-    "ticker": "NASDAQ:PYPL"
-   },
-   {
     "company": "Upstart Holdings, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -138,6 +122,22 @@
     "reason": "shares the language of credit; same type of business; same business function",
     "score": 6.1,
     "ticker": "NASDAQ:SOFI"
+   },
+   {
+    "company": "LendingClub Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function",
+    "score": 6.1,
+    "ticker": "NYSE:LC"
+   },
+   {
+    "company": "Enova International, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function",
+    "score": 6.1,
+    "ticker": "NYSE:ENVA"
    }
   ],
   "secondary_range": {

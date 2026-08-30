@@ -95,44 +95,12 @@
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "Hemnet Group AB (publ)",
-    "family": "consumer",
+    "company": "Upstart Holdings, Inc.",
+    "family": "fintech",
     "in_medians": true,
-    "reason": "same end market; same cost structure; same purchase frequency; same AI stance",
-    "score": 9.5,
-    "ticker": "OM:HEM"
-   },
-   {
-    "company": "Zillow Group, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Mortgage; same end market; same cost structure; same purchase frequency",
-    "score": 8.9,
-    "ticker": "NASDAQGS:Z"
-   },
-   {
-    "company": "Opendoor Technologies Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; same purchase frequency; same AI stance",
-    "score": 8.5,
-    "ticker": "NASDAQGS:OPEN"
-   },
-   {
-    "company": "REA Group Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of mortgage; same end market; same cost structure",
-    "score": 6.9,
-    "ticker": "ASX:REA"
-   },
-   {
-    "company": "Rightmove plc",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; same cost structure",
-    "score": 6.5,
-    "ticker": "LSE:RMV"
+    "reason": "shares the language of bank; same type of business; same business function",
+    "score": 5.3,
+    "ticker": "NASDAQ:UPST"
    }
   ],
   "secondary_range": {

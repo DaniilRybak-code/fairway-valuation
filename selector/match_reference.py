@@ -254,6 +254,21 @@ for _r in private:
 #   vocabulary. The two mechanisms catch different failures and both are needed: the gate stops
 #   an SMB payments profile being shown consumer marketplaces, and the tag floor stops a
 #   nutrition brand being shown to an edtech company inside the same family.
+# A LENDER NEVER PRICES A NON-LENDER, AND THE REVERSE.
+#
+# Daniil, 28-Aug-2026, on Payabli being priced off Klarna: "Klarna is exposed to credit risk. In my
+# view some embedded payments stuff works much better." He is right, and the gate that already
+# existed was only half a gate. is_balance_sheet decided which METRIC a founder is priced on; it did
+# not decide which COMPANIES were eligible to price them. So an embedded-payments company carrying
+# no credit risk was compared against a consumer lender, on a lender's economics, because Klarna
+# was the only priced payments-adjacent row that cleared the relevance gate.
+#
+# The two populations do not price each other in either direction. A lender's multiple carries its
+# funding book and its credit losses; a payments company's does not.
+def balance_sheet_compatible(prof, rows):
+    want = is_balance_sheet(prof)
+    return [r for r in rows if is_balance_sheet(r) == want]
+
 def same_family(prof, universe):
     f, ind = family_of(prof), (prof.get('industry') or '').strip()
     if not f: return universe
@@ -585,6 +600,7 @@ def _neg_date(d):
 
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
+    priv = balance_sheet_compatible(prof, priv)      # lenders and non-lenders never mix
     pband = (prof.get('growth_band') or band_of(prof.get('growth'))).upper()
     if pband:
         priv = [r for r in priv if band_compatible(pband, r.get('growth_band'))] or priv
@@ -641,6 +657,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
+    universe = balance_sheet_compatible(prof, universe)   # same rule on the listed lane
     scored = sorted(((scorer(prof, r), r) for r in universe), key=lambda z: -z[0][0])
 
     # AXIS B, WHO IT SELLS TO. Corrected 25-Aug-2026 against Daniil's own comp picks.

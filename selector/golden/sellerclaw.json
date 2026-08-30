@@ -147,14 +147,6 @@
     "ticker": "NASDAQGS:SHOP"
    },
    {
-    "company": "Klarna Group plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; sold the same way",
-    "score": 7.5,
-    "ticker": "NYSE:KLAR"
-   },
-   {
     "company": "SPS Commerce, Inc.",
     "family": "software",
     "in_medians": true,
@@ -169,6 +161,14 @@
     "reason": "both do Fulfilment; same end market; same business function",
     "score": 5.6,
     "ticker": "NYSE:CHWY"
+   },
+   {
+    "company": "Lightspeed Commerce Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer",
+    "score": 5.5,
+    "ticker": "TSX:LSPD"
    }
   ],
   "secondary_range": {
@@ -187,21 +187,21 @@
    "high": 11.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
+   "low": 0.8,
    "mid": 3.4,
    "n": 5,
    "points": [
     {
-     "company": "Klarna Group plc",
-     "mult": 0.6,
-     "reason": "same end market; same kind of customer; sold the same way",
+     "company": "Chewy, Inc.",
+     "mult": 0.7,
+     "reason": "both do Fulfilment; same end market; same business function",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
-     "company": "Chewy, Inc.",
-     "mult": 0.7,
-     "reason": "both do Fulfilment; same end market; same business function",
+     "company": "Lightspeed Commerce Inc.",
+     "mult": 0.8,
+     "reason": "same end market; same kind of customer",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -234,7 +234,7 @@
     "order",
     "store"
    ],
-   "spread": 18.3,
+   "spread": 15.7,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
