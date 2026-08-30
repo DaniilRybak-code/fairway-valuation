@@ -89,7 +89,25 @@ for mfile, tfile, fam in [('peers-software.csv','peers-software-tags.csv','softw
         r['ev']   = _f(m['enterprise_value_musd'])
         r['rev']  = _f(m['revenue_ntm_musd'])
         r['mult'] = _f(m['ev_ntm_revenue_x'])
-        r['g']    = _f(m['revenue_growth_ntm_pct'])
+        # GROWTH ON THE LISTED SIDE CHANGED DEFINITION ON 30-AUG-2026 AND THIS IS WHERE IT LANDS.
+        # Daniil recalculated it as the CY+0 to CY+2 COMPOUND ANNUAL GROWTH RATE of revenue in
+        # reported currency, replacing the single-year forward NTM growth the screen used to give.
+        # A two-year CAGR is the better measure for our purpose: one forward year is mostly the
+        # analyst's near-term estimate and moves with every quarter, while two years describes the
+        # trajectory a founder is actually being compared against, and it is far less sensitive to
+        # a single guided quarter.
+        #
+        # BOTH COLUMNS ARE KEPT AND THE CAGR WINS WHERE IT EXISTS. The old column stays in the file
+        # so an older row is not silently reinterpreted, and so the change is auditable rather than
+        # a number that quietly means something different than it did last week. Anything comparing
+        # a founder's growth against r['g'] is now comparing against a two-year rate: the founder is
+        # asked for growth over the last twelve months, so the two are NOT like for like, and
+        # closing that gap is an open item, not something to paper over here.
+        r['g']    = _f(m.get('revenue_growth_cagr_cy0_cy2_pct'))
+        r['g_basis'] = 'CAGR_CY0_CY2'
+        if r['g'] is None:
+            r['g'] = _f(m.get('revenue_growth_ntm_pct'))
+            r['g_basis'] = 'NTM'
         gp        = _f(m.get('gross_profit_musd'))
         r['gp']   = gp
         r['gp_mult'] = _f(m.get('ev_ntm_gp_x'))
