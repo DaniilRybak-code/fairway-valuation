@@ -25,9 +25,17 @@ WHAT THE SCRIPT WILL NOT DO SILENTLY. It reports, and does not guess, on three t
 """
 import csv, io, os, re, sys, datetime
 
+# EVERY COLUMN A PULL CAN CARRY. A column missing from this list is silently not copied, which is
+# how the GMV block from the 30-Aug ecommerce pull reached the file and reached nothing else. Add to
+# this list whenever a pull brings a new metric, and check the loader reads it.
 MARKET = ['market_cap_musd', 'enterprise_value_musd', 'revenue_ntm_musd', 'gross_profit_musd',
-          'ev_ntm_revenue_x', 'ev_ntm_gp_x', 'revenue_local_cy0', 'revenue_local_cy2',
-          'revenue_growth_cagr_cy0_cy2_pct', 'recurring_revenue_pct', 'gross_margin_pct', 'as_of']
+          'ev_ntm_revenue_x', 'ev_ntm_gp_x', 'recurring_revenue_pct', 'gross_margin_pct', 'as_of',
+          'revenue_local_cy0', 'revenue_local_cy1', 'revenue_local_cy2', 'revenue_local_cy3',
+          'revenue_cy1_musd', 'revenue_cy2_musd',
+          'revenue_growth_cagr_cy0_cy2_pct', 'revenue_growth_cagr_cy1_cy3_pct',
+          'revenue_growth_cy1_pct', 'revenue_growth_cy2_pct',
+          'gmv_cy0_musd', 'gmv_cy1_musd', 'gmv_cy2_musd', 'gmv_ntm_musd', 'ev_ntm_gmv_x',
+          'net_debt_musd', 'nci_musd', 'invest_assoc_musd', 'eqv_ev_bridge_musd']
 
 
 def read(path):

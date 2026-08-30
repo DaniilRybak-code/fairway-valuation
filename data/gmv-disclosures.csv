@@ -1,0 +1,99 @@
+# COMPANY-REPORTED GMV AND TRANSACTION-VALUE METRICS. Supplied by Daniil 30-Aug-2026 as a separate
+# sheet: "Latest Annual Company-Reported GMV / Transaction-Value Metrics. Reported values in
+# local-currency millions; USD values are formula-driven using fiscal-period average FX."
+#
+# THIS IS THE FILE TO CITE TO A FOUNDER. Every value here is the company's own reported figure, with
+# the metric name it used, the fiscal period, the currency, the FX basis and the scope. The forward
+# GMV columns in data/peers-ecommerce.csv are DERIVED by applying revenue growth and must never be
+# presented as company-reported. These are.
+#
+# THE METRIC NAME IS NOT DECORATION AND MUST TRAVEL WITH THE NUMBER. Nine different names appear
+# below for what people loosely call GMV, and they do not measure the same thing: Gross Merchandise
+# Volume, Gross Merchandise Sales, Marketplace GOV, Gross Bookings, Gross Booking Value, Gross
+# Transaction Value, Gross Order Value, Gross Services Volume, and Bookings. Uber's Gross Bookings
+# includes rides and delivery and freight; Airbnb's GBV is the value of stays booked, not stayed;
+# Roblox's Bookings is a cash-value KPI the company does not call GMV at all.
+#
+# SCOPE IS THE SECOND TRAP. Sea reports GMV for the Shopee segment only, not the group. Tripadvisor
+# reports it only for the Viator-powered Experiences segment. Allegro's is continuing operations and
+# excludes what it discontinued. ASOS reports an issuer-defined alternative performance measure, not
+# a standard GMV. Each of those is recorded in the scope column and none of them is a group figure.
+#
+# 25 OF 74 COMPANIES DISCLOSE ANYTHING AT ALL. The other 49 are recorded as not disclosed with the
+# reason, which is itself useful: it means a marketplace founder asking why we cannot show a GMV
+# multiple against Amazon has an answer, and it means nobody re-runs this search next month.
+company_name,exchange_ticker,disclosure_status,reported_metric,fiscal_period,value_local_musd,currency,fx_local_per_usd,fx_basis,value_usd_musd,scope
+"Amazon.com, Inc.",NASDAQGS:AMZN,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Latest 10-K describes third-party seller activity but discloses no consolidated GMV
+Alibaba Group Holding Limited,NYSE:BABA,NOT_DISCLOSED,,"FY2026, year ended 2026-03-31",,,,,,Annual report references the world's largest retail marketplace without a GMV figure
+"JD.com, Inc.",NASDAQGS:JD,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Latest 20-F discusses the online marketplace without a disclosed GMV
+PDD Holdings Inc.,NASDAQGS:PDD,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Latest 20-F reports transaction services revenue rather than GMV
+"MercadoLibre, Inc.",NASDAQGS:MELI,DISCLOSED,Gross merchandise volume,"FY2025, year ended 2025-12-31",65037.0,USD,1.0,Reported in USD,65037.0,Consolidated / company-defined scope
+Sea Limited,NYSE:SE,DISCLOSED,Gross merchandise value (Shopee),"FY2025, year ended 2025-12-31",127400.0,USD,1.0,Reported in USD,127400.0,SHOPEE SEGMENT ONLY, not the group
+"Coupang, Inc.",NYSE:CPNG,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Latest 10-K reports net retail sales and net other revenue rather than GMV
+eBay Inc.,NASDAQGS:EBAY,DISCLOSED,GMV,"FY2025, year ended 2025-12-31",79609.0,USD,1.0,Reported in USD,79609.0,Consolidated marketplace
+"Etsy, Inc.",NASDAQGS:ETSY,DISCLOSED,Gross merchandise sales (GMS),"FY2025, year ended 2025-12-31",11916.9,USD,1.0,Reported in USD,11916.9,Consolidated / company-defined scope
+Allegro.eu S.A.,WSE:ALE,DISCLOSED,GMV,FY2025,69163.1,PLN,3.8,Calendar 2025,18395.0,Continuing Group; EXCLUDES DISCONTINUED OPERATIONS
+Zalando SE,XTRA:ZAL,DISCLOSED,GMV,FY2025,17560.2,EUR,0.9,Calendar 2025,19853.3,Consolidated / company-defined scope
+ASOS Plc,LSE:ASC,DISCLOSED_ISSUER_DEFINED_APM,GMV (issuer-defined APM),"FY2025, 52 weeks ended 2025",2456.3,GBP,0.8,Sep-2024 to Aug-2025,3202.8,ISSUER-DEFINED ALTERNATIVE PERFORMANCE MEASURE. Adjusted retail sales plus revenue attribution, not a standard GMV
+Vipshop Holdings Limited,NYSE:VIPS,DISCLOSED,GMV,"FY2025, year ended 2025-12-31",213500.0,CNY,7.2,Calendar 2025,29704.3,Consolidated / company-defined scope
+Baozun Inc.,NASDAQGS:BZUN,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Latest 20-F defines GMV and refers to it without giving a consolidated figure
+"1stdibs.Com, Inc.",NASDAQGM:DIBS,DISCLOSED,GMV,"FY2025, year ended 2025-12-31",363.9,USD,1.0,Reported in USD,363.9,Consolidated / company-defined scope
+"DoorDash, Inc.",NASDAQGS:DASH,DISCLOSED,Marketplace GOV,"FY2025, year ended 2025-12-31",102018.0,USD,1.0,Reported in USD,102018.0,Consolidated / company-defined scope
+"Uber Technologies, Inc.",NYSE:UBER,DISCLOSED,Gross Bookings,"FY2025, year ended 2025-12-31",193454.0,USD,1.0,Reported in USD,193454.0,Consolidated / company-defined scope. Spans mobility, delivery and freight
+Delivery Hero SE,XTRA:DHER,DISCLOSED,Group GMV,FY2025,49196.8,EUR,0.9,Calendar 2025,55621.0,Consolidated / company-defined scope
+Meituan,SEHK:3690,NOT_DISCLOSED,,FY2025,,,,,,2025 Annual Report states only platform activity without a consolidated GMV
+Eternal Limited,NSEI:ETERNAL,NOT_DISCLOSED,,"FY2026, year ended 2026-03-31",,INR,,,,Net Order Value disclosed by segment only; no consolidated numeric figure
+Swiggy Limited,NSEI:SWIGGY,DISCLOSED,B2C Gross Order Value (GOV),"FY2026, year ended 2026-03-31",677340.0,INR,88.3,FY2026 annual,7670.0,Consolidated / company-defined scope
+Maplebear Inc.,NASDAQGS:CART,DISCLOSED,Gross Transaction Value (GTV),"FY2025, year ended 2025-12-31",37224.0,USD,1.0,Reported in USD,37224.0,Consolidated / company-defined scope
+Booking Holdings Inc.,NASDAQGS:BKNG,DISCLOSED,Total gross bookings,"FY2025, year ended 2025-12-31",186107.0,USD,1.0,Reported in USD,186107.0,Consolidated / company-defined scope
+"Expedia Group, Inc.",NASDAQGS:EXPE,DISCLOSED,Total gross bookings,"FY2025, year ended 2025-12-31",119590.0,USD,1.0,Reported in USD,119590.0,Consolidated / company-defined scope
+"Airbnb, Inc.",NASDAQGS:ABNB,DISCLOSED,Gross Booking Value (GBV),"FY2025, year ended 2025-12-31",91273.0,USD,1.0,Reported in USD,91273.0,Consolidated / company-defined scope
+"Tripadvisor, Inc.",NASDAQGS:TRIP,DISCLOSED_SEGMENT_ONLY,Gross Booking Value (GBV),"FY2025, year ended 2025-12-31",4700.0,USD,1.0,Reported in USD,4700.0,VIATOR-POWERED EXPERIENCES SEGMENT ONLY, not the group
+Trip.com Group Limited,NASDAQGS:TCOM,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed as an absolute annual figure
+trivago N.V.,NASDAQGS:TRVG,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Company estimates advertiser bookings but publishes no GMV
+MakeMyTrip Limited,NASDAQGS:MMYT,DISCLOSED,Gross Bookings,"FY2026, year ended 2026-03-31",10390.8,USD,1.0,Reported in USD,10390.8,Consolidated
+"CarGurus, Inc.",NASDAQGS:CARG,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Continuing business derives from listings rather than transaction value
+Cars.com Inc.,NYSE:CARS,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed
+Autotrader Group plc,LSE:AUTO,NOT_DISCLOSED,,"FY2026, year ended 2026-03-31",,,,,,Not disclosed in the latest annual report
+Autohome Inc.,NYSE:ATHM,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Online marketplace revenue reported instead
+Carvana Co.,NYSE:CVNA,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Company reports retail units sold and revenue
+ACV Auctions Inc.,NYSE:ACVA,DISCLOSED,Marketplace GMV,"FY2025, year ended 2025-12-31",10400.0,USD,1.0,Reported in USD,10400.0,Consolidated / company-defined scope
+Opendoor Technologies Inc.,NASDAQGS:OPEN,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed as platform GMV. Opendoor buys and resells homes as principal
+"CarMax, Inc.",NYSE:KMX,NOT_DISCLOSED,,"FY2026, year ended 2026-02-28",,,,,,Not disclosed. Company reports owned retail unit sales
+"OPENLANE, Inc.",NYSE:OPLN,DISCLOSED,Gross Merchandise Value (GMV),"FY2025, year ended 2025-12-31",28800.0,USD,1.0,Reported in USD,28800.0,"Marketplace; US, Canada and Europe"
+"Zillow Group, Inc.",NASDAQGS:Z,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,No platform GMV disclosed
+Rightmove plc,LSE:RMV,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Annual report gives listing and agent metrics
+Scout24 SE,XTRA:G24,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed as platform GMV
+REA Group Limited,ASX:REA,NOT_DISCLOSED,,"FY2026, year ended 2026-06-30",,,,,,Not disclosed in the latest annual report
+Hemnet Group AB (publ),OM:HEM,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Annual report reports listings and ARPL
+"CoStar Group, Inc.",NASDAQGS:CSGP,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Residential marketplaces do not report a transaction value
+Upwork Inc.,NASDAQGS:UPWK,DISCLOSED,Gross Services Volume (GSV),"FY2025, year ended 2025-12-31",4028.4,USD,1.0,Reported in USD,4028.4,All Upwork platforms and other services
+Fiverr International Ltd.,NYSE:FVRR,DISCLOSED,Marketplace Gross Merchandise Value,"FY2025, year ended 2025-12-31",1073.0,USD,1.0,Reported in USD,1073.0,MARKETPLACE ONLY. Excludes VAT
+Angi Inc.,NASDAQGS:ANGI,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Principal operating metrics are service requests and professionals
+SEEK Limited,ASX:SEK,NOT_DISCLOSED,,"FY2026, year ended 2026-06-30",,,,,,Not disclosed and not applicable as a reported metric
+Info Edge (India) Limited,NSEI:NAUKRI,NOT_DISCLOSED,,"FY2026, year ended 2026-03-31",,,,,,Not disclosed. Company reports billings
+MONY Group plc,LSE:MONY,NOT_DISCLOSED,,"FY2025, year ended 2025-12-31",,,,,,Not disclosed. Company reports lead and conversion metrics
+"Match Group, Inc.",NASDAQGS:MTCH,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Company reports subscribers and RPP
+Bumble Inc.,NASDAQGS:BMBL,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Company reports paying users
+Grindr Inc.,NYSE:GRND,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Company reports paying users
+"Netflix, Inc.",NASDAQGS:NFLX,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Company reports streaming revenue and membership
+Spotify Technology S.A.,NYSE:SPOT,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Company reports Premium subscribers and MAUs
+"Duolingo, Inc.",NASDAQGS:DUOL,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Company reports subscribers and DAUs
+The New York Times Company,NYSE:NYT,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,"EXCLUDED: total bookings mixes subscription and other revenue and is not a GMV"
+Roblox Corporation,NYSE:RBLX,DISCLOSED_ANALOGOUS_NOT_GMV,Bookings,"FY2025, year ended 2025-12-31",6788.4,USD,1.0,Reported in USD,6788.4,"Consolidated analogous cash-value KPI. Roblox does NOT call this GMV; sales activity substantially all from virtual currency"
+"Roku, Inc.",NASDAQGS:ROKU,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Key KPIs are streaming households and hours
+"Coursera, Inc.",NYSE:COUR,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Degree revenue is a service fee rather than a transaction value
+"Chegg, Inc.",NYSE:CHGG,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed in the latest annual filing
+"Chewy, Inc.",NYSE:CHWY,NOT_DISCLOSED,,"FY2025, year ended 2026-02-01",,,,,,Not disclosed. Net sales are recorded as principal
+Wayfair Inc.,NYSE:W,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Net revenue is recorded gross of supplier cost as principal
+"Hims & Hers Health, Inc.",NYSE:HIMS,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed in the latest annual filing
+Warby Parker Inc.,NYSE:WRBY,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed in the latest annual filing
+"Revolve Group, Inc.",NYSE:RVLV,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. AOV uses total gross sales rather than a published GMV
+"The RealReal, Inc.",NASDAQGS:REAL,DISCLOSED,Gross Merchandise Value (GMV),"FY2025, year ended 2025-12-31",2130.0,USD,1.0,Reported in USD,2130.0,Consolidated / company-defined scope
+On Holding AG,NYSE:ONON,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Direct-to-consumer and wholesale split reported instead
+"e.l.f. Beauty, Inc.",NYSE:ELF,NOT_DISCLOSED,,"FY2026, year ended 2026-03-31",,,,,,Not disclosed. Net sales only
+"FIGS, Inc.",NYSE:FIGS,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Direct-to-consumer net revenue only
+"BARK, Inc.",NYSE:BARK,NOT_DISCLOSED,,"FY2026, year ended 2026-03-31",,,,,,Not disclosed in the latest annual filing
+"YETI Holdings, Inc.",NYSE:YETI,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Wholesale and direct-to-consumer net sales only
+Similarweb Ltd.,NYSE:SMWB,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,"Not disclosed. Bookings refers to SaaS bookings, not transaction value"
+ZoomInfo Technologies Inc.,NASDAQGS:GTM,NOT_DISCLOSED,,"FY2025; latest annual filing",,,,,,Not disclosed. Subscription business with no transaction value

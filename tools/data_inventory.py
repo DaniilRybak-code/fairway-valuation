@@ -61,11 +61,18 @@ def main():
             print('    %-40s %4d' % (a, n))
 
     print('\nFILES PRESENT BUT NOT WIRED INTO THE LOADER')
-    wired = {'peers-software.csv', 'peers-software-tags.csv', 'peers-ecommerce.csv',
-             'peers-ecommerce-tags.csv', 'peers-fintech.csv', 'peers-fintech-tags.csv',
-             'private-rounds.csv', 'private-rounds-consumer.csv', 'private-companies-tags.csv',
-             'private-companies-consumer-tags.csv', 'private-round-investors.csv',
-             'private-round-investors-consumer.csv', 'tag-token-weights.csv'}
+    # DERIVED FROM THE LOADER, NEVER HARDCODED. A hand-maintained list of wired files goes stale the
+    # moment someone wires a new one, and then this section reports files as unread when they are
+    # read. That is worse than not reporting at all, because it is the check people trust.
+    wired = set()
+    for _mf, _tf, _ in getattr(M, '_PRIMARY', []):
+        wired.update((_mf, _tf))
+    for _mf, _tf in getattr(M, '_SECONDARY', []):
+        wired.update((_mf, _tf))
+    for extra in ('private-rounds.csv', 'private-rounds-consumer.csv', 'private-companies-tags.csv',
+                  'private-companies-consumer-tags.csv', 'private-round-investors.csv',
+                  'private-round-investors-consumer.csv', 'tag-token-weights.csv'):
+        wired.add(extra)
     loose = [f for f in sorted(os.listdir(DATA)) if f.endswith('.csv') and f not in wired]
     if loose:
         for f in loose:

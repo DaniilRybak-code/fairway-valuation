@@ -138,11 +138,29 @@ def _ingest(mfile, tfile, fam_for):
         # a founder's growth against r['g'] is now comparing against a two-year rate: the founder is
         # asked for growth over the last twelve months, so the two are NOT like for like, and
         # closing that gap is an open item, not something to paper over here.
-        r['g']    = _f(m.get('revenue_growth_cagr_cy0_cy2_pct'))
+        #
+        # THE ECOMMERCE PULL USES A THIRD DEFINITION AGAIN and it is read here rather than blended.
+        # That file carries four revenue years and its CAGR runs CY+1 to CY+3; the software and
+        # fintech files carry two years and theirs runs CY+0 to CY+2. Both are two-year forward
+        # CAGRs, anchored a year apart. They are close cousins and NOT the same measure, so g_basis
+        # records which one every row is carrying and no comparison across them can be made blind.
+        r['g'] = _f(m.get('revenue_growth_cagr_cy0_cy2_pct'))
         r['g_basis'] = 'CAGR_CY0_CY2'
+        if r['g'] is None:
+            r['g'] = _f(m.get('revenue_growth_cagr_cy1_cy3_pct'))
+            r['g_basis'] = 'CAGR_CY1_CY3'
         if r['g'] is None:
             r['g'] = _f(m.get('revenue_growth_ntm_pct'))
             r['g_basis'] = 'NTM'
+
+        # GMV, WHERE THE COMPANY REPORTS ONE. gmv_reported is the company's own figure and is the
+        # only one that may be shown to a founder as reported. gmv (NTM) and gmv_mult are built on
+        # Daniil's assumption that GMV grows with revenue, because brokers do not forecast GMV, so
+        # anything derived from them carries that assumption and must say so.
+        r['gmv_reported'] = _f(m.get('gmv_cy0_musd'))
+        r['gmv']          = _f(m.get('gmv_ntm_musd'))
+        r['gmv_mult']     = _f(m.get('ev_ntm_gmv_x'))
+        r['gmv_basis']    = 'DERIVED_FROM_REVENUE_GROWTH' if r['gmv_mult'] is not None else ''
         gp        = _f(m.get('gross_profit_musd'))
         r['gp']   = gp
         r['gp_mult'] = _f(m.get('ev_ntm_gp_x'))

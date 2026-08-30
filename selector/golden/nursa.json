@@ -188,11 +188,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.2,
+   "high": 1.1,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 0.85,
+   "mid": 0.8,
    "n": 2,
    "points": [],
    "positioning": [
@@ -205,7 +205,7 @@
     },
     {
      "company": "eBay Inc.",
-     "mult": 3.9,
+     "mult": 3.8,
      "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
@@ -214,7 +214,7 @@
    "shared_words": [
     "marketplace"
    ],
-   "spread": 2.4,
+   "spread": 2.2,
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true

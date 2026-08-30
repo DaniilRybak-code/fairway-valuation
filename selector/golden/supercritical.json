@@ -23,7 +23,7 @@
     "in_medians": true,
     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
     "score": 11.1,
-    "ticker": "NYSE:ETSY"
+    "ticker": "NASDAQGS:ETSY"
    },
    {
     "company": "Auction Technology Group plc",
@@ -55,7 +55,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 3.9,
+   "high": 3.8,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.9,
@@ -67,7 +67,7 @@
     "credit",
     "marketplace"
    ],
-   "spread": 4.9,
+   "spread": 4.7,
    "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
@@ -218,7 +218,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 6.8,
+   "high": 6.6,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.2,
@@ -228,7 +228,7 @@
    "positioning": [
     {
      "company": "Trip.com Group Limited",
-     "mult": 2.2,
+     "mult": 2.0,
      "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
@@ -239,7 +239,7 @@
     "sourcing",
     "supplier"
    ],
-   "spread": 5.7,
+   "spread": 5.5,
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false

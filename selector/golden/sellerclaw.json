@@ -3,7 +3,7 @@
   "core": [
    {
     "company": "BASE, Inc.",
-    "family": "fintech",
+    "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of ecommerce, shopify; same type of business; same end market; same business function",
     "score": 14.7,
@@ -16,6 +16,14 @@
     "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
     "score": 11.6,
     "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Baozun Inc.",
+    "family": "consumer",
+    "in_medians": false,
+    "reason": "shares the language of ecommerce, fulfilment, management; same type of business; same end market; same business function",
+    "score": 10.7,
+    "ticker": "NASDAQGS:BZUN"
    }
   ],
   "core_range": {

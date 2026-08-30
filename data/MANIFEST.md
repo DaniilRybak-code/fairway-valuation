@@ -52,9 +52,44 @@ Also fine: attach the CSV or the .xlsx to the conversation.
 | 2026-08-30 | **Listed fintech, payments, exchanges, market data. Refreshed pull.** | 85 | `data/raw/2026-08-30_capiq-listed-fintech.csv` | `data/peers-fintech.csv` | **yes** |
 | 2026-08-30 | **Company-disclosed recurring revenue and retention**, five research passes, software set | 68 recurring + 42 retention | no raw, sourced from filings | `data/peers-software.csv` | **yes** |
 | earlier | Listed fintech, first pull, superseded above | 87 | not recorded | `data/peers-fintech.csv` | yes |
-| earlier | Listed consumer commerce | 71 | not recorded | `data/peers-ecommerce.csv` | yes |
+| 2026-08-30 | **Listed ecommerce, marketplaces, travel, classifieds, media, consumer brands. Refreshed pull, WITH GMV.** | 74 | `data/raw/2026-08-30_capiq-listed-ecommerce.csv` | `data/peers-ecommerce.csv` | **yes** |
+| 2026-08-30 | **Company-reported GMV disclosures**, metric name, period, scope and caveat | 74 checked, 25 disclose | `data/raw/2026-08-30_gmv-disclosures.csv` | `data/gmv-disclosures.csv` | not wired, reference file |
+| earlier | Listed consumer commerce, first pull, superseded above | 71 | not recorded | `data/peers-ecommerce.csv` | yes |
 | earlier | Private rounds, software and fintech | 99 | not recorded | `data/private-rounds.csv` | yes |
 | earlier | Private rounds, consumer | 50 | not recorded | `data/private-rounds-consumer.csv` | yes |
+
+## Three growth definitions now live in the files, and none of them may be blended
+
+Each pull has arrived with growth measured differently, and every row records which one it carries
+in `g_basis` so a comparison across them can never be made blind:
+
+| basis | which files | what it is |
+|---|---|---|
+| `CAGR_CY0_CY2` | software, fintech | two-year CAGR from CY+0 to CY+2 |
+| `CAGR_CY1_CY3` | ecommerce | two-year CAGR from CY+1 to CY+3 |
+| `NTM` | older rows not yet refreshed | one-year forward growth |
+
+The first two are both forward two-year CAGRs anchored a year apart. Close cousins, not the same
+measure. The third is a different animal entirely and is only still present on rows an updated pull
+has not yet reached.
+
+## GMV: what is reported and what is assumed
+
+`data/gmv-disclosures.csv` holds the company-reported figure for all 74 ecommerce names: **25
+disclose something, 49 do not.** It carries the metric name, the fiscal period, the currency, the FX
+basis, the scope and the exact caveat. **It is the file to cite to a founder.**
+
+Seventeen different metric names appear across those 25 companies, and they do not measure the same
+thing: Gross Merchandise Volume, Gross Merchandise Sales, Marketplace GOV, Gross Bookings, Gross
+Booking Value, Gross Transaction Value, Gross Order Value, Gross Services Volume, Bookings. Three
+carry scope that changes their meaning outright: Sea reports Shopee only, Tripadvisor reports the
+Viator segment only, ASOS reports an issuer-defined alternative performance measure. Roblox's
+Bookings is a cash-value KPI the company does not call GMV at all.
+
+**The forward GMV columns in `peers-ecommerce.csv` are Daniil's, not the brokers'.** Brokers do not
+publish GMV estimates, so he assumed GMV grows with revenue in local currency and pro-rated to an
+NTM figure. Any EV/GMV multiple therefore inherits that assumption, and every such row is stamped
+`gmv_basis = DERIVED_FROM_REVENUE_GROWTH`. It must never be presented as a third-party forecast.
 
 ## A defect this found, and the rule that comes out of it
 
