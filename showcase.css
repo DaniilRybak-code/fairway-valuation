@@ -944,3 +944,49 @@ h1,h2,h3 { font-family:var(--sans); }
 /* the expanded card's tail rides below the sticky hero; the anchor becomes a
    spacer so the read section starts clear of it */
 #screen-hero .hero-genie-on + .field-anchor { height:320px; }
+
+/* ================= v8.5, 30-Aug-2026: the margin-note round.
+   Callouts sit to the right of their ranges like a banker's margin notes; the
+   +40% floats up into the field itself; the bottom strip becomes the comp
+   table with lead investors; the page takes the full width. */
+
+/* wider page */
+.wrap-wide, .nav-inner { max-width:1380px; }
+
+/* margin notes: right-aligned beside their range, no tick, wrapped */
+.ff-anno.note { left:auto; right:4px; bottom:auto; top:50%;
+  transform:translateY(-50%); text-align:right; max-width:230px;
+  white-space:normal; line-height:1.35; font-size:11px; }
+.ff-anno.note::before { display:none; }
+.ff-anno.note.grey { color:var(--ff-mute); }
+.ff-anno.note.args { color:var(--ff-purple); font-weight:600; }
+.ff-anno.note.teal { color:var(--ff-teal); }
+.ff-anno.note.band { color:#33415f; font-weight:600; }
+.ff-anno.note.teal, .ff-anno.note.band { top:auto; bottom:0; transform:none;
+  max-width:none; white-space:nowrap; }
+
+/* the +40% badge lives in the field, beside the core rows; visible at rest */
+.prem-badge { position:absolute; right:4px; top:calc(50% - 26px); z-index:5;
+  text-align:right; pointer-events:none; }
+.prem-badge em { display:block; font-style:normal; font-family:var(--mono);
+  font-size:30px; font-weight:600; color:var(--accent); letter-spacing:-.02em; line-height:1; }
+.prem-badge span { display:block; font-size:10px; color:var(--ff-soft); line-height:1.35; margin-top:3px; }
+
+
+/* bottom strip: comp table with lead investors, no +40% block */
+.ff-delta { border-left:none; }
+.dm-col.wide i { display:grid; grid-template-columns:minmax(70px,auto) 46px minmax(110px,auto); gap:0 14px; }
+.dm-col.wide i em { text-align:right; }
+.dm-col.wide i b.lead { font-family:var(--sans); font-size:11px; font-weight:500;
+  color:var(--ff-soft); text-align:left; text-transform:none; letter-spacing:0; margin:0; }
+/* the whole strip hands over to Our read as the field expands */
+.hero-genie-on .ff-delta { opacity:calc(1 - (var(--exp, 0) - 0.4) / 0.25);
+  max-height:calc(240px - 240px * var(--exp, 0)); overflow:hidden;
+  padding-top:calc(14px * (1 - var(--exp, 0))); padding-bottom:calc(14px * (1 - var(--exp, 0))); }
+.hero-genie-on .d-mini { opacity:1; max-height:none; overflow:visible; }
+
+@media (max-width:900px) {
+  .ff-anno.note { position:static; transform:none; text-align:left; max-width:none; display:block; margin-top:2px; }
+  .prem-badge { display:none; }
+  .hero-genie-on .ff-delta { opacity:1; max-height:none; }
+}
