@@ -1,0 +1,150 @@
+# Fairway peer set: LISTED LOGISTICS AND DELIVERY, SERVICES MARKETPLACES, CONSUMER SUBSCRIPTION,
+# and PAYMENTS. Transcribed 30-Aug-2026 from Daniil's S&P Capital IQ Pro screen, currency USD.
+#
+# WHY THIS FILE EXISTS AND WHAT IT FIXES. Before today the repo held 319 listed names covering
+# software, fintech and consumer commerce, and NOTHING in logistics, delivery, services marketplaces
+# or consumer subscription. HIVED was being priced off Wolt, 99minutos and byrd had almost nothing,
+# and the new media fork had no listed side. Every one of those holes is a name in this file.
+#
+# TRANSCRIBED FROM A SCREENSHOT, SO READ THIS. The figures were read off Daniil's screen by eye. They
+# are faithful to the best of my reading and they are NOT machine-exported. Spot-check before any of
+# these numbers reaches a founder. The underlying workbook should replace this file when it lands.
+#
+# WHAT IS DELIBERATELY NOT HERE. Rows 53 to 95 of the same screen are the lending and specialty
+# finance names. They are in data/peers-lending.csv on P/E and P/BV, which is the only basis a lender
+# may be priced on. That screen also gives them an EV/revenue multiple and IT MUST NOT BE USED:
+# revenue for a lender contains interest earned on borrowed money and enterprise value adds back the
+# debt that is the product. The screen itself proves the point, returning a NEGATIVE enterprise value
+# for Japan Post Holdings and a 168x EV/gross profit for OSB.
+#
+# EIGHT LENDERS ON THAT SCREEN ARE NOT YET IN peers-lending.csv AND HAVE NO BOOK VALUE:
+# Orchard Funding Group, Resurs Bank, Muninova, Credit Saison, Tokyo Century, Banco Pan,
+# Garanti Faktoring, Is Finansal Kiralama. They need a P/BV pull before they can be used.
+#
+# COLUMNS. As supplied. total_aggregate_value_musd is the enterprise value the screen computed from
+# market cap plus net debt plus NCI less investments in associates. A DASH on the screen means the
+# field returned nothing and is left blank here. n.a. and #DIV/0! are left blank, never zero.
+company_name,country,market_cap_musd,net_debt_musd,nci_musd,invest_assoc_musd,eqv_ev_bridge_musd,enterprise_value_musd,revenue_fy0_musd,revenue_fy1_musd,revenue_fy2_musd,revenue_ntm_musd,gross_margin_pct,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_pct,sector_block
+United Parcel Service,United States,86788,24020,32,0,24052,110840,88175,91432,94937,93286,14,12860,1.2,8.6,4,logistics
+FedEx Corporation,United States,76937,29393,0,0,29393,106330,87416,91062,95144,91062,26,24076,1.2,4.4,4,logistics
+"XPO, Inc.",United States,23153,3747,0,0,3747,26900,8101,9040,9509,9264,46,4290,2.9,6.3,5,logistics
+"GXO Logistics, Inc.",United States,5243,5350,35,0,5385,10628,13147,13959,14707,14244,15,2197,0.7,4.8,5,logistics
+"RXO, Inc.",United States,3717,713,0,0,713,4430,5762,6840,7497,7251,16,1180,0.6,3.8,10,logistics
+C.H. Robinson Worldwide,United States,16550,1818,0,0,1818,18368,16290,18292,19572,19054,17,3205,1.0,5.7,7,logistics
+Expeditors International,United States,24414,-464,2,0,-462,23952,11028,13023,13088,13103,33,4354,1.8,5.5,0,logistics
+"Hub Group, Inc.",United States,2491,379,53,0,432,2923,3983,3675,3815,3732,25,943,0.8,3.1,4,logistics
+"Radiant Logistics, Inc.",United States,381,44,1,0,45,426,900,904,949,933,27,249,0.5,1.7,5,logistics
+Americold Realty Trust,United States,4354,4581,37,0,4618,8972,2613,2536,2510,2427,33,792,3.7,11.3,-1,logistics
+"Lineage, Inc.",United States,9475,8373,981,167,9187,18662,5401,5411,5537,5425,32,1733,3.4,10.8,2,logistics
+Ocado Group plc,United Kingdom,2713,1306,0,999,307,3020,1758,2304,2022,2163,58,1262,1.4,2.4,-12,logistics
+Clarkson PLC,United Kingdom,2104,-372,5,2,-369,1735,848,1054,1083,1054,95,1003,1.6,1.7,3,logistics
+Tritax Big Box REIT plc,United Kingdom,6321,3332,0,27,3306,9627,427,495,527,511,98,502,18.8,19.2,6,logistics
+Deutsche Post AG,Germany,72368,27055,603,1219,26439,98807,98037,102079,105185,103973,7,7174,1.0,13.8,3,logistics
+HelloFresh SE,Germany,475,576,-4,0,572,1047,7946,7326,7389,7263,61,4462,0.1,0.2,1,logistics
+ID Logistics Group SA,France,2611,0,0,0,0,2611,4368,5058,5561,5184,50,2597,0.5,1.0,10,logistics
+STEF SA,France,1893,1800,0,87,1714,3607,5935,6295,6495,6295,0,,0.6,,3,logistics
+PostNL N.V.,Netherlands,539,578,2,1,579,1119,3871,3954,4063,3954,46,1819,0.3,0.6,3,logistics
+InPost S.A.,Luxembourg,9052,2650,-2,25,2624,11676,4115,4681,5478,4880,41,1994,2.4,5.9,17,logistics
+DSV A/S,Denmark,52159,13061,57,0,13117,65276,39046,46706,47676,47435,27,12840,1.4,5.1,2,logistics
+NTG Nordic Transport Group,Denmark,965,359,13,0,372,1337,1787,1951,1982,1966,22,441,0.7,3.0,2,logistics
+Pkp Cargo S.A.,Poland,122,595,0,6,589,711,1100,1210,1319,1238,0,,0.6,,9,logistics
+Yamato Holdings Co.,Japan,3848,-157,67,0,-90,3757,11721,12047,12351,12123,5,601,0.3,6.3,3,logistics
+"SG Holdings Co., Ltd.",Japan,5878,1835,14,0,1850,7728,10313,10975,11392,11079,11,1166,0.7,6.6,4,logistics
+Nippon Express Holdings,Japan,8374,3978,120,271,3827,12201,16631,17201,17699,17450,11,1989,0.7,6.1,3,logistics
+Mitsubishi Logistics,Japan,3237,463,30,0,494,3731,1758,1773,1834,1788,12,217,2.1,17.2,3,logistics
+Japan Post Holdings,Japan,40179,-188832,43319,0,-145513,-105333,72649,73631,76360,92433,0,,,,4,logistics
+Oisix Inc.,Japan,381,109,10,0,118,500,1602,1568,1653,1589,30,473,0.3,1.1,5,logistics
+"S.F. Holding Co., Ltd.",China,24373,1475,1690,2087,1078,25452,44436,49638,53622,50307,13,6669,0.5,3.8,8,logistics
+ZTO Express (Cayman) Inc.,China,16241,-1364,13,0,-1351,14890,6978,8564,9278,9133,26,2388,1.6,6.2,8,logistics
+J&T Global Express Limited,China,12833,1127,-296,2,829,13662,12030,15320,18011,15320,11,1685,0.9,8.1,18,logistics
+KLN Logistics Group,Hong Kong,1367,708,336,180,865,2232,7424,7423,7621,7472,8,633,0.3,3.5,3,logistics
+Sinotrans Limited,China,6192,-303,429,1102,-976,5215,14478,15339,16010,15507,0,,0.3,,4,logistics
+Full Truck Alliance Co. Ltd.,China,9099,-3464,205,166,-3425,5674,1768,1841,1996,1919,63,1206,3.0,4.7,8,logistics
+Delhivery Limited,India,3528,-55,0,0,-55,3473,1105,1318,1545,1375,29,403,2.5,8.6,17,logistics
+Blue Dart Express Limited,India,1258,52,0,0,52,1310,659,731,791,746,43,319,1.8,4.1,8,logistics
+Container Corporation of India,India,4100,-267,12,0,-255,3845,984,1040,1182,1076,31,334,3.6,11.5,14,logistics
+Snowman Logistics Limited,India,66,32,0,0,32,98,38,,,,0,,,,,logistics
+Lindsay Australia Limited,Australia,177,219,0,0,219,396,748,788,809,785,0,,0.5,,3,logistics
+JSL S.A.,Brazil,290,1201,0,0,1201,1491,1812,2039,2202,2121,18,392,0.7,3.8,8,logistics
+Tegma Gestao Logistica S.A.,Brazil,439,5,0,14,-8,431,405,460,546,503,0,,0.9,,19,logistics
+"Grupo Traxion, S.A.B. de C.V.",Mexico,333,31,-2,0,28,361,1821,2262,2433,2347,17,392,0.2,0.9,8,logistics
+Reysas Tasimacilik ve Lojistik,Turkey,965,90,238,32,296,1262,115,,,,0,,,,,logistics
+"AMN Healthcare Services, Inc.",United States,1335,414,0,0,414,1749,2706,3352,2664,2623,28,742,0.7,2.4,-21,services_marketplace
+"RB Global, Inc.",United States,16116,4171,1,0,4171,20287,4532,5007,5266,5083,43,2177,4.0,9.3,5,services_marketplace
+"Copart, Inc.",United States,31292,-4107,17,0,-4089,27203,4671,4642,4820,4766,45,2144,5.7,12.7,4,services_marketplace
+"Liquidity Services, Inc.",United States,1356,-217,0,0,-217,1138,459,,,,44,,,,,services_marketplace
+"Xometry, Inc.",United States,4792,-177,1,4,-180,4612,678,918,1116,1014,39,399,4.5,11.6,22,services_marketplace
+GigaCloud Technology Inc,United States,1773,129,0,0,129,1902,1260,1547,1662,1584,23,360,1.2,5.3,7,services_marketplace
+Freightos Limited,Spain,70,-19,0,0,-19,51,30,30,34,32,68,22,1.6,2.4,10,services_marketplace
+"ZipRecruiter, Inc.",United States,346,91,0,0,91,437,449,462,486,473,90,425,0.9,1.0,5,services_marketplace
+"DHI Group, Inc.",United States,174,37,0,1,36,210,126,125,128,126,85,106,1.7,2.0,2,services_marketplace
+Kanzhun Limited,China,7131,-3052,0,0,-3052,4080,1180,1383,1555,1437,85,1219,2.8,3.3,12,services_marketplace
+"LegalZoom.com, Inc.",United States,999,-152,0,0,-152,847,750,800,836,812,69,561,1.0,1.5,5,services_marketplace
+Robert Walters plc,United Kingdom,132,56,0,0,56,187,991,961,1009,961,0,,0.2,,5,services_marketplace
+Auction Technology Group plc,United Kingdom,732,156,0,0,156,888,188,250,263,256,65,168,3.5,5.3,5,services_marketplace
+Hays plc,United Kingdom,1544,177,0,0,177,1721,8035,8294,8425,8294,14,1191,0.2,1.4,2,services_marketplace
+hipages Group Holdings,Australia,78,-18,0,0,-18,60,63,72,81,70,0,,0.9,,12,services_marketplace
+Airtasker Limited,Australia,72,-8,-11,0,-19,53,41,49,54,47,95,45,1.1,1.2,10,services_marketplace
+Freelancer Limited,Australia,47,-7,2,0,-5,42,36,35,39,35,83,29,1.2,1.4,10,services_marketplace
+Elders Limited,Australia,881,618,2,38,582,1463,2204,2865,2948,2906,20,578,0.5,2.5,3,services_marketplace
+"Visional, Inc.",Japan,2359,-464,3,0,-462,1897,528,624,739,710,91,643,2.7,3.0,18,services_marketplace
+"SMS Co., Ltd.",Japan,1222,-60,0,0,-60,1162,407,450,490,460,89,408,2.5,2.9,9,services_marketplace
+"Medley, Inc.",Japan,544,42,0,0,42,586,238,292,347,319,64,205,1.8,2.9,19,services_marketplace
+"MonotaRO Co., Ltd.",Japan,5618,-125,2,0,-123,5495,2121,2401,2654,2527,30,748,2.2,7.3,11,services_marketplace
+Infomart Corporation,Japan,989,-108,0,14,-122,868,121,134,153,144,72,103,6.0,8.4,14,services_marketplace
+"Bengo4.com, Inc.",Japan,641,6,1,0,7,649,102,129,152,135,79,106,4.8,6.1,18,services_marketplace
+DIP Corporation,Japan,618,-100,0,0,-100,518,362,334,341,336,89,298,1.5,1.7,2,services_marketplace
+en Inc.,Japan,379,-139,0,0,-139,240,377,345,372,351,83,291,0.7,0.8,8,services_marketplace
+IndiaMART InterMESH Limited,India,1095,-356,0,29,-385,710,168,180,199,185,56,102,3.8,6.9,11,services_marketplace
+AUTO1 Group SE,Germany,5455,1290,0,0,1290,6745,9388,11587,13320,12453,12,1521,0.5,4.4,15,services_marketplace
+Costco Wholesale Corporation,United States,420303,-11764,0,0,-11764,408539,274998,301566,326073,319402,11,35473,1.3,11.5,8,consumer_subscription
+BJ's Wholesale Club Holdings,United States,12312,2743,0,0,2743,15056,21440,23762,25252,24528,19,4560,0.6,3.3,6,consumer_subscription
+"PriceSmart, Inc.",United States,5203,12,0,0,12,5215,5275,5822,6498,6341,17,1097,0.8,4.8,12,consumer_subscription
+"Planet Fitness, Inc.",United States,4077,2543,-2,0,2541,6617,1316,1423,1523,,83,,,,7,consumer_subscription
+Life Time Group Holdings,United States,10080,4047,0,0,4047,14127,2992,3370,3765,3566,47,1685,4.0,8.4,12,consumer_subscription
+"Trupanion, Inc.",United States,1364,-42,0,0,-42,1322,1439,1592,1727,,16,,,,9,consumer_subscription
+"Frontdoor, Inc.",United States,5690,557,0,0,557,6247,2082,2199,2334,2274,56,1264,2.7,4.9,6,consumer_subscription
+ADT Inc.,United States,5392,7749,0,0,7749,13140,5144,5222,5361,5283,0,,2.5,,3,consumer_subscription
+"Arlo Technologies, Inc.",United States,1410,-135,0,0,-135,1274,524,592,624,595,44,265,2.1,4.8,6,consumer_subscription
+FuboTV Inc.,United States,309,172,1826,0,1998,2307,,6182,6497,6414,0,,0.4,,5,consumer_subscription
+CuriosityStream Inc.,United States,164,-3,0,4,-7,157,71,79,89,83,55,46,1.9,3.4,12,consumer_subscription
+"WW International, Inc.",United States,157,325,0,0,325,482,700,632,644,626,72,450,0.8,1.1,2,consumer_subscription
+"Rent the Runway, Inc.",United States,128,161,0,0,161,289,307,,,,39,,,,,consumer_subscription
+"LifeMD, Inc.",United States,160,-19,0,0,-19,140,229,208,245,227,87,197,0.6,0.7,18,consumer_subscription
+"Rollins, Inc.",United States,17759,1006,0,0,1006,18765,3775,4090,4445,4256,53,2253,4.4,8.3,9,consumer_subscription
+"Peloton Interactive, Inc.",United States,2374,504,0,0,504,2878,2434,2372,2362,2372,52,1244,1.2,2.3,0,consumer_subscription
+Nerdy Inc.,United States,90,-17,9,0,-8,82,176,171,177,170,62,105,0.5,0.8,3,consumer_subscription
+Basic-Fit N.V.,Netherlands,2574,3343,-1,0,3342,5915,1663,1946,2170,1946,0,,3.0,,11,consumer_subscription
+The Gym Group plc,United Kingdom,509,547,0,0,547,1056,330,367,407,367,99,362,2.9,2.9,11,consumer_subscription
+Naked Wines plc,United Kingdom,62,-38,0,0,-38,24,264,224,211,224,0,,0.1,,-6,consumer_subscription
+Pets at Home Group Plc,United Kingdom,1271,476,0,0,477,1747,1944,2055,2095,2055,46,949,0.9,1.8,2,consumer_subscription
+Deezer S.A.,France,164,-87,0,0,-87,77,656,631,682,631,25,158,0.1,0.5,8,consumer_subscription
+Viaplay Group AB (publ),Sweden,649,563,0,0,563,1213,2015,2282,2268,2282,0,,0.5,,-1,consumer_subscription
+Verisure plc,United Kingdom,11327,5919,0,0,5919,17246,4397,4830,5249,5029,47,2351,3.4,7.3,9,consumer_subscription
+U-NEXT HOLDINGS,Japan,1991,120,95,0,215,2206,2610,2888,3210,3253,32,1051,0.7,2.1,11,consumer_subscription
+Cookpad Inc.,Japan,61,-35,0,0,-35,25,,,,,0,,,,,consumer_subscription
+CURVES HOLDINGS,Japan,562,-35,0,0,-35,527,256,269,291,289,0,,1.8,,8,consumer_subscription
+JustSystems Corporation,Japan,1630,-739,0,0,-739,891,,,,,0,,,,,consumer_subscription
+Viva Leisure Limited,Australia,112,266,0,6,260,372,167,187,204,187,0,,2.0,,9,consumer_subscription
+Aussie Broadband Limited,Australia,1142,98,0,0,98,1240,908,1166,1326,1110,36,402,1.1,3.1,14,consumer_subscription
+Matrimony.com Limited,India,116,-21,0,0,-21,95,49,53,58,53,0,,1.8,,9,consumer_subscription
+Repay Holdings Corporation,United States,332,689,-3,0,686,1018,308,492,627,615,75,462,1.7,2.2,27,payments
+Priority Technology Holdings,United States,462,928,8,0,936,1398,970,1037,1113,1073,39,419,1.3,3.3,7,payments
+"Usio, Inc.",United States,80,-2,0,0,-2,78,86,98,108,102,23,24,0.8,3.3,10,payments
+"Pathward Financial, Inc.",United States,1738,74,0,0,75,1813,837,818,865,850,7,63,2.1,29.0,6,payments
+Paymentus Holdings,United States,5038,-367,0,0,-367,4670,1178,1450,1704,1572,25,385,3.0,12.1,18,payments
+Waystar Holding Corp.,United States,4796,1288,0,0,1288,6084,1090,1286,1423,1345,68,914,4.5,6.7,11,payments
+"Phreesia, Inc.",United States,749,18,0,0,18,767,480,515,538,519,71,368,1.5,2.1,5,payments
+NCR Atleos Corporation,United States,3430,2514,0,0,2514,5944,4351,4472,4654,4563,27,1217,1.3,4.9,4,payments
+"Diebold Nixdorf, Incorporated",United States,2374,842,7,0,849,3223,3815,3906,4025,3966,26,1023,0.8,3.1,3,payments
+WEX Inc.,United States,6814,-744,0,0,-744,6070,2650,2885,2930,2892,59,1712,2.1,3.5,2,payments
+Cass Information Systems,United States,722,-144,0,0,-144,578,191,205,218,213,4,8,2.7,71.7,7,payments
+Nayax Ltd.,Israel,1737,54,0,0,54,1791,401,515,630,569,48,275,3.1,6.5,22,payments
+Worldline SA,France,811,1321,893,38,2176,2988,5304,4380,4335,4358,0,,0.7,,-1,payments
+PayPoint plc,United Kingdom,516,36,2,0,38,554,250,266,279,266,0,,2.1,,5,payments
+PAX Global Technology,Hong Kong,534,-523,5,2,-520,14,,,,,0,,,,,payments
+"Digital Garage, Inc.",Japan,663,-201,16,230,-416,247,271,274,305,281,0,,0.9,,11,payments
+"BASE, Inc.",Japan,226,-135,1,0,-133,93,131,174,195,184,0,,0.5,,12,payments
+AvenuesAI Limited,India,552,-81,25,0,-56,496,787,1197,1358,1237,8,103,0.4,4.8,13,payments
+Zaggle Prepaid Ocean Services,India,281,-52,0,0,-52,230,198,255,338,276,46,126,0.8,1.8,32,payments
+Fawry for Banking Technology,Egypt,1286,-129,6,1,-124,1163,174,234,309,234,69,161,5.0,7.2,32,payments
