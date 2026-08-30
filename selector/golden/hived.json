@@ -55,6 +55,28 @@
     "type": "MIXED"
    },
    {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Shiprocket",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": 16.03,
+    "reason": "both do Last Mile; related type of business; same business function; same revenue model",
+    "score": 12.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Xpressbees",
+    "date": "Feb-22",
+    "in_medians": false,
+    "mult": 8.94,
+    "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
+    "score": 19.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "NONE",
     "bound": "",
     "company": "Glovo",
@@ -75,17 +97,6 @@
     "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
     "score": 9.3,
     "type": "CONTROL"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Gopuff",
-    "date": "Jul-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
-    "score": 9.8,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -123,7 +134,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 61,
+  "private_window_months": 57,
   "secondary": [
    {
     "company": "Delivery Hero SE",

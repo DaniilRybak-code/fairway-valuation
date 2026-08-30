@@ -68,9 +68,20 @@
     "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
     "score": 21.3,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Better.com",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 8.79,
+    "reason": "shares the language of lending, origination; same type of business; sold the same way; same AI stance",
+    "score": 9.8,
+    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "DIRECT",
+  "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
@@ -103,7 +114,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 58,
+  "private_window_months": 63,
   "secondary": [
    {
     "company": "Inter & Co, Inc.",

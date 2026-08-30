@@ -44,6 +44,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Xpressbees",
+    "date": "Feb-22",
+    "in_medians": false,
+    "mult": 8.94,
+    "reason": "both do Parcel Delivery, Last Mile, Reverse Logistics; same type of business; same business function; same revenue model",
+    "score": 19.9,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "NONE",
     "bound": "",
     "company": "Loop Returns",
@@ -66,6 +77,17 @@
     "type": "MIXED"
    },
    {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Shiprocket",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": 16.03,
+    "reason": "both do Last Mile; related type of business; same business function; same kind of customer",
+    "score": 15.5,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "NONE",
     "bound": "",
     "company": "Glovo",
@@ -75,65 +97,10 @@
     "reason": "shares the language of delivery, multi, network; same type of business; same business function; same AI stance",
     "score": 9.9,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Wolt",
-    "date": "Nov-21",
-    "in_medians": true,
-    "mult": 8.2,
-    "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
-    "score": 9.3,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Gopuff",
-    "date": "Jul-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of delivery; same type of business; same business function; same AI stance",
-    "score": 9.2,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
-  "private_range": {
-   "anchor_dropped": true,
-   "band": "ADJACENT",
-   "basis": "REVENUE",
-   "basis_label": "enterprise value to revenue",
-   "basis_mix": {
-    "NET_REVENUE": 1
-   },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Wolt"
-   ],
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 8.2,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 8.2,
-   "mid": 8.2,
-   "n": 1,
-   "points": [],
-   "positioning": [],
-   "shared_words": [
-    "delivery",
-    "network"
-   ],
-   "sole": "Wolt",
-   "spread": 1.0,
-   "tag_evidence": 0.3,
-   "thin": true,
-   "triangulated": false
-  },
+  "private_range": {},
   "private_window_months": 61,
   "secondary": [
    {

@@ -71,7 +71,7 @@ FORKS = {
  'software': dict(
     archetypes=('Business Applications', 'Vertical Software', 'Cybersecurity', 'Data, AI & Developer Tools',
                 'Cloud & Infrastructure', 'Design & Engineering', 'Communications & Collaboration',
-                'Consumer & Prosumer Software', 'Software Consolidator'),
+                'Consumer & Prosumer Software', 'Software Consolidator', 'Online Learning'),
     questions=[
       dict(key='arr', label='What is your ARR?', kind='money', required=True,
            maps_to='profile.revenue', peer_field='revenue_musd', basis='ARR',
@@ -144,15 +144,27 @@ FORKS = {
            why='A lender is priced on price to book, because book value nets the funding off the '
                'assets. A multiple of the loan book alone ignores the liabilities that financed it, '
                'so two lenders with the same book and different leverage would read identically.'),
-      dict(key='net_loan_book', label='Net loan book outstanding today', kind='money',
-           required=True, maps_to='profile.net_loan_book', peer_field='net_loan_book_musd',
-           basis='LOAN_BOOK', period_required=True,
-           why='Carried alongside book value so the leverage is visible, and as the fallback where '
-               'book value is immaterial. A STOCK at a date, never a total of everything ever lent.'),
-      dict(key='originations', label='Amount lent over the last twelve months', kind='money',
-           required=False, maps_to='profile.originations', peer_field='originations_musd',
-           basis='ORIGINATIONS', period_required=True,
-           why='The alternative denominator where the book is sold on rather than held. This is a '
+      # OPTIONAL, and Daniil is right about why. 28-Aug: "Net loan book - why is it required? Do we
+      # have the like-for-like multiples to apply on this?" We do not. We hold one private book
+      # multiple (Zopa, 5.6x) and ZERO loan-book multiples, private or listed, so requiring this
+      # field breaks the rule the fork is built on: never ask for a metric we cannot put a peer
+      # number next to. It stays on the form as REVIEWER CONTEXT, because leverage is the first
+      # thing a reviewer wants next to a book value, but it is not an engine input and the founder
+      # is never blocked on it. It becomes required again on the day we hold like-for-like
+      # loan-book multiples on both sides.
+      dict(key='net_loan_book', label='Net loan book outstanding today, if you have it to hand',
+           kind='money', required=False, maps_to='profile.net_loan_book',
+           peer_field='net_loan_book_musd', basis='LOAN_BOOK', period_required=True,
+           reviewer_context=True,
+           why='Not part of the range. Carried so the leverage behind your book value is visible to '
+               'the reviewer. A STOCK at a date, never a total of everything ever lent.'),
+      dict(key='originations', label='Amount lent over the last twelve months, if you have it',
+           kind='money', required=False, maps_to='profile.originations',
+           peer_field='originations_musd', basis='ORIGINATIONS', period_required=True,
+           reviewer_context=True,
+           why='Reviewer context, not part of the range, on the same reasoning as the loan book. '
+               'Where the book is sold on rather than held this is the shape a denominator would '
+               'eventually take. This is a '
                'FLOW over a stated period. A since-inception total is not an answer and is rejected: '
                'in 43% of the lending announcements we read, the only monetary number offered was an '
                'undated lifetime total, and three rounds disclosed both stock and flow differing by '
@@ -165,8 +177,26 @@ FORKS = {
                'basis; originate-and-distribute for a fee is the only lending shape where a revenue '
                'multiple is defensible.'),
     ]),
- 'subscription': dict(
-    archetypes=('Streaming & Digital Media', 'Dating & Social Network', 'Online Learning'),
+ # THE SUBSCRIPTION FORK IS RETIRED. Daniil, 28-Aug: subscription is a REVENUE MODEL, not the
+ # nature of a business, and our standing rule is that nature selects. The fork was wrong at the
+ # root rather than misrouted. It had swept together three unrelated businesses:
+ #
+ #   smol, Lyka, Bokksu, FINN   direct-to-consumer brands whose billing recurs. They are priced on
+ #                              net revenue and gross margin like any other consumer brand, so they
+ #                              belong on the ecommerce fork, which is where Consumer Brand already
+ #                              sends them.
+ #   Online Learning            Duolingo and Coursera price on retention and margin the way software
+ #                              does, so it moves into the software archetype list above.
+ #   Streaming, media, social   genuinely distinct: content cost, catalogue and audience rather than
+ #                              seats or baskets. That business keeps a fork, below, under its own
+ #                              name.
+ 'media': dict(
+    archetypes=('Streaming & Digital Media', 'Dating & Social Network'),
+    # NOT YET PRICEABLE, and the fork says so rather than pretending. We hold no private rounds in
+    # streaming, media or social with a revenue figure and a stated period, so a founder here reaches
+    # listed comparables only. The sourcing list carries the gap: Substack, Cameo, DAZN, Curiosity,
+    # Rumble pre-listing. Until those land this fork collects answers and shows the listed side.
+    priceable_private=False,
     questions=[
       dict(key='net_revenue', label='Net revenue over the last twelve months', kind='money',
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE'),
@@ -205,10 +235,31 @@ AI_NATIVE_EXTRA = [
 FALLBACK = 'software'
 
 def fork_for(prof):
-    """Which fork a profiled company gets. Never a menu the founder picks from."""
-    a = {prof.get('archetype'), prof.get('archetype_secondary')} - {None, ''}
-    for name, f in FORKS.items():
-        if a & set(f.get('archetypes', ())): return name
+    """Which fork a profiled company gets. Never a menu the founder picks from.
+
+    THE PRIMARY ARCHETYPE WINS, and the first version of this did not do that. It put both
+    archetypes into one set and walked FORKS in insertion order, so whichever FORK came first in the
+    dict claimed the company. Software is first, so any business carrying a software SECONDARY was
+    handed the software fork no matter what it actually was:
+
+        Inato          primary Third-Party Marketplace,          secondary Vertical Software
+        Priori Legal   primary Freelance & Services Marketplace, secondary Vertical Software
+        Moov           primary Merchant Acquiring & PSP,         secondary Cloud & Infrastructure
+        Mondu          primary Lending & Credit,                 secondary Commerce & Payments Software
+
+    All four were asked the wrong questions. Mondu was the worst of them: it is a balance-sheet
+    business, priced on book by the engine, and the payments fork was asking it for net revenue.
+    A founder answering a question that does not reach the number they are priced on is the exact
+    failure this file exists to prevent.
+
+    So: try the primary archetype against every fork first, and only fall back to the secondary if
+    the primary matches nothing. Dict order is then a tie-break within one archetype, not a
+    precedence over the company's actual nature.
+    """
+    for level in (prof.get('archetype') or '', prof.get('archetype_secondary') or ''):
+        if not level: continue
+        for name, f in FORKS.items():
+            if level in f.get('archetypes', ()): return name
     return FALLBACK
 
 def questions_for(prof):

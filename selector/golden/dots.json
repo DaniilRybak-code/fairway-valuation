@@ -16,11 +16,85 @@
     "reason": "both do Payouts; same type of business; same business function; same AI stance",
     "score": 12.8,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Razorpay",
+    "date": "Dec-21",
+    "in_medians": false,
+    "mult": 67.6,
+    "reason": "both do Payouts; related type of business; same business function; sold the same way",
+    "score": 11.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Zepz",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 21.0,
+    "reason": "shares the language of payments; same type of business; same business function; same revenue model",
+    "score": 13.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Pine Labs",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 30.3,
+    "reason": "shares the language of payments; related type of business; same business function; same AI stance",
+    "score": 7.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "dLocal",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 48.0,
+    "reason": "shares the language of payments, payouts; same type of business; same business function; same AI stance",
+    "score": 12.2,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
-  "private_range": {},
-  "private_window_months": 46,
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "NET_REVENUE": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 48.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 21.0,
+   "mid": 30.3,
+   "n": 3,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "payments",
+    "payouts"
+   ],
+   "spread": 2.3,
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 64,
   "secondary": [],
   "secondary_range": {
    "denominator": "rev"

@@ -474,3 +474,89 @@ REAL_2 = [
 ]
 
 PROFILES = REAL + REAL_2
+
+
+# ---------------------------------------------------------------------------------------------
+# EXPECTED PEERS: the market's own answer, frozen next to ours.
+#
+# Daniil's test, 28-Aug: google the company name and read the SPONSORED results, then google
+# "alternatives to X". Sponsored results are companies that have PAID to sit beside that name, and
+# an alternatives page is written by someone who had to choose between them. Both are a comp set
+# revealed by the market rather than derived from our tags, which makes them the sharpest check we
+# have on whether the engine is picking sensible companies.
+#
+# IT CANNOT BE A LIVE CALL, for three reasons, and each one on its own is enough:
+#   - reading a search engine results page programmatically is scraping, and we do not scrape.
+#   - sponsored results are personalised, geo-varied and re-auctioned continuously, so two runs an
+#     hour apart disagree.
+#   - a golden fixture has to be deterministic. If the fixture moves because the world moved, a diff
+#     stops meaning "the engine changed" and the whole suite stops being worth running.
+#
+# SO IT IS AN INPUT, FROZEN, WITH A DATE ON IT. Someone runs the two searches by hand, writes the
+# names down here, and the suite reports COVERAGE: of the peers a human found, how many did the
+# engine surface. Not an assertion. A number that should climb as the data and the matcher improve,
+# and that tells us WHICH fixtures are starved rather than just that something moved.
+#
+#   peers      companies a human would put in the set, from the two searches. Real names only.
+#   listed     names we would expect on the listed side specifically, where the human set has any.
+#   source     how the names were arrived at, in words.
+#   checked    the date the searches were run. A stale set is still usable; it is not silently fresh.
+#
+# COVERAGE IS NOT A SCORE TO MAXIMISE. A peer we do not hold in the file cannot be surfaced, so a
+# low number usually means a data gap and not a matcher defect. Read it against the sourcing list.
+# ---------------------------------------------------------------------------------------------
+
+from expected_peers import EXPECTED_PEERS   # the frozen human sets, one module per concern
+
+
+def expected_for(key):
+    """The frozen human peer set for a fixture, or None if nobody has run the searches yet."""
+    return EXPECTED_PEERS.get(key)
+
+
+_GENERIC = {
+    # words that identify no company on their own. Without this list "Fin Sustainable Logistics"
+    # matches "N-able" on the letters inside SUSTAI-NABLE, which is exactly what the first version
+    # of this function did.
+    'group', 'holdings', 'holding', 'technologies', 'technology', 'solutions', 'systems', 'global',
+    'international', 'company', 'digital', 'online', 'services', 'service', 'partners', 'labs',
+    'software', 'payments', 'payment', 'financial', 'finance', 'bank', 'banking', 'capital',
+    'ventures', 'platform', 'platforms', 'network', 'networks', 'the', 'and', 'for', 'plc', 'inc',
+    'ltd', 'limited', 'corporation', 'corp', 'llc', 'sa', 'se', 'ag', 'nv', 'ab', 'oyj', 'co',
+    'app', 'apps', 'ai', 'io', 'api', 'sdk', 'com', 'collective', 'connect',
+}
+
+
+def _tokens(s):
+    s = (s or '').lower()
+    for ch in ",.'()/&+-|": s = s.replace(ch, ' ')
+    return [t for t in s.split() if t and t not in _GENERIC]
+
+
+def peer_hit(expected_name, engine_names):
+    """Does the engine's set contain this expected peer?
+
+    Loose on corporate suffixes and holding-company wrappers, strict on identity. Every meaningful
+    word of the SHORTER name has to appear in the longer one, so a single shared word is not enough:
+
+        PayPal                     matches  PayPal Holdings, Inc.      one token, contained
+        Cursor                     matches  Anysphere / Cursor         one token, contained
+        Adyen for Platforms        matches  Adyen N.V.                 "for" and "platforms" are generic
+        Fin Sustainable Logistics  MISSES   N-able, Inc.               no shared word at all
+        Legal Hero                 MISSES   Delivery Hero SE           shares only "hero"
+        Japan Crate                MISSES   Japan Exchange Group       shares only "japan"
+
+    Every line above is a real pair this function got wrong at some point. A one-word peer shorter
+    than four letters (Two, Fill) can only match on an exact name. That is a known limit and it
+    reads as a miss, which is the safe direction.
+    """
+    e = _tokens(expected_name)
+    if not e: return False
+    es = set(e)
+    for n in engine_names:
+        ms = set(_tokens(n))
+        if not ms: continue
+        if es == ms: return True
+        short, long = (es, ms) if len(es) <= len(ms) else (ms, es)
+        if short <= long and any(len(t) >= 4 for t in short): return True
+    return False

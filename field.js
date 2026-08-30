@@ -73,6 +73,7 @@ function ffBuildRows(r) {
     const when = responses.last_round_date ? prettyMonth(responses.last_round_date) : 'date not given';
     const kind = responses.last_round_type === 'SAFE or note cap' ? 'cap' : 'pre-money';
     rows.push({
+      group: 'Where you are today',
       parameter: 'Last round',
       basis: 'Marker only, feeds nothing',
       metric: { value: ffMoney(r.markerM), sub: kind },
@@ -88,6 +89,7 @@ function ffBuildRows(r) {
   if (anchor && anchor.post_median_m) {
     const medianLocal = cur === 'USD' ? anchor.post_median_m : fxConvert(anchor.post_median_m, 'USD', cur);
     rows.push({
+      group: 'Where you are today',
       parameter: 'Stage benchmark',
       basis: 'Market context, not a valuation of you',
       metric: { value: '$' + anchor.post_median_m.toFixed(1) + 'm', sub: responses.stage + ' median',
@@ -106,6 +108,7 @@ function ffBuildRows(r) {
   if (pc && runRateM > 0 && r.ntmM) {
     const a = runRateM * pc.ev_sales, b = r.ntmM * pc.ev_sales;
     rows.push({
+      group: 'Public trading multiples',
       parameter: 'Unrefined range',
       basis: 'Before any comparable set is chosen',
       metric: { value: ffMoney(runRateM) + ' · ' + ffMoney(r.ntmM), sub: 'ARR · NTM revenue' },
@@ -118,6 +121,7 @@ function ffBuildRows(r) {
     });
   } else if (pc) {
     rows.push({
+      group: 'Public trading multiples',
       parameter: 'Unrefined range',
       basis: 'Before any comparable set is chosen',
       metric: { value: 'no revenue yet' },
@@ -130,6 +134,7 @@ function ffBuildRows(r) {
 
   /* ---- 4. NTM revenue. */
   rows.push({
+    group: 'Public trading multiples',
     parameter: 'NTM revenue',
     basis: 'Median of your core peer set',
     metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'next twelve months',
@@ -148,6 +153,7 @@ function ffBuildRows(r) {
 
   /* ---- 5. Month-twelve ARR, same peers. */
   rows.push({
+    group: 'Public trading multiples',
     parameter: 'ARR, month 12',
     basis: 'Same peers, forward run-rate',
     metric: { value: r.exitArrM === null ? 'needs revenue' : ffMoney(r.exitArrM), sub: 'run-rate in a year',
@@ -162,6 +168,7 @@ function ffBuildRows(r) {
     ? ffMoney((responses.revenue_exact * 0.8) / 1e6) + ' to ' + ffMoney((responses.revenue_exact * 1.25) / 1e6)
     : (responses.revenue || 'pre-revenue');
   rows.push({
+    group: 'Private rounds',
     parameter: 'Comparable private rounds',
     basis: [responses.stage, sector].filter(Boolean).join(' · '),
     metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'matched on ' + revLabel + ' MRR' },
@@ -172,6 +179,7 @@ function ffBuildRows(r) {
 
   /* ---- 7 to 10. The paid rows. These stay locked after launch. */
   rows.push({
+    group: 'Public trading multiples',
     parameter: 'Growth-adjusted',
     basis: 'Fitted on the peer regression',
     metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'NTM revenue' },
@@ -179,6 +187,7 @@ function ffBuildRows(r) {
   });
 
   rows.push({
+    group: 'Discounted cash flow',
     parameter: 'Discounted cash flow',
     basis: 'Cost of capital from peer beta',
     metric: { value: 'your plan', sub: 'send a link and it opens',
@@ -188,6 +197,7 @@ function ffBuildRows(r) {
 
   if (r.ebitdaM) {
     rows.push({
+      group: 'Public trading multiples',
       parameter: 'NTM EBITDA',
       basis: 'Peer median, forward',
       metric: { value: ffMoney(r.ebitdaM), sub: 'last twelve months' },
@@ -197,6 +207,7 @@ function ffBuildRows(r) {
   }
 
   rows.push({
+    group: 'Private rounds',
     parameter: 'Precedents, growth-adjusted',
     basis: 'Fitted across the matched rounds',
     metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'NTM revenue' },
@@ -204,13 +215,37 @@ function ffBuildRows(r) {
   });
 
   rows.push({
+    group: "The reviewer's conclusion",
     parameter: 'Reviewer band',
     basis: 'Where inside these you actually sit',
     metric: { value: 'all rows', sub: 'read by a banker' },
     mult: null, locked: true, paid: true, conclusion: true
   });
 
-  return rows;
+  /* THE FIELD IS ORGANISED BY METHOD, and this is the part the landing page always showed and
+     the reveal did not. Daniil, 29-Aug: the reveal field "does not really look like the one we have
+     on first page, no split into public trading multiples vs private rounds vs DCF". A banker reads
+     a football field by method, because the question is never "what is the number" but "which
+     approaches agree and which do not". Four rows in a flat list do not answer that. Four rows
+     under three headings do.
+
+     THE DISCOUNTED CASH FLOW ROW STAYS IN THE FIELD EVEN THOUGH IT IS NOT DISPLAYED. It sits under
+     its own heading with a redacted bar, so a founder can see that the method is run and held back,
+     rather than concluding we cannot do it. A method missing from the exhibit reads as a method we
+     do not have. */
+  const order = ffGroupOrder();
+  return rows
+    .map(function (row, i) { return [order.indexOf(row.group || ''), i, row]; })
+    .sort(function (x, y) { return (x[0] - y[0]) || (x[1] - y[1]); })
+    .map(function (t) { return t[2]; });
+}
+
+/* The reading order of the exhibit. Context first, then the two market-observed methods, then the
+   intrinsic one, then the human. A group not listed here sorts to the front, which is loud enough
+   to notice. */
+function ffGroupOrder() {
+  return ['Where you are today', 'Public trading multiples', 'Private rounds',
+          'Discounted cash flow', "The reviewer's conclusion"];
 }
 
 /* ---------------- render ---------------- */
@@ -244,7 +279,12 @@ function renderField(r) {
   let html = '<div class="ffx-head"><div>Method</div><div>Metric</div><div>Multiple</div>' +
     '<div>Implied pre-money, ' + escapeHtml(cur) + 'm</div></div>';
 
+  let lastGroup = null;
   rows.forEach(function (row, i) {
+    if ((row.group || '') !== lastGroup) {
+      lastGroup = row.group || '';
+      html += '<div class="ff-group"><span>' + escapeHtml(lastGroup) + '</span></div>';
+    }
     let cell;
     if (row.locked) {
       /* Neutral position, never the real one. */

@@ -57,6 +57,17 @@
     "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
     "score": 18.4,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Better.com",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 8.79,
+    "reason": "shares the language of mortgage; same type of business; same kind of customer; same AI stance",
+    "score": 9.9,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -92,7 +103,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 58,
+  "private_window_months": 63,
   "secondary": [
    {
     "company": "Upstart Holdings, Inc.",

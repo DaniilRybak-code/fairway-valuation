@@ -3,12 +3,13 @@
 
   python selector/golden.py --write    regenerate the fixtures (do this deliberately)
   python selector/golden.py            check, exit 1 and print a diff if anything moved
+  python selector/golden.py --peers    report coverage against the frozen human peer sets
 """
 import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import match_reference as M
-from golden_profiles import PROFILES
+from golden_profiles import PROFILES, EXPECTED_PEERS, peer_hit
 FIX = os.path.join(HERE, 'golden')
 
 def snap(prof):
@@ -37,7 +38,51 @@ def snap(prof):
     out['private_range'] = M.private_range(prof, picked, priv_tier)
     return out
 
+def peer_coverage():
+    """How much of the human peer set the engine actually surfaced, fixture by fixture.
+
+    Reports. Does not assert. A peer we do not hold in the file cannot be surfaced, so a low number
+    is usually a data gap rather than a matcher defect: read it next to the sourcing list before
+    touching weights. See the note above EXPECTED_PEERS in golden_profiles.py for why this is a
+    frozen input and not a live search.
+    """
+    have = [(k, l, p) for k, l, p in PROFILES if EXPECTED_PEERS.get(k)]
+    if not have:
+        print('No expected peer sets recorded yet. Run the two searches for a fixture and add it')
+        print('to EXPECTED_PEERS in golden_profiles.py.')
+        return 0
+    tot_hit = tot_held = tot_exp = 0
+    universe = ([r['company_name'] for r in M.listed]
+                + [r['company_name'] for r in M.private])
+    for key, label, prof in have:
+        spec = EXPECTED_PEERS[key]
+        got = snap(prof)
+        names = ([x['company'] for x in got.get('core', [])]
+                 + [x['company'] for x in got.get('secondary', [])]
+                 + [x['company'] for x in got.get('private', [])])
+        hits = [e for e in spec['peers'] if peer_hit(e, names)]
+        held = [e for e in spec['peers'] if peer_hit(e, universe)]
+        # A peer we do not hold in the file cannot be surfaced. Separating the two is the whole
+        # point: the first column is a matcher question, the third is a sourcing question.
+        held_missed = [e for e in held if e not in hits]
+        absent = [e for e in spec['peers'] if e not in held]
+        tot_hit += len(hits); tot_held += len(held); tot_exp += len(spec['peers'])
+        print('%-16s surfaced %d  held %d  human set %d   %s'
+              % (key, len(hits), len(held), len(spec['peers']), spec.get('confidence', '')))
+        if hits: print('    surfaced       ', ', '.join(hits))
+        if held_missed: print('    HELD, NOT SHOWN', ', '.join(held_missed))
+        if absent: print('    not in our data', ', '.join(absent))
+    print('\n%d fixtures, %d human-verified peers between them.' % (len(have), tot_exp))
+    print('  %3d of those peers exist anywhere in our data (%.0f%%)   <- SOURCING'
+          % (tot_held, 100.0 * tot_held / tot_exp if tot_exp else 0))
+    print('  %3d of the %d we hold were actually surfaced          <- MATCHER'
+          % (tot_hit, tot_held))
+    print('%d of %d fixtures have a human peer set recorded' % (len(have), len(PROFILES)))
+    return 0
+
+
 def main():
+    if '--peers' in sys.argv: return peer_coverage()
     write = '--write' in sys.argv
     os.makedirs(FIX, exist_ok=True)
     bad = 0
