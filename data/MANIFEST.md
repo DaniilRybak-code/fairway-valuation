@@ -49,10 +49,37 @@ Also fine: attach the CSV or the .xlsx to the conversation.
 | 2026-08-30 | Private financing transaction database, 58 valuation-backed rounds | 58 | transcribed from screenshot, NO RAW | `data/private-rounds-master-30aug.csv` | **no**, source URLs missing |
 | 2026-08-30 | **Listed software, refreshed pull.** Growth redefined as CY+0 to CY+2 CAGR; recurring revenue % added | 167 | `data/raw/2026-08-30_capiq-listed-software.csv` | `data/peers-software.csv` | **yes** |
 | earlier | Listed software, first pull, superseded above | 166 | not recorded | `data/peers-software.csv` | yes |
-| earlier | Listed fintech | 87 | not recorded | `data/peers-fintech.csv` | yes |
+| 2026-08-30 | **Listed fintech, payments, exchanges, market data. Refreshed pull.** | 85 | `data/raw/2026-08-30_capiq-listed-fintech.csv` | `data/peers-fintech.csv` | **yes** |
+| 2026-08-30 | **Company-disclosed recurring revenue and retention**, five research passes, software set | 68 recurring + 42 retention | no raw, sourced from filings | `data/peers-software.csv` | **yes** |
+| earlier | Listed fintech, first pull, superseded above | 87 | not recorded | `data/peers-fintech.csv` | yes |
 | earlier | Listed consumer commerce | 71 | not recorded | `data/peers-ecommerce.csv` | yes |
 | earlier | Private rounds, software and fintech | 99 | not recorded | `data/private-rounds.csv` | yes |
 | earlier | Private rounds, consumer | 50 | not recorded | `data/private-rounds-consumer.csv` | yes |
+
+## A defect this found, and the rule that comes out of it
+
+Enriching the retention column on 30 August exposed that **twelve retention values were not
+retention at all**. Every one of the twelve software names that carried a recurring-revenue
+percentage had the identical number sitting in `nrr_pct`: Adobe 96 and 96, MongoDB 97 and 97,
+Shopify 22 and 22. Shopify is the proof, because no going concern retains 22% of its revenue.
+The recurring share had been written into the retention column, and it had been feeding the
+retention spread we quote to founders.
+
+All twelve were cleared. Eight were then re-sourced from filings and are back with the real figure:
+BlackLine 102, Five9 106, GitLab 118, MongoDB 121, Sprinklr 104, Tecsys 106 (its Elite product line
+only, not the company), plus Q2 Holdings and RingCentral marked stale. Four were confirmed to
+disclose nothing at all: Adobe, Shopify, Workday, and Vitec, whose own materials publish recurring
+revenue as a share of sales, which is precisely the figure that got mistaken for retention.
+
+**THE RULE. Every metric column carries its own status and source, and a value with neither is
+marked UNSOURCED_NEEDS_VERIFICATION rather than trusted.** Twelve rows carry that mark today. They
+sit in a plausible retention range and are probably right, but nothing records where they came from,
+so they cannot be defended to a founder. They stay in the file with the warning rather than being
+deleted, because deleting real data to tidy a column is worse than carrying it honestly.
+
+Two statuses distinguish how a figure was arrived at, and the difference is not cosmetic:
+`DISCLOSED` means the company stated the percentage itself; `CALCULATED` means it disclosed the
+numerator and denominator separately and the division is ours.
 
 ## Refreshing a listed pull
 

@@ -1,5 +1,5 @@
 # Fairway listed fintech and financial-technology screen. 87 names.
-# as_of=2026-08-21 currency=USD
+# as_of=2026-08-30  refreshed from 2026-08-30_capiq-listed-fintech.csv. Market columns replaced, analysis columns kept.
 # CORRECTION 24-Aug-2026: MercadoLibre revenue_ntm_musd read 46939 and the source screen says
 # 46874. Found because the same name appears in the listed consumer and commerce pull, where
 # every other MercadoLibre field is byte-identical. Both figures round to the same 2.2x, so no
@@ -25,91 +25,91 @@
 # NASDAQGS: / NASDAQGM: / NASDAQCM:. They do not join without normalising the tier suffix, and
 # without that normalisation nCino enters the database twice as two different companies.
 # Duplicates across the two pulls: NYSE:BILL, NYSE:QTWO, NASDAQ:NCNO. Count each once.
-row,company_name,exchange_ticker,country,market_cap_musd,net_debt_musd,minority_interest_musd,associates_musd,equity_to_av_bridge_musd,enterprise_value_musd,revenue_ntm_musd,gross_margin_pct,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_ntm_pct,paying_users_k,paying_users_basis
-9,Visa Inc.,NYSE:V,United States,681083,10066,0,0,10066,691149,49412,80,39529,14.0,17.5,15,,
-10,Mastercard Incorporated,NYSE:MA,United States,508638,12891,-5,282,12604,521242,39468,49,19438,13.2,26.8,14,,
-11,American Express Company,NYSE:AXP,United States,226904,13340,0,0,13340,240244,83076,12,10065,2.9,23.9,10,,
-12,"PayPal Holdings, Inc.",NASDAQ:PYPL,United States,52654,2965,0,193,2772,55426,35404,46,16413,1.6,3.4,4,,
-13,"Block, Inc.",NYSE:XYZ,United States,49361,433,-36,0,397,49759,27247,42,11559,1.8,4.3,7,,
-14,"Fidelity National Information Services, Inc.",NYSE:FIS,United States,21319,20512,3,13,20502,41821,13953,37,5169,3.0,8.1,29,,
-15,"Fiserv, Inc.",NASDAQ:FISV,United States,27960,27407,22,1031,26398,54358,19900,61,12175,2.7,4.5,-1,,
-16,Global Payments Inc.,NYSE:GPN,United States,24739,18147,859,0,19006,43745,12694,78,9872,3.4,4.4,31,,
-17,The Western Union Company,NYSE:WU,United States,2277,1777,0,0,1777,4054,4279,37,1601,0.9,2.5,1,,
-18,"Shift4 Payments, Inc.",NYSE:FOUR,United States,3785,4211,123,0,4334,8119,5471,69,3793,1.5,2.1,22,,
-19,"Toast, Inc.",NYSE:TOST,United States,21178,-1713,0,0,-1713,19465,8133,27,2215,2.4,8.8,22,,
-20,"BILL Holdings, Inc.",NYSE:BILL,United States,4078,-40,0,0,-40,4038,1809,84,1517,2.2,2.7,10,,
-21,DLocal Limited,NASDAQ:DLO,Uruguay,4452,-807,0,0,-807,3645,1823,38,689,2.0,5.3,50,,
-22,Flywire Corporation,NASDAQ:FLYW,United States,2377,-293,0,0,-293,2085,813,64,520,2.6,4.0,27,,
-23,"EVERTEC, Inc.",NYSE:EVTC,United States,1786,1065,78,18,1124,2910,1142,48,550,2.5,5.3,18,,
-24,"Euronet Worldwide, Inc.",NASDAQ:EEFT,United States,2621,623,15,0,638,3259,4552,41,1875,0.7,1.7,5,,
-25,"Corpay, Inc.",NYSE:CPAY,United States,27389,7558,360,0,7919,35307,5513,78,4314,6.4,8.2,18,,
-26,Paysafe Limited,NYSE:PSFE,United Kingdom,359,2321,0,0,2321,2679,1860,56,1040,1.4,2.6,6,,
-27,Payoneer Global Inc.,NASDAQ:PAYO,United States,2409,-260,0,0,-260,2149,1179,84,989,1.8,2.2,6,,
-28,"Remitly Global, Inc.",NASDAQ:RELY,United States,5646,-638,0,0,-638,5007,2172,66,1423,2.3,3.5,23,,
-29,"Affirm Holdings, Inc.",NASDAQ:AFRM,United States,25797,7322,0,0,7322,33119,4961,46,2261,6.7,14.6,32,,
-30,"SoFi Technologies, Inc.",NASDAQ:SOFI,United States,24424,49,0,0,49,24472,5441,6,322,4.5,76.0,37,,
-31,"Upstart Holdings, Inc.",NASDAQ:UPST,United States,2949,1600,0,0,1600,4548,1617,0,,2.8,,37,,
-32,"Marqeta, Inc.",NASDAQ:MQ,United States,1703,-694,0,0,-694,1009,748,70,522,1.3,1.9,14,,
-33,LendingClub Corporation,NYSE:LC,United States,2126,-901,0,0,-901,1224,1146,6,70,1.1,17.5,8,,
-34,"Enova International, Inc.",NYSE:ENVA,United States,6049,4910,0,1,4909,10958,4266,57,2444,2.6,4.5,18,,
-35,"Coinbase Global, Inc.",NASDAQ:COIN,United States,49203,-2121,0,0,-2121,47082,5586,85,4767,8.4,9.9,-26,,
-36,"Robinhood Markets, Inc.",NASDAQ:HOOD,United States,97218,-980,61,0,-919,96299,5869,95,5592,16.4,17.2,14,,
-37,Bullish,NYSE:BLSH,Cayman Islands,4612,205,45,0,250,4862,372,0,,13.1,,25,,
-38,"Bakkt, Inc.",NYSE:BKKT,United States,387,-52,0,11,-62,325,,0,,,,-49,,
-39,Klarna Group plc,NYSE:KLAR,United Kingdom,5433,-3062,225,0,-2837,2596,4372,36,1572,0.6,1.7,20,,
-40,"Chime Financial, Inc.",NASDAQ:CHYM,United States,12410,-980,0,0,-980,11430,3019,88,2657,3.8,4.3,26,,
-41,"Jack Henry & Associates, Inc.",NASDAQ:JKHY,United States,11809,116,0,0,116,11925,2692,43,1164,4.4,10.2,6,,
-42,"Q2 Holdings, Inc.",NYSE:QTWO,United States,3985,-65,0,0,-65,3920,927,58,538,4.2,7.3,12,,
-43,"nCino, Inc.",NASDAQ:NCNO,United States,2259,224,14,0,238,2497,658,67,440,3.8,5.7,9,,
-44,"Donnelley Financial Solutions, Inc.",NYSE:DFIN,United States,1186,186,0,0,186,1372,796,62,493,1.7,2.8,4,,
-45,"SS&C Technologies Holdings, Inc.",NASDAQ:SSNC,United States,19465,7329,70,296,7103,26568,6938,59,4096,3.8,6.5,8,,
-46,"Broadridge Financial Solutions, Inc.",NYSE:BR,United States,20772,3117,0,0,3117,23889,7855,31,2468,3.0,9.7,6,,
-47,S&P Global Inc.,NYSE:SPGI,United States,127133,11614,5139,613,16140,143273,15117,0,,9.5,,-5,,
-48,Moody's Corporation,NYSE:MCO,United States,87165,6124,141,483,5782,92947,8555,74,6368,10.9,14.6,8,,
-49,MSCI Inc.,NYSE:MSCI,United States,40966,6192,0,0,6192,47157,3669,83,3029,12.9,15.6,12,,
-50,FactSet Research Systems Inc.,NYSE:FDS,United States,10666,1266,0,0,1266,11933,2579,53,1376,4.6,8.7,7,,
-51,"Morningstar, Inc.",NASDAQ:MORN,United States,8102,1381,0,0,1381,9483,2727,0,,3.5,,9,,
-52,"Intercontinental Exchange, Inc.",NYSE:ICE,United States,90525,19460,101,499,19062,109587,11197,0,,9.8,,11,,
-53,CME Group Inc.,NASDAQ:CME,United States,98877,1593,0,0,1593,100470,7101,0,,14.1,,8,,
-54,"Cboe Global Markets, Inc.",CBOE:CBOE,United States,31407,-774,0,2,-776,30631,2922,0,,10.5,,19,,
-55,"Nasdaq, Inc.",NASDAQ:NDAQ,United States,54903,8762,5,559,8208,63111,6149,0,,10.3,,13,,
-56,MarketAxess Holdings Inc.,NASDAQ:MKTX,United States,5705,-167,14,0,-153,5552,920,0,,6.0,,5,,
-57,Tradeweb Markets Inc.,NASDAQ:TW,United States,22582,-1908,704,27,-1231,21351,2481,0,,8.6,,14,,
-58,Adyen N.V.,ENXTAM:ADYEN,Netherlands,39578,-13703,0,0,-13703,25876,3706,90,3331,7.0,7.8,20,,
-59,Wise plc,LSE:WISE,United Kingdom,13216,-4902,0,0,-4902,8314,3007,79,2369,2.8,3.5,22,,
-60,Nexi S.p.A.,BIT:NEXI,Italy,5771,4590,11,13,4589,10360,4304,0,,2.4,,1,,
-61,"Boku, Inc.",AIM:BOKU,United Kingdom,454,-241,0,0,-241,213,136,98,133,1.6,1.6,6,,
-62,CAB Payments Holdings plc,LSE:CABP,United Kingdom,285,-685,0,0,-685,-399,177,0,,-2.3,,14,,
-63,London Stock Exchange Group plc,LSE:LSEG,United Kingdom,56843,12346,3144,17,15473,72316,13900,89,12345,5.2,5.9,7,,
-64,Deutsche Boerse AG,XTRA:DB1,Germany,59542,5041,431,142,5330,64871,7793,0,,8.3,,8,,
-65,Euronext N.V.,ENXTPA:ENX,Netherlands,19326,1883,216,19,2080,21406,2485,0,,8.6,,14,,
-66,Al Ansari Financial Services PJSC,DFM:ALANSARI,United Arab Emirates,1940,-139,0,0,-139,1801,,0,,,,-100,,
-67,"MercadoLibre, Inc.",NASDAQ:MELI,Uruguay,97476,7462,0,0,7462,104938,46874,44,20781,2.2,5.0,46,,
-68,Nu Holdings Ltd.,NYSE:NU,Brazil,70431,,2,93,-91,70340,25112,43,10868,2.8,6.5,46,,
-69,StoneCo Ltd.,NASDAQ:STNE,Cayman Islands,2158,1692,8,14,1686,3845,2965,57,1678,1.3,2.3,11,,
-70,PagSeguro Digital Ltd.,NYSE:PAGS,Brazil,2376,75,0,0,75,2451,4250,38,1621,0.6,1.5,11,,
-71,XP Inc.,NASDAQ:XP,Cayman Islands,8531,-24684,0,718,-25402,-16871,4098,68,2784,-4.1,-6.1,17,,
-72,"Inter & Co, Inc.",NASDAQ:INTR,Brazil,2380,2708,21,2,2728,5107,2282,9,197,2.2,25.9,36,,
-73,"B3 S.A. - Brasil, Bolsa, Balcao",BOVESPA:B3SA3,Brazil,14617,-38,5,12,-45,14571,2275,0,,6.4,,20,,
-74,"Bolsa Mexicana de Valores, S.A.B. de C.V.",BMV:BOLSA A,Mexico,1221,-174,16,1,-159,1062,293,0,,3.6,,14,,
-75,Bolsas y Mercados Argentinos S.A.,BASE:BYMA,Argentina,1296,-1086,0,13,-1099,197,276,0,,0.7,,45,,
-76,One97 Communications Limited,NSEI:PAYTM,India,10922,-1525,0,0,-1525,9397,1176,66,776,8.0,12.1,23,,
-77,One MobiKwik Systems Limited,NSEI:MOBIKWIK,India,162,-65,0,0,-65,97,147,35,51,0.7,1.9,13,,
-78,Indian Energy Exchange Limited,NSEI:IEX,India,1150,-190,0,0,-190,960,72,0,,13.4,,11,,
-79,Multi Commodity Exchange of India Limited,NSEI:MCX,India,8488,-414,0,0,-414,8074,321,0,,25.2,,35,,
-80,BSE Limited,NSEI:BSE,India,13817,-582,13,0,-569,13247,708,0,,18.7,,30,,
-81,CRISIL Limited,NSEI:CRISIL,India,3451,-62,0,0,-62,3389,494,0,,6.9,,17,,
-82,Hong Kong Exchanges and Clearing Limited,SEHK:388,Hong Kong,67875,-21258,38,113,-21333,46542,3945,0,,11.8,,13,,
-83,"ZhongAn Online P&C Insurance Co., Ltd.",SEHK:6060,China,2261,788,0,697,91,2352,5501,0,,0.4,,8,,
-84,"Japan Exchange Group, Inc.",TSE:8697,Japan,14362,-85,81,135,-138,14224,1498,0,,9.5,,20,,
-85,"GMO Payment Gateway, Inc.",TSE:3769,Japan,4405,-936,22,37,-950,3455,646,67,429,5.3,8.0,6,,
-86,ASX Limited,ASX:ASX,Australia,7875,-3035,0,0,-3035,4840,952,0,,5.1,,11,,
-87,Iress Limited,ASX:IRE,Australia,843,87,0,0,87,931,367,70,257,2.5,3.6,-1,,
-88,HUB24 Limited,ASX:HUB,Australia,4452,0,0,0,0,4453,411,100,411,10.8,10.8,19,,
-89,Netwealth Group Limited,ASX:NWL,Australia,3845,-114,0,0,-114,3731,315,0,,11.8,,23,,
-90,Tyro Payments Limited,ASX:TYR,Australia,342,-53,0,1,-54,288,361,45,163,0.8,1.8,7,,
-91,Zip Co Limited,ASX:ZIP,Australia,2295,1763,0,0,1763,4058,1156,47,538,3.5,7.5,24,,
-92,OFX Group Limited,ASX:OFX,Australia,136,-51,0,4,-55,81,155,0,,0.5,,3,,
-93,EML Payments Limited,ASX:EML,Australia,77,36,0,0,36,112,154,75,115,0.7,1.0,9,,
-94,JSE Limited,JSE:JSE,South Africa,779,-106,0,24,-130,648,226,0,,2.9,,14,,
-95,HPS S.A.,CBSE:HPS,Morocco,518,21,0,7,13,532,183,0,,2.9,,10,,
+row,company_name,exchange_ticker,country,market_cap_musd,net_debt_musd,minority_interest_musd,associates_musd,equity_to_av_bridge_musd,enterprise_value_musd,revenue_ntm_musd,gross_margin_pct,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_ntm_pct,paying_users_k,paying_users_basis,revenue_local_cy0,revenue_local_cy2,revenue_growth_cagr_cy0_cy2_pct,recurring_revenue_pct,as_of
+9,Visa Inc.,NYSE:V,United States,681083,10066,0,0,10066,691149,49412,80.0,39529,14.0,17.5,15,,,41180,51940,12,,2026-08-30
+10,Mastercard Incorporated,NYSE:MA,United States,508638,12891,-5,282,12604,521242,39425,49.3,19417,13.2,26.8,14,,,32708,41968,13,,2026-08-30
+11,American Express Company,NYSE:AXP,United States,226904,13340,0,0,13340,240244,83076,12.1,10065,2.9,23.9,10,,,72137,86772,10,,2026-08-30
+12,"PayPal Holdings, Inc.",NASDAQ:PYPL,United States,52654,2965,0,193,2772,55426,35404,46.4,16413,1.6,3.4,4,,,33296,36208,4,,2026-08-30
+13,"Block, Inc.",NYSE:XYZ,United States,49361,433,-36,0,397,49759,27247,42.4,11559,1.8,4.3,7,,,24283,28948,9,,2026-08-30
+14,"Fidelity National Information Services, Inc.",NYSE:FIS,United States,21319,20512,3,13,20502,41821,13953,37.0,5169,3.0,8.1,29,,,10601,14258,16,,2026-08-30
+15,"Fiserv, Inc.",NASDAQ:FISV,United States,27960,27407,22,1031,26398,54358,19900,61.2,12175,2.7,4.5,-1,,,19806,20339,1,,2026-08-30
+16,Global Payments Inc.,NYSE:GPN,United States,24739,18147,859,0,19006,43745,12694,77.8,9872,3.4,4.4,31,,,9446,13009,17,,2026-08-30
+17,The Western Union Company,NYSE:WU,United States,2277,1777,0,0,1777,4054,4279,37.4,1601,0.9,2.5,1,,,4088,4362,3,,2026-08-30
+18,"Shift4 Payments, Inc.",NYSE:FOUR,United States,3785,4211,123,0,4334,8119,5471,69.3,3793,1.5,2.1,22,,,4195,5853,18,,2026-08-30
+19,"Toast, Inc.",NYSE:TOST,United States,21178,-1713,0,0,-1713,19465,8133,27.2,2215,2.4,8.8,22,,,6134,8844,20,,2026-08-30
+20,"BILL Holdings, Inc.",NYSE:BILL,United States,4078,-40,0,0,-40,4038,1809,83.9,1517,2.2,2.7,10,,,1537,1915,12,,2026-08-30
+21,DLocal Limited,NASDAQ:DLO,Uruguay,4452,-807,0,0,-807,3645,1823,37.8,689,2.0,5.3,50,,,1054,2031,39,,2026-08-30
+22,Flywire Corporation,NASDAQ:FLYW,United States,2377,-293,0,0,-293,2085,813,64.0,520,2.6,4.0,27,,,598,879,21,,2026-08-30
+23,"EVERTEC, Inc.",NYSE:EVTC,United States,1786,1065,78,18,1124,2910,1142,48.2,550,2.5,5.3,18,,,924,1180,13,,2026-08-30
+24,"Euronet Worldwide, Inc.",NASDAQ:EEFT,United States,2621,623,15,0,638,3259,4552,41.2,1875,0.7,1.7,5,,,4245,4694,5,,2026-08-30
+25,"Corpay, Inc.",NYSE:CPAY,United States,27389,7558,360,0,7919,35307,5513,78.3,4314,6.4,8.2,18,,,4517,5780,13,,2026-08-30
+26,Paysafe Limited,NYSE:PSFE,United Kingdom,359,2321,0,0,2321,2679,1860,55.9,1040,1.4,2.6,6,,,1704,1916,6,,2026-08-30
+27,Payoneer Global Inc.,NASDAQ:PAYO,United States,2409,-260,0,0,-260,2149,1179,83.9,989,1.8,2.2,6,,,1060,1238,8,,2026-08-30
+28,"Remitly Global, Inc.",NASDAQ:RELY,United States,5646,-638,0,0,-638,5007,2172,65.5,1423,2.3,3.5,23,,,1620,2373,21,,2026-08-30
+29,"Affirm Holdings, Inc.",NASDAQ:AFRM,United States,25797,7322,0,0,7322,34118,4961,48.7,2415,6.9,14.1,32,,,3649,5921,27,,2026-08-30
+30,"SoFi Technologies, Inc.",NASDAQ:SOFI,United States,24424,49,0,0,49,24472,5441,5.9,322,4.5,76.0,37,,,3557,6131,31,,2026-08-30
+31,"Upstart Holdings, Inc.",NASDAQ:UPST,United States,2949,1600,0,0,1600,4548,1617,,,2.8,,37,,,1036,1860,34,,2026-08-30
+32,"Marqeta, Inc.",NASDAQ:MQ,United States,1703,-694,0,0,-694,1009,748,69.8,522,1.3,1.9,14,,,618,808,14,,2026-08-30
+33,LendingClub Corporation,NYSE:LC,United States,2126,-901,0,0,-901,1224,1146,6.1,70,1.1,17.5,8,,,994,1255,12,,2026-08-30
+34,"Enova International, Inc.",NYSE:ENVA,United States,6049,4910,0,1,4909,10958,4266,57.3,2444,2.6,4.5,18,,,3151,4538,20,,2026-08-30
+35,"Coinbase Global, Inc.",NASDAQ:COIN,United States,49203,-2121,0,0,-2121,47082,5586,85.3,4767,8.4,9.9,-26,,,7234,6812,-3,,2026-08-30
+36,"Robinhood Markets, Inc.",NASDAQ:HOOD,United States,97218,-980,61,0,-919,96299,5869,95.3,5592,16.4,17.2,14,,,4529,6487,20,,2026-08-30
+37,Bullish,NYSE:BLSH,Cayman Islands,4612,205,45,0,250,4862,372,,,13.1,,25,,,285,406,19,,2026-08-30
+38,"Bakkt, Inc.",NYSE:BKKT,United States,387,-52,0,11,-62,325,,,,,,-49,,,2335,,-100,,2026-08-30
+39,Klarna Group plc,NYSE:KLAR,United Kingdom,5433,-3062,225,0,-2837,2596,4372,36.0,1572,0.6,1.7,20,,,3503,4865,18,,2026-08-30
+40,"Chime Financial, Inc.",NASDAQ:CHYM,United States,12410,-980,0,0,-980,11430,3019,88.0,2657,3.8,4.3,26,,,2168,3290,23,,2026-08-30
+41,"Jack Henry & Associates, Inc.",NASDAQ:JKHY,United States,11809,116,0,0,116,11874,2692,43.2,1164,4.4,10.2,6,,,2455,2780,6,,2026-08-30
+42,"Q2 Holdings, Inc.",NYSE:QTWO,United States,3985,-65,0,0,-65,3920,927,58.0,538,4.2,7.3,12,,,792,975,11,,2026-08-30
+43,"nCino, Inc.",NASDAQ:NCNO,United States,2259,224,14,0,238,2497,658,67,440,3.8,5.7,9,,,,,,,2026-08-21
+44,"Donnelley Financial Solutions, Inc.",NYSE:DFIN,United States,1186,186,0,0,186,1372,796,61.9,493,1.7,2.8,4,,,750,809,4,,2026-08-30
+45,"SS&C Technologies Holdings, Inc.",NASDAQ:SSNC,United States,19465,7329,70,296,7103,26568,6938,59.0,4096,3.8,6.5,8,,,6246,7096,7,,2026-08-30
+46,"Broadridge Financial Solutions, Inc.",NYSE:BR,United States,20772,3117,0,0,3117,23889,7855,31.4,2468,3.0,9.7,6,,,7071,8045,7,,2026-08-30
+47,S&P Global Inc.,NYSE:SPGI,United States,127133,11614,5139,613,16140,143273,15117,,,9.5,,-5,,,15327,15642,1,,2026-08-30
+48,Moody's Corporation,NYSE:MCO,United States,87165,6124,141,483,5782,92947,8555,74.4,6368,10.9,14.6,8,,,7694,8889,7,,2026-08-30
+49,MSCI Inc.,NYSE:MSCI,United States,40966,6192,0,0,6192,47157,3669,82.6,3029,12.9,15.6,12,,,3136,3822,10,,2026-08-30
+50,FactSet Research Systems Inc.,NYSE:FDS,United States,10666,1266,0,0,1266,11933,2579,53.4,1376,4.6,8.7,7,,,2354,2654,6,,2026-08-30
+51,"Morningstar, Inc.",NASDAQ:MORN,United States,8102,1381,0,0,1381,9483,2727,,,3.5,,9,,,2430,2801,7,,2026-08-30
+52,"Intercontinental Exchange, Inc.",NYSE:ICE,United States,90525,19460,101,499,19062,109587,11197,,,9.8,,11,,,9907,11602,8,,2026-08-30
+53,CME Group Inc.,NASDAQ:CME,United States,98877,1593,0,0,1593,100470,7101,,,14.1,,8,,,6525,7364,6,,2026-08-30
+54,"Cboe Global Markets, Inc.",CBOE:CBOE,United States,31407,-774,0,2,-776,30631,2922,,,10.5,,19,,,2411,2975,11,,2026-08-30
+55,"Nasdaq, Inc.",NASDAQ:NDAQ,United States,54903,8762,5,559,8208,63111,6149,,,10.3,,13,,,5226,6398,11,,2026-08-30
+56,MarketAxess Holdings Inc.,NASDAQ:MKTX,United States,5705,-167,14,0,-153,5552,920,,,6.0,,5,,,848,955,6,,2026-08-30
+57,Tradeweb Markets Inc.,NASDAQ:TW,United States,22582,-1908,704,27,-1231,21351,2481,,,8.6,,14,,,2055,2616,13,,2026-08-30
+58,Adyen N.V.,ENXTAM:ADYEN,Netherlands,39578,-13703,0,0,-13703,25876,3706,89.9,3331,7.0,7.8,20,,,2383,3478,21,,2026-08-30
+59,Wise plc,LSE:WISE,United Kingdom,13216,-4902,0,0,-4902,8314,3007,78.8,2369,2.8,3.5,22,,,1655,2367,20,,2026-08-30
+60,Nexi S.p.A.,BIT:NEXI,Italy,5771,4590,11,13,4589,10360,4304,,,2.4,,1,,,3594,3727,2,,2026-08-30
+61,"Boku, Inc.",AIM:BOKU,United Kingdom,454,-241,0,0,-241,213,136,97.8,133,1.6,1.6,6,,,128,158,11,,2026-08-30
+62,CAB Payments Holdings plc,LSE:CABP,United Kingdom,285,-685,0,0,-685,-399,177,,,,,14,,,111,134,10,,2026-08-30
+63,London Stock Exchange Group plc,LSE:LSEG,United Kingdom,56843,12346,3144,17,15473,72316,13900,88.8,12345,5.2,5.9,7,,,9349,10523,6,,2026-08-30
+64,Deutsche Boerse AG,XTRA:DB1,Germany,59542,5041,431,142,5330,64871,7793,,,8.3,,8,,,6034,6812,6,,2026-08-30
+65,Euronext N.V.,ENXTPA:ENX,Netherlands,19326,1883,216,19,2080,21406,2485,,,8.6,,14,,,1816,2181,10,,2026-08-30
+66,Al Ansari Financial Services PJSC,DFM:ALANSARI,United Arab Emirates,1940,-139,0,0,-139,1801,,0,,,,-100,,,,,,,2026-08-21
+67,"MercadoLibre, Inc.",NASDAQ:MELI,Uruguay,97476,7462,0,0,7462,104938,46874,44.3,20781,2.2,5.0,46,,,28621,53210,36,,2026-08-30
+68,Nu Holdings Ltd.,NYSE:NU,Brazil,70431,,2,93,-91,70340,25112,43.3,10868,2.8,6.5,46,,,15652,27420,32,,2026-08-30
+69,StoneCo Ltd.,NASDAQ:STNE,Cayman Islands,2158,1692,8,14,1686,3845,2965,56.6,1678,1.3,2.3,11,,,14353,15822,5,,2026-08-30
+70,PagSeguro Digital Ltd.,NYSE:PAGS,Brazil,2376,75,0,0,75,2451,4250,38.1,1621,0.6,1.5,11,,,20348,22485,5,,2026-08-30
+71,XP Inc.,NASDAQ:XP,Cayman Islands,8531,-24684,0,718,-25402,-16871,4098,67.9,2784,,,17,,,18298,22415,11,,2026-08-30
+72,"Inter & Co, Inc.",NASDAQ:INTR,Brazil,2380,2708,21,2,2728,5107,2282,8.6,197,2.2,25.9,36,,,8386,12896,24,,2026-08-30
+73,"B3 S.A. - Brasil, Bolsa, Balcao",BOVESPA:B3SA3,Brazil,14617,-38,5,12,-45,14571,2275,,,6.4,,20,,,9985,12285,11,,2026-08-30
+74,"Bolsa Mexicana de Valores, S.A.B. de C.V.",BMV:BOLSA A,Mexico,1221,-174,16,1,-159,1062,293,,,3.6,,14,,,4470,5118,7,,2026-08-30
+75,Bolsas y Mercados Argentinos S.A.,BASE:BYMA,Argentina,1296,-1086,0,13,-1099,197,276,,,0.7,,45,,,191,380,41,,2026-08-30
+76,One97 Communications Limited,NSEI:PAYTM,India,10922,-1525,0,0,-1525,9397,1176,66.0,776,8.0,12.1,23,,,80785,125523,25,,2026-08-30
+77,One MobiKwik Systems Limited,NSEI:MOBIKWIK,India,162,-65,0,0,-65,97,147,34.7,51,0.7,1.9,13,,,11548,15819,17,,2026-08-30
+78,Indian Energy Exchange Limited,NSEI:IEX,India,1150,-190,0,0,-190,960,72,,,13.4,,11,,,5789,6884,9,,2026-08-30
+79,Multi Commodity Exchange of India Limited,NSEI:MCX,India,8488,-414,0,0,-414,8074,321,,,25.2,,35,,,16946,33390,40,,2026-08-30
+80,BSE Limited,NSEI:BSE,India,13817,-582,13,0,-569,13247,708,,,18.7,,30,,,41937,72661,32,,2026-08-30
+81,CRISIL Limited,NSEI:CRISIL,India,3451,-62,0,0,-62,3389,494,,,6.9,,17,,,35856,49993,18,,2026-08-30
+82,Hong Kong Exchanges and Clearing Limited,SEHK:388,Hong Kong,67875,-21258,38,113,-21333,46542,3945,,,11.8,,13,,,28541,32935,7,,2026-08-30
+83,"ZhongAn Online P&C Insurance Co., Ltd.",SEHK:6060,China,2261,788,0,697,91,2429,5615,,,0.4,,8,,,35575,40032,6,,2026-08-30
+84,"Japan Exchange Group, Inc.",TSE:8697,Japan,14362,-85,81,135,-138,14224,1498,,,9.5,,20,,,181370,255091,19,,2026-08-30
+85,"GMO Payment Gateway, Inc.",TSE:3769,Japan,4405,-936,22,37,-950,3455,646,66.4,429,5.3,8.0,6,,,84312,115468,17,,2026-08-30
+86,ASX Limited,ASX:ASX,Australia,7875,-3035,0,0,-3035,4840,952,,,5.1,,11,,,1165,1349,8,,2026-08-30
+87,Iress Limited,ASX:IRE,Australia,843,87,0,0,87,931,367,70.0,257,2.5,3.6,-1,,,546,519,-3,,2026-08-30
+88,HUB24 Limited,ASX:HUB,Australia,4452,0,0,0,0,4453,411,100.0,411,10.8,10.8,19,,,450,621,17,,2026-08-30
+89,Netwealth Group Limited,ASX:NWL,Australia,3845,-114,0,0,-114,3774,315,,,12.0,,23,,,357,493,17,,2026-08-30
+90,Tyro Payments Limited,ASX:TYR,Australia,342,-53,0,1,-54,273,364,46.4,169,0.7,1.6,7,,,438,519,2,,2026-08-30
+91,Zip Co Limited,ASX:ZIP,Australia,2295,1763,0,0,1763,4058,1156,46.5,538,3.5,7.5,24,,,1235,1754,19,,2026-08-30
+92,OFX Group Limited,ASX:OFX,Australia,136,-51,0,4,-55,81,155,,,0.5,,3,,,220,227,2,,2026-08-30
+93,EML Payments Limited,ASX:EML,Australia,77,36,0,0,36,112,154,74.7,115,0.7,1.0,9,,,220,227,2,,2026-08-30
+94,JSE Limited,JSE:JSE,South Africa,779,-106,0,24,-130,648,226,,,2.9,,14,,,3274,3900,9,,2026-08-30
+95,HPS S.A.,CBSE:HPS,Morocco,518,21,0,7,13,532,183,,,2.9,,10,,,1518,1958,14,,2026-08-30
