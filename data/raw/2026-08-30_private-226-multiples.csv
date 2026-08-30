@@ -1,0 +1,59 @@
+# PRIVATE FUNDING TRANSACTIONS AND VALUATION MULTIPLES, from the 226-company universe.
+# Sourced by Daniil 30-Aug-2026. THIS FILE IS THE COMPLETE SET OF MULTIPLES FOUND. The screenshot was
+# filtered to hide blanks because the other rows are blank: no priced round with a usable denominator
+# was found for them.
+#
+# THE HEADLINE, AND IT IS THE MOST IMPORTANT DATA RESULT OF THE DAY.
+# The 226 companies are the peer names the market itself said our 43 test companies should be
+# compared against, taken from search results and alternatives pages. We asked what each one is
+# worth and what it earns. The answer, after a full research pass:
+#
+#   2   CORE MULTIPLES               Atom Bank 4.76x on net interest income, Buffer 12.8x on ARR
+#   5   SUPPLEMENTAL MULTIPLES       real multiples on the wrong denominator or the wrong period
+#   2   CONTROL ACQUISITIONS         takeover prices, carrying a control premium, segregated
+#   217 NOTHING                      no defensible valuation with a contemporaneous denominator
+#
+# WHAT THAT MEANS, AND IT IS NOT WHAT I ASSUMED THIS MORNING. I have been treating the gap between
+# what the market names as a peer and what we hold as a SOURCING problem, fixable by going and
+# getting the data. For the overwhelming majority of these names there is no data to get. Private
+# companies mostly do not disclose revenue alongside a valuation, and the ones that do are the
+# exception. 217 blanks is not a failure of the search; it is the shape of the private market.
+#
+# THE CONSEQUENCE FOR THE PRODUCT. A founder in a young category will often have named competitors
+# that are genuinely unpriceable, and no amount of work changes that. The honest answer is to show
+# those competitors BY NAME as positioning, with no number, and to price off the adjacent companies
+# that do have numbers. That is what the closest-band logic already does. What must change is the
+# expectation: "we could not find a multiple" is frequently the correct and final answer, not a
+# to-do item.
+#
+# DANIIL'S CLASSIFICATION SCHEME IS BETTER THAN OURS AND WE SHOULD ADOPT IT WHOLESALE.
+# Four statuses, and the distinction between them is the thing our own file has been fudging:
+#   CORE MULTIPLE                    transaction pricing plus a contemporaneous, period-specific
+#                                    revenue, ARR, GMV or volume denominator. These, and only these,
+#                                    may feed a median.
+#   SUPPLEMENTAL MULTIPLE            a real multiple on a denominator that is not revenue or is not
+#                                    contemporaneous: TPV, payment volume, an external estimate, a
+#                                    forward run-rate. Shown, never banded.
+#   CONTROL ACQUISITION SEPARATE SET a takeover price carries a control premium a minority round
+#                                    never gets. Segregated, not excluded.
+#   NO SUPPORTED PRICED ROUND FOUND  the blank is deliberate and says so.
+#
+# The sheet also splits the multiple into a numeric value AND a comparator basis in words, so
+# "0.06x < POST / TPV" carries its own health warning. That is exactly the discipline our bound
+# column was reaching for, done better.
+#
+# ONE ROW TO READ BEFORE ANY OTHER. Atom Bank is a CORE multiple at 4.76x, and the methodology note
+# says in terms: do not compare mechanically with software revenue multiples. It is post-money over
+# NET INTEREST INCOME. That is the same trap we spent a day removing from the lending fork, caught
+# here at source.
+sector,company_name,round_date,round_type,amount_raised,transaction_valuation,valuation_basis,revenue_musd,revenue_period,gross_or_net,research_status,revenue_arr_reported,revenue_period_basis,gmv_volume_reported,gmv_volume_period,implied_valuation_multiple,multiple_classification,investors,methodology_exclusions,numeric_multiple_x,comparator_basis,alternative_multiple_x,alternative_basis,round_source_url,revenue_source_url
+payments,Stripe,2023-03,Series I employee-liquidity financing,>6500,50000,POST,,,,SUPPLEMENTAL MULTIPLE - TPV,,,more than $817000m total payment volume,CY2022,<0.0612x post-money / TPV,SUPPLEMENTAL - payment volume; not revenue or GMV,Andreessen Horowitz; Baillie Gifford; Founders Fund,$50bn post-money over more than $817bn 2022 TPV. Denominator floor makes the multiple an upper bound. TPV is not revenue or GMV,0.06,< POST / TPV,,,https://stripe.com/en-ch/newsroom/news/stripe-series-i-employee-liquidity,https://stripe.com/annual-updates/2022
+payments,Tipalti,2021-12,Series F,270,8300,POST,,,,SUPPLEMENTAL MULTIPLE - PAYMENT VOLUME,,,more than $30000m annual payment volume,Annual period not specified in round announcement,<0.2767x post-money / annual payment volume,SUPPLEMENTAL - payment volume; period unspecified,G Squared-led; Marshall Wace; others,$8.3bn post-money over more than $30bn annual payment volume. Upper bound only; payment volume is not revenue or ARR and the exact fiscal period was not stated,0.28,< POST / annual payment volume,,,https://tipalti.com/newsroom/tipalti-raises-270-million-in-series-f-funding-at-8-3-billion-valuation/,https://tipalti.com/press/series-f-pr/
+lending,Atom Bank,2023-11,Equity financing primary,>100,362,POST (GBP),76,FY ended 2023-03-31,Net interest income,CORE MULTIPLE - BANK-SPECIFIC,GBP76m net interest income,FY ended 2023-03-31,,,4.76x post-money / NII,CORE - financing; bank-specific,BBVA; Toscafund; Infinity Investment,GBP362m post-money over GBP76m FY2023 net interest income. DO NOT COMPARE MECHANICALLY WITH SOFTWARE REVENUE MULTIPLES,4.76,POST / NII,,,https://www.atombank.co.uk/newsroom/investors-back-atom/,https://www.atombank.co.uk/docs/annual-report-22-23-holdco.pdf
+lending,Kriya,2025-10,Control acquisition by Allica Bank,7.5,7.5,CONTROL ACQUISITION; not clean EV,12.6,FY ended 2024-12-31,Turnover; filed accounts,CONTROL ACQUISITION - SEPARATE SET,GBP12.6m turnover,FY ended 2024-12-31,,,0.60x purchase consideration / turnover,CONTROL ACQUISITION - SEPARATE SET,Allica Bank,GBP7.5m accounting purchase consideration over GBP12.6m FY2024 turnover = 0.5952x. NOT A CLEAN EV/REVENUE MULTIPLE,0.60,Purchase consideration / turnover,,,https://www.allica.bank/hubfs/pdf/allica-bank_annual-report-2025.pdf,https://find-and-update.company-information.service.gov.uk/company/07330525/filing-history
+software,Buffer,2014-10,Series A mixed primary / secondary,3.5 total (1.0 primary; 2.5 secondary),60.0,POST,4.689024,ARR annualized from Oct-2014 MRR,NET / ARR,CORE MULTIPLE - FINANCING,$4.689024m ARR,October 2014 run-rate,,,12.80x post-money / ARR,CORE - financing; mixed primary and secondary,Collaborative Fund and others,$60.0m post-money over $4.689024m ARR. Round included $1.0m primary capital and $2.5m founder and early-team liquidity; not pure primary,12.80,POST / ARR,,,https://buffer.com/resources/raising-3-5m-funding-valuation-term-sheet/,https://buffer.com/resources/buffer-october-2014-investor-report/
+software,Supabase,2025-10,Series E,100,"5100 implied post; 5000 pre",PRE disclosed; POST implied,,Mid-2025 annualized run-rate,Estimated; not company-disclosed,SUPPLEMENTAL MULTIPLE - ESTIMATED ARR,approximately $70m annualized revenue (third-party estimate),Mid-2025 annualized run-rate,,,71.43x pre / 72.86x implied post,SUPPLEMENTAL - reputable third-party estimate,Accel; Peak XV,Company disclosed $5.0bn pre-money and a $100m round; $5.1bn post implied. The $70m annualized revenue is an EXTERNAL ESTIMATE not company disclosure,72.86,Implied POST / external est. annualized revenue,71.43,PRE / external est. annualized revenue,https://supabase.com/blog/series-e,https://www.theinformation.com/articles/database-startup-supabase-talks-double-valuation-10-billion
+payments,Unit,2022-05,Series C,100,1200,Basis not clearly stated in cited wording,,Forward: expected in the coming months,Forward run-rate; not closed period,SUPPLEMENTAL MULTIPLE - FORWARD,approximately $10m expected annual revenue run-rate,Forward: expected in the coming months,,,120.0x stated valuation / forward run-rate,SUPPLEMENTAL - forward; valuation basis unclear,Insight Partners-led,EXPLICITLY FORWARD revenue run-rate not a closed-period actual. Exclude from strict historical transaction-revenue comps,120.00,Stated valuation / forward run-rate,,,https://www.unit.co/blog/announcing-our-100m-series-c-led-by-insight-partners,https://www.calcalistech.com/ctechnews/article/byj00mmwd5
+ecommerce,Olive & June,2024-12,Control acquisition by Helen of Troy,$225m cash up to $15m earnout,"240 maximum; 225 upfront",CONTROL ACQUISITION,92,Estimated CY2024 net sales,NET SALES,CONTROL ACQUISITION - SEPARATE SET,approximately $92m estimated net sales,Estimated CY2024 at closing,,,2.45x upfront / 2.61x maximum consideration,CONTROL ACQUISITION - SEPARATE SET,Helen of Troy,$225m upfront over about $92m = 2.4457x; $240m maximum over about $92m = 2.6087x. DENOMINATOR WAS EXPLICITLY ESTIMATED AT CLOSING not reported actual,2.45,Upfront consideration / est. net sales,2.61,Maximum consideration / est. net sales,https://investor.helenoftroy.com/press-releases/press-release-details/2024/Helen-of-Troy-Completes-Acquisition-of-Olive--June-LLC/default.aspx,https://www.sec.gov/Archives/edgar/data/916789/000091678924000039/ex-991pressreleaseoliv.htm
+lending,Konfio,2021-09,Series E extension,235,1300,Basis not established,45,2021E,External analyst estimate,SUPPLEMENTAL MULTIPLE - EXTERNAL 2021E,approximately $45m 2021e revenue,2021E,,,28.89x stated valuation / 2021e revenue,SUPPLEMENTAL - analyst estimate,SoftBank; Kaszek; others,EXTERNAL COMMISSIONED-RESEARCH ESTIMATE not company-disclosed actual revenue. Keep outside core,28.89,Stated valuation / external 2021E revenue,,,https://konfio.mx/blog/en-konfio/noticias/konfio-unicornio/,https://mb.cision.com/Main/19072/3187241/1301167.pdf
+software,SerpAPI,,,,,,,,,NO SUPPORTED PRICED ROUND FOUND,,,,,,NO COMPLIANT MULTIPLE FOUND,,No defensible transaction valuation plus contemporaneous period-specific revenue/ARR or GMV/volume denominator was found after re-review; blank is intentional,,,,,,
