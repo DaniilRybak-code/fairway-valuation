@@ -3,31 +3,32 @@
 # filtered to hide blanks because the other rows are blank: no priced round with a usable denominator
 # was found for them.
 #
-# THE HEADLINE, AND IT IS THE MOST IMPORTANT DATA RESULT OF THE DAY.
-# The 226 companies are the peer names the market itself said our 43 test companies should be
-# compared against, taken from search results and alternatives pages. We asked what each one is
-# worth and what it earns. The answer, after a full research pass:
-#
+# THE RESULT
 #   2   CORE MULTIPLES               Atom Bank 4.76x on net interest income, Buffer 12.8x on ARR
 #   5   SUPPLEMENTAL MULTIPLES       real multiples on the wrong denominator or the wrong period
 #   2   CONTROL ACQUISITIONS         takeover prices, carrying a control premium, segregated
-#   217 NOTHING                      no defensible valuation with a contemporaneous denominator
+#   217 NOTHING FOUND
 #
-# WHAT THAT MEANS, AND IT IS NOT WHAT I ASSUMED THIS MORNING. I have been treating the gap between
-# what the market names as a peer and what we hold as a SOURCING problem, fixable by going and
-# getting the data. For the overwhelming majority of these names there is no data to get. Private
-# companies mostly do not disclose revenue alongside a valuation, and the ones that do are the
-# exception. 217 blanks is not a failure of the search; it is the shape of the private market.
+# WHAT THIS MEANS. Daniil, 30-Aug-2026, correcting a wrong conclusion I had written into an earlier
+# version of this header:
 #
-# THE CONSEQUENCE FOR THE PRODUCT. A founder in a young category will often have named competitors
-# that are genuinely unpriceable, and no amount of work changes that. The honest answer is to show
-# those competitors BY NAME as positioning, with no number, and to price off the adjacent companies
-# that do have numbers. That is what the closest-band logic already does. What must change is the
-# expectation: "we could not find a multiple" is frequently the correct and final answer, not a
-# to-do item.
+#   "A founder in a young category would be using our service exactly because no clear precedent
+#    exists. So if we do the analysis, and find that no clear priced precedents exist, we should
+#    apply our judgement and find the NEXT BEST NEIGHBOUR, in terms of business model, end market,
+#    revenue generation, growth profile, maturity. THIS IS THE WHOLE VALUE OF THIS SERVICE, to tell
+#    people how much they are worth in the conditions where there is no clear market."
 #
-# DANIIL'S CLASSIFICATION SCHEME IS BETTER THAN OURS AND WE SHOULD ADOPT IT WHOLESALE.
-# Four statuses, and the distinction between them is the thing our own file has been fudging:
+# I had written that 217 blanks meant "we could not find a multiple" is often the correct and final
+# answer. THAT IS WRONG AND IT INVERTS THE PRODUCT. A founder with obvious priced comparables barely
+# needs us; they can read the same press releases. The founder with 217 unpriceable competitors is
+# precisely the customer, and the blank is where our work STARTS.
+#
+# SO THIS FILE IS NOT A LIST OF DEAD ENDS. It is the input to the neighbour search: 217 companies we
+# now know are named as peers, are real, and cannot be priced directly. Each one still tells us what
+# the founder's market looks like, and each one still has to be reasoned onto a priced neighbour
+# along the five dimensions above. The blank is a trigger, never a conclusion.
+#
+# DANIIL'S CLASSIFICATION SCHEME, ADOPTED WHOLESALE
 #   CORE MULTIPLE                    transaction pricing plus a contemporaneous, period-specific
 #                                    revenue, ARR, GMV or volume denominator. These, and only these,
 #                                    may feed a median.
@@ -36,16 +37,14 @@
 #                                    forward run-rate. Shown, never banded.
 #   CONTROL ACQUISITION SEPARATE SET a takeover price carries a control premium a minority round
 #                                    never gets. Segregated, not excluded.
-#   NO SUPPORTED PRICED ROUND FOUND  the blank is deliberate and says so.
+#   NO SUPPORTED PRICED ROUND FOUND  the blank is deliberate, and it routes to the neighbour search.
 #
-# The sheet also splits the multiple into a numeric value AND a comparator basis in words, so
-# "0.06x < POST / TPV" carries its own health warning. That is exactly the discipline our bound
-# column was reaching for, done better.
+# The sheet splits the multiple into a numeric value AND a comparator basis in words, so
+# "0.06x < POST / TPV" carries its own health warning. Better than our bound column.
 #
 # ONE ROW TO READ BEFORE ANY OTHER. Atom Bank is a CORE multiple at 4.76x, and the methodology note
 # says in terms: do not compare mechanically with software revenue multiples. It is post-money over
-# NET INTEREST INCOME. That is the same trap we spent a day removing from the lending fork, caught
-# here at source.
+# NET INTEREST INCOME. The same trap we removed from the lending fork, caught here at source.
 sector,company_name,round_date,round_type,amount_raised,transaction_valuation,valuation_basis,revenue_musd,revenue_period,gross_or_net,research_status,revenue_arr_reported,revenue_period_basis,gmv_volume_reported,gmv_volume_period,implied_valuation_multiple,multiple_classification,investors,methodology_exclusions,numeric_multiple_x,comparator_basis,alternative_multiple_x,alternative_basis,round_source_url,revenue_source_url
 payments,Stripe,2023-03,Series I employee-liquidity financing,>6500,50000,POST,,,,SUPPLEMENTAL MULTIPLE - TPV,,,more than $817000m total payment volume,CY2022,<0.0612x post-money / TPV,SUPPLEMENTAL - payment volume; not revenue or GMV,Andreessen Horowitz; Baillie Gifford; Founders Fund,$50bn post-money over more than $817bn 2022 TPV. Denominator floor makes the multiple an upper bound. TPV is not revenue or GMV,0.06,< POST / TPV,,,https://stripe.com/en-ch/newsroom/news/stripe-series-i-employee-liquidity,https://stripe.com/annual-updates/2022
 payments,Tipalti,2021-12,Series F,270,8300,POST,,,,SUPPLEMENTAL MULTIPLE - PAYMENT VOLUME,,,more than $30000m annual payment volume,Annual period not specified in round announcement,<0.2767x post-money / annual payment volume,SUPPLEMENTAL - payment volume; period unspecified,G Squared-led; Marshall Wace; others,$8.3bn post-money over more than $30bn annual payment volume. Upper bound only; payment volume is not revenue or ARR and the exact fiscal period was not stated,0.28,< POST / annual payment volume,,,https://tipalti.com/newsroom/tipalti-raises-270-million-in-series-f-funding-at-8-3-billion-valuation/,https://tipalti.com/press/series-f-pr/

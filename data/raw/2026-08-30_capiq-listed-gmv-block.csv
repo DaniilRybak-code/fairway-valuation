@@ -1,0 +1,31 @@
+# BROKER-ESTIMATED GMV AND TRANSACTION VOLUME FOR LISTED NAMES, with the aggregate value that
+# prices it. Transcribed 30-Aug-2026 from Daniil's S&P Capital IQ Pro screen, pull dated 21/08/2026,
+# currency USD, rows 84 to 192 of the logistics, services, consumer and payments pull.
+#
+# WHY ONLY THESE TWELVE. The pull carries a GMV block for every row but the estimate is n.a. on all
+# but twelve names. Brokers do not forecast GMV for carriers, first-party retailers or subscription
+# businesses, and for good reason: those businesses have no GMV to forecast.
+#
+# WHAT WE DELIBERATELY DID NOT RE-TRANSCRIBE. Revenue, gross profit, the revenue multiples and
+# growth for these same rows were transcribed this morning into peers-logistics-services.csv from
+# the SAME pull. Re-typing them would add transcription risk and no information, so this file adds
+# only the ticker as supplied and the GMV block. The tickers matter: this morning's pull had the
+# ticker column hidden and all 123 were recovered by hand.
+#
+# THE MULTIPLE IS DERIVED HERE, NOT TAKEN FROM THE SCREEN. Capital IQ's AV/NTM GMV column is
+# inconsistently populated (blank for Nayax, n.a. for WEX) and rounds to 0.0x for every payments
+# name, which is useless. See ev_ntm_volume_pct: for a payments business the honest expression is a
+# percentage of volume, not a turn.
+company_name,exchange_ticker,aggregate_value_musd,volume_kind,gmv_cy0_musd,gmv_cy1_musd,gmv_cy2_musd,gmv_ntm_musd,ev_ntm_volume_x,ev_ntm_volume_pct
+"RB Global, Inc.",NYSE:RBA,20287,GMV,16200,17671,18582,18252,1.111,111.15
+GigaCloud Technology Inc.,NASDAQGM:GCT,1902,GMV,1577,1892,2032,1981,0.96,96.01
+Freightos Limited,NASDAQCM:CRGO,51,GMV,1286,1329,1466,1416,0.036,3.6
+Auction Technology Group plc,LSE:ATG,888,GMV,12100,14622,15471,15164,0.059,5.86
+"PROG Holdings, Inc.",NYSE:PRG,2346,ORIGINATIONS,2497,3289,3553,3458,0.678,67.84
+Sezzle Inc.,NASDAQ:SEZL,4053,GMV,3940,5329,6626,6157,0.658,65.83
+"Priority Technology Holdings, Inc.",NASDAQ:PRTH,1398,TPV,72374,78753,84559,82459,0.017,1.7
+"Usio, Inc.",NASDAQ:USIO,78,TPV,8400,9624,10631,10267,0.008,0.76
+"Phreesia, Inc.",NYSE:PHR,767,TPV,4873,5221,5457,5372,0.143,14.28
+WEX Inc.,NYSE:WEX,6070,TPV,147786,194649,197718,196608,0.031,3.09
+"Cass Information Systems, Inc.",NASDAQ:CASS,578,TPV,36447,65830,70122,68570,0.008,0.84
+Nayax Ltd.,NASDAQ:NYAX,1791,TPV,6449,8296,10151,9480,0.189,18.89

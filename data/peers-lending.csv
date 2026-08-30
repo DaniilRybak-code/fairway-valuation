@@ -28,83 +28,83 @@
 # (NYSE:XYZ) is in the payments file, not here, on Daniil's ruling of 29-Aug: it trades on EBITDA in
 # reality, and the next best bases are EV/revenue and P/E, not P/BV. Its row is carried below for
 # reference only and is marked in_medians=0.
-company_name,exchange_ticker,country,market_cap_musd,price_per_share,ni_fy0_musd,ni_fy1_musd,ni_fy2_musd,ni_ntm_musd,bvps_2026,bvps_2027,bvps_ntm,p_e_x,p_bv_x,ni_growth_pct,in_medians
-"OneMain Holdings, Inc.",NYSE:OMF,United States,7269,63,787,817,963,908,30.24,33.77,32.5,8.0,1.9,18,1
-Oportun Financial Corporation,NASDAQ:OPRT,United States,345,8,64,78,101,92,9.04,10.41,9.9,3.7,0.8,29,1
-"PROG Holdings, Inc.",NYSE:PRG,United States,1544,39,140,201,225,203,21.59,26.70,24.9,7.6,1.6,12,1
-Pagaya Technologies Ltd.,NASDAQ:PGY,United States,1809,22,268,360,408,379,7.06,9.01,8.3,4.8,2.6,13,1
-"PennyMac Financial Services, Inc.",NYSE:PFSI,United States,3901,75,638,391,558,463,86.81,97.13,93.4,8.4,0.8,43,1
-"Triumph Financial, Inc.",NYSE:TFIN,United States,1791,75,16,49,77,65,39.62,42.47,41.4,27.6,1.8,57,1
-S&U plc,LSE:SUS,United Kingdom,323,27,32,36,42,36,29.76,31.44,30.8,9.0,0.9,16,1
-OSB Group Plc,LSE:OSB,United Kingdom,2401,7,381,360,384,360,9.22,9.89,9.6,6.7,0.7,7,1
-Funding Circle Holdings plc,LSE:FCH,United Kingdom,932,3,20,46,61,46,1.16,1.31,1.3,20.5,2.6,34,1
-Grenke AG,XTRA:GLJ,Germany,572,13,71,73,86,80,31.98,33.29,32.8,7.2,0.4,17,1
-Multitude AG,XTRA:MULT,Switzerland,150,7,30,34,39,37,12.44,12.04,12.2,4.1,0.6,17,1
-Banca IFIS S.p.A.,BIT:IF,Italy,1084,18,153,36,148,92,40.44,41.95,41.4,11.8,0.4,316,1
-BFF Bank S.p.A.,BIT:BFF,Italy,683,4,176,153,150,151,5.60,5.97,5.8,4.5,0.6,-2,1
-Cembra Money Bank AG,SWX:CMBN,Switzerland,3177,109,234,256,262,259,58.93,62.40,61.1,12.3,1.8,2,1
-Avarda Bank AB (publ),OM:AVARDA,Sweden,1372,21,70,88,107,99,5.85,6.90,6.5,13.8,3.3,22,1
-KRUK Spolka Akcyjna,WSE:KRU,Poland,2306,118,306,311,357,322,83.38,96.19,91.6,7.2,1.3,15,1
-Lufax Holding Ltd,NYSE:LU,China,1205,1,170,324,243,324,18.27,13.87,15.5,3.7,0.1,-25,1
-"Qfin Holdings, Inc.",NASDAQ:QFIN,China,1409,12,899,529,578,541,31.04,34.34,33.1,2.6,0.3,9,1
-Far East Horizon Limited,SEHK:3360,Hong Kong,4462,1,571,597,634,597,1.67,1.73,1.7,7.5,0.5,6,1
-Latitude Group Holdings Limited,ASX:LFS,Australia,693,1,68,91,87,91,0.83,0.84,0.8,7.7,0.8,-4,1
-Pepper Money Limited,ASX:PPM,Australia,625,1,69,78,86,82,1.46,1.53,1.5,7.6,0.9,10,1
-Banco BMG S.A.,BOVESPA:BMGB4,Brazil,635,1,93,113,120,125,1.41,1.54,1.5,5.1,0.7,7,1
-"Pathward Financial, Inc.",NASDAQ:CASH,United States,1738,84,166,170,192,190,,,,9.2,,13,0
-"Cass Information Systems, Inc.",NASDAQ:CASS,United States,722,56,30,39,47,43,19.96,21.56,21.0,16.6,2.7,20,1
-Credit Acceptance Corporation,NASDAQ:CACC,United States,6239,601,455,522,608,565,,,,11.0,,16,0
-Atlanticus Holdings Corporation,NASDAQ:ATLC,United States,1458,96,114,182,254,208,,,,7.0,,40,0
-Sezzle Inc.,NASDAQ:SEZL,United States,4011,119,120,183,234,207,,,,19.4,,28,0
-Close Brothers Group plc,LSE:CBG,United Kingdom,871,6,69,87,134,88,,,,9.9,,53,0
-Paragon Banking Group PLC,LSE:PAG,United Kingdom,2039,11,289,287,298,292,,,,7.0,,4,0
-Time Finance plc,AIM:TIME,United Kingdom,72,1,9,10,,10,,,,7.4,,-100,0
-Distribution Finance Capital Holdings plc,AIM:DFCH,United Kingdom,161,1,,23,27,23,,,,6.9,,15,0
-Bajaj Finance Limited,NSEI:BAJFINANCE,India,71160,11,2047,2699,3289,2847,,,,25.0,,22,0
-Shriram Finance Limited,NSEI:SHRIRAMFIN,India,27890,12,1037,1457,1740,1528,,,,18.3,,19,0
-Cholamandalam Investment and Finance Company Limited,NSEI:CHOLAFIN,India,16602,19,543,708,871,749,,,,22.2,,23,0
-Five-Star Business Finance Limited,NSEI:FIVESTAR,India,1607,5,118,126,153,133,,,,12.1,,21,0
-Humm Group Limited,ASX:HUM,Australia,146,0,19,23,26,22,,,,6.6,,10,0
-Judo Capital Holdings Limited,ASX:JDO,Australia,788,1,78,105,138,105,,,,7.5,,30,0
-Capital One Financial Corporation,NYSE:COF,United States,133684,218,10895,12576,13655,13052,182.40,198.67,192.8,10.2,1.1,9,1
-Ally Financial Inc.,NYSE:ALLY,United States,12931,43,1168,1615,1906,1870,47.02,52.48,50.5,6.9,0.9,18,1
-"Affirm Holdings, Inc.",NASDAQ:AFRM,United States,25797,77,1139,1391,1868,1328,,,,19.4,,34,0
-"SoFi Technologies, Inc.",NASDAQ:SOFI,United States,24424,19,448,804,1136,,8.90,9.86,9.5,,2.0,41,1
-"Upstart Holdings, Inc.",NASDAQ:UPST,United States,2949,30,187,242,391,328,9.09,11.77,10.8,9.0,2.8,61,1
-"Happen, Inc.",NYSE:LC,United States,2126,0,134,217,276,227,,,,9.4,,27,0
-"Enova International, Inc.",NYSE:ENVA,United States,6049,243,339,448,520,487,70.72,96.74,87.3,12.4,2.8,16,1
-Klarna Group plc,NYSE:KLAR,United Kingdom,5433,14,-241,-19,337,152,7.14,7.84,7.6,35.9,1.9,-1904,1
-"Chime Financial, Inc.",NASDAQ:CHYM,United States,12410,33,,,,,4.28,5.84,5.3,,6.2,,1
-Nu Holdings Ltd.,NYSE:NU,Brazil,70431,15,3091,4271,5538,4793,3.13,4.09,3.7,14.7,3.9,30,1
-"Inter & Co, Inc.",NASDAQ:INTR,Brazil,2380,5,245,339,430,384,4.98,5.69,5.4,6.2,1.0,27,1
-Zip Co Limited,ASX:ZIP,Australia,2295,2,85,127,164,127,,,,18.1,,29,0
-Regional Management Corp.,NYSE:RM,United States,315,34,44,48,55,52,42.52,47.59,45.8,6.1,0.7,15,1
-World Acceptance Corporation,NASDAQ:WRLD,United States,852,188,35,59,64,54,,,,15.7,,9,0
-OppFi Inc.,NYSE:OPFI,United States,595,7,140,122,171,139,4.87,5.21,5.1,4.3,1.4,40,1
-Dave Inc.,NASDAQ:DAVE,United States,4525,355,194,241,310,275,26.38,51.87,42.7,16.5,8.3,29,1
-Medallion Financial Corp.,NASDAQ:MFIN,United States,261,12,41,28,38,33,18.17,19.09,18.8,8.0,0.6,40,1
-SLM Corporation,NASDAQ:SLM,United States,4973,26,686,598,597,546,12.44,13.85,13.3,9.1,2.0,0,1
-Navient Corporation,NASDAQ:NAVI,United States,886,9,-5,76,81,64,25.94,28.40,27.5,13.8,0.3,6,1
-Synchrony Financial,NYSE:SYF,United States,25857,79,3497,3102,3060,2958,48.70,54.05,52.1,8.7,1.5,-1,1
-"Bread Financial Holdings, Inc.",NYSE:BFH,United States,4069,106,483,495,492,470,86.93,98.06,94.0,8.7,1.1,-1,1
-American Express Company,NYSE:AXP,United States,226904,336,10714,11932,13230,12279,52.06,58.36,56.1,18.5,6.0,11,1
-"FirstCash Holdings, Inc.",NASDAQ:FCFS,United States,9771,225,384,488,577,528,,,,18.5,,18,0
-"EZCORP, Inc.",NASDAQ:EZPW,United States,1980,32,111,166,176,165,,,,12.0,,6,0
-"Upbound Group, Inc.",NASDAQ:UPBD,United States,1096,19,234,245,268,257,13.39,15.53,14.8,4.3,1.3,9,1
-"Encore Capital Group, Inc.",NASDAQ:ECPG,United States,2147,101,241,316,317,322,57.02,74.47,68.2,6.7,1.5,0,1
-"PRA Group, Inc.",NASDAQ:PRAA,United States,737,20,,,,,29.01,29.00,29.0,,0.7,,1
-"Jefferson Capital, Inc.",NASDAQ:JCAP,United States,1280,22,204,185,190,185,8.69,9.87,9.4,6.9,2.4,3,1
-GATX Corporation,NYSE:GATX,United States,6247,177,319,373,410,374,83.46,94.21,90.3,16.7,2.0,10,1
-Willis Lease Finance Corporation,NASDAQ:WLFC,United States,1150,54,87,153,156,140,,,,8.2,,2,0
-"Rocket Companies, Inc.",NYSE:RKT,United States,39445,14,522,1726,2417,2037,8.51,9.16,8.9,19.4,1.6,40,1
-UWM Holdings Corporation,NYSE:UWMC,United States,479,1,237,-6,718,499,0.68,1.07,0.9,1.0,1.5,-11974,1
-Onity Group Inc.,NYSE:ONIT,United States,301,36,78,43,72,59,75.92,84.23,81.2,5.1,0.4,70,1
-"Velocity Financial, Inc.",NYSE:VEL,United States,724,18,103,111,118,111,19.76,22.65,21.6,6.5,0.8,6,1
-"Walker & Dunlop, Inc.",NYSE:WD,United States,1381,40,134,69,159,120,51.34,52.66,52.2,11.5,0.8,131,1
-"Block, Inc.",NYSE:XYZ,United States,49361,82,1484,2465,3135,2788,38.74,44.37,42.3,17.7,1.9,27,0
-"Axos Financial, Inc.",NYSE:AX,United States,5484,97,479,559,629,559,,,,9.8,,13,0
-"The Bancorp, Inc.",NASDAQ:TBBK,United States,2740,67,237,248,310,277,18.47,20.89,20.0,9.9,3.4,25,1
-"NewtekOne, Inc.",NASDAQ:NEWT,United States,362,13,59,59,68,62,13.45,15.45,14.7,5.8,0.9,14,1
-"Live Oak Bancshares, Inc.",NYSE:LOB,United States,1897,41,87,140,191,162,27.87,32.10,30.6,11.7,1.3,36,1
-Merchants Bancorp,NASDAQ:MBIN,United States,2512,55,176,264,289,264,46.75,52.28,50.3,9.5,1.1,10,1
-Coastal Financial Corporation,NASDAQ:CCB,United States,707,46,50,27,91,74,32.42,38.21,36.1,9.6,1.3,231,1
+company_name,exchange_ticker,country,market_cap_musd,price_per_share,ni_fy0_musd,ni_fy1_musd,ni_fy2_musd,ni_ntm_musd,bvps_2026,bvps_2027,bvps_ntm,p_e_x,p_bv_x,ni_growth_pct,in_medians,gmv_cy0_musd,gmv_ntm_musd,ev_ntm_gmv_x
+"OneMain Holdings, Inc.",NYSE:OMF,United States,7269,63,787,817,963,908,30.24,33.77,32.5,8.0,1.9,18,1,,,
+Oportun Financial Corporation,NASDAQ:OPRT,United States,345,8,64,78,101,92,9.04,10.41,9.9,3.7,0.8,29,1,,,
+"PROG Holdings, Inc.",NYSE:PRG,United States,1544,39,140,201,225,203,21.59,26.70,24.9,7.6,1.6,12,1,2497,3458,0.678
+Pagaya Technologies Ltd.,NASDAQ:PGY,United States,1809,22,268,360,408,379,7.06,9.01,8.3,4.8,2.6,13,1,,,
+"PennyMac Financial Services, Inc.",NYSE:PFSI,United States,3901,75,638,391,558,463,86.81,97.13,93.4,8.4,0.8,43,1,,,
+"Triumph Financial, Inc.",NYSE:TFIN,United States,1791,75,16,49,77,65,39.62,42.47,41.4,27.6,1.8,57,1,,,
+S&U plc,LSE:SUS,United Kingdom,323,27,32,36,42,36,29.76,31.44,30.8,9.0,0.9,16,1,,,
+OSB Group Plc,LSE:OSB,United Kingdom,2401,7,381,360,384,360,9.22,9.89,9.6,6.7,0.7,7,1,,,
+Funding Circle Holdings plc,LSE:FCH,United Kingdom,932,3,20,46,61,46,1.16,1.31,1.3,20.5,2.6,34,1,,,
+Grenke AG,XTRA:GLJ,Germany,572,13,71,73,86,80,31.98,33.29,32.8,7.2,0.4,17,1,,,
+Multitude AG,XTRA:MULT,Switzerland,150,7,30,34,39,37,12.44,12.04,12.2,4.1,0.6,17,1,,,
+Banca IFIS S.p.A.,BIT:IF,Italy,1084,18,153,36,148,92,40.44,41.95,41.4,11.8,0.4,316,1,,,
+BFF Bank S.p.A.,BIT:BFF,Italy,683,4,176,153,150,151,5.60,5.97,5.8,4.5,0.6,-2,1,,,
+Cembra Money Bank AG,SWX:CMBN,Switzerland,3177,109,234,256,262,259,58.93,62.40,61.1,12.3,1.8,2,1,,,
+Avarda Bank AB (publ),OM:AVARDA,Sweden,1372,21,70,88,107,99,5.85,6.90,6.5,13.8,3.3,22,1,,,
+KRUK Spolka Akcyjna,WSE:KRU,Poland,2306,118,306,311,357,322,83.38,96.19,91.6,7.2,1.3,15,1,,,
+Lufax Holding Ltd,NYSE:LU,China,1205,1,170,324,243,324,18.27,13.87,15.5,3.7,0.1,-25,1,,,
+"Qfin Holdings, Inc.",NASDAQ:QFIN,China,1409,12,899,529,578,541,31.04,34.34,33.1,2.6,0.3,9,1,,,
+Far East Horizon Limited,SEHK:3360,Hong Kong,4462,1,571,597,634,597,1.67,1.73,1.7,7.5,0.5,6,1,,,
+Latitude Group Holdings Limited,ASX:LFS,Australia,693,1,68,91,87,91,0.83,0.84,0.8,7.7,0.8,-4,1,,,
+Pepper Money Limited,ASX:PPM,Australia,625,1,69,78,86,82,1.46,1.53,1.5,7.6,0.9,10,1,,,
+Banco BMG S.A.,BOVESPA:BMGB4,Brazil,635,1,93,113,120,125,1.41,1.54,1.5,5.1,0.7,7,1,,,
+"Pathward Financial, Inc.",NASDAQ:CASH,United States,1738,84,166,170,192,190,,,,9.2,,13,0,,,
+"Cass Information Systems, Inc.",NASDAQ:CASS,United States,722,56,30,39,47,43,19.96,21.56,21.0,16.6,2.7,20,1,36447,68570,0.008
+Credit Acceptance Corporation,NASDAQ:CACC,United States,6239,601,455,522,608,565,,,,11.0,,16,0,,,
+Atlanticus Holdings Corporation,NASDAQ:ATLC,United States,1458,96,114,182,254,208,,,,7.0,,40,0,,,
+Sezzle Inc.,NASDAQ:SEZL,United States,4011,119,120,183,234,207,,,,19.4,,28,0,3940,6157,0.658
+Close Brothers Group plc,LSE:CBG,United Kingdom,871,6,69,87,134,88,,,,9.9,,53,0,,,
+Paragon Banking Group PLC,LSE:PAG,United Kingdom,2039,11,289,287,298,292,,,,7.0,,4,0,,,
+Time Finance plc,AIM:TIME,United Kingdom,72,1,9,10,,10,,,,7.4,,-100,0,,,
+Distribution Finance Capital Holdings plc,AIM:DFCH,United Kingdom,161,1,,23,27,23,,,,6.9,,15,0,,,
+Bajaj Finance Limited,NSEI:BAJFINANCE,India,71160,11,2047,2699,3289,2847,,,,25.0,,22,0,,,
+Shriram Finance Limited,NSEI:SHRIRAMFIN,India,27890,12,1037,1457,1740,1528,,,,18.3,,19,0,,,
+Cholamandalam Investment and Finance Company Limited,NSEI:CHOLAFIN,India,16602,19,543,708,871,749,,,,22.2,,23,0,,,
+Five-Star Business Finance Limited,NSEI:FIVESTAR,India,1607,5,118,126,153,133,,,,12.1,,21,0,,,
+Humm Group Limited,ASX:HUM,Australia,146,0,19,23,26,22,,,,6.6,,10,0,,,
+Judo Capital Holdings Limited,ASX:JDO,Australia,788,1,78,105,138,105,,,,7.5,,30,0,,,
+Capital One Financial Corporation,NYSE:COF,United States,133684,218,10895,12576,13655,13052,182.40,198.67,192.8,10.2,1.1,9,1,,,
+Ally Financial Inc.,NYSE:ALLY,United States,12931,43,1168,1615,1906,1870,47.02,52.48,50.5,6.9,0.9,18,1,,,
+"Affirm Holdings, Inc.",NASDAQ:AFRM,United States,25797,77,1139,1391,1868,1328,,,,19.4,,34,0,,,
+"SoFi Technologies, Inc.",NASDAQ:SOFI,United States,24424,19,448,804,1136,,8.90,9.86,9.5,,2.0,41,1,,,
+"Upstart Holdings, Inc.",NASDAQ:UPST,United States,2949,30,187,242,391,328,9.09,11.77,10.8,9.0,2.8,61,1,,,
+"Happen, Inc.",NYSE:LC,United States,2126,0,134,217,276,227,,,,9.4,,27,0,,,
+"Enova International, Inc.",NYSE:ENVA,United States,6049,243,339,448,520,487,70.72,96.74,87.3,12.4,2.8,16,1,,,
+Klarna Group plc,NYSE:KLAR,United Kingdom,5433,14,-241,-19,337,152,7.14,7.84,7.6,35.9,1.9,-1904,1,,,
+"Chime Financial, Inc.",NASDAQ:CHYM,United States,12410,33,,,,,4.28,5.84,5.3,,6.2,,1,,,
+Nu Holdings Ltd.,NYSE:NU,Brazil,70431,15,3091,4271,5538,4793,3.13,4.09,3.7,14.7,3.9,30,1,,,
+"Inter & Co, Inc.",NASDAQ:INTR,Brazil,2380,5,245,339,430,384,4.98,5.69,5.4,6.2,1.0,27,1,,,
+Zip Co Limited,ASX:ZIP,Australia,2295,2,85,127,164,127,,,,18.1,,29,0,,,
+Regional Management Corp.,NYSE:RM,United States,315,34,44,48,55,52,42.52,47.59,45.8,6.1,0.7,15,1,,,
+World Acceptance Corporation,NASDAQ:WRLD,United States,852,188,35,59,64,54,,,,15.7,,9,0,,,
+OppFi Inc.,NYSE:OPFI,United States,595,7,140,122,171,139,4.87,5.21,5.1,4.3,1.4,40,1,,,
+Dave Inc.,NASDAQ:DAVE,United States,4525,355,194,241,310,275,26.38,51.87,42.7,16.5,8.3,29,1,,,
+Medallion Financial Corp.,NASDAQ:MFIN,United States,261,12,41,28,38,33,18.17,19.09,18.8,8.0,0.6,40,1,,,
+SLM Corporation,NASDAQ:SLM,United States,4973,26,686,598,597,546,12.44,13.85,13.3,9.1,2.0,0,1,,,
+Navient Corporation,NASDAQ:NAVI,United States,886,9,-5,76,81,64,25.94,28.40,27.5,13.8,0.3,6,1,,,
+Synchrony Financial,NYSE:SYF,United States,25857,79,3497,3102,3060,2958,48.70,54.05,52.1,8.7,1.5,-1,1,,,
+"Bread Financial Holdings, Inc.",NYSE:BFH,United States,4069,106,483,495,492,470,86.93,98.06,94.0,8.7,1.1,-1,1,,,
+American Express Company,NYSE:AXP,United States,226904,336,10714,11932,13230,12279,52.06,58.36,56.1,18.5,6.0,11,1,,,
+"FirstCash Holdings, Inc.",NASDAQ:FCFS,United States,9771,225,384,488,577,528,,,,18.5,,18,0,,,
+"EZCORP, Inc.",NASDAQ:EZPW,United States,1980,32,111,166,176,165,,,,12.0,,6,0,,,
+"Upbound Group, Inc.",NASDAQ:UPBD,United States,1096,19,234,245,268,257,13.39,15.53,14.8,4.3,1.3,9,1,,,
+"Encore Capital Group, Inc.",NASDAQ:ECPG,United States,2147,101,241,316,317,322,57.02,74.47,68.2,6.7,1.5,0,1,,,
+"PRA Group, Inc.",NASDAQ:PRAA,United States,737,20,,,,,29.01,29.00,29.0,,0.7,,1,,,
+"Jefferson Capital, Inc.",NASDAQ:JCAP,United States,1280,22,204,185,190,185,8.69,9.87,9.4,6.9,2.4,3,1,,,
+GATX Corporation,NYSE:GATX,United States,6247,177,319,373,410,374,83.46,94.21,90.3,16.7,2.0,10,1,,,
+Willis Lease Finance Corporation,NASDAQ:WLFC,United States,1150,54,87,153,156,140,,,,8.2,,2,0,,,
+"Rocket Companies, Inc.",NYSE:RKT,United States,39445,14,522,1726,2417,2037,8.51,9.16,8.9,19.4,1.6,40,1,,,
+UWM Holdings Corporation,NYSE:UWMC,United States,479,1,237,-6,718,499,0.68,1.07,0.9,1.0,1.5,-11974,1,,,
+Onity Group Inc.,NYSE:ONIT,United States,301,36,78,43,72,59,75.92,84.23,81.2,5.1,0.4,70,1,,,
+"Velocity Financial, Inc.",NYSE:VEL,United States,724,18,103,111,118,111,19.76,22.65,21.6,6.5,0.8,6,1,,,
+"Walker & Dunlop, Inc.",NYSE:WD,United States,1381,40,134,69,159,120,51.34,52.66,52.2,11.5,0.8,131,1,,,
+"Block, Inc.",NYSE:XYZ,United States,49361,82,1484,2465,3135,2788,38.74,44.37,42.3,17.7,1.9,27,0,,,
+"Axos Financial, Inc.",NYSE:AX,United States,5484,97,479,559,629,559,,,,9.8,,13,0,,,
+"The Bancorp, Inc.",NASDAQ:TBBK,United States,2740,67,237,248,310,277,18.47,20.89,20.0,9.9,3.4,25,1,,,
+"NewtekOne, Inc.",NASDAQ:NEWT,United States,362,13,59,59,68,62,13.45,15.45,14.7,5.8,0.9,14,1,,,
+"Live Oak Bancshares, Inc.",NYSE:LOB,United States,1897,41,87,140,191,162,27.87,32.10,30.6,11.7,1.3,36,1,,,
+Merchants Bancorp,NASDAQ:MBIN,United States,2512,55,176,264,289,264,46.75,52.28,50.3,9.5,1.1,10,1,,,
+Coastal Financial Corporation,NASDAQ:CCB,United States,707,46,50,27,91,74,32.42,38.21,36.1,9.6,1.3,231,1,,,

@@ -60,6 +60,8 @@ def main():
         for a, n in sorted(c.items()):
             print('    %-40s %4d' % (a, n))
 
+    for _f, _why in sorted(getattr(M, '_SUPERSEDED', {}).items()):
+        print('  SUPERSEDED  %-42s %s' % (_f, _why))
     print('\nFILES PRESENT BUT NOT WIRED INTO THE LOADER')
     # DERIVED FROM THE LOADER, NEVER HARDCODED. A hand-maintained list of wired files goes stale the
     # moment someone wires a new one, and then this section reports files as unread when they are
@@ -69,6 +71,9 @@ def main():
         wired.update((_mf, _tf))
     for _mf, _tf in getattr(M, '_SECONDARY', []):
         wired.update((_mf, _tf))
+    wired.update(getattr(M, '_OVERLAYS', ()))
+    sup = getattr(M, '_SUPERSEDED', {})
+    wired.update(sup)
     for extra in ('private-rounds.csv', 'private-rounds-consumer.csv', 'private-companies-tags.csv',
                   'private-companies-consumer-tags.csv', 'private-round-investors.csv',
                   'private-round-investors-consumer.csv', 'tag-token-weights.csv'):

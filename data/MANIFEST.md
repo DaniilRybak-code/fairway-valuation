@@ -141,3 +141,13 @@ added by it, and names with no tags row, which the engine cannot match however g
 **The three rows marked NO RAW are the debt.** They were transcribed by eye from screenshots because
 the originals never reached the machine. They should be replaced by the real export and the raw file
 recorded here, at which point my transcription can be diffed against it and any reading error found.
+
+## 30-Aug-2026, evening
+
+| File | Rows | What it is | Read by the engine |
+|---|---|---|---|
+| `raw/2026-08-30_volume-metrics-disclosure-research.csv` | 166 | Company-reported GMV and transaction value across logistics, services, consumer and payments, with the issuer's exact words and a source URL per row. 26 disclosed, 63 not disclosed, 77 excluded by business model. | No, raw |
+| `raw/2026-08-30_capiq-listed-gmv-block.csv` | 12 | The GMV and volume block from the 21-Aug Capital IQ pull, the only twelve names in it that carry a broker volume estimate. | No, raw |
+| `raw/2026-08-30_capiq-tickers-as-supplied.csv` | 104 | Tickers as Capital IQ supplied them. This morning the same pull arrived with the ticker column hidden and 123 tickers were recovered by hand; this is what checked them. | No, raw |
+| `volume-metrics.csv` | 240 | The merged overlay of company-disclosed volume. Supersedes `gmv-disclosures.csv`. | Yes, as an overlay |
+| `gmv-disclosures.csv` | 74 | Superseded. Kept only so the ecommerce sheet's provenance stays auditable. | No, superseded |

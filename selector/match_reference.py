@@ -197,6 +197,59 @@ def _fam_from_archetype(t):
 for _mf, _tf in _SECONDARY:
     _ingest(_mf, _tf, _fam_from_archetype)
 
+
+# ---------------------------------------------------------------------------
+# COMPANY-DISCLOSED VOLUME, LAID OVER THE BROKER ESTIMATE.
+#
+# 30-Aug-2026. Two different things were both called GMV until today. The peers files carry a
+# BROKER GMV forecast, which exists for twelve names and is n.a. everywhere else. volume-metrics.csv
+# carries what the ISSUER ITSELF published, which is the only figure we may quote back to a founder
+# as reported. Where we hold both, the issuer's number wins for display and the broker's stays for
+# the forward multiple, and volume_status records which we are looking at.
+#
+# THE CATEGORY MATTERS MORE THAN THE NUMBER. A payments TPV and a marketplace GMV are both gross
+# transaction values and they are NOT comparable: WEX turns over $197bn to earn $2.9bn while
+# GigaCloud turns over $2.0bn to earn $1.7bn. volume_kind keeps them apart so nothing can average
+# a take-rate business against a marketplace.
+#
+# AND FOR A PAYMENTS NAME THE MULTIPLE IS A PERCENTAGE, NOT A TURN. Capital IQ's AV/NTM GMV column
+# rounds to 0.0x for every payments business in the file, which tells a founder nothing. The same
+# number as a percentage of volume is the take rate the market is paying for, so it is carried both
+# ways and the payments lane must display the percentage.
+# _OVERLAYS is read by tools/data_inventory.py so an overlay file is never reported unread.
+_OVERLAYS = ('volume-metrics.csv',)
+# A file kept for audit but no longer read: its content has been merged into an overlay.
+_SUPERSEDED = {'gmv-disclosures.csv': 'merged into volume-metrics.csv on 30-Aug-2026'}
+_VOLUME_STATUS, _VOLUME_KIND = {}, {}
+try:
+    for _v in load(D + 'volume-metrics.csv'):
+        _k = norm(_v.get('exchange_ticker', ''))
+        if not _k:
+            continue
+        _VOLUME_STATUS[_k] = _v
+        _VOLUME_KIND[_k] = _v.get('metric_category', '')
+except FileNotFoundError:
+    pass
+
+for _r in listed.values():
+    _v = _VOLUME_STATUS.get(norm(_r['exchange_ticker']))
+    _r['volume_status'] = (_v or {}).get('status', 'NOT_RESEARCHED')
+    _r['volume_kind'] = (_v or {}).get('metric_category', '')
+    _r['volume_metric_name'] = (_v or {}).get('issuer_metric_name', '')
+    _r['volume_period'] = (_v or {}).get('fiscal_period', '')
+    _r['volume_source'] = (_v or {}).get('source_url', '')
+    _disc = _f((_v or {}).get('value_usd_musd'))
+    if _disc is not None:
+        _r['gmv_reported'] = _disc
+        _r['gmv_basis_reported'] = 'ISSUER_DISCLOSED'
+    elif _r.get('gmv_reported') is not None:
+        _r['gmv_basis_reported'] = 'BROKER_ESTIMATE'
+    else:
+        _r['gmv_basis_reported'] = ''
+    # A turn is unreadable below about 0.1x, which is every payments name we hold.
+    _r['volume_pct'] = (round(100.0 * _r['ev'] / _r['gmv'], 2)
+                        if (_r.get('ev') and _r.get('gmv')) else None)
+
 listed = list(listed.values())
 
 # ---------------------------------------------------------------------------
