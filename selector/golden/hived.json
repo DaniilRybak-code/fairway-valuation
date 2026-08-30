@@ -2,42 +2,106 @@
  "expected": {
   "core": [
    {
-    "company": "Uber Technologies, Inc.",
+    "company": "SG Holdings Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, network; same type of business; same cost structure; same purchase frequency",
-    "score": 8.8,
-    "ticker": "NYSE:UBER"
+    "reason": "both do Parcel Delivery Network; same type of business; same business function; same kind of customer",
+    "score": 18.1,
+    "ticker": "TSE:9143"
+   },
+   {
+    "company": "FedEx Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
+    "score": 15.7,
+    "ticker": "NYSE:FDX"
+   },
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Parcel Delivery, Own Fleet; same type of business; same business function; same kind of customer",
+    "score": 15.1,
+    "ticker": "NYSE:UPS"
+   },
+   {
+    "company": "PostNL N.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Parcel Delivery; same type of business; same business function; same kind of customer",
+    "score": 15.1,
+    "ticker": "ENXTAM:PNL"
+   },
+   {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
+    "score": 15.1,
+    "ticker": "SZSE:002352"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "DIAMOND",
-   "high": 2.6,
+   "high": 0.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.6,
-   "mid": 2.6,
+   "low": 0.7,
+   "mid": 0.7,
    "n": 1,
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "PostNL N.V.",
+     "mult": 0.3,
+     "reason": "both do Parcel Delivery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "mult": 0.5,
+     "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FedEx Corporation",
+     "mult": 1.2,
+     "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "United Parcel Service",
+     "mult": 1.2,
+     "reason": "both do Parcel Delivery, Own Fleet; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "shared_words": [
     "delivery",
-    "network"
+    "fleet",
+    "network",
+    "own",
+    "parcel"
    ],
-   "sole": "Uber Technologies, Inc.",
+   "sole": "SG Holdings Co., Ltd.",
    "spread": 1.0,
-   "tag_evidence": 0.3,
+   "tag_evidence": 5.1,
    "thin": true,
    "triangulated": false
   },
@@ -137,89 +201,79 @@
   "private_window_months": 57,
   "secondary": [
    {
-    "company": "Delivery Hero SE",
+    "company": "Deutsche Post AG",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, network; same type of business; same cost structure; same purchase frequency",
-    "score": 9.8,
-    "ticker": "XTRA:DHER"
+    "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
+    "score": 14.8,
+    "ticker": "XTRA:DHL"
    },
    {
-    "company": "DoorDash, Inc.",
+    "company": "Blue Dart Express Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, network; same type of business; same cost structure; same purchase frequency",
-    "score": 8.8,
-    "ticker": "NASDAQGS:DASH"
+    "reason": "shares the language of delivery, network, own; same type of business; same business function; same kind of customer",
+    "score": 14.5,
+    "ticker": "NSEI:BLUEDART"
    },
    {
-    "company": "NCR Voyix Corporation",
-    "family": "software",
+    "company": "Delhivery Limited",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "same end market; same business function; sold the same way; same AI stance",
-    "score": 8.0,
-    "ticker": "NYSE:VYX"
+    "reason": "shares the language of parcel; same type of business; same business function; same kind of customer",
+    "score": 13.6,
+    "ticker": "NSEI:DELHIVERY"
    },
    {
-    "company": "Rezolve AI PLC",
-    "family": "software",
-    "in_medians": false,
-    "reason": "same end market; same kind of customer; sold the same way",
-    "score": 7.5,
-    "ticker": "NASDAQGM:RZLV"
-   },
-   {
-    "company": "Riskified Ltd.",
-    "family": "software",
+    "company": "ZTO Express (Cayman) Inc.",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "same end market; same kind of customer; sold the same way",
-    "score": 7.5,
-    "ticker": "NYSE:RSKD"
+    "reason": "shares the language of last, mile, network; same type of business; same business function; same kind of customer",
+    "score": 12.9,
+    "ticker": "NYSE:ZTO"
+   },
+   {
+    "company": "Container Corporation of India",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of last, mile, own; related type of business; same kind of customer; same revenue model",
+    "score": 12.3,
+    "ticker": "NSEI:CONCOR"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.8,
+   "high": 3.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.9,
-   "mid": 2.85,
-   "n": 2,
+   "low": 1.6,
+   "mid": 1.8,
+   "n": 5,
    "points": [],
-   "positioning": [
-    {
-     "company": "NCR Voyix Corporation",
-     "mult": 1.0,
-     "reason": "same end market; same business function; sold the same way; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Riskified Ltd.",
-     "mult": 1.3,
-     "reason": "same end market; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "shared_words": [
     "delivery",
-    "network"
+    "fleet",
+    "last",
+    "mile",
+    "network",
+    "own",
+    "parcel"
    ],
-   "spread": 5.3,
-   "tag_evidence": 0.3,
-   "thin": true,
+   "spread": 3.6,
+   "tag_evidence": 1.9,
+   "thin": false,
    "triangulated": false
   }
  },

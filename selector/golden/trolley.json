@@ -137,6 +137,30 @@
   "private_window_months": 75,
   "secondary": [
    {
+    "company": "Repay Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NASDAQCM:RPAY"
+   },
+   {
+    "company": "Usio, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NASDAQGM:USIO"
+   },
+   {
+    "company": "WEX Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same business function; same kind of customer; same revenue model",
+    "score": 9.1,
+    "ticker": "NYSE:WEX"
+   },
+   {
     "company": "Tyro Payments Limited",
     "family": "fintech",
     "in_medians": true,
@@ -151,30 +175,6 @@
     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
     "score": 8.4,
     "ticker": "NYSE:WU"
-   },
-   {
-    "company": "OFX Group Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 7.4,
-    "ticker": "ASX:OFX"
-   },
-   {
-    "company": "Al Ansari Financial Services PJSC",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
-    "score": 7.1,
-    "ticker": "DFM:ALANSARI"
-   },
-   {
-    "company": "DLocal Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; related type of business; same business function; same AI stance",
-    "score": 6.9,
-    "ticker": "NASDAQ:DLO"
    }
   ],
   "secondary_range": {
@@ -190,20 +190,28 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.0,
+   "high": 1.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 0.8,
+   "low": 0.7,
+   "mid": 0.85,
    "n": 4,
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "WEX Inc.",
+     "mult": 2.1,
+     "reason": "shares the language of payments; same business function; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "shared_words": [
     "border",
     "cross",
     "payments"
    ],
-   "spread": 4.0,
+   "spread": 2.4,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false

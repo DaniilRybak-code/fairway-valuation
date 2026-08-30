@@ -2,50 +2,77 @@
  "expected": {
   "core": [
    {
-    "company": "LendingClub Corporation",
+    "company": "Time Finance plc",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Loan Origination; same type of business; same business function; same revenue model",
-    "score": 9.8,
-    "ticker": "NYSE:LC"
+    "in_medians": false,
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 15.1,
+    "ticker": "AIM:TIME"
    },
    {
-    "company": "Upstart Holdings, Inc.",
+    "company": "Five-Star Business Finance Limited",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Loan Origination; same type of business; same end market; same business function",
-    "score": 9.3,
-    "ticker": "NASDAQ:UPST"
+    "in_medians": false,
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 15.1,
+    "ticker": "NSEI:FIVESTAR"
    },
    {
-    "company": "SoFi Technologies, Inc.",
+    "company": "Cholamandalam Investment and Finance Company Limited",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit, loan; same type of business; same business function; same revenue model",
-    "score": 9.0,
-    "ticker": "NASDAQ:SOFI"
+    "in_medians": false,
+    "reason": "both do SME Lending; same type of business; same end market; same business function",
+    "score": 14.8,
+    "ticker": "NSEI:CHOLAFIN"
    },
    {
-    "company": "Enova International, Inc.",
+    "company": "Credit Acceptance Corporation",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 8.8,
-    "ticker": "NYSE:ENVA"
+    "in_medians": false,
+    "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+    "score": 14.7,
+    "ticker": "NASDAQGS:CACC"
    },
    {
-    "company": "Nu Holdings Ltd.",
+    "company": "Grenke AG",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending, mobile; related type of business; same business function; same revenue model",
-    "score": 7.6,
-    "ticker": "NYSE:NU"
+    "reason": "shares the language of sme; same type of business; same end market; same business function",
+    "score": 14.6,
+    "ticker": "XTRA:GLJ"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 0.4,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.4,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "sme"
+   ],
+   "sole": "Grenke AG",
+   "spread": 1.0,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": true
   },
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "NONE",
@@ -117,48 +144,79 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Inter & Co, Inc.",
+    "company": "Shriram Finance Limited",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of lending; related type of business; same business function; same revenue model",
-    "score": 7.2,
-    "ticker": "NASDAQ:INTR"
+    "in_medians": false,
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 14.5,
+    "ticker": "NSEI:SHRIRAMFIN"
    },
    {
-    "company": "Affirm Holdings, Inc.",
+    "company": "Funding Circle Holdings plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same revenue model",
-    "score": 5.8,
-    "ticker": "NASDAQ:AFRM"
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 14.5,
+    "ticker": "LSE:FCH"
    },
    {
-    "company": "Klarna Group plc",
+    "company": "Far East Horizon Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same kind of customer",
-    "score": 5.8,
-    "ticker": "NYSE:KLAR"
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 14.0,
+    "ticker": "SEHK:3360"
    },
    {
-    "company": "Zip Co Limited",
+    "company": "Live Oak Bancshares, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same revenue model",
-    "score": 5.8,
-    "ticker": "ASX:ZIP"
+    "reason": "shares the language of business, lending; related type of business; same end market; same business function",
+    "score": 13.9,
+    "ticker": "NYSE:LOB"
    },
    {
-    "company": "One97 Communications Limited",
+    "company": "UWM Holdings Corporation",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of lending; related type of business; same kind of customer",
-    "score": 5.2,
-    "ticker": "NSEI:PAYTM"
+    "reason": "shares the language of lending, origination; same type of business; same end market; same business function",
+    "score": 13.8,
+    "ticker": "NYSE:UWMC"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 1.4,
+   "n": 4,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "business",
+    "credit",
+    "lending",
+    "loan",
+    "origination",
+    "sme"
+   ],
+   "spread": 5.2,
+   "tag_evidence": 1.5,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "Unsecured working-capital loans to African micro and small businesses in under a day"

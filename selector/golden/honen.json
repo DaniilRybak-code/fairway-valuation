@@ -18,6 +18,14 @@
     "ticker": "TSX:DCBO"
    },
    {
+    "company": "Nerdy Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same end market",
+    "score": 6.1,
+    "ticker": "NYSE:NRDY"
+   },
+   {
     "company": "Coursera, Inc.",
     "family": "consumer",
     "in_medians": true,
@@ -38,7 +46,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -51,8 +59,8 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
-   "mid": 0.4,
-   "n": 3,
+   "mid": 0.45,
+   "n": 4,
    "points": [
     {
      "company": "Coursera, Inc.",
@@ -65,6 +73,13 @@
      "company": "Chegg, Inc.",
      "mult": 0.4,
      "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nerdy Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of ai; same type of business; same end market",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -99,9 +114,53 @@
   "private_proximity": "NONE",
   "private_range": {},
   "private_window_months": 24,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Infomart Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of platform; related type of business; same kind of customer; sold the same way",
+    "score": 6.1,
+    "ticker": "TSE:2492"
+   },
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "TSE:4686"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 6.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 6.0,
+   "mid": 6.0,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "platform"
+   ],
+   "sole": "Infomart Corporation",
+   "spread": 1.0,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Turns company documents and recordings into structured courses with a 1:1 AI tutor"

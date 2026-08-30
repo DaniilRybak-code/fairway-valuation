@@ -2,6 +2,38 @@
  "expected": {
   "core": [
    {
+    "company": "Oisix Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of food, subscription; related type of business; same end market; same business function",
+    "score": 14.1,
+    "ticker": "TSE:3182"
+   },
+   {
+    "company": "HelloFresh SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of subscription; related type of business; same end market; same business function",
+    "score": 13.6,
+    "ticker": "XTRA:HFG"
+   },
+   {
+    "company": "Naked Wines plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same kind of customer",
+    "score": 12.0,
+    "ticker": "LSE:WINE"
+   },
+   {
+    "company": "Ocado Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same kind of customer",
+    "score": 11.0,
+    "ticker": "LSE:OCDO"
+   },
+   {
     "company": "Coupang, Inc.",
     "family": "consumer",
     "in_medians": true,
@@ -14,31 +46,67 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.7,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 1.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 0.7,
-   "n": 1,
-   "points": [],
+   "low": 0.1,
+   "mid": 0.3,
+   "n": 5,
+   "points": [
+    {
+     "company": "HelloFresh SE",
+     "mult": 0.1,
+     "reason": "shares the language of subscription; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Naked Wines plc",
+     "mult": 0.1,
+     "reason": "related type of business; same end market; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Oisix Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of food, subscription; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coupang, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Ocado Group plc",
+     "mult": 1.4,
+     "reason": "related type of business; same end market; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "shared_words": [
+    "food",
     "subscription"
    ],
-   "sole": "Coupang, Inc.",
-   "spread": 1.0,
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "spread": 14.0,
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -165,20 +233,20 @@
     "ticker": "NYSE:CHWY"
    },
    {
-    "company": "Match Group, Inc.",
+    "company": "WW International, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
-    "score": 9.4,
-    "ticker": "NASDAQGS:MTCH"
+    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+    "score": 12.1,
+    "ticker": "NASDAQGM:WW"
    },
    {
-    "company": "Bumble Inc.",
+    "company": "Rent the Runway, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
-    "score": 9.4,
-    "ticker": "NASDAQGS:BMBL"
+    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NASDAQGM:RENT"
    }
   ],
   "secondary_range": {
@@ -210,10 +278,10 @@
      "transaction_type": ""
     },
     {
-     "company": "Bumble Inc.",
-     "mult": 1.0,
-     "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
+     "company": "WW International, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
@@ -221,13 +289,6 @@
      "mult": 2.3,
      "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Match Group, Inc.",
-     "mult": 3.5,
-     "reason": "shares the language of discovery, subscription; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
      "transaction_type": ""
     }
    ],

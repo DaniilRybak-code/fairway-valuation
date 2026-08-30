@@ -208,13 +208,21 @@
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
     "score": 13.4,
     "ticker": "NYSE:ONON"
+   },
+   {
+    "company": "WW International, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+    "score": 12.1,
+    "ticker": "NASDAQGM:WW"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -227,8 +235,8 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.9,
-   "mid": 2.55,
-   "n": 4,
+   "mid": 2.3,
+   "n": 5,
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -238,7 +246,7 @@
     "subscription",
     "to"
    ],
-   "spread": 1.7,
+   "spread": 4.0,
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

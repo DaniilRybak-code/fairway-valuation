@@ -26,20 +26,20 @@
     "ticker": "NYSE:ETSY"
    },
    {
+    "company": "Auction Technology Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same kind of customer",
+    "score": 11.1,
+    "ticker": "LSE:ATG"
+   },
+   {
     "company": "Sea Limited",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of credit, marketplace; same type of business; same business function; same revenue model",
     "score": 8.7,
     "ticker": "NYSE:SE"
-   },
-   {
-    "company": "Allegro.eu S.A.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "WSE:ALE"
    }
   ],
   "core_range": {
@@ -181,38 +181,38 @@
     "ticker": "NASDAQGS:TCOM"
    },
    {
+    "company": "Xometry, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, supplier; same type of business; same business function; same kind of customer",
+    "score": 11.7,
+    "ticker": "NASDAQGS:XMTR"
+   },
+   {
+    "company": "GigaCloud Technology Inc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, sourcing; same type of business; same business function; same kind of customer",
+    "score": 11.7,
+    "ticker": "NASDAQGM:GCT"
+   },
+   {
     "company": "Airbnb, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace; related type of business; same business function; same revenue model",
     "score": 11.6,
     "ticker": "NASDAQGS:ABNB"
-   },
-   {
-    "company": "Booking Holdings Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:BKNG"
-   },
-   {
-    "company": "Expedia Group, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:EXPE"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -222,8 +222,8 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.2,
-   "mid": 4.0,
-   "n": 2,
+   "mid": 2.85,
+   "n": 4,
    "points": [],
    "positioning": [
     {
@@ -232,29 +232,17 @@
      "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
-    },
-    {
-     "company": "Expedia Group, Inc.",
-     "mult": 2.3,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Booking Holdings Inc.",
-     "mult": 5.3,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
     }
    ],
    "shared_words": [
-    "marketplace"
+    "marketplace",
+    "sourcing",
+    "supplier"
    ],
    "spread": 5.7,
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "Marketplace and procurement layer for durable carbon removal credits"

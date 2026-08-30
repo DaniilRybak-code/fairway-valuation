@@ -26,20 +26,20 @@
     "ticker": "NYSE:ETSY"
    },
    {
+    "company": "Auction Technology Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same kind of customer",
+    "score": 12.1,
+    "ticker": "LSE:ATG"
+   },
+   {
     "company": "Veeva Systems Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of clinical, trial; related type of business; same end market; same kind of customer",
     "score": 11.2,
     "ticker": "NYSE:VEEV"
-   },
-   {
-    "company": "Tecsys Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same kind of customer; sold the same way",
-    "score": 9.0,
-    "ticker": "TSX:TCS"
    }
   ],
   "core_range": {
@@ -58,8 +58,8 @@
    "high": 8.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 3.2,
+   "low": 3.2,
+   "mid": 3.5,
    "n": 5,
    "points": [
     {
@@ -70,16 +70,16 @@
      "transaction_type": ""
     },
     {
-     "company": "Tecsys Inc.",
-     "mult": 2.1,
-     "reason": "related type of business; same end market; same kind of customer; sold the same way",
+     "company": "Etsy, Inc.",
+     "mult": 3.2,
+     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "Etsy, Inc.",
-     "mult": 3.2,
-     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+     "company": "Auction Technology Group plc",
+     "mult": 3.5,
+     "reason": "shares the language of marketplace; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -217,35 +217,35 @@
     "ticker": "NASDAQGS:ABNB"
    },
    {
+    "company": "Xometry, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
+    "score": 12.2,
+    "ticker": "NASDAQGS:XMTR"
+   },
+   {
+    "company": "GigaCloud Technology Inc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
+    "score": 11.2,
+    "ticker": "NASDAQGM:GCT"
+   },
+   {
     "company": "Booking Holdings Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
     "score": 11.1,
     "ticker": "NASDAQGS:BKNG"
-   },
-   {
-    "company": "Expedia Group, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:EXPE"
-   },
-   {
-    "company": "Trip.com Group Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:TCOM"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -258,24 +258,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.2,
-   "mid": 4.0,
-   "n": 2,
+   "mid": 2.85,
+   "n": 4,
    "points": [],
    "positioning": [
-    {
-     "company": "Trip.com Group Limited",
-     "mult": 2.2,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Expedia Group, Inc.",
-     "mult": 2.3,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
     {
      "company": "Booking Holdings Inc.",
      "mult": 5.3,
@@ -290,7 +276,7 @@
    ],
    "spread": 5.7,
    "tag_evidence": 0.2,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   }
  },

@@ -2,51 +2,60 @@
  "expected": {
   "core": [
    {
+    "company": "BASE, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of ecommerce, shopify; same type of business; same end market; same business function",
+    "score": 14.7,
+    "ticker": "TSE:4477"
+   },
+   {
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
     "score": 11.6,
     "ticker": "NYSE:KVYO"
-   },
-   {
-    "company": "Rezolve AI PLC",
-    "family": "software",
-    "in_medians": false,
-    "reason": "shares the language of ai, product; related type of business; same end market; same AI stance",
-    "score": 5.9,
-    "ticker": "NASDAQGM:RZLV"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "DIAMOND",
-   "high": 2.7,
+   "high": 0.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
-   "mid": 2.7,
+   "low": 0.5,
+   "mid": 0.5,
    "n": 1,
    "points": [],
-   "positioning": [],
-   "shared_words": [
-    "automation"
+   "positioning": [
+    {
+     "company": "Klaviyo, Inc.",
+     "mult": 2.7,
+     "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
    ],
-   "sole": "Klaviyo, Inc.",
+   "shared_words": [
+    "ecommerce",
+    "shopify"
+   ],
+   "sole": "BASE, Inc.",
    "spread": 1.0,
-   "tag_evidence": 0.1,
+   "tag_evidence": 1.2,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -142,6 +151,14 @@
   "private_window_months": 65,
   "secondary": [
    {
+    "company": "Nayax Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "TASE:NYAX"
+   },
+   {
     "company": "Shoper S.A.",
     "family": "software",
     "in_medians": true,
@@ -156,97 +173,35 @@
     "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
     "score": 7.9,
     "ticker": "NASDAQGS:SHOP"
-   },
-   {
-    "company": "SPS Commerce, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Order Management; same end market; same kind of customer",
-    "score": 6.0,
-    "ticker": "NASDAQGS:SPSC"
-   },
-   {
-    "company": "Chewy, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Fulfilment; same end market; same business function",
-    "score": 5.6,
-    "ticker": "NYSE:CHWY"
-   },
-   {
-    "company": "Lightspeed Commerce Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer",
-    "score": 5.5,
-    "ticker": "TSX:LSPD"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 11.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
-   "mid": 3.4,
-   "n": 5,
-   "points": [
-    {
-     "company": "Chewy, Inc.",
-     "mult": 0.7,
-     "reason": "both do Fulfilment; same end market; same business function",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Lightspeed Commerce Inc.",
-     "mult": 0.8,
-     "reason": "same end market; same kind of customer",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "SPS Commerce, Inc.",
-     "mult": 3.4,
-     "reason": "both do Order Management; same end market; same kind of customer",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Shoper S.A.",
-     "mult": 4.5,
-     "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Shopify Inc.",
-     "mult": 11.0,
-     "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "low": 3.1,
+   "mid": 4.5,
+   "n": 3,
+   "points": [],
    "positioning": [],
    "shared_words": [
-    "fulfilment",
     "management",
-    "order",
     "store"
    ],
-   "spread": 15.7,
-   "tag_evidence": 0.6,
+   "spread": 3.5,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
   }

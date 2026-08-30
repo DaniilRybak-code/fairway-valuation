@@ -28,7 +28,7 @@
 # (NYSE:XYZ) is in the payments file, not here, on Daniil's ruling of 29-Aug: it trades on EBITDA in
 # reality, and the next best bases are EV/revenue and P/E, not P/BV. Its row is carried below for
 # reference only and is marked in_medians=0.
-company_name,exchange_ticker,country,market_cap_musd,price_per_share,ni_fy0_musd,ni_fy1_musd,ni_fy2_musd,ni_ntm_musd,bvps_2026,bvps_2027,bvps_ntm,pe_ntm_x,pb_ntm_x,ni_growth_pct,in_medians
+company_name,exchange_ticker,country,market_cap_musd,price_per_share,ni_fy0_musd,ni_fy1_musd,ni_fy2_musd,ni_ntm_musd,bvps_2026,bvps_2027,bvps_ntm,p_e_x,p_bv_x,ni_growth_pct,in_medians
 "OneMain Holdings, Inc.",NYSE:OMF,United States,7269,63,787,817,963,908,30.24,33.77,32.5,8.0,1.9,18,1
 Oportun Financial Corporation,NASDAQ:OPRT,United States,345,8,64,78,101,92,9.04,10.41,9.9,3.7,0.8,29,1
 "PROG Holdings, Inc.",NYSE:PRG,United States,1544,39,140,201,225,203,21.59,26.70,24.9,7.6,1.6,12,1

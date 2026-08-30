@@ -1,10 +1,43 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Oisix Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct, food, meal; same end market; same business function; same kind of customer",
+    "score": 13.4,
+    "ticker": "TSE:3182"
+   },
+   {
+    "company": "HelloFresh SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct, meal, subscription; same end market; same business function; same kind of customer",
+    "score": 12.9,
+    "ticker": "XTRA:HFG"
+   },
+   {
+    "company": "Naked Wines plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct; same end market; same business function; same kind of customer",
+    "score": 10.7,
+    "ticker": "LSE:WINE"
+   },
+   {
+    "company": "Ocado Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer; sold the same way",
+    "score": 9.5,
+    "ticker": "LSE:OCDO"
+   }
+  ],
   "core_range": {
    "denominator": "rev"
   },
-  "listed_proximity": "NONE",
+  "listed_proximity": "BROAD",
   "private": [
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -113,7 +146,48 @@
    "triangulated": false
   },
   "private_window_months": 45,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "BARK, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct, dog, pet; same type of business; same business function; same kind of customer",
+    "score": 21.0,
+    "ticker": "NYSE:BARK"
+   },
+   {
+    "company": "Hims & Hers Health, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct, subscription; same type of business; same business function; same kind of customer",
+    "score": 19.8,
+    "ticker": "NYSE:HIMS"
+   },
+   {
+    "company": "Warby Parker Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "score": 15.2,
+    "ticker": "NYSE:WRBY"
+   },
+   {
+    "company": "FIGS, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "score": 15.2,
+    "ticker": "NYSE:FIGS"
+   },
+   {
+    "company": "On Holding AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "score": 13.2,
+    "ticker": "NYSE:ONON"
+   }
+  ],
   "secondary_range": {
    "denominator": "rev"
   }

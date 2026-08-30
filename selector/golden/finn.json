@@ -32,13 +32,21 @@
     "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
     "score": 7.1,
     "ticker": "NASDAQGS:AMZN"
+   },
+   {
+    "company": "AUTO1 Group SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of car; related type of business; same end market; sold the same way",
+    "score": 6.8,
+    "ticker": "XTRA:AG1"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -46,13 +54,13 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 1.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.7,
-   "mid": 1.7,
-   "n": 1,
+   "low": 0.5,
+   "mid": 1.1,
+   "n": 2,
    "points": [],
    "positioning": [
     {
@@ -81,8 +89,7 @@
     "car",
     "owned"
    ],
-   "sole": "Carvana Co.",
-   "spread": 1.0,
+   "spread": 3.4,
    "tag_evidence": 0.5,
    "thin": true,
    "triangulated": false
@@ -153,35 +160,35 @@
     "ticker": "NYSE:HIMS"
    },
    {
-    "company": "Chewy, Inc.",
+    "company": "HelloFresh SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned, subscription, to; same type of business; same business function; same kind of customer",
+    "score": 13.3,
+    "ticker": "XTRA:HFG"
+   },
+   {
+    "company": "Oisix Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of owned, subscription, to; same type of business; same business function; same kind of customer",
+    "score": 13.3,
+    "ticker": "TSE:3182"
+   },
+   {
+    "company": "Rent the Runway, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
-    "score": 11.7,
-    "ticker": "NYSE:CHWY"
-   },
-   {
-    "company": "Zalando SE",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
-    "score": 11.6,
-    "ticker": "XTRA:ZAL"
-   },
-   {
-    "company": "ASOS Plc",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
-    "score": 11.6,
-    "ticker": "LSE:ASC"
+    "score": 13.2,
+    "ticker": "NASDAQGM:RENT"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -193,10 +200,17 @@
    "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.4,
-   "mid": 0.4,
-   "n": 5,
+   "low": 0.1,
+   "mid": 0.3,
+   "n": 4,
    "points": [
+    {
+     "company": "HelloFresh SE",
+     "mult": 0.1,
+     "reason": "shares the language of owned, subscription, to; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "BARK, Inc.",
      "mult": 0.3,
@@ -205,23 +219,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Zalando SE",
-     "mult": 0.4,
-     "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "ASOS Plc",
-     "mult": 0.4,
-     "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Chewy, Inc.",
-     "mult": 0.7,
-     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
+     "company": "Oisix Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of owned, subscription, to; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -239,7 +239,7 @@
     "subscription",
     "to"
    ],
-   "spread": 7.7,
+   "spread": 23.0,
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false

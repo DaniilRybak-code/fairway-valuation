@@ -2,6 +2,14 @@
  "expected": {
   "core": [
    {
+    "company": "Velocity Financial, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of broker; same type of business; same end market; same business function",
+    "score": 14.1,
+    "ticker": "NYSE:VEL"
+   },
+   {
     "company": "SoFi Technologies, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -32,18 +40,37 @@
     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
     "score": 9.8,
     "ticker": "NASDAQ:INTR"
-   },
-   {
-    "company": "Chime Financial, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-    "score": 7.3,
-    "ticker": "NASDAQ:CHYM"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 0.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.8,
+   "mid": 0.8,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "broker"
+   ],
+   "sole": "Velocity Financial, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": true
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -106,16 +133,78 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Upstart Holdings, Inc.",
+    "company": "Pepper Money Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of bank; same type of business; same business function",
-    "score": 5.3,
-    "ticker": "NASDAQ:UPST"
+    "reason": "shares the language of bank, broker, funding; same type of business; same business function; same kind of customer",
+    "score": 14.5,
+    "ticker": "ASX:PPM"
+   },
+   {
+    "company": "Onity Group Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
+    "score": 14.4,
+    "ticker": "NYSE:ONIT"
+   },
+   {
+    "company": "PennyMac Financial Services, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of broker, mortgage; same type of business; same business function; same kind of customer",
+    "score": 14.0,
+    "ticker": "NYSE:PFSI"
+   },
+   {
+    "company": "S&U plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
+    "score": 13.9,
+    "ticker": "LSE:SUS"
+   },
+   {
+    "company": "Japan Post Holdings",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+    "score": 11.8,
+    "ticker": "TSE:6178"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 0.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.85,
+   "n": 4,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "bank",
+    "broker",
+    "funding",
+    "mortgage",
+    "uk"
+   ],
+   "spread": 2.2,
+   "tag_evidence": 1.5,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "UK bank offering long-term fixed-rate mortgages funded by covered bonds, sold through brokers"

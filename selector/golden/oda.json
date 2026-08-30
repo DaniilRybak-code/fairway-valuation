@@ -2,96 +2,114 @@
  "expected": {
   "core": [
    {
+    "company": "Ocado Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Online Grocery; same type of business; same end market; same business function",
+    "score": 20.9,
+    "ticker": "LSE:OCDO"
+   },
+   {
+    "company": "Oisix Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of grocery, inventory; same type of business; same end market; same business function",
+    "score": 14.1,
+    "ticker": "TSE:3182"
+   },
+   {
+    "company": "HelloFresh SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of inventory; same type of business; same end market; same business function",
+    "score": 13.8,
+    "ticker": "XTRA:HFG"
+   },
+   {
+    "company": "Naked Wines plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of inventory; same type of business; same end market; same business function",
+    "score": 13.8,
+    "ticker": "LSE:WINE"
+   },
+   {
     "company": "Coupang, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Online Retail, Grocery; same type of business; same business function; same kind of customer",
     "score": 18.2,
     "ticker": "NYSE:CPNG"
-   },
-   {
-    "company": "JD.com, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
-    "score": 16.8,
-    "ticker": "NASDAQGS:JD"
-   },
-   {
-    "company": "Amazon.com, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
-    "score": 12.4,
-    "ticker": "NASDAQGS:AMZN"
-   },
-   {
-    "company": "Eternal Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
-    "score": 11.1,
-    "ticker": "NSEI:ETERNAL"
-   },
-   {
-    "company": "Swiggy Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
-    "score": 11.1,
-    "ticker": "NSEI:SWIGGY"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 2.8,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 1.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 2.4,
-   "n": 2,
-   "points": [],
-   "positioning": [
+   "low": 0.1,
+   "mid": 0.2,
+   "n": 4,
+   "points": [
     {
-     "company": "JD.com, Inc.",
+     "company": "HelloFresh SE",
      "mult": 0.1,
-     "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
+     "reason": "shares the language of inventory; same type of business; same end market; same business function",
+     "tier": "DIRECT",
      "transaction_type": ""
     },
+    {
+     "company": "Naked Wines plc",
+     "mult": 0.1,
+     "reason": "shares the language of inventory; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Oisix Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of grocery, inventory; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Ocado Group plc",
+     "mult": 1.4,
+     "reason": "both do Online Grocery; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [
     {
      "company": "Coupang, Inc.",
      "mult": 0.7,
      "reason": "both do Online Retail, Grocery; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
-    },
-    {
-     "company": "Amazon.com, Inc.",
-     "mult": 3.3,
-     "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "shared_words": [
-    "delivery",
-    "grocery"
+    "automated",
+    "fulfilment",
+    "grocery",
+    "inventory",
+    "online"
    ],
-   "spread": 1.4,
-   "tag_evidence": 0.6,
-   "thin": true,
+   "spread": 14.0,
+   "tag_evidence": 4.9,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",

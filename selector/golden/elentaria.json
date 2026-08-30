@@ -190,76 +190,100 @@
     "ticker": "NASDAQGS:PEGA"
    },
    {
+    "company": "Zaggle Prepaid Ocean Services",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "NSEI:ZAGGLE"
+   },
+   {
+    "company": "Cass Information Systems",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of b2b, commercial; same type of business; same kind of customer; sold the same way",
+    "score": 8.5,
+    "ticker": "NASDAQGS:CASS"
+   },
+   {
     "company": "SAP SE",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of planning, platform; same type of business; same business function; sold the same way",
     "score": 8.5,
     "ticker": "XTRA:SAP"
-   },
-   {
-    "company": "Samsara Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
-    "score": 8.2,
-    "ticker": "NYSE:IOT"
-   },
-   {
-    "company": "Intapp, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation, deal, lifecycle; same business function; same kind of customer; sold the same way",
-    "score": 7.8,
-    "ticker": "NASDAQGS:INTA"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 5.1,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.7,
-   "mid": 4.0,
-   "n": 3,
-   "points": [],
-   "positioning": [
+   "mid": 2.7,
+   "n": 5,
+   "points": [
     {
-     "company": "Intapp, Inc.",
-     "mult": 4.6,
-     "reason": "shares the language of automation, deal, lifecycle; same business function; same kind of customer; sold the same way",
-     "tier": "BROAD",
+     "company": "Zaggle Prepaid Ocean Services",
+     "mult": 0.8,
+     "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "Samsara Inc.",
-     "mult": 10.5,
-     "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
-     "tier": "BROAD",
+     "company": "Pegasystems Inc.",
+     "mult": 2.7,
+     "reason": "both do Workflow Automation; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cass Information Systems",
+     "mult": 2.7,
+     "reason": "shares the language of b2b, commercial; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "UiPath, Inc.",
+     "mult": 4.0,
+     "reason": "both do Agentic Automation; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SAP SE",
+     "mult": 5.1,
+     "reason": "shares the language of planning, platform; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
     "agentic",
     "automation",
+    "b2b",
+    "commercial",
     "customer",
     "planning",
     "platform",
+    "revenue",
     "workflow"
    ],
-   "spread": 1.9,
-   "tag_evidence": 0.9,
+   "spread": 6.4,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   }

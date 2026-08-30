@@ -2,6 +2,14 @@
  "expected": {
   "core": [
    {
+    "company": "Avarda Bank AB (publ)",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, financing, lending; same type of business; same end market; same kind of customer",
+    "score": 11.4,
+    "ticker": "OM:AVARDA"
+   },
+   {
     "company": "Affirm Holdings, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -32,18 +40,39 @@
     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
     "score": 8.8,
     "ticker": "NYSE:LC"
-   },
-   {
-    "company": "Enova International, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 8.8,
-    "ticker": "NYSE:ENVA"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 3.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.3,
+   "mid": 3.3,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "credit",
+    "financing",
+    "lending"
+   ],
+   "sole": "Avarda Bank AB (publ)",
+   "spread": 1.0,
+   "tag_evidence": 0.9,
+   "thin": true,
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -117,48 +146,76 @@
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "SoFi Technologies, Inc.",
+    "company": "Credit Acceptance Corporation",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "NASDAQ:SOFI"
+    "in_medians": false,
+    "reason": "shares the language of credit, financing, lending; same type of business; same business function; same kind of customer",
+    "score": 13.9,
+    "ticker": "NASDAQGS:CACC"
    },
    {
-    "company": "Nu Holdings Ltd.",
+    "company": "Five-Star Business Finance Limited",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit, lending; related type of business; same business function; same revenue model",
-    "score": 7.3,
-    "ticker": "NYSE:NU"
+    "in_medians": false,
+    "reason": "shares the language of credit, lending, micro; same type of business; same business function; same kind of customer",
+    "score": 13.9,
+    "ticker": "NSEI:FIVESTAR"
    },
    {
-    "company": "Inter & Co, Inc.",
+    "company": "Time Finance plc",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of lending; related type of business; same business function; same revenue model",
-    "score": 7.2,
-    "ticker": "NASDAQ:INTR"
+    "in_medians": false,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same kind of customer",
+    "score": 13.3,
+    "ticker": "AIM:TIME"
    },
    {
-    "company": "StoneCo Ltd.",
+    "company": "Shriram Finance Limited",
     "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Working Capital; same kind of customer; sold the same way",
-    "score": 6.5,
-    "ticker": "NASDAQ:STNE"
+    "in_medians": false,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same kind of customer",
+    "score": 13.3,
+    "ticker": "NSEI:SHRIRAMFIN"
    },
    {
-    "company": "Upstart Holdings, Inc.",
+    "company": "Velocity Financial, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function",
-    "score": 5.3,
-    "ticker": "NASDAQ:UPST"
+    "reason": "shares the language of credit, lending; same type of business; same business function; same kind of customer",
+    "score": 13.3,
+    "ticker": "NYSE:VEL"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 0.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.8,
+   "mid": 0.8,
+   "n": 1,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "credit",
+    "lending"
+   ],
+   "sole": "Velocity Financial, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
   }
  },
  "label": "Weekly working-capital credit letting Latin American shopkeepers pay distributors"

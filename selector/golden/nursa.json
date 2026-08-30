@@ -1,10 +1,78 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "AMN Healthcare Services, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Healthcare Staffing; same type of business; same end market; same business function",
+    "score": 10.0,
+    "ticker": "NYSE:AMN"
+   },
+   {
+    "company": "Freelancer Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+    "score": 9.1,
+    "ticker": "ASX:FLN"
+   },
+   {
+    "company": "Airtasker Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same revenue model",
+    "score": 6.6,
+    "ticker": "ASX:ART"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 0.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.7,
+   "mid": 0.7,
+   "n": 1,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Airtasker Limited",
+     "mult": 1.1,
+     "reason": "shares the language of marketplace; same type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Freelancer Limited",
+     "mult": 1.2,
+     "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "healthcare",
+    "staffing"
+   ],
+   "sole": "AMN Healthcare Services, Inc.",
+   "spread": 1.0,
+   "tag_evidence": 1.0,
+   "thin": true,
+   "triangulated": false
   },
-  "listed_proximity": "NONE",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "GMV_ONLY",
@@ -65,9 +133,91 @@
   "private_proximity": "BROAD",
   "private_range": {},
   "private_window_months": 37,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Upwork Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+    "score": 13.6,
+    "ticker": "NASDAQGS:UPWK"
+   },
+   {
+    "company": "Fiverr International Ltd.",
+    "family": "consumer",
+    "in_medians": false,
+    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+    "score": 13.6,
+    "ticker": "NYSE:FVRR"
+   },
+   {
+    "company": "Angi Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+    "score": 12.6,
+    "ticker": "NASDAQGS:ANGI"
+   },
+   {
+    "company": "PDD Holdings Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+    "score": 10.6,
+    "ticker": "NASDAQGS:PDD"
+   },
+   {
+    "company": "eBay Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+    "score": 10.6,
+    "ticker": "NASDAQGS:EBAY"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 0.85,
+   "n": 2,
+   "points": [],
+   "positioning": [
+    {
+     "company": "PDD Holdings Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "eBay Inc.",
+     "mult": 3.9,
+     "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "marketplace"
+   ],
+   "spread": 2.4,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Per-diem shift marketplace matching healthcare facilities with local licensed clinicians"

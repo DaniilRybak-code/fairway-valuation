@@ -8,13 +8,29 @@
     "reason": "shares the language of legal, management; related type of business; same end market; same kind of customer",
     "score": 9.6,
     "ticker": "NASDAQGS:INTA"
+   },
+   {
+    "company": "Airtasker Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 8.6,
+    "ticker": "ASX:ART"
+   },
+   {
+    "company": "Freelancer Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 8.6,
+    "ticker": "ASX:FLN"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -22,23 +38,23 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 4.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.6,
-   "mid": 4.6,
-   "n": 1,
+   "low": 1.1,
+   "mid": 1.2,
+   "n": 3,
    "points": [],
    "positioning": [],
    "shared_words": [
     "legal",
-    "management"
+    "management",
+    "marketplace"
    ],
-   "sole": "Intapp, Inc.",
-   "spread": 1.0,
+   "spread": 4.2,
    "tag_evidence": 0.6,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",

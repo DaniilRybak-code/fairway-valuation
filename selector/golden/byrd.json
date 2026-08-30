@@ -2,42 +2,118 @@
  "expected": {
   "core": [
    {
-    "company": "Lightspeed Commerce Inc.",
-    "family": "software",
+    "company": "Delhivery Limited",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of processing; same end market; same business function; same kind of customer",
-    "score": 10.7,
-    "ticker": "TSX:LSPD"
+    "reason": "shares the language of border, cross, fulfilment; same type of business; same business function; same revenue model",
+    "score": 9.8,
+    "ticker": "NSEI:DELHIVERY"
    },
    {
-    "company": "Shoper S.A.",
-    "family": "software",
+    "company": "FedEx Corporation",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "same end market; same business function; same kind of customer; same AI stance",
-    "score": 8.5,
-    "ticker": "WSE:SHO"
+    "reason": "shares the language of network, shipping; same type of business; same business function; same revenue model",
+    "score": 9.2,
+    "ticker": "NYSE:FDX"
    },
    {
-    "company": "Shopify Inc.",
-    "family": "software",
+    "company": "Deutsche Post AG",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of processing; same end market; same business function; same kind of customer",
-    "score": 7.7,
-    "ticker": "NASDAQGS:SHOP"
+    "reason": "shares the language of border, cross, logistics; same type of business; same business function; same revenue model",
+    "score": 9.2,
+    "ticker": "XTRA:DHL"
    },
    {
-    "company": "NCR Voyix Corporation",
-    "family": "software",
+    "company": "InPost S.A.",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "same end market; same business function; same AI stance",
-    "score": 6.0,
-    "ticker": "NYSE:VYX"
+    "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
+    "score": 9.2,
+    "ticker": "ENXTAM:INPST"
+   },
+   {
+    "company": "PostNL N.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+    "score": 8.9,
+    "ticker": "ENXTAM:PNL"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.0,
+   "mid": 1.2,
+   "n": 5,
+   "points": [
+    {
+     "company": "PostNL N.V.",
+     "mult": 0.3,
+     "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Deutsche Post AG",
+     "mult": 1.0,
+     "reason": "shares the language of border, cross, logistics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FedEx Corporation",
+     "mult": 1.2,
+     "reason": "shares the language of network, shipping; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "InPost S.A.",
+     "mult": 2.4,
+     "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of border, cross, fulfilment; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "border",
+    "cross",
+    "european",
+    "fulfilment",
+    "logistics",
+    "network",
+    "shipping"
+   ],
+   "spread": 8.3,
+   "tag_evidence": 1.3,
+   "thin": false,
+   "triangulated": false
   },
-  "listed_proximity": "BROAD",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_EXACT",
@@ -164,16 +240,50 @@
     "ticker": "NASDAQGS:CART"
    },
    {
-    "company": "SPS Commerce, Inc.",
+    "company": "Lightspeed Commerce Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of network; same end market; same kind of customer; sold the same way",
-    "score": 9.6,
-    "ticker": "NASDAQGS:SPSC"
+    "reason": "shares the language of processing; same end market; same business function; same kind of customer",
+    "score": 10.7,
+    "ticker": "TSX:LSPD"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.9,
+   "mid": 2.2,
+   "n": 4,
+   "points": [],
+   "positioning": [
+    {
+     "company": "Lightspeed Commerce Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of processing; same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "shared_words": [
+    "network"
+   ],
+   "spread": 3.1,
+   "tag_evidence": 0.1,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "European third-party logistics running pick, pack and returns from its own warehouse network"

@@ -2,43 +2,78 @@
  "expected": {
   "core": [
    {
-    "company": "Uber Technologies, Inc.",
+    "company": "PostNL N.V.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, network; same type of business; same cost structure; same purchase frequency",
-    "score": 8.8,
-    "ticker": "NYSE:UBER"
+    "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "ENXTAM:PNL"
+   },
+   {
+    "company": "Yamato Holdings Co.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, last, mile; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "TSE:9064"
+   },
+   {
+    "company": "ZTO Express (Cayman) Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of last, mile, network; same type of business; same business function; same revenue model",
+    "score": 10.4,
+    "ticker": "NYSE:ZTO"
+   },
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
+    "score": 9.7,
+    "ticker": "NYSE:UPS"
+   },
+   {
+    "company": "SG Holdings Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
+    "score": 9.7,
+    "ticker": "TSE:9143"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 2.6,
+   "display": "RANGE",
+   "high": 1.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.6,
-   "mid": 2.6,
-   "n": 1,
+   "low": 0.3,
+   "mid": 0.7,
+   "n": 5,
    "points": [],
    "positioning": [],
    "shared_words": [
     "delivery",
-    "network"
+    "last",
+    "logistics",
+    "mile",
+    "network",
+    "parcel"
    ],
-   "sole": "Uber Technologies, Inc.",
-   "spread": 1.0,
-   "tag_evidence": 0.3,
-   "thin": true,
+   "spread": 5.3,
+   "tag_evidence": 2.1,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
@@ -136,33 +171,33 @@
     "ticker": "NASDAQGS:SPSC"
    },
    {
-    "company": "Allegro.eu S.A.",
+    "company": "Deutsche Post AG",
     "family": "consumer",
     "in_medians": true,
-    "reason": "both do Delivery Network; same kind of customer; same purchase frequency; same AI stance",
-    "score": 8.8,
-    "ticker": "WSE:ALE"
+    "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+    "score": 9.4,
+    "ticker": "XTRA:DHL"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "DIRECT",
+   "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "SHARED_PRODUCT",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 3.4,
+   "display": "RANGE",
+   "high": 4.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.4,
-   "mid": 3.4,
-   "n": 1,
+   "low": 0.9,
+   "mid": 1.0,
+   "n": 3,
    "points": [],
    "positioning": [
     {
@@ -173,35 +208,22 @@
      "transaction_type": ""
     },
     {
-     "company": "Delivery Hero SE",
-     "mult": 0.9,
-     "reason": "shares the language of delivery, network; same type of business; same kind of customer; same cost structure",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "SPS Commerce, Inc.",
      "mult": 3.4,
      "reason": "shares the language of network; same end market; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
-    },
-    {
-     "company": "DoorDash, Inc.",
-     "mult": 4.8,
-     "reason": "shares the language of delivery, network; same type of business; same kind of customer; same cost structure",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "shared_words": [
     "delivery",
-    "network"
+    "logistics",
+    "network",
+    "parcel"
    ],
-   "sole": "Allegro.eu S.A.",
-   "spread": 1.0,
-   "tag_evidence": 3.3,
-   "thin": true,
+   "spread": 5.3,
+   "tag_evidence": 0.9,
+   "thin": false,
    "triangulated": false
   }
  },

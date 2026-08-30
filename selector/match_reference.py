@@ -78,17 +78,52 @@ def _f(v):
 #   MercadoLibre is a marketplace with a payments business attached, not the reverse,
 #   so it must keep the consumer archetypes.
 listed = {}
-for mfile, tfile, fam in [('peers-software.csv','peers-software-tags.csv','software'),
-                          ('peers-ecommerce.csv','peers-ecommerce-tags.csv','consumer'),
-                          ('peers-fintech.csv','peers-fintech-tags.csv','fintech')]:
-    tags = {r['exchange_ticker']: r for r in load(D+tfile)}
+untagged = []
+
+# TWO FILES ARE LOADED IN A SECOND PASS AND THE REASON IS NOT COSMETIC. Family is the matching
+# GATE, and it is LEARNED further down from the archetypes that appear on these listed rows. If the
+# lending file and the logistics file each declared a NEW family, every archetype they share with
+# the original three would be re-counted and could silently flip: 'Merchant Acquiring & PSP' sits in
+# fintech today, and twenty payments names arriving under a family called 'operations' could move
+# it. That would change which companies every payments founder is compared against, with nothing in
+# any diff to show why.
+#
+# So the three original files keep their families exactly as they were and are loaded FIRST. The two
+# new files are then loaded with family assigned PER ROW from the map the first three produced, so a
+# logistics name lands in consumer, a payments name lands in fintech, and no existing archetype is
+# re-counted. The gate is unchanged; the universe is simply larger.
+_PRIMARY = [('peers-software.csv',  'peers-software-tags.csv',  'software'),
+            ('peers-ecommerce.csv', 'peers-ecommerce-tags.csv', 'consumer'),
+            ('peers-fintech.csv',   'peers-fintech-tags.csv',   'fintech')]
+_SECONDARY = [('peers-logistics-services.csv', 'peers-logistics-services-tags.csv'),
+              ('peers-lending.csv',            'peers-lending-tags.csv')]
+
+
+def _ingest(mfile, tfile, fam_for):
+    # THE TAG LOOKUP IS NORMALISED, NOT EXACT, AND THAT IS DELIBERATE. Capital IQ writes the same
+    # company as NASDAQ:OPRT on one pull and NASDAQGS:OPRT on another, and an exact-string join
+    # silently drops the row: 29 lenders vanished this way on 30-Aug-2026 before this was fixed.
+    # norm() already strips the exchange prefix for de-duplication, so the join uses the same key.
+    # The exact spelling is still tried first, so a file that is internally consistent is unaffected.
+    tags, ntags = {}, {}
+    for r in load(D+tfile):
+        tags[r['exchange_ticker']] = r
+        ntags.setdefault(norm(r['exchange_ticker']), r)
     for m in load(D+mfile):
-        k = norm(m['exchange_ticker'])
-        if k in listed: continue
-        r = {**m, **tags[m['exchange_ticker']], 'family': fam}
-        r['ev']   = _f(m['enterprise_value_musd'])
-        r['rev']  = _f(m['revenue_ntm_musd'])
-        r['mult'] = _f(m['ev_ntm_revenue_x'])
+        tk = m.get('exchange_ticker', '')
+        k = norm(tk)
+        if not k or k in listed: continue
+        t = tags.get(tk) or ntags.get(k)
+        if t is None:
+            # A market row with no tag row cannot be matched on anything, so it is skipped and
+            # RECORDED. Silently dropping it is how a whole sector goes missing without anyone
+            # noticing, which is exactly what happened on 30-Aug-2026.
+            untagged.append((mfile, tk, m.get('company_name', '')))
+            continue
+        r = {**m, **t, 'family': fam_for(t)}
+        r['ev']   = _f(m.get('enterprise_value_musd'))
+        r['rev']  = _f(m.get('revenue_ntm_musd'))
+        r['mult'] = _f(m.get('ev_ntm_revenue_x'))
         # GROWTH ON THE LISTED SIDE CHANGED DEFINITION ON 30-AUG-2026 AND THIS IS WHERE IT LANDS.
         # Daniil recalculated it as the CY+0 to CY+2 COMPOUND ANNUAL GROWTH RATE of revenue in
         # reported currency, replacing the single-year forward NTM growth the screen used to give.
@@ -121,6 +156,29 @@ for mfile, tfile, fam in [('peers-software.csv','peers-software-tags.csv','softw
         flag = r.get('in_medians', r.get('in_stats', '1'))
         r['in_medians'] = str(flag).strip() not in ('0','')
         listed[k] = r
+
+
+for _mf, _tf, _fam in _PRIMARY:
+    _ingest(_mf, _tf, (lambda f: (lambda _t: f))(_fam))
+
+# The family map produced by the three primary files, used to place every secondary row.
+_SEED = {}
+for _r in listed.values():
+    _SEED.setdefault(_r['archetype'], collections.Counter())[_r['family']] += 1
+_SEED = {a: c.most_common(1)[0][0] for a, c in _SEED.items()}
+
+
+def _fam_from_archetype(t):
+    # An archetype the primary files never carried falls back to consumer, which is where every
+    # such archetype in these two files belongs (logistics, retail, fitness, media). It is a
+    # fallback, not a guess dressed up as one: nothing here should reach it, and if something does
+    # it will show up as a consumer-family name that looks out of place.
+    return _SEED.get(t.get('archetype')) or _SEED.get(t.get('archetype_secondary')) or 'consumer'
+
+
+for _mf, _tf in _SECONDARY:
+    _ingest(_mf, _tf, _fam_from_archetype)
+
 listed = list(listed.values())
 
 # ---------------------------------------------------------------------------
