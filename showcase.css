@@ -991,11 +991,95 @@ h1,h2,h3 { font-family:var(--sans); }
   .hero-genie-on .ff-delta { opacity:1; max-height:none; }
 }
 
-/* The method headings. A banker reads a football field by approach, not by row label: which
-   methods agree, which disagree, and which are missing. Eleven rows in a flat column do not
-   answer that; the same eleven under four headings do. */
-.ff-group { padding:22px 0 5px; border-bottom:1px solid var(--ff-rule-hard); margin-bottom:-1px; }
-.ff-group:first-of-type { padding-top:6px; }
-.ff-group span { font-size:10.5px; font-weight:700; letter-spacing:.11em;
-  text-transform:uppercase; color:var(--ff-ink); opacity:.6; }
-.ff-group + .ff-row { border-top:none; }
+/* ================= v8.6, 30-Aug-2026: the numbered-rail round.
+   The margin notes leave the field. The field gives up its right edge to a
+   250px rail where six numbered points spawn one by one as the card expands —
+   chip and text wear the colour of the bar they explain. The +40% badge gets
+   its small curved arrows back. Page 3 gains the narrowing funnel and pulls
+   the investors into first view. */
+
+/* ---- the field cedes a rail: 5th grid column grows with the expansion ---- */
+.hero-genie-on .ffx-head, .hero-genie-on .ff-row, .hero-genie-on .ffx-axis {
+  grid-template-columns:minmax(140px,200px) calc(92px * var(--exp, 0)) calc(114px * var(--exp, 0))
+    minmax(0,1fr) calc(250px * var(--exp, 0)); }
+
+/* numbered points: absolutely pinned to the rail so a half-open column can
+   never inflate the row; they exist only in the genie context */
+.ff-note { display:none; }
+.hero-genie-on .ff-row { position:relative; }
+.hero-genie-on .ff-note { display:flex; align-items:flex-start; gap:10px;
+  position:absolute; right:0; top:50%; width:min(250px, calc(280px * var(--exp, 0)));
+  transform:translateY(-50%) translateX(calc(14px * (1 - var(--nseen, 0))));
+  opacity:var(--nseen, 0); pointer-events:none; }
+.hero-genie-on .ff-note, .hero-genie-on .our-read .ff-note {
+  --nseen:clamp(0, calc((var(--exp, 0) - var(--nd, .6)) / 0.08), 1); }
+.ff-note .fn { flex:0 0 auto; width:21px; height:21px; border-radius:50%;
+  font-family:var(--mono); font-style:normal; font-size:11px; font-weight:700;
+  color:#fff; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+.ff-note p { margin:0; font-size:12px; line-height:1.35; font-weight:600; }
+.fn.c1 { background:#9aa5b8; }  .ff-note .fn.c1 + p { color:#6a7383; }
+.fn.c2 { background:#8ea9dd; }  .ff-note .fn.c2 + p { color:#3f66c2; }
+.fn.c3 { background:#8b5cf6; }  .ff-note .fn.c3 + p { color:#7c3aed; }
+.fn.c4 { background:#0e7490; }  .ff-note .fn.c4 + p { color:#0e7490; }
+.fn.c5 { background:#33415f; }  .ff-note .fn.c5 + p { color:#33415f; }
+.fn.c6 { background:#1d4ed8; }  .ff-note .fn.c6 + p { color:#1d4ed8; }
+/* the regression note leans down toward the precedents bar it also speaks for */
+.hero-genie-on .ff-note.n3 { top:72%; }
+
+/* Our read shares the card's geometry: main copy left, point six on the rail */
+.hero-genie-on .our-read { display:grid;
+  grid-template-columns:minmax(0,1fr) calc(250px * var(--exp, 0));
+  gap:0 calc(4px + 14px * var(--exp, 0)); align-items:center;
+  max-height:calc(420px * var(--exp, 0)); }
+.hero-genie-on .our-read .ff-note { position:static; transform:none;
+  justify-self:end; align-self:center; }
+
+/* the +40% badge gets its small curved arrows: up to the unrefined range,
+   down to the refined band it prices against */
+.prem-badge .pa { position:absolute; width:26px; height:23px; fill:none;
+  stroke:var(--accent); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.prem-badge .pa.up { left:-32px; top:-10px; }
+.prem-badge .pa.dn { left:-32px; bottom:-8px; }
+
+/* ---- page 3: tighter frame, funnel beside the universe, investors in view ---- */
+.snap.read-sec { min-height:100vh; justify-content:flex-start; padding:38px 0 40px; }
+.read-head { display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+  gap:24px; align-items:end; }
+.read-head .sec-title { font-size:clamp(22px,2.2vw,30px); margin-bottom:0; }
+.read-head .sec-lede { font-size:13.5px; margin:0; padding-bottom:2px; }
+.read-grid { grid-template-columns:minmax(0,57fr) minmax(0,43fr); gap:14px; margin-top:22px; }
+.rd { padding:16px 20px 14px; }
+.rd-t { margin-bottom:10px; }
+.rd-list li { margin-bottom:8px; font-size:12.5px; }
+.uni-table td { padding:3.5px 8px 3.5px 0; font-size:12px; }
+.uni-table tr.uh td { padding-top:10px; }
+
+/* the funnel: how 12,000 companies become 5 named peers */
+.rd.funnel-card { display:flex; flex-direction:column; }
+.funnel { flex:1; display:grid; gap:6px; align-content:space-evenly; margin-top:2px; }
+.fl { display:grid; grid-template-columns:minmax(0,54%) minmax(0,1fr); gap:0 14px;
+  align-items:center; }
+.fl em { display:flex; align-items:center; justify-content:center; font-style:normal;
+  font-family:var(--mono); font-weight:600; font-size:14.5px; letter-spacing:-.01em;
+  padding:9px 0; justify-self:center; color:#fff; }
+.fl span { font-size:11px; line-height:1.4; color:var(--ff-soft); }
+.fl.f1 em { width:100%;   background:#cfd6e4; color:#1c2740; clip-path:polygon(0 0,100% 0,90% 100%,10% 100%); }
+.fl.f2 em { width:80%;    background:#a9bde6; color:#1c2740; clip-path:polygon(0 0,100% 0,88.8% 100%,11.2% 100%); }
+.fl.f3 em { width:62%;    background:#6b8afd; clip-path:polygon(0 0,100% 0,85.5% 100%,14.5% 100%); }
+.fl.f4 em { width:44%;    background:#8b5cf6; clip-path:polygon(0 0,100% 0,81.8% 100%,18.2% 100%); }
+.fl.f5 em { width:28%;    background:#1d4ed8; clip-path:polygon(0 0,100% 0,82% 100%,18% 100%); }
+
+/* investors: three columns, the width earning its keep */
+.inv-cols { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.ivc { display:flex; flex-direction:column; gap:8px; }
+.ivc .ivn-rounds { align-items:flex-start; }
+
+@media (max-width:900px) {
+  .hero-genie-on .ff-note { display:none; }
+  .hero-genie-on .our-read { display:block; }
+  .read-head { grid-template-columns:1fr; gap:10px; }
+  .read-grid { grid-template-columns:1fr; }
+  .fl { grid-template-columns:minmax(0,60%) minmax(0,1fr); }
+  .inv-cols { grid-template-columns:1fr; }
+  .snap.read-sec { min-height:auto; }
+}
