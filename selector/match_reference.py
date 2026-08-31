@@ -153,6 +153,22 @@ def _ingest(mfile, tfile, fam_for):
             r['g'] = _f(m.get('revenue_growth_ntm_pct'))
             r['g_basis'] = 'NTM'
 
+        # ONLY A MULTI-YEAR RATE MAY RANK A PEER. Daniil, 31-Aug-2026: "for growth - we need to take
+        # longer-term numbers to rank the peers (i.e. the CAGR). Year 1 and 2 numbers are only there
+        # to estimate the TPV / GMV, where available, but should not be used to categorise the peers."
+        #
+        # A single forward year is one analyst's near-term estimate and it swings with a guided
+        # quarter. Fiserv is the case in front of us: its CY+1 revenue is down 7.6 per cent while its
+        # two-year trajectory is up. Ranking a founder's comparables on that one year would sort
+        # Fiserv next to a shrinking business, which it is not.
+        #
+        # g STAYS as it is, because the volume forecast is built off the near-term series and the
+        # reveal shows whatever we hold. g_rank is what the MATCHER may see, and it is empty unless
+        # we hold a real CAGR. An empty growth is honest: band_compatible already lets an unknown
+        # pass rather than excluding on it, so a row with no CAGR competes on business nature alone
+        # instead of on a number that means something different from its neighbours'.
+        r['g_rank'] = r['g'] if r['g_basis'].startswith('CAGR') else None
+
         # GMV, WHERE THE COMPANY REPORTS ONE. gmv_reported is the company's own figure and is the
         # only one that may be shown to a founder as reported. gmv (NTM) and gmv_mult are built on
         # Daniil's assumption that GMV grows with revenue, because brokers do not forecast GMV, so
@@ -384,8 +400,8 @@ def score(p, r, weights=W, use_fin=True):
         # The profile side can be genuinely empty. A pre-revenue founder has no growth rate and
         # no gross margin, and neither does a company profiled from its website alone. Scoring
         # must degrade to the qualitative axes rather than raise TypeError on None.
-        if r.get('g') is not None and p.get('growth') is not None:
-            v = max(0, weights['growth']*(1 - abs(p['growth']-r['g'])/60.0)); s += v
+        if r.get('g_rank') is not None and p.get('growth') is not None:
+            v = max(0, weights['growth']*(1 - abs(p['growth']-r['g_rank'])/60.0)); s += v
             if v > weights['growth']*0.5: why.append('growth')
         if r.get('gm') is not None and p.get('gm') is not None:
             v = max(0, weights['profitability']*(1 - abs(p['gm']-r['gm'])/30.0)); s += v
