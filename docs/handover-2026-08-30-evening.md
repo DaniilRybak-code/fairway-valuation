@@ -81,12 +81,37 @@ two of them. The same figure as a percentage of volume is the take rate the mark
 for, so the loader now carries `volume_pct` alongside the turn and the payments lane must
 display the percentage.
 
-**What tonight's sheet did NOT do.** It covered the logistics, services, consumer and payments
-universe, which sits next to our outstanding list rather than on it. Not one of the 154 names on
-`docs/sourcing-volume-metrics.md` was answered by it. 95 are still open, 70 of those TPV for the
-large payments names: Adyen, Block, Fiserv, Global Payments, Visa, Mastercard, PayPal, Shopify,
-Toast, Shift4, Wise, StoneCo, dLocal, Marqeta, Payoneer, Remitly, Corpay, Euronet, Nexi,
-Paysafe. That is still the largest hole we have and it is the one a payments founder walks into.
+**Listed marketplace GMV is now CLOSED.** This is the correction to what I wrote an hour ago.
+121 listed names sit in an archetype where a founder would expect a GMV figure and 116 of them are
+researched to the issuer's own words: a figure, or the issuer saying it publishes none, or the
+business model having none to publish. The only five left are pawn and leasing businesses where no
+marketplace GMV exists to find, and they should be closed out formally rather than left as noise.
+39 listed names now carry a volume figure in the engine.
+
+**What is still open is TPV, and it is a different job.** 123 listed names sit in a payments,
+banking, lending or cross-border archetype and 72 have no volume research: PayPal, Fiserv, Global
+Payments, Adyen, Shift4, Toast, dLocal, Paysafe, Marqeta, Nexi, StoneCo, PagSeguro, Block, Nu,
+Chime, Affirm, SoFi, Upstart, Klarna, Wise, Payoneer, American Express and the rest. Daniil has
+that coming on 31 August. It is the last big data hole and it is the one a payments founder walks
+into.
+
+**A third job was hiding inside the same list and is neither of the above.** 22 private companies
+where we hold a round but not the GMV it was priced against: Flipkart, Meesho, SHEIN, Trendyol,
+Glovo, Wolt, Gopuff, Vinted, StockX, Faire, Whatnot and others. There is no filing to read. It
+comes from press coverage at the time of the round and every figure needs the same at-pricing test
+as a revenue denominator, meaning the period must have closed on or before the pricing date. I had
+been reporting all three jobs as one number, which made a finished job look unfinished.
+
+`docs/sourcing-volume-metrics.md` is now regenerated from the engine itself and splits the three.
+
+**A join bug the sheet exposed, and it is the third time this lesson has cost us.** Four companies
+came through with different exchanges on the two sources: ACV Auctions as NASDAQGS:ACVA against
+NYSE:ACVA, Triumph Financial as NYSE:TFIN against NASDAQ:TFIN, Naked Wines LSE against AIM, PAX
+Global SEHK:0327 against SEHK:327. Normalising the Nasdaq tiers does not help when the exchange
+itself differs, so two disclosed figures were silently lost, including Triumph's $40.5bn. The
+overlay now falls back to symbol plus company name, which is safe because the name is attached,
+and records every disagreement in `_VOLUME_TICKER_CONFLICTS`. One spelling in each pair is still
+wrong and someone has to say which.
 
 ## Please check the numbers, not just the code
 
@@ -134,7 +159,10 @@ That gap is open and it affects the regression method directly.
 **6. `nursa` returns no range while holding three priced comparables** (Vinted 7.3x, Meesho 4.2x,
 Flipkart 5.2x). That is a plain bug, not a data gap, and it is unfixed.
 
-**7. Twelve disclosed figures cannot be converted to dollars** because the issuer reports in a
+**7. The four ticker disagreements above.** Two of them carry a disclosed figure. Please settle
+which exchange is right for ACV Auctions and Triumph Financial before anything is shown.
+
+**8. Twelve disclosed figures cannot be converted to dollars** because the issuer reports in a
 currency we have no dated rate for: Airtasker and Freelancer and Humm in Australian dollars,
 Credit Saison and U-NEXT and Digital Garage and BASE in yen, Worldline in euro, PayPoint in
 sterling, AvenuesAI in rupees, Avarda in krona, Fawry in Egyptian pounds. The local figures are
@@ -159,6 +187,7 @@ secondary peer list, which is the correction itself showing up. Rebaselined.
 5. `private-rounds-master-30aug.csv` is still unread by the engine. It needs source URLs, and six
    rows conflict with this morning's insert: Zepz at 14.8x against 21.0x, and Marqeta at a
    14.3x gross ceiling against 30.0x net.
-6. The 70 payments TPV names.
-7. The tokeniser leaks stopwords: "to" is surviving out of "direct to consumer".
-8. Profitability and EBITDA are still asked for in the live quiz and used nowhere.
+6. The 72 payments and lending TPV names. Daniil has these coming 31 August.
+7. The 22 private-round GMV figures, which is a press-and-statements job, not a filings job.
+8. The tokeniser leaks stopwords: "to" is surviving out of "direct to consumer".
+9. Profitability and EBITDA are still asked for in the live quiz and used nowhere.

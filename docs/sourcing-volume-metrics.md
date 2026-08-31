@@ -1,122 +1,118 @@
-# Volume metrics we need: GMV, TPV, subscribers
+# Volume metrics: what is closed and what is not
 
-State on 30-Aug-2026, evening. Rewritten from data/volume-metrics.csv rather than by hand, so
-this list cannot drift from what we actually hold.
+State on 30 August 2026, evening. Regenerated from `data/volume-metrics.csv` and from the engine
+itself, not maintained by hand, so it cannot drift from what we hold.
 
-WHAT WE NOW HOLD. 240 names researched: 51 with a figure the company itself publishes, 112 that
-report revenue and unit volumes but no monetary gross figure, and 77 whose business model has no
-gross transaction value to report. That last group is a CONCLUSION and must not come back onto
-this list. Of the figures we hold, 30 are core marketplace GMV and 21 are payments or lending
-throughput, which is a real number but is not GMV and must never be pooled with GMV multiples.
+There are THREE separate jobs here and they were being run together, which made a finished job
+look unfinished. They are separated below.
 
-WHAT THE 30-AUG RESEARCH SHEET DID NOT DO. It covered the logistics, services, consumer and
-payments universe, which is next to this list rather than on it. Not one of the names below was
-answered by it. The large-cap payments hole is still the largest hole we have.
+---
 
-## Still open, 95 names
+## 1. Listed marketplace GMV: CLOSED
 
-| Company | Ticker or private | Country | Metric wanted |
-|---|---|---|---|
-| ACI Worldwide, Inc. | NASDAQGS:ACIW | United States | TPV |
-| Adyen N.V. | ENXTAM:ADYEN | Netherlands | TPV |
-| Affirm Holdings, Inc. | NASDAQ:AFRM | United States | TPV |
-| Al Ansari Financial Services PJSC | DFM:ALANSARI | United Arab Emirates | TPV |
-| American Express Company | NYSE:AXP | United States | TPV |
-| AppFolio, Inc. | NASDAQGM:APPF | United States | TPV |
-| BILL Holdings, Inc. | NYSE:BILL | United States | TPV |
-| Bakkt, Inc. | NYSE:BKKT | United States | TPV |
-| Block, Inc. | NYSE:XYZ | United States | TPV |
-| Boku, Inc. | AIM:BOKU | United Kingdom | TPV |
-| Bullish | NYSE:BLSH | Cayman Islands | TPV |
-| CAB Payments Holdings plc | LSE:CABP | United Kingdom | TPV |
-| Coinbase Global, Inc. | NASDAQ:COIN | United States | TPV |
-| Corpay, Inc. | NYSE:CPAY | United States | TPV |
-| DLocal Limited | NASDAQ:DLO | Uruguay | TPV |
-| EML Payments Limited | ASX:EML | Australia | TPV |
-| EVERTEC, Inc. | NYSE:EVTC | United States | TPV |
-| Euronet Worldwide, Inc. | NASDAQ:EEFT | United States | TPV |
-| Fiserv, Inc. | NASDAQ:FISV | United States | TPV |
-| Flywire Corporation | NASDAQ:FLYW | United States | TPV |
-| GMO Payment Gateway, Inc. | TSE:3769 | Japan | TPV |
-| Global Payments Inc. | NYSE:GPN | United States | TPV |
-| GoDaddy Inc. | NYSE:GDDY | United States | TPV |
-| HPS S.A. | CBSE:HPS | Morocco | TPV |
-| Intuit Inc. | NASDAQGS:INTU | United States | TPV |
-| Lightspeed Commerce Inc. | TSX:LSPD | Canada | TPV |
-| Marqeta, Inc. | NASDAQ:MQ | United States | TPV |
-| Mastercard Incorporated | NYSE:MA | United States | TPV |
-| NCR Voyix Corporation | NYSE:VYX | United States | TPV |
-| Nexi S.p.A. | BIT:NEXI | Italy | TPV |
-| OFX Group Limited | ASX:OFX | Australia | TPV |
-| One MobiKwik Systems Limited | NSEI:MOBIKWIK | India | TPV |
-| One97 Communications Limited | NSEI:PAYTM | India | TPV |
-| PagSeguro Digital Ltd. | NYSE:PAGS | Brazil | TPV |
-| PayPal Holdings, Inc. | NASDAQ:PYPL | United States | TPV |
-| Payoneer Global Inc. | NASDAQ:PAYO | United States | TPV |
-| Paysafe Limited | NYSE:PSFE | United Kingdom | TPV |
-| Remitly Global, Inc. | NASDAQ:RELY | United States | TPV |
-| Riskified Ltd. | NYSE:RSKD | United States | TPV |
-| Robinhood Markets, Inc. | NASDAQ:HOOD | United States | TPV |
-| ServiceTitan, Inc. | NASDAQGS:TTAN | United States | TPV |
-| Shift4 Payments, Inc. | NYSE:FOUR | United States | TPV |
-| Shoper S.A. | WSE:SHO | Poland | TPV |
-| Shopify Inc. | NASDAQGS:SHOP | Canada | TPV |
-| StoneCo Ltd. | NASDAQ:STNE | Cayman Islands | TPV |
-| The Western Union Company | NYSE:WU | United States | TPV |
-| Toast, Inc. | NYSE:TOST | United States | TPV |
-| Tyro Payments Limited | ASX:TYR | Australia | TPV |
-| Visa Inc. | NYSE:V | United States | TPV |
-| Wise plc | LSE:WISE | United Kingdom | TPV |
-| Wix.com Ltd. | NASDAQGS:WIX | Israel | TPV |
-| Clio | private |  | TPV |
-| Deel | private |  | TPV |
-| Fabric | private |  | TPV |
-| Gorgias | private |  | TPV |
-| Klarna | private |  | TPV |
-| Loop Returns | private |  | TPV |
-| Marqeta | private |  | TPV |
-| Mews | private |  | TPV |
-| Mirakl | private |  | TPV |
-| Patreon | private |  | TPV |
-| Pine Labs | private |  | TPV |
-| Ramp | private |  | TPV |
-| Razorpay | private |  | TPV |
-| Recharge | private |  | TPV |
-| Rippling | private |  | TPV |
-| Rokt | private |  | TPV |
-| TravelPerk | private |  | TPV |
-| Zepz | private |  | TPV |
-| dLocal | private |  | TPV |
-| Ankorstore | private |  | GMV |
-| Back Market | private |  | GMV |
-| Delhivery | private |  | GMV |
-| Faire | private |  | GMV |
-| Flink | private |  | GMV |
-| Flipkart | private |  | GMV |
-| GOAT Group | private |  | GMV |
-| Glovo | private |  | GMV |
-| Gopuff | private |  | GMV |
-| Hopper | private |  | GMV |
-| Loft | private |  | GMV |
-| Meesho | private |  | GMV |
-| Rent the Runway | private |  | GMV |
-| SHEIN | private |  | GMV |
-| Shiprocket | private |  | GMV |
-| StockX | private |  | GMV |
-| Trendyol | private |  | GMV |
-| Vestiaire Collective | private |  | GMV |
-| Vinted | private |  | GMV |
-| Whatnot | private |  | GMV |
-| Wolt | private |  | GMV |
-| Xpressbees | private |  | GMV |
-| Deezer | private |  | SUBSCRIBERS |
-| Patreon | private |  | SUBSCRIBERS |
-| Whatnot | private |  | SUBSCRIBERS |
+121 listed names sit in an archetype where a founder would expect a GMV figure. 116 of them have
+been researched to the issuer's own words. Every name we set out to find is either answered with
+a figure, answered with the issuer saying it does not publish one, or excluded because the
+business model has none to publish.
 
-## Figures we hold but cannot yet convert to dollars, 12 names
+The only five not researched are owned-inventory and leasing businesses where no marketplace GMV
+is expected: FirstCash Holdings, Inc., EZCORP, Inc., Upbound Group, Inc., GATX Corporation, Willis Lease Finance Corporation. They should be closed out formally on the next sheet rather than left as noise.
+
+39 listed names now carry a volume figure in the engine.
+
+## 2. Listed payments and lending TPV: OPEN, coming 31 August
+
+123 listed names sit in a payments, banking, lending or cross-border archetype. 72 have no volume
+research yet. This is the hole a payments founder walks into and it is the last big one.
+
+| Company | Ticker | Archetype |
+|---|---|---|
+| Al Ansari Financial Services PJSC | DFM:ALANSARI | Cross-Border & FX |
+| CAB Payments Holdings plc | LSE:CABP | Cross-Border & FX |
+| Euronet Worldwide, Inc. | NASDAQ:EEFT | Cross-Border & FX |
+| Flywire Corporation | NASDAQ:FLYW | Cross-Border & FX |
+| OFX Group Limited | ASX:OFX | Cross-Border & FX |
+| Payoneer Global Inc. | NASDAQ:PAYO | Cross-Border & FX |
+| Remitly Global, Inc. | NASDAQ:RELY | Cross-Border & FX |
+| The Western Union Company | NYSE:WU | Cross-Border & FX |
+| Wise plc | LSE:WISE | Cross-Border & FX |
+| Ally Financial Inc. | NYSE:ALLY | Digital Bank & Deposits |
+| Axos Financial, Inc. | NYSE:AX | Digital Bank & Deposits |
+| Block, Inc. | NYSE:XYZ | Digital Bank & Deposits |
+| Bread Financial Holdings, Inc. | NYSE:BFH | Digital Bank & Deposits |
+| Capital One Financial Corporation | NYSE:COF | Digital Bank & Deposits |
+| Chime Financial, Inc. | NASDAQ:CHYM | Digital Bank & Deposits |
+| Coastal Financial Corporation | NASDAQGS:CCB | Digital Bank & Deposits |
+| Inter & Co, Inc. | NASDAQ:INTR | Digital Bank & Deposits |
+| Live Oak Bancshares, Inc. | NYSE:LOB | Digital Bank & Deposits |
+| Medallion Financial Corp. | NASDAQGS:MFIN | Digital Bank & Deposits |
+| Merchants Bancorp | NASDAQGS:MBIN | Digital Bank & Deposits |
+| NewtekOne, Inc. | NASDAQGS:NEWT | Digital Bank & Deposits |
+| Nu Holdings Ltd. | NYSE:NU | Digital Bank & Deposits |
+| SLM Corporation | NASDAQGS:SLM | Digital Bank & Deposits |
+| Synchrony Financial | NYSE:SYF | Digital Bank & Deposits |
+| The Bancorp, Inc. | NASDAQGS:TBBK | Digital Bank & Deposits |
+| Affirm Holdings, Inc. | NASDAQ:AFRM | Lending & Credit |
+| Dave Inc. | NASDAQGS:DAVE | Lending & Credit |
+| Encore Capital Group, Inc. | NASDAQGS:ECPG | Lending & Credit |
+| Enova International, Inc. | NYSE:ENVA | Lending & Credit |
+| Jefferson Capital, Inc. | NASDAQGS:JCAP | Lending & Credit |
+| Klarna Group plc | NYSE:KLAR | Lending & Credit |
+| LendingClub Corporation | NYSE:LC | Lending & Credit |
+| Navient Corporation | NASDAQGS:NAVI | Lending & Credit |
+| Onity Group Inc. | NYSE:ONIT | Lending & Credit |
+| Oportun Financial Corporation | NASDAQGS:OPRT | Lending & Credit |
+| PRA Group, Inc. | NASDAQGS:PRAA | Lending & Credit |
+| Regional Management Corp. | NYSE:RM | Lending & Credit |
+| Rocket Companies, Inc. | NYSE:RKT | Lending & Credit |
+| SoFi Technologies, Inc. | NASDAQ:SOFI | Lending & Credit |
+| UWM Holdings Corporation | NYSE:UWMC | Lending & Credit |
+| Upstart Holdings, Inc. | NASDAQ:UPST | Lending & Credit |
+| Velocity Financial, Inc. | NYSE:VEL | Lending & Credit |
+| World Acceptance Corporation | NASDAQGS:WRLD | Lending & Credit |
+| Zip Co Limited | ASX:ZIP | Lending & Credit |
+| Adyen N.V. | ENXTAM:ADYEN | Merchant Acquiring & PSP |
+| DLocal Limited | NASDAQ:DLO | Merchant Acquiring & PSP |
+| EML Payments Limited | ASX:EML | Merchant Acquiring & PSP |
+| Fiserv, Inc. | NASDAQ:FISV | Merchant Acquiring & PSP |
+| GMO Payment Gateway, Inc. | TSE:3769 | Merchant Acquiring & PSP |
+| Global Payments Inc. | NYSE:GPN | Merchant Acquiring & PSP |
+| Marqeta, Inc. | NASDAQ:MQ | Merchant Acquiring & PSP |
+| Nexi S.p.A. | BIT:NEXI | Merchant Acquiring & PSP |
+| One MobiKwik Systems Limited | NSEI:MOBIKWIK | Merchant Acquiring & PSP |
+| One97 Communications Limited | NSEI:PAYTM | Merchant Acquiring & PSP |
+| PagSeguro Digital Ltd. | NYSE:PAGS | Merchant Acquiring & PSP |
+| PayPal Holdings, Inc. | NASDAQ:PYPL | Merchant Acquiring & PSP |
+| Paysafe Limited | NYSE:PSFE | Merchant Acquiring & PSP |
+| Shift4 Payments, Inc. | NYSE:FOUR | Merchant Acquiring & PSP |
+| StoneCo Ltd. | NASDAQ:STNE | Merchant Acquiring & PSP |
+| Toast, Inc. | NYSE:TOST | Merchant Acquiring & PSP |
+| Tyro Payments Limited | ASX:TYR | Merchant Acquiring & PSP |
+| EZCORP, Inc. | NASDAQGS:EZPW | Owned-Inventory Retail |
+| FirstCash Holdings, Inc. | NASDAQGS:FCFS | Owned-Inventory Retail |
+| Upbound Group, Inc. | NASDAQGS:UPBD | Owned-Inventory Retail |
+| American Express Company | NYSE:AXP | Payment Network |
+| Boku, Inc. | AIM:BOKU | Payment Network |
+| Corpay, Inc. | NYSE:CPAY | Payment Network |
+| Mastercard Incorporated | NYSE:MA | Payment Network |
+| Visa Inc. | NYSE:V | Payment Network |
+| EVERTEC, Inc. | NYSE:EVTC | Vertical Software |
+| HPS S.A. | CBSE:HPS | Vertical Software |
+| Walker & Dunlop, Inc. | NYSE:WD | Wealth & Capital Markets Platform |
+
+## 3. GMV at the round date for private companies: OPEN, separate job
+
+22 private companies where we hold a round but not the GMV the round was priced against. This is
+NOT the same job as the two above. There is no filing to read: it comes from press coverage and
+company statements at the time of the round, and every figure needs the same at-pricing test as a
+revenue denominator, meaning the period must have closed on or before the pricing date.
+
+Ankorstore, Back Market, Delhivery, Faire, Flink, Flipkart, GOAT Group, Glovo, Gopuff, Hopper, Loft, Meesho, Rent the Runway, SHEIN, Shiprocket, StockX, Trendyol, Vestiaire Collective, Vinted, Whatnot, Wolt, Xpressbees.
+
+## Figures we hold but cannot convert to dollars, 12 names
 
 The issuer reports in a currency we have no dated rate for. The local figure is recorded and the
-dollar column is deliberately empty. We do not invent a rate.
+dollar column is deliberately empty. We do not invent a rate. Daniil to say which rate table.
 
 | Company | Metric | Local figure | Currency |
 |---|---|---|---|
@@ -132,3 +128,17 @@ dollar column is deliberately empty. We do not invent a rate.
 | BASE,Inc. | Group GMV | 430459.0 | JPY |
 | AvenuesAI Limited | Payments TPV | 5038000.0 | INR |
 | Fawry for Banking Technology and Electronic Payments | Total throughput value | 943632.7 | EGP |
+
+## Four ticker disagreements to resolve
+
+The peers files and the research sheet give four companies different exchanges. The overlay now
+recovers them on a symbol-and-name fallback and records the disagreement, but one spelling in
+each pair is wrong and a human has to say which. Two of the four carry a disclosed figure and
+both were silently lost before the fallback existed.
+
+| Company | In the peers file | In the research sheet |
+|---|---|---|
+| ACV Auctions Inc. | NASDAQGS:ACVA | NYSE:ACVA |
+| Naked Wines plc | LSE:WINE | AIM:WINE |
+| PAX Global Technology | SEHK:0327 | SEHK:327 |
+| Triumph Financial, Inc. | NYSE:TFIN | NASDAQ:TFIN |

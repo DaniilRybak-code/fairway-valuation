@@ -28,7 +28,7 @@ THREE VOCABULARY FAMILIES now feed one universe:
 A field is only scored when BOTH sides have a value for it. A blank never scores,
 so the two consumer-only fields cannot quietly inflate every software row.
 """
-import csv, io, re, sys, collections, statistics as st
+import csv, io, re, sys, math, collections, statistics as st
 import consumer_vocabulary as CV
 
 def load(p):
@@ -220,7 +220,26 @@ for _mf, _tf in _SECONDARY:
 _OVERLAYS = ('volume-metrics.csv',)
 # A file kept for audit but no longer read: its content has been merged into an overlay.
 _SUPERSEDED = {'gmv-disclosures.csv': 'merged into volume-metrics.csv on 30-Aug-2026'}
-_VOLUME_STATUS, _VOLUME_KIND = {}, {}
+#
+# THE JOIN NEEDS A SECOND KEY, AND THIS IS THE THIRD TIME THAT LESSON HAS COST US. norm() folds the
+# Nasdaq tiers, which fixed 29 lenders this morning. It does not help when two sources disagree on
+# the EXCHANGE itself: ACV Auctions came through as NASDAQGS:ACVA on one sheet and NYSE:ACVA on
+# another, Triumph Financial as NYSE:TFIN and NASDAQ:TFIN, Naked Wines as LSE:WINE and AIM:WINE,
+# PAX Global as SEHK:0327 and SEHK:327. Two of those four carry a disclosed volume figure and both
+# were silently lost. So the fallback key is the SYMBOL plus the normalised company name. Symbol
+# alone would be reckless, because the same symbol on two exchanges is usually two companies; with
+# the name attached it is safe. Every row joined on the fallback is recorded in _VOLUME_TICKER_
+# CONFLICTS so the disagreement is visible rather than papered over, and one of the two spellings
+# is wrong and needs a human to say which.
+_VOLUME_STATUS, _VOLUME_KIND, _VOLUME_ALT = {}, {}, {}
+_VOLUME_TICKER_CONFLICTS = []
+
+
+def _sym_name(tk, name):
+    _s = (tk or '').split(':')[-1].strip().lstrip('0').lower()
+    return _s + '|' + re.sub(r'[^a-z0-9]', '', (name or '').lower())[:14]
+
+
 try:
     for _v in load(D + 'volume-metrics.csv'):
         _k = norm(_v.get('exchange_ticker', ''))
@@ -228,11 +247,17 @@ try:
             continue
         _VOLUME_STATUS[_k] = _v
         _VOLUME_KIND[_k] = _v.get('metric_category', '')
+        _VOLUME_ALT.setdefault(_sym_name(_v.get('exchange_ticker'), _v.get('company_name')), _v)
 except FileNotFoundError:
     pass
 
 for _r in listed.values():
     _v = _VOLUME_STATUS.get(norm(_r['exchange_ticker']))
+    if _v is None:
+        _v = _VOLUME_ALT.get(_sym_name(_r['exchange_ticker'], _r['company_name']))
+        if _v is not None:
+            _VOLUME_TICKER_CONFLICTS.append(
+                (_r['company_name'], _r['exchange_ticker'], _v['exchange_ticker']))
     _r['volume_status'] = (_v or {}).get('status', 'NOT_RESEARCHED')
     _r['volume_kind'] = (_v or {}).get('metric_category', '')
     _r['volume_metric_name'] = (_v or {}).get('issuer_metric_name', '')
@@ -745,6 +770,90 @@ def _neg_date(d):
     """Sort key that puts the most recent date first while the key beside it sorts ascending."""
     return tuple(-int(x) for x in (d[:4], d[5:7]))
 
+
+# ---------------------------------------------------------------------------
+# ONE COMPANY, ONE VOTE, AND WHICH ROUND GETS IT
+#
+# Daniil, 31-Aug-2026: "revenue scale should only be the first gate when we select between multiple
+# rounds of the same company and when the multiple is an order of magnitude different. If multiples
+# are similar across rounds, we should just use the latest."
+#
+# WHY THIS RULE AND NOT THE OLD ONE. Twelve companies carry more than one priced round. The old code
+# kept the highest business-nature score and broke ties on date. Two rounds of one company carry
+# identical tags, so the score ALWAYS tied and the date decided on its own, every time. Recency was
+# selecting a comparable, which our own rules prohibit. Eight priced rounds, including the two
+# highest multiples we hold, were unreachable by any founder.
+#
+# THE THRESHOLD IS SET WHERE THE DATA IS EMPTY, WHICH IS THE ONLY HONEST PLACE TO PUT ONE. Measured
+# across the companies that carry more than one round, the spread between a company's own multiples
+# is either under 1.5x (Mews 1.04, SKIMS 1.06, Vinted 1.15, AlphaSense 1.5, Scale AI 1.5) or over
+# 7x (Klarna 7.4, Meesho 11.0). Nothing sits between. Any threshold in that gap gives the same
+# answer today, so 3.0 is not a tuned parameter and must not be treated as one: if a future round
+# lands inside the gap, this constant needs a fresh look rather than a nudge.
+MULTI_ROUND_SPREAD = 3.0
+
+
+def _round_pick_reason(rows, chosen, spread):
+    # The wording has to survive the case where the other rounds carry no multiple at all, which is
+    # most of them. Calling those 'priced rounds' would be a small lie in a sentence a founder reads.
+    n = len(rows)
+    if spread is None:
+        return 'the latest of %d rounds we hold for this company; only one of them is priced' % n
+    if spread < MULTI_ROUND_SPREAD:
+        return ('the latest of %d rounds we hold; the priced ones sit within %.1fx of each other, '
+                'so the choice between them barely moves the answer' % (n, spread))
+    return ('%s, chosen because its revenue at pricing is closest to yours rather than because it '
+            'is the most recent; this company repriced by %.1fx between rounds'
+            % (chosen['date'], spread))
+
+
+def _one_round_per_company(prof, scored):
+    """Keep one row per company. WHICH row is the whole question, and it is decided per founder."""
+    by = collections.OrderedDict()
+    for (sc, why), r in scored:
+        by.setdefault(r['company_key'], []).append(((sc, why), r))
+    out = []
+    for k, rows in by.items():
+        top = max(z[0][0] for z in rows)
+        tied = [z for z in rows if z[0][0] >= top - 1e-9]
+        if len(tied) == 1:
+            out.append(tied[0]); continue
+        mults = [m for m in (_f(z[1].get('mult')) for z in tied) if m]
+        spread = (max(mults) / min(mults)) if len(mults) > 1 and min(mults) > 0 else None
+        if spread is None or spread < MULTI_ROUND_SPREAD:
+            # SIMILAR MULTIPLES: the rounds agree, so the choice does not matter much and the later
+            # one carries the fresher market. Daniil's rule, and it is also the cheap answer.
+            pick = max(tied, key=lambda z: z[1]['date_iso'])
+        else:
+            # AN ORDER OF MAGNITUDE APART: the rounds disagree because the company was a different
+            # business at each one, and scale is what changed. Scale therefore leads HERE and only
+            # here; everywhere else size stays out of selection entirely.
+            frev = _f(prof.get('revenue'))
+            fg = _f(prof.get('growth'))
+            def dist(z):
+                r = z[1]
+                rrev, rg = _f(r.get('rev')), _f(r.get('growth_pct_at_round'))
+                a = abs(math.log10(max(rrev, 1e-6)) - math.log10(max(frev, 1e-6))) if (frev and rrev) else None
+                b = abs(rg - fg) / 100.0 if (fg is not None and rg is not None) else None
+                # Scale first, then growth, then maturity as the age of the round. A missing field
+                # never excludes a row: it drops to the back of that one key.
+                return (a if a is not None else 9.0,
+                        b if b is not None else 9.0,
+                        -_date_key(r['date_iso']))
+            pick = min(tied, key=dist) if (frev or fg) else max(tied, key=lambda z: z[1]['date_iso'])
+        r = dict(pick[1])
+        r['round_choice'] = _round_pick_reason([z[1] for z in tied], r, spread)
+        r['round_alternatives'] = [
+            {'date': z[1]['date'], 'mult': z[1].get('mult'), 'revenue_musd': z[1].get('rev')}
+            for z in tied if z[1]['transaction_id'] != r['transaction_id']]
+        out.append((pick[0], r))
+    return sorted(out, key=lambda z: -z[0][0])
+
+
+def _date_key(iso):
+    try: return int(iso[:4]) * 12 + int(iso[5:7])
+    except Exception: return 0
+
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
     priv = balance_sheet_compatible(prof, priv)      # lenders and non-lenders never mix
@@ -760,12 +869,7 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     scored = [(sw, r) for (sw, r) in scored
               if r.get('display_gate') != 'CLOSE_MATCH_ONLY'
               or _tag_points(sw[1]) >= FLOOR_TAG_EVIDENCE]
-    best = {}
-    for (sc, why), r in scored:
-        k = r['company_key']
-        if k not in best or r['date_iso'] > best[k][1]['date_iso']:
-            if k not in best or sc >= best[k][0][0]: best[k] = ((sc, why), r)
-    pool = sorted(best.values(), key=lambda z: -z[0][0])
+    pool = _one_round_per_company(prof, scored)
     # FILL, DO NOT STOP. Same rule as peer_groups: walk DIRECT then ADJACENT, keeping the order
     # so anchored names lead, and only fall to BROAD if neither pricing tier returns anything.
     cands, seen = [], set()
