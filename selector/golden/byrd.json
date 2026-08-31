@@ -116,6 +116,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "Disclosed at pricing",
+    "bound": "<=",
+    "company": "Gorillas",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 10.3,
+    "reason": "shares the language of fulfilment; same type of business; same end market; same AI stance",
+    "score": 10.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_EXACT",
     "bound": "",
     "company": "Shiprocket",
@@ -169,43 +180,55 @@
     "reason": "shares the language of party, third; related type of business; same kind of customer; same cost structure",
     "score": 14.8,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Delhivery",
+    "date": "May-21",
+    "in_medians": false,
+    "mult": 5.97,
+    "reason": "both do Third-Party Logistics; same type of business; same business function; same revenue model",
+    "score": 14.7,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Wolt"
    ],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 8.2,
+   "display": "RANGE",
+   "high": 10.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.2,
-   "mid": 8.2,
-   "n": 1,
+   "mid": 10.3,
+   "n": 2,
    "points": [],
    "positioning": [],
    "shared_words": [
+    "fulfilment",
     "network"
    ],
-   "sole": "Wolt",
-   "spread": 1.0,
-   "tag_evidence": 0.1,
+   "spread": 1.3,
+   "tag_evidence": 0.6,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
-  "private_window_months": 60,
+  "private_window_months": 63,
   "secondary": [
    {
     "company": "Meituan",

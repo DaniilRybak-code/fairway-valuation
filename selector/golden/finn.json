@@ -46,28 +46,34 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 1.6,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 3.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 1.05,
-   "n": 2,
-   "points": [],
-   "positioning": [
+   "mid": 0.7,
+   "n": 5,
+   "points": [
     {
      "company": "JD.com, Inc.",
      "mult": 0.1,
      "reason": "shares the language of owned; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "AUTO1 Group SE",
+     "mult": 0.5,
+     "reason": "shares the language of car; related type of business; same end market; sold the same way",
+     "tier": "DIRECT",
      "transaction_type": ""
     },
     {
@@ -78,6 +84,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Carvana Co.",
+     "mult": 1.6,
+     "reason": "shares the language of car, owned; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
      "company": "Amazon.com, Inc.",
      "mult": 3.2,
      "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
@@ -85,13 +98,15 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
     "car",
-    "owned"
+    "owned",
+    "subscription"
    ],
-   "spread": 3.2,
+   "spread": 32.0,
    "tag_evidence": 0.5,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",

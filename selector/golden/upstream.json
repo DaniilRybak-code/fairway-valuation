@@ -103,6 +103,28 @@
     "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
     "score": 13.6,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Miro",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 58.3,
+    "reason": "shares the language of team; same type of business; same revenue model; sold the same way",
+    "score": 12.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "PayFit",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 45.5,
+    "reason": "shares the language of tracking; related type of business; same kind of customer; same revenue model",
+    "score": 10.5,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -137,7 +159,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 48,
+  "private_window_months": 55,
   "secondary": [
    {
     "company": "Zoom Communications, Inc.",

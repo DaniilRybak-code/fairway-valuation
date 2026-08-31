@@ -133,6 +133,28 @@
     "reason": "shares the language of automation; related type of business; same kind of customer",
     "score": 6.6,
     "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Invisible Technologies",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 14.9,
+    "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
+    "score": 8.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Glean",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 72.0,
+    "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
+    "score": 8.1,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -142,22 +164,59 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 1
+    "ARR": 3,
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 105.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 32.0,
+   "low": 14.9,
    "mid": 50.0,
-   "n": 3,
-   "points": [],
+   "n": 5,
+   "points": [
+    {
+     "company": "Invisible Technologies",
+     "mult": 14.9,
+     "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Ramp",
+     "mult": 32.0,
+     "reason": "shares the language of automation; related type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of ai, automation, gtm; related type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Glean",
+     "mult": 72.0,
+     "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Sierra",
+     "mult": 105.3,
+     "reason": "both do Agentic AI; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "agentic",
@@ -166,12 +225,12 @@
     "customer",
     "gtm"
    ],
-   "spread": 3.3,
+   "spread": 7.1,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 9,
+  "private_window_months": 14,
   "secondary": [
    {
     "company": "UiPath, Inc.",

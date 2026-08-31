@@ -46,7 +46,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -54,59 +54,43 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.7,
+   "display": "RANGE",
+   "high": 1.2,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
+   "low": 0.5,
    "mid": 0.7,
-   "n": 1,
+   "n": 5,
    "points": [],
-   "positioning": [
-    {
-     "company": "PostNL N.V.",
-     "mult": 0.3,
-     "reason": "both do Parcel Delivery; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "S.F. Holding Co., Ltd.",
-     "mult": 0.5,
-     "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "FedEx Corporation",
-     "mult": 1.2,
-     "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "United Parcel Service",
-     "mult": 1.2,
-     "reason": "both do Parcel Delivery, Own Fleet; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "shared_words": [
     "delivery",
     "fleet",
+    "last",
+    "mile",
     "network",
     "own",
-    "parcel"
+    "parcel",
+    "shipping"
    ],
-   "sole": "SG Holdings Co., Ltd.",
-   "spread": 1.0,
+   "spread": 4.0,
    "tag_evidence": 5.1,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "Disclosed at pricing",
+    "bound": "<=",
+    "company": "Gorillas",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 10.3,
+    "reason": "shares the language of delivery, own; same type of business; same end market; same AI stance",
+    "score": 10.8,
+    "type": "PRIMARY"
+   },
    {
     "basis": "NONE",
     "bound": "",
@@ -161,44 +145,56 @@
     "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
     "score": 9.3,
     "type": "CONTROL"
+   },
+   {
+    "basis": "CONTEMPORANEOUS_PRESS",
+    "bound": "",
+    "company": "Gopuff",
+    "date": "Jul-21",
+    "in_medians": true,
+    "mult": 44.12,
+    "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
+    "score": 9.8,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 2
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Wolt"
    ],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 8.2,
+   "display": "RANGE",
+   "high": 44.12,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.2,
-   "mid": 8.2,
-   "n": 1,
+   "mid": 10.3,
+   "n": 3,
    "points": [],
    "positioning": [],
    "shared_words": [
     "delivery",
-    "network"
+    "network",
+    "own"
    ],
-   "sole": "Wolt",
-   "spread": 1.0,
-   "tag_evidence": 0.3,
-   "thin": true,
+   "spread": 5.4,
+   "tag_evidence": 0.8,
+   "thin": false,
    "triangulated": false
   },
-  "private_window_months": 57,
+  "private_window_months": 61,
   "secondary": [
    {
     "company": "Deutsche Post AG",

@@ -110,7 +110,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 1
+    "ARR": 1,
+    "NET_REVENUE": 3
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -118,18 +119,24 @@
    "control_names": [
     "Semrush"
    ],
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 4.3,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 50.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 4.3,
-   "n": 1,
-   "points": [],
-   "positioning": [
+   "mid": 33.3,
+   "n": 4,
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "both do SEO, Keyword Research, Backlink Analysis; same type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
     {
      "company": "Klaviyo",
      "mult": 32.6,
@@ -152,21 +159,23 @@
      "transaction_type": "SECONDARY"
     }
    ],
+   "positioning": [],
    "shared_words": [
     "ai",
     "analysis",
     "backlink",
+    "data",
     "keyword",
+    "platform",
     "rank",
     "research",
     "seo",
     "tracking",
     "visibility"
    ],
-   "sole": "Semrush",
-   "spread": 1.0,
+   "spread": 11.6,
    "tag_evidence": 12.0,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 63,

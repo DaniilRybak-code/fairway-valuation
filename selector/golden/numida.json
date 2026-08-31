@@ -75,6 +75,28 @@
   "listed_proximity": "DIRECT",
   "private": [
    {
+    "basis": "Q3 results released on financing close date; closed quarter",
+    "bound": "",
+    "company": "Creditas",
+    "date": "Dec-25",
+    "in_medians": false,
+    "mult": 7.41,
+    "reason": "shares the language of lending; same type of business; same end market; same business function",
+    "score": 21.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Disclosed at pricing",
+    "bound": "<=",
+    "company": "Fundbox",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 11.0,
+    "reason": "shares the language of capital, credit, working; same type of business; same end market; same business function",
+    "score": 19.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "NONE",
     "bound": "",
     "company": "Upgrade",

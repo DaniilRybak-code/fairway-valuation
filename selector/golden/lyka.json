@@ -93,6 +93,28 @@
     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
     "score": 18.7,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Vuori",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "score": 18.7,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "Estimate around financing",
+    "bound": "",
+    "company": "AG1",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 2.0,
+    "reason": "shares the language of direct, subscription; same type of business; same business function; same kind of customer",
+    "score": 27.8,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -102,50 +124,34 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "GROSS_REVENUE": 1,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 3
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.6,
+   "high": 10.1,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 4.6,
-   "n": 2,
+   "mid": 5.0,
+   "n": 3,
    "points": [],
-   "positioning": [
-    {
-     "company": "SKIMS",
-     "mult": 5.0,
-     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Quince",
-     "mult": 10.1,
-     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "positioning": [],
    "shared_words": [
     "direct",
     "meal",
     "nutrition",
     "subscription"
    ],
-   "spread": 1.4,
+   "spread": 3.1,
    "tag_evidence": 1.5,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
-  "private_window_months": 45,
+  "private_window_months": 55,
   "secondary": [
    {
     "company": "BARK, Inc.",

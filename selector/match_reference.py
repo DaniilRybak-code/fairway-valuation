@@ -854,6 +854,85 @@ def _date_key(iso):
     try: return int(iso[:4]) * 12 + int(iso[5:7])
     except Exception: return 0
 
+
+# ---------------------------------------------------------------------------
+# LIKE FOR LIKE, OR NOT AT ALL.
+#
+# Daniil, 31-Aug-2026: "would give optionality to the user to give EITHER / BOTH net or gross, but
+# we then should apply LfL multiples."
+#
+# UNTIL TODAY THIS WAS ENFORCED BY HAND, ROW BY ROW, WHICH IS THE SAME AS NOT ENFORCED. Every
+# private row has carried revenue_basis since 27-Aug, and the range reported the mix, but nothing
+# stopped a GROSS_REVENUE row pricing a founder who was asked for NET. The only thing keeping them
+# apart was somebody remembering to set in_medians=0 by hand when the row was inserted. That is how
+# Razorpay's 67.6x on a gross denominator sat in the fintech file for four days.
+#
+# The quiz asks every fork for NET revenue and says so in the label, so the founder's basis is NET
+# unless they tell us otherwise. A net founder may be priced by a net-equivalent row and by nothing
+# else. ARR and a run rate are net by construction: nobody quotes contracted recurring revenue
+# gross of anything. A bank revenue line is a net line. GROSS_REVENUE is not, and the gap is not a
+# rounding difference: on a payments business gross and net differ by roughly an order of magnitude.
+#
+# A gross row is not deleted. It stays visible as context with its basis on the label, because a
+# founder who is only ever shown net comparables cannot tell that the gross ones exist.
+NET_EQUIVALENT = ('NET_REVENUE', 'ARR', 'ARR_RUNRATE', 'BANK_NOI', '')
+GROSS_EQUIVALENT = ('GROSS_REVENUE',)
+
+
+def basis_compatible(prof, row):
+    """True when the row's denominator measures the same thing the founder was asked for.
+
+    TWO WAYS THIS GATE MUST NOT FIRE, both found within minutes of switching it on.
+
+    A LENDER HAS NO REVENUE DENOMINATOR AT ALL. It is priced on price to book, the quiz never asks
+    it for revenue, and the gate has nothing to compare. Left unguarded it silently emptied all four
+    lender fixtures, which had been pricing correctly off Zopa at 5.6x book.
+
+    AND 'NONE' IS NOT A BASIS, IT IS THE ABSENCE OF ONE. Rows priced on book carry revenue_basis
+    NONE, and treating that as a mismatch is the same bug wearing a different hat. Unknown and
+    absent both pass; the range already reports the mix so the gap stays visible.
+    """
+    if is_balance_sheet(prof):
+        return True
+    fb = (prof.get('revenue_basis') or 'NET_REVENUE').strip().upper()
+    rb = (row.get('revenue_basis') or '').strip().upper()
+    if rb in ('', 'NONE', 'UNKNOWN'):
+        return True                       # unknown never excludes; it is flagged elsewhere
+    if fb in ('BOTH', 'ANY'):
+        return True                       # the founder gave us both, so either side is like for like
+    if fb == 'GROSS_REVENUE':
+        return rb in GROSS_EQUIVALENT
+    return rb in NET_EQUIVALENT
+
+
+# HOW MANY NAMES A HANDFUL SHOULD HOLD.
+#
+# Daniil, 31-Aug-2026: "We should aim to have 3 to 5 names. 3 should be the case only when there is
+# almost perfect match in terms of companies profile / business nature. Where the match is weaker,
+# we should go for 5 to 7."
+#
+# The logic is the opposite of what an instinct says. A WEAK set needs MORE names, not fewer,
+# because no single weak name carries the argument and the spread is doing the work. A strong set
+# earns the right to be short. Before today the count was a flat five for everyone, which gave a
+# founder with three excellent comparables two spare seats filled by names that only widened the
+# range, and gave a founder with no good comparables the same five.
+WANT_MIN, WANT_TARGET, WANT_MAX = 3, 5, 7
+
+
+def _trim_to_match_quality(prof, ordered):
+    if len(ordered) <= WANT_MIN:
+        return ordered
+    strong = 0
+    for (sc, why), r in ordered:
+        if _tier(prof, r, why) == 'DIRECT' and _tag_points(why) >= FLOOR_TAG_EVIDENCE:
+            strong += 1
+        else:
+            break                          # they are already in tier order, so stop at the first weak one
+    if strong >= WANT_MIN:
+        # An almost perfect match: keep the strong names and stop. Never below three, never above five.
+        return ordered[:max(WANT_MIN, min(strong, WANT_TARGET))]
+    return ordered[:WANT_MAX]
+
 def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
     priv = balance_sheet_compatible(prof, priv)      # lenders and non-lenders never mix
@@ -891,7 +970,8 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     # more recent ADJACENT one. `months` is no longer an input the loop widens; it is an output,
     # the age of the OLDEST transaction actually shown, so the reveal can caveat it honestly.
     ordered = sorted(cands, key=lambda z: (_TIER_ORDER[_tier(prof, z[1], z[0][1])],
-                                           _neg_date(z[1]['date_iso'])))[:want]
+                                           _neg_date(z[1]['date_iso'])))[:WANT_MAX]
+    ordered = _trim_to_match_quality(prof, ordered)
     if not ordered: return [], window_months, 'NONE'
     oldest = min(c[1]['date_iso'] for c in ordered)
     y, m = int(oldest[:4]), int(oldest[5:7])
@@ -1262,17 +1342,38 @@ def _listed_targets(rows):
 # founder who can show why they belong nearer Clay than Semrush has a case to make, and the field
 # should hand them the case rather than quietly average it away.
 def _bands(prof, priced):
-    """Split priced rows into the closest band that has any, and everything weaker.
-    Returns (band_tier, headline_rows, positioning_rows)."""
+    """Split priced rows into the closest band, and everything weaker.
+
+    THE CLOSEST BAND KEEPS WIDENING UNTIL IT HOLDS THREE NAMES, AND THAT IS DELIBERATE.
+
+    Daniil, 31-Aug-2026: "We should aim to have 3 to 5 names. 3 should be the case only when there
+    is almost perfect match... Where the match is weaker, we should go for 5 to 7."
+
+    Until today this stopped at the first band that held anything at all, which on a thin set meant
+    a single name. Hived is the example: it had Gorillas as a DIRECT comparable and Wolt as an
+    ADJACENT one, and the rule threw Wolt out and drew a one-name diamond at Gorillas. A range built
+    on one name is not a range, and pricing off one comp is the thing we were told not to do.
+
+    So the band absorbs the next tier down whenever it is short of three, and the ABSORPTION IS
+    RECORDED: band_widened_to says how far it had to reach, so the reveal can say plainly that the
+    third name is a weaker match rather than pretending all three are equally close.
+    Returns (band_tier, headline_rows, positioning_rows).
+    """
     by = {}
     for (sw, r) in priced:
         by.setdefault(_tier(prof, r, sw[1]), []).append((sw, r))
     order = ('DIRECT', 'ADJACENT', 'BROAD')
-    for i, t in enumerate(order):
-        if by.get(t):
-            weaker = [x for tt in order[i+1:] for x in by.get(tt, [])]
-            return t, by[t], weaker
-    return 'NONE', [], []
+    start = next((i for i, t in enumerate(order) if by.get(t)), None)
+    if start is None:
+        return 'NONE', [], []
+    head, end = [], start
+    for i in range(start, len(order)):
+        head += by.get(order[i], [])
+        end = i
+        if len(head) >= WANT_MIN:
+            break
+    weaker = [x for tt in order[end+1:] for x in by.get(tt, [])]
+    return order[start], head, weaker
 
 def _positioning(prof, rows, key):
     out = [{'company': r.get('company_name', ''), 'mult': r[key],
@@ -1314,7 +1415,8 @@ def private_range(prof, picked, tier):
     if tier not in RANGE_TIERS: return {}
     basis = basis_for(prof)
     key = BASIS_KEYS[basis][0]
-    allpriced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get(key)]
+    allpriced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get(key)
+                 and basis_compatible(prof, r)]
     if not allpriced: return {}
     band, priced, weaker = _bands(prof, allpriced)
     v = sorted(r[key] for _sw, r in priced)

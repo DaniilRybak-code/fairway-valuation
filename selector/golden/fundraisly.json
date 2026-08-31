@@ -223,23 +223,22 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 4.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.5,
-   "mid": 4.05,
-   "n": 2,
-   "points": [],
-   "positioning": [
+   "low": 1.8,
+   "mid": 3.5,
+   "n": 5,
+   "points": [
     {
      "company": "AvenuesAI Limited",
      "mult": 0.4,
@@ -255,17 +254,34 @@
      "transaction_type": ""
     },
     {
+     "company": "Morningstar, Inc.",
+     "mult": 3.5,
+     "reason": "related type of business; same end market; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Alkami Technology, Inc.",
      "mult": 4.3,
      "reason": "same end market; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
+    },
+    {
+     "company": "FactSet Research Systems Inc.",
+     "mult": 4.6,
+     "reason": "related type of business; same end market; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
-   "shared_words": [],
-   "spread": 1.3,
-   "tag_evidence": 0.0,
-   "thin": true,
+   "positioning": [],
+   "shared_words": [
+    "ai"
+   ],
+   "spread": 11.5,
+   "tag_evidence": 0.1,
+   "thin": false,
    "triangulated": true
   }
  },

@@ -112,6 +112,28 @@
     "reason": "shares the language of platform; same type of business; same revenue model",
     "score": 7.6,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vercel",
+    "date": "May-24",
+    "in_medians": false,
+    "mult": 32.5,
+    "reason": "shares the language of platform; related type of business; same kind of customer; sold the same way",
+    "score": 11.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Apollo.io",
+    "date": "Aug-23",
+    "in_medians": false,
+    "mult": 16.7,
+    "reason": "shares the language of engagement; related type of business; same revenue model; sold the same way",
+    "score": 9.9,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -146,7 +168,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 26,
+  "private_window_months": 36,
   "secondary": [
    {
     "company": "Sprout Social, Inc.",

@@ -165,6 +165,28 @@
     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
     "score": 10.6,
     "type": "SECONDARY"
+   },
+   {
+    "basis": "Disclosed at pricing; FY2021 closed",
+    "bound": "<=",
+    "company": "Loadsmart",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": 5.2,
+    "reason": "shares the language of marketplace; same type of business; same revenue model; sold the same way",
+    "score": 14.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "GMV_ONLY",
+    "bound": "",
+    "company": "Back Market",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 17.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -198,7 +220,7 @@
    "thin": true,
    "triangulated": true
   },
-  "private_window_months": 37,
+  "private_window_months": 55,
   "secondary": [
    {
     "company": "1stdibs.Com, Inc.",

@@ -105,6 +105,28 @@
     "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
     "score": 16.9,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of model; same type of business; same business function; same kind of customer",
+    "score": 16.8,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Turing",
+    "date": "Mar-25",
+    "in_medians": true,
+    "mult": 13.2,
+    "reason": "shares the language of model; same type of business; same business function; same AI stance",
+    "score": 11.8,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -114,7 +136,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "ARR_RUNRATE": 2
    },
    "bounded": true,
@@ -126,16 +148,17 @@
    "high": 33.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 19.8,
+   "low": 13.2,
    "mid": 30.0,
-   "n": 3,
+   "n": 4,
    "points": [],
    "positioning": [],
    "shared_words": [
     "app",
-    "developer"
+    "developer",
+    "model"
    ],
-   "spread": 1.7,
+   "spread": 2.5,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
@@ -171,23 +194,29 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.6,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 10.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
-   "mid": 0.6,
-   "n": 1,
-   "points": [],
-   "positioning": [
+   "mid": 0.8,
+   "n": 3,
+   "points": [
+    {
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of sdk; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "Agora, Inc.",
      "mult": 0.8,
@@ -203,14 +232,15 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
+    "developer",
     "sdk"
    ],
-   "sole": "TomTom N.V.",
-   "spread": 1.0,
+   "spread": 17.3,
    "tag_evidence": 0.6,
-   "thin": true,
-   "triangulated": true
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "MIT-licensed TypeScript and React framework for building MCP apps"

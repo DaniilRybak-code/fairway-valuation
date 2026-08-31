@@ -167,6 +167,28 @@
     "reason": "both do AI Browser; related type of business; same business function; sold the same way",
     "score": 11.7,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Invisible Technologies",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 14.9,
+    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+    "score": 11.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "reason": "shares the language of ai, code; same type of business; same kind of customer; sold the same way",
+    "score": 13.9,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -176,10 +198,11 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
-    "ARR_RUNRATE": 2
+    "ARR": 2,
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
@@ -189,8 +212,8 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 30.0,
-   "n": 3,
+   "mid": 19.8,
+   "n": 5,
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -210,7 +233,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 14,
   "secondary": [
    {
     "company": "Snowflake Inc.",

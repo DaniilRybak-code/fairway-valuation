@@ -116,6 +116,28 @@
     "reason": "shares the language of ai, deployment, evaluation; same type of business; same AI stance",
     "score": 8.9,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "reason": "shares the language of ai, code; same type of business; same business function; same kind of customer",
+    "score": 16.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Agent Evaluation, Tracing; same type of business; same business function; same kind of customer",
+    "score": 18.0,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -125,11 +147,11 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
@@ -139,8 +161,8 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 30.0,
-   "n": 4,
+   "mid": 19.8,
+   "n": 5,
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -158,7 +180,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 17,
   "secondary": [
    {
     "company": "C3.ai, Inc.",

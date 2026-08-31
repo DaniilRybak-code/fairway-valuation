@@ -30,7 +30,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -38,101 +38,42 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.7,
+   "display": "RANGE",
+   "high": 1.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.7,
-   "mid": 0.7,
-   "n": 1,
+   "mid": 1.1,
+   "n": 3,
    "points": [],
-   "positioning": [
-    {
-     "company": "Airtasker Limited",
-     "mult": 1.1,
-     "reason": "shares the language of marketplace; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Freelancer Limited",
-     "mult": 1.2,
-     "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "shared_words": [
     "healthcare",
+    "marketplace",
     "staffing"
    ],
-   "sole": "AMN Healthcare Services, Inc.",
-   "spread": 1.0,
+   "spread": 1.7,
    "tag_evidence": 1.0,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "GMV_ONLY",
-    "bound": "",
-    "company": "Whatnot",
-    "date": "Aug-26",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
-    "score": 14.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Vinted",
-    "date": "Apr-26",
-    "in_medians": true,
-    "mult": 7.3,
-    "reason": "shares the language of marketplace; same revenue model; same cost structure; same purchase frequency",
-    "score": 10.6,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_RUNRATE",
+    "basis": "Disclosed at pricing",
     "bound": "<=",
-    "company": "Faire",
-    "date": "Nov-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
-    "score": 15.6,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "FILED_ACCOUNTS",
-    "bound": "",
-    "company": "Meesho",
-    "date": "May-24",
+    "company": "Jobandtalent",
+    "date": "Dec-21",
     "in_medians": true,
-    "mult": 4.2,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
-    "score": 16.1,
+    "mult": 2.08,
+    "reason": "both do Shift Staffing; same type of business; same business function; same revenue model",
+    "score": 15.3,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "FILED_ACCOUNTS",
-    "bound": "",
-    "company": "Flipkart",
-    "date": "Jul-23",
-    "in_medians": false,
-    "mult": 5.2,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same purchase frequency",
-    "score": 11.6,
-    "type": "SECONDARY"
    }
   ],
-  "private_proximity": "BROAD",
+  "private_proximity": "ADJACENT",
   "private_range": {},
-  "private_window_months": 37,
+  "private_window_months": 56,
   "secondary": [
    {
     "company": "Upwork Inc.",
@@ -179,28 +120,41 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 1.1,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 3.8,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 0.8,
-   "n": 2,
-   "points": [],
-   "positioning": [
+   "mid": 0.95,
+   "n": 4,
+   "points": [
+    {
+     "company": "Angi Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "PDD Holdings Inc.",
      "mult": 0.8,
      "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
      "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Upwork Inc.",
+     "mult": 1.1,
+     "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
@@ -211,12 +165,13 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
     "marketplace"
    ],
-   "spread": 2.2,
+   "spread": 7.6,
    "tag_evidence": 0.1,
-   "thin": true,
+   "thin": false,
    "triangulated": true
   }
  },

@@ -30,7 +30,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -38,29 +38,21 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.5,
+   "display": "RANGE",
+   "high": 2.7,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 0.5,
-   "n": 1,
+   "mid": 1.6,
+   "n": 2,
    "points": [],
-   "positioning": [
-    {
-     "company": "Klaviyo, Inc.",
-     "mult": 2.7,
-     "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "shared_words": [
+    "automation",
     "ecommerce",
     "shopify"
    ],
-   "sole": "BASE, Inc.",
-   "spread": 1.0,
+   "spread": 5.4,
    "tag_evidence": 1.2,
    "thin": true,
    "triangulated": false

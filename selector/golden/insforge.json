@@ -46,23 +46,29 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 4.0,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.0,
-   "mid": 4.0,
-   "n": 1,
-   "points": [],
-   "positioning": [
+   "low": 5.3,
+   "mid": 10.5,
+   "n": 5,
+   "points": [
+    {
+     "company": "Elastic N.V.",
+     "mult": 4.0,
+     "reason": "both do Vector Search; related type of business; same kind of customer; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
     {
      "company": "Backblaze, Inc.",
      "mult": 5.3,
@@ -92,14 +98,20 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
+    "agent",
+    "ai",
+    "database",
+    "edge",
+    "llm",
     "search",
+    "storage",
     "vector"
    ],
-   "sole": "Elastic N.V.",
-   "spread": 1.0,
+   "spread": 8.0,
    "tag_evidence": 3.8,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
@@ -158,6 +170,28 @@
     "reason": "shares the language of agent, llm; related type of business; same business function; same kind of customer",
     "score": 16.7,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 30.0,
+    "reason": "both do AI Coding Agent; related type of business; same business function; same revenue model",
+    "score": 15.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "reason": "shares the language of ai, coding; related type of business; same business function; same kind of customer",
+    "score": 15.2,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -167,45 +201,33 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1
+    "ARR": 3,
+    "ARR_RUNRATE": 2
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 22.5,
+   "display": "RANGE",
+   "high": 33.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 22.5,
+   "low": 10.3,
    "mid": 22.5,
-   "n": 1,
+   "n": 5,
    "points": [],
-   "positioning": [
-    {
-     "company": "Oxylabs",
-     "mult": 10.3,
-     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "shares the language of ai, coding; related type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "positioning": [],
    "shared_words": [
+    "agent",
+    "ai",
+    "coding",
     "search",
     "vector"
    ],
-   "sole": "Algolia",
-   "spread": 1.0,
+   "spread": 3.2,
    "tag_evidence": 3.8,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 61,

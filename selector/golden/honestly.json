@@ -146,34 +146,54 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 32.6,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 14.0,
-   "mid": 32.6,
-   "n": 2,
-   "points": [],
-   "positioning": [
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
+   "low": 4.3,
+   "mid": 14.0,
+   "n": 3,
+   "points": [
     {
      "company": "Semrush",
      "mult": 4.3,
      "reason": "shares the language of analysis; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Yotpo",
+     "mult": 14.0,
+     "reason": "same type of business; same end market; same business function; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Klaviyo",
+     "mult": 32.6,
+     "reason": "same type of business; same end market; same business function; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
     }
    ],
-   "shared_words": [],
-   "spread": 2.3,
-   "tag_evidence": 0.0,
-   "thin": true,
+   "positioning": [],
+   "shared_words": [
+    "analysis"
+   ],
+   "spread": 7.6,
+   "tag_evidence": 0.6,
+   "thin": false,
    "triangulated": true
   },
   "private_window_months": 65,

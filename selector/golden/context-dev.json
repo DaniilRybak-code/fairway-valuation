@@ -166,6 +166,28 @@
     "reason": "both do LLM; same type of business; same kind of customer; same revenue model",
     "score": 14.2,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of llm; same type of business; same kind of customer; sold the same way",
+    "score": 11.9,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vercel",
+    "date": "May-24",
+    "in_medians": false,
+    "mult": 32.5,
+    "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
+    "score": 16.7,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -205,7 +227,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 17,
+  "private_window_months": 27,
   "secondary": [
    {
     "company": "Snowflake Inc.",

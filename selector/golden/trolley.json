@@ -45,34 +45,23 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "DISCLOSED_THRESHOLD",
+    "basis": "Disclosed at pricing",
     "bound": "<=",
     "company": "Airwallex",
-    "date": "Oct-22",
-    "in_medians": false,
-    "mult": 27.5,
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 8.0,
     "reason": "both do Cross-Border Payments, Payouts; same type of business; same business function; sold the same way",
     "score": 16.1,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Razorpay",
-    "date": "Dec-21",
-    "in_medians": false,
-    "mult": 67.6,
-    "reason": "both do Payouts; related type of business; same business function; same AI stance",
-    "score": 8.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
+    "basis": "Reported around round",
     "bound": "",
     "company": "Zepz",
-    "date": "Aug-21",
-    "in_medians": true,
-    "mult": 21.0,
+    "date": "Oct-24",
+    "in_medians": false,
+    "mult": 6.3,
     "reason": "both do Cross-Border Payments; same type of business; same business function; same revenue model",
     "score": 13.9,
     "type": "PRIMARY"
@@ -89,12 +78,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
+    "basis": "CONTEMPORANEOUS_PRESS_THRESHOLD",
+    "bound": "<=",
     "company": "Marqeta",
     "date": "May-20",
-    "in_medians": true,
-    "mult": 30.0,
+    "in_medians": false,
+    "mult": 14.3,
     "reason": "shares the language of payments; related type of business; same business function; same AI stance",
     "score": 9.6,
     "type": "PRIMARY"
@@ -107,9 +96,10 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 3
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
@@ -118,20 +108,21 @@
    "high": 48.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 21.0,
-   "mid": 30.0,
-   "n": 3,
+   "low": 8.0,
+   "mid": 48.0,
+   "n": 2,
    "points": [],
    "positioning": [],
    "shared_words": [
     "border",
     "cross",
+    "global",
     "payments",
     "payouts"
    ],
-   "spread": 2.3,
-   "tag_evidence": 1.0,
-   "thin": false,
+   "spread": 6.0,
+   "tag_evidence": 1.6,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 75,

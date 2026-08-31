@@ -90,6 +90,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "Disclosed at pricing",
+    "bound": "<=",
+    "company": "Gorillas",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 10.3,
+    "reason": "shares the language of delivery; same type of business; same end market; same AI stance",
+    "score": 10.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "NONE",
     "bound": "",
     "company": "Loop Returns",
@@ -132,10 +143,54 @@
     "reason": "shares the language of delivery, multi, network; same type of business; same business function; same AI stance",
     "score": 9.9,
     "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Wolt",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 8.2,
+    "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
+    "score": 9.3,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
-  "private_range": {},
+  "private_range": {
+   "anchor_dropped": true,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Wolt"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 8.2,
+   "mid": 10.3,
+   "n": 2,
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "delivery",
+    "network"
+   ],
+   "spread": 1.3,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
+  },
   "private_window_months": 61,
   "secondary": [
    {

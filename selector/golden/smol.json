@@ -38,7 +38,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -52,27 +52,13 @@
    "listed_target_names": [],
    "low": 0.3,
    "mid": 0.95,
-   "n": 2,
+   "n": 4,
    "points": [],
-   "positioning": [
-    {
-     "company": "Chewy, Inc.",
-     "mult": 0.7,
-     "reason": "both do Consumables; related type of business; same end market; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Wayfair Inc.",
-     "mult": 1.2,
-     "reason": "shares the language of delivery; related type of business; same end market; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "shared_words": [
     "consumables",
     "consumer",
+    "delivery",
     "direct",
     "products",
     "subscription",
@@ -80,7 +66,7 @@
    ],
    "spread": 5.3,
    "tag_evidence": 1.6,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
@@ -139,6 +125,28 @@
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
     "score": 28.0,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "Estimate around financing",
+    "bound": "",
+    "company": "AG1",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 2.0,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 28.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Glossier",
+    "date": "Jul-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 18.9,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -175,7 +183,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 58,
+  "private_window_months": 61,
   "secondary": [
    {
     "company": "Hims & Hers Health, Inc.",

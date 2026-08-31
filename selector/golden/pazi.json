@@ -112,6 +112,28 @@
     "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
     "score": 9.8,
     "type": "CONTROL"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Writer",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": 40.4,
+    "reason": "shares the language of ai, content; related type of business; same AI stance",
+    "score": 6.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vanta",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 24.5,
+    "reason": "shares the language of automation; related type of business; same kind of customer",
+    "score": 6.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -121,7 +143,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 3,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -139,7 +161,7 @@
    ],
    "low": 4.3,
    "mid": 50.0,
-   "n": 3,
+   "n": 4,
    "points": [
     {
      "company": "Semrush",
@@ -147,6 +169,13 @@
      "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Vanta",
+     "mult": 24.5,
+     "reason": "shares the language of automation; related type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
@@ -175,7 +204,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 9,
+  "private_window_months": 25,
   "secondary": [
    {
     "company": "Klaviyo, Inc.",

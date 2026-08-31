@@ -144,12 +144,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
+    "basis": "Estimate around financing",
+    "bound": "",
     "company": "AG1",
     "date": "Jan-22",
     "in_medians": false,
-    "mult": null,
+    "mult": 2.0,
     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
     "score": 23.1,
     "type": "PRIMARY"
@@ -164,6 +164,17 @@
     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
     "score": 20.1,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Rent the Runway",
+    "date": "Mar-19",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+    "score": 23.1,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -173,8 +184,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "GROSS_REVENUE": 1,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 2
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -189,15 +199,7 @@
    "mid": 4.6,
    "n": 2,
    "points": [],
-   "positioning": [
-    {
-     "company": "Harry's",
-     "mult": 4.6,
-     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "positioning": [],
    "shared_words": [
     "subscription"
    ],
@@ -206,7 +208,7 @@
    "thin": true,
    "triangulated": true
   },
-  "private_window_months": 65,
+  "private_window_months": 89,
   "secondary": [
    {
     "company": "BARK, Inc.",
@@ -253,23 +255,29 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.3,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.3,
-   "mid": 0.3,
-   "n": 1,
-   "points": [],
-   "positioning": [
+   "mid": 0.75,
+   "n": 4,
+   "points": [
+    {
+     "company": "BARK, Inc.",
+     "mult": 0.3,
+     "reason": "both do Subscription Box; same type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
     {
      "company": "Chewy, Inc.",
      "mult": 0.7,
@@ -292,14 +300,14 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
     "box",
     "subscription"
    ],
-   "sole": "BARK, Inc.",
-   "spread": 1.0,
+   "spread": 7.7,
    "tag_evidence": 3.7,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   }
  },

@@ -165,6 +165,28 @@
     "reason": "shares the language of brand, care; same type of business; same end market; same business function",
     "score": 23.2,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Savage X Fenty",
+    "date": "Feb-21",
+    "in_medians": false,
+    "mult": 6.7,
+    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "score": 25.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Away",
+    "date": "May-19",
+    "in_medians": true,
+    "mult": 9.3,
+    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "score": 26.1,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "DIRECT",
@@ -174,7 +196,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 3
+    "NET_REVENUE": 4
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -186,8 +208,8 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.6,
-   "mid": 5.0,
-   "n": 3,
+   "mid": 9.3,
+   "n": 4,
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -200,7 +222,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 65,
+  "private_window_months": 87,
   "secondary": [
    {
     "company": "YETI Holdings, Inc.",
@@ -247,23 +269,22 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 1.0,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 1.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.0,
-   "mid": 1.0,
-   "n": 1,
-   "points": [],
-   "positioning": [
+   "low": 0.3,
+   "mid": 0.4,
+   "n": 5,
+   "points": [
     {
      "company": "Vipshop Holdings Limited",
      "mult": 0.2,
@@ -286,6 +307,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Revolve Group, Inc.",
+     "mult": 1.0,
+     "reason": "related type of business; same end market; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
      "company": "YETI Holdings, Inc.",
      "mult": 1.6,
      "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
@@ -293,11 +321,13 @@
      "transaction_type": ""
     }
    ],
-   "shared_words": [],
-   "sole": "Revolve Group, Inc.",
-   "spread": 1.0,
-   "tag_evidence": 0.0,
-   "thin": true,
+   "positioning": [],
+   "shared_words": [
+    "brand"
+   ],
+   "spread": 8.0,
+   "tag_evidence": 0.1,
+   "thin": false,
    "triangulated": true
   }
  },

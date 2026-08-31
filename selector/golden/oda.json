@@ -126,12 +126,12 @@
     "type": "MIXED"
    },
    {
-    "basis": "NONE",
+    "basis": "CONTEMPORANEOUS_PRESS",
     "bound": "",
     "company": "Gopuff",
     "date": "Jul-21",
-    "in_medians": false,
-    "mult": null,
+    "in_medians": true,
+    "mult": 44.12,
     "reason": "both do Own Inventory; related type of business; same end market; same kind of customer",
     "score": 13.0,
     "type": "PRIMARY"
@@ -168,39 +168,69 @@
     "reason": "shares the language of delivery; related type of business; same end market; same kind of customer",
     "score": 11.7,
     "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Wolt",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 8.2,
+    "reason": "both do Retail Delivery, Grocery Delivery; related type of business; same end market; same kind of customer",
+    "score": 12.2,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "Disclosed at pricing",
+    "bound": "<=",
+    "company": "Gorillas",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 10.3,
+    "reason": "both do Own Inventory; related type of business; same kind of customer; sold the same way",
+    "score": 12.5,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 3
    },
    "bounded": true,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Wolt"
+   ],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 10.1,
+   "display": "RANGE",
+   "high": 44.12,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.1,
-   "mid": 10.1,
-   "n": 1,
+   "low": 8.2,
+   "mid": 10.3,
+   "n": 4,
    "points": [],
    "positioning": [],
    "shared_words": [
-    "home"
+    "delivery",
+    "fulfilment",
+    "grocery",
+    "home",
+    "inventory",
+    "own",
+    "retail"
    ],
-   "sole": "Quince",
-   "spread": 1.0,
-   "tag_evidence": 0.4,
-   "thin": true,
-   "triangulated": true
+   "spread": 5.4,
+   "tag_evidence": 2.0,
+   "thin": false,
+   "triangulated": false
   },
   "private_window_months": 61,
   "secondary": [

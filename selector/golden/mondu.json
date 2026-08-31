@@ -51,14 +51,14 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Upgrade",
+    "basis": "Disclosed at pricing",
+    "bound": "<=",
+    "company": "Fundbox",
     "date": "Nov-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of credit; same type of business; same AI stance",
-    "score": 6.1,
+    "in_medians": true,
+    "mult": 11.0,
+    "reason": "both do Invoice Financing; same type of business; same business function; same kind of customer",
+    "score": 13.9,
     "type": "PRIMARY"
    },
    {
