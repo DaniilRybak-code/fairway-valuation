@@ -14,11 +14,13 @@ The data side of the plan is effectively finished, four days ahead of the week-o
 Daniil ruled on all five disputed private rounds, supplied the twelve missing FX conversions, and
 landed a 28-name TPV pull that ties to the issuers' own filings to the dollar. The matcher drops
 are fixed and no fixture returns an empty peer list any more. Multi-round selection is built under
-his ordering. Against that, the single most useful thing I did today was run twenty companies the
-engine had never seen, and the result is sobering: **on a fresh batch, 7 of 20 get no listed range
-and 13 of 20 get no clean private range.** The 43 verified fixtures flatter us, because data
-existed for them. The pilot risk is no longer data quality. It is coverage, and the fixture march
-is the only thing that will surface how bad it is.
+his ordering. Against that, two findings from checking my own work tonight, and both point the same
+way. **No fixture carries a revenue figure**, so today's basis and period machinery has never once
+run on real input and the gross branch of the basis gate has never been exercised. And on twenty
+companies the engine had never seen, **7 of 20 get no listed range and 13 of 20 get no clean private
+range**. The 43 fixtures flatter us twice over: data existed for them, and they only ever tested
+peer selection. The pilot risk is no longer data quality. It is that the fixture march is about to
+do 57 more of a test that covers half the engine.
 
 ---
 
@@ -34,7 +36,7 @@ FILES PRESENT BUT NOT WIRED INTO THE LOADER
 ```
 
 Private moved from 149 to 163 on the day. Listed moved 513 to 511, because OFX and EML were
-dropped tonight for the reason in finding 4 below. The 58-row master file is the only unwired file and it
+dropped tonight for the reason in finding 5 below. The 58-row master file is the only unwired file and it
 ends the day exactly where it started, which I flag rather than bury: it still lacks 14 source URLs
 and under our own sourcing rule none of its rounds may be shown to a founder until they exist.
 
@@ -42,7 +44,7 @@ Golden suite: `python3 -m selector.golden` gives **0 of 43 profiles moved**. Two
 number tonight. It held at 0 across every change made for the rulings, which answers your
 rebaselining worry from last night directly: no fixture was leaning on a disputed number, so the old
 baseline was honest. It was then **deliberately rebaselined once**, at the end of the day, for the
-OFX and EML removal in finding 4. Three fixtures moved, all three named and explained below, and the
+OFX and EML removal in finding 5. Three fixtures moved, all three named and explained below, and the
 0 above is against the new baseline.
 
 ---
@@ -77,10 +79,15 @@ The gross/net test we settled on is ownership, not size: does the line contain m
 somebody else? A first-party retailer keeps the whole sale price, so its revenue is net in our
 sense.
 
-**Period matching is wired too, and the mismatch it fixes was live on all 43 fixtures.** Every
-listed multiple in our files is EV over NTM revenue. Every quiz fork asks the founder for a trailing
-number. We were applying a forward multiple to a trailing denominator, everywhere, silently. Run
-rate and ARR are now treated as forward denominators and matched to the founder's forward figure.
+**Period matching is built, and I want to be careful about the word wired, because when I went to
+check it tonight it is less finished than I said this afternoon.** The problem is real: every listed
+multiple in our files is EV over NTM revenue, every quiz fork asks the founder for a trailing number,
+and we were applying a forward multiple to a trailing denominator everywhere, silently. What now
+exists is `founder_revenue_for(prof, period)`, which returns the founder's own revenue on whichever
+basis a comparable was built on, and every range on both lanes carries `period_mix` and
+`period_span` so the reveal can multiply row by row instead of applying one median to one number.
+**What does not exist is anything consuming it**, because the reveal is not connected to the engine
+yet, and that is by design. See finding 1 below for the part that genuinely worries me.
 
 **The matcher drops are fixed, by three separate changes.** Bands widen until they hold at least
 three names and record how far they widened. The listed core tops up from the wide set until it has
@@ -103,7 +110,51 @@ to 1.2x on three names, as a side effect of the band widening.
 
 ## Key findings, in the order I would want them read
 
-### 1. Fresh companies do much worse than our fixtures, and we should say so out loud
+### 1. The 43 fixtures carry no revenue, so the basis and period work is completely untested
+
+I found this checking my own claim before sending this, and it is the most important thing in the
+handover. **Not one of the 43 golden profiles carries a revenue figure.** The key is not even in the
+schema they use: a fixture profile has archetype, industry, function, buyer, growth, gross margin,
+revenue model and tags, and no revenue.
+
+Reproduce:
+
+```
+cd selector && python3 -c "from golden_profiles import PROFILES; \
+  print(sum(1 for i in PROFILES if [x for x in i if isinstance(x,dict)][0].get('revenue')), 'of', len(PROFILES))"
+```
+
+It prints 0 of 43. Three consequences, and each one bites:
+
+**The period machinery has never run on real input.** Across all 43 fixtures there are 75
+`period_span` entries and **every single one says `NO_REVENUE_GIVEN`**. The derivation is correct as
+far as I can read it, and it has never once produced a number.
+
+**The basis gate has only ever been exercised on one branch.** `basis_compatible` reads
+`prof.get('revenue_basis') or 'NET_REVENUE'`, so with no fixture supplying it, every founder in
+every test is net. The gross branch, which is the one that would have caught Razorpay, is untested.
+
+**There is a second, dead derivation of the same number.** `with_forward_revenue(prof)` exists at
+line 1093 and has **zero callers anywhere in the repo**. It duplicates what `founder_revenue_for`
+does. Two derivations of one number is how they drift apart, and one of them being dead is how
+nobody notices. It should be deleted or made the single path, and that is a decision I would rather
+you took than I did at this hour.
+
+**What this means for the pilot gate, which is the part Daniil should see.** The gate is 100
+double-verified fixtures. Fixtures of the current shape test peer SELECTION and nothing else. They
+do not test that a founder's number meets a comparable on the same basis, or on the same period, or
+that the multiple applied to it is the right one. **Reaching 100 fixtures of this shape would
+certify half the engine and read as though it certified all of it.** I do not think that changes
+the gate, but the fixture schema has to grow a revenue figure, a revenue basis and a period before
+the march goes much further, or we will do 57 more of the wrong test. Six a day for ten days is a
+lot of work to spend on the wrong shape.
+
+Fable, your own check number 4 in the basis brief was "fixtures where a trailing founder figure
+meets a forward peer multiple: was 43 of 43, should be 0". The honest answer tonight is that it is
+**unanswerable**, not zero. The number the check needs is on the range object now. Nothing supplies
+the input that would make it non-null.
+
+### 2. Fresh companies do much worse than our fixtures, and we should say so out loud
 
 I triaged twenty real companies taken from Product Hunt's July, June and May 2026 monthly
 leaderboards. Real names, nothing invented, per the standing rule. `tools/triage_20_31aug.py`
@@ -137,7 +188,7 @@ twenty are software. This tells us nothing about the ecommerce, payments, lendin
 which is exactly where the volume-metrics and TPV work landed today. The next triage batch has to
 come from somewhere else.
 
-### 2. Twenty different spellings of the same field
+### 3. Twenty different spellings of the same field
 
 `denominator_basis` on the 108 priced private rows carries **20 distinct values**, of which nine are
 free-text sentences rather than labels: "Q3 results released on financing close date; closed
@@ -156,7 +207,7 @@ Nothing can filter reliably on a field spelled twenty ways. The notes are worth 
 belong in a notes column, not in the field the engine reads. This wants a controlled vocabulary and
 a one-time migration, and it should happen before the fixture march scales, not after.
 
-### 3. Twelve figures were in the file, correctly tagged, and in no valuation at all
+### 4. Twelve figures were in the file, correctly tagged, and in no valuation at all
 
 This is my failure and it deserves its own heading. Twelve non-USD volume figures sat in
 `volume-metrics.csv`, manifested and visible, and never entered a single valuation because nothing
@@ -172,7 +223,7 @@ to be used. I have proposed a ninth rule in the marked-up roadmap: a figure that
 not in the engine is reported as absent, not as pending, and every data session states by count
 which rows entered a valuation and which did not. Adopt it or redraft it, but it needs to exist.
 
-### 4. OFX and EML were killed in conversation and were still pricing an hour ago
+### 5. OFX and EML were killed in conversation and were still pricing an hour ago
 
 I went to confirm this as a carry-over rather than assume it, and found the decision had never
 reached the code. Daniil killed both on 31 August ("these are micro stocks, doubt anyone wants to be
@@ -201,7 +252,7 @@ The general point is the one Daniil keeps making and I keep proving: a ruling th
 conversation is not in the product. Everything he ruled on today is written into code or into a
 file, and this handover names the file for each.
 
-### 5. Flipkart was wrong in a way our own notes already knew
+### 6. Flipkart was wrong in a way our own notes already knew
 
 Our notes said the denominator was the B2B wholesale entity. Nobody acted on it. The result was
 6.4x and 5.2x sitting in the ranges when the marketplace entity prices at 34.2x, a factor of six.
@@ -209,7 +260,7 @@ Both Flipkart rows are now out of the ranges. The general lesson is worth writin
 recording a problem is not the same as the problem being handled, and we have at least one more of
 these in the file (the 42 rows the basis audit flags below).
 
-### 6. Two more things I got wrong today, recorded
+### 7. Two more things I got wrong today, recorded
 
 My explanation of Wise's negative growth was wrong. I attributed it to interest income decoupling.
 The real cause was that Wise reports in USD from FY2026, so a sterling year sat next to a dollar
@@ -218,37 +269,105 @@ workbook had already given, with the Forbes source named in it.
 
 ---
 
-## The ask: audit the most sensitive places
+## The ask: what Fable audits, all of it in one place
 
-Not everything. Four places, chosen because an error in each is invisible until a founder is looking
-at it.
+Everything we flagged for you today, gathered here so it is one list rather than four documents. The
+source documents stay where they are and go deeper: `docs/brief-for-fable-basis-and-period.md`,
+`docs/issues-for-fable-31aug-pm.md`, `docs/basis-and-period-audit-31aug.md` and
+`docs/tpv-check-31aug.md`. Items 1 to 3 are standing checks that repeat at every handover from now
+on. Items 4 to 11 are this batch.
 
-**One, and this is now a standing check at every handover, not a one-off.** Run
-`python3 tools/audit_basis_period.py`. Tonight it flags **42 rows for a human** and finds **66
-agreeing with their own words**. The check reads the multiple's own label against the wording of the
-source it came from, and disagreements are exactly where a gross multiple is labelled net or a
-forward figure is labelled trailing. The 42 are not all wrong, they are all unverified. The full
-brief is in `Fairway_brief_for_Fable_basis_and_period.md`.
+### The standing checks, at every handover
 
-**Two, the arithmetic on the TPV batch, on the four riskiest rows rather than all 28.** Every CY+0
-figure ties exactly to the issuer's disclosure, which I checked. The forward series are the risk,
-because they are grown at the local-currency revenue growth rate and four of them inherited a broken
-revenue series before I fixed it across three revisions. Fiserv also carries a **manual 1% growth
-assumption for 2026** that Daniil entered by hand because Capital IQ was returning something wrong.
-That assumption must be replaced when the real number is available, and it is the kind of thing that
-becomes permanent if nobody writes it down, so it is written down here and in the manifest.
+**1. Run `python3 tools/audit_basis_period.py` and read the foot.** Tonight: **42 rows need a human,
+66 agree with their own words**, out of 108 that carry a multiple. Three things must hold each time:
 
-**Three, the basis gate on the lender fixtures.** When I first wired `basis_compatible()` it emptied
-all four lender fixtures, because lenders carry no revenue basis and the gate treated blank as
-incompatible. I fixed it by guarding on `is_balance_sheet()` and treating blank, NONE and UNKNOWN as
-unknown rather than as a mismatch. That is the right fix but it is a permissive one, so it deserves
-a second pair of eyes: check that no non-lender is passing the gate on a blank.
+- **The agreeing number only ever goes UP.** If it falls, a row was edited without its label being
+  revisited, which is exactly how Razorpay's gross 67.6x sat in the fintech file for four days.
+- **Every row that can feed a range carries both a period and a basis.** **108 of 108 tonight**, and
+  it must stay there. A row that can price a founder and cannot say what it is measuring must not
+  price a founder.
+- **`revenue_basis_source` says how we know.** Tonight: **18 STATED, 100 INFERRED, 0
+  INFERRED_HIGH_RISK, 45 blank** (book-priced lenders and rows with no multiple). STATED should
+  climb. **INFERRED_HIGH_RISK is at zero for the first time**: all five are resolved from primary
+  sources, which was the dLocal, Pine Labs, StockX and Flipkart-twice investigation Daniil ordered.
 
-**Four, whether the CONTEXT tier is honest on screen.** The tier is new today and it is the thing
-standing between a founder and an empty box. Seven of the twenty new names land on it. The
-disclaimer copy has never been read in situ. If the label does not make it obvious that these are
-context rather than comparables, we have replaced an honest empty box with a dishonest full one,
-which is worse.
+**2. Run `python3 tools/data_inventory.py` and paste the foot into the handover**, including the NOT
+READ BY THE ENGINE line. Plus the new ninth protocol rule: state by count which rows entered a
+valuation and which did not, so a figure that is in the file but not in the engine is reported as
+absent rather than as pending.
+
+**3. Run the golden suite and check that no ruling from the day ended only in a conversation.** That
+is the tenth protocol rule, added tonight after OFX.
+
+### This batch
+
+**4. The fixture schema, and I would do this one first.** Finding 1 above: no fixture carries a
+revenue figure, so all 43 period spans read `NO_REVENUE_GIVEN`, the basis gate has only ever run on
+its net branch, and `with_forward_revenue` is dead code with zero callers. Decide whether that
+function is deleted or becomes the single path, and decide what a fixture profile has to carry
+before the march to 100 continues. This gates the other 57.
+
+**5. The 100 INFERRED basis rows.** Each is a basis somebody read off the business model rather than
+off the source. Most will be right. Work them by sector, hardest first: **payments and delivery are
+the two where the same archetype contains both gross and net reporters**, so an archetype rule must
+not decide them. The test is ownership, not size: does the line contain money belonging to somebody
+else? A freight broker's revenue holds the carrier's money, a staffing platform's holds the worker's
+wage, and a first-party retailer keeps the whole sale price so its revenue is net in our sense even
+though it looks gross beside a commission.
+
+**6. The run-rate modelling assumption, which is doing more work than anything else on the list.**
+`founder_revenue_for` assumes a run rate leads a trailing year by half a year of growth, and returns
+`ESTIMATED_HALF_A_YEAR_OF_GROWTH` so nothing downstream can present it as something the founder
+said. **66 private rows are run rates or ARR, our largest single bucket.** That is a modelling
+choice, not a fact, and it deserves a second opinion before it prices anyone.
+
+**7. The TPV arithmetic, on the riskiest rows rather than all 28.** Every CY+0 figure ties exactly to
+the issuer's disclosure, which I checked. The forward series are the risk, because they are grown at
+the local-currency revenue growth rate and four inherited a broken revenue series before I fixed it
+across three revisions. Two manual overrides are in the file and both will become permanent if
+nobody writes them down, so they are written down here, in `docs/tpv-check-31aug.md` and in the
+manifest: **Fiserv carries a hand-entered 1% growth assumption for 2026** because Capital IQ was
+returning something wrong, and **Nu's historical revenue was manually corrected** by Daniil. Both
+must be replaced when the real numbers exist.
+
+**8. The basis gate's permissiveness.** When first switched on it emptied all four lender fixtures,
+because lenders carry no revenue basis and the gate read blank as incompatible. It is now guarded on
+`is_balance_sheet()` and treats blank, NONE and UNKNOWN as unknown rather than as a mismatch. That is
+the right fix and it is a permissive one: **check that no non-lender is passing the gate on a blank.**
+
+**9. The lender fence, which I narrowed today.** It used to fire on either archetype slot, so
+Payoneer and Wise were fenced out for holding customer funds and Block for owning Square Financial
+Services. All three are payments businesses the market prices on revenue, and all three were blocked
+from exactly the founders who needed them. It now reads the PRIMARY archetype only. Check that no
+genuine lender slipped through the narrowing.
+
+**10. Trolley, which you asked about and which has changed since.** Its listed core was EML at 0.7x
+and Corpay at 6.4x, a ninefold spread from two names, and you asked whether EML was mis-tagged or
+whether the honest answer was that the listed lane cannot price Trolley at all. Daniil decided it:
+EML is dropped. The core is now Corpay, Repay and Usio, and the secondary range moves from 0.5-0.9x
+to 0.7-2.1x. **Worth a look at whether that reads as a real range or as three names that happen to
+be left**, because the original worry has not fully gone away.
+
+**11. Whether the CONTEXT tier is honest on screen.** It is new today and it is the thing standing
+between a founder and an empty box. Seven of the twenty new names land on it. The disclaimer copy
+has never been read in situ. If the label does not make it obvious that these are context and not
+comparables, we have replaced an honest empty box with a dishonest full one, which is worse.
+
+### Known and deliberately deprioritised, so it is not rediscovered as a surprise
+
+**The 513 listed rows still have no `revenue_basis` field at all**, and the listed lane therefore has
+no basis gate. Statutory revenue is net for a take-rate marketplace like Etsy and gross for a
+first-party retailer like Ocado, and both sit in the same family with nothing recording which. That
+is the OLIPOP error at the listed level and it is live. Daniil ruled on 31 August that private names
+matter more here, which I think is right, so this is a known hole rather than an unnoticed one. The
+tagging table by archetype is in `docs/brief-for-fable-basis-and-period.md`, including the two
+archetypes that must be read one by one rather than ruled on.
+
+**The quiz cannot ask which basis the founder is giving.** `basis_compatible` already understands
+NET, GROSS and BOTH on the profile, and no question produces that value, so it defaults to net for
+everyone. Daniil wants the founder to be able to give either or both and then be priced like for
+like. The gate is built and the input does not exist.
 
 ---
 
@@ -272,23 +391,26 @@ working days. Today's 20 are triaged but not double-verified, so the number does
 independent agents per company that is roughly six companies a day and it needs to start Monday.
 
 **Still unresolved from before today:** the six honesty flags do not reach a founder; volume
-multiples are not yet on the football field although today's work unblocks them; 101 rows across the
-two private files carry an INFERRED marker that nobody has verified; and Nexi's local-currency CY+0
-cell is still blank.
+multiples are not yet on the football field although today's work unblocks them; 100 private rows carry an
+INFERRED basis that nobody has verified; and Nexi's local-currency CY+0 cell is still blank.
 
 ---
 
 ## Commits
 
-I do not run git on Daniil's machine, including read-only commands, per the standing rule. His last
-terminal showed HEAD at `e6eacca` with a clean tree, everything pushed. Since then I have added
-`docs/cagr-todo-31aug.md`, appended a row to `data/MANIFEST.md`, dropped OFX and EML in
-`selector/match_reference.py`, and rewritten the three golden fixtures that moved because of it. So
-there are uncommitted changes now. Daniil, when you get a moment:
+I do not run git on Daniil's machine, including read-only commands, per the standing rule. Everything
+up to and including the OFX and EML removal is on origin at **`61c8032`**, pushed at his terminal:
+eight files, three of them new (`docs/cagr-todo-31aug.md`, `docs/handover-2026-08-31-evening.md`,
+`tools/triage_20_31aug.py`), plus `selector/match_reference.py`, `data/MANIFEST.md` and exactly the
+three golden fixtures that moved. Eight is the number it should have been, which also confirms the
+fixture writer is deterministic: a rewrite of all 43 produced diffs on only the three that changed,
+so the suite is doing what it claims.
+
+This handover was then extended after `61c8032` with finding 1, which I found while checking my own
+claim about period matching, and with the consolidated audit list. One more push:
 
 ```
-git add -A && git commit -m "OFX and EML dropped from the universe, golden rebaselined; CAGR to-do and manifest row" && git push
+git add -A && git commit -m "Handover extended: fixture schema gap, consolidated Fable audit list" && git push
 ```
 
-Fable, the SHA to verify tonight's data claims against is whatever that push produces. Until it
-lands, verify against `e6eacca` plus the two files named above.
+Fable, verify tonight's claims against `61c8032` plus that push.
