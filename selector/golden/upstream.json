@@ -16,29 +16,37 @@
     "reason": "shares the language of email; related type of business; same kind of customer; sold the same way",
     "score": 7.2,
     "ticker": "NASDAQGS:INTU"
+   },
+   {
+    "company": "Zoom Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of team; same type of business; same revenue model; sold the same way",
+    "score": 10.1,
+    "ticker": "NASDAQGS:ZM"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.4,
+   "high": 4.7,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.8,
-   "mid": 3.6,
-   "n": 2,
+   "mid": 4.4,
+   "n": 3,
    "period_mix": {
-    "NTM": 2
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -49,12 +57,13 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "email"
+    "email",
+    "team"
    ],
-   "spread": 1.6,
-   "tag_evidence": 0.2,
-   "thin": true,
-   "triangulated": true
+   "spread": 1.7,
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -180,14 +189,6 @@
   "private_window_months": 55,
   "secondary": [
    {
-    "company": "Zoom Communications, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of team; same type of business; same revenue model; sold the same way",
-    "score": 10.1,
-    "ticker": "NASDAQGS:ZM"
-   },
-   {
     "company": "Asana, Inc.",
     "family": "software",
     "in_medians": true,
@@ -226,21 +227,13 @@
     "reason": "shares the language of email; same kind of customer; sold the same way",
     "score": 5.7,
     "ticker": "NYSE:GDDY"
-   },
-   {
-    "company": "IONOS Group SE",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of email; same kind of customer; sold the same way",
-    "score": 5.7,
-    "ticker": "XTRA:IOS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -252,11 +245,11 @@
    "high": 5.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.5,
-   "mid": 4.7,
-   "n": 5,
+   "low": 2.3,
+   "mid": 3.85,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -269,13 +262,6 @@
     {
      "company": "GoDaddy Inc.",
      "mult": 2.8,
-     "reason": "shares the language of email; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "IONOS Group SE",
-     "mult": 3.7,
      "reason": "shares the language of email; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""

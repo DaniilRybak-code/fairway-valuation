@@ -153,12 +153,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "Estimate around financing",
+    "basis": "CONTEMPORANEOUS_PRESS",
     "bound": "",
     "company": "AG1",
     "date": "Jan-22",
-    "in_medians": false,
-    "mult": 2.0,
+    "in_medians": true,
+    "mult": 8.8,
     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
     "score": 23.1,
     "type": "PRIMARY"
@@ -193,6 +193,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 2
    },
    "bounded": false,
@@ -201,17 +202,22 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.6,
+   "high": 8.8,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
    "mid": 4.6,
-   "n": 2,
+   "n": 3,
    "period_mix": {
-    "LTM": 2
+    "LTM": 2,
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -221,9 +227,9 @@
    "shared_words": [
     "subscription"
    ],
-   "spread": 1.4,
+   "spread": 2.7,
    "tag_evidence": 0.1,
-   "thin": true,
+   "thin": false,
    "triangulated": true
   },
   "private_window_months": 89,

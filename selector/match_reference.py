@@ -315,6 +315,14 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             row['mult_alt'] = _f(r.get('ev_revenue_alt_x'))
             row['rev_alt'] = _f(r.get('revenue_alt_musd'))
             row['revenue_basis_alt'] = (r.get('revenue_basis_alt') or '').strip().upper()
+            # A PRIVATE ROUND CAN PRICE ON VOLUME TOO, and for a marketplace it is often the better
+            # number. StockX is the case that forced it: its GMV of $1.8bn and its valuation of
+            # $3.8bn are both points the company stated on the pricing date, while its revenue is a
+            # threshold on a partly gross basis. 2.11x on volume is simply better evidence than
+            # "at most 9.5x" on a number we cannot pin down.
+            row['gmv'] = _f(r.get('gmv_musd'))
+            row['gmv_mult'] = _f(r.get('ev_gmv_x'))
+            row['gmv_basis'] = (r.get('gmv_basis') or '').strip().upper()
             row['mult_book'] = _f(r.get('ev_book_x'))
             row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
             row['in_medians'] = str(r.get('in_medians', '1')).strip() not in ('0', '')
@@ -1077,6 +1085,15 @@ def with_forward_revenue(prof):
 # rate. That is a modelling choice, not a fact, and it returns ESTIMATED_HALF_A_YEAR_OF_GROWTH so
 # nothing downstream can present it as something the founder said.
 PERIOD_KINDS = ('LTM', 'NTM', 'RUN_RATE')
+# Daniil, 31-Aug-2026: "On runrates - I would apply forward looking multiples on them + multiples
+# that are based on ARRs, of course."
+#
+# THAT OVERRULES A GUESS I HAD MADE AND IT IS THE BETTER ANSWER. I had modelled a run rate as
+# trailing plus half a year of growth, which was an invention dressed as precision. A run rate and
+# an ARR both annualise what the business is earning NOW, which is the forward year, not the one
+# just finished. So there are two buckets, not three: trailing, and forward. Everything that
+# annualises a current period is forward.
+FORWARD_PERIODS = ('NTM', 'RUN_RATE', 'ARR', 'ARR_RUNRATE')
 
 
 def founder_revenue_for(prof, period):
@@ -1089,10 +1106,8 @@ def founder_revenue_for(prof, period):
         return rev, 'AS_GIVEN_TRAILING'
     if g is None:
         return rev, 'TRAILING_USED_UNCHANGED_NO_GROWTH_GIVEN'
-    if p == 'NTM':
+    if p in FORWARD_PERIODS:
         return round(rev * (1.0 + g / 100.0), 4), 'DERIVED_FROM_TRAILING_AND_GROWTH'
-    if p == 'RUN_RATE':
-        return round(rev * (1.0 + g / 200.0), 4), 'ESTIMATED_HALF_A_YEAR_OF_GROWTH'
     return rev, 'UNRECOGNISED_PERIOD_TRAILING_USED'
 
 
@@ -1109,6 +1124,31 @@ def _period_span(prof, rows):
         v, how = founder_revenue_for(prof, p)
         out[p] = {'founder_revenue': v, 'basis': how}
     return out
+
+
+# ---------------------------------------------------------------------------
+# LISTED NAMES EXCLUDED FROM PRICING, BY NAME, WITH A REASON EACH.
+#
+# THIS IS A LIST AND NOT A RULE, ON PURPOSE. The standing instruction is that SIZE IS NEVER A
+# SELECTION OR EXCLUSION CRITERION, so "too small to trust" is not available to us and should not
+# be. What disqualifies a name here is EVIDENCE QUALITY: a forward multiple is only as good as the
+# consensus behind it, and on a collapsed micro-cap there is barely a consensus to speak of.
+#
+# We cannot yet detect that from the data we hold, because the pull does not carry the NUMBER OF
+# ANALYST ESTIMATES behind each forecast. Until it does, this stays an explicit list that a human
+# wrote and a human can argue with, rather than a threshold that quietly removes companies.
+# ADD "number of estimates" TO THE NEXT CAPITAL IQ PULL and this becomes a rule.
+LISTED_NOT_PRICING = {
+ 'ASX:EML': ('EML Payments: market capitalisation of A$124m on 10-Aug-2026 after falling 69 per cent '
+             'in a year, at A$0.32 a share. Its 0.7x forward revenue is a distress multiple, and the '
+             'consensus behind the forecast is thin enough that the multiple is not evidence about '
+             'payments companies. It was pricing Trolley: the listed core was EML at 0.7x and Corpay '
+             'at 6.4x, a ninefold spread from two names.'),
+}
+
+
+def pricing_eligible(row):
+    return norm(row.get('exchange_ticker', '')) not in {norm(k) for k in LISTED_NOT_PRICING}
 
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
@@ -1189,9 +1229,37 @@ def peer_groups(prof, universe, scorer=None, want=5):
         # payments founder could be shown.
         picked = {id(x) for x in core}
         wide, _wt = qualifying(scored, prof, only='BROAD')
+
+        # A CORE THAT CANNOT PRICE THREE NAMES IS NOT A CORE. Daniil, 31-Aug-2026, on Trolley:
+        # "2 names are obviously not enough."
+        #
+        # Trolley's core came back as EML Payments at 0.7x and Corpay at 6.4x, and once EML was
+        # taken out of pricing that left a single name. A one-name diamond drawn from a group of
+        # nine available comparables is not caution, it is a failure to look. So the core tops up
+        # from the wider ring until it can price three, exactly as the private band does. The
+        # topped-up names are still ordered behind the anchored ones, so the closest comparable
+        # still leads and the reader can see where the set thins out.
+        def _prices(x):
+            r = x[1]
+            return r.get('mult') is not None and r.get('in_medians', True) and pricing_eligible(r)
+        #
+        # AND THE TIER IS SET BY THE ANCHORED NAMES, NOT BY THE TOP-UPS. The first version of this
+        # let a topped-up BROAD name drag the whole group's tier down to BROAD, and BROAD is not a
+        # pricing tier, so sellerclaw LOST the range it already had. Topping up must only ever add
+        # evidence; it must never take a founder's answer away.
+        anchored_tier = set_tier(prof, core)
+        if sum(1 for x in core if _prices(x)) < WANT_MIN:
+            for x in wide:
+                if id(x) in picked or len(core) >= WANT_MAX:
+                    continue
+                x[1]['topped_up'] = True     # so the reveal can say this one was reached for
+                core.append(x); picked.add(id(x))
+                if sum(1 for y in core if _prices(y)) >= WANT_MIN:
+                    break
+
         room = WANT_MAX if len(core) < WANT_MIN else want
         secondary = [x for x in wide if id(x) not in picked][:room]
-        return core, secondary, set_tier(prof, core)
+        return core, secondary, anchored_tier
 
     # NOTHING QUALIFIED FOR CORE. UNTIL 31-AUG-2026 THAT RETURNED ABSOLUTELY NOTHING, and five of
     # our own test companies were getting an empty listed lane out of pools of 74 to 179 eligible
@@ -1550,7 +1618,10 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
     Returns None for a BROAD group: it is context, not a price."""
     if tier not in RANGE_TIERS: return None
     key = BASIS_KEYS['BOOK'][1] if is_balance_sheet(prof) else ('mult' if which == 'rev' else 'gp_mult')
-    allpriced = [(sw, r) for (sw, r) in group if r.get(key) is not None and r.get('in_medians', True)]
+    # An excluded name still APPEARS in the comp list, because hiding it would be its own kind of
+    # dishonesty. It just does not price.
+    allpriced = [(sw, r) for (sw, r) in group
+                 if r.get(key) is not None and r.get('in_medians', True) and pricing_eligible(r)]
     if not allpriced: return None
     band, priced, weaker = _bands(prof, allpriced)
     v = sorted(r[key] for _sw, r in priced)

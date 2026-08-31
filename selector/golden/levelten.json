@@ -8,55 +8,7 @@
     "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
     "score": 10.7,
     "ticker": "NSEI:IEX"
-   }
-  ],
-  "core_range": {
-   "anchor_dropped": false,
-   "band": "DIRECT",
-   "basis_mix": {
-    "UNKNOWN": 1
    },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 13.4,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 13.4,
-   "mid": 13.4,
-   "n": 1,
-   "period_mix": {
-    "NTM": 1
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "shared_words": [
-    "energy",
-    "power",
-    "renewable"
-   ],
-   "sole": "Indian Energy Exchange Limited",
-   "spread": 1.0,
-   "tag_evidence": 1.7,
-   "thin": true,
-   "triangulated": false
-  },
-  "listed_proximity": "DIRECT",
-  "private": [],
-  "private_proximity": "NONE",
-  "private_range": {},
-  "private_window_months": 24,
-  "secondary": [
    {
     "company": "Clarkson PLC",
     "family": "fintech",
@@ -72,7 +24,78 @@
     "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
     "score": 6.6,
     "ticker": "NASDAQ:CME"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
    },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 14.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.6,
+   "mid": 13.4,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Clarkson PLC",
+     "mult": 1.6,
+     "reason": "shares the language of purchase; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Indian Energy Exchange Limited",
+     "mult": 13.4,
+     "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "CME Group Inc.",
+     "mult": 14.1,
+     "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "energy",
+    "index",
+    "power",
+    "purchase",
+    "renewable"
+   ],
+   "spread": 8.8,
+   "tag_evidence": 1.7,
+   "thin": false,
+   "triangulated": false
+  },
+  "listed_proximity": "DIRECT",
+  "private": [],
+  "private_proximity": "NONE",
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [
    {
     "company": "Multi Commodity Exchange of India Limited",
     "family": "fintech",
@@ -118,23 +141,23 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 25.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.3,
    "mid": 9.8,
-   "n": 5,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -142,43 +165,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Clarkson PLC",
-     "mult": 1.6,
-     "reason": "shares the language of purchase; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Deutsche Boerse AG",
-     "mult": 8.3,
-     "reason": "shares the language of index; same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Intercontinental Exchange, Inc.",
-     "mult": 9.8,
-     "reason": "shares the language of energy; same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "CME Group Inc.",
-     "mult": 14.1,
-     "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Multi Commodity Exchange of India Limited",
-     "mult": 25.2,
-     "reason": "shares the language of energy; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [
     {
      "company": "PSI Software SE",
@@ -197,10 +184,9 @@
    ],
    "shared_words": [
     "energy",
-    "index",
-    "purchase"
+    "index"
    ],
-   "spread": 15.7,
+   "spread": 3.0,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false

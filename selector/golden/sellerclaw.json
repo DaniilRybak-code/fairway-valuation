@@ -24,29 +24,37 @@
     "reason": "shares the language of ecommerce, fulfilment, management; same type of business; same end market; same business function",
     "score": 10.7,
     "ticker": "NASDAQGS:BZUN"
+   },
+   {
+    "company": "Nayax Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "NASDAQ:NYAX"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 2.7,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 3.1,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 1.6,
-   "n": 2,
+   "mid": 2.7,
+   "n": 3,
    "period_mix": {
-    "NTM": 2
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -54,16 +62,39 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "BASE, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of ecommerce, shopify; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "mult": 2.7,
+     "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nayax Ltd.",
+     "mult": 3.1,
+     "reason": "same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "automation",
     "ecommerce",
+    "management",
     "shopify"
    ],
-   "spread": 5.4,
+   "spread": 6.2,
    "tag_evidence": 1.2,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
@@ -174,14 +205,6 @@
   "private_window_months": 65,
   "secondary": [
    {
-    "company": "Nayax Ltd.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same business function; same kind of customer",
-    "score": 8.5,
-    "ticker": "NASDAQ:NYAX"
-   },
-   {
     "company": "Shoper S.A.",
     "family": "software",
     "in_medians": true,
@@ -202,10 +225,10 @@
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -214,11 +237,11 @@
    "high": 11.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.1,
-   "mid": 4.5,
-   "n": 3,
+   "low": 4.5,
+   "mid": 7.75,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -229,13 +252,12 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "management",
     "store"
    ],
-   "spread": 3.5,
+   "spread": 2.4,
    "tag_evidence": 0.4,
-   "thin": false,
-   "triangulated": false
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "A supervised team of AI agents that runs a merchant Shopify, eBay and Amazon stores"

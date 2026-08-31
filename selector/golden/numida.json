@@ -40,29 +40,45 @@
     "reason": "shares the language of sme; same type of business; same end market; same business function",
     "score": 14.6,
     "ticker": "XTRA:GLJ"
+   },
+   {
+    "company": "Shriram Finance Limited",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 14.5,
+    "ticker": "NSEI:SHRIRAMFIN"
+   },
+   {
+    "company": "Funding Circle Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 14.5,
+    "ticker": "LSE:FCH"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.4,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
-   "mid": 0.4,
-   "n": 1,
+   "mid": 1.5,
+   "n": 2,
    "period_mix": {
-    "NTM": 1
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -70,16 +86,34 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Grenke AG",
+     "mult": 0.4,
+     "reason": "shares the language of sme; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Funding Circle Holdings plc",
+     "mult": 2.6,
+     "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "shared_words": [
+    "business",
+    "credit",
+    "lending",
+    "loan",
     "sme"
    ],
-   "sole": "Grenke AG",
-   "spread": 1.0,
-   "tag_evidence": 0.6,
+   "spread": 6.5,
+   "tag_evidence": 1.5,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -184,22 +218,6 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Shriram Finance Limited",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-    "score": 14.5,
-    "ticker": "NSEI:SHRIRAMFIN"
-   },
-   {
-    "company": "Funding Circle Holdings plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-    "score": 14.5,
-    "ticker": "LSE:FCH"
-   },
-   {
     "company": "Far East Horizon Limited",
     "family": "fintech",
     "in_medians": true,
@@ -222,13 +240,29 @@
     "reason": "shares the language of lending, origination; same type of business; same end market; same business function",
     "score": 13.8,
     "ticker": "NYSE:UWMC"
+   },
+   {
+    "company": "Merchants Bancorp",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending, loan, origination; related type of business; same end market; same business function",
+    "score": 13.7,
+    "ticker": "NASDAQ:MBIN"
+   },
+   {
+    "company": "Banca IFIS S.p.A.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of loan, sme; related type of business; same end market; same business function",
+    "score": 13.5,
+    "ticker": "BIT:IF"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -237,14 +271,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.6,
+   "high": 1.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 1.4,
-   "n": 4,
+   "mid": 1.1,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -256,14 +290,13 @@
    "positioning": [],
    "shared_words": [
     "business",
-    "credit",
     "lending",
     "loan",
     "origination",
     "sme"
    ],
-   "spread": 5.2,
-   "tag_evidence": 1.5,
+   "spread": 3.8,
+   "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
   }

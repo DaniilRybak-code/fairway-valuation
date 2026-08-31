@@ -8,10 +8,111 @@
     "reason": "both do Buy Now Pay Later, Checkout Financing; same type of business; same revenue model",
     "score": 9.2,
     "ticker": "NASDAQ:SEZL"
+   },
+   {
+    "company": "Avarda Bank AB (publ)",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Checkout Financing; same type of business; same kind of customer; same revenue model",
+    "score": 10.9,
+    "ticker": "OM:AVARDA"
+   },
+   {
+    "company": "Lufax Holding Ltd",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+    "score": 10.1,
+    "ticker": "NYSE:LU"
+   },
+   {
+    "company": "Credit Acceptance Corporation",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of credit, financing; same type of business; same business function; same kind of customer",
+    "score": 9.2,
+    "ticker": "NASDAQ:CACC"
+   },
+   {
+    "company": "Time Finance plc",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of credit, invoice; same type of business; same business function; same kind of customer",
+    "score": 9.2,
+    "ticker": "AIM:TIME"
+   },
+   {
+    "company": "Shriram Finance Limited",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+    "score": 8.6,
+    "ticker": "NSEI:SHRIRAMFIN"
+   },
+   {
+    "company": "Five-Star Business Finance Limited",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+    "score": 8.6,
+    "ticker": "NSEI:FIVESTAR"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": true,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 3.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.1,
+   "mid": 1.7,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Lufax Holding Ltd",
+     "mult": 0.1,
+     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Avarda Bank AB (publ)",
+     "mult": 3.3,
+     "reason": "both do Checkout Financing; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "checkout",
+    "credit",
+    "financing",
+    "invoice"
+   ],
+   "spread": 33.0,
+   "tag_evidence": 1.9,
+   "thin": true,
+   "triangulated": false
   },
   "listed_proximity": "DIRECT",
   "private": [
@@ -93,60 +194,44 @@
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "Avarda Bank AB (publ)",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Checkout Financing; same type of business; same kind of customer; same revenue model",
-    "score": 10.9,
-    "ticker": "OM:AVARDA"
-   },
-   {
-    "company": "Lufax Holding Ltd",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
-    "score": 10.1,
-    "ticker": "NYSE:LU"
-   },
-   {
-    "company": "Credit Acceptance Corporation",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of credit, financing; same type of business; same business function; same kind of customer",
-    "score": 9.2,
-    "ticker": "NASDAQ:CACC"
-   },
-   {
-    "company": "Time Finance plc",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of credit, invoice; same type of business; same business function; same kind of customer",
-    "score": 9.2,
-    "ticker": "AIM:TIME"
-   },
-   {
-    "company": "Shriram Finance Limited",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
-    "score": 8.6,
-    "ticker": "NSEI:SHRIRAMFIN"
-   },
-   {
-    "company": "Five-Star Business Finance Limited",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
-    "score": 8.6,
-    "ticker": "NSEI:FIVESTAR"
-   },
-   {
     "company": "Velocity Financial, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
     "score": 8.6,
     "ticker": "NYSE:VEL"
+   },
+   {
+    "company": "Klarna Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Buy Now Pay Later; same type of business; same kind of customer",
+    "score": 8.0,
+    "ticker": "NYSE:KLAR"
+   },
+   {
+    "company": "Close Brothers Group plc",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of invoice, merchant; related type of business; same business function; same kind of customer",
+    "score": 7.7,
+    "ticker": "LSE:CBG"
+   },
+   {
+    "company": "Funding Circle Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+    "score": 7.6,
+    "ticker": "LSE:FCH"
+   },
+   {
+    "company": "Qfin Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "NASDAQ:QFIN"
    }
   ],
   "secondary_range": {
@@ -156,16 +241,16 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 3.3,
+   "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.1,
+   "low": 0.3,
    "mid": 0.8,
    "n": 3,
    "period_mix": {
@@ -179,9 +264,9 @@
    },
    "points": [
     {
-     "company": "Lufax Holding Ltd",
-     "mult": 0.1,
-     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+     "company": "Qfin Holdings, Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of credit; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -193,24 +278,21 @@
      "transaction_type": ""
     },
     {
-     "company": "Avarda Bank AB (publ)",
-     "mult": 3.3,
-     "reason": "both do Checkout Financing; same type of business; same kind of customer; same revenue model",
+     "company": "Funding Circle Holdings plc",
+     "mult": 2.6,
+     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
    ],
    "positioning": [],
    "shared_words": [
-    "checkout",
-    "credit",
-    "financing",
-    "invoice"
+    "credit"
    ],
-   "spread": 33.0,
-   "tag_evidence": 1.9,
+   "spread": 8.7,
+   "tag_evidence": 0.1,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "B2B deferred payment terms where the provider takes the credit risk from the seller"

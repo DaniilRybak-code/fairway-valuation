@@ -16,13 +16,29 @@
     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
     "score": 8.4,
     "ticker": "NYSE:CPAY"
+   },
+   {
+    "company": "Repay Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NASDAQCM:RPAY"
+   },
+   {
+    "company": "Usio, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NASDAQGM:USIO"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -34,11 +50,11 @@
    "high": 6.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 3.55,
-   "n": 2,
+   "low": 0.8,
+   "mid": 1.7,
+   "n": 3,
    "period_mix": {
-    "NTM": 2
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -48,8 +64,15 @@
    },
    "points": [
     {
-     "company": "EML Payments Limited",
-     "mult": 0.7,
+     "company": "Usio, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "mult": 1.7,
      "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -68,9 +91,9 @@
     "cross",
     "payments"
    ],
-   "spread": 9.1,
+   "spread": 8.0,
    "tag_evidence": 0.4,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
@@ -173,22 +196,6 @@
   "private_window_months": 75,
   "secondary": [
    {
-    "company": "Repay Holdings Corporation",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
-    "score": 10.6,
-    "ticker": "NASDAQCM:RPAY"
-   },
-   {
-    "company": "Usio, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
-    "score": 10.6,
-    "ticker": "NASDAQGM:USIO"
-   },
-   {
     "company": "WEX Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -233,7 +240,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -242,14 +249,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.7,
+   "high": 0.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 0.8,
-   "n": 5,
+   "low": 0.5,
+   "mid": 0.7,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -272,7 +279,7 @@
     "cross",
     "payments"
    ],
-   "spread": 3.4,
+   "spread": 1.8,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false

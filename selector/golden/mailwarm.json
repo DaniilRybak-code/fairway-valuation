@@ -8,13 +8,29 @@
     "reason": "shares the language of email; same type of business; same business function; same kind of customer",
     "score": 10.7,
     "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
+    "score": 12.2,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same type of business; same business function; same revenue model",
+    "score": 8.7,
+    "ticker": "NYSE:ZETA"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -22,15 +38,15 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 2.8,
+   "display": "RANGE",
+   "high": 3.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.8,
+   "low": 2.7,
    "mid": 2.8,
-   "n": 1,
+   "n": 3,
    "period_mix": {
-    "NTM": 1
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -43,10 +59,9 @@
    "shared_words": [
     "email"
    ],
-   "sole": "HubSpot, Inc.",
-   "spread": 1.0,
+   "spread": 1.4,
    "tag_evidence": 0.2,
-   "thin": true,
+   "thin": false,
    "triangulated": true
   },
   "listed_proximity": "ADJACENT",
@@ -130,22 +145,6 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
-    "score": 12.2,
-    "ticker": "NYSE:KVYO"
-   },
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of email; same type of business; same business function; same revenue model",
-    "score": 8.7,
-    "ticker": "NYSE:ZETA"
-   },
-   {
     "company": "IONOS Group SE",
     "family": "software",
     "in_medians": true,
@@ -190,23 +189,23 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 3.7,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.7,
-   "mid": 2.7,
-   "n": 3,
+   "low": 2.8,
+   "mid": 3.7,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -214,8 +213,14 @@
      "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [
+   "points": [
+    {
+     "company": "Yext, Inc.",
+     "mult": 1.7,
+     "reason": "shares the language of reputation; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "GoDaddy Inc.",
      "mult": 2.8,
@@ -245,12 +250,15 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
     "email",
+    "infrastructure",
+    "monitoring",
     "reputation"
    ],
-   "spread": 2.2,
-   "tag_evidence": 0.6,
+   "spread": 18.7,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   }

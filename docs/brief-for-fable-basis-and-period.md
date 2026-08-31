@@ -103,3 +103,66 @@ Not by reading the code. By these four numbers, each reproducible from a command
    yet.
 
 Number 4 is the one to watch. The derivation exists; nothing calls it.
+
+---
+
+# ADDED 31 August, evening: this becomes one of Fable's standing checks
+
+Daniil asked who audits the basis. **Fable does, at every handover, alongside the inventory and the
+golden suite.** It goes in the evening handover from tonight.
+
+## The check, in one command
+
+```
+python3 tools/audit_basis_period.py
+```
+
+It reads the metric wording on every private row that carries a multiple and reports where the
+label contradicts it. It asserts nothing and changes nothing, because the wording is often genuinely
+ambiguous and a script that guesses is how we got into this. A human decides.
+
+## What the numbers should say
+
+Tonight it prints **43 rows need a human to look at the label, 65 rows agree with their own words**,
+out of 108 that carry a multiple. Three things must hold at every handover:
+
+1. **Rows agreeing with their own words only ever goes UP.** If it falls, a row was edited without
+   its label being revisited, and that is exactly how Razorpay's gross 67.6x sat in the fintech file
+   for four days.
+2. **Every row that feeds a range has both a period and a basis.** 71 of 71 tonight. A row that can
+   price a founder and cannot say what it is measuring must not price a founder.
+3. **`revenue_basis_source` says how we know.** 13 STATED, the rest INFERRED, and a handful marked
+   INFERRED_HIGH_RISK. STATED should climb as the backlog is worked; INFERRED_HIGH_RISK should reach
+   zero, because every one of those is a row that could be wrong by an order of magnitude.
+
+## What "audited" actually means for a row
+
+Not that the field is filled. That is the easy half and it is already done. Audited means somebody
+read the source and can say WHICH of these the number is:
+
+- **Basis.** Does the line contain money that belongs to somebody else? A freight broker's revenue
+  holds the carrier's money, a staffing platform's holds the worker's wage, a marketplace commission
+  does not, and a first-party retailer keeps the whole sale price so its revenue is NET in our sense
+  even though it looks gross beside a commission. The test is ownership of the money, not the size
+  of the number.
+- **Period.** Trailing, or forward. Daniil's ruling of 31-Aug: a run rate and an ARR are FORWARD,
+  because both annualise what the business is earning now rather than the year just finished. Two
+  buckets, not three.
+- **Entity.** The one that caught Flipkart. Whose revenue is it, and is it the same entity the
+  valuation covers? Flipkart India Private Limited is the B2B wholesale arm at Rs 43,357 crore;
+  Flipkart Internet Private Limited is the marketplace at Rs 8,115 crore. Same group, five times
+  apart, 6.4x against 34.2x. Nobody had asked which one the number was.
+
+## The backlog, worst first
+
+The five INFERRED_HIGH_RISK rows are down to one after tonight. dLocal, Pine Labs, Flipkart twice
+and StockX are all resolved from primary sources. What is left:
+
+- **The 90 INFERRED rows.** Each is a basis somebody read off the business model rather than off the
+  source. Most will be right. Work them down by sector, hardest first: payments and delivery are the
+  two where the same archetype contains both gross and net reporters.
+- **The 43 rows the audit still flags.** Mostly rows where the wording says only "FY2021 revenue"
+  and the basis was assumed. That is not a defect, it is an unverified assumption, and the
+  difference matters when somebody asks us to defend a number.
+- **The listed side, deprioritised by Daniil on 31-Aug** but still real: 513 rows with no
+  `revenue_basis` field at all.

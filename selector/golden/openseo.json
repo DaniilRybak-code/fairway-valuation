@@ -8,29 +8,45 @@
     "reason": "both do Keyword Research, SEO, Rank Tracking; related type of business; same AI stance",
     "score": 13.7,
     "ticker": "NYSE:SMWB"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+    "score": 13.2,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:DDOG"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 2.1,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 16.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.1,
-   "mid": 2.1,
-   "n": 1,
+   "mid": 2.7,
+   "n": 3,
    "period_mix": {
-    "NTM": 1
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -38,20 +54,44 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Similarweb Ltd.",
+     "mult": 2.1,
+     "reason": "both do Keyword Research, SEO, Rank Tracking; related type of business; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "mult": 2.7,
+     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "shared_words": [
+    "ai",
     "analysis",
+    "data",
     "keyword",
+    "platform",
     "rank",
     "research",
     "seo",
     "tracking"
    ],
-   "sole": "Similarweb Ltd.",
-   "spread": 1.0,
+   "spread": 7.8,
    "tag_evidence": 9.2,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "listed_proximity": "DIRECT",
@@ -209,22 +249,6 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
-    "score": 13.2,
-    "ticker": "NYSE:KVYO"
-   },
-   {
-    "company": "Datadog, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:DDOG"
-   },
-   {
     "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
@@ -269,7 +293,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -278,14 +302,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 16.4,
+   "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.7,
-   "mid": 6.15,
-   "n": 4,
+   "low": 1.9,
+   "mid": 5.2,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -302,29 +326,6 @@
      "transaction_type": ""
     },
     {
-     "company": "Klaviyo, Inc.",
-     "mult": 2.7,
-     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "mult": 9.6,
-     "reason": "shares the language of data; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 16.4,
-     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [
-    {
      "company": "Wix.com Ltd.",
      "mult": 1.9,
      "reason": "shares the language of ai, platform; same kind of customer; sold the same way; same AI stance",
@@ -339,6 +340,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Red Violet, Inc.",
+     "mult": 9.6,
+     "reason": "shares the language of data; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Cloudflare, Inc.",
      "mult": 31.8,
      "reason": "shares the language of ai; same revenue model; sold the same way; same AI stance",
@@ -346,13 +354,14 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "shared_words": [
     "ai",
     "data",
     "platform",
     "seo"
    ],
-   "spread": 9.6,
+   "spread": 18.7,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
