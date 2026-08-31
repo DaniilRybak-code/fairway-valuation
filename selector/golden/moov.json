@@ -125,20 +125,20 @@
     "ticker": "NSEI:MOBIKWIK"
    },
    {
-    "company": "EML Payments Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of card, payments, wallets; same type of business; same business function; same AI stance",
-    "score": 8.8,
-    "ticker": "ASX:EML"
-   },
-   {
     "company": "PayPal Holdings, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of pay, payments, to; same type of business; same business function; sold the same way",
     "score": 8.6,
     "ticker": "NASDAQ:PYPL"
+   },
+   {
+    "company": "Nexi S.p.A.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
+    "score": 8.2,
+    "ticker": "BIT:NEXI"
    }
   ],
   "secondary_range": {

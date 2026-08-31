@@ -302,7 +302,33 @@ for _r in listed.values():
     _r['volume_pct'] = (round(100.0 * _r['ev'] / _r['gmv'], 2)
                         if (_r.get('ev') and _r.get('gmv')) else None)
 
-listed = list(listed.values())
+# NAMES DANIIL HAS KILLED. Dropped from the universe entirely, not merely stopped from pricing.
+# His words on EML, 31-Aug: "would simply drop this peer". His words on both, later the same day:
+# "these are micro stocks, doubt anyone wants to be compared to them". Being compared to them is
+# the thing he objected to, so hiding them from the range while still printing their names beside
+# a founder's company would not be what he asked for. The reason string is kept so that a name is
+# never dropped silently and anyone can see why it went.
+LISTED_NOT_PRICING = {
+ 'ASX:EML': ('EML Payments: market capitalisation of A$124m on 10-Aug-2026 after falling 69 per cent '
+             'in a year, at A$0.32 a share. Its 0.7x forward revenue is a distress multiple, and the '
+             'consensus behind the forecast is thin enough that the multiple is not evidence about '
+             'payments companies. It was pricing Trolley: the listed core was EML at 0.7x and Corpay '
+             'at 6.4x, a ninefold spread from two names.'),
+ 'ASX:OFX': ('OFX Group: killed by Daniil on 31-Aug-2026 with EML, on the same reasoning. A micro '
+             'cap that no founder wants to be compared to, and broker coverage thin enough that '
+             'the consensus forward revenue behind the multiple is not reliable evidence. It was '
+             'still feeding medians on 31-Aug because the decision had been taken in conversation '
+             'and never written into the code, which is the failure mode this dict exists to stop.'),
+}
+
+
+
+
+def _norm_t(t):
+    return (t or '').strip().upper().replace(' ', '')
+
+_KILLED = {_norm_t(k) for k in LISTED_NOT_PRICING}
+listed = [_r for _r in listed.values() if _norm_t(_r.get('exchange_ticker')) not in _KILLED]
 
 # ---------------------------------------------------------------------------
 # PRIVATE UNIVERSE
@@ -1154,17 +1180,10 @@ def _period_span(prof, rows):
 # ANALYST ESTIMATES behind each forecast. Until it does, this stays an explicit list that a human
 # wrote and a human can argue with, rather than a threshold that quietly removes companies.
 # ADD "number of estimates" TO THE NEXT CAPITAL IQ PULL and this becomes a rule.
-LISTED_NOT_PRICING = {
- 'ASX:EML': ('EML Payments: market capitalisation of A$124m on 10-Aug-2026 after falling 69 per cent '
-             'in a year, at A$0.32 a share. Its 0.7x forward revenue is a distress multiple, and the '
-             'consensus behind the forecast is thin enough that the multiple is not evidence about '
-             'payments companies. It was pricing Trolley: the listed core was EML at 0.7x and Corpay '
-             'at 6.4x, a ninefold spread from two names.'),
-}
-
-
 def pricing_eligible(row):
-    return norm(row.get('exchange_ticker', '')) not in {norm(k) for k in LISTED_NOT_PRICING}
+    # Kept as a second fence. The universe build above already removes these rows, so this only
+    # fires on a row handed in from outside the loader, such as a test.
+    return _norm_t(row.get('exchange_ticker', '')) not in _KILLED
 
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))

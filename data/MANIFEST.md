@@ -159,3 +159,9 @@ recorded here, at which point my transcription can be diffed against it and any 
 | `raw/2026-08-31_tpv-disclosure-research.csv` | 28 | Issuer-reported payment volume with the exact metric name, scope, an audit note and a filing URL per row. 21 reported, 4 segment-only, 3 not disclosed. | No, raw |
 | `raw/2026-08-31_capiq-tpv-block.csv` | 27 | The Capital IQ TPV block, CY+0 to NTM, with local-currency revenue carried so the growth applied can be checked rather than trusted. | No, raw |
 | `volume-metrics.csv` | 268 | The overlay, now including TPV. 63 usable, 13 not. | Yes, as an overlay |
+
+## 31-Aug-2026, outstanding pull recorded rather than remembered
+
+| File | Rows | What it is | Read by the engine |
+|---|---|---|---|
+| `../docs/cagr-needed-pull-list.tsv` | 192 | The listed names that hold a single forward year and no CAGR, so they cannot rank on growth under Daniil's 31-Aug ruling. 105 consumer, 75 fintech, 12 software. Pastable into Excel. Owner: Daniil, promised with the next full dataset refresh. Full note in `docs/cagr-todo-31aug.md`. | Not applicable, it is a request |
