@@ -61,6 +61,15 @@
    "low": 6.9,
    "mid": 9.5,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -144,6 +153,25 @@
    "low": 4.3,
    "mid": 33.3,
    "n": 3,
+   "period_mix": {
+    "LTM": 1,
+    "NTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Semrush",
@@ -238,6 +266,15 @@
    "low": 1.8,
    "mid": 3.5,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "AvenuesAI Limited",

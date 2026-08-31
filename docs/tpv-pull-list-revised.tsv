@@ -1,0 +1,29 @@
+ticker	company_name	country	metric_wanted	note
+ENXTAM:ADYEN	Adyen N.V.	Netherlands	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+DFM:ALANSARI	Al Ansari Financial Services PJSC	United Arab Emirates	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+LSE:CABP	CAB Payments Holdings plc	United Kingdom	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:CPAY	Corpay, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	BORDERLINE: corporate and fleet payments. Reports spend volume, but a large part of revenue is fees per transaction rather than a rate on value.
+NASDAQ:DLO	DLocal Limited	Uruguay	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+ASX:EML	EML Payments Limited	Australia	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:EVTC	EVERTEC, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	Tagged Vertical Software in our file but it is a Puerto Rico payment processor. The tag is wrong, the inclusion is right.
+NASDAQ:EEFT	Euronet Worldwide, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	BORDERLINE: three businesses in one, ATM network, money transfer and epay. Only the money transfer arm is genuinely volume priced.
+NASDAQ:FISV	Fiserv, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NASDAQ:FLYW	Flywire Corporation	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+TSE:3769	GMO Payment Gateway, Inc.	Japan	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:GPN	Global Payments Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NASDAQ:MQ	Marqeta, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	Card issuing processor, reports TPV. Also one of our six open conflicts on the private side.
+BIT:NEXI	Nexi S.p.A.	Italy	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+ASX:OFX	OFX Group Limited	Australia	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NSEI:MOBIKWIK	One MobiKwik Systems Limited	India	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NSEI:PAYTM	One97 Communications Limited	India	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:PAGS	PagSeguro Digital Ltd.	Brazil	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NASDAQ:PYPL	PayPal Holdings, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NASDAQ:PAYO	Payoneer Global Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:PSFE	Paysafe Limited	United Kingdom	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NASDAQ:RELY	Remitly Global, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:FOUR	Shift4 Payments, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NASDAQ:STNE	StoneCo Ltd.	Cayman Islands	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:WU	The Western Union Company	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+NYSE:TOST	Toast, Inc.	United States	Total payment volume / gross transaction value, latest full fiscal year, company-reported	BORDERLINE: point of sale software whose revenue is now mostly payments. It reports gross payment volume. Your Shopify rule would exclude it; its revenue mix argues to keep it.
+ASX:TYR	Tyro Payments Limited	Australia	Total payment volume / gross transaction value, latest full fiscal year, company-reported	
+LSE:WISE	Wise plc	United Kingdom	Total payment volume / gross transaction value, latest full fiscal year, company-reported	

@@ -138,6 +138,20 @@
    "low": 3.3,
    "mid": 5.0,
    "n": 3,
+   "period_mix": {
+    "LTM": 2,
+    "NTM": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [

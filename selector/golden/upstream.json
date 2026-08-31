@@ -37,6 +37,15 @@
    "low": 2.8,
    "mid": 3.6,
    "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -148,6 +157,15 @@
    "low": 21.0,
    "mid": 72.0,
    "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -200,6 +218,22 @@
     "reason": "shares the language of email; same type of business; sold the same way",
     "score": 6.2,
     "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "GoDaddy Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same kind of customer; sold the same way",
+    "score": 5.7,
+    "ticker": "NYSE:GDDY"
+   },
+   {
+    "company": "IONOS Group SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same kind of customer; sold the same way",
+    "score": 5.7,
+    "ticker": "XTRA:IOS"
    }
   ],
   "secondary_range": {
@@ -221,8 +255,32 @@
    "low": 2.5,
    "mid": 4.7,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "GoDaddy Inc.",
+     "mult": 2.8,
+     "reason": "shares the language of email; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "IONOS Group SE",
+     "mult": 3.7,
+     "reason": "shares the language of email; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "shared_words": [
     "email",
     "team",

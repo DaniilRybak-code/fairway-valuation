@@ -61,6 +61,15 @@
    "low": 1.9,
    "mid": 2.8,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "ASOS Plc",
@@ -210,6 +219,20 @@
    "low": 4.6,
    "mid": 9.3,
    "n": 4,
+   "period_mix": {
+    "LTM": 3,
+    "NTM": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -284,6 +307,15 @@
    "low": 0.3,
    "mid": 0.4,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Vipshop Holdings Limited",

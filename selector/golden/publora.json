@@ -45,6 +45,15 @@
    "low": 1.8,
    "mid": 3.9,
    "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -157,6 +166,15 @@
    "low": 10.3,
    "mid": 20.0,
    "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -230,6 +248,15 @@
    "low": 0.6,
    "mid": 1.1,
    "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [
     {

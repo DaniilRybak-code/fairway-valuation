@@ -37,6 +37,15 @@
    "low": 3.9,
    "mid": 4.45,
    "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -151,6 +160,15 @@
    "low": 13.2,
    "mid": 30.0,
    "n": 4,
+   "period_mix": {
+    "RUN_RATE": 4
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -209,6 +227,15 @@
    "low": 0.6,
    "mid": 0.8,
    "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "TomTom N.V.",

@@ -61,6 +61,15 @@
    "low": 1.4,
    "mid": 5.2,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Agora, Inc.",
@@ -212,6 +221,15 @@
    "low": 10.3,
    "mid": 33.0,
    "n": 3,
+   "period_mix": {
+    "RUN_RATE": 3
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -289,6 +307,15 @@
    "low": 2.1,
    "mid": 4.3,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Teradata Corporation",

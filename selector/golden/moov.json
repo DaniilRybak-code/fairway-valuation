@@ -61,6 +61,15 @@
    "low": 30.3,
    "mid": 48.0,
    "n": 2,
+   "period_mix": {
+    "LTM": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -106,6 +115,22 @@
     "reason": "shares the language of card; same type of business; same business function; same revenue model",
     "score": 9.7,
     "ticker": "LSE:PAY"
+   },
+   {
+    "company": "One MobiKwik Systems Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of pay, payments; same type of business; same business function; sold the same way",
+    "score": 9.5,
+    "ticker": "NSEI:MOBIKWIK"
+   },
+   {
+    "company": "EML Payments Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of card, payments, wallets; same type of business; same business function; same AI stance",
+    "score": 8.8,
+    "ticker": "ASX:EML"
    },
    {
     "company": "PayPal Holdings, Inc.",

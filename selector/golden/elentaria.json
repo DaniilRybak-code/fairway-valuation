@@ -61,6 +61,15 @@
    "low": 3.1,
    "mid": 3.4,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -180,6 +189,20 @@
    "low": 14.9,
    "mid": 50.0,
    "n": 5,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 4
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Invisible Technologies",
@@ -292,6 +315,15 @@
    "low": 2.7,
    "mid": 2.7,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Zaggle Prepaid Ocean Services",

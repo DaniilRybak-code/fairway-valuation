@@ -61,6 +61,15 @@
    "low": 4.0,
    "mid": 5.0,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Agora, Inc.",
@@ -215,6 +224,20 @@
    "low": 10.3,
    "mid": 19.8,
    "n": 5,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 4
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -289,6 +312,15 @@
    "low": 4.8,
    "mid": 5.2,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "TomTom N.V.",

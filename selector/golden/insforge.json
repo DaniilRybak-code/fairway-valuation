@@ -61,6 +61,15 @@
    "low": 5.3,
    "mid": 10.5,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Elastic N.V.",
@@ -216,6 +225,15 @@
    "low": 10.3,
    "mid": 22.5,
    "n": 5,
+   "period_mix": {
+    "RUN_RATE": 5
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -292,6 +310,15 @@
    "low": 5.1,
    "mid": 5.2,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [

@@ -29,6 +29,15 @@
    "low": 2.8,
    "mid": 2.8,
    "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -99,6 +108,15 @@
    "low": 15.0,
    "mid": 32.6,
    "n": 2,
+   "period_mix": {
+    "LTM": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -150,6 +168,22 @@
     "reason": "both do Infrastructure Monitoring; same revenue model; sold the same way",
     "score": 6.2,
     "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of infrastructure; same revenue model; sold the same way",
+    "score": 5.8,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "GoDaddy Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same kind of customer; sold the same way",
+    "score": 5.7,
+    "ticker": "NYSE:GDDY"
    }
   ],
   "secondary_range": {
@@ -171,8 +205,24 @@
    "low": 1.7,
    "mid": 2.7,
    "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [
+    {
+     "company": "GoDaddy Inc.",
+     "mult": 2.8,
+     "reason": "shares the language of email; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
     {
      "company": "IONOS Group SE",
      "mult": 3.7,
@@ -184,6 +234,13 @@
      "company": "Datadog, Inc.",
      "mult": 16.4,
      "reason": "both do Infrastructure Monitoring; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 31.8,
+     "reason": "shares the language of infrastructure; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }

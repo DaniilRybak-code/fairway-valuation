@@ -61,6 +61,15 @@
    "low": 30.3,
    "mid": 48.0,
    "n": 2,
+   "period_mix": {
+    "LTM": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -113,6 +122,22 @@
     "reason": "shares the language of payment; same type of business; same business function; same revenue model",
     "score": 9.6,
     "ticker": "LSE:PAY"
+   },
+   {
+    "company": "Fawry for Banking Technology",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment; same type of business; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "CASE:FWRY"
+   },
+   {
+    "company": "WEX Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments, vertical; related type of business; same business function; same revenue model",
+    "score": 8.7,
+    "ticker": "NYSE:WEX"
    }
   ],
   "secondary_range": {

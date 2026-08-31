@@ -1052,6 +1052,64 @@ def with_forward_revenue(prof):
         p['revenue_ntm_basis'] = 'DERIVED_FROM_TRAILING_AND_GROWTH'
     return p
 
+
+# ---------------------------------------------------------------------------
+# A MULTIPLE MUST MEET THE NUMBER IT WAS BUILT FROM.
+#
+# Daniil, 31-Aug-2026: "we need to make sure our machinery can MATCH the numbers given by a founder
+# (net vs gross, fwd looking vs backwards) with what we have in our database."
+#
+# basis_mult() is the gross-versus-net half. This is the period half, and it is the one that was
+# wrong for every founder who has ever used the engine. Three denominators are in play and they are
+# not interchangeable:
+#
+#   LTM        the twelve months just finished. What the quiz asks for.
+#   NTM        the twelve months ahead. What EVERY listed multiple we hold is built on.
+#   RUN_RATE   the latest month or quarter annualised. It sits between the other two, and it is our
+#              LARGEST private bucket at 60 rows, so it cannot be waved through as trailing.
+#
+# founder_revenue_for() returns the founder's own number on the basis a given comparable was built
+# on, so the reveal multiplies like with like instead of hoping the gap is small. On a founder
+# growing 80 per cent the gap IS 80 per cent.
+#
+# THE RUN-RATE ESTIMATE IS THE WEAKEST OF THE THREE AND SAYS SO. A run rate leads a trailing year by
+# roughly half a year of growth, so it is approximated as trailing compounded by half the annual
+# rate. That is a modelling choice, not a fact, and it returns ESTIMATED_HALF_A_YEAR_OF_GROWTH so
+# nothing downstream can present it as something the founder said.
+PERIOD_KINDS = ('LTM', 'NTM', 'RUN_RATE')
+
+
+def founder_revenue_for(prof, period):
+    """(value, how_we_got_it). None when the founder gave us nothing to work from."""
+    rev, g = _f(prof.get('revenue')), _f(prof.get('growth'))
+    if rev is None:
+        return None, 'NO_REVENUE_GIVEN'
+    p = (period or 'LTM').strip().upper()
+    if p in ('', 'LTM'):
+        return rev, 'AS_GIVEN_TRAILING'
+    if g is None:
+        return rev, 'TRAILING_USED_UNCHANGED_NO_GROWTH_GIVEN'
+    if p == 'NTM':
+        return round(rev * (1.0 + g / 100.0), 4), 'DERIVED_FROM_TRAILING_AND_GROWTH'
+    if p == 'RUN_RATE':
+        return round(rev * (1.0 + g / 200.0), 4), 'ESTIMATED_HALF_A_YEAR_OF_GROWTH'
+    return rev, 'UNRECOGNISED_PERIOD_TRAILING_USED'
+
+
+def _period_mix(rows):
+    return dict(collections.Counter(
+        (r.get('revenue_period') or 'UNKNOWN').strip().upper() for _sw, r in rows))
+
+
+def _period_span(prof, rows):
+    """The founder's own revenue on every basis present in this comp set, so the reveal can
+    multiply row by row rather than applying one median to one number."""
+    out = {}
+    for p in sorted({(r.get('revenue_period') or 'LTM').strip().upper() for _sw, r in rows}):
+        v, how = founder_revenue_for(prof, p)
+        out[p] = {'founder_revenue': v, 'basis': how}
+    return out
+
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
@@ -1124,9 +1182,15 @@ def peer_groups(prof, universe, scorer=None, want=5):
         # A banker's comp set is a tight core and a looser ring around it. So core is filled from
         # the pricing tiers in order, and secondary is everything else in the family that clears
         # the floor. The tier label still describes CORE, which is what the range is computed from.
+        # SAME SIZING RULE AS THE PRIVATE LANE, and for the same reason. Daniil, 31-Aug-2026:
+        # three to five names on an almost perfect match, five to seven where the match is weaker.
+        # A flat five was dropping Adyen from Payabli at 7.8 against a cut of 9.6, which is sixth
+        # place rather than a hidden name, and Adyen is the single most obvious listed comparable a
+        # payments founder could be shown.
         picked = {id(x) for x in core}
         wide, _wt = qualifying(scored, prof, only='BROAD')
-        secondary = [x for x in wide if id(x) not in picked][:want]
+        room = WANT_MAX if len(core) < WANT_MIN else want
+        secondary = [x for x in wide if id(x) not in picked][:room]
         return core, secondary, set_tier(prof, core)
 
     # NOTHING QUALIFIED FOR CORE. UNTIL 31-AUG-2026 THAT RETURNED ABSOLUTELY NOTHING, and five of
@@ -1144,8 +1208,11 @@ def peer_groups(prof, universe, scorer=None, want=5):
     # none of it is close enough to price you off". The second is true and the first was not.
     wide, _wt = qualifying(scored, prof, only='BROAD')
     if not wide:
-        wide = scored[:want]                 # last resort: the family's best, however weak
-    return [], wide[:want], 'CONTEXT'
+        wide = scored[:WANT_MAX]             # last resort: the family's best, however weak
+    # NOTHING QUALIFIED FOR CORE, WHICH IS THE WEAKEST MATCH THERE IS, so this is precisely the case
+    # Daniil's rule says should show SEVEN rather than five. A short list of loose names reads as a
+    # judgement; a longer one reads as a neighbourhood, which is what it actually is.
+    return [], wide[:WANT_MAX], 'CONTEXT'
 
 
 # ---------------------------------------------------------------------------
@@ -1181,9 +1248,21 @@ MARGIN_GAP = 15.0
 BALANCE_SHEET_ARCHETYPES = ('Lending & Credit', 'Digital Bank & Deposits')
 
 def is_balance_sheet(prof):
-    """True when this company is priced on its balance sheet rather than its revenue."""
-    a = {prof.get('archetype'), prof.get('archetype_secondary')} - {None, ''}
-    return bool(a & set(BALANCE_SHEET_ARCHETYPES))
+    """True when this company is priced on its balance sheet rather than its revenue.
+
+    THE PRIMARY ARCHETYPE DECIDES, AND ONLY THE PRIMARY. Until 31-Aug-2026 either slot could make a
+    company a lender, and it was throwing away good comparables in both directions. Payoneer and
+    Wise carry a banking archetype in the secondary slot because they hold customer funds and have
+    licences; Block carries one because it owns Square Financial Services. All three are payments
+    businesses that the market prices on revenue, and all three were being fenced out of Trolley,
+    Dots and Moov, which is exactly the comparison a payments founder needs.
+
+    A company is priced on book when LENDING IS THE BUSINESS, not when it has a licence somewhere in
+    the group. The primary archetype is our record of what the business IS, so that is the field
+    that decides. A genuine lender with a software product in the secondary slot is unaffected: its
+    primary still says Lending & Credit.
+    """
+    return (prof.get('archetype') or '') in BALANCE_SHEET_ARCHETYPES
 
 def basis_for(prof):
     return 'BOOK' if is_balance_sheet(prof) else 'REVENUE'
@@ -1488,6 +1567,13 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced),
+               # EVERY LISTED MULTIPLE IS EV OVER NTM REVENUE. There is no other kind in the
+               # file, so the period is stated rather than counted, and the founder's own
+               # forward figure is carried beside it. This is the fix for the mismatch that
+               # was live on all 43 fixtures: a forward multiple applied to a trailing number.
+               period_mix={'NTM': n},
+               period_span={'NTM': dict(zip(('founder_revenue', 'basis'),
+                                            founder_revenue_for(prof, 'NTM')))},
                band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')
@@ -1531,6 +1617,7 @@ def private_range(prof, picked, tier):
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced),
                basis=basis, basis_label=BASIS_KEYS[basis][2],
+               period_mix=_period_mix(priced), period_span=_period_span(prof, priced),
                band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')

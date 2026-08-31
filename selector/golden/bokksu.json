@@ -61,6 +61,15 @@
    "low": 0.1,
    "mid": 0.3,
    "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "HelloFresh SE",
@@ -198,6 +207,15 @@
    "low": 3.3,
    "mid": 4.6,
    "n": 2,
+   "period_mix": {
+    "LTM": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -270,6 +288,15 @@
    "low": 0.3,
    "mid": 0.75,
    "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "BARK, Inc.",

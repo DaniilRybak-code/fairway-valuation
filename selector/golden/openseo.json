@@ -29,6 +29,15 @@
    "low": 2.1,
    "mid": 2.1,
    "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -129,6 +138,25 @@
    "low": 4.3,
    "mid": 33.3,
    "n": 4,
+   "period_mix": {
+    "LTM": 2,
+    "NTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Semrush",
@@ -219,16 +247,32 @@
     "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
     "score": 6.7,
     "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Yext, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of seo; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "NYSE:YEXT"
+   },
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same revenue model; sold the same way; same AI stance",
+    "score": 6.6,
+    "ticker": "NYSE:NET"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -237,10 +281,26 @@
    "high": 16.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
-   "mid": 9.6,
-   "n": 3,
+   "low": 1.7,
+   "mid": 6.15,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
+    {
+     "company": "Yext, Inc.",
+     "mult": 1.7,
+     "reason": "shares the language of seo; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "Klaviyo, Inc.",
      "mult": 2.7,
@@ -277,15 +337,23 @@
      "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 31.8,
+     "reason": "shares the language of ai; same revenue model; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
     }
    ],
    "shared_words": [
     "ai",
     "data",
-    "platform"
+    "platform",
+    "seo"
    ],
-   "spread": 6.1,
-   "tag_evidence": 0.2,
+   "spread": 9.6,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

@@ -1,10 +1,58 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Payoneer Global Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Marketplace Payouts; same type of business; same business function; sold the same way",
+    "score": 12.3,
+    "ticker": "NASDAQ:PAYO"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 1.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.8,
+   "mid": 1.8,
+   "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "marketplace",
+    "multi",
+    "payments",
+    "payouts"
+   ],
+   "sole": "Payoneer Global Inc.",
+   "spread": 1.0,
+   "tag_evidence": 4.3,
+   "thin": true,
+   "triangulated": false
   },
-  "listed_proximity": "CONTEXT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "Disclosed at pricing",
@@ -84,6 +132,20 @@
    "low": 8.0,
    "mid": 30.3,
    "n": 3,
+   "period_mix": {
+    "LTM": 2,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -115,6 +177,14 @@
     "ticker": "DFM:ALANSARI"
    },
    {
+    "company": "Wise plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of multi, payments; same type of business; same business function; sold the same way",
+    "score": 8.7,
+    "ticker": "LSE:WISE"
+   },
+   {
     "company": "Marqeta, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -137,10 +207,55 @@
     "reason": "shares the language of payments; same type of business; same business function; sold the same way",
     "score": 8.1,
     "ticker": "NASDAQ:RELY"
+   },
+   {
+    "company": "Repay Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; same revenue model",
+    "score": 8.1,
+    "ticker": "NASDAQCM:RPAY"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 6
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.9,
+   "mid": 1.5,
+   "n": 6,
+   "period_mix": {
+    "NTM": 6
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "api",
+    "multi",
+    "payments"
+   ],
+   "spread": 5.6,
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "Payouts API sending money by any method to marketplace sellers and gig workers"

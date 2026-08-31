@@ -29,6 +29,15 @@
    "low": 13.4,
    "mid": 13.4,
    "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -87,13 +96,29 @@
     "reason": "shares the language of index; same type of business; sold the same way",
     "score": 5.6,
     "ticker": "XTRA:DB1"
+   },
+   {
+    "company": "Intercontinental Exchange, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of energy; same type of business; sold the same way",
+    "score": 5.5,
+    "ticker": "NYSE:ICE"
+   },
+   {
+    "company": "Morningstar, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of index; same kind of customer; sold the same way",
+    "score": 5.1,
+    "ticker": "NASDAQ:MORN"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -105,9 +130,18 @@
    "high": 25.2,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.6,
-   "mid": 11.2,
-   "n": 4,
+   "low": 8.3,
+   "mid": 9.8,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [
     {
      "company": "Clarkson PLC",
@@ -120,6 +154,13 @@
      "company": "Deutsche Boerse AG",
      "mult": 8.3,
      "reason": "shares the language of index; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Intercontinental Exchange, Inc.",
+     "mult": 9.8,
+     "reason": "shares the language of energy; same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -143,6 +184,13 @@
      "company": "PSI Software SE",
      "mult": 2.4,
      "reason": "shares the language of energy; same end market; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Morningstar, Inc.",
+     "mult": 3.5,
+     "reason": "shares the language of index; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }

@@ -2,6 +2,14 @@
  "expected": {
   "core": [
    {
+    "company": "EML Payments Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+    "score": 9.1,
+    "ticker": "ASX:EML"
+   },
+   {
     "company": "Corpay, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -14,30 +22,53 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 6.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 6.4,
-   "mid": 6.4,
-   "n": 1,
-   "points": [],
+   "low": 0.7,
+   "mid": 3.55,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "EML Payments Limited",
+     "mult": 0.7,
+     "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Corpay, Inc.",
+     "mult": 6.4,
+     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "border",
     "cross",
     "payments"
    ],
-   "sole": "Corpay, Inc.",
-   "spread": 1.0,
+   "spread": 9.1,
    "tag_evidence": 0.4,
    "thin": true,
    "triangulated": false
@@ -111,6 +142,20 @@
    "low": 8.0,
    "mid": 48.0,
    "n": 2,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [],
    "shared_words": [
@@ -166,13 +211,29 @@
     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
     "score": 8.4,
     "ticker": "NYSE:WU"
+   },
+   {
+    "company": "CAB Payments Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+    "score": 7.4,
+    "ticker": "LSE:CABP"
+   },
+   {
+    "company": "OFX Group Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+    "score": 7.4,
+    "ticker": "ASX:OFX"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -185,8 +246,17 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.7,
-   "mid": 0.85,
-   "n": 4,
+   "mid": 0.8,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
    "points": [],
    "positioning": [
     {
@@ -202,7 +272,7 @@
     "cross",
     "payments"
    ],
-   "spread": 2.4,
+   "spread": 3.4,
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
