@@ -89,8 +89,8 @@ Robert Walters plc,LSE:RWA,United Kingdom,132,56,0,0,56,187,991,961,1009,961,0,,
 Auction Technology Group plc,LSE:ATG,United Kingdom,732,156,0,0,156,888,188,250,263,256,65,168,3.5,5.3,5,services_marketplace,12100,15164,0.059
 Hays plc,LSE:HAS,United Kingdom,1544,177,0,0,177,1721,8035,8294,8425,8294,14,1191,0.2,1.4,2,services_marketplace,,,
 hipages Group Holdings,ASX:HPG,Australia,78,-18,0,0,-18,60,63,72,81,70,0,,0.9,,12,services_marketplace,,,
-Airtasker Limited,ASX:ART,Australia,72,-8,-11,0,-19,53,41,49,54,47,95,45,1.1,1.2,10,services_marketplace,,,
-Freelancer Limited,ASX:FLN,Australia,47,-7,2,0,-5,42,36,35,39,35,83,29,1.2,1.4,10,services_marketplace,,,
+Airtasker Limited,ASX:ART,Australia,72,-8,-11,0,-19,53,41,49,54,47,95,45,1.1,1.2,10,services_marketplace,135,166,0.3193
+Freelancer Limited,ASX:FLN,Australia,47,-7,2,0,-5,42,36,35,39,35,83,29,1.2,1.4,10,services_marketplace,86,85,0.4941
 Elders Limited,ASX:ELD,Australia,881,618,2,38,582,1463,2204,2865,2948,2906,20,578,0.5,2.5,3,services_marketplace,,,
 "Visional, Inc.",TSE:4194,Japan,2359,-464,3,0,-462,1897,528,624,739,710,91,643,2.7,3.0,18,services_marketplace,,,
 "SMS Co., Ltd.",TSE:2175,Japan,1222,-60,0,0,-60,1162,407,450,490,460,89,408,2.5,2.9,9,services_marketplace,,,
@@ -126,7 +126,7 @@ Pets at Home Group Plc,LSE:PETS,United Kingdom,1271,476,0,0,477,1747,1944,2055,2
 Deezer S.A.,ENXTPA:DEEZR,France,164,-87,0,0,-87,77,656,631,682,631,25,158,0.1,0.5,8,consumer_subscription,,,
 Viaplay Group AB (publ),OM:VPLAY B,Sweden,649,563,0,0,563,1213,2015,2282,2268,2282,0,,0.5,,-1,consumer_subscription,,,
 Verisure plc,OM:VSURE,United Kingdom,11327,5919,0,0,5919,17246,4397,4830,5249,5029,47,2351,3.4,7.3,9,consumer_subscription,,,
-U-NEXT HOLDINGS,TSE:9418,Japan,1991,120,95,0,215,2206,2610,2888,3210,3253,32,1051,0.7,2.1,11,consumer_subscription,,,
+U-NEXT HOLDINGS,TSE:9418,Japan,1991,120,95,0,215,2206,2610,2888,3210,3253,32,1051,0.7,2.1,11,consumer_subscription,5145,6459,0.3415
 Cookpad Inc.,TSE:2193,Japan,61,-35,0,0,-35,25,,,,,0,,,,,consumer_subscription,,,
 CURVES HOLDINGS,TSE:7085,Japan,562,-35,0,0,-35,527,256,269,291,289,0,,1.8,,8,consumer_subscription,,,
 JustSystems Corporation,TSE:4686,Japan,1630,-739,0,0,-739,891,,,,,0,,,,,consumer_subscription,,,
@@ -146,10 +146,10 @@ WEX Inc.,NYSE:WEX,United States,6814,-744,0,0,-744,6070,2650,2885,2930,2892,59,1
 Cass Information Systems,NASDAQGS:CASS,United States,722,-144,0,0,-144,578,191,205,218,213,4,8,2.7,71.7,7,payments,36447,68570,0.008
 Nayax Ltd.,NASDAQ:NYAX,Israel,1737,54,0,0,54,1791,401,515,630,569,48,275,3.1,6.5,22,payments,6449,9480,0.189
 Worldline SA,ENXTPA:WLN,France,811,1321,893,38,2176,2988,5304,4380,4335,4358,0,,0.7,,-1,payments,,,
-PayPoint plc,LSE:PAY,United Kingdom,516,36,2,0,38,554,250,266,279,266,0,,2.1,,5,payments,,,
+PayPoint plc,LSE:PAY,United Kingdom,516,36,2,0,38,554,250,266,279,266,0,,2.1,,5,payments,8630,9020,0.0614
 PAX Global Technology,SEHK:0327,Hong Kong,534,-523,5,2,-520,14,,,,,0,,,,,payments,,,
-"Digital Garage, Inc.",TSE:4819,Japan,663,-201,16,230,-416,247,271,274,305,281,0,,0.9,,11,payments,,,
-"BASE, Inc.",TSE:4477,Japan,226,-135,1,0,-133,93,131,174,195,184,0,,0.5,,12,payments,,,
-AvenuesAI Limited,NSEI:CCAVENUE,India,552,-81,25,0,-56,496,787,1197,1358,1237,8,103,0.4,4.8,13,payments,,,
+"Digital Garage, Inc.",TSE:4819,Japan,663,-201,16,230,-416,247,271,274,305,281,0,,0.9,,11,payments,60878,78309,0.0032
+"BASE, Inc.",TSE:4477,Japan,226,-135,1,0,-133,93,131,174,195,184,0,,0.5,,12,payments,2880,4136,0.0225
+AvenuesAI Limited,NSEI:CCAVENUE,India,552,-81,25,0,-56,496,787,1197,1358,1237,8,103,0.4,4.8,13,payments,57062,99960,0.0050
 Zaggle Prepaid Ocean Services,NSEI:ZAGGLE,India,281,-52,0,0,-52,230,198,255,338,276,46,126,0.8,1.8,32,payments,,,
-Fawry for Banking Technology,CASE:FWRY,Egypt,1286,-129,6,1,-124,1163,174,234,309,234,69,161,5.0,7.2,32,payments,,,
+Fawry for Banking Technology,CASE:FWRY,Egypt,1286,-129,6,1,-124,1163,174,234,309,234,69,161,5.0,7.2,32,payments,19168,31818,0.0366

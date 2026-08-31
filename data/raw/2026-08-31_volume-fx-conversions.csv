@@ -1,0 +1,20 @@
+# COMPANY-DISCLOSED VOLUME CONVERTED TO USD. Supplied by Daniil 31-Aug-2026 from the GMV Screening
+# tab, with the FX table he used. "GMV was converted using average FX for the respective financial
+# years." Transcribed the same session.
+#
+# THREE ROWS ARE WRONG AND THE ERROR IS THE SAME ONE EACH TIME: the reported figure is in BILLIONS
+# or TRILLIONS of local currency and the conversion multiplied it by the rate without first
+# normalising to millions. U-NEXT, Digital Garage and AvenuesAI are out by a factor of 1,000 or
+# 1,000,000. usd_as_supplied is what the sheet says; usd_corrected is what the arithmetic gives.
+company_name,exchange_ticker,metric_category,issuer_metric_name,fiscal_period,reported_value,scale_unit,currency,fx_usd_per_unit,fx_window,usd_as_supplied_musd,usd_corrected_musd,scale_ok
+Airtasker Limited,ASX:ART,CORE_GMV,Gross Marketplace Volume (GMV),FY ended 30-Jun-2025,208.7,AUD m,AUD,0.6477,30-Jun-24 to 30-Jun-25,135.17,135.17,OK
+Freelancer Limited,ASX:FLN,CORE_GMV,Freelancer marketplace GMV,FY ended 31-Dec-2025,133.4,AUD m,AUD,0.6447,31-Dec-24 to 31-Dec-25,86.00,86.00,OK
+Avarda Bank AB (publ),OM:AVARDA,ADJACENT_GROSS_VOLUME,Ecommerce Solutions transaction volume,FY ended 31-Dec-2025,17017,SEK m,SEK,0.1022,31-Dec-24 to 31-Dec-25,1739.09,1739.09,OK
+"Credit Saison Co., Ltd.",TSE:8253,ADJACENT_GROSS_VOLUME,Card shopping transaction volume,FY ended 31-Mar-2026,6186000,JPY m,JPY,0.0066,31-Mar-25 to 31-Mar-26,41097.36,41097.36,OK
+Humm Group Limited,ASX:HUM,ADJACENT_GROSS_VOLUME,Transaction volume total hummgroup,FY ended 30-Jun-2025,3911.9,AUD m,AUD,0.6477,30-Jun-24 to 30-Jun-25,2533.69,2533.69,OK
+"U-NEXT HOLDINGS Co.,Ltd.",TSE:9418,ADJACENT_GROSS_VOLUME,Cashless service GMV,FY ended 31-Aug-2025,764.8,JPY bn,JPY,0.0067,31-Aug-24 to 31-Aug-25,5.15,5124.16,SCALE_ERROR_BILLIONS
+PayPoint plc,LSE:PAY,ADJACENT_GROSS_VOLUME,Card Services transaction value,FY ended 31-Mar-2026,6439,GBP m,GBP,1.3403,31-Mar-25 to 31-Mar-26,8630.35,8630.35,OK
+"Digital Garage, Inc.",TSE:4819,ADJACENT_GROSS_VOLUME,Payment transaction volume,FY ended 31-Mar-2026,9.1,JPY tn,JPY,0.0067,31-Dec-24 to 31-Dec-25,0.06,60970.00,SCALE_ERROR_TRILLIONS
+"BASE,Inc.",TSE:4477,ADJACENT_GROSS_VOLUME,Group GMV,FY ended 31-Dec-2025,430459,JPY m,JPY,0.0067,31-Dec-24 to 31-Dec-25,2879.70,2879.70,OK
+AvenuesAI Limited,NSEI:CCAVENUE,ADJACENT_GROSS_VOLUME,Payments TPV,FY ended 31-Mar-2026,5038,INR bn,INR,0.0113,31-Mar-25 to 31-Mar-26,57.06,56929.40,SCALE_ERROR_BILLIONS
+Fawry for Banking Technology and Electronic Payments,CASE:FWRY,ADJACENT_GROSS_VOLUME,Total throughput value,FY ended 31-Dec-2025,943632.7,EGP m,EGP,0.0203,31-Dec-24 to 31-Dec-25,19167.99,19155.74,OK

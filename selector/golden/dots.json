@@ -4,7 +4,7 @@
   "core_range": {
    "denominator": "rev"
   },
-  "listed_proximity": "NONE",
+  "listed_proximity": "CONTEXT",
   "private": [
    {
     "basis": "Disclosed at pricing",
@@ -97,7 +97,48 @@
    "triangulated": false
   },
   "private_window_months": 75,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "OFX Group Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of multi, payments; same type of business; same business function; sold the same way",
+    "score": 9.7,
+    "ticker": "ASX:OFX"
+   },
+   {
+    "company": "Al Ansari Financial Services PJSC",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; sold the same way",
+    "score": 9.1,
+    "ticker": "DFM:ALANSARI"
+   },
+   {
+    "company": "Marqeta, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same business function; same kind of customer",
+    "score": 8.3,
+    "ticker": "NASDAQ:MQ"
+   },
+   {
+    "company": "The Western Union Company",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
+    "score": 8.1,
+    "ticker": "NYSE:WU"
+   },
+   {
+    "company": "Remitly Global, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQ:RELY"
+   }
+  ],
   "secondary_range": {
    "denominator": "rev"
   }

@@ -4,7 +4,7 @@
   "core_range": {
    "denominator": "rev"
   },
-  "listed_proximity": "NONE",
+  "listed_proximity": "CONTEXT",
   "private": [
    {
     "basis": "DISCLOSED_EXACT",
@@ -73,7 +73,48 @@
    "triangulated": false
   },
   "private_window_months": 75,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Repay Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of embedded, payments, vertical; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "NASDAQCM:RPAY"
+   },
+   {
+    "company": "Marqeta, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of api, embedded; same type of business; same business function; same kind of customer",
+    "score": 10.2,
+    "ticker": "NASDAQ:MQ"
+   },
+   {
+    "company": "Tyro Payments Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; sold the same way",
+    "score": 10.1,
+    "ticker": "ASX:TYR"
+   },
+   {
+    "company": "Usio, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+    "score": 9.7,
+    "ticker": "NASDAQGM:USIO"
+   },
+   {
+    "company": "PayPoint plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment; same type of business; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "LSE:PAY"
+   }
+  ],
   "secondary_range": {
    "denominator": "rev"
   }

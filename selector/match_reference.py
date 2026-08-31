@@ -263,7 +263,11 @@ for _r in listed.values():
     _r['volume_metric_name'] = (_v or {}).get('issuer_metric_name', '')
     _r['volume_period'] = (_v or {}).get('fiscal_period', '')
     _r['volume_source'] = (_v or {}).get('source_url', '')
-    _disc = _f((_v or {}).get('value_usd_musd'))
+    # A volume figure that cannot price is still shown as a fact, so the status and the reason travel
+    # with the row, but it never reaches gmv_reported and therefore never reaches a multiple.
+    _r['volume_usable'] = (_v or {}).get('volume_usable', '')
+    _r['volume_usable_reason'] = (_v or {}).get('volume_usable_reason', '')
+    _disc = _f((_v or {}).get('value_usd_musd')) if (_v or {}).get('volume_usable') != 'NO' else None
     if _disc is not None:
         _r['gmv_reported'] = _disc
         _r['gmv_basis_reported'] = 'ISSUER_DISCLOSED'
@@ -271,6 +275,13 @@ for _r in listed.values():
         _r['gmv_basis_reported'] = 'BROKER_ESTIMATE'
     else:
         _r['gmv_basis_reported'] = ''
+    # THE UNUSABLE FLAG HAS TO REACH THE FORWARD MULTIPLE TOO, not just the reported figure. It did
+    # not on the first pass, so U-NEXT and Digital Garage were still producing an EV over volume
+    # percentage from the broker block while being marked unusable on the disclosure. A rule that
+    # only blocks one of two doors is not a rule.
+    if _r.get('volume_usable') == 'NO':
+        _r['gmv'] = None
+        _r['gmv_mult'] = None
     # A turn is unreadable below about 0.1x, which is every payments name we hold.
     _r['volume_pct'] = (round(100.0 * _r['ev'] / _r['gmv'], 2)
                         if (_r.get('ev') and _r.get('gmv')) else None)
@@ -295,7 +306,15 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             row = {**t, **r}
             row['post'] = _f(r.get('post_money_musd'))
             row['rev']  = _f(r.get('revenue_musd'))
+            # A ROW MAY HOLD TWO READINGS OF THE SAME PERIOD, ONE GROSS AND ONE NET, and which one
+            # applies depends on what the FOUNDER was asked for. Zepz is the first: $338m gross from
+            # the round announcement at 14.8x, $238m net from the filed accounts at 21.0x, same
+            # twelve months. Before this the row could only carry one, so whichever we chose was
+            # wrong for half the founders who saw it.
             row['mult'] = _f(r.get('ev_revenue_x'))
+            row['mult_alt'] = _f(r.get('ev_revenue_alt_x'))
+            row['rev_alt'] = _f(r.get('revenue_alt_musd'))
+            row['revenue_basis_alt'] = (r.get('revenue_basis_alt') or '').strip().upper()
             row['mult_book'] = _f(r.get('ev_book_x'))
             row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
             row['in_medians'] = str(r.get('in_medians', '1')).strip() not in ('0', '')
@@ -900,9 +919,29 @@ def basis_compatible(prof, row):
         return True                       # unknown never excludes; it is flagged elsewhere
     if fb in ('BOTH', 'ANY'):
         return True                       # the founder gave us both, so either side is like for like
+    alt = (row.get('revenue_basis_alt') or '').strip().upper()
     if fb == 'GROSS_REVENUE':
-        return rb in GROSS_EQUIVALENT
-    return rb in NET_EQUIVALENT
+        return rb in GROSS_EQUIVALENT or alt in GROSS_EQUIVALENT
+    return rb in NET_EQUIVALENT or alt in NET_EQUIVALENT
+
+
+def basis_mult(prof, row, key='mult'):
+    """The multiple on the SAME basis the founder was asked for, swapping to the row's alternative
+    reading where it holds one. Returns None when the row cannot answer on that basis at all."""
+    if key != 'mult' or is_balance_sheet(prof):
+        return row.get(key)
+    fb = (prof.get('revenue_basis') or 'NET_REVENUE').strip().upper()
+    rb = (row.get('revenue_basis') or '').strip().upper()
+    if rb in ('', 'NONE', 'UNKNOWN') or fb in ('BOTH', 'ANY'):
+        return row.get('mult')
+    want_gross = fb == 'GROSS_REVENUE'
+    row_is_gross = rb in GROSS_EQUIVALENT
+    if want_gross == row_is_gross:
+        return row.get('mult')
+    alt = (row.get('revenue_basis_alt') or '').strip().upper()
+    if alt and (want_gross == (alt in GROSS_EQUIVALENT)):
+        return row.get('mult_alt')
+    return None
 
 
 # HOW MANY NAMES A HANDFUL SHOULD HOLD.
@@ -985,6 +1024,34 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
 #   Axis B, WHO IT SELLS TO  end market and end customer
 #   CORE      strong on both.   SECONDARY strong on A, different on B.
 # ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# THE FOUNDER GIVES US TWELVE MONTHS BEHIND. THE LISTED MULTIPLES LOOK TWELVE MONTHS AHEAD.
+#
+# Daniil, 31-Aug-2026: "Public comps are priced on NTM basis -> hence we need to ask / derive
+# client's NTM revenue."
+#
+# Every listed multiple in the file is enterprise value over NEXT twelve months revenue. Every quiz
+# fork asks the founder for the LAST twelve months, and says so in the label. Applying a forward
+# multiple to a trailing number is not conservative and it is not aggressive, it is simply a
+# different measure, and for a founder growing 80 per cent it is wrong by 80 per cent.
+#
+# We already ask for growth, so the forward figure is derivable rather than another question. The
+# derivation is recorded in revenue_ntm_basis so nothing downstream can mistake it for something
+# the founder said. Where growth is unknown the trailing figure is used unchanged and the flag says
+# so, because a made-up growth rate would be worse than a labelled mismatch.
+def with_forward_revenue(prof):
+    p = dict(prof)
+    rev, g = _f(p.get('revenue')), _f(p.get('growth'))
+    if rev is None:
+        p['revenue_ntm'] = None; p['revenue_ntm_basis'] = 'NO_REVENUE_GIVEN'
+    elif g is None:
+        p['revenue_ntm'] = rev; p['revenue_ntm_basis'] = 'TRAILING_USED_UNCHANGED_NO_GROWTH_GIVEN'
+    else:
+        p['revenue_ntm'] = round(rev * (1.0 + g / 100.0), 4)
+        p['revenue_ntm_basis'] = 'DERIVED_FROM_TRAILING_AND_GROWTH'
+    return p
+
 def peer_groups(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
@@ -1061,7 +1128,24 @@ def peer_groups(prof, universe, scorer=None, want=5):
         wide, _wt = qualifying(scored, prof, only='BROAD')
         secondary = [x for x in wide if id(x) not in picked][:want]
         return core, secondary, set_tier(prof, core)
-    return [], [], 'NONE'
+
+    # NOTHING QUALIFIED FOR CORE. UNTIL 31-AUG-2026 THAT RETURNED ABSOLUTELY NOTHING, and five of
+    # our own test companies were getting an empty listed lane out of pools of 74 to 179 eligible
+    # names: goldfish, payabli, rainforest, moov and dots. The founder saw no listed comparables at
+    # all, which reads as "we have no data" when in fact we have hundreds of names in their family.
+    #
+    # Daniil, 31-Aug-2026: "Shall we lower threshold for public companies to be shown on ranges in
+    # these cases? In the end of the day, they can be shown with clear disclaimer that these are not
+    # close comps and are shown as FYI."
+    #
+    # So the floor drops, and ONLY for display. The names come back in the SECONDARY group with the
+    # tier reported as CONTEXT, and CONTEXT is not in RANGE_TIERS, so nothing here can ever price a
+    # founder. It is the difference between "we found nothing" and "here is the neighbourhood, and
+    # none of it is close enough to price you off". The second is true and the first was not.
+    wide, _wt = qualifying(scored, prof, only='BROAD')
+    if not wide:
+        wide = scored[:want]                 # last resort: the family's best, however weak
+    return [], wide[:want], 'CONTEXT'
 
 
 # ---------------------------------------------------------------------------
@@ -1415,8 +1499,16 @@ def private_range(prof, picked, tier):
     if tier not in RANGE_TIERS: return {}
     basis = basis_for(prof)
     key = BASIS_KEYS[basis][0]
-    allpriced = [(sw, r) for (sw, r) in picked if r.get('in_medians') and r.get(key)
-                 and basis_compatible(prof, r)]
+    # basis_mult, not r[key]: a row holding both a gross and a net reading answers on the founder's
+    # basis, and a row that can only answer on the other one is dropped here rather than silently
+    # priced on the wrong measure.
+    allpriced = []
+    for (sw, r) in picked:
+        if not (r.get('in_medians') and r.get(key)): continue
+        m = basis_mult(prof, r, key)
+        if m is None: continue
+        r = dict(r); r[key] = m
+        allpriced.append((sw, r))
     if not allpriced: return {}
     band, priced, weaker = _bands(prof, allpriced)
     v = sorted(r[key] for _sw, r in priced)

@@ -4,7 +4,7 @@
   "core_range": {
    "denominator": "rev"
   },
-  "listed_proximity": "NONE",
+  "listed_proximity": "CONTEXT",
   "private": [
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -73,7 +73,16 @@
    "triangulated": true
   },
   "private_window_months": 17,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Truecaller AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of app; same type of business; sold the same way",
+    "score": 7.2,
+    "ticker": "OM:TRUE B"
+   }
+  ],
   "secondary_range": {
    "denominator": "rev"
   }
