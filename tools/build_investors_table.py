@@ -80,6 +80,14 @@ def _stem(name):
 def key_of(name):
     return _stem(name) or re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
 
+
+def _months_since(ym):
+    from datetime import date
+    if not re.match(r'^\d{4}-\d{2}$', ym or ''):
+        return None
+    t = date.today()
+    return (t.year - int(ym[:4])) * 12 + (t.month - int(ym[5:7]))
+
 MONTHS = {m: i for i, m in enumerate(
     ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'], 1)}
 
@@ -176,7 +184,8 @@ SECTOR_TO_CATEGORY = {
 }
 
 COLS = ['investor_key', 'investor_name', 'house_type', 'layer', 'geographies', 'stage_bands',
-        'first_cheque_low_m', 'first_cheque_high_m', 'cheque_currency', 'thesis_one_liner',
+        'first_cheque_low_m', 'first_cheque_high_m', 'cheque_currency',
+        'round_size_low_m', 'round_size_high_m', 'thesis_one_liner',
         'screening_categories', 'subsectors', 'recent_deal_1_company', 'recent_deal_1_date',
         'recent_deal_1_source_url', 'recent_deal_2_company', 'recent_deal_2_date',
         'recent_deal_2_source_url', 'rounds_in_set', 'companies_in_set', 'companies_backed',
@@ -210,6 +219,8 @@ def build():
             'companies_backed': '|'.join(companies),
             'first_round': deals[-1][0] if deals else '', 'last_round': deals[0][0] if deals else '',
             'median_round_size_m': med(h['cheques']), 'median_postmoney_m': med(h['posts']),
+            '_round_sizes': [x for x in h['posts'] if x],
+            'round_size_low_m': '', 'round_size_high_m': '',
             'last_verified': today,
             'provenance': ('GENERATED from data/private-rounds.csv and data/private-rounds-consumer.csv'
                            + ('. Spellings merged: ' + ' / '.join(sorted(h['aliases']))
@@ -238,6 +249,7 @@ def build():
             'first_cheque_high_m': hi if hi is not None else '', 'cheque_currency': ccy,
             'thesis_one_liner': note, 'screening_categories': '; '.join(cats),
             'subsectors': '; '.join(sorted(set(f['sectors']))),
+            'round_size_low_m': '', 'round_size_high_m': '',
             'recent_deal_1_company': '', 'recent_deal_1_date': '', 'recent_deal_1_source_url': '',
             'recent_deal_2_company': '', 'recent_deal_2_date': '', 'recent_deal_2_source_url': '',
             'rounds_in_set': 0, 'companies_in_set': 0, 'companies_backed': '',
@@ -245,6 +257,60 @@ def build():
             'last_verified': '',
             'provenance': 'SEEDED from data-content.js. Needs two dated deals with source URLs.',
         })
+
+    # ------------------------------------------------------------------ promotion
+    # DANIIL, 02-Sep-2026: "Why are we focusing on the UK curated funds? Why only 19? We have a
+    # much larger database already available from the deal database we own, no?"
+    #
+    # Right on both counts for the stage our own data covers, and the numbers settle where the
+    # line falls. Of 349 houses, 80 have a deal inside 12 months and every one of them already
+    # carries that deal with its date and its source URL. Those 80 are a current, sourced call
+    # list and they were being withheld from founders because the CALLABLE layer had been
+    # hand-typed rather than generated.
+    #
+    # What our data CANNOT do is the seed end, and this is a fact about the database rather than
+    # a curation choice: it is built from priced rounds with a disclosed revenue figure, and small
+    # rounds do not disclose revenue, so they never entered it. The median round a house in this
+    # file joins is $267m; the 10th percentile is $100m; exactly THREE houses of 349 appear in any
+    # round below $25m and none of the three is currently active. A founder raising GBP 600k
+    # cannot call Coatue.
+    #
+    # So the layer is promoted where the evidence supports it and left to a pull where it does not.
+    # A promoted house carries the size of ROUND it joins rather than a first-cheque range, because
+    # a first cheque is not something our data knows and inventing one would be worse than leaving
+    # it out. That is the honest equivalent: it tells a founder whether this is their conversation,
+    # which is the whole point of putting a number on the card.
+    def _stage_of(m):
+        if m is None:                  return ''
+        if m < 25:                     return 'Seed; Series A'
+        if m < 100:                    return 'Series A; Series B'
+        if m < 300:                    return 'Series B; Series C'
+        return 'Growth; Late stage; Crossover'
+
+    promoted = 0
+    for r in rows:
+        if r['layer'] != 'EVIDENCE':
+            continue
+        age = _months_since(r['last_round'])
+        if age is None or age > 12:
+            continue
+        sizes = r.pop('_round_sizes', None) or []
+        m = r.get('median_round_size_m')
+        m = float(m) if m not in (None, '') else None
+        if m is None:
+            continue
+        r['layer'] = 'CALLABLE|EVIDENCE'
+        r['stage_bands'] = _stage_of(m)
+        r['round_size_low_m'] = round(min(sizes), 1) if sizes else round(m, 1)
+        r['round_size_high_m'] = round(max(sizes), 1) if sizes else round(m, 1)
+        r['cheque_currency'] = 'USD'
+        r['thesis_one_liner'] = ('Joins rounds of $%.0fm to $%.0fm in %s. Generated from the rounds '
+                                 'in our own set, not from a curated list.'
+                                 % (r['round_size_low_m'], r['round_size_high_m'],
+                                    (r['screening_categories'] or 'our tracked sectors').split('(')[0].strip()))
+        promoted += 1
+    print('%d EVIDENCE houses promoted to CALLABLE on the activity rule (a deal inside 12 months).'
+          % promoted)
 
     rows.sort(key=lambda r: (r['layer'] == 'EVIDENCE', -int(r['rounds_in_set'] or 0), r['investor_name']))
 

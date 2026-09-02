@@ -294,3 +294,22 @@ recorded here, at which point my transcription can be diffed against it and any 
 - The immediate effect: 70 rounds that could not be inserted for want of a source per figure now
   have one. The remaining work on them is ours, tagging each company into the screening
   vocabulary, not Daniil's.
+
+## 2026-09-02 — the callable investor list, generated rather than curated
+
+- Daniil: "Why are we focusing on the UK curated funds? Why only 19? We have a much larger
+  database already available from the deal database we own, no?" Right for the stage our data
+  covers. **75 EVIDENCE houses promoted to CALLABLE on the activity rule; 73 render.** Yesterday
+  the callable list rendered nothing at all.
+- A promoted house carries the SIZE OF ROUND IT JOINS rather than a first-cheque range, because a
+  first cheque is not something our data knows and inventing one would be worse than omitting it.
+  `tools/investor_check.py` accepts either.
+- WHERE OUR DATA STOPS, measured rather than assumed: the median round a house in this file joins
+  is $267m, p10 is $100m, and exactly 3 of 349 houses appear in any round below $25m, none of them
+  currently active. The database is built from priced rounds with a disclosed revenue figure and
+  small rounds do not disclose revenue, so seed never entered it. Callable now reads 47 growth and
+  crossover, 26 Series B/C, 2 Series A/B, and nothing at seed, which is where our founders are.
+- FOUND WHILE DOING IT: **we hold no country field anywhere** — not on the rounds, not on the
+  company tags, not on the investor files. Geography is one of the three matching facets and it is
+  missing entirely, so every promoted house renders in the broader-fit tier. Added to the pull; it
+  also unblocks the region quiz question already queued.

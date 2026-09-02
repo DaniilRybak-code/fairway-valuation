@@ -9,34 +9,60 @@ resort and must be labelled.
 
 ---
 
-## 1. Investor deals, to turn the "who to call" list on
+## 1. Seed-stage investors, the one part our own database cannot supply
 
-**Why it blocks.** The landing page promises "you know who to call" and nothing renders today.
-`tools/investor_check.py` refuses all 19 curated UK funds because none carries a dated deal with
-a source URL. Two deals each turns the whole feature on. Full list with cheque ranges is
-`docs/investor-pull-list-2sep.tsv`.
+**What changed on 2 September, and it changes this ask.** Daniil asked why we were curating 19
+UK funds by hand when we own a deal database. Right question. Of the 349 houses generated from
+our own rounds, **80 have a deal inside 12 months and every one already carries that deal with
+its date and source URL.** They are now promoted into the callable list: **73 render today**,
+where yesterday the answer was zero. Nothing was pulled to get them.
 
-> For each of the 19 UK early-stage venture funds listed below, find the TWO most recent
-> investments they have announced, and for each one give me: the portfolio company name, the
-> month and year of the announcement, the round name if stated, and the URL of the announcement.
->
-> Ada Ventures, Backed VC, Cherry Ventures, Concept Ventures, Episode 1 Ventures, Founders
-> Factory, Fuel Ventures, Future Planet Capital, Hoxton Ventures, LocalGlobe / Latitude,
-> Maven Capital Partners, Mercia Ventures, MMC Ventures, Octopus Ventures, Passion Capital,
-> Playfair Capital, Seedcamp, SFC Capital, SyndicateRoom.
->
-> Rules. Only announcements dated within the last 12 months count; if a fund has none, say NOT
-> FOUND for that fund rather than reaching further back. Prefer the fund's own website or the
-> portfolio company's own announcement over a news aggregator. Give me the exact sentence naming
-> the fund as an investor. Do not use Crunchbase or PitchBook pages that sit behind a login.
->
-> Also, for these four where our cheque range is missing, find the fund's stated first-cheque or
-> initial-investment range and the page that states it: Future Planet Capital, Maven Capital
-> Partners, Mercia Ventures, Octopus Ventures.
->
-> Return one row per deal: fund | company | month-year | round | source URL | the quoted sentence.
+What our data cannot do is the seed end, and that is a fact about the database rather than a
+choice. It is built from priced rounds with a disclosed revenue figure, and small rounds do not
+disclose revenue, so they never entered it. The median round a house in our file joins is
+**$267m**; the tenth percentile is **$100m**; exactly **three houses of 349** appear in any round
+below $25m, and none of the three is currently active.
 
----
+So the callable list now stands at 47 growth and crossover houses, 26 at Series B and C, 2 at
+Series A and B, and **nothing at all at seed** — which is where most of our founders are. That
+is the gap, and it is the only part of this that needs a pull. The 19 UK funds were a hand-typed
+starting point, not a target; the target is 60 to 80 across the forks we actually serve.
+
+> I need a list of **active seed and Series A investors**, organised by sector. For each investor
+> give me: the fund name, the country or region it invests in, its stated first-cheque or initial
+> investment range with the currency, a one-line description of what it invests in, and then the
+> TWO most recent investments it has announced with the portfolio company name, the month and
+> year, and the URL of the announcement.
+>
+> Sectors, and I want 8 to 12 funds in each: B2B software and AI tooling; payments and fintech
+> infrastructure; digital banking and lending; marketplaces; consumer brands and D2C; delivery,
+> logistics and supply chain; healthcare and digital health; insurance.
+>
+> Geography: weight it to the UK and Europe, since that is where our founders are, but include
+> US funds that invest into Europe at seed, and say which is which.
+>
+> Rules. Only announcements dated within the last 12 months count towards the two recent deals;
+> if a fund has none, leave it out rather than reaching further back, because an inactive fund on
+> the list is worse than a short list. The cheque range must come from a page that states it, not
+> from an average of deal sizes. Prefer the fund's own website or the portfolio company's own
+> announcement over a news aggregator. Do not use pages behind a login.
+>
+> Return one row per deal: fund | region | cheque low | cheque high | currency | thesis | company
+> | month-year | source URL.
+>
+> Separately, for these four funds we already hold, find the stated first-cheque range and the
+> page that states it: Future Planet Capital, Maven Capital Partners, Mercia Ventures, Octopus
+> Ventures. And for all 19 in `docs/investor-pull-list-2sep.tsv`, the two recent deals as above.
+
+**One more thing this exposed, small and worth doing in the same pass.** We hold no country field
+anywhere: not on the rounds, not on the company tags, not on the investors. Geography is one of
+the three facets the matching is meant to use and it is missing entirely, so all 73 promoted
+houses render in the broader-fit tier rather than matched to a founder's country. Closing it also
+unblocks the region question already queued for the quiz.
+
+> For each investor in the attached list, state the countries or regions it invests in, with the
+> page that says so. Where a fund says "global" or "sector agnostic", say that rather than
+> guessing a list.
 
 ## 2. Source URLs for the 70 rounds — CLOSED, 2 September
 

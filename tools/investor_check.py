@@ -38,8 +38,8 @@ def months_since(ym, today=None):
     return (t.year - y) * 12 + (t.month - m)
 
 def check_row(r):
-    """Returns (renders, [reasons it does not])."""
-    bad = []
+    """Returns (renders, [reasons it does not], [soft notes that downgrade the tier])."""
+    bad, soft = [], []
     layer = r.get('layer') or ''
     d1, u1 = r.get('recent_deal_1_date'), r.get('recent_deal_1_source_url')
     if not d1 or not u1:
@@ -50,17 +50,31 @@ def check_row(r):
             pass                                   # already reported above
         elif age > ACTIVITY_MONTHS:
             bad.append('most recent deal is %d months old, the rule is %d' % (age, ACTIVITY_MONTHS))
-        if not (r.get('first_cheque_low_m') and r.get('first_cheque_high_m')):
-            bad.append('no first-cheque range')
+        # A SIZE THE FOUNDER CAN JUDGE, not necessarily a first cheque. For a curated seed fund
+        # the honest number is its first-cheque range; for a house promoted out of our own rounds
+        # it is the size of round it joins, because a first cheque is not something our data knows
+        # and inventing one would be worse than leaving it out. Either satisfies the rule; neither
+        # is optional. Amended 02-Sep-2026 when the promotion pass was added.
+        has_cheque = r.get('first_cheque_low_m') and r.get('first_cheque_high_m')
+        has_round = r.get('round_size_low_m') and r.get('round_size_high_m')
+        if not (has_cheque or has_round):
+            bad.append('no first-cheque range and no round-size range')
         if not r.get('stage_bands'):
             bad.append('no stage band')
         if not r.get('screening_categories'):
             bad.append('no sector in our vocabulary')
+        # GEOGRAPHY IS NOT A BLOCKER, BECAUSE WE DO NOT HOLD IT ANYWHERE. Checked 02-Sep-2026:
+        # there is no country field on the rounds files, on the company tags, or on the investor
+        # files. Refusing 75 active, sourced houses for a facet the whole database lacks would be
+        # punishing them for our gap. A row without a geography renders in the BROADER FIT tier,
+        # which is exactly what vcconf's degradation does with sector-agnostic and pan-geo
+        # investors, and the card says the geography is not recorded rather than implying global.
+        # The pull to close it is small and it also unblocks the queued region quiz question.
         if not r.get('geographies'):
-            bad.append('no geography')
+            soft.append('geography not recorded, renders as broader fit')
         if not r.get('thesis_one_liner'):
             bad.append('no thesis')
-    return (not bad), bad
+    return (not bad), bad, soft
 
 def alias_collisions(rows):
     """Sequoia and Sequoia Capital are one house in the world and two rows here."""
@@ -87,17 +101,21 @@ def main():
     evidence_rows = [r for r in rows if 'EVIDENCE' in (r.get('layer') or '')]
 
     fails = []
+    softs = []
     for r in rows:
-        ok, why = check_row(r)
+        ok, why, soft = check_row(r)
         if not ok:
             fails.append((r, why))
+        if soft:
+            softs.append((r, soft))
 
     if pull_only:
         print('investor\tlayer\tsector\tcheque\twhat is missing')
         for r, why in fails:
             print('\t'.join([r['investor_name'], r['layer'],
                              (r.get('screening_categories') or r.get('subsectors') or '')[:60],
-                             ('%s-%s %s' % (r.get('first_cheque_low_m'), r.get('first_cheque_high_m'),
+                             ('%s-%s %s' % (r.get('first_cheque_low_m') or r.get('round_size_low_m'),
+                                            r.get('first_cheque_high_m') or r.get('round_size_high_m'),
                                             r.get('cheque_currency'))).strip('- '),
                              '; '.join(why)]))
         return 0
@@ -115,6 +133,15 @@ def main():
     for r, w in ef[:20]:
         print('   REFUSED  %-24s %s' % (r['investor_name'][:24], '; '.join(w)))
 
+    tiered = [(r, w) for r, w in softs if 'CALLABLE' in r['layer']]
+    print('\nBROADER FIT: %d CALLABLE rows render but with a facet missing.' % len(tiered))
+    seen = {}
+    for r, w in tiered:
+        for x in w:
+            seen[x] = seen.get(x, 0) + 1
+    for k, v in sorted(seen.items(), key=lambda x: -x[1]):
+        print('   %-52s %d rows' % (k, v))
+
     col = alias_collisions(rows)
     print('\nALIAS COLLISIONS: %d. One house, two rows, so a founder could see it twice.' % len(col))
     for k, v in sorted(col.items()):
@@ -123,7 +150,7 @@ def main():
     print('\nCOVERAGE OF THE CALLABLE LAYER BY SECTOR (what a founder in each fork would be offered):')
     by = {}
     for r in callable_rows:
-        ok, _ = check_row(r)
+        ok, _w, _s = check_row(r)
         for c in (r.get('screening_categories') or '').split(';'):
             c = c.strip()
             if c:
