@@ -117,14 +117,36 @@
   "listed_proximity": "DIRECT",
   "private": [
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "FY ended 2024-12-31",
     "bound": "",
-    "company": "Klarna",
-    "date": "Jul-22",
-    "in_medians": true,
-    "mult": 5.1,
-    "reason": "both do Buy Now Pay Later, Checkout Financing; same type of business",
-    "score": 7.7,
+    "company": "Kriya",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 0.6,
+    "reason": "shares the language of b2b, credit, invoice; same type of business; same business function; same kind of customer",
+    "score": 22.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "inception 2015 to 2022-04-11",
+    "bound": "",
+    "company": "Stenn",
+    "date": "Apr-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Invoice Financing; same type of business; same business function; same kind of customer",
+    "score": 21.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2021",
+    "bound": "",
+    "company": "Wayflyer",
+    "date": "Feb-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of merchant; same type of business; same business function; same kind of customer",
+    "score": 15.6,
     "type": "PRIMARY"
    },
    {
@@ -137,61 +159,11 @@
     "reason": "both do Invoice Financing; same type of business; same business function; same kind of customer",
     "score": 13.9,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Zopa",
-    "date": "Oct-21",
-    "in_medians": true,
-    "mult": 8.9,
-    "reason": "shares the language of credit; same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
-  "private_range": {
-   "anchor_dropped": true,
-   "band": "ADJACENT",
-   "basis": "BOOK",
-   "basis_label": "price to book",
-   "basis_mix": {
-    "BOOK": 1
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 5.6,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 5.6,
-   "mid": 5.6,
-   "n": 1,
-   "period_mix": {
-    "RUN_RATE": 1
-   },
-   "period_span": {
-    "RUN_RATE": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "shared_words": [
-    "credit"
-   ],
-   "sole": "Zopa",
-   "spread": 1.0,
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
-  },
-  "private_window_months": 58,
+  "private_range": {},
+  "private_window_months": 57,
   "secondary": [
    {
     "company": "Velocity Financial, Inc.",

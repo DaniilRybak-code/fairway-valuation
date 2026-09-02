@@ -97,6 +97,28 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "FY2021",
+    "bound": "",
+    "company": "Wayflyer",
+    "date": "Feb-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of advance, capital, cash; same type of business; same end market; same business function",
+    "score": 16.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "inception to 2021-07",
+    "bound": "",
+    "company": "Clearco",
+    "date": "Jul-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of capital, inventory; same type of business; same end market; same business function",
+    "score": 15.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "Q3 results released on financing close date; closed quarter",
     "bound": "",
     "company": "Creditas",
@@ -108,82 +130,42 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "Disclosed at pricing",
-    "bound": "<=",
-    "company": "Fundbox",
-    "date": "Nov-21",
-    "in_medians": true,
-    "mult": 11.0,
-    "reason": "shares the language of capital, credit, financing; same type of business; same business function; same kind of customer",
-    "score": 15.7,
+    "basis": "FY ended 2024-12-31",
+    "bound": "",
+    "company": "Kriya",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 0.6,
+    "reason": "both do Working Capital; same type of business; same business function; same kind of customer",
+    "score": 13.8,
     "type": "PRIMARY"
    },
    {
-    "basis": "NONE",
+    "basis": "FY ended 2023-03-31",
     "bound": "",
-    "company": "Upgrade",
-    "date": "Nov-21",
+    "company": "Atom Bank",
+    "date": "Nov-23",
+    "in_medians": true,
+    "mult": 4.76,
+    "reason": "shares the language of lending; related type of business; same business function; same revenue model",
+    "score": 10.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "inception 2015 to 2022-04-11",
+    "bound": "",
+    "company": "Stenn",
+    "date": "Apr-22",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of credit, lending; same type of business; sold the same way; same AI stance",
-    "score": 10.8,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Zopa",
-    "date": "Oct-21",
-    "in_medians": true,
-    "mult": 8.9,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 14.3,
+    "reason": "shares the language of financing; same type of business; same business function; same kind of customer",
+    "score": 13.1,
     "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
-  "private_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis": "BOOK",
-   "basis_label": "price to book",
-   "basis_mix": {
-    "BOOK": 1
-   },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 5.6,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 5.6,
-   "mid": 5.6,
-   "n": 1,
-   "period_mix": {
-    "RUN_RATE": 1
-   },
-   "period_span": {
-    "RUN_RATE": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "shared_words": [
-    "credit",
-    "lending"
-   ],
-   "sole": "Zopa",
-   "spread": 1.0,
-   "tag_evidence": 0.3,
-   "thin": true,
-   "triangulated": false
-  },
-  "private_window_months": 58,
+  "private_range": {},
+  "private_window_months": 61,
   "secondary": [
    {
     "company": "Credit Acceptance Corporation",

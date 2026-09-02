@@ -129,6 +129,39 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "FY ended 2024-12-31",
+    "bound": "",
+    "company": "Kriya",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 0.6,
+    "reason": "both do Working Capital; same type of business; same end market; same business function",
+    "score": 18.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY ended 2023-03-31",
+    "bound": "",
+    "company": "Atom Bank",
+    "date": "Nov-23",
+    "in_medians": true,
+    "mult": 4.76,
+    "reason": "both do Business Lending; related type of business; same end market; same business function",
+    "score": 17.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "inception 2015 to 2022-04-11",
+    "bound": "",
+    "company": "Stenn",
+    "date": "Apr-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of sme; same type of business; same end market; same business function",
+    "score": 17.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "Disclosed at pricing",
     "bound": "<=",
     "company": "Fundbox",
@@ -160,20 +193,9 @@
     "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
     "score": 21.3,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Better.com",
-    "date": "May-21",
-    "in_medians": true,
-    "mult": 8.79,
-    "reason": "shares the language of lending, origination; same type of business; sold the same way; same AI stance",
-    "score": 9.8,
-    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
+  "private_proximity": "DIRECT",
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
@@ -215,7 +237,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 63,
+  "private_window_months": 58,
   "secondary": [
    {
     "company": "Far East Horizon Limited",

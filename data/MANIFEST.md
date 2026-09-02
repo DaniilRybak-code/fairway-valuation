@@ -612,3 +612,27 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 - `tools/check_raw_coverage.py` — all 49 sector screen exclusion reasons rewritten to carry the
   ruling that now governs each row. 44 cleared to load, 2 held, 3 out.
 - Columns AC to AF: Daniil confirms they are hidden deliberately and are not needed. D11 flag withdrawn.
+
+### 2026-09-02, night: lending screen, and 41 companies tagged so today's data reaches founders
+
+- `data/raw/2026-09-02_lending-screen.csv` — 22 rows. Daniil's lending and credit pull, addressing
+  point 4 of `docs/data-pull-prompts-2sep.md`. Transcribed from four screenshots. All 19 readable
+  multiples recompute exactly. THREE implied-multiple cells could not be read and are marked
+  UNREADABLE rather than guessed: Tabby Nov-23, MNT-Halan, Zilch. No fx rate, date or source is
+  recorded anywhere in the sheet and four rows convert currency.
+- `docs/lending-screen-verdicts-2sep.md` — the review. Point 4 asked for balance-sheet measures and
+  none arrived, so Zopa is still the only priced book comparable. Only 7 of 22 rows carry a periodic
+  revenue or ARR denominator; 10 are cumulative-since-inception volume and are not multiples.
+  Settles open decision 2: Klarna has no revenue line, both sheets price on net operating income,
+  and the disagreement is the SEK/USD rate, not the basis.
+- `data/private-companies-tags.csv` — 94 rows to 135. Tag rows added for the 41 companies whose
+  rounds were in `private-rounds.csv` and never reached the engine. Every value was already in use
+  in another tag file; nothing invented. **All 184 rounds now reach the engine, up from 126.**
+  `tools/data_inventory.py` private count 178 to 236.
+- `selector/golden/*.json` — REBASELINED. 28 of 43 fixtures moved, 63 private peers gained against
+  29 displaced. Reason recorded in `docs/tagging-and-golden-rebaseline-2sep.md`.
+- `data/private-rounds.csv` — AG1 Jan-22 set to `in_medians = 0`. The same round is carried in
+  `private-rounds-consumer.csv` under key `ag1` and prices there at 8.8x. Tagging surfaced the
+  duplicate; the row is not deleted and the tag row is not removed, it simply stops voting twice.
+  Median-eligible 114 to 113 in this file, 132 across both.
+- `tools/check_raw_coverage.py` — now guards three supplied files. 191 of 191, 49 of 49, 22 of 22.

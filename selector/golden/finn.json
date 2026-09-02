@@ -130,6 +130,28 @@
     "reason": "shares the language of owned, to; related type of business; same business function; same kind of customer",
     "score": 13.7,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "At announcement",
+    "bound": "",
+    "company": "AG1 (Athletic Greens)",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 8.77,
+    "reason": "shares the language of subscription; related type of business; same kind of customer; same revenue model",
+    "score": 14.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2020",
+    "bound": "",
+    "company": "Packable",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 4.15,
+    "reason": "shares the language of owned; same type of business; same kind of customer; sold the same way",
+    "score": 12.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -174,7 +196,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 5,
+  "private_window_months": 59,
   "secondary": [
    {
     "company": "BARK, Inc.",

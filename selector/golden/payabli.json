@@ -7,6 +7,61 @@
   "listed_proximity": "CONTEXT",
   "private": [
    {
+    "basis": "Net revenue",
+    "bound": "",
+    "company": "Stripe",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 16.34,
+    "reason": "shares the language of api, payment, payments; same type of business; same business function; same kind of customer",
+    "score": 17.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "UK entity revenue",
+    "bound": "",
+    "company": "Checkout.com",
+    "date": "Dec-23",
+    "in_medians": true,
+    "mult": 44.34,
+    "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+    "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annual revenue",
+    "bound": "",
+    "company": "MoonPay",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 22.67,
+    "reason": "both do Payments Infrastructure; related type of business; same business function; same revenue model",
+    "score": 12.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2020",
+    "bound": "",
+    "company": "Rapyd",
+    "date": "Aug-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of embedded, payment, payments; same type of business; same business function; same revenue model",
+    "score": 15.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annual revenue",
+    "bound": "",
+    "company": "Mollie",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": 54.17,
+    "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+    "score": 15.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_EXACT",
     "bound": "",
     "company": "Pine Labs",
@@ -27,17 +82,6 @@
     "reason": "shares the language of payment, payments; related type of business; same business function; same AI stance",
     "score": 9.7,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "CONTEMPORANEOUS_PRESS_THRESHOLD",
-    "bound": "<=",
-    "company": "Marqeta",
-    "date": "May-20",
-    "in_medians": false,
-    "mult": 14.3,
-    "reason": "shares the language of embedded, payment, payments; same type of business; same business function; same AI stance",
-    "score": 12.1,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -47,7 +91,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -58,11 +102,11 @@
    "high": 48.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 30.3,
-   "mid": 48.0,
-   "n": 2,
+   "low": 16.34,
+   "mid": 30.3,
+   "n": 3,
    "period_mix": {
-    "LTM": 2
+    "LTM": 3
    },
    "period_span": {
     "LTM": {
@@ -73,15 +117,16 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "api",
     "payment",
     "payments"
    ],
-   "spread": 1.6,
-   "tag_evidence": 0.2,
-   "thin": true,
+   "spread": 2.9,
+   "tag_evidence": 0.5,
+   "thin": false,
    "triangulated": false
   },
-  "private_window_months": 75,
+  "private_window_months": 64,
   "secondary": [
    {
     "company": "Repay Holdings Corporation",

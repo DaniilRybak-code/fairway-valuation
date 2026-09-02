@@ -34,6 +34,9 @@ SOURCES = {
     'data/raw/2026-09-02_sector-screen-fixed.csv': (
         'company_name', 'transaction_date',
         ['data/private-rounds.csv', 'data/private-rounds-consumer.csv']),
+    'data/raw/2026-09-02_lending-screen.csv': (
+        'company_name', 'transaction_date',
+        ['data/private-rounds.csv', 'data/private-rounds-consumer.csv']),
 }
 
 # (supplied file, company, YYYY-MM) -> the reason it is not loaded. Auditable, or it does not count.
@@ -143,6 +146,50 @@ EXCLUSIONS = {
         "CLEARED TO LOAD on Daniil's ruling of 02-Sep-2026. Transcribed and arithmetically verified from his screenshots. Remove this entry when the row lands in private-rounds.csv.",
     ('data/raw/2026-09-02_sector-screen-fixed.csv', 'Dream Sports', '2021-11'):
         'CLEARED on ruling 1 (use whatever is available, with the note). Denominator INR 27,060m is TOTAL INCOME (Rs 2,705.56 crore); revenue from operations was Rs 2,551.59 crore. Load with revenue_basis = TOTAL_INCOME and a note, giving 22.1x. On revenue from operations it would be 23.4x.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Konfio', '2021-09'):
+        'CLEARED TO LOAD as a revenue or ARR multiple. One of only 7 rows in this sheet with a periodic revenue denominator. See docs/lending-screen-verdicts-2sep.md.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Creditas', '2022-01'):
+        "ALREADY LOADED at 4,800 over 200 = 24.00x. Agrees exactly. This sheet labels the denominator REVENUE where the engine says ARR_RUNRATE; the sheet's own basis text ('annualised revenue as described by CEO, not audited FY revenue') supports ARR_RUNRATE. No change needed.",
+    ('data/raw/2026-09-02_lending-screen.csv', 'Tabby', '2025-02'):
+        'NOT LOADED AS A REVENUE MULTIPLE. The denominator is a cumulative-since-inception volume figure, so valuation over it compares a point-in-time price to everything the company has ever done. It falls as the company ages and is not a multiple. Volume overlay or nothing. See the verdicts doc.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Tabby', '2023-11'):
+        'NOT LOADED. Annualised transaction volume, not revenue, and the implied-multiple cell could not be read from the screenshot. Confirm the cell before anything else.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'MNT-Halan', '2023-02'):
+        "NOT LOADED. Cumulative loans disbursed over a floor valuation, and the implied-multiple cell could not be read. Floor over floor, which the sheet's own header says it marks NM.",
+    ('data/raw/2026-09-02_lending-screen.csv', 'Klarna', '2022-07'):
+        'ALREADY LOADED. In private-rounds.csv at 6,700 over 1,303.7 BANK_NOI = 5.1x. This sheet says 1,600 for the same FY2021 net operating income; the gap is the SEK/USD rate, not the basis. Settle the FX date, do not load a second row.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Atom Bank', '2022-02'):
+        'NOT LOADED AS A REVENUE MULTIPLE. The denominator is a cumulative-since-inception volume figure, so valuation over it compares a point-in-time price to everything the company has ever done. It falls as the company ages and is not a multiple. Volume overlay or nothing. See the verdicts doc.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Wayflyer', '2022-02'):
+        'CLEARED TO LOAD as an ORIGINATIONS multiple. The engine holds this round at a 1,600 post-money with no denominator and out of the medians. FY2021 originations of 500 prices it at 3.20x. Not a revenue multiple; label it as originations.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Monzo Bank', '2021-12'):
+        'CLEARED TO LOAD as a revenue or ARR multiple. One of only 7 rows in this sheet with a periodic revenue denominator. See docs/lending-screen-verdicts-2sep.md.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Fundbox', '2021-11'):
+        'NOT LOADED. The engine already prices this round on 100 ARR at 11.00x. This sheet adds a cumulative transaction-volume figure, which is a different metric and not a conflict.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Zilch', '2021-11'):
+        'NOT LOADED. Cumulative sales since launch over a floor valuation. The implied-multiple cell could not be read; it computes to 14.9x, which would be badly misleading against a cumulative denominator.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Billie', '2021-10'):
+        'NOT LOADED AS A REVENUE MULTIPLE. The denominator is a cumulative-since-inception volume figure, so valuation over it compares a point-in-time price to everything the company has ever done. It falls as the company ages and is not a multiple. Volume overlay or nothing. See the verdicts doc.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Klarna', '2021-06'):
+        'ALREADY LOADED at 45,600 over 1,212.1 BANK_NOI = 37.6x. This sheet labels the same figure FULL-YEAR REVENUE at 1,000. The label is wrong, it is net operating income, and the value gap is the SEK/USD rate. Do not load a second row.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Pipe', '2021-05'):
+        'NOT LOADED AS A REVENUE MULTIPLE. The denominator is a cumulative-since-inception volume figure, so valuation over it compares a point-in-time price to everything the company has ever done. It falls as the company ages and is not a multiple. Volume overlay or nothing. See the verdicts doc.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Clearco (then Clearbanc)', '2021-04'):
+        'NOT LOADED AS A REVENUE MULTIPLE. The denominator is a cumulative-since-inception volume figure, so valuation over it compares a point-in-time price to everything the company has ever done. It falls as the company ages and is not a multiple. Volume overlay or nothing. See the verdicts doc.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Starling Bank', '2021-03'):
+        'CLEARED TO LOAD, with a flag: the 7.59x is struck on a PRE-money valuation while the other six revenue multiples in this sheet are post-money. Not like for like, and it is the lowest of the seven.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Klarna', '2021-03'):
+        'CLEARED TO LOAD, but as net operating income and not as the FULL-YEAR REVENUE this sheet labels it. Klarna has no revenue line, now confirmed from a second independent pull, which settles open decision 2.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Upgrade', '2021-11'):
+        'NOT LOADED. This sheet carries 6,000 PRE-money; the engine already holds the round at a 6,280 post-money, which is the same number plus the raise. The engine is right. The denominator is cumulative credit delivered in any case.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Tala', '2021-10'):
+        'NOT LOADED as a revenue multiple. Cumulative credit delivered since launch. The engine already holds this round unpriced; this does not price it on a revenue basis.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Upgrade', '2021-08'):
+        'NOT LOADED. This sheet carries 3,325 PRE-money; the engine holds 3,430 post-money. Same round, engine correct. Cumulative denominator in any case.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Nubank', '2021-06'):
+        'CLEARED TO LOAD as a revenue or ARR multiple. One of only 7 rows in this sheet with a periodic revenue denominator. See docs/lending-screen-verdicts-2sep.md.',
+    ('data/raw/2026-09-02_lending-screen.csv', 'Happy Money', '2022-02'):
+        'NOT LOADED AS A REVENUE MULTIPLE. The denominator is a cumulative-since-inception volume figure, so valuation over it compares a point-in-time price to everything the company has ever done. It falls as the company ages and is not a multiple. Volume overlay or nothing. See the verdicts doc.',
 }
 
 

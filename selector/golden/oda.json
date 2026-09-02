@@ -135,6 +135,17 @@
     "type": "MIXED"
    },
    {
+    "basis": "At announcement",
+    "bound": "",
+    "company": "AG1 (Athletic Greens)",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 8.77,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 14.5,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "CONTEMPORANEOUS_PRESS",
     "bound": "",
     "company": "Gopuff",
@@ -188,17 +199,6 @@
     "reason": "both do Retail Delivery, Grocery Delivery; related type of business; same end market; same kind of customer",
     "score": 12.2,
     "type": "CONTROL"
-   },
-   {
-    "basis": "Disclosed at pricing",
-    "bound": "<=",
-    "company": "Gorillas",
-    "date": "Oct-21",
-    "in_medians": true,
-    "mult": 10.3,
-    "reason": "both do Own Inventory; related type of business; same kind of customer; sold the same way",
-    "score": 12.5,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -208,7 +208,6 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
     "NET_REVENUE": 3
    },
    "bounded": true,
@@ -224,17 +223,12 @@
    "listed_target_names": [],
    "low": 10.1,
    "mid": 23.5,
-   "n": 4,
+   "n": 3,
    "period_mix": {
-    "LTM": 3,
-    "RUN_RATE": 1
+    "LTM": 3
    },
    "period_span": {
     "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -243,7 +237,6 @@
    "positioning": [],
    "shared_words": [
     "delivery",
-    "fulfilment",
     "grocery",
     "home",
     "inventory",
@@ -251,7 +244,7 @@
     "retail"
    ],
    "spread": 4.4,
-   "tag_evidence": 2.0,
+   "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
   },

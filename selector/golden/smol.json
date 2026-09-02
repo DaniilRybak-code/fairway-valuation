@@ -103,6 +103,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "Exiting CY2025",
+    "bound": "",
+    "company": "WHOOP",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 9.18,
+    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+    "score": 15.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_FORECAST",
     "bound": "<=",
     "company": "SKIMS",
@@ -145,17 +156,6 @@
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
     "score": 28.0,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Glossier",
-    "date": "Jul-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 18.9,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -165,7 +165,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 3
    },
    "bounded": true,
@@ -179,11 +179,11 @@
    "listed_target_names": [],
    "low": 3.3,
    "mid": 8.8,
-   "n": 4,
+   "n": 5,
    "period_mix": {
     "LTM": 2,
     "NTM": 1,
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -212,7 +212,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 61,
+  "private_window_months": 58,
   "secondary": [
    {
     "company": "Hims & Hers Health, Inc.",

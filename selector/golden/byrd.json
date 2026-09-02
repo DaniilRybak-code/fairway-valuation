@@ -136,6 +136,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "FY2020",
+    "bound": "",
+    "company": "Packable",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 4.15,
+    "reason": "both do Ecommerce Fulfilment; same end market; same AI stance",
+    "score": 10.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_EXACT",
     "bound": "",
     "company": "Shiprocket",
@@ -189,28 +200,17 @@
     "reason": "shares the language of party, third; related type of business; same kind of customer; same cost structure",
     "score": 14.8,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Delhivery",
-    "date": "May-21",
-    "in_medians": true,
-    "mult": 5.97,
-    "reason": "both do Third-Party Logistics; same type of business; same business function; same revenue model",
-    "score": 14.7,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "anchor_dropped": false,
+   "anchor_dropped": true,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -223,11 +223,11 @@
    "high": 23.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.97,
+   "low": 8.94,
    "mid": 10.3,
-   "n": 4,
+   "n": 3,
    "period_mix": {
-    "LTM": 3,
+    "LTM": 2,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -252,12 +252,12 @@
     "shipping",
     "third"
    ],
-   "spread": 3.9,
+   "spread": 2.6,
    "tag_evidence": 1.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 63,
+  "private_window_months": 60,
   "secondary": [
    {
     "company": "Meituan",

@@ -153,6 +153,28 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "At announcement",
+    "bound": "",
+    "company": "AG1 (Athletic Greens)",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 8.77,
+    "reason": "shares the language of subscription; same type of business; same end market; same kind of customer",
+    "score": 21.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Exiting CY2025",
+    "bound": "",
+    "company": "WHOOP",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 9.18,
+    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+    "score": 15.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "CONTEMPORANEOUS_PRESS",
     "bound": "",
     "company": "AG1",
@@ -173,17 +195,6 @@
     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
     "score": 20.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Rent the Runway",
-    "date": "Mar-19",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
-    "score": 23.1,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -193,7 +204,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 3
    },
    "bounded": false,
@@ -202,15 +213,15 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 8.8,
+   "high": 9.18,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
    "mid": 4.6,
-   "n": 4,
+   "n": 5,
    "period_mix": {
     "LTM": 3,
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -227,12 +238,12 @@
    "shared_words": [
     "subscription"
    ],
-   "spread": 2.7,
+   "spread": 2.8,
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
   },
-  "private_window_months": 89,
+  "private_window_months": 65,
   "secondary": [
    {
     "company": "BARK, Inc.",

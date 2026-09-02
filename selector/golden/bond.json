@@ -113,6 +113,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "ARR",
+    "bound": "",
+    "company": "Pleo",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 47.0,
+    "reason": "shares the language of company; same type of business; same revenue model; sold the same way",
+    "score": 12.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Calendly",
@@ -131,11 +142,11 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 3,
     "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -144,11 +155,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 21.0,
-   "mid": 42.9,
-   "n": 3,
+   "mid": 47.0,
+   "n": 4,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -165,6 +176,7 @@
    "shared_words": [
     "ai",
     "assistant",
+    "company",
     "meeting"
    ],
    "spread": 3.4,

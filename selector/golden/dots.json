@@ -90,6 +90,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "Net revenue",
+    "bound": "",
+    "company": "Stripe",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 16.34,
+    "reason": "both do Tax; related type of business; same business function; same kind of customer",
+    "score": 18.5,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "Reported around round",
     "bound": "",
     "company": "Zepz",
@@ -101,36 +112,47 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_EXACT",
+    "basis": "UK entity revenue",
     "bound": "",
-    "company": "Pine Labs",
-    "date": "May-21",
+    "company": "Checkout.com",
+    "date": "Dec-23",
     "in_medians": true,
-    "mult": 30.3,
-    "reason": "shares the language of payments; related type of business; same business function; same AI stance",
-    "score": 7.1,
+    "mult": 44.34,
+    "reason": "both do Payouts; related type of business; same business function; same revenue model",
+    "score": 12.3,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_EXACT",
+    "basis": "Annual revenue",
     "bound": "",
-    "company": "dLocal",
-    "date": "Apr-21",
+    "company": "MoonPay",
+    "date": "Nov-21",
     "in_medians": true,
-    "mult": 48.0,
-    "reason": "shares the language of payments, payouts; same type of business; same business function; same AI stance",
-    "score": 12.2,
+    "mult": 22.67,
+    "reason": "shares the language of payments; related type of business; same business function; same revenue model",
+    "score": 12.1,
     "type": "PRIMARY"
    },
    {
-    "basis": "CONTEMPORANEOUS_PRESS_THRESHOLD",
-    "bound": "<=",
-    "company": "Marqeta",
-    "date": "May-20",
+    "basis": "FY2020",
+    "bound": "",
+    "company": "Rapyd",
+    "date": "Aug-21",
     "in_medians": false,
-    "mult": 14.3,
-    "reason": "shares the language of payments; related type of business; same business function; same AI stance",
-    "score": 9.6,
+    "mult": null,
+    "reason": "both do Payouts; related type of business; same business function; same revenue model",
+    "score": 13.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annual revenue",
+    "bound": "",
+    "company": "Mollie",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": 54.17,
+    "reason": "both do Payouts; related type of business; same business function; same revenue model",
+    "score": 16.7,
     "type": "PRIMARY"
    }
   ],
@@ -142,22 +164,22 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 48.0,
+   "high": 16.34,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.0,
-   "mid": 30.3,
-   "n": 3,
+   "mid": 16.34,
+   "n": 2,
    "period_mix": {
-    "LTM": 2,
+    "LTM": 1,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -173,16 +195,18 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "api",
     "multi",
     "payments",
-    "payouts"
+    "payouts",
+    "tax"
    ],
-   "spread": 6.0,
+   "spread": 2.0,
    "tag_evidence": 1.3,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
-  "private_window_months": 75,
+  "private_window_months": 62,
   "secondary": [
    {
     "company": "The Western Union Company",

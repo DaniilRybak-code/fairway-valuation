@@ -105,6 +105,17 @@
     "type": "CONTROL"
    },
    {
+    "basis": "ARR (> threshold)",
+    "bound": "<=",
+    "company": "Plaid",
+    "date": "Apr-25",
+    "in_medians": true,
+    "mult": 12.2,
+    "reason": "related type of business; same end market",
+    "score": 6.0,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
     "company": "Apollo.io",
@@ -134,10 +145,10 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "NET_REVENUE": 2
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "THIN_OVERLAP",
    "control_n": 1,
    "control_names": [
@@ -152,11 +163,11 @@
    ],
    "low": 4.3,
    "mid": 33.3,
-   "n": 3,
+   "n": 4,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -179,6 +190,13 @@
      "reason": "shares the language of ai; same type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Plaid",
+     "mult": 12.2,
+     "reason": "related type of business; same end market",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Jasper",

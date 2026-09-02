@@ -126,14 +126,14 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Databricks",
-    "date": "Sep-23",
-    "in_medians": false,
-    "mult": 28.7,
-    "reason": "both do Vector Search; related type of business; same revenue model",
-    "score": 11.9,
+    "basis": "Mid-2025 annualized run-rate",
+    "bound": "",
+    "company": "Supabase",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 72.86,
+    "reason": "both do Postgres, Backend as a Service, Edge Functions; same type of business; same business function; same kind of customer",
+    "score": 30.7,
     "type": "PRIMARY"
    },
    {
@@ -211,22 +211,22 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 3
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 33.0,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 72.86,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
    "mid": 22.5,
-   "n": 4,
+   "n": 5,
    "period_mix": {
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "RUN_RATE": {
@@ -234,17 +234,62 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Oxylabs",
+     "mult": 10.3,
+     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "both do AI Coding Agent; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Algolia",
+     "mult": 22.5,
+     "reason": "both do Vector Search; related type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Lovable",
+     "mult": 33.0,
+     "reason": "shares the language of ai, coding; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Supabase",
+     "mult": 72.86,
+     "reason": "both do Postgres, Backend as a Service, Edge Functions; same type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
+    "a",
     "agent",
     "ai",
+    "as",
+    "backend",
     "coding",
+    "database",
+    "edge",
+    "functions",
+    "postgres",
     "search",
+    "service",
+    "storage",
     "vector"
    ],
-   "spread": 3.2,
-   "tag_evidence": 3.8,
+   "spread": 7.1,
+   "tag_evidence": 11.2,
    "thin": false,
    "triangulated": false
   },

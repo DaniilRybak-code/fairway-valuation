@@ -143,6 +143,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "Estimated CY2024 at closing",
+    "bound": "",
+    "company": "Olive & June",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 2.61,
+    "reason": "both do Nail Care, Beauty, At-Home Manicure; same type of business; same end market; same kind of customer",
+    "score": 21.9,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
     "company": "Vuori",
@@ -185,27 +196,16 @@
     "reason": "shares the language of brand; same type of business; same end market; same business function",
     "score": 25.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Away",
-    "date": "May-19",
-    "in_medians": true,
-    "mult": 9.3,
-    "reason": "shares the language of brand; same type of business; same end market; same business function",
-    "score": 26.1,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "DIRECT",
   "private_range": {
-   "anchor_dropped": false,
+   "anchor_dropped": true,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 4
+    "NET_REVENUE": 3
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -217,10 +217,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.6,
-   "mid": 9.3,
-   "n": 4,
+   "mid": 5.0,
+   "n": 3,
    "period_mix": {
-    "LTM": 3,
+    "LTM": 2,
     "NTM": 1
    },
    "period_span": {
@@ -245,7 +245,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 87,
+  "private_window_months": 66,
   "secondary": [
    {
     "company": "YETI Holdings, Inc.",

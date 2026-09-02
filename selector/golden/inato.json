@@ -176,6 +176,17 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "FY2021",
+    "bound": "",
+    "company": "Incredible Health",
+    "date": "Aug-22",
+    "in_medians": true,
+    "mult": 66.0,
+    "reason": "shares the language of marketplace; related type of business; same end market; sold the same way",
+    "score": 11.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "Disclosed at pricing; FY2021 closed",
     "bound": "<=",
     "company": "Loadsmart",
@@ -184,17 +195,6 @@
     "mult": 5.2,
     "reason": "shares the language of marketplace; same type of business; same revenue model; sold the same way",
     "score": 14.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "GMV_ONLY",
-    "bound": "",
-    "company": "Back Market",
-    "date": "Jan-22",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 17.6,
     "type": "PRIMARY"
    }
   ],
@@ -238,7 +238,7 @@
    "thin": true,
    "triangulated": true
   },
-  "private_window_months": 55,
+  "private_window_months": 54,
   "secondary": [
    {
     "company": "1stdibs.Com, Inc.",

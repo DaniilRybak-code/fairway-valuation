@@ -125,6 +125,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "Mid-2025 annualized run-rate",
+    "bound": "",
+    "company": "Supabase",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 72.86,
+    "reason": "both do Open Source; related type of business; same business function; same kind of customer",
+    "score": 15.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Replit",
@@ -156,17 +167,6 @@
     "reason": "shares the language of model; same type of business; same business function; same kind of customer",
     "score": 16.8,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Turing",
-    "date": "Mar-25",
-    "in_medians": true,
-    "mult": 13.2,
-    "reason": "shares the language of model; same type of business; same business function; same AI stance",
-    "score": 11.8,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -176,20 +176,20 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 2
+    "ARR": 1,
+    "ARR_RUNRATE": 3
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 33.0,
+   "high": 72.86,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 13.2,
-   "mid": 20.0,
+   "low": 19.8,
+   "mid": 33.0,
    "n": 4,
    "period_mix": {
     "RUN_RATE": 4
@@ -205,10 +205,11 @@
    "shared_words": [
     "app",
     "developer",
-    "model"
+    "open",
+    "source"
    ],
-   "spread": 2.5,
-   "tag_evidence": 0.4,
+   "spread": 3.7,
+   "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
   },

@@ -104,15 +104,27 @@
     "reason": "both do Channel Manager; same type of business; same end market; same kind of customer",
     "score": 19.6,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "Annualized revenue",
+    "bound": "",
+    "company": "Brex",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 39.42,
+    "reason": "shares the language of booking; related type of business; same kind of customer; sold the same way",
+    "score": 10.4,
+    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "DIRECT",
+  "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -120,18 +132,23 @@
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 12.5,
+   "display": "RANGE",
+   "high": 39.42,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 12.5,
-   "mid": 12.5,
-   "n": 1,
+   "mid": 39.42,
+   "n": 2,
    "period_mix": {
-    "LTM": 1
+    "LTM": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -145,13 +162,12 @@
     "manager",
     "payments"
    ],
-   "sole": "Mews",
-   "spread": 1.0,
+   "spread": 3.2,
    "tag_evidence": 5.0,
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 28,
+  "private_window_months": 55,
   "secondary": [
    {
     "company": "EverCommerce Inc.",

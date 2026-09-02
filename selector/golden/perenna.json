@@ -84,6 +84,28 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "FY2024 revenue",
+    "bound": "",
+    "company": "Monzo",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 4.73,
+    "reason": "shares the language of uk; related type of business; same business function; same kind of customer",
+    "score": 14.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY ended 2023-03-31",
+    "bound": "",
+    "company": "Atom Bank",
+    "date": "Nov-23",
+    "in_medians": true,
+    "mult": 4.76,
+    "reason": "shares the language of bank, uk; related type of business; same business function; same kind of customer",
+    "score": 14.9,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Zopa",

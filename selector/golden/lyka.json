@@ -73,6 +73,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "At announcement",
+    "bound": "",
+    "company": "AG1 (Athletic Greens)",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 8.77,
+    "reason": "both do Nutrition; same type of business; same end market; same kind of customer",
+    "score": 22.4,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Quince",
@@ -84,6 +95,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "Exiting CY2025",
+    "bound": "",
+    "company": "WHOOP",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 9.18,
+    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+    "score": 15.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_FORECAST",
     "bound": "<=",
     "company": "SKIMS",
@@ -92,28 +114,6 @@
     "mult": 5.0,
     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
     "score": 18.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Vuori",
-    "date": "Nov-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-    "score": 18.7,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "CONTEMPORANEOUS_PRESS",
-    "bound": "",
-    "company": "AG1",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 8.8,
-    "reason": "shares the language of direct, subscription; same type of business; same business function; same kind of customer",
-    "score": 27.8,
     "type": "PRIMARY"
    }
   ],

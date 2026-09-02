@@ -156,6 +156,17 @@
     "reason": "shares the language of analysis, product; same type of business; same kind of customer; sold the same way",
     "score": 13.4,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "October 2014 run-rate",
+    "bound": "",
+    "company": "Buffer",
+    "date": "Oct-14",
+    "in_medians": true,
+    "mult": 12.8,
+    "reason": "shares the language of social; same type of business; same business function; same AI stance",
+    "score": 10.8,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -165,7 +176,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 3,
     "NET_REVENUE": 2
    },
    "bounded": true,
@@ -182,12 +193,12 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 28.0,
-   "n": 4,
+   "mid": 14.0,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -210,6 +221,13 @@
      "reason": "shares the language of analysis; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Buffer",
+     "mult": 12.8,
+     "reason": "shares the language of social; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Yotpo",
@@ -236,14 +254,15 @@
    "positioning": [],
    "shared_words": [
     "analysis",
-    "product"
+    "product",
+    "social"
    ],
    "spread": 7.6,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 65,
+  "private_window_months": 142,
   "secondary": [
    {
     "company": "Riskified Ltd.",

@@ -91,10 +91,22 @@
    "triangulated": false
   },
   "listed_proximity": "DIRECT",
-  "private": [],
-  "private_proximity": "NONE",
+  "private": [
+   {
+    "basis": "CY2021 MtCO2e",
+    "bound": "",
+    "company": "Xpansiv",
+    "date": "Jul-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of energy, renewable; same type of business; same end market; sold the same way",
+    "score": 14.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
   "private_range": {},
-  "private_window_months": 24,
+  "private_window_months": 49,
   "secondary": [
    {
     "company": "Multi Commodity Exchange of India Limited",
