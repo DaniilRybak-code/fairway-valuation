@@ -389,7 +389,7 @@ recorded here, at which point my transcription can be diffed against it and any 
   order in the sheet, not a column), `url_confidence`, `transcription_note`, and `sheet_row`.
 - WHAT PRICES: 32 of 51 give a multiple straight away; 11 more need FX first (five Indian rows
   USD-against-INR, five Octopus rows USD-against-GBP, Voodoo EUR-against-USD); **8 have no
-  denominator at all**. Only **18 survive a strict gate** — denominator present, currencies
+  denominator at all**. Only **21 survive a strict gate** — denominator present, currencies
   already agree, not a floor, not forward, not a part-year figure.
 - SIX THINGS RECORDED, none of them guesses:
   1. **Two rows are the same round twice.** Alan EUR 183m at EUR 2,700m post is rows 27 and 50,
@@ -418,3 +418,32 @@ recorded here, at which point my transcription can be diffed against it and any 
   (Ninjacart), a personal blog (Vegrow), a French filings aggregator (Doctolib), a press index
   (Restore), and a **staging subdomain** for Dream Sports. Two more are paywalled (The
   Information, both Epic Games rows).
+
+## 2026-09-02 — four private rows held a local-currency denominator under a USD column name
+
+Found while answering "are all the previous private rounds usable". `data/private-rounds.csv`
+has a column named `revenue_musd`. Four rows held a figure in BRL or EUR while the stored
+multiple had been computed off a USD figure that was never written into the row.
+
+| Row | Was | Now | Where the correct number already was |
+|---|---|---|---|
+| Creditas Dec-25 | 592.1 BRL | 445.4 USD | Daniil's sheet: "Q3 2025 annualized x4 to USD", 445.4 |
+| Creditas Jul-22 | 846.1 BRL | 304.0 USD | this row's OWN note: "US$4,800m / (~US$152m x 2)" |
+| Creditas Dec-20 | 78.8 BRL (a QUARTERLY figure) | 56.0 USD | Daniil's sheet: "Q3 2020 revenue annualized x4 from BRL 78.8", 56.0 |
+| Jobandtalent Dec-21 | 1,000.0 EUR | 1,130.0 USD | this row's OWN note: "CB Insights translated >EUR1.0bn as >US$1.13bn" |
+
+- **THE SAME CLASS OF ERROR AS THE DROPPED AA/AB COLUMNS.** In three of the four the correct USD
+  figure was sitting in Daniil's own sheet and we loaded the local-currency one beside it instead.
+  Nothing was derived by us; every replacement is quoted from a file already in the repo.
+- **The test is exact reconciliation**: post_money_musd / revenue_musd now equals the stored
+  multiple to the second decimal on all four. Across the whole file, rows where the two disagree
+  by more than 2%: **0 of 116**, from 4 before.
+- Jobandtalent was **in_medians = 1**, so it was live. Its multiple was right, but any renderer
+  showing `revenue_musd` would have printed EUR 1,000m labelled US$. The three Creditas rows are
+  in_medians = 0, so nothing moved in a median.
+- Jobandtalent now carries `fx_rate` 1.1300 and `fx_date` 2021-12-01. Daniil's sheet cites the
+  rate source itself, xrates.eu for 1 December 2021.
+- STILL OPEN: three Creditas rows carry `fx_ccy = BRL` with no rate and no date. The USD figures
+  are now correct and sourced, so no multiple depends on the missing rate, but the conversion is
+  not reproducible from the file.
+- Applied by `tools/fix_fx_denominators_2sep.py`. Golden suite unchanged, 0 of 43 moved.
