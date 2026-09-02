@@ -21,6 +21,8 @@ Check:    python3 tools/investor_check.py
 """
 import csv, io, re, os, sys, json
 from datetime import date
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import load_seed_screen
 
 OUT = 'data/investors.csv'
 
@@ -185,7 +187,7 @@ SECTOR_TO_CATEGORY = {
 
 COLS = ['investor_key', 'investor_name', 'house_type', 'layer', 'geographies', 'stage_bands',
         'first_cheque_low_m', 'first_cheque_high_m', 'cheque_currency',
-        'round_size_low_m', 'round_size_high_m', 'thesis_one_liner',
+        'round_size_low_m', 'round_size_high_m', 'thesis_one_liner', 'deal_evidences_sector',
         'screening_categories', 'subsectors', 'recent_deal_1_company', 'recent_deal_1_date',
         'recent_deal_1_source_url', 'recent_deal_2_company', 'recent_deal_2_date',
         'recent_deal_2_source_url', 'rounds_in_set', 'companies_in_set', 'companies_backed',
@@ -227,11 +229,45 @@ def build():
                               if len(h['aliases']) > 1 else '')),
         })
 
+    # ------------------------------------------------- the seed screen, Daniil's pull of 02-Sep
+    # 25 funds, 88 deal rows, 8 sectors, every one carrying a FUND-STATED cheque range and two
+    # dated sourced deals. Its own gate is stricter than ours, so where a fund appears both here
+    # and in the data-content.js list the screen wins.
+    screen = load_seed_screen.load()
+    for name, srow in screen.items():
+        k = key_of(name)
+        existing = next((r for r in rows if r['investor_key'] == k), None)
+        if existing:
+            # DO NOT LET THE SCREEN BLANK THE EVIDENCE. A house can be in both, and the two layers
+            # answer different questions: the screen says what the fund invests, our rounds say
+            # what it has actually backed in our set. The first merge overwrote rounds_in_set with
+            # 0 and wiped the companies list for Felix, Northzone and Notion Capital, which is the
+            # opposite of the point.
+            KEEP = ('rounds_in_set', 'companies_in_set', 'companies_backed', 'first_round',
+                    'median_round_size_m', 'median_postmoney_m', 'round_size_low_m',
+                    'round_size_high_m')
+            keep_prov = existing.get('provenance', '')
+            keep_vals = {c: existing.get(c) for c in KEEP}
+            keep_last = existing.get('last_round') or ''
+            existing.update({c: v for c, v in srow.items() if c != 'layer'})
+            existing.update({c: v for c, v in keep_vals.items() if v not in (None, '', 0, '0')})
+            existing['last_round'] = max(filter(None, [keep_last, srow.get('last_round') or '']),
+                                         default='')
+            existing['layer'] = ('CALLABLE|EVIDENCE' if 'EVIDENCE' in existing['layer']
+                                 else 'CALLABLE')
+            existing['provenance'] = srow['provenance'] + ' || also: ' + keep_prov
+        else:
+            srow['investor_key'] = k
+            rows.append(srow)
+    print('%d funds loaded from the seed screen.' % len(screen))
+
     for k, f in callable_seed().items():
         note = sorted(f['notes'], key=len, reverse=True)[0]
         lo, hi, ccy = parse_cheque(' '.join(f['notes']))
         cats = sorted({c for s in set(f['sectors']) for c in SECTOR_TO_CATEGORY.get(s, '').split('; ') if c})
         existing = next((r for r in rows if r['investor_key'] == k), None)
+        if existing and existing.get('provenance', '').startswith('SEED SCREEN'):
+            continue                       # the screen's fund-stated range beats a curated note
         if existing:                       # a house that is BOTH a curated fund and in our rounds
             existing['layer'] = 'CALLABLE|EVIDENCE'
             existing['thesis_one_liner'] = note

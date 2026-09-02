@@ -9,56 +9,39 @@ resort and must be labelled.
 
 ---
 
-## 1. Seed-stage investors, the one part our own database cannot supply
+## 1. Seed investors — LANDED, with three small things left
 
-**What changed on 2 September, and it changes this ask.** Daniil asked why we were curating 19
-UK funds by hand when we own a deal database. Right question. Of the 349 houses generated from
-our own rounds, **80 have a deal inside 12 months and every one already carries that deal with
-its date and source URL.** They are now promoted into the callable list: **73 render today**,
-where yesterday the answer was zero. Nothing was pulled to get them.
+Daniil's Active Seed & Series A Investor Screen arrived on 2 September: **88 deal rows, 25 funds,
+8 sectors**, written to `data/raw/2026-09-02_seed-investor-screen.csv` with all ten of its source
+columns. Its own gate is stricter than ours and is quoted in the file.
 
-What our data cannot do is the seed end, and that is a fact about the database rather than a
-choice. It is built from priced rounds with a disclosed revenue figure, and small rounds do not
-disclose revenue, so they never entered it. The median round a house in our file joins is
-**$267m**; the tenth percentile is **$100m**; exactly **three houses of 349** appear in any round
-below $25m, and none of the three is currently active.
+**The callable list now renders 97 houses and for the first time it has a seed end:** 8 pre-seed
+and seed, 12 seed and Series A, 3 Series A, alongside 47 growth and crossover and 26 at Series B
+and C. Every fork we serve now has someone a founder can call.
 
-So the callable list now stands at 47 growth and crossover houses, 26 at Series B and C, 2 at
-Series A and B, and **nothing at all at seed** — which is where most of our founders are. That
-is the gap, and it is the only part of this that needs a pull. The 19 UK funds were a hand-typed
-starting point, not a target; the target is 60 to 80 across the forks we actually serve.
+Three small things remain, none of them a new pull of any size.
 
-> I need a list of **active seed and Series A investors**, organised by sector. For each investor
-> give me: the fund name, the country or region it invests in, its stated first-cheque or initial
-> investment range with the currency, a one-line description of what it invests in, and then the
-> TWO most recent investments it has announced with the portfolio company name, the month and
-> year, and the URL of the announcement.
->
-> Sectors, and I want 8 to 12 funds in each: B2B software and AI tooling; payments and fintech
-> infrastructure; digital banking and lending; marketplaces; consumer brands and D2C; delivery,
-> logistics and supply chain; healthcare and digital health; insurance.
->
-> Geography: weight it to the UK and Europe, since that is where our founders are, but include
-> US funds that invest into Europe at seed, and say which is which.
->
-> Rules. Only announcements dated within the last 12 months count towards the two recent deals;
-> if a fund has none, leave it out rather than reaching further back, because an inactive fund on
-> the list is worse than a short list. The cheque range must come from a page that states it, not
-> from an average of deal sizes. Prefer the fund's own website or the portfolio company's own
-> announcement over a news aggregator. Do not use pages behind a login.
->
-> Return one row per deal: fund | region | cheque low | cheque high | currency | thesis | company
-> | month-year | source URL.
->
-> Separately, for these four funds we already hold, find the stated first-cheque range and the
-> page that states it: Future Planet Capital, Maven Capital Partners, Mercia Ventures, Octopus
-> Ventures. And for all 19 in `docs/investor-pull-list-2sep.tsv`, the two recent deals as above.
+**a. Fourteen of the original curated funds still have no dated deal** and are therefore still
+refused: Ada Ventures, Backed VC, Concept Ventures, Founders Factory, Fuel Ventures, Future
+Planet Capital, LocalGlobe / Latitude, MMC Ventures, Maven Capital Partners, Mercia Ventures,
+Octopus Ventures, Passion Capital, SFC Capital, SyndicateRoom. Five of the original nineteen were
+superseded by the screen. If any of the fourteen matter, they need the same two columns the
+screen has; if they do not, say so and I will drop them, since an unrenderable row is clutter.
 
-**One more thing this exposed, small and worth doing in the same pass.** We hold no country field
-anywhere: not on the rounds, not on the company tags, not on the investors. Geography is one of
-the three facets the matching is meant to use and it is missing entirely, so all 73 promoted
-houses render in the broader-fit tier rather than matched to a founder's country. Closing it also
-unblocks the region question already queued for the quiz.
+**b. Project A is in the screen but its latest deal is June 2025, fifteen months old.** The
+screen's own window runs from January 2023 so it passes there, but it fails our twelve-month
+activity rule and does not render. Two recent deals would bring it in.
+
+**c. Fifteen of the eighty-eight URLs are marked low confidence** because they are long and small
+in a photograph of a screen, and fifteen deal links point at an index page rather than the
+announcement (Pale Blue Dot, Nina Capital, Heal Capital, FoodLabs, Project A, and single rows for
+Skalar and Cordant). Both lists are in the raw file. A pasted text version of column J alone
+would settle the first; the second needs the deal page rather than the blog index.
+
+**The geography gap is still open and it is the bigger one.** We hold no country field anywhere:
+not on the rounds, not on the company tags, not on our own investor files. The screen fixes this
+for its own 25 funds, which now carry a real Region. The other 75 promoted houses still render in
+the broader-fit tier because we cannot match them to a founder's country.
 
 > For each investor in the attached list, state the countries or regions it invests in, with the
 > page that says so. Where a fund says "global" or "sector agnostic", say that rather than

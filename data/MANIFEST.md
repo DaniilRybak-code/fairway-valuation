@@ -313,3 +313,28 @@ recorded here, at which point my transcription can be diffed against it and any 
   company tags, not on the investor files. Geography is one of the three matching facets and it is
   missing entirely, so every promoted house renders in the broader-fit tier. Added to the pull; it
   also unblocks the region quiz question already queued.
+
+## 2026-09-02 — Daniil's Active Seed & Series A Investor Screen
+
+- `data/raw/2026-09-02_seed-investor-screen.csv` — **88 deal rows, 25 funds, 8 sectors**,
+  transcribed from three photographs (`..._seed-investor-screen-p01..p03`). ALL TEN SOURCE
+  COLUMNS are carried, per durability rule 11 adopted this morning.
+- The screen's own gate, quoted from its Read Me, is stricter than ours: "Funds lacking a
+  bounded, fund-stated initial-cheque range or two eligible announcements were excluded." A
+  fund-STATED cheque range is exactly what our promoted growth houses cannot supply, so where a
+  fund appears both here and in the data-content.js list, the screen wins.
+- Loaded by `tools/load_seed_screen.py`. **Callable list goes 73 to 100 renderable houses**, and
+  for the first time it has a seed end: 8 pre-seed/seed, 12 seed/Series A, 3 Series A.
+- THREE THINGS RECORDED ABOUT THE STRUCTURE, none of them faults:
+  1. The two deals are per FUND, not per sector — the Read Me says so. Seedcamp appears in six
+     sectors carrying Embedd and EverSettled in all six. A deal proves the fund is ACTIVE; it does
+     not prove the sector claim beside it. `deal_evidences_sector` is 0 on every screen row and
+     the renderer must not say "recently backed a company like yours".
+  2. 15 of 88 deal links point at an INDEX page rather than the announcement: Pale Blue Dot,
+     Nina Capital, Heal Capital, FoodLabs, Project A, plus single rows for Skalar and Cordant.
+     Usable, weaker than the rest, flagged `source_is_index`.
+  3. Cheque size spans a hundredfold in one list: Playfair and FoodLabs from 100k, Eos from 7m,
+     Dawn from 10m. Stage bands are derived from the LOW end, because the low end is what tells a
+     founder whether the first cheque could be theirs.
+- 15 of 88 URLs are marked `url_confidence = LOW`: they are long and small in a photograph of a
+  screen. They need a check before they render to a founder.
