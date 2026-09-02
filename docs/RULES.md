@@ -205,6 +205,41 @@ ends the session written into code or into a file, and the handover names which.
 **D10. Nobody runs any git command on Daniil's machine through the bridge, including read-only
 ones.** Files and patches in; commands for him to run.
 
+**D11. A transcription schema must carry every column the source has.**
+*Added 2 Sep*, after source URL columns AA and AB were dropped twice from the same sheet. D1 to D10
+all assume that what arrives is either written down or visibly missing. A column that was never in
+the target schema is neither: the data has nowhere to land and nothing counts its absence. Before
+transcribing, list the source's columns and give every one a field, even the ones that look empty
+or useless today.
+
+**D12. EVERY SUPPLIED ROW IS ACCOUNTED FOR BY NAME. Silence is never an outcome.**
+*Added 2 Sep*, after a loader deduplicated on COMPANY rather than on company AND round and silently
+skipped six of Daniil's rounds, for companies we already held.
+
+Three parts, and all three are mandatory:
+
+1. **Match on the row, never on the entity.** A load that decides "we already have this company"
+   is broken by construction. The comparison key is company plus year and month, always. The same
+   applies to funds, tickers and investors: match the ROW, not the name.
+2. **`python3 tools/check_raw_coverage.py` must PASS before any commit that touches a data file.**
+   It reads every supplied file, matches every row against the loaded files, and exits 1 with the
+   company and date of anything unaccounted for. It is deliberately dumb because the bug it exists
+   to catch was clever.
+3. **A row that is not loaded is EXCLUDED IN WRITING or it is a failure.** Add it to `EXCLUSIONS`
+   in that tool with a reason a stranger could audit. Never make the check pass by editing a raw
+   file: raw files are the record of what Daniil sent and are append-only.
+
+The rule generalises past loading. Any operation that reduces a supplied set, a dedup, a filter, a
+join, a merge, a promotion pass, must report the count in and the count out, and name what fell
+between them. **If it cannot name what it dropped, it is not allowed to drop it.**
+
+**D13. Commit with `git add -A`, never with a hand-written file list.**
+*Added 2 Sep*, after a commit block was skipped and `tools/load_daniil_sheet_2sep.py` and
+`docs/sector-screen-fix-prompt-2sep.md` never reached the repo, even though the data they produced
+did. A hand-written `git add` list is a second place for work to be silently lost: it fails when a
+file is forgotten, and it fails again when a whole block is skipped. Every commit instruction handed
+to Daniil is `git add -A`, and every handover names the SHA that the state was verified against.
+
 ---
 
 ## E. The product and what it may claim

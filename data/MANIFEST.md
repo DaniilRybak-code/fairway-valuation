@@ -538,3 +538,48 @@ probably in a different unit.
 disagreements between post over revenue and the stored multiple: 0. Median rows missing a multiple
 or a URL: 0. Golden suite 0 of 43 moved, because the fixtures still do not cover fintech, banking
 or payments.
+
+## 2026-09-02 (night) — three rulings, three new rules, one check that makes silence impossible
+
+**RULE D12, THE ROW-ACCOUNTING CHECK.** `tools/check_raw_coverage.py`. Every row Daniil supplies is
+now accounted for BY NAME: loaded, or listed in that tool's EXCLUSIONS with a reason a stranger
+could audit. It matches on company PLUS year-month, never on company alone, because company-alone
+matching is the exact bug it was written to catch. It must pass before any commit that touches a
+data file. Current state: **supplied 191, loaded 189, excluded with a written reason 2,
+UNACCOUNTED 0.** The rule generalises: any operation that reduces a supplied set, a dedup, filter,
+join, merge or promotion pass, must report count in, count out, and name what fell between. If it
+cannot name what it dropped, it is not allowed to drop it.
+
+**RULE D11** (schema carries every source column) and **RULE D13** (commit with `git add -A`, never
+a hand-written file list) written into `docs/RULES.md` alongside it. D13 exists because a commit
+block was skipped and `tools/load_daniil_sheet_2sep.py` and `docs/sector-screen-fix-prompt-2sep.md`
+never reached the repo even though the data they produced did.
+
+**CANVA Apr-24, PRICED ON DANIIL'S RULING** to use the number the company itself published. Canva
+said "more than US$2.2 billion in annualised revenue" on 24-May-2024. 26,000 / 2,200 = **11.8x**,
+carried as a CEILING because "more than" makes the denominator a floor, with the six-week gap
+between the April close and the May publication recorded in `denominator_basis`. The earlier
+withdrawal stands corrected: the objection was to the phantom 2,300, which is the AUD translation
+A$3.3bn from the same sentence, not to Canva's own US$2.2bn.
+
+**TWO MORE OVER-CAUTIOUS HOLDS REVERSED.** Plaid Apr-25 (12.2x) and Alan Sep-24 (8.2x) were held out
+of the medians only because their denominators are thresholds. A ceiling is usable and the `bound`
+field already says so. Same error as the neobank holds.
+
+**THE LENDER RULE IS BEING RECONSIDERED**, on Daniil's ruling that public banks trade on book with
+an EBITDA cross-check while private neobanks are priced off ARR. Spec at
+`docs/lender-fork-revision-2sep.md`. The evidence is stark: we hold **ONE** private book multiple
+(Zopa 5.6x) against **16 median-eligible revenue or ARR multiples** in the finance archetypes. The
+lending fork has therefore been pricing founders off a single comparable, which breaks our own rule
+that we never price off one comp, and the reason was scarcity rather than judgement: until today
+the neobank rows were not loaded. Digital Bank & Deposits now holds **11 rounds, median 15.0x,
+range 4.7x to 51.9x**, and the spread is the rate cycle, 2021 vintage at 26x to 52x against 2023-25
+at 4.7x to 20.5x, so the range must split by vintage rather than average across it.
+
+**YESTERDAY'S RECONCILIATION VERDICTS ALL STILL HOLD.** The 19 disagreements were decided on one
+principle, that a multiple uses the revenue investors had AT PRICING and never a later actual.
+Nothing ruled since touches that principle. Ours stood in 16, Daniil's in 1 (Replit, 150), neither
+in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
+
+**State: 184 rows, 114 median-eligible.** Arithmetic disagreements 0, median rows missing a source
+0, golden suite 0 of 43 moved.

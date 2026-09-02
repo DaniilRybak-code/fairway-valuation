@@ -145,6 +145,17 @@
     "reason": "shares the language of analysis; same type of business; same business function",
     "score": 9.1,
     "type": "CONTROL"
+   },
+   {
+    "basis": "ARR / annual revenue",
+    "bound": "",
+    "company": "Contentsquare",
+    "date": "Jul-22",
+    "in_medians": true,
+    "mult": 28.0,
+    "reason": "shares the language of analysis, product; same type of business; same kind of customer; sold the same way",
+    "score": 13.4,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -154,11 +165,11 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "NET_REVENUE": 2
    },
    "bounded": true,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Semrush"
@@ -171,12 +182,12 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 14.0,
-   "n": 3,
+   "mid": 28.0,
+   "n": 4,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -208,6 +219,13 @@
      "transaction_type": "PRIMARY"
     },
     {
+     "company": "Contentsquare",
+     "mult": 28.0,
+     "reason": "shares the language of analysis, product; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
      "company": "Klaviyo",
      "mult": 32.6,
      "reason": "same type of business; same end market; same business function; same AI stance",
@@ -217,12 +235,13 @@
    ],
    "positioning": [],
    "shared_words": [
-    "analysis"
+    "analysis",
+    "product"
    ],
    "spread": 7.6,
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.9,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "private_window_months": 65,
   "secondary": [

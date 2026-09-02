@@ -48,9 +48,10 @@ Of 51 rows:
   valuation against an INR or GBP denominator, plus Voodoo which is EUR against USD.
 - **8 have no denominator at all**, so no multiple can be formed from them.
 
-Of the 32, only **18 survive a strict gate** (denominator present, same currency, not a floor,
+Of the 32, only **21 survive a strict gate** (denominator present, same currency, not a floor,
 not a forward figure, not a part-year figure annualised by us). That is the honest count of what
-this sheet adds to the fixture set as it stands.
+this sheet adds to the fixture set as it stands. (An earlier draft said 18; that gate wrongly
+excluded Thirty Madison and The Zebra, whose denominators the SOURCE had already annualised.)
 
 ## The eight rows with no denominator
 
