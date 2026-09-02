@@ -38,19 +38,17 @@ a source URL. Two deals each turns the whole feature on. Full list with cheque r
 
 ---
 
-## 2. Source URLs for the 70 rounds your sheet has and ours does not
+## 2. Source URLs for the 70 rounds — CLOSED, 2 September
 
-**Why it blocks.** Your sheet holds 70 rounds we do not, 62 of them companies we have never
-carried, and they are exactly where our coverage is thinnest: payments, banking, crypto, lending,
-insurance. They cannot go in without a source per figure. **Your own sheet already has them in
-columns AA and AB** — this is a copy job, not a research job, and it is the cheapest large win
-available.
+**This was never a pull.** The URLs were already in the two screenshot batches Daniil sent on
+1 and 2 September, in columns AA and AB, and they were dropped twice at transcription because
+the target schema had no field for them. They are now in:
+`data/raw/2026-09-01_private-transactions-daniil.csv` carries `valuation_source_url` and
+`revenue_source_url` on **191 of 191 rows**.
 
-> No prompt needed. Send me columns A (company), C (transaction date), AA (valuation source) and
-> AB (revenue / metric source) for the whole sheet, in whatever form comes across. Two screenshots
-> at readable width would do it. Everything else I already have.
-
----
+Nothing is owed here. What remains is our own work: 70 rounds are now insertable with a source
+per figure, and the only thing standing between them and the file is tagging each company into
+our screening vocabulary.
 
 ## 3. The verticals a founder cannot be priced in at all
 

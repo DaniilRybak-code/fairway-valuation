@@ -278,3 +278,19 @@ recorded here, at which point my transcription can be diffed against it and any 
 - Also fixed today, in `selector/match_reference.py`: `_basis_mix` read `revenue_basis` on rows
   priced on BOOK. Harmless with one lender comp, wrong with two: it would have told a founder
   "these rounds were priced on different measures" when both were priced on book.
+
+## 2026-09-02 — the source columns that were dropped twice
+
+- `data/raw/2026-09-01_private-transactions-daniil.csv` now carries `valuation_source_url` and
+  `revenue_source_url` on **191 of 191 rows**, read off the two screenshot batches already in
+  `data/raw/`. Applied by `tools/add_sheet_source_urls_2sep.py`, which carries the post-mortem.
+- WHAT WENT WRONG, because it is a new failure mode. Daniil sent columns AA and AB twice, on
+  1 and 2 September. Both times the multiples in column Y were transcribed off those same images
+  and the two source columns beside them were not, because the transcription schema had no field
+  to put them in. He was then asked for them a third time. The screenshots were fine and the
+  reading was fine; there was nowhere for the data to land, and nothing flagged its absence.
+- Rules 1 to 10 of the durability protocol all assume that what arrives is either written down or
+  visibly missing. A column that was never in the schema is neither. Hence rule 11.
+- The immediate effect: 70 rounds that could not be inserted for want of a source per figure now
+  have one. The remaining work on them is ours, tagging each company into the screening
+  vocabulary, not Daniil's.
