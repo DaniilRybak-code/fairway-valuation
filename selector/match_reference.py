@@ -850,16 +850,28 @@ def _neg_date(d):
 # WHY THIS RULE AND NOT THE OLD ONE. Twelve companies carry more than one priced round. The old code
 # kept the highest business-nature score and broke ties on date. Two rounds of one company carry
 # identical tags, so the score ALWAYS tied and the date decided on its own, every time. Recency was
-# selecting a comparable, which our own rules prohibit. Eight priced rounds, including the two
-# highest multiples we hold, were unreachable by any founder.
+# deciding a comparable unconditionally, and eight priced rounds, including the two highest
+# multiples we hold, were unreachable by any founder.
 #
-# THE THRESHOLD IS SET WHERE THE DATA IS EMPTY, WHICH IS THE ONLY HONEST PLACE TO PUT ONE. Measured
-# across the companies that carry more than one round, the spread between a company's own multiples
-# is either under 1.5x (Mews 1.04, SKIMS 1.06, Vinted 1.15, AlphaSense 1.5, Scale AI 1.5) or over
-# 7x (Klarna 7.4, Meesho 11.0). Nothing sits between. Any threshold in that gap gives the same
-# answer today, so 3.0 is not a tuned parameter and must not be treated as one: if a future round
-# lands inside the gap, this constant needs a fresh look rather than a nudge.
-MULTI_ROUND_SPREAD = 3.0
+# THE THRESHOLD IS DANIIL'S, SET 1-SEP-2026, AND IT REPLACES THE 3.0x I CHOSE.
+# His words: "I would not hardcode 3x, I would say that if the lower multiple is more than 30% below
+# the higher multiple, then we need to apply size criteria."
+#
+# So the test is on the GAP, not on a ratio picked to sit in a gap in our own data. If the lower
+# multiple is more than 30 per cent below the higher one, the two rounds are not two readings of one
+# price and the date must not decide between them: the founder's own scale and maturity does.
+# Below that, the rounds agree closely enough that the later one is simply the more current
+# evidence, and we take it.
+#
+# lower < 0.70 x higher  is the same statement as  higher / lower > 1 / 0.70, which is 1.4286.
+#
+# WHAT THIS CHANGED when it went in. Under the old 3.0x the closeness rule fired on four companies
+# (Airwallex, Creditas, Klarna, Meesho). Under Daniil's rule it fires on eight, adding AlphaSense
+# (17.0 to 25.0), Scale AI (9.9 to 14.5), Zepz (6.3 to 14.8) and SHEIN (1.4 to 2.9). Every one of
+# those four is a genuine repricing where the older round is evidence about a smaller company, so
+# the change reaches the right answer in four more cases.
+MULTI_ROUND_GAP = 0.70                 # the lower multiple must be within 30% of the higher
+MULTI_ROUND_SPREAD = 1.0 / MULTI_ROUND_GAP
 
 
 def _round_pick_reason(rows, chosen, spread):

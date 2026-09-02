@@ -165,3 +165,10 @@ recorded here, at which point my transcription can be diffed against it and any 
 | File | Rows | What it is | Read by the engine |
 |---|---|---|---|
 | `../docs/cagr-needed-pull-list.tsv` | 192 | The listed names that hold a single forward year and no CAGR, so they cannot rank on growth under Daniil's 31-Aug ruling. 105 consumer, 75 fintech, 12 software. Pastable into Excel. Owner: Daniil, promised with the next full dataset refresh. Full note in `docs/cagr-todo-31aug.md`. | Not applicable, it is a request |
+
+## 01-Sep-2026, GMV and TPV combined sheet
+
+| File | Rows | What it is | Read by the engine |
+|---|---|---|---|
+| `raw/2026-09-01_gmv-tpv-combined.csv` | 101 | Company-reported GMV and TPV, latest annual, with the issuer's own metric name, fiscal period, local-currency value, period-average FX and the USD figure. Transcribed from screenshots because the source workbook lives in another sandbox and cannot be exported. **Every row verified by `tools/check_gmv_tpv_transcription.py`: usd = local x fx holds on 101 of 101.** | Not yet, raw |
+| `raw/2026-09-01_full-refresh-p01..p11.png` | 507 | The full listed refresh, as images. NOT transcribed. Held as the record of what was shown on 1-Sep pending a transfer route. | No |

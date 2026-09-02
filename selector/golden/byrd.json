@@ -151,7 +151,7 @@
     "bound": "",
     "company": "Xpressbees",
     "date": "Feb-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 8.94,
     "reason": "both do Third-Party Logistics, Cross-Border Shipping; same type of business; same business function; same revenue model",
     "score": 15.6,
@@ -195,7 +195,7 @@
     "bound": "",
     "company": "Delhivery",
     "date": "May-21",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 5.97,
     "reason": "both do Third-Party Logistics; same type of business; same business function; same revenue model",
     "score": 14.7,
@@ -210,10 +210,10 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 3
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Wolt"
@@ -223,11 +223,11 @@
    "high": 10.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 8.2,
-   "mid": 10.3,
-   "n": 2,
+   "low": 5.97,
+   "mid": 8.94,
+   "n": 4,
    "period_mix": {
-    "LTM": 1,
+    "LTM": 3,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -243,12 +243,18 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "border",
+    "cross",
     "fulfilment",
-    "network"
+    "logistics",
+    "network",
+    "party",
+    "shipping",
+    "third"
    ],
-   "spread": 1.3,
-   "tag_evidence": 0.6,
-   "thin": true,
+   "spread": 1.7,
+   "tag_evidence": 1.6,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 63,

@@ -1,0 +1,108 @@
+# COMBINED LATEST ANNUAL COMPANY-REPORTED GMV AND TPV METRICS.
+# Transcribed by Opus from Daniil's screenshots, 1-Sep-2026, in the same session they arrived.
+# The source workbook lives in another sandbox and cannot be exported, so a screenshot is the only
+# transfer available. EVERY ROW IS ARITHMETICALLY CHECKED: usd_musd must equal local_value x fx.
+# tools/check_gmv_tpv_transcription.py runs that check and any row that fails is quarantined,
+# not guessed at. sheet_row is kept so any row can be found again in the original.
+sheet_row,company_name,exchange_ticker,disclosure_status,reported_metric,fiscal_period,local_value,local_ccy,fx_usd_per_local,usd_musd
+27,BILL Holdings Inc.,NYSE:BILL,Reported,Total payment volume,FY2026 (year ended 2026-06-30),371300.0,USD,1.000000,371300.0
+71,Intuit Inc.,NASDAQGS:INTU,Reported - floor,Total online payment,FY2026 (year ended 2026-07-31),225000.0,USD,1.000000,225000.0
+79,Lightspeed Commerce Inc.,TSX:LSPD,Reported,Gross transaction,FY2026 (year ended 2026-03-31),98100.0,USD,1.000000,98100.0
+111,Q2 Holdings Inc.,NYSE:QTWO,Reported - floor,Commercial banking,CY2025 (year ended 2025-12-31),4000000.0,USD,1.000000,4000000.0
+120,Riskified Ltd.,NYSE:RSKD,Reported,Gross merchandise,FY2025 (year ended 2025-12-31),155102.0,USD,1.000000,155102.0
+129,ServiceTitan Inc.,NASDAQGS:TTAN,Reported,Gross transaction value,FY2026 (year ended 2026-01-31),82100.0,USD,1.000000,82100.0
+130,Shoper S.A.,WSE:SHO,Reported,Omnichannel GMV,CY2025 (year ended 2025-12-31),21000.0,PLN,0.266528,5597.1
+131,Shopify Inc.,NASDAQGS:SHOP,Reported,Gross merchandise,FY2025 (year ended 2025-12-31),378400.0,USD,1.000000,378400.0
+171,Wix.com Ltd.,NASDAQGS:WIX,Reported,Gross payment volume,FY2025 (year ended 2025-12-31),14300.0,USD,1.000000,14300.0
+179,MercadoLibre Inc.,NASDAQGS:MELI,Disclosed,Gross merchandise,"FY2025, year ended 2025-12-31",65037.0,USD,1.000000,65037.0
+180,Sea Limited,NYSE:SE,Disclosed,Gross merchandise,"FY2025, year ended 2025-12-31",127400.0,USD,1.000000,127400.0
+182,eBay Inc.,NASDAQGS:EBAY,Disclosed,GMV,"FY2025, year ended 2025-12-31",79609.0,USD,1.000000,79609.0
+183,"Etsy, Inc.",NYSE:ETSY,Disclosed,Gross merchandise,"FY2025, year ended 2025-12-31",11916.9,USD,1.000000,11916.9
+184,Allegro.eu S.A.,WSE:ALE,Disclosed,GMV,FY2025,69163.1,PLN,0.266528,18433.9
+185,Zalando SE,XTRA:ZAL,Disclosed,GMV,FY2025,17560.2,EUR,1.130000,19843.0
+186,ASOS Plc,LSE:ASC,Disclosed - issuer-defined,GMV (issuer-defined),"FY2025, 52 weeks ended 2025-08-31",2456.3,GBP,1.302000,3198.1
+187,Vipshop Holdings Limited,NYSE:VIPS,Disclosed,GMV,"FY2025, year ended 2025-12-31",213500.0,CNY,0.139197,29718.5
+189,1stdibs.Com Inc.,NASDAQGM:DIBS,Disclosed,GMV,"FY2025, year ended 2025-12-31",363.9,USD,1.000000,363.9
+190,DoorDash Inc.,NASDAQGS:DASH,Disclosed,Marketplace GOV,"FY2025, year ended 2025-12-31",102018.0,USD,1.000000,102018.0
+191,Uber Technologies Inc.,NYSE:UBER,Disclosed,Gross Bookings,"FY2025, year ended 2025-12-31",193454.0,USD,1.000000,193454.0
+192,Delivery Hero SE,XTRA:DHER,Disclosed,Group GMV,FY2025,49196.8,EUR,1.130000,55592.4
+195,Swiggy Limited,NSEI:SWIGGY,Disclosed,B2C Gross Order Value,FY2026 (year ended 2026-03-31),677340.0,INR,0.011316,7664.6
+196,Maplebear Inc.,NASDAQGS:CART,Disclosed,Gross Transaction,"FY2025, year ended 2025-12-31",37224.0,USD,1.000000,37224.0
+197,Booking Holdings Inc.,NASDAQGS:BKNG,Disclosed,Total gross bookings,"FY2025, year ended 2025-12-31",186107.0,USD,1.000000,186107.0
+198,Expedia Group Inc.,NASDAQGS:EXPE,Disclosed,Total gross bookings,"FY2025, year ended 2025-12-31",119590.0,USD,1.000000,119590.0
+199,Airbnb Inc.,NASDAQGS:ABNB,Disclosed,Gross Booking Value,"FY2025, year ended 2025-12-31",91273.0,USD,1.000000,91273.0
+200,Tripadvisor Inc.,NASDAQGS:TRIP,Disclosed - segment,Gross Booking Value,"FY2025, year ended 2025-12-31",4700.0,USD,1.000000,4700.0
+203,MakeMyTrip Limited,NASDAQGS:MMYT,Disclosed,Gross Bookings,FY2026 (year ended 2026-03-31),10390.8,USD,1.000000,10390.8
+209,ACV Auctions Inc.,NYSE:ACVA,Disclosed,Marketplace GMV,"FY2025, year ended 2025-12-31",10400.0,USD,1.000000,10400.0
+212,"OPENLANE, Inc.",NYSE:OPLN,Disclosed,Gross Merchandise,"FY2025, year ended 2025-12-31",28800.0,USD,1.000000,28800.0
+219,Upwork Inc.,NASDAQGS:UPWK,Disclosed,Gross Services Volume,"FY2025, year ended 2025-12-31",4028.4,USD,1.000000,4028.4
+220,Fiverr International Ltd.,NYSE:FVRR,Disclosed,Marketplace Gross,"FY2025, year ended 2025-12-31",1073.0,USD,1.000000,1073.0
+232,Roblox Corporation,NYSE:RBLX,Disclosed,Bookings (analogous),"FY2025, year ended 2025-12-31",6788.4,USD,1.000000,6788.4
+241,"The RealReal, Inc.",NASDAQGS:REAL,Disclosed,Gross Merchandise,FY2025 (year ended 2025-12-31),2130.0,USD,1.000000,2130.0
+247,"RB Global, Inc.",NYSE:RBA,Disclosed,Gross Transaction,FY ended 31-Dec-2025,16201.9,USD,1.000000,16201.9
+250,GigaCloud Technology Inc.,NASDAQGM:GCT,Disclosed,GigaCloud Marketplace,FY ended 31-Dec-2025,1576.8,USD,1.000000,1576.8
+251,Freightos Limited,NASDAQCM:CRGO,Disclosed,Gross Booking Value,FY ended 31-Dec-2025,1286.0,USD,1.000000,1286.0
+252,Auction Technology Group plc,LSE:ATG,Disclosed,Total Hammer Value,FY ended 30-Sep-2025,12100.0,USD,1.000000,12100.0
+256,Airtasker Limited,ASX:ART,Disclosed,Gross Marketplace,FY ended 30-Jun-2025,208.7,AUD,0.647800,135.2
+257,Freelancer Limited,ASX:FLN,Reported,Group gross,FY ended 31-Dec-2025,881.5,AUD,0.645000,568.6
+311,"PROG Holdings, Inc.",NYSE:PRG,Disclosed,Gross merchandise,FY ended 31-Dec-2025,2497.3,USD,1.000000,2497.3
+312,Sezzle Inc.,NASDAQ:SEZL,Disclosed,Gross Merchandise,FY ended 31-Dec-2025,3940.4,USD,1.000000,3940.4
+314,GigaCloud Technology Inc.,NASDAQ:GCT,Disclosed,GigaCloud Marketplace,FY ended 31-Dec-2025,1576.8,USD,1.000000,1576.8
+315,Freightos Limited,NASDAQ:CRGO,Disclosed,Gross Booking Value,FY ended 31-Dec-2025,1286.0,USD,1.000000,1286.0
+337,"U-NEXT HOLDINGS Co.,Ltd.",TSE:9418,Disclosed,Cashless service GMV,FY ended 31-Aug-2025,764800.0,JPY,0.006720,5139.5
+343,"Priority Technology Holdings, Inc.",NASDAQ:PRTH,Disclosed,Total card processing,FY ended 31-Dec-2025,72373.8,USD,1.000000,72373.8
+344,"Usio, Inc.",NASDAQ:USIO,Disclosed,Total dollars processed,FY ended 31-Dec-2025,8400.0,USD,1.000000,8400.0
+345,"Phreesia, Inc.",NYSE:PHR,Disclosed,Patient payment volume,FY ended 31-Jan-2026,4873.0,USD,1.000000,4873.0
+346,WEX Inc.,NYSE:WEX,Disclosed,Total volume,Twelve months ended 31-Dec-2025,147785.7,USD,1.000000,147785.7
+347,"Cass Information Systems, Inc.",NASDAQ:CASS,Disclosed,Transportation dollar,FY ended 31-Dec-2025,36447.5,USD,1.000000,36447.5
+348,Nayax Ltd.,NASDAQ:NYAX,Disclosed,Total transaction value,FY ended 31-Dec-2025,6449.0,USD,1.000000,6449.0
+350,"Digital Garage, Inc.",TSE:4819,Disclosed,Payment transaction,FY ended 31-Mar-2026,9100000.0,JPY,0.006634,60369.4
+351,"BASE,Inc.",TSE:4477,Disclosed,Group GMV,FY ended 31-Dec-2025,430459.0,JPY,0.006684,2877.2
+352,AvenuesAI Limited,NSEI:CCAVENUE,Disclosed,Payments TPV,FY ended 31-Mar-2026,5038000.0,INR,0.011316,57010.3
+354,Fawry for Banking Technology and Electronic,CASE:FWRY,Disclosed,Total throughput value,FY ended 31-Dec-2025,943632.7,EGP,0.020317,19171.3
+355,PayPoint plc,LSE:PAY,Disclosed,Card Services,FY ended 31-Mar-2026,6439.0,GBP,1.340200,8629.5
+356,Visa Inc.,NYSE:V,Reported,Payments volume,FY2025 (year ended 2025-09-30),14200000.0,USD,1.000000,14200000.0
+357,Mastercard Incorporated,NYSE:MA,Reported,Gross dollar volume,FY2025 (year ended 2025-12-31),10632000.0,USD,1.000000,10632000.0
+358,American Express Company,NYSE:AXP,Reported,Network volumes,FY2025 (year ended 2025-12-31),1897000.0,USD,1.000000,1897000.0
+359,"PayPal Holdings, Inc.",NASDAQ:PYPL,Reported,Total payment volume,FY2025 / YE 2025-12-31,1793979.0,USD,1.000000,1793979.0
+360,"Block, Inc.",NYSE:XYZ,Reported,Gross payment volume,FY2025 (year ended 2025-12-31),259631.0,USD,1.000000,259631.0
+362,"Fiserv, Inc.",NASDAQ:FISV,Segment-only,Annual global gross,FY2025 / YE 2025-12-31,4600000.0,USD,1.000000,4600000.0
+364,The Western Union Company,NYSE:WU,Reported,Consumer cross-border,FY2025 / YE 2025-12-31,107400.0,USD,1.000000,107400.0
+365,"Shift4 Payments, Inc.",NYSE:FOUR,Reported,Payment volume,FY2025 / YE 2025-12-31,209000.0,USD,1.000000,209000.0
+366,"Toast, Inc.",NYSE:TOST,Reported,Gross Payment Volume,FY2025 / YE 2025-12-31,195100.0,USD,1.000000,195100.0
+367,DLocal Limited,NASDAQ:DLO,Reported,Total payments volume,FY2025 / YE 2025-12-31,40816.4,USD,1.000000,40816.4
+368,Flywire Corporation,NASDAQ:FLYW,Reported,Total payment volume,FY2025 / YE 2025-12-31,37554.1,USD,1.000000,37554.1
+370,"Euronet Worldwide, Inc.",NASDAQ:EEFT,Segment-only,Money transfers,FY2025 / YE 2025-12-31,77600.0,USD,1.000000,77600.0
+371,"Corpay, Inc.",NYSE:CPAY,Segment-only,Corporate Payments,FY2025 / YE 2025-12-31,258452.0,USD,1.000000,258452.0
+372,Paysafe Limited,NYSE:PSFE,Reported,Total Payment Volume,FY2025 / YE 2025-12-31,167000.0,USD,1.000000,167000.0
+373,Payoneer Global Inc.,NASDAQ:PAYO,Reported,Volume,FY2025 / YE 2025-12-31,87503.0,USD,1.000000,87503.0
+374,"Remitly Global, Inc.",NASDAQ:RELY,Reported,Send volume,FY2025 / YE 2025-12-31,74912.0,USD,1.000000,74912.0
+375,"Affirm Holdings, Inc.",NASDAQ:AFRM,Reported,Gross merchandise,FY2026 (year ended 2026-06-30),50200.0,USD,1.000000,50200.0
+378,"Marqeta, Inc.",NASDAQ:MQ,Reported,Total processing,FY2025 / YE 2025-12-31,382513.0,USD,1.000000,382513.0
+381,"Coinbase Global, Inc.",NASDAQ:COIN,Analogue disclosed,Trading volume,FY2025 (year ended 2025-12-31),1221000.0,USD,1.000000,1221000.0
+383,Bullish,NYSE:BLSH,Analogue disclosed,Digital assets sold,FY2025 (year ended 2025-12-31),244415.0,USD,1.000000,244415.0
+384,Klarna Group plc,NYSE:KLAR,Reported,Gross merchandise,FY2025 (year ended 2025-12-31),127862.0,USD,1.000000,127862.0
+385,"Chime Financial, Inc.",NASDAQ:CHYM,Reported,Purchase Volume,FY2025 (year ended 2025-12-31),133680.0,USD,1.000000,133680.0
+401,Adyen N.V.,ENXTAM:ADYEN,Reported,Processed volume,FY2025 / YE 2025-12-31,1394300.0,EUR,1.130367,1576070.7
+402,Wise Group plc,LSE:WISE,Reported,Cross-border volume,FY2026 / YE 2026-03-31,243500.0,USD,1.000000,243500.0
+403,Nexi S.p.A.,BIT:NEXI,Segment-only,Merchant Solutions,FY2025 / YE 2025-12-31,869400.0,EUR,1.130367,982741.1
+404,"Boku, Inc.",AIM:BOKU,Reported,Total payment volume,FY2025 (year ended 2025-12-31),15700.0,USD,1.000000,15700.0
+405,CAB Payments Holdings plc,LSE:CABP,Reported,Total FX Volume,FY2025 / YE 2025-12-31,41900.0,GBP,1.318641,55251.1
+409,"MercadoLibre, Inc.",NASDAQ:MELI,Reported,Total payment volume,FY2025 / YE 2025-12-31,277823.0,USD,1.000000,277823.0
+410,Nu Holdings Ltd.,NYSE:NU,Reported,Purchase volume,FY2025 (year ended 2025-12-31),141800.0,USD,1.000000,141800.0
+411,StoneCo Ltd.,NASDAQ:STNE,Reported,Total Payment Volume,FY2025 / YE 2025-12-31,560900.0,BRL,0.179061,100435.3
+412,PagSeguro Digital Ltd.,NYSE:PAGS,Reported,Total Payment Volume,FY2025 / YE 2025-12-31,530500.0,BRL,0.179061,94991.9
+418,One97 Communications Limited,NSEI:PAYTM,Reported,Merchant Gross,FY2026 / YE 2026-03-31,23800000.0,INR,0.011326,269558.8
+419,One MobiKwik Systems Limited,NSEI:MOBIKWIK,Reported,Payments GMV,FY2026 / YE 2026-03-31,1821000.0,INR,0.011326,20624.6
+427,"GMO Payment Gateway, Inc.",TSE:3769,Reported,Annual transaction,FY2025 / YE 2025-09-30,21800000.0,JPY,0.006701,146081.8
+432,Tyro Payments Limited,ASX:TYR,Reported,Total transaction value,FY2026 / YE 2026-06-30,44253.0,AUD,0.678521,30026.6
+433,Zip Co Limited,ASX:ZIP,Reported,Total transaction,FY2026 (year ended 2026-06-30),16700.0,AUD,0.678521,11331.3
+434,EML Payments Limited,ASX:EML,Reported,Gross Debit Volume,FY2026 / YE 2026-06-30,23100.0,AUD,0.678521,15673.8
+460,Avarda Bank AB (publ),OM:AVARDA,Disclosed,Ecommerce Solutions,FY ended 31-Dec-2025,17017.0,SEK,0.101842,1733.1
+463,"Credit Saison Co., Ltd.",TSE:8253,Disclosed,Card shopping,FY ended 31-Mar-2026,6186076.0,JPY,0.006634,41038.4
+473,Humm Group Limited,ASX:HUM,Disclosed,Transaction volume,FY ended 30-Jun-2025,3911.9,AUD,0.647687,2533.7
+482,"Liquidity Services, Inc.",NASDAQ:LQDT,Disclosed,Gross merchandise,FY ended 30-Sep-2025,1570.9,USD,1.000000,1570.9
+500,Capital One Financial Corporation,NYSE:COF,Reported,Purchase volume,FY2025 (year ended 2025-12-31),828467.0,USD,1.000000,828467.0
+509,Synchrony Financial,NYSE:SYF,Reported,Purchase volume,FY2025 (year ended 2025-12-31),182300.0,USD,1.000000,182300.0
+510,"Bread Financial Holdings, Inc.",NYSE:BFH,Reported,Credit sales volume,FY2025 (year ended 2025-12-31),27777.0,USD,1.000000,27777.0
+513,"Upbound Group, Inc.",NASDAQ:UPBD,Segment metric,Acima gross,FY2025 (year ended 2025-12-31),2010.1,USD,1.000000,2010.1

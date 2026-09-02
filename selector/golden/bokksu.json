@@ -194,7 +194,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -207,9 +207,9 @@
    "listed_target_names": [],
    "low": 3.3,
    "mid": 4.6,
-   "n": 3,
+   "n": 4,
    "period_mix": {
-    "LTM": 2,
+    "LTM": 3,
     "RUN_RATE": 1
    },
    "period_span": {

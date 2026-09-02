@@ -92,7 +92,7 @@
     "bound": "",
     "company": "Xpressbees",
     "date": "Feb-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 8.94,
     "reason": "both do Parcel Delivery, Last Mile, Reverse Logistics; same type of business; same business function; same revenue model",
     "score": 19.9,
@@ -167,16 +167,16 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "anchor_dropped": true,
+   "anchor_dropped": false,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 1,
    "control_names": [
     "Wolt"
@@ -187,10 +187,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.2,
-   "mid": 10.3,
-   "n": 2,
+   "mid": 8.94,
+   "n": 3,
    "period_mix": {
-    "LTM": 1,
+    "LTM": 2,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -207,11 +207,16 @@
    "positioning": [],
    "shared_words": [
     "delivery",
-    "network"
+    "last",
+    "logistics",
+    "mile",
+    "network",
+    "parcel",
+    "reverse"
    ],
    "spread": 1.3,
-   "tag_evidence": 0.3,
-   "thin": true,
+   "tag_evidence": 5.9,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 61,

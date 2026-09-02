@@ -127,7 +127,7 @@
     "bound": "",
     "company": "Xpressbees",
     "date": "Feb-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 8.94,
     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
     "score": 19.6,
@@ -175,10 +175,10 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Wolt"
@@ -190,9 +190,9 @@
    "listed_target_names": [],
    "low": 8.2,
    "mid": 10.3,
-   "n": 3,
+   "n": 4,
    "period_mix": {
-    "LTM": 2,
+    "LTM": 3,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -209,11 +209,15 @@
    "positioning": [],
    "shared_words": [
     "delivery",
+    "last",
+    "mile",
     "network",
-    "own"
+    "own",
+    "parcel",
+    "shipping"
    ],
    "spread": 5.4,
-   "tag_evidence": 0.8,
+   "tag_evidence": 2.6,
    "thin": false,
    "triangulated": false
   },
