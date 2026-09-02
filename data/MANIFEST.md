@@ -172,3 +172,10 @@ recorded here, at which point my transcription can be diffed against it and any 
 |---|---|---|---|
 | `raw/2026-09-01_gmv-tpv-combined.csv` | 101 | Company-reported GMV and TPV, latest annual, with the issuer's own metric name, fiscal period, local-currency value, period-average FX and the USD figure. Transcribed from screenshots because the source workbook lives in another sandbox and cannot be exported. **Every row verified by `tools/check_gmv_tpv_transcription.py`: usd = local x fx holds on 101 of 101.** | Not yet, raw |
 | `raw/2026-09-01_full-refresh-p01..p11.png` | 507 | The full listed refresh, as images. NOT transcribed. Held as the record of what was shown on 1-Sep pending a transfer route. | No |
+
+## 01-Sep-2026, the full listed refresh
+
+| File | Rows | What it is | Read by the engine |
+|---|---|---|---|
+| `raw/2026-09-01_listed-full-refresh.csv` | 509 | The complete listed pull, recalculated by Daniil from fiscal-year figures and calendarised by hand, with the CY+1/+3 revenue CAGR and the FY+1 broker estimate count both new. Transcribed from screenshots because the source workbook is in another sandbox and cannot be exported. Checked by `tools/check_listed_refresh.py`: 1,993 arithmetic identity checks, 44 flagged, 43 of them explained by the sheet rounding gross profit or net income to a whole number, 1 genuine and flagged (U-NEXT AV/gross profit). | Not yet, raw |
+| `raw/2026-09-01_full-refresh-p01..p11.png` | - | The screenshots the above was read from, kept as the record. | No |
