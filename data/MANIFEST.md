@@ -374,3 +374,47 @@ recorded here, at which point my transcription can be diffed against it and any 
 - **88 of 132 URLs are `url_confidence = LOW` and 19 company names could not be read**, because
   these are photographs of a screen at an angle. That is a transcription limit, not a fault in
   the pull. A pasted text version of columns H and J settles both at once.
+
+## 2026-09-02 — the sector screen, area 3's data dump
+
+- `data/raw/2026-09-02_sector-screen.csv` — **51 priced private rounds, 41 companies, 1 Jan 2021
+  to 2 Sep 2026**, transcribed from four photographs kept beside it as
+  `2026-09-02_sector-screen-p01..p04.jpg`. This is Daniil's answer to area 3 of
+  `docs/data-pull-prompts-2sep.md`, the verticals a founder cannot be priced in at all.
+  Read-back and checks in `docs/sector-screen-read-2sep.md`. NOT WIRED into the engine yet.
+- All 27 source columns are carried, including the three that are empty on every row: pre-money,
+  the whole transaction-value block, and **the implied multiple**, which is blank throughout even
+  though the tab is named "with Multiples". Durability rule 11.
+- Four fields are OURS and are labelled as such: `sector_block_inferred` (the blocks are the row
+  order in the sheet, not a column), `url_confidence`, `transcription_note`, and `sheet_row`.
+- WHAT PRICES: 32 of 51 give a multiple straight away; 11 more need FX first (five Indian rows
+  USD-against-INR, five Octopus rows USD-against-GBP, Voodoo EUR-against-USD); **8 have no
+  denominator at all**. Only **18 survive a strict gate** — denominator present, currencies
+  already agree, not a floor, not forward, not a part-year figure.
+- SIX THINGS RECORDED, none of them guesses:
+  1. **Two rows are the same round twice.** Alan EUR 183m at EUR 2,700m post is rows 27 and 50,
+     dated four days apart under two different blocks. BetterUp US$300m at US$4,700m post is rows
+     37 and 40, the same date written two ways. Dedupe gives 49 distinct rounds.
+  2. **Discord's denominator contradicts its own metric**: metric REVENUE 130.0 FY2020,
+     denominator 310.0 FY2021. One is wrong or the choice is undocumented.
+  3. **Fuse Energy carries a US$5,000m post-money on a US$70m Series B** and neither source is a
+     valuation announcement (a Goodwin mandate note and a Sifted raise story). Not loaded.
+  4. **eFishery is in the agri block** and its reported figures were later found to have been
+     fabricated. Must never be used as a comparable.
+  5. **The two emptiest verticals depend entirely on the FX work.** Agri has 6 rows, 5 needing
+     INR conversion, and its only FX-free row is eFishery. Energy has 7 rows, 5 needing GBP
+     conversion, and its FX-free rows are Enpal (a floor) and Fuse Energy. Both blocks are empty
+     until FX is done at the right rate per fiscal year.
+  6. **Six of the eight missing denominators look like omissions**, because the metric column
+     next door holds a clean number: upGrad 165, LEAD School 80, EGYM 130, Roblox 923.9 (from the
+     audited S-1), Epic Games 5,100, Dream Sports 27,060. Only Fireblocks (a reported range) and
+     ConsenSys ("nine figures") are correctly blank.
+- QUALIFIERS MATTER HERE: 19 of 51 rows carry one — 11 estimates, **7 floors (">"), which make
+  the multiple a CEILING not a point**, 2 forward figures, 2 vague ranges. Four more price a
+  part-year denominator against a full valuation (Devoted Health H1, wefox four months, MoonPay
+  eleven months, BlockFi one month) and need annualising, which is our assumption not the sheet's.
+- SOURCING: 22 of 51 rows use the same URL for both figures. Seven lean on tier-4 or worse —
+  sacra.com (Virta, Ro), forgeglobal.com (MasterClass, both figures), a CB Insights company page
+  (Ninjacart), a personal blog (Vegrow), a French filings aggregator (Doctolib), a press index
+  (Restore), and a **staging subdomain** for Dream Sports. Two more are paywalled (The
+  Information, both Epic Games rows).
