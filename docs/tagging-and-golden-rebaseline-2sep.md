@@ -72,3 +72,56 @@ file-versus-engine check as the next thing to build.
 - Post-money over revenue equals the stored multiple within 2% on every row, 0 failures.
 - No `in_medians = 1` row lacking a multiple or either URL, 0.
 - `python3 selector/golden.py` back to 0 of 43 against the new baseline.
+
+---
+
+# Second pass, same night: the sector screen loaded and tagged
+
+`data/private-rounds.csv` 184 to **224 rows**, 153 median-eligible.
+`data/private-companies-tags.csv` 135 to **167 rows**.
+The engine now loads **276 private rounds, 172 median-eligible**, against 178 total this morning.
+
+## Row accounting, 49 supplied
+
+| | |
+|---|---|
+| Loaded | 40 |
+| Held for a ruling | 2 (Vegrow, Fireblocks) |
+| Excluded in the sheet | 3 (eFishery, Celsius, Fuse Energy) |
+| Already in the engine | 3 (MoonPay, wefox Jul-22, Alan Sep-24) |
+| **Same round already loaded** | **1 (Athletic Greens (AG1) Jan-22)** |
+
+That last one is worth recording. The sector screen calls it "Athletic Greens (AG1)"; the round files
+call it "AG1 (Athletic Greens)" and "AG1". A name match misses all three ways. It was caught by
+matching on the round instead: same month, same 1,315 post-money, and a shared name token. Without
+that check AG1's January 2022 round would now be in the engine three times.
+
+## Precision
+
+Twenty-five multiples were restated from the sheet's one-decimal display value to the value computed
+from post-money over denominator. Octopus Energy May-24 shows 0.6 in the sheet and computes to 0.574,
+which fails the 2% check on rounding alone. The figures are unchanged; only the stored precision is.
+LEAD School's denominator was restated from the displayed 8.1 to 8.13, which is INR 600m at the
+sheet's own rate and reproduces the 135.3x the sheet states.
+
+## What moved, and why it is right
+
+8 of 43 fixtures, 11 peers gained against 6 displaced.
+
+| Fixture | Gained |
+|---|---|
+| honen | LEAD School, Vedantu, upGrad. **One comparable to three**, which is the rule against pricing off a single name |
+| levelten | The Zebra. One to two |
+| finn | Enpal, a consumer energy subscription against a car subscription |
+| sellerclaw | ElasticRun, WayCool Foods |
+| inato | DeHaat |
+| oda | WayCool Foods, a food supply chain against an online grocer |
+| smol, bokksu | Oura |
+
+## What this does to coverage
+
+Archetypes that had **no private range at all** this morning and have one now: Insurance Technology 7
+median-eligible rounds, Gaming & Virtual Economy 5, Online Learning 3, Streaming & Digital Media 3,
+Financial Data & Index 2, Wealth & Capital Markets Platform 1. Digital Bank & Deposits went from the
+4 the engine could see to 11, which is the number the lender fork spec was written against and could
+not previously compute.

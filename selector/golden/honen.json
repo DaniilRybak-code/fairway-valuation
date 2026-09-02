@@ -119,10 +119,82 @@
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
-  "private": [],
-  "private_proximity": "NONE",
-  "private_range": {},
-  "private_window_months": 24,
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "LEAD School",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 135.3,
+    "reason": "shares the language of training; same type of business; same end market; same kind of customer",
+    "score": 13.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vedantu",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 15.38,
+    "reason": "shares the language of prep; same type of business; same end market",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "upGrad",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 7.27,
+    "reason": "same type of business; same end market",
+    "score": 8.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 15.38,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 7.27,
+   "mid": 15.38,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "prep"
+   ],
+   "spread": 2.1,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 60,
   "secondary": [
    {
     "company": "Infomart Corporation",

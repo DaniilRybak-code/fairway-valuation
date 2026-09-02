@@ -132,6 +132,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Enpal",
+    "date": "Jan-23",
+    "in_medians": true,
+    "mult": 5.5,
+    "reason": "shares the language of ev; same type of business; same kind of customer; sold the same way",
+    "score": 14.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "At announcement",
     "bound": "",
     "company": "AG1 (Athletic Greens)",

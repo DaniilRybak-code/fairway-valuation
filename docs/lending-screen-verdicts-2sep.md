@@ -6,6 +6,24 @@
 
 ## The short answer
 
+**CORRECTED 02-Sep-2026 after Daniil's note.** He widened the prompt himself, and he is right that
+early-stage lenders are frequently priced off ARR and off origination rather than off book. So the
+framing below, that the pull "failed" to deliver book measures, is wrong: book was no longer the only
+target. What holds is the narrower point, which he agrees with: a multiple cannot be struck over an
+all-time cumulative origination volume.
+
+**The usable set is therefore 11 rows, not 7.** Seven carry a periodic revenue or ARR denominator.
+Three more carry a PERIODIC volume or origination denominator and are legitimate on his ruling: Tabby
+twice on an annualised transaction-volume run-rate, and Wayflyer on FY2021 originations. Pipe's
+tradable ARR connected to the platform is an eleventh, with the caveat that it is third-party ARR
+sitting on the platform rather than Pipe's own revenue.
+
+The line that matters is periodic versus cumulative, not revenue versus volume. An annualised run-rate
+and a fiscal-year origination figure are both rates and both price. A since-inception total is not a
+rate and does not.
+
+**The original framing, kept for the record:**
+
 **It does not deliver what point 4 asked for, and it delivers something more useful instead.**
 
 Point 4 asked for balance-sheet measures, in its own words: "net loan book or gross loans
@@ -30,8 +48,8 @@ What the denominators *are* is the problem.
 |---|---|---|
 | Periodic revenue or ARR | **7** | Usable as revenue multiples |
 | Income-statement line, not revenue | 1 | Klarna Jul-22, load as its own basis |
-| Periodic volume or originations | 3 | Volume lane, not the revenue median |
-| Third-party ARR sitting on the platform | 1 | Pipe. Not the company's own revenue |
+| Periodic volume or originations | 3 | **USABLE on Daniil's ruling.** Load as an originations or volume multiple, labelled as such, not into the revenue median |
+| Third-party ARR sitting on the platform | 1 | Pipe. Usable as a volume multiple; it is not Pipe's own revenue |
 | **Cumulative since inception** | **10** | **Not multiples at all** |
 
 The seven real ones, and they are a proper range for a neobank and lender archetype:
@@ -124,5 +142,7 @@ Starling Bank, Tabby, Zilch.
   Correct the two Klarna labels to net operating income first, and decide the FX date.
 - **Load Wayflyer's originations** to price a row that currently prices nothing.
 - **Do not load the 10 cumulative rows as revenue multiples.** Volume overlay or nothing.
-- **Point 4 stays open.** The book measures it asked for did not arrive, so Zopa is still the only
-  priced book comparable and the lender fork still cannot show a book range from more than one name.
+- **Book coverage stays thin.** No net loan book, total equity, NAV or deposits figure arrived, so Zopa
+  at 5.6x is still the only priced BOOK comparable. That matters only for the lenders that do price on
+  book; on Daniil's ruling the ARR and origination lanes now carry 11 rows and the fork can show a
+  private range from those.

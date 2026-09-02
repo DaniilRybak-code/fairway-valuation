@@ -135,6 +135,17 @@
     "type": "MIXED"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "WayCool Foods",
+    "date": "Jun-22",
+    "in_medians": true,
+    "mult": 5.88,
+    "reason": "same type of business; same end market; same AI stance",
+    "score": 10.0,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "At announcement",
     "bound": "",
     "company": "AG1 (Athletic Greens)",
@@ -188,17 +199,6 @@
     "reason": "shares the language of delivery; related type of business; same end market; same kind of customer",
     "score": 11.7,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Wolt",
-    "date": "Nov-21",
-    "in_medians": true,
-    "mult": 23.5,
-    "reason": "both do Retail Delivery, Grocery Delivery; related type of business; same end market; same kind of customer",
-    "score": 12.2,
-    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -208,24 +208,22 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 3
+    "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Wolt"
-   ],
+   "control_n": 0,
+   "control_names": [],
    "dispersed": false,
    "display": "RANGE",
    "high": 44.12,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.1,
-   "mid": 23.5,
-   "n": 3,
+   "mid": 44.12,
+   "n": 2,
    "period_mix": {
-    "LTM": 3
+    "LTM": 2
    },
    "period_span": {
     "LTM": {
@@ -245,7 +243,7 @@
    ],
    "spread": 4.4,
    "tag_evidence": 1.5,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 61,

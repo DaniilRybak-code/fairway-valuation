@@ -175,6 +175,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oura",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 23.1,
+    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+    "score": 15.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "CONTEMPORANEOUS_PRESS",
     "bound": "",
     "company": "AG1",
@@ -183,17 +194,6 @@
     "mult": 8.8,
     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
     "score": 23.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Harry's",
-    "date": "Mar-21",
-    "in_medians": true,
-    "mult": 4.6,
-    "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
-    "score": 20.1,
     "type": "PRIMARY"
    }
   ],
@@ -205,7 +205,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 2,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 2
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -217,10 +217,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 4.6,
-   "n": 5,
+   "mid": 8.8,
+   "n": 4,
    "period_mix": {
-    "LTM": 3,
+    "LTM": 2,
     "RUN_RATE": 2
    },
    "period_span": {
@@ -243,7 +243,7 @@
    "thin": false,
    "triangulated": true
   },
-  "private_window_months": 65,
+  "private_window_months": 55,
   "secondary": [
    {
     "company": "BARK, Inc.",

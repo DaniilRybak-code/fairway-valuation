@@ -102,11 +102,61 @@
     "reason": "shares the language of energy, renewable; same type of business; same end market; sold the same way",
     "score": 14.1,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "The Zebra",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 6.67,
+    "reason": "shares the language of marketplace; related type of business; same revenue model; same AI stance",
+    "score": 9.1,
+    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "DIRECT",
-  "private_range": {},
-  "private_window_months": 49,
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 6.67,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 6.67,
+   "mid": 6.67,
+   "n": 1,
+   "period_mix": {
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "marketplace"
+   ],
+   "sole": "The Zebra",
+   "spread": 1.0,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 64,
   "secondary": [
    {
     "company": "Multi Commodity Exchange of India Limited",

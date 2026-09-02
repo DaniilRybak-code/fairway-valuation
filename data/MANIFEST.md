@@ -636,3 +636,22 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
   duplicate; the row is not deleted and the tag row is not removed, it simply stops voting twice.
   Median-eligible 114 to 113 in this file, 132 across both.
 - `tools/check_raw_coverage.py` — now guards three supplied files. 191 of 191, 49 of 49, 22 of 22.
+
+### 2026-09-02, late: sector screen loaded and tagged
+
+- `data/private-rounds.csv` — 184 to **224 rows**, 153 median-eligible. Forty rows loaded from
+  `data/raw/2026-09-02_sector-screen-fixed.csv`, each carrying its sheet row number, both URLs and a
+  provenance note. Nine of the 49 not loaded, all named: Vegrow held, eFishery / Celsius / Fuse
+  excluded in the sheet, MoonPay / wefox Jul-22 / Alan Sep-24 already in the engine, Fireblocks held,
+  and **Athletic Greens (AG1) Jan-22 caught as the same round already loaded twice** under AG1.
+- Twenty-five multiples restated from the sheet's one-decimal display value to the computed value so
+  the 2% check passes on the arithmetic rather than on the rounding. LEAD School's denominator
+  restated from the displayed 8.1 to 8.13, which is INR 600m at the sheet's own recorded rate and
+  reproduces the 135.3x the sheet states.
+- `data/private-companies-tags.csv` — 135 to **167 rows**. Thirty-two new companies tagged. Vocabulary
+  gate run against every other tag file: zero invented values.
+- `selector/golden/*.json` — rebaselined again. 8 of 43 moved, 11 peers gained against 6 displaced.
+  `honen` went from one comparable to three (LEAD School, Vedantu, upGrad); `levelten` from one to two.
+- **Engine now loads 276 private rounds, 172 of them median-eligible**, against 178 and far fewer this
+  morning. Insurance Technology, Gaming & Virtual Economy, Online Learning and Streaming now have a
+  private range at all, where this morning they had none.
