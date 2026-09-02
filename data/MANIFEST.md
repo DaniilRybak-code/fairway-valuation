@@ -179,3 +179,34 @@ recorded here, at which point my transcription can be diffed against it and any 
 |---|---|---|---|
 | `raw/2026-09-01_listed-full-refresh.csv` | 509 | The complete listed pull, recalculated by Daniil from fiscal-year figures and calendarised by hand, with the CY+1/+3 revenue CAGR and the FY+1 broker estimate count both new. Transcribed from screenshots because the source workbook is in another sandbox and cannot be exported. Checked by `tools/check_listed_refresh.py`: 1,993 arithmetic identity checks, 44 flagged, 43 of them explained by the sheet rounding gross profit or net income to a whole number, 1 genuine and flagged (U-NEXT AV/gross profit). | Not yet, raw |
 | `raw/2026-09-01_full-refresh-p01..p11.png` | - | The screenshots the above was read from, kept as the record. | No |
+
+## 2026-09-01 — Daniil's realigned private transactions (comparison only, NOT wired)
+
+- `data/raw/2026-09-01_private-transactions-daniil.csv` — 148 rows transcribed from 16 screenshots.
+  Source has 191 transactions; the screenshots cover 2021-08-24 to 2026-07-09 sorted newest first,
+  so 43 rows dated before 24 August 2021 are still outstanding.
+- `data/raw/2026-09-01_private-transactions-p01.png` .. `p16.png` — the raw screenshots, untouched.
+- Status: **NOT WIRED and must not be wired.** This file exists to be compared against
+  `data/private-rounds.csv` and `data/private-rounds-consumer.csv`, not to replace them.
+- Self-check: 146 of 148 rows tie post-money / revenue = multiple. The two that do not are
+  Gorillas Oct-21 (multiple computed off pre-money) and Perplexity Jan-24 (multiple taken at the
+  bottom of a stated 5m-10m range while the revenue cell shows the top).
+- Result of the comparison: `docs/private-reconciliation-1sep.md`. 95 rows match on company and
+  month, 55 agree outright, 19 disagree on a number (17 of them denominator only), 21 are rows he
+  prices and we do not. 52 of his rows are new to us, 45 of them new companies. Eight decisions
+  are open before anything merges.
+
+## 2026-09-02 — the 19 disagreements checked against live sources
+
+- `docs/private-verdicts-2sep.md` — per-row verdict with the URL and the verbatim sentence that
+  decided each. Ours right in 16 of 19, Daniil's in 1 (Replit), neither in 1 (Notion), Wolt open.
+- `tools/apply_reconciliation_verdicts_2sep.py` — applied four changes to `data/private-rounds.csv`:
+  Replit Sep-25 revenue 100 to 150 and 30.0x to 20.0x (we misread our own cited source);
+  Notion Jan-26 revenue 500 to 600 and 22.0x to 18.3x with the source moved to Forbes 15-Dec-2025;
+  AlphaSense Sep-23 source only, from a TechCrunch piece that carries no revenue figure to the
+  CNBC piece that does; Clay Jan-26 source only, from the milestone post to the tender announcement.
+- Golden suite deliberately rebaselined: 8 of 43 moved, 2 of them a range (insforge 22.5x to 20.0x,
+  skybridge 30.0x to 20.0x, both AI fixtures where Replit and Notion sit in the peer set), 6 only
+  re-ordered peers. Now 0 of 43.
+- Flagged, not changed: Anthropic May-23 prices on a denominator eight months after the round,
+  which breaks our own hindsight rule. The row note says it was done by Daniil's instruction.
