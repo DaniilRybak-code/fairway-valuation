@@ -22,7 +22,9 @@ the renderer must not say "recently backed a company like yours" on the strength
 """
 import csv, io, os, re
 
-SRC = 'data/raw/2026-09-02_seed-investor-screen.csv'
+SRC_V2 = 'data/raw/2026-09-02_seed-investor-screen-v2.csv'
+SRC_V1 = 'data/raw/2026-09-02_seed-investor-screen.csv'
+SRC = SRC_V2 if os.path.exists(SRC_V2) else SRC_V1
 
 # The screen's eight sectors, mapped onto the categories our own files actually use, so the
 # matcher can join on them. Checked against the values present in private-rounds*.csv rather
@@ -82,18 +84,24 @@ def load(path=SRC):
         m = re.match(r'^([A-Za-z]{3})-(\d{4})$', (my or '').strip())
         return '%s-%02d' % (m.group(2), MONTHS[m.group(1).title()]) if m else ''
 
+    v2 = 'cheque_range_source' in (deals[0] if deals else {})
     funds = {}
     for d in deals:
         f = funds.setdefault(d['fund'], dict(
             name=d['fund'], regions=set(), sectors=[], theses=set(), deals={}, index_src=0,
+            cheque_src=set(), sector_deals=0,
             low=num(d['cheque_low']), high=num(d['cheque_high']), ccy=d['currency']))
+        if d.get('cheque_range_source'):
+            f['cheque_src'].add(d['cheque_range_source'])
+        if d.get('deal_evidences_sector') == '1':
+            f['sector_deals'] += 1
         f['regions'].add(d['region'])
         if d['sector'] not in f['sectors']:
             f['sectors'].append(d['sector'])
         f['theses'].add(d['thesis'])
         # keyed on company so the same deal repeated across sectors collapses to one
         f['deals'][d['company']] = (iso(d['month_year']), d['company'], d['source_url'])
-        if d['source_is_index'] == '1':
+        if d.get('source_is_index') == '1':
             f['index_src'] += 1
 
     out = {}
@@ -127,10 +135,16 @@ def load(path=SRC):
             rounds_in_set=0, companies_in_set=0, companies_backed='',
             first_round='', last_round=ds[0][0] if ds else '',
             median_round_size_m='', last_verified='2026-09-02',
-            deal_evidences_sector='0',
-            provenance=('SEED SCREEN, data/raw/2026-09-02_seed-investor-screen.csv. Cheque range '
-                        'is fund-stated. Deals are the fund\'s two latest overall, not sector '
-                        'specific'
+            deal_evidences_sector=('1' if f['sector_deals'] else '0'),
+            cheque_range_source=(sorted(f['cheque_src'])[0] if f['cheque_src'] else ''),
+            sector_deals_file=(SRC if v2 else ''),
+            provenance=('SEED SCREEN %s. Cheque range is fund-stated%s. %s'
+                        % (SRC,
+                           ' and SOURCED' if f['cheque_src'] else ' but unsourced',
+                           ('Deals are SECTOR-MATCHED: two per fund per sector, held one row each '
+                            'in the raw file, and the fund-level card carries the two most recent '
+                            'overall' if v2 else
+                            "Deals are the fund's two latest overall, not sector specific"))
                         + ('; %d of its deal links point at an index page rather than the '
                            'announcement' % f['index_src'] if f['index_src'] else '') + '.'),
         )

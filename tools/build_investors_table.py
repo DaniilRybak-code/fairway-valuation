@@ -188,6 +188,7 @@ SECTOR_TO_CATEGORY = {
 COLS = ['investor_key', 'investor_name', 'house_type', 'layer', 'geographies', 'stage_bands',
         'first_cheque_low_m', 'first_cheque_high_m', 'cheque_currency',
         'round_size_low_m', 'round_size_high_m', 'thesis_one_liner', 'deal_evidences_sector',
+        'cheque_range_source', 'sector_deals_file',
         'screening_categories', 'subsectors', 'recent_deal_1_company', 'recent_deal_1_date',
         'recent_deal_1_source_url', 'recent_deal_2_company', 'recent_deal_2_date',
         'recent_deal_2_source_url', 'rounds_in_set', 'companies_in_set', 'companies_backed',

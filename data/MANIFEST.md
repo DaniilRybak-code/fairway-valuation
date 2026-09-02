@@ -338,3 +338,39 @@ recorded here, at which point my transcription can be diffed against it and any 
      founder whether the first cheque could be theirs.
 - 15 of 88 URLs are marked `url_confidence = LOW`: they are long and small in a photograph of a
   screen. They need a check before they render to a founder.
+
+## 2026-09-02 — the seed screen, version 2, sector-matched
+
+- `data/raw/2026-09-02_seed-investor-screen-v2.csv` — **132 deal rows, 66 fund-sector pairs,
+  52 funds, 8 sectors**, transcribed from `data/raw/2026-09-02_seed-screen-v2-p01..p03.jpg`.
+  SUPERSEDES `2026-09-02_seed-investor-screen.csv`, which stays as the record of what v1 said.
+  `tools/load_seed_screen.py` prefers v2 when present and falls back to v1.
+- **THE ONE STRUCTURAL DEFECT IN v1 IS FIXED.** v1's two deals were per FUND, so Seedcamp carried
+  Embedd and EverSettled in all six of its sectors and the deal proved activity, never the sector
+  claim beside it. v2's gate is "exactly two announcements per fund IN THE NAMED SECTOR", and it
+  holds: of the 9 funds appearing in more than one sector, **0 repeat the same deal pair**.
+  Seedcamp's B2B row is Embedd and EverSettled, its payments row Nopan and Topograph, its
+  delivery row Operent and Sunrise Robotics, its digital-banking row Wanwani and Porters.
+  `deal_evidences_sector` is therefore **1** on every v2 row, where it was 0 on every v1 row, and
+  the renderer may now say the fund has backed a company in this sector.
+- Three structural rules stated in the sheet's own Read Me, all three checked and all three pass:
+  fund-sector pairs not carrying exactly two deals **0 of 66**; pairs whose newest sector deal is
+  older than 2 Sep 2025 **0 of 66**; cheque-range sources present **132 of 132**. Column K,
+  "Initial Cheque Range Source", is new in v2 and is carried as `cheque_range_source`.
+- Sector coverage is even: Marketplaces 18 rows, Healthcare 18, the other six 16 each.
+- **Callable list goes 100 to 124 renderable houses.** 60 of the 140 callable rows now band at
+  seed, 46 of those render, and every one of the eight forks has 6 to 8 seed-capable houses:
+  B2B 6, payments 7, banking and lending 6, marketplaces 8, consumer brands 7, delivery 8,
+  healthcare 8, insurance 8.
+- TWO DATA-QUALITY ITEMS RECORDED, both smaller than v1's:
+  1. **3 deal links point at a listing page rather than the announcement** (v1 had 15): QED for
+     Skalar cites `skalar.de/presse`, Trucks for Maritime Fusion cites `maritimefusion.com/blog`,
+     Nina for IO Health cites `nina.capital/2025-news`.
+  2. **2 links are attributed to the wrong house.** Kfund's Pollen row cites
+     `paleblue.vc/portfolio/pollen`, which is Pale Blue Dot's own portfolio page, and Felix
+     Capital's Lasso row cites a balderton.com announcement. Either both funds were in the round
+     and the citation is simply the other lead's page, or the row is wrong. Not resolvable from
+     the photograph.
+- **88 of 132 URLs are `url_confidence = LOW` and 19 company names could not be read**, because
+  these are photographs of a screen at an angle. That is a transcription limit, not a fault in
+  the pull. A pasted text version of columns H and J settles both at once.
