@@ -583,3 +583,20 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 
 **State: 184 rows, 114 median-eligible.** Arithmetic disagreements 0, median rows missing a source
 0, golden suite 0 of 43 moved.
+
+## 2026-09-02, evening: sector screen fixed version
+
+- `data/raw/2026-09-02_sector-screen-fixed.csv` — 49 rows, 41 columns. Transcribed from six
+  screenshots of Daniil's fixed "Priced Private Funding Rounds - Sector Screen". The 51-row original
+  `2026-09-02_sector-screen.csv` is untouched and stays as the record of what arrived first.
+  Row accounting: 51 in, 2 dropped (Alan May-2022 and BetterUp Oct-2021, each a duplicate of a row
+  that survived), 0 added, 49 out. Balances.
+  INCOMPLETE BY DESIGN: columns AC to AF of the source sheet were not visible in any screenshot and
+  are not transcribed. The file's own header says so. Owner: Daniil to supply those four columns.
+- NOT WIRED INTO THE ENGINE. All 49 rows are named in `EXCLUSIONS` in `tools/check_raw_coverage.py`
+  with a written reason, so the file is inside the row-accounting guard rather than outside it.
+  Remove an entry when its row is loaded.
+- `docs/sector-screen-fixed-verdicts-2sep.md` — what was checked, what recomputed, and six findings.
+- `data/private-rounds.csv` — wefox Jul-22 and Alan Sep-24 set to `in_medians = 0` under D6, because
+  Daniil's two sheets disagree on their denominators. Median-eligible 114 to 112. Row count unchanged
+  at 184. Reversible: set `in_medians` back to 1 and delete the note.
