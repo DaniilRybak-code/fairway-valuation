@@ -447,3 +447,94 @@ multiple had been computed off a USD figure that was never written into the row.
   are now correct and sourced, so no multiple depends on the missing rate, but the conversion is
   not reproducible from the file.
 - Applied by `tools/fix_fx_denominators_2sep.py`. Golden suite unchanged, 0 of 43 moved.
+
+## 2026-09-02 — the 63 unloaded rows from Daniil's sheet are now in
+
+WHOOP, Revolut, Stripe, Plaid, Monzo, Chime and 40 more. `tools/load_daniil_sheet_2sep.py`.
+
+- **WHY THEY SAT UNLOADED, plainly: our step, not his data.** His sheet is complete on 191 of 191
+  rows. It carries no screening category, and the matcher joins on that field, so every company
+  had to be placed in our vocabulary before its round could be selected for anyone. That work was
+  queued behind the investor build and the sector screen and should not have been.
+- `data/private-rounds.csv` goes **116 to 179 rows, 88 to 134 companies. Median-eligible rows go
+  59 to 91.**
+- Loaded at `verification = SHEET_02SEP`, NOT VERIFIED. In this file VERIFIED means a human opened
+  the source and checked the figure against the sentence in it. These have not had that. The
+  figures, bases and both URLs are Daniil's; the categories, bounds and median flags are ours.
+- Two new screening categories were needed: **Connected Hardware & Wearables** (WHOOP) and
+  **Crypto & Digital Assets** (Blockchain.com, MoonPay). Four more that already existed in
+  `tools/load_seed_screen.py` now appear in the rounds file for the first time: Digital Bank &
+  Deposits, Insurance, D2C / Consumer Brand, Owned-Inventory Retail.
+- **31 of the 63 are held out of the medians**, each with the reason written into its own row:
+  13 volume-only metrics (LOANS_ORIGINATED, PAYMENT_VOLUME, OTHER_VOLUME) which produce no revenue
+  multiple at all and load into the volume fields; 2 paid-subscriber counts (Calm, Flo Health)
+  which load into `paying_users_k`; 10 deposit-taking banks and neobanks held under the standing
+  rule that these price on BOOK, never on EV/revenue (Revolut x4, Monzo, Chime x2, N26, Atom Bank,
+  Mercury, Qonto); 2 entity-proxy denominators (SumUp Dec-23 "entity proxy", Checkout.com "UK
+  entity revenue"); 2 stated proxies (Cohere "ARR proxy", Coalition "annualized GWP / revenue
+  proxy" — GWP is premium written, not revenue); and 2 with a basis doubt the sheet states itself
+  (Rapyd Jan-21 "unclear whether closed", Tipalti Dec-21 "annual period not specified").
+- **Kriya Oct-25 is loaded and held out**: post-money 7.5 against revenue 12.6 gives 0.60x. A
+  US$7.5m post-money on a company with US$12.6m of revenue is unlikely; the post-money is probably
+  in a different unit. Needs Daniil's confirmation.
+- Arithmetic across all 179 rows: post-money over revenue disagrees with the stored multiple by
+  more than 2% on **0 rows**. in_medians = 1 rows missing a multiple or a URL: **0**.
+- **GOLDEN SUITE: 1 of 43 profiles moved**, the first movement in a long time, and it is a real
+  improvement. "honestly" picked up Contentsquare as a fourth comparable; midpoint 14.0x to 28.0x,
+  tag evidence 0.6 to 0.9, closeness THIN_OVERLAP to PARTIAL_OVERLAP. Snapshot regenerated
+  deliberately with `selector/golden.py --write`.
+- **Only 1 of 43 moved because our fixtures do not cover these verticals.** The 43 frozen profiles
+  are seed-stage B2B software, delivery and marketplace companies; these 63 rows are fintech,
+  banking, payments, crypto, insurance and consumer. The data is not unused, it lands where the
+  fixture set does not test. That is another argument for the 43 to 100 fixture march.
+- STILL OPEN: six older rows carry no screening category and are in the medians (Airwallex,
+  Loadsmart x2, Creditas Jan-22, Jobandtalent, Fundbox), all at SOURCED_31AUG.
+
+## 2026-09-02 (later) — 189 of Daniil's 191 rows are now in, and the two that are not are the same rounds
+
+`tools/fix_load_gaps_2sep.py`. Two fixes.
+
+**FIX 1, MY BUG.** `tools/load_daniil_sheet_2sep.py` deduplicated on COMPANY rather than on
+company AND round, so any round belonging to a company we already held was silently skipped. Six
+rounds were lost and are now inserted: Airwallex Nov-21 (Series E1, $5.5bn, run-rate 100, 55.0x),
+Deel May-22 (Series D extension, $12bn, ARR 295, 40.68x), Perplexity Jul-25 ($18bn, run-rate 150,
+120.0x), Ramp Jul-25 ($22.5bn, run-rate 700, 32.14x), Ramp Aug-21 (Series C, $3.9bn, run-rate 100,
+39.0x), and Whatnot Jan-25 (Series E, $4.97bn, GMV 3,000, 1.66x) into the consumer file.
+
+**THE ONLY TWO OF HIS 191 ROWS NOT PRESENT ARE THE SAME ROUNDS UNDER DIFFERENT DATES**, both
+deliberate and both documented in the rows themselves:
+- **Figma 16-May-2024** is our Jul-24 row. Same Axios URL. We re-dated from tender LAUNCH to tender
+  CLOSE, which is the honest date for a tender. Same $12.5bn, same $700m ARR, same 17.9x.
+- **Canva 23-May-2024** is our Apr-24 row. Same Forbes URL. We withdrew the multiple over two
+  recorded defects: the $26bn secondary COMPLETED in early April 2024 and there is no May-2024
+  Canva share sale, and the 2,300 denominator matches no published figure. Canva's own number is
+  "more than US$2.2 billion in annualised revenue", published 24-May-2024, six weeks AFTER the sale
+  closed; the A$3.3bn in the same sentence is the AUD translation of that US$2.2bn, which is where
+  both the phantom 2,300 and 3,300 come from. **DANIIL'S CALL:** price it at 11.8x off the $2.2bn
+  and accept a denominator published six weeks after closing, or leave the multiple withdrawn.
+
+**FIX 2, DANIIL'S RULING.** "Even if this is a finance company, if the revenue or ARR was cited for
+it in the press release, this is how the round was priced and this is what our data needs to
+reflect." Fifteen rows I had held out on my own judgement go back in: the ten deposit-taking banks
+and neobanks (Revolut x4, Monzo, Chime x2, N26, Atom Bank, Mercury, Qonto), the two entity-proxy
+denominators (SumUp Dec-23, Checkout.com Dec-23), the stated ARR proxy (Cohere Jun-23), and the one
+basis doubt (Rapyd Jan-21).
+
+**NOTHING IS LOST BY THIS, and it does not contradict the lender rule.** `is_balance_sheet` in
+`selector/match_reference.py` picks the pricing basis from the FOUNDER'S archetype, not the
+comparable's. A lender founder is still priced on book. Revolut's revenue multiple simply becomes
+available to the payments and fintech founders who are priced on revenue, which is what the round
+itself was priced on.
+
+**WHAT REMAINS OUT OF THE REVENUE MEDIANS IS ARITHMETIC, NOT JUDGEMENT:** 13 volume-only rows
+(LOANS_ORIGINATED, PAYMENT_VOLUME, OTHER_VOLUME) which carry no revenue denominator and whose
+multiple lives in `ev_volume_x`; 2 subscriber counts (Calm, Flo Health); Coalition Jul-22,
+RECLASSIFIED to a volume multiple because annualised gross written premium is the volume flowing
+through an insurer's book, the analogue of GMV, not the insurer's revenue; and Kriya Oct-25, held
+pending Daniil because post-money 7.5 against revenue 12.6 gives 0.60x and the post-money is
+probably in a different unit.
+
+**State: 184 rows, 111 median-eligible** (59 this morning, 91 after the first load). Arithmetic
+disagreements between post over revenue and the stored multiple: 0. Median rows missing a multiple
+or a URL: 0. Golden suite 0 of 43 moved, because the fixtures still do not cover fintech, banking
+or payments.
