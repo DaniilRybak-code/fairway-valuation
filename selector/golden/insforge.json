@@ -160,6 +160,17 @@
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anthropic",
+    "date": "May-26",
+    "in_medians": false,
+    "mult": 20.5,
+    "reason": "both do LLM, Coding Agent; related type of business; same kind of customer; same revenue model",
+    "score": 15.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
     "date": "Dec-25",
@@ -190,17 +201,6 @@
     "reason": "both do AI Coding Agent; related type of business; same business function; same revenue model",
     "score": 15.4,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Anysphere / Cursor",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 19.8,
-    "reason": "shares the language of ai, coding; related type of business; same business function; same kind of customer",
-    "score": 15.2,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -210,7 +210,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 2,
     "ARR_RUNRATE": 2
    },
    "bounded": true,
@@ -223,10 +223,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 20.0,
-   "n": 5,
+   "mid": 22.5,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 5
+    "RUN_RATE": 4
    },
    "period_span": {
     "RUN_RATE": {

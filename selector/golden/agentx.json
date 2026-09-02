@@ -84,6 +84,17 @@
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anthropic",
+    "date": "May-26",
+    "in_medians": false,
+    "mult": 20.5,
+    "reason": "shares the language of agent, ai; same type of business; same kind of customer; same AI stance",
+    "score": 10.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
     "date": "Dec-25",
@@ -136,17 +147,6 @@
     "reason": "shares the language of ai, code; same type of business; same business function; same kind of customer",
     "score": 16.9,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Weights & Biases",
-    "date": "Mar-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "both do Agent Evaluation, Tracing; same type of business; same business function; same kind of customer",
-    "score": 18.0,
-    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -203,7 +203,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 17,
+  "private_window_months": 14,
   "secondary": [
    {
     "company": "C3.ai, Inc.",

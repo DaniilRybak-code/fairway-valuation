@@ -210,3 +210,31 @@ recorded here, at which point my transcription can be diffed against it and any 
   re-ordered peers. Now 0 of 43.
 - Flagged, not changed: Anthropic May-23 prices on a denominator eight months after the round,
   which breaks our own hindsight rule. The row note says it was done by Daniil's instruction.
+
+## 2026-09-02 — Daniil's rulings applied
+
+- `tools/apply_daniil_rulings_2sep.py` and `..._consumer.py` and `apply_glovo_note_2sep.py`.
+- **ALL-STOCK ACQUISITIONS NOW PRICE AT ANNOUNCEMENT.** Daniil's ruling: "need to use the price of
+  Doordash AT ANNOUNCEMENT. This is what the seller was pricing when he was setting the price."
+  Wolt Nov-21 moves from the audited $2,838m close to the announced $8,100m: 8.2x becomes 23.5x.
+  Both numerator and denominator are USD, so no conversion is involved. Glovo has the same
+  exposure and its note is updated; it stays record-only only because its denominator is unsourced.
+- Perplexity Jan-24 priced as the range TechCrunch reported on the day, $5m to $10m ARR:
+  52.0x to 104.0x, headline 52.0x with bound '>='. Was unpriced on "sources conflict".
+- Gorillas Oct-21: numbers confirmed and unchanged, both sources added. Found while doing it:
+  **`private-rounds-consumer.csv` had no `revenue_source_url` column at all**, so none of its 51
+  rows could record where its revenue came from. Column added, empty on 50 rows, populated on
+  Gorillas. Filling the other 50 goes on the sourcing list.
+- Anthropic May-23 loses its multiple and becomes RECORD_ONLY: no revenue figure was public at
+  that pricing, and both candidate denominators post-date the round. Three later rounds inserted,
+  each with a run-rate Anthropic disclosed at or before pricing, all from anthropic.com/news:
+  Series F Sep-25 $183bn post on over $5bn (Aug-25), 36.6x ceiling, out of medians;
+  Series G Feb-26 $380bn post on $14bn, 27.1x point, IN medians;
+  Series H May-26 $965bn post on over $47bn, 20.5x ceiling, out of medians.
+  Anthropic Mar-25 keeps its $1bn, source upgraded from LinkedIn News to TechCrunch on the day.
+- private-rounds.csv 112 to 115 rows.
+- Golden deliberately rebaselined: 11 of 43 moved, now 0 of 43. Four delivery fixtures moved a
+  range because Wolt is now their high anchor rather than their low: hived mid 10.3x to 23.5x,
+  byrd high 10.3x to 23.5x, oda mid 10.3x to 23.5x, 99minutos high 10.3x to 23.5x. Five AI
+  fixtures changed peer NAMES only, Anthropic May-26 displacing Anysphere; it is out of medians
+  so no range moved.

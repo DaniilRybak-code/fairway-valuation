@@ -133,6 +133,17 @@
     "type": "MIXED"
    },
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anthropic",
+    "date": "May-26",
+    "in_medians": false,
+    "mult": 20.5,
+    "reason": "both do LLM; same type of business; same kind of customer; same revenue model",
+    "score": 14.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Clay",
@@ -163,17 +174,6 @@
     "mult": null,
     "reason": "shares the language of llm; same type of business; same kind of customer; sold the same way",
     "score": 13.4,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Anthropic",
-    "date": "Mar-25",
-    "in_medians": false,
-    "mult": 61.5,
-    "reason": "both do LLM; same type of business; same kind of customer; same revenue model",
-    "score": 14.2,
     "type": "PRIMARY"
    },
    {

@@ -135,6 +135,17 @@
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anthropic",
+    "date": "May-26",
+    "in_medians": false,
+    "mult": 20.5,
+    "reason": "both do MCP; same type of business; same kind of customer; same revenue model",
+    "score": 16.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
     "date": "Dec-25",
@@ -187,17 +198,6 @@
     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
     "score": 11.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Anysphere / Cursor",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 19.8,
-    "reason": "shares the language of ai, code; same type of business; same kind of customer; sold the same way",
-    "score": 13.9,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -207,11 +207,11 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 1,
     "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
@@ -221,11 +221,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 19.8,
-   "n": 5,
+   "mid": 20.0,
+   "n": 4,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -256,7 +256,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 14,
+  "private_window_months": 11,
   "secondary": [
    {
     "company": "Snowflake Inc.",

@@ -79,12 +79,12 @@
     "type": "MIXED"
    },
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Anthropic",
-    "date": "Mar-25",
+    "date": "May-26",
     "in_medians": false,
-    "mult": 61.5,
+    "mult": 20.5,
     "reason": "both do MCP; same type of business; same kind of customer",
     "score": 10.9,
     "type": "PRIMARY"

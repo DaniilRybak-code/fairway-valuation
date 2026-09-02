@@ -92,12 +92,12 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
     "company": "Anthropic",
-    "date": "Mar-25",
+    "date": "May-26",
     "in_medians": false,
-    "mult": 61.5,
+    "mult": 20.5,
     "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
     "score": 17.1,
     "type": "PRIMARY"
