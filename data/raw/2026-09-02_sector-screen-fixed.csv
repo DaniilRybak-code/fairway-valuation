@@ -11,9 +11,10 @@
 #     sheet_row 40, BetterUp, 08-Oct-2021 -> duplicate of sheet_row 37, BetterUp, 2021-10-08 (one round, two date formats)
 #   Both deletions were instructed by docs/sector-screen-fix-prompt-2sep.md rule 6. Nothing else was dropped.
 #
-# D11 SCHEMA NOTE: the screenshots show columns A to AB and AG to AR. Columns AC, AD, AE and AF were
-#   NOT VISIBLE in any screenshot and are therefore NOT TRANSCRIBED. This file does not carry every
-#   column of the source. Ask Daniil for AC to AF before this file is treated as complete.
+# D11 SCHEMA NOTE, CLOSED 02-Sep-2026. The screenshots show columns A to AB and AG to AR. Columns
+#   AC, AD, AE and AF are not transcribed. Daniil confirms they are hidden in the workbook
+#   deliberately and are not needed here, so this file is complete for our purposes. The flag is
+#   withdrawn; the gap is recorded rather than silently closed.
 #
 # sheet_row is the row number in Daniil's workbook, kept so every row can be traced back by name and position.
 sheet_row,company_name,transaction_date,round_type,transaction_class,amount_raised_m,amount_currency,amount_raised_reported,premoney_valuation_m,postmoney_valuation_m,valuation_reference_m,valuation_currency,valuation_basis,transaction_value_m,transaction_value_currency,transaction_value_basis,metric_type,metric_value_m,metric_currency,metric_qualifier,metric_period_basis,multiple_denominator_m,denominator_currency,denominator_basis,implied_multiple_x,lead_investors,valuation_source_url,revenue_metric_source_url,denominator_converted,fx_rate_used,fx_rate_date,fx_rate_source,denominator_blank_reason,bound,period_months,forward_metric,excluded,excluded_reason,source_tier,multiple_type,transcription_note

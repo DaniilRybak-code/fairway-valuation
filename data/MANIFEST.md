@@ -600,3 +600,15 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 - `data/private-rounds.csv` — wefox Jul-22 and Alan Sep-24 set to `in_medians = 0` under D6, because
   Daniil's two sheets disagree on their denominators. Median-eligible 114 to 112. Row count unchanged
   at 184. Reversible: set `in_medians` back to 1 and delete the note.
+
+### 2026-09-02, later: Daniil's rulings applied
+
+- `docs/sector-screen-rulings-2sep.md` — seven rulings and what each one did.
+- `data/private-rounds.csv` — both D6 holds released. Wefox Jul-22 back in the medians unchanged at
+  14.06x (dispute resolved in the engine's favour). Alan Sep-24 CORRECTED: revenue 550.000 to
+  500.000, multiple 8.18 to 9.00, bound `<=` to `>=`, back in the medians. The USD 550m appeared in
+  no source; TechCrunch, cited by both sheets, says ARR expected to reach EUR450m, around USD500m.
+  Median-eligible 112 back to 114. Row count unchanged at 184.
+- `tools/check_raw_coverage.py` — all 49 sector screen exclusion reasons rewritten to carry the
+  ruling that now governs each row. 44 cleared to load, 2 held, 3 out.
+- Columns AC to AF: Daniil confirms they are hidden deliberately and are not needed. D11 flag withdrawn.
