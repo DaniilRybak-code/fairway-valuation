@@ -238,3 +238,24 @@ recorded here, at which point my transcription can be diffed against it and any 
   byrd high 10.3x to 23.5x, oda mid 10.3x to 23.5x, 99minutos high 10.3x to 23.5x. Five AI
   fixtures changed peer NAMES only, Anthropic May-26 displacing Anysphere; it is out of medians
   so no range moved.
+
+## 2026-09-02 — the private sheet is COMPLETE at 191 transactions
+
+- `data/raw/2026-09-02_private-transactions-p01..p12.png` — the second screenshot batch, rows 123
+  to 195 of the sheet, archived untouched before anything was built on them.
+- `data/raw/2026-09-01_private-transactions-daniil.csv` — now 191 rows, matching the sheet's own
+  stated count. Rows 123 to 152 overlapped the first batch and EVERY ONE matched what was already
+  transcribed. 43 rows were new, running from Carta Aug-2021 back to Buffer Oct-2014.
+- Self-check: 189 of 191 rows tie post-money / metric = multiple. The two that do not are the
+  already-ruled Gorillas (pre-money) and Perplexity Jan-24 (bottom of a range).
+- `tools/check_denominator_monotonicity.py` — NEW, and it closes a to-do the header of
+  private-rounds.csv opened on 31-Aug. Across sequential rounds of one company on one basis the
+  denominator should not fall; a fall flags a figure attached to the wrong round. Ours: 1 flag
+  (Creditas, a real BRL decline). Daniil's sheet: 1 flag, Upgrade Aug-21 160 falling to Nov-21 100,
+  which is exactly the defect we had already found and fixed on our side.
+- `tools/apply_batch2_verdicts_2sep.py` — four rows moved after independent checking:
+  Salesloft Apr-19 priced at 12.0x display-only (was a round with neither valuation nor
+  denominator); Trendyol Aug-21 volume multiple 1.65x filled from numbers we already held;
+  GOAT Group Jun-21 rounding 1.9x to 1.85x; Anthropic Series D Jan-24 inserted at $18.4bn on the
+  $87m run-rate Anthropic itself dates to the start of 2024, 211.5x, IN medians.
+- Golden unchanged, 0 of 43.

@@ -1,0 +1,199 @@
+# PRIVATE TRANSACTIONS WITH MULTIPLES, Daniil's realigned database, 1-Sep-2026. 191 unique
+# transactions in the source. COMPLETE as of 02-Sep-2026: the second screenshot batch (12 shots,
+# data/raw/2026-09-02_private-transactions-p01..p12.png) supplied rows 123 to 195, the last of which
+# is Buffer Oct-2014. Rows 123 to 152 overlapped the first batch and every one matched what was
+# already transcribed. 43 rows were new and are appended at the foot in sheet order.
+# Transcribed by Opus for COMPARISON against data/private-rounds*.csv, not as a replacement.
+# Columns kept are the ones the comparison needs. mult_reported is column Y "Implied multiple(s)".
+company,txn_date,post_money_m,metric_type,metric_value_m,denominator_basis,mult_reported
+Oxylabs,2026-07-09,3600,ARR,350,ARR at transaction,10.3
+Sierra,2026-05-04,15800,ARR,150,ARR,105.33
+WHOOP,2026-03-31,10100,RUN_RATE,1100,Exiting CY2025,9.18
+Quince,2026-03-11,10100,REVENUE,1000,FY2025,10.10
+Notion,2026-01-27,11000,ARR,865,ARR,12.72
+Mews,2026-01-22,2500,REVENUE,200,FY2024,12.50
+Decagon,2026-01-20,4500,RUN_RATE,100,Annualized revenue,45.00
+Clay,2026-01-15,5000,ARR,150,ARR,33.33
+Lovable,2025-12-18,6600,ARR,200,ARR (> threshold),33.00
+Airwallex,2025-12-10,8000,RUN_RATE,1000,Annualized revenue (> threshold),8.00
+Creditas,2025-12-01,3300,REVENUE,445.4,Q3 2025 annualized x4 to USD,7.41
+Revolut,2025-11-24,75000,REVENUE,6000,FY2025 revenue,12.50
+Gamma,2025-11-19,2100,ARR,100,ARR (> threshold),21.00
+Ramp,2025-11-17,32000,RUN_RATE,1000,Annualized revenue (> threshold),32.00
+Gong,2025-11-15,4500,ARR,500,ARR (> threshold),9.00
+SKIMS,2025-11-12,5000,REVENUE,1000,FY2025E,5.00
+LangChain,2025-10-21,1250,RUN_RATE,16,Annualized revenue,78.12
+Deel,2025-10-16,17300,ARR,1000,ARR (> threshold),17.30
+Kriya,2025-10,7.5,REVENUE,12.6,FY ended 2024-12-31,0.60
+Supabase,2025-10,5100,RUN_RATE,70,Mid-2025 annualized run-rate,72.86
+Invisible Technologies,2025-09-16,2000,RUN_RATE,134,Annualized revenue,14.93
+Perplexity,2025-09-10,20000,ARR,200,At transaction,100.0
+Replit,2025-09-10,3000,RUN_RATE,150,Annualized revenue,20.00
+Sierra,2025-09-04,10000,ARR,100,Enterprise ARR / run-rate,100.00
+Canva,2025-08-20,42000,ARR,4000,ARR,10.50
+Ramp,2025-07-30,22500,RUN_RATE,700,Annualized revenue,32.14
+Perplexity,2025-07,18000,RUN_RATE,150,Jul-2025,120.0
+Harvey,2025-06-23,5000,RUN_RATE,75,Annualized run-rate revenue,66.67
+Scale AI,2025-06-12,29000,REVENUE,2000,Forward revenue,14.50
+Glean,2025-06-10,7200,ARR,100,ARR (> threshold),72.00
+Anysphere / Cursor,2025-06-05,9900,ARR,500,ARR (> threshold),19.80
+Strava,2025-05-22,2200,ARR,500,ARR at pricing,4.40
+Airwallex,2025-05-21,6200,RUN_RATE,900,Annualized revenue,6.89
+Plaid,2025-04-03,6100,ARR,500,ARR (> threshold),12.20
+OpenAI,2025-03-31,300000,RUN_RATE,5500,Annualized recurring revenue,54.55
+Mercury,2025-03-26,3500,RUN_RATE,650,Annualized revenue,5.38
+Turing,2025-03-06,2200,ARR,300,ARR,7.33
+Weights & Biases,2025-03-04,1700,ARR,50,Dec-2024,34.0
+Anthropic,2025-03-03,61500,RUN_RATE,1000,Annualized revenue run-rate,61.50
+Stripe,2025-02-27,91500,REVENUE,5600,Net revenue,16.34
+OLIPOP,2025-02-12,1850,REVENUE,400,FY2024,4.62
+ElevenLabs,2025-01-30,3300,ARR,80,ARR,41.25
+Rokt,2025-01-16,3500,REVENUE,600,FY2024,5.83
+Whatnot,2025-01-08,4970,GMV,3000,FY2024,1.66
+Perplexity,2024-12-18,9000,ARR,63,ARR,142.86
+Olive & June,2024-12,240,REVENUE,92,Estimated CY2024 at closing,2.61
+Writer,2024-11-12,1900,ARR,47,ARR,40.43
+Vinted,2024-10-24,5000,REVENUE,596.3,FY2023,8.385
+Zepz,2024-10-08,3000,REVENUE,478,Revenue,6.28
+Alan,2024-09-20,4500,ARR,550,ARR (> threshold),8.18
+Flink,2024-09-16,1000,REVENUE,600,FY2024E,1.67
+Revolut,2024-08-16,45000,REVENUE,2200,FY2023 revenue,20.45
+Abnormal Security,2024-08-06,5100,ARR,200,ARR (> threshold),25.50
+Vanta,2024-07-24,2450,ARR,100,ARR (> threshold),24.50
+Clio,2024-07-23,3000,ARR,200,ARR (> threshold),15.00
+Huntress,2024-06-18,1550,ARR,100,ARR / run-rate,15.50
+AlphaSense,2024-06-11,4000,ARR,200,ARR (> threshold),20.00
+Canva,2024-05-23,26000,RUN_RATE,2300,Annualized revenue,11.30
+Scale AI,2024-05-21,13800,RUN_RATE,1400,Forward annualized revenue,9.86
+Figma,2024-05-16,12500,ARR,700,ARR (> threshold),17.86
+Vercel,2024-05-16,3250,ARR,100,Annual revenue / ARR proxy,32.50
+Monzo,2024-05-08,5200,REVENUE,1100,FY2024 revenue,4.73
+Wiz,2024-05-07,12000,ARR,350,ARR,34.29
+Rippling,2024-04-22,13500,ARR,350,ARR (> threshold),38.57
+FloQast,2024-04-10,1600,ARR,100,ARR (> threshold),16.00
+Guesty,2024-04-10,900,ARR,164,Revenue / ARR proxy,5.49
+Cyera,2024-04-09,1400,ARR,50,ARR midpoint proxy,28.00
+Chime,2024-04-01,16000,REVENUE,1673,FY2024 revenue,9.56
+Liquid Death,2024-03-11,1400,OTHER_VOLUME,263,FY2023,5.32
+Mews,2024-03-04,1200,RUN_RATE,100,At transaction,12.00
+Stripe,2024-02-28,65000,REVENUE,5600,Net revenue,11.61
+TravelPerk,2024-01-23,1400,RUN_RATE,150,FY2023,9.33
+Perplexity,2024-01-04,520,ARR,10,At transaction; range 5m-10m,104.0
+SumUp,2023-12-11,8500,REVENUE,204,Revenue / entity proxy,41.67
+Checkout.com,2023-12-01,9400,REVENUE,212,UK entity revenue,44.34
+Revolut,2023-11-01,33000,REVENUE,2200,FY2023 revenue,15.00
+Atom Bank,2023-11,362,REVENUE,76,FY ended 2023-03-31,4.76
+AlphaSense,2023-09-28,2500,ARR,200,ARR,12.50
+HiBob,2023-09-20,2700,ARR,100,ARR (> threshold),27.00
+Cato Networks,2023-09-19,3000,ARR,100,ARR (> threshold),30.00
+Writer,2023-09-18,750,ARR,16,ARR,46.88
+Databricks,2023-09-14,43000,ARR,1600,ARR / revenue run-rate,26.88
+Apollo.io,2023-08-29,1600,ARR,150,ARR,10.67
+OneTrust,2023-07-24,4500,ARR,400,ARR,11.25
+SKIMS,2023-07-19,4000,REVENUE,750,FY2023E,5.33
+Cohere,2023-06-08,2100,ARR,22,Annual revenue / ARR proxy,95.45
+Anthropic,2023-05-23,4000,RUN_RATE,100,Annualized revenue,40.00
+SHEIN,2023-05-17,66000,REVENUE,23000,FY2022,2.87
+Raisin,2023-03-23,1100,REVENUE,171,FY2023 revenue,6.43
+Stripe,2023-03-15,50000,REVENUE,4100,Net revenue,12.20
+Snyk,2022-12-12,7400,ARR,150,ARR,49.33
+Huel,2022-11-30,560,REVENUE,170,At announcement,3.29
+Jasper,2022-10-17,1500,ARR,42.5,First 12 months,35.29
+Airwallex,2022-10-11,5500,RUN_RATE,200,Annualized revenue,27.50
+Factorial,2022-10-11,1000,ARR,30,ARR,33.33
+Celonis,2022-08-23,13000,ARR,1000,ARR / revenue run-rate,13.00
+Incredible Health,2022-08-17,1650,REVENUE,25,FY2021,66.00
+Contentsquare,2022-07-21,5600,ARR,200,ARR / annual revenue,28.00
+Wefox,2022-07-12,4500,REVENUE,320,Revenue,14.06
+Klarna,2022-07-11,6700,REVENUE,1900,FY2022 revenue,3.53
+Coalition,2022-07-08,5000,RUN_RATE,740,Annualized GWP / revenue proxy,6.76
+Xpansiv,2022-07-06,1400,PAYMENT_VOLUME,121.5,CY2021 MtCO2e,11.52
+SumUp,2022-06-23,8500,RUN_RATE,1000,Annualized revenue,8.50
+Personio,2022-06-22,8500,ARR,100,ARR,85.00
+AlphaSense,2022-06-15,1700,ARR,100,At transaction,17.00
+Chainalysis,2022-05-12,8600,ARR,190,ARR,45.26
+Deel,2022-05-11,12000,ARR,295,ARR,40.68
+Stenn,2022-04-11,900,LOANS_ORIGINATED,6000,inception 2015 to 2022-04-11,0.15
+Remote,2022-04-05,3000,ARR,100,ARR,30.00
+Docker,2022-03-31,2100,ARR,50,ARR,42.00
+Blockchain.com,2022-03-30,14000,REVENUE,1500,Annual revenue,9.33
+dbt Labs,2022-02-24,4200,ARR,100,ARR,42.00
+GoCardless,2022-02-08,2100,REVENUE,100,Annual revenue,21.00
+Hopper,2022-02-03,5000,REVENUE,150,FY2021,33.33
+Loadsmart,2022-02-01,1300,GROSS_REVENUE,250,FY2021,5.20
+Wayflyer,2022-02-01,1600,LOANS_ORIGINATED,500,FY2021,3.20
+Fireblocks,2022-01-27,8000,ARR,100,ARR,80.00
+AG1 (Athletic Greens),2022-01-25,1315,REVENUE,150,At announcement,8.77
+Creditas,2022-01-25,4800,REVENUE,200,2021 annualized revenue,24.0
+6sense,2022-01-20,5200,RUN_RATE,110,At transaction,47.3
+1Password,2022-01-19,6800,ARR,120,ARR (> threshold),56.67
+Spendesk,2022-01-18,1140,ARR,50,ARR / revenue run-rate,22.80
+Brex,2022-01-11,12300,RUN_RATE,312,Annualized revenue,39.42
+Qonto,2022-01-11,5000,RUN_RATE,120,Annualized revenue,41.67
+PayFit,2022-01-06,2100,ARR,100,ARR / annual revenue,21.00
+Miro,2022-01-05,17500,ARR,300,ARR,58.33
+Glovo,2021-12-31,2300,REVENUE,360,approx 360m EUR 2020 revenue,6.39
+Salesloft,2021-12-23,2300,ARR,100,Early summer 2021,23.0
+Mambu,2021-12-09,5500,ARR,250,ARR / revenue,22.00
+Pleo,2021-12-09,4700,ARR,100,ARR,47.00
+Jobandtalent,2021-12-01,2350,REVENUE,1130,Run-rate at Dec-2021 announcement,2.08
+Tipalti,2021-12,8300,PAYMENT_VOLUME,30000,Annual period not specified,0.2767
+Fundbox,2021-11-30,1100,REVENUE,100,Annual revenue run-rate as of 2021,11.0
+MoonPay,2021-11-22,3400,REVENUE,150,Annual revenue,22.67
+Airwallex,2021-11-18,5500,RUN_RATE,100,Q3 2021 annualized,55.0
+Faire,2021-11-16,12400,GMV,1000,At announcement,12.40
+Upgrade,2021-11-16,6280,RUN_RATE,100,After Q3 2021,62.80
+Wolt,2021-11-09,8100,REVENUE,345,preliminary 345m,23.48
+Thrasio,2021-10-25,10000,RUN_RATE,1000,At announcement,10.0
+Brex,2021-10-21,7400,RUN_RATE,200,Annualized revenue,37.00
+Gorillas,2021-10-19,3100,RUN_RATE,300,Run-rate at Oct-2021 announcement,7.0
+Zopa,2021-10-19,750,REVENUE,29.8,FY2020 statutory aggregate GBP,25.16
+N26,2021-10-18,9000,REVENUE,200,Annual revenue,45.00
+Tala,2021-10-14,800,LOANS_ORIGINATED,2700,inception to 2021-10,0.30
+Airwallex,2021-09-20,4000,RUN_RATE,100,Annualized revenue,40.00
+Flo Health,2021-09-09,800,PAID_SUBSCRIBERS,1.5,Point-in-time Aug-2021 millions,533.33
+Packable,2021-09-09,1550,REVENUE,373.3,FY2020,4.15
+Ramp,2021-08-24,3900,RUN_RATE,100,Annualized revenue,39.00
+Carta,2021-08-13,7400,ARR,150,ARR / annual revenue,49.33
+Chime,2021-08-13,25000,REVENUE,950,Annual revenue,26.32
+Upgrade,2021-08-11,3430,RUN_RATE,160,At transaction,21.44
+Trendyol,2021-08-09,16500,GMV,10000,FY2021E,1.65
+Rapyd,2021-08-03,8750,PAYMENT_VOLUME,5000,FY2020,1.75
+Gopuff,2021-07-30,15000,REVENUE,340,FY2020,44.12
+Algolia,2021-07-28,2250,ARR,100,Around Jul-2021,22.5
+Fireblocks,2021-07-27,2000,ARR,50,ARR,40.00
+Revolut,2021-07-15,33000,REVENUE,636,Annual revenue,51.89
+Clearco,2021-07-08,2000,LOANS_ORIGINATED,2400,inception to 2021-07,0.83
+Chainalysis,2021-06-24,4200,ARR,100,ARR,42.00
+GOAT Group,2021-06-24,3700,GMV,2000,LTM to announcement,1.85
+Mollie,2021-06-22,6500,REVENUE,120,Annual revenue,54.17
+Klarna,2021-06-10,45600,REVENUE,1400,Annual revenue,32.57
+Gong,2021-06-03,7250,ARR,100,At transaction,72.5
+Clearco,2021-04-20,2000,LOANS_ORIGINATED,2000,Inception to 2021-04-20,1.00
+StockX,2021-04-08,3800,GMV,1800,FY2020,2.11
+Patreon,2021-04-07,4000,RUN_RATE,100,Pre-pricing,40.00
+Plaid,2021-04-07,13400,REVENUE,170,Annual revenue,78.82
+dLocal,2021-04-02,5000,REVENUE,104.1,FY2020 year ended 31-Dec-2020,48.01
+Harry's,2021-03-31,1700,REVENUE,370,FY2020,4.59
+Loft,2021-03-23,2200,RUN_RATE,150,At transaction,14.67
+Yotpo,2021-03-18,1400,ARR,100,At announcement,14.00
+Savage X Fenty,2021-02-10,1000,REVENUE,150,FY2020 estimate,6.7
+Calendly,2021-01-26,3000,ARR,100,ARR (> threshold),30.00
+Rapyd,2021-01-13,2500,REVENUE,100,FY2020 unclear whether closed,25.00
+Creditas,2020-12-18,1750,REVENUE,56.0,Q3 2020 revenue annualized x4 from BRL 78.8,31.25
+Calm,2020-12-08,2000,PAID_SUBSCRIBERS,4.0,Point-in-time at round millions,500.00
+Loadsmart,2020-11-20,400,REVENUE,100,Projected FY2020 at pricing,4.0
+Mollie,2020-09-08,1000,PAYMENT_VOLUME,10000,Forward annual payment volume at pricing EUR,0.10
+Thrasio,2020-07-15,1260,REVENUE,300,LTM at announcement,4.20
+Marqeta,2020-05-28,4300,REVENUE,300,FY2019 estimated,14.3
+Tala,2019-08-21,800,LOANS_ORIGINATED,1000,preceding 12 months to 2019-08,0.80
+Calm,2019-07-01,1000,RUN_RATE,150,Annual revenue run-rate at 2019-02-06,6.67
+Marqeta,2019-05-21,2000,REVENUE,150,FY2018 estimated,13.3
+Away,2019-05-14,1400,REVENUE,150,FY2018,9.33
+Salesloft,2019-04-25,600,ARR,50,Jul-2019 within ~3 months,12.0
+Rent the Runway,2019-03-21,1000,REVENUE,100,At announcement,10.00
+Glossier,2019-03-19,1200,REVENUE,100,FY2018,12.00
+Calm,2019-02-06,1000,RUN_RATE,150,Annual revenue run-rate at pricing,6.67
+Deezer,2018-08-02,1000,REVENUE,300,FY2017 EUR,3.33
+Bright Data / Luminati,2017-08-01,200,REVENUE,100,At transaction,2.0
+Buffer,2014-10,60,ARR,4.7,October 2014 run-rate,12.80

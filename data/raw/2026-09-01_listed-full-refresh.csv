@@ -4,6 +4,17 @@
 # and added the broker estimate count for FY+1 revenue.
 # na = n.a. in the sheet. nm = n.m. HIDDEN = the cell was truncated by column width and unreadable.
 # BROKEN = the sheet itself shows #DIV/0! or #N/A.
+#
+# TWO CORRECTIONS FROM DANIIL, 1-Sep, applied here.
+# 1. TSE:9418 U-NEXT gross profit is 955, not the 355 I first read. It now ties: 2155/955 = 2.3x,
+#    which is the multiple the sheet shows. This was the single discrepancy the check could not
+#    explain by rounding, and it is closed.
+# 2. NASDAQ:MELI and NASDAQGS:MELI are NOT a duplicate to be collapsed. Same enterprise value,
+#    two different volume denominators: GMV of 65,037 on the commerce row and TPV of 277,823 on
+#    the payments row. MercadoLibre is therefore two comparables, and AV/TPV is to be calculated
+#    separately from AV/GMV. Recorded on the tracker as an open build item.
+#    The other six repeated tickers ARE true duplicates and collapse on the normalised symbol:
+#    GigaCloud, Freightos, Kanzhun, LegalZoom, Copart, Xometry.
 ticker,company_name,year_end,calendarization,currency,fx_usd_per_lcy,balance_sheet_driven,market_cap_musd,price_per_share,eqv_av_bridge_musd,av_musd,n_estimates,gmv_cy0,gmv_cy1,gmv_cy2,gmv_ntm,revenue_ntm_musd,gross_profit_musd,net_income_musd,bvps,av_gmv_pct,av_ntm_revenue_x,av_ntm_gp_x,pe_x,pbv_x,growth_cy1_pct,growth_cy2_pct,growth_cy3_pct,cagr_cy1_cy3_pct,ni_growth_cy2_pct
 ENXTPA:74SW,74Software,31-Dec-25,0.00,EUR,1.16,0,1335,46,269,1604,7,na,na,na,na,878,604,93,na,na,1.8,2.7,14.3,na,4.6,3.6,3.9,3.8,13.8
 NYSE:ATEN,A10 Networks Inc.,31-Dec-25,0.00,USD,1.00,0,1812,25,-131,1680,6,na,na,na,na,355,285,85,na,na,4.7,5.9,21.2,na,13.3,11.6,11.4,11.5,14.2
@@ -336,7 +347,7 @@ ENXTAM:BFIT,Basic-Fit N.V.,,,,,,2508,39,3342,5849,11,na,na,na,na,2081,2035,154,n
 LSE:GYM,The Gym Group plc,,,,,,488,3,547,1036,9,na,na,na,na,390,386,13,na,na,2.7,2.7,38.5,na,9.8,10.9,11.5,11.2,9.4
 LSE:PETS,Pets at Home Group Plc,,,,,,1260,3,477,1736,10,na,na,na,na,2055,937,100,na,na,0.8,1.9,12.6,na,1.8,2.1,1.9,2.0,7.5
 OM:VSURE,Verisure plc,,,,,,10742,10,5919,16661,11,na,na,na,na,5075,2456,762,na,na,3.3,6.8,14.1,na,10.5,8.7,8.3,8.5,19.0
-TSE:9418,"U-NEXT HOLDINGS Co.,Ltd.",,,,,,1940,11,215,2155,5,5139,5921,6483,6297,3163,355,166,na,34.2,0.7,2.3,11.7,na,15.2,9.5,6.1,7.8,19.8
+TSE:9418,"U-NEXT HOLDINGS Co.,Ltd.",,,,,,1940,11,215,2155,5,5139,5921,6483,6297,3163,955,166,na,34.2,0.7,2.3,11.7,na,15.2,9.5,6.1,7.8,19.8
 TSE:7085,CURVES HOLDINGS Co. Ltd.,,,,,,545,6,-35,510,2,na,na,na,na,291,125,39,na,na,1.8,4.1,13.8,na,11.8,8.9,9.9,9.4,20.7
 ASX:VVA,Viva Leisure Limited,,,,,,108,1,260,368,2,na,na,na,na,190,19,15,na,na,1.9,19.1,7.0,na,11.2,9.6,8.7,9.2,35.4
 ASX:ABB,Aussie Broadband Limited,,,,,,966,3,98,1064,12,na,na,na,na,1159,379,66,na,na,0.9,2.8,14.5,na,16.4,17.9,10.3,14.0,61.3
