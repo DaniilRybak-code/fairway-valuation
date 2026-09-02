@@ -1589,7 +1589,16 @@ def _control(rows):
 #
 # So the range reports the mix of bases behind it. If a founder gives us ARR and the number they are
 # shown was built from gross sales, the copy owes them that sentence.
-def _basis_mix(rows):
+def _basis_mix(rows, basis='REVENUE'):
+    # THE MIX MUST DESCRIBE THE MEASURE ACTUALLY PRICED ON, NOT A FIELD THAT HAPPENS TO BE FILLED.
+    # Fixed 02-Sep-2026, the day Zopa gained a run-rate. Zopa is priced on BOOK at 5.6x and is the
+    # only priced lender comparable we have; recording its revenue run-rate for the record made
+    # revenue_basis non-empty, and this function was reading that field on a row nobody prices on
+    # revenue. With one comp nothing showed. With two lender comps carrying different revenue_basis
+    # values it would have told a founder "these rounds were priced on different measures" while
+    # both were in fact priced on book. On a book range the measure is book, once, for every row.
+    if basis != 'REVENUE':
+        return {basis: len(rows)}
     m = {}
     for (_sw, r) in rows:
         b = r.get('revenue_basis') or 'UNKNOWN'
@@ -1733,7 +1742,7 @@ def private_range(prof, picked, tier):
                triangulated=(close == 'THIN_OVERLAP'), anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
-               basis_mix=_basis_mix(priced),
+               basis_mix=_basis_mix(priced, basis),
                basis=basis, basis_label=BASIS_KEYS[basis][2],
                period_mix=_period_mix(priced), period_span=_period_span(prof, priced),
                band=band, positioning=_positioning(prof, weaker, key))

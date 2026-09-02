@@ -84,12 +84,12 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Zopa",
     "date": "Oct-21",
     "in_medians": true,
-    "mult": null,
+    "mult": 8.9,
     "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
     "score": 18.4,
     "type": "PRIMARY"
@@ -113,7 +113,7 @@
    "basis": "BOOK",
    "basis_label": "price to book",
    "basis_mix": {
-    "NONE": 1
+    "BOOK": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -128,10 +128,10 @@
    "mid": 5.6,
    "n": 1,
    "period_mix": {
-    "UNKNOWN": 1
+    "RUN_RATE": 1
    },
    "period_span": {
-    "LTM": {
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }

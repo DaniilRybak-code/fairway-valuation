@@ -259,3 +259,22 @@ recorded here, at which point my transcription can be diffed against it and any 
   GOAT Group Jun-21 rounding 1.9x to 1.85x; Anthropic Series D Jan-24 inserted at $18.4bn on the
   $87m run-rate Anthropic itself dates to the start of 2024, 211.5x, IN medians.
 - Golden unchanged, 0 of 43.
+
+## 2026-09-02 — data/investors.csv, day 1 of the investors build
+
+- `data/investors.csv` — **368 houses.** 19 carry a CALLABLE layer, 349 an EVIDENCE layer.
+  Built by `tools/build_investors_table.py`, gated by `tools/investor_check.py`.
+- EVIDENCE layer generated from `private-rounds.csv` and `private-rounds-consumer.csv`: every
+  house carries its rounds in our set, its two most recent deals with company, month and the
+  round's OWN source URL, and its sector mix in our screening vocabulary. **349 of 349 render.**
+- CALLABLE layer seeded from the 19 UK funds in `data-content.js` with cheque ranges parsed from
+  their notes. **0 of 19 render**, and that is the design: none carries a dated deal with a
+  source URL. The refusals are the pull list, `docs/investor-pull-list-2sep.tsv`.
+- Found and fixed while building: **27 houses were split in two by spelling** across the two
+  round files (Sequoia / Sequoia Capital, Tiger Global / Tiger Global Management), which
+  understated the activity of every one of them. Names now merge on a repeated-suffix stem and
+  the collision count is 0. Prose leaking out of the investor cells ("Buyers: Drive Capital,
+  Stack Capital Group…") is filtered rather than treated as a house.
+- Also fixed today, in `selector/match_reference.py`: `_basis_mix` read `revenue_basis` on rows
+  priced on BOOK. Harmless with one lender comp, wrong with two: it would have told a founder
+  "these rounds were priced on different measures" when both were priced on book.
