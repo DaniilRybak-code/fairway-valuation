@@ -2,6 +2,30 @@
  "expected": {
   "core": [
    {
+    "company": "Asana, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of team; same type of business; same business function; sold the same way",
+    "score": 8.6,
+    "ticker": "NYSE:ASAN"
+   },
+   {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of agent, automation; same type of business; same business function; same AI stance",
+    "score": 8.4,
+    "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "Pegasystems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation, business; same type of business; same business function",
+    "score": 7.3,
+    "ticker": "NASDAQGS:PEGA"
+   },
+   {
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
@@ -16,24 +40,16 @@
     "reason": "shares the language of credit; same type of business; same kind of customer",
     "score": 6.6,
     "ticker": "XTRA:1INN"
-   },
-   {
-    "company": "BILL Holdings, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same kind of customer",
-    "score": 5.1,
-    "ticker": "NYSE:BILL"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -42,11 +58,11 @@
    "high": 5.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.2,
+   "low": 2.7,
    "mid": 2.8,
-   "n": 3,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -57,11 +73,14 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "agent",
     "automation",
-    "credit"
+    "business",
+    "credit",
+    "team"
    ],
-   "spread": 2.6,
-   "tag_evidence": 0.1,
+   "spread": 2.5,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -238,59 +257,59 @@
     "ticker": "NYSE:KVYO"
    },
    {
-    "company": "Asana, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of team; same type of business; same business function; sold the same way",
-    "score": 8.6,
-    "ticker": "NYSE:ASAN"
-   },
-   {
-    "company": "UiPath, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of agent, automation; same type of business; same business function; same AI stance",
-    "score": 8.4,
-    "ticker": "NYSE:PATH"
-   },
-   {
-    "company": "Pegasystems Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation, business; same type of business; same business function",
-    "score": 7.3,
-    "ticker": "NASDAQGS:PEGA"
-   },
-   {
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "NASDAQGS:WIX"
+   },
+   {
+    "company": "SAP SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of business; same type of business; same business function",
+    "score": 6.2,
+    "ticker": "XTRA:SAP"
+   },
+   {
+    "company": "SoundHound AI, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
+    "score": 6.1,
+    "ticker": "NASDAQGM:SOUN"
+   },
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of agent, ai; same revenue model; sold the same way",
+    "score": 5.8,
+    "ticker": "NYSE:NET"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.0,
+   "high": 11.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.3,
-   "mid": 2.7,
-   "n": 4,
+   "low": 2.7,
+   "mid": 5.1,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -306,16 +325,22 @@
      "reason": "shares the language of ai; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 31.8,
+     "reason": "shares the language of agent, ai; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
     }
    ],
    "shared_words": [
-    "agent",
+    "ai",
     "automation",
-    "business",
-    "team"
+    "business"
    ],
-   "spread": 1.7,
-   "tag_evidence": 0.6,
+   "spread": 4.4,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

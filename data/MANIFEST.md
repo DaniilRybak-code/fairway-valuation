@@ -705,3 +705,31 @@ was reporting the wrong thing.
   52 clear the roadmap's stricter six-field bar. Both numbers are right; they are different bars.
   What separates them: **78 callable rows have no `first_cheque_low_m` and 74 have no
   `geographies`.**
+
+## 2026-09-03 (later): five matcher fixes, all found by chasing one question
+
+Daniil asked how a payments company could come back with no listed comparables. It could not, quite:
+Payabli had seven listed names and seven private ones. But its CORE lane was empty, and chasing that
+found four more places where the engine held the answer and picked something else. Full write-up in
+`docs/peer-universe-diagnosis-3sep.md`.
+
+- `selector/match_reference.py` — five changes, all the same class of bug: the code asked whether
+  there was a number in the cell when the question is whether the name can price THIS founder.
+  1. A third route through axis B for a horizontal founder: the same PRIMARY archetype. Narrower
+     evidence than the two existing routes, not looser. 23 listed names gained, 2 displaced.
+  2. `_one_round_per_company` drops rounds that cannot price this founder before breaking the tie.
+     Atom Bank's Feb-22 BOOK round was losing to its Nov-23 revenue round on date, so Perenna was
+     still shown a book range of one name the day after we loaded the second book comparable.
+  3. `_prices` reads the basis-appropriate multiple. It asked every candidate for EV/revenue, which
+     no lender has, so every lender core topped up to its ceiling and measured nothing.
+  4. The listed top-up reaches for names that price before names that merely score.
+  5. The private lane gets the same "cannot price two names is not a lane" rule, on `basis_mult` so
+     a gross-revenue row does not count as pricing a net-basis founder.
+- `tools/peer_universe_check.py` — two faults of its own fixed. It scored an EMPTY lane above a thin
+  one, so a fixture passed with no comparable and failed when a real one arrived. And it re-raised
+  Daniil's 31-Aug CONTEXT ruling as an open question.
+- `tools/thin_lane_diagnosis.py` — NEW. Answers "is the next best peer in our database" for every
+  thin lane, separating multiple-on-the-wrong-basis from held-but-unpriced from genuinely exhausted.
+  Spares must clear the same tier and score cut as the lane itself or they are not spares.
+- `selector/golden/*.json` — rebaselined. **Peer universe: 33 of 43 to 36 of 43. Fixtures with no
+  priced range at all: 4 to 2.**

@@ -24,29 +24,45 @@
     "reason": "shares the language of scheduling; same type of business; same kind of customer; same revenue model",
     "score": 9.6,
     "ticker": "NYSE:PD"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of engagement, platform; same type of business; same revenue model",
+    "score": 7.0,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same type of business; same kind of customer",
+    "score": 6.8,
+    "ticker": "ENXTAM:TOM2"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 5.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.8,
-   "mid": 3.9,
-   "n": 3,
+   "mid": 2.1,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -54,13 +70,51 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of api; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PagerDuty, Inc.",
+     "mult": 1.8,
+     "reason": "shares the language of scheduling; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "mult": 2.1,
+     "reason": "shares the language of engagement, platform; same type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Qt Group Oyj",
+     "mult": 3.9,
+     "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GitLab Inc.",
+     "mult": 5.0,
+     "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "shared_words": [
+    "api",
+    "engagement",
     "platform",
     "scheduling"
    ],
-   "spread": 2.8,
+   "spread": 8.3,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -197,14 +251,6 @@
     "ticker": "NASDAQCM:SPT"
    },
    {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of engagement, platform; same type of business; same revenue model",
-    "score": 7.0,
-    "ticker": "NASDAQGS:GTM"
-   },
-   {
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
@@ -213,20 +259,28 @@
     "ticker": "NYSE:TWLO"
    },
    {
-    "company": "TomTom N.V.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; same type of business; same kind of customer",
-    "score": 6.8,
-    "ticker": "ENXTAM:TOM2"
-   },
-   {
     "company": "Agora, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; same kind of customer; sold the same way",
     "score": 6.8,
     "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "Sprinklr, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of media, social; related type of business; same revenue model; same AI stance",
+    "score": 6.5,
+    "ticker": "NYSE:CXM"
+   },
+   {
+    "company": "Five9, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of engagement; related type of business; same revenue model; same AI stance",
+    "score": 6.4,
+    "ticker": "NASDAQGM:FIVN"
    }
   ],
   "secondary_range": {
@@ -242,11 +296,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.1,
+   "high": 2.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.6,
-   "mid": 1.1,
+   "low": 1.1,
+   "mid": 1.5,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -275,14 +329,12 @@
     }
    ],
    "shared_words": [
-    "api",
     "engagement",
     "media",
-    "platform",
     "scheduling",
     "social"
    ],
-   "spread": 3.5,
+   "spread": 1.8,
    "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false

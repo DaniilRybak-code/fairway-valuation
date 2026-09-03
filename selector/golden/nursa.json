@@ -104,14 +104,6 @@
     "ticker": "NASDAQGS:UPWK"
    },
    {
-    "company": "Fiverr International Ltd.",
-    "family": "consumer",
-    "in_medians": false,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 13.6,
-    "ticker": "NYSE:FVRR"
-   },
-   {
     "company": "Angi Inc.",
     "family": "consumer",
     "in_medians": true,
@@ -134,13 +126,21 @@
     "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
     "score": 10.6,
     "ticker": "NASDAQGS:EBAY"
+   },
+   {
+    "company": "Trip.com Group Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+    "score": 10.6,
+    "ticker": "NASDAQGS:TCOM"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -152,11 +152,11 @@
    "high": 3.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 0.95,
-   "n": 4,
+   "low": 0.8,
+   "mid": 1.1,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -184,6 +184,13 @@
      "mult": 1.1,
      "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Trip.com Group Limited",
+     "mult": 2.0,
+     "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+     "tier": "BROAD",
      "transaction_type": ""
     },
     {

@@ -165,17 +165,6 @@
     "type": "SECONDARY"
    },
    {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Glossier",
-    "date": "Jul-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "both do Beauty; same type of business; same end market; same business function",
-    "score": 29.2,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Harry's",
@@ -196,6 +185,17 @@
     "reason": "shares the language of brand; same type of business; same end market; same business function",
     "score": 25.6,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Away",
+    "date": "May-19",
+    "in_medians": true,
+    "mult": 9.3,
+    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "score": 26.1,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "DIRECT",
@@ -205,7 +205,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 3
+    "NET_REVENUE": 4
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -217,10 +217,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.6,
-   "mid": 5.0,
-   "n": 3,
+   "mid": 9.3,
+   "n": 4,
    "period_mix": {
-    "LTM": 2,
+    "LTM": 3,
     "NTM": 1
    },
    "period_span": {
@@ -245,7 +245,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 66,
+  "private_window_months": 87,
   "secondary": [
    {
     "company": "YETI Holdings, Inc.",

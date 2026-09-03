@@ -2,14 +2,6 @@
  "expected": {
   "core": [
    {
-    "company": "Sezzle Inc.",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "both do Buy Now Pay Later, Checkout Financing; same type of business; same revenue model",
-    "score": 9.2,
-    "ticker": "NASDAQ:SEZL"
-   },
-   {
     "company": "Avarda Bank AB (publ)",
     "family": "fintech",
     "in_medians": true,
@@ -42,27 +34,27 @@
     "ticker": "AIM:TIME"
    },
    {
-    "company": "Shriram Finance Limited",
+    "company": "Sezzle Inc.",
     "family": "fintech",
     "in_medians": false,
-    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
-    "score": 8.6,
-    "ticker": "NSEI:SHRIRAMFIN"
+    "reason": "both do Buy Now Pay Later, Checkout Financing; same type of business; same revenue model",
+    "score": 9.2,
+    "ticker": "NASDAQ:SEZL"
    },
    {
-    "company": "Five-Star Business Finance Limited",
+    "company": "Velocity Financial, Inc.",
     "family": "fintech",
-    "in_medians": false,
+    "in_medians": true,
     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
     "score": 8.6,
-    "ticker": "NSEI:FIVESTAR"
+    "ticker": "NYSE:VEL"
    }
   ],
   "core_range": {
    "anchor_dropped": true,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -75,10 +67,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.1,
-   "mid": 1.7,
-   "n": 2,
+   "mid": 0.8,
+   "n": 3,
    "period_mix": {
-    "NTM": 2
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -90,6 +82,13 @@
     {
      "company": "Lufax Holding Ltd",
      "mult": 0.1,
+     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Velocity Financial, Inc.",
+     "mult": 0.8,
      "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -111,10 +110,10 @@
    ],
    "spread": 33.0,
    "tag_evidence": 1.9,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
-  "listed_proximity": "DIRECT",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -199,30 +198,6 @@
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "Velocity Financial, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
-    "score": 8.6,
-    "ticker": "NYSE:VEL"
-   },
-   {
-    "company": "Klarna Group plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Buy Now Pay Later; same type of business; same kind of customer",
-    "score": 8.0,
-    "ticker": "NYSE:KLAR"
-   },
-   {
-    "company": "Close Brothers Group plc",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of invoice, merchant; related type of business; same business function; same kind of customer",
-    "score": 7.7,
-    "ticker": "LSE:CBG"
-   },
-   {
     "company": "Funding Circle Holdings plc",
     "family": "fintech",
     "in_medians": true,
@@ -237,29 +212,53 @@
     "reason": "shares the language of credit; same type of business; same business function; same revenue model",
     "score": 7.6,
     "ticker": "NASDAQ:QFIN"
+   },
+   {
+    "company": "Dave Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "NASDAQ:DAVE"
+   },
+   {
+    "company": "OSB Group Plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of buy; related type of business; same business function; same kind of customer",
+    "score": 7.6,
+    "ticker": "LSE:OSB"
+   },
+   {
+    "company": "Cembra Money Bank AG",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Buy Now Pay Later; related type of business; same business function; same AI stance",
+    "score": 6.8,
+    "ticker": "SWX:CMBN"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.6,
+   "high": 8.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.3,
-   "mid": 0.8,
-   "n": 3,
+   "low": 0.7,
+   "mid": 1.8,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -276,9 +275,16 @@
      "transaction_type": ""
     },
     {
-     "company": "Velocity Financial, Inc.",
-     "mult": 0.8,
-     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+     "company": "OSB Group Plc",
+     "mult": 0.7,
+     "reason": "shares the language of buy; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cembra Money Bank AG",
+     "mult": 1.8,
+     "reason": "both do Buy Now Pay Later; related type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -288,16 +294,27 @@
      "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "Dave Inc.",
+     "mult": 8.3,
+     "reason": "shares the language of credit; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
    "positioning": [],
    "shared_words": [
-    "credit"
+    "buy",
+    "credit",
+    "later",
+    "now",
+    "pay"
    ],
-   "spread": 8.7,
-   "tag_evidence": 0.1,
+   "spread": 27.7,
+   "tag_evidence": 2.3,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "B2B deferred payment terms where the provider takes the credit risk from the seller"

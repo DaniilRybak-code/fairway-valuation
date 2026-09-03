@@ -34,12 +34,12 @@
     "ticker": "NYSE:TWLO"
    },
    {
-    "company": "Sinch AB (publ)",
+    "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
-    "ticker": "OM:SINCH"
+    "reason": "shares the language of ai; same type of business; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "NYSE:SNOW"
    }
   ],
   "core_range": {
@@ -58,8 +58,8 @@
    "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.4,
-   "mid": 5.2,
+   "low": 5.2,
+   "mid": 16.4,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -79,13 +79,6 @@
      "transaction_type": ""
     },
     {
-     "company": "Sinch AB (publ)",
-     "mult": 1.4,
-     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Twilio Inc.",
      "mult": 5.2,
      "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
@@ -96,6 +89,13 @@
      "company": "Datadog, Inc.",
      "mult": 16.4,
      "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 17.6,
+     "reason": "shares the language of ai; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -178,17 +178,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "PRESS_REPORTED",
-    "bound": ">=",
-    "company": "Perplexity",
-    "date": "Sep-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "both do AI Browser; related type of business; same business function; sold the same way",
-    "score": 11.7,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": ">=",
     "company": "Invisible Technologies",
@@ -197,6 +186,17 @@
     "mult": 14.9,
     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
     "score": 11.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Jul-2025",
+    "bound": "",
+    "company": "Perplexity",
+    "date": "Jul-25",
+    "in_medians": true,
+    "mult": 120.0,
+    "reason": "both do AI Browser; related type of business; same business function; sold the same way",
+    "score": 11.7,
     "type": "PRIMARY"
    }
   ],
@@ -208,24 +208,24 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 2,
+    "ARR_RUNRATE": 3,
     "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 33.0,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 120.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
    "mid": 20.0,
-   "n": 4,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -237,7 +237,43 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Oxylabs",
+     "mult": 10.3,
+     "reason": "both do Web Scraping, Scraper API; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Invisible Technologies",
+     "mult": 14.9,
+     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Lovable",
+     "mult": 33.0,
+     "reason": "both do No-Code; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Perplexity",
+     "mult": 120.0,
+     "reason": "both do AI Browser; related type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "agent",
@@ -251,20 +287,20 @@
     "scraping",
     "web"
    ],
-   "spread": 3.2,
+   "spread": 11.7,
    "tag_evidence": 2.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 13,
   "secondary": [
    {
-    "company": "Snowflake Inc.",
+    "company": "Sinch AB (publ)",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same business function; same revenue model",
-    "score": 9.6,
-    "ticker": "NYSE:SNOW"
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 8.8,
+    "ticker": "OM:SINCH"
    },
    {
     "company": "SoundHound AI, Inc.",
@@ -315,8 +351,8 @@
    "high": 41.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.5,
-   "mid": 11.8,
+   "low": 4.8,
+   "mid": 5.5,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -328,6 +364,13 @@
     }
    },
    "points": [
+    {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "C3.ai, Inc.",
      "mult": 4.8,
@@ -350,13 +393,6 @@
      "transaction_type": ""
     },
     {
-     "company": "Snowflake Inc.",
-     "mult": 17.6,
-     "reason": "shares the language of ai; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Palantir Technologies Inc.",
      "mult": 41.8,
      "reason": "shares the language of ai; same type of business; same business function; same AI stance",
@@ -367,9 +403,10 @@
    "positioning": [],
    "shared_words": [
     "ai",
+    "api",
     "infrastructure"
    ],
-   "spread": 8.7,
+   "spread": 29.9,
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false

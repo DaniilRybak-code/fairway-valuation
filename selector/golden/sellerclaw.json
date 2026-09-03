@@ -157,23 +157,23 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "ElasticRun",
-    "date": "Feb-22",
-    "in_medians": true,
-    "mult": 10.36,
-    "reason": "shares the language of ecommerce; related type of business; same kind of customer",
-    "score": 6.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
     "company": "Klaviyo",
     "date": "May-21",
     "in_medians": true,
     "mult": 32.6,
     "reason": "shares the language of automation, shopify; related type of business; same end market; same kind of customer",
     "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Yotpo",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 14.0,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 12.5,
     "type": "PRIMARY"
    }
   ],
@@ -184,25 +184,31 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR": 1,
     "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 32.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 32.6,
+   "low": 14.0,
    "mid": 32.6,
-   "n": 1,
+   "n": 2,
    "period_mix": {
-    "LTM": 1
+    "LTM": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -213,13 +219,12 @@
     "automation",
     "shopify"
    ],
-   "sole": "Klaviyo",
-   "spread": 1.0,
+   "spread": 2.3,
    "tag_evidence": 0.7,
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 63,
+  "private_window_months": 65,
   "secondary": [
    {
     "company": "Shoper S.A.",

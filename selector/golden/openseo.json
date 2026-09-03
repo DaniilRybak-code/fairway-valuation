@@ -18,12 +18,12 @@
     "ticker": "NYSE:KVYO"
    },
    {
-    "company": "Datadog, Inc.",
+    "company": "Yext, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:DDOG"
+    "reason": "shares the language of seo; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "NYSE:YEXT"
    }
   ],
   "core_range": {
@@ -37,13 +37,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 16.4,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 2.7,
+   "low": 1.7,
+   "mid": 2.1,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -54,32 +54,9 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Similarweb Ltd.",
-     "mult": 2.1,
-     "reason": "both do Keyword Research, SEO, Rank Tracking; related type of business; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "mult": 2.7,
-     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 16.4,
-     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
     "analysis",
     "data",
     "keyword",
@@ -89,12 +66,12 @@
     "seo",
     "tracking"
    ],
-   "spread": 7.8,
+   "spread": 1.6,
    "tag_evidence": 9.2,
    "thin": false,
    "triangulated": false
   },
-  "listed_proximity": "DIRECT",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_FORECAST",
@@ -270,6 +247,14 @@
   "private_window_months": 63,
   "secondary": [
    {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
     "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
@@ -294,14 +279,6 @@
     "ticker": "NYSE:TWLO"
    },
    {
-    "company": "Yext, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of seo; same type of business; same business function",
-    "score": 6.6,
-    "ticker": "NYSE:YEXT"
-   },
-   {
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
@@ -317,7 +294,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -326,8 +303,8 @@
    "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
-   "mid": 5.2,
+   "low": 5.2,
+   "mid": 9.6,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -339,13 +316,6 @@
     }
    },
    "points": [
-    {
-     "company": "Yext, Inc.",
-     "mult": 1.7,
-     "reason": "shares the language of seo; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
     {
      "company": "Wix.com Ltd.",
      "mult": 1.9,
@@ -368,6 +338,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Cloudflare, Inc.",
      "mult": 31.8,
      "reason": "shares the language of ai; same revenue model; sold the same way; same AI stance",
@@ -379,11 +356,10 @@
    "shared_words": [
     "ai",
     "data",
-    "platform",
-    "seo"
+    "platform"
    ],
-   "spread": 18.7,
-   "tag_evidence": 0.6,
+   "spread": 16.7,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

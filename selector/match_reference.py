@@ -895,8 +895,24 @@ def _one_round_per_company(prof, scored):
         by.setdefault(r['company_key'], []).append(((sc, why), r))
     out = []
     for k, rows in by.items():
+        # A COMPANY'S CHOSEN ROUND MUST BE ONE THAT CAN PRICE THIS FOUNDER. Added 3-Sep-2026.
+        #
+        # Atom Bank is in the file twice: Nov-23 with a revenue multiple of 4.76 and Feb-22 with a
+        # BOOK multiple of 3.17, loaded on 2-Sep precisely because the lender fork had been pricing
+        # off one comparable since it was built. Both rounds score identically, because the score
+        # is about the business and the business did not change, so the tie went to the later date
+        # and the book round lost. Perenna, a mortgage lender, was still shown a book range of one
+        # name. The row that answers the question was in the file and the engine picked the other.
+        #
+        # So before the tie is broken on anything else, drop the tied rows that cannot price this
+        # founder at all. It never empties the tie: if no round carries the needed multiple the
+        # whole tie is kept and the later date wins as before.
+        need = BASIS_KEYS[basis_for(prof)][0]
         top = max(z[0][0] for z in rows)
         tied = [z for z in rows if z[0][0] >= top - 1e-9]
+        priced = [z for z in tied if _f(z[1].get(need))]
+        if priced:
+            tied = priced
         if len(tied) == 1:
             out.append(tied[0]); continue
         mults = [m for m in (_f(z[1].get('mult')) for z in tied) if m]
@@ -1073,6 +1089,42 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     ordered = sorted(cands, key=lambda z: (_TIER_ORDER[_tier(prof, z[1], z[0][1])],
                                            _neg_date(z[1]['date_iso'])))[:WANT_MAX]
     ordered = _trim_to_match_quality(prof, ordered)
+    # A PRIVATE LANE THAT CANNOT PRICE TWO NAMES IS NOT A LANE EITHER. Added 3-Sep-2026, as the
+    # mirror of the same rule on the listed lane, and for the same reason it was needed there.
+    #
+    # Numida is a lender, so its private range is on book. Its seven names came back on business
+    # nature and recency, and exactly one of them carried a book multiple. Zopa, which carries one,
+    # sat eighth and was never reached. The lane looked full and priced off a single comparable,
+    # which is the outcome Daniil has ruled against more than once.
+    #
+    # The top-up only ever ADDS, it runs after the quality trim so it cannot resurrect a name the
+    # trim rejected on merit, and each added row is marked so the reveal can say it was reached for.
+    # "CAN PRICE" MEANS ON THE FOUNDER'S OWN BASIS, NOT MERELY HAVING A NUMBER IN THE CELL.
+    # Sellerclaw's private lane held four multiples and priced off one, because Packable, WayCool
+    # and ElasticRun are gross-revenue rows and the founder is asked for net. Counting the raw cell
+    # made the lane look answered, so the top-up never fired and the net-basis names that would
+    # have filled it were never reached for. basis_mult is the same test the range itself applies.
+    _pk = BASIS_KEYS[basis_for(prof)][0]
+
+    def _p(z):
+        return _f(basis_mult(prof, z[1], _pk)) and z[1].get('in_medians', True)
+    # The lane is already at its ceiling by the time we get here, so reaching for a name that can
+    # price means giving up the WEAKEST name that cannot. That is the right trade and not a close
+    # call: a comparable with no multiple contributes nothing to the range and only length.
+    if sum(1 for z in ordered if _p(z)) < 2:
+        have = {z[1]['transaction_id'] for z in ordered}
+        for z in cands:
+            if sum(1 for y in ordered if _p(y)) >= 2:
+                break
+            if z[1]['transaction_id'] in have or not _p(z):
+                continue
+            r = dict(z[1]); r['topped_up'] = True
+            if len(ordered) >= WANT_MAX:
+                drop = next((i for i in range(len(ordered) - 1, -1, -1) if not _p(ordered[i])), None)
+                if drop is None:
+                    break
+                ordered.pop(drop)
+            ordered.append((z[0], r)); have.add(r['transaction_id'])
     if not ordered: return [], window_months, 'NONE'
     oldest = min(c[1]['date_iso'] for c in ordered)
     y, m = int(oldest[:4]), int(oldest[5:7])
@@ -1215,8 +1267,24 @@ def peer_groups(prof, universe, scorer=None, want=5):
     # vocabulary is the thing itself, so it should not lose to its own proxy.
     def axis_b(r, why=None):
         ri, pi = (r.get('industry') or '').strip(), (prof.get('industry') or '').strip()
+        # AND A THIRD ROUTE: THE SAME BUSINESS. Added 3-Sep-2026, on Daniil asking how a payments
+        # company could have no listed comparable at all. Payabli is Horizontal and sells to
+        # developers, so the first clause demanded a listed peer that is BOTH horizontal AND
+        # developer-facing, and no listed acquirer is. The tag route could not save it either: we
+        # wrote the founder tags and the listed tags in different vocabularies, so "Embedded
+        # Payments" against "Embedded Finance" and "Card API" scores 0.7 out of a required 3.0.
+        # The result was an empty core drawn from 84 eligible names, 25 of them merchant acquirers.
+        #
+        # Sharing the exact PRIMARY ARCHETYPE is narrower evidence than either of those, not looser.
+        # Axis A already accepts an overlap on EITHER archetype slot; this asks the primary slots to
+        # be identical, which is the strongest business-nature signal we hold. Payabli and Marqeta
+        # are both Merchant Acquiring & PSP. Trolley and Western Union are both Cross-Border & FX.
+        # Being told who someone sells to is a proxy for what they do; being the same business is
+        # the thing itself, and it should not lose to its own proxy. Same argument that added the
+        # tag route on 26-Aug.
         if pi == 'Horizontal':
             return ((ri == 'Horizontal' and _eq(prof, r, 'buyer'))
+                    or _eq(prof, r, 'archetype')
                     or _tag_points(why or []) >= FLOOR_TAG_EVIDENCE)
         return bool(ri) and (ri == pi or ri == 'Horizontal')
 
@@ -1276,15 +1344,34 @@ def peer_groups(prof, universe, scorer=None, want=5):
         # from the wider ring until it can price three, exactly as the private band does. The
         # topped-up names are still ordered behind the anchored ones, so the closest comparable
         # still leads and the reader can see where the set thins out.
+        # AND IT HAS TO BE THE MULTIPLE THIS FOUNDER IS PRICED ON. Fixed 3-Sep-2026.
+        #
+        # This asked for `mult`, enterprise value to revenue, whoever the founder was. A lender is
+        # priced on book, so for every lender fixture the answer was "none of these price", the
+        # top-up ran to its ceiling, and it still measured nothing: Perenna's core came back as
+        # SoFi, LendingClub, Nu Holdings and Inter & Co, four names with no price-to-book in the
+        # file, while 39 listed lenders that DO carry one sat unshown in the same family. The lane
+        # was full and empty at the same time, which is worse than empty, because it looks answered.
+        _pkey = BASIS_KEYS[basis_for(prof)][1]
+
         def _prices(x):
             r = x[1]
-            return r.get('mult') is not None and r.get('in_medians', True) and pricing_eligible(r)
+            return r.get(_pkey) is not None and r.get('in_medians', True) and pricing_eligible(r)
         #
         # AND THE TIER IS SET BY THE ANCHORED NAMES, NOT BY THE TOP-UPS. The first version of this
         # let a topped-up BROAD name drag the whole group's tier down to BROAD, and BROAD is not a
         # pricing tier, so sellerclaw LOST the range it already had. Topping up must only ever add
         # evidence; it must never take a founder's answer away.
         anchored_tier = set_tier(prof, core)
+        # AND THE TOP-UP HAS TO REACH FOR NAMES THAT PRICE. Fixed 3-Sep-2026.
+        #
+        # It walked `wide` in score order and appended whatever came next, so a top-up meant to
+        # rescue a lane that could not price three names spent its places on names that could not
+        # price either. Tienda-Pago filled to the ceiling of seven with six unpriced names while 33
+        # priced lenders sat in the same wide pool, three of them scoring above the two that were
+        # taken. Score still decides the order among the names that price; it no longer decides
+        # whether the top-up is any use.
+        wide = sorted(wide, key=lambda x: (0 if _prices(x) else 1, -x[0][0]))
         if sum(1 for x in core if _prices(x)) < WANT_MIN:
             for x in wide:
                 if id(x) in picked or len(core) >= WANT_MAX:

@@ -273,14 +273,6 @@
     "ticker": "NYSE:RSKD"
    },
    {
-    "company": "Baozun Inc.",
-    "family": "consumer",
-    "in_medians": false,
-    "reason": "same end market; same kind of customer; sold the same way",
-    "score": 7.5,
-    "ticker": "NASDAQGS:BZUN"
-   },
-   {
     "company": "Manhattan Associates, Inc.",
     "family": "software",
     "in_medians": true,
@@ -303,6 +295,14 @@
     "reason": "shares the language of product; same kind of customer; sold the same way; same AI stance",
     "score": 5.8,
     "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "Baozun Inc.",
+    "family": "consumer",
+    "in_medians": false,
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NASDAQGS:BZUN"
    }
   ],
   "secondary_range": {

@@ -51,17 +51,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Liquid Death",
-    "date": "Mar-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 22.5,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Huel",
@@ -70,6 +59,17 @@
     "mult": 3.3,
     "reason": "both do Nutrition; same type of business; same end market; same business function",
     "score": 33.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Liquid Death",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 5.4,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 22.5,
     "type": "PRIMARY"
    },
    {
@@ -124,25 +124,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 4
+    "NET_REVENUE": 3
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 10.1,
+   "high": 5.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 5.0,
-   "n": 5,
+   "mid": 4.6,
+   "n": 3,
    "period_mix": {
-    "LTM": 3,
-    "NTM": 1,
-    "RUN_RATE": 1
+    "LTM": 2,
+    "NTM": 1
    },
    "period_span": {
     "LTM": {
@@ -152,21 +150,39 @@
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
-    },
-    "RUN_RATE": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
     }
    },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "SKIMS",
+     "mult": 5.0,
+     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "WHOOP",
+     "mult": 9.18,
+     "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Quince",
+     "mult": 10.1,
+     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "shared_words": [
     "direct",
     "meal",
     "nutrition",
     "subscription"
    ],
-   "spread": 3.1,
+   "spread": 1.6,
    "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false

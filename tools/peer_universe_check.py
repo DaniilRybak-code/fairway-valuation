@@ -35,7 +35,7 @@ def read(path):
 
 def score(e):
     """Returns (verdict, reasons, facts) for one fixture snapshot."""
-    names, per_lane, closeness, sole_lanes = set(), {}, [], []
+    names, per_lane, closeness, sole_lanes, empty_lanes = set(), {}, [], [], []
     for lane in LANES:
         rows = e.get(lane) or []
         got = [r.get('company') for r in rows if r.get('company')]
@@ -45,8 +45,13 @@ def score(e):
         n = rng.get('n')
         if rng.get('closeness'):
             closeness.append(rng['closeness'])
-        if rng.get('sole') or (isinstance(n, int) and n == 1):
-            sole_lanes.append(lane)
+        # ZERO PRICED NAMES IS NOT BETTER THAN ONE, AND THE FIRST VERSION OF THIS SCORED IT AS
+        # BETTER. It failed on n == 1 and said nothing about n == 0, so numida passed with a book
+        # range built on no comparable at all, and then "failed" the moment a real book comparable
+        # arrived and made it one. A check that rewards an empty answer over a thin one is worse
+        # than no check. Rule 4 already says a blank is a trigger; this is where it is enforced.
+        if rng.get('sole') or (isinstance(n, int) and n < 2):
+            (sole_lanes if (rng.get('sole') or n == 1) else empty_lanes).append(lane)
     fails = []
     if not names:
         fails.append('no comparables at all')
@@ -54,6 +59,8 @@ def score(e):
         fails.append('only %d distinct comparable(s); three real names is the floor' % len(names))
     if sole_lanes:
         fails.append('priced off ONE name in: %s' % ', '.join(sole_lanes))
+    if empty_lanes:
+        fails.append('NO priced comparable in: %s' % ', '.join(empty_lanes))
     if closeness and all(c == WEAK for c in closeness):
         fails.append('every lane is %s; the set rests on nothing but a shared word' % WEAK)
     if not closeness:

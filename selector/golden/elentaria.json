@@ -2,12 +2,28 @@
  "expected": {
   "core": [
    {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Agentic Automation; same type of business; same business function; sold the same way",
+    "score": 10.7,
+    "ticker": "NYSE:PATH"
+   },
+   {
     "company": "Sidetrade SA",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai, order; same type of business; same kind of customer; sold the same way",
     "score": 10.1,
     "ticker": "ENXTPA:ALBFR"
+   },
+   {
+    "company": "Pegasystems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Workflow Automation; same type of business; same business function; sold the same way",
+    "score": 9.9,
+    "ticker": "NASDAQGS:PEGA"
    },
    {
     "company": "DocuSign, Inc.",
@@ -18,28 +34,12 @@
     "ticker": "NASDAQGS:DOCU"
    },
    {
-    "company": "Workday, Inc.",
+    "company": "Zaggle Prepaid Ocean Services",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of planning; same type of business; same kind of customer; sold the same way",
-    "score": 8.9,
-    "ticker": "NASDAQGS:WDAY"
-   },
-   {
-    "company": "BlackLine, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "NASDAQGS:BL"
-   },
-   {
-    "company": "Braze, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation, channel, customer; related type of business; same kind of customer; sold the same way",
-    "score": 7.9,
-    "ticker": "NASDAQGS:BRZE"
+    "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "NSEI:ZAGGLE"
    }
   ],
   "core_range": {
@@ -55,11 +55,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.6,
+   "high": 4.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.1,
-   "mid": 3.4,
+   "low": 2.7,
+   "mid": 3.1,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -73,15 +73,16 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "agentic",
     "ai",
     "automation",
-    "channel",
     "customer",
     "lifecycle",
     "order",
-    "planning"
+    "revenue",
+    "workflow"
    ],
-   "spread": 1.8,
+   "spread": 5.0,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
@@ -256,28 +257,20 @@
   "private_window_months": 14,
   "secondary": [
    {
-    "company": "UiPath, Inc.",
+    "company": "Workday, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "both do Agentic Automation; same type of business; same business function; sold the same way",
-    "score": 10.7,
-    "ticker": "NYSE:PATH"
+    "reason": "shares the language of planning; same type of business; same kind of customer; sold the same way",
+    "score": 8.9,
+    "ticker": "NASDAQGS:WDAY"
    },
    {
-    "company": "Pegasystems Inc.",
+    "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "both do Workflow Automation; same type of business; same business function; sold the same way",
-    "score": 9.9,
-    "ticker": "NASDAQGS:PEGA"
-   },
-   {
-    "company": "Zaggle Prepaid Ocean Services",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
-    "score": 9.1,
-    "ticker": "NSEI:ZAGGLE"
+    "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
+    "score": 8.6,
+    "ticker": "NASDAQGS:BL"
    },
    {
     "company": "Cass Information Systems",
@@ -294,29 +287,37 @@
     "reason": "shares the language of planning, platform; same type of business; same business function; sold the same way",
     "score": 8.5,
     "ticker": "XTRA:SAP"
+   },
+   {
+    "company": "Samsara Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
+    "score": 8.2,
+    "ticker": "NYSE:IOT"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 5.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
-   "mid": 2.7,
-   "n": 5,
+   "low": 2.5,
+   "mid": 3.65,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -324,56 +325,24 @@
      "founder_revenue": null
     }
    },
-   "points": [
+   "points": [],
+   "positioning": [
     {
-     "company": "Zaggle Prepaid Ocean Services",
-     "mult": 0.8,
-     "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Pegasystems Inc.",
-     "mult": 2.7,
-     "reason": "both do Workflow Automation; same type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Cass Information Systems",
-     "mult": 2.7,
-     "reason": "shares the language of b2b, commercial; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "UiPath, Inc.",
-     "mult": 4.0,
-     "reason": "both do Agentic Automation; same type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SAP SE",
-     "mult": 5.1,
-     "reason": "shares the language of planning, platform; same type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
+     "company": "Samsara Inc.",
+     "mult": 10.5,
+     "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
      "transaction_type": ""
     }
    ],
-   "positioning": [],
    "shared_words": [
-    "agentic",
     "automation",
     "b2b",
     "commercial",
-    "customer",
     "planning",
-    "platform",
-    "revenue",
-    "workflow"
+    "platform"
    ],
-   "spread": 6.4,
+   "spread": 2.0,
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

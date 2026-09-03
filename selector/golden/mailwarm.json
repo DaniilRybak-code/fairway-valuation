@@ -2,14 +2,6 @@
  "expected": {
   "core": [
    {
-    "company": "HubSpot, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
-    "score": 10.7,
-    "ticker": "NYSE:HUBS"
-   },
-   {
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
@@ -18,22 +10,38 @@
     "ticker": "NYSE:KVYO"
    },
    {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same type of business; same business function; same kind of customer",
+    "score": 10.7,
+    "ticker": "NYSE:HUBS"
+   },
+   {
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of email; same type of business; same business function; same revenue model",
     "score": 8.7,
     "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "Yext, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of reputation; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "NYSE:YEXT"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -42,11 +50,11 @@
    "high": 3.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
-   "mid": 2.8,
-   "n": 3,
+   "low": 1.7,
+   "mid": 2.75,
+   "n": 4,
    "period_mix": {
-    "NTM": 3
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -57,12 +65,13 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "email"
+    "email",
+    "reputation"
    ],
-   "spread": 1.4,
-   "tag_evidence": 0.2,
+   "spread": 2.2,
+   "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -153,14 +162,6 @@
     "ticker": "XTRA:IOS"
    },
    {
-    "company": "Yext, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of reputation; same type of business; same business function",
-    "score": 6.6,
-    "ticker": "NYSE:YEXT"
-   },
-   {
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
@@ -183,16 +184,24 @@
     "reason": "shares the language of email; same kind of customer; sold the same way",
     "score": 5.7,
     "ticker": "NYSE:GDDY"
+   },
+   {
+    "company": "Intuit Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same kind of customer; sold the same way",
+    "score": 5.7,
+    "ticker": "NASDAQGS:INTU"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "BROAD",
    "basis_mix": {
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -201,8 +210,8 @@
    "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.8,
-   "mid": 3.7,
+   "low": 3.7,
+   "mid": 4.4,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -215,13 +224,6 @@
    },
    "points": [
     {
-     "company": "Yext, Inc.",
-     "mult": 1.7,
-     "reason": "shares the language of reputation; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "GoDaddy Inc.",
      "mult": 2.8,
      "reason": "shares the language of email; same kind of customer; sold the same way",
@@ -232,6 +234,13 @@
      "company": "IONOS Group SE",
      "mult": 3.7,
      "reason": "shares the language of email, infrastructure; same kind of customer; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Intuit Inc.",
+     "mult": 4.4,
+     "reason": "shares the language of email; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -254,10 +263,9 @@
    "shared_words": [
     "email",
     "infrastructure",
-    "monitoring",
-    "reputation"
+    "monitoring"
    ],
-   "spread": 18.7,
+   "spread": 11.4,
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false

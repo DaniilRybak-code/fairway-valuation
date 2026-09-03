@@ -1,10 +1,128 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "Marqeta, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of a, as, embedded; same type of business; same business function; same kind of customer",
+    "score": 11.0,
+    "ticker": "NASDAQ:MQ"
+   },
+   {
+    "company": "Repay Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of embedded, payments, vertical; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "NASDAQCM:RPAY"
+   },
+   {
+    "company": "Tyro Payments Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of merchant, payments; same type of business; same business function; sold the same way",
+    "score": 10.2,
+    "ticker": "ASX:TYR"
+   },
+   {
+    "company": "PayPoint plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of merchant; same type of business; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "LSE:PAY"
+   },
+   {
+    "company": "Fawry for Banking Technology",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of merchant; same type of business; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "CASE:FWRY"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 5.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.3,
+   "mid": 1.7,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Tyro Payments Limited",
+     "mult": 0.7,
+     "reason": "shares the language of merchant, payments; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Marqeta, Inc.",
+     "mult": 1.3,
+     "reason": "shares the language of a, as, embedded; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "mult": 1.7,
+     "reason": "shares the language of embedded, payments, vertical; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PayPoint plc",
+     "mult": 2.1,
+     "reason": "shares the language of merchant; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Fawry for Banking Technology",
+     "mult": 5.0,
+     "reason": "shares the language of merchant; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "a",
+    "as",
+    "embedded",
+    "merchant",
+    "payments",
+    "service",
+    "vertical"
+   ],
+   "spread": 7.1,
+   "tag_evidence": 1.5,
+   "thin": false,
+   "triangulated": false
   },
-  "listed_proximity": "CONTEXT",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "Net revenue",
@@ -51,17 +169,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "FY2020",
-    "bound": "",
-    "company": "Rapyd",
-    "date": "Aug-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of embedded, payments; same type of business; same business function; same revenue model",
-    "score": 15.5,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "Annual revenue",
     "bound": "",
     "company": "Mollie",
@@ -82,6 +189,17 @@
     "reason": "both do Merchant Payments; same type of business; same business function; same AI stance",
     "score": 9.2,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "dLocal",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 48.0,
+    "reason": "shares the language of payments; related type of business; same business function; same AI stance",
+    "score": 9.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -91,7 +209,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -99,14 +217,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 30.3,
+   "high": 48.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 16.34,
    "mid": 30.3,
-   "n": 2,
+   "n": 3,
    "period_mix": {
-    "LTM": 2
+    "LTM": 3
    },
    "period_span": {
     "LTM": {
@@ -120,53 +238,13 @@
     "merchant",
     "payments"
    ],
-   "spread": 1.9,
+   "spread": 2.9,
    "tag_evidence": 0.2,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
-  "private_window_months": 63,
+  "private_window_months": 64,
   "secondary": [
-   {
-    "company": "Marqeta, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of a, as, embedded; same type of business; same business function; same kind of customer",
-    "score": 11.0,
-    "ticker": "NASDAQ:MQ"
-   },
-   {
-    "company": "Repay Holdings Corporation",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of embedded, payments, vertical; same type of business; same business function; same revenue model",
-    "score": 10.6,
-    "ticker": "NASDAQCM:RPAY"
-   },
-   {
-    "company": "Tyro Payments Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of merchant, payments; same type of business; same business function; sold the same way",
-    "score": 10.2,
-    "ticker": "ASX:TYR"
-   },
-   {
-    "company": "PayPoint plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of merchant; same type of business; same business function; same revenue model",
-    "score": 9.6,
-    "ticker": "LSE:PAY"
-   },
-   {
-    "company": "Fawry for Banking Technology",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of merchant; same type of business; same business function; same revenue model",
-    "score": 9.6,
-    "ticker": "CASE:FWRY"
-   },
    {
     "company": "Usio, Inc.",
     "family": "fintech",
@@ -182,10 +260,108 @@
     "reason": "shares the language of merchant, payments; same type of business; same business function; same AI stance",
     "score": 8.2,
     "ticker": "BIT:NEXI"
+   },
+   {
+    "company": "GMO Payment Gateway, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of merchant, payments; same type of business; same business function; same AI stance",
+    "score": 8.2,
+    "ticker": "TSE:3769"
+   },
+   {
+    "company": "DLocal Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
+    "score": 8.1,
+    "ticker": "NASDAQ:DLO"
+   },
+   {
+    "company": "Nayax Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments, saas, service; same type of business; same revenue model; same AI stance",
+    "score": 7.3,
+    "ticker": "NASDAQ:NYAX"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 5.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.0,
+   "mid": 2.4,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Usio, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of payments; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "DLocal Limited",
+     "mult": 2.0,
+     "reason": "shares the language of payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nexi S.p.A.",
+     "mult": 2.4,
+     "reason": "shares the language of merchant, payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nayax Ltd.",
+     "mult": 3.1,
+     "reason": "shares the language of payments, saas, service; same type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GMO Payment Gateway, Inc.",
+     "mult": 5.3,
+     "reason": "shares the language of merchant, payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "merchant",
+    "payments",
+    "saas",
+    "service"
+   ],
+   "spread": 6.6,
+   "tag_evidence": 0.8,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "Payfac-as-a-service that lets vertical software platforms own payments without the risk"

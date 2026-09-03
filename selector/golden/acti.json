@@ -63,12 +63,12 @@
     "type": "MIXED"
    },
    {
-    "basis": "PRESS_REPORTED",
-    "bound": ">=",
+    "basis": "Jul-2025",
+    "bound": "",
     "company": "Perplexity",
-    "date": "Sep-25",
-    "in_medians": false,
-    "mult": null,
+    "date": "Jul-25",
+    "in_medians": true,
+    "mult": 120.0,
     "reason": "shares the language of ai; same type of business; same kind of customer; sold the same way",
     "score": 15.1,
     "type": "PRIMARY"
@@ -103,22 +103,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1
+    "ARR": 1,
+    "ARR_RUNRATE": 1
    },
    "bounded": true,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 21.0,
+   "display": "RANGE",
+   "high": 120.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 21.0,
-   "mid": 21.0,
-   "n": 1,
+   "mid": 120.0,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -131,8 +132,7 @@
    "shared_words": [
     "ai"
    ],
-   "sole": "Gamma",
-   "spread": 1.0,
+   "spread": 5.7,
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true

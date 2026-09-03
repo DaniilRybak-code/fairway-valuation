@@ -34,12 +34,12 @@
     "ticker": "NYSE:NET"
    },
    {
-    "company": "Sinch AB (publ)",
+    "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
-    "ticker": "OM:SINCH"
+    "reason": "shares the language of data; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "NYSE:SNOW"
    }
   ],
   "core_range": {
@@ -58,8 +58,8 @@
    "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.4,
-   "mid": 5.2,
+   "low": 5.2,
+   "mid": 16.4,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -79,13 +79,6 @@
      "transaction_type": ""
     },
     {
-     "company": "Sinch AB (publ)",
-     "mult": 1.4,
-     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Twilio Inc.",
      "mult": 5.2,
      "reason": "shares the language of api, data; related type of business; same kind of customer; same revenue model",
@@ -96,6 +89,13 @@
      "company": "Datadog, Inc.",
      "mult": 16.4,
      "reason": "shares the language of llm; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 17.6,
+     "reason": "shares the language of data; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -248,20 +248,20 @@
   "private_window_months": 27,
   "secondary": [
    {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same type of business; same business function; same revenue model",
-    "score": 10.6,
-    "ticker": "NYSE:SNOW"
-   },
-   {
     "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Data Enrichment; same type of business; same business function; same revenue model",
     "score": 10.2,
     "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "Sinch AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 8.8,
+    "ticker": "OM:SINCH"
    },
    {
     "company": "Teradata Corporation",
@@ -301,11 +301,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 17.6,
+   "high": 9.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 4.3,
+   "low": 1.4,
+   "mid": 2.1,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -317,6 +317,13 @@
     }
    },
    "points": [
+    {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "Teradata Corporation",
      "mult": 1.4,
@@ -344,23 +351,17 @@
      "reason": "both do Data Enrichment; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 17.6,
-     "reason": "shares the language of data; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "positioning": [],
    "shared_words": [
+    "api",
     "data",
     "enrichment",
     "scraping",
     "web"
    ],
-   "spread": 12.6,
+   "spread": 6.9,
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false

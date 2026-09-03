@@ -242,19 +242,19 @@
     "ticker": "TSE:3182"
    },
    {
-    "company": "Rent the Runway, Inc.",
+    "company": "Chewy, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
-    "score": 13.2,
-    "ticker": "NASDAQGM:RENT"
+    "score": 11.7,
+    "ticker": "NYSE:CHWY"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -266,11 +266,11 @@
    "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.1,
+   "low": 0.3,
    "mid": 0.3,
-   "n": 4,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -297,6 +297,13 @@
      "company": "Oisix Inc.",
      "mult": 0.3,
      "reason": "shares the language of owned, subscription, to; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Chewy, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },

@@ -40,29 +40,45 @@
     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
     "score": 9.8,
     "ticker": "NASDAQ:INTR"
+   },
+   {
+    "company": "Pepper Money Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank, broker, funding; same type of business; same business function; same kind of customer",
+    "score": 14.5,
+    "ticker": "ASX:PPM"
+   },
+   {
+    "company": "Onity Group Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
+    "score": 14.4,
+    "ticker": "NYSE:ONIT"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.8,
+   "display": "RANGE",
+   "high": 0.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
+   "low": 0.4,
    "mid": 0.8,
-   "n": 1,
+   "n": 3,
    "period_mix": {
-    "NTM": 1
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -73,13 +89,15 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "broker"
+    "bank",
+    "broker",
+    "funding",
+    "mortgage"
    ],
-   "sole": "Velocity Financial, Inc.",
-   "spread": 1.0,
-   "tag_evidence": 0.6,
-   "thin": true,
-   "triangulated": true
+   "spread": 2.2,
+   "tag_evidence": 1.5,
+   "thin": false,
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
@@ -95,12 +113,12 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "FY ended 2023-03-31",
+    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Atom Bank",
-    "date": "Nov-23",
+    "date": "Feb-22",
     "in_medians": true,
-    "mult": 4.76,
+    "mult": null,
     "reason": "shares the language of bank, uk; related type of business; same business function; same kind of customer",
     "score": 14.9,
     "type": "PRIMARY"
@@ -157,24 +175,29 @@
    "basis": "BOOK",
    "basis_label": "price to book",
    "basis_mix": {
-    "BOOK": 1
+    "BOOK": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 5.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.6,
+   "low": 3.17,
    "mid": 5.6,
-   "n": 1,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 1
+    "RUN_RATE": 1,
+    "UNKNOWN": 1
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -186,30 +209,13 @@
     "bank",
     "uk"
    ],
-   "sole": "Zopa",
-   "spread": 1.0,
+   "spread": 1.8,
    "tag_evidence": 0.9,
    "thin": true,
    "triangulated": false
   },
   "private_window_months": 65,
   "secondary": [
-   {
-    "company": "Pepper Money Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of bank, broker, funding; same type of business; same business function; same kind of customer",
-    "score": 14.5,
-    "ticker": "ASX:PPM"
-   },
-   {
-    "company": "Onity Group Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
-    "score": 14.4,
-    "ticker": "NYSE:ONIT"
-   },
    {
     "company": "PennyMac Financial Services, Inc.",
     "family": "fintech",
@@ -227,19 +233,35 @@
     "ticker": "LSE:SUS"
    },
    {
-    "company": "Japan Post Holdings",
+    "company": "Cembra Money Bank AG",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
     "score": 11.8,
-    "ticker": "TSE:6178"
+    "ticker": "SWX:CMBN"
+   },
+   {
+    "company": "Banco BMG S.A.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+    "score": 11.8,
+    "ticker": "BOVESPA:BMGB4"
+   },
+   {
+    "company": "Medallion Financial Corp.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+    "score": 11.8,
+    "ticker": "NASDAQ:MFIN"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -248,14 +270,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 0.9,
+   "high": 1.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.4,
-   "mid": 0.85,
-   "n": 4,
+   "low": 0.7,
+   "mid": 0.8,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -268,12 +290,11 @@
    "shared_words": [
     "bank",
     "broker",
-    "funding",
     "mortgage",
     "uk"
    ],
-   "spread": 2.2,
-   "tag_evidence": 1.5,
+   "spread": 3.0,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   }

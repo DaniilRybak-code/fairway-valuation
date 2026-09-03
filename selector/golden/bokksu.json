@@ -131,17 +131,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Liquid Death",
-    "date": "Mar-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 18.0,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Huel",
@@ -150,6 +139,17 @@
     "mult": 3.3,
     "reason": "shares the language of subscription; same type of business; same end market; same business function",
     "score": 27.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Liquid Death",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 5.4,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 18.0,
     "type": "PRIMARY"
    },
    {
@@ -204,8 +204,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 2,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -213,32 +212,47 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 9.18,
+   "high": 5.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 8.8,
-   "n": 4,
+   "mid": 4.6,
+   "n": 3,
    "period_mix": {
     "LTM": 2,
-    "RUN_RATE": 2
+    "NTM": 1
    },
    "period_span": {
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
-    "RUN_RATE": {
+    "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "AG1",
+     "mult": 8.8,
+     "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "WHOOP",
+     "mult": 9.18,
+     "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "shared_words": [
     "subscription"
    ],
-   "spread": 2.8,
+   "spread": 1.6,
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -278,19 +292,19 @@
     "ticker": "NASDAQGM:WW"
    },
    {
-    "company": "Rent the Runway, Inc.",
+    "company": "LifeMD, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
-    "score": 11.6,
-    "ticker": "NASDAQGM:RENT"
+    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+    "score": 11.1,
+    "ticker": "NASDAQGM:LFMD"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -302,11 +316,11 @@
    "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.3,
-   "mid": 0.75,
-   "n": 4,
+   "low": 0.6,
+   "mid": 0.7,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -320,6 +334,13 @@
      "mult": 0.3,
      "reason": "both do Subscription Box; same type of business; same business function; same kind of customer",
      "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "LifeMD, Inc.",
+     "mult": 0.6,
+     "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {

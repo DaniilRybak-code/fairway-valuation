@@ -190,14 +190,14 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "PRESS_REPORTED",
-    "bound": ">=",
-    "company": "Perplexity",
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
     "date": "Sep-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "both do AI Search; related type of business; same business function; sold the same way",
-    "score": 11.3,
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+    "score": 10.3,
     "type": "PRIMARY"
    }
   ],
@@ -209,7 +209,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 2,
+    "ARR_RUNRATE": 3,
     "NET_REVENUE": 1
    },
    "bounded": false,
@@ -222,11 +222,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 33.0,
-   "n": 4,
+   "mid": 20.0,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -250,6 +250,13 @@
      "company": "Invisible Technologies",
      "mult": 14.9,
      "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
