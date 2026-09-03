@@ -560,3 +560,40 @@ def peer_hit(expected_name, engine_names):
         short, long = (es, ms) if len(es) <= len(ms) else (ms, es)
         if short <= long and any(len(t) >= 4 for t in short): return True
     return False
+
+# ---------------------------------------------------------------------------
+# TEST REVENUE FOR THE FIXTURES. Added 3-Sep-2026, closing Fable's item 1.
+#
+# THESE ARE NOT COMPANY FIGURES AND MUST NEVER BE READ AS ANY. Not one of the 43 fixtures has a
+# revenue we know: they are real companies taken from Product Hunt whose numbers are private, which
+# is why every profile above carries growth=None and gm=None. The fixtures existed to test PEER
+# SELECTION, which needs no revenue, and that is all they have ever tested.
+#
+# The consequence, and it is Fable's point: the PERIOD MACHINERY HAS NEVER BEEN EXERCISED ONCE. All
+# 43 fixtures return NO_REVENUE_GIVEN on all 152 period spans, so `founder_revenue_for` has never
+# converted a trailing figure to a forward one in any test we run, on the single path that decides
+# whether a founder is priced correctly. Daniil, 31-Aug: "Public comps are priced on NTM basis,
+# hence we need to ask / derive client's NTM revenue." That conversion is untested.
+#
+# So one synthetic pair is injected for every fixture, and DELIBERATELY THE SAME FOR ALL OF THEM:
+# $10m trailing revenue growing 60 per cent. Identical values across 43 different companies cannot
+# be mistaken for research, which is the point of making them identical rather than plausible one by
+# one. What they test is the conversion, not the level.
+#
+# It is injected by golden.py rather than written into the profiles above, so a profile stays a
+# statement about what a company IS and nothing in it is ever a guess about its finances.
+TEST_REVENUE_MUSD = 10.0
+TEST_GROWTH_PCT = 60.0
+TEST_REVENUE_BASIS = 'NET_REVENUE'
+TEST_REVENUE_PERIOD = 'LTM'
+
+
+def with_test_revenue(prof):
+    """A copy of the profile carrying the synthetic revenue, for golden only."""
+    out = dict(prof)
+    out['revenue'] = TEST_REVENUE_MUSD
+    out['growth'] = TEST_GROWTH_PCT
+    out['revenue_basis'] = TEST_REVENUE_BASIS
+    out['revenue_period'] = TEST_REVENUE_PERIOD
+    out['is_test_revenue'] = True
+    return out

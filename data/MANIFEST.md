@@ -1123,3 +1123,67 @@ a new chat in this same project is `docs/prompts/user-count-sweep.md`.
 
 **State: 511 listed on 1-Sep data with 13 frozen as stale, 290 private rounds, 195 median-eligible,
 peer universe 39 of 43, all eight checks green.**
+
+## 2026-09-03 (night, 6): Fable's list closed, and the quiz walker found the last gap
+
+### 1. Fixture schema, and why it is NOT what Fable asked for
+
+The concern was exact: all 43 fixtures return NO_REVENUE_GIVEN on all 152 period spans, so
+`founder_revenue_for` has never converted a trailing figure to a forward one in any test we run.
+
+**I tried the obvious fix and reverted it inside the hour.** Injecting a synthetic revenue and
+growth into the fixtures MOVED THE PEER SELECTION OF 42 OF THE 43. Growth is not a display field:
+`band_compatible` gates the private lane on it, so a made-up 60 per cent put every fixture in the
+hyper band and excluded the mature rounds. An invented number would have decided which real
+companies a founder is compared against, and golden would have frozen that as correct.
+
+`tools/check_period_conversion.py` : NEW, and this is where the conversion belongs. Ten cases with
+known answers plus the span: trailing as given, forward derived, run rate and ARR treated as
+forward, a NEGATIVE rate reducing the forward figure, zero growth distinguished from no growth, no
+revenue returning the honest empty answer, an unrecognised period falling back and SAYING SO. All
+pass. **The 43 fixtures still read NO_REVENUE_GIVEN and that is correct: we do not know their
+revenue.** `with_forward_revenue` deleted earlier today; the 43 re-run many times over.
+
+### 2 and 3. Done earlier today
+
+The two checks are `tools/check_engine_reach.py` (file versus engine, and cross-file duplicate on
+month plus post-money with token overlap, never on the name). The investor suffix bug is fixed and
+the count reconciled: 408 houses, 140 callable, 124 clear investor_check's bar, 52 clear the
+roadmap's six-field bar, and the gap is exactly 78 rows with no cheque range and 74 with no
+geography. The 14 undated funds now all carry dated, source-confirmed deals.
+
+### 4. The last two audit verdicts applied
+
+**Oura**: source upgraded from Sacra, a tier-4 estimator, to the CEO's own December-2024 statement,
+giving 23.1x, with the filed Finnish September-year-end figure (EUR 163.6m, which would give 29.7x)
+recorded in `basis_risk_note` as the alternative reading and DELIBERATELY NOT SWAPPED IN: it is a
+different period end on a different basis. **Atom Bank Feb-22**: pre/post tagged UNSPECIFIED, with
+the note that on a GBP75m raise the difference is 17 per cent of the numerator, which on a 3.17x
+book multiple is the difference between 3.17x and 2.62x.
+
+### 5. The quiz walker, and what it found
+
+`tools/quiz_walker.py` : NEW. Walks every fork with a REAL fixture that routes to it, and asks four
+things: does every question with a basis have peers who can answer on it, does every answer reach
+the engine, does a founder who answers get a priced range, and are the invented answers kept out of
+selection.
+
+**It found that seven questions collected an answer that nothing in the engine read.** A lending
+founder was asked for book value as a REQUIRED question and the book multiple had nothing to
+multiply it by. This is the quiz-shaped version of every data-loss bug found today: the number
+arrives, is stored, and stops.
+
+- `BASIS_FOUNDER_FIELD` and `founder_metric_for()` added, so every range now carries the founder's
+  own figure for that basis and the valuation it implies. A lender with $12m of book, $8m ARR, $1.5m
+  net income and 150,000 borrowers now gets five valuations from five bases instead of a set of
+  multiples with nothing to apply them to.
+- **`funding_model` was REQUIRED and unread.** Its own text says it "decides which line the founder
+  is priced on". It does now: a marketplace or forward-flow lender, which earns a fee and holds no
+  book, gains the revenue basis, exactly as the fork's rule says.
+
+**Two findings remain open and are product decisions, not bugs**: the founder's own `nrr` is
+collected and unused (Daniil's own note says the top NRR quartile trades at 11.1x against 2.9x for
+the bottom, so it should position a founder within the range), and `asset_intensity` on the
+ecommerce fork is collected and unused.
+
+`tools/check_all.sh` now runs TEN checks, still in the order a figure travels.

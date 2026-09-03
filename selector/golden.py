@@ -13,6 +13,22 @@ from golden_profiles import PROFILES, EXPECTED_PEERS, peer_hit
 FIX = os.path.join(HERE, 'golden')
 
 def snap(prof):
+    # NO SYNTHETIC REVENUE IS INJECTED HERE, AND THE ATTEMPT IS RECORDED BECAUSE IT WAS WRONG.
+    #
+    # Fable's item 1 is that the period machinery has never been exercised: all 43 fixtures return
+    # NO_REVENUE_GIVEN because none of them has a revenue we know. The obvious fix, injecting a
+    # synthetic revenue and growth, was tried on 3-Sep-2026 and REVERTED WITHIN MINUTES: it moved
+    # the peer selection of 42 of the 43 fixtures.
+    #
+    # The reason is worth keeping. Growth is not only a display field: `band_compatible` gates the
+    # PRIVATE lane on it, so a made-up 60 per cent put every fixture in the hyper band and excluded
+    # the mature rounds. An invented number would have been deciding which real companies a founder
+    # is compared against, and the golden suite would have frozen that as the expected answer.
+    #
+    # NOTHING INVENTED MAY EVER TOUCH SELECTION. The period conversion is tested instead by
+    # tools/check_period_conversion.py, which drives founder_revenue_for and _period_span directly
+    # with known inputs and known answers. That is the right shape for it: it is arithmetic on one
+    # founder's own number, not a property of the comparable set.
     core, sec, listed_tier = M.peer_groups(prof, M.listed)
     out = {}
     for name, grp in (('core', core), ('secondary', sec)):

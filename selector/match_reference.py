@@ -1448,6 +1448,44 @@ def founder_revenue_for(prof, period):
     return rev, 'UNRECOGNISED_PERIOD_TRAILING_USED'
 
 
+# WHICH PROFILE FIELD EACH BASIS MULTIPLIES. Added 3-Sep-2026, and the quiz walker is what found
+# it was missing: seven questions collected an answer that NOTHING IN THE ENGINE READ. A lending
+# founder was being asked for book value as a REQUIRED question, and the book multiple had nothing
+# to multiply it by. It is the quiz-shaped version of every data-loss bug found today: the number
+# arrives, is stored, and stops.
+BASIS_FOUNDER_FIELD = {
+    'REVENUE': 'revenue',
+    'ARR': 'arr',
+    'BOOK': 'book_value',
+    'EARNINGS': 'net_income',
+    'ORIGINATIONS': 'originations',
+    'THROUGHPUT': 'volume',
+    'PAYING_SUBSCRIBERS': 'subscribers',
+    'BORROWERS': 'borrowers',
+    'MEMBERS': 'members',
+    'CUSTOMERS': 'customers',
+    'BUSINESS_CUSTOMERS': 'business_customers',
+    'MERCHANTS': 'merchants',
+    'ACTIVE_USERS': 'active_users',
+    'REGISTERED_USERS': 'registered_users',
+}
+
+
+def founder_metric_for(prof, basis):
+    """(value, field) the founder gave for THIS basis, so a range has something to multiply.
+
+    Returns (None, field) when they did not answer it, which is the normal case for an optional
+    question and must read as absent rather than as zero.
+    """
+    field = BASIS_FOUNDER_FIELD.get(basis)
+    if not field:
+        return None, None
+    if basis == 'REVENUE':
+        # Revenue alone is period-sensitive and already has its own machinery.
+        return _f(prof.get('revenue')), field
+    return _f(prof.get(field)), field
+
+
 def _period_mix(rows):
     return dict(collections.Counter(
         (r.get('revenue_period') or 'UNKNOWN').strip().upper() for _sw, r in rows))
@@ -1814,6 +1852,19 @@ COUNT_BASES = ('PAYING_SUBSCRIBERS', 'BORROWERS', 'MEMBERS', 'CUSTOMERS', 'BUSIN
 
 def bases_for(prof, lane):
     out = list(LANE_BASES[bool(is_balance_sheet(prof))][lane])
+    # THE FUNDING MODEL DECIDES WHETHER A REVENUE MULTIPLE IS DEFENSIBLE FOR A LENDER, and until
+    # 3-Sep-2026 nothing read it. The quiz walker found it: `funding_model` is a REQUIRED question
+    # whose own text says it "decides which line the founder is priced on", and the answer was
+    # collected and discarded.
+    #
+    # The rule is the fork's own: "Retained credit risk goes on the book basis; originate-and-
+    # distribute for a fee is the only lending shape where a revenue multiple is defensible." A
+    # marketplace or forward-flow lender earns a fee and holds no book, so book value is close to
+    # nothing and pricing on it would say the business is worth nothing.
+    if is_balance_sheet(prof):
+        _fm = (prof.get('funding_model') or '').strip().lower()
+        if _fm.startswith('marketplace') or 'forward-flow' in _fm or 'forward flow' in _fm:
+            out.append('REVENUE')
     # THROUGHPUT is offered on the private lane when the business is an exchange, or when the
     # founder has answered the throughput question with a unit that is not dollars. The second
     # route matters: a founder who tells us they cleared 4 million tonnes should get the comparison
@@ -2208,10 +2259,20 @@ def all_ranges(prof, listed_group, listed_tier, private_picked, private_tier):
     out = {'listed': {}, 'private': {}}
     for b in bases_for(prof, 'listed'):
         r = group_range(prof, listed_group, tier=listed_tier, basis=b)
-        if r: out['listed'][b] = dict(r, basis=b, basis_label=BASIS_KEYS[b][2])
+        if r:
+            v, fld = founder_metric_for(prof, b)
+            out['listed'][b] = dict(r, basis=b, basis_label=BASIS_KEYS[b][2],
+                                    founder_metric=v, founder_field=fld,
+                                    founder_low=(None if v is None else round(v * r['low'], 2)),
+                                    founder_high=(None if v is None else round(v * r['high'], 2)))
     for b in bases_for(prof, 'private'):
         r = private_range(prof, private_picked, private_tier, basis=b)
-        if r: out['private'][b] = dict(r, basis=b, basis_label=BASIS_KEYS[b][2])
+        if r:
+            v, fld = founder_metric_for(prof, b)
+            out['private'][b] = dict(r, basis=b, basis_label=BASIS_KEYS[b][2],
+                                     founder_metric=v, founder_field=fld,
+                                     founder_low=(None if v is None else round(v * r['low'], 2)),
+                                     founder_high=(None if v is None else round(v * r['high'], 2)))
     return out
 
 
