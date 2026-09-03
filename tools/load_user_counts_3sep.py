@@ -37,6 +37,39 @@ WRITE = '--write' in sys.argv
 
 LOADABLE = {'PAYING_SUBSCRIBERS', 'MEMBERS', 'CUSTOMERS', 'BUSINESS_CUSTOMERS', 'MERCHANTS',
             'BORROWERS', 'ACTIVE_USERS', 'REGISTERED_USERS'}
+# A FLOW IS NOT A STOCK, AND A SINCE-INCEPTION TOTAL IS NOT A DENOMINATOR.
+#
+# Added 3-Sep-2026 after Daniil asked whether Decagon's count could price where its revenue could
+# not. It cannot, and checking why found three more of the same shape, two of them loaded from
+# waves 1 and 2 this afternoon. The raw files are append-only, so the exclusion lives here with a
+# reason a stranger could audit, per D12.
+#
+# Two different objections, both fatal to a denominator:
+#   a PERIOD ADDITION  "100 new customers joined", "introducing 1 million new customers". That is
+#                      customers ADDED, and EV over customers added is not a price per customer.
+#   SINCE INCEPTION    "over 325,000 businesses since its founding", "signed up since its public
+#                      launch in June 2020". Daniil, 2-Sep: "multiples cannot be calculated over
+#                      all time origination volumes." A price divided by everything a company has
+#                      ever done falls as the company ages and says nothing about what it is worth.
+#                      match_reference already bars this for money volumes by testing vol_period
+#                      for INCEPTION, but this loader writes 'At the round' for every count, so the
+#                      guard could never fire on the count lane. These are barred here instead.
+#
+# Keyed on company, round, kind and count so it can only ever match the figure it names.
+EXCLUSIONS = {
+    ('Decagon', 'Jan-26', 'BUSINESS_CUSTOMERS', 100.0):
+        'PERIOD ADDITION. "more than 100 new global enterprise customers ... joined the Decagon '
+        'family" is customers added, not the installed base.',
+    ('Glossier', 'Mar-19', 'CUSTOMERS', 1000000.0):
+        'PERIOD ADDITION. "introducing more than 1 million new customers" is customers added over '
+        'the period, not the base at the round.',
+    ('Fundbox', 'Nov-21', 'BUSINESS_CUSTOMERS', 325000.0):
+        'SINCE INCEPTION. "connected with over 325,000 businesses since its founding" is a '
+        'cumulative total that grows with age.',
+    ('Pipe', 'May-21', 'BUSINESS_CUSTOMERS', 4000.0):
+        'SINCE INCEPTION. "have signed up on the Pipe trading platform since its public launch in '
+        'June 2020" is cumulative signups, not an active base.',
+}
 SRC = ['data/raw/2026-09-03_user-counts-sweep-wave1.csv',
        'data/raw/2026-09-03_user-counts-sweep-wave2.csv',
        'data/raw/2026-09-03_user-counts-sweep-wave3.csv']
@@ -46,6 +79,24 @@ ROUND_FILES = ['data/private-rounds.csv', 'data/private-rounds-consumer.csv']
 # a count has somewhere to land. D11: a column with no field has nowhere to go and nothing counts
 # its absence.
 VOL_COLS = ['volume_metric', 'volume_musd', 'volume_period', 'volume_basis', 'ev_volume_x']
+# RESIDUE OF THE in_medians BUG, corrected by name against commit 02836c8.
+#
+# The promotion described below ran once before it was found, in commit cc85d3a of 17:52 on 3-Sep,
+# over the 56 rows waves 1 and 2 loaded. Restoring the data files to e9ab546 did not undo it,
+# because e9ab546 is AFTER cc85d3a and carries other real work that must not be lost. The reset
+# pass takes this tool's volume columns back out but cannot know what in_medians was before the
+# tool first ran.
+#
+# So these four are named against 02836c8, the last commit before any count was loaded, where all
+# four read in_medians=0. Each carries a revenue multiple that somebody excluded on purpose, and
+# under the rule below each must stay excluded and be reported as BLOCKED instead. Verified by
+# reading 02836c8 through the GitHub MCP rather than by running git on Daniil's machine.
+IN_MEDIANS_WAS_ZERO_AT_02836C8 = {
+    ('Anthropic', 'Sep-25'), ('OpenAI', 'Mar-25'),
+    ('Perplexity', 'Jan-24'), ('Shiprocket', 'Aug-22'),
+}
+# The stamp this tool leaves in notes, and the handle it uses to take its own work back out.
+MARKER = 'COUNT LOADED 3-Sep-2026'
 
 
 def read(path):
@@ -56,6 +107,7 @@ def read(path):
 def main():
     counts = {}
     skipped = []
+    excluded = []
     for p in SRC:
         for d in read(p):
             kind = (d['metric_kind'] or '').strip().upper()
@@ -69,6 +121,9 @@ def main():
                 continue
             if n <= 0:
                 continue
+            if (key[0], key[1], kind, n) in EXCLUSIONS:
+                excluded.append((key, kind, n, EXCLUSIONS[(key[0], key[1], kind, n)]))
+                continue
             # PREFER THE MOST MONETISED KIND when a page gives several. A paying count beats a
             # member count beats a customer count beats an active count beats a registered one,
             # because the further down that list you go the looser the relationship to revenue.
@@ -78,13 +133,30 @@ def main():
             if cur is None or rank < cur[0]:
                 counts[key] = (rank, kind, n, d['is_paying'], d['as_worded_on_the_page'])
 
-    total_hit, total_before, all_clash, added_cols, blocked = 0, 0, [], [], []
+    total_hit, total_before, all_clash, added_cols, blocked, reset = 0, 0, [], [], [], 0
     for path in ROUND_FILES:
         raw = io.open(path, encoding='utf-8').read()
         head = ''.join(l for l in raw.splitlines(True) if l.startswith('#'))
         body = [l for l in raw.splitlines(True) if not l.startswith('#')]
         rd = csv.DictReader(body)
         cols, rows = list(rd.fieldnames), list(rd)
+
+        # RESET WHAT THIS TOOL WROTE LAST TIME, so a run is a clean rebuild and not a patch on top
+        # of its own output. Added 3-Sep-2026 with the EXCLUSIONS above, because without it an
+        # excluded figure could not be taken back out: Fundbox's since-inception 325,000 had been
+        # loaded by wave 2 and the exclusion only stopped it being loaded AGAIN, leaving the stale
+        # $3,385 per business customer in the file. Only rows this tool stamped are touched, so a
+        # volume written by any other tool is left exactly alone.
+        for r in rows:
+            if MARKER not in (r.get('notes') or ''):
+                continue
+            cleared_kind = (r.get('volume_metric') or '').strip()
+            for c in VOL_COLS:
+                r[c] = ''
+            if (r.get('valuation_basis') or '').strip() == cleared_kind:
+                r['valuation_basis'] = ''
+            r['notes'] = (r['notes'].split(' || ' + MARKER)[0]).rstrip()
+            reset += 1
         before = len(rows)
         total_before += before
         missing = [c for c in VOL_COLS if c not in cols]
@@ -140,6 +212,9 @@ def main():
             # barred from revenue ranges and still price on a count, and that is Daniil's decision,
             # not something to slip in inside a sweep.
             was_in = (r.get('in_medians') or '').strip()
+            if key in IN_MEDIANS_WAS_ZERO_AT_02836C8:
+                was_in = '0'
+                r['in_medians'] = '0'
             has_rev = (r.get('ev_revenue_x') or '').strip()
             if has_rev and was_in in ('0', ''):
                 blocked.append((key, kind, r.get('ev_revenue_x'), r.get('revenue_basis'),
@@ -147,7 +222,7 @@ def main():
             else:
                 r['in_medians'] = '1'
             r['notes'] = ((r.get('notes') or '').rstrip() +
-                          ' || COUNT LOADED 3-Sep-2026 from the round announcement itself: "%s". '
+                          ' || ' + MARKER + ' from the round announcement itself: "%s". '
                           '%s of %s at the round against a $%.0fm post-money is $%s of enterprise '
                           'value per unit. is_paying=%s. A range may only be built against the same '
                           'KIND: this figure never meets a count of a different kind.'
@@ -172,8 +247,12 @@ def main():
     print()
     for path, missing in added_cols:
         print('ADDED the volume lane to %s: %s' % (path, ', '.join(missing)))
+    print('rows reset from this tool\'s own previous run: %d' % reset)
     print('rows in %d, counts loaded %d' % (total_before, total_hit))
     print('kinds not loadable as a denominator (recorded in raw only): %d' % len(skipped))
+    print('figures EXCLUDED as a flow or a since-inception total, in writing: %d' % len(excluded))
+    for k, kind, n, why in excluded:
+        print('   %-22s %-8s %-20s %14s  %s' % (k[0][:22], k[1], kind, '{:,.0f}'.format(n), why))
     print('rounds that already carry a money volume, count NOT overwritten: %d' % len(all_clash))
     for k, have, kind in all_clash:
         print('   %-24s %-8s keeps %-30s instead of %s' % (k[0][:24], k[1], have, kind))

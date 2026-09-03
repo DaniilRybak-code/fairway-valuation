@@ -643,7 +643,7 @@
     "bound": "",
     "company": "OpenAI",
     "date": "Mar-25",
-    "in_medians": true,
+    "in_medians": false,
     "mult": 54.5,
     "reason": "shares the language of api; related type of business; same revenue model; sold the same way",
     "score": 9.8,
@@ -701,8 +701,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 1
+    "ARR": 2
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -710,14 +709,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 54.5,
+   "high": 20.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
    "mid": 20.0,
-   "n": 3,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -731,9 +730,9 @@
     "api",
     "platform"
    ],
-   "spread": 5.3,
+   "spread": 1.9,
    "tag_evidence": 0.3,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 36,
