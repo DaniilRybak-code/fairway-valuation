@@ -674,3 +674,34 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 - **289 private rounds, 0 untagged, 179 median-eligible, no company under two keys.**
 - `selector/golden/*.json` — rebaselined. 4 of 43 moved: mondu gained Billie, the direct B2B
   buy-now-pay-later comparable; numida gained MNT-Halan; perenna gained Starling Bank.
+
+## 2026-09-03: engine reach checks, march-to-100 rescoped, investor table fix
+
+No data file changed in this entry. Everything here is a check, a deletion, or a fix to a tool that
+was reporting the wrong thing.
+
+- `tools/check_engine_reach.py` — NEW. The two checks Fable asked for, both wired to fail a build.
+  Check 1: every row in `data/private-rounds.csv` reaches the engine, or the check names the ones
+  that do not. It imports `selector/match_reference.py` rather than reimplementing the loader, so it
+  cannot drift from the thing it is checking. Check 2: no company votes twice in a median under two
+  keys. Both checks were run against a planted fault before being trusted, and both faults exposed a
+  real bug in the check itself, now fixed. Clean state: 289 file rows, 289 loaded, one managed
+  duplicate (AG1 Jan-22) reported as a warning rather than a failure.
+- `tools/peer_universe_check.py` — NEW. The march-to-100 scoreboard, rescoped on Daniil's 3-Sep
+  instruction that the march needs no revenue figures. It scores whether the engine narrows the
+  world to a defensible comparable set, using Daniil's own standing rules as the bar: never one
+  comparable, three real names over five padded ones, nothing unrelated, a blank is a trigger.
+  **43 fixtures, 33 pass, 10 fail.** Three more pass with an entire lane empty, flagged as a
+  warning because no ruling exists on whether an empty lane should fail.
+- `tools/investor_check.py` — FIXED. The `screening_categories` cell is `Sector(n); Sector(n)` where
+  n is the house's deal count in that sector. The splitter was keeping the suffix, so one bucket was
+  created per deal count and every coverage number in the table was unreadable. Real concentration
+  was hidden behind it. Top sectors now read Agent Ops 11, Lending & Credit 11, Merchant Acquiring
+  & PSP 13.
+- `selector/match_reference.py` — `with_forward_revenue()` DELETED. Zero callers since 31 Aug. A
+  note in its place records what it did and why it went, so the reasoning is not lost with the code.
+  Golden unmoved: 0 of 43.
+- Renderable investor count reconciled: 408 houses, 140 CALLABLE, 124 clear `investor_check`'s bar,
+  52 clear the roadmap's stricter six-field bar. Both numbers are right; they are different bars.
+  What separates them: **78 callable rows have no `first_cheque_low_m` and 74 have no
+  `geographies`.**

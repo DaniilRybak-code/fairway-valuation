@@ -1097,22 +1097,12 @@ def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
 # fork asks the founder for the LAST twelve months, and says so in the label. Applying a forward
 # multiple to a trailing number is not conservative and it is not aggressive, it is simply a
 # different measure, and for a founder growing 80 per cent it is wrong by 80 per cent.
-#
-# We already ask for growth, so the forward figure is derivable rather than another question. The
-# derivation is recorded in revenue_ntm_basis so nothing downstream can mistake it for something
-# the founder said. Where growth is unknown the trailing figure is used unchanged and the flag says
-# so, because a made-up growth rate would be worse than a labelled mismatch.
-def with_forward_revenue(prof):
-    p = dict(prof)
-    rev, g = _f(p.get('revenue')), _f(p.get('growth'))
-    if rev is None:
-        p['revenue_ntm'] = None; p['revenue_ntm_basis'] = 'NO_REVENUE_GIVEN'
-    elif g is None:
-        p['revenue_ntm'] = rev; p['revenue_ntm_basis'] = 'TRAILING_USED_UNCHANGED_NO_GROWTH_GIVEN'
-    else:
-        p['revenue_ntm'] = round(rev * (1.0 + g / 100.0), 4)
-        p['revenue_ntm_basis'] = 'DERIVED_FROM_TRAILING_AND_GROWTH'
-    return p
+# DELETED 03-Sep-2026: with_forward_revenue() had zero callers and had had zero callers since
+# 31 August, when `founder_revenue_for` became the single path. Fable flagged it twice. It is
+# removed rather than left as a second way to derive a denominator, because a dead second path
+# is the thing that gets picked up by accident later. The reasoning it encoded, that a forward
+# figure is derivable from trailing plus growth rather than being another quiz question, is
+# preserved here in case it is wanted again.
 
 
 # ---------------------------------------------------------------------------

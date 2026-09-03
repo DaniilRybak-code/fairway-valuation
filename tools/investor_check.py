@@ -94,6 +94,10 @@ def alias_collisions(rows):
         seen.setdefault(stem(r['investor_name']), []).append(r['investor_name'])
     return {k: v for k, v in seen.items() if len(set(v)) > 1}
 
+CANON = {'b2b marketplace': 'B2B Marketplace', 'consumer subscription': 'Consumer Subscription',
+         'consumer marketplace': 'Consumer Marketplace'}
+
+
 def main():
     rows = load()
     pull_only = '--pull' in sys.argv
@@ -147,18 +151,34 @@ def main():
     for k, v in sorted(col.items()):
         print('   %s' % ' / '.join(sorted(set(v))))
 
+    # The screening_categories cell is "Sector(n); Sector(n)" where n is that house's DEAL COUNT
+    # in the sector, not part of the name. Splitting without stripping it produced one bucket per
+    # deal count -- "Vertical Software(1)", "(2)", "(3)" -- which made every coverage number here
+    # unreadable and hid real concentration. Strip the suffix, keep the count.
     print('\nCOVERAGE OF THE CALLABLE LAYER BY SECTOR (what a founder in each fork would be offered):')
     by = {}
     for r in callable_rows:
         ok, _w, _s = check_row(r)
         for c in (r.get('screening_categories') or '').split(';'):
             c = c.strip()
-            if c:
-                by.setdefault(c, [0, 0])
-                by[c][0] += 1
-                by[c][1] += 1 if ok else 0
-    for c, (tot, good) in sorted(by.items()):
-        print('   %-46s %d curated, %d renderable' % (c, tot, good))
+            if not c:
+                continue
+            m = re.match(r'^(.*?)\((\d+)\)$', c)
+            name = (m.group(1) if m else c).strip()
+            deals = int(m.group(2)) if m else 0
+            # one vocabulary: the sector names are case-inconsistent in the source cell
+            name = CANON.get(name.lower(), name)
+            by.setdefault(name, [0, 0, 0])
+            by[name][0] += 1
+            by[name][1] += 1 if ok else 0
+            by[name][2] += deals
+    print('   %-46s %8s %11s %8s' % ('sector', 'curated', 'renderable', 'deals'))
+    for c, (tot, good, deals) in sorted(by.items(), key=lambda kv: -kv[1][1]):
+        print('   %-46s %8d %11d %8d' % (c, tot, good, deals))
+    print('   %-46s %8d %11d %8d' % ('TOTAL (houses counted once per sector)',
+                                     sum(v[0] for v in by.values()),
+                                     sum(v[1] for v in by.values()),
+                                     sum(v[2] for v in by.values())))
     return 0
 
 if __name__ == '__main__':
