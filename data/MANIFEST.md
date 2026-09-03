@@ -816,3 +816,57 @@ Future Planet (regional arm), Maven and Mercia (regional fund manager, not balan
 and SyndicateRoom (disclosure posts stop after April 2025).
 
 **State: 511 listed, 290 private rounds, 180 median-eligible, peer universe 36 of 43.**
+
+## 2026-09-03 (night): the check that would have caught today's bugs, and what it found
+
+Daniil asked why real bugs survived so long. Full answer in `docs/why-the-bugs-survived-3sep.md`.
+The short version: **every check we had counts ROWS, and every one of today's bugs lost a FIELD
+while the row arrived intact.** Golden cannot help either, because a field that was always empty
+never moves, so a defect present when the baseline was written is invisible to it by construction.
+Rule D8 says a figure in the file but not in the engine is ABSENT; nothing enforced D8 below the row.
+
+- `tools/check_field_reach.py` : NEW, two halves. **Value test:** every numeric value in every
+  source file must reach its loaded row. **Static test:** every populated numeric column must be
+  mentioned somewhere in the loader source. The second half exists because I planted the
+  `ev_volume_x` fault and the first half passed: both loaders build rows as `{**raw, **tags}`, so a
+  raw string sits on the row whether anything reads it or not. Both faults were planted and the
+  check now catches each. It separates shadowed rows, deliberately killed rows
+  (`LISTED_NOT_PRICING`) and genuinely absent fields, and a column can only be silenced by an entry
+  in `REASONED_UNREAD` carrying its reason.
+
+**What it found the same evening, beyond the bugs it was built for:**
+
+- The 12 recovered neobanks had the MULTIPLES and not the figures behind them. Nu Holdings arrived
+  with a 3.9x price to book and no book value per share. Merge widened to bvps, net income, net
+  income growth and price per share.
+- **All 123 logistics and services companies had no growth at all**, because that file calls the
+  column `revenue_growth_pct` while the loader reads `revenue_growth_ntm_pct`. Now read for DISPLAY
+  and deliberately given no `g_rank`: the file does not state the horizon and only a multi-year rate
+  may rank a peer.
+- Net revenue retention for 83 listed software rows and recurring revenue percentage for 80 sit
+  unread. Relevant to the open retention decision from the 29-Aug quiz review.
+- MercadoLibre is 2.10x in the ecommerce pull and 2.20x in the fintech pull. Two of Daniil's own
+  pulls disagree about the same company.
+- Three rows carry a physical quantity in a dollar column: Xpansiv 121.5 MtCO2e, Flo Health and Calm
+  in millions of users. A unit guard now bars any volume whose period or metric names a physical
+  unit, so none of them can price.
+- `_src_file` recorded on every listed row, so which pull won a shared ticker is visible to a check.
+
+### The thin lanes, answered
+
+- **Public side: closed.** No fixture now fails on a listed lane. acti and goldfish were not short
+  of public companies: five priced consumer software names sat in the family unreachable because
+  our listed tags say what a product DOES and never what KIND of thing it is, while a consumer-app
+  founder's tags lead with the kind. Adding Consumer App / Desktop App / Mobile App to Dropbox,
+  Opera, Life360, Gen Digital and F-Secure fixed both. Same vocabulary gap as Marqeta, different
+  corner.
+- **Peer universe 36 to 39 of 43.** A thin SECONDARY lane no longer fails a fixture: nothing prices
+  off secondary. `all_ranges` and `triage` both use the listed CORE and the private lane, and the
+  only place a secondary range is computed is golden's snapshot loop, which shows it to nobody.
+  Verified before changing the check, not after. Reported as a note instead.
+- **Four remain, all private-side:** finn, fundraisly, levelten, priori-legal.
+- **Still worth sourcing on the listed side, verified as currently trading:** Zedge (NYSEAMERICAN
+  ZDGE) and CyberLink (TWSE 5203) for the consumer-app set; Skillsoft (NYSE SKIL), Stride (NYSE
+  LRN), D2L (TSX DTOL), Franklin Covey (NYSE FC) and John Wiley (NYSE WLY) for the training and LMS
+  ring. **Do not source: Udemy was acquired by Coursera in May 2026, and Instructure, PowerSchool,
+  Kahoot, 2U, Pluralsight and Learning Technologies Group have all gone private since 2021.**

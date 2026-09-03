@@ -27,6 +27,18 @@ import sys
 
 WEAK = 'THIN_OVERLAP'
 LANES = ('core', 'secondary', 'private')
+# WHICH LANES ACTUALLY PRICE A FOUNDER. Narrowed 3-Sep-2026 after this check failed goldfish and
+# honen on their SECONDARY lane while both had a healthy core.
+#
+# I checked what reads a secondary range before changing this rather than after. Nothing does.
+# `all_ranges` and `triage` both price off the listed CORE and the private lane; the only place a
+# secondary range is computed at all is golden.py's snapshot loop, which records it and shows it to
+# nobody. Secondary is the wider ring of context names, exactly as the code comments describe it.
+#
+# Failing a company because a number no founder sees rests on one name is not a strict check, it is
+# a wrong one, and it buries the six real failures under two false ones. A thin secondary is still
+# reported, as a note.
+PRICING_LANES = ('core', 'private')
 
 
 def read(path):
@@ -35,7 +47,7 @@ def read(path):
 
 def score(e):
     """Returns (verdict, reasons, facts) for one fixture snapshot."""
-    names, per_lane, closeness, sole_lanes, empty_lanes = set(), {}, [], [], []
+    names, per_lane, closeness, sole_lanes, empty_lanes, thin_context = set(), {}, [], [], [], []
     for lane in LANES:
         rows = e.get(lane) or []
         got = [r.get('company') for r in rows if r.get('company')]
@@ -51,7 +63,10 @@ def score(e):
         # arrived and made it one. A check that rewards an empty answer over a thin one is worse
         # than no check. Rule 4 already says a blank is a trigger; this is where it is enforced.
         if rng.get('sole') or (isinstance(n, int) and n < 2):
-            (sole_lanes if (rng.get('sole') or n == 1) else empty_lanes).append(lane)
+            if lane not in PRICING_LANES:
+                thin_context.append(lane)
+            else:
+                (sole_lanes if (rng.get('sole') or n == 1) else empty_lanes).append(lane)
     fails = []
     if not names:
         fails.append('no comparables at all')
@@ -70,6 +85,7 @@ def score(e):
     # bar above does not forbid but Daniil has never ruled on. Report it as a warning, visible on
     # its own line in the summary, rather than folding it silently into a PASS or inventing a fail.
     warns = ['%s lane empty' % lane for lane in LANES if per_lane[lane] == 0] if names else []
+    warns += ['%s ring rests on one priced name' % l for l in thin_context]
     facts = dict(names=len(names), core=per_lane['core'], secondary=per_lane['secondary'],
                  private=per_lane['private'], closeness=','.join(sorted(set(closeness))) or '-')
     return ('PASS' if not fails else 'FAIL'), fails, facts, warns

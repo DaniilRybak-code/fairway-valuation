@@ -131,7 +131,17 @@ def _ingest(mfile, tfile, fam_for):
         # can move, and the fill is recorded on the row so it is auditable rather than magic.
         if k in listed:
             have = listed[k]
-            for fld, col in (('pb_mult', 'p_bv_x'), ('pe_mult', 'p_e_x')):
+            # The whitelist covers the MULTIPLES and the figures they are built from. Carrying the
+            # multiple without its denominator was the first version of this fix and
+            # check_field_reach caught it the same evening: Nu Holdings arrived with a 3.9x price
+            # to book and no book value per share behind it, so nothing could ever show a founder
+            # what the 3.9x was a multiple OF.
+            for fld, col in (('pb_mult', 'p_bv_x'), ('pe_mult', 'p_e_x'),
+                             ('bvps', 'bvps_ntm'), ('bvps_2026', 'bvps_2026'),
+                             ('bvps_2027', 'bvps_2027'), ('ni', 'ni_ntm_musd'),
+                             ('ni_fy0', 'ni_fy0_musd'), ('ni_fy1', 'ni_fy1_musd'),
+                             ('ni_fy2', 'ni_fy2_musd'), ('ni_growth_pct', 'ni_growth_pct'),
+                             ('price_per_share', 'price_per_share')):
                 v = _f(m.get(col))
                 if v is not None and have.get(fld) is None:
                     have[fld] = v
@@ -176,6 +186,19 @@ def _ingest(mfile, tfile, fam_for):
         if r['g'] is None:
             r['g'] = _f(m.get('revenue_growth_ntm_pct'))
             r['g_basis'] = 'NTM'
+        if r['g'] is None:
+            # THE LOGISTICS FILE CALLS IT SOMETHING ELSE AGAIN, and until 3-Sep-2026 that meant all
+            # 123 logistics and services companies arrived with NO GROWTH AT ALL. Nothing said so:
+            # an unknown growth is permissive by design, so the rows competed on business nature and
+            # the gap was invisible. check_field_reach found it by asking which populated columns
+            # the loader never mentions.
+            #
+            # The column is `revenue_growth_pct` and the file does not say over what horizon, so it
+            # is read for DISPLAY and deliberately not given a g_rank. The standing rule is that
+            # only a multi-year rate may rank a peer, and a rate whose definition we cannot name
+            # certainly may not.
+            r['g'] = _f(m.get('revenue_growth_pct'))
+            r['g_basis'] = 'FILE_UNSPECIFIED_HORIZON'
 
         # ONLY A MULTI-YEAR RATE MAY RANK A PEER. Daniil, 31-Aug-2026: "for growth - we need to take
         # longer-term numbers to rank the peers (i.e. the CAGR). Year 1 and 2 numbers are only there
@@ -209,6 +232,10 @@ def _ingest(mfile, tfile, fam_for):
         r['gm']   = 100*gp/r['rev'] if (gp and r['rev']) else None
         r['acv']  = _f(r.get('acv_usd_disclosed'))
         r['mix_note'] = r.get('mix_note','')
+        # WHICH FILE THIS ROW CAME FROM. Fifteen tickers appear in two peers files, and until
+        # 3-Sep-2026 the loser was dropped in silence. Recording the winner's file makes that
+        # visible to a check instead of only to whoever goes looking.
+        r['_src_file'] = mfile
         # in_stats on the software file, in_medians on the consumer file. Same idea:
         # the row is visible to the founder and out of every median.
         flag = r.get('in_medians', r.get('in_stats', '1'))
@@ -419,8 +446,33 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             # 0.15x since 2015, Tala 0.30x since inception, Clearco 0.83x since inception. They stay
             # visible with their period on the label; they are barred from every range.
             row['vol_periodic'] = bool(row['vol_period']) and 'INCEPTION' not in row['vol_period'].upper()
+            # AND THE VOLUME HAS TO BE MONEY. Caught 3-Sep-2026 the moment the volume column began
+            # loading at all. Xpansiv's volume is 121.5 CY2021 MtCO2e, megatonnes of carbon dioxide,
+            # sitting in a column called volume_musd. Divided into a $1.4bn valuation it produces a
+            # tidy-looking 11.52x that is a price per tonne, not a multiple, and it would have gone
+            # straight into a renewable-energy founder's range. A physical quantity in a dollar
+            # column is a units error in the data; the guard is here because the data will keep
+            # arriving from spreadsheets and this will not be the last one.
+            _unit = (row['vol_period'] + ' ' + (r.get('volume_metric') or '')).upper()
+            if any(u in _unit for u in ('CO2', 'TONNE', 'TON ', 'MWH', 'KWH', 'GWH', 'BARREL',
+                                        'UNITS', 'SEATS', 'RIDES', 'TRIPS', 'ORDERS', 'USERS',
+                                        'MEMBERS', 'SUBSCRIBERS', 'TRANSACTIONS', 'MESSAGES')):
+                row['vol_periodic'] = False
+                row['vol_unit_warning'] = ('volume is a physical quantity (%s), not money, so it '
+                                           'cannot price anything' % row['vol_period'])
             row['mult_book'] = _f(r.get('ev_book_x'))
             row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
+            # THE DENOMINATORS BEHIND THE LENDER MULTIPLES. Added 3-Sep-2026, found by
+            # check_field_reach: the multiples were read and the figures they are built from were
+            # not, so nothing could ever tell a founder what a 3.17x was a multiple OF. Also the
+            # round size and the exchange rate, both of which the reveal needs to show its working.
+            row['book_value'] = _f(r.get('book_value_musd'))
+            row['tangible_book'] = _f(r.get('tangible_book_musd'))
+            row['originations'] = _f(r.get('originations_musd'))
+            row['net_loan_book'] = _f(r.get('net_loan_book_musd'))
+            row['capital_raised'] = _f(r.get('capital_raised_musd'))
+            row['fx_rate_used'] = _f(r.get('fx_rate'))
+            row['paying_users_k'] = _f(r.get('paying_users_k'))
             # PRE-MONEY AND POST-MONEY MAY NOT SIT IN THE SAME RANGE. Daniil, 3-Sep-2026:
             # "let's add pre-money valuation, then we need to be consistent in terms of multiples
             # we use for the user (not mix the two)."
@@ -1562,9 +1614,12 @@ def _basis_row_ok(basis, r):
     """Extra condition a row must meet to belong in THIS basis, beyond having the multiple."""
     if basis == 'ARR':
         return (r.get('revenue_basis') or '').upper() in ('ARR', 'ARR_RUNRATE')
-    if basis == 'ORIGINATIONS':
-        # Periodic only. A since-inception total is barred, see the loader note.
-        return r.get('vol_metric') == 'ORIGINATIONS' and r.get('vol_periodic')
+    if basis in ('ORIGINATIONS', 'GMV', 'PAYMENT_VOLUME'):
+        # The right KIND of volume, and a periodic one. A since-inception total, a blank period and
+        # a physical quantity are all barred: see the loader note. The kind test matters as much as
+        # the period one, because originations, payment volume and GMV are three different things
+        # and averaging them would be the same error as averaging gross with net revenue.
+        return r.get('vol_metric') == basis and r.get('vol_periodic')
     if basis == 'BOOK':
         return True
     return True

@@ -2,35 +2,75 @@
  "expected": {
   "core": [
    {
+    "company": "Opera Limited",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Mobile App; same type of business; same kind of customer; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQGS:OPRA"
+   },
+   {
     "company": "Truecaller AB (publ)",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of app; same type of business; same kind of customer; sold the same way",
     "score": 9.7,
     "ticker": "OM:TRUE B"
+   },
+   {
+    "company": "Life360, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Mobile App; same type of business; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "ASX:360"
+   },
+   {
+    "company": "Gen Digital Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Mobile App; related type of business; same kind of customer; sold the same way",
+    "score": 8.5,
+    "ticker": "NASDAQGS:GEN"
+   },
+   {
+    "company": "F-Secure Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Mobile App; same type of business; same kind of customer",
+    "score": 8.0,
+    "ticker": "HLSE:FSECURE"
+   },
+   {
+    "company": "Dropbox, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Mobile App; same type of business; sold the same way",
+    "score": 6.5,
+    "ticker": "NASDAQGS:DBX"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 3.0,
+   "display": "RANGE",
+   "high": 4.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.0,
-   "mid": 3.0,
-   "n": 1,
+   "mid": 3.6,
+   "n": 6,
    "period_mix": {
-    "NTM": 1
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -42,13 +82,13 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app"
+    "app",
+    "mobile"
    ],
-   "sole": "Truecaller AB (publ)",
-   "spread": 1.0,
-   "tag_evidence": 0.2,
-   "thin": true,
-   "triangulated": true
+   "spread": 2.4,
+   "tag_evidence": 0.5,
+   "thin": false,
+   "triangulated": false
   },
   "listed_proximity": "ADJACENT",
   "private": [
