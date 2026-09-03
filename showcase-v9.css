@@ -1,0 +1,117 @@
+/* ================= v9, 3-Sep-2026: the field sells.
+   The right rail goes. The story moves LEFT into the third the hero copy
+   vacates: five highlights in the colour of the bar they explain, arriving
+   one by one, with a second CTA at the foot. The card grows to two thirds
+   of the page, not the whole of it, and its top edge never moves: the grid
+   now fills the viewport and the card is pinned at its rest position (JS
+   measures it once). Plus Daniil's markup: the headline reveals word by
+   word and the rest follows; +53% (recomputed for the new row) is big;
+   an EV-per-user precedent row 25% above the revenue-priced one, axis to
+   18; "based on peer beta"; hero stats in the page's own sans; three
+   best-fit seed investors with cheques in the rest-state strip. */
+
+/* ---- the grid fills the viewport so nothing has to recentre ---- */
+#screen-hero .hero-genie-on .hero .hero-grid { display:flex; align-items:center;
+  min-height:100vh; }
+#screen-hero .hero-genie-on .hero-vis { top:calc(var(--card-top, 40px) + var(--nav-shift, 0px)); transform:none;
+  width:calc(60% + 8% * var(--exp, 0)); }
+#screen-hero .hero-genie-on .hero .hero-grid { position:relative; }
+
+/* ---- the field no longer cedes a rail; the method column tightens a little ---- */
+.hero-genie-on .ffx-head, .hero-genie-on .ff-row, .hero-genie-on .ffx-axis {
+  grid-template-columns:minmax(140px,calc(200px - 30px * var(--exp, 0))) calc(92px * var(--exp, 0))
+    calc(114px * var(--exp, 0)) minmax(0,1fr); }
+.hero-genie-on .our-read { display:block; }
+.hero-genie-on .ff-delta { max-width:none; }
+
+/* ---- numbered chips on the rows: hidden at rest, spawning with the expansion,
+   sitting in the card's left padding so the method name does not shift ---- */
+.sp .fn, .row-chip { border-radius:50%; font-family:var(--mono); font-style:normal; font-weight:700;
+  color:#fff; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+.row-chip { display:none; }
+.hero-genie-on .ff-param { position:relative; }
+.hero-genie-on .row-chip { display:flex; position:absolute; left:-27px; top:50%;
+  transform:translateY(-50%); width:18px; height:18px; font-size:9.5px;
+  opacity:clamp(0, calc((var(--exp, 0) - 0.5) / 0.25), 1); }
+.hero-genie-on .ffcard.compact .ff-param { display:flex; flex-direction:column; justify-content:center; }
+
+/* ---- the story column ---- */
+.hero-story { display:none; }
+#screen-hero .hero-genie-on .hero-story { display:block; position:absolute; left:0;
+  top:calc(var(--card-top, 40px) + var(--nav-shift, 0px)); width:29%; text-align:left;
+  opacity:clamp(0, calc((var(--exp, 0) - 0.55) / 0.2), 1);
+  visibility:hidden; pointer-events:none; }
+#screen-hero .hero-genie-mid .hero-story { visibility:visible; pointer-events:auto; }
+.hs-eyebrow { margin:0 0 10px; font-family:var(--mono); font-size:9.5px; letter-spacing:.16em;
+  text-transform:uppercase; font-weight:700; color:var(--ff-mute); }
+.hs-title { font-family:var(--serif); font-size:clamp(22px,2vw,28px); line-height:1.1;
+  letter-spacing:-.02em; font-weight:600; margin:0 0 12px; color:var(--ff-ink); }
+.hs-lede { font-size:13px; line-height:1.5; color:var(--ff-soft); margin:0 0 18px; max-width:42ch; }
+.sp { display:flex; gap:12px; align-items:flex-start; margin-bottom:13px;
+  --nseen:clamp(0, calc((var(--exp, 0) - var(--nd, .6)) / 0.08), 1);
+  opacity:var(--nseen); transform:translateX(calc(-12px * (1 - var(--nseen)))); }
+.sp .fn { width:22px; height:22px; font-size:11px; margin-top:1px; }
+.sp b { display:block; font-size:15.5px; line-height:1.25; font-weight:600; letter-spacing:-.008em;
+  margin-bottom:4px; }
+.sp p { margin:0; font-size:12.5px; line-height:1.45; color:var(--ff-soft); max-width:42ch; }
+.sp .fn.c1 + div b { color:#6a7383; }
+.sp .fn.c2 + div b { color:#3f66c2; }
+.sp .fn.c3 + div b { color:#7c3aed; }
+.sp .fn.c4 + div b { color:#0e7490; }
+.sp .fn.c5 + div b { color:#33415f; }
+.sp-cta { display:flex; align-items:center; gap:14px; margin-top:16px;
+  --nseen:clamp(0, calc((var(--exp, 0) - var(--nd, .9)) / 0.08), 1); opacity:var(--nseen); }
+#screen-hero .hero .btn.btn-outline { background:transparent; color:var(--accent); border:1.5px solid var(--accent);
+  padding:11px 20px; font-size:14px; }
+#screen-hero .hero .btn.btn-outline:hover { background:var(--accent-soft); color:var(--accent); }
+
+/* ---- the second precedent row: the same rounds, priced per paying user ---- */
+.ff-bar.priv2 { background:#a78bfa; }
+.hf-bar.priv2, .ff-bar.priv2 { --glow:167,139,250; }
+
+/* ---- the premium badge, now the loudest thing on the card ---- */
+.prem-badge { top:calc(50% - 34px); }
+.prem-badge em { font-size:46px; letter-spacing:-.03em; }
+.prem-badge span { font-size:11.5px; margin-top:4px; }
+.prem-badge .pa { width:30px; height:27px; }
+.prem-badge .pa.up { left:-38px; top:-8px; }
+.prem-badge .pa.dn { left:-38px; bottom:-2px; }
+
+/* ---- hero stats in the page's own sans, one voice with the copy ---- */
+.hero-stats em { font-family:var(--sans); font-weight:700; word-spacing:normal; letter-spacing:-.015em;
+  font-size:20px; }
+
+/* ---- rest-state strip: the investors column ---- */
+.d-mini { gap:26px; }
+.dm-col.keyinv { min-width:0; }
+.dm-col.keyinv i { grid-template-columns:auto auto auto; gap:0 10px; white-space:nowrap; }
+.dm-col.keyinv i em { white-space:nowrap; }
+.dm-col.keyinv i b.lead { white-space:nowrap; }
+
+/* ---- the opening: headline word by word, then everything else ---- */
+.hero-intro .hero-copy h1 .w { display:inline-block; opacity:0; filter:blur(7px);
+  transform:translateY(.35em); animation:wreveal .62s cubic-bezier(.2,.7,.2,1) forwards;
+  animation-delay:calc(120ms + var(--wi, 0) * 75ms); }
+@keyframes wreveal { to { opacity:1; filter:blur(0); transform:none; } }
+.hero-intro .hero-copy > :not(h1), .hero-intro .hero-vis .ffcard { opacity:0; transform:translateY(14px);
+  animation:blockreveal .7s ease forwards; animation-delay:var(--bd, 1.2s); }
+@keyframes blockreveal { to { opacity:1; transform:none; } }
+.hero-intro .hero-copy > :not(h1) { --bd:1.25s; }
+.hero-intro .hero-copy .sub-strong { --bd:1.2s; }
+.hero-intro .hero-copy .sub { --bd:1.3s; }
+.hero-intro .hero-copy .cta-stack { --bd:1.4s; }
+.hero-intro .hero-copy .hero-stats { --bd:1.5s; }
+.hero-intro .hero-vis .ffcard { --bd:1.45s; }
+.hero-intro.intro-done .hero-copy h1 .w, .hero-intro.intro-done .hero-copy > :not(h1),
+.hero-intro.intro-done .hero-vis .ffcard { animation:none; opacity:1; transform:none; filter:none; }
+
+@media (max-width:900px) {
+  .hero-story { display:block; margin-top:28px; text-align:left; }
+  .sp, .sp-cta { opacity:1; transform:none; }
+  .row-chip { display:none !important; }
+  #screen-hero .hero-genie-on .hero .hero-grid { display:grid; min-height:0; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-intro .hero-copy h1 .w, .hero-intro .hero-copy > :not(h1), .hero-intro .hero-vis .ffcard {
+    animation:none; opacity:1; transform:none; filter:none; }
+}
