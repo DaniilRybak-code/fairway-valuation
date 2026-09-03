@@ -1,8 +1,9 @@
 /* ================= v9, 3-Sep-2026: the field sells.
-   The right rail goes. The story moves LEFT into the third the hero copy
-   vacates: five highlights in the colour of the bar they explain, arriving
-   one by one, with a second CTA at the foot. The card grows to two thirds
-   of the page, not the whole of it, and its top edge never moves: the grid
+   The right rail goes. The story moves LEFT into the space the hero copy
+   vacates: five big punchlines in the colour of the bar they explain, one
+   short line under each, a swatch above (colour is the link, no numbers),
+   arriving one by one, with a second CTA at the foot. The card keeps its
+   hero width, nudged right, and its top edge never moves: the grid
    now fills the viewport and the card is pinned at its rest position (JS
    measures it once). Plus Daniil's markup: the headline reveals word by
    word and the rest follows; +53% (recomputed for the new row) is big;
@@ -14,52 +15,43 @@
 #screen-hero .hero-genie-on .hero .hero-grid { display:flex; align-items:center;
   min-height:100vh; }
 #screen-hero .hero-genie-on .hero-vis { top:calc(var(--card-top, 40px) + var(--nav-shift, 0px)); transform:none;
-  width:calc(60% + 8% * var(--exp, 0)); }
+  width:calc(60% - 2% * var(--exp, 0)); right:calc(-24px * var(--exp, 0)); }
 #screen-hero .hero-genie-on .hero .hero-grid { position:relative; }
 
 /* ---- the field no longer cedes a rail; the method column tightens a little ---- */
 .hero-genie-on .ffx-head, .hero-genie-on .ff-row, .hero-genie-on .ffx-axis {
-  grid-template-columns:minmax(140px,calc(200px - 30px * var(--exp, 0))) calc(92px * var(--exp, 0))
-    calc(114px * var(--exp, 0)) minmax(0,1fr); }
+  grid-template-columns:minmax(130px,calc(200px - 36px * var(--exp, 0))) calc(98px * var(--exp, 0))
+    calc(100px * var(--exp, 0)) minmax(0,1fr); }
+/* the Unrefined tag is redundant once the row has its title column; it goes with the copy */
+.hero-genie-mid .ffcard .ff-param .lock-tag { display:none; }
 .hero-genie-on .our-read { display:block; }
 .hero-genie-on .ff-delta { max-width:none; }
 
-/* ---- numbered chips on the rows: hidden at rest, spawning with the expansion,
-   sitting in the card's left padding so the method name does not shift ---- */
-.sp .fn, .row-chip { border-radius:50%; font-family:var(--mono); font-style:normal; font-weight:700;
-  color:#fff; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
-.row-chip { display:none; }
-.hero-genie-on .ff-param { position:relative; }
-.hero-genie-on .row-chip { display:flex; position:absolute; left:-27px; top:50%;
-  transform:translateY(-50%); width:18px; height:18px; font-size:9.5px;
-  opacity:clamp(0, calc((var(--exp, 0) - 0.5) / 0.25), 1); }
-.hero-genie-on .ffcard.compact .ff-param { display:flex; flex-direction:column; justify-content:center; }
-
-/* ---- the story column ---- */
+/* ---- the story column: big punchline, one short line, a swatch in the bar's colour ---- */
 .hero-story { display:none; }
 #screen-hero .hero-genie-on .hero-story { display:block; position:absolute; left:0;
-  top:calc(var(--card-top, 40px) + var(--nav-shift, 0px)); width:29%; text-align:left;
+  top:calc(var(--card-top, 40px) + var(--nav-shift, 0px)); width:36%; text-align:left;
   opacity:clamp(0, calc((var(--exp, 0) - 0.55) / 0.2), 1);
   visibility:hidden; pointer-events:none; }
 #screen-hero .hero-genie-mid .hero-story { visibility:visible; pointer-events:auto; }
-.hs-eyebrow { margin:0 0 10px; font-family:var(--mono); font-size:9.5px; letter-spacing:.16em;
+.hs-eyebrow { margin:0 0 8px; font-family:var(--mono); font-size:9.5px; letter-spacing:.16em;
   text-transform:uppercase; font-weight:700; color:var(--ff-mute); }
-.hs-title { font-family:var(--serif); font-size:clamp(22px,2vw,28px); line-height:1.1;
-  letter-spacing:-.02em; font-weight:600; margin:0 0 12px; color:var(--ff-ink); }
-.hs-lede { font-size:13px; line-height:1.5; color:var(--ff-soft); margin:0 0 18px; max-width:42ch; }
-.sp { display:flex; gap:12px; align-items:flex-start; margin-bottom:13px;
+.hs-title { font-family:var(--serif); font-size:clamp(20px,1.7vw,24px); line-height:1.15;
+  letter-spacing:-.015em; font-weight:600; margin:0 0 6px; color:var(--ff-ink); }
+.hs-lede { font-size:13px; line-height:1.45; color:var(--ff-soft); margin:0 0 22px; }
+.sp { display:block; margin-bottom:19px;
   --nseen:clamp(0, calc((var(--exp, 0) - var(--nd, .6)) / 0.08), 1);
   opacity:var(--nseen); transform:translateX(calc(-12px * (1 - var(--nseen)))); }
-.sp .fn { width:22px; height:22px; font-size:11px; margin-top:1px; }
-.sp b { display:block; font-size:15.5px; line-height:1.25; font-weight:600; letter-spacing:-.008em;
-  margin-bottom:4px; }
-.sp p { margin:0; font-size:12.5px; line-height:1.45; color:var(--ff-soft); max-width:42ch; }
-.sp .fn.c1 + div b { color:#6a7383; }
-.sp .fn.c2 + div b { color:#3f66c2; }
-.sp .fn.c3 + div b { color:#7c3aed; }
-.sp .fn.c4 + div b { color:#0e7490; }
-.sp .fn.c5 + div b { color:#33415f; }
-.sp-cta { display:flex; align-items:center; gap:14px; margin-top:16px;
+.sp .sw { display:block; width:34px; height:6px; border-radius:3px; margin-bottom:7px; }
+.sp b { display:block; font-family:var(--serif); font-size:clamp(22px,2vw,28px); line-height:1.1;
+  font-weight:600; letter-spacing:-.018em; margin-bottom:6px; max-width:17ch; }
+.sp p { margin:0; font-size:13.5px; line-height:1.42; color:var(--ff-soft); max-width:46ch; }
+.sw.c1 { background:#c3c9d6; }  .sp .sw.c1 + b { color:#6a7383; }
+.sw.c2 { background:#8ea9dd; }  .sp .sw.c2 + b { color:#3f66c2; }
+.sw.c3 { background:#7c3aed; }  .sp .sw.c3 + b { color:#7c3aed; }
+.sw.c4 { background:#0e7490; }  .sp .sw.c4 + b { color:#0e7490; }
+.sw.c5 { background:repeating-linear-gradient(-45deg,#33415f 0 4px,#4a5b80 4px 8px); }  .sp .sw.c5 + b { color:#33415f; }
+.sp-cta { display:flex; align-items:center; gap:14px; margin-top:4px;
   --nseen:clamp(0, calc((var(--exp, 0) - var(--nd, .9)) / 0.08), 1); opacity:var(--nseen); }
 #screen-hero .hero .btn.btn-outline { background:transparent; color:var(--accent); border:1.5px solid var(--accent);
   padding:11px 20px; font-size:14px; }
@@ -108,7 +100,6 @@
 @media (max-width:900px) {
   .hero-story { display:block; margin-top:28px; text-align:left; }
   .sp, .sp-cta { opacity:1; transform:none; }
-  .row-chip { display:none !important; }
   #screen-hero .hero-genie-on .hero .hero-grid { display:grid; min-height:0; }
 }
 @media (prefers-reduced-motion:reduce) {
