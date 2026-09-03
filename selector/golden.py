@@ -9,6 +9,7 @@ import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import match_reference as M
+import investors as I
 from golden_profiles import PROFILES, EXPECTED_PEERS, peer_hit
 FIX = os.path.join(HERE, 'golden')
 
@@ -60,6 +61,12 @@ def snap(prof):
     # while holding a perfectly good throughput range.
     if len(M.bases_for(prof, 'private')) > 1 or len(M.bases_for(prof, 'listed')) > 1:
         out['all_ranges'] = M.all_ranges(prof, core, listed_tier, picked, priv_tier)
+    # THE INVESTOR LISTS ARE SNAPSHOTTED LIKE THE RANGES. Fable's Day 2 acceptance test: "each of
+    # the 43 fixtures gets its investor list snapshotted like ranges, so a data edit that flips a
+    # founder's list shows up in a diff." Without it, an edit to investors.csv could silently change
+    # who every founder is told to call and nothing would report it.
+    out['investors_callable'] = I.match_callable(prof, raise_musd=3.0)
+    out['investors_evidence'] = I.match_evidence(picked)
     return out
 
 def peer_coverage():

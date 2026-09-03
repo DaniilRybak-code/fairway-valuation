@@ -1187,3 +1187,86 @@ the bottom, so it should position a founder within the range), and `asset_intens
 ecommerce fork is collected and unused.
 
 `tools/check_all.sh` now runs TEN checks, still in the order a figure travels.
+
+## 2026-09-03 (night, 7): the investor matcher and the recommendations read
+
+### Status before tonight, honestly
+
+Fable's roadmap of 2-Sep gave three days of build. **Day 1, the investor table, was done. Days 2 and
+3 had not been started.** There was no matcher: nothing turned 408 investor rows into a list for a
+founder, so the feature promised on the landing page had a database behind it and no machinery, and
+nothing in golden would have noticed if an edit changed who every founder is told to call.
+
+### Day 2, built: `selector/investors.py`
+
+Two layers, kept apart, because Fable's read of the competitor is right: "vcconf's failure mode is
+stale investors; ours would be aspirational ones."
+
+- **CALLABLE**, the call list. Facet match on sector (our archetype vocabulary), stage (from the
+  raise amount, or from revenue when they have not said), and geography, ranked inside a tier by the
+  house's own DEAL COUNT in the founder's sectors, which is the activity evidence the table already
+  holds. **Degradation is labelled, never silent**: exact on all three, then sector and stage with a
+  wider geography, then broader fit, then two of three, and the label goes on the card. A house
+  whose first cheque cannot fund this round is dropped. **The list is never padded**: numida gets
+  six because six is what fits.
+- **EVIDENCE**, the houses behind the founder's own comparables, generated from the rounds the
+  selector chose, so the investors arrive attached to the evidence. Labelled as a map of who pays up
+  for businesses like this, never as a call list. The parser drops prose: the source cell contains
+  entries like "IFC identified for up to $40m of additional primary capital", which is a sentence
+  about a deal and not a house.
+- **Both layers are snapshotted in golden for all 43 fixtures**, which was Fable's Day 2 acceptance
+  test. Averages: 6.2 callable and 13.0 evidence names per founder.
+
+**The coverage finding: 62 of 140 callable rows are renderable.** The blockers are exactly the two
+already known, 78 rows with no cheque range and 74 with no geography, and **10 of the 43 fixtures
+get fewer than three callable investors** as a result. That is the number Daniil's enrichment pull
+moves.
+
+### Day 3, built: `selector/recommendations.py`, and NRR is in it
+
+Daniil, 3-Sep: "NRR SHOULD be used in the recommendations piece." It was collected by the quiz and
+read by nothing, which the quiz walker found earlier the same evening.
+
+Three dimensions render so far, each in three sentences and always in this order: where the founder
+stands against a NAMED set, the one action, and the valuation consequence as a row on their own
+field. **The list is ordered by range impact, not by rubric order.**
+
+- **quality of revenue**, which is the retention dimension. Measured against our own data rather
+  than a quoted figure: across the 83 listed names that disclose both a retention figure and a
+  forward revenue multiple, **the bottom quartile on retention prices at a median 2.3x and the top
+  quartile at 5.8x**. That 3.5x gap is the largest we can measure on any disclosed metric, which is
+  what makes retention worth both a question and a recommendation.
+- **growth story**, the same shape on growth.
+- **evidence gaps**, straight from the ranges: a basis with a range and no founder figure behind it
+  is named, because that row is currently a multiple with nothing applied to it.
+
+A core set is seven names at most and can never be a distribution, so where the founder's own peers
+are too few the read falls back to the listed family AND THE SENTENCE SAYS WHICH SET IT USED. A
+percentile against seven names is not a percentile.
+
+**Still to build**: unit economics and market position, the two dimensions that need the FIX_BY
+playbooks and the concerns block wired in; and the renderer that puts all of this into the reveal.
+
+## 2026-09-03 (night, 8): the investor enrichment pull, targeted
+
+`data/raw/2026-09-03_investor-enrichment-targets.csv` : the 78 CALLABLE houses that cannot render,
+each with what it needs and what we already hold, including the sectors we have watched it actually
+deal in. `docs/prompts/investor-enrichment.md` is the prompt to run against it.
+
+**The pull asks a question before it asks for data, and that question matters more than the fields.**
+Many of the 78 arrived in the callable layer because we observed them in a LATE-STAGE round of a
+company in our comparables set, not because they lead early rounds: Accel, Andreessen Horowitz,
+Benchmark, Bessemer, Coatue, DST Global, BlackRock, Baillie Gifford, D. E. Shaw. The list exists for
+founders raising $0.5m to $20m. So every house is first classified `callable` or `evidence_only`,
+and an `evidence_only` house stays in the database behind the reference rounds and comes off the
+call list. **A seed founder told to call Benchmark is worse served than one shown six houses that
+actually write their cheque.**
+
+The rest of the prompt is the same discipline as comps sourcing: every figure carries the URL where
+it appears, an unstated cheque range is recorded as NOT STATED rather than estimated, public
+information only with no contact details of any kind, no currency conversion, the fund's own
+investment-criteria page beating a press profile beating an aggregator, and a house with no new
+vehicle or investment since 2024 flagged dormant rather than filled in.
+
+Filling these takes renderable callable rows from 62 to as many as 140, and takes the 10 of 43
+fixtures that currently get fewer than three callable investors down towards zero.

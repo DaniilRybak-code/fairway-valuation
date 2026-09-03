@@ -435,6 +435,194 @@
    "thin": true,
    "triangulated": false
   },
+  "investors_callable": [
+   {
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "geographies": "UK/Europe",
+    "house_type": "Venture",
+    "investor": "13books Capital",
+    "recent_deal": "Aria",
+    "recent_deal_date": "2026-03",
+    "recent_deal_url": "https://www.13books.com/insights/why-we-invested-in-aria",
+    "stage_bands": "Seed; Series A",
+    "thesis": "European fintech specialist investing from seed in banking, lending and financial infrastructure.",
+    "tier": 1,
+    "why": "sector and stage, wider geography"
+   },
+   {
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 0.25,
+    "geographies": "Europe and North America",
+    "house_type": "Venture",
+    "investor": "DN Capital",
+    "recent_deal": "Fimple",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://fimple.co/news/fimple-raises-series-a",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Seed/Series A investor backing European digital-finance, credit and banking software businesses.",
+    "tier": 1,
+    "why": "sector and stage, wider geography"
+   },
+   {
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 1.0,
+    "geographies": "US-based, North America and Europe",
+    "house_type": "Venture",
+    "investor": "Motive Ventures",
+    "recent_deal": "Neno",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://motivepartners.com/content/why-we-invested-in-neno",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Fintech specialist backing digital banking, credit and capital-markets infrastructure from pre-seed to Series A.",
+    "tier": 1,
+    "why": "sector and stage, wider geography"
+   },
+   {
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.25,
+    "geographies": "Primarily UK, broader Europe",
+    "house_type": "Venture",
+    "investor": "Outward VC",
+    "recent_deal": "Infrawatch",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://outwardvc.com/articles/why-we-invested-in-infrawatch/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Early-stage investor in technology for regulated industries, including payments, fintech operations and compliance infrastructure.",
+    "tier": 1,
+    "why": "sector and stage, wider geography"
+   },
+   {
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage, wider geography"
+   },
+   {
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.25,
+    "geographies": "Europe-focused, invests globally",
+    "house_type": "Venture",
+    "investor": "Speedinvest",
+    "recent_deal": "Kyrok?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "tier": 1,
+    "why": "sector and stage, wider geography"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Creditas",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Andbank (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Tabby",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Blue Pool Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Tabby",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Hassana Investment Company",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "MNT-Halan",
+      "date": "Feb-23"
+     }
+    ],
+    "investor": "Chimera Abu Dhabi",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Atom Bank",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Toscafund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Atom Bank",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Infinity Investment Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Atom Bank",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "BBVA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zopa",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zopa",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "Chimera",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zopa",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "existing investors",
+    "n": 1
+   }
+  ],
   "listed_proximity": "DIRECT",
   "private": [
    {
