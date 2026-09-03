@@ -71,11 +71,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 17.6,
+   "high": 15.6,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.4,
-   "mid": 11.8,
+   "mid": 10.8,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -89,7 +89,7 @@
    "points": [
     {
      "company": "Agora, Inc.",
-     "mult": 0.8,
+     "mult": 0.5,
      "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -110,28 +110,28 @@
     },
     {
      "company": "SoundHound AI, Inc.",
-     "mult": 11.8,
+     "mult": 10.8,
      "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
-     "mult": 16.4,
+     "mult": 14.9,
      "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Snowflake Inc.",
-     "mult": 17.6,
+     "mult": 15.6,
      "reason": "shares the language of ai; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
-     "mult": 31.8,
+     "mult": 29.5,
      "reason": "both do AI Agent Infrastructure; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -147,13 +147,13 @@
     "web"
    ],
    "show_retention": true,
-   "spread": 39.8,
+   "spread": 59.0,
    "table": [
     {
      "company": "Agora, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 0.8,
+     "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NASDAQGS:API"
@@ -180,7 +180,7 @@
      "company": "SoundHound AI, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 28.0,
-     "multiple": 11.8,
+     "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:SOUN"
@@ -189,7 +189,7 @@
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 27.0,
-     "multiple": 16.4,
+     "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
@@ -198,7 +198,7 @@
      "company": "Snowflake Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 28.0,
-     "multiple": 17.6,
+     "multiple": 15.6,
      "recurring_pct": null,
      "retention_pct": 126.0,
      "ticker": "NYSE:SNOW"
@@ -207,7 +207,7 @@
      "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 31.0,
-     "multiple": 31.8,
+     "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:NET"
@@ -445,11 +445,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 41.8,
+   "high": 39.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 4.8,
+   "low": 2.2,
+   "mid": 4.6,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -470,28 +470,28 @@
     },
     {
      "company": "Similarweb Ltd.",
-     "mult": 2.1,
+     "mult": 2.2,
      "reason": "both do Web Scraping; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "C3.ai, Inc.",
-     "mult": 4.8,
+     "mult": 4.6,
      "reason": "shares the language of ai; same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Dynatrace, Inc.",
-     "mult": 5.5,
+     "mult": 5.8,
      "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Palantir Technologies Inc.",
-     "mult": 41.8,
+     "mult": 39.0,
      "reason": "shares the language of ai; same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -507,7 +507,7 @@
     "web"
    ],
    "show_retention": true,
-   "spread": 69.7,
+   "spread": 65.0,
    "table": [
     {
      "company": "TomTom N.V.",
@@ -522,7 +522,7 @@
      "company": "Similarweb Ltd.",
      "growth_basis": "NTM",
      "growth_pct": 11.0,
-     "multiple": 2.1,
+     "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
      "ticker": "NYSE:SMWB"
@@ -531,7 +531,7 @@
      "company": "C3.ai, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": -14.0,
-     "multiple": 4.8,
+     "multiple": 4.6,
      "recurring_pct": 91.0,
      "retention_pct": null,
      "ticker": "NYSE:AI"
@@ -540,7 +540,7 @@
      "company": "Dynatrace, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 16.0,
-     "multiple": 5.5,
+     "multiple": 5.8,
      "recurring_pct": null,
      "retention_pct": 110.0,
      "ticker": "NYSE:DT"
@@ -549,7 +549,7 @@
      "company": "Palantir Technologies Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 66.0,
-     "multiple": 41.8,
+     "multiple": 39.0,
      "recurring_pct": null,
      "retention_pct": 157.0,
      "ticker": "NASDAQGS:PLTR"

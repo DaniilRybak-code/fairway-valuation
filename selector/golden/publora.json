@@ -55,11 +55,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 5.0,
+   "high": 5.2,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 2.1,
+   "low": 2.1,
+   "mid": 2.2,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -80,14 +80,14 @@
     },
     {
      "company": "PagerDuty, Inc.",
-     "mult": 1.8,
+     "mult": 2.1,
      "reason": "shares the language of scheduling; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "ZoomInfo Technologies Inc.",
-     "mult": 2.1,
+     "mult": 2.2,
      "reason": "shares the language of engagement, platform; same type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -101,7 +101,7 @@
     },
     {
      "company": "GitLab Inc.",
-     "mult": 5.0,
+     "mult": 5.2,
      "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -116,7 +116,7 @@
     "scheduling"
    ],
    "show_retention": true,
-   "spread": 8.3,
+   "spread": 8.7,
    "table": [
     {
      "company": "TomTom N.V.",
@@ -131,7 +131,7 @@
      "company": "PagerDuty, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 1.0,
-     "multiple": 1.8,
+     "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": 97.0,
      "ticker": "NYSE:PD"
@@ -140,7 +140,7 @@
      "company": "ZoomInfo Technologies Inc.",
      "growth_basis": "NTM",
      "growth_pct": -2.0,
-     "multiple": 2.1,
+     "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 89.0,
      "ticker": "NASDAQGS:GTM"
@@ -158,7 +158,7 @@
      "company": "GitLab Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 17.0,
-     "multiple": 5.0,
+     "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
      "ticker": "NASDAQGS:GTLB"
@@ -348,8 +348,8 @@
    "high": 2.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.1,
-   "mid": 1.5,
+   "low": 1.2,
+   "mid": 1.6,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -364,7 +364,7 @@
    "positioning": [
     {
      "company": "Agora, Inc.",
-     "mult": 0.8,
+     "mult": 0.5,
      "reason": "shares the language of api; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -385,13 +385,13 @@
     "social"
    ],
    "show_retention": true,
-   "spread": 1.8,
+   "spread": 1.7,
    "table": [
     {
      "company": "Sprout Social, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 7.0,
-     "multiple": 1.1,
+     "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
      "ticker": "NASDAQCM:SPT"
@@ -400,7 +400,7 @@
      "company": "Sprinklr, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 3.0,
-     "multiple": 1.5,
+     "multiple": 1.6,
      "recurring_pct": 89.0,
      "retention_pct": 104.0,
      "ticker": "NYSE:CXM"

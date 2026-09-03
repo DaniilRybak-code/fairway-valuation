@@ -499,11 +499,30 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
                 # A physical throughput is its own kind of volume. Xpansiv's sheet labelled it
                 # PAYMENT_VOLUME, which it is not: nothing was paid, tonnes were cleared.
                 row['vol_metric'] = 'THROUGHPUT'
-            if row['vol_unit'] in ('USERS', 'SEATS') or 'POINT-IN-TIME' in _unit_src:
-                # A STOCK, not a flow. Barred, and the reason is on the row.
+            # A SUBSCRIBER COUNT IS A STOCK, AND FOR A PRICE PER SUBSCRIBER A STOCK IS CORRECT.
+            # Reversed 3-Sep-2026 on Daniil's objection, and he is right: "especially if the company
+            # is PRE REVENUE, you can calculate value having number of users in denominator."
+            #
+            # My earlier rule barred every stock, which conflated two different things. A
+            # SINCE-INCEPTION ORIGINATIONS TOTAL is meaningless because it grows with age and has no
+            # period; a PAYING SUBSCRIBER COUNT AT THE ROUND DATE is the installed base the buyer
+            # was actually buying, and it is the standard denominator for a consumer subscription
+            # business with no disclosed revenue. The evidence was already in the file and I barred
+            # it: Flo Health at $800m over 1.5m paying subscribers is $533, and Calm at $2,000m over
+            # 4.0m is $500. Two rounds fifteen months apart, seven per cent apart, and both were
+            # sitting unusable.
+            if any(w in _unit_src for w in ('SUBSCRIBER', 'PAYING USER', 'PAID USER', 'MEMBER')):
+                row['vol_metric'] = 'SUBSCRIBERS'
+                row['vol_unit'] = 'SUBSCRIBERS'
+                row['vol_periodic'] = True      # a stock at the round date is the right denominator
+                row['vol_stock_at'] = row['vol_period']
+            elif row['vol_unit'] in ('USERS', 'SEATS') or 'POINT-IN-TIME' in _unit_src:
+                # Still barred: a raw user or seat count that is NOT stated as paying. A price per
+                # registered user compares a business that monetises with one that does not.
                 row['vol_periodic'] = False
-                row['vol_unit_warning'] = ('volume is a point-in-time count (%s), not an annual '
-                                           'throughput, so it cannot price anything'
+                row['vol_unit_warning'] = ('volume is a count of non-paying users or seats (%s). A '
+                                           'price per registered user is not comparable to a price '
+                                           'per paying subscriber, so it cannot price anything'
                                            % row['vol_period'])
             row['mult_book'] = _f(r.get('ev_book_x'))
             row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
@@ -1657,6 +1676,10 @@ BASIS_KEYS = {'BOOK':    ('mult_book', 'pb_mult', 'price to book'),
               # throughput" is meaningless without saying throughput OF WHAT. It is a price per
               # annual unit in DOLLARS, never an x.
               'THROUGHPUT': ('gmv_mult', None, 'enterprise value per annual unit of throughput'),
+              # PRICED ON THE INSTALLED BASE. For a consumer subscription business that has not
+              # disclosed revenue, the paying subscriber count at the round date is what the buyer
+              # was buying. Written in DOLLARS PER SUBSCRIBER, never as an x.
+              'SUBSCRIBERS': ('gmv_mult', None, 'dollars of enterprise value per paying subscriber'),
               'GMV': ('gmv_mult', None, 'enterprise value to annual GMV'),
               'PAYMENT_VOLUME': ('gmv_mult', None, 'enterprise value to annual payment volume')}
 
@@ -1682,6 +1705,8 @@ def _basis_row_ok(basis, r):
     """Extra condition a row must meet to belong in THIS basis, beyond having the multiple."""
     if basis == 'ARR':
         return (r.get('revenue_basis') or '').upper() in ('ARR', 'ARR_RUNRATE')
+    if basis == 'SUBSCRIBERS':
+        return r.get('vol_metric') == 'SUBSCRIBERS' and r.get('vol_periodic')
     if basis == 'THROUGHPUT':
         # SAME UNIT OR NOTHING. Tonnes of carbon, megawatt hours and barrels are not
         # interchangeable, and none of them is comparable to a dollar. The unit is checked here
@@ -1705,6 +1730,10 @@ def _basis_row_ok(basis, r):
 # traded. Revenue is a take rate on top of it and is often not disclosed at all, which is exactly
 # LevelTen's and Xpansiv's situation.
 THROUGHPUT_ARCHETYPES = {'Market Infrastructure & Exchange'}
+# Where a price per paying subscriber is a defensible reading. All of these sell a recurring
+# consumer relationship, and all of them routinely raise without disclosing revenue.
+SUBSCRIBER_ARCHETYPES = {'Consumer & Prosumer Software', 'Streaming & Digital Media',
+                         'Dating & Social Network', 'Online Learning', 'Digital Bank & Deposits'}
 
 
 def bases_for(prof, lane):
@@ -1716,8 +1745,10 @@ def bases_for(prof, lane):
     if lane == 'private':
         arch = {prof.get('archetype'), prof.get('archetype_secondary')} - {None, ''}
         unit = (prof.get('volume_unit') or '').strip().upper()
-        if (arch & THROUGHPUT_ARCHETYPES) or (unit and unit != 'USD'):
+        if (arch & THROUGHPUT_ARCHETYPES) or (unit and unit not in ('USD', 'SUBSCRIBERS')):
             out.append('THROUGHPUT')
+        if (arch & SUBSCRIBER_ARCHETYPES) or unit == 'SUBSCRIBERS' or _f(prof.get('subscribers')):
+            out.append('SUBSCRIBERS')
     return tuple(out)
 
 def denominator(prof, group):

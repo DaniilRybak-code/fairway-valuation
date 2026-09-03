@@ -48,9 +48,39 @@ def num(v):
     try: return float(s)
     except ValueError: return None
 
-def close(a, b, tol=TOL):
+def _dp(raw):
+    """How many decimal places the sheet DISPLAYED. 0.7 was displayed to one."""
+    s = str(raw).strip().replace(',', '').replace('%', '').replace('x', '')
+    return len(s.split('.')[1]) if '.' in s else 0
+
+
+def close(a, b, tol=TOL, shown=None, denom=None, denom_shown=None):
+    """Does the sheet's stated figure `a` agree with the recomputed `b`?
+
+    THE TOLERANCE HAS TO BE THE ROUNDING, NOT A PERCENTAGE. Fixed 3-Sep-2026, and it is why the
+    1-Sep refresh sat unusable in data/raw for two days: a flat 3% rejected 89 of 509 rows, and the
+    great majority of them were not errors at all. Capital IQ displays a multiple to ONE DECIMAL.
+    GXO's 0.74 shows as 0.7, which is 5.7% away. JD's 0.11 shows as 0.1, which is 10% away. Every
+    logistics and low-margin ecommerce name in the file failed for that reason and no other, while
+    a genuinely mistyped digit on a 30x software name would have passed the same 3% test easily.
+    Percentage tolerance is exactly backwards: it is loosest where the multiple is large and the
+    absolute error is biggest, and tightest where the multiple is small and rounding dominates.
+
+    So a stated 0.7 is consistent with anything in [0.65, 0.75), and the percentage tolerance stays
+    only as a floor for the cases where the sheet shows more decimals than it rounds to.
+    """
     if a is None or b is None: return None
     if b == 0: return abs(a) < 1e-9
+    half = 0.5 * (10 ** -_dp(a if shown is None else shown)) + 1e-9
+    # AND THE DENOMINATOR IS ROUNDED TOO. Net income and gross profit are displayed as WHOLE
+    # MILLIONS, so a company earning 22 could be earning anything from 21.5 to 22.5, and a P/E
+    # recomputed from it inherits that uncertainty: 2.3% on a net income of 22, far more on a
+    # smaller one. Ignoring it fails a row for the sheet's display precision rather than for any
+    # error in it. `denom` carries the displayed denominator so the check can widen by the right
+    # amount instead of by a guess.
+    if denom not in (None, 0):
+        half += abs(b) * (0.5 * (10 ** -_dp(denom_shown if denom_shown is not None else denom))) / abs(denom)
+    if abs(a - b) <= half: return True
     return abs(a - b) / abs(b) <= tol
 
 def load(path):
@@ -89,9 +119,9 @@ def main():
         mult, gpm, pe = num(r['av_ntm_revenue_x']), num(r['av_ntm_gp_x']), num(r['pe_x'])
         checks = {}
         if None not in (mc, br, av):   checks['AV = mktcap + bridge'] = close(av, mc + br)
-        if None not in (av, rev, mult) and rev: checks['AV/revenue'] = close(mult, av / rev)
-        if None not in (av, gp, gpm) and gp:    checks['AV/gross profit'] = close(gpm, av / gp)
-        if None not in (mc, ni, pe) and ni:     checks['P/E'] = close(pe, mc / ni)
+        if None not in (av, rev, mult) and rev: checks['AV/revenue'] = close(mult, av / rev, shown=r.get('av_ntm_revenue_x'), denom=rev, denom_shown=r.get('revenue_ntm_musd'))
+        if None not in (av, gp, gpm) and gp:    checks['AV/gross profit'] = close(gpm, av / gp, shown=r.get('av_ntm_gp_x'), denom=gp, denom_shown=r.get('gross_profit_musd'))
+        if None not in (mc, ni, pe) and ni:     checks['P/E'] = close(pe, mc / ni, shown=r.get('pe_x'), denom=ni, denom_shown=r.get('net_income_ntm_musd'))
         bad = [k for k, v in checks.items() if v is False]
         if bad:
             failed.append((t, r['company_name'], bad)); continue

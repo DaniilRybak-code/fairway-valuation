@@ -80,7 +80,18 @@ FORKS = {
       dict(key='nrr_pct', label='Net revenue retention, if you measure it', kind='percent', required=False,
            maps_to='profile.nrr', peer_field='nrr_pct',
            why='51 of 165 listed software names disclose it. The top quarter trades at 11.1x '
-               'forward revenue and the bottom at 2.9x, which is the largest gap we can measure.'),
+               'forward revenue and the bottom at 2.9x, which is the largest gap we can measure. '
+               'It is also shown beside every listed name in your comparable table.'),
+      # ASKED HERE TOO, because Consumer & Prosumer Software routes to this fork and a consumer app
+      # is often the case where ARR is the number the founder does NOT have. Optional, so nobody is
+      # blocked, and it unlocks a whole extra range rather than refining an existing one.
+      dict(key='paying_subscribers', label='Paying subscribers today, if you sell to consumers',
+           kind='quantity', required=False, maps_to='profile.subscribers',
+           peer_field='volume_musd', basis='SUBSCRIBERS',
+           why='For a consumer subscription business this is what a buyer is buying, and it is '
+               'often disclosed when revenue is not. We hold Flo Health at $533 of enterprise '
+               'value per paying subscriber and Calm at $500. PAYING, not registered: a price per '
+               'registered user compares a business that monetises with one that does not.'),
     ]),
  'marketplace': dict(
     archetypes=('Third-Party Marketplace', 'Classifieds & Listings', 'Freelance & Services Marketplace',
@@ -94,6 +105,38 @@ FORKS = {
       dict(key='net_revenue', label='Net revenue over the same period', kind='money', required=True,
            maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='The figure we actually price on.'),
+    ]),
+ # PAYING SUBSCRIBERS, for a consumer subscription business. Added 3-Sep-2026, Daniil: "especially
+ # if the company is PRE REVENUE, you can calculate value having number of users in denominator."
+ #
+ # We hold two rounds priced this way and they agree closely: Flo Health at $533 of enterprise value
+ # per paying subscriber in September 2021, Calm at $500 in December 2020. Both were in the file
+ # from his own sheet with the division never done.
+ #
+ # PAYING is the whole question, and it is why the label says so twice. A price per registered user
+ # compares a business that monetises with one that does not, and the gap between the two is the
+ # entire business model.
+ 'consumer_subscription': dict(
+    archetypes=('Consumer & Prosumer Software', 'Streaming & Digital Media',
+                'Dating & Social Network'),
+    questions=[
+      dict(key='paying_subscribers', label='Paying subscribers today', kind='quantity',
+           required=True, maps_to='profile.subscribers', peer_field='volume_musd',
+           basis='SUBSCRIBERS',
+           why='For a consumer subscription business that has not disclosed revenue, this is what '
+               'a buyer is buying. We hold Flo Health at $533 of enterprise value per paying '
+               'subscriber and Calm at $500. A count at today\'s date, not a total ever '
+               'registered.'),
+      dict(key='free_users', label='Free or registered users today, if you want it on the record',
+           kind='quantity', required=False, maps_to='profile.free_users',
+           reviewer_context=True,
+           why='NOT part of any range, and deliberately. A price per registered user compares a '
+               'business that monetises with one that does not. Carried so a reviewer can see the '
+               'conversion behind the paying number.'),
+      dict(key='net_revenue', label='Net revenue over the last twelve months, if you have it',
+           kind='money', required=False, maps_to='profile.revenue',
+           peer_field='revenue_musd', basis='NET_REVENUE',
+           why='Optional. Answer it and you get a revenue range as well as a per-subscriber one.'),
     ]),
  # AN EXCHANGE IS JUDGED ON WHAT IT MOVES, NOT WHAT IT EARNS. Added 3-Sep-2026 on Daniil's
  # ruling about Xpansiv: "sustainability business, no? If CO2 volume was quoted in the release,

@@ -71,11 +71,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 3.1,
+   "high": 2.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.0,
-   "mid": 2.35,
+   "low": 0.9,
+   "mid": 2.2,
    "n": 6,
    "period_mix": {
     "NTM": 6
@@ -96,35 +96,35 @@
     },
     {
      "company": "Revolve Group, Inc.",
-     "mult": 1.0,
+     "mult": 0.9,
      "reason": "related type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "On Holding AG",
-     "mult": 1.9,
-     "reason": "shares the language of brand; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "FIGS, Inc.",
-     "mult": 2.8,
+     "mult": 1.7,
      "reason": "shares the language of brand; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Warby Parker Inc.",
-     "mult": 3.1,
+     "mult": 2.7,
      "reason": "shares the language of brand, home; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
+     "company": "FIGS, Inc.",
+     "mult": 2.9,
+     "reason": "shares the language of brand; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
      "company": "e.l.f. Beauty, Inc.",
-     "mult": 3.3,
+     "mult": 3.4,
      "reason": "shares the language of beauty, brand; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
@@ -146,7 +146,7 @@
     "home"
    ],
    "show_retention": false,
-   "spread": 8.2,
+   "spread": 8.5,
    "table": [
     {
      "company": "ASOS Plc",
@@ -161,7 +161,7 @@
      "company": "Revolve Group, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.0,
-     "multiple": 1.0,
+     "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:RVLV"
@@ -170,34 +170,34 @@
      "company": "On Holding AG",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 20.0,
-     "multiple": 1.9,
+     "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:ONON"
     },
     {
-     "company": "FIGS, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
-     "multiple": 2.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:FIGS"
-    },
-    {
      "company": "Warby Parker Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 26.0,
-     "multiple": 3.1,
+     "multiple": 2.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:WRBY"
     },
     {
+     "company": "FIGS, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 2.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FIGS"
+    },
+    {
      "company": "e.l.f. Beauty, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.0,
-     "multiple": 3.3,
+     "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:ELF"
@@ -390,11 +390,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.0,
+   "high": 1.8,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.2,
-   "mid": 0.95,
+   "mid": 0.9,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -422,14 +422,14 @@
     },
     {
      "company": "YETI Holdings, Inc.",
-     "mult": 1.6,
+     "mult": 1.5,
      "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "The RealReal, Inc.",
-     "mult": 2.0,
+     "mult": 1.8,
      "reason": "related type of business; same end market; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -441,7 +441,7 @@
     "brand"
    ],
    "show_retention": false,
-   "spread": 10.0,
+   "spread": 9.0,
    "table": [
     {
      "company": "Vipshop Holdings Limited",
@@ -465,7 +465,7 @@
      "company": "YETI Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 7.0,
-     "multiple": 1.6,
+     "multiple": 1.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:YETI"
@@ -474,7 +474,7 @@
      "company": "The RealReal, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 11.0,
-     "multiple": 2.0,
+     "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:REAL"

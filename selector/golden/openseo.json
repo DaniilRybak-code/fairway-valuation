@@ -39,11 +39,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.7,
+   "high": 3.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.7,
-   "mid": 2.1,
+   "low": 1.8,
+   "mid": 2.2,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -68,13 +68,13 @@
     "tracking"
    ],
    "show_retention": true,
-   "spread": 1.6,
+   "spread": 1.7,
    "table": [
     {
      "company": "Yext, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 0.0,
-     "multiple": 1.7,
+     "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": 95.0,
      "ticker": "NYSE:YEXT"
@@ -83,7 +83,7 @@
      "company": "Similarweb Ltd.",
      "growth_basis": "NTM",
      "growth_pct": 11.0,
-     "multiple": 2.1,
+     "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
      "ticker": "NYSE:SMWB"
@@ -92,7 +92,7 @@
      "company": "Klaviyo, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 23.0,
-     "multiple": 2.7,
+     "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:KVYO"
@@ -331,11 +331,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 31.8,
+   "high": 29.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 5.2,
-   "mid": 9.6,
+   "mid": 10.0,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -349,7 +349,7 @@
    "points": [
     {
      "company": "Wix.com Ltd.",
-     "mult": 1.9,
+     "mult": 2.0,
      "reason": "shares the language of ai, platform; same kind of customer; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
@@ -363,21 +363,21 @@
     },
     {
      "company": "Red Violet, Inc.",
-     "mult": 9.6,
+     "mult": 10.0,
      "reason": "shares the language of data; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
-     "mult": 16.4,
+     "mult": 14.9,
      "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
-     "mult": 31.8,
+     "mult": 29.5,
      "reason": "shares the language of ai; same revenue model; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
@@ -391,13 +391,13 @@
     "platform"
    ],
    "show_retention": true,
-   "spread": 16.7,
+   "spread": 14.8,
    "table": [
     {
      "company": "Wix.com Ltd.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 12.0,
-     "multiple": 1.9,
+     "multiple": 2.0,
      "recurring_pct": 71.0,
      "retention_pct": null,
      "ticker": "NASDAQGS:WIX"
@@ -415,7 +415,7 @@
      "company": "Red Violet, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 17.0,
-     "multiple": 9.6,
+     "multiple": 10.0,
      "recurring_pct": 77.0,
      "retention_pct": 95.0,
      "ticker": "NASDAQCM:RDVT"
@@ -424,7 +424,7 @@
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 27.0,
-     "multiple": 16.4,
+     "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
@@ -433,7 +433,7 @@
      "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 31.0,
-     "multiple": 31.8,
+     "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:NET"

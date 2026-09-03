@@ -62,23 +62,23 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 6.4,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 2.3,
-   "n": 5,
+   "low": 0.9,
+   "mid": 1.95,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -86,43 +86,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "The Western Union Company",
-     "mult": 0.9,
-     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Payoneer Global Inc.",
-     "mult": 1.8,
-     "reason": "both do Cross-Border Payments; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Remitly Global, Inc.",
-     "mult": 2.3,
-     "reason": "both do Cross-Border Payments; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Flywire Corporation",
-     "mult": 2.6,
-     "reason": "both do Cross-Border Payments; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Corpay, Inc.",
-     "mult": 6.4,
-     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -132,8 +96,17 @@
     "payouts"
    ],
    "show_retention": false,
-   "spread": 7.1,
+   "spread": -2.7,
    "table": [
+    {
+     "company": "CAB Payments Holdings plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": -2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:CABP"
+    },
     {
      "company": "The Western Union Company",
      "growth_basis": "CAGR_CY0_CY2",
@@ -156,7 +129,7 @@
      "company": "Remitly Global, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 21.0,
-     "multiple": 2.3,
+     "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:RELY"
@@ -165,7 +138,7 @@
      "company": "Flywire Corporation",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 21.0,
-     "multiple": 2.6,
+     "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:FLYW"
@@ -174,7 +147,7 @@
      "company": "Corpay, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 13.0,
-     "multiple": 6.4,
+     "multiple": 6.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:CPAY"
@@ -371,11 +344,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.0,
+   "high": 1.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 1.25,
+   "low": 0.6,
+   "mid": 1.2,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -390,7 +363,7 @@
    "positioning": [
     {
      "company": "WEX Inc.",
-     "mult": 2.1,
+     "mult": 2.0,
      "reason": "shares the language of payments; same business function; same kind of customer; same revenue model",
      "tier": "BROAD",
      "transaction_type": ""
@@ -403,13 +376,13 @@
     "payments"
    ],
    "show_retention": false,
-   "spread": 2.9,
+   "spread": 3.2,
    "table": [
     {
      "company": "Tyro Payments Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 2.0,
-     "multiple": 0.7,
+     "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ASX:TYR"
@@ -418,7 +391,7 @@
      "company": "Usio, Inc.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 10.0,
-     "multiple": 0.8,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:USIO"
@@ -436,7 +409,7 @@
      "company": "DLocal Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 39.0,
-     "multiple": 2.0,
+     "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:DLO"

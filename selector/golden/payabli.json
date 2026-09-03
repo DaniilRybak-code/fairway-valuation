@@ -74,8 +74,8 @@
    "high": 2.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
-   "mid": 2.0,
+   "low": 0.7,
+   "mid": 1.9,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -89,14 +89,14 @@
    "points": [
     {
      "company": "Tyro Payments Limited",
-     "mult": 0.7,
+     "mult": 0.6,
      "reason": "shares the language of payments; same type of business; same business function; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Usio, Inc.",
-     "mult": 0.8,
+     "mult": 0.7,
      "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -110,14 +110,14 @@
     },
     {
      "company": "DLocal Limited",
-     "mult": 2.0,
+     "mult": 1.9,
      "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "PayPoint plc",
-     "mult": 2.1,
+     "mult": 2.0,
      "reason": "shares the language of payment; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -131,7 +131,7 @@
     },
     {
      "company": "Fawry for Banking Technology",
-     "mult": 5.0,
+     "mult": 4.0,
      "reason": "shares the language of payment; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -146,13 +146,13 @@
     "vertical"
    ],
    "show_retention": false,
-   "spread": 7.1,
+   "spread": 6.7,
    "table": [
     {
      "company": "Tyro Payments Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 2.0,
-     "multiple": 0.7,
+     "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ASX:TYR"
@@ -161,7 +161,7 @@
      "company": "Usio, Inc.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 10.0,
-     "multiple": 0.8,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:USIO"
@@ -179,7 +179,7 @@
      "company": "DLocal Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 39.0,
-     "multiple": 2.0,
+     "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:DLO"
@@ -188,7 +188,7 @@
      "company": "PayPoint plc",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 5.0,
-     "multiple": 2.1,
+     "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "LSE:PAY"
@@ -206,7 +206,7 @@
      "company": "Fawry for Banking Technology",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 32.0,
-     "multiple": 5.0,
+     "multiple": 4.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "CASE:FWRY"
@@ -394,11 +394,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 7.0,
+   "high": 6.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 3.1,
+   "low": 2.0,
+   "mid": 3.5,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -422,7 +422,7 @@
     "vertical"
    ],
    "show_retention": false,
-   "spread": 5.4,
+   "spread": 4.7,
    "table": [
     {
      "company": "Marqeta, Inc.",
@@ -437,7 +437,7 @@
      "company": "WEX Inc.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 2.0,
-     "multiple": 2.1,
+     "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:WEX"
@@ -446,7 +446,7 @@
      "company": "Nayax Ltd.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 22.0,
-     "multiple": 3.1,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:NYAX"
@@ -455,7 +455,7 @@
      "company": "GMO Payment Gateway, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 17.0,
-     "multiple": 5.3,
+     "multiple": 5.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "TSE:3769"
@@ -464,7 +464,7 @@
      "company": "Adyen N.V.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 21.0,
-     "multiple": 7.0,
+     "multiple": 6.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ENXTAM:ADYEN"

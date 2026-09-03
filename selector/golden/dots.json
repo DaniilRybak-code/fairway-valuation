@@ -62,7 +62,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -71,14 +71,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.8,
+   "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 2.3,
-   "n": 5,
+   "low": 0.9,
+   "mid": 1.95,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -96,8 +96,17 @@
     "payouts"
    ],
    "show_retention": false,
-   "spread": 3.1,
+   "spread": -1.1,
    "table": [
+    {
+     "company": "CAB Payments Holdings plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": -2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:CABP"
+    },
     {
      "company": "The Western Union Company",
      "growth_basis": "CAGR_CY0_CY2",
@@ -120,7 +129,7 @@
      "company": "Remitly Global, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 21.0,
-     "multiple": 2.3,
+     "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:RELY"
@@ -129,7 +138,7 @@
      "company": "Flywire Corporation",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 21.0,
-     "multiple": 2.6,
+     "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:FLYW"
@@ -138,7 +147,7 @@
      "company": "Wise plc",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 20.0,
-     "multiple": 2.8,
+     "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "LSE:WISE"
@@ -337,8 +346,8 @@
    "high": 1.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 1.05,
+   "low": 0.6,
+   "mid": 1.0,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -353,7 +362,7 @@
    "positioning": [
     {
      "company": "WEX Inc.",
-     "mult": 2.1,
+     "mult": 2.0,
      "reason": "shares the language of multi, payments; same business function; same revenue model; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
@@ -365,13 +374,13 @@
     "payments"
    ],
    "show_retention": false,
-   "spread": 2.4,
+   "spread": 2.8,
    "table": [
     {
      "company": "One MobiKwik Systems Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 17.0,
-     "multiple": 0.7,
+     "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:MOBIKWIK"
@@ -380,7 +389,7 @@
      "company": "Usio, Inc.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 10.0,
-     "multiple": 0.8,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:USIO"

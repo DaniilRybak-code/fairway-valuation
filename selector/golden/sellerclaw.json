@@ -45,13 +45,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 3.1,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 2.7,
+   "low": 0.7,
+   "mid": 3.0,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -62,29 +62,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "BASE, Inc.",
-     "mult": 0.5,
-     "reason": "shares the language of ecommerce, shopify; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "mult": 2.7,
-     "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Nayax Ltd.",
-     "mult": 3.1,
-     "reason": "same end market; same business function; same kind of customer",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -94,13 +72,13 @@
     "shopify"
    ],
    "show_retention": true,
-   "spread": 6.2,
+   "spread": 5.0,
    "table": [
     {
      "company": "BASE, Inc.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 12.0,
-     "multiple": 0.5,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "TSE:4477"
@@ -109,7 +87,7 @@
      "company": "Klaviyo, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 23.0,
-     "multiple": 2.7,
+     "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:KVYO"
@@ -118,7 +96,7 @@
      "company": "Nayax Ltd.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 22.0,
-     "multiple": 3.1,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:NYAX"
@@ -287,11 +265,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 11.0,
+   "high": 9.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.5,
-   "mid": 7.75,
+   "low": 4.1,
+   "mid": 6.95,
    "n": 2,
    "period_mix": {
     "NTM": 2
@@ -315,7 +293,7 @@
      "company": "Shoper S.A.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 14.0,
-     "multiple": 4.5,
+     "multiple": 4.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "WSE:SHO"
@@ -324,7 +302,7 @@
      "company": "Shopify Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 29.0,
-     "multiple": 11.0,
+     "multiple": 9.8,
      "recurring_pct": 22.0,
      "retention_pct": null,
      "ticker": "NASDAQGS:SHOP"

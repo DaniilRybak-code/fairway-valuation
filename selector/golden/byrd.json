@@ -71,11 +71,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.4,
+   "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.9,
-   "mid": 1.2,
+   "low": 0.7,
+   "mid": 1.1,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -96,21 +96,21 @@
     },
     {
      "company": "J&T Global Express Limited",
-     "mult": 0.9,
+     "mult": 0.7,
      "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Deutsche Post AG",
-     "mult": 1.0,
+     "mult": 0.9,
      "reason": "shares the language of border, cross, logistics; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "FedEx Corporation",
-     "mult": 1.2,
+     "mult": 1.1,
      "reason": "shares the language of network, shipping; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -124,7 +124,7 @@
     },
     {
      "company": "InPost S.A.",
-     "mult": 2.4,
+     "mult": 2.3,
      "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -164,7 +164,7 @@
      "company": "J&T Global Express Limited",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 18.0,
-     "multiple": 0.9,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "SEHK:1519"
@@ -173,7 +173,7 @@
      "company": "Deutsche Post AG",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 3.0,
-     "multiple": 1.0,
+     "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "XTRA:DHL"
@@ -182,7 +182,7 @@
      "company": "FedEx Corporation",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 4.0,
-     "multiple": 1.2,
+     "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:FDX"
@@ -200,7 +200,7 @@
      "company": "InPost S.A.",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 17.0,
-     "multiple": 2.4,
+     "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ENXTAM:INPST"
@@ -413,7 +413,7 @@
    "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
+   "low": 0.7,
    "mid": 2.15,
    "n": 4,
    "period_mix": {
@@ -429,7 +429,7 @@
    "positioning": [
     {
      "company": "Lightspeed Commerce Inc.",
-     "mult": 0.8,
+     "mult": 0.7,
      "reason": "shares the language of processing; same end market; same business function; same kind of customer",
      "tier": "BROAD",
      "transaction_type": ""
@@ -440,13 +440,13 @@
     "network"
    ],
    "show_retention": false,
-   "spread": 3.2,
+   "spread": 3.7,
    "table": [
     {
      "company": "Meituan",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 13.0,
-     "multiple": 0.8,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "SEHK:3690"

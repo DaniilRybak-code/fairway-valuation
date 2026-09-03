@@ -75,7 +75,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.3,
-   "mid": 1.0,
+   "mid": 0.9,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -110,7 +110,7 @@
     },
     {
      "company": "Deutsche Post AG",
-     "mult": 1.0,
+     "mult": 0.9,
      "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -181,7 +181,7 @@
      "company": "Deutsche Post AG",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 3.0,
-     "multiple": 1.0,
+     "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "XTRA:DHL"
@@ -412,7 +412,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.8,
-   "mid": 1.2,
+   "mid": 1.1,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -427,7 +427,7 @@
    "positioning": [
     {
      "company": "Lightspeed Commerce Inc.",
-     "mult": 0.8,
+     "mult": 0.7,
      "reason": "same end market; same business function; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -462,7 +462,7 @@
      "company": "FedEx Corporation",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 4.0,
-     "multiple": 1.2,
+     "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:FDX"

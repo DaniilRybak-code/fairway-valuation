@@ -948,3 +948,77 @@ an environmental-commodity exchange is judged on, and Daniil's read is right.
   is a third-party market estimate times a claimed share, not a disclosure.
 
 **State: 511 listed, 290 private rounds, 181 median-eligible, peer universe 39 of 43.**
+
+## 2026-09-03 (night, 2): ONE dataset. The 1-Sep refresh applied at last.
+
+Daniil, 3-Sep: "There was one pull I provided on 1st of Sep, it was supposed to supersede / update
+numbers we had before... All of that is one set, simply updated for market movements."
+
+He is right and this was the largest problem in the repo. **`data/raw/2026-09-01_listed-full-refresh.csv`,
+509 rows, his own recalculated and calendarised pull, had been sitting unapplied since 1 September.**
+The MANIFEST recorded it as "Not yet, raw". `tools/ingest_full_refresh.py` CHECKED it and had no
+write path at all. So the engine ran on 30-Aug numbers for two days, and I spent an evening
+describing one dataset as two pulls that disagreed. They did not disagree. One was simply stale.
+
+- **The check that gated it was wrong, and that is why it never landed.** It used a flat 3% tolerance
+  on a recomputed multiple and rejected 89 of 509 rows. Capital IQ shows a multiple to one decimal:
+  GXO's 0.74 displays as 0.7, which is 5.7% away, and JD's 0.11 as 0.1, which is 10%. Percentage
+  tolerance is exactly backwards, loosest where the multiple is large and tightest where rounding
+  dominates. Replaced with the actual rounding half-width, plus the rounding of the DENOMINATOR
+  (net income and gross profit display as whole millions, so a P/E built from them inherits that).
+  **509 rows: 506 now tie, 3 genuinely fail** (Tecsys P/E, Autohome bridge, Freelancer AV/revenue).
+- `tools/apply_listed_refresh.py` : NEW. Writes market data only, never a tag, an archetype or a
+  family. Matches in three passes because Capital IQ renames tickers between pulls: exact ticker,
+  then symbol with a name guard (NYSE:ZIP is ZipRecruiter and ASX:ZIP is Zip Co, so names must
+  agree), then name alone when unique on both sides (CCC Intelligent Solutions moved from CCCS to
+  CCC). A rename map handles LendingClub becoming Happen, Inc. Gross margin is RECOMPUTED from the
+  refreshed gross profit and revenue rather than left stale. Every row accounted for in both
+  directions.
+- **Applied: 519 peers rows refreshed, 3,300 cells changed.** MercadoLibre is now 2.2x, exactly as
+  Daniil said. nCino 3.9x, which resolves the "13% too low" finding: there was never a disagreement
+  between pulls, only a stale row. Nu Holdings 2.7x with 3.8x price to book and bvps 4.0.
+- **`check_cross_pull` now PASSES.** Where a company sits in two files, the files agree.
+- Still outstanding: **15 companies in a peers file are not in the 1-Sep pull** and are now the only
+  stale rows left (1stdibs, Bakkt, Al Ansari, OFX, Liquidity Services, Rent the Runway, Cookpad,
+  JustSystems, PAX Global, AvenuesAI, Time Finance, Distribution Finance, FirstCash, Willis Lease).
+  Three companies in the pull are new to us (Muninova, Credit Saison, Tokyo Century). And the last
+  five columns of the refresh are unnamed in the source, so nothing is written from them: a guessed
+  column would be undetectable.
+
+## 2026-09-03 (night, 3): Xpansiv prices on tonnes, Flo and Calm price on subscribers
+
+### Xpansiv, after reading the business
+
+CBL is a spot exchange for environmental commodities and Xpansiv earns a transaction fee on what
+clears, so the transacted volume IS the value driver. Daniil's read was right and my bar was wrong.
+`THROUGHPUT` is now a first-class basis with the unit recorded, comparable only within a unit and
+written in dollars per unit, never as an x: **$11.52 of enterprise value per annual tonne of CO2
+equivalent cleared.** New `exchange` quiz fork asks a founder for volume and unit as REQUIRED and
+revenue as optional, which is the reverse of every other fork and deliberate.
+
+### Subscribers, and Daniil overruling my bar on stock measures
+
+"Especially if the company is PRE REVENUE, you can calculate value having number of users in
+denominator." Correct, and the evidence was already in the file with the division never done:
+**Flo Health $800m over 1.5m paying subscribers is $533 each; Calm $2,000m over 4.0m is $500.** Two
+rounds fifteen months apart, seven per cent apart. New `SUBSCRIBERS` basis, a new
+`consumer_subscription` fork, and the question added to the software fork as well, since a consumer
+app is exactly the case where ARR is the number the founder does not have.
+
+A raw count of REGISTERED users is still barred, and that is a narrower objection than my first one.
+A price per registered user compares a business that monetises with one that does not.
+
+### The sourcing pass, and its answer is mostly negative
+
+Eight further candidates researched, each confirmed on a page actually read, in
+`data/raw/2026-09-03_subscriber-count-sourcing.csv`. **Only Deezer produced a paying figure at all,
+and it is dated five months after the round, so it is held.** The reason the rest fail is consistent
+and worth knowing: in BNPL the merchant pays (Zilch, Tabby), in digital banking the customer pays no
+subscription (Atom), and Hopper discloses downloads. MNT-Halan's 2 million BORROWERS at the round
+are a genuine paying relationship and a candidate for a separate EV-per-borrower measure, which must
+never share a range with subscribers.
+
+Two prompts written for Daniil's other LLM: `docs/prompts/volume-priced-comparables.md` and
+`docs/prompts/paying-subscriber-comparables.md`.
+
+**State: 511 listed on 1-Sep market data, 290 private rounds, 183 median-eligible, peer universe 39 of 43.**

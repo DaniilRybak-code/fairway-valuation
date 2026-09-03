@@ -71,7 +71,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 16.4,
+   "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.9,
@@ -89,7 +89,7 @@
    "points": [
     {
      "company": "Coveo Solutions Inc.",
-     "mult": 1.3,
+     "mult": 1.1,
      "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -103,28 +103,28 @@
     },
     {
      "company": "C3.ai, Inc.",
-     "mult": 4.8,
+     "mult": 4.6,
      "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "GitLab Inc.",
-     "mult": 5.0,
+     "mult": 5.2,
      "reason": "both do CI/CD; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
-     "mult": 16.4,
+     "mult": 14.9,
      "reason": "both do AI Agent Monitoring; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Palantir Technologies Inc.",
-     "mult": 41.8,
+     "mult": 39.0,
      "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -141,13 +141,13 @@
     "monitoring"
    ],
    "show_retention": true,
-   "spread": 32.2,
+   "spread": 35.5,
    "table": [
     {
      "company": "Coveo Solutions Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 11.0,
-     "multiple": 1.3,
+     "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": 99.0,
      "ticker": "TSX:CVO"
@@ -165,7 +165,7 @@
      "company": "C3.ai, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": -14.0,
-     "multiple": 4.8,
+     "multiple": 4.6,
      "recurring_pct": 91.0,
      "retention_pct": null,
      "ticker": "NYSE:AI"
@@ -174,7 +174,7 @@
      "company": "GitLab Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 17.0,
-     "multiple": 5.0,
+     "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
      "ticker": "NASDAQGS:GTLB"
@@ -183,7 +183,7 @@
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 27.0,
-     "multiple": 16.4,
+     "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
@@ -192,7 +192,7 @@
      "company": "Palantir Technologies Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 66.0,
-     "multiple": 41.8,
+     "multiple": 39.0,
      "recurring_pct": null,
      "retention_pct": 157.0,
      "ticker": "NASDAQGS:PLTR"
@@ -392,11 +392,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.0,
+   "high": 4.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
-   "mid": 3.6,
+   "low": 2.9,
+   "mid": 3.5,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -411,7 +411,7 @@
    "positioning": [
     {
      "company": "Wix.com Ltd.",
-     "mult": 1.9,
+     "mult": 2.0,
      "reason": "both do No-Code; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -433,7 +433,7 @@
      "company": "Pegasystems Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 9.0,
-     "multiple": 2.7,
+     "multiple": 2.9,
      "recurring_pct": 57.9,
      "retention_pct": null,
      "ticker": "NASDAQGS:PEGA"
@@ -442,28 +442,28 @@
      "company": "Appian Corporation",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 3.2,
+     "multiple": 3.3,
      "recurring_pct": 79.5,
      "retention_pct": 116.0,
      "ticker": "NASDAQGM:APPN"
     },
     {
-     "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
-     "multiple": 4.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:PATH"
-    },
-    {
      "company": "Sidetrade SA",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 4.0,
+     "multiple": 3.7,
      "recurring_pct": 87.0,
      "retention_pct": null,
      "ticker": "ENXTPA:ALBFR"
+    },
+    {
+     "company": "UiPath, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:PATH"
     }
    ],
    "tag_evidence": 1.0,

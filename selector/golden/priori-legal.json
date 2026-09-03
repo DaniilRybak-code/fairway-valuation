@@ -42,8 +42,8 @@
    "high": 4.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.1,
-   "mid": 1.2,
+   "low": 1.2,
+   "mid": 1.3,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -63,17 +63,8 @@
     "marketplace"
    ],
    "show_retention": true,
-   "spread": 4.2,
+   "spread": 3.8,
    "table": [
-    {
-     "company": "Airtasker Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 10.0,
-     "multiple": 1.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:ART"
-    },
     {
      "company": "Freelancer Limited",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
@@ -82,6 +73,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ASX:FLN"
+    },
+    {
+     "company": "Airtasker Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:ART"
     },
     {
      "company": "Intapp, Inc.",
@@ -245,8 +245,8 @@
    "high": 1.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 1.1,
+   "low": 0.4,
+   "mid": 1.2,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -268,7 +268,7 @@
     },
     {
      "company": "Trip.com Group Limited",
-     "mult": 2.0,
+     "mult": 1.9,
      "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
@@ -281,13 +281,13 @@
     "talent"
    ],
    "show_retention": false,
-   "spread": 2.8,
+   "spread": 3.5,
    "table": [
     {
      "company": "Angi Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 2.0,
-     "multiple": 0.5,
+     "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:ANGI"
@@ -296,7 +296,7 @@
      "company": "Upwork Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 3.0,
-     "multiple": 1.1,
+     "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:UPWK"

@@ -63,7 +63,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.6,
+   "high": 1.7,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
@@ -108,7 +108,7 @@
     "owned"
    ],
    "show_retention": false,
-   "spread": 3.2,
+   "spread": 3.4,
    "table": [
     {
      "company": "AUTO1 Group SE",
@@ -132,7 +132,7 @@
      "company": "Carvana Co.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 24.0,
-     "multiple": 1.6,
+     "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:CVNA"
@@ -287,7 +287,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.3,
+   "high": 2.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.3,
@@ -333,7 +333,7 @@
     },
     {
      "company": "Hims & Hers Health, Inc.",
-     "mult": 2.3,
+     "mult": 2.0,
      "reason": "shares the language of subscription, to; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -347,7 +347,7 @@
     "to"
    ],
    "show_retention": false,
-   "spread": 23.0,
+   "spread": 20.0,
    "table": [
     {
      "company": "HelloFresh SE",
@@ -389,7 +389,7 @@
      "company": "Hims & Hers Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 19.0,
-     "multiple": 2.3,
+     "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:HIMS"

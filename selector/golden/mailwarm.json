@@ -47,11 +47,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 3.7,
+   "high": 3.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.7,
-   "mid": 2.75,
+   "low": 1.8,
+   "mid": 2.9,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -76,19 +76,10 @@
      "company": "Yext, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 0.0,
-     "multiple": 1.7,
+     "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": 95.0,
      "ticker": "NYSE:YEXT"
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
-     "multiple": 2.7,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
     },
     {
      "company": "HubSpot, Inc.",
@@ -100,10 +91,19 @@
      "ticker": "NYSE:HUBS"
     },
     {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
      "company": "Zeta Global Holdings Corp.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 28.0,
-     "multiple": 3.7,
+     "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:ZETA"
@@ -247,11 +247,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 31.8,
+   "high": 29.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.7,
-   "mid": 4.4,
+   "low": 3.6,
+   "mid": 4.0,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -272,28 +272,28 @@
     },
     {
      "company": "IONOS Group SE",
-     "mult": 3.7,
+     "mult": 3.6,
      "reason": "shares the language of email, infrastructure; same kind of customer; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Intuit Inc.",
-     "mult": 4.4,
+     "mult": 4.0,
      "reason": "shares the language of email; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
-     "mult": 16.4,
+     "mult": 14.9,
      "reason": "both do Infrastructure Monitoring; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
-     "mult": 31.8,
+     "mult": 29.5,
      "reason": "shares the language of infrastructure; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -307,7 +307,7 @@
     "monitoring"
    ],
    "show_retention": true,
-   "spread": 11.4,
+   "spread": 10.5,
    "table": [
     {
      "company": "GoDaddy Inc.",
@@ -322,7 +322,7 @@
      "company": "IONOS Group SE",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 5.0,
-     "multiple": 3.7,
+     "multiple": 3.6,
      "recurring_pct": 80.0,
      "retention_pct": null,
      "ticker": "XTRA:IOS"
@@ -331,7 +331,7 @@
      "company": "Intuit Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 11.0,
-     "multiple": 4.4,
+     "multiple": 4.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:INTU"
@@ -340,7 +340,7 @@
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 27.0,
-     "multiple": 16.4,
+     "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
@@ -349,7 +349,7 @@
      "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 31.0,
-     "multiple": 31.8,
+     "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:NET"

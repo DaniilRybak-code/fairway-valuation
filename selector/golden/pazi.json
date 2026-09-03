@@ -71,11 +71,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 5.1,
+   "high": 4.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
-   "mid": 3.2,
+   "low": 2.8,
+   "mid": 3.3,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -97,7 +97,7 @@
     "team"
    ],
    "show_retention": true,
-   "spread": 2.5,
+   "spread": 2.1,
    "table": [
     {
      "company": "Asana, Inc.",
@@ -109,15 +109,6 @@
      "ticker": "NYSE:ASAN"
     },
     {
-     "company": "Pegasystems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
-     "multiple": 2.7,
-     "recurring_pct": 57.9,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:PEGA"
-    },
-    {
      "company": "HubSpot, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 16.0,
@@ -127,10 +118,19 @@
      "ticker": "NYSE:HUBS"
     },
     {
+     "company": "Pegasystems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 2.9,
+     "recurring_pct": 57.9,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PEGA"
+    },
+    {
      "company": "Appian Corporation",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 3.2,
+     "multiple": 3.3,
      "recurring_pct": 79.5,
      "retention_pct": 116.0,
      "ticker": "NASDAQGM:APPN"
@@ -139,28 +139,28 @@
      "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 10.0,
-     "multiple": 4.0,
+     "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
     },
     {
-     "company": "SAP SE",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
-     "multiple": 5.1,
-     "recurring_pct": 63.6,
-     "retention_pct": null,
-     "ticker": "XTRA:SAP"
-    },
-    {
      "company": "innoscripta SE",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 38.0,
-     "multiple": 5.7,
+     "multiple": 4.4,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "XTRA:1INN"
+    },
+    {
+     "company": "SAP SE",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.9,
+     "recurring_pct": 63.6,
+     "retention_pct": null,
+     "ticker": "XTRA:SAP"
     }
    ],
    "tag_evidence": 0.6,
@@ -385,11 +385,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 31.8,
+   "high": 29.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
-   "mid": 11.8,
+   "low": 3.0,
+   "mid": 10.8,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -403,35 +403,35 @@
    "points": [
     {
      "company": "Wix.com Ltd.",
-     "mult": 1.9,
+     "mult": 2.0,
      "reason": "shares the language of ai; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Klaviyo, Inc.",
-     "mult": 2.7,
+     "mult": 3.0,
      "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "SoundHound AI, Inc.",
-     "mult": 11.8,
+     "mult": 10.8,
      "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
-     "mult": 16.4,
+     "mult": 14.9,
      "reason": "shares the language of agent, ai; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
-     "mult": 31.8,
+     "mult": 29.5,
      "reason": "shares the language of agent, ai; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -445,13 +445,13 @@
     "automation"
    ],
    "show_retention": true,
-   "spread": 16.7,
+   "spread": 14.8,
    "table": [
     {
      "company": "Wix.com Ltd.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 12.0,
-     "multiple": 1.9,
+     "multiple": 2.0,
      "recurring_pct": 71.0,
      "retention_pct": null,
      "ticker": "NASDAQGS:WIX"
@@ -460,7 +460,7 @@
      "company": "Klaviyo, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 23.0,
-     "multiple": 2.7,
+     "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:KVYO"
@@ -469,7 +469,7 @@
      "company": "SoundHound AI, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 28.0,
-     "multiple": 11.8,
+     "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:SOUN"
@@ -478,7 +478,7 @@
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 27.0,
-     "multiple": 16.4,
+     "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
@@ -487,7 +487,7 @@
      "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 31.0,
-     "multiple": 31.8,
+     "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:NET"

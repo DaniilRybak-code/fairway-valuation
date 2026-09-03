@@ -39,7 +39,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 5.0,
+   "high": 5.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
@@ -71,7 +71,7 @@
     },
     {
      "company": "GitLab Inc.",
-     "mult": 5.0,
+     "mult": 5.2,
      "reason": "shares the language of source; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -86,7 +86,7 @@
     "source"
    ],
    "show_retention": true,
-   "spread": 8.3,
+   "spread": 8.7,
    "table": [
     {
      "company": "TomTom N.V.",
@@ -110,7 +110,7 @@
      "company": "GitLab Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 17.0,
-     "multiple": 5.0,
+     "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
      "ticker": "NASDAQGS:GTLB"
@@ -276,11 +276,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 10.4,
+   "high": 8.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
-   "mid": 5.6,
+   "low": 0.5,
+   "mid": 4.6,
    "n": 2,
    "period_mix": {
     "NTM": 2
@@ -294,14 +294,14 @@
    "points": [
     {
      "company": "Agora, Inc.",
-     "mult": 0.8,
+     "mult": 0.5,
      "reason": "shares the language of sdk; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "DigitalOcean Holdings, Inc.",
-     "mult": 10.4,
+     "mult": 8.7,
      "reason": "shares the language of developer; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -314,13 +314,13 @@
     "sdk"
    ],
    "show_retention": true,
-   "spread": 13.0,
+   "spread": 17.4,
    "table": [
     {
      "company": "Agora, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 0.8,
+     "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NASDAQGS:API"
@@ -329,7 +329,7 @@
      "company": "DigitalOcean Holdings, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 42.0,
-     "multiple": 10.4,
+     "multiple": 8.7,
      "recurring_pct": null,
      "retention_pct": 102.0,
      "ticker": "NYSE:DOCN"

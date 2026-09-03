@@ -71,11 +71,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 16.4,
+   "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.1,
-   "mid": 5.3,
+   "low": 4.2,
+   "mid": 5.2,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -89,15 +89,22 @@
    "points": [
     {
      "company": "Elastic N.V.",
-     "mult": 4.0,
+     "mult": 4.2,
      "reason": "both do Vector Search; related type of business; same kind of customer; same revenue model",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Fastly, Inc.",
-     "mult": 5.1,
+     "mult": 4.2,
      "reason": "shares the language of edge; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Backblaze, Inc.",
+     "mult": 4.3,
+     "reason": "shares the language of storage; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -109,29 +116,22 @@
      "transaction_type": ""
     },
     {
-     "company": "Backblaze, Inc.",
-     "mult": 5.3,
-     "reason": "shares the language of storage; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "MongoDB, Inc.",
-     "mult": 10.5,
+     "mult": 10.0,
      "reason": "both do Database, Vector Database; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
-     "mult": 16.4,
+     "mult": 14.9,
      "reason": "shares the language of agent, ai, llm; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
-     "mult": 31.8,
+     "mult": 29.5,
      "reason": "shares the language of agent, ai, edge; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -151,13 +151,13 @@
     "vector"
    ],
    "show_retention": true,
-   "spread": 8.0,
+   "spread": 7.0,
    "table": [
     {
      "company": "Elastic N.V.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 4.0,
+     "multiple": 4.2,
      "recurring_pct": null,
      "retention_pct": 112.0,
      "ticker": "NYSE:ESTC"
@@ -166,10 +166,19 @@
      "company": "Fastly, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 16.0,
-     "multiple": 5.1,
+     "multiple": 4.2,
      "recurring_pct": null,
      "retention_pct": 117.0,
      "ticker": "NASDAQGS:FSLY"
+    },
+    {
+     "company": "Backblaze, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 22.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": 103.0,
+     "ticker": "NASDAQGM:BLZE"
     },
     {
      "company": "Twilio Inc.",
@@ -181,19 +190,10 @@
      "ticker": "NYSE:TWLO"
     },
     {
-     "company": "Backblaze, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 22.0,
-     "multiple": 5.3,
-     "recurring_pct": null,
-     "retention_pct": 103.0,
-     "ticker": "NASDAQGM:BLZE"
-    },
-    {
      "company": "MongoDB, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 20.0,
-     "multiple": 10.5,
+     "multiple": 10.0,
      "recurring_pct": 97.0,
      "retention_pct": 121.0,
      "ticker": "NASDAQGM:MDB"
@@ -202,7 +202,7 @@
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 27.0,
-     "multiple": 16.4,
+     "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
@@ -211,7 +211,7 @@
      "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 31.0,
-     "multiple": 31.8,
+     "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:NET"
@@ -447,11 +447,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 17.6,
+   "high": 15.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.5,
-   "mid": 5.8,
+   "low": 5.8,
+   "mid": 6.1,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -471,13 +471,13 @@
     "service"
    ],
    "show_retention": true,
-   "spread": 4.1,
+   "spread": 3.8,
    "table": [
     {
      "company": "Akamai Technologies, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 10.0,
-     "multiple": 4.3,
+     "multiple": 4.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:AKAM"
@@ -486,7 +486,7 @@
      "company": "Dynatrace, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 16.0,
-     "multiple": 5.5,
+     "multiple": 5.8,
      "recurring_pct": null,
      "retention_pct": 110.0,
      "ticker": "NYSE:DT"
@@ -495,7 +495,7 @@
      "company": "Atlassian Corporation",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 18.0,
-     "multiple": 5.8,
+     "multiple": 6.1,
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NASDAQGS:TEAM"
@@ -504,7 +504,7 @@
      "company": "SoundHound AI, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 28.0,
-     "multiple": 11.8,
+     "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:SOUN"
@@ -513,7 +513,7 @@
      "company": "Snowflake Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 28.0,
-     "multiple": 17.6,
+     "multiple": 15.6,
      "recurring_pct": null,
      "retention_pct": 126.0,
      "ticker": "NYSE:SNOW"

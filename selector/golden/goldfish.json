@@ -1,5 +1,142 @@
 {
  "expected": {
+  "all_ranges": {
+   "listed": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "UNKNOWN": 5
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "high": 4.4,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 3.0,
+     "mid": 3.7,
+     "n": 5,
+     "period_mix": {
+      "NTM": 5
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "app",
+      "desktop",
+      "local"
+     ],
+     "show_retention": false,
+     "spread": 2.3,
+     "table": [
+      {
+       "company": "Opera Limited",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 19.0,
+       "multiple": 1.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQGS:OPRA"
+      },
+      {
+       "company": "F-Secure Oyj",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 6.0,
+       "multiple": 3.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "HLSE:FSECURE"
+      },
+      {
+       "company": "Truecaller AB (publ)",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 5.0,
+       "multiple": 3.7,
+       "recurring_pct": 45.0,
+       "retention_pct": null,
+       "ticker": "OM:TRUE B"
+      },
+      {
+       "company": "Dropbox, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 0.0,
+       "multiple": 4.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQGS:DBX"
+      },
+      {
+       "company": "Life360, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 30.0,
+       "multiple": 4.4,
+       "recurring_pct": 75.4,
+       "retention_pct": null,
+       "ticker": "ASX:360"
+      }
+     ],
+     "tag_evidence": 1.1,
+     "thin": false,
+     "triangulated": false
+    }
+   },
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 1
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "high": 120.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 21.0,
+     "mid": 120.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "assistant"
+     ],
+     "spread": 5.7,
+     "tag_evidence": 0.4,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Dropbox, Inc.",
@@ -55,11 +192,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.6,
+   "high": 4.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.0,
-   "mid": 3.1,
+   "mid": 3.7,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -79,7 +216,7 @@
     "local"
    ],
    "show_retention": false,
-   "spread": 2.4,
+   "spread": 2.3,
    "table": [
     {
      "company": "Opera Limited",
@@ -91,22 +228,22 @@
      "ticker": "NASDAQGS:OPRA"
     },
     {
-     "company": "Truecaller AB (publ)",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 5.0,
-     "multiple": 3.0,
-     "recurring_pct": 45.0,
-     "retention_pct": null,
-     "ticker": "OM:TRUE B"
-    },
-    {
      "company": "F-Secure Oyj",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 6.0,
-     "multiple": 3.1,
+     "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "HLSE:FSECURE"
+    },
+    {
+     "company": "Truecaller AB (publ)",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 3.7,
+     "recurring_pct": 45.0,
+     "retention_pct": null,
+     "ticker": "OM:TRUE B"
     },
     {
      "company": "Dropbox, Inc.",
@@ -121,7 +258,7 @@
      "company": "Life360, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 30.0,
-     "multiple": 4.6,
+     "multiple": 4.4,
      "recurring_pct": 75.4,
      "retention_pct": null,
      "ticker": "ASX:360"
@@ -233,11 +370,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "DIAMOND",
-   "high": 4.5,
+   "high": 4.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.5,
-   "mid": 4.5,
+   "low": 4.6,
+   "mid": 4.6,
    "n": 1,
    "period_mix": {
     "NTM": 1
@@ -263,7 +400,7 @@
      "company": "Gen Digital Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 10.0,
-     "multiple": 4.5,
+     "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:GEN"

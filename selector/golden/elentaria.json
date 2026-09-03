@@ -69,13 +69,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 4.0,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 4.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.5,
-   "mid": 3.1,
+   "mid": 3.2,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -86,7 +86,57 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Zaggle Prepaid Ocean Services",
+     "mult": 0.7,
+     "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "BlackLine, Inc.",
+     "mult": 2.5,
+     "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Pegasystems Inc.",
+     "mult": 2.9,
+     "reason": "both do Workflow Automation; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "DocuSign, Inc.",
+     "mult": 3.2,
+     "reason": "shares the language of lifecycle; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Sidetrade SA",
+     "mult": 3.7,
+     "reason": "shares the language of ai, order; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "UiPath, Inc.",
+     "mult": 4.3,
+     "reason": "both do Agentic Automation; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Workday, Inc.",
+     "mult": 4.3,
+     "reason": "shares the language of planning; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -101,13 +151,13 @@
     "workflow"
    ],
    "show_retention": true,
-   "spread": 5.7,
+   "spread": 6.1,
    "table": [
     {
      "company": "Zaggle Prepaid Ocean Services",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 32.0,
-     "multiple": 0.8,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:ZAGGLE"
@@ -125,7 +175,7 @@
      "company": "Pegasystems Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 9.0,
-     "multiple": 2.7,
+     "multiple": 2.9,
      "recurring_pct": 57.9,
      "retention_pct": null,
      "ticker": "NASDAQGS:PEGA"
@@ -134,34 +184,34 @@
      "company": "DocuSign, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 8.0,
-     "multiple": 3.1,
+     "multiple": 3.2,
      "recurring_pct": null,
      "retention_pct": 102.0,
      "ticker": "NASDAQGS:DOCU"
     },
     {
-     "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
-     "multiple": 4.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:PATH"
-    },
-    {
      "company": "Sidetrade SA",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 4.0,
+     "multiple": 3.7,
      "recurring_pct": 87.0,
      "retention_pct": null,
      "ticker": "ENXTPA:ALBFR"
     },
     {
+     "company": "UiPath, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:PATH"
+    },
+    {
      "company": "Workday, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 11.0,
-     "multiple": 4.6,
+     "multiple": 4.3,
      "recurring_pct": 93.0,
      "retention_pct": null,
      "ticker": "NASDAQGS:WDAY"
@@ -394,10 +444,10 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 5.1,
+   "high": 4.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
+   "low": 3.3,
    "mid": 3.4,
    "n": 3,
    "period_mix": {
@@ -420,7 +470,7 @@
     },
     {
      "company": "Samsara Inc.",
-     "mult": 10.5,
+     "mult": 9.6,
      "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -437,13 +487,13 @@
     "platform"
    ],
    "show_retention": true,
-   "spread": 1.9,
+   "spread": 1.5,
    "table": [
     {
      "company": "Cass Information Systems",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 7.0,
-     "multiple": 2.7,
+     "multiple": 3.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:CASS"
@@ -461,7 +511,7 @@
      "company": "SAP SE",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 10.0,
-     "multiple": 5.1,
+     "multiple": 4.9,
      "recurring_pct": 63.6,
      "retention_pct": null,
      "ticker": "XTRA:SAP"

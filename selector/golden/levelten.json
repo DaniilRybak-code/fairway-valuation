@@ -16,11 +16,11 @@
      "control_names": [],
      "dispersed": true,
      "display": "SCATTER",
-     "high": 14.1,
+     "high": 14.4,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 1.6,
-     "mid": 13.4,
+     "mid": 12.7,
      "n": 3,
      "period_mix": {
       "NTM": 3
@@ -41,14 +41,14 @@
       },
       {
        "company": "Indian Energy Exchange Limited",
-       "mult": 13.4,
+       "mult": 12.7,
        "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
        "tier": "DIRECT",
        "transaction_type": ""
       },
       {
        "company": "CME Group Inc.",
-       "mult": 14.1,
+       "mult": 14.4,
        "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": ""
@@ -64,7 +64,7 @@
       "renewable"
      ],
      "show_retention": false,
-     "spread": 8.8,
+     "spread": 9.0,
      "table": [
       {
        "company": "Clarkson PLC",
@@ -79,7 +79,7 @@
        "company": "Indian Energy Exchange Limited",
        "growth_basis": "CAGR_CY0_CY2",
        "growth_pct": 9.0,
-       "multiple": 13.4,
+       "multiple": 12.7,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NSEI:IEX"
@@ -88,7 +88,7 @@
        "company": "CME Group Inc.",
        "growth_basis": "CAGR_CY0_CY2",
        "growth_pct": 6.0,
-       "multiple": 14.1,
+       "multiple": 14.4,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NASDAQ:CME"
@@ -222,11 +222,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 14.1,
+   "high": 14.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.6,
-   "mid": 13.4,
+   "mid": 12.7,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -247,14 +247,14 @@
     },
     {
      "company": "Indian Energy Exchange Limited",
-     "mult": 13.4,
+     "mult": 12.7,
      "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "CME Group Inc.",
-     "mult": 14.1,
+     "mult": 14.4,
      "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -270,7 +270,7 @@
     "renewable"
    ],
    "show_retention": false,
-   "spread": 8.8,
+   "spread": 9.0,
    "table": [
     {
      "company": "Clarkson PLC",
@@ -285,7 +285,7 @@
      "company": "Indian Energy Exchange Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 9.0,
-     "multiple": 13.4,
+     "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:IEX"
@@ -294,7 +294,7 @@
      "company": "CME Group Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 6.0,
-     "multiple": 14.1,
+     "multiple": 14.4,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:CME"
@@ -426,11 +426,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 25.2,
+   "high": 25.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.3,
-   "mid": 9.8,
+   "mid": 9.5,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -445,14 +445,14 @@
    "positioning": [
     {
      "company": "PSI Software SE",
-     "mult": 2.4,
+     "mult": 2.3,
      "reason": "shares the language of energy; same end market; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Morningstar, Inc.",
-     "mult": 3.5,
+     "mult": 3.4,
      "reason": "shares the language of index; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
@@ -464,7 +464,7 @@
     "index"
    ],
    "show_retention": false,
-   "spread": 3.0,
+   "spread": 3.1,
    "table": [
     {
      "company": "Deutsche Boerse AG",
@@ -479,7 +479,7 @@
      "company": "Intercontinental Exchange, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 8.0,
-     "multiple": 9.8,
+     "multiple": 9.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:ICE"
@@ -488,7 +488,7 @@
      "company": "Multi Commodity Exchange of India Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 40.0,
-     "multiple": 25.2,
+     "multiple": 25.4,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:MCX"

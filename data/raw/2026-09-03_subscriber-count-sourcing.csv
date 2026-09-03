@@ -1,0 +1,20 @@
+# PAYING-SUBSCRIBER SOURCING PASS, 3-Sep-2026, on Daniil's ruling that a user count is a legitimate
+# denominator for a pre-revenue consumer business. Eight candidate rounds were researched, each by
+# an agent instructed to confirm the figure on a page it actually read and to refuse anything it
+# could not date to within six months of the round.
+#
+# THE RESULT IS MOSTLY NEGATIVE AND THAT IS THE USEFUL PART. Only one of the eight produced a
+# paying figure at all, and even that one is dated after the round. The reason is consistent and
+# worth writing down: in BNPL and in banking THE MERCHANT OR THE BORROWER PAYS, NOT THE USER, so a
+# "customer" count is not a subscriber count and a price per registered user would compare a
+# business that monetises against one that does not.
+company,round_date,figure,paying_or_registered,figure_dated,source_url,verdict
+Deezer,2018-08,7000000,PAYING subscribers,year-end 2018 (five months AFTER the round),https://musically.com/2019/01/07/deezer-targets-more-growth-with-local-focus-and-humbleness/,HELD: a later actual. Our standing rule is the figure current when the price was set
+Deezer,2018-08,14000000,REGISTERED monthly active users,at the round announcement 2-Aug-2018,https://www.musicbusinessworldwide.com/deezer-raises-185m-as-new-investment-values-company-at-1bn/,NOT LOADED: registered not paying
+Rent the Runway,2019-03,,,,https://www.fastcompany.com/90323340/rent-the-runway-becomes-a-unicorn-after-new-125m-investment,NOT FOUND: the company explicitly declined to disclose subscribers at the round. First audited figure is 133572 at 31-Jan-2020 ten months later
+Zilch,2021-11,1000000,REGISTERED customers,at the round announcement 10-Nov-2021,https://www.zilch.com/news/zilch-becomes-fastest-growing-unicorn-bnpl-in-europe/,NOT LOADED: Zilch charges the customer no interest and no fees. Revenue is merchant commission so the customer is not a payer
+Atom Bank,2022-02,123000,revenue-generating banking customers,FY to 31-Mar-2022 six weeks after the round,https://www.atombank.co.uk/~/docs/annual-report-22-23-holdco.pdf,NOT LOADED as a subscriber comp: Atom charges no subscription. Already priced on book at 3.17x
+Tabby,2025-02,15000000,REGISTERED users,at the round announcement 12-Feb-2025,https://tabby.ai/en-KW/newsroom/series-e-funding,NOT LOADED: registered not paying. In BNPL the merchant pays; the analogue would be the 40000 merchant count
+MNT-Halan,2023-02,2000000,PAYING borrowers,at the round announcement 1-Feb-2023,https://www.fintechfutures.com/press-releases/mnt-halan-attracts-400-million-in-largest-funding-in-egypt-and-the-middle-east-in-the-past-12-months,CANDIDATE for a separate EV-PER-BORROWER measure. A borrower is not a subscriber and the two must not share a range
+Hopper,2022-02,70000000,app downloads,at the round 3-Feb-2022,https://techcrunch.com/2022/02/03/hopper/,NOT LOADED: downloads are neither users nor payers
+Perplexity,2025-09,,,,https://www.pymnts.com/artificial-intelligence-2/2025/perplexity-valuation-hits-20-billion-following-new-funding-round/,NOT FOUND: no paying-subscriber count has ever been disclosed. Every circulating number is back-solved from revenue at an assumed seat price

@@ -71,11 +71,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 10.9,
+   "high": 10.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.5,
-   "mid": 6.9,
+   "low": 3.4,
+   "mid": 7.2,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -93,7 +93,7 @@
     "crm"
    ],
    "show_retention": true,
-   "spread": 4.6,
+   "spread": 4.5,
    "table": [
     {
      "company": "HubSpot, Inc.",
@@ -108,7 +108,7 @@
      "company": "Morningstar, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 7.0,
-     "multiple": 3.5,
+     "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:MORN"
@@ -126,7 +126,7 @@
      "company": "CRISIL Limited",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 18.0,
-     "multiple": 6.9,
+     "multiple": 7.2,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:CRISIL"
@@ -144,7 +144,7 @@
      "company": "Moody's Corporation",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 7.0,
-     "multiple": 10.9,
+     "multiple": 10.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:MCO"
@@ -153,7 +153,7 @@
      "company": "MSCI Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 10.0,
-     "multiple": 12.9,
+     "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:MSCI"
@@ -364,8 +364,8 @@
    "high": 8.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 4.3,
+   "low": 1.6,
+   "mid": 4.0,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -386,21 +386,21 @@
     },
     {
      "company": "Qualco Group S.A.",
-     "mult": 1.8,
+     "mult": 1.6,
      "reason": "same end market; same revenue model; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Alkami Technology, Inc.",
-     "mult": 4.3,
+     "mult": 4.0,
      "reason": "same end market; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "London Stock Exchange Group plc",
-     "mult": 5.2,
+     "mult": 5.3,
      "reason": "related type of business; same end market; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -434,7 +434,7 @@
      "company": "Qualco Group S.A.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 15.0,
-     "multiple": 1.8,
+     "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ATSE:QLCO"
@@ -443,7 +443,7 @@
      "company": "Alkami Technology, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 18.0,
-     "multiple": 4.3,
+     "multiple": 4.0,
      "recurring_pct": null,
      "retention_pct": 115.0,
      "ticker": "NASDAQGS:ALKT"
@@ -452,7 +452,7 @@
      "company": "London Stock Exchange Group plc",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 6.0,
-     "multiple": 5.2,
+     "multiple": 5.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "LSE:LSEG"

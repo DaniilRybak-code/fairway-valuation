@@ -75,7 +75,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 1.0,
+   "mid": 0.9,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -100,7 +100,7 @@
     "shipping"
    ],
    "show_retention": false,
-   "spread": 6.0,
+   "spread": 5.7,
    "table": [
     {
      "company": "PostNL N.V.",
@@ -133,7 +133,7 @@
      "company": "Deutsche Post AG",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 3.0,
-     "multiple": 1.0,
+     "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "XTRA:DHL"
@@ -142,7 +142,7 @@
      "company": "FedEx Corporation",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 4.0,
-     "multiple": 1.2,
+     "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:FDX"
@@ -160,7 +160,7 @@
      "company": "Blue Dart Express Limited",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 8.0,
-     "multiple": 1.8,
+     "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:BLUEDART"
@@ -360,10 +360,10 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 3.6,
+   "high": 3.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.9,
+   "low": 0.7,
    "mid": 1.6,
    "n": 5,
    "period_mix": {
@@ -385,7 +385,7 @@
     },
     {
      "company": "J&T Global Express Limited",
-     "mult": 0.9,
+     "mult": 0.7,
      "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -406,7 +406,7 @@
     },
     {
      "company": "Container Corporation of India",
-     "mult": 3.6,
+     "mult": 3.5,
      "reason": "shares the language of last, mile, own; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -424,7 +424,7 @@
     "parcel"
    ],
    "show_retention": false,
-   "spread": 12.0,
+   "spread": 11.7,
    "table": [
     {
      "company": "Yamato Holdings Co.",
@@ -439,7 +439,7 @@
      "company": "J&T Global Express Limited",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 18.0,
-     "multiple": 0.9,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "SEHK:1519"
@@ -466,7 +466,7 @@
      "company": "Container Corporation of India",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
      "growth_pct": 14.0,
-     "multiple": 3.6,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:CONCOR"

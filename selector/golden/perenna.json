@@ -8,7 +8,7 @@
      "basis": "BOOK",
      "basis_label": "price to book",
      "basis_mix": {
-      "UNKNOWN": 5
+      "UNKNOWN": 6
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -16,14 +16,14 @@
      "control_names": [],
      "dispersed": true,
      "display": "SCATTER",
-     "high": 6.2,
+     "high": 3.8,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 1.0,
-     "mid": 2.0,
-     "n": 5,
+     "mid": 1.4500000000000002,
+     "n": 6,
      "period_mix": {
-      "NTM": 5
+      "NTM": 6
      },
      "period_span": {
       "NTM": {
@@ -47,15 +47,22 @@
        "transaction_type": ""
       },
       {
+       "company": "LendingClub Corporation",
+       "mult": 1.1,
+       "reason": "shares the language of bank; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
        "company": "SoFi Technologies, Inc.",
-       "mult": 2.0,
+       "mult": 1.8,
        "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": ""
       },
       {
        "company": "Nu Holdings Ltd.",
-       "mult": 3.9,
+       "mult": 3.8,
        "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": ""
@@ -97,10 +104,19 @@
        "ticker": "NASDAQ:INTR"
       },
       {
+       "company": "LendingClub Corporation",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 12.0,
+       "multiple": 1.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:LC"
+      },
+      {
        "company": "SoFi Technologies, Inc.",
        "growth_basis": "CAGR_CY0_CY2",
        "growth_pct": 31.0,
-       "multiple": 2.0,
+       "multiple": 1.8,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NASDAQ:SOFI"
@@ -109,7 +125,7 @@
        "company": "Nu Holdings Ltd.",
        "growth_basis": "CAGR_CY0_CY2",
        "growth_pct": 32.0,
-       "multiple": 3.9,
+       "multiple": 3.8,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NYSE:NU"
@@ -134,7 +150,7 @@
      "basis": "EARNINGS",
      "basis_label": "price to earnings",
      "basis_mix": {
-      "UNKNOWN": 4
+      "UNKNOWN": 5
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -142,14 +158,14 @@
      "control_names": [],
      "dispersed": false,
      "display": "RANGE",
-     "high": 14.7,
+     "high": 21.4,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 6.2,
-     "mid": 7.95,
-     "n": 4,
+     "mid": 7.5,
+     "n": 5,
      "period_mix": {
-      "NTM": 4
+      "NTM": 5
      },
      "period_span": {
       "NTM": {
@@ -162,11 +178,21 @@
      "post_stated_n": 0,
      "shared_words": [
       "bank",
-      "broker"
+      "broker",
+      "mortgage"
      ],
      "show_retention": false,
-     "spread": 2.4,
+     "spread": 3.5,
      "table": [
+      {
+       "company": "Velocity Financial, Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 6.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:VEL"
+      },
       {
        "company": "Inter & Co, Inc.",
        "growth_basis": "CAGR_CY0_CY2",
@@ -177,19 +203,10 @@
        "ticker": "NASDAQ:INTR"
       },
       {
-       "company": "Velocity Financial, Inc.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
-       "multiple": 6.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:VEL"
-      },
-      {
        "company": "LendingClub Corporation",
        "growth_basis": "CAGR_CY0_CY2",
        "growth_pct": 12.0,
-       "multiple": 9.4,
+       "multiple": 7.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NYSE:LC"
@@ -198,10 +215,19 @@
        "company": "Nu Holdings Ltd.",
        "growth_basis": "CAGR_CY0_CY2",
        "growth_pct": 32.0,
-       "multiple": 14.7,
+       "multiple": 13.6,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NYSE:NU"
+      },
+      {
+       "company": "SoFi Technologies, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 31.0,
+       "multiple": 21.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:SOFI"
       }
      ],
      "tag_evidence": 0.6,
@@ -352,7 +378,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -361,14 +387,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 6.2,
+   "high": 3.8,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.0,
-   "mid": 2.0,
-   "n": 5,
+   "mid": 1.45,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -392,15 +418,22 @@
      "transaction_type": ""
     },
     {
+     "company": "LendingClub Corporation",
+     "mult": 1.1,
+     "reason": "shares the language of bank; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "SoFi Technologies, Inc.",
-     "mult": 2.0,
+     "mult": 1.8,
      "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Nu Holdings Ltd.",
-     "mult": 3.9,
+     "mult": 3.8,
      "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -442,10 +475,19 @@
      "ticker": "NASDAQ:INTR"
     },
     {
+     "company": "LendingClub Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 12.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:LC"
+    },
+    {
      "company": "SoFi Technologies, Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 31.0,
-     "multiple": 2.0,
+     "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:SOFI"
@@ -454,7 +496,7 @@
      "company": "Nu Holdings Ltd.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 32.0,
-     "multiple": 3.9,
+     "multiple": 3.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:NU"
