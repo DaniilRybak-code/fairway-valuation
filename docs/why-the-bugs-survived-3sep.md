@@ -119,3 +119,107 @@ python3 tools/honesty_check.py          # every range is caveated
 
 **And the standing rule this all points at:** when a check passes and a human still finds a defect,
 the bug to fix first is the check, not the defect.
+
+
+---
+
+# Part two, later the same day: is it architectural?
+
+Daniil, after the fourth instance: "How is it possible, again, that I provide super large dataset, it
+takes A LOT of time to create and paste it, and AGAIN it does not reach the user. What is the matter?
+Is it architectural?"
+
+**Yes. It is architectural, and part one of this document had not identified it.** Part one found
+that our checks count rows while the bugs lose fields. That was true and it was not the whole
+answer, because the failures kept coming from places a field-level check does not look.
+
+## The chain a figure has to survive
+
+A number Daniil supplies passes through seven stages before a founder sees it:
+
+```
+1  ARRIVES     a file lands in data/raw
+2  INGESTED    a tool reads that file and writes it into data/
+3  LOADED      match_reference reads the column into a row field
+4  KEPT        the row survives dedup, kill lists and family gates
+5  SELECTED    the matcher picks that row for this founder
+6  PRICED      a basis exists that the row can answer on
+7  SHOWN       the reveal renders it
+```
+
+Every failure found today is a different stage, and that is the finding:
+
+| what was lost | stage | how it failed |
+|---|---|---|
+| the entire 1-Sep listed refresh, 509 rows | **1 to 2** | the ingest tool had no write path at all. The file sat in raw for two days |
+| price to book for 12 neobanks | **3 to 4** | a ticker already seen in another file was skipped |
+| 16 volume multiples | **3** | the column is spelled `ev_volume_x` here and `ev_gmv_x` there |
+| growth for all 123 logistics rows | **3** | that file calls the column `revenue_growth_pct` |
+| retention for 83 software rows | **3** | the loader never mentioned the column |
+| Xpansiv's 121.5 MtCO2e | **6** | no basis existed that a physical volume could answer on |
+| Flo Health and Calm's subscribers | **6** | no basis existed, and I then barred them on a bad rule |
+| 13 companies dropped from the pull | **4** | a decision taken by OMISSION left no trace anywhere |
+
+**There is no single accounting that follows a figure from stage 1 to stage 7.** Each stage has, at
+best, a check of its own, and each check is satisfied by handing the problem to the next stage.
+`check_raw_coverage` proves a row was accounted for at stage 2 and says nothing about stage 3.
+`check_engine_reach` proves stage 3 to 4 and says nothing about stage 6. Golden watches stage 7 and
+cannot see a value that has been absent since its baseline was written. **A figure can be lost at
+any stage and every check will still pass**, which is exactly what a founder experiences as "the
+data I sent is not in the answer".
+
+## The second structural cause: a decision taken by omission
+
+The 13 dropped companies are the clearest case and the one with no check anywhere near it. Daniil
+made a real decision, correctly, by leaving names out of a pull. Nothing in the repo could see it.
+Two of the fifteen had been written into `LISTED_NOT_PRICING` by hand weeks earlier; the other
+thirteen kept pricing founders off superseded numbers.
+
+**A decision expressed as an absence is invisible to every check that looks at what is present.**
+That is why the fix is not another list to maintain: the newest `as_of` in the file now DEFINES the
+current universe, and any row older than it is frozen with its reason. The next refresh enforces
+the next set of kills without anybody remembering.
+
+## The third: a schema that cannot express what the data says
+
+Xpansiv, Flo Health and Calm were not lost by a loader. They were loaded, matched and shown, and
+then found there was no denominator they could answer on, because the engine knew about revenue,
+gross profit and book value and nothing else. A tonne of carbon and a paying subscriber had nowhere
+to go, so they became either a fake x or a barred row.
+
+**When a founder's data has no place in the schema, the honest failure is loud and ours was silent.**
+The engine gave a number that looked normal (11.52x) or gave nothing at all, and in neither case
+did it say "we hold this figure and cannot use it".
+
+## What now exists
+
+- `tools/check_field_reach.py` covers stages 3 and 4: every figure in a file reaches a row, and every
+  populated column is at least read.
+- `tools/apply_listed_refresh.py` covers stage 1 to 2 and, critically, EXISTS: the refresh now has a
+  write path, matches across renamed tickers, and accounts for every row in both directions.
+- `tools/check_cross_pull.py` covers the case of one company in two files.
+- The `as_of` rule covers decisions taken by omission.
+- Six bases now exist where three did (revenue, gross profit, book, earnings, ARR, originations,
+  throughput, and the count family), so more of what Daniil sends has somewhere to go.
+
+## What is still missing, and it is the one that matters
+
+**Nothing yet reports, for a given supplied figure, WHERE IT STOPPED.** That is the check to build
+next, and it is the only one that would have caught all eight of today's failures with one command:
+
+> for every numeric cell in every file under `data/raw/`, say which of the seven stages it reached,
+> and for anything that stopped before stage 6, say which stage and why.
+
+Stage 6 is the right bar rather than stage 7, because a figure that can price SOMEBODY is doing its
+job even if no current fixture needs it.
+
+## For Fable, added to the end-of-day list
+
+7. **Diff `data/raw/` against the loaded universe.** Any file added since yesterday that has not
+   been ingested is the highest-severity finding available: that is a whole dataset Daniil spent
+   time producing, sitting unused. The 1-Sep refresh sat for two days and no check looked.
+8. **Ask what the newest `as_of` is, and how many rows are older.** A row left behind by a refresh
+   is a decision somebody made; confirm it was deliberate.
+9. **For any figure type newly appearing in a supplied file** (tonnes, subscribers, borrowers), ask
+   whether a basis exists that can use it. If not, that is a schema gap and it should be raised as
+   one, not absorbed silently.

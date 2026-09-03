@@ -221,12 +221,12 @@
     "ticker": "NYSE:CARS"
    },
    {
-    "company": "1stdibs.Com, Inc.",
+    "company": "Booking Holdings Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
     "score": 11.1,
-    "ticker": "NASDAQGM:DIBS"
+    "ticker": "NASDAQGS:BKNG"
    }
   ],
   "secondary_range": {
@@ -260,15 +260,15 @@
    "points": [],
    "positioning": [
     {
-     "company": "1stdibs.Com, Inc.",
-     "mult": 1.2,
+     "company": "Trip.com Group Limited",
+     "mult": 1.9,
      "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
-     "company": "Trip.com Group Limited",
-     "mult": 1.9,
+     "company": "Booking Holdings Inc.",
+     "mult": 4.8,
      "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""

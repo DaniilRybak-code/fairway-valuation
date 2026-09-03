@@ -392,6 +392,38 @@ def _norm_t(t):
 _KILLED = {_norm_t(k) for k in LISTED_NOT_PRICING}
 listed = [_r for _r in listed.values() if _norm_t(_r.get('exchange_ticker')) not in _KILLED]
 
+# A COMPANY LEFT OUT OF THE LATEST REFRESH IS NOT PART OF THE CURRENT UNIVERSE. Added 3-Sep-2026.
+#
+# Daniil, on the fifteen names the 1-Sep pull did not include: "These 15 companies I killed
+# deliberately... most of them are micro cap, some with negative enterprise value, most with very
+# thin consensus." He was right, and the data agrees: seven of them carry no NTM revenue at all,
+# which means no broker coverage; PAX Global shows an enterprise value of $14m against a $534m
+# market capitalisation; 1stdibs, OFX, Cookpad, Rent the Runway, Time Finance and EML are all under
+# $200m.
+#
+# THE FAILURE WAS THAT NOTHING RECORDED THE KILL. Only two of the fifteen were in
+# LISTED_NOT_PRICING, so the other thirteen stayed in the engine and could still price a founder off
+# 30-August numbers. A decision taken by leaving a company out of a pull left no trace in the code
+# at all, which is the same shape as every other failure found today.
+#
+# So the rule is general and needs no list: THE NEWEST as_of IN THE FILE DEFINES THE CURRENT
+# UNIVERSE. A row older than that was left out of the refresh, stays visible for audit, and cannot
+# price anything. The next refresh enforces this by itself, with nobody having to remember.
+_AS_OF = [(_r.get('as_of') or '').strip() for _r in listed]
+CURRENT_AS_OF = max([a for a in _AS_OF if a] or [''])
+stale_rows = []
+for _r in listed:
+    _a = (_r.get('as_of') or '').strip()
+    if CURRENT_AS_OF and _a != CURRENT_AS_OF:
+        _r['stale_since'] = _a or 'undated'
+        _r['stale_reason'] = ('left out of the %s refresh, so not part of the current universe. '
+                              'Visible for audit, cannot price.' % CURRENT_AS_OF)
+        for _k in ('mult', 'gp_mult', 'pb_mult', 'pe_mult', 'gmv_mult'):
+            if _r.get(_k) is not None:
+                _r['stale_' + _k] = _r[_k]
+                _r[_k] = None
+        stale_rows.append(_r)
+
 # ---------------------------------------------------------------------------
 # PRIVATE UNIVERSE
 # Two files today: the software rounds and the consumer rounds. They share a schema.
@@ -511,19 +543,48 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             # it: Flo Health at $800m over 1.5m paying subscribers is $533, and Calm at $2,000m over
             # 4.0m is $500. Two rounds fifteen months apart, seven per cent apart, and both were
             # sitting unusable.
-            if any(w in _unit_src for w in ('SUBSCRIBER', 'PAYING USER', 'PAID USER', 'MEMBER')):
-                row['vol_metric'] = 'SUBSCRIBERS'
-                row['vol_unit'] = 'SUBSCRIBERS'
-                row['vol_periodic'] = True      # a stock at the round date is the right denominator
-                row['vol_stock_at'] = row['vol_period']
-            elif row['vol_unit'] in ('USERS', 'SEATS') or 'POINT-IN-TIME' in _unit_src:
-                # Still barred: a raw user or seat count that is NOT stated as paying. A price per
-                # registered user compares a business that monetises with one that does not.
-                row['vol_periodic'] = False
-                row['vol_unit_warning'] = ('volume is a count of non-paying users or seats (%s). A '
-                                           'price per registered user is not comparable to a price '
-                                           'per paying subscriber, so it cannot price anything'
-                                           % row['vol_period'])
+            # A COUNT DOES NOT HAVE TO BE OF PAYERS. Daniil, 3-Sep-2026, correcting my second
+            # attempt: "they do not necessarily NEED to be paying, but if they are, we need to make
+            # the respective note of it."
+            #
+            # So the count is kept whatever it counts, the KIND is recorded, and a range may only
+            # ever be built inside one kind. Paying subscribers with paying subscribers, merchants
+            # with merchants, borrowers with borrowers. Mixing them would be the same error as
+            # averaging gross revenue with net. `vol_is_paying` carries the note he asked for, so a
+            # founder is told whether the people being counted are the people paying.
+            _COUNT_KINDS = (
+                ('BORROWER', 'BORROWERS', True), ('CARDHOLDER', 'CARDHOLDERS', True),
+                ('PAYING SUBSCRIBER', 'PAYING_SUBSCRIBERS', True),
+                ('PAID SUBSCRIBER', 'PAYING_SUBSCRIBERS', True),
+                ('PAID CUSTOMER', 'PAYING_SUBSCRIBERS', True),
+                ('PAYING USER', 'PAYING_SUBSCRIBERS', True),
+                ('PAID USER', 'PAYING_SUBSCRIBERS', True),
+                ('SUBSCRIBER', 'PAYING_SUBSCRIBERS', True),
+                ('MERCHANT', 'MERCHANTS', True), ('SELLER', 'MERCHANTS', True),
+                ('MEMBER', 'MEMBERS', None),
+                ('BUSINESS CUSTOMER', 'BUSINESS_CUSTOMERS', True),
+                ('ACTIVE USER', 'ACTIVE_USERS', False),
+                ('REGISTERED USER', 'REGISTERED_USERS', False),
+                ('CUSTOMER', 'CUSTOMERS', None), ('USER', 'REGISTERED_USERS', False),
+            )
+            _MONEY_KINDS = ('ORIGINATIONS', 'PAYMENT_VOLUME', 'GMV', 'WRITTEN_PREMIUM', 'THROUGHPUT')
+            for _needle, _kind, _paying in (() if row.get('vol_metric') in _MONEY_KINDS
+                                            else _COUNT_KINDS):
+                # A MONEY VOLUME IS NOT A COUNT, however it is worded. Wayflyer's metric is
+                # "CUSTOMER FUNDING ADVANCED / ORIGINATIONS", which contains the word customer and
+                # is dollars advanced, not customers counted. The money kinds are decided first and
+                # this loop does not run for them.
+                if _needle in _unit_src:
+                    row['vol_metric'] = _kind
+                    row['vol_unit'] = _kind
+                    row['vol_periodic'] = True   # a stock at the round date is the right denominator
+                    row['vol_stock_at'] = row['vol_period']
+                    row['vol_is_paying'] = _paying
+                    break
+            # NOTHING IS BARRED FOR NOT BEING PAID-FOR ANY MORE. The kind decides what it can be
+            # compared against, and vol_is_paying is the note on the label. A registered-user count
+            # prices only against other registered-user counts, which is the honest treatment: it
+            # is not that the number is worthless, it is that it means something different.
             row['mult_book'] = _f(r.get('ev_book_x'))
             row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
             # THE DENOMINATORS BEHIND THE LENDER MULTIPLES. Added 3-Sep-2026, found by
@@ -1679,7 +1740,18 @@ BASIS_KEYS = {'BOOK':    ('mult_book', 'pb_mult', 'price to book'),
               # PRICED ON THE INSTALLED BASE. For a consumer subscription business that has not
               # disclosed revenue, the paying subscriber count at the round date is what the buyer
               # was buying. Written in DOLLARS PER SUBSCRIBER, never as an x.
-              'SUBSCRIBERS': ('gmv_mult', None, 'dollars of enterprise value per paying subscriber'),
+              'PAYING_SUBSCRIBERS': ('gmv_mult', None, 'dollars of enterprise value per paying subscriber'),
+              # EV PER BORROWER, built 3-Sep-2026 on Daniil's instruction. A borrower is not a
+              # subscriber and the two must never share a range: a borrower pays interest on a
+              # balance, a subscriber pays a fixed fee for access. MNT-Halan's own February 2023
+              # announcement states "over 2 million are borrowers" against a $1bn valuation.
+              'BORROWERS': ('gmv_mult', None, 'dollars of enterprise value per borrower'),
+              'MEMBERS': ('gmv_mult', None, 'dollars of enterprise value per member'),
+              'CUSTOMERS': ('gmv_mult', None, 'dollars of enterprise value per customer'),
+              'BUSINESS_CUSTOMERS': ('gmv_mult', None, 'dollars of enterprise value per business customer'),
+              'MERCHANTS': ('gmv_mult', None, 'dollars of enterprise value per merchant'),
+              'ACTIVE_USERS': ('gmv_mult', None, 'dollars of enterprise value per monthly active user'),
+              'REGISTERED_USERS': ('gmv_mult', None, 'dollars of enterprise value per registered user'),
               'GMV': ('gmv_mult', None, 'enterprise value to annual GMV'),
               'PAYMENT_VOLUME': ('gmv_mult', None, 'enterprise value to annual payment volume')}
 
@@ -1705,8 +1777,9 @@ def _basis_row_ok(basis, r):
     """Extra condition a row must meet to belong in THIS basis, beyond having the multiple."""
     if basis == 'ARR':
         return (r.get('revenue_basis') or '').upper() in ('ARR', 'ARR_RUNRATE')
-    if basis == 'SUBSCRIBERS':
-        return r.get('vol_metric') == 'SUBSCRIBERS' and r.get('vol_periodic')
+    if basis in COUNT_BASES:
+        # SAME KIND OR NOTHING.
+        return r.get('vol_metric') == basis and r.get('vol_periodic')
     if basis == 'THROUGHPUT':
         # SAME UNIT OR NOTHING. Tonnes of carbon, megawatt hours and barrels are not
         # interchangeable, and none of them is comparable to a dollar. The unit is checked here
@@ -1734,6 +1807,9 @@ THROUGHPUT_ARCHETYPES = {'Market Infrastructure & Exchange'}
 # consumer relationship, and all of them routinely raise without disclosing revenue.
 SUBSCRIBER_ARCHETYPES = {'Consumer & Prosumer Software', 'Streaming & Digital Media',
                          'Dating & Social Network', 'Online Learning', 'Digital Bank & Deposits'}
+# Every count-based reading. Each prices only against its own kind.
+COUNT_BASES = ('PAYING_SUBSCRIBERS', 'BORROWERS', 'MEMBERS', 'CUSTOMERS', 'BUSINESS_CUSTOMERS',
+               'MERCHANTS', 'ACTIVE_USERS', 'REGISTERED_USERS')
 
 
 def bases_for(prof, lane):
@@ -1747,8 +1823,15 @@ def bases_for(prof, lane):
         unit = (prof.get('volume_unit') or '').strip().upper()
         if (arch & THROUGHPUT_ARCHETYPES) or (unit and unit not in ('USD', 'SUBSCRIBERS')):
             out.append('THROUGHPUT')
-        if (arch & SUBSCRIBER_ARCHETYPES) or unit == 'SUBSCRIBERS' or _f(prof.get('subscribers')):
-            out.append('SUBSCRIBERS')
+        # A count reading is offered when the founder has answered a count question, and the
+        # subscriber one is offered to the consumer archetypes whether or not they have.
+        if (arch & SUBSCRIBER_ARCHETYPES) or _f(prof.get('subscribers')):
+            out.append('PAYING_SUBSCRIBERS')
+        if _f(prof.get('borrowers')) or is_balance_sheet(prof):
+            out.append('BORROWERS')
+        for _b in COUNT_BASES:
+            if _b not in out and _f(prof.get(_b.lower())):
+                out.append(_b)
     return tuple(out)
 
 def denominator(prof, group):

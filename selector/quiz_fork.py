@@ -293,6 +293,17 @@ FORKS = {
                'undated lifetime total, and three rounds disclosed both stock and flow differing by '
                '5x to 6x (Oxyzo $350m AUM against $2bn cumulative; Stenn $6bn since 2015 against '
                '$1bn in 2022; iwoca £2.5bn since 2012 with no book at all).'),
+      # EV PER BORROWER. Added 3-Sep-2026 on Daniil's instruction, and optional like the rest of
+      # the extra lender readings. Backed by MNT-Halan's own February 2023 announcement: "over 2
+      # million are borrowers" against a $1bn post-money, so $500 of enterprise value per borrower.
+      # One comparable is thin and the range will say so, but a lender that has borrowers and no
+      # disclosed book has nothing else to be judged on.
+      dict(key='borrowers', label='How many borrowers do you have today?', kind='quantity',
+           required=False, maps_to='profile.borrowers', peer_field='volume_musd',
+           basis='BORROWERS',
+           why='A borrower count is often the only number an early lender can give, and it is not '
+               'the same as a subscriber count: a borrower pays interest on a balance rather than a '
+               'fee for access, so the two are never averaged together.'),
       dict(key='funding_model', label='How are the loans funded?', kind='choice',
            choices=('Our own balance sheet', 'Marketplace or forward-flow', 'Both'),
            required=True, maps_to='profile.funding_model', peer_field='funding_model',

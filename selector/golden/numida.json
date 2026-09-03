@@ -235,6 +235,46 @@
      "tag_evidence": 0.4,
      "thin": true,
      "triangulated": false
+    },
+    "BORROWERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BORROWERS",
+     "basis_label": "dollars of enterprise value per borrower",
+     "basis_mix": {
+      "BORROWERS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "high": 500.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 500.0,
+     "mid": 500.0,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "lending"
+     ],
+     "sole": "MNT-Halan",
+     "spread": 1.0,
+     "tag_evidence": 0.2,
+     "thin": true,
+     "triangulated": true
     }
    }
   },
@@ -415,7 +455,7 @@
     "bound": ">=",
     "company": "MNT-Halan",
     "date": "Feb-23",
-    "in_medians": false,
+    "in_medians": true,
     "mult": null,
     "reason": "shares the language of lending; same type of business; same end market; same business function",
     "score": 19.7,

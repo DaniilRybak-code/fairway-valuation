@@ -1,0 +1,63 @@
+# USER-COUNT SWEEP, WAVE 1 of the 290 private rounds. 3-Sep-2026.
+# Daniil: "Did we check for each of them the number of users at announcement? I think you are being
+# lazy or stupid here, first announcement I found - Whoop - has the number of users."
+# He was right that we had checked eight. This is a sweep of the announcement URL of every round.
+# 217 distinct URLs cover 218 rounds; this file is the first 106 of them, read by four agents, each
+# instructed to report ONLY what appears on the page it fetched and to quote the wording verbatim.
+#
+# AND DANIIL'S CORRECTION OF THE SAME DAY, which shapes the schema: "they do not necessarily NEED
+# to be paying, but if they are, we need to make the respective note of it." So the count is kept
+# whatever it counts, and metric_kind records WHICH THING was counted. A range may only ever be
+# built inside one kind: paying subscribers with paying subscribers, merchants with merchants.
+# is_paying records whether the payer is the counted party, which is the note he asked for.
+company,round,count,metric_kind,is_paying,as_worded_on_the_page
+Alan,Jun-26,1100000,MEMBERS,YES,"1.1 million members who trust us in France Belgium Spain and Canada"
+Alan,Jun-26,37000,BUSINESS_CUSTOMERS,YES,"more than 37000 companies served"
+Alan,May-22,289000,MEMBERS,YES,"289k insured members"
+Alan,Sep-24,500000,MEMBERS,YES,"over 500000 people were covered by Alan's insurance products"
+Anthropic,Feb-26,500,BUSINESS_CUSTOMERS,YES,"customers spending over $1 million annualized exceeds 500"
+Atom Bank,Nov-23,224000,CUSTOMERS,UNKNOWN,"customer numbers doubling to 224000"
+Buffer,Oct-14,28000,PAYING_SUBSCRIBERS,YES,"We have 28k paying customers on the Awesome or Business plans"
+Buffer,Oct-14,1800000,REGISTERED_USERS,NO,"1.8m users have registered for Buffer"
+Buffer,Oct-14,165000,ACTIVE_USERS,NO,"165k users are active on a monthly basis"
+Canva,Aug-25,240000000,ACTIVE_USERS,NO,"more than 240 million monthly active users"
+Cato Networks,Sep-23,1800,BUSINESS_CUSTOMERS,YES,"More than 1800 enterprise customers"
+Clay,Jan-26,14000,BUSINESS_CUSTOMERS,YES,"Clay now serves 14000 customers"
+Clio,Jul-24,150000,USERS,UNKNOWN,"used by over 150000 legal professionals"
+Deel,Oct-25,35000,BUSINESS_CUSTOMERS,YES,"serves 35000+ customers"
+Deel,Oct-25,1500000,WORKERS_ON_PLATFORM,NO,"1.5+ million workers in 150+ countries"
+Deezer,Aug-18,14000000,ACTIVE_USERS,NO,"Deezer connects 14 million monthly active users"
+Devoted Health,Oct-21,40000,MEMBERS,YES,"served nearly 40000 members as of June 30"
+EGYM,Jul-23,16000,BUSINESS_CUSTOMERS,YES,"some 16000 gyms using EGYM's products"
+ElasticRun,Feb-22,1000000,MERCHANTS,UNKNOWN,"over a million kirana neighbourhood retail shops"
+Enpal,Jan-23,30000,CUSTOMERS,YES,"Enpal which has 30000 customers in Germany"
+FloQast,Apr-24,2600,BUSINESS_CUSTOMERS,YES,"adopted by more than 2600 teams globally"
+Gong,Jun-21,2000,BUSINESS_CUSTOMERS,YES,"Reached 2000+ customers"
+Gong,Nov-25,4500,BUSINESS_CUSTOMERS,YES,"currently serves more than 4500 customers"
+Hopper,Feb-22,70000000,APP_DOWNLOADS,NO,"70 million downloads to date"
+LEAD School,Jan-22,5000,BUSINESS_CUSTOMERS,YES,"LEAD estimates it will have over 5000 schools in April"
+Loadsmart,Feb-22,680000,CARRIER_TRUCKS,NO,"carrier network has grown to more than 680000 trucks"
+Mailchimp,Sep-21,800000,PAYING_SUBSCRIBERS,YES,"800000 paid customers"
+Mailchimp,Sep-21,13000000,REGISTERED_USERS,NO,"13 million total users globally"
+Nubank,Jun-21,40000000,CUSTOMERS,UNKNOWN,"democratize the access to financial services for 40MM people"
+Octopus Energy Group,Dec-21,3100000,CUSTOMERS,YES,"domestic energy arm already serves 3.1 million customers"
+Octopus Energy Group,Dec-23,7200000,HOUSEHOLDS,YES,"delivers to 7.2 million households globally"
+OpenAI,Mar-25,500000000,ACTIVE_USERS,NO,"the 500 million people who use ChatGPT every week"
+Oura,Dec-24,2500000,UNITS_SOLD,NO,"Oura has sold more than 2.5 million rings"
+Outreach,Jun-21,4800,BUSINESS_CUSTOMERS,YES,"More than 4800 companies depend on Outreach"
+Perplexity,Jan-24,10000000,ACTIVE_USERS,NO,"grown to 10 million monthly active users"
+Razorpay,Dec-21,8000000,MERCHANTS,YES,"have the trust of 8 million partner businesses"
+Replit,Sep-25,40000000,REGISTERED_USERS,NO,"a global community of more than 40 million users"
+Replit,Sep-25,500000,PROFESSIONAL_USERS,UNKNOWN,"over 500000 professional users"
+Ro,Mar-21,8000000,VISITS,NO,"more than eight million digital healthcare visits"
+Roblox,Jan-21,31000000,ACTIVE_USERS,NO,"31 million daily active users on its platform"
+Shiprocket,Aug-22,250000,MERCHANTS,YES,"nearly 2.5 lakh merchants"
+SumUp,Dec-23,4000000,MERCHANTS,YES,"payments and related services to some 4 million small businesses"
+Turing,Mar-25,4000000,SUPPLY_SIDE_USERS,NO,"more than four million software engineers data scientists and STEM experts"
+Vanta,Jul-24,8000,BUSINESS_CUSTOMERS,YES,"helped more than 8000 companies"
+Zepz,Aug-21,11000000,REGISTERED_USERS,UNKNOWN,"over 11 million users across 150 countries"
+Zilch,Nov-21,1000000,CUSTOMERS,NO,"customer base grew from 0 to 1 million in just 13 months; Zilch charges the customer nothing"
+Abnormal Security,Aug-24,2400,BUSINESS_CUSTOMERS,YES,"More than 2400 organizations already trust Abnormal"
+BetterUp,Oct-21,380,BUSINESS_CUSTOMERS,YES,"serves more than 380 enterprise businesses"
+Restore Hyper Wellness,Dec-21,115,LOCATIONS,NO,"counts 115 locations in 34 states"
+Sierra,May-26,0,BUSINESS_CUSTOMERS,YES,"more than 40% of the Fortune 50 as customers; percentage only no count"

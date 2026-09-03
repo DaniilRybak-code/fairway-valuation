@@ -1022,3 +1022,54 @@ Two prompts written for Daniil's other LLM: `docs/prompts/volume-priced-comparab
 `docs/prompts/paying-subscriber-comparables.md`.
 
 **State: 511 listed on 1-Sep market data, 290 private rounds, 183 median-eligible, peer universe 39 of 43.**
+
+## 2026-09-03 (night, 4): the 15 kills recorded, counts of every kind, EV per borrower
+
+### The 15 companies were killed deliberately and nothing recorded it
+
+Daniil: "These 15 companies I killed deliberately... most of them are micro cap, some with negative
+enterprise value, most with very thin consensus." The data agrees: **seven carry no NTM revenue at
+all**, which means no broker coverage; PAX Global shows an enterprise value of $14m against a $534m
+market cap; 1stdibs, OFX, Cookpad, Rent the Runway, Time Finance and EML are all under $200m.
+
+The failure was that a decision taken by LEAVING A NAME OUT OF A PULL left no trace in the code.
+Only two of the fifteen were in `LISTED_NOT_PRICING`; the other thirteen stayed live and could price
+a founder off superseded numbers. **Fixed generally rather than with a list: the newest `as_of` in
+the file now DEFINES the current universe**, and any row older than it is frozen with its reason,
+visible for audit and unable to price. The next refresh enforces the next set of kills by itself.
+An `as_of` column was added to the logistics and lending files, which had none, so 188 rows had no
+date at all. **13 rows now frozen.**
+
+### A count does not have to be of payers
+
+Daniil, correcting me mid-sweep: "they do not necessarily NEED to be paying, but if they are, we
+need to make the respective note of it." Right, and my bar on registered counts is gone. The KIND is
+recorded instead, a range may only be built inside one kind, and `vol_is_paying` carries the note.
+Eight count bases: PAYING_SUBSCRIBERS, BORROWERS, MEMBERS, CUSTOMERS, BUSINESS_CUSTOMERS, MERCHANTS,
+ACTIVE_USERS, REGISTERED_USERS. Averaging a merchant count with a subscriber count would be the same
+error as averaging gross revenue with net.
+
+### EV per borrower, built
+
+MNT-Halan's own announcement of 1 February 2023 states "over 2 million are borrowers" against the
+$1bn post-money, so **$500 of enterprise value per borrower**. Loaded, with an optional borrower
+question added to the lending fork. A borrower pays interest on a balance and a subscriber pays a
+fee for access, so the two never share a range. numida now gets book, earnings, ARR and borrower
+readings.
+
+### The user-count sweep, wave one
+
+Daniil: "How many private round records do we have currently? Did we check for each of them the
+number of users at announcement? I think you are being lazy or stupid here, first announcement I
+found, Whoop, has the number of users." He was right that we had checked eight of 290.
+
+**290 rounds, 241 with an announcement URL, 217 distinct URLs.** Target list written to
+`data/raw/2026-09-03_user-count-sweep-targets.csv`. Wave one read 106 of them with four agents, each
+instructed to report only what appears on the page it fetched and to quote the wording verbatim.
+**50 countable figures found across 33 companies**, in `data/raw/2026-09-03_user-counts-sweep-wave1.csv`:
+Mailchimp 800,000 paid customers, Buffer 28,000 paying customers against 1.8m registered, Alan 1.1m
+members, SumUp 4m merchants, Razorpay 8m merchants, Canva 240m monthly active, Octopus 7.2m
+households, and so on. A prompt for the remaining 111 URLs is at `docs/prompts/user-count-sweep.md`.
+
+**State: 511 listed on 1-Sep data with 13 frozen as stale, 290 private rounds, 184 median-eligible,
+peer universe 39 of 43.**

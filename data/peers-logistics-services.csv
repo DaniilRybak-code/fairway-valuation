@@ -29,127 +29,127 @@
 # ticker column and the GMV columns visible. ev_ntm_gmv_x is DERIVED here as aggregate
 # value over NTM volume, because Capital IQ's own column rounds to 0.0x for every
 # payments name and is blank for two of them. See data/raw for the transcription.
-company_name,exchange_ticker,country,market_cap_musd,net_debt_musd,nci_musd,invest_assoc_musd,eqv_ev_bridge_musd,enterprise_value_musd,revenue_fy0_musd,revenue_fy1_musd,revenue_fy2_musd,revenue_ntm_musd,gross_margin_pct,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_pct,sector_block,gmv_cy0_musd,gmv_ntm_musd,ev_ntm_gmv_x
-United Parcel Service,NYSE:UPS,United States,87341,24020,32,0,24052,111393,88175,91432,94937,93787,14.1,13192,1.2,8.4,4,logistics,,,
-FedEx Corporation,NYSE:FDX,United States,76889,29393,0,0,29393,106282,87416,91062,95144,93159,13.2,12254,1.1,8.7,4,logistics,,,
-"XPO, Inc.",NYSE:XPO,United States,21672,3747,0,0,3747,25419,8101,9040,9509,9354,74.0,6918,2.7,3.7,5,logistics,,,
-"GXO Logistics, Inc.",NYSE:GXO,United States,5295,5350,35,0,5385,10680,13147,13959,14707,14459,15.4,2228,0.7,4.8,5,logistics,,,
-"RXO, Inc.",NYSE:RXO,United States,3317,713,0,0,713,4030,5762,6840,7497,7279,14.6,1063,0.6,3.8,10,logistics,,,
-C.H. Robinson Worldwide,NASDAQGS:CHRW,United States,17280,1818,0,0,1818,19098,16290,18292,19572,19148,16.0,3071,1.0,6.2,7,logistics,,,
-Expeditors International,NYSE:EXPD,United States,24399,-464,2,0,-462,23937,11028,13023,13088,13067,32.3,4220,1.8,5.7,0,logistics,,,
-"Hub Group, Inc.",NASDAQGS:HUBG,United States,2320,379,53,0,432,2752,3983,3675,3815,3982,25.5,1014,0.7,2.7,4,logistics,,,
-"Radiant Logistics, Inc.",NYSEAM:RLGT,United States,375,44,1,0,45,420,900,904,949,957,17.2,165,0.4,2.5,5,logistics,,,
-Americold Realty Trust,NYSE:COLD,United States,4208,4581,37,0,4618,8826,2613,2536,2510,2532,32.3,819,3.5,10.8,-1,logistics,,,
-"Lineage, Inc.",NASDAQGS:LINE,United States,8833,8373,981,167,9187,18020,5401,5411,5537,5492,31.7,1741,3.3,10.4,2,logistics,,,
-Ocado Group plc,LSE:OCDO,United Kingdom,2573,1306,0,999,307,2880,1758,2304,2022,2099,38.4,807,1.4,3.6,-12,logistics,,,
-Clarkson PLC,LSE:CKN,United Kingdom,2113,-372,5,2,-369,1744,848,1054,1083,1065,93.9,1000,1.6,1.7,3,logistics,,,
-Tritax Big Box REIT plc,LSE:BBOX,United Kingdom,6112,3332,0,27,3306,9417,427,495,527,516,97.5,503,18.3,18.7,6,logistics,,,
-Deutsche Post AG,XTRA:DHL,Germany,71351,27055,603,1219,26439,97790,98037,102079,105185,103431,7.5,7726,0.9,12.7,3,logistics,,,
-HelloFresh SE,XTRA:HFG,Germany,447,576,-4,0,572,1019,7946,7326,7389,7315,61.7,4512,0.1,0.2,1,logistics,,,
-ID Logistics Group SA,ENXTPA:IDL,France,2521,0,0,0,0,2521,4368,5058,5561,5382,49.9,2686,0.5,0.9,10,logistics,,,
-STEF SA,ENXTPA:STF,France,1804,1800,0,87,1714,3518,5935,6295,6495,6377,0.0,0,0.6,,3,logistics,,,
-PostNL N.V.,ENXTAM:PNL,Netherlands,542,578,2,1,579,1121,3871,3954,4063,3999,45.2,1807,0.3,0.6,3,logistics,,,
-InPost S.A.,ENXTAM:INPST,Luxembourg,9006,2650,-2,25,2659,11666,4115,4681,5478,5157,40.6,2096,2.3,5.6,17,logistics,,,
-DSV A/S,CPSE:DSV,Denmark,49091,13061,57,0,13117,62208,39046,46706,47676,47002,26.8,12595,1.3,4.9,2,logistics,,,
-NTG Nordic Transport Group,CPSE:NTG,Denmark,951,359,13,0,372,1324,1787,1951,1982,1958,22.4,438,0.7,3.0,2,logistics,,,
-Pkp Cargo S.A.,WSE:PKP,Poland,126,595,0,6,589,716,1100,1210,1319,1269,30.6,388,0.6,1.8,9,logistics,,,
-Yamato Holdings Co.,TSE:9064,Japan,3892,-157,67,0,-90,3802,11721,12047,12351,12088,5.5,667,0.3,5.7,3,logistics,,,
-"SG Holdings Co., Ltd.",TSE:9143,Japan,5661,1835,14,0,1850,7510,10313,10975,11392,11122,11.6,1292,0.7,5.8,4,logistics,,,
-Nippon Express Holdings,TSE:9147,Japan,8775,3978,120,271,3827,12602,16631,17201,17699,17473,12.7,2226,0.7,5.7,3,logistics,,,
-Mitsubishi Logistics,TSE:9301,Japan,3262,463,30,0,494,3756,1758,1773,1834,1792,13.0,233,2.1,16.1,3,logistics,,,
-Japan Post Holdings,TSE:6178,Japan,43627,-188832,43319,0,0,43627,72649,73631,76360,74272,0.0,0,0.6,,4,logistics,,,
-Oisix Inc.,TSE:3182,Japan,373,109,10,0,118,491,1602,1568,1653,1601,29.9,479,0.3,1.0,5,logistics,,,
-"S.F. Holding Co., Ltd.",SZSE:002352,China,24019,1475,1690,2087,1078,25098,44436,49638,53622,51713,13.9,7172,0.5,3.5,8,logistics,,,
-ZTO Express (Cayman) Inc.,NYSE:ZTO,China,16006,-1364,13,0,-1351,14655,6978,8564,9278,9061,26.1,2366,1.6,6.2,8,logistics,,,
-J&T Global Express Limited,SEHK:1519,China,11926,1127,-296,2,829,12755,12030,15320,18011,17172,13.2,2269,0.7,5.6,18,logistics,,,
-KLN Logistics Group,SEHK:636,Hong Kong,1370,708,336,180,865,2235,7424,7423,7621,8021,8.0,642,0.3,3.5,3,logistics,,,
-Sinotrans Limited,SEHK:598,China,6386,-303,429,1102,-976,5409,14478,15339,16010,14265,5.7,816,0.4,6.6,4,logistics,,,
-Full Truck Alliance Co. Ltd.,NYSE:YMM,China,8830,-3464,205,166,-3425,5405,1768,1841,1996,1944,73.6,1430,2.8,3.8,8,logistics,,,
-Delhivery Limited,NSEI:DELHIVERY,India,3637,-55,0,0,-55,3582,1105,1318,1545,1425,32.8,468,2.5,7.6,17,logistics,,,
-Blue Dart Express Limited,NSEI:BLUEDART,India,1276,52,0,0,52,1328,659,731,791,760,40.3,306,1.7,4.3,8,logistics,,,
-Container Corporation of India,NSEI:CONCOR,India,4125,-267,12,0,-255,3870,984,1040,1182,1113,32.1,357,3.5,10.8,14,logistics,,,
-Snowman Logistics Limited,NSEI:SNOWMAN,India,65,32,0,0,32,96,38,,,,0,,,,,logistics,,,
-Lindsay Australia Limited,ASX:LAU,Australia,200,219,0,0,219,419,748,788,809,801,30.8,247,0.5,1.7,3,logistics,,,
-JSL S.A.,BOVESPA:JSLG3,Brazil,312,1201,0,0,1201,1512,1812,2039,2202,2154,21.6,465,0.7,3.3,8,logistics,,,
-Tegma Gestao Logistica S.A.,BOVESPA:TGMA3,Brazil,439,5,0,14,-8,430,405,460,546,519,19.3,100,0.8,4.3,19,logistics,,,
-"Grupo Traxion, S.A.B. de C.V.",BMV:TRAXION A,Mexico,345,31,-2,0,28,373,1821,2262,2433,2320,15.7,365,0.2,1.0,8,logistics,,,
-Reysas Tasimacilik ve Lojistik,IBSE:RYSAS,Turkey,1244,90,238,32,296,1540,115,,,,0,,,,,logistics,,,
-"AMN Healthcare Services, Inc.",NYSE:AMN,United States,1299,414,0,0,414,1713,2706,3352,2664,2892,27.3,790,0.6,2.2,-21,services_marketplace,,,
-"RB Global, Inc.",NYSE:RBA,United States,15325,4171,1,0,4171,19496,4532,5007,5266,5180,46.3,2396,3.8,8.1,5,services_marketplace,16200,18252,1.111
-"Copart, Inc.",NASDAQGS:CPRT,United States,30056,-4107,17,0,-4089,25967,4671,4642,4820,4901,45.5,2228,5.3,11.7,4,services_marketplace,,,
-"Liquidity Services, Inc.",NASDAQGS:LQDT,United States,1356,-217,0,0,-217,1138,459,,,,44,,,,,services_marketplace,,,
-"Xometry, Inc.",NASDAQGS:XMTR,United States,5225,-177,1,4,-180,5045,678,918,1116,1050,38.7,406,4.8,12.4,22,services_marketplace,,,
-GigaCloud Technology Inc,NASDAQGM:GCT,United States,1692,129,0,0,129,1821,1260,1547,1662,1624,24.9,404,1.1,4.5,7,services_marketplace,1577,1981,0.96
-Freightos Limited,NASDAQGM:CRGO,Spain,65,-19,0,0,-19,46,30,30,34,33,69.7,23,1.4,2.0,10,services_marketplace,1286,1416,0.036
-"ZipRecruiter, Inc.",NYSE:ZIP,United States,340,91,0,0,91,431,449,462,486,478,90.0,430,0.9,1.0,5,services_marketplace,,,
-"DHI Group, Inc.",NYSE:DHX,United States,185,37,0,1,36,221,126,125,128,127,82.7,105,1.7,2.1,2,services_marketplace,,,
-Kanzhun Limited,NASDAQGS:BZ,China,7847,-3052,0,0,-3052,4795,1180,1383,1555,1498,86.1,1290,3.2,3.7,12,services_marketplace,,,
-"LegalZoom.com, Inc.",NASDAQGS:LZ,United States,1052,-152,0,0,-152,899,750,800,836,824,70.0,577,1.1,1.6,5,services_marketplace,,,
-Robert Walters plc,LSE:RWA,United Kingdom,123,56,0,0,56,178,991,961,1009,986,35.1,346,0.2,0.5,5,services_marketplace,,,
-Auction Technology Group plc,LSE:ATG,United Kingdom,703,156,0,0,156,859,188,250,263,262,61.8,162,3.3,5.3,5,services_marketplace,12100,15164,0.059
-Hays plc,LSE:HAS,United Kingdom,1574,177,0,0,177,1750,8035,8294,8425,8364,12.2,1020,0.2,1.7,2,services_marketplace,,,
-hipages Group Holdings,ASX:HPG,Australia,90,-18,0,0,-18,72,63,72,81,72,61.1,44,1.0,1.6,12,services_marketplace,,,
-Airtasker Limited,ASX:ART,Australia,77,-8,-11,0,-19,58,41,49,54,46,89.1,41,1.3,1.4,10,services_marketplace,135,166,0.3193
-Freelancer Limited,ASX:FLN,Australia,48,-7,2,0,-5,43,36,35,39,38,84.2,32,1.2,1.3,10,services_marketplace,86,85,0.4941
-Elders Limited,ASX:ELD,Australia,915,618,2,38,582,1497,2204,2865,2948,2939,19.2,565,0.5,2.6,3,services_marketplace,,,
-"Visional, Inc.",TSE:4194,Japan,2353,-464,3,0,-462,1891,528,624,739,743,89.4,664,2.5,2.8,18,services_marketplace,,,
-"SMS Co., Ltd.",TSE:2175,Japan,1270,-60,0,0,-60,1211,407,450,490,463,88.1,408,2.6,3.0,9,services_marketplace,,,
-"Medley, Inc.",TSE:4480,Japan,494,42,0,0,42,536,238,292,347,329,62.0,204,1.6,2.6,19,services_marketplace,,,
-"MonotaRO Co., Ltd.",TSE:3064,Japan,5843,-125,2,0,-123,5720,2121,2401,2654,2552,29.7,759,2.2,7.5,11,services_marketplace,,,
-Infomart Corporation,TSE:2492,Japan,1059,-108,0,14,-122,938,121,134,153,142,75.4,107,6.6,8.7,14,services_marketplace,,,
-"Bengo4.com, Inc.",TSE:6027,Japan,750,6,1,0,7,757,102,129,152,139,78.4,109,5.5,7.0,18,services_marketplace,,,
-DIP Corporation,TSE:2379,Japan,593,-100,0,0,-100,493,362,334,341,336,88.1,296,1.5,1.7,2,services_marketplace,,,
-en Inc.,TSE:4849,Japan,395,-139,0,0,-139,256,377,345,372,358,82.4,295,0.7,0.9,8,services_marketplace,,,
-IndiaMART InterMESH Limited,NSEI:INDIAMART,India,1118,-356,0,29,-385,733,168,180,199,190,56.8,108,3.9,6.8,11,services_marketplace,,,
-AUTO1 Group SE,XTRA:AG1,Germany,5576,1290,0,0,1290,6865,9388,11587,13320,12657,12.4,1568,0.5,4.4,15,services_marketplace,,,
-Costco Wholesale Corporation,NASDAQGS:COST,United States,416852,-11764,0,0,-11764,405088,274998,301566,326073,326003,11.2,36523,1.2,11.1,8,consumer_subscription,,,
-BJ's Wholesale Club Holdings,NYSE:BJ,United States,11555,2743,0,0,2743,14299,21440,23762,25252,24696,18.0,4455,0.6,3.2,6,consumer_subscription,,,
-"PriceSmart, Inc.",NASDAQGS:PSMT,United States,5179,12,0,0,12,5190,5275,5822,6498,6515,13.3,864,0.8,6.0,12,consumer_subscription,,,
-"Planet Fitness, Inc.",NYSE:PLNT,United States,3796,2543,-2,0,2541,6337,1316,1423,1523,1491,83.0,1238,4.3,5.1,7,consumer_subscription,,,
-Life Time Group Holdings,NYSE:LTH,United States,9347,4047,0,0,4047,13395,2992,3370,3765,3635,42.8,1557,3.7,8.6,12,consumer_subscription,,,
-"Trupanion, Inc.",NASDAQGM:TRUP,United States,1223,-42,0,0,-42,1181,1439,1592,1727,1682,0.0,0,0.7,,9,consumer_subscription,,,
-"Frontdoor, Inc.",NASDAQGS:FTDR,United States,5478,557,0,0,557,6035,2082,2199,2334,2290,55.2,1263,2.6,4.8,6,consumer_subscription,,,
-ADT Inc.,NYSE:ADT,United States,5384,7749,0,0,7749,13133,5144,5222,5361,5315,77.6,4123,2.5,3.2,3,consumer_subscription,,,
-"Arlo Technologies, Inc.",NYSE:ARLO,United States,1353,-135,0,0,-135,1217,524,592,624,614,53.9,331,2.0,3.7,6,consumer_subscription,,,
-FuboTV Inc.,NYSE:FUBO,United States,318,172,1826,0,1998,2316,,6182,6497,6458,8.6,556,0.4,4.2,5,consumer_subscription,,,
-CuriosityStream Inc.,NASDAQCM:CURI,United States,166,-3,0,4,-7,159,71,79,89,86,58.1,50,1.9,3.2,12,consumer_subscription,,,
-"WW International, Inc.",NASDAQGM:WW,United States,163,325,0,0,325,487,700,632,644,640,70.9,454,0.8,1.1,2,consumer_subscription,,,
-"Rent the Runway, Inc.",NASDAQGM:RENT,United States,128,161,0,0,161,289,307,,,,39,,,,,consumer_subscription,,,
-"LifeMD, Inc.",NASDAQGM:LFMD,United States,149,-19,0,0,-19,130,229,208,245,233,88.0,205,0.6,0.6,18,consumer_subscription,,,
-"Rollins, Inc.",NYSE:ROL,United States,17413,1006,0,0,1006,18419,3775,4090,4445,4327,52.4,2269,4.3,8.1,9,consumer_subscription,,,
-"Peloton Interactive, Inc.",NASDAQGS:PTON,United States,2234,504,0,0,504,2737,2434,2372,2362,2381,53.4,1271,1.1,2.2,0,consumer_subscription,,,
-Nerdy Inc.,NYSE:NRDY,United States,83,-17,9,0,-8,75,176,171,177,175,66.3,116,0.4,0.6,3,consumer_subscription,,,
-Basic-Fit N.V.,ENXTAM:BFIT,Netherlands,2508,3343,-1,0,3342,5849,1663,1946,2170,2081,97.8,2035,2.8,2.9,11,consumer_subscription,,,
-The Gym Group plc,LSE:GYM,United Kingdom,488,547,0,0,547,1036,330,367,407,390,99.0,386,2.7,2.7,11,consumer_subscription,,,
-Naked Wines plc,LSE:WINE,United Kingdom,61,-38,0,0,-38,23,264,224,211,220,36.4,80,0.1,0.3,-6,consumer_subscription,,,
-Pets at Home Group Plc,LSE:PETS,United Kingdom,1260,476,0,0,477,1736,1944,2055,2095,2055,45.6,937,0.8,1.9,2,consumer_subscription,,,
-Deezer S.A.,ENXTPA:DEEZR,France,180,-87,0,0,-87,93,656,631,682,661,25.7,170,0.1,0.5,8,consumer_subscription,,,
-Viaplay Group AB (publ),OM:VPLAY B,Sweden,620,563,0,0,563,1184,2015,2282,2268,2244,13.7,307,0.5,3.9,-1,consumer_subscription,,,
-Verisure plc,OM:VSURE,United Kingdom,10742,5919,0,0,5919,16661,4397,4830,5249,5075,48.4,2456,3.3,6.8,9,consumer_subscription,,,
-U-NEXT HOLDINGS,TSE:9418,Japan,1940,120,95,0,215,2155,2610,2888,3210,3163,30.2,955,0.7,2.3,11,consumer_subscription,5145,6459,0.3415
-Cookpad Inc.,TSE:2193,Japan,61,-35,0,0,-35,25,,,,,0,,,,,consumer_subscription,,,
-CURVES HOLDINGS,TSE:7085,Japan,545,-35,0,0,-35,510,256,269,291,291,43.0,125,1.8,4.1,8,consumer_subscription,,,
-JustSystems Corporation,TSE:4686,Japan,1630,-739,0,0,-739,891,,,,,0,,,,,consumer_subscription,,,
-Viva Leisure Limited,ASX:VVA,Australia,108,266,0,6,260,368,167,187,204,190,10.0,19,1.9,19.1,9,consumer_subscription,,,
-Aussie Broadband Limited,ASX:ABB,Australia,966,98,0,0,98,1064,908,1166,1326,1159,32.7,379,0.9,2.8,14,consumer_subscription,,,
-Matrimony.com Limited,NSEI:MATRIMONY,India,113,-21,0,0,-21,92,49,53,58,56,66.1,37,1.6,2.5,9,consumer_subscription,,,
-Repay Holdings Corporation,NASDAQCM:RPAY,United States,291,689,-3,0,686,977,308,492,627,582,66.5,387,1.7,2.5,27,payments,,,
-Priority Technology Holdings,NASDAQCM:PRTH,United States,433,928,8,0,936,1368,970,1037,1113,1088,39.4,429,1.3,3.2,7,payments,72374,82459,0.017
-"Usio, Inc.",NASDAQGM:USIO,United States,80,-2,0,0,-2,78,86,98,108,105,22.9,24,0.7,3.2,10,payments,8400,10267,0.008
-"Pathward Financial, Inc.",NASDAQGS:CASH,United States,1669,74,0,0,0,1669,837,818,865,862,5.5,47,1.9,35.3,6,payments,,,
-Paymentus Holdings,NYSE:PAY,United States,4424,-367,0,0,-367,4057,1178,1450,1704,1620,24.7,400,2.5,10.1,18,payments,,,
-Waystar Holding Corp.,NASDAQGS:WAY,United States,4939,1288,0,0,1288,6228,1090,1286,1423,1378,69.1,952,4.5,6.5,11,payments,,,
-"Phreesia, Inc.",NYSE:PHR,United States,732,18,0,0,18,750,480,515,538,528,67.6,357,1.4,2.1,5,payments,4873,5372,0.143
-NCR Atleos Corporation,NYSE:NATL,United States,3420,2514,0,0,2514,5934,4351,4472,4654,4594,27.5,1265,1.3,4.7,4,payments,,,
-"Diebold Nixdorf, Incorporated",NYSE:DBD,United States,2263,842,7,0,849,3111,3815,3906,4025,3985,26.7,1064,0.8,2.9,3,payments,,,
-WEX Inc.,NYSE:WEX,United States,6431,-744,0,0,-744,5687,2650,2885,2930,2915,61.3,1786,2.0,3.2,2,payments,147786,196608,0.031
-Cass Information Systems,NASDAQGS:CASS,United States,707,-144,0,0,0,707,191,205,218,214,4.2,9,3.3,81.7,7,payments,36447,68570,0.008
-Nayax Ltd.,NASDAQ:NYAX,Israel,2010,54,0,0,54,2065,401,515,630,593,49.1,291,3.5,7.1,22,payments,6449,9480,0.189
-Worldline SA,ENXTPA:WLN,France,876,1321,893,38,2176,3052,5304,4380,4335,4320,66.0,2852,0.7,1.1,-1,payments,,,
-PayPoint plc,LSE:PAY,United Kingdom,526,36,2,0,38,564,250,266,279,286,42.7,122,2.0,4.6,5,payments,8630,9020,0.0614
-PAX Global Technology,SEHK:0327,Hong Kong,534,-523,5,2,-520,14,,,,,0,,,,,payments,,,
-"Digital Garage, Inc.",TSE:4819,Japan,650,-201,16,230,-416,235,271,274,305,287,62.4,179,0.8,1.3,11,payments,60878,78309,0.0032
-"BASE, Inc.",TSE:4477,Japan,263,-135,1,0,-133,129,131,174,195,187,51.9,97,0.7,1.3,12,payments,2880,4136,0.0225
-AvenuesAI Limited,NSEI:CCAVENUE,India,552,-81,25,0,-56,496,787,1197,1358,1237,8,103,0.4,4.8,13,payments,57062,99960,0.0050
-Zaggle Prepaid Ocean Services,NSEI:ZAGGLE,India,261,-52,0,0,-52,210,198,255,338,294,43.2,127,0.7,1.6,32,payments,,,
-Fawry for Banking Technology,CASE:FWRY,Egypt,1270,-129,6,1,-124,1147,174,234,309,285,70.9,202,4.0,5.7,32,payments,19168,31818,0.0366
+company_name,exchange_ticker,country,market_cap_musd,net_debt_musd,nci_musd,invest_assoc_musd,eqv_ev_bridge_musd,enterprise_value_musd,revenue_fy0_musd,revenue_fy1_musd,revenue_fy2_musd,revenue_ntm_musd,gross_margin_pct,gross_profit_musd,ev_ntm_revenue_x,ev_ntm_gp_x,revenue_growth_pct,sector_block,gmv_cy0_musd,gmv_ntm_musd,ev_ntm_gmv_x,as_of
+United Parcel Service,NYSE:UPS,United States,87341,24020,32,0,24052,111393,88175,91432,94937,93787,14.1,13192,1.2,8.4,4,logistics,,,,2026-09-01
+FedEx Corporation,NYSE:FDX,United States,76889,29393,0,0,29393,106282,87416,91062,95144,93159,13.2,12254,1.1,8.7,4,logistics,,,,2026-09-01
+"XPO, Inc.",NYSE:XPO,United States,21672,3747,0,0,3747,25419,8101,9040,9509,9354,74.0,6918,2.7,3.7,5,logistics,,,,2026-09-01
+"GXO Logistics, Inc.",NYSE:GXO,United States,5295,5350,35,0,5385,10680,13147,13959,14707,14459,15.4,2228,0.7,4.8,5,logistics,,,,2026-09-01
+"RXO, Inc.",NYSE:RXO,United States,3317,713,0,0,713,4030,5762,6840,7497,7279,14.6,1063,0.6,3.8,10,logistics,,,,2026-09-01
+C.H. Robinson Worldwide,NASDAQGS:CHRW,United States,17280,1818,0,0,1818,19098,16290,18292,19572,19148,16.0,3071,1.0,6.2,7,logistics,,,,2026-09-01
+Expeditors International,NYSE:EXPD,United States,24399,-464,2,0,-462,23937,11028,13023,13088,13067,32.3,4220,1.8,5.7,0,logistics,,,,2026-09-01
+"Hub Group, Inc.",NASDAQGS:HUBG,United States,2320,379,53,0,432,2752,3983,3675,3815,3982,25.5,1014,0.7,2.7,4,logistics,,,,2026-09-01
+"Radiant Logistics, Inc.",NYSEAM:RLGT,United States,375,44,1,0,45,420,900,904,949,957,17.2,165,0.4,2.5,5,logistics,,,,2026-09-01
+Americold Realty Trust,NYSE:COLD,United States,4208,4581,37,0,4618,8826,2613,2536,2510,2532,32.3,819,3.5,10.8,-1,logistics,,,,2026-09-01
+"Lineage, Inc.",NASDAQGS:LINE,United States,8833,8373,981,167,9187,18020,5401,5411,5537,5492,31.7,1741,3.3,10.4,2,logistics,,,,2026-09-01
+Ocado Group plc,LSE:OCDO,United Kingdom,2573,1306,0,999,307,2880,1758,2304,2022,2099,38.4,807,1.4,3.6,-12,logistics,,,,2026-09-01
+Clarkson PLC,LSE:CKN,United Kingdom,2113,-372,5,2,-369,1744,848,1054,1083,1065,93.9,1000,1.6,1.7,3,logistics,,,,2026-09-01
+Tritax Big Box REIT plc,LSE:BBOX,United Kingdom,6112,3332,0,27,3306,9417,427,495,527,516,97.5,503,18.3,18.7,6,logistics,,,,2026-09-01
+Deutsche Post AG,XTRA:DHL,Germany,71351,27055,603,1219,26439,97790,98037,102079,105185,103431,7.5,7726,0.9,12.7,3,logistics,,,,2026-09-01
+HelloFresh SE,XTRA:HFG,Germany,447,576,-4,0,572,1019,7946,7326,7389,7315,61.7,4512,0.1,0.2,1,logistics,,,,2026-09-01
+ID Logistics Group SA,ENXTPA:IDL,France,2521,0,0,0,0,2521,4368,5058,5561,5382,49.9,2686,0.5,0.9,10,logistics,,,,2026-09-01
+STEF SA,ENXTPA:STF,France,1804,1800,0,87,1714,3518,5935,6295,6495,6377,0.0,0,0.6,,3,logistics,,,,2026-09-01
+PostNL N.V.,ENXTAM:PNL,Netherlands,542,578,2,1,579,1121,3871,3954,4063,3999,45.2,1807,0.3,0.6,3,logistics,,,,2026-09-01
+InPost S.A.,ENXTAM:INPST,Luxembourg,9006,2650,-2,25,2659,11666,4115,4681,5478,5157,40.6,2096,2.3,5.6,17,logistics,,,,2026-09-01
+DSV A/S,CPSE:DSV,Denmark,49091,13061,57,0,13117,62208,39046,46706,47676,47002,26.8,12595,1.3,4.9,2,logistics,,,,2026-09-01
+NTG Nordic Transport Group,CPSE:NTG,Denmark,951,359,13,0,372,1324,1787,1951,1982,1958,22.4,438,0.7,3.0,2,logistics,,,,2026-09-01
+Pkp Cargo S.A.,WSE:PKP,Poland,126,595,0,6,589,716,1100,1210,1319,1269,30.6,388,0.6,1.8,9,logistics,,,,2026-09-01
+Yamato Holdings Co.,TSE:9064,Japan,3892,-157,67,0,-90,3802,11721,12047,12351,12088,5.5,667,0.3,5.7,3,logistics,,,,2026-09-01
+"SG Holdings Co., Ltd.",TSE:9143,Japan,5661,1835,14,0,1850,7510,10313,10975,11392,11122,11.6,1292,0.7,5.8,4,logistics,,,,2026-09-01
+Nippon Express Holdings,TSE:9147,Japan,8775,3978,120,271,3827,12602,16631,17201,17699,17473,12.7,2226,0.7,5.7,3,logistics,,,,2026-09-01
+Mitsubishi Logistics,TSE:9301,Japan,3262,463,30,0,494,3756,1758,1773,1834,1792,13.0,233,2.1,16.1,3,logistics,,,,2026-09-01
+Japan Post Holdings,TSE:6178,Japan,43627,-188832,43319,0,0,43627,72649,73631,76360,74272,0.0,0,0.6,,4,logistics,,,,2026-09-01
+Oisix Inc.,TSE:3182,Japan,373,109,10,0,118,491,1602,1568,1653,1601,29.9,479,0.3,1.0,5,logistics,,,,2026-09-01
+"S.F. Holding Co., Ltd.",SZSE:002352,China,24019,1475,1690,2087,1078,25098,44436,49638,53622,51713,13.9,7172,0.5,3.5,8,logistics,,,,2026-09-01
+ZTO Express (Cayman) Inc.,NYSE:ZTO,China,16006,-1364,13,0,-1351,14655,6978,8564,9278,9061,26.1,2366,1.6,6.2,8,logistics,,,,2026-09-01
+J&T Global Express Limited,SEHK:1519,China,11926,1127,-296,2,829,12755,12030,15320,18011,17172,13.2,2269,0.7,5.6,18,logistics,,,,2026-09-01
+KLN Logistics Group,SEHK:636,Hong Kong,1370,708,336,180,865,2235,7424,7423,7621,8021,8.0,642,0.3,3.5,3,logistics,,,,2026-09-01
+Sinotrans Limited,SEHK:598,China,6386,-303,429,1102,-976,5409,14478,15339,16010,14265,5.7,816,0.4,6.6,4,logistics,,,,2026-09-01
+Full Truck Alliance Co. Ltd.,NYSE:YMM,China,8830,-3464,205,166,-3425,5405,1768,1841,1996,1944,73.6,1430,2.8,3.8,8,logistics,,,,2026-09-01
+Delhivery Limited,NSEI:DELHIVERY,India,3637,-55,0,0,-55,3582,1105,1318,1545,1425,32.8,468,2.5,7.6,17,logistics,,,,2026-09-01
+Blue Dart Express Limited,NSEI:BLUEDART,India,1276,52,0,0,52,1328,659,731,791,760,40.3,306,1.7,4.3,8,logistics,,,,2026-09-01
+Container Corporation of India,NSEI:CONCOR,India,4125,-267,12,0,-255,3870,984,1040,1182,1113,32.1,357,3.5,10.8,14,logistics,,,,2026-09-01
+Snowman Logistics Limited,NSEI:SNOWMAN,India,65,32,0,0,32,96,38,,,,0,,,,,logistics,,,,2026-09-01
+Lindsay Australia Limited,ASX:LAU,Australia,200,219,0,0,219,419,748,788,809,801,30.8,247,0.5,1.7,3,logistics,,,,2026-09-01
+JSL S.A.,BOVESPA:JSLG3,Brazil,312,1201,0,0,1201,1512,1812,2039,2202,2154,21.6,465,0.7,3.3,8,logistics,,,,2026-09-01
+Tegma Gestao Logistica S.A.,BOVESPA:TGMA3,Brazil,439,5,0,14,-8,430,405,460,546,519,19.3,100,0.8,4.3,19,logistics,,,,2026-09-01
+"Grupo Traxion, S.A.B. de C.V.",BMV:TRAXION A,Mexico,345,31,-2,0,28,373,1821,2262,2433,2320,15.7,365,0.2,1.0,8,logistics,,,,2026-09-01
+Reysas Tasimacilik ve Lojistik,IBSE:RYSAS,Turkey,1244,90,238,32,296,1540,115,,,,0,,,,,logistics,,,,2026-09-01
+"AMN Healthcare Services, Inc.",NYSE:AMN,United States,1299,414,0,0,414,1713,2706,3352,2664,2892,27.3,790,0.6,2.2,-21,services_marketplace,,,,2026-09-01
+"RB Global, Inc.",NYSE:RBA,United States,15325,4171,1,0,4171,19496,4532,5007,5266,5180,46.3,2396,3.8,8.1,5,services_marketplace,16200,18252,1.111,2026-09-01
+"Copart, Inc.",NASDAQGS:CPRT,United States,30056,-4107,17,0,-4089,25967,4671,4642,4820,4901,45.5,2228,5.3,11.7,4,services_marketplace,,,,2026-09-01
+"Liquidity Services, Inc.",NASDAQGS:LQDT,United States,1356,-217,0,0,-217,1138,459,,,,44,,,,,services_marketplace,,,,
+"Xometry, Inc.",NASDAQGS:XMTR,United States,5225,-177,1,4,-180,5045,678,918,1116,1050,38.7,406,4.8,12.4,22,services_marketplace,,,,2026-09-01
+GigaCloud Technology Inc,NASDAQGM:GCT,United States,1692,129,0,0,129,1821,1260,1547,1662,1624,24.9,404,1.1,4.5,7,services_marketplace,1577,1981,0.96,2026-09-01
+Freightos Limited,NASDAQGM:CRGO,Spain,65,-19,0,0,-19,46,30,30,34,33,69.7,23,1.4,2.0,10,services_marketplace,1286,1416,0.036,2026-09-01
+"ZipRecruiter, Inc.",NYSE:ZIP,United States,340,91,0,0,91,431,449,462,486,478,90.0,430,0.9,1.0,5,services_marketplace,,,,2026-09-01
+"DHI Group, Inc.",NYSE:DHX,United States,185,37,0,1,36,221,126,125,128,127,82.7,105,1.7,2.1,2,services_marketplace,,,,2026-09-01
+Kanzhun Limited,NASDAQGS:BZ,China,7847,-3052,0,0,-3052,4795,1180,1383,1555,1498,86.1,1290,3.2,3.7,12,services_marketplace,,,,2026-09-01
+"LegalZoom.com, Inc.",NASDAQGS:LZ,United States,1052,-152,0,0,-152,899,750,800,836,824,70.0,577,1.1,1.6,5,services_marketplace,,,,2026-09-01
+Robert Walters plc,LSE:RWA,United Kingdom,123,56,0,0,56,178,991,961,1009,986,35.1,346,0.2,0.5,5,services_marketplace,,,,2026-09-01
+Auction Technology Group plc,LSE:ATG,United Kingdom,703,156,0,0,156,859,188,250,263,262,61.8,162,3.3,5.3,5,services_marketplace,12100,15164,0.059,2026-09-01
+Hays plc,LSE:HAS,United Kingdom,1574,177,0,0,177,1750,8035,8294,8425,8364,12.2,1020,0.2,1.7,2,services_marketplace,,,,2026-09-01
+hipages Group Holdings,ASX:HPG,Australia,90,-18,0,0,-18,72,63,72,81,72,61.1,44,1.0,1.6,12,services_marketplace,,,,2026-09-01
+Airtasker Limited,ASX:ART,Australia,77,-8,-11,0,-19,58,41,49,54,46,89.1,41,1.3,1.4,10,services_marketplace,135,166,0.3193,2026-09-01
+Freelancer Limited,ASX:FLN,Australia,48,-7,2,0,-5,43,36,35,39,38,84.2,32,1.2,1.3,10,services_marketplace,86,85,0.4941,2026-09-01
+Elders Limited,ASX:ELD,Australia,915,618,2,38,582,1497,2204,2865,2948,2939,19.2,565,0.5,2.6,3,services_marketplace,,,,2026-09-01
+"Visional, Inc.",TSE:4194,Japan,2353,-464,3,0,-462,1891,528,624,739,743,89.4,664,2.5,2.8,18,services_marketplace,,,,2026-09-01
+"SMS Co., Ltd.",TSE:2175,Japan,1270,-60,0,0,-60,1211,407,450,490,463,88.1,408,2.6,3.0,9,services_marketplace,,,,2026-09-01
+"Medley, Inc.",TSE:4480,Japan,494,42,0,0,42,536,238,292,347,329,62.0,204,1.6,2.6,19,services_marketplace,,,,2026-09-01
+"MonotaRO Co., Ltd.",TSE:3064,Japan,5843,-125,2,0,-123,5720,2121,2401,2654,2552,29.7,759,2.2,7.5,11,services_marketplace,,,,2026-09-01
+Infomart Corporation,TSE:2492,Japan,1059,-108,0,14,-122,938,121,134,153,142,75.4,107,6.6,8.7,14,services_marketplace,,,,2026-09-01
+"Bengo4.com, Inc.",TSE:6027,Japan,750,6,1,0,7,757,102,129,152,139,78.4,109,5.5,7.0,18,services_marketplace,,,,2026-09-01
+DIP Corporation,TSE:2379,Japan,593,-100,0,0,-100,493,362,334,341,336,88.1,296,1.5,1.7,2,services_marketplace,,,,2026-09-01
+en Inc.,TSE:4849,Japan,395,-139,0,0,-139,256,377,345,372,358,82.4,295,0.7,0.9,8,services_marketplace,,,,2026-09-01
+IndiaMART InterMESH Limited,NSEI:INDIAMART,India,1118,-356,0,29,-385,733,168,180,199,190,56.8,108,3.9,6.8,11,services_marketplace,,,,2026-09-01
+AUTO1 Group SE,XTRA:AG1,Germany,5576,1290,0,0,1290,6865,9388,11587,13320,12657,12.4,1568,0.5,4.4,15,services_marketplace,,,,2026-09-01
+Costco Wholesale Corporation,NASDAQGS:COST,United States,416852,-11764,0,0,-11764,405088,274998,301566,326073,326003,11.2,36523,1.2,11.1,8,consumer_subscription,,,,2026-09-01
+BJ's Wholesale Club Holdings,NYSE:BJ,United States,11555,2743,0,0,2743,14299,21440,23762,25252,24696,18.0,4455,0.6,3.2,6,consumer_subscription,,,,2026-09-01
+"PriceSmart, Inc.",NASDAQGS:PSMT,United States,5179,12,0,0,12,5190,5275,5822,6498,6515,13.3,864,0.8,6.0,12,consumer_subscription,,,,2026-09-01
+"Planet Fitness, Inc.",NYSE:PLNT,United States,3796,2543,-2,0,2541,6337,1316,1423,1523,1491,83.0,1238,4.3,5.1,7,consumer_subscription,,,,2026-09-01
+Life Time Group Holdings,NYSE:LTH,United States,9347,4047,0,0,4047,13395,2992,3370,3765,3635,42.8,1557,3.7,8.6,12,consumer_subscription,,,,2026-09-01
+"Trupanion, Inc.",NASDAQGM:TRUP,United States,1223,-42,0,0,-42,1181,1439,1592,1727,1682,0.0,0,0.7,,9,consumer_subscription,,,,2026-09-01
+"Frontdoor, Inc.",NASDAQGS:FTDR,United States,5478,557,0,0,557,6035,2082,2199,2334,2290,55.2,1263,2.6,4.8,6,consumer_subscription,,,,2026-09-01
+ADT Inc.,NYSE:ADT,United States,5384,7749,0,0,7749,13133,5144,5222,5361,5315,77.6,4123,2.5,3.2,3,consumer_subscription,,,,2026-09-01
+"Arlo Technologies, Inc.",NYSE:ARLO,United States,1353,-135,0,0,-135,1217,524,592,624,614,53.9,331,2.0,3.7,6,consumer_subscription,,,,2026-09-01
+FuboTV Inc.,NYSE:FUBO,United States,318,172,1826,0,1998,2316,,6182,6497,6458,8.6,556,0.4,4.2,5,consumer_subscription,,,,2026-09-01
+CuriosityStream Inc.,NASDAQCM:CURI,United States,166,-3,0,4,-7,159,71,79,89,86,58.1,50,1.9,3.2,12,consumer_subscription,,,,2026-09-01
+"WW International, Inc.",NASDAQGM:WW,United States,163,325,0,0,325,487,700,632,644,640,70.9,454,0.8,1.1,2,consumer_subscription,,,,2026-09-01
+"Rent the Runway, Inc.",NASDAQGM:RENT,United States,128,161,0,0,161,289,307,,,,39,,,,,consumer_subscription,,,,
+"LifeMD, Inc.",NASDAQGM:LFMD,United States,149,-19,0,0,-19,130,229,208,245,233,88.0,205,0.6,0.6,18,consumer_subscription,,,,2026-09-01
+"Rollins, Inc.",NYSE:ROL,United States,17413,1006,0,0,1006,18419,3775,4090,4445,4327,52.4,2269,4.3,8.1,9,consumer_subscription,,,,2026-09-01
+"Peloton Interactive, Inc.",NASDAQGS:PTON,United States,2234,504,0,0,504,2737,2434,2372,2362,2381,53.4,1271,1.1,2.2,0,consumer_subscription,,,,2026-09-01
+Nerdy Inc.,NYSE:NRDY,United States,83,-17,9,0,-8,75,176,171,177,175,66.3,116,0.4,0.6,3,consumer_subscription,,,,2026-09-01
+Basic-Fit N.V.,ENXTAM:BFIT,Netherlands,2508,3343,-1,0,3342,5849,1663,1946,2170,2081,97.8,2035,2.8,2.9,11,consumer_subscription,,,,2026-09-01
+The Gym Group plc,LSE:GYM,United Kingdom,488,547,0,0,547,1036,330,367,407,390,99.0,386,2.7,2.7,11,consumer_subscription,,,,2026-09-01
+Naked Wines plc,LSE:WINE,United Kingdom,61,-38,0,0,-38,23,264,224,211,220,36.4,80,0.1,0.3,-6,consumer_subscription,,,,2026-09-01
+Pets at Home Group Plc,LSE:PETS,United Kingdom,1260,476,0,0,477,1736,1944,2055,2095,2055,45.6,937,0.8,1.9,2,consumer_subscription,,,,2026-09-01
+Deezer S.A.,ENXTPA:DEEZR,France,180,-87,0,0,-87,93,656,631,682,661,25.7,170,0.1,0.5,8,consumer_subscription,,,,2026-09-01
+Viaplay Group AB (publ),OM:VPLAY B,Sweden,620,563,0,0,563,1184,2015,2282,2268,2244,13.7,307,0.5,3.9,-1,consumer_subscription,,,,2026-09-01
+Verisure plc,OM:VSURE,United Kingdom,10742,5919,0,0,5919,16661,4397,4830,5249,5075,48.4,2456,3.3,6.8,9,consumer_subscription,,,,2026-09-01
+U-NEXT HOLDINGS,TSE:9418,Japan,1940,120,95,0,215,2155,2610,2888,3210,3163,30.2,955,0.7,2.3,11,consumer_subscription,5145,6459,0.3415,2026-09-01
+Cookpad Inc.,TSE:2193,Japan,61,-35,0,0,-35,25,,,,,0,,,,,consumer_subscription,,,,
+CURVES HOLDINGS,TSE:7085,Japan,545,-35,0,0,-35,510,256,269,291,291,43.0,125,1.8,4.1,8,consumer_subscription,,,,2026-09-01
+JustSystems Corporation,TSE:4686,Japan,1630,-739,0,0,-739,891,,,,,0,,,,,consumer_subscription,,,,
+Viva Leisure Limited,ASX:VVA,Australia,108,266,0,6,260,368,167,187,204,190,10.0,19,1.9,19.1,9,consumer_subscription,,,,2026-09-01
+Aussie Broadband Limited,ASX:ABB,Australia,966,98,0,0,98,1064,908,1166,1326,1159,32.7,379,0.9,2.8,14,consumer_subscription,,,,2026-09-01
+Matrimony.com Limited,NSEI:MATRIMONY,India,113,-21,0,0,-21,92,49,53,58,56,66.1,37,1.6,2.5,9,consumer_subscription,,,,2026-09-01
+Repay Holdings Corporation,NASDAQCM:RPAY,United States,291,689,-3,0,686,977,308,492,627,582,66.5,387,1.7,2.5,27,payments,,,,2026-09-01
+Priority Technology Holdings,NASDAQCM:PRTH,United States,433,928,8,0,936,1368,970,1037,1113,1088,39.4,429,1.3,3.2,7,payments,72374,82459,0.017,2026-09-01
+"Usio, Inc.",NASDAQGM:USIO,United States,80,-2,0,0,-2,78,86,98,108,105,22.9,24,0.7,3.2,10,payments,8400,10267,0.008,2026-09-01
+"Pathward Financial, Inc.",NASDAQGS:CASH,United States,1669,74,0,0,0,1669,837,818,865,862,5.5,47,1.9,35.3,6,payments,,,,2026-09-01
+Paymentus Holdings,NYSE:PAY,United States,4424,-367,0,0,-367,4057,1178,1450,1704,1620,24.7,400,2.5,10.1,18,payments,,,,2026-09-01
+Waystar Holding Corp.,NASDAQGS:WAY,United States,4939,1288,0,0,1288,6228,1090,1286,1423,1378,69.1,952,4.5,6.5,11,payments,,,,2026-09-01
+"Phreesia, Inc.",NYSE:PHR,United States,732,18,0,0,18,750,480,515,538,528,67.6,357,1.4,2.1,5,payments,4873,5372,0.143,2026-09-01
+NCR Atleos Corporation,NYSE:NATL,United States,3420,2514,0,0,2514,5934,4351,4472,4654,4594,27.5,1265,1.3,4.7,4,payments,,,,2026-09-01
+"Diebold Nixdorf, Incorporated",NYSE:DBD,United States,2263,842,7,0,849,3111,3815,3906,4025,3985,26.7,1064,0.8,2.9,3,payments,,,,2026-09-01
+WEX Inc.,NYSE:WEX,United States,6431,-744,0,0,-744,5687,2650,2885,2930,2915,61.3,1786,2.0,3.2,2,payments,147786,196608,0.031,2026-09-01
+Cass Information Systems,NASDAQGS:CASS,United States,707,-144,0,0,0,707,191,205,218,214,4.2,9,3.3,81.7,7,payments,36447,68570,0.008,2026-09-01
+Nayax Ltd.,NASDAQ:NYAX,Israel,2010,54,0,0,54,2065,401,515,630,593,49.1,291,3.5,7.1,22,payments,6449,9480,0.189,2026-09-01
+Worldline SA,ENXTPA:WLN,France,876,1321,893,38,2176,3052,5304,4380,4335,4320,66.0,2852,0.7,1.1,-1,payments,,,,2026-09-01
+PayPoint plc,LSE:PAY,United Kingdom,526,36,2,0,38,564,250,266,279,286,42.7,122,2.0,4.6,5,payments,8630,9020,0.0614,2026-09-01
+PAX Global Technology,SEHK:0327,Hong Kong,534,-523,5,2,-520,14,,,,,0,,,,,payments,,,,
+"Digital Garage, Inc.",TSE:4819,Japan,650,-201,16,230,-416,235,271,274,305,287,62.4,179,0.8,1.3,11,payments,60878,78309,0.0032,2026-09-01
+"BASE, Inc.",TSE:4477,Japan,263,-135,1,0,-133,129,131,174,195,187,51.9,97,0.7,1.3,12,payments,2880,4136,0.0225,2026-09-01
+AvenuesAI Limited,NSEI:CCAVENUE,India,552,-81,25,0,-56,496,787,1197,1358,1237,8,103,0.4,4.8,13,payments,57062,99960,0.0050,
+Zaggle Prepaid Ocean Services,NSEI:ZAGGLE,India,261,-52,0,0,-52,210,198,255,338,294,43.2,127,0.7,1.6,32,payments,,,,2026-09-01
+Fawry for Banking Technology,CASE:FWRY,Egypt,1270,-129,6,1,-124,1147,174,234,309,285,70.9,202,4.0,5.7,32,payments,19168,31818,0.0366,2026-09-01

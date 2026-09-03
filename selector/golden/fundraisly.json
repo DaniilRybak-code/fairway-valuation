@@ -308,14 +308,6 @@
   "private_window_months": 46,
   "secondary": [
    {
-    "company": "AvenuesAI Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of ai; same end market; same kind of customer; same AI stance",
-    "score": 6.6,
-    "ticker": "NSEI:CCAVENUE"
-   },
-   {
     "company": "Qualco Group S.A.",
     "family": "software",
     "in_medians": true,
@@ -346,29 +338,37 @@
     "reason": "related type of business; same end market; same AI stance",
     "score": 5.5,
     "ticker": "XTRA:DB1"
+   },
+   {
+    "company": "Clarkson PLC",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market",
+    "score": 5.5,
+    "ticker": "LSE:CKN"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 8.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.6,
-   "mid": 4.0,
-   "n": 5,
+   "mid": 5.3,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -376,14 +376,8 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "AvenuesAI Limited",
-     "mult": 0.4,
-     "reason": "shares the language of ai; same end market; same kind of customer; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
+   "points": [],
+   "positioning": [
     {
      "company": "Qualco Group S.A.",
      "mult": 1.6,
@@ -397,56 +391,21 @@
      "reason": "same end market; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
-    },
-    {
-     "company": "London Stock Exchange Group plc",
-     "mult": 5.3,
-     "reason": "related type of business; same end market; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Deutsche Boerse AG",
-     "mult": 8.3,
-     "reason": "related type of business; same end market; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
-   "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "ai"
-   ],
-   "show_retention": true,
-   "spread": 20.8,
+   "shared_words": [],
+   "show_retention": false,
+   "spread": 5.2,
    "table": [
     {
-     "company": "AvenuesAI Limited",
+     "company": "Clarkson PLC",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 13.0,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NSEI:CCAVENUE"
-    },
-    {
-     "company": "Qualco Group S.A.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_pct": 3.0,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "ATSE:QLCO"
-    },
-    {
-     "company": "Alkami Technology, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
-     "multiple": 4.0,
-     "recurring_pct": null,
-     "retention_pct": 115.0,
-     "ticker": "NASDAQGS:ALKT"
+     "ticker": "LSE:CKN"
     },
     {
      "company": "London Stock Exchange Group plc",
@@ -467,7 +426,7 @@
      "ticker": "XTRA:DB1"
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   }

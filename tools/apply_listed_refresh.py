@@ -154,6 +154,11 @@ def main():
     used, updated, unmatched_peer, changed_cells = set(), [], [], 0
     for path in PEERS:
         head, cols, rows = read_peers(path)
+        # EVERY FILE NEEDS AN as_of, or a row cannot be told apart from a refreshed one. The
+        # logistics and lending pulls had no such column, so 188 rows carried no date at all and
+        # nothing could tell that they had been left behind by a refresh. Added rather than assumed.
+        if 'as_of' not in cols:
+            cols = list(cols) + ['as_of']
         targets = {c for c in cols}
         n_file = 0
         for d in rows:

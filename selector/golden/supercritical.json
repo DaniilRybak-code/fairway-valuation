@@ -288,14 +288,6 @@
   "private_window_months": 54,
   "secondary": [
    {
-    "company": "1stdibs.Com, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 14.1,
-    "ticker": "NASDAQGM:DIBS"
-   },
-   {
     "company": "Trip.com Group Limited",
     "family": "consumer",
     "in_medians": true,
@@ -326,13 +318,21 @@
     "reason": "shares the language of marketplace; related type of business; same business function; same revenue model",
     "score": 11.6,
     "ticker": "NASDAQGS:ABNB"
+   },
+   {
+    "company": "Booking Holdings Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+    "score": 11.1,
+    "ticker": "NASDAQGS:BKNG"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -345,10 +345,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.1,
-   "mid": 3.0,
-   "n": 4,
+   "mid": 4.8,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -361,6 +361,13 @@
     {
      "company": "Trip.com Group Limited",
      "mult": 1.9,
+     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Booking Holdings Inc.",
+     "mult": 4.8,
      "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
@@ -383,15 +390,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:GCT"
-    },
-    {
-     "company": "1stdibs.Com, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 1.0,
-     "multiple": 1.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:DIBS"
     },
     {
      "company": "Xometry, Inc.",
