@@ -141,6 +141,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Tabby",
+    "date": "Feb-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of credit; same type of business; same business function; sold the same way",
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "FY ended 2023-03-31",
     "bound": "",
     "company": "Atom Bank",
@@ -149,17 +160,6 @@
     "mult": 4.76,
     "reason": "shares the language of lending; related type of business; same business function; same revenue model",
     "score": 10.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "inception 2015 to 2022-04-11",
-    "bound": "",
-    "company": "Stenn",
-    "date": "Apr-22",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of financing; same type of business; same business function; same kind of customer",
-    "score": 13.1,
     "type": "PRIMARY"
    }
   ],

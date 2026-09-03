@@ -655,3 +655,22 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 - **Engine now loads 276 private rounds, 172 of them median-eligible**, against 178 and far fewer this
   morning. Insurance Technology, Gaming & Virtual Economy, Online Learning and Streaming now have a
   private range at all, where this morning they had none.
+
+## 2026-09-03: revised lending screen loaded and tagged
+
+- `data/raw/2026-09-03_lending-screen-v2.csv` — 22 rows. REVISED pull. Supersedes
+  `2026-09-02_lending-screen.csv`, which stays on disk as the record of what arrived first. Every
+  cumulative-since-inception denominator is gone. Reconciles exactly to the sheet's own header:
+  17 bounded multiples, 2 NM, 3 NOT FOUND, zero arithmetic mismatches.
+- `data/private-rounds.csv` — 224 to **237 rows**. 13 new rounds loaded, 3 previously unpriced rounds
+  priced on periodic originations (Wayflyer 3.20x, Upgrade Nov-21 0.75x, Clearco 2.00x), 6 skipped as
+  already in the engine.
+- **Atom Bank Feb-22 loaded as a BOOK multiple at 3.17x on consolidated total equity from the filed
+  annual report. That is the second priced book comparable we hold, after Zopa at 5.6x.** The lender
+  fork has been pricing off one comparable since it was built.
+- `data/private-companies-tags.csv` — 167 to **176 rows**. Nine new companies tagged. Two company keys
+  were caught colliding with companies already in the engine (Atom Bank, Monzo) and reuse the existing
+  key instead of creating a duplicate.
+- **289 private rounds, 0 untagged, 179 median-eligible, no company under two keys.**
+- `selector/golden/*.json` — rebaselined. 4 of 43 moved: mondu gained Billie, the direct B2B
+  buy-now-pay-later comparable; numida gained MNT-Halan; perenna gained Starling Bank.

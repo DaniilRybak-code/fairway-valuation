@@ -117,6 +117,17 @@
   "listed_proximity": "DIRECT",
   "private": [
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Billie",
+    "date": "Oct-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do B2B Buy Now Pay Later, Checkout Financing; same type of business; same business function; same kind of customer",
+    "score": 25.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "FY ended 2024-12-31",
     "bound": "",
     "company": "Kriya",
@@ -125,6 +136,17 @@
     "mult": 0.6,
     "reason": "shares the language of b2b, credit, invoice; same type of business; same business function; same kind of customer",
     "score": 22.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Tabby",
+    "date": "Feb-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Buy Now Pay Later; same type of business; same business function; same revenue model",
+    "score": 14.5,
     "type": "PRIMARY"
    },
    {
@@ -150,6 +172,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Happy Money",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": 11.0,
+    "reason": "shares the language of credit; same type of business; same business function; same revenue model",
+    "score": 14.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "Disclosed at pricing",
     "bound": "<=",
     "company": "Fundbox",
@@ -163,7 +196,7 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {},
-  "private_window_months": 57,
+  "private_window_months": 58,
   "secondary": [
    {
     "company": "Velocity Financial, Inc.",

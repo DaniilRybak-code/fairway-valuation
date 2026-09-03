@@ -106,6 +106,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Zilch",
+    "date": "Nov-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do UK; same type of business; same business function; same kind of customer",
+    "score": 13.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Zopa",
@@ -125,6 +136,17 @@
     "mult": 8.79,
     "reason": "shares the language of mortgage; same type of business; same kind of customer; same AI stance",
     "score": 9.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Starling Bank",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 7.59,
+    "reason": "shares the language of bank, uk; related type of business; same business function; same kind of customer",
+    "score": 14.9,
     "type": "PRIMARY"
    }
   ],
@@ -170,7 +192,7 @@
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 63,
+  "private_window_months": 65,
   "secondary": [
    {
     "company": "Pepper Money Limited",
