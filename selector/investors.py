@@ -178,3 +178,80 @@ def match_evidence(picked):
             seen.setdefault(name, []).append((r['company_name'], r.get('date')))
     return [dict(investor=k, backed=[{'company': c, 'date': d} for c, d in v[:3]], n=len(v))
             for k, v in seen.items()]
+
+
+# ---------------------------------------------------------------------------
+# THE REVEAL PAYLOAD, and the compliance rails that travel with it.
+#
+# Fable, 2-Sep: "public information only, no scraping behind logins, no contact details, no claim of
+# introduction. The footer's 'a map, not an introduction, no affiliation or endorsement is implied'
+# carries over to every rendering of both layers. Styled text wordmarks, no logos."
+#
+# Those rails are enforced HERE rather than trusted to the renderer, because the renderer is the
+# last place a rule gets remembered. Nothing leaves this function carrying a person's name, an
+# email, a phone number or a logo URL, and every card carries the label saying how far we reached
+# for it.
+FOOTER = ('A map, not an introduction. No affiliation or endorsement is implied, and no contact '
+          'details are held or shown. Every name here is drawn from public announcements.')
+
+# A field that may reach a founder. Anything not on this list is not passed through, so a column
+# added to investors.csv later cannot leak into the page by accident.
+CARD_FIELDS = ('investor', 'house_type', 'thesis', 'why', 'cheque_low_m', 'cheque_high_m',
+               'geographies', 'stage_bands', 'recent_deal', 'recent_deal_date', 'recent_deal_url')
+BANNED = ('email', 'phone', 'contact', 'partner_name', 'linkedin', 'twitter', 'logo')
+
+
+def _clean(card):
+    out = {k: card.get(k) for k in CARD_FIELDS}
+    for k, v in list(out.items()):
+        if isinstance(v, str) and any(b in v.lower() for b in ('@', 'linkedin.com', 'mailto:')):
+            out[k] = None
+    return out
+
+
+def cheque_line(card):
+    """How the cheque reads on the card. vcconf's own reasoning, and it is right: "a $25K angel and
+    a $15M fund are different conversations, and knowing which one you are looking at saves you the
+    email." An unknown range says so rather than being hidden."""
+    lo, hi = card.get('cheque_low_m'), card.get('cheque_high_m')
+    if lo is None:
+        return 'First cheque not published'
+    if hi is None or hi == lo:
+        return 'First cheque from $%sm' % ('%g' % lo)
+    return 'First cheque $%sm to $%sm' % ('%g' % lo, '%g' % hi)
+
+
+def reveal_payload(prof, picked, raise_musd=None, want=8):
+    """Everything the reveal needs for both layers, and nothing it does not."""
+    callable_rows = match_callable(prof, raise_musd=raise_musd, want=want)
+    evidence_rows = match_evidence(picked)
+    cards = []
+    for c in callable_rows:
+        d = _clean(c)
+        d['cheque_line'] = cheque_line(c)
+        d['reach'] = c.get('why')
+        cards.append(d)
+    return {
+        'callable': {
+            'heading': 'Writing first cheques in your sector right now',
+            'cards': cards,
+            'count': len(cards),
+            # NEVER PADDED, and the page should say so rather than look thin by accident.
+            'note': ('%d houses match. We do not pad the list: a shorter list of houses that write '
+                     'your cheque is worth more than a longer one that does not.' % len(cards))
+                    if len(cards) < want else None,
+        },
+        'evidence': {
+            'heading': 'The houses behind your reference rounds',
+            # THE HONEST LABEL, and it is the difference between our failure mode and theirs.
+            'note': ('A map of who pays up for businesses like yours, drawn from the rounds on your '
+                     'own field. Mostly growth stage and mostly US: this is not a call list for an '
+                     'early round.'),
+            'chips': [{'investor': e['investor'],
+                       'backed': '%s, %s' % (e['backed'][0]['company'], e['backed'][0]['date'])
+                       if e['backed'] else None,
+                       'n': e['n']} for e in evidence_rows],
+            'count': len(evidence_rows),
+        },
+        'footer': FOOTER,
+    }

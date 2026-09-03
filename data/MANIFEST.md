@@ -1464,3 +1464,48 @@ metric kind gets its own bar. Not built. It needs his ruling alongside the `in_m
 
 **State: 511 listed on 1-Sep data with 13 frozen as stale, 290 private rounds, 205 median-eligible,
 131 carrying a user count, peer universe 39 of 43, all eight checks green, golden 0 of 43.**
+
+## 2026-09-03 (night, 9): Day 2 finished, and the enrichment file has NOT arrived
+
+### The enrichment file is not in the repo
+
+Daniil asked me to read the completed investor enrichment file. **It is not there.** `data/raw`
+holds only the TARGETS file I wrote at 18:13, and `Claude outputs/` holds the two files I sent him.
+No completed enrichment has landed anywhere under the connected folder. Nothing was guessed at in
+its place: the 78 incomplete callable rows are still incomplete and 62 of 140 still render.
+
+**Wave 3 of the user-count sweep HAS landed** and is loaded: 398 findings across 224 re-read rounds,
+plus a readlog carrying a verdict for all 224. That wave also caught a real failure of mine, and it
+is worth recording: waves 1 and 2 recorded only the URLs that produced a finding and never which
+URLs were READ, so my claim that 159 of 217 had been read could not be reproduced from any file in
+the repo and the 58 said to remain could not be named. Under D12 a set that cannot name what fell
+out of it is not a set you may act on. **134 rounds now carry a count; median-eligible 205.**
+
+### Day 2 finished: the renderer and the rails
+
+`selector/investors.py` gains `reveal_payload()`, which is what the reveal consumes.
+
+- **A whitelist, not a filter.** Only the eleven fields on `CARD_FIELDS` are passed through, so a
+  column added to `investors.csv` later cannot leak onto a founder's page by accident.
+- **The cheque line reads as a sentence**, and an unpublished range says so rather than being
+  hidden. vcconf's own reasoning and it is right: a $25k angel and a $15m fund are different
+  conversations.
+- **The list says when it is short.** "We do not pad the list: a shorter list of houses that write
+  your cheque is worth more than a longer one that does not."
+- **The evidence layer carries its honest label on every render**: a map of who pays up for
+  businesses like yours, mostly growth stage and mostly US, not a call list for an early round.
+
+`tools/check_investor_compliance.py` : NEW, and it enforces the rails rather than trusting the
+renderer to remember them. Walks all 43 fixtures, 265 callable cards and 560 evidence chips, and
+asserts no contact detail reaches a card, no card renders without a dated deal or a cheque range or
+a geography, every card says how far we reached for it, and the two layers keep their labels.
+
+**Its first run failed on five fixtures and the fault was the check's own**: the host pattern
+`x.com/` matched inside `https://www.liablix.com/news/...`. Anchored to match a host rather than a
+substring. A check that cries wolf on its first run is a check nobody runs twice.
+
+`tools/check_all.sh` now runs ELEVEN checks.
+
+**What Day 2 still needs is the data, not the code**: 62 of 140 callable rows render, and ten of the
+43 fixtures get fewer than three callable investors. That is the enrichment pull, and it is the only
+thing standing between the current lists and the design.

@@ -20,6 +20,7 @@
 #   8  peer universe can we still narrow the world for 100 companies
 #   9  period        does a founder's own revenue convert onto each comparable's basis
 #  10  quiz walker   does every fork ask only what peers can answer, and does every answer land
+#  11  investor rails no contact details, no incomplete cards, both layers labelled
 set -e
 cd "$(dirname "$0")/.."
 fail=0
