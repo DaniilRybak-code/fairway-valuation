@@ -1,0 +1,233 @@
+# READ LOG for the wave 3 user-count sweep. 3-Sep-2026. REFERENCE, not a dataset to ingest.
+# This file exists because waves 1 and 2 did not have one. They recorded only the URLs that produced
+# a finding, so a URL read that found nothing left no trace, and the sweep could not say what it had
+# checked. D12: silence is never an outcome. One row per round, for all 224 rounds wave 3 covered.
+# verdict FOUND means at least one countable figure, and the figures are in the wave 3 file.
+# verdict NONE means the page was read and prints no countable figure about the company.
+# verdict UNREACHABLE means no page about that round could be read, after the recovery pass.
+# url_read is the page actually read, which for a recovered round is not the URL we had stored.
+company,round,verdict,url_read
+1Password,Jan-22,FOUND,https://www.prnewswire.com/news-releases/1password-closes-620m-at-6-8b-valuation-to-bring-human-centric-security-to-all-301463885.html
+6sense,Jan-22,NONE,https://www.prnewswire.com/news-releases/6sense-announces-200-million-series-e-round-increasing-valuation-to-5-2-billion-301464832.html
+AG1,Jan-22,NONE,https://techcrunch.com/2022/01/25/athletic-greens-valued-at-1-2b-nutrition-drink/
+AG1 (Athletic Greens),Jan-22,NONE,https://techcrunch.com/2022/01/25/athletic-greens-valued-at-1-2b-nutrition-drink/
+Airwallex,Dec-25,FOUND,https://www.airwallex.com/global/newsroom/awx-raises-usd330m-series-g-at-usd8b-valuation-establishes-sf-as-dual-global-hq
+Airwallex,May-25,FOUND,https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking
+Airwallex,Nov-21,FOUND,https://www.airwallex.com/global/newsroom/airwallex-raises-additional-usd100-million-in-series-e1-led-by-lone-pine
+Airwallex,Oct-22,NONE,https://www.airwallex.com/newsroom/airwallex-sustains-ususd5-5-bn-valuation-with-ususd100-m-series-e-extension
+Airwallex,Sep-21,FOUND,https://www.airwallex.com/newsroom/airwallex-raised-usd200-million-series-e-funding-round-led-by-lone-pine
+Aledade,Jun-23,FOUND,https://aledade.com/newsroom/aledade-news/aledade-secures-series-f/
+AlphaSense,Jun-24,FOUND,https://www.prnewswire.com/news-releases/alphasense-to-join-forces-with-tegus-increases-latest-valuation-to-4b-302169502.html
+AlphaSense,Sep-23,FOUND,https://techcrunch.com/2023/09/28/alphasense-an-ai-based-market-intel-firm-snaps-up-150m-at-a-2-5b-valuation/
+Ankorstore,Jan-22,FOUND,https://techcrunch.com/2022/01/09/ankorstore-reaches-2-billion-valuation-two-years-after-launching-its-wholesale-marketplace/
+Anthropic,Jan-24,NONE,https://www.forbes.com/sites/alexkonrad/2024/01/11/anthropic-750million-funding-round-menlo-ventures/
+Anthropic,Mar-25,NONE,https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation
+Anthropic,May-23,NONE,https://www.anthropic.com/news/anthropic-series-c
+Anthropic,May-26,NONE,https://www.anthropic.com/news/series-h
+Anysphere / Cursor,Jun-25,NONE,https://www.cursor.com/blog/series-c
+Apollo.io,Aug-23,FOUND,https://www.apollo.io/magazine/apolloio-secures-100-million-series-d-at-16b-valuation-to-drive-world-class-gtm
+Atom Bank,Feb-22,NONE,https://www.uktech.news/fintech/atom-bank-ipo-funding-20220216
+Away,May-19,FOUND,https://prnewswire.com/news-releases/away-is-valued-at-1-4-billion-after-a-series-d-investment-of-100-million-300850285.html
+Back Market,Jan-22,FOUND,https://backmarket.reportablenews.com/pr/back-market-the-renewed-electronics-marketplace-raises-510-million-and-is-now-valued-at-5-7-billion
+Better.com,May-21,FOUND,https://www.businesswire.com/news/home/20210511005602/en/
+Blockchain.com,Mar-22,FOUND,https://www.theblock.co/linked/140070/blockchain-com-raises-series-d-at-a-14-billion-valuation
+Blockworks,May-23,NONE,https://blockworks.com/news/blockworks-raises-12m/
+Brex,Jan-22,FOUND,https://techcrunch.com/2022/01/11/brex-confirms-12-3b-valuation-hires-meta-exec-to-serve-as-its-chief-product-officer/
+Brex,Oct-21,NONE,https://techcrunch.com/2021/10/21/brex-raises-300m-at-a-12-3b-valuation/
+Bright Data (Luminati),Aug-17,FOUND,https://www.emkcapital.com/news/emk-acquires-luminati-the-worlds-largest-ip-proxy-network-which-brings-transparency-to-the-internet
+Calm,Dec-20,FOUND,https://www.globenewswire.com/news-release/2020/12/08/2141185/0/en/Calm-Hits-2-Billion-Valuation-Expands-into-Wellness-at-Work.html
+Calm,Jul-19,FOUND,https://techcrunch.com/2019/07/01/calm-sleep-stories/
+Canva,Apr-24,FOUND,https://www.forbes.com/sites/alexkonrad/2024/05/23/canva-new-tools-cozy-up-corporations/
+Carta,Aug-21,NONE,https://henrysward.medium.com/carta-series-g-3a3702f69b11
+Celonis,Aug-22,FOUND,https://www.prnewswire.com/news-releases/celonis-secures-1-billion-to-help-customers-fight-economic-and-supply-chain-challenges-with-process-improvements-301610454.html
+Chainalysis,Jun-21,NONE,https://www.chainalysis.com/blog/series-e-announcement/
+Checkout.com,Dec-23,UNREACHABLE,
+Chime,Apr-24,FOUND,https://www.forbes.com/sites/jeffkauflin/2024/05/03/exclusive-the-inside-story-of-chime-americas-biggest-digital-bank/
+Chime,Aug-21,NONE,https://www.cnbc.com/2021/08/13/chime-earns-big-valuation-jump-in-latest-financing-nears-ipo.html
+Cityblock Health,Sep-21,NONE,https://www.statnews.com/2021/09/03/cityblock-health-series-d-valuation/
+Clearco,Apr-21,FOUND,https://www.prnewswire.com/news-releases/clearbanc-rebrands-to-clearco-announces-us100m-series-c-funding-301271758.html
+Clearco,Jul-21,FOUND,https://techcrunch.com/2021/07/08/clearco-gets-the-softbank-stamp-of-approval-in-new-215m-round
+Coalition,Jul-22,FOUND,https://www.coalitioninc.com/announcements/coalition-closes-250-million-in-series-f-funding
+Cohere,Jun-23,FOUND,https://techcrunch.com/2023/06/08/ai-startup-cohere-now-valued-at-over-2-1b-raises-270m/
+CommerceIQ,Mar-22,FOUND,https://techcrunch.com/2022/03/21/commerceiq-e-commerce-infrastructure/
+Contentsquare,Jul-22,FOUND,https://contentsquare.com/press/600m-growth-investment/
+Creditas,Dec-20,FOUND,https://www.creditas.com/ir/non-regulatory/creditas-announces-ususd255-million-series-e/
+Creditas,Dec-25,NONE,https://www.creditas.com/ir/regulatory/creditas-concludes-acquisition-of-bank-andbank-brasil-and-finalizes-initial/
+Creditas,Jan-22,FOUND,https://ir.creditas.com/ir/press-releases/creditas-announces-usd260-million-series-f-fundraising-round/
+Creditas,Jul-22,FOUND,https://www.creditas.com/ir/non-regulatory/andbank-and-creditas-sign-strategic-partnership-in-brazil/
+Cyera,Apr-24,NONE,https://www.cyera.com/press-releases/data-security-leader-cyera-raises-300-million-at-1-4-billion-valuation
+Databricks,Sep-23,FOUND,https://www.axios.com/2023/09/14/databricks-43-billion-ai-nvidia
+DeHaat,Oct-22,NONE,https://inc42.com/buzz/agritech-startup-dehaat-raises-46-mn-in-funding-round-led-by-sofina-ventures/
+Decagon,Jan-26,FOUND,https://decagon.ai/blog/series-d-announcement
+Deel,May-22,FOUND,https://techcrunch.com/2022/05/11/fueled-by-the-remote-work-revolution-deel-more-than-doubles-valuation-to-12b-with-new-raise/
+Delhivery,May-21,FOUND,https://entrackr.com/2021/05/exclusive-ipo-bound-delhivery-raises-277-mn-led-by-fidelity/
+Discord,Sep-21,NONE,https://www.investing.com/news/stock-market-news/chat-app-discord-raises-500-million-in-new-funding-2617713
+Docker,Mar-22,FOUND,https://www.globenewswire.com/news-release/2022/03/31/2414082/0/en/Docker-Raises-105-Million-to-Accelerate-Investments-in-Developer-Productivity-Trusted-Content-and-Ecosystem-Partnerships.html
+Doctolib,Mar-22,FOUND,https://techcrunch.com/2022/03/15/healthcare-tech-platform-doctolib-reaches-6-4-billion-valuation/
+Dream Sports,Nov-21,FOUND,https://inc42.com/buzz/dream-sports-raises-840-mn-at-a-valuation-of-8-bn/
+ElevenLabs,Jan-25,FOUND,https://elevenlabs.io/blog/series-c
+Epic Games,Apr-21,NONE,https://www.epicgames.com/site/news/announcing-a-1-billion-funding-round-to-support-epics-long-term-vision-for-the-metaverse
+Epic Games,Apr-22,NONE,https://www.epicgames.com/site/news/sony-and-kirkbi-invest-in-epic-games-to-build-the-future-of-digital-entertainment?lang=en-US
+Fabric,Feb-22,FOUND,https://www.prnewswire.com/news-releases/headless-commerce-leader-fabric-announces-140-million-series-c-funding-led-by-softbank-301489632.html
+Factorial,Oct-22,FOUND,https://factorialhr.com/blog/factorial-european-unicorn-startup/
+Faire,Nov-21,FOUND,https://businesswire.com/news/home/20211116005386/en/Faire-Valuation-Grows-to-%2412.4-Billion-With-%24400-Million-Series-G-Funding-Round-Co-Led-by-Durable-Capital-Partners-LP
+Faire,Nov-25,NONE,https://faire.com/news/2025-11-17-faire-announces-tender-offer
+Figma,Jul-24,NONE,https://www.axios.com/2024/05/16/figma-tender-12-billion
+Fireblocks,Jan-22,FOUND,https://www.fireblocks.com/blog/550m-series-e-zero-to-crypto
+Fireblocks,Jul-21,FOUND,https://www.prnewswire.com/news-releases/fireblocks-solidifies-unicorn-status-with-310-million-series-d-at-2-billion-valuation-301342165.html
+Flink,Sep-24,FOUND,https://techcrunch.com/2024/09/16/flink-the-quick-commerce-startup-raises-another-150m-at-a-valuation-of-just-under-1b/
+Flipkart,Jul-21,FOUND,https://corporate.walmart.com/news/2021/07/12/flipkart-raises-us-3-6-billion-in-funding-to-accelerate-the-growth-of-the-consumer-internet-ecosystem-in-india
+Flipkart,Jul-23,NONE,https://techcrunch.com/2023/07/30/walmart-flipkart-tiger-global/
+Flo Health,Sep-21,FOUND,https://www.globenewswire.com/news-release/2021/09/09/2294372/0/en/Flo-Announces-50-Million-Series-B-Funding-Round-Bringing-Company-to-800M-Valuation.html
+GOAT Group,Jun-21,FOUND,https://prnewswire.com/news-releases/goat-group-valuation-more-than-doubles-to-3-7-billion-after-closing-series-f-funding-round-of-195-million-301319298.html
+Glean,Jun-25,FOUND,https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally
+Glossier,Jul-21,FOUND,https://beautymatter.com/articles/glossier-raises-80-million-series-e
+Glossier,Mar-19,FOUND,https://prnewswire.com/news-releases/glossier-inc-raises-100-million-to-build-the-future-beauty-company-300814345.html
+Glovo,Dec-21,FOUND,https://www.deliveryhero.com/newsroom/tech-champions-join-forces/
+GoCardless,Feb-22,FOUND,https://gocardless.com/en-us/blog/312m-series-g-funding-round/
+Gopuff,Jul-21,FOUND,https://techcrunch.com/2021/07/30/gopuff-confirms-new-1b-cash-injection-at-a-15b-valuation-to-expand-its-instant-grocery-delivery-service/
+Gorgias,Aug-22,FOUND,https://techcrunch.com/2022/08/15/gorgias-valuation-710m-series-c-e-commerce-customer-support/
+Gorillas,Oct-21,FOUND,https://www.prnewswire.co.uk/news-releases/gorillas-secures-close-to-usd-1-billion-in-series-c-funding-raising-the-largest-european-round-in-its-sector-to-date-853522283.html
+Guesty,Apr-24,FOUND,https://www.prnewswire.com/news-releases/guesty-raises-130m-to-accelerate-global-expansion-302112918.html
+Harry's,Mar-21,NONE,https://forbes.com/sites/stevenbertoni/2021/03/31/exclusive-harrys-raises-a-155-million-series-e--at-17-billion-a-year-after-the-ftc-blocked-its-billion-dollar-sale-to-edgewell/
+Harvey,Jun-25,NONE,https://www.harvey.ai/blog/harvey-raises-series-e
+HiBob,Sep-23,FOUND,https://www.hibob.com/news/mid-market-hr-tech-leader-hibob-adds-150m-in-new-round-of-funding-to-support-continued-expansion/
+Huel,Nov-22,FOUND,https://highlandeurope.com/huel-closes-24-million-funding-round-led-by-highland-europe/
+Huntress,Jun-24,FOUND,https://www.huntress.com/press-release/150m-boost-for-huntress-powers-new-products
+Incredible Health,Aug-22,FOUND,https://www.forbes.com/sites/maggiemcgrath/2022/08/17/dr-iman-abuzeid-leads-incredible-health-to-unicorn-status-with-80-million-series-b/
+Invisible Technologies,Sep-25,FOUND,https://invisibletech.ai/blog/invisible-technologies-raises-100-million
+Jobandtalent,Dec-21,FOUND,https://www.prnewswire.co.uk/news-releases/jobandtalent-secures-500m-in-series-e-fundraising-round-to-accelerate-expansion-858456572.html
+Klarna,Jul-22,FOUND,https://www.prnewswire.com/news-releases/klarna-closes-major-financing-round-during-worst-stock-downturn-in-50-years-301583680.html
+Klarna,Jun-21,FOUND,https://www.prnewswire.com/news-releases/klarna-secures-additional-funding-as-consumers-demand-smarter-alternatives-to-shop-bank--pay-301310118.html
+Klarna,Mar-21,FOUND,https://techcrunch.com/2021/03/01/daily-crunch-klarna-valued-at-31b/
+Klaviyo,May-21,FOUND,https://sec.gov/Archives/edgar/data/1835830/000162828023030618/klaviyoincs-1.htm
+Konfio,Sep-21,FOUND,https://forbes.com.mx/emprendedores-konfio-se-convierte-en-unicornio-al-lograr-un-valor-de-1300-mdd/
+Kriya,Oct-25,FOUND,https://www.allica.bank/hubfs/pdf/allica-bank_annual-report-2025.pdf
+LangChain,Oct-25,FOUND,https://www.langchain.com/blog/series-b
+Liquid Death,Mar-24,FOUND,https://businesswire.com/news/home/20240310837019/en/Liquid-Death-closes-67-million-in-strategic-financing-including-top-distributors-at-1.4-billion-valuation
+Liquid Death,Oct-22,NONE,https://bevnet.com/news/2022/liquid-death-closes-70m-raise-as-water-brand-explores-ipo/
+Loadsmart,Nov-20,NONE,https://blog.loadsmart.com/2020/11/20/news-digital-freight-platform-loadsmart-raises-90m-in-series-c-funding-round-led-by-blackrocks-managed-funds
+Loft,Mar-21,FOUND,https://techcrunch.com/2021/03/23/real-estate-platform-loft-raises-425m-at-a-2-2b-valuation-in-one-of-brazils-largest-venture-rounds/
+Loop Returns,Jul-21,FOUND,https://techcrunch.com/2021/07/21/loop-returns-locks-in-65-million-series-b-led-by-crv/
+Lovable,Dec-25,FOUND,https://lovable.dev/blog/series-b
+MNT-Halan,Feb-23,FOUND,https://ent.news/2023/2/MNT-Halan-Funding-230201-FINAL-FOR-IMMEDIATE-RELEASE.pdf
+Mambu,Dec-21,FOUND,https://www.prnewswire.co.uk/news-releases/mambu-raises-eur235-million-at-eur4-9-billion-valuation-in-eqt-growth-led-series-e-814350115.html
+Marqeta,May-19,NONE,https://techcrunch.com/2019/05/21/payment-card-startup-marqeta-confirms-260m-round-at-close-to-2b-valuation/
+Marqeta,May-20,NONE,https://www.marqeta.com/blog/marqeta-raises-150-million-in-new-capital
+MasterClass,May-21,FOUND,https://www.prnewswire.com/news-releases/masterclass-raises-225m-to-further-accelerate-growth-301290700.html
+Meesho,May-24,FOUND,https://techcrunch.com/2024/05/10/meesho-an-indian-social-commerce-with-150m-transacting-users-secures-275m-in-new-funding
+Meesho,Sep-21,FOUND,https://techcrunch.com/2021/09/29/meesho-india-social-commerce-raises-570-million/
+Mercury,Mar-25,FOUND,https://mercury.com/blog/series-c-announcement
+Mews,Jan-26,FOUND,https://www.prnewswire.com/news-releases/mews-secures-300-million-investment-to-cement-position-as-worlds-leading-hospitality-operating-system-302668120.html
+Mews,Mar-24,FOUND,https://www.mews.com/en/press/mews-raises-110m-to-accelerate-cloud-technology-in-hospitality
+Mirakl,Sep-21,FOUND,https://mirakl.com/news/mirakl-announces-555-million-series-e-funding-2/
+Miro,Jan-22,FOUND,https://miro.com/newsroom/miro-series-c/
+Mollie,Jun-21,FOUND,https://www.mollie.com/news/mollie-series-c
+Mollie,Sep-20,FOUND,https://www.mollie.com/news/mollie-raises-90-million-euro-in-series-b-funding
+Monzo,May-24,FOUND,https://techcrunch.com/2024/05/08/uk-challenger-bank-monzo-nabs-another-190m-at-5-2b-valuation/
+Monzo Bank,Dec-21,NONE,https://www.lse.co.uk/news/monzo-valuation-jumps-to-45-billion-after-fresh-funding-round-wj8vl4utb7jp8lg.html
+MoonPay,Nov-21,FOUND,https://www.businesswire.com/news/home/20211122006158/en/Leading-Crypto-Payments-Infrastructure-Provider-MoonPay-Closes-$555-Million-Series-A
+N26,Oct-21,FOUND,https://n26.com/en-eu/press/press-release/n26-announces-landmark-series-e-funding-round
+Ninjacart,Dec-21,NONE,https://www.cbinsights.com/company/ninjacart/financials
+Noom,May-21,NONE,https://www.pymnts.com/news/investment-tracker/2021/digital-diet-platform-noom-notches-540m
+Notion,Jan-26,NONE,https://www.notion.com/blog/gic-sequoia-index-purchase-notion-shares
+OLIPOP,Feb-25,NONE,https://www.nbcnews.com/business/business-news/prebiotic-soda-brand-olipop-valued-1point85-billion-latest-funding-rcna191894
+Octopus Energy Group,Sep-21,FOUND,https://octopus.energy/press/octopus-the-next-generation/
+Olive & June,Dec-24,NONE,https://investor.helenoftroy.com/press-releases/press-release-details/2024/Helen-of-Troy-Completes-Acquisition-of-Olive--June-LLC/default.aspx
+OneTrust,Jul-23,FOUND,https://www.prnewswire.com/news-releases/onetrust-secures-150m-investment-led-by-generation-investment-management-301883935.html
+Packable,Sep-21,FOUND,https://www.sec.gov/Archives/edgar/data/1828817/000114036121030752/brhc10028753_ex99-1.htm
+Patreon,Apr-21,FOUND,https://news.patreon.com/articles/the-second-renaissance-is-here
+PayFit,Jan-22,FOUND,https://payfit.com/payfit-becomes-a-unicorn/
+Perplexity,Dec-24,FOUND,https://www.bloomberg.com/news/articles/2024-12-18/ai-startup-perplexity-closes-funding-round-at-9-billion-value
+Perplexity,Jul-25,NONE,https://news.bloomberglaw.com/private-equity/ai-startup-perplexity-valued-at-18-billion-with-new-funding
+Perplexity,Sep-25,NONE,https://www.pymnts.com/artificial-intelligence-2/2025/perplexity-valuation-hits-20-billion-following-new-funding-round/
+Personio,Jun-22,FOUND,https://www.personio.com/about-personio/press/personio-raises-200m-second-series-e/
+Pipe,May-21,FOUND,https://www.prnewswire.com/news-releases/pipe-closes-250-million-investment-led-by-greenspring-associates-ten-months-after-public-launch-301294772.html
+Plaid,Apr-21,FOUND,https://edition.cnn.com/2021/04/07/tech/plaid-funding-425-million/index.html
+Plaid,Apr-25,FOUND,https://techcrunch.com/2025/04/03/fintech-plaid-raises-575m-at-6-1b-valuation-says-it-will-not-go-public-in-2025/
+Pleo,Dec-21,FOUND,https://blog.pleo.io/en/series-c-extension
+Qonto,Jan-22,FOUND,https://www.fintechfutures.com/venture-capital-funding/french-fintech-qonto-secures-486m-series-d-funding-to-boost-european-growth
+Quince,Jul-25,NONE,https://news.crunchbase.com/e-commerce/iconiq-investment-doubles-quince-valuation/
+Quince,Mar-26,NONE,https://prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html
+Raisin,Mar-23,FOUND,https://www.raisin.com/en/corporate/press/Raisin-Announces-60M-Funding/
+Ramp,Aug-21,FOUND,https://techcrunch.com/2021/08/24/ramp-raises-300m-at-a-3-9b-valuation-makes-its-first-acquisition/
+Ramp,Jul-25,FOUND,https://www.prnewswire.com/news-releases/ramp-raises-500-million-at-22-5-billion-valuation-to-accelerate-ai-and-build-the-future-of-finance-302516953.html
+Ramp,Nov-25,FOUND,https://www.prnewswire.com/news-releases/ramp-reaches-32-billion-valuation-doubling-revenue-and-customers-in-past-year-302616510.html
+Rapyd,Aug-21,FOUND,https://techcrunch.com/2021/08/03/rapyd-raises-300m-on-8-75b-valuation-as-fintech-as-a-service-continues-to-boom/
+Rapyd,Jan-21,NONE,"https://www.calcalistech.com/ctech/articles/0,7340,L-3887513,00.html"
+Recharge,May-21,FOUND,https://businesswire.com/news/home/20210506005257/en/ReCharge-Announces-277-Million-in-Growth-Capital-from-Summit-Partners-ICONIQ-Growth-and-Bain-Capital-Ventures-to-Power-E-Commerce-Subscriptions
+Remote,Apr-22,FOUND,https://www.globenewswire.com/news-release/2022/04/05/2416485/0/en/Remote-secures-300-million-Series-C-financing-to-power-global-employment.html
+Rent the Runway,Mar-19,FOUND,https://techcrunch.com/2019/03/21/rent-the-runway-hits-a-1-billion-valuation/
+Revolut,Aug-24,FOUND,https://www.revolut.com/en-US/news/revolut_announces_secondary_share_sale_to_provide_employee_liquidity/
+Revolut,Jul-21,FOUND,https://www.revolut.com/en-US/news/revolut_raises_800m_series_e_funding_from_softbank_vision_fund_2_and_tiger_global/
+Revolut,Nov-23,UNREACHABLE,
+Revolut,Nov-25,FOUND,https://www.revolut.com/news/revolut_completes_fundraising_process_establishing_75_billion_valuation/
+Rippling,Apr-24,NONE,https://techcrunch.com/2024/04/22/ripplings-parker-conrad-on-the-companys-brand-new-round-its-brand-new-sf-lease-and-also-its-brand-new-critic/
+Rokt,Dec-22,FOUND,https://prnewswire.com/news-releases/rokt-announces-secondary-transaction-increasing-valuation-to-us2-4-billion-301694650.html
+Rokt,Jan-25,FOUND,https://prnewswire.com/news-releases/rokt-announces-secondary-transaction-increasing-valuation-to-us3-5-billion-and-appointment-of-anita-sands-to-the-board-of-directors-302352792.html
+SHEIN,Apr-22,NONE,https://techcrunch.com/2022/04/04/shein-said-to-be-raising-1-billion-at-100-billion-valuation/
+SHEIN,Jan-24,NONE,https://technode.com/2024/01/26/sheins-valuation-drops-to-45-billion-amid-investigations-and-stalling-ipo-report/
+SHEIN,May-23,NONE,https://www.fashiondive.com/news/shein-2b-funding-round/650664/
+SKIMS,Jul-23,NONE,https://news.bloomberglaw.com/private-equity/kim-kardashians-skims-raises-funds-at-4-billion-valuation
+SKIMS,Nov-25,FOUND,https://am.gs.com/en-us/advisors/news/press-release/2025/skims
+Salesloft,Apr-19,FOUND,https://salesloft.com/company/news/salesloft-70-million-series-d/
+Savage X Fenty,Feb-21,FOUND,https://www.forbes.com/sites/maddieberg/2021/02/10/rihannas-lingerie-line-savage-x-fenty-raises-115-million-on-same-day-lvmh-announces-its-closing-her-fashion-house/
+Scale AI,Jun-25,NONE,https://scale.com/blog/scale-ai-announces-next-phase-of-company-evolution
+Scale AI,May-24,NONE,https://techcrunch.com/2024/05/21/data-labeling-startup-scale-ai-raises-1b-as-valuation-doubles-to-13-8b/
+Semrush,Nov-25,NONE,https://news.adobe.com/news/2025/11/adobe-to-acquire-semrush
+Sierra,Sep-25,NONE,https://techcrunch.com/2025/09/04/bret-taylors-sierra-raises-350m-at-a-10b-valuation/
+Snyk,Dec-22,FOUND,https://snyk.io/news/snyk-closes-196-5-million-series-g-funding-at-7-4-billion-valuation/
+Spendesk,Jan-22,FOUND,https://www.spendesk.com/press/spendesk-raises-additional-100-million-euro-at-unicorn-valuation/
+Stenn,Apr-22,NONE,https://techcrunch.com/2022/04/11/stenn-banks-50m-on-a-900m-valuation-for-a-platform-to-finance-smbs-that-trade-internationally/
+StockX,Apr-21,FOUND,https://www.prnewswire.com/news-releases/stockx-valuation-surges-to-3-8-billion-with-255-million-financing-301264729.html
+Strava,May-25,NONE,https://www.techmeme.com/250522/h1115
+Stripe,Feb-24,NONE,https://techcrunch.com/2024/02/28/fintech-giant-stripe-valuation-spikes-65b-employee-stock-sale/
+Stripe,Feb-25,FOUND,https://stripe.com/in/newsroom/news/employee-liquidity-feb-2025
+Stripe,Mar-23,FOUND,https://stripe.com/newsroom/news/stripe-series-i-employee-liquidity
+SumUp,Jun-22,FOUND,https://www.sumup.com/en-us/press/global-fintech-sumup-raises-590-million-euros/
+Supabase,Oct-25,NONE,https://supabase.com/blog/series-e
+Tabby,Feb-25,FOUND,https://tabby.ai/en-AE/newsroom/series-e-funding
+Tabby,Nov-23,FOUND,https://tabby.ai/en-AE/newsroom/series-d
+Tala,Aug-19,FOUND,https://tala.co/blog/2019/08/21/tala-raises-110m-series-d-to-accelerate-financial-agency-for-all/
+Tala,Oct-21,FOUND,https://tala.co/tala-series-e/
+The Zebra,Apr-21,FOUND,https://www.thezebra.com/about/press-center/the-zebra-raises-150m-series-d-at-1b-valuation/
+Thirty Madison,Jun-21,NONE,https://hitconsultant.net/2021/06/02/thirty-madison-reaches-1b-valuation-140m-series-c-funding/
+Thrasio,Jul-20,FOUND,https://prnewswire.com/news-releases/thrasio-reaches-1b-valuation-sets-new-us-speed-record-for-unicorns-301093829.html
+Thrasio,Oct-21,FOUND,https://prnewswire.com/news-releases/silver-lake-leads-thrasios-1-billion-series-d-financing-alongside-advent-international-upper90-and-peak6-301407213.html
+Tipalti,Dec-21,FOUND,https://tipalti.com/press/series-f-pr/
+TravelPerk,Jan-24,FOUND,https://www.businesswire.com/news/home/20240122614068/en/TravelPerk-Secures-over-100m-in-Funding-Led-by-SoftBank-Vision-Fund-2-to-Expand-Hyper-Growth-Business-Travel-Platform
+Trendyol,Aug-21,FOUND,https://techcrunch.com/2021/08/09/turkeys-first-decacorn-trendyol-raises-1-5b-at-a-16-5b-valuation
+Upgrade,Aug-21,NONE,https://www.prnewswire.com/news-releases/upgrade-closes-105-million-series-e-round-at-3-325-billion-valuation-301352490.html
+Upgrade,Nov-21,NONE,https://techcrunch.com/2021/11/16/credit-focused-company-upgrade-raises-280-million-at-6-billion-valuation/
+Vedantu,Sep-21,FOUND,https://www.businesstoday.in/latest/corporate/story/vedantu-raises-100-mn-in-series-e-funding-led-by-abc-world-asia-becomes-indias-5th-edtech-unicorn-307987-2021-09-29
+Vegrow,Dec-23,FOUND,https://entrackr.com/2023/12/vegrow-raises-46-mn-in-series-c-round-led-by-gic/
+Vercel,May-24,FOUND,https://www.businesswire.com/news/home/20240516704768/en/Vercel-Raises-$250M-to-Accelerate-AI-and-Security-Innovation-and-Deliver-Next-Generation-Web-Experiences-and-Applications
+Vestiaire Collective,Sep-21,FOUND,https://www.generationim.com/our-thinking/news/vestiaire-collective-continues-accelerating-and-announces-a-new-178-million-us-210-million-fundraising-backed-by-softbank-vision-fund-2-and-generation-investment-management/
+Vinted,Apr-26,FOUND,https://company.vinted.com/newsroom/financial-results-2025
+Vinted,May-21,FOUND,https://techcrunch.com/2021/05/11/vinted-raises-303m-for-its-2nd-hand-clothes-marketplace-used-by-45m-and-now-valued-at-4-5b/
+Vinted,Oct-24,FOUND,https://company.vinted.com/newsroom/secondary-investment
+Virta Health,Apr-21,FOUND,https://www.virtahealth.com/press/diabetes-reversal-leader-virta-health-raises-133m-series-e-to-take-type-2-diabetes-reversal-mainstream
+Voodoo,Aug-21,FOUND,https://www.marketscreener.com/quote/stock/GROUPE-BRUXELLES-LAMBERT--5953/news/Groupe-Bruxelles-Lambert-GBL-increases-its-digital-exposure-by-acquiring-a-stake-in-Voodoo-a-glob-36022576/
+Vuori,Nov-24,FOUND,https://businesswire.com/news/home/20241108508233/en/Vuori-Announces-%24825-Million-Investment-Led-by-General-Atlantic-and-Stripes
+Vuori,Oct-21,FOUND,https://businesswire.com/news/home/20211013005305/en/Vuori-Receives-$400-Million-Investment-and-$4B-Valuation-from-SoftBank-Vision-Fund-2
+WHOOP,Mar-26,FOUND,https://www.whoop.com/us/en/press-center/whoop-announces-series-g-funding/
+WayCool Foods,Jun-22,FOUND,https://www.thehansindia.com/business/foodtech-waycool-raises-40-million-in-funding-led-by-global-investment-firm-750131
+Wayflyer,Feb-22,FOUND,https://www.irishtimes.com/business/technology/wayflyer-in-no-rush-to-float-after-becoming-tech-unicorn-1.4790911
+Wefox,Jul-22,FOUND,https://www.businesswire.com/news/home/20220711005902/en/wefox-Closes-US$400m-Series-D-Round-at-US$4.5bn-Post-Money-Valuation
+Weights & Biases,Mar-25,NONE,https://investors.coreweave.com/news/news-details/2025/CoreWeave-Completes-Acquisition-of-Weights--Biases/default.aspx
+Whatnot,Aug-26,FOUND,https://blog.teamwhatnot.com/unitedstates/seriesg
+Whatnot,Jan-25,FOUND,https://techcrunch.com/2025/01/08/livestream-shopping-app-whatnot-raises-265m-pinning-valuation-at-nearly-5b/
+Whatnot,Jul-22,NONE,https://techcrunch.com/2022/07/21/whatnot-valuation-livestream-shopping/
+Whatnot,Oct-25,NONE,https://news.crunchbase.com/venture/ecommerce-unicorn-whatnot-raises-seriesf/
+Wiz,Mar-26,FOUND,https://www.prnewswire.com/news-releases/google-completes-acquisition-of-wiz-302710989.html
+Wiz,May-24,NONE,https://www.wiz.io/blog/celebrating-our-1-billion-funding-round-and-12-billion-valuation
+Wolt,Nov-21,FOUND,https://ir.doordash.com/news/news-details/2021/DoorDash-Joins-Forces-with-Wolt/default.aspx
+Writer,Nov-24,NONE,https://writer.com/blog/series-c-funding-writer-press-release/
+Writer,Sep-23,FOUND,https://writer.com/blog/series-b-funding-writer/
+Xpansiv,Jul-22,FOUND,https://www.xpansiv.com/press/xpansivs-cbl-sees-near-tripling-in-carbon-trade-in-2021
+Xpressbees,Feb-22,FOUND,https://entrackr.com/2022/02/xpressbees-enters-unicorn-club-after-300-mn-series-f-round/
+Yotpo,Mar-21,FOUND,https://prnewswire.com/news-releases/yotpo-raises-230-million-to-deliver-its-ecommerce-marketing-platform-giving-brands-maximum-marketing-firepower-in-an-ecommerce-first-world-301250042.html
+Zepz,Oct-24,NONE,https://news.bloomberglaw.com/private-equity/accel-tcv-and-world-bank-support-zepzs-267-million-fundraise
+dbt Labs,Feb-22,FOUND,https://www.getdbt.com/blog/dbt-labs-raises-222m-in-series-d-funding-at-4-2b-valuation-led-by-altimeter-with-participation-from-databricks-and-snowflake
+upGrad,Aug-21,FOUND,https://techcrunch.com/2021/08/09/india-upgrad-enters-unicorn-club-with-185-million-fundraise/
+wefox,May-21,FOUND,https://techcrunch.com/2021/05/31/european-insurtech-startup-wefox-grabs-650-million-at-3-billion-valuation/

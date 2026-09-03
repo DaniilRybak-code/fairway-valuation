@@ -1,0 +1,457 @@
+# USER-COUNT SWEEP, WAVE 3. 3-Sep-2026. The rest of the 290 private rounds.
+# Daniil: "check thoroughly the existing database of 290 private rounds, checking for each if the
+# number of users / subscribers / members was quoted at the announcement and calculating the
+# respective EV / subscribers multiple for each row where available."
+#
+# WHAT THIS WAVE COVERED, AND WHY IT IS 224 AND NOT 58. Waves 1 and 2 recorded only the URLs that
+# produced a finding, never which URLs were read, so the claim that 159 of 217 had been read could
+# not be reproduced from any file in the repo and the 58 said to remain could not be named. Under
+# D12, a set that cannot name what fell out of it is not a set you may act on, so wave 3 re-read
+# every one of the 224 rounds carrying no finding. Where waves 1 and 2 had already read a page and
+# found nothing, this wave read it again and recorded that nothing is there, which is the point.
+# The companion file 2026-09-03_user-counts-sweep-wave3-readlog.csv carries a verdict for all 224.
+#
+# ALSO CORRECTED: the targets file was described as having 241 URLs with 49 rounds carrying none.
+# All 290 carry one. The 49 are the same kind of link with the scheme missing, so they were read
+# with https:// prepended rather than sourced again. The targets file itself was not edited.
+#
+# METHOD. Eight agents read 223 distinct URLs, each told to report only what appears on the page it
+# fetched, to quote verbatim, to report every countable figure and not just the first, to take only
+# the subject company's own counts, and to prefer the company's own release over trade coverage.
+# 62 URLs came back dead. Daniil, 3-Sep: "Announcement URL could not be read - check it
+# independently then." Three further agents re-read those 62 against a working page for the SAME
+# round, found through the company's own release at its new path, a syndicated copy, or trade
+# coverage of that round. 60 of the 62 were recovered. The url column of the read log records the
+# page actually read, never the dead one.
+#
+# THE KIND IS THE WHOLE POINT, per Daniil's correction of the same day: "they do not necessarily
+# NEED to be paying, but if they are, we need to make the respective note of it." The count is kept
+# whatever it counts, metric_kind records WHICH THING was counted, and a range may only ever be
+# built inside one kind. is_paying records whether the payer is the counted party.
+#
+# SIXTEEN FIGURES WERE RE-KINDED TO OTHER so they stay on the record but can never become a
+# denominator. Each is a real verbatim quote that is not the round's customer count:
+#   penetration statistics   Klarna "30 of the top 100 US retailers", Klarna "24 of the top 100"
+#   threshold subsets        Klaviyo 1,458 above $50k ARR, Ramp 2,200 above $100k,
+#                            Databricks 300 above $1m run-rate
+#   a prior round's figure   Gorgias 4,500 stores, stated on the page as the Series B number
+#   flows, not stocks        Pipe 1,000 signups since March, Deel 1,800 as the April 2021 endpoint
+#   named sub-segments       Canva 600,000 nonprofits and 60m students and teachers,
+#                            Monzo 400,000 business clients against 9m retail customers,
+#                            Octopus 25,000 business-division customers against 2.5m customers,
+#                            MoonPay 250 wallets and apps powered against 7m customers
+#   stale about-boilerplate  Miro 25m users and 100,000 client orgs, both contradicted by the body
+#                            of the same release, which says 30m and 130,000
+#   contradicted on the page Contentsquare "over one million customers" against the 1,000 enterprise
+#                            customers stated in the same release
+# Without these the loader's rank would have priced Canva per nonprofit, Monzo per business client
+# and Octopus per business-division account, none of which is what those companies sell.
+#
+# Where one page gives two counts of ONE kind, the base figure is written first and the loader takes
+# the first at the best rank. Octopus Sep-21 keeps 2.5m at 24 September, not the 3.1m it reached the
+# day after by taking on Avro's book. Klarna keeps the global merchant and user counts, not the US
+# ones. Faire keeps the 300,000 retailers of its own release over the looser 350,000.
+#
+# Two rounds could not be reached even after the recovery pass, and both look mis-dated at source
+# rather than merely unlinked: Checkout.com Dec-23 (no Checkout.com round exists in December 2023;
+# the $11bn internal cut was Dec 2022 and the $12bn buyback Sept 2025) and Revolut Nov-23 (the
+# stored URL is an annual-report page, not a round; Revolut has no November 2023 funding event).
+company,round,count,metric_kind,is_paying,as_worded_on_the_page
+Aledade,Jun-23,1500,BUSINESS_CUSTOMERS,UNKNOWN,"more than 1,500 independent primary care practices in 2023"
+Aledade,Jun-23,2000000,OTHER_PATIENTS_COVERED,UNKNOWN,collectively cover more than two million patients
+Aledade,Jun-23,1000000,OTHER_PATIENTS_COVERED,UNKNOWN,more than one million patients under the Medicare Shared Savings Program
+Aledade,Jun-23,250000,OTHER_PATIENTS_COVERED,UNKNOWN,"nearly 250,000 patients under Medicare Advantage contracts"
+Brex,Jan-22,1000,OTHER_EMPLOYEES,NO,"The company expects to have 1,000 employees by month's end"
+Cohere,Jun-23,180,OTHER_EMPLOYEES,NO,"Cohere, which has around 180 employees"
+Databricks,Sep-23,10000,BUSINESS_CUSTOMERS,YES,"Ended the quarter with more than 10,000 global customers"
+Databricks,Sep-23,300,OTHER_CUSTOMERS_ABOVE_1M_RUNRATE,YES,including >300 customers consuming at $1M+ annual revenue run-rate
+Databricks,Sep-23,30000,OTHER_EVENT_ATTENDEES,UNKNOWN,"the sold-out Data and AI Summit in June with over 30,000 global attendees"
+Databricks,Sep-23,6000,OTHER_EMPLOYEES,NO,"around 6,000 employees"
+Glean,Jun-25,100000000,OTHER_AGENT_ACTIONS,UNKNOWN,the platform is already powering more than 100 million agent actions annually
+Glean,Jun-25,1000000000,OTHER_AGENT_ACTIONS,UNKNOWN,supporting one billion agent actions by the end of the year
+Glean,Jun-25,10000,OTHER_EVENT_ATTENDEES,UNKNOWN,"brought together more than 10,000 attendees in person and online"
+Glean,Jun-25,100,OTHER_INTEGRATED_APPLICATIONS,UNKNOWN,"ecosystem of 100+ integrated SaaS applications for deep, enterprise-wide context"
+Glean,Jun-25,100,OTHER_CONNECTORS,UNKNOWN,"With over 100 connectors, LLM options"
+Guesty,Apr-24,200,OTHER_INDUSTRY_PARTNERS,UNKNOWN,With a complete suite of features and 200+ industry partners
+Guesty,Apr-24,750,OTHER_EMPLOYEES,NO,"Today, Guesty has 15 offices and 750+ team members across the globe."
+Guesty,Apr-24,250,OTHER_EMPLOYEES,NO,an R&D team of 250+
+Liquid Death,Mar-24,113000,OTHER_RETAIL_DOORS,UNKNOWN,"expanded to 113,000 retail doors across the US and UK"
+Liquid Death,Mar-24,7900000,OTHER_SOCIAL_FOLLOWERS,NO,Liquid Death's social following captures 7.9 million followers across TikTok and Instagram
+Mirakl,Sep-21,300,BUSINESS_CUSTOMERS,UNKNOWN,over 300 of the world's leading brands
+Mirakl,Sep-21,350,OTHER_EMPLOYEES,NO,Hiring 350 engineers
+Mirakl,Sep-21,500,OTHER_EMPLOYEES,NO,"growing the Mirakl Labs team to 500, by 2023"
+Patreon,Apr-21,200000,OTHER_CREATORS,UNKNOWN,"over 200,000 creators sharing their work on Patreon"
+Patreon,Apr-21,7000000,OTHER_PATRONS,UNKNOWN,more than 7 million patrons across the world
+Plaid,Apr-25,1200,OTHER_EMPLOYEES,NO,"Presently, it has 1,200 employees across the United States, Canada, the United Kingdom, and the EU."
+Ramp,Nov-25,50000,CUSTOMERS,UNKNOWN,"Serving over 50,000 customers, doubling year-over-year"
+Ramp,Nov-25,2200,OTHER_CUSTOMERS_ABOVE_100K_ARR,YES,"over 2,200 customers contributing $100,000 or more in annualized revenue"
+Ramp,Nov-25,26146619,OTHER_AI_DECISIONS,UNKNOWN,"In October, Ramp's AI made 26,146,619 decisions across more than $10 billion in spend"
+Ramp,Nov-25,511157,OTHER_TRANSACTIONS,UNKNOWN,"Our policy agent prevented 511,157 out-of-policy transactions"
+Thrasio,Jul-20,50,OTHER_ACQUIRED_BUSINESSES,UNKNOWN,Thrasio has acquired well over 50 Amazon businesses
+Thrasio,Jul-20,17,OTHER_ACQUIRED_BUSINESSES,UNKNOWN,including 17 last quarter
+Thrasio,Jul-20,60,OTHER_ACQUIRED_BUSINESSES,UNKNOWN,having integrated nearly 60 businesses
+Thrasio,Jul-20,6000,OTHER_PRODUCTS,UNKNOWN,"and 6,000+ products"
+Thrasio,Jul-20,300,OTHER_EMPLOYEES,NO,Thrasio now has over 300 FTE employees and consultants
+Thrasio,Jul-20,90,OTHER_EMPLOYEES,NO,adding over 90 new people since April
+Vuori,Nov-24,100,OTHER_STORES,UNKNOWN,expected to exceed 100 stores in 2026
+Whatnot,Jan-25,600,OTHER_EMPLOYEES,NO,its 600 full-time employees
+Xpansiv,Jul-22,150,OTHER_MARKET_PARTICIPANTS,UNKNOWN,with more than 150 active market participants
+Apollo.io,Aug-23,3000000,CUSTOMERS,UNKNOWN,"currently serves over three million GTM professionals at over 500,000 companies"
+Apollo.io,Aug-23,500000,BUSINESS_CUSTOMERS,UNKNOWN,"currently serves over three million GTM professionals at over 500,000 companies"
+CommerceIQ,Mar-22,2200,BUSINESS_CUSTOMERS,YES,"Today, CommerceIQ has more than 2,200 brands that use its platform daily"
+CommerceIQ,Mar-22,215000000,OTHER_AUTOMATIONS,UNKNOWN,"The company also grew in automations, delivering 215 million last year, up 70 million in one year."
+CommerceIQ,Mar-22,500000000,OTHER_AUTOMATIONS,UNKNOWN,"This year, Hariharan expects to deliver 500 million automations."
+ElevenLabs,Jan-25,1000,OTHER_YEARS_OF_AUDIO_GENERATED,UNKNOWN,"Together, these milestones represent 1,000 years of AI audio generated with ElevenLabs."
+ElevenLabs,Jan-25,250000,OTHER_CONVERSATIONAL_AI_AGENTS,UNKNOWN,"just two months after launch, has already enabled developers to build more than 250,000 conversational AI agents."
+ElevenLabs,Jan-25,1000000,OTHER_HOURS_OF_AUDIO_LOCALIZED,UNKNOWN,ElevenLabs' models have localized more than 1 million hours of audio
+ElevenLabs,Jan-25,1000000,OTHER_HOURS_OF_TEXT_READ_ALOUD,UNKNOWN,"read aloud 1 million hours of text from ebooks, PDFs, and news articles through ElevenReader"
+ElevenLabs,Jan-25,10000000,OTHER_SOUND_EFFECTS,UNKNOWN,produced more than 10 million sound effects
+ElevenLabs,Jan-25,5000,OTHER_SHARED_VOICES,UNKNOWN,"creators have shared over 5,000 voices in ElevenLabs' Voice Library"
+ElevenLabs,Jan-25,80,OTHER_PARTNER_ORGANIZATIONS,UNKNOWN,"partnering with 80 organizations across accessibility, education, and culture"
+ElevenLabs,Jan-25,1000,OTHER_INDIVIDUALS_WITH_SPEECH_IMPAIRMENTS,UNKNOWN,"over 1,000 individuals with speech impairments have reclaimed their voices through the program."
+Glossier,Jul-21,5000000,CUSTOMERS,YES,The company has more than 5 million customers globally
+Klarna,Jul-22,150000000,ACTIVE_USERS,NO,With over 150 million global active users and 2 million transactions per day
+Klarna,Jul-22,30000000,CUSTOMERS,NO,"In the US Klarna has gone from nothing to becoming the market leader, with close to 30m users"
+Klarna,Jul-22,18000000,CUSTOMERS,NO,reaching 18m consumers from just 4m in 2018 representing a 333% increase
+Klarna,Jul-22,400000,MERCHANTS,YES,"Klarna is active in 45 markets with over 400,000 global retail partners"
+Klarna,Jul-22,22000,MERCHANTS,YES,"with 22,000 retail partners"
+Klarna,Jul-22,30,OTHER_TOP100_US_RETAILERS_LIVE,YES,30 of the top 100 US retailers more than Affirm and Afterpay combined
+Klarna,Jul-22,2000000,OTHER_TRANSACTIONS,UNKNOWN,using Klarna 2 million times a day
+Klarna,Jul-22,60000000,OTHER_DOWNLOADS,UNKNOWN,app downloads in excess of 60m
+Klarna,Jul-22,1000,OTHER_SHAREHOLDERS,UNKNOWN,more than 1000 smaller shareholders
+PayFit,Jan-22,6000,BUSINESS_CUSTOMERS,YES,"PayFit has gained over 6,000 clients"
+Rapyd,Aug-21,12000,BUSINESS_CUSTOMERS,YES,"The company has some 12,000 small and medium-sized businesses using its services"
+Rapyd,Aug-21,650,BUSINESS_CUSTOMERS,YES,with another 650 large enterprise clients
+Revolut,Nov-25,65000000,CUSTOMERS,NO,"Revolut, the global fintech leader with over 65 million customers worldwide"
+SKIMS,Nov-25,18,OTHER_RETAIL_STORES,UNKNOWN,SKIMS now has 18 owned retail stores in the US
+SKIMS,Nov-25,2,OTHER_FRANCHISE_DOORS,UNKNOWN,two franchise doors in Mexico
+Thrasio,Oct-21,200,OTHER_BRANDS,UNKNOWN,with over 200 brands in its portfolio
+Thrasio,Oct-21,6000,OTHER_ECOMMERCE_BUSINESSES_EVALUATED,UNKNOWN,"With experience evaluating 6,000 ecommerce businesses"
+Vercel,May-24,1000000,ACTIVE_USERS,UNKNOWN,"Vercel's Next.js technology, with over 1 million monthly active developers, powers the world's largest web applications"
+Vercel,May-24,1000000000,OTHER_THREATS_MITIGATED,UNKNOWN,With Vercel already mitigating nearly one billion threats every week
+Vuori,Oct-21,100,OTHER_PLANNED_STORE_OPENINGS,UNKNOWN,Vuori will double down on retail expansion in the U.S. with more than 100 store openings slated for the next five years
+Xpressbees,Feb-22,3000,OTHER_CITIES,UNKNOWN,"Currently present in more than 3,000 cities"
+Xpressbees,Feb-22,20000,OTHER_PIN_CODES,UNKNOWN,"XpressBees claims to serve over 20,000 pin codes"
+Xpressbees,Feb-22,1500000,OTHER_PACKAGES_PER_DAY,UNKNOWN,delivers over 1.5 million packages per day
+AlphaSense,Sep-23,4000,BUSINESS_CUSTOMERS,YES,"rapid adoption of its innovative AI and search capabilities by more than 4,000 enterprise customers"
+AlphaSense,Sep-23,10000,OTHER_INFORMATION_SOURCES,UNKNOWN,"Today the company covers some 10,000 sources of information that span private and public content published by big and small research firms, government and other public bodies, and competitors and other businesses."
+Bright Data (Luminati),Aug-17,40000000,OTHER_IP_ADDRESSES,UNKNOWN,Luminati brings back transparency and trust to the Web by enabling its enterprise customers to access the internet through its proprietary network of over 40 million IP addresses.
+Bright Data (Luminati),Aug-17,30000000,OTHER_RESIDENTIAL_IPS,UNKNOWN,Luminati is the world's leading proxy network for businesses. With a proprietary network of over 30 million residential IPs
+Chime,Apr-24,7000000,CUSTOMERS,NO,seven million customers using its cards for $8 billion a month in transactions
+Chime,Apr-24,1500000,OTHER_CUSTOMER_INQUIRIES,UNKNOWN,about 70% of its 1.5 million monthly customer inquiries
+Decagon,Jan-26,100,BUSINESS_CUSTOMERS,YES,"more than 100 new global enterprise customers, like Avis Budget Group, Block, and Deutsche Telekom, joined the Decagon family."
+Glossier,Mar-19,1000000,CUSTOMERS,YES,while introducing more than 1 million new customers to its portfolio of modern beauty and skincare essentials
+Klarna,Jun-21,90000000,ACTIVE_USERS,NO,With over 90 million global active users and 2 million transactions a day
+Klarna,Jun-21,2000000,OTHER_TRANSACTIONS,UNKNOWN,With over 90 million global active users and 2 million transactions a day
+Klarna,Jun-21,18000000,CUSTOMERS,NO,used by 18m customers worldwide
+Klarna,Jun-21,18000000,ACTIVE_USERS,NO,over 18 million American consumers now using Klarna
+Klarna,Jun-21,250000,MERCHANTS,YES,"available at over 250,000 retailers globally"
+Klarna,Jun-21,24,OTHER_TOP100_US_RETAILERS_LIVE,YES,Klarna is now live with 24 of the top 100 US retailers
+MasterClass,May-21,100,OTHER_INSTRUCTORS,NO,"With an annual membership, subscribers get unlimited access to 100+ instructors and classes across a wide range of subjects"
+Perplexity,Dec-24,15000000,ACTIVE_USERS,UNKNOWN,"In March, the company said it had more than 15 million active users."
+Salesloft,Apr-19,4000,BUSINESS_CUSTOMERS,UNKNOWN,"Trusted by more than 4,000 organizations including Adobe, 3M, IBM, and Zoom, Salesloft helps revenue teams move from guesswork to confidence, quarter after quarter."
+Tabby,Feb-25,15000000,REGISTERED_USERS,NO,more than 15 million registered users
+Tabby,Feb-25,40000,MERCHANTS,YES,"over 40,000 sellers"
+Vestiaire Collective,Sep-21,3000000,OTHER_ITEMS,UNKNOWN,"The platform is unique thanks to its highly engaged community and its rare, desirable inventory of 3 million items."
+WHOOP,Mar-26,2500000,MEMBERS,YES,The company now has over 2.5 million members around the world
+Yotpo,Mar-21,30000,BUSINESS_CUSTOMERS,YES,"Yotpo now serves over 30,000 customers that represent the best in eCommerce, including Patagonia, Revolution Beauty, Brooklinen, Steve Madden and Princess Polly."
+Yotpo,Mar-21,500,OTHER_PARTNERS,UNKNOWN,"Yotpo has partnered with more than 500 dominant agencies, platforms, and technologies that make eCommerce stores run."
+Ankorstore,Jan-22,200000,MERCHANTS,UNKNOWN,"There are currently 200,000 retailers using the marketplace and sourcing items from 15,000 brands."
+Ankorstore,Jan-22,15000,OTHER_BRANDS,UNKNOWN,"There are currently 200,000 retailers using the marketplace and sourcing items from 15,000 brands."
+Ankorstore,Jan-22,400,OTHER_EMPLOYEES,NO,"With 400 employees and a lot of money in its bank account, Ankorstore could act as the unifying layer of this highly fragmented industry."
+Away,May-19,50,OTHER_STORES,NO,"opening 50 new stores over the next three years in addition to its current locations in New York, Los Angeles, San Francisco, Austin, Chicago, Boston, and London"
+Calm,Dec-20,100000000,OTHER_DOWNLOADS,NO,Calm continues rapid growth with over 100 million downloads and 4 million paying members.
+Calm,Dec-20,4000000,PAYING_SUBSCRIBERS,YES,Calm continues rapid growth with over 100 million downloads and 4 million paying members.
+Calm,Dec-20,10000000,OTHER_LIVES_COVERED,NO,"One primary driver is Calm for Business, the brand's enterprise arm, which covers more than 10 million lives through employer partnerships."
+Calm,Dec-20,1000000000,OTHER_MINUTES_LISTENED,NO,"Daily downloads doubled and members listened to more than a billion minutes of content in 2020, up 100% from 2019."
+Calm,Dec-20,1000000,OTHER_FIVE_STAR_REVIEWS,NO,Calm has now had over 1 million five-star reviews in the App Store.
+Calm,Dec-20,100000,OTHER_NEW_USERS_DAILY,UNKNOWN,"Calm boasts over 100 million downloads to date, averaging 100,000 new users daily."
+Creditas,Dec-20,1500,OTHER_EMPLOYEES,NO,"We managed to migrate our 1,500 crew members to remote work in a matter of days."
+Flink,Sep-24,146,OTHER_HUBS,NO,"Flink has 146 hubs in the two countries across some 80 cities, and it said it will be opening 30 more locations in the next year."
+Flink,Sep-24,30,OTHER_LOCATIONS,NO,"Flink has 146 hubs in the two countries across some 80 cities, and it said it will be opening 30 more locations in the next year."
+Flink,Sep-24,8900,OTHER_EMPLOYEES,NO,"It has 8,900 employees."
+Glovo,Dec-21,15000000,ACTIVE_USERS,UNKNOWN,"In many of their markets, Glovo has become the most loved app, connecting approximately 15 million active users annually with 70,000 monthly active couriers and 130,000 monthly active partners."
+Glovo,Dec-21,70000,OTHER_COURIERS,NO,"In many of their markets, Glovo has become the most loved app, connecting approximately 15 million active users annually with 70,000 monthly active couriers and 130,000 monthly active partners."
+Glovo,Dec-21,130000,MERCHANTS,UNKNOWN,"In many of their markets, Glovo has become the most loved app, connecting approximately 15 million active users annually with 70,000 monthly active couriers and 130,000 monthly active partners."
+HiBob,Sep-23,3500,BUSINESS_CUSTOMERS,YES,"With more than 3,500 customers now onboard, HiBob continues to deliver powerful growth even amidst volatile market conditions, exceeding $100M in Annual Recurring Revenue (ARR) less than three years after celebrating its $10M ARR milestone."
+HiBob,Sep-23,50000,OTHER_NEWSLETTER_SUBSCRIBERS,NO,"Join 50,000 HR leaders who get our monthly newsletter."
+Klarna,Mar-21,250000,MERCHANTS,YES,"The company is active in more than 17 countries and has more than 250,000 retail partners."
+Loft,Mar-21,13000,OTHER_LISTINGS,NO,"Today, the company actively maintains more than 13,000 property listings in approximately 130 regions across São Paulo and Rio de Janeiro, partnering with more than 30,000 brokers."
+Loft,Mar-21,30000,OTHER_BROKERS,UNKNOWN,"Today, the company actively maintains more than 13,000 property listings in approximately 130 regions across São Paulo and Rio de Janeiro, partnering with more than 30,000 brokers."
+Loft,Mar-21,700,OTHER_EMPLOYEES,NO,"The startup has also grown its number of employees in the past year, growing from 450 last January to 700 today."
+Meesho,May-24,150000000,ACTIVE_USERS,UNKNOWN,"Meesho, a leading e-commerce startup in India with about 150 million transacting users, has secured $275 million in a new funding round"
+Meesho,May-24,440000,MERCHANTS,UNKNOWN,"With 440,000 annual transacting sellers and over 120 million listings, Meesho boasts one of the widest assortment of goods across platforms"
+Meesho,May-24,120000000,OTHER_LISTINGS,NO,"With 440,000 annual transacting sellers and over 120 million listings, Meesho boasts one of the widest assortment of goods across platforms"
+Mollie,Sep-20,100000,MERCHANTS,YES,"serving nearly 100,000 merchants across the continent"
+Recharge,May-21,15000,MERCHANTS,YES,"Today, ReCharge powers subscriptions for 15,000 merchants and 20 million subscribers worldwide."
+Recharge,May-21,20000000,OTHER_SUBSCRIBERS,NO,"Today, ReCharge powers subscriptions for 15,000 merchants and 20 million subscribers worldwide."
+Recharge,May-21,300,OTHER_EMPLOYEES,NO,"Headquartered in Santa Monica, CA, ReCharge offers a fully remote working environment, which includes more than 300 team members in 10 countries."
+Rokt,Dec-22,5000000000,OTHER_TRANSACTIONS,NO,"Rokt's machine-learning technology has powered more than 5 billion transactions globally for more than 2,500 of the world's leading companies, including Fanatics, Live Nation, AMC Theatres, PayPal, Uber, Hulu, Staples, Lands' End and HelloFresh."
+Rokt,Dec-22,2500,BUSINESS_CUSTOMERS,UNKNOWN,"Rokt's machine-learning technology has powered more than 5 billion transactions globally for more than 2,500 of the world's leading companies, including Fanatics, Live Nation, AMC Theatres, PayPal, Uber, Hulu, Staples, Lands' End and HelloFresh."
+StockX,Apr-21,7500000,OTHER_TRADES,NO,"For the year ended December 31, 2020 the company closed more than 7.5 million trades"
+StockX,Apr-21,200000000,OTHER_VISITORS,UNKNOWN,served more than 200 million visitors across 200 countries and territories
+StockX,Apr-21,1000,OTHER_EMPLOYEES,NO,"the company employs more than 1,000 people in 13 offices"
+Tabby,Nov-23,10000000,ACTIVE_USERS,NO,Over 10 million users choose Tabby to stay in control of their spending and make the most out of their money.
+Tabby,Nov-23,30000,MERCHANTS,YES,"Over 30,000 global brands and small businesses, including SHEIN, Amazon, Adidas, IKEA, H&M, Samsung and Noon use Tabby's technology to accelerate growth and gain loyal customers by offering flexible payments online and in stores."
+Tabby,Nov-23,500000,OTHER_PRODUCTS,NO,"More recently, the company launched Tabby Shop, showcasing over 500,000 products from thousands of brands to help shoppers discover and track the best products and deals in one place."
+TravelPerk,Jan-24,1200,OTHER_EMPLOYEES,NO,We have a team of more than 1200 employees who together enable us to achieve such rapid growth and success.
+Vinted,Apr-26,500000,OTHER_PICKUP_AND_DROPOFF_POINTS,NO,"Vinted provides members with access to more than 500,000 pick-up and drop-off points across Europe"
+Back Market,Jan-22,6000000,CUSTOMERS,UNKNOWN,"The Series E funding cements Back Market's position as a leading refurbished electronics marketplace, with more than 6 million customers worldwide."
+Delhivery,May-21,17500,OTHER_PIN_CODES,NO,"presence beyond 17,500 pin codes with a full suite of logistics services"
+Delhivery,May-21,800000000,OTHER_ORDERS,NO,fulfilled over 800 million orders since its inception in 2011
+Flipkart,Jul-21,350000000,REGISTERED_USERS,UNKNOWN,"With more than 350 million registered users from across the country, Flipkart has been investing in key categories"
+Flipkart,Jul-21,300000,MERCHANTS,YES,"More than 300,000 registered sellers from across the country are on Flipkart's marketplace, and 60% are from Tier 2 cities and beyond."
+Flipkart,Jul-21,1600000,BUSINESS_CUSTOMERS,UNKNOWN,Flipkart also works with more than 1.6 million kiranas in India through its wholesale business and its last-mile delivery program
+Flipkart,Jul-21,150000000,OTHER_PRODUCT_LISTINGS,NO,offering over 150 million products across 80+ categories
+Flipkart,Jul-21,750000,OTHER_BENEFICIARIES,NO,"Samarth, Flipkart's program to support small businesses, underserved communities and artisans, has more than 750,000 beneficiaries."
+Huel,Nov-22,270000000,OTHER_MEALS_SOLD,NO,The brand has sold over 270 million meals worldwide since its inception in 2015
+Klaviyo,May-21,130000,CUSTOMERS,YES,"our platform had efficiently scaled to over 130,000 customers"
+Klaviyo,May-21,1458,OTHER_CUSTOMERS_ABOVE_50K_ARR,YES,"we had 1,458 customers generating over $50,000 of ARR, representing growth of 94% year-over-year"
+Klaviyo,May-21,6900000000,OTHER_CONSUMER_PROFILES,NO,we assembled over 6.9 billion consumer profiles across our customer base
+Klaviyo,May-21,695000000000,OTHER_EVENTS,NO,we processed over 695 billion events
+Loop Returns,Jul-21,700,CUSTOMERS,YES,"In terms of traction, the company has gone from 200 to 700 customers, and from $26 million in returns processed to just over $100 million in the same time frame."
+Meesho,Sep-21,13000000,ACTIVE_USERS,UNKNOWN,"As of April this year, 13 million entrepreneurs and over 100,000 suppliers were using Meesho."
+Meesho,Sep-21,100000,MERCHANTS,YES,"As of April this year, 13 million entrepreneurs and over 100,000 suppliers were using Meesho."
+Octopus Energy Group,Sep-21,2500000,CUSTOMERS,YES,Octopus Energy had 2.5 million customers up to 24 September 2021.
+Octopus Energy Group,Sep-21,3100000,CUSTOMERS,YES,"The company's customer base grew to 3.1 million after taking on Avro Energy's 600,000 customers on 25 September 2021."
+Octopus Energy Group,Sep-21,25000,OTHER_BUSINESS_DIVISION_CUSTOMERS,YES,"Octopus Energy for Business manages over 25,000 customers with proprietary energy offerings."
+Octopus Energy Group,Sep-21,17000000,OTHER_ENERGY_ACCOUNTS_ON_KRAKEN,UNKNOWN,"Kraken, is already contracted to deliver outstanding customer experience, hyper efficient operations and cleaner and smarter energy solutions to 17 million energy accounts globally"
+Octopus Energy Group,Sep-21,100000,OTHER_CHARGE_POINTS,NO,"Electric Juice, the UK's first electric vehicle roaming network which has rapidly grown to over 100,000 charge points across Europe"
+Rokt,Jan-25,6500000000,OTHER_TRANSACTIONS,NO,The company's AI- and ML-powered Rokt Brain and ecommerce Rokt Network will power more than 6.5 billion transactions connecting 400 million customers across the world's leading companies
+Rokt,Jan-25,400000000,OTHER_CUSTOMERS_REACHED,NO,"will power more than 6.5 billion transactions connecting 400 million customers across the world's leading companies, including Live Nation, Macy's, AMC Theatres, PayPal, Uber, Hulu, Staples, Albertsons and HelloFresh."
+Tala,Aug-19,4000000,BORROWERS,YES,lending over $1 billion dollars to more than four million customers across three continents
+Tala,Aug-19,40000,OTHER_PICKUP_POINTS,NO,"Customers can now receive and pay back their loans at over 40,000 pickup points"
+Trendyol,Aug-21,30000000,CUSTOMERS,UNKNOWN,serving more than 30 million shoppers
+Trendyol,Aug-21,1000000,OTHER_PACKAGES_PER_DAY,NO,delivering more than 1 million packages per day
+Vinted,May-21,45000000,REGISTERED_USERS,UNKNOWN,Vinted currently has some 45 million users
+Wayflyer,Feb-22,800,BUSINESS_CUSTOMERS,YES,has more than 800 customers across 11 countries
+Airwallex,Nov-21,1000,OTHER_EMPLOYEES,NO,"the business operates with a team of over 1,000 employees across 19 locations globally"
+Airwallex,Nov-21,19,OTHER_LOCATIONS,UNKNOWN,"over 1,000 employees across 19 locations globally"
+Airwallex,Nov-21,200,OTHER_HIRES,NO,The company also made more than 200 additional hires
+Better.com,May-21,47,OTHER_STATES_LICENSED,UNKNOWN,Currently licensed to operate in 47 states and the District of Columbia
+Canva,Apr-24,185000000,ACTIVE_USERS,UNKNOWN,"With 185 million active users, a $26 billion valuation and annual recurring revenue of about $2.3 billion"
+Canva,Apr-24,600000,OTHER_NONPROFITS,UNKNOWN,"The company says it works with more than 600,000 nonprofits and 60 million students and teachers."
+Canva,Apr-24,60000000,OTHER_STUDENTS_AND_TEACHERS,UNKNOWN,"works with more than 600,000 nonprofits and 60 million students and teachers"
+Canva,Apr-24,6500000000,OTHER_USES,UNKNOWN,Canva claimed its own Magic Studio AI tools have been used 6.5 billion times since their October launch
+Canva,Apr-24,2000000,OTHER_EVENT_ATTENDEES,UNKNOWN,"attended, the company claimed, by 2 million users online"
+Clearco,Apr-21,4500,BUSINESS_CUSTOMERS,UNKNOWN,"Clearco has financed over 4,500 companies to date"
+Factorial,Oct-22,7000,BUSINESS_CUSTOMERS,UNKNOWN,"We went from 70 clients to 7,000 throughout nine markets worldwide."
+Factorial,Oct-22,9,OTHER_MARKETS,UNKNOWN,"7,000 throughout nine markets worldwide"
+Factorial,Oct-22,800,OTHER_EMPLOYEES,NO,There are now over 800 people working every day to make this revolution a reality.
+Gopuff,Jul-21,450,OTHER_SITES,UNKNOWN,It currently operates 450 sites across North America and the U.K.
+Gopuff,Jul-21,285,OTHER_DARK_STORES,UNKNOWN,"which includes more than 285 dark stores (or micro-fulfillment centers, in Gopuff's words)"
+Gopuff,Jul-21,185,OTHER_RETAILERS,UNKNOWN,plus more than 185 retailers by way of its acquisition of BevMo earlier this year.
+Huntress,Jun-24,277000,BUSINESS_CUSTOMERS,UNKNOWN,Partnering with 277k+ organizations like yours for enterprise-grade protection.
+Huntress,Jun-24,3500000,OTHER_ENDPOINTS_AND_IDENTITIES,UNKNOWN,nearly 3.5 million endpoints and identities protected
+Huntress,Jun-24,5000000,OTHER_ENDPOINTS,UNKNOWN,Currently safeguarding more than 5 million endpoints and 15 million identities
+Huntress,Jun-24,15000000,OTHER_IDENTITIES,UNKNOWN,more than 5 million endpoints and 15 million identities
+Lovable,Dec-25,100000,OTHER_PROJECTS_PER_DAY,UNKNOWN,"100,000+ new projects built on Lovable every day"
+Lovable,Dec-25,25000000,OTHER_PROJECTS,UNKNOWN,25 million+ total projects created in our first year
+Lovable,Dec-25,500000000,OTHER_VISITS,UNKNOWN,Half a billion visits to Lovable-built websites and apps in the last six months
+Lovable,Dec-25,6000000,OTHER_DAILY_VISITS,UNKNOWN,6 million+ daily visits to Lovable-built sites and apps (200 million+ monthly)
+Lovable,Dec-25,200000000,OTHER_MONTHLY_VISITS,UNKNOWN,6 million+ daily visits to Lovable-built sites and apps (200 million+ monthly)
+Rent the Runway,Mar-19,5,OTHER_STORES,UNKNOWN,marking the company's fifth standalone brick and mortar space
+Tala,Oct-21,6000000,BORROWERS,YES,Tala has delivered more than $2.7 billion in credit to more than 6 million customers
+Tala,Oct-21,12000,OTHER_DAILY_SIGNUPS,UNKNOWN,"Every day, more than 12,000 new users globally sign up for Tala's services."
+Vinted,Oct-24,10,OTHER_COUNTRIES,UNKNOWN,This feature is now live in 10 countries.
+Wolt,Nov-21,4000,OTHER_EMPLOYEES,NO,"Wolt's team of over 4,000 employees operates a leading local commerce platform across 23 countries."
+Wolt,Nov-21,23,OTHER_COUNTRIES,UNKNOWN,a leading local commerce platform across 23 countries
+upGrad,Aug-21,1000000,REGISTERED_USERS,UNKNOWN,More than a million users from over four dozen nations have accessed the platform's courses
+upGrad,Aug-21,62000,CUSTOMERS,YES,"On its website, UpGrad says it has over 62,000 paid students."
+upGrad,Aug-21,100,OTHER_COURSES,UNKNOWN,"offers students over 100 courses in data science, machine learning, artificial intelligence, blockchain, finance, programming and law"
+Clearco,Jul-21,5500,BORROWERS,YES,"To date, Clearco has put more than $2.5 billion in over 5,500 companies."
+Creditas,Jul-22,4000,OTHER_EMPLOYEES,NO,"it employs 4,000 people in Sao Paulo, Curitiba, Porto Alegre, Recife, Valencia (Spain), and Mexico City."
+Creditas,Jul-22,16,OTHER_INSURANCE_CARRIERS,UNKNOWN,"the largest independent insurance broker in Brazil providing auto, residential and employment insurance in partnership with more than 16 carriers."
+Faire,Nov-21,300000,BUSINESS_CUSTOMERS,UNKNOWN,"Faire now serves 300,000 retailers across North America and Europe, as well as 40,000 brands from over 80 countries."
+Faire,Nov-21,40000,MERCHANTS,UNKNOWN,"Faire now serves 300,000 retailers across North America and Europe, as well as 40,000 brands from over 80 countries."
+Faire,Nov-21,350000,BUSINESS_CUSTOMERS,UNKNOWN,"connecting nearly 350,000 retail entrepreneurs around the world"
+Faire,Nov-21,700,OTHER_EMPLOYEES,NO,"Faire's world-class team has more than doubled over the past year, now representing a team of roughly 700"
+Faire,Nov-21,10,OTHER_OFFICES,NO,"located across 10 global offices in the United States, Canada, the United Kingdom, the Netherlands, and Brazil"
+Faire,Nov-21,160000,OTHER_ORDERS,UNKNOWN,"Enabled over 160,000 orders between North American and European businesses, and over 2 million total connections between businesses on the platform."
+Faire,Nov-21,2000000,OTHER_CONNECTIONS,UNKNOWN,over 2 million total connections between businesses on the platform.
+Faire,Nov-21,125000000,OTHER_PRODUCTS_SOLD,UNKNOWN,"Faire has sold over 125 million products in the last year, recording an average of over $10 million in sales per day during peak buying events."
+Faire,Nov-21,400000,OTHER_PRODUCTS_LISTED,UNKNOWN,"culminating in access to over 400,000 unique products"
+Flo Health,Sep-21,200000000,OTHER_DOWNLOADS,UNKNOWN,"Over 200 million people have downloaded Flo, and 43 million people use it on a monthly basis."
+Flo Health,Sep-21,200000000,REGISTERED_USERS,UNKNOWN,"With a community of over 200 million users, coming from all corners of the world, Flo has gained significant traction."
+Flo Health,Sep-21,43000000,ACTIVE_USERS,UNKNOWN,"Over 200 million people have downloaded Flo, and 43 million people use it on a monthly basis."
+Flo Health,Sep-21,1500000,PAYING_SUBSCRIBERS,UNKNOWN,the app has increased its active subscribers' base 4 times reaching 1.5M in August 2021.
+Flo Health,Sep-21,350,OTHER_EMPLOYEES,NO,"the employee base has more than doubled in the last two years to 350, with the growth trend set to continue."
+Flo Health,Sep-21,100,OTHER_MEDICAL_EXPERTS,NO,"With over 100+ medical experts, Flo supports women during their entire reproductive lives."
+Flo Health,Sep-21,1000000000,OTHER_CYCLES_TRACKED,UNKNOWN,Over 1 billion menstrual cycles have been tracked within the app.
+Flo Health,Sep-21,27700000,OTHER_PREGNANCIES,UNKNOWN,"To date, 27.7 million women got pregnant while using Flo."
+Gorgias,Aug-22,10000,BUSINESS_CUSTOMERS,UNKNOWN,"Today, the six-year-old company is working with more than 10,000 online stores, including Princess Polly, Steve Madden, Olipop and Marine Layer"
+Gorgias,Aug-22,4500,OTHER_STORES_AT_PRIOR_ROUND,UNKNOWN,"At the time of the Series B, it was supporting more than 4,500 stores with its technology"
+Gorgias,Aug-22,245,OTHER_EMPLOYEES,NO,"It also has grown to 245 employees across offices in San Francisco, Paris, Toronto, New York City, Sydney, Belgrade and Charlotte."
+Incredible Health,Aug-22,180,OTHER_EMPLOYEES,NO,The company has also expanded its workforce to 180 employees.
+Kriya,Oct-25,27,OTHER_EMPLOYEES,NO,including 27 who joined us as part of our acquisition of Kriya
+MNT-Halan,Feb-23,1300000,ACTIVE_USERS,UNKNOWN,"With 1.3 million monthly active users, MNT-Halan serves more than 5 million customers in Egypt, of which 3.5 million are financial clients and over 2 million are borrowers."
+MNT-Halan,Feb-23,5000000,CUSTOMERS,UNKNOWN,MNT-Halan serves more than 5 million customers in Egypt
+MNT-Halan,Feb-23,3500000,CUSTOMERS,UNKNOWN,of which 3.5 million are financial clients
+MNT-Halan,Feb-23,2000000,BORROWERS,YES,over 2 million are borrowers
+MNT-Halan,Feb-23,246000,OTHER_CONTRACTS,UNKNOWN,"consisting of 246,000 contracts and a robust cash pay-back ability"
+Mews,Jan-26,15000,CUSTOMERS,YES,"Powering 15,000 customers across 85 countries"
+Mews,Jan-26,132000,ACTIVE_USERS,UNKNOWN,"A customer base of 15,000, with 132,000+ monthly active hoteliers in 85 countries"
+Mews,Jan-26,42300000,OTHER_RESERVATIONS,UNKNOWN,"42.3 million checked-in reservations, of which 3.2 million via Mews Kiosk"
+Mews,Jan-26,3200000,OTHER_KIOSK_RESERVATIONS,UNKNOWN,"42.3 million checked-in reservations, of which 3.2 million via Mews Kiosk"
+Mews,Jan-26,2000000,OTHER_NON_ROOM_RESERVATIONS,UNKNOWN,powered over two million non-room reservations
+Pipe,May-21,4000,BUSINESS_CUSTOMERS,UNKNOWN,"More than 4,000 companies have signed up on the Pipe trading platform since its public launch in June 2020"
+Pipe,May-21,1000,OTHER_SIGNUPS_SINCE_MARCH_ROUND,UNKNOWN,"just over 1,000 of those signing up since its March raise"
+Pipe,May-21,34,OTHER_EMPLOYEES,NO,has a current headcount of 34
+Pipe,May-21,4000,BUSINESS_CUSTOMERS,UNKNOWN,"Over 4,000 companies have signed up on the Pipe trading platform"
+The Zebra,Apr-21,325,OTHER_EMPLOYEES,NO,"increased its headcount to over 325, compared to about 200 in early 2020"
+The Zebra,Apr-21,200,OTHER_EMPLOYEES,NO,compared to about 200 in early 2020
+The Zebra,Apr-21,325,OTHER_EMPLOYEES,NO,from approximately 200 to more than 325 employees
+The Zebra,Apr-21,200,OTHER_EMPLOYEES,NO,from approximately 200 to more than 325 employees
+Virta Health,Apr-21,100,BUSINESS_CUSTOMERS,UNKNOWN,"Virta works with over 100 organizations, and treats patients in all 50 states."
+wefox,May-21,700,OTHER_AGENTS,NO,Wefox has 700 agents selling Wefox products exclusively.
+wefox,May-21,5000,OTHER_BROKERS,NO,"It also partners with associate brokers - around 5,000 can distribute Wefox products."
+Doctolib,Mar-22,60000000,REGISTERED_USERS,UNKNOWN,"60 million people have used it in France, Germany and Italy."
+Doctolib,Mar-22,300000,BUSINESS_CUSTOMERS,UNKNOWN,"Overall, 300,000 healthcare workers are using Doctolib - not all of them pay for a monthly subscription."
+Doctolib,Mar-22,250,OTHER_HOSPITALS,UNKNOWN,The startup also works with 250 public hospitals.
+GOAT Group,Jun-21,30000000,MEMBERS,UNKNOWN,delivering products to over 30 million members across 170 countries
+GOAT Group,Jun-21,600000,MERCHANTS,UNKNOWN,"To provide a trusted end-to-end experience to its 30 million members and 600,000 sellers"
+GOAT Group,Jun-21,13,OTHER_FACILITIES,UNKNOWN,"increase its global footprint of 13 facilities with the addition of Chicago, China, Japan and Singapore"
+Gorillas,Oct-21,4500000,OTHER_ORDERS,UNKNOWN,opening 140 warehouses and delivering over 4.5 million orders in the past six months alone.
+Gorillas,Oct-21,140,OTHER_WAREHOUSES_OPENED,UNKNOWN,opening 140 warehouses and delivering over 4.5 million orders in the past six months alone.
+Gorillas,Oct-21,180,OTHER_WAREHOUSES,UNKNOWN,Gorillas has grown rapidly to operate over 180 warehouses in 9 international markets
+Gorillas,Oct-21,2000,OTHER_ITEMS,UNKNOWN,"Users of the app benefit from access to more than 2,000 essential items at retail prices"
+Invisible Technologies,Sep-25,44000,OTHER_NEWSLETTER_SUBSCRIBERS,UNKNOWN,"Invisible's newsletter: join +44,000 decision-makers for curated intelligence"
+LangChain,Oct-25,90000000,OTHER_DOWNLOADS,UNKNOWN,"Today, langchain and langgraph have a combined 90M monthly downloads, and 35 percent of the Fortune 500 use our services."
+Mews,Mar-24,5000,CUSTOMERS,UNKNOWN,"Powering 5,000 customers across more than 85 countries"
+Mews,Mar-24,350000,OTHER_HOSPITALITY_SPACES,UNKNOWN,"over 350,000 hospitality spaces are managed via Mews across 5,000 customers worldwide"
+Mews,Mar-24,16000000,OTHER_CHECK_INS,UNKNOWN,Over 16 million annual check-ins at hotels worldwide
+Mews,Mar-24,1000,OTHER_INTEGRATIONS,UNKNOWN,"Over 1,000 integrations with hospitality's best technology in its marketplace"
+Packable,Sep-21,75000000,OTHER_TRANSACTIONS,UNKNOWN,with approximately 75 million customer transactions to-date
+Packable,Sep-21,7,OTHER_MARKETPLACES,UNKNOWN,across 7 online marketplaces in North America
+Ramp,Jul-25,40000,BUSINESS_CUSTOMERS,UNKNOWN,"Serves more than 40,000 companies, including CBRE, Shopify, Anduril, Notion, Cursor, Vercel, Barry's, and the University of Tennessee Athletics Foundation."
+Stripe,Mar-23,100,OTHER_BILLION_DOLLAR_BUSINESSES,UNKNOWN,One hundred businesses now handle more than $1 billion on Stripe every year
+Voodoo,Aug-21,5000000000,OTHER_DOWNLOADS,UNKNOWN,with more than 5 billion downloads and 300 million active users monthly
+Voodoo,Aug-21,300000000,ACTIVE_USERS,NO,its 300 million monthly active users and 230+ mobile games available in free access on the Apple Store and Google Play
+Voodoo,Aug-21,600000000,OTHER_GAME_DOWNLOADS,UNKNOWN,"Voodoo has published hits including Helix Jump and Aquapark, with approximately 600 million and 300 million downloads, respectively."
+Voodoo,Aug-21,300000000,OTHER_GAME_DOWNLOADS,UNKNOWN,"Voodoo has published hits including Helix Jump and Aquapark, with approximately 600 million and 300 million downloads, respectively."
+Voodoo,Aug-21,230,OTHER_GAMES,UNKNOWN,230+ mobile games available in free access on the Apple Store and Google Play
+Voodoo,Aug-21,2000,OTHER_PARTNER_STUDIOS,UNKNOWN,"The company develops and publishes Hypercasual mobile games in partnership with over 2,000 studios worldwide."
+Whatnot,Aug-26,650000,OTHER_WEEKLY_NEW_USERS,UNKNOWN,"more than 650,000 people are joining Whatnot every week"
+Writer,Sep-23,50,OTHER_CUSTOMERS_IN_STUDY,UNKNOWN,"In a study of over 50 enterprise customers, WRITER was found to return an average of 7.5 hours of productivity per employee per week."
+1Password,Jan-22,100000,BUSINESS_CUSTOMERS,YES,"Growing its business customer base to more than 100,000 companies, adding notable new customers include Datadog, Intercom, PGA, Snowflake, and Wealthsimple."
+1Password,Jan-22,100000,BUSINESS_CUSTOMERS,YES,"The company's password management and credentials security platform is trusted by over 100,000 businesses, including IBM, Slack, Snowflake, Shopify, and Under Armour."
+1Password,Jan-22,570,OTHER_EMPLOYEES,NO,Growing its team by over 300% to 570 employees.
+Blockchain.com,Mar-22,37000000,REGISTERED_USERS,UNKNOWN,37 million verified users globally
+Blockchain.com,Mar-22,82000000,OTHER_WALLETS_CREATED,UNKNOWN,82 million wallets created
+Contentsquare,Jul-22,1000000,OTHER_ONE_MILLION_CUSTOMERS_CONTRADICTED_ON_SAME_PAGE,UNKNOWN,"with over one million customers worldwide across all verticals: retail, luxury, entertainment, telco, travel, automotive, B2B and finance."
+Contentsquare,Jul-22,1000,BUSINESS_CUSTOMERS,YES,"Contentsquare now serves 1,000 enterprise customers, including 30% of the Global Fortune 100."
+Contentsquare,Jul-22,30,OTHER_GLOBAL_FORTUNE_100_COMPANIES,YES,"Contentsquare now serves 1,000 enterprise customers, including 30% of the Global Fortune 100."
+Contentsquare,Jul-22,1500,OTHER_EMPLOYEES,NO,"with a team of 1,500 - including 430 in R&D - and 17 offices around the world"
+Contentsquare,Jul-22,430,OTHER_R_AND_D_EMPLOYEES,NO,"with a team of 1,500 - including 430 in R&D - and 17 offices around the world"
+Contentsquare,Jul-22,17,OTHER_OFFICES,NO,"with a team of 1,500 - including 430 in R&D - and 17 offices around the world"
+Contentsquare,Jul-22,1000000,OTHER_WEBSITES,NO,Its insights power the customer experience on over 1 million websites worldwide.
+Contentsquare,Jul-22,3200000000000,OTHER_CUSTOMER_INTERACTIONS_MONTHLY,NO,"by analyzing 3,200 billion customer interactions monthly and $2.5 billion in transactions daily"
+Deel,May-22,4500,CUSTOMERS,YES,"From April to October 2021 alone, Deel said it saw its global customer base jump from 1,800 to over 4,500."
+Deel,May-22,1800,OTHER_CUSTOMERS_AT_APRIL_2021,YES,"From April to October 2021 alone, Deel said it saw its global customer base jump from 1,800 to over 4,500."
+Fabric,Feb-22,28,OTHER_GARTNER_PEER_INSIGHTS_REVIEWERS,YES,The 28 customers who participated in the survey said:
+GoCardless,Feb-22,100000,MERCHANTS,YES,"Over 100,000 businesses use GoCardless to get paid on time."
+Mambu,Dec-21,200,BUSINESS_CUSTOMERS,YES,"over 200 customers and over 50 million end users across Europe, North America, Asia Pacific, the Middle East, and Latin America"
+Mambu,Dec-21,50000000,OTHER_END_USERS,NO,"Mambu counts banks, lenders, fintechs and financial institutions as its customers, with over 50 million end users leveraging Mambu's technology every day."
+Mambu,Dec-21,40,OTHER_CUSTOMERS_SIGNED_IN_2021,YES,The company has signed over 40 customers in 2021 to date
+Mambu,Dec-21,800,OTHER_EMPLOYEES,NO,"With 800 employees globally, Mambu continues to invest in its people and the community"
+Mollie,Jun-21,120000,MERCHANTS,YES,"Today, it serves more than 120,000 monthly active merchants of all sizes across the continent."
+Mollie,Jun-21,480,OTHER_EMPLOYEES,NO,"Today, Mollie has around 480 employees and plans to hire 300 new team members in the next six-to-nine months."
+Mollie,Jun-21,300,OTHER_PLANNED_NEW_HIRES,NO,"Today, Mollie has around 480 employees and plans to hire 300 new team members in the next six-to-nine months."
+N26,Oct-21,7000000,CUSTOMERS,UNKNOWN,"With more than 7 million customers in 25 countries, N26 is on track to process over $90 billion in transaction volume in 2021 alone"
+N26,Oct-21,25,OTHER_COUNTRIES,NO,"With more than 7 million customers in 25 countries, N26 is on track to process over $90 billion in transaction volume in 2021 alone"
+N26,Oct-21,1500,OTHER_EMPLOYEES,NO,"currently has a 1,500-strong team of more than 90 nationalities"
+N26,Oct-21,1000,OTHER_PLANNED_NEW_HIRES,NO,"N26 will also scale its global team further, and aims to bring on board 1,000 new team members in the coming years"
+N26,Oct-21,24,OTHER_MARKETS,NO,"It offers simple, secure and customer-friendly mobile banking to millions of customers in 24 markets across Europe"
+Pleo,Dec-21,40000,CUSTOMERS,YES,"And a big thank you to our 40,000+ customers"
+Pleo,Dec-21,25000,BUSINESS_CUSTOMERS,YES,"We were impressed by how Pleo has already redefined the way that over 25,000 companies think about managing their expenses, saving them time and lowering costs while increasing transparency"
+Pleo,Dec-21,1000,OTHER_MONTHLY_CUSTOMER_SIGNUPS,YES,"Since July, we've had up to 1,000 customers signing up every month."
+Pleo,Dec-21,400,OTHER_EMPLOYEES,NO,Doubling & up-skilling our 400-strong team
+Ramp,Aug-21,2000,BUSINESS_CUSTOMERS,UNKNOWN,"more than 2,000 businesses currently using Ramp as their 'primary spend management solution.'"
+Revolut,Jul-21,16000000,CUSTOMERS,UNKNOWN,"Revolut, the financial superapp with more than 16 million customers worldwide, today announced an $800m series E funding round, valuing the business at $33 billion."
+Savage X Fenty,Feb-21,3900000,OTHER_INSTAGRAM_FOLLOWERS,NO,"The brand, known for its inclusivity of body types and elaborate fashion shows, has made waves on social media, with 3.9 million followers on Instagram."
+Stripe,Feb-25,50,OTHER_FORTUNE_100_COMPANIES,YES,"Stripe now serves half of the Fortune 100, 80% of the Forbes Cloud 100, and 78% of the Forbes AI 50."
+Stripe,Feb-25,80,OTHER_FORBES_CLOUD_100_COMPANIES,YES,"Stripe now serves half of the Fortune 100, 80% of the Forbes Cloud 100, and 78% of the Forbes AI 50."
+Stripe,Feb-25,39,OTHER_FORBES_AI_50_COMPANIES,YES,"Stripe now serves half of the Fortune 100, 80% of the Forbes Cloud 100, and 78% of the Forbes AI 50."
+Tipalti,Dec-21,2000,CUSTOMERS,YES,"Tipalti also passed the 2,000-customer mark"
+Tipalti,Dec-21,700,OTHER_EMPLOYEES,NO,has grown to over 700 employees worldwide.
+WayCool Foods,Jun-22,100000,CUSTOMERS,YES,"The company claims to work with more than 1,50,000 farmers and operates a product range across multiple channels, serving over 1,00,000 clients."
+WayCool Foods,Jun-22,150000,OTHER_FARMERS,NO,"The company claims to work with more than 1,50,000 farmers and operates a product range across multiple channels, serving over 1,00,000 clients."
+Airwallex,Dec-25,200000,BUSINESS_CUSTOMERS,YES,"More than 200,000 companies worldwide – from startups to public enterprises – use Airwallex to manage their global banking and financial operations, or to build and monetize their own financial products using Airwallex infrastructure."
+Airwallex,Dec-25,2000,OTHER_EMPLOYEES,NO,"The company is co-headquartered in San Francisco and Singapore with over 2,000 employees across 26 offices."
+Airwallex,Dec-25,26,OTHER_OFFICES,UNKNOWN,"The company is co-headquartered in San Francisco and Singapore with over 2,000 employees across 26 offices."
+Airwallex,Dec-25,80,OTHER_LICENSES,UNKNOWN,"Founded in Melbourne in 2015, Airwallex holds 80 licenses across North America, Europe, the Middle East, and Asia-Pacific, forming one of the most comprehensive financial infrastructures in the world."
+Airwallex,Dec-25,235000000000,OTHER_ANNUALIZED_TRANSACTION_VOLUME_USD,UNKNOWN,Annualized transaction volume doubled YoY to more than $235B in October.
+Airwallex,Sep-21,1000,OTHER_EMPLOYEES,NO,"The company has nearly doubled its headcount in 2021 and employs almost 1,000 employees today in over 20 locations globally."
+Airwallex,Sep-21,20,OTHER_LOCATIONS,UNKNOWN,"The company has nearly doubled its headcount in 2021 and employs almost 1,000 employees today in over 20 locations globally."
+Airwallex,Sep-21,20000000000,OTHER_ANNUALISED_PROCESSING_VOLUME_USD,UNKNOWN,"Airwallex has seen significant business growth in the last year, recording a year-over-year revenue growth of nearly 150% for the first half of 2021, and processing more than annualised US$20 billion for a global client portfolio that has quadrupled in size."
+Celonis,Aug-22,2500,OTHER_ENTERPRISE_DEPLOYMENTS,UNKNOWN,"Celonis is executing another record year of strong growth with more than 2,500 enterprise deployments worldwide."
+Celonis,Aug-22,10000,OTHER_CONSULTANTS,NO,"The Celonis for Consulting program launched in April 2021 and has enlisted more than 10,000 consultants and 2,000 consulting firms and created more than 2,000 Celonis projects and continues to expand."
+Celonis,Aug-22,2000,OTHER_CONSULTING_FIRMS,NO,"The Celonis for Consulting program launched in April 2021 and has enlisted more than 10,000 consultants and 2,000 consulting firms and created more than 2,000 Celonis projects and continues to expand."
+Celonis,Aug-22,2000,OTHER_PROJECTS,UNKNOWN,"The Celonis for Consulting program launched in April 2021 and has enlisted more than 10,000 consultants and 2,000 consulting firms and created more than 2,000 Celonis projects and continues to expand."
+Celonis,Aug-22,600,OTHER_ACADEMIC_PARTNERS,NO,"Additionally, there are 600+ academic partners and over 100,000 certified Celonis practitioners graduating from the Celonis Academic Alliance program."
+Celonis,Aug-22,100000,OTHER_CERTIFIED_PRACTITIONERS,NO,"Additionally, there are 600+ academic partners and over 100,000 certified Celonis practitioners graduating from the Celonis Academic Alliance program."
+Celonis,Aug-22,20,OTHER_OFFICES,UNKNOWN,"Celonis has thousands of implementations with global customers and is headquartered in Munich, Germany and New York City, USA with more than 20 offices worldwide."
+Creditas,Jan-22,4000,OTHER_EMPLOYEES,NO,"Founded in 2012 by Spanish Sergio Furio, it employs more than 4,000 people in Sao Paulo, Curitiba, Porto Alegre, Recife, Valencia (Spain), and Mexico City."
+Docker,Mar-22,10000000,REGISTERED_USERS,NO,"With over 10 million registered developers and development teams, Docker has grown to over 56,000 commercial customers, including over 70% of the Fortune 100, nine of the 10 top technology companies, eight of the top 10 banks, eight of the top 10 retailers, eight of the top 10 media companies, and seven of the top 10 healthcare companies."
+Docker,Mar-22,56000,BUSINESS_CUSTOMERS,YES,"With over 10 million registered developers and development teams, Docker has grown to over 56,000 commercial customers, including over 70% of the Fortune 100, nine of the 10 top technology companies, eight of the top 10 banks, eight of the top 10 retailers, eight of the top 10 media companies, and seven of the top 10 healthcare companies."
+Docker,Mar-22,9,OTHER_TOP_10_TECHNOLOGY_COMPANIES,YES,"With over 10 million registered developers and development teams, Docker has grown to over 56,000 commercial customers, including over 70% of the Fortune 100, nine of the 10 top technology companies, eight of the top 10 banks, eight of the top 10 retailers, eight of the top 10 media companies, and seven of the top 10 healthcare companies."
+Docker,Mar-22,8,OTHER_TOP_10_BANKS,YES,"With over 10 million registered developers and development teams, Docker has grown to over 56,000 commercial customers, including over 70% of the Fortune 100, nine of the 10 top technology companies, eight of the top 10 banks, eight of the top 10 retailers, eight of the top 10 media companies, and seven of the top 10 healthcare companies."
+Docker,Mar-22,8,OTHER_TOP_10_RETAILERS,YES,"With over 10 million registered developers and development teams, Docker has grown to over 56,000 commercial customers, including over 70% of the Fortune 100, nine of the 10 top technology companies, eight of the top 10 banks, eight of the top 10 retailers, eight of the top 10 media companies, and seven of the top 10 healthcare companies."
+Docker,Mar-22,8,OTHER_TOP_10_MEDIA_COMPANIES,YES,"With over 10 million registered developers and development teams, Docker has grown to over 56,000 commercial customers, including over 70% of the Fortune 100, nine of the 10 top technology companies, eight of the top 10 banks, eight of the top 10 retailers, eight of the top 10 media companies, and seven of the top 10 healthcare companies."
+Docker,Mar-22,7,OTHER_TOP_10_HEALTHCARE_COMPANIES,YES,"With over 10 million registered developers and development teams, Docker has grown to over 56,000 commercial customers, including over 70% of the Fortune 100, nine of the 10 top technology companies, eight of the top 10 banks, eight of the top 10 retailers, eight of the top 10 media companies, and seven of the top 10 healthcare companies."
+Fireblocks,Jan-22,800,CUSTOMERS,YES,"We reached some major milestones in 2021, growing from 150 customers to more than 800 customers, and surpassing $2 trillion in assets transferred."
+Fireblocks,Jan-22,2000000000000,OTHER_ASSETS_TRANSFERRED_USD,UNKNOWN,"We reached some major milestones in 2021, growing from 150 customers to more than 800 customers, and surpassing $2 trillion in assets transferred."
+Jobandtalent,Dec-21,1300,BUSINESS_CUSTOMERS,YES,"More than 1,300 companies - including DHL, FedEx, XPO, Ceva Logistics, eBay, IKEA, Kuehne & Nagel, JD Sports, Ocado, Sainsbury's, Argos and GLS - use the Jobandtalent platform to easily and efficiently match the right temporary roles with the right workers."
+Jobandtalent,Dec-21,100000,OTHER_WORKERS_PLACED_IN_FIRST_9_MONTHS_OF_2021,NO,"The Jobandtalent platform has found the right roles at the right companies for more than 100,000 workers in the first 9 months of 2021 alone, providing them with the benefits and security of full time employment."
+Mercury,Mar-25,200000,BUSINESS_CUSTOMERS,YES,"We now serve more than 200,000 ambitious companies across a variety of industries — from tech startups like Linear, Phantom, and ElevenLabs to venture capital firms, e-commerce companies like Cocolab and Bogey Bros, and a range of small businesses — who rely on Mercury to operate at their best."
+Monzo,May-24,9000000,CUSTOMERS,NO,"In the U.K., Monzo now claims more than 9 million retail customers and 400,000 clients in the business realm."
+Monzo,May-24,400000,OTHER_BUSINESS_BANKING_CLIENTS,UNKNOWN,"In the U.K., Monzo now claims more than 9 million retail customers and 400,000 clients in the business realm."
+Personio,Jun-22,6000,BUSINESS_CUSTOMERS,YES,"Over 6,000 companies with more than 500,000 employees have automated their people processes with Personio."
+Personio,Jun-22,500000,OTHER_EMPLOYEES_OF_CUSTOMER_COMPANIES,NO,"Over 6,000 companies with more than 500,000 employees have automated their people processes with Personio."
+Qonto,Jan-22,220000,BUSINESS_CUSTOMERS,YES,"Launched in 2017, Qonto claims to serve more than 220,000 clients across four countries (France, Germany, Italy and Spain) and employs more than 500 staff."
+Qonto,Jan-22,500,OTHER_EMPLOYEES,NO,"Launched in 2017, Qonto claims to serve more than 220,000 clients across four countries (France, Germany, Italy and Spain) and employs more than 500 staff."
+Remote,Apr-22,60,OTHER_COUNTRIES,UNKNOWN,"With expert team members located in more than 60 countries, Remote provides all the tools and support companies need to manage onboarding, payroll, benefits, relocation and other services for their teams."
+Snyk,Dec-22,2300,CUSTOMERS,YES,"Rapid customer adoption with more than 2,300 customers including: AB InBev, Comcast, Dun & Bradstreet, Manulife and Salesforce."
+Snyk,Dec-22,5100000,OTHER_VULNERABILITIES_FIXED,UNKNOWN,"In the past year, Snyk customers fixed more than 5.1 million vulnerabilities."
+Snyk,Dec-22,11500000,OTHER_SECURITY_ISSUES_REMEDIATED,UNKNOWN,Snyk-aided user remediation of over 11.5 million security issues in 2022 as a result of Snyk's comprehensive vulnerability data and developer-centric security journey.
+SumUp,Jun-22,4000000,MERCHANTS,YES,More than 4 million businesses ‒ from taxi drivers and coffee shop owners to large sports stadiums ‒trust SumUp to deliver when it matters.
+SumUp,Jun-22,3000,OTHER_EMPLOYEES,NO,"SumUp's team of over 3,000 people supports merchants in 35 countries worldwide, with Peru (launched in June 2022) being the company's most recent new market."
+SumUp,Jun-22,35,OTHER_COUNTRIES,UNKNOWN,"SumUp's team of over 3,000 people supports merchants in 35 countries worldwide, with Peru (launched in June 2022) being the company's most recent new market."
+Vedantu,Sep-21,35000000,REGISTERED_USERS,NO,Vedantu says it has onboarded 35 million students and aims to have half a million subscription-based user base by the end of this year.
+Vedantu,Sep-21,200000,CUSTOMERS,YES,"The platform currently has 200,000 paid customers"
+Wefox,Jul-22,2000000,CUSTOMERS,YES,wefox now has more than two million customers and we aim to reach three million customers by the end of this year.
+Wefox,Jul-22,1300,OTHER_EMPLOYEES,NO,"Despite the current economic climate, wefox remains one of the very few tech companies still recruiting, with more than 1300 employees in the company today up from 550 employees in 2021."
+dbt Labs,Feb-22,9000,ACTIVE_USERS,NO,"Today there are 9,000 companies using dbt every week, 25,000 practitioners in the dbt Community Slack, and 1,800 companies paying for dbt Cloud."
+dbt Labs,Feb-22,25000,OTHER_COMMUNITY_SLACK_MEMBERS,NO,"Today there are 9,000 companies using dbt every week, 25,000 practitioners in the dbt Community Slack, and 1,800 companies paying for dbt Cloud."
+dbt Labs,Feb-22,1800,BUSINESS_CUSTOMERS,YES,"Today there are 9,000 companies using dbt every week, 25,000 practitioners in the dbt Community Slack, and 1,800 companies paying for dbt Cloud."
+dbt Labs,Feb-22,12,OTHER_MEETUPS,UNKNOWN,"The dbt Community now includes 25,000 data professionals, 12 dbt Meetups in 8 countries, and more than 9,000 companies using dbt."
+dbt Labs,Feb-22,7000,OTHER_CONFERENCE_ATTENDEES,NO,"dbt Labs hosted the largest global conference dedicated to analytics engineering with more than 7,000 attendees."
+dbt Labs,Feb-22,25,OTHER_ENTERPRISE_APPLICATIONS,UNKNOWN,"dbt Cloud APIs now powers more than 25 enterprise applications delivering solutions across categories of business intelligence, operational analytics, data discovery, data quality, and data governance."
+Airwallex,May-25,150000,BUSINESS_CUSTOMERS,YES,"The company grew its customer base by 50% in 2024 – now serving 150,000 businesses worldwide."
+AlphaSense,Jun-24,4000,BUSINESS_CUSTOMERS,YES,"Our platform is trusted by over 4,000 enterprise customers, including a majority of the S&P 500."
+Calm,Jul-19,2000000,PAYING_SUBSCRIBERS,YES,"Calm's Sleep Stories feature that launched last year is a hit, with more than 150 million listens from its 2 million paid subscribers and 50 million downloads."
+Calm,Jul-19,50000000,OTHER_DOWNLOADS,NO,"Calm's Sleep Stories feature that launched last year is a hit, with more than 150 million listens from its 2 million paid subscribers and 50 million downloads."
+Calm,Jul-19,150000000,OTHER_LISTENS,NO,"Calm's Sleep Stories feature that launched last year is a hit, with more than 150 million listens from its 2 million paid subscribers and 50 million downloads."
+Coalition,Jul-22,160000,CUSTOMERS,YES,"Coalition now serves over 160,000 customers with Active Cyber Insurance, Active Executive Risks Insurance, P&C insurance, and cybersecurity capabilities."
+Dream Sports,Nov-21,140000000,REGISTERED_USERS,UNKNOWN,"In a statement, the company said that with an existing user base of 140 Mn Indians, it aims to be one of the world's largest sports ecosystems which includes sports content, commerce, experiences, fan engagement (including sports gaming and esports), web 3.0 solutions, fantasy sports and fitness tech."
+Fireblocks,Jul-21,500,BUSINESS_CUSTOMERS,YES,"Fireblocks serves over 500 financial institutions, has secured the transfer of over one trillion in digital assets, and has a unique insurance policy that covers assets in storage & transit."
+Konfio,Sep-21,35000,OTHER_BUSINESSES_LENT_TO_SINCE_INCEPTION,YES,desde el inicio de sus operaciones ha otorgado préstamos de capital de trabajo a cerca de 35 mil empresas
+Miro,Jan-22,30000000,REGISTERED_USERS,UNKNOWN,"Since Miro raised its $50M Series B funding round in April 2020, the company has increased its user base by 500% (from 5M to 30M) and its paying customer base by 550% (from 20,000 to 130,000)."
+Miro,Jan-22,130000,BUSINESS_CUSTOMERS,YES,"Since Miro raised its $50M Series B funding round in April 2020, the company has increased its user base by 500% (from 5M to 30M) and its paying customer base by 550% (from 20,000 to 130,000)."
+Miro,Jan-22,20,OTHER_ENTERPRISE_CUSTOMERS_PAYING_OVER_1M_PER_YEAR,YES,Miro currently has 20 enterprise customers each paying more than $1M per year each.
+Miro,Jan-22,25000000,OTHER_ABOUT_BOILERPLATE_USERS,UNKNOWN,"Miro, co-headquartered in San Francisco and Amsterdam, serves more than 25M users worldwide, including more than 100,000 client organizations and 95% of the Fortune 100."
+Miro,Jan-22,100000,OTHER_ABOUT_BOILERPLATE_CLIENT_ORGS,UNKNOWN,"Miro, co-headquartered in San Francisco and Amsterdam, serves more than 25M users worldwide, including more than 100,000 client organizations and 95% of the Fortune 100."
+MoonPay,Nov-21,250,OTHER_WALLETS_WEBSITES_AND_APPS_POWERED,UNKNOWN,"The company's fiat-to-crypto on-ramp powers more than 250 wallets, websites and applications in more than 160 countries and has processed more than $2 billion in transactions to date."
+MoonPay,Nov-21,7000000,CUSTOMERS,YES,Built a customer base of more than 7 million users
+OneTrust,Jul-23,14000,BUSINESS_CUSTOMERS,YES,"Over 14,000 customers use OneTrust's technology, including half of the Global 2,000."
+Plaid,Apr-21,4500,BUSINESS_CUSTOMERS,YES,"Plaid's technology connects information from 11,000 banks and financial institutions to more than 4,500 fintech customers, including PayPal (PYPL), Robinhood, Google (GOOGL) and Microsoft (MSFT)."
+Plaid,Apr-21,11000,OTHER_BANKS_AND_FINANCIAL_INSTITUTIONS_CONNECTED,NO,"Plaid's technology connects information from 11,000 banks and financial institutions to more than 4,500 fintech customers, including PayPal (PYPL), Robinhood, Google (GOOGL) and Microsoft (MSFT)."
+Plaid,Apr-21,700,OTHER_EMPLOYEES,NO,"It currently has around 700 employees at offices in San Francisco, New York, Salt Lake City, Washington, London and Amsterdam."
+Raisin,Mar-23,1000000,CUSTOMERS,NO,"The global savings and investment specialist recently exceeded 1 million customers, for which a total of €850 million in interest has been generated since founding the company in 2012."
+Raisin,Mar-23,1000000,OTHER_CUSTOMERS_IN_THREE_MARKETS,NO,"Today, Raisin serves more than one million customers in these three markets offering not only savings products but also a multitude of investment and pension products."
+Raisin,Mar-23,400,OTHER_PARTNER_BANKS_AND_FINANCIAL_SERVICE_PROVIDERS,YES,Raisin works with over 400 banks and financial service providers from more than 30 countries.
+Revolut,Aug-24,45000000,CUSTOMERS,NO,"Revolut, the global financial technology company with over 45 million customers worldwide"
+Spendesk,Jan-22,7000,OTHER_CFO_CONNECT_COMMUNITY_MEMBERS,NO,"CFO Connect is the fastest-growing global community of finance leaders with more than 7,000 members"
+Vegrow,Dec-23,400,OTHER_PRODUCTION_POCKETS,NO,Vegrow connects farmers across more than 400 production pockets and helps them align with market expectations and get better yield.
+Vegrow,Dec-23,200,OTHER_TONS_OF_FRUIT_PROCESSED_DAILY,NO,"According to the company, it processes more than 200 tons of fruits daily and operates in Karnataka and Telangana."
+Wiz,Mar-26,50,OTHER_PERCENT_OF_FORTUNE_100,UNKNOWN,"Wiz is trusted by 50% of the Fortune 100 and leading global organizations including Shell, BMW, LVMH, Morgan Stanley, Mars, Salesforce, Takeda, Colgate-Palmolive, and Aon among others."
