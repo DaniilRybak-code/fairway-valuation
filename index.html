@@ -223,14 +223,59 @@
             <li><b>Unit economics as spend scales.</b> CAC payback by channel is the number that decides whether 74% growth is being earned or bought.</li>
           </ul>
         </div>
+        <!-- TWO LAYERS, AND THEY ARE NEVER BLENDED. Fable, 2-Sep: "vcconf's failure mode is
+             stale investors; ours would be aspirational ones." So the call list and the map are
+             two blocks with two headings and two different promises. The first is houses that
+             write a cheque this size in this sector and led something recently. The second is
+             who paid up for businesses like this one, which is mostly growth stage and mostly
+             US and says so. Merging them would make the second block look like the first. -->
         <div class="rd wide">
-          <b class="rd-t">Investors in the space</b>
+          <b class="rd-t">Writing first cheques in Northsteer&rsquo;s sector right now</b>
+          <div class="inv-call">
+            <div class="ivk">
+              <span class="ivn-logo">Uncork Capital</span>
+              <span class="ivk-line">First cheque $3m to $5m</span>
+              <span class="ivk-line">North America</span>
+              <span class="ivk-deal">Led <b>Roam</b> <em>Jul-26</em></span>
+              <span class="ivk-why">exact fit on sector, stage and geography</span>
+            </div>
+            <div class="ivk">
+              <span class="ivn-logo">Salesforce Ventures</span>
+              <span class="ivk-line">First cheque up to $5m</span>
+              <span class="ivk-line">US; Europe; Asia</span>
+              <span class="ivk-deal">Led <b>Covecta</b> <em>Sep-25</em></span>
+              <span class="ivk-why">exact fit on sector, stage and geography</span>
+            </div>
+            <div class="ivk">
+              <span class="ivn-logo">Benchmark</span>
+              <!-- A THIN WEBSITE IS NOT AN INACTIVE FUND. benchmark.com carries two office
+                   addresses and no investment criteria. It led a $17m Series A in Nov 2025 and
+                   raised a $750m early-stage fund in Jun 2026. It goes on the list, and the card
+                   says what is not published rather than leaving a gap the founder fills in. -->
+              <span class="ivk-line ivk-none">First cheque not published</span>
+              <span class="ivk-line ivk-none">No stated investing geography</span>
+              <span class="ivk-deal">Led <b>fomo</b> <em>Nov-25</em></span>
+              <span class="ivk-why">sector and stage, wider geography</span>
+            </div>
+            <div class="ivk lock-blur">
+              <span class="ivn-logo">Redacted Partners</span>
+              <span class="ivk-line">First cheque $1m to $4m</span>
+              <span class="ivk-line">Europe</span>
+              <span class="ivk-deal">Led <b>Redacted</b> <em>Jun-26</em></span>
+              <span class="ivk-why">exact fit on sector, stage and geography</span>
+            </div>
+          </div>
+          <p class="microcopy" style="margin-top:10px;">Six houses match. We do not pad the list: a shorter list of houses that write your cheque is worth more than a longer one that does not. Every name carries a dated round we read, and the label saying how far we reached to find it.</p>
+        </div>
+        <div class="rd wide">
+          <b class="rd-t">The houses behind your reference rounds</b>
+          <p class="microcopy" style="margin:-2px 0 12px;">A map of who pays up for businesses like yours, drawn from the rounds on your own field. Mostly growth stage and mostly US: this is not a call list for an early round.</p>
           <div class="inv-cols">
             <div class="ivc"><span class="ivn-logo">Accel</span><span class="ivn-rounds"><i>Decagon <em>Jan-26</em></i><i>Gamma <em>Nov-25</em></i><i>Cursor <em>Jun-25</em></i><u>+12 more</u></span></div>
             <div class="ivc"><span class="ivn-logo">Sequoia</span><span class="ivn-rounds"><i>Sierra <em>May-26</em></i><i>Notion <em>Jan-26</em></i><i>LangChain <em>Oct-25</em></i><u>+13 more</u></span></div>
             <div class="ivc"><span class="ivn-logo">Coatue</span><span class="ivn-rounds"><i>Decagon <em>Jan-26</em></i><i>Ramp <em>Nov-25</em></i><i>Deel <em>Oct-25</em></i><u>+8 more</u></span></div>
           </div>
-          <p class="microcopy" style="margin-top:10px;">Drawn from public sources. A map, not an introduction &mdash; and no affiliation or endorsement is implied.</p>
+          <p class="microcopy" style="margin-top:10px;">Drawn from public sources. A map, not an introduction, and no affiliation or endorsement is implied. No contact details are held or shown.</p>
         </div>
       </div>
     </div>
@@ -536,6 +581,11 @@
           </select>, taken from where you are. Change it if that is wrong.</span>
       </p>
 
+      <!-- THE TWO INVESTOR LAYERS, drawn by investors.js from the selector's own payload rather
+           than written here. Empty until the engine answers, and it stays empty rather than
+           showing a heading with nothing under it if the engine never does. -->
+      <div class="read-grid" id="investor-blocks"></div>
+
       <div class="review-badge">
         <span class="dot"></span>
         <span><strong>Under review now.</strong> A reviewer reads every set of answers that comes through here by hand and emails you their read on where inside these methods you actually sit, within 24 hours. That part is free.</span>
@@ -700,6 +750,7 @@
 <script src="/field.js"></script>
 <script src="/app-result.js"></script>
 <script src="/app-site.js"></script>
+<script src="/investors.js"></script>
 <script src="/reveal-client.js"></script>
 <script src="/showcase.js"></script>
 </body>

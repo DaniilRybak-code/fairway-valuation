@@ -59,26 +59,174 @@ def _sectors(cell):
     return out
 
 
+# THE SAME TOKENISER THE PEER MATCHER USES, imported rather than rewritten so "embedded payments"
+# tokenises identically on both sides of the page. A second, subtly different one here is how the
+# investor list and the comparables list would slowly stop agreeing about what a business is.
+_STOP = {'and', 'of', 'the', 'for', 'a', 'in', 'to', 'with', 'we', 'our', 'is', 'that', 'from',
+         'ventures', 'capital', 'partners', 'fund', 'funds', 'invest', 'invests', 'investing',
+         'companies', 'company', 'founders', 'stage', 'early', 'seed', 'series'}
+
+
+def _toks(t):
+    return set(re.findall(r'[a-z0-9]+', (t or '').lower())) - _STOP
+
+
+def _tag_overlap(prof, d):
+    """How close is what this house has backed to what this founder is building?
+
+    The founder side is their own product vocabulary, the same `product_tags` the peer matcher
+    scores on. The house side is the SUBSECTORS OF THE ROUNDS IT ACTUALLY JOINED plus its own
+    one-line thesis: "AI coding assistant / IDE", "Residential real-estate marketplace (iBuyer)".
+    Not its sector list, which is coarse by design and already scored as the sector facet.
+
+    Jaccard rather than a raw count, so a house with a long portfolio does not out-rank a focused
+    one simply by having more words.
+    """
+    mine = _toks(prof.get('product_tags', '').replace('|', ' '))
+    if not mine:
+        return 0.0
+    theirs = _toks(' '.join([d.get('subsectors') or '', d.get('thesis_one_liner') or '']))
+    if not theirs:
+        return 0.0
+    return len(mine & theirs) / float(len(mine | theirs))
+
+
+# ---------------------------------------------------------------------------
+# GEOGRAPHY, and why a substring test was never going to work.
+#
+# The founder's country arrives as an edge header, so it is a two-letter code or a full country
+# name. The house's geography is a free-text line a human wrote: "UK", "UK/Europe; backs European
+# founders building globally", "Europe-focused, invests globally", "North America; Europe; Israel",
+# "Australia and New Zealand; Israel; Southeast Asia". The old test asked whether one string
+# contained the other, so a founder in "United Kingdom" did not match a fund in "UK" -- the letters
+# u and k are both there and not next to each other -- and geography scored nothing for anybody.
+#
+# So: resolve the founder to a set of words for their country AND the regions that contain it,
+# and intersect that with the words in the house's line. A fund saying "Europe" matches a German
+# founder without anyone listing Germany, and a fund saying "invests globally" matches everyone,
+# which is what it means.
+_REGIONS = {
+    'eu':   ('europe', 'european', 'emea', 'eea'),
+    'na':   ('north america', 'north american', 'americas'),
+    'apac': ('apac', 'asia', 'asia pacific', 'southeast asia', 'south east asia'),
+    'latam': ('latin america', 'latam', 'south america'),
+    'africa': ('africa', 'african', 'sub-saharan'),
+    'mena': ('mena', 'middle east', 'gulf'),
+}
+# code -> (what the country is called, which regions contain it). Kept to the markets the pilot
+# will actually see, and adding one is a one-line change rather than a rethink.
+COUNTRIES = {
+    'gb': (('uk', 'united kingdom', 'britain', 'british', 'england', 'scotland', 'wales'), ('eu',)),
+    'ie': (('ireland', 'irish'), ('eu',)),
+    'us': (('us', 'usa', 'united states', 'america', 'american'), ('na',)),
+    'ca': (('canada', 'canadian'), ('na',)),
+    'de': (('germany', 'german', 'dach'), ('eu',)),
+    'fr': (('france', 'french'), ('eu',)),
+    'es': (('spain', 'spanish', 'iberia'), ('eu',)),
+    'it': (('italy', 'italian'), ('eu',)),
+    'nl': (('netherlands', 'dutch', 'benelux'), ('eu',)),
+    'be': (('belgium', 'benelux'), ('eu',)),
+    'se': (('sweden', 'swedish', 'nordic', 'nordics'), ('eu',)),
+    'no': (('norway', 'norwegian', 'nordic', 'nordics'), ('eu',)),
+    'dk': (('denmark', 'danish', 'nordic', 'nordics'), ('eu',)),
+    'fi': (('finland', 'finnish', 'nordic', 'nordics'), ('eu',)),
+    'pl': (('poland', 'polish', 'cee'), ('eu',)),
+    'ch': (('switzerland', 'swiss', 'dach'), ('eu',)),
+    'at': (('austria', 'austrian', 'dach'), ('eu',)),
+    'pt': (('portugal', 'portuguese', 'iberia'), ('eu',)),
+    'il': (('israel', 'israeli'), ('mena',)),
+    'ae': (('uae', 'emirates', 'dubai', 'abu dhabi'), ('mena',)),
+    'in': (('india', 'indian'), ('apac',)),
+    'sg': (('singapore', 'singaporean'), ('apac',)),
+    'au': (('australia', 'australian', 'anz'), ('apac',)),
+    'nz': (('new zealand', 'anz'), ('apac',)),
+    'jp': (('japan', 'japanese'), ('apac',)),
+    'ng': (('nigeria', 'nigerian'), ('africa',)),
+    'ke': (('kenya', 'kenyan'), ('africa',)),
+    'ug': (('uganda', 'ugandan'), ('africa',)),
+    'za': (('south africa',), ('africa',)),
+    'br': (('brazil', 'brazilian'), ('latam',)),
+    'mx': (('mexico', 'mexican'), ('latam',)),
+}
+_BY_NAME = {}
+for _c, (_names, _regs) in COUNTRIES.items():
+    for _n in _names:
+        _BY_NAME[_n] = _c
+    _BY_NAME[_c] = _c
+
+_ANYWHERE = ('global', 'globally', 'worldwide', 'anywhere', 'any geography', 'international')
+
+
+def geo_words(country):
+    """Everything a house could write that would mean this founder's country. None if unresolved."""
+    c = _BY_NAME.get((country or '').strip().lower())
+    if not c:
+        return None
+    names, regs = COUNTRIES[c]
+    out = set(names) | {c}
+    for r in regs:
+        out |= set(_REGIONS[r])
+    return out
+
+
+def geo_match(country, cell):
+    """(matched, house states no restriction). Word-level, because the house side is a sentence."""
+    line = (cell or '').strip().lower()
+    anywhere = any(a in line for a in _ANYWHERE) or not line
+    words = geo_words(country)
+    if words is None:
+        return None, anywhere
+    return (any(w in line for w in words) or anywhere), anywhere
+
+
 INVESTORS = _rows(D + 'investors.csv')
 
-# WHAT A CALLABLE ROW MUST CARRY TO RENDER. Fable's bar, unchanged in substance.
-REQUIRED = ('recent_deal_1_company', 'recent_deal_1_date', 'geographies')
+# WHAT A CALLABLE ROW MUST CARRY TO RENDER.
+#
+# ONE HARD REQUIREMENT: a named deal with a date and the URL it was read from. That is the
+# activity rule and it is the whole defence against vcconf's failure mode. Everything else is
+# something we either publish or say we do not have.
+#
+# DANIIL, 3-Sep-2026: "We should definitely include Benchmark and Thrive. Reality is they can do
+# pretty much anything from what I understand."
+#
+# He is right and the old gate had the logic backwards. It refused any house that had not
+# published a first-cheque range or an investing geography, which does not describe an inactive
+# fund; it describes a fund with a sparse website. benchmark.com carries two office addresses and
+# no investment criteria. thrivecap.com is one sentence. Both led seed rounds this year, both
+# raised new early-stage funds this year, and both were being withheld from every founder because
+# their marketing pages are thin. Meanwhile the ABSENCE of a stated geography was being read as a
+# failed geography test when the honest reading is the opposite: a fund that publishes no
+# geographic restriction has not claimed one.
+#
+# So an unpublished cheque and an unstated geography no longer block. They are SHOWN AS
+# UNPUBLISHED on the card ("First cheque not published", "No stated investing geography"), which
+# is true, useful and the same discipline we hold a comparable to. What still holds the line is
+# the stage band: a house that says where it comes in is believed and filtered on, and IVP saying
+# "typically Series B, floor $15m" keeps it away from a pre-seed founder whether or not anything
+# else is published.
+REQUIRED = ('recent_deal_1_company', 'recent_deal_1_date', 'recent_deal_1_source_url')
 
-# A CHEQUE FIGURE AT EITHER END COUNTS, and the 3-Sep enrichment is why this changed. Five houses
-# publish only one side of the range: Salesforce Ventures states "under $5M" at seed, Mercia "up
-# to GBP 10m", Google's AI Futures Fund a $2m co-investment ceiling, Menlo Anthology a $100k floor,
-# Square Peg a $1m floor. Requiring first_cheque_low_m specifically was a rule about our own column
-# layout rather than about what a founder needs to know, and it kept five sourced, current houses
-# off the list. A ceiling tells a founder just as clearly whether this is their conversation.
+# Shown, not required. A ceiling or a floor alone is a real published figure and reads on the card
+# as "up to $5m" or "from $100k": Salesforce Ventures states "under $5M" at seed, Mercia "up to
+# GBP 10m", Google's AI Futures Fund a $2m ceiling, Menlo Anthology and Square Peg a floor.
 CHEQUE_EITHER_END = ('first_cheque_low_m', 'first_cheque_high_m')
 
 
 def renderable(d):
-    """(bool, missing fields). A row is not shown to a founder unless it is complete."""
+    """(bool, missing fields). A row is not shown to a founder without a dated, sourced deal."""
     miss = [k for k in REQUIRED if not (d.get(k) or '').strip()]
-    if not any((d.get(k) or '').strip() for k in CHEQUE_EITHER_END):
-        miss.append('first_cheque_low_m or first_cheque_high_m')
     return (not miss), miss
+
+
+def gaps(d):
+    """What this house does not publish, for the card to say out loud rather than hide."""
+    out = []
+    if not any((d.get(k) or '').strip() for k in CHEQUE_EITHER_END):
+        out.append('cheque')
+    if not (d.get('geographies') or '').strip():
+        out.append('geography')
+    return out
 
 
 def _stage_for(prof, raise_musd=None):
@@ -135,18 +283,19 @@ def match_callable(prof, raise_musd=None, want=8):
         # because silence is not a claim.
         if stages and stage and not stage_hit:
             continue
-        geos = [g.strip().lower() for g in (d.get('geographies') or '').split(';') if g.strip()]
-        geo_hit = bool(geo) and any(geo in g or g in geo for g in geos)
-        geo_any = (not geos) or any(g in ('global', 'any', 'worldwide') for g in geos)
+        hit, geo_any = geo_match(geo, d.get('geographies'))
+        geo_hit = bool(hit)
         # AN UNKNOWN COUNTRY IS NOT A MISS, and treating it as one emptied the list.
         #
-        # Every one of the 43 fixtures has country=None, because the quiz never asks it. geo_hit
-        # is therefore false for all of them, and geo_any is true only for the four renderable
-        # houses that say "Global", so 71 of 75 houses failed the geography facet for every
-        # founder we test. Ten fixtures got fewer than three houses and four got none, and it read
-        # as a thin database when it was a three-valued question answered with a boolean. The same
-        # mistake _cheque_fits already avoids: unknown returns None and never excludes.
-        geo_known = bool(geo)
+        # The founder is never asked where they are based. It comes from Vercel's edge header at
+        # boot (app.js sets responses.country from /api/geo, docs/lead-capture.md), which is the
+        # right call: one fewer question for a fact the request already carries. But the header
+        # can be absent, a VPN can make it wrong, and NONE OF THE 43 TEST FIXTURES CARRY ONE, so
+        # geo_hit was false for every founder we test and geo_any true only for the handful of
+        # houses saying "Global". Ten fixtures got fewer than three houses and four got none. It
+        # read as a thin database; it was a three-valued question answered with a boolean, the
+        # same mistake _cheque_fits already avoids by returning None for unknown.
+        geo_known = geo_words(geo) is not None
         fits = _cheque_fits(d, raise_musd)
         if fits is False:
             continue
@@ -154,9 +303,9 @@ def match_callable(prof, raise_musd=None, want=8):
             # Score on what we actually know, and SAY that geography was not part of it rather
             # than letting the founder read "exact fit" and assume we checked.
             if sector_hit and stage_hit:
-                tier, label = 1, 'sector and stage; we have not asked where you are based'
+                tier, label = 1, 'sector and stage; your location was not resolved'
             elif (sector_hit or sector_any) and (stage_hit or stage_any):
-                tier, label = 2, 'broader fit; we have not asked where you are based'
+                tier, label = 2, 'broader fit; your location was not resolved'
             else:
                 continue
         else:
@@ -174,11 +323,21 @@ def match_callable(prof, raise_musd=None, want=8):
         # Rank inside a tier by the house's DEAL COUNT in the founder's own sectors: activity in
         # this sector is the evidence that matters, and it is the number the table already holds.
         depth = sum(n for s, n in secs.items() if s in mine)
-        pool.append((tier, -depth, d['investor_name'], d, label))
-    pool.sort(key=lambda z: (z[0], z[1], z[2]))
+        # TAG OVERLAP, the second half of the roadmap's ranking rule and the half that was
+        # missing. Deal count says how ACTIVE a house is in the founder's sector; tag overlap says
+        # how close the businesses it backed are to this one. A payments house with four deals is
+        # ranked above one with two, but between two houses with four deals each, the one whose
+        # portfolio shares the founder's own product vocabulary goes first. Same tokeniser the
+        # peer matcher uses, so "embedded payments" means the same thing on both sides of the page.
+        overlap = _tag_overlap(prof, d)
+        # A HOUSE THAT PUBLISHES ITS TERMS OUTRANKS ONE THAT DOES NOT, all else equal. Benchmark
+        # belongs on the list; it does not belong above a house of equal fit whose cheque range a
+        # founder can actually check themselves.
+        pool.append((tier, len(gaps(d)), -depth, -overlap, d['investor_name'], d, label))
+    pool.sort(key=lambda z: (z[0], z[1], z[2], z[3], z[4]))
     # NEVER PADDED. If only four houses clear tier 0 and 1, four is the answer.
     out = []
-    for tier, _negdepth, _name, d, label in pool[:want]:
+    for tier, _ngaps, _negdepth, _overlap, _name, d, label in pool[:want]:
         if tier >= 3 and len([o for o in out if o['tier'] < 3]) >= 3:
             break                          # do not dilute a good list with two-of-three matches
         out.append(dict(
@@ -195,7 +354,10 @@ def match_callable(prof, raise_musd=None, want=8):
             # rather than writing a balance-sheet venture cheque. Both change what "first cheque
             # $1.5m to $3m" and "recently backed X" mean to the person reading them.
             cheque_figure_dated=(d.get('cheque_figure_dated') or '').strip() or None,
-            deal_note=(d.get('deal_note') or '').strip() or None))
+            deal_note=(d.get('deal_note') or '').strip() or None,
+            # WHAT THIS HOUSE DOES NOT PUBLISH, carried so the card can say it rather than leave a
+            # blank the founder fills in with an assumption.
+            not_published=gaps(d) or None))
     return out
 
 
@@ -269,7 +431,7 @@ FOOTER = ('A map, not an introduction. No affiliation or endorsement is implied,
 # added to investors.csv later cannot leak into the page by accident.
 CARD_FIELDS = ('investor', 'house_type', 'thesis', 'why', 'cheque_low_m', 'cheque_high_m',
                'geographies', 'stage_bands', 'recent_deal', 'recent_deal_date', 'recent_deal_url',
-               'cheque_figure_dated', 'deal_note')
+               'cheque_figure_dated', 'deal_note', 'not_published')
 BANNED = ('email', 'phone', 'contact', 'partner_name', 'linkedin', 'twitter', 'logo')
 
 
@@ -303,6 +465,15 @@ def cheque_line(card):
     return line
 
 
+def geography_line(card):
+    """Where they invest, or the fact that they do not say. An empty line on a card is read as an
+    omission by us; "no stated investing geography" is read as a fact about the fund, which is
+    what it is. Seven of the houses on this list publish no geography at all, Benchmark and
+    Founders Fund among them, and that is not a reason to hide them."""
+    g = (card.get('geographies') or '').strip()
+    return g if g else 'No stated investing geography'
+
+
 def reveal_payload(prof, picked, raise_musd=None, want=8):
     """Everything the reveal needs for both layers, and nothing it does not."""
     callable_rows = match_callable(prof, raise_musd=raise_musd, want=want)
@@ -311,6 +482,7 @@ def reveal_payload(prof, picked, raise_musd=None, want=8):
     for c in callable_rows:
         d = _clean(c)
         d['cheque_line'] = cheque_line(c)
+        d['geography_line'] = geography_line(c)
         d['reach'] = c.get('why')
         cards.append(d)
     return {

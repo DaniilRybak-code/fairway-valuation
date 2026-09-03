@@ -37,6 +37,37 @@ def main():
     for why in sorted(miss, key=lambda k: -len(miss[k])):
         print('        %3d blocked on %s' % (len(miss[why]), why))
 
+    # DOES GEOGRAPHY ACTUALLY DO ANYTHING? Nothing tested this, and that is why it took a
+    # rebuild to notice it was doing nothing. The country is resolved from the edge header rather
+    # than asked (docs/lead-capture.md), so no golden fixture carries one and the whole facet was
+    # dead in every test we run. Two synthetic founders, identical but for the country, must get
+    # different lists and must carry the exact-fit label. If this stops being true, geography has
+    # silently stopped being scored again.
+    base = dict(PROFILES[0][2])
+    uk = dict(base, country='United Kingdom')
+    us = dict(base, country='United States')
+    picked, _mo, _pt = M.select_private(base, M.private)
+    l_uk = I.match_callable(uk, raise_musd=1.0, want=12)
+    l_us = I.match_callable(us, raise_musd=1.0, want=12)
+    l_none = I.match_callable(base, raise_musd=1.0, want=12)
+    names = lambda L: [c['investor'] for c in L]
+    exact = lambda L: [c for c in L if c['tier'] == 0]
+    print('GEOGRAPHY  UK %d houses (%d exact) | US %d (%d exact) | no country %d'
+          % (len(l_uk), len(exact(l_uk)), len(l_us), len(exact(l_us)), len(l_none)))
+    problems = []
+    if names(l_uk) == names(l_us):
+        problems.append('a UK founder and a US founder get the identical list: '
+                        'geography is not being scored')
+    if not exact(l_uk) and not exact(l_us):
+        problems.append('no house reaches tier 0 for either country, so the exact-fit label '
+                        'is unreachable')
+    if any('location was not resolved' in (c.get('why') or '') for c in l_uk + l_us):
+        problems.append('a founder WITH a country is being labelled as unresolved')
+    if not all('location was not resolved' in (c.get('why') or '') for c in l_none):
+        problems.append('a founder with no country is not being labelled as unresolved')
+    for m in problems:
+        print('        FAIL %s' % m)
+
     thin, tot = [], 0
     for k, _label, p in PROFILES:
         picked, _mo, _pt = M.select_private(p, M.private)
@@ -50,7 +81,7 @@ def main():
     print('        %d fixtures get fewer than %d houses' % (len(thin), THIN))
     for k, n in thin:
         print('            %-24s %d' % (k, n))
-    return 0
+    return 1 if problems else 0
 
 
 if __name__ == '__main__':

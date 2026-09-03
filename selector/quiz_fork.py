@@ -51,8 +51,16 @@ CORE = [
          maps_to='profile.product_tags via the profiler', required=True, peer_field='product_tags'),
     dict(key='website', label='Website', kind='url', required=True,
          maps_to='profiler input', peer_field=''),
-    dict(key='country', label='Where are you based?', kind='choice', required=True,
-         maps_to='profile.country', peer_field='country'),
+    # NOT ASKED. Resolved from Vercel's edge header at boot: app.js sets responses.country from
+    # /api/geo, and docs/lead-capture.md records that no IP is ever stored. Kept in this list
+    # because it IS part of the profile contract and the investor matcher scores geography on it;
+    # a reader of this file needs to see that the field exists and where it comes from, or the
+    # next person adds a question for it. `asked=False` keeps it out of the fork walk.
+    dict(key='country', label='Where are you based?', kind='inferred', asked=False, required=False,
+         maps_to='profile.country', peer_field='country',
+         why='Resolved from the request, not asked. It is one of the three facets the investor '
+             'match scores on, and where it is missing the card says so rather than implying we '
+             'checked.'),
     dict(key='stage', label='Stage and last round', kind='choice', required=True,
          maps_to='context only', peer_field=''),
     # Context only, and marked so the guard below does not treat it as an unbacked metric. It is
