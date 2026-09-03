@@ -40,13 +40,29 @@
     "reason": "related type of business; same end market; same AI stance",
     "score": 5.5,
     "ticker": "NYSE:MSCI"
+   },
+   {
+    "company": "FactSet Research Systems Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 5.5,
+    "ticker": "NYSE:FDS"
+   },
+   {
+    "company": "Morningstar, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 5.5,
+    "ticker": "NASDAQ:MORN"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -55,14 +71,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 12.9,
+   "high": 10.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 6.9,
-   "mid": 9.5,
-   "n": 5,
+   "low": 3.5,
+   "mid": 6.9,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -72,6 +88,7 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "crm"
    ],
@@ -249,20 +266,20 @@
     "ticker": "NASDAQGS:ALKT"
    },
    {
-    "company": "FactSet Research Systems Inc.",
+    "company": "London Stock Exchange Group plc",
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same AI stance",
     "score": 5.5,
-    "ticker": "NYSE:FDS"
+    "ticker": "LSE:LSEG"
    },
    {
-    "company": "Morningstar, Inc.",
+    "company": "Deutsche Boerse AG",
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same AI stance",
     "score": 5.5,
-    "ticker": "NASDAQ:MORN"
+    "ticker": "XTRA:DB1"
    }
   ],
   "secondary_range": {
@@ -278,11 +295,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 4.6,
+   "high": 8.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.8,
-   "mid": 3.5,
+   "mid": 4.3,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -309,13 +326,6 @@
      "transaction_type": ""
     },
     {
-     "company": "Morningstar, Inc.",
-     "mult": 3.5,
-     "reason": "related type of business; same end market; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Alkami Technology, Inc.",
      "mult": 4.3,
      "reason": "same end market; sold the same way; same AI stance",
@@ -323,18 +333,26 @@
      "transaction_type": ""
     },
     {
-     "company": "FactSet Research Systems Inc.",
-     "mult": 4.6,
+     "company": "London Stock Exchange Group plc",
+     "mult": 5.2,
+     "reason": "related type of business; same end market; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Deutsche Boerse AG",
+     "mult": 8.3,
      "reason": "related type of business; same end market; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "ai"
    ],
-   "spread": 11.5,
+   "spread": 20.8,
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true

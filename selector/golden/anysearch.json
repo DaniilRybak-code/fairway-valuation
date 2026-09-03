@@ -40,13 +40,29 @@
     "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
     "score": 8.3,
     "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
+    "score": 8.3,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Palantir Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
+    "score": 7.7,
+    "ticker": "NASDAQGS:PLTR"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -59,10 +75,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.0,
-   "mid": 5.0,
-   "n": 5,
+   "mid": 5.2,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -93,6 +109,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Datadog, Inc.",
      "mult": 16.4,
      "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; sold the same way",
@@ -105,19 +128,28 @@
      "reason": "both do AI Agent Infrastructure; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "mult": 41.8,
+     "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "agent",
     "ai",
     "api",
     "infrastructure",
+    "integration",
     "search",
     "source"
    ],
-   "spread": 39.8,
-   "tag_evidence": 0.6,
+   "spread": 52.2,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
@@ -290,22 +322,6 @@
   "private_window_months": 11,
   "secondary": [
    {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
-    "score": 8.3,
-    "ticker": "NYSE:TWLO"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
-    "score": 7.7,
-    "ticker": "NASDAQGS:PLTR"
-   },
-   {
     "company": "C3.ai, Inc.",
     "family": "software",
     "in_medians": true,
@@ -328,6 +344,22 @@
     "reason": "shares the language of api; same type of business; same kind of customer",
     "score": 6.8,
     "ticker": "ENXTAM:TOM2"
+   },
+   {
+    "company": "Sinch AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer",
+    "score": 6.3,
+    "ticker": "OM:SINCH"
+   },
+   {
+    "company": "SoundHound AI, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same AI stance",
+    "score": 6.1,
+    "ticker": "NASDAQGM:SOUN"
    }
   ],
   "secondary_range": {
@@ -343,11 +375,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 41.8,
+   "high": 17.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.8,
-   "mid": 5.2,
+   "low": 1.4,
+   "mid": 4.8,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -367,6 +399,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "C3.ai, Inc.",
      "mult": 4.8,
      "reason": "shares the language of ai; same type of business; same business function; same AI stance",
@@ -374,9 +413,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Twilio Inc.",
-     "mult": 5.2,
-     "reason": "shares the language of api; related type of business; same kind of customer; sold the same way",
+     "company": "SoundHound AI, Inc.",
+     "mult": 11.8,
+     "reason": "shares the language of ai; same type of business; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -386,23 +425,16 @@
      "reason": "shares the language of ai; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 41.8,
-     "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "ai",
-    "api",
-    "integration"
+    "api"
    ],
-   "spread": 69.7,
-   "tag_evidence": 0.7,
+   "spread": 29.3,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   }

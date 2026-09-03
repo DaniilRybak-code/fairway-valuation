@@ -40,13 +40,29 @@
     "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
     "score": 9.1,
     "ticker": "NSEI:ZAGGLE"
+   },
+   {
+    "company": "Workday, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of planning; same type of business; same kind of customer; sold the same way",
+    "score": 8.9,
+    "ticker": "NASDAQGS:WDAY"
+   },
+   {
+    "company": "BlackLine, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
+    "score": 8.6,
+    "ticker": "NASDAQGS:BL"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -58,11 +74,11 @@
    "high": 4.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.7,
+   "low": 2.5,
    "mid": 3.1,
-   "n": 5,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -72,6 +88,7 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "agentic",
     "ai",
@@ -79,10 +96,11 @@
     "customer",
     "lifecycle",
     "order",
+    "planning",
     "revenue",
     "workflow"
    ],
-   "spread": 5.0,
+   "spread": 5.7,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
@@ -257,22 +275,6 @@
   "private_window_months": 14,
   "secondary": [
    {
-    "company": "Workday, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of planning; same type of business; same kind of customer; sold the same way",
-    "score": 8.9,
-    "ticker": "NASDAQGS:WDAY"
-   },
-   {
-    "company": "BlackLine, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "NASDAQGS:BL"
-   },
-   {
     "company": "Cass Information Systems",
     "family": "software",
     "in_medians": true,
@@ -295,13 +297,29 @@
     "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
     "score": 8.2,
     "ticker": "NYSE:IOT"
+   },
+   {
+    "company": "Braze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation, channel, customer; related type of business; same kind of customer; sold the same way",
+    "score": 7.9,
+    "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation, deal, lifecycle; same business function; same kind of customer; sold the same way",
+    "score": 7.8,
+    "ticker": "NASDAQGS:INTA"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -313,11 +331,11 @@
    "high": 5.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.5,
-   "mid": 3.65,
-   "n": 4,
+   "low": 2.7,
+   "mid": 3.4,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -328,6 +346,13 @@
    "points": [],
    "positioning": [
     {
+     "company": "Intapp, Inc.",
+     "mult": 4.6,
+     "reason": "shares the language of automation, deal, lifecycle; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
      "company": "Samsara Inc.",
      "mult": 10.5,
      "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
@@ -335,14 +360,17 @@
      "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "automation",
     "b2b",
+    "channel",
     "commercial",
+    "customer",
     "planning",
     "platform"
    ],
-   "spread": 2.0,
+   "spread": 1.9,
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

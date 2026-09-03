@@ -36,6 +36,11 @@ def snap(prof):
     out['listed_proximity'] = listed_tier
     out['private_proximity'] = priv_tier
     out['private_range'] = M.private_range(prof, picked, priv_tier)
+    # A LENDER GETS EVERY READING ITS FORK CAN SUPPORT, AND THE SNAPSHOT HOLDS THEM ALL, so a
+    # change to any one of them shows up as a golden diff instead of passing unnoticed. Recorded
+    # only for the balance-sheet forks: for everyone else it would just restate private_range.
+    if M.is_balance_sheet(prof):
+        out['all_ranges'] = M.all_ranges(prof, core, listed_tier, picked, priv_tier)
     return out
 
 def peer_coverage():

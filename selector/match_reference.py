@@ -112,7 +112,31 @@ def _ingest(mfile, tfile, fam_for):
     for m in load(D+mfile):
         tk = m.get('exchange_ticker', '')
         k = norm(tk)
-        if not k or k in listed: continue
+        if not k: continue
+        # A SECOND FILE MAY FILL A FIELD THE FIRST ONE CANNOT CARRY. Fixed 3-Sep-2026, on Daniil
+        # saying Nu Holdings certainly has a price to book and that if we did not have one we had
+        # not transcribed his file properly. We had transcribed it. The LOADER threw it away.
+        #
+        # Twelve companies sit in both peers-fintech.csv and peers-lending.csv, because a neobank
+        # is both a fintech and a lender. The fintech file has no price-to-book or price-earnings
+        # column at all; the lending file has both. This loop skipped any ticker it had already
+        # seen, so for all twelve the lending row was dropped in silence and the bank arrived with
+        # no book multiple: Nu Holdings 3.9x, Klarna 1.9x, SoFi 2.0x, Inter & Co 1.0x, Amex 6.0x,
+        # Block 1.9x, Chime 6.2x, Enova 2.8x, Upstart 2.8x, and price-earnings for Affirm, Zip and
+        # Happen. Those are the exact names that came back unpriced in every lender fixture.
+        #
+        # The merge is deliberately narrow: ONLY fields the existing row left empty, ONLY from this
+        # whitelist of measures a second file can legitimately add, and NEVER a tag, a family or a
+        # revenue figure. A second file cannot overwrite a first, so nothing that already matched
+        # can move, and the fill is recorded on the row so it is auditable rather than magic.
+        if k in listed:
+            have = listed[k]
+            for fld, col in (('pb_mult', 'p_bv_x'), ('pe_mult', 'p_e_x')):
+                v = _f(m.get(col))
+                if v is not None and have.get(fld) is None:
+                    have[fld] = v
+                    have.setdefault('filled_from', []).append('%s:%s' % (mfile, col))
+            continue
         t = tags.get(tk) or ntags.get(k)
         if t is None:
             # A market row with no tag row cannot be matched on anything, so it is skipped and
@@ -362,11 +386,51 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             # $3.8bn are both points the company stated on the pricing date, while its revenue is a
             # threshold on a partly gross basis. 2.11x on volume is simply better evidence than
             # "at most 9.5x" on a number we cannot pin down.
-            row['gmv'] = _f(r.get('gmv_musd'))
+            # AND THE TWO PRIVATE FILES SPELL THE SAME COLUMN DIFFERENTLY. Fixed 3-Sep-2026.
+            # private-rounds-consumer.csv writes gmv_musd / ev_gmv_x; private-rounds.csv writes
+            # volume_musd / ev_volume_x with a volume_metric naming what the volume IS. Only the
+            # first spelling was read, so 16 volume multiples in the fintech file reached nothing,
+            # including every EV/originations multiple we hold: Stenn, Tala twice, Clearco twice,
+            # Wayflyer, Upgrade. Those are the lender volume comparables Daniil asked for.
+            #
+            # vol_metric is carried and normalised because these are NOT interchangeable. Loans
+            # originated, payment volume and GMV are three different denominators, and a range may
+            # only ever be built within one of them.
+            row['gmv'] = _f(r.get('gmv_musd')) or _f(r.get('volume_musd'))
             row['gmv_mult'] = _f(r.get('ev_gmv_x'))
-            row['gmv_basis'] = (r.get('gmv_basis') or '').strip().upper()
+            if row['gmv_mult'] is None:
+                row['gmv_mult'] = _f(r.get('ev_volume_x'))
+            row['gmv_basis'] = (r.get('gmv_basis') or r.get('volume_basis') or '').strip().upper()
+            _vm = (r.get('volume_metric') or ('GMV' if r.get('ev_gmv_x') else '')).strip().upper()
+            for _needle, _canon in (('ORIGINAT', 'ORIGINATIONS'), ('CREDIT DELIVERED', 'ORIGINATIONS'),
+                                    ('CAPITAL DEPLOYED', 'ORIGINATIONS'), ('FUNDING ADVANCED', 'ORIGINATIONS'),
+                                    ('LOANS_ORIGINATED', 'ORIGINATIONS'), ('PAYMENT', 'PAYMENT_VOLUME'),
+                                    ('TPV', 'PAYMENT_VOLUME'), ('TRANSACTION VOL', 'PAYMENT_VOLUME'),
+                                    ('PREMIUM', 'WRITTEN_PREMIUM'), ('GMV', 'GMV')):
+                if _needle in _vm:
+                    _vm = _canon
+                    break
+            row['vol_metric'] = _vm
+            row['vol_period'] = (r.get('volume_period') or '').strip()
+            # A SINCE-INCEPTION TOTAL IS NOT A DENOMINATOR AND MAY NEVER PRICE. Daniil, 2-Sep-2026:
+            # "multiples cannot be calculated over all time origination volumes". A price divided by
+            # everything a company has ever done falls as the company ages and says nothing about
+            # what it is worth. Three of the seven origination rows are exactly this shape: Stenn
+            # 0.15x since 2015, Tala 0.30x since inception, Clearco 0.83x since inception. They stay
+            # visible with their period on the label; they are barred from every range.
+            row['vol_periodic'] = bool(row['vol_period']) and 'INCEPTION' not in row['vol_period'].upper()
             row['mult_book'] = _f(r.get('ev_book_x'))
             row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
+            # PRE-MONEY AND POST-MONEY MAY NOT SIT IN THE SAME RANGE. Daniil, 3-Sep-2026:
+            # "let's add pre-money valuation, then we need to be consistent in terms of multiples
+            # we use for the user (not mix the two)."
+            #
+            # A pre-money valuation is smaller than the post-money one by exactly the size of the
+            # round. On a seed round that is a third of the answer, so a range holding one of each
+            # is not a range, it is two measures averaged. UNSPECIFIED sits with POST because the
+            # announcement convention is post-money, and the range records how many of its names
+            # are only assumed rather than stated, so the caveat can say so.
+            row['pre_post'] = (r.get('valuation_pre_or_post') or 'UNSPECIFIED').strip().upper()
             row['in_medians'] = str(r.get('in_medians', '1')).strip() not in ('0', '')
             row['transaction_type'] = r.get('transaction_type', 'PRIMARY')
             row['denominator_basis'] = r.get('denominator_basis', '')
@@ -1299,15 +1363,27 @@ def peer_groups(prof, universe, scorer=None, want=5):
     # empty even though the tier was non-empty. So walk the tiers and FILL the core group, taking
     # DIRECT names first and topping up from ADJACENT, rather than stopping at the first tier that
     # produces a single name. See the note above set_tier for why.
+    # THE LISTED CORE IS SIZED THE SAME WAY THE PRIVATE LANE IS, AND IT WAS NOT. Fixed 3-Sep-2026.
+    #
+    # Daniil, 31-Aug-2026: three to five names on an almost perfect match, five to seven where the
+    # match is weaker. `_trim_to_match_quality` has enforced that on the private lane since; the
+    # listed core was hard-capped at five whatever the quality, so on a WEAK match it stopped at
+    # five and left the obvious names out. Payabli is the case Daniil raised: its core stopped at
+    # Repay, Tyro, Usio, PayPoint and Fawry, an Egyptian bill-payment network, while Adyen, dLocal,
+    # Nexi and GMO Payment Gateway waited in the sixth to ninth places. Daniil, 3-Sep-2026: "it is
+    # ok if we cannot find EXACT match... on public side Toast, Shopify and Adyen would make sense".
+    # A weaker match is exactly when a founder needs MORE names, not fewer.
     core, seen = [], set()
     for tier in PRICING_TIERS:
         rows, _got = qualifying(scored, prof, only=tier)
         for x in rows:
-            if len(core) >= want: break
+            if len(core) >= WANT_MAX: break
             if id(x) in seen: continue
             if axis_a(x[1]) and axis_b(x[1], x[0][1]):
                 seen.add(id(x)); core.append(x)
-        if len(core) >= want: break
+        if len(core) >= WANT_MAX: break
+    core = _trim_to_match_quality(prof, core)
+    seen = {id(x) for x in core}
     if not core:
         rows, _got = qualifying(scored, prof, only='BROAD')
         core = [x for x in rows if axis_a(x[1]) and axis_b(x[1], x[0][1])][:want]
@@ -1461,7 +1537,41 @@ def basis_for(prof):
 
 # private lane key, listed lane key, and what the reveal should call it
 BASIS_KEYS = {'BOOK':    ('mult_book', 'pb_mult', 'price to book'),
-              'REVENUE': ('mult',      'mult',    'enterprise value to revenue')}
+              'REVENUE': ('mult',      'mult',    'enterprise value to revenue'),
+              # A LENDER IS NOT PRICED ON ONE MEASURE. Daniil, 3-Sep-2026: "public peers are priced
+              # off book value or net income. Private peers very often (but not always) are priced
+              # off ARR. So when we ask the question to the user we need to ask all of these and
+              # show the ranges based on all of that."
+              #
+              # These three are the extra readings, and each exists because we HOLD the multiples:
+              # 12 private lender rounds priced on ARR or an ARR run-rate, 76 listed rows with a
+              # price-earnings, and four private rounds on a PERIODIC originations figure. They are
+              # additive. BOOK stays the lead basis for a lender and nothing here displaces it.
+              'ARR':     ('mult',      None,      'enterprise value to ARR'),
+              'EARNINGS': (None,       'pe_mult', 'price to earnings'),
+              'ORIGINATIONS': ('gmv_mult', None,  'enterprise value to annual originations')}
+
+# Which readings each fork can support, in the order a reveal should show them. A basis appears
+# here only where we hold real multiples on both the measure and the lane; nothing is listed
+# aspirationally, because an empty range on the page is worse than no row.
+LANE_BASES = {True:  dict(listed=('BOOK', 'EARNINGS'), private=('BOOK', 'ARR', 'ORIGINATIONS')),
+              False: dict(listed=('REVENUE',),          private=('REVENUE',))}
+
+
+def _basis_row_ok(basis, r):
+    """Extra condition a row must meet to belong in THIS basis, beyond having the multiple."""
+    if basis == 'ARR':
+        return (r.get('revenue_basis') or '').upper() in ('ARR', 'ARR_RUNRATE')
+    if basis == 'ORIGINATIONS':
+        # Periodic only. A since-inception total is barred, see the loader note.
+        return r.get('vol_metric') == 'ORIGINATIONS' and r.get('vol_periodic')
+    if basis == 'BOOK':
+        return True
+    return True
+
+
+def bases_for(prof, lane):
+    return LANE_BASES[bool(is_balance_sheet(prof))][lane]
 
 def denominator(prof, group):
     """Return ('gp'|'rev', reason). Gross profit leads when the subject's margin
@@ -1746,11 +1856,19 @@ def _positioning(prof, rows, key):
             'reason': why_text(prof, r, sw[1])} for (sw, r) in rows if r.get(key) is not None]
     return sorted(out, key=lambda z: z['mult'])
 
-def group_range(prof, group, which='rev', tier='DIRECT'):
+def group_range(prof, group, which='rev', tier='DIRECT', basis=None):
     """Quartile range of the group, excluding rows flagged out of medians.
-    Returns None for a BROAD group: it is context, not a price."""
+    Returns None for a BROAD group: it is context, not a price.
+
+    `basis` names an EXTRA reading to compute instead of the fork's default, so a lender can be
+    shown price-to-book and price-earnings side by side without either being the other's fallback.
+    """
     if tier not in RANGE_TIERS: return None
-    key = BASIS_KEYS['BOOK'][1] if is_balance_sheet(prof) else ('mult' if which == 'rev' else 'gp_mult')
+    if basis:
+        key = BASIS_KEYS[basis][1]
+        if not key: return None
+    else:
+        key = BASIS_KEYS['BOOK'][1] if is_balance_sheet(prof) else ('mult' if which == 'rev' else 'gp_mult')
     # An excluded name still APPEARS in the comp list, because hiding it would be its own kind of
     # dishonesty. It just does not price.
     allpriced = [(sw, r) for (sw, r) in group
@@ -1771,6 +1889,9 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced),
+               # How many of the contributing valuations are STATED post-money rather than assumed
+               # to be, so the honesty layer can say which it is instead of implying certainty.
+               post_stated_n=sum(1 for _sw, r in priced if r.get('pre_post') == 'POST'),
                # EVERY LISTED MULTIPLE IS EV OVER NTM REVENUE. There is no other kind in the
                # file, so the period is stated rather than counted, and the founder's own
                # forward figure is carried beside it. This is the fix for the mismatch that
@@ -1783,18 +1904,40 @@ def group_range(prof, group, which='rev', tier='DIRECT'):
         out['sole'] = priced[0][1].get('company_name', '')
     return out
 
-def private_range(prof, picked, tier):
+def all_ranges(prof, listed_group, listed_tier, private_picked, private_tier):
+    """Every reading this founder's fork can support, on both lanes, keyed by basis.
+
+    Built for the lender fork, where one measure has never been enough. Returns only the readings
+    that actually produced a range, so a caller can render what exists and say nothing about the
+    rest. The fork's lead basis is first in each lane's tuple.
+    """
+    out = {'listed': {}, 'private': {}}
+    for b in bases_for(prof, 'listed'):
+        r = group_range(prof, listed_group, tier=listed_tier, basis=b)
+        if r: out['listed'][b] = dict(r, basis=b, basis_label=BASIS_KEYS[b][2])
+    for b in bases_for(prof, 'private'):
+        r = private_range(prof, private_picked, private_tier, basis=b)
+        if r: out['private'][b] = dict(r, basis=b, basis_label=BASIS_KEYS[b][2])
+    return out
+
+
+def private_range(prof, picked, tier, basis=None):
     """The same rule on the private lane, kept here rather than in the caller so the two cannot
     drift apart. BROAD returns nothing; a single priced round returns a diamond."""
     if tier not in RANGE_TIERS: return {}
-    basis = basis_for(prof)
+    basis = basis or basis_for(prof)
     key = BASIS_KEYS[basis][0]
+    if not key: return {}
     # basis_mult, not r[key]: a row holding both a gross and a net reading answers on the founder's
     # basis, and a row that can only answer on the other one is dropped here rather than silently
     # priced on the wrong measure.
     allpriced = []
     for (sw, r) in picked:
         if not (r.get('in_medians') and r.get(key)): continue
+        if not _basis_row_ok(basis, r): continue
+        # A PRE-MONEY ROW NEVER JOINS A POST-MONEY RANGE. It stays in the comp list with its own
+        # label, because hiding it would be its own dishonesty; it simply does not price.
+        if r.get('pre_post') == 'PRE': continue
         m = basis_mult(prof, r, key)
         if m is None: continue
         r = dict(r); r[key] = m

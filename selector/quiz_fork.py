@@ -112,8 +112,17 @@ FORKS = {
            required=False, maps_to='profile.asset_intensity', peer_field='asset_intensity'),
     ]),
  'payments': dict(
+    # 'Card Issuing & BaaS' added 3-Sep-2026. Daniil: "Marqeta is not an acquirer. Marqeta is an
+    # issuing business. Pricing payabli vs. Marqeta is wrong conceptually." He is right, and the
+    # cause was our vocabulary, not the matcher: we had no archetype for issuing at all, so the
+    # only card-issuing business in the listed file sat in the acquiring bucket and was reachable
+    # as a core comparable for every payfac and gateway. An issuer earns interchange on cards it
+    # puts in the market; an acquirer earns a merchant discount on cards it accepts. Same industry,
+    # opposite side of the transaction, different economics. Marqeta keeps Merchant Acquiring & PSP
+    # in the secondary slot, so it stays visible to a payments founder as context and can no longer
+    # price one.
     archetypes=('Merchant Acquiring & PSP', 'Payment Network', 'Cross-Border & FX',
-                'Commerce & Payments Software', 'Crypto & Digital Assets'),
+                'Commerce & Payments Software', 'Card Issuing & BaaS', 'Crypto & Digital Assets'),
     questions=[
       dict(key='net_revenue', label='Net revenue after interchange and scheme fees', kind='money',
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
@@ -158,11 +167,43 @@ FORKS = {
            reviewer_context=True,
            why='Not part of the range. Carried so the leverage behind your book value is visible to '
                'the reviewer. A STOCK at a date, never a total of everything ever lent.'),
+      # ARR AND NET INCOME ADDED 3-SEP-2026, ORIGINATIONS PROMOTED OUT OF REVIEWER CONTEXT.
+      #
+      # Daniil: "public peers are priced off book value or net income. Private peers very often
+      # (but not always) are priced off ARR. So when we ask the question to the user, we need to
+      # ask all of these (ARR, book value, net income, origination) and show the ranges based on
+      # all of that."
+      #
+      # Every one of these is now backed by multiples we actually hold, which is the rule this
+      # fork is built on: never ask for a metric we cannot put a peer number next to.
+      #   ARR           12 private lender rounds priced on ARR or an ARR run-rate. It is the
+      #                 LARGEST private lender basis we have and the fork was not asking for it.
+      #   net income    76 listed rows carry a price-earnings, 12 of them recovered on 3-Sep from
+      #                 a loader that was dropping the lending file for any ticker it had already
+      #                 seen in the fintech file.
+      #   originations  four private rounds on a PERIODIC originations figure: Wayflyer 3.20x,
+      #                 Clearco 2.00x, Tala 0.80x, Upgrade 0.75x. The since-inception rows are
+      #                 barred in the loader and cannot reach this.
+      #
+      # Book value stays the only REQUIRED one, because it is the lead basis and the one a lender
+      # always knows. The rest are asked and optional, so a founder is never blocked, and each one
+      # answered adds a whole range rather than refining an existing one.
+      dict(key='arr', label='Annual recurring revenue, or your current revenue run-rate',
+           kind='money', required=False, maps_to='profile.arr', peer_field='revenue_musd',
+           basis='ARR', period_required=True,
+           why='Private lending rounds are priced on ARR far more often than on book. Twelve of '
+               'the rounds we hold are, from Starling at 7.6x to Qonto at 41.7x. Answer this and '
+               'you get a private ARR range as well as the book one.'),
+      dict(key='net_income', label='Net income for the last twelve months, if you are profitable',
+           kind='money', required=False, maps_to='profile.net_income', peer_field='ni_ntm_musd',
+           basis='EARNINGS', period_required=True,
+           why='Listed lenders are priced on earnings as much as on book. We hold a price-earnings '
+               'for 76 of them. Leave it blank if you are loss-making; it simply means one fewer '
+               'range rather than a worse one.'),
       dict(key='originations', label='Amount lent over the last twelve months, if you have it',
            kind='money', required=False, maps_to='profile.originations',
            peer_field='originations_musd', basis='ORIGINATIONS', period_required=True,
-           reviewer_context=True,
-           why='Reviewer context, not part of the range, on the same reasoning as the loan book. '
+           why='Now a range of its own where the peers support it, not just reviewer context. '
                'Where the book is sold on rather than held this is the shape a denominator would '
                'eventually take. This is a '
                'FLOW over a stated period. A since-inception total is not an answer and is rejected: '

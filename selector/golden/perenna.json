@@ -1,5 +1,216 @@
 {
  "expected": {
+  "all_ranges": {
+   "listed": {
+    "BOOK": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BOOK",
+     "basis_label": "price to book",
+     "basis_mix": {
+      "UNKNOWN": 5
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "high": 6.2,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 1.0,
+     "mid": 2.0,
+     "n": 5,
+     "period_mix": {
+      "NTM": 5
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Velocity Financial, Inc.",
+       "mult": 0.8,
+       "reason": "shares the language of broker; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Inter & Co, Inc.",
+       "mult": 1.0,
+       "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
+       "company": "SoFi Technologies, Inc.",
+       "mult": 2.0,
+       "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Nu Holdings Ltd.",
+       "mult": 3.9,
+       "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Chime Financial, Inc.",
+       "mult": 6.2,
+       "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      }
+     ],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "bank",
+      "broker",
+      "mortgage"
+     ],
+     "spread": 7.8,
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": false
+    },
+    "EARNINGS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "EARNINGS",
+     "basis_label": "price to earnings",
+     "basis_mix": {
+      "UNKNOWN": 4
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "high": 14.7,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 6.2,
+     "mid": 7.95,
+     "n": 4,
+     "period_mix": {
+      "NTM": 4
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "bank",
+      "broker"
+     ],
+     "spread": 2.4,
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": false
+    }
+   },
+   "private": {
+    "ARR": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "ARR",
+     "basis_label": "enterprise value to ARR",
+     "basis_mix": {
+      "ARR": 1
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "high": 8.9,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 8.9,
+     "mid": 8.9,
+     "n": 1,
+     "period_mix": {
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "bank",
+      "uk"
+     ],
+     "sole": "Zopa",
+     "spread": 1.0,
+     "tag_evidence": 0.9,
+     "thin": true,
+     "triangulated": false
+    },
+    "BOOK": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BOOK",
+     "basis_label": "price to book",
+     "basis_mix": {
+      "BOOK": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "high": 5.6,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 3.17,
+     "mid": 5.6,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 1,
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "bank",
+      "uk"
+     ],
+     "spread": 1.8,
+     "tag_evidence": 0.9,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Velocity Financial, Inc.",
@@ -42,43 +253,35 @@
     "ticker": "NASDAQ:INTR"
    },
    {
-    "company": "Pepper Money Limited",
+    "company": "Chime Financial, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of bank, broker, funding; same type of business; same business function; same kind of customer",
-    "score": 14.5,
-    "ticker": "ASX:PPM"
-   },
-   {
-    "company": "Onity Group Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
-    "score": 14.4,
-    "ticker": "NYSE:ONIT"
+    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+    "score": 7.3,
+    "ticker": "NASDAQ:CHYM"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 0.9,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 6.2,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.4,
-   "mid": 0.8,
-   "n": 3,
+   "low": 1.0,
+   "mid": 2.0,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -86,16 +289,52 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Velocity Financial, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of broker; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Inter & Co, Inc.",
+     "mult": 1.0,
+     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SoFi Technologies, Inc.",
+     "mult": 2.0,
+     "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nu Holdings Ltd.",
+     "mult": 3.9,
+     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Chime Financial, Inc.",
+     "mult": 6.2,
+     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "bank",
     "broker",
-    "funding",
     "mortgage"
    ],
-   "spread": 2.2,
-   "tag_evidence": 1.5,
+   "spread": 7.8,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -217,6 +456,22 @@
   "private_window_months": 65,
   "secondary": [
    {
+    "company": "Pepper Money Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of bank, broker, funding; same type of business; same business function; same kind of customer",
+    "score": 14.5,
+    "ticker": "ASX:PPM"
+   },
+   {
+    "company": "Onity Group Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
+    "score": 14.4,
+    "ticker": "NYSE:ONIT"
+   },
+   {
     "company": "PennyMac Financial Services, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -239,22 +494,6 @@
     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
     "score": 11.8,
     "ticker": "SWX:CMBN"
-   },
-   {
-    "company": "Banco BMG S.A.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-    "score": 11.8,
-    "ticker": "BOVESPA:BMGB4"
-   },
-   {
-    "company": "Medallion Financial Corp.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-    "score": 11.8,
-    "ticker": "NASDAQ:MFIN"
    }
   ],
   "secondary_range": {
@@ -273,8 +512,8 @@
    "high": 1.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 0.8,
+   "low": 0.8,
+   "mid": 0.9,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -287,14 +526,16 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "bank",
     "broker",
+    "funding",
     "mortgage",
     "uk"
    ],
-   "spread": 3.0,
-   "tag_evidence": 1.0,
+   "spread": 4.5,
+   "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
   }

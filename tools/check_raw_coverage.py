@@ -50,8 +50,9 @@ EXCLUSIONS = {
         'ruling off Canva\'s own published figure of more than US$2.2bn annualised revenue.',
     ('data/raw/2026-09-02_sector-screen-fixed.csv', 'Ninjacart', '2021-12'):
         "CLEARED TO LOAD on Daniil's ruling of 02-Sep-2026. Transcribed and arithmetically verified from his screenshots. Remove this entry when the row lands in private-rounds.csv.",
-    ('data/raw/2026-09-02_sector-screen-fixed.csv', 'Vegrow', '2023-12'):
-        "HELD. The revenue source is gokulnk.com, personal research notes. Its author does appear to work at Vegrow, but the page makes no claim of authority, gives 'Gross Revenue 100 cr and 361 cr' with NO year attached, and cites thekredible for its figures. The sheet assigns the 361 cr to FY ended 31-Mar-2023 on no stated basis. Inc42 has FY24 at Rs 407.9 crore but no FY23. Needs a dated FY2023 source before it prices anything.",
+    # LOADED 3-Sep-2026 on Daniil's ruling ("ok to keep, with a note"). The exclusion text that
+    # stood here is preserved in the row's own notes field, where a reader of the data will find
+    # it, rather than here where only a reader of this check would.
     ('data/raw/2026-09-02_sector-screen-fixed.csv', 'ElasticRun', '2022-02'):
         "CLEARED TO LOAD on Daniil's ruling of 02-Sep-2026. Transcribed and arithmetically verified from his screenshots. Remove this entry when the row lands in private-rounds.csv.",
     ('data/raw/2026-09-02_sector-screen-fixed.csv', 'DeHaat', '2022-10'):

@@ -40,29 +40,37 @@
     "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
     "score": 7.1,
     "ticker": "NASDAQGS:AMZN"
+   },
+   {
+    "company": "AUTO1 Group SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of car; related type of business; same end market; sold the same way",
+    "score": 6.8,
+    "ticker": "XTRA:AG1"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 3.2,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
+   "low": 0.5,
    "mid": 1.0,
-   "n": 5,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -70,7 +78,8 @@
      "founder_revenue": null
     }
    },
-   "points": [
+   "points": [],
+   "positioning": [
     {
      "company": "JD.com, Inc.",
      "mult": 0.1,
@@ -86,20 +95,6 @@
      "transaction_type": ""
     },
     {
-     "company": "CarMax, Inc.",
-     "mult": 1.0,
-     "reason": "shares the language of car, owned; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Carvana Co.",
-     "mult": 1.6,
-     "reason": "shares the language of car, owned; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
      "company": "Amazon.com, Inc.",
      "mult": 3.2,
      "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
@@ -107,13 +102,12 @@
      "transaction_type": ""
     }
    ],
-   "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "car",
-    "owned",
-    "subscription"
+    "owned"
    ],
-   "spread": 32.0,
+   "spread": 3.2,
    "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
@@ -316,6 +310,7 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "owned",
     "subscription",

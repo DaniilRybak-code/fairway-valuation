@@ -180,12 +180,12 @@ recorded here, at which point my transcription can be diffed against it and any 
 | `raw/2026-09-01_listed-full-refresh.csv` | 509 | The complete listed pull, recalculated by Daniil from fiscal-year figures and calendarised by hand, with the CY+1/+3 revenue CAGR and the FY+1 broker estimate count both new. Transcribed from screenshots because the source workbook is in another sandbox and cannot be exported. Checked by `tools/check_listed_refresh.py`: 1,993 arithmetic identity checks, 44 flagged, 43 of them explained by the sheet rounding gross profit or net income to a whole number, 1 genuine and flagged (U-NEXT AV/gross profit). | Not yet, raw |
 | `raw/2026-09-01_full-refresh-p01..p11.png` | - | The screenshots the above was read from, kept as the record. | No |
 
-## 2026-09-01 — Daniil's realigned private transactions (comparison only, NOT wired)
+## 2026-09-01 : Daniil's realigned private transactions (comparison only, NOT wired)
 
-- `data/raw/2026-09-01_private-transactions-daniil.csv` — 148 rows transcribed from 16 screenshots.
+- `data/raw/2026-09-01_private-transactions-daniil.csv` : 148 rows transcribed from 16 screenshots.
   Source has 191 transactions; the screenshots cover 2021-08-24 to 2026-07-09 sorted newest first,
   so 43 rows dated before 24 August 2021 are still outstanding.
-- `data/raw/2026-09-01_private-transactions-p01.png` .. `p16.png` — the raw screenshots, untouched.
+- `data/raw/2026-09-01_private-transactions-p01.png` .. `p16.png` : the raw screenshots, untouched.
 - Status: **NOT WIRED and must not be wired.** This file exists to be compared against
   `data/private-rounds.csv` and `data/private-rounds-consumer.csv`, not to replace them.
 - Self-check: 146 of 148 rows tie post-money / revenue = multiple. The two that do not are
@@ -196,11 +196,11 @@ recorded here, at which point my transcription can be diffed against it and any 
   prices and we do not. 52 of his rows are new to us, 45 of them new companies. Eight decisions
   are open before anything merges.
 
-## 2026-09-02 — the 19 disagreements checked against live sources
+## 2026-09-02 : the 19 disagreements checked against live sources
 
-- `docs/private-verdicts-2sep.md` — per-row verdict with the URL and the verbatim sentence that
+- `docs/private-verdicts-2sep.md` : per-row verdict with the URL and the verbatim sentence that
   decided each. Ours right in 16 of 19, Daniil's in 1 (Replit), neither in 1 (Notion), Wolt open.
-- `tools/apply_reconciliation_verdicts_2sep.py` — applied four changes to `data/private-rounds.csv`:
+- `tools/apply_reconciliation_verdicts_2sep.py` : applied four changes to `data/private-rounds.csv`:
   Replit Sep-25 revenue 100 to 150 and 30.0x to 20.0x (we misread our own cited source);
   Notion Jan-26 revenue 500 to 600 and 22.0x to 18.3x with the source moved to Forbes 15-Dec-2025;
   AlphaSense Sep-23 source only, from a TechCrunch piece that carries no revenue figure to the
@@ -211,7 +211,7 @@ recorded here, at which point my transcription can be diffed against it and any 
 - Flagged, not changed: Anthropic May-23 prices on a denominator eight months after the round,
   which breaks our own hindsight rule. The row note says it was done by Daniil's instruction.
 
-## 2026-09-02 — Daniil's rulings applied
+## 2026-09-02 : Daniil's rulings applied
 
 - `tools/apply_daniil_rulings_2sep.py` and `..._consumer.py` and `apply_glovo_note_2sep.py`.
 - **ALL-STOCK ACQUISITIONS NOW PRICE AT ANNOUNCEMENT.** Daniil's ruling: "need to use the price of
@@ -239,30 +239,30 @@ recorded here, at which point my transcription can be diffed against it and any 
   fixtures changed peer NAMES only, Anthropic May-26 displacing Anysphere; it is out of medians
   so no range moved.
 
-## 2026-09-02 — the private sheet is COMPLETE at 191 transactions
+## 2026-09-02 : the private sheet is COMPLETE at 191 transactions
 
-- `data/raw/2026-09-02_private-transactions-p01..p12.png` — the second screenshot batch, rows 123
+- `data/raw/2026-09-02_private-transactions-p01..p12.png` : the second screenshot batch, rows 123
   to 195 of the sheet, archived untouched before anything was built on them.
-- `data/raw/2026-09-01_private-transactions-daniil.csv` — now 191 rows, matching the sheet's own
+- `data/raw/2026-09-01_private-transactions-daniil.csv` : now 191 rows, matching the sheet's own
   stated count. Rows 123 to 152 overlapped the first batch and EVERY ONE matched what was already
   transcribed. 43 rows were new, running from Carta Aug-2021 back to Buffer Oct-2014.
 - Self-check: 189 of 191 rows tie post-money / metric = multiple. The two that do not are the
   already-ruled Gorillas (pre-money) and Perplexity Jan-24 (bottom of a range).
-- `tools/check_denominator_monotonicity.py` — NEW, and it closes a to-do the header of
+- `tools/check_denominator_monotonicity.py` : NEW, and it closes a to-do the header of
   private-rounds.csv opened on 31-Aug. Across sequential rounds of one company on one basis the
   denominator should not fall; a fall flags a figure attached to the wrong round. Ours: 1 flag
   (Creditas, a real BRL decline). Daniil's sheet: 1 flag, Upgrade Aug-21 160 falling to Nov-21 100,
   which is exactly the defect we had already found and fixed on our side.
-- `tools/apply_batch2_verdicts_2sep.py` — four rows moved after independent checking:
+- `tools/apply_batch2_verdicts_2sep.py` : four rows moved after independent checking:
   Salesloft Apr-19 priced at 12.0x display-only (was a round with neither valuation nor
   denominator); Trendyol Aug-21 volume multiple 1.65x filled from numbers we already held;
   GOAT Group Jun-21 rounding 1.9x to 1.85x; Anthropic Series D Jan-24 inserted at $18.4bn on the
   $87m run-rate Anthropic itself dates to the start of 2024, 211.5x, IN medians.
 - Golden unchanged, 0 of 43.
 
-## 2026-09-02 — data/investors.csv, day 1 of the investors build
+## 2026-09-02 : data/investors.csv, day 1 of the investors build
 
-- `data/investors.csv` — **368 houses.** 19 carry a CALLABLE layer, 349 an EVIDENCE layer.
+- `data/investors.csv` : **368 houses.** 19 carry a CALLABLE layer, 349 an EVIDENCE layer.
   Built by `tools/build_investors_table.py`, gated by `tools/investor_check.py`.
 - EVIDENCE layer generated from `private-rounds.csv` and `private-rounds-consumer.csv`: every
   house carries its rounds in our set, its two most recent deals with company, month and the
@@ -279,7 +279,7 @@ recorded here, at which point my transcription can be diffed against it and any 
   priced on BOOK. Harmless with one lender comp, wrong with two: it would have told a founder
   "these rounds were priced on different measures" when both were priced on book.
 
-## 2026-09-02 — the source columns that were dropped twice
+## 2026-09-02 : the source columns that were dropped twice
 
 - `data/raw/2026-09-01_private-transactions-daniil.csv` now carries `valuation_source_url` and
   `revenue_source_url` on **191 of 191 rows**, read off the two screenshot batches already in
@@ -295,7 +295,7 @@ recorded here, at which point my transcription can be diffed against it and any 
   have one. The remaining work on them is ours, tagging each company into the screening
   vocabulary, not Daniil's.
 
-## 2026-09-02 — the callable investor list, generated rather than curated
+## 2026-09-02 : the callable investor list, generated rather than curated
 
 - Daniil: "Why are we focusing on the UK curated funds? Why only 19? We have a much larger
   database already available from the deal database we own, no?" Right for the stage our data
@@ -309,14 +309,14 @@ recorded here, at which point my transcription can be diffed against it and any 
   currently active. The database is built from priced rounds with a disclosed revenue figure and
   small rounds do not disclose revenue, so seed never entered it. Callable now reads 47 growth and
   crossover, 26 Series B/C, 2 Series A/B, and nothing at seed, which is where our founders are.
-- FOUND WHILE DOING IT: **we hold no country field anywhere** — not on the rounds, not on the
+- FOUND WHILE DOING IT: **we hold no country field anywhere** : not on the rounds, not on the
   company tags, not on the investor files. Geography is one of the three matching facets and it is
   missing entirely, so every promoted house renders in the broader-fit tier. Added to the pull; it
   also unblocks the region quiz question already queued.
 
-## 2026-09-02 — Daniil's Active Seed & Series A Investor Screen
+## 2026-09-02 : Daniil's Active Seed & Series A Investor Screen
 
-- `data/raw/2026-09-02_seed-investor-screen.csv` — **88 deal rows, 25 funds, 8 sectors**,
+- `data/raw/2026-09-02_seed-investor-screen.csv` : **88 deal rows, 25 funds, 8 sectors**,
   transcribed from three photographs (`..._seed-investor-screen-p01..p03`). ALL TEN SOURCE
   COLUMNS are carried, per durability rule 11 adopted this morning.
 - The screen's own gate, quoted from its Read Me, is stricter than ours: "Funds lacking a
@@ -326,7 +326,7 @@ recorded here, at which point my transcription can be diffed against it and any 
 - Loaded by `tools/load_seed_screen.py`. **Callable list goes 73 to 100 renderable houses**, and
   for the first time it has a seed end: 8 pre-seed/seed, 12 seed/Series A, 3 Series A.
 - THREE THINGS RECORDED ABOUT THE STRUCTURE, none of them faults:
-  1. The two deals are per FUND, not per sector — the Read Me says so. Seedcamp appears in six
+  1. The two deals are per FUND, not per sector : the Read Me says so. Seedcamp appears in six
      sectors carrying Embedd and EverSettled in all six. A deal proves the fund is ACTIVE; it does
      not prove the sector claim beside it. `deal_evidences_sector` is 0 on every screen row and
      the renderer must not say "recently backed a company like yours".
@@ -339,9 +339,9 @@ recorded here, at which point my transcription can be diffed against it and any 
 - 15 of 88 URLs are marked `url_confidence = LOW`: they are long and small in a photograph of a
   screen. They need a check before they render to a founder.
 
-## 2026-09-02 — the seed screen, version 2, sector-matched
+## 2026-09-02 : the seed screen, version 2, sector-matched
 
-- `data/raw/2026-09-02_seed-investor-screen-v2.csv` — **132 deal rows, 66 fund-sector pairs,
+- `data/raw/2026-09-02_seed-investor-screen-v2.csv` : **132 deal rows, 66 fund-sector pairs,
   52 funds, 8 sectors**, transcribed from `data/raw/2026-09-02_seed-screen-v2-p01..p03.jpg`.
   SUPERSEDES `2026-09-02_seed-investor-screen.csv`, which stays as the record of what v1 said.
   `tools/load_seed_screen.py` prefers v2 when present and falls back to v1.
@@ -375,9 +375,9 @@ recorded here, at which point my transcription can be diffed against it and any 
   these are photographs of a screen at an angle. That is a transcription limit, not a fault in
   the pull. A pasted text version of columns H and J settles both at once.
 
-## 2026-09-02 — the sector screen, area 3's data dump
+## 2026-09-02 : the sector screen, area 3's data dump
 
-- `data/raw/2026-09-02_sector-screen.csv` — **51 priced private rounds, 41 companies, 1 Jan 2021
+- `data/raw/2026-09-02_sector-screen.csv` : **51 priced private rounds, 41 companies, 1 Jan 2021
   to 2 Sep 2026**, transcribed from four photographs kept beside it as
   `2026-09-02_sector-screen-p01..p04.jpg`. This is Daniil's answer to area 3 of
   `docs/data-pull-prompts-2sep.md`, the verticals a founder cannot be priced in at all.
@@ -389,7 +389,7 @@ recorded here, at which point my transcription can be diffed against it and any 
   order in the sheet, not a column), `url_confidence`, `transcription_note`, and `sheet_row`.
 - WHAT PRICES: 32 of 51 give a multiple straight away; 11 more need FX first (five Indian rows
   USD-against-INR, five Octopus rows USD-against-GBP, Voodoo EUR-against-USD); **8 have no
-  denominator at all**. Only **21 survive a strict gate** — denominator present, currencies
+  denominator at all**. Only **21 survive a strict gate** : denominator present, currencies
   already agree, not a floor, not forward, not a part-year figure.
 - SIX THINGS RECORDED, none of them guesses:
   1. **Two rows are the same round twice.** Alan EUR 183m at EUR 2,700m post is rows 27 and 50,
@@ -409,17 +409,17 @@ recorded here, at which point my transcription can be diffed against it and any 
      next door holds a clean number: upGrad 165, LEAD School 80, EGYM 130, Roblox 923.9 (from the
      audited S-1), Epic Games 5,100, Dream Sports 27,060. Only Fireblocks (a reported range) and
      ConsenSys ("nine figures") are correctly blank.
-- QUALIFIERS MATTER HERE: 19 of 51 rows carry one — 11 estimates, **7 floors (">"), which make
+- QUALIFIERS MATTER HERE: 19 of 51 rows carry one : 11 estimates, **7 floors (">"), which make
   the multiple a CEILING not a point**, 2 forward figures, 2 vague ranges. Four more price a
   part-year denominator against a full valuation (Devoted Health H1, wefox four months, MoonPay
   eleven months, BlockFi one month) and need annualising, which is our assumption not the sheet's.
-- SOURCING: 22 of 51 rows use the same URL for both figures. Seven lean on tier-4 or worse —
+- SOURCING: 22 of 51 rows use the same URL for both figures. Seven lean on tier-4 or worse :
   sacra.com (Virta, Ro), forgeglobal.com (MasterClass, both figures), a CB Insights company page
   (Ninjacart), a personal blog (Vegrow), a French filings aggregator (Doctolib), a press index
   (Restore), and a **staging subdomain** for Dream Sports. Two more are paywalled (The
   Information, both Epic Games rows).
 
-## 2026-09-02 — four private rows held a local-currency denominator under a USD column name
+## 2026-09-02 : four private rows held a local-currency denominator under a USD column name
 
 Found while answering "are all the previous private rounds usable". `data/private-rounds.csv`
 has a column named `revenue_musd`. Four rows held a figure in BRL or EUR while the stored
@@ -448,7 +448,7 @@ multiple had been computed off a USD figure that was never written into the row.
   not reproducible from the file.
 - Applied by `tools/fix_fx_denominators_2sep.py`. Golden suite unchanged, 0 of 43 moved.
 
-## 2026-09-02 — the 63 unloaded rows from Daniil's sheet are now in
+## 2026-09-02 : the 63 unloaded rows from Daniil's sheet are now in
 
 WHOOP, Revolut, Stripe, Plaid, Monzo, Chime and 40 more. `tools/load_daniil_sheet_2sep.py`.
 
@@ -472,7 +472,7 @@ WHOOP, Revolut, Stripe, Plaid, Monzo, Chime and 40 more. `tools/load_daniil_shee
   rule that these price on BOOK, never on EV/revenue (Revolut x4, Monzo, Chime x2, N26, Atom Bank,
   Mercury, Qonto); 2 entity-proxy denominators (SumUp Dec-23 "entity proxy", Checkout.com "UK
   entity revenue"); 2 stated proxies (Cohere "ARR proxy", Coalition "annualized GWP / revenue
-  proxy" — GWP is premium written, not revenue); and 2 with a basis doubt the sheet states itself
+  proxy" : GWP is premium written, not revenue); and 2 with a basis doubt the sheet states itself
   (Rapyd Jan-21 "unclear whether closed", Tipalti Dec-21 "annual period not specified").
 - **Kriya Oct-25 is loaded and held out**: post-money 7.5 against revenue 12.6 gives 0.60x. A
   US$7.5m post-money on a company with US$12.6m of revenue is unlikely; the post-money is probably
@@ -490,7 +490,7 @@ WHOOP, Revolut, Stripe, Plaid, Monzo, Chime and 40 more. `tools/load_daniil_shee
 - STILL OPEN: six older rows carry no screening category and are in the medians (Airwallex,
   Loadsmart x2, Creditas Jan-22, Jobandtalent, Fundbox), all at SOURCED_31AUG.
 
-## 2026-09-02 (later) — 189 of Daniil's 191 rows are now in, and the two that are not are the same rounds
+## 2026-09-02 (later) : 189 of Daniil's 191 rows are now in, and the two that are not are the same rounds
 
 `tools/fix_load_gaps_2sep.py`. Two fixes.
 
@@ -539,7 +539,7 @@ disagreements between post over revenue and the stored multiple: 0. Median rows 
 or a URL: 0. Golden suite 0 of 43 moved, because the fixtures still do not cover fintech, banking
 or payments.
 
-## 2026-09-02 (night) — three rulings, three new rules, one check that makes silence impossible
+## 2026-09-02 (night) : three rulings, three new rules, one check that makes silence impossible
 
 **RULE D12, THE ROW-ACCOUNTING CHECK.** `tools/check_raw_coverage.py`. Every row Daniil supplies is
 now accounted for BY NAME: loaded, or listed in that tool's EXCLUSIONS with a reason a stranger
@@ -586,7 +586,7 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 
 ## 2026-09-02, evening: sector screen fixed version
 
-- `data/raw/2026-09-02_sector-screen-fixed.csv` — 49 rows, 41 columns. Transcribed from six
+- `data/raw/2026-09-02_sector-screen-fixed.csv` : 49 rows, 41 columns. Transcribed from six
   screenshots of Daniil's fixed "Priced Private Funding Rounds - Sector Screen". The 51-row original
   `2026-09-02_sector-screen.csv` is untouched and stays as the record of what arrived first.
   Row accounting: 51 in, 2 dropped (Alan May-2022 and BetterUp Oct-2021, each a duplicate of a row
@@ -596,50 +596,50 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 - NOT WIRED INTO THE ENGINE. All 49 rows are named in `EXCLUSIONS` in `tools/check_raw_coverage.py`
   with a written reason, so the file is inside the row-accounting guard rather than outside it.
   Remove an entry when its row is loaded.
-- `docs/sector-screen-fixed-verdicts-2sep.md` — what was checked, what recomputed, and six findings.
-- `data/private-rounds.csv` — wefox Jul-22 and Alan Sep-24 set to `in_medians = 0` under D6, because
+- `docs/sector-screen-fixed-verdicts-2sep.md` : what was checked, what recomputed, and six findings.
+- `data/private-rounds.csv` : wefox Jul-22 and Alan Sep-24 set to `in_medians = 0` under D6, because
   Daniil's two sheets disagree on their denominators. Median-eligible 114 to 112. Row count unchanged
   at 184. Reversible: set `in_medians` back to 1 and delete the note.
 
 ### 2026-09-02, later: Daniil's rulings applied
 
-- `docs/sector-screen-rulings-2sep.md` — seven rulings and what each one did.
-- `data/private-rounds.csv` — both D6 holds released. Wefox Jul-22 back in the medians unchanged at
+- `docs/sector-screen-rulings-2sep.md` : seven rulings and what each one did.
+- `data/private-rounds.csv` : both D6 holds released. Wefox Jul-22 back in the medians unchanged at
   14.06x (dispute resolved in the engine's favour). Alan Sep-24 CORRECTED: revenue 550.000 to
   500.000, multiple 8.18 to 9.00, bound `<=` to `>=`, back in the medians. The USD 550m appeared in
   no source; TechCrunch, cited by both sheets, says ARR expected to reach EUR450m, around USD500m.
   Median-eligible 112 back to 114. Row count unchanged at 184.
-- `tools/check_raw_coverage.py` — all 49 sector screen exclusion reasons rewritten to carry the
+- `tools/check_raw_coverage.py` : all 49 sector screen exclusion reasons rewritten to carry the
   ruling that now governs each row. 44 cleared to load, 2 held, 3 out.
 - Columns AC to AF: Daniil confirms they are hidden deliberately and are not needed. D11 flag withdrawn.
 
 ### 2026-09-02, night: lending screen, and 41 companies tagged so today's data reaches founders
 
-- `data/raw/2026-09-02_lending-screen.csv` — 22 rows. Daniil's lending and credit pull, addressing
+- `data/raw/2026-09-02_lending-screen.csv` : 22 rows. Daniil's lending and credit pull, addressing
   point 4 of `docs/data-pull-prompts-2sep.md`. Transcribed from four screenshots. All 19 readable
   multiples recompute exactly. THREE implied-multiple cells could not be read and are marked
   UNREADABLE rather than guessed: Tabby Nov-23, MNT-Halan, Zilch. No fx rate, date or source is
   recorded anywhere in the sheet and four rows convert currency.
-- `docs/lending-screen-verdicts-2sep.md` — the review. Point 4 asked for balance-sheet measures and
+- `docs/lending-screen-verdicts-2sep.md` : the review. Point 4 asked for balance-sheet measures and
   none arrived, so Zopa is still the only priced book comparable. Only 7 of 22 rows carry a periodic
   revenue or ARR denominator; 10 are cumulative-since-inception volume and are not multiples.
   Settles open decision 2: Klarna has no revenue line, both sheets price on net operating income,
   and the disagreement is the SEK/USD rate, not the basis.
-- `data/private-companies-tags.csv` — 94 rows to 135. Tag rows added for the 41 companies whose
+- `data/private-companies-tags.csv` : 94 rows to 135. Tag rows added for the 41 companies whose
   rounds were in `private-rounds.csv` and never reached the engine. Every value was already in use
   in another tag file; nothing invented. **All 184 rounds now reach the engine, up from 126.**
   `tools/data_inventory.py` private count 178 to 236.
-- `selector/golden/*.json` — REBASELINED. 28 of 43 fixtures moved, 63 private peers gained against
+- `selector/golden/*.json` : REBASELINED. 28 of 43 fixtures moved, 63 private peers gained against
   29 displaced. Reason recorded in `docs/tagging-and-golden-rebaseline-2sep.md`.
-- `data/private-rounds.csv` — AG1 Jan-22 set to `in_medians = 0`. The same round is carried in
+- `data/private-rounds.csv` : AG1 Jan-22 set to `in_medians = 0`. The same round is carried in
   `private-rounds-consumer.csv` under key `ag1` and prices there at 8.8x. Tagging surfaced the
   duplicate; the row is not deleted and the tag row is not removed, it simply stops voting twice.
   Median-eligible 114 to 113 in this file, 132 across both.
-- `tools/check_raw_coverage.py` — now guards three supplied files. 191 of 191, 49 of 49, 22 of 22.
+- `tools/check_raw_coverage.py` : now guards three supplied files. 191 of 191, 49 of 49, 22 of 22.
 
 ### 2026-09-02, late: sector screen loaded and tagged
 
-- `data/private-rounds.csv` — 184 to **224 rows**, 153 median-eligible. Forty rows loaded from
+- `data/private-rounds.csv` : 184 to **224 rows**, 153 median-eligible. Forty rows loaded from
   `data/raw/2026-09-02_sector-screen-fixed.csv`, each carrying its sheet row number, both URLs and a
   provenance note. Nine of the 49 not loaded, all named: Vegrow held, eFishery / Celsius / Fuse
   excluded in the sheet, MoonPay / wefox Jul-22 / Alan Sep-24 already in the engine, Fireblocks held,
@@ -648,9 +648,9 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
   the 2% check passes on the arithmetic rather than on the rounding. LEAD School's denominator
   restated from the displayed 8.1 to 8.13, which is INR 600m at the sheet's own recorded rate and
   reproduces the 135.3x the sheet states.
-- `data/private-companies-tags.csv` — 135 to **167 rows**. Thirty-two new companies tagged. Vocabulary
+- `data/private-companies-tags.csv` : 135 to **167 rows**. Thirty-two new companies tagged. Vocabulary
   gate run against every other tag file: zero invented values.
-- `selector/golden/*.json` — rebaselined again. 8 of 43 moved, 11 peers gained against 6 displaced.
+- `selector/golden/*.json` : rebaselined again. 8 of 43 moved, 11 peers gained against 6 displaced.
   `honen` went from one comparable to three (LEAD School, Vedantu, upGrad); `levelten` from one to two.
 - **Engine now loads 276 private rounds, 172 of them median-eligible**, against 178 and far fewer this
   morning. Insurance Technology, Gaming & Virtual Economy, Online Learning and Streaming now have a
@@ -658,21 +658,21 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 
 ## 2026-09-03: revised lending screen loaded and tagged
 
-- `data/raw/2026-09-03_lending-screen-v2.csv` — 22 rows. REVISED pull. Supersedes
+- `data/raw/2026-09-03_lending-screen-v2.csv` : 22 rows. REVISED pull. Supersedes
   `2026-09-02_lending-screen.csv`, which stays on disk as the record of what arrived first. Every
   cumulative-since-inception denominator is gone. Reconciles exactly to the sheet's own header:
   17 bounded multiples, 2 NM, 3 NOT FOUND, zero arithmetic mismatches.
-- `data/private-rounds.csv` — 224 to **237 rows**. 13 new rounds loaded, 3 previously unpriced rounds
+- `data/private-rounds.csv` : 224 to **237 rows**. 13 new rounds loaded, 3 previously unpriced rounds
   priced on periodic originations (Wayflyer 3.20x, Upgrade Nov-21 0.75x, Clearco 2.00x), 6 skipped as
   already in the engine.
 - **Atom Bank Feb-22 loaded as a BOOK multiple at 3.17x on consolidated total equity from the filed
   annual report. That is the second priced book comparable we hold, after Zopa at 5.6x.** The lender
   fork has been pricing off one comparable since it was built.
-- `data/private-companies-tags.csv` — 167 to **176 rows**. Nine new companies tagged. Two company keys
+- `data/private-companies-tags.csv` : 167 to **176 rows**. Nine new companies tagged. Two company keys
   were caught colliding with companies already in the engine (Atom Bank, Monzo) and reuse the existing
   key instead of creating a duplicate.
 - **289 private rounds, 0 untagged, 179 median-eligible, no company under two keys.**
-- `selector/golden/*.json` — rebaselined. 4 of 43 moved: mondu gained Billie, the direct B2B
+- `selector/golden/*.json` : rebaselined. 4 of 43 moved: mondu gained Billie, the direct B2B
   buy-now-pay-later comparable; numida gained MNT-Halan; perenna gained Starling Bank.
 
 ## 2026-09-03: engine reach checks, march-to-100 rescoped, investor table fix
@@ -680,25 +680,25 @@ in 1 (Notion, 600), and Wolt was settled by the announcement-price ruling.
 No data file changed in this entry. Everything here is a check, a deletion, or a fix to a tool that
 was reporting the wrong thing.
 
-- `tools/check_engine_reach.py` — NEW. The two checks Fable asked for, both wired to fail a build.
+- `tools/check_engine_reach.py` : NEW. The two checks Fable asked for, both wired to fail a build.
   Check 1: every row in `data/private-rounds.csv` reaches the engine, or the check names the ones
   that do not. It imports `selector/match_reference.py` rather than reimplementing the loader, so it
   cannot drift from the thing it is checking. Check 2: no company votes twice in a median under two
   keys. Both checks were run against a planted fault before being trusted, and both faults exposed a
   real bug in the check itself, now fixed. Clean state: 289 file rows, 289 loaded, one managed
   duplicate (AG1 Jan-22) reported as a warning rather than a failure.
-- `tools/peer_universe_check.py` — NEW. The march-to-100 scoreboard, rescoped on Daniil's 3-Sep
+- `tools/peer_universe_check.py` : NEW. The march-to-100 scoreboard, rescoped on Daniil's 3-Sep
   instruction that the march needs no revenue figures. It scores whether the engine narrows the
   world to a defensible comparable set, using Daniil's own standing rules as the bar: never one
   comparable, three real names over five padded ones, nothing unrelated, a blank is a trigger.
   **43 fixtures, 33 pass, 10 fail.** Three more pass with an entire lane empty, flagged as a
   warning because no ruling exists on whether an empty lane should fail.
-- `tools/investor_check.py` — FIXED. The `screening_categories` cell is `Sector(n); Sector(n)` where
+- `tools/investor_check.py` : FIXED. The `screening_categories` cell is `Sector(n); Sector(n)` where
   n is the house's deal count in that sector. The splitter was keeping the suffix, so one bucket was
   created per deal count and every coverage number in the table was unreadable. Real concentration
   was hidden behind it. Top sectors now read Agent Ops 11, Lending & Credit 11, Merchant Acquiring
   & PSP 13.
-- `selector/match_reference.py` — `with_forward_revenue()` DELETED. Zero callers since 31 Aug. A
+- `selector/match_reference.py` : `with_forward_revenue()` DELETED. Zero callers since 31 Aug. A
   note in its place records what it did and why it went, so the reasoning is not lost with the code.
   Golden unmoved: 0 of 43.
 - Renderable investor count reconciled: 408 houses, 140 CALLABLE, 124 clear `investor_check`'s bar,
@@ -713,7 +713,7 @@ Payabli had seven listed names and seven private ones. But its CORE lane was emp
 found four more places where the engine held the answer and picked something else. Full write-up in
 `docs/peer-universe-diagnosis-3sep.md`.
 
-- `selector/match_reference.py` — five changes, all the same class of bug: the code asked whether
+- `selector/match_reference.py` : five changes, all the same class of bug: the code asked whether
   there was a number in the cell when the question is whether the name can price THIS founder.
   1. A third route through axis B for a horizontal founder: the same PRIMARY archetype. Narrower
      evidence than the two existing routes, not looser. 23 listed names gained, 2 displaced.
@@ -725,11 +725,94 @@ found four more places where the engine held the answer and picked something els
   4. The listed top-up reaches for names that price before names that merely score.
   5. The private lane gets the same "cannot price two names is not a lane" rule, on `basis_mult` so
      a gross-revenue row does not count as pricing a net-basis founder.
-- `tools/peer_universe_check.py` — two faults of its own fixed. It scored an EMPTY lane above a thin
+- `tools/peer_universe_check.py` : two faults of its own fixed. It scored an EMPTY lane above a thin
   one, so a fixture passed with no comparable and failed when a real one arrived. And it re-raised
   Daniil's 31-Aug CONTEXT ruling as an open question.
-- `tools/thin_lane_diagnosis.py` — NEW. Answers "is the next best peer in our database" for every
+- `tools/thin_lane_diagnosis.py` : NEW. Answers "is the next best peer in our database" for every
   thin lane, separating multiple-on-the-wrong-basis from held-but-unpriced from genuinely exhausted.
   Spares must clear the same tier and score cut as the lane itself or they are not spares.
-- `selector/golden/*.json` — rebaselined. **Peer universe: 33 of 43 to 36 of 43. Fixtures with no
+- `selector/golden/*.json` : rebaselined. **Peer universe: 33 of 43 to 36 of 43. Fixtures with no
   priced range at all: 4 to 2.**
+
+## 2026-09-03 (evening): Daniil's rulings, two silent loader drops, and the lender fork rebuilt
+
+### Two loader bugs, both dropping data we had transcribed correctly
+
+- **Twelve companies were losing their price-to-book and price-earnings.** `peers-fintech.csv` and
+  `peers-lending.csv` both hold neobanks, because a neobank is both. The loader skipped any ticker
+  it had already seen, so for every one of them the lending row went in silence, and the fintech
+  file has no book or earnings column at all. Nu Holdings 3.9x, Klarna 1.9x, SoFi 2.0x, Inter & Co
+  1.0x, Amex 6.0x, Block 1.9x, Chime 6.2x, Enova 2.8x, Upstart 2.8x, plus price-earnings for
+  Affirm, Zip, LendingClub, Pathward and Cass. **Those are the exact names that came back unpriced
+  in every lender fixture.** Daniil called it: "NU for sure carried price to book value, you need
+  to properly check the dataset." Now a second file may FILL a field the first left empty, never
+  overwrite one, only from a whitelist of measures, and never a tag or a family. Recorded on the
+  row as `filled_from`. **Listed price-to-book 47 to 57 rows, price-earnings 64 to 76.**
+- **Sixteen volume multiples reached nothing.** The two private files spell the same column
+  differently: the consumer file writes `ev_gmv_x`, the fintech file writes `ev_volume_x` with a
+  `volume_metric` naming what the volume is. Only the first was read. That silently included every
+  EV/originations multiple we hold. Both spellings are read now, the metric is carried and
+  normalised so originations, payment volume and GMV can never mix, and a since-inception period is
+  barred from pricing anything. **Private volume multiples 6 to 22 rows, 4 of them periodic
+  originations: Wayflyer 3.20x, Clearco 2.00x, Tala 0.80x, Upgrade 0.75x.**
+
+### The lender fork now shows every reading it can support
+
+Daniil: "public peers are priced off book value or net income. Private peers very often are priced
+off ARR... we need to ask all of these and show the ranges based on all of that."
+
+- `LANE_BASES`, `bases_for()` and `all_ranges()` added. A lender gets listed P/BV and P/E, and
+  private EV/book, EV/ARR and EV/originations, each computed only where we hold the multiples.
+- The quiz gains ARR and net income, and originations is promoted out of reviewer context into a
+  range of its own. Every one is backed: 12 private lender rounds priced on ARR or an ARR run-rate,
+  76 listed rows with a price-earnings, 4 periodic origination rounds.
+- Perenna goes from one book comparable to four readings. **Mondu, which had no priced range at
+  all, now has three.**
+
+### Marqeta is an issuing business, not an acquirer
+
+Daniil: "Pricing payabli vs. Marqeta is wrong conceptually." The cause was our vocabulary, not the
+matcher: there was no archetype for issuing at all, so the only card-issuing business in the listed
+file sat in the acquiring bucket and could be a core comparable for every payfac and gateway. New
+archetype `Card Issuing & BaaS`, applied to Marqeta in both the listed and private tag files, with
+Merchant Acquiring & PSP kept in the secondary slot so it stays visible as context and can no
+longer price. Marqeta is out of core for payabli, moov and rainforest.
+
+### The listed core is sized the way the private lane already was
+
+Three to five names on an almost perfect match, five to seven where the match is weaker: Daniil's
+rule from 31 August, enforced on the private lane since, and hard-capped at five on the listed core
+whatever the quality. Payabli stopped at Fawry, an Egyptian bill-payment network, with dLocal, Nexi
+and GMO waiting in sixth to eighth. **51 listed names gained, 6 displaced.** Trolley's core is now
+Western Union, Corpay, CAB Payments, Al Ansari, Payoneer, Flywire and Remitly.
+
+### Rulings applied to the data
+
+- **Klarna, spot at the pricing date, all three rounds on one convention.** Mar-21 28.52x to 26.11x,
+  Jun-21 37.6x to 37.72x, Jul-22 5.1x to 5.16x. Rate, date and entity (Klarna Bank AB) now on the
+  row. **And Klarna DID disclose a volume metric, which answers Daniil's question: GMV of $53bn for
+  2020, public 24-Feb-2021 and so current when both 2021 rounds were priced.** Loaded as EV/GMV of
+  0.585x and 0.860x. FY2021 GMV is not loaded: the only figure I could verify is "42% year on year".
+- **LEAD School, the printed figure.** Rs 57.1 crore operating revenue, 135.30x to 142.17x.
+- **Indian rows, revenue from operations, never total income.** Dream Sports 22.06x to 23.40x,
+  WayCool basis label corrected (5.88x to 5.91x), Ninjacart was already right and is the control.
+- **Pre-money column added** with three values, derived only where the row's own text settles it:
+  54 POST, 1 PRE, 182 UNSPECIFIED. A PRE row can no longer join a post-money range, and every range
+  records how many of its names are stated post-money rather than assumed.
+- **Vegrow loaded at 6.68x** with the full caveat on the row: tier-4 source, no year attached to the
+  figure at source, used because tiers 1 to 3 are empty for FY2023.
+- **Kriya checked.** The 12.6 is turnover from the filed accounts, not a volume. The unusual number
+  is the numerator: GBP7.5m is Allica Bank's accounting purchase consideration, not a valuation.
+  Typed CONTROL_ACQUISITION, stays out of medians.
+- **Fireblocks needs no fix.** Our two rounds carry their own dated ARR, $50m at Jul-21 and $100m at
+  Jan-22. The stale denominator was in the supplied sector screen, and that row was never loaded.
+
+### The fourteen undated funds now render
+
+Two dated deals each, thirteen of fourteen, each confirmed on a page that names the fund and the
+round. Founders Factory has one. Rejected rather than recorded: CuspAI for Hoxton, Luffy AI for
+Future Planet, Frontier Health for MMC, Play Padel for Mercia. Caveats carried on the rows for
+Future Planet (regional arm), Maven and Mercia (regional fund manager, not balance-sheet cheques)
+and SyndicateRoom (disclosure posts stop after April 2025).
+
+**State: 511 listed, 290 private rounds, 180 median-eligible, peer universe 36 of 43.**

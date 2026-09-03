@@ -40,13 +40,29 @@
     "reason": "shares the language of agent, ai, llm; related type of business; same kind of customer; same revenue model",
     "score": 11.2,
     "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of authentication; related type of business; same kind of customer; same revenue model",
+    "score": 10.9,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Fastly, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of edge; same type of business; same kind of customer; same revenue model",
+    "score": 10.6,
+    "ticker": "NASDAQGS:FSLY"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -55,14 +71,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 31.8,
+   "high": 16.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.3,
-   "mid": 10.5,
-   "n": 5,
+   "low": 5.1,
+   "mid": 5.3,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -76,6 +92,20 @@
      "mult": 4.0,
      "reason": "both do Vector Search; related type of business; same kind of customer; same revenue model",
      "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Fastly, Inc.",
+     "mult": 5.1,
+     "reason": "shares the language of edge; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of authentication; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
@@ -108,9 +138,11 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "agent",
     "ai",
+    "authentication",
     "database",
     "edge",
     "llm",
@@ -296,22 +328,6 @@
   "private_window_months": 61,
   "secondary": [
    {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of authentication; related type of business; same kind of customer; same revenue model",
-    "score": 10.9,
-    "ticker": "NYSE:TWLO"
-   },
-   {
-    "company": "Fastly, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of edge; same type of business; same kind of customer; same revenue model",
-    "score": 10.6,
-    "ticker": "NASDAQGS:FSLY"
-   },
-   {
     "company": "Atlassian Corporation",
     "family": "software",
     "in_medians": true,
@@ -334,6 +350,22 @@
     "reason": "shares the language of edge; related type of business; same revenue model",
     "score": 6.6,
     "ticker": "NASDAQGS:AKAM"
+   },
+   {
+    "company": "Dynatrace, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; related type of business; same revenue model",
+    "score": 6.1,
+    "ticker": "NYSE:DT"
+   },
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; related type of business; same revenue model",
+    "score": 6.1,
+    "ticker": "NYSE:SNOW"
    }
   ],
   "secondary_range": {
@@ -343,17 +375,17 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 11.8,
+   "high": 17.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.1,
-   "mid": 5.2,
+   "low": 5.5,
+   "mid": 5.8,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -366,13 +398,13 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "ai",
-    "authentication",
     "edge",
     "service"
    ],
-   "spread": 2.7,
+   "spread": 4.1,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false

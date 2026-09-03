@@ -40,13 +40,29 @@
     "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
     "score": 15.1,
     "ticker": "SZSE:002352"
+   },
+   {
+    "company": "Deutsche Post AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
+    "score": 14.8,
+    "ticker": "XTRA:DHL"
+   },
+   {
+    "company": "Blue Dart Express Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, network, own; same type of business; same business function; same kind of customer",
+    "score": 14.5,
+    "ticker": "NSEI:BLUEDART"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -59,10 +75,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,
-   "mid": 0.7,
-   "n": 5,
+   "mid": 1.0,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -72,6 +88,7 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "delivery",
     "fleet",
@@ -82,7 +99,7 @@
     "parcel",
     "shipping"
    ],
-   "spread": 4.0,
+   "spread": 6.0,
    "tag_evidence": 5.1,
    "thin": false,
    "triangulated": false
@@ -224,22 +241,6 @@
   "private_window_months": 61,
   "secondary": [
    {
-    "company": "Deutsche Post AG",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
-    "score": 14.8,
-    "ticker": "XTRA:DHL"
-   },
-   {
-    "company": "Blue Dart Express Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of delivery, network, own; same type of business; same business function; same kind of customer",
-    "score": 14.5,
-    "ticker": "NSEI:BLUEDART"
-   },
-   {
     "company": "Delhivery Limited",
     "family": "consumer",
     "in_medians": true,
@@ -262,26 +263,42 @@
     "reason": "shares the language of last, mile, own; related type of business; same kind of customer; same revenue model",
     "score": 12.3,
     "ticker": "NSEI:CONCOR"
+   },
+   {
+    "company": "J&T Global Express Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same kind of customer",
+    "score": 11.9,
+    "ticker": "SEHK:1519"
+   },
+   {
+    "company": "Yamato Holdings Co.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, fleet, last; same type of business; same business function; same revenue model",
+    "score": 11.8,
+    "ticker": "TSE:9064"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 3.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.6,
-   "mid": 1.8,
+   "low": 0.9,
+   "mid": 1.6,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -292,8 +309,45 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Yamato Holdings Co.",
+     "mult": 0.3,
+     "reason": "shares the language of delivery, fleet, last; same type of business; same business function; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "J&T Global Express Limited",
+     "mult": 0.9,
+     "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "ZTO Express (Cayman) Inc.",
+     "mult": 1.6,
+     "reason": "shares the language of last, mile, network; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of parcel; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Container Corporation of India",
+     "mult": 3.6,
+     "reason": "shares the language of last, mile, own; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "delivery",
     "fleet",
@@ -303,8 +357,8 @@
     "own",
     "parcel"
    ],
-   "spread": 3.6,
-   "tag_evidence": 1.9,
+   "spread": 12.0,
+   "tag_evidence": 3.3,
    "thin": false,
    "triangulated": false
   }

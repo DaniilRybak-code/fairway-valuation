@@ -40,13 +40,29 @@
     "reason": "shares the language of brand; related type of business; same end market; same business function",
     "score": 14.1,
     "ticker": "LSE:ASC"
+   },
+   {
+    "company": "Revolve Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same kind of customer",
+    "score": 14.0,
+    "ticker": "NYSE:RVLV"
+   },
+   {
+    "company": "Zalando SE",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same kind of customer",
+    "score": 14.0,
+    "ticker": "XTRA:ZAL"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -55,14 +71,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 3.3,
+   "high": 3.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
-   "mid": 2.8,
-   "n": 5,
+   "low": 1.0,
+   "mid": 2.35,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -75,6 +91,13 @@
      "company": "ASOS Plc",
      "mult": 0.4,
      "reason": "shares the language of brand; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Revolve Group, Inc.",
+     "mult": 1.0,
+     "reason": "related type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -107,7 +130,16 @@
      "transaction_type": ""
     }
    ],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "Zalando SE",
+     "mult": 0.4,
+     "reason": "related type of business; same end market; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
    "shared_words": [
     "beauty",
     "brand",
@@ -118,7 +150,7 @@
    "thin": false,
    "triangulated": false
   },
-  "listed_proximity": "DIRECT",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -264,35 +296,35 @@
     "ticker": "NYSE:BARK"
    },
    {
-    "company": "Revolve Group, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same business function; same kind of customer",
-    "score": 14.0,
-    "ticker": "NYSE:RVLV"
-   },
-   {
-    "company": "Zalando SE",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same business function; same kind of customer",
-    "score": 14.0,
-    "ticker": "XTRA:ZAL"
-   },
-   {
     "company": "Vipshop Holdings Limited",
     "family": "consumer",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same kind of customer",
     "score": 14.0,
     "ticker": "NYSE:VIPS"
+   },
+   {
+    "company": "The RealReal, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 12.0,
+    "ticker": "NASDAQGS:REAL"
+   },
+   {
+    "company": "Rent the Runway, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same kind of customer",
+    "score": 12.0,
+    "ticker": "NASDAQGM:RENT"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "DIRECT",
+   "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -301,14 +333,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 1.6,
+   "high": 2.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.3,
-   "mid": 0.4,
-   "n": 5,
+   "low": 0.2,
+   "mid": 0.95,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -332,32 +364,26 @@
      "transaction_type": ""
     },
     {
-     "company": "Zalando SE",
-     "mult": 0.4,
-     "reason": "related type of business; same end market; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Revolve Group, Inc.",
-     "mult": 1.0,
-     "reason": "related type of business; same end market; same business function; same kind of customer",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
      "company": "YETI Holdings, Inc.",
      "mult": 1.6,
      "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "The RealReal, Inc.",
+     "mult": 2.0,
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "brand"
    ],
-   "spread": 8.0,
+   "spread": 10.0,
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true

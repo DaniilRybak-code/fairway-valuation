@@ -40,13 +40,29 @@
     "reason": "shares the language of payments; same type of business; same business function; sold the same way",
     "score": 8.1,
     "ticker": "NASDAQ:RELY"
+   },
+   {
+    "company": "CAB Payments Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
+    "score": 7.1,
+    "ticker": "LSE:CABP"
+   },
+   {
+    "company": "Flywire Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function",
+    "score": 6.1,
+    "ticker": "NASDAQ:FLYW"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -58,11 +74,11 @@
    "high": 2.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.9,
-   "mid": 2.05,
-   "n": 4,
+   "low": 1.8,
+   "mid": 2.3,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -72,6 +88,7 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "marketplace",
     "multi",
@@ -294,6 +311,7 @@
      "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "api",
     "payments"

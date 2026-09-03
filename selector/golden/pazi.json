@@ -40,13 +40,29 @@
     "reason": "shares the language of credit; same type of business; same kind of customer",
     "score": 6.6,
     "ticker": "XTRA:1INN"
+   },
+   {
+    "company": "SAP SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of business; same type of business; same business function",
+    "score": 6.2,
+    "ticker": "XTRA:SAP"
+   },
+   {
+    "company": "Appian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation, business; same type of business",
+    "score": 5.3,
+    "ticker": "NASDAQGM:APPN"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -55,14 +71,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 5.7,
+   "high": 5.1,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.7,
-   "mid": 2.8,
-   "n": 5,
+   "mid": 3.2,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -72,6 +88,7 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "agent",
     "automation",
@@ -265,14 +282,6 @@
     "ticker": "NASDAQGS:WIX"
    },
    {
-    "company": "SAP SE",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of business; same type of business; same business function",
-    "score": 6.2,
-    "ticker": "XTRA:SAP"
-   },
-   {
     "company": "SoundHound AI, Inc.",
     "family": "software",
     "in_medians": true,
@@ -287,29 +296,37 @@
     "reason": "shares the language of agent, ai; same revenue model; sold the same way",
     "score": 5.8,
     "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of agent, ai; same revenue model; sold the same way",
+    "score": 5.8,
+    "ticker": "NASDAQGS:DDOG"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 11.8,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 31.8,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.7,
-   "mid": 5.1,
-   "n": 3,
+   "mid": 11.8,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -317,12 +334,32 @@
      "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [
+   "points": [
     {
      "company": "Wix.com Ltd.",
      "mult": 1.9,
      "reason": "shares the language of ai; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "mult": 2.7,
+     "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SoundHound AI, Inc.",
+     "mult": 11.8,
+     "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 16.4,
+     "reason": "shares the language of agent, ai; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -334,13 +371,15 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
+    "agent",
     "ai",
-    "automation",
-    "business"
+    "automation"
    ],
-   "spread": 4.4,
-   "tag_evidence": 0.2,
+   "spread": 16.7,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   }

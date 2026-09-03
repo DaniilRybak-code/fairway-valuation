@@ -40,29 +40,45 @@
     "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
     "score": 9.7,
     "ticker": "TSE:9143"
+   },
+   {
+    "company": "Deutsche Post AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+    "score": 9.4,
+    "ticker": "XTRA:DHL"
+   },
+   {
+    "company": "Delhivery Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+    "score": 9.4,
+    "ticker": "NSEI:DELHIVERY"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 1.6,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.3,
-   "mid": 0.7,
-   "n": 5,
+   "mid": 1.0,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -70,8 +86,59 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "PostNL N.V.",
+     "mult": 0.3,
+     "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Yamato Holdings Co.",
+     "mult": 0.3,
+     "reason": "shares the language of delivery, last, mile; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "mult": 0.7,
+     "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Deutsche Post AG",
+     "mult": 1.0,
+     "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "United Parcel Service",
+     "mult": 1.2,
+     "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "ZTO Express (Cayman) Inc.",
+     "mult": 1.6,
+     "reason": "shares the language of last, mile, network; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "delivery",
     "last",
@@ -80,7 +147,7 @@
     "network",
     "parcel"
    ],
-   "spread": 5.3,
+   "spread": 8.3,
    "tag_evidence": 2.1,
    "thin": false,
    "triangulated": false
@@ -254,12 +321,12 @@
     "ticker": "NASDAQGS:SPSC"
    },
    {
-    "company": "Deutsche Post AG",
+    "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+    "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same revenue model",
     "score": 9.4,
-    "ticker": "XTRA:DHL"
+    "ticker": "NYSE:FDX"
    }
   ],
   "secondary_range": {
@@ -269,7 +336,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -279,7 +346,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.8,
-   "mid": 1.0,
+   "mid": 1.2,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -307,9 +374,9 @@
      "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "delivery",
-    "logistics",
     "network",
     "parcel"
    ],

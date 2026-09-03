@@ -40,6 +40,22 @@
     "reason": "both do Online Retail, Grocery; same type of business; same business function; same kind of customer",
     "score": 18.2,
     "ticker": "NYSE:CPNG"
+   },
+   {
+    "company": "JD.com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
+    "score": 16.8,
+    "ticker": "NASDAQGS:JD"
+   },
+   {
+    "company": "Amazon.com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
+    "score": 12.4,
+    "ticker": "NASDAQGS:AMZN"
    }
   ],
   "core_range": {
@@ -102,13 +118,28 @@
    ],
    "positioning": [
     {
+     "company": "JD.com, Inc.",
+     "mult": 0.1,
+     "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Coupang, Inc.",
      "mult": 0.7,
      "reason": "both do Online Retail, Grocery; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "Amazon.com, Inc.",
+     "mult": 3.2,
+     "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "automated",
     "fulfilment",
@@ -140,7 +171,7 @@
     "company": "WayCool Foods",
     "date": "Jun-22",
     "in_medians": true,
-    "mult": 5.88,
+    "mult": 5.91,
     "reason": "same type of business; same end market; same AI stance",
     "score": 10.0,
     "type": "PRIMARY"
@@ -319,6 +350,7 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "fulfilment",
     "inventory",

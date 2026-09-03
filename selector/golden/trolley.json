@@ -40,13 +40,29 @@
     "reason": "both do Cross-Border Payments; same type of business; same business function",
     "score": 7.0,
     "ticker": "NASDAQ:PAYO"
+   },
+   {
+    "company": "Flywire Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function",
+    "score": 6.4,
+    "ticker": "NASDAQ:FLYW"
+   },
+   {
+    "company": "Remitly Global, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function",
+    "score": 6.4,
+    "ticker": "NASDAQ:RELY"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -58,11 +74,11 @@
    "high": 6.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.9,
-   "mid": 1.8,
-   "n": 3,
+   "low": 1.8,
+   "mid": 2.3,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -86,6 +102,20 @@
      "transaction_type": ""
     },
     {
+     "company": "Remitly Global, Inc.",
+     "mult": 2.3,
+     "reason": "both do Cross-Border Payments; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Flywire Corporation",
+     "mult": 2.6,
+     "reason": "both do Cross-Border Payments; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Corpay, Inc.",
      "mult": 6.4,
      "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
@@ -94,6 +124,7 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "border",
     "cross",
@@ -317,6 +348,7 @@
      "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "border",
     "cross",

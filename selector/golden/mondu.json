@@ -1,5 +1,154 @@
 {
  "expected": {
+  "all_ranges": {
+   "listed": {
+    "BOOK": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "BOOK",
+     "basis_label": "price to book",
+     "basis_mix": {
+      "UNKNOWN": 2
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "high": 3.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 0.1,
+     "mid": 1.7,
+     "n": 2,
+     "period_mix": {
+      "NTM": 2
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Lufax Holding Ltd",
+       "mult": 0.1,
+       "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Avarda Bank AB (publ)",
+       "mult": 3.3,
+       "reason": "both do Checkout Financing; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      }
+     ],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "checkout",
+      "credit",
+      "financing",
+      "invoice"
+     ],
+     "spread": 33.0,
+     "tag_evidence": 1.9,
+     "thin": true,
+     "triangulated": false
+    },
+    "EARNINGS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "EARNINGS",
+     "basis_label": "price to earnings",
+     "basis_mix": {
+      "UNKNOWN": 2
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "high": 13.8,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 3.7,
+     "mid": 8.75,
+     "n": 2,
+     "period_mix": {
+      "NTM": 2
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "checkout",
+      "credit",
+      "financing",
+      "invoice"
+     ],
+     "spread": 3.7,
+     "tag_evidence": 1.9,
+     "thin": true,
+     "triangulated": false
+    }
+   },
+   "private": {
+    "ARR": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "ARR",
+     "basis_label": "enterprise value to ARR",
+     "basis_mix": {
+      "ARR": 2
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "high": 11.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 11.0,
+     "mid": 11.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "credit",
+      "financing",
+      "invoice",
+      "terms"
+     ],
+     "spread": 1.0,
+     "tag_evidence": 1.9,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Avarda Bank AB (publ)",
@@ -42,19 +191,27 @@
     "ticker": "NASDAQ:SEZL"
    },
    {
-    "company": "Velocity Financial, Inc.",
+    "company": "Shriram Finance Limited",
     "family": "fintech",
-    "in_medians": true,
+    "in_medians": false,
     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
     "score": 8.6,
-    "ticker": "NYSE:VEL"
+    "ticker": "NSEI:SHRIRAMFIN"
+   },
+   {
+    "company": "Five-Star Business Finance Limited",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+    "score": 8.6,
+    "ticker": "NSEI:FIVESTAR"
    }
   ],
   "core_range": {
    "anchor_dropped": true,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -67,10 +224,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.1,
-   "mid": 0.8,
-   "n": 3,
+   "mid": 1.7,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -87,13 +244,6 @@
      "transaction_type": ""
     },
     {
-     "company": "Velocity Financial, Inc.",
-     "mult": 0.8,
-     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Avarda Bank AB (publ)",
      "mult": 3.3,
      "reason": "both do Checkout Financing; same type of business; same kind of customer; same revenue model",
@@ -102,6 +252,7 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "checkout",
     "credit",
@@ -110,7 +261,7 @@
    ],
    "spread": 33.0,
    "tag_evidence": 1.9,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "listed_proximity": "ADJACENT",
@@ -135,7 +286,7 @@
     "mult": 0.6,
     "reason": "shares the language of b2b, credit, invoice; same type of business; same business function; same kind of customer",
     "score": 22.7,
-    "type": "PRIMARY"
+    "type": "CONTROL_ACQUISITION"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -198,6 +349,22 @@
   "private_window_months": 58,
   "secondary": [
    {
+    "company": "Velocity Financial, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
+    "score": 8.6,
+    "ticker": "NYSE:VEL"
+   },
+   {
+    "company": "Klarna Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Buy Now Pay Later; same type of business; same kind of customer",
+    "score": 8.0,
+    "ticker": "NYSE:KLAR"
+   },
+   {
     "company": "Funding Circle Holdings plc",
     "family": "fintech",
     "in_medians": true,
@@ -220,22 +387,6 @@
     "reason": "shares the language of credit; same type of business; same business function; same revenue model",
     "score": 7.6,
     "ticker": "NASDAQ:DAVE"
-   },
-   {
-    "company": "OSB Group Plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of buy; related type of business; same business function; same kind of customer",
-    "score": 7.6,
-    "ticker": "LSE:OSB"
-   },
-   {
-    "company": "Cembra Money Bank AG",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Buy Now Pay Later; related type of business; same business function; same AI stance",
-    "score": 6.8,
-    "ticker": "SWX:CMBN"
    }
   ],
   "secondary_range": {
@@ -254,8 +405,8 @@
    "high": 8.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 1.8,
+   "low": 0.8,
+   "mid": 1.9,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -275,16 +426,16 @@
      "transaction_type": ""
     },
     {
-     "company": "OSB Group Plc",
-     "mult": 0.7,
-     "reason": "shares the language of buy; related type of business; same business function; same kind of customer",
+     "company": "Velocity Financial, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of credit; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "Cembra Money Bank AG",
-     "mult": 1.8,
-     "reason": "both do Buy Now Pay Later; related type of business; same business function; same AI stance",
+     "company": "Klarna Group plc",
+     "mult": 1.9,
+     "reason": "both do Buy Now Pay Later; same type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -304,15 +455,17 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "buy",
     "credit",
     "later",
+    "merchant",
     "now",
     "pay"
    ],
    "spread": 27.7,
-   "tag_evidence": 2.3,
+   "tag_evidence": 2.5,
    "thin": false,
    "triangulated": false
   }

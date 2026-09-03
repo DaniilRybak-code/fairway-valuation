@@ -40,29 +40,45 @@
     "reason": "shares the language of clinical, trial; related type of business; same end market; same kind of customer",
     "score": 11.2,
     "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Freightos Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, platform; same type of business; same business function; same kind of customer",
+    "score": 9.7,
+    "ticker": "NASDAQGM:CRGO"
+   },
+   {
+    "company": "Full Truck Alliance Co. Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
+    "score": 9.7,
+    "ticker": "NYSE:YMM"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 8.8,
+   "high": 3.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.2,
-   "mid": 3.5,
-   "n": 5,
+   "low": 1.6,
+   "mid": 3.2,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -75,6 +91,20 @@
      "company": "PDD Holdings Inc.",
      "mult": 0.8,
      "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Freightos Limited",
+     "mult": 1.6,
+     "reason": "shares the language of marketplace, platform; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Full Truck Alliance Co. Ltd.",
+     "mult": 3.0,
+     "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -108,9 +138,12 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "clinical",
     "marketplace",
+    "network",
+    "platform",
     "trial"
    ],
    "spread": 11.0,
@@ -165,6 +198,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "INR 3,610m at 0.01201",
+    "bound": "",
+    "company": "Vegrow",
+    "date": "Dec-23",
+    "in_medians": true,
+    "mult": 6.68,
+    "reason": "shares the language of marketplace, network; same type of business; same revenue model",
+    "score": 9.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "FILED_ACCOUNTS",
     "bound": "",
     "company": "Flipkart",
@@ -184,17 +228,6 @@
     "mult": 4.5,
     "reason": "shares the language of marketplace, network; same type of business; same revenue model; same AI stance",
     "score": 9.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "FY2021",
-    "bound": "",
-    "company": "Incredible Health",
-    "date": "Aug-22",
-    "in_medians": true,
-    "mult": 66.0,
-    "reason": "shares the language of marketplace; related type of business; same end market; sold the same way",
-    "score": 11.1,
     "type": "PRIMARY"
    }
   ],
@@ -238,7 +271,7 @@
    "thin": true,
    "triangulated": true
   },
-  "private_window_months": 48,
+  "private_window_months": 46,
   "secondary": [
    {
     "company": "1stdibs.Com, Inc.",
@@ -319,6 +352,7 @@
      "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "marketplace",
     "network"

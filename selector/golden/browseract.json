@@ -40,13 +40,29 @@
     "reason": "shares the language of ai; same type of business; same business function; same revenue model",
     "score": 9.6,
     "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "Sinch AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 8.8,
+    "ticker": "OM:SINCH"
+   },
+   {
+    "company": "SoundHound AI, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
+    "score": 8.6,
+    "ticker": "NASDAQGM:SOUN"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -55,14 +71,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 31.8,
+   "high": 17.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.2,
-   "mid": 16.4,
-   "n": 5,
+   "low": 1.4,
+   "mid": 11.8,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -79,9 +95,23 @@
      "transaction_type": ""
     },
     {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Twilio Inc.",
      "mult": 5.2,
      "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SoundHound AI, Inc.",
+     "mult": 11.8,
+     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -108,6 +138,7 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "agent",
     "ai",
@@ -295,22 +326,6 @@
   "private_window_months": 13,
   "secondary": [
    {
-    "company": "Sinch AB (publ)",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
-    "ticker": "OM:SINCH"
-   },
-   {
-    "company": "SoundHound AI, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "ticker": "NASDAQGM:SOUN"
-   },
-   {
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
@@ -333,6 +348,22 @@
     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
     "score": 7.1,
     "ticker": "NASDAQGS:PLTR"
+   },
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same type of business; same kind of customer",
+    "score": 6.8,
+    "ticker": "ENXTAM:TOM2"
+   },
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Web Scraping; same type of business; same business function",
+    "score": 6.8,
+    "ticker": "NYSE:SMWB"
    }
   ],
   "secondary_range": {
@@ -342,7 +373,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -351,8 +382,8 @@
    "high": 41.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.8,
-   "mid": 5.5,
+   "low": 2.1,
+   "mid": 4.8,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -365,9 +396,16 @@
    },
    "points": [
     {
-     "company": "Sinch AB (publ)",
-     "mult": 1.4,
-     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of api; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "mult": 2.1,
+     "reason": "both do Web Scraping; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -386,13 +424,6 @@
      "transaction_type": ""
     },
     {
-     "company": "SoundHound AI, Inc.",
-     "mult": 11.8,
-     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Palantir Technologies Inc.",
      "mult": 41.8,
      "reason": "shares the language of ai; same type of business; same business function; same AI stance",
@@ -401,13 +432,16 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "ai",
     "api",
-    "infrastructure"
+    "infrastructure",
+    "scraping",
+    "web"
    ],
-   "spread": 29.9,
-   "tag_evidence": 0.3,
+   "spread": 69.7,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   }

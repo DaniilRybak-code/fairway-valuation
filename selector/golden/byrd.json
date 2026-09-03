@@ -40,13 +40,29 @@
     "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
     "score": 8.9,
     "ticker": "ENXTAM:PNL"
+   },
+   {
+    "company": "J&T Global Express Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+    "score": 8.9,
+    "ticker": "SEHK:1519"
+   },
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics, network; same type of business; same business function; same revenue model",
+    "score": 8.9,
+    "ticker": "NYSE:UPS"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -55,14 +71,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.5,
+   "high": 2.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.0,
+   "low": 0.9,
    "mid": 1.2,
-   "n": 5,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -74,6 +90,13 @@
     {
      "company": "PostNL N.V.",
      "mult": 0.3,
+     "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "J&T Global Express Limited",
+     "mult": 0.9,
      "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -93,6 +116,13 @@
      "transaction_type": ""
     },
     {
+     "company": "United Parcel Service",
+     "mult": 1.2,
+     "reason": "shares the language of logistics, network; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "InPost S.A.",
      "mult": 2.4,
      "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
@@ -108,6 +138,7 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "border",
     "cross",
@@ -338,6 +369,7 @@
      "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "network"
    ],

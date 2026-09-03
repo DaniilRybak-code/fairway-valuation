@@ -86,6 +86,7 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "automation",
     "ecommerce",
@@ -122,6 +123,17 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "INR 3,610m at 0.01201",
+    "bound": "",
+    "company": "Vegrow",
+    "date": "Dec-23",
+    "in_medians": true,
+    "mult": 6.68,
+    "reason": "shares the language of sourcing; related type of business; same kind of customer",
+    "score": 6.1,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_EXACT",
     "bound": "",
     "company": "Shiprocket",
@@ -138,20 +150,9 @@
     "company": "WayCool Foods",
     "date": "Jun-22",
     "in_medians": true,
-    "mult": 5.88,
+    "mult": 5.91,
     "reason": "both do Sourcing; related type of business; same kind of customer",
     "score": 6.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": ">=",
-    "company": "CommerceIQ",
-    "date": "Mar-22",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of amazon, management; related type of business; same end market",
-    "score": 6.6,
     "type": "PRIMARY"
    },
    {
@@ -273,6 +274,7 @@
    },
    "points": [],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "store"
    ],

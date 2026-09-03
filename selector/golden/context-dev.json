@@ -40,13 +40,29 @@
     "reason": "shares the language of data; same type of business; same business function; same revenue model",
     "score": 10.6,
     "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "Red Violet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Data Enrichment; same type of business; same business function; same revenue model",
+    "score": 10.2,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "Sinch AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 8.8,
+    "ticker": "OM:SINCH"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -55,14 +71,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 31.8,
+   "high": 17.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.2,
-   "mid": 16.4,
-   "n": 5,
+   "low": 1.4,
+   "mid": 9.6,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -79,9 +95,23 @@
      "transaction_type": ""
     },
     {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Twilio Inc.",
      "mult": 5.2,
      "reason": "shares the language of api, data; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "mult": 9.6,
+     "reason": "both do Data Enrichment; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -108,14 +138,16 @@
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "api",
     "data",
+    "enrichment",
     "llm",
     "web"
    ],
    "spread": 39.8,
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
@@ -248,22 +280,6 @@
   "private_window_months": 27,
   "secondary": [
    {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Data Enrichment; same type of business; same business function; same revenue model",
-    "score": 10.2,
-    "ticker": "NASDAQCM:RDVT"
-   },
-   {
-    "company": "Sinch AB (publ)",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
-    "ticker": "OM:SINCH"
-   },
-   {
     "company": "Teradata Corporation",
     "family": "software",
     "in_medians": true,
@@ -286,6 +302,22 @@
     "reason": "shares the language of web; related type of business; same revenue model; same AI stance",
     "score": 7.2,
     "ticker": "NASDAQGS:AKAM"
+   },
+   {
+    "company": "GoDaddy Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of web, website; related type of business; sold the same way; same AI stance",
+    "score": 7.2,
+    "ticker": "NYSE:GDDY"
+   },
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api, data; same type of business; same kind of customer",
+    "score": 6.9,
+    "ticker": "ENXTAM:TOM2"
    }
   ],
   "secondary_range": {
@@ -301,7 +333,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 9.6,
+   "high": 4.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.4,
@@ -318,9 +350,9 @@
    },
    "points": [
     {
-     "company": "Sinch AB (publ)",
-     "mult": 1.4,
-     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of api, data; same type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -339,29 +371,30 @@
      "transaction_type": ""
     },
     {
+     "company": "GoDaddy Inc.",
+     "mult": 2.8,
+     "reason": "shares the language of web, website; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Akamai Technologies, Inc.",
      "mult": 4.3,
      "reason": "shares the language of web; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "mult": 9.6,
-     "reason": "both do Data Enrichment; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "api",
     "data",
-    "enrichment",
     "scraping",
-    "web"
+    "web",
+    "website"
    ],
-   "spread": 6.9,
+   "spread": 7.2,
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false

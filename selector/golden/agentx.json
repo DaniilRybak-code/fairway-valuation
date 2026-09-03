@@ -40,13 +40,29 @@
     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
     "score": 8.6,
     "ticker": "TSX:CVO"
+   },
+   {
+    "company": "Palantir Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
+    "score": 8.6,
+    "ticker": "NASDAQGS:PLTR"
+   },
+   {
+    "company": "Rezolve AI PLC",
+    "family": "software",
+    "in_medians": false,
+    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
+    "score": 6.6,
+    "ticker": "NASDAQGM:RZLV"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -59,10 +75,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.9,
-   "mid": 4.8,
-   "n": 5,
+   "mid": 4.9,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -105,9 +121,17 @@
      "reason": "both do AI Agent Monitoring; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "mult": 41.8,
+     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
     "agent",
     "ai",
@@ -116,7 +140,7 @@
     "framework",
     "monitoring"
    ],
-   "spread": 12.6,
+   "spread": 32.2,
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
@@ -258,14 +282,6 @@
   "private_window_months": 14,
   "secondary": [
    {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "ticker": "NASDAQGS:PLTR"
-   },
-   {
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
@@ -296,6 +312,14 @@
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
     "score": 6.4,
     "ticker": "ENXTPA:ALBFR"
+   },
+   {
+    "company": "Pegasystems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of code; related type of business; same revenue model",
+    "score": 6.4,
+    "ticker": "NASDAQGS:PEGA"
    }
   ],
   "secondary_range": {
@@ -309,13 +333,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 41.8,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.2,
-   "mid": 4.0,
+   "low": 2.7,
+   "mid": 3.6,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -326,36 +350,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Appian Corporation",
-     "mult": 3.2,
-     "reason": "both do No-Code; related type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "UiPath, Inc.",
-     "mult": 4.0,
-     "reason": "both do Agent Orchestration; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Sidetrade SA",
-     "mult": 4.0,
-     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 41.8,
-     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [
     {
      "company": "Wix.com Ltd.",
@@ -365,6 +360,7 @@
      "transaction_type": ""
     }
    ],
+   "post_stated_n": 0,
    "shared_words": [
     "agent",
     "agents",
@@ -373,7 +369,7 @@
     "no",
     "orchestration"
    ],
-   "spread": 13.1,
+   "spread": 1.5,
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

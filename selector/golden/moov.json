@@ -2,14 +2,6 @@
  "expected": {
   "core": [
    {
-    "company": "Marqeta, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Card API; same type of business; same business function; same kind of customer",
-    "score": 10.0,
-    "ticker": "NASDAQ:MQ"
-   },
-   {
     "company": "Repay Holdings Corporation",
     "family": "fintech",
     "in_medians": true,
@@ -40,29 +32,53 @@
     "reason": "shares the language of pay, payments; same type of business; same business function; sold the same way",
     "score": 9.5,
     "ticker": "NSEI:MOBIKWIK"
+   },
+   {
+    "company": "PayPal Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of pay, payments, to; same type of business; same business function; sold the same way",
+    "score": 8.6,
+    "ticker": "NASDAQ:PYPL"
+   },
+   {
+    "company": "Nexi S.p.A.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
+    "score": 8.2,
+    "ticker": "BIT:NEXI"
+   },
+   {
+    "company": "GMO Payment Gateway, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Card Payments; same type of business; same business function; same AI stance",
+    "score": 8.2,
+    "ticker": "TSE:3769"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 2.1,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.4,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.8,
-   "mid": 1.3,
-   "n": 5,
+   "mid": 1.7,
+   "n": 7,
    "period_mix": {
-    "NTM": 5
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -70,16 +86,67 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "One MobiKwik Systems Limited",
+     "mult": 0.7,
+     "reason": "shares the language of pay, payments; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Usio, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of card, payments; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PayPal Holdings, Inc.",
+     "mult": 1.6,
+     "reason": "shares the language of pay, payments, to; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "mult": 1.7,
+     "reason": "shares the language of pay, payments; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PayPoint plc",
+     "mult": 2.1,
+     "reason": "shares the language of card; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nexi S.p.A.",
+     "mult": 2.4,
+     "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GMO Payment Gateway, Inc.",
+     "mult": 5.3,
+     "reason": "both do Card Payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
-    "api",
     "card",
     "pay",
-    "payments"
+    "payments",
+    "to"
    ],
-   "spread": 3.0,
-   "tag_evidence": 0.5,
+   "spread": 7.6,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -215,28 +282,12 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "PayPal Holdings, Inc.",
+    "company": "Marqeta, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of pay, payments, to; same type of business; same business function; sold the same way",
-    "score": 8.6,
-    "ticker": "NASDAQ:PYPL"
-   },
-   {
-    "company": "Nexi S.p.A.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
-    "score": 8.2,
-    "ticker": "BIT:NEXI"
-   },
-   {
-    "company": "GMO Payment Gateway, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Card Payments; same type of business; same business function; same AI stance",
-    "score": 8.2,
-    "ticker": "TSE:3769"
+    "reason": "both do Card API; related type of business; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "NASDAQ:MQ"
    },
    {
     "company": "Tyro Payments Limited",
@@ -253,6 +304,22 @@
     "reason": "shares the language of payments; same type of business; same business function; same AI stance",
     "score": 8.1,
     "ticker": "NASDAQ:DLO"
+   },
+   {
+    "company": "One97 Communications Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; same type of business; same business function; sold the same way",
+    "score": 8.1,
+    "ticker": "NSEI:PAYTM"
+   },
+   {
+    "company": "PagSeguro Digital Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
+    "score": 7.2,
+    "ticker": "NYSE:PAGS"
    }
   ],
   "secondary_range": {
@@ -262,17 +329,17 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 5.3,
+   "high": 8.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.6,
-   "mid": 2.0,
+   "low": 0.7,
+   "mid": 1.3,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -285,6 +352,13 @@
    },
    "points": [
     {
+     "company": "PagSeguro Digital Ltd.",
+     "mult": 0.6,
+     "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Tyro Payments Limited",
      "mult": 0.7,
      "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
@@ -292,9 +366,9 @@
      "transaction_type": ""
     },
     {
-     "company": "PayPal Holdings, Inc.",
-     "mult": 1.6,
-     "reason": "shares the language of pay, payments, to; same type of business; same business function; sold the same way",
+     "company": "Marqeta, Inc.",
+     "mult": 1.3,
+     "reason": "both do Card API; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -306,29 +380,22 @@
      "transaction_type": ""
     },
     {
-     "company": "Nexi S.p.A.",
-     "mult": 2.4,
-     "reason": "shares the language of card, payments; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "GMO Payment Gateway, Inc.",
-     "mult": 5.3,
-     "reason": "both do Card Payments; same type of business; same business function; same AI stance",
+     "company": "One97 Communications Limited",
+     "mult": 8.0,
+     "reason": "shares the language of payments; same type of business; same business function; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
    ],
    "positioning": [],
+   "post_stated_n": 0,
    "shared_words": [
+    "api",
     "card",
-    "pay",
-    "payments",
-    "to"
+    "payments"
    ],
-   "spread": 7.6,
-   "tag_evidence": 0.6,
+   "spread": 13.3,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   }
