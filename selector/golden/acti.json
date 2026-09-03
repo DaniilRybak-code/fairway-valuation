@@ -109,10 +109,10 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 1,
-      "ARR_RUNRATE": 1
+      "ARR_RUNRATE": 2
      },
      "bounded": true,
-     "closeness": "THIN_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -121,10 +121,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 21.0,
-     "mid": 120.0,
-     "n": 2,
+     "mid": 54.5,
+     "n": 3,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
       "RUN_RATE": {
@@ -135,12 +135,13 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai"
+      "ai",
+      "api"
      ],
      "spread": 5.7,
-     "tag_evidence": 0.1,
-     "thin": true,
-     "triangulated": true
+     "tag_evidence": 0.4,
+     "thin": false,
+     "triangulated": false
     }
    }
   },
@@ -320,7 +321,7 @@
     "bound": "",
     "company": "OpenAI",
     "date": "Mar-25",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 54.5,
     "reason": "shares the language of ai, api; same type of business; same kind of customer; sold the same way",
     "score": 13.9,
@@ -346,10 +347,10 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 1
+    "ARR_RUNRATE": 2
    },
    "bounded": true,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -358,10 +359,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 21.0,
-   "mid": 120.0,
-   "n": 2,
+   "mid": 54.5,
+   "n": 3,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "RUN_RATE": {
@@ -372,12 +373,13 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai"
+    "ai",
+    "api"
    ],
    "spread": 5.7,
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
   },
   "private_window_months": 19,
   "secondary": [],

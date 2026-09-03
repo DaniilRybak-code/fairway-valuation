@@ -1073,3 +1073,53 @@ households, and so on. A prompt for the remaining 111 URLs is at `docs/prompts/u
 
 **State: 511 listed on 1-Sep data with 13 frozen as stale, 290 private rounds, 184 median-eligible,
 peer universe 39 of 43.**
+
+## 2026-09-03 (night, 5): the intake gate, and the sweep loaded
+
+### The architectural fix Daniil asked for
+
+"I will be providing data updates on regular basis, so we need to make sure the updated numbers go
+into the database and start reaching the user as soon as received, without creating any conflicts."
+
+- `tools/check_intake.py` : NEW, and it is the check nothing had. Every other check begins by
+  reading `data/`, so a file that never got that far was invisible to all of them: that is how the
+  509-row 1-Sep refresh sat unused for two days while everything passed. This one starts at the
+  other end, walks `data/raw`, and for each supplied file asks whether its contents are in the
+  engine, by sampling identifying values. No per-file configuration, so it cannot go stale when a
+  new kind of file arrives. States are INGESTED, PARTIAL, NOT INGESTED, SUPERSEDED (a decision, with
+  the file that replaced it) and REFERENCE. **NOT INGESTED fails the build.** It found two more on
+  its first run, both false, which is how the investor table got added to what it looks at.
+- `tools/check_all.sh` : NEW. ONE COMMAND, and the checks run IN THE ORDER A FIGURE TRAVELS, so a
+  failure says where the data stopped rather than only that something is wrong:
+  intake, raw coverage, field reach, cross pull, engine reach, golden, honesty, peer universe.
+  This is the answer to "without creating any conflicts": run it after every drop and before every
+  commit, and the stage that fails is the stage to fix.
+
+### The sweep, waves 1 and 2 loaded
+
+**159 of the 217 announcement URLs read**, by six agents, each told to report only what it saw on
+the page and to quote verbatim. `tools/load_user_counts_3sep.py` loads them and computes the figure.
+
+**56 counts loaded across 56 rounds.** Median-eligible rounds 184 to 195.
+
+| kind | rounds | range |
+|---|---|---|
+| PAYING_SUBSCRIBERS | 6 | Calm $500, Flo Health $533, Calm Feb-19 $1,000, Buffer $2,143, Mailchimp, Jasper $21,429 |
+| CUSTOMERS | 32 | Nubank $750, Octopus $1,169 to $1,613, Zilch $2,000, BlockFi $11,321, Enpal $73,333 |
+| MERCHANTS | 6 | Razorpay $938, ElasticRun $1,500, SumUp, Shiprocket, Pine Labs, dLocal |
+| REGISTERED_USERS | 10 | Gamma $30, Perplexity, Deezer $71, Replit, Roblox $952 |
+| MEMBERS | 4 | Happy Money $5,366, Alan $9,343, Devoted Health $317,500 |
+| BORROWERS | 1 | MNT-Halan $500 |
+
+The kind is what keeps these apart: a merchant count never meets a subscriber count and a borrower
+never meets either. Within a founder's own comparable set the family gate narrows it further, so the
+wide spread across a kind is not what any one founder sees.
+
+Not loaded, and recorded in the raw files only: downloads, sessions, visits, locations, listings,
+terminals, trucks, units sold. A price per download has nothing behind it.
+
+**About 58 URLs remain, plus 49 rounds with no announcement URL at all.** The prompt to finish it in
+a new chat in this same project is `docs/prompts/user-count-sweep.md`.
+
+**State: 511 listed on 1-Sep data with 13 frozen as stale, 290 private rounds, 195 median-eligible,
+peer universe 39 of 43, all eight checks green.**

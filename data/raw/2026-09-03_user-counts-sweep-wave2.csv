@@ -1,0 +1,26 @@
+# USER-COUNT SWEEP, WAVE 2. 3-Sep-2026. Same method as wave 1: each URL fetched by an agent that
+# reports only what appears on the page it read, quotes verbatim, and is told to ignore counts
+# belonging to the investor, acquirer, competitor or market.
+company,round,count,metric_kind,is_paying,as_worded_on_the_page
+Algolia,Jul-21,10000,BUSINESS_CUSTOMERS,UNKNOWN,"More than 10000 companies rely on Algolia"
+Billie,Oct-21,100000,BUSINESS_CUSTOMERS,UNKNOWN,"as of February 2021 it had worked with 100000 businesses"
+Calendly,Jan-21,10000000,ACTIVE_USERS,NO,"some 10 million of us are using Calendly on a monthly basis"
+Fundbox,Nov-21,325000,BUSINESS_CUSTOMERS,YES,"connected with over 325000 businesses since its founding"
+Jasper,Oct-22,70000,PAYING_SUBSCRIBERS,YES,"now supports more than 70000 paying subscribers"
+Octopus Energy Group,Jul-22,3400000,CUSTOMERS,YES,"domestic energy arm already serves 3.4 million customers"
+Oxylabs,Jul-26,350000,CUSTOMERS,UNKNOWN,"With over 350000 customers"
+Salesloft,Dec-21,4000,BUSINESS_CUSTOMERS,YES,"Trusted by more than 4000 organizations"
+Zopa,Oct-21,500000,CUSTOMERS,UNKNOWN,"a neobank with some 500000 users in the U.K."
+AlphaSense,Jun-22,3500,BUSINESS_CUSTOMERS,YES,"AlphaSense's base of 3500 customers"
+Anthropic,Sep-25,300000,BUSINESS_CUSTOMERS,YES,"Anthropic now serves over 300000 business customers"
+BlockFi,Mar-21,265000,CUSTOMERS,UNKNOWN,"BlockFi has 265000 funded retail clients"
+Calm,Feb-19,1000000,PAYING_SUBSCRIBERS,YES,"has well over 1 million paying subscribers"
+Chainalysis,May-22,750,BUSINESS_CUSTOMERS,YES,"now has more than 750 customers in 70 countries"
+ConsenSys,Mar-22,30000000,ACTIVE_USERS,NO,"MetaMask now supports more than 30 million Monthly Active Users"
+Gamma,Nov-25,70000000,REGISTERED_USERS,UNKNOWN,"customer base which consists of 70 million users globally"
+Happy Money,Feb-22,205000,MEMBERS,YES,"has helped close to 205000 members"
+Octopus Energy Group,May-24,7700000,CUSTOMERS,YES,"delivers to 7.7 million households globally"
+Pine Labs,May-21,140000,MERCHANTS,YES,"serves over 140000 merchants"
+Starling Bank,Mar-21,300000,BUSINESS_CUSTOMERS,UNKNOWN,"more than 300000 small business accounts"
+dLocal,Apr-21,325,MERCHANTS,YES,"More than 325 global merchants use dLocal"
+Guild Education,Jun-22,5000000,REACHABLE_EMPLOYEES,NO,"nearly 5 million employees have access to Guild's platform"
