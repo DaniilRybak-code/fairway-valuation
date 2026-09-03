@@ -146,7 +146,73 @@
     "llm",
     "web"
    ],
+   "show_retention": true,
    "spread": 39.8,
+   "table": [
+    {
+     "company": "Agora, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:API"
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:SINCH"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 9.6,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 16.4,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Snowflake Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 17.6,
+     "recurring_pct": null,
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 31.8,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
@@ -394,7 +460,55 @@
     "web",
     "website"
    ],
+   "show_retention": true,
    "spread": 7.2,
+   "table": [
+    {
+     "company": "TomTom N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -1.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:TOM2"
+    },
+    {
+     "company": "Teradata Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 1.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": 108.0,
+     "ticker": "NYSE:TDC"
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "NTM",
+     "growth_pct": 11.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
+     "company": "GoDaddy Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 85.0,
+     "ticker": "NYSE:GDDY"
+    },
+    {
+     "company": "Akamai Technologies, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:AKAM"
+    }
+   ],
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false

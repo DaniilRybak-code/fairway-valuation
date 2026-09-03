@@ -145,7 +145,64 @@
     "brand",
     "home"
    ],
+   "show_retention": false,
    "spread": 8.2,
+   "table": [
+    {
+     "company": "ASOS Plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:ASC"
+    },
+    {
+     "company": "Revolve Group, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:RVLV"
+    },
+    {
+     "company": "On Holding AG",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 20.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ONON"
+    },
+    {
+     "company": "FIGS, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FIGS"
+    },
+    {
+     "company": "Warby Parker Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 26.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WRBY"
+    },
+    {
+     "company": "e.l.f. Beauty, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ELF"
+    }
+   ],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
@@ -383,7 +440,46 @@
    "shared_words": [
     "brand"
    ],
+   "show_retention": false,
    "spread": 10.0,
+   "table": [
+    {
+     "company": "Vipshop Holdings Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.0,
+     "multiple": 0.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:VIPS"
+    },
+    {
+     "company": "BARK, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BARK"
+    },
+    {
+     "company": "YETI Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:YETI"
+    },
+    {
+     "company": "The RealReal, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:REAL"
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true

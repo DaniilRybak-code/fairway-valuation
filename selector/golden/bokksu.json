@@ -113,7 +113,55 @@
     "food",
     "subscription"
    ],
+   "show_retention": false,
    "spread": 14.0,
+   "table": [
+    {
+     "company": "HelloFresh SE",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 1.0,
+     "multiple": 0.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:HFG"
+    },
+    {
+     "company": "Naked Wines plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -6.0,
+     "multiple": 0.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:WINE"
+    },
+    {
+     "company": "Oisix Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:3182"
+    },
+    {
+     "company": "Coupang, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CPNG"
+    },
+    {
+     "company": "Ocado Group plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -12.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:OCDO"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -372,7 +420,55 @@
     "box",
     "subscription"
    ],
+   "show_retention": false,
    "spread": 7.7,
+   "table": [
+    {
+     "company": "BARK, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BARK"
+    },
+    {
+     "company": "LifeMD, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 18.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:LFMD"
+    },
+    {
+     "company": "Chewy, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHWY"
+    },
+    {
+     "company": "WW International, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 2.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:WW"
+    },
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.0,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:HIMS"
+    }
+   ],
    "tag_evidence": 3.7,
    "thin": false,
    "triangulated": false

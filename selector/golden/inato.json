@@ -146,7 +146,73 @@
     "platform",
     "trial"
    ],
+   "show_retention": false,
    "spread": 11.0,
+   "table": [
+    {
+     "company": "PDD Holdings Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PDD"
+    },
+    {
+     "company": "Freightos Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:CRGO"
+    },
+    {
+     "company": "Full Truck Alliance Co. Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:YMM"
+    },
+    {
+     "company": "Etsy, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.0,
+     "multiple": 3.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ETSY"
+    },
+    {
+     "company": "Auction Technology Group plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:ATG"
+    },
+    {
+     "company": "eBay Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.0,
+     "multiple": 3.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:EBAY"
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 8.8,
+     "recurring_pct": 84.0,
+     "retention_pct": null,
+     "ticker": "NYSE:VEEV"
+    }
+   ],
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
@@ -357,7 +423,46 @@
     "marketplace",
     "network"
    ],
+   "show_retention": false,
    "spread": 5.5,
+   "table": [
+    {
+     "company": "1stdibs.Com, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:DIBS"
+    },
+    {
+     "company": "GigaCloud Technology Inc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 7.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:GCT"
+    },
+    {
+     "company": "Xometry, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 22.0,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:XMTR"
+    },
+    {
+     "company": "Airbnb, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.0,
+     "multiple": 6.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ABNB"
+    }
+   ],
    "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false

@@ -85,7 +85,37 @@
     "listening",
     "social"
    ],
+   "show_retention": true,
    "spread": 2.5,
+   "table": [
+    {
+     "company": "Sprout Social, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NASDAQCM:SPT"
+    },
+    {
+     "company": "Sprinklr, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 1.5,
+     "recurring_pct": 89.0,
+     "retention_pct": 104.0,
+     "ticker": "NYSE:CXM"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    }
+   ],
    "tag_evidence": 3.9,
    "thin": false,
    "triangulated": false
@@ -369,7 +399,46 @@
    "shared_words": [
     "product"
    ],
+   "show_retention": true,
    "spread": 7.9,
+   "table": [
+    {
+     "company": "Riskified Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": 105.0,
+     "ticker": "NYSE:RSKD"
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "NTM",
+     "growth_pct": 0.0,
+     "multiple": 4.2,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "PTC Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 6.5,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTC"
+    },
+    {
+     "company": "Manhattan Associates, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 10.3,
+     "recurring_pct": 37.7,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:MANH"
+    }
+   ],
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": true

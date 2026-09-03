@@ -99,7 +99,73 @@
     "parcel",
     "shipping"
    ],
+   "show_retention": false,
    "spread": 6.0,
+   "table": [
+    {
+     "company": "PostNL N.V.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:PNL"
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SZSE:002352"
+    },
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9143"
+    },
+    {
+     "company": "Deutsche Post AG",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DHL"
+    },
+    {
+     "company": "FedEx Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FDX"
+    },
+    {
+     "company": "United Parcel Service",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UPS"
+    },
+    {
+     "company": "Blue Dart Express Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:BLUEDART"
+    }
+   ],
    "tag_evidence": 5.1,
    "thin": false,
    "triangulated": false
@@ -357,7 +423,55 @@
     "own",
     "parcel"
    ],
+   "show_retention": false,
    "spread": 12.0,
+   "table": [
+    {
+     "company": "Yamato Holdings Co.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9064"
+    },
+    {
+     "company": "J&T Global Express Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 18.0,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:1519"
+    },
+    {
+     "company": "ZTO Express (Cayman) Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ZTO"
+    },
+    {
+     "company": "Delhivery Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 17.0,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:DELHIVERY"
+    },
+    {
+     "company": "Container Corporation of India",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 14.0,
+     "multiple": 3.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:CONCOR"
+    }
+   ],
    "tag_evidence": 3.3,
    "thin": false,
    "triangulated": false

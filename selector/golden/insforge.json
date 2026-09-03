@@ -150,7 +150,73 @@
     "storage",
     "vector"
    ],
+   "show_retention": true,
    "spread": 8.0,
+   "table": [
+    {
+     "company": "Elastic N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 4.0,
+     "recurring_pct": null,
+     "retention_pct": 112.0,
+     "ticker": "NYSE:ESTC"
+    },
+    {
+     "company": "Fastly, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 5.1,
+     "recurring_pct": null,
+     "retention_pct": 117.0,
+     "ticker": "NASDAQGS:FSLY"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    },
+    {
+     "company": "Backblaze, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 22.0,
+     "multiple": 5.3,
+     "recurring_pct": null,
+     "retention_pct": 103.0,
+     "ticker": "NASDAQGM:BLZE"
+    },
+    {
+     "company": "MongoDB, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 10.5,
+     "recurring_pct": 97.0,
+     "retention_pct": 121.0,
+     "ticker": "NASDAQGM:MDB"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 16.4,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 31.8,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
    "tag_evidence": 3.8,
    "thin": false,
    "triangulated": false
@@ -404,7 +470,55 @@
     "edge",
     "service"
    ],
+   "show_retention": true,
    "spread": 4.1,
+   "table": [
+    {
+     "company": "Akamai Technologies, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:AKAM"
+    },
+    {
+     "company": "Dynatrace, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 5.5,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NYSE:DT"
+    },
+    {
+     "company": "Atlassian Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 5.8,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NASDAQGS:TEAM"
+    },
+    {
+     "company": "SoundHound AI, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 11.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:SOUN"
+    },
+    {
+     "company": "Snowflake Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 17.6,
+     "recurring_pct": null,
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false

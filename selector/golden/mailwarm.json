@@ -69,7 +69,46 @@
     "email",
     "reputation"
    ],
+   "show_retention": true,
    "spread": 2.2,
+   "table": [
+    {
+     "company": "Yext, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 0.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": 95.0,
+     "ticker": "NYSE:YEXT"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Zeta Global Holdings Corp.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 3.7,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:ZETA"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -267,7 +306,55 @@
     "infrastructure",
     "monitoring"
    ],
+   "show_retention": true,
    "spread": 11.4,
+   "table": [
+    {
+     "company": "GoDaddy Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 85.0,
+     "ticker": "NYSE:GDDY"
+    },
+    {
+     "company": "IONOS Group SE",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 3.7,
+     "recurring_pct": 80.0,
+     "retention_pct": null,
+     "ticker": "XTRA:IOS"
+    },
+    {
+     "company": "Intuit Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 11.0,
+     "multiple": 4.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:INTU"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 16.4,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 31.8,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false

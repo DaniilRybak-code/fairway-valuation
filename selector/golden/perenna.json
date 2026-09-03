@@ -75,7 +75,55 @@
       "broker",
       "mortgage"
      ],
+     "show_retention": false,
      "spread": 7.8,
+     "table": [
+      {
+       "company": "Velocity Financial, Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 0.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:VEL"
+      },
+      {
+       "company": "Inter & Co, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 24.0,
+       "multiple": 1.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:INTR"
+      },
+      {
+       "company": "SoFi Technologies, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 31.0,
+       "multiple": 2.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:SOFI"
+      },
+      {
+       "company": "Nu Holdings Ltd.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 32.0,
+       "multiple": 3.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:NU"
+      },
+      {
+       "company": "Chime Financial, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 23.0,
+       "multiple": 6.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:CHYM"
+      }
+     ],
      "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
@@ -116,7 +164,46 @@
       "bank",
       "broker"
      ],
+     "show_retention": false,
      "spread": 2.4,
+     "table": [
+      {
+       "company": "Inter & Co, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 24.0,
+       "multiple": 6.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:INTR"
+      },
+      {
+       "company": "Velocity Financial, Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 6.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:VEL"
+      },
+      {
+       "company": "LendingClub Corporation",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 12.0,
+       "multiple": 9.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:LC"
+      },
+      {
+       "company": "Nu Holdings Ltd.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 32.0,
+       "multiple": 14.7,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:NU"
+      }
+     ],
      "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
@@ -333,7 +420,55 @@
     "broker",
     "mortgage"
    ],
+   "show_retention": false,
    "spread": 7.8,
+   "table": [
+    {
+     "company": "Velocity Financial, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:VEL"
+    },
+    {
+     "company": "Inter & Co, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 24.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:INTR"
+    },
+    {
+     "company": "SoFi Technologies, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:SOFI"
+    },
+    {
+     "company": "Nu Holdings Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 32.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NU"
+    },
+    {
+     "company": "Chime Financial, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 6.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:CHYM"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -534,7 +669,55 @@
     "mortgage",
     "uk"
    ],
+   "show_retention": false,
    "spread": 4.5,
+   "table": [
+    {
+     "company": "Onity Group Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ONIT"
+    },
+    {
+     "company": "PennyMac Financial Services, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PFSI"
+    },
+    {
+     "company": "Pepper Money Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:PPM"
+    },
+    {
+     "company": "S&U plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:SUS"
+    },
+    {
+     "company": "Cembra Money Bank AG",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SWX:CMBN"
+    }
+   ],
    "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false

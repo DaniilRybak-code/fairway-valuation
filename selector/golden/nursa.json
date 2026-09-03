@@ -62,7 +62,37 @@
     "marketplace",
     "staffing"
    ],
+   "show_retention": false,
    "spread": 1.7,
+   "table": [
+    {
+     "company": "AMN Healthcare Services, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -21.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:AMN"
+    },
+    {
+     "company": "Airtasker Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:ART"
+    },
+    {
+     "company": "Freelancer Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:FLN"
+    }
+   ],
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
@@ -207,7 +237,55 @@
    "shared_words": [
     "marketplace"
    ],
+   "show_retention": false,
    "spread": 7.6,
+   "table": [
+    {
+     "company": "Angi Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ANGI"
+    },
+    {
+     "company": "PDD Holdings Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PDD"
+    },
+    {
+     "company": "Upwork Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:UPWK"
+    },
+    {
+     "company": "Trip.com Group Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:TCOM"
+    },
+    {
+     "company": "eBay Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.0,
+     "multiple": 3.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:EBAY"
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true

@@ -148,7 +148,73 @@
     "network",
     "shipping"
    ],
+   "show_retention": false,
    "spread": 8.3,
+   "table": [
+    {
+     "company": "PostNL N.V.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:PNL"
+    },
+    {
+     "company": "J&T Global Express Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 18.0,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:1519"
+    },
+    {
+     "company": "Deutsche Post AG",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DHL"
+    },
+    {
+     "company": "FedEx Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FDX"
+    },
+    {
+     "company": "United Parcel Service",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UPS"
+    },
+    {
+     "company": "InPost S.A.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 17.0,
+     "multiple": 2.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:INPST"
+    },
+    {
+     "company": "Delhivery Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 17.0,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:DELHIVERY"
+    }
+   ],
    "tag_evidence": 1.3,
    "thin": false,
    "triangulated": false
@@ -373,7 +439,46 @@
    "shared_words": [
     "network"
    ],
+   "show_retention": false,
    "spread": 3.2,
+   "table": [
+    {
+     "company": "Meituan",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:3690"
+    },
+    {
+     "company": "Swiggy Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 24.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:SWIGGY"
+    },
+    {
+     "company": "Maplebear Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.0,
+     "multiple": 2.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CART"
+    },
+    {
+     "company": "Eternal Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 41.0,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:ETERNAL"
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true

@@ -92,7 +92,73 @@
    "shared_words": [
     "crm"
    ],
+   "show_retention": true,
    "spread": 4.6,
+   "table": [
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Morningstar, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MORN"
+    },
+    {
+     "company": "FactSet Research Systems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FDS"
+    },
+    {
+     "company": "CRISIL Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 6.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:CRISIL"
+    },
+    {
+     "company": "S&P Global Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 1.0,
+     "multiple": 9.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:SPGI"
+    },
+    {
+     "company": "Moody's Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 10.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:MCO"
+    },
+    {
+     "company": "MSCI Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 12.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:MSCI"
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
@@ -352,7 +418,55 @@
    "shared_words": [
     "ai"
    ],
+   "show_retention": true,
    "spread": 20.8,
+   "table": [
+    {
+     "company": "AvenuesAI Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 13.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:CCAVENUE"
+    },
+    {
+     "company": "Qualco Group S.A.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ATSE:QLCO"
+    },
+    {
+     "company": "Alkami Technology, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": 115.0,
+     "ticker": "NASDAQGS:ALKT"
+    },
+    {
+     "company": "London Stock Exchange Group plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:LSEG"
+    },
+    {
+     "company": "Deutsche Boerse AG",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 8.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DB1"
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true

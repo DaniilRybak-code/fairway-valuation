@@ -39,7 +39,10 @@ def snap(prof):
     # A LENDER GETS EVERY READING ITS FORK CAN SUPPORT, AND THE SNAPSHOT HOLDS THEM ALL, so a
     # change to any one of them shows up as a golden diff instead of passing unnoticed. Recorded
     # only for the balance-sheet forks: for everyone else it would just restate private_range.
-    if M.is_balance_sheet(prof):
+    # RECORDED FOR ANY FORK WITH MORE THAN ONE READING, not just the lenders. The exchange fork
+    # prices on throughput, and a fixture judged only on its revenue range would be marked thin
+    # while holding a perfectly good throughput range.
+    if len(M.bases_for(prof, 'private')) > 1 or len(M.bases_for(prof, 'listed')) > 1:
         out['all_ranges'] = M.all_ranges(prof, core, listed_tier, picked, priv_tier)
     return out
 

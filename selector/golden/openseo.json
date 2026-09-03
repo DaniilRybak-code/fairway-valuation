@@ -67,7 +67,37 @@
     "seo",
     "tracking"
    ],
+   "show_retention": true,
    "spread": 1.6,
+   "table": [
+    {
+     "company": "Yext, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 0.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": 95.0,
+     "ticker": "NYSE:YEXT"
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "NTM",
+     "growth_pct": 11.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    }
+   ],
    "tag_evidence": 9.2,
    "thin": false,
    "triangulated": false
@@ -360,7 +390,55 @@
     "data",
     "platform"
    ],
+   "show_retention": true,
    "spread": 16.7,
+   "table": [
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 12.0,
+     "multiple": 1.9,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 9.6,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 16.4,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 31.8,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
    "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false

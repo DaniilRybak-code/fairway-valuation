@@ -77,7 +77,55 @@
     "email",
     "team"
    ],
+   "show_retention": true,
    "spread": 2.1,
+   "table": [
+    {
+     "company": "RingCentral, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 2.5,
+     "recurring_pct": 96.0,
+     "retention_pct": 99.0,
+     "ticker": "NYSE:RNG"
+    },
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Intuit Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 11.0,
+     "multiple": 4.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:INTU"
+    },
+    {
+     "company": "Zoom Communications, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 4.0,
+     "multiple": 4.7,
+     "recurring_pct": null,
+     "retention_pct": 99.0,
+     "ticker": "NASDAQGS:ZM"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -282,7 +330,55 @@
     "team",
     "tracking"
    ],
+   "show_retention": true,
    "spread": 2.5,
+   "table": [
+    {
+     "company": "Asana, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": 96.0,
+     "ticker": "NYSE:ASAN"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
+     "company": "GoDaddy Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 85.0,
+     "ticker": "NYSE:GDDY"
+    },
+    {
+     "company": "IONOS Group SE",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 3.7,
+     "recurring_pct": 80.0,
+     "retention_pct": null,
+     "ticker": "XTRA:IOS"
+    },
+    {
+     "company": "Atlassian Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 5.8,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NASDAQGS:TEAM"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false

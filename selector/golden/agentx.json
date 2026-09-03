@@ -140,7 +140,64 @@
     "framework",
     "monitoring"
    ],
+   "show_retention": true,
    "spread": 32.2,
+   "table": [
+    {
+     "company": "Coveo Solutions Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 11.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": 99.0,
+     "ticker": "TSX:CVO"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "C3.ai, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -14.0,
+     "multiple": 4.8,
+     "recurring_pct": 91.0,
+     "retention_pct": null,
+     "ticker": "NYSE:AI"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.0,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 16.4,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 66.0,
+     "multiple": 41.8,
+     "recurring_pct": null,
+     "retention_pct": 157.0,
+     "ticker": "NASDAQGS:PLTR"
+    }
+   ],
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
@@ -369,7 +426,46 @@
     "no",
     "orchestration"
    ],
+   "show_retention": true,
    "spread": 1.5,
+   "table": [
+    {
+     "company": "Pegasystems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 2.7,
+     "recurring_pct": 57.9,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PEGA"
+    },
+    {
+     "company": "Appian Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 3.2,
+     "recurring_pct": 79.5,
+     "retention_pct": 116.0,
+     "ticker": "NASDAQGM:APPN"
+    },
+    {
+     "company": "UiPath, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:PATH"
+    },
+    {
+     "company": "Sidetrade SA",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 4.0,
+     "recurring_pct": 87.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:ALBFR"
+    }
+   ],
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

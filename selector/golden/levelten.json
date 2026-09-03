@@ -1,5 +1,188 @@
 {
  "expected": {
+  "all_ranges": {
+   "listed": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "UNKNOWN": 3
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "high": 14.1,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 1.6,
+     "mid": 13.4,
+     "n": 3,
+     "period_mix": {
+      "NTM": 3
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Clarkson PLC",
+       "mult": 1.6,
+       "reason": "shares the language of purchase; same type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Indian Energy Exchange Limited",
+       "mult": 13.4,
+       "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "CME Group Inc.",
+       "mult": 14.1,
+       "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      }
+     ],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "energy",
+      "index",
+      "power",
+      "purchase",
+      "renewable"
+     ],
+     "show_retention": false,
+     "spread": 8.8,
+     "table": [
+      {
+       "company": "Clarkson PLC",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": 3.0,
+       "multiple": 1.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "LSE:CKN"
+      },
+      {
+       "company": "Indian Energy Exchange Limited",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 9.0,
+       "multiple": 13.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NSEI:IEX"
+      },
+      {
+       "company": "CME Group Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 6.0,
+       "multiple": 14.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:CME"
+      }
+     ],
+     "tag_evidence": 1.7,
+     "thin": false,
+     "triangulated": false
+    }
+   },
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "high": 6.67,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 6.67,
+     "mid": 6.67,
+     "n": 1,
+     "period_mix": {
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "marketplace"
+     ],
+     "sole": "The Zebra",
+     "spread": 1.0,
+     "tag_evidence": 0.1,
+     "thin": true,
+     "triangulated": true
+    },
+    "THROUGHPUT": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "THROUGHPUT",
+     "basis_label": "enterprise value per annual unit of throughput",
+     "basis_mix": {
+      "THROUGHPUT": 1
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "high": 11.52,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 11.52,
+     "mid": 11.52,
+     "n": 1,
+     "period_mix": {
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "energy",
+      "renewable"
+     ],
+     "sole": "Xpansiv",
+     "spread": 1.0,
+     "tag_evidence": 1.1,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Indian Energy Exchange Limited",
@@ -86,7 +269,37 @@
     "purchase",
     "renewable"
    ],
+   "show_retention": false,
    "spread": 8.8,
+   "table": [
+    {
+     "company": "Clarkson PLC",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:CKN"
+    },
+    {
+     "company": "Indian Energy Exchange Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 13.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:IEX"
+    },
+    {
+     "company": "CME Group Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 14.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:CME"
+    }
+   ],
    "tag_evidence": 1.7,
    "thin": false,
    "triangulated": false
@@ -98,7 +311,7 @@
     "bound": "",
     "company": "Xpansiv",
     "date": "Jul-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": null,
     "reason": "shares the language of energy, renewable; same type of business; same end market; sold the same way",
     "score": 14.1,
@@ -250,7 +463,37 @@
     "energy",
     "index"
    ],
+   "show_retention": false,
    "spread": 3.0,
+   "table": [
+    {
+     "company": "Deutsche Boerse AG",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 8.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DB1"
+    },
+    {
+     "company": "Intercontinental Exchange, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 9.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ICE"
+    },
+    {
+     "company": "Multi Commodity Exchange of India Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 40.0,
+     "multiple": 25.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:MCX"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false

@@ -55,7 +55,28 @@
       "financing",
       "invoice"
      ],
+     "show_retention": false,
      "spread": 33.0,
+     "table": [
+      {
+       "company": "Lufax Holding Ltd",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 0.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:LU"
+      },
+      {
+       "company": "Avarda Bank AB (publ)",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 3.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "OM:AVARDA"
+      }
+     ],
      "tag_evidence": 1.9,
      "thin": true,
      "triangulated": false
@@ -98,7 +119,28 @@
       "financing",
       "invoice"
      ],
+     "show_retention": false,
      "spread": 3.7,
+     "table": [
+      {
+       "company": "Lufax Holding Ltd",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 3.7,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:LU"
+      },
+      {
+       "company": "Avarda Bank AB (publ)",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 13.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "OM:AVARDA"
+      }
+     ],
      "tag_evidence": 1.9,
      "thin": true,
      "triangulated": false
@@ -259,7 +301,28 @@
     "financing",
     "invoice"
    ],
+   "show_retention": false,
    "spread": 33.0,
+   "table": [
+    {
+     "company": "Lufax Holding Ltd",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:LU"
+    },
+    {
+     "company": "Avarda Bank AB (publ)",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:AVARDA"
+    }
+   ],
    "tag_evidence": 1.9,
    "thin": true,
    "triangulated": false
@@ -464,7 +527,55 @@
     "now",
     "pay"
    ],
+   "show_retention": false,
    "spread": 27.7,
+   "table": [
+    {
+     "company": "Qfin Holdings, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:QFIN"
+    },
+    {
+     "company": "Velocity Financial, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:VEL"
+    },
+    {
+     "company": "Klarna Group plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:KLAR"
+    },
+    {
+     "company": "Funding Circle Holdings plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:FCH"
+    },
+    {
+     "company": "Dave Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 8.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:DAVE"
+    }
+   ],
    "tag_evidence": 2.5,
    "thin": false,
    "triangulated": false

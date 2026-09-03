@@ -62,7 +62,37 @@
     "task",
     "to"
    ],
+   "show_retention": true,
    "spread": 1.7,
+   "table": [
+    {
+     "company": "Asana, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": 96.0,
+     "ticker": "NYSE:ASAN"
+    },
+    {
+     "company": "BlackLine, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 2.5,
+     "recurring_pct": 95.0,
+     "retention_pct": 102.0,
+     "ticker": "NASDAQGS:BL"
+    },
+    {
+     "company": "Sidetrade SA",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 4.0,
+     "recurring_pct": 87.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:ALBFR"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -248,7 +278,37 @@
     "company",
     "to"
    ],
+   "show_retention": true,
    "spread": 1.2,
+   "table": [
+    {
+     "company": "NICE Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 1.7,
+     "recurring_pct": 89.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:NICE"
+    },
+    {
+     "company": "Five9, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 2.0,
+     "recurring_pct": 94.0,
+     "retention_pct": 106.0,
+     "ticker": "NASDAQGM:FIVN"
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "NTM",
+     "growth_pct": -2.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    }
+   ],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false

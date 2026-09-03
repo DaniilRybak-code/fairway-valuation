@@ -145,7 +145,73 @@
     "payments",
     "vertical"
    ],
+   "show_retention": false,
    "spread": 7.1,
+   "table": [
+    {
+     "company": "Tyro Payments Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:TYR"
+    },
+    {
+     "company": "Usio, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:USIO"
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 27.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQCM:RPAY"
+    },
+    {
+     "company": "DLocal Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 39.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:DLO"
+    },
+    {
+     "company": "PayPoint plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:PAY"
+    },
+    {
+     "company": "Nexi S.p.A.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 2.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BIT:NEXI"
+    },
+    {
+     "company": "Fawry for Banking Technology",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 32.0,
+     "multiple": 5.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "CASE:FWRY"
+    }
+   ],
    "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
@@ -355,7 +421,55 @@
     "unified",
     "vertical"
    ],
+   "show_retention": false,
    "spread": 5.4,
+   "table": [
+    {
+     "company": "Marqeta, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MQ"
+    },
+    {
+     "company": "WEX Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 2.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WEX"
+    },
+    {
+     "company": "Nayax Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 22.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:NYAX"
+    },
+    {
+     "company": "GMO Payment Gateway, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:3769"
+    },
+    {
+     "company": "Adyen N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 21.0,
+     "multiple": 7.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:ADYEN"
+    }
+   ],
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false

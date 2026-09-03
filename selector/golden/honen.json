@@ -122,7 +122,46 @@
     "ai",
     "tutor"
    ],
+   "show_retention": false,
    "spread": 10.7,
+   "table": [
+    {
+     "company": "Coursera, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:COUR"
+    },
+    {
+     "company": "Chegg, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -26.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHGG"
+    },
+    {
+     "company": "Nerdy Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NRDY"
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DUOL"
+    }
+   ],
    "tag_evidence": 3.7,
    "thin": false,
    "triangulated": false
@@ -248,8 +287,20 @@
    "shared_words": [
     "platform"
    ],
+   "show_retention": false,
    "sole": "Infomart Corporation",
    "spread": 1.0,
+   "table": [
+    {
+     "company": "Infomart Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 14.0,
+     "multiple": 6.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:2492"
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true

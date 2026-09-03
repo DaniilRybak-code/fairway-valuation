@@ -148,7 +148,73 @@
     "search",
     "source"
    ],
+   "show_retention": true,
    "spread": 52.2,
+   "table": [
+    {
+     "company": "Agora, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:API"
+    },
+    {
+     "company": "Elastic N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 4.0,
+     "recurring_pct": null,
+     "retention_pct": 112.0,
+     "ticker": "NYSE:ESTC"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.0,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 16.4,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 31.8,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 66.0,
+     "multiple": 41.8,
+     "recurring_pct": null,
+     "retention_pct": 157.0,
+     "ticker": "NASDAQGS:PLTR"
+    }
+   ],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
@@ -433,7 +499,55 @@
     "ai",
     "api"
    ],
+   "show_retention": true,
    "spread": 29.3,
+   "table": [
+    {
+     "company": "TomTom N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -1.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:TOM2"
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:SINCH"
+    },
+    {
+     "company": "C3.ai, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -14.0,
+     "multiple": 4.8,
+     "recurring_pct": 91.0,
+     "retention_pct": null,
+     "ticker": "NYSE:AI"
+    },
+    {
+     "company": "SoundHound AI, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 11.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:SOUN"
+    },
+    {
+     "company": "Snowflake Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 17.6,
+     "recurring_pct": null,
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
+    }
+   ],
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false

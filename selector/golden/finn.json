@@ -107,7 +107,37 @@
     "car",
     "owned"
    ],
+   "show_retention": false,
    "spread": 3.2,
+   "table": [
+    {
+     "company": "AUTO1 Group SE",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 15.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:AG1"
+    },
+    {
+     "company": "CarMax, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:KMX"
+    },
+    {
+     "company": "Carvana Co.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 24.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CVNA"
+    }
+   ],
    "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
@@ -316,7 +346,55 @@
     "subscription",
     "to"
    ],
+   "show_retention": false,
    "spread": 23.0,
+   "table": [
+    {
+     "company": "HelloFresh SE",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 1.0,
+     "multiple": 0.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:HFG"
+    },
+    {
+     "company": "BARK, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BARK"
+    },
+    {
+     "company": "Oisix Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:3182"
+    },
+    {
+     "company": "Chewy, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHWY"
+    },
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.0,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:HIMS"
+    }
+   ],
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false

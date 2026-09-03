@@ -85,7 +85,37 @@
     "sdk",
     "source"
    ],
+   "show_retention": true,
    "spread": 8.3,
+   "table": [
+    {
+     "company": "TomTom N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -1.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:TOM2"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.0,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    }
+   ],
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
@@ -283,7 +313,28 @@
     "developer",
     "sdk"
    ],
+   "show_retention": true,
    "spread": 13.0,
+   "table": [
+    {
+     "company": "Agora, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:API"
+    },
+    {
+     "company": "DigitalOcean Holdings, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 42.0,
+     "multiple": 10.4,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:DOCN"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": true,
    "triangulated": false

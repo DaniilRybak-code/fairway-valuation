@@ -131,7 +131,55 @@
     "payments",
     "payouts"
    ],
+   "show_retention": false,
    "spread": 7.1,
+   "table": [
+    {
+     "company": "The Western Union Company",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WU"
+    },
+    {
+     "company": "Payoneer Global Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:PAYO"
+    },
+    {
+     "company": "Remitly Global, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 21.0,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:RELY"
+    },
+    {
+     "company": "Flywire Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 21.0,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:FLYW"
+    },
+    {
+     "company": "Corpay, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 13.0,
+     "multiple": 6.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CPAY"
+    }
+   ],
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
@@ -354,7 +402,46 @@
     "cross",
     "payments"
    ],
+   "show_retention": false,
    "spread": 2.9,
+   "table": [
+    {
+     "company": "Tyro Payments Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:TYR"
+    },
+    {
+     "company": "Usio, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:USIO"
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 27.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQCM:RPAY"
+    },
+    {
+     "company": "DLocal Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 39.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:DLO"
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false

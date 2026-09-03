@@ -115,7 +115,55 @@
     "platform",
     "scheduling"
    ],
+   "show_retention": true,
    "spread": 8.3,
+   "table": [
+    {
+     "company": "TomTom N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -1.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:TOM2"
+    },
+    {
+     "company": "PagerDuty, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 1.0,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": 97.0,
+     "ticker": "NYSE:PD"
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "NTM",
+     "growth_pct": -2.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.0,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -336,7 +384,37 @@
     "scheduling",
     "social"
    ],
+   "show_retention": true,
    "spread": 1.8,
+   "table": [
+    {
+     "company": "Sprout Social, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NASDAQCM:SPT"
+    },
+    {
+     "company": "Sprinklr, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 1.5,
+     "recurring_pct": 89.0,
+     "retention_pct": 104.0,
+     "ticker": "NYSE:CXM"
+    },
+    {
+     "company": "Five9, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 2.0,
+     "recurring_pct": 94.0,
+     "retention_pct": 106.0,
+     "ticker": "NASDAQGM:FIVN"
+    }
+   ],
    "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false

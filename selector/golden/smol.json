@@ -74,7 +74,46 @@
     "subscription",
     "to"
    ],
+   "show_retention": false,
    "spread": 5.3,
+   "table": [
+    {
+     "company": "BARK, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BARK"
+    },
+    {
+     "company": "Chewy, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHWY"
+    },
+    {
+     "company": "Wayfair Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:W"
+    },
+    {
+     "company": "YETI Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:YETI"
+    }
+   ],
    "tag_evidence": 1.6,
    "thin": false,
    "triangulated": false
@@ -294,7 +333,55 @@
     "subscription",
     "to"
    ],
+   "show_retention": false,
    "spread": 3.9,
+   "table": [
+    {
+     "company": "WW International, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 2.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:WW"
+    },
+    {
+     "company": "On Holding AG",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 20.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ONON"
+    },
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.0,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:HIMS"
+    },
+    {
+     "company": "FIGS, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FIGS"
+    },
+    {
+     "company": "Warby Parker Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 26.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WRBY"
+    }
+   ],
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

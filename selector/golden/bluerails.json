@@ -77,7 +77,37 @@
     "hotel",
     "payments"
    ],
+   "show_retention": false,
    "spread": 3.8,
+   "table": [
+    {
+     "company": "PAR Technology Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 13.0,
+     "multiple": 2.1,
+     "recurring_pct": 63.3,
+     "retention_pct": null,
+     "ticker": "NYSE:PAR"
+    },
+    {
+     "company": "Toast, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 2.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:TOST"
+    },
+    {
+     "company": "Agilysys, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 8.0,
+     "recurring_pct": 64.5,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:AGYS"
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
@@ -254,7 +284,46 @@
     "commerce",
     "payments"
    ],
+   "show_retention": true,
    "spread": 3.9,
+   "table": [
+    {
+     "company": "Weave Communications, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": 92.0,
+     "ticker": "NYSE:WEAV"
+    },
+    {
+     "company": "EverCommerce Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": 94.0,
+     "ticker": "NASDAQGS:EVCM"
+    },
+    {
+     "company": "Shoper S.A.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:SHO"
+    },
+    {
+     "company": "ServiceTitan, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 7.4,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NASDAQGS:TTAN"
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": false

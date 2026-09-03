@@ -147,7 +147,46 @@
     "inventory",
     "online"
    ],
+   "show_retention": false,
    "spread": 14.0,
+   "table": [
+    {
+     "company": "HelloFresh SE",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 1.0,
+     "multiple": 0.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:HFG"
+    },
+    {
+     "company": "Naked Wines plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -6.0,
+     "multiple": 0.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:WINE"
+    },
+    {
+     "company": "Oisix Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:3182"
+    },
+    {
+     "company": "Ocado Group plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -12.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:OCDO"
+    }
+   ],
    "tag_evidence": 4.9,
    "thin": false,
    "triangulated": false
@@ -359,7 +398,55 @@
     "price",
     "retail"
    ],
+   "show_retention": false,
    "spread": 5.0,
+   "table": [
+    {
+     "company": "Vipshop Holdings Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.0,
+     "multiple": 0.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:VIPS"
+    },
+    {
+     "company": "ASOS Plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:ASC"
+    },
+    {
+     "company": "Zalando SE",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:ZAL"
+    },
+    {
+     "company": "Chewy, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHWY"
+    },
+    {
+     "company": "Revolve Group, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:RVLV"
+    }
+   ],
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

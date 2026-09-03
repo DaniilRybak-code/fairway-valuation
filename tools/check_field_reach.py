@@ -156,16 +156,10 @@ REASONED_UNREAD_COLS = {
  'revenue_growth_cy1_pct': 'a single forward year. Daniil, 31-Aug: only a multi-year rate may rank '
                            'a peer, so this is deliberately not an engine input',
  'revenue_growth_cy2_pct': 'same, a single forward year',
- # THESE TWO ARE A REAL FINDING, NOT A DISMISSAL. We hold net revenue retention for 83 listed
- # software companies and the percentage of revenue that is recurring for 80, and the engine reads
- # neither. Whether retention enters the quiz is an open decision from the 29-Aug review ("keep as
- # optional, or cut"). If it is kept, THIS is the peer field it has to join, and the data is
- # already here. Recorded so the check stays green and the fact stays visible.
- 'nrr_pct': 'held and not read: retention is an open quiz decision (29-Aug review). 83 listed '
-            'software rows carry it and it is the peer field a retention question would join',
- 'nrr_pct_low': 'same, the low end of a stated NRR range',
- 'nrr_pct_high': 'same, the high end of a stated NRR range',
- 'recurring_revenue_pct': 'held and not read, same open decision. 80 listed software rows carry it',
+ # The four retention columns WERE listed here as held-and-not-read. They are read now: Daniil
+ # ruled on 3-Sep that retention goes in the hover table next to each public name, so the entries
+ # are gone rather than left behind as a stale excuse. This is what the dict is supposed to do:
+ # hold a decision until it changes, then be emptied.
 }
 
 

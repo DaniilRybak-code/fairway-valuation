@@ -39,7 +39,46 @@
       "financing",
       "lending"
      ],
+     "show_retention": false,
      "spread": 1.7,
+     "table": [
+      {
+       "company": "Klarna Group plc",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 18.0,
+       "multiple": 1.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:KLAR"
+      },
+      {
+       "company": "SoFi Technologies, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 31.0,
+       "multiple": 2.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:SOFI"
+      },
+      {
+       "company": "Enova International, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 20.0,
+       "multiple": 2.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:ENVA"
+      },
+      {
+       "company": "Avarda Bank AB (publ)",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 3.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "OM:AVARDA"
+      }
+     ],
      "tag_evidence": 0.9,
      "thin": false,
      "triangulated": false
@@ -96,7 +135,46 @@
       "financing",
       "lending"
      ],
+     "show_retention": false,
      "spread": 2.6,
+     "table": [
+      {
+       "company": "Avarda Bank AB (publ)",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 13.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "OM:AVARDA"
+      },
+      {
+       "company": "Zip Co Limited",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 19.0,
+       "multiple": 18.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "ASX:ZIP"
+      },
+      {
+       "company": "Affirm Holdings, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 27.0,
+       "multiple": 19.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:AFRM"
+      },
+      {
+       "company": "Klarna Group plc",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 18.0,
+       "multiple": 35.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:KLAR"
+      }
+     ],
      "tag_evidence": 0.9,
      "thin": false,
      "triangulated": false
@@ -285,7 +363,46 @@
     "financing",
     "lending"
    ],
+   "show_retention": false,
    "spread": 1.7,
+   "table": [
+    {
+     "company": "Klarna Group plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:KLAR"
+    },
+    {
+     "company": "SoFi Technologies, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:SOFI"
+    },
+    {
+     "company": "Enova International, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ENVA"
+    },
+    {
+     "company": "Avarda Bank AB (publ)",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:AVARDA"
+    }
+   ],
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
@@ -494,7 +611,55 @@
     "credit",
     "lending"
    ],
+   "show_retention": false,
    "spread": 2.1,
+   "table": [
+    {
+     "company": "OSB Group Plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:OSB"
+    },
+    {
+     "company": "Velocity Financial, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:VEL"
+    },
+    {
+     "company": "S&U plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:SUS"
+    },
+    {
+     "company": "Pepper Money Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:PPM"
+    },
+    {
+     "company": "UWM Holdings Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UWMC"
+    }
+   ],
    "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false

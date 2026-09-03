@@ -78,7 +78,55 @@
     "desktop",
     "local"
    ],
+   "show_retention": false,
    "spread": 2.4,
+   "table": [
+    {
+     "company": "Opera Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 19.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:OPRA"
+    },
+    {
+     "company": "Truecaller AB (publ)",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 3.0,
+     "recurring_pct": 45.0,
+     "retention_pct": null,
+     "ticker": "OM:TRUE B"
+    },
+    {
+     "company": "F-Secure Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:FSECURE"
+    },
+    {
+     "company": "Dropbox, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DBX"
+    },
+    {
+     "company": "Life360, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 30.0,
+     "multiple": 4.6,
+     "recurring_pct": 75.4,
+     "retention_pct": null,
+     "ticker": "ASX:360"
+    }
+   ],
    "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
@@ -207,8 +255,20 @@
     "app",
     "desktop"
    ],
+   "show_retention": false,
    "sole": "Gen Digital Inc.",
    "spread": 1.0,
+   "table": [
+    {
+     "company": "Gen Digital Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:GEN"
+    }
+   ],
    "tag_evidence": 0.8,
    "thin": true,
    "triangulated": false

@@ -227,6 +227,17 @@ def _ingest(mfile, tfile, fam_for):
         gp        = _f(m.get('gross_profit_musd'))
         r['gp']   = gp
         r['gp_mult'] = _f(m.get('ev_ntm_gp_x'))
+        # RETENTION, FOR THE HOVER TABLE. Daniil, 3-Sep-2026: "this should be shown in a small
+        # table (when user hovers over the range) next to each public name and its multiple. So
+        # table would look like NAME | Multiple | Growth | RETENTION [last one only for software]."
+        #
+        # We have held net revenue retention for 83 listed software companies since the software
+        # pull landed and read it exactly never. It is a column in the file that the loader did not
+        # mention, which is how check_field_reach found it.
+        r['nrr'] = _f(m.get('nrr_pct'))
+        r['nrr_low'] = _f(m.get('nrr_pct_low'))
+        r['nrr_high'] = _f(m.get('nrr_pct_high'))
+        r['recurring_pct'] = _f(m.get('recurring_revenue_pct'))
         r['pb_mult'] = _f(m.get('p_bv_x'))          # balance-sheet lenders only
         r['pe_mult'] = _f(m.get('p_e_x'))           # balance-sheet lenders only
         r['gm']   = 100*gp/r['rev'] if (gp and r['rev']) else None
@@ -453,13 +464,47 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             # straight into a renewable-energy founder's range. A physical quantity in a dollar
             # column is a units error in the data; the guard is here because the data will keep
             # arriving from spreadsheets and this will not be the last one.
-            _unit = (row['vol_period'] + ' ' + (r.get('volume_metric') or '')).upper()
-            if any(u in _unit for u in ('CO2', 'TONNE', 'TON ', 'MWH', 'KWH', 'GWH', 'BARREL',
-                                        'UNITS', 'SEATS', 'RIDES', 'TRIPS', 'ORDERS', 'USERS',
-                                        'MEMBERS', 'SUBSCRIBERS', 'TRANSACTIONS', 'MESSAGES')):
+            # A PHYSICAL VOLUME IS NOT A BAD DENOMINATOR. IT IS A DIFFERENT ONE. Rewritten
+            # 3-Sep-2026 on Daniil's ruling, after my first version barred it outright.
+            #
+            # Xpansiv's own release of 2021 states "total carbon offset volume transacted on CBL
+            # exceeded 121.5 MtCO2e last year, up 288% on 2020 levels". That is the company's OWN
+            # disclosure and it is the natural measure of an environmental-commodity exchange:
+            # tonnes cleared, not dollars of revenue. Daniil, 3-Sep: "if CO2 volume was quoted in
+            # the release then perhaps these companies are priced as such, hence we should be adding
+            # the question to the respective branch of the quiz and show to the founder."
+            #
+            # So the unit is RECORDED rather than the row rejected, and two rules follow from it:
+            #   1. A ratio may only ever be built from rows sharing the SAME unit. Tonnes and
+            #      megawatt hours are not interchangeable and neither is comparable to dollars.
+            #   2. It is never displayed as a multiple. $1,400m over 121.5 MtCO2e is ELEVEN DOLLARS
+            #      FIFTY PER ANNUAL TONNE, not 11.52x. Writing it as an x is what made it look like
+            #      a normal revenue multiple and nearly put it in a founder's range.
+            #
+            # A POINT-IN-TIME STOCK IS STILL BARRED, and that is a different objection. Flo Health
+            # and Calm carry "millions" of users at the round date. A count of users you have is not
+            # a volume you moved through, we hold no comparable set for it, and a per-user figure
+            # would be a price per customer masquerading as a throughput measure.
+            _unit_src = (row['vol_period'] + ' ' + (r.get('volume_metric') or '') + ' '
+                         + (r.get('volume_basis') or '')).upper()
+            row['vol_unit'] = 'USD'
+            for _needle, _u in (('CO2E', 'MTCO2E'), ('CO2', 'MTCO2E'), ('TONNE', 'TONNES'),
+                                ('MWH', 'MWH'), ('KWH', 'KWH'), ('GWH', 'GWH'),
+                                ('BARREL', 'BARRELS'), ('USER', 'USERS'), ('MEMBER', 'USERS'),
+                                ('SUBSCRIBER', 'USERS'), ('SEAT', 'SEATS')):
+                if _needle in _unit_src:
+                    row['vol_unit'] = _u
+                    break
+            if row['vol_unit'] != 'USD' and row['vol_unit'] not in ('USERS', 'SEATS'):
+                # A physical throughput is its own kind of volume. Xpansiv's sheet labelled it
+                # PAYMENT_VOLUME, which it is not: nothing was paid, tonnes were cleared.
+                row['vol_metric'] = 'THROUGHPUT'
+            if row['vol_unit'] in ('USERS', 'SEATS') or 'POINT-IN-TIME' in _unit_src:
+                # A STOCK, not a flow. Barred, and the reason is on the row.
                 row['vol_periodic'] = False
-                row['vol_unit_warning'] = ('volume is a physical quantity (%s), not money, so it '
-                                           'cannot price anything' % row['vol_period'])
+                row['vol_unit_warning'] = ('volume is a point-in-time count (%s), not an annual '
+                                           'throughput, so it cannot price anything'
+                                           % row['vol_period'])
             row['mult_book'] = _f(r.get('ev_book_x'))
             row['mult_tbook'] = _f(r.get('ev_tangible_book_x'))
             # THE DENOMINATORS BEHIND THE LENDER MULTIPLES. Added 3-Sep-2026, found by
@@ -1601,7 +1646,30 @@ BASIS_KEYS = {'BOOK':    ('mult_book', 'pb_mult', 'price to book'),
               # additive. BOOK stays the lead basis for a lender and nothing here displaces it.
               'ARR':     ('mult',      None,      'enterprise value to ARR'),
               'EARNINGS': (None,       'pe_mult', 'price to earnings'),
-              'ORIGINATIONS': ('gmv_mult', None,  'enterprise value to annual originations')}
+              'ORIGINATIONS': ('gmv_mult', None,  'enterprise value to annual originations'),
+              # PRICED ON WHAT THE PLATFORM ACTUALLY MOVES, IN THE UNIT IT MOVES IT IN.
+              # Daniil, 3-Sep-2026, on Xpansiv: "sustainability business, no? If CO2 volume was
+              # quoted in the release, then perhaps these companies are priced as such, hence we
+              # should be adding the question to the respective branch of the quiz and show to the
+              # founder." It was quoted: 121.5 MtCO2e cleared on CBL in 2021, Xpansiv's own release.
+              #
+              # The label is filled in per unit by throughput_label(), because "enterprise value to
+              # throughput" is meaningless without saying throughput OF WHAT. It is a price per
+              # annual unit in DOLLARS, never an x.
+              'THROUGHPUT': ('gmv_mult', None, 'enterprise value per annual unit of throughput'),
+              'GMV': ('gmv_mult', None, 'enterprise value to annual GMV'),
+              'PAYMENT_VOLUME': ('gmv_mult', None, 'enterprise value to annual payment volume')}
+
+
+def throughput_label(unit):
+    """How a per-unit figure must be written. Never an 'x'."""
+    return {'MTCO2E': 'dollars of enterprise value per annual tonne of CO2 equivalent cleared',
+            'TONNES': 'dollars of enterprise value per annual tonne cleared',
+            'MWH': 'dollars of enterprise value per annual megawatt hour',
+            'KWH': 'dollars of enterprise value per annual kilowatt hour',
+            'GWH': 'dollars of enterprise value per annual gigawatt hour',
+            'BARRELS': 'dollars of enterprise value per annual barrel',
+            }.get(unit, 'enterprise value per annual unit of throughput')
 
 # Which readings each fork can support, in the order a reveal should show them. A basis appears
 # here only where we hold real multiples on both the measure and the lane; nothing is listed
@@ -1614,6 +1682,13 @@ def _basis_row_ok(basis, r):
     """Extra condition a row must meet to belong in THIS basis, beyond having the multiple."""
     if basis == 'ARR':
         return (r.get('revenue_basis') or '').upper() in ('ARR', 'ARR_RUNRATE')
+    if basis == 'THROUGHPUT':
+        # SAME UNIT OR NOTHING. Tonnes of carbon, megawatt hours and barrels are not
+        # interchangeable, and none of them is comparable to a dollar. The unit is checked here
+        # rather than trusted from the metric name, because the metric name is whatever the source
+        # spreadsheet called it and Xpansiv's said PAYMENT_VOLUME.
+        return (r.get('vol_metric') == 'THROUGHPUT' and r.get('vol_periodic')
+                and r.get('vol_unit') not in (None, '', 'USD'))
     if basis in ('ORIGINATIONS', 'GMV', 'PAYMENT_VOLUME'):
         # The right KIND of volume, and a periodic one. A since-inception total, a blank period and
         # a physical quantity are all barred: see the loader note. The kind test matters as much as
@@ -1625,8 +1700,25 @@ def _basis_row_ok(basis, r):
     return True
 
 
+# WHO GETS ASKED WHAT THEY MOVE, RATHER THAN WHAT THEY EARN. An exchange or a commodity
+# marketplace is judged on throughput first: tonnes cleared, megawatt hours contracted, barrels
+# traded. Revenue is a take rate on top of it and is often not disclosed at all, which is exactly
+# LevelTen's and Xpansiv's situation.
+THROUGHPUT_ARCHETYPES = {'Market Infrastructure & Exchange'}
+
+
 def bases_for(prof, lane):
-    return LANE_BASES[bool(is_balance_sheet(prof))][lane]
+    out = list(LANE_BASES[bool(is_balance_sheet(prof))][lane])
+    # THROUGHPUT is offered on the private lane when the business is an exchange, or when the
+    # founder has answered the throughput question with a unit that is not dollars. The second
+    # route matters: a founder who tells us they cleared 4 million tonnes should get the comparison
+    # whatever archetype we filed them under.
+    if lane == 'private':
+        arch = {prof.get('archetype'), prof.get('archetype_secondary')} - {None, ''}
+        unit = (prof.get('volume_unit') or '').strip().upper()
+        if (arch & THROUGHPUT_ARCHETYPES) or (unit and unit != 'USD'):
+            out.append('THROUGHPUT')
+    return tuple(out)
 
 def denominator(prof, group):
     """Return ('gp'|'rev', reason). Gross profit leads when the subject's margin
@@ -1904,6 +1996,35 @@ def _bands(prof, priced):
     weaker = [x for tt in order[end+1:] for x in by.get(tt, [])]
     return order[start], head, weaker
 
+def peer_table(prof, rows, key):
+    """The hover table: one line per comparable actually in the range.
+
+    NAME | MULTIPLE | GROWTH | RETENTION, in Daniil's words of 3-Sep-2026, with retention shown
+    only where it exists, which in practice means only for software. It is not restricted by
+    archetype: the column appears when the names in front of the founder carry a retention figure,
+    and disappears when they do not, so nothing has to be kept in step with a hard-coded list.
+
+    growth_basis travels with growth because the four peers files measure it over three different
+    windows, and a founder comparing themselves against "26%" deserves to know whether that is one
+    forward year or a two-year compound rate.
+    """
+    out = []
+    for (sw, r) in rows:
+        m = r.get(key)
+        if m is None:
+            continue
+        out.append({
+            'company': r.get('company_name', ''),
+            'ticker': r.get('exchange_ticker', ''),
+            'multiple': m,
+            'growth_pct': r.get('g'),
+            'growth_basis': r.get('g_basis') or '',
+            'retention_pct': r.get('nrr'),
+            'recurring_pct': r.get('recurring_pct'),
+        })
+    return sorted(out, key=lambda z: z['multiple'])
+
+
 def _positioning(prof, rows, key):
     out = [{'company': r.get('company_name', ''), 'mult': r[key],
             'tier': _tier(prof, r, sw[1]),
@@ -1944,6 +2065,10 @@ def group_range(prof, group, which='rev', tier='DIRECT', basis=None):
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced),
+               # THE HOVER TABLE. One line per name actually in this range, with the retention
+               # column present only where the names carry a retention figure.
+               table=peer_table(prof, priced, key),
+               show_retention=any(r.get('nrr') is not None for _sw, r in priced),
                # How many of the contributing valuations are STATED post-money rather than assumed
                # to be, so the honesty layer can say which it is instead of implying certainty.
                post_stated_n=sum(1 for _sw, r in priced if r.get('pre_post') == 'POST'),

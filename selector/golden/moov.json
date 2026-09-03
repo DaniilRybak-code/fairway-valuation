@@ -145,7 +145,73 @@
     "payments",
     "to"
    ],
+   "show_retention": false,
    "spread": 7.6,
+   "table": [
+    {
+     "company": "One MobiKwik Systems Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:MOBIKWIK"
+    },
+    {
+     "company": "Usio, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:USIO"
+    },
+    {
+     "company": "PayPal Holdings, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 4.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:PYPL"
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 27.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQCM:RPAY"
+    },
+    {
+     "company": "PayPoint plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:PAY"
+    },
+    {
+     "company": "Nexi S.p.A.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 2.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BIT:NEXI"
+    },
+    {
+     "company": "GMO Payment Gateway, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:3769"
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -394,7 +460,55 @@
     "card",
     "payments"
    ],
+   "show_retention": false,
    "spread": 13.3,
+   "table": [
+    {
+     "company": "PagSeguro Digital Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PAGS"
+    },
+    {
+     "company": "Tyro Payments Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:TYR"
+    },
+    {
+     "company": "Marqeta, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MQ"
+    },
+    {
+     "company": "DLocal Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 39.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:DLO"
+    },
+    {
+     "company": "One97 Communications Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 25.0,
+     "multiple": 8.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:PAYTM"
+    }
+   ],
    "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false

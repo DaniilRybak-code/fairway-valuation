@@ -93,7 +93,37 @@
     "management",
     "shopify"
    ],
+   "show_retention": true,
    "spread": 6.2,
+   "table": [
+    {
+     "company": "BASE, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 12.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:4477"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
+     "company": "Nayax Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 22.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:NYAX"
+    }
+   ],
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
@@ -278,7 +308,28 @@
    "shared_words": [
     "store"
    ],
+   "show_retention": false,
    "spread": 2.4,
+   "table": [
+    {
+     "company": "Shoper S.A.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:SHO"
+    },
+    {
+     "company": "Shopify Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 29.0,
+     "multiple": 11.0,
+     "recurring_pct": 22.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:SHOP"
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": true,
    "triangulated": true

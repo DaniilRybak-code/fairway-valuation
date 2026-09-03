@@ -45,6 +45,24 @@ def read(path):
     return json.load(open(path))['expected']
 
 
+def best_n(e, lane):
+    """The widest range this founder can actually be priced on IN THIS LANE, across every basis.
+
+    Added 3-Sep-2026, when the exchange fork landed. A lender is priced on book, ARR, earnings and
+    originations; an exchange on throughput. Judging a fixture on the REVENUE range alone would
+    fail a company that has a perfectly good book or throughput range and no revenue line, which is
+    the normal condition for both of those archetypes rather than an edge case.
+    """
+    ns = []
+    rng = e.get(lane + '_range') or {}
+    if isinstance(rng.get('n'), int):
+        ns.append(rng['n'])
+    for _b, r in ((e.get('all_ranges') or {}).get(lane) or {}).items():
+        if isinstance(r.get('n'), int):
+            ns.append(r['n'])
+    return max(ns) if ns else None
+
+
 def score(e):
     """Returns (verdict, reasons, facts) for one fixture snapshot."""
     names, per_lane, closeness, sole_lanes, empty_lanes, thin_context = set(), {}, [], [], [], []
@@ -54,7 +72,7 @@ def score(e):
         per_lane[lane] = len(got)
         names.update(got)
         rng = e.get(lane + '_range') or {}
-        n = rng.get('n')
+        n = best_n(e, lane)
         if rng.get('closeness'):
             closeness.append(rng['closeness'])
         # ZERO PRICED NAMES IS NOT BETTER THAN ONE, AND THE FIRST VERSION OF THIS SCORED IT AS

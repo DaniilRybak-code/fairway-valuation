@@ -95,6 +95,45 @@ FORKS = {
            maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='The figure we actually price on.'),
     ]),
+ # AN EXCHANGE IS JUDGED ON WHAT IT MOVES, NOT WHAT IT EARNS. Added 3-Sep-2026 on Daniil's
+ # ruling about Xpansiv: "sustainability business, no? If CO2 volume was quoted in the release,
+ # then perhaps these companies are priced as such, hence we should be adding the question to the
+ # respective branch of the quiz and show to the founder."
+ #
+ # It was quoted. Xpansiv's own release states 121.5 MtCO2e cleared on CBL in 2021, and gives no
+ # revenue figure at all. That is the shape of this whole archetype: an environmental-commodity
+ # exchange, a power-purchase-agreement marketplace or a carbon registry discloses throughput and
+ # keeps its take rate to itself. Asking such a founder only for net revenue asks for the one
+ # number they are least likely to have and least likely to be judged on.
+ #
+ # THE UNIT IS A SEPARATE QUESTION AND IT IS REQUIRED, because a ratio may only ever be built from
+ # rows sharing a unit. Tonnes of carbon, megawatt hours and dollars are three different
+ # denominators, and the answer is shown as a price PER UNIT rather than as a multiple: Xpansiv is
+ # eleven dollars fifty per annual tonne of CO2 equivalent, never 11.52x.
+ 'exchange': dict(
+    archetypes=('Market Infrastructure & Exchange', 'Financial Data & Index'),
+    questions=[
+      dict(key='throughput_volume',
+           label='Volume transacted or cleared on your platform over the last twelve months',
+           kind='quantity', required=True, maps_to='profile.volume',
+           peer_field='volume_musd', basis='THROUGHPUT', period_required=True,
+           why='What an exchange is actually judged on. A FLOW over a stated period, never a '
+               'since-inception total: a price divided by everything you have ever cleared falls '
+               'as you age and says nothing about what you are worth.'),
+      dict(key='throughput_unit', label='In what unit?', kind='choice',
+           choices=('US dollars', 'Tonnes of CO2 equivalent', 'Megawatt hours', 'Barrels',
+                    'Other physical unit'),
+           required=True, maps_to='profile.volume_unit', peer_field='volume_basis',
+           why='A ratio can only be built from comparables measured in the same unit, so this '
+               'decides which comparables you can be shown at all. It also decides how your '
+               'answer is written: dollars of value per annual tonne, not a multiple.'),
+      dict(key='net_revenue', label='Net revenue over the same period, if you have it',
+           kind='money', required=False, maps_to='profile.revenue',
+           peer_field='revenue_musd', basis='NET_REVENUE',
+           why='Optional here and required almost everywhere else, deliberately. Most exchanges we '
+               'hold disclose throughput and no revenue line at all, Xpansiv among them. Answer it '
+               'and you get a revenue range as well.'),
+    ]),
  'ecommerce': dict(
     archetypes=('Consumer Brand', 'Owned-Inventory Retail', 'Commerce Enablement & Fulfilment'),
     questions=[

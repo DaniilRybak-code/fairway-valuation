@@ -100,7 +100,73 @@
     "revenue",
     "workflow"
    ],
+   "show_retention": true,
    "spread": 5.7,
+   "table": [
+    {
+     "company": "Zaggle Prepaid Ocean Services",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 32.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:ZAGGLE"
+    },
+    {
+     "company": "BlackLine, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 2.5,
+     "recurring_pct": 95.0,
+     "retention_pct": 102.0,
+     "ticker": "NASDAQGS:BL"
+    },
+    {
+     "company": "Pegasystems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 2.7,
+     "recurring_pct": 57.9,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PEGA"
+    },
+    {
+     "company": "DocuSign, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NASDAQGS:DOCU"
+    },
+    {
+     "company": "UiPath, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:PATH"
+    },
+    {
+     "company": "Sidetrade SA",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 4.0,
+     "recurring_pct": 87.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:ALBFR"
+    },
+    {
+     "company": "Workday, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 11.0,
+     "multiple": 4.6,
+     "recurring_pct": 93.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WDAY"
+    }
+   ],
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
@@ -370,7 +436,37 @@
     "planning",
     "platform"
    ],
+   "show_retention": true,
    "spread": 1.9,
+   "table": [
+    {
+     "company": "Cass Information Systems",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 7.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CASS"
+    },
+    {
+     "company": "Braze, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 3.4,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NASDAQGS:BRZE"
+    },
+    {
+     "company": "SAP SE",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 5.1,
+     "recurring_pct": 63.6,
+     "retention_pct": null,
+     "ticker": "XTRA:SAP"
+    }
+   ],
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

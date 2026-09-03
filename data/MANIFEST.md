@@ -870,3 +870,81 @@ Rule D8 says a figure in the file but not in the engine is ABSENT; nothing enfor
   LRN), D2L (TSX DTOL), Franklin Covey (NYSE FC) and John Wiley (NYSE WLY) for the training and LMS
   ring. **Do not source: Udemy was acquired by Coursera in May 2026, and Instructure, PowerSchool,
   Kahoot, 2U, Pluralsight and Learning Technologies Group have all gone private since 2021.**
+
+## 2026-09-03 (late): Daniil's five answers
+
+Each of the five things `check_field_reach` surfaced, answered rather than reported.
+
+### 1 and 2. Nothing needs repasting. Both were transcribed correctly and the loader dropped them.
+
+- **Logistics growth**: `revenue_growth_pct` is populated on **116 of 123 rows** in
+  `data/peers-logistics-services.csv`. The transcription was complete. The loader read three column
+  names and that file uses a fourth. Fixed earlier today; now read for display, with no rank weight
+  because the file does not state the horizon.
+- **BVPS**: `bvps_2026`, `bvps_2027` and `bvps_ntm` are populated on **57 of 79 rows** in
+  `data/peers-lending.csv`, exactly as Daniil said. The transcription was complete. The loader
+  discarded the whole lending row for any ticker it had already seen in the fintech pull, so the
+  book values behind the multiples never arrived. Now merged: Nu Holdings bvps 3.7, Klarna 7.6,
+  Inter & Co 5.4, SoFi 9.5.
+
+**Both failures were in the loader, not in the data, and the pattern is the same one twice.**
+
+### 3. Retention is now in the hover table
+
+`peer_table()` returns NAME | MULTIPLE | GROWTH | RETENTION for every name actually in a range, and
+every range carries it as `table`. `show_retention` is true only where the names in front of the
+founder carry a retention figure, which restricts the column to software without anything having to
+be kept in step with a hard-coded archetype list. `growth_basis` travels beside growth, because the
+peers pulls measure it over three different windows and a founder comparing themselves against
+"26%" deserves to know whether that is one forward year or a two-year compound rate.
+
+Browseract's table, as it now renders: Agora 0.8x / 15% / 109%, Sinch 1.4x / 2% / n.a.,
+Twilio 5.2x / 15% / 116%, SoundHound 11.8x / 28% / n.a., Datadog 16.4x / 27% / 122%,
+Snowflake 17.6x / 28% / 126%, Cloudflare 31.8x / 31% / 120%.
+
+### 4. MercadoLibre, and a second case Daniil had not seen
+
+Both MELI rows are his own pulls, both dated 2026-08-30, both carrying an identical enterprise
+value of $104,938m. They differ on NTM revenue: ecommerce 49,038 giving 2.1x, fintech 46,874 giving
+2.2x. **The ecommerce figure is the one that reconciles.** Both pulls agree CY2027 revenue is
+53,210 and the ecommerce pull gives CY2026 as 41,673; next twelve months from 30-Aug-2026 is four
+months of 2026 and eight of 2027, so 0.333 x 41,673 + 0.667 x 53,210 = 49,364. That is 0.7% from
+the ecommerce figure and 5% from the fintech one. **2.1x stands; the fintech NTM is the outlier.**
+
+`tools/check_cross_pull.py` : NEW, because the peers files are refreshed from the screens so a note
+written into one would be overwritten by the next pull. It compares every shared measure for the 20
+tickers that sit in more than one pull, and tests whether each pull's enterprise value reconciles
+from the bridge components the same row carries. It found a second case:
+
+**nCino is priced 13% too low right now.** Same market cap (2,259) and same NTM revenue (658) in
+both pulls. The fintech pull shows net debt 224 and minority interest 14, so 2,259 + 238 = 2,497,
+and it ties: **3.8x**. The software pull states 2,630 with no bridge components at all, which is 371
+above market capitalisation with nothing to explain it: **3.3x**. The engine uses the software row.
+Needs a ruling on which pull wins, or a per-ticker preference map.
+
+### 5. Xpansiv: the volume WAS in the release, so it prices on its own basis
+
+Verified from the source already cited on the row. Xpansiv's own press release states, verbatim:
+"total carbon offset volume transacted on CBL exceeded 121.5 MtCO2e last year, up 288% on 2020
+levels". It gives no revenue figure at all. So this is the company's own disclosure of the measure
+an environmental-commodity exchange is judged on, and Daniil's read is right.
+
+- The unit is now RECORDED rather than the row barred. `vol_unit` holds MTCO2E, MWH, KWH, GWH,
+  BARRELS or USD, a ratio may only be built from rows sharing a unit, and it is never written as an
+  x: **$1,400m over 121.5 MtCO2e is eleven dollars fifty per annual tonne of CO2 equivalent
+  cleared**, which is what `throughput_label()` makes it say.
+- New `THROUGHPUT` basis, offered on the private lane to an exchange archetype or to any founder who
+  answers the new question with a non-dollar unit. Xpansiv released into medians; LevelTen now gets
+  a throughput reading beside its revenue one.
+- **New quiz fork, `exchange`**, for Market Infrastructure & Exchange and Financial Data & Index.
+  Volume transacted over the last twelve months is REQUIRED, its unit is REQUIRED, and net revenue
+  is optional, which is the reverse of every other fork and deliberate: most exchanges we hold
+  disclose throughput and no revenue line. LevelTen now routes here.
+- A point-in-time STOCK is still barred, and that is a different objection: Flo Health and Calm
+  carry millions of users at the round date. A count of users you have is not a volume you moved,
+  and a per-user figure would be a price per customer dressed up as throughput.
+- The release also implies a notional dollar value (the voluntary carbon market passed $1bn in 2021
+  and CBL claimed more than 41% of it), which would give roughly 3.4x on notional. NOT loaded: that
+  is a third-party market estimate times a claimed share, not a disclosure.
+
+**State: 511 listed, 290 private rounds, 181 median-eligible, peer universe 39 of 43.**
