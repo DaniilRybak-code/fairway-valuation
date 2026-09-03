@@ -189,9 +189,19 @@ FORKS = {
            why='Not optional for a consumer brand. Across our listed consumer set the revenue '
                'multiple moves from 0.9x to 2.8x between the lowest and highest margin quartile, '
                'while the gross-profit multiple sits at 3.6x and 3.1x. We price you on gross profit.'),
-      dict(key='asset_intensity', label='Do you hold your own stock?', kind='choice',
-           choices=('Own inventory', 'Third-party or consignment', 'Dropship or made to order'),
-           required=False, maps_to='profile.asset_intensity', peer_field='asset_intensity'),
+      # 'Do you hold your own stock?' WITHDRAWN 3-Sep-2026, and the reason it was withdrawn is
+      # visible in the line that used to be here: it is the only question in the whole quiz with
+      # no `why`. Every other question can say what it does to the range. This one collected an
+      # answer that nothing read: not the matcher, not the recommendations engine, not a single
+      # peer field. Asking a founder something we then ignore costs their attention and buys
+      # nothing, so it comes out until a dimension reads it.
+      #
+      # It is worth wiring, not deleting: own-inventory retail and dropship are priced differently
+      # and the archetype vocabulary already separates them. Open for Daniil, and recorded in
+      # docs/investor-sourcing-gaps.md with the other open decisions. To restore:
+      #     dict(key='asset_intensity', label='Do you hold your own stock?', kind='choice',
+      #          choices=('Own inventory', 'Third-party or consignment', 'Dropship or made to order'),
+      #          required=False, maps_to='profile.asset_intensity', peer_field='asset_intensity'),
     ]),
  'payments': dict(
     # 'Card Issuing & BaaS' added 3-Sep-2026. Daniil: "Marqeta is not an acquirer. Marqeta is an

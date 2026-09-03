@@ -61,13 +61,23 @@ def _sectors(cell):
 
 INVESTORS = _rows(D + 'investors.csv')
 
-# WHAT A CALLABLE ROW MUST CARRY TO RENDER. Fable's bar, unchanged.
-REQUIRED = ('recent_deal_1_company', 'recent_deal_1_date', 'first_cheque_low_m', 'geographies')
+# WHAT A CALLABLE ROW MUST CARRY TO RENDER. Fable's bar, unchanged in substance.
+REQUIRED = ('recent_deal_1_company', 'recent_deal_1_date', 'geographies')
+
+# A CHEQUE FIGURE AT EITHER END COUNTS, and the 3-Sep enrichment is why this changed. Five houses
+# publish only one side of the range: Salesforce Ventures states "under $5M" at seed, Mercia "up
+# to GBP 10m", Google's AI Futures Fund a $2m co-investment ceiling, Menlo Anthology a $100k floor,
+# Square Peg a $1m floor. Requiring first_cheque_low_m specifically was a rule about our own column
+# layout rather than about what a founder needs to know, and it kept five sourced, current houses
+# off the list. A ceiling tells a founder just as clearly whether this is their conversation.
+CHEQUE_EITHER_END = ('first_cheque_low_m', 'first_cheque_high_m')
 
 
 def renderable(d):
     """(bool, missing fields). A row is not shown to a founder unless it is complete."""
     miss = [k for k in REQUIRED if not (d.get(k) or '').strip()]
+    if not any((d.get(k) or '').strip() for k in CHEQUE_EITHER_END):
+        miss.append('first_cheque_low_m or first_cheque_high_m')
     return (not miss), miss
 
 
@@ -115,23 +125,52 @@ def match_callable(prof, raise_musd=None, want=8):
         stages = [s.strip() for s in (d.get('stage_bands') or '').split(';') if s.strip()]
         stage_hit = bool(stage) and stage in stages
         stage_any = not stages
+        # A PUBLISHED STAGE BAND IS A HARD GATE, NOT ONE FACET OF THREE. The enrichment turned
+        # this from a preference into a rule. IVP states its entry is typically Series B and its
+        # floor is $15m; Insight led four Series A rounds in 2026 at $15m to $25m and publishes no
+        # cheque at all. Under the old scoring, either could still reach a pre-seed founder as a
+        # "two of three facets" match on sector and geography, and a seed founder told to call
+        # Insight is exactly the aspirational-investor failure this list exists to avoid. A house
+        # that says where it comes in is believed. A house that says nothing is still eligible,
+        # because silence is not a claim.
+        if stages and stage and not stage_hit:
+            continue
         geos = [g.strip().lower() for g in (d.get('geographies') or '').split(';') if g.strip()]
         geo_hit = bool(geo) and any(geo in g or g in geo for g in geos)
         geo_any = (not geos) or any(g in ('global', 'any', 'worldwide') for g in geos)
+        # AN UNKNOWN COUNTRY IS NOT A MISS, and treating it as one emptied the list.
+        #
+        # Every one of the 43 fixtures has country=None, because the quiz never asks it. geo_hit
+        # is therefore false for all of them, and geo_any is true only for the four renderable
+        # houses that say "Global", so 71 of 75 houses failed the geography facet for every
+        # founder we test. Ten fixtures got fewer than three houses and four got none, and it read
+        # as a thin database when it was a three-valued question answered with a boolean. The same
+        # mistake _cheque_fits already avoids: unknown returns None and never excludes.
+        geo_known = bool(geo)
         fits = _cheque_fits(d, raise_musd)
         if fits is False:
             continue
-        hits = sum([sector_hit, stage_hit, geo_hit])
-        if sector_hit and stage_hit and geo_hit:
-            tier, label = 0, 'exact fit on sector, stage and geography'
-        elif sector_hit and stage_hit:
-            tier, label = 1, 'sector and stage, wider geography'
-        elif (sector_hit or sector_any) and (geo_hit or geo_any) and (stage_hit or stage_any):
-            tier, label = 2, 'broader fit'
-        elif hits >= 2:
-            tier, label = 3, 'two of three facets'
+        if not geo_known:
+            # Score on what we actually know, and SAY that geography was not part of it rather
+            # than letting the founder read "exact fit" and assume we checked.
+            if sector_hit and stage_hit:
+                tier, label = 1, 'sector and stage; we have not asked where you are based'
+            elif (sector_hit or sector_any) and (stage_hit or stage_any):
+                tier, label = 2, 'broader fit; we have not asked where you are based'
+            else:
+                continue
         else:
-            continue
+            hits = sum([sector_hit, stage_hit, geo_hit])
+            if sector_hit and stage_hit and geo_hit:
+                tier, label = 0, 'exact fit on sector, stage and geography'
+            elif sector_hit and stage_hit:
+                tier, label = 1, 'sector and stage, wider geography'
+            elif (sector_hit or sector_any) and (geo_hit or geo_any) and (stage_hit or stage_any):
+                tier, label = 2, 'broader fit'
+            elif hits >= 2:
+                tier, label = 3, 'two of three facets'
+            else:
+                continue
         # Rank inside a tier by the house's DEAL COUNT in the founder's own sectors: activity in
         # this sector is the evidence that matters, and it is the number the table already holds.
         depth = sum(n for s, n in secs.items() if s in mine)
@@ -148,7 +187,15 @@ def match_callable(prof, raise_musd=None, want=8):
             cheque_low_m=_f(d.get('first_cheque_low_m')), cheque_high_m=_f(d.get('first_cheque_high_m')),
             geographies=d.get('geographies'), stage_bands=d.get('stage_bands'),
             recent_deal=d.get('recent_deal_1_company'), recent_deal_date=d.get('recent_deal_1_date'),
-            recent_deal_url=d.get('recent_deal_1_source_url')))
+            recent_deal_url=d.get('recent_deal_1_source_url'),
+            # THE TWO CAVEATS THAT MUST TRAVEL WITH THE CARD, not sit in the file being true.
+            # cheque_figure_dated is set where the only published figure carries a date: Freestyle
+            # Mar-2022, Square Peg Nov-2022, Sequoia's Arc programme Jan-2023. deal_note is set
+            # where the deal is a regional-fund deployment with the house named as fund manager
+            # rather than writing a balance-sheet venture cheque. Both change what "first cheque
+            # $1.5m to $3m" and "recently backed X" mean to the person reading them.
+            cheque_figure_dated=(d.get('cheque_figure_dated') or '').strip() or None,
+            deal_note=(d.get('deal_note') or '').strip() or None))
     return out
 
 
@@ -175,6 +222,30 @@ def match_evidence(picked):
                 continue
             if re.search(r'\b(identified|additional|up to)\b', name, flags=re.I):
                 continue
+            # REPAIR, THEN REFUSE. The same shapes tools/build_investors_table.py applies when it
+            # builds the table, kept here because this layer reads the rounds file directly rather
+            # than the table. "partners of DST Global" is DST Global with a preposition in front,
+            # "Origin Energy participated" is a house with a verb stuck to it, and "Walmart and
+            # Flipkart" is two houses in one cell: none of them is a reason to lose an investor.
+            # A clause that names nobody is refused.
+            name = re.sub(r'^(?:partners of|affiliates of|funds managed by)\s+', '', name,
+                          flags=re.I).strip()
+            name = re.sub(r'\s+(?:participated|invested|joined)\s*$', '', name,
+                          flags=re.I).strip()
+            if re.search(r'\b(?:did not|said|was oversubscribed|declined to)\b', name, flags=re.I):
+                continue
+            # OUR OWN PLACEHOLDER, NOT A HOUSE. "Not identified in any source" is what we write in
+            # the investor cell when a round names no lead. It was reaching the evidence layer as
+            # an investor chip against Perplexity.
+            if name.lower().startswith('not identified'):
+                continue
+            pair = re.match(r'^([A-Z][\w.&-]*) and ([A-Z][\w.&-]*)$', name)
+            names = [pair.group(1), pair.group(2)] if pair else [name]
+            for name in names:
+                if len(name) < 3:
+                    continue
+                seen.setdefault(name, []).append((r['company_name'], r.get('date')))
+            continue
             seen.setdefault(name, []).append((r['company_name'], r.get('date')))
     return [dict(investor=k, backed=[{'company': c, 'date': d} for c, d in v[:3]], n=len(v))
             for k, v in seen.items()]
@@ -197,7 +268,8 @@ FOOTER = ('A map, not an introduction. No affiliation or endorsement is implied,
 # A field that may reach a founder. Anything not on this list is not passed through, so a column
 # added to investors.csv later cannot leak into the page by accident.
 CARD_FIELDS = ('investor', 'house_type', 'thesis', 'why', 'cheque_low_m', 'cheque_high_m',
-               'geographies', 'stage_bands', 'recent_deal', 'recent_deal_date', 'recent_deal_url')
+               'geographies', 'stage_bands', 'recent_deal', 'recent_deal_date', 'recent_deal_url',
+               'cheque_figure_dated', 'deal_note')
 BANNED = ('email', 'phone', 'contact', 'partner_name', 'linkedin', 'twitter', 'logo')
 
 
@@ -214,11 +286,21 @@ def cheque_line(card):
     a $15M fund are different conversations, and knowing which one you are looking at saves you the
     email." An unknown range says so rather than being hidden."""
     lo, hi = card.get('cheque_low_m'), card.get('cheque_high_m')
-    if lo is None:
-        return 'First cheque not published'
-    if hi is None or hi == lo:
-        return 'First cheque from $%sm' % ('%g' % lo)
-    return 'First cheque $%sm to $%sm' % ('%g' % lo, '%g' % hi)
+    line = None
+    if lo is None and hi is None:
+        line = 'First cheque not published'
+    elif lo is None:
+        # CEILING ONLY, AND IT SAYS SO. "under $5M" is what Salesforce Ventures publishes and it is
+        # a different statement from "$0m to $5m", which we would be inventing.
+        line = 'First cheque up to $%sm' % ('%g' % hi)
+    elif hi is None or hi == lo:
+        line = 'First cheque from $%sm' % ('%g' % lo)
+    else:
+        line = 'First cheque $%sm to $%sm' % ('%g' % lo, '%g' % hi)
+    when = card.get('cheque_figure_dated')
+    if when and lo is not None or when and hi is not None:
+        line += ' (the only figure they publish, dated %s)' % when
+    return line
 
 
 def reveal_payload(prof, picked, raise_musd=None, want=8):

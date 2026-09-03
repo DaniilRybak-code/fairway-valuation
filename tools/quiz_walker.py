@@ -36,8 +36,12 @@ import quiz_fork as Q                            # noqa: E402
 ANSWER = {'money': 10.0, 'percent': 60.0, 'quantity': 100000.0}
 
 
-SRC = io.open('selector/match_reference.py', encoding='utf-8').read() + \
-      io.open('selector/quiz_fork.py', encoding='utf-8').read()
+# EVERY MODULE THAT READS A PROFILE, not just the matcher. The walker searched two files and
+# reported net revenue retention as "READ BY NOTHING" while selector/recommendations.py was
+# reading prof.get('nrr') to place the founder in a quartile against their own comparables. The
+# check was right that a question must land somewhere; it was looking in too few places.
+SRC = ''.join(io.open('selector/%s.py' % m, encoding='utf-8').read()
+              for m in ('match_reference', 'quiz_fork', 'recommendations', 'investors'))
 
 
 def field_is_read(field):

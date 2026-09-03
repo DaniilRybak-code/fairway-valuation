@@ -221,8 +221,10 @@
   },
   "investors_callable": [
    {
+    "cheque_figure_dated": null,
     "cheque_high_m": 5.0,
     "cheque_low_m": 0.5,
+    "deal_note": null,
     "geographies": "UK",
     "house_type": "Venture",
     "investor": "Backed VC",
@@ -232,11 +234,13 @@
     "stage_bands": "Pre-seed; Seed; Series A",
     "thesis": "Manufacturing and automation alongside frontier tech. $500k to $5M.",
     "tier": 1,
-    "why": "sector and stage, wider geography"
+    "why": "sector and stage; we have not asked where you are based"
    },
    {
+    "cheque_figure_dated": null,
     "cheque_high_m": 2.5,
     "cheque_low_m": 0.5,
+    "deal_note": null,
     "geographies": "North America and Europe, selectively global",
     "house_type": "Venture",
     "investor": "Dynamo Ventures",
@@ -246,11 +250,13 @@
     "stage_bands": "Seed; Series A",
     "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
     "tier": 1,
-    "why": "sector and stage, wider geography"
+    "why": "sector and stage; we have not asked where you are based"
    },
    {
+    "cheque_figure_dated": null,
     "cheque_high_m": 2.0,
     "cheque_low_m": 0.1,
+    "deal_note": null,
     "geographies": "Europe-focused (Berlin); invests internationally",
     "house_type": "Venture",
     "investor": "FoodLabs",
@@ -260,11 +266,13 @@
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
     "tier": 1,
-    "why": "sector and stage, wider geography"
+    "why": "sector and stage; we have not asked where you are based"
    },
    {
+    "cheque_figure_dated": null,
     "cheque_high_m": 1.0,
     "cheque_low_m": 0.1,
+    "deal_note": null,
     "geographies": "UK",
     "house_type": "Venture",
     "investor": "Fuel Ventures",
@@ -274,11 +282,13 @@
     "stage_bands": "Pre-seed; Seed; Series A",
     "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
     "tier": 1,
-    "why": "sector and stage, wider geography"
+    "why": "sector and stage; we have not asked where you are based"
    },
    {
+    "cheque_figure_dated": null,
     "cheque_high_m": 3.5,
     "cheque_low_m": 0.1,
+    "deal_note": null,
     "geographies": "Southern Europe and Latin America, especially Spain",
     "house_type": "Venture",
     "investor": "Kfund",
@@ -288,11 +298,29 @@
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
     "tier": 1,
-    "why": "sector and stage, wider geography"
+    "why": "sector and stage; we have not asked where you are based"
    },
    {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.15,
+    "deal_note": "Regional fund deployments (MEIF II) with Maven named as fund manager, not balance-sheet venture cheques.",
+    "geographies": "UK; South West England",
+    "house_type": "Venture",
+    "investor": "Maven Capital Partners",
+    "recent_deal": "Xentra",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.uktech.news/cybersecurity/cybersecurity-provider-xentra-secures-2-7m-20260720",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "The SWIF Maven Equity Fund invests in earlier stage and established companies located across the South West of England.",
+    "tier": 1,
+    "why": "sector and stage; we have not asked where you are based"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 2.0,
     "cheque_low_m": 0.5,
+    "deal_note": null,
     "geographies": "Europe and US",
     "house_type": "Venture",
     "investor": "Pale blue dot",
@@ -302,11 +330,13 @@
     "stage_bands": "Seed; Series A",
     "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
     "tier": 1,
-    "why": "sector and stage, wider geography"
+    "why": "sector and stage; we have not asked where you are based"
    },
    {
+    "cheque_figure_dated": null,
     "cheque_high_m": 4.0,
     "cheque_low_m": 0.5,
+    "deal_note": null,
     "geographies": "Pan-European, including Israel",
     "house_type": "Venture",
     "investor": "Planet A Ventures",
@@ -316,21 +346,7 @@
     "stage_bands": "Seed; Series A",
     "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
     "tier": 1,
-    "why": "sector and stage, wider geography"
-   },
-   {
-    "cheque_high_m": 1.25,
-    "cheque_low_m": 0.35,
-    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
-    "house_type": "Venture",
-    "investor": "Seedcamp",
-    "recent_deal": "Embedd",
-    "recent_deal_date": "2026-08",
-    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
-    "tier": 1,
-    "why": "sector and stage, wider geography"
+    "why": "sector and stage; we have not asked where you are based"
    }
   ],
   "investors_evidence": [

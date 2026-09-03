@@ -23,6 +23,7 @@ import csv, io, re, os, sys, json
 from datetime import date
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import load_seed_screen
+import load_investor_enrichment
 
 OUT = 'data/investors.csv'
 
@@ -57,8 +58,64 @@ def split_investors(cell):
             continue
         if ':' in p or len(p) > 45 or low in ('founders', 'others', 'investors'):
             continue
-        out.append(p)
+        out.extend(_repair(p))
     return out
+
+
+# REPAIR BEFORE YOU REJECT, and reject only what is not a name at all.
+#
+# The 3-Sep rebuild, the first since the private-rounds file grew, sent nine prose fragments to
+# the EVIDENCE layer where a founder would have read them as investors: "company did not name a
+# lead)", "company said the round was oversubscribed", "Origin Energy participated", "Hedosophia
+# (reported", "Walmart and Flipkart", "Berkshire Hathaway (USD 500m)", "partners of DST Global".
+#
+# My first filter rejected on any digit and killed a16z, 8VC, 83North, D1 Capital, Upper90, 10T
+# Holdings, PEAK6, 1835i and SoftBank Vision Fund 2: nine real houses. My second rejected anything
+# starting lower case and killed a16z, boldstart and e.ventures, three firms that spell themselves
+# that way. Both were written in a minute and both only showed up because this filter prints what
+# it refuses.
+#
+# The lesson is the one Daniil has been making all day: MOST OF THESE ARE NOT DROPS, THEY ARE
+# REPAIRS. "Berkshire Hathaway (USD 500m)" is Berkshire Hathaway with a deal term stuck to it.
+# "partners of DST Global" is DST Global with a preposition in front. "Walmart and Flipkart" is
+# two houses in one cell. Strip the term, split the pair, keep the house. Only a clause that
+# names nobody is dropped, and every drop is printed with the reason.
+REJECTED = []
+REPAIRED = []
+
+_DEAL_TAIL = re.compile(r'\s*\((?:[^)]*(?:[\d$£€%]|reported|undisclosed)[^)]*\)?)\s*$', re.I)
+_LEAD_IN = re.compile(r'^(?:partners of|affiliates of|funds managed by|certain funds of)\s+', re.I)
+_VERB_TAIL = re.compile(r'\s+(?:participated|invested|joined|also participated)\s*$', re.I)
+_CLAUSE = re.compile(r'\b(?:did not|said|was oversubscribed|declined to|were not)\b', re.I)
+
+
+def _repair(p):
+    """One raw fragment in, zero or more house names out. Every change is recorded."""
+    orig = p
+    p = _DEAL_TAIL.sub('', p).strip(' .,')          # Berkshire Hathaway (USD 500m) -> Berkshire Hathaway
+    p = _LEAD_IN.sub('', p).strip()                 # partners of DST Global -> DST Global
+    p = _VERB_TAIL.sub('', p).strip()               # Origin Energy participated -> Origin Energy
+    if _CLAUSE.search(p) or not re.search(r'[A-Za-z]', p):
+        REJECTED.append((orig, 'a clause about the round, naming no house'))
+        return []
+    if p.count('(') != p.count(')'):                # a fragment cut mid-bracket
+        p = p.split('(')[0].strip(' .,')
+    parts = [p]
+    m = re.match(r'^([A-Z][\w.&-]*) and ([A-Z][\w.&-]*)$', p)
+    if m:                                           # Walmart and Flipkart -> two houses, not none
+        parts = [m.group(1), m.group(2)]
+    parts = [x for x in parts if len(x) >= 3]
+    if not parts:
+        REJECTED.append((orig, 'nothing left once the deal term was stripped'))
+        return []
+    if parts != [orig]:
+        REPAIRED.append((orig, ' + '.join(parts)))
+    return parts
+
+
+# EVERY REFUSED FRAGMENT, KEPT AND PRINTED. D12: a merge that drops something must name what it
+# dropped. A silent filter is how the last one of these survived.
+REJECTED = []
 
 # ONE HOUSE, ONE ROW. The two round files spell the same firm two ways ("Sequoia" in the consumer
 # file, "Sequoia Capital" in the software file), which split 27 houses in two on the first build
@@ -79,8 +136,32 @@ def _stem(name):
                 break
     return re.sub(r'[^a-z0-9]', '', n)
 
+# TWO SPELLINGS THAT STEMMING CANNOT MEET. "a16z" and "Andreessen Horowitz" are the same firm and
+# share no letters, so _stem left them as two houses: nine rounds in Data, AI and Developer Tools
+# under one key and two real-estate rounds under the other, each understating the firm and each
+# arriving on a founder's list as a separate name. Stemming can only merge what looks alike; a
+# firm that trades under an unrelated short name needs to be told. Keys, not display names, so a
+# new spelling of either still lands in one place.
+NAME_ALIASES = {
+    'a16z': 'andreessenhorowitz',
+    # Long-form spellings the tail-stripper cannot reach, all found on the 3-Sep rebuild.
+    'lightspeedventure': 'lightspeed',                   # Lightspeed Venture Partners
+    'teachersventuregrowth': 'ontarioteachersventuregrowth',
+    'fidelitymanagementresearchcompany': 'fidelity',
+}
+
+# NOT INVESTORS. These reach the investor cells because a round names them there, but a founder
+# cannot call them. "Not identified in any source" is our own placeholder for an unattributed
+# participant and it had been promoted to a CALLABLE house with a dated deal against Perplexity.
+# Dropped by name and reported, never silently.
+DROP_KEYS = {
+    'notidentifiedinanysource': 'our placeholder for an unattributed participant, not a house',
+}
+
+
 def key_of(name):
-    return _stem(name) or re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+    k = _stem(name) or re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+    return NAME_ALIASES.get(k, k)
 
 
 def _months_since(ym):
@@ -193,7 +274,64 @@ COLS = ['investor_key', 'investor_name', 'house_type', 'layer', 'geographies', '
         'recent_deal_1_source_url', 'recent_deal_2_company', 'recent_deal_2_date',
         'recent_deal_2_source_url', 'rounds_in_set', 'companies_in_set', 'companies_backed',
         'first_round', 'last_round', 'median_round_size_m', 'median_postmoney_m',
-        'last_verified', 'provenance']
+        'last_verified', 'provenance',
+        # written by the 3-Sep enrichment, tools/load_investor_enrichment.py
+        'geographies_source', 'dormant_note', 'enrichment_verdict',
+        'cheque_figure_dated',
+        # written by the curated-fund deal file, data/raw/2026-09-03_curated-fund-deals.csv
+        'deal_note']
+
+
+# ------------------------------------------------- dated deals for the curated funds
+CURATED_DEALS = 'data/raw/2026-09-03_curated-fund-deals.csv'
+
+
+def apply_curated_deals(rows):
+    """Fill recent_deal_1 and _2 for the funds curated in data-content.js.
+
+    THIS STAGE EXISTS BECAUSE OF A BUG I WROTE. The research behind it was applied on 3-Sep by
+    tools/fill_undated_funds_3sep.py, which edited data/investors.csv in place. investors.csv is
+    generated by this script. The very next rebuild wiped all 27 deals, and thirteen funds -- Ada,
+    Backed, Concept, Founders Factory, Fuel, Future Planet, Hoxton, LocalGlobe, MMC, Maven,
+    Mercia, Passion, SFC -- silently stopped rendering to founders. It showed up only because the
+    renderable count was being counted before and after.
+
+    The rule it breaks is the one Daniil has been repeating all week: a figure has to live in a
+    file that the build reads, or it is on a countdown. So the deals live in data/raw and this
+    reads them.
+    """
+    if not os.path.exists(CURATED_DEALS):
+        print('CURATED DEALS: %s not present, skipped.' % CURATED_DEALS)
+        return
+    supplied = load(CURATED_DEALS)
+    by_key = {}
+    for r in rows:
+        by_key.setdefault(r['investor_key'], r)
+    filled, unmatched = {}, []
+    for d in supplied:
+        k = key_of(d['investor_name'])
+        r = by_key.get(k)
+        if r is None:
+            unmatched.append(d['investor_name'])
+            continue
+        i = d['deal_n']
+        # NEVER OVERWRITE A DEAL THE ROUNDS FILE ALREADY PROVED. Our own rounds carry the round's
+        # own source URL and are the stronger evidence; this file fills the funds that have none.
+        if not (r.get('recent_deal_%s_date' % i) or '').strip():
+            r['recent_deal_%s_company' % i] = d['company']
+            r['recent_deal_%s_date' % i] = d['date']
+            r['recent_deal_%s_source_url' % i] = d['source_url']
+            filled.setdefault(d['investor_name'], 0)
+            filled[d['investor_name']] += 1
+        if d.get('deal_note'):
+            r['deal_note'] = d['deal_note']
+    print('CURATED FUND DEALS: %d rows supplied, %d deals written across %d funds.'
+          % (len(supplied), sum(filled.values()), len(filled)))
+    for n in sorted(set(x['investor_name'] for x in supplied) - set(filled)):
+        print('    %s: already carried its own dated deals, left alone.' % n)
+    if unmatched:
+        print('    NOT MATCHED TO ANY ROW, so this research reaches nobody: %s'
+              % ', '.join(unmatched))
 
 
 def build():
@@ -201,6 +339,17 @@ def build():
     rows = []
 
     ev = evidence_rows()
+    for label, bucket in (('repaired', REPAIRED), ('REFUSED', REJECTED)):
+        seen, shown = set(), 0
+        for frag, why in bucket:
+            if frag in seen:
+                continue
+            seen.add(frag)
+            if not shown:
+                print('%d distinct investor-cell fragments %s:'
+                      % (len({f for f, _ in bucket}), label))
+            shown += 1
+            print('    %-46s %s' % (frag[:46], why))
     for k, h in ev.items():
         deals = sorted([d for d in h['deals'] if d[0]], reverse=True)
         companies = sorted({c for _d, c, _u in h['deals'] if c})
@@ -348,6 +497,20 @@ def build():
         promoted += 1
     print('%d EVIDENCE houses promoted to CALLABLE on the activity rule (a deal inside 12 months).'
           % promoted)
+
+    apply_curated_deals(rows)
+
+    # ------------------------------------------------------------------ drops, by name
+    for k, why in sorted(DROP_KEYS.items()):
+        gone = [r for r in rows if r['investor_key'] == k]
+        for r in gone:
+            rows.remove(r)
+            print('DROPPED %s (%s): %s' % (r['investor_name'], k, why))
+
+    # ------------------------------------------------- the human enrichment, and it runs LAST
+    # It overrides the promotion rule above on purpose: see tools/load_investor_enrichment.py.
+    load_investor_enrichment.apply_to(rows, aliases=NAME_ALIASES,
+                                     dropped=DROP_KEYS)
 
     rows.sort(key=lambda r: (r['layer'] == 'EVIDENCE', -int(r['rounds_in_set'] or 0), r['investor_name']))
 

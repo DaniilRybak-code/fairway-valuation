@@ -37,6 +37,10 @@ run "5 ENGINE REACH    does every row reach the matcher"              python3 to
 run "6 GOLDEN          did any founder's answer move"                 python3 selector/golden.py
 run "7 HONESTY         is every range caveated"                       python3 tools/honesty_check.py
 run "8 PEER UNIVERSE   can we narrow the world"                       python3 tools/peer_universe_check.py
+run "9 PERIOD           does the founder's own figure convert"        python3 tools/check_period_conversion.py
+run "10 QUIZ WALKER     does every answer land somewhere"              python3 tools/quiz_walker.py
+run "11 INVESTOR RAILS  no contact details, no incomplete cards"       python3 tools/check_investor_compliance.py
+run "12 INVESTOR REACH  does a founder get a list at all"              python3 tools/investor_coverage.py
 printf '\n'
 if [ "$fail" = "1" ]; then
   echo 'ONE OR MORE CHECKS FAILED. The stage that failed is where the data stopped.'

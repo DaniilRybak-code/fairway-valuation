@@ -87,4 +87,8 @@ def main():
     return 0
 
 
-sys.exit(main())
+# GUARDED, because it was not. `sys.exit(main())` sat at module level, so importing this file to
+# reuse its fixture list ran the whole check and then killed the caller with SystemExit. Anything
+# that wanted to walk the same 43 profiles had to copy them instead.
+if __name__ == '__main__':
+    sys.exit(main())

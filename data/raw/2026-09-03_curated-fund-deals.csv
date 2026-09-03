@@ -1,0 +1,43 @@
+# DATED DEALS FOR THE CURATED FUNDS, 3-Sep-2026.
+# Daniil: "Fourteen investor funds -> go and do the research on them, try to find a couple of
+# deals for each at least." Every row was confirmed by reading a page that NAMES THE FUND and
+# the round. Candidates found only on an aggregator, or on the fund's own portfolio page without
+# the fund named in the round coverage, were rejected rather than recorded: CuspAI for Hoxton,
+# Luffy AI for Future Planet, Frontier Health for MMC, Play Padel for Mercia.
+#
+# THIS FILE EXISTS BECAUSE THE FIRST VERSION OF THIS RESEARCH WAS WRITTEN STRAIGHT INTO
+# data/investors.csv BY tools/fill_undated_funds_3sep.py. investors.csv is GENERATED. The next
+# rebuild, on 3-Sep, wiped all 27 deals and took thirteen funds off the founder-facing list
+# without a word. A patch applied to a generated file is not data; it is a countdown. The deals
+# now live here and tools/build_investors_table.py reads them as a source, so a rebuild reapplies
+# them. deal_note travels with the row: several are regional-fund deployments where the house is
+# named as fund manager rather than writing a balance-sheet venture cheque, and a founder reading
+# "recently backed X" needs that to be true in the sense they will read it.
+investor_name,deal_n,company,date,source_url,deal_note
+Ada Ventures,1,Cascade,2026-07,https://techcrunch.com/2026/07/22/cascade-raises-3-5m-to-help-construction-firms-find-and-win-projects/,
+Ada Ventures,2,Gizmo,2026-04,https://techcrunch.com/2026/04/15/ai-learning-app-gizmo-levels-up-with-13m-users-and-a-22m-investment/,
+Backed VC,1,Round,2026-04,https://www.finsmes.com/2026/04/round-raises-6m-in-seed-funding.html,
+Backed VC,2,Novogaia,2026-01,https://www.backed.vc/insights/developing-new-medicines-from-fungi-using-ai,
+Concept Ventures,1,Archestra.AI,2026-06,https://archestra.ai/blog/archestra-announces-10m-seed,
+Concept Ventures,2,Dex,2026-04,https://fortune.com/2026/04/28/exclusive-dex-ai-powered-recruiting-startup-raises-seed-round-notion-capital/,
+Founders Factory,1,Telgea,2026-06,https://app.dealroom.co/news/feed/telgea-raises-funding-from-founders-factory-and-vodafone-to-automate-90-of-telecom-operations-with-ai,"ONE dated deal only. Immoly is confirmed as a Founders Factory venture on three pages, none of which states a month, so it is not recorded rather than dated by guess."
+Fuel Ventures,1,PANTA,2026-05,https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/,
+Fuel Ventures,2,Arrival,2026-04,https://www.uktechnews.info/2026/04/14/arrival-raises-500000-pre-seed-funding-from-fuel-ventures/,
+Future Planet Capital,1,Furbnow,2026-07,https://bdaily.co.uk/articles/2026/07/24/proptech-firm-heats-up-growth-plans-with-25-million-support,"Both deals are Future Planet Capital Regional, formerly Midven. The main fund has published no deal news since 2022."
+Future Planet Capital,2,Rem3dy Health,2026-06,https://thenextweb.com/news/rem3dy-health-nourished-14m-personalised-nutrition-3d-printing,
+Hoxton Ventures,1,Phagos,2025-10,https://www.eu-startups.com/2025/10/paris-based-phagos-raises-e25-million-to-create-a-sustainable-alternative-to-antibiotics/,
+Hoxton Ventures,2,Everbloom,2025-08,https://www.wsgr.com/en/insights/wilson-sonsini-advises-everbloom-on-dollar8-million-financing-to-advance-sustainable-luxury-textiles.html,
+LocalGlobe / Latitude,1,Microagi,2026-07,https://sifted.eu/articles/munich-robotics-startup-microagi-raises-55m-germanys-largest-ever-seed-round,
+LocalGlobe / Latitude,2,Trent AI,2026-04,https://www.finsmes.com/2026/04/trent-ai-raises-13m-in-seed-funding.html,
+MMC Ventures,1,Fifth Dimension,2026-05,https://www.vestbee.com/insights/articles/london-based-fifth-dimension-raises-26-m-series-a-led-by-hv-capital,
+MMC Ventures,2,Cloover,2026-01,https://www.goodwinlaw.com/en/news-and-events/news/2026/01/announcements-technology-goodwin-advises-mmc-ventures-cloover,
+Maven Capital Partners,1,Xentra,2026-07,https://www.uktech.news/cybersecurity/cybersecurity-provider-xentra-secures-2-7m-20260720,"Regional fund deployments (MEIF II) with Maven named as fund manager, not balance-sheet venture cheques."
+Maven Capital Partners,2,Spirit Health,2026-07,https://www.mavencp.com/latest-news/spirit-healthcare-secures-2-million-debt-finance-package-from-meif-ii,
+Mercia Ventures,1,VisaDoc,2026-08,https://www.mercia.co.uk/business-visa-platform-raises-funding-to-meet-overwhelming-demand/,"Regional fund deployments (NPIF II) with Mercia named as fund manager. Play Padel excluded: that was Mercia Business Loans, not Mercia Ventures."
+Mercia Ventures,2,TaiSan,2026-07,https://www.mercia.co.uk/taisan-raises-4-65m-to-bring-sodium-ion-batteries-to-mass-market/,
+Passion Capital,1,geoSurge,2026-07,https://www.eu-startups.com/2026/07/londons-geosurge-raises-e10-million-to-help-brands-understand-ai-generated-outputs/,
+Passion Capital,2,Paypercut,2026-06,https://tech.eu/2026/06/03/paypercut-secures-eur5m-to-scale-cross-border-payments-in-cee/,
+SFC Capital,1,Prema Cognition,2026-05,https://www.uktechnews.info/2026/05/18/prema-cognition-secures-550k-investment-led-by-sfc-capital/,
+SFC Capital,2,Pontiro,2026-02,https://www.uktechnews.info/2026/02/20/pontiro-secures-357500-investment-led-by-sfc-capital/,
+SyndicateRoom,1,The Ova,2025-04,https://www.syndicateroom.com/articles/april-2025-investments-summary,"Access EIS monthly disclosure posts stop after April 2025, so these are the most recent individually disclosed deals rather than 2026 ones."
+SyndicateRoom,2,MindSpire,2025-03,https://www.syndicateroom.com/articles/march-2025-investments-summary,

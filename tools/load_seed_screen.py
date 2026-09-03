@@ -29,11 +29,30 @@ SRC = SRC_V2 if os.path.exists(SRC_V2) else SRC_V1
 # The screen's eight sectors, mapped onto the categories our own files actually use, so the
 # matcher can join on them. Checked against the values present in private-rounds*.csv rather
 # than invented.
+# THE SCREEN HAS EIGHT COARSE SECTORS AND THE ENGINE HAS FORTY ARCHETYPES, so this table is the
+# translation between them and every archetype it forgets is a founder who gets an empty list.
+#
+# On 3-Sep ten of the 43 test founders were shown fewer than three houses and four were shown
+# none. It read as a thin database. It was this table: "B2B software and AI tooling" reached four
+# archetypes and stopped, so eight fixtures tagged Marketing & Customer Engagement, six tagged
+# Business Applications and two tagged Communications & Collaboration matched nothing, while the
+# funds behind them describe themselves as backing exactly that. Marketing software, sales
+# software, comms software and productivity software ARE B2B software; a generalist B2B seed fund
+# saying so is a translation of its own words, not a claim invented on its behalf.
+#
+# WHAT IS DELIBERATELY NOT ADDED, because it would be inventing coverage: Consumer & Prosumer
+# Software is not "consumer brands and D2C" (an app is not a brand), and there is no edtech
+# sector in the screen at all. Those founders get a short list or none, and the fix is a pull,
+# not a wider map. See docs/investor-sourcing-gaps.md.
 SECTOR_TO_CATEGORY = {
     'B2B software and AI tooling':
-        'Enterprise Applications; Data, AI & Developer Tools; Vertical Software; Cloud & Infrastructure Software',
+        'Enterprise Applications; Data, AI & Developer Tools; Vertical Software; '
+        'Cloud & Infrastructure Software; Business Applications; '
+        'Marketing & Customer Engagement; Communications & Collaboration; '
+        'Sales Engagement; Personal Software / Productivity; Agent Ops',
     'Payments and fintech infrastructure':
-        'Merchant Acquiring & PSP; Commerce & Payments Software; Cross-Border & FX',
+        'Merchant Acquiring & PSP; Commerce & Payments Software; Cross-Border & FX; '
+        'Financial Data & Index; Market Infrastructure & Exchange',
     'Digital banking and lending':
         'Digital Bank & Deposits; Lending & Credit',
     'Marketplaces':

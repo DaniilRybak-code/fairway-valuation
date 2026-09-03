@@ -51,6 +51,20 @@ SUPERSEDED = {
 REFERENCE = ('-targets.csv', '-sourcing.csv', 'pull-list', 'prompt', 'needed')
 
 
+# WHICH COLUMN IDENTIFIES A ROW, where the first four are not all identifiers.
+#
+# The default is to sample the first four columns, which works for a screen or a price pull where
+# those are the name, the ticker and the sector. It is wrong for a deal file: the curated-fund
+# deals list investor_name, deal_n, company, date, so the check sampled fourteen fund names AND
+# thirty-one portfolio companies, then reported PARTIAL because the portfolio companies are not
+# in our tables. They are not supposed to be. A check that reports a problem where there is none
+# gets ignored on the day it reports a real one.
+ID_COLS = {
+    '2026-09-03_curated-fund-deals.csv': ('investor_name',),
+    '2026-09-03_investor-enrichment-complete.csv': ('investor_key', 'investor_name'),
+}
+
+
 def names_in(path):
     """Identifying strings from a raw file: company names and tickers."""
     out = set()
@@ -58,6 +72,15 @@ def names_in(path):
         lines = [l for l in io.open(path, encoding='utf-8', errors='replace')
                  if l.strip() and not l.lstrip('"').startswith('#')]
     except OSError:
+        return out
+    cols = ID_COLS.get(os.path.basename(path))
+    if cols:
+        rd = csv.DictReader(lines)
+        for r in rd:
+            for c in cols:
+                v = (r.get(c) or '').strip().lower()
+                if 3 <= len(v) <= 60:
+                    out.add(v)
         return out
     for row in csv.reader(lines):
         for cell in row[:4]:
