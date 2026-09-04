@@ -98,16 +98,19 @@
   update();
 })();
 
-/* v9: the card never moves. The hero grid now fills the viewport, so the card
-   is pinned at the top edge it has at rest (measured once, re-measured on
-   resize while still at rest) and simply grows downward as it expands. */
+/* v9: the card starts at its rest position (measured once, re-measured on
+   resize while still at rest) and settles under the story block as it
+   expands; the story's height is measured so the two never overlap. */
 (function () {
   var wrap = document.querySelector('#screen-hero .snap.first.hero-genie-on');
   if (!wrap) return;
   var grid = wrap.querySelector('.hero-grid');
   var card = wrap.querySelector('.ffcard');
   if (!grid || !card) return;
+  var story = wrap.querySelector('.hero-story');
   function measure() {
+    /* the story block's height decides where the expanded card starts */
+    if (story) wrap.style.setProperty('--story-h', (story.offsetHeight + 40) + 'px');
     var exp = parseFloat(wrap.style.getPropertyValue('--exp') || '0');
     if (exp > 0.02) return;
     var top = Math.max(24, Math.round((grid.clientHeight - card.offsetHeight) / 2) + 8);
@@ -115,14 +118,6 @@
   }
   measure();
   window.addEventListener('resize', measure, { passive: true });
-  /* the nav scrolls away before the hero pins; add that travel back so the
-     card holds the same place on screen from the first pixel of scroll */
-  var restTop = wrap.getBoundingClientRect().top + window.scrollY;
-  function shift() {
-    wrap.style.setProperty('--nav-shift', Math.min(window.scrollY, restTop).toFixed(0) + 'px');
-  }
-  shift();
-  window.addEventListener('scroll', shift, { passive: true });
   /* fonts arriving late change the card's height; measure again once they have */
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
   window.addEventListener('load', measure);
