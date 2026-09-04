@@ -10,13 +10,29 @@ So the gate is not "does this company get a priced range". It is "does the engin
 down to a defensible set of comparables for this company". That is testable today, with no revenue
 on any fixture, which is why the march no longer waits on the fixture schema.
 
-THE BAR, taken from Daniil's own standing rules rather than invented here:
-  1. NEVER PRICE OFF ONE COMPARABLE. A lane holding exactly one name fails.
+THE BAR. Daniil ruled the top line on 4-Sep-2026, closing the empty-lane question:
+
+  0. TWO KINDS OF EVIDENCE, OR IT IS NOT A PASS. "Fixture must be a pass when we have at least
+     1 lane based on public peers and 1 lane based on private peers." A listed lane says what the
+     market pays for this kind of business today; a private lane says what an investor actually
+     paid for a company at this stage. Neither substitutes for the other, and a football field
+     drawn from one of them is a single point of view wearing the clothes of a range.
+     PUBLIC is core OR secondary: either listed lane satisfies it.
+  1. NEVER PRICE OFF ONE COMPARABLE. A lane with one usable name does not count as a lane.
   2. THREE REAL NAMES BEAT FIVE PADDED ONES. At least three distinct named comparables in total.
   3. NEVER SHOW AN UNRELATED COMPARABLE. At least one lane must reach better than the weakest
      overlap tier, so the set rests on something more than a shared archetype word.
   4. A BLANK IS A TRIGGER, NEVER A CONCLUSION. A fixture with no peers at all is the loudest
      failure, not a quiet one.
+
+WHAT THE 4-SEP RULING CHANGED, both ways. It LOOSENED the old bar, which demanded the CORE lane
+specifically and failed a company whose core was empty however good its secondary was. It also
+TIGHTENED it: an empty secondary is now explicitly fine and no longer reported as an unruled
+warning, while a fixture with no private evidence fails outright rather than passing on the listed
+side alone. One caveat is written into the output rather than hidden here: nothing in the product
+reads a SECONDARY range today (see the note on PRICING_LANES below), so a fixture that satisfies
+rule 0 only through its secondary lane is passing on a number no founder currently sees. Those are
+counted and named on their own line.
 
 Reported per fixture so two agents can double-check the same company and compare, which is the
 double-verification the gate asks for.
@@ -39,6 +55,11 @@ LANES = ('core', 'secondary', 'private')
 # a wrong one, and it buries the six real failures under two false ones. A thin secondary is still
 # reported, as a note.
 PRICING_LANES = ('core', 'private')
+
+# DANIIL'S RULING OF 4-SEP-2026, in code: one public lane and one private lane.
+PUBLIC_LANES = ('core', 'secondary')
+PRIVATE_LANE = 'private'
+MIN_PRICED = 2                      # one name is not a range (rule 1)
 
 
 def read(path):
@@ -64,8 +85,8 @@ def best_n(e, lane):
 
 
 def score(e):
-    """Returns (verdict, reasons, facts) for one fixture snapshot."""
-    names, per_lane, closeness, sole_lanes, empty_lanes, thin_context = set(), {}, [], [], [], []
+    """Returns (verdict, reasons, facts, warnings) for one fixture snapshot."""
+    names, per_lane, closeness, priced, sole = set(), {}, [], {}, []
     for lane in LANES:
         rows = e.get(lane) or []
         got = [r.get('company') for r in rows if r.get('company')]
@@ -75,37 +96,44 @@ def score(e):
         n = best_n(e, lane)
         if rng.get('closeness'):
             closeness.append(rng['closeness'])
-        # ZERO PRICED NAMES IS NOT BETTER THAN ONE, AND THE FIRST VERSION OF THIS SCORED IT AS
-        # BETTER. It failed on n == 1 and said nothing about n == 0, so numida passed with a book
-        # range built on no comparable at all, and then "failed" the moment a real book comparable
-        # arrived and made it one. A check that rewards an empty answer over a thin one is worse
-        # than no check. Rule 4 already says a blank is a trigger; this is where it is enforced.
-        if rng.get('sole') or (isinstance(n, int) and n < 2):
-            if lane not in PRICING_LANES:
-                thin_context.append(lane)
-            else:
-                (sole_lanes if (rng.get('sole') or n == 1) else empty_lanes).append(lane)
+        # The widest priced set this lane can offer, across every basis the fork supports. A lender
+        # priced on book and an exchange priced on throughput both count here; judging on the
+        # revenue range alone would fail companies for not holding a line they never had.
+        priced[lane] = n if isinstance(n, int) else 0
+        if rng.get('sole') or priced[lane] == 1:
+            sole.append(lane)
+
+    public_lane = next((l for l in PUBLIC_LANES if priced[l] >= MIN_PRICED), None)
+    private_ok = priced[PRIVATE_LANE] >= MIN_PRICED
+
     fails = []
     if not names:
         fails.append('no comparables at all')
     elif len(names) < 3:
         fails.append('only %d distinct comparable(s); three real names is the floor' % len(names))
-    if sole_lanes:
-        fails.append('priced off ONE name in: %s' % ', '.join(sole_lanes))
-    if empty_lanes:
-        fails.append('NO priced comparable in: %s' % ', '.join(empty_lanes))
+    # RULE 0, AND IT IS THE ONE THAT DECIDES MOST VERDICTS.
+    if public_lane is None:
+        fails.append('no public lane with %d priced comparables (core %d, secondary %d)'
+                     % (MIN_PRICED, priced['core'], priced['secondary']))
+    if not private_ok:
+        fails.append('no private lane: %d priced round(s), and a listed lane alone is one point '
+                     'of view, not a range' % priced[PRIVATE_LANE])
     if closeness and all(c == WEAK for c in closeness):
         fails.append('every lane is %s; the set rests on nothing but a shared word' % WEAK)
     if not closeness:
         fails.append('no lane produced a range object to judge closeness on')
-    # An EMPTY lane is not the same failure as a one-name lane, and it is not nothing either.
-    # A fixture with zero core comparables is being priced entirely off the other lanes, which the
-    # bar above does not forbid but Daniil has never ruled on. Report it as a warning, visible on
-    # its own line in the summary, rather than folding it silently into a PASS or inventing a fail.
-    warns = ['%s lane empty' % lane for lane in LANES if per_lane[lane] == 0] if names else []
-    warns += ['%s ring rests on one priced name' % l for l in thin_context]
+
+    # WARNINGS ARE FACTS THAT DO NOT DECIDE THE VERDICT, and after the 4-Sep ruling an empty
+    # secondary is one of them: it is explicitly allowed, so it is reported and nothing more.
+    warns = []
+    if names and public_lane == 'secondary':
+        warns.append('passes rule 0 on SECONDARY: no founder sees a secondary range today')
+    if names and per_lane['secondary'] == 0:
+        warns.append('secondary lane empty (allowed since 4-Sep)')
+    warns += ['%s lane rests on one priced name' % l for l in sole if priced[l] == 1]
     facts = dict(names=len(names), core=per_lane['core'], secondary=per_lane['secondary'],
-                 private=per_lane['private'], closeness=','.join(sorted(set(closeness))) or '-')
+                 private=per_lane['private'], public_lane=public_lane or '-',
+                 closeness=','.join(sorted(set(closeness))) or '-')
     return ('PASS' if not fails else 'FAIL'), fails, facts, warns
 
 
@@ -125,21 +153,30 @@ def main():
         if verdict == 'FAIL':
             failed += 1
     print('THE MARCH TO 100, SCORED ON PEER UNIVERSE ONLY. No revenue figure is used anywhere here.\n')
-    print('%-18s %-5s %6s %5s %5s %8s  %s' % ('fixture', 'verd', 'names', 'core', 'priv', 'closeness', 'why it fails'))
+    print('%-18s %-5s %6s %5s %5s %5s %9s %8s  %s'
+          % ('fixture', 'verd', 'names', 'core', 'sec', 'priv', 'rule0 via', 'closeness', 'why it fails'))
     for key, verdict, fails, fc, warns in rows:
         note = '; '.join(fails) or ('WARN ' + '; '.join(warns) if warns else '')
-        print('%-18s %-5s %6d %5d %5d %8s  %s'
-              % (key, verdict, fc['names'], fc['core'], fc['private'],
-                 fc['closeness'][:8], note))
+        print('%-18s %-5s %6d %5d %5d %5d %9s %8s  %s'
+              % (key, verdict, fc['names'], fc['core'], fc['secondary'], fc['private'],
+                 fc['public_lane'], fc['closeness'][:8], note))
     n = len(rows)
     print('\n%d fixtures | %d refine the peer universe | %d do not' % (n, n - failed, failed))
     print('GATE: 100 companies must reach PASS here, each checked by two independent agents.')
     print('Currently at %d of 100 companies, %d of them passing.' % (n, n - failed))
-    warned = sorted(k for k, v, f, fc, w in rows if w and v == 'PASS')
-    if warned:
-        print('\nPASSING BUT WITH AN EMPTY LANE (%d): %s' % (len(warned), ', '.join(warned)))
-        print('These price with no comparable at all in one lane. Not a fail under the bar above.')
-        print('Daniil has not ruled on whether an empty lane should fail. Flagged, not decided.')
+    on_secondary = sorted(k for k, v, f, fc, w in rows
+                          if v == 'PASS' and fc['public_lane'] == 'secondary')
+    if on_secondary:
+        print('\nPASSING ON THE SECONDARY LANE (%d): %s' % (len(on_secondary), ', '.join(on_secondary)))
+        print('Rule 0 is satisfied, and nothing in the product reads a secondary range today, so')
+        print('these pass on a number no founder currently sees. Either the reveal starts reading')
+        print('the secondary range or these are a false pass. Flagged, not decided.')
+    empty_secondary = sorted(k for k, v, f, fc, w in rows if v == 'PASS' and fc['secondary'] == 0)
+    if empty_secondary:
+        print('\nPASSING WITH AN EMPTY SECONDARY LANE (%d): %s'
+              % (len(empty_secondary), ', '.join(empty_secondary)))
+        print("Allowed by Daniil's ruling of 4-Sep: a public lane and a private lane is the bar,")
+        print('and these have both. Reported so the sourcing list stays visible.')
     return 0
 
 

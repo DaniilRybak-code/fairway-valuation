@@ -113,3 +113,48 @@ The disclaimer is therefore ready except for one field, the contact email:
 
 Still open from this document: the ICO data protection fee (about £52, ten minutes), the SM&CR
 answer, and whether the fee is taken before or after the founder sees the review.
+
+
+---
+
+# PRICING, decided 4 September 2026 (evening)
+
+Daniil, replacing the single 750 price agreed earlier the same day:
+
+> "Reveal is always free with some lanes blurred. 250 USD to get full FF (so fully unblurred), 750
+> to get a full-blown valuation advocacy presentation (takes up to a week)."
+
+**The three tiers.**
+
+| tier | price | what it is | who does the work |
+|---|---|---|---|
+| Reveal | free | the football field with one or more lanes locked, the honesty flags, the fix list, both investor layers | the engine |
+| Full field | $250 | every lane unlocked, every comparable named, every peer table readable | the engine |
+| Advocacy pack | $750 | a full valuation advocacy presentation, up to a week | a person, on the engine's output |
+
+**What has to be decided before this can be built, and none of it is hard.**
+
+1. **Which lanes are locked.** The recommendation: lock the PRIVATE lane and the regression row,
+   leave the listed lane open. A founder can assemble listed comparables themselves with a day and
+   a subscription; 289 tagged, basis-audited private rounds are the thing they cannot get, and the
+   regression is the thing they would not think to build. Locking the listed lane instead would
+   make the free tier look empty and give away the part that is genuinely ours.
+2. **The lock is a payload boundary, not a CSS class.** Written into the rulebook as E8. The free
+   payload must not contain the locked figures at all.
+3. **The free banker review has to go.** The reveal page currently promises "a reviewer reads every
+   set of answers that comes through here by hand and emails you their read within 24 hours. That
+   part is free." A free human read is worth more than the $250 tier and its cost is unbounded in
+   the number of submissions. The human belongs in the $750 tier. This is copy on the live page and
+   it is now wrong, so it is a launch blocker rather than a nice-to-have.
+4. **SM&CR covers both prices.** $250 is a payment for financial analysis exactly as $750 is. The
+   compliance answer gates the whole ladder, not the top of it.
+5. **Two prices, one meta description.** "Reviewed by former bulge bracket bankers. Free." has to
+   become something that survives both tiers.
+6. **Retention is unchanged and now covers more cases.** 90 days for a quiz that never converts,
+   six years from delivery for anything paid, and "paid" now includes a $250 unlock.
+7. **VAT is further away, not closer.** The £90,000 threshold is 120 engagements at £750 and many
+   more at $250. Still not a near-term problem.
+
+Open on this: does the $250 unlock expire, and does it carry the founder's next visit? The simplest
+answer is that it unlocks that one analysis for good, and a re-run with new numbers is a new
+unlock.

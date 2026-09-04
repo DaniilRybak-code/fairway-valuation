@@ -295,6 +295,15 @@ reader has to decode. No em dashes.
 **E7. Every comment Daniil makes gets reflected in the product, and anything that cannot be is
 flagged to him immediately.**
 
+**E8. A lane the founder has not paid for is ABSENT FROM THE PAYLOAD, never blurred in the page.**
+*Added 4 Sep*, with the three tiers (free reveal with lanes locked, $250 for the full field, $750
+for the advocacy pack). A CSS blur over a number that is sitting in the DOM is not a paywall, it is
+a dare: inspect the element and read it. The engine builds two payloads and the free one does not
+contain the figures behind the lock. What the free tier may carry about a locked lane is its
+EXISTENCE and its SHAPE (that it exists, how many comparables stand behind it, what kind of
+evidence they are), never its numbers, its names or its multiples. This is a rule about honesty as
+much as revenue: a lock that can be picked in ten seconds tells a founder what we think of them.
+
 ---
 
 ## What this table says about us

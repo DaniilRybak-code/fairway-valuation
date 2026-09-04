@@ -62,7 +62,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -71,14 +71,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 6.1,
+   "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 2.1,
-   "n": 5,
+   "low": 1.6,
+   "mid": 1.95,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -90,6 +90,13 @@
     {
      "company": "The Western Union Company",
      "mult": 0.9,
+     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "CAB Payments Holdings plc",
+     "mult": 1.6,
      "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -142,6 +149,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:WU"
+    },
+    {
+     "company": "CAB Payments Holdings plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:CABP"
     },
     {
      "company": "Payoneer Global Inc.",

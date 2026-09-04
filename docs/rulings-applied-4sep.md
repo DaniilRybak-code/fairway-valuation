@@ -59,9 +59,26 @@ what the source said, and this is a pricing ruling rather than a correction of t
 one row the components no longer sum to the bridge, which is why the override is written into the
 file's own header as well as here.
 
-**Still open:** CAB Payments Holdings plc is the same shape, a payments company whose client
-balances net against its market capitalisation, and it is currently n.m. rather than repriced. It
-needs the same ruling or a different one.
+## 2b. CAB Payments, the same ruling, applied 20:19 UK
+
+Daniil: "Let's do same for CAB payments." `tools/apply_bridge_zero.py` now holds both rulings in one
+table and is idempotent, so XP was skipped and only CAB changed.
+
+| field | was | now |
+|---|---|---|
+| equity_to_av_bridge_musd | -685 | 0 |
+| enterprise_value_musd | -399 | 286 (the market capitalisation) |
+| ev_ntm_revenue_x | -2.3 | 1.6 |
+| ev_ntm_gp_x | 26.3 | -19.1, which B11 then marks n.m. |
+| ev_ntm_gmv_x | -0.00657 | 0.00471 |
+
+Every EV-based multiple in the row is rebuilt, not just the revenue one, because leaving a stale
+ev/gp behind would be a figure computed from an enterprise value the file no longer holds. The 26.3x
+it used to carry was two negatives dividing into a plausible-looking positive.
+
+**Worth a separate look: CAB's gross profit is negative**, -$15m on $177m of revenue, a margin of
+-8.5%. That is why its gross-profit multiple is n.m. after the fix rather than sensible. A negative
+margin also sits in the distribution the unit-economics recommendation reads.
 
 ## 3. The investor sector column, fixed without touching peer selection
 
