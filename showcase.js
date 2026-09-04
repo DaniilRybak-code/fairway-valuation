@@ -97,3 +97,54 @@
   window.addEventListener('resize', onScroll, { passive: true });
   update();
 })();
+
+/* v9: the card starts at its rest position (measured once, re-measured on
+   resize while still at rest) and settles under the story block as it
+   expands; the story's height is measured so the two never overlap. */
+(function () {
+  var wrap = document.querySelector('#screen-hero .snap.first.hero-genie-on');
+  if (!wrap) return;
+  var grid = wrap.querySelector('.hero-grid');
+  var card = wrap.querySelector('.ffcard');
+  if (!grid || !card) return;
+  var story = wrap.querySelector('.hero-story');
+  function measure() {
+    /* the story block's height decides where the expanded card starts */
+    if (story) wrap.style.setProperty('--story-h', (story.offsetHeight + 40) + 'px');
+    var exp = parseFloat(wrap.style.getPropertyValue('--exp') || '0');
+    if (exp > 0.02) return;
+    var top = Math.max(24, Math.round((grid.clientHeight - card.offsetHeight) / 2) + 8);
+    wrap.style.setProperty('--card-top', top + 'px');
+  }
+  measure();
+  window.addEventListener('resize', measure, { passive: true });
+  /* fonts arriving late change the card's height; measure again once they have */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  window.addEventListener('load', measure);
+})();
+
+/* v9: the opening. The headline arrives word by word (a soft blur-and-rise,
+   one word every 75ms); the copy under it and the card follow once the last
+   word has landed. Runs once per visit, never on the way back up the page, and
+   not at all under prefers-reduced-motion. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var wrap = document.querySelector('#screen-hero .snap.first');
+  var h1 = document.getElementById('hook-headline');
+  if (!wrap || !h1 || reduce) return;
+  var i = 0;
+  Array.prototype.slice.call(h1.childNodes).forEach(function (node) {
+    var host = node.nodeType === 1 ? node : null;
+    var text = node.textContent;
+    if (!text.trim()) return;
+    var html = text.split(/\s+/).filter(Boolean).map(function (w) {
+      return '<span class="w" style="--wi:' + (i++) + '">' + w + '</span>';
+    }).join(' ');
+    if (host) host.innerHTML = html;
+    else { var s = document.createElement('span'); s.innerHTML = html; h1.replaceChild(s, node); }
+  });
+  wrap.classList.add('hero-intro');
+  /* once played, hand every element back to its static styles so the genie
+     and hover rules own them again */
+  setTimeout(function () { wrap.classList.add('intro-done'); }, 120 + i * 75 + 1600);
+})();

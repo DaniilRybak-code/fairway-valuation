@@ -1,0 +1,122 @@
+/* ================= v9, 3-Sep-2026: the field sells.
+   Page 2 is a story ABOVE the field: a centred title and five steps in a
+   row (what Fairway does, arrows between them), fading in as the hero copy
+   goes; the card takes the full width beneath and the numbered notes on
+   its right rail explain what each range IS. A CTA sits under the field. Plus Daniil's markup: the headline reveals word by
+   word and the rest follows; +53% (recomputed for the new row) is big;
+   an EV-per-user precedent row 25% above the revenue-priced one, axis to
+   18; "based on peer beta"; hero stats in the page's own sans; three
+   best-fit seed investors with cheques in the rest-state strip. */
+
+/* ---- the grid fills the viewport; the card starts at its rest position and,
+   as it takes the full width, settles under the story block ---- */
+#screen-hero .hero-genie-on .hero .hero-grid { display:flex; align-items:center;
+  min-height:100vh; position:relative; }
+#screen-hero .hero-genie-on .hero-vis { transform:none; right:0;
+  top:calc(var(--card-top, 40px) * (1 - var(--exp, 0)) + var(--story-h, 300px) * var(--exp, 0));
+  width:calc(60% + 40% * var(--exp, 0)); }
+
+/* the field's columns at full width: room for the metric sub-labels, a 270px rail */
+.hero-genie-on .ffx-head, .hero-genie-on .ff-row, .hero-genie-on .ffx-axis {
+  grid-template-columns:minmax(140px,200px) calc(110px * var(--exp, 0)) calc(114px * var(--exp, 0))
+    minmax(0,1fr) calc(270px * var(--exp, 0)); }
+.hero-genie-on .ff-note { width:min(270px, calc(300px * var(--exp, 0))); }
+.hero-genie-on .ff-note p { font-size:11.5px; line-height:1.32; }
+.hero-genie-on .ff-note.n3 { top:22%; }
+.hero-genie-on .our-read { grid-template-columns:minmax(0,1fr) calc(270px * var(--exp, 0)); }
+
+/* ---- the story block: centred title and five steps in a row, fading in as the copy goes ---- */
+.hero-story { display:none; }
+#screen-hero .hero-genie-on .hero-story { display:block; position:absolute; left:0; right:0; top:10px;
+  text-align:center; opacity:clamp(0, calc((var(--exp, 0) - 0.5) / 0.2), 1);
+  visibility:hidden; pointer-events:none; }
+#screen-hero .hero-genie-mid .hero-story { visibility:visible; pointer-events:auto; }
+.hs-eyebrow { margin:0 0 8px; font-family:var(--mono); font-size:10px; letter-spacing:.18em;
+  text-transform:uppercase; font-weight:700; color:var(--ff-mute); }
+.hs-title { font-family:var(--serif); font-size:clamp(28px,2.9vw,42px); line-height:1.05;
+  letter-spacing:-.025em; font-weight:600; margin:0 0 8px; color:var(--ff-ink); }
+.hs-lede { font-size:15px; line-height:1.5; color:var(--ff-soft); margin:0 0 26px; }
+.steps { display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:0 40px; text-align:left;
+  padding:0 8px; }
+.st { position:relative; display:flex; flex-direction:column; gap:8px;
+  --nseen:clamp(0, calc((var(--exp, 0) - var(--nd, .6)) / 0.08), 1);
+  opacity:var(--nseen); transform:translateY(calc(10px * (1 - var(--nseen))));
+  transition:transform .25s ease; }
+.hero-genie-mid .st:hover { transform:translateY(-4px); }
+.st .sw { display:block; width:40px; height:6px; border-radius:3px; }
+.st b { display:block; font-family:var(--serif); font-size:clamp(18px,1.45vw,21px); line-height:1.15;
+  font-weight:600; letter-spacing:-.018em; text-wrap:pretty; }
+.st p { margin:0; font-size:12.5px; line-height:1.45; color:var(--ff-soft); }
+.st .st-arrow { position:absolute; right:-34px; top:-6px; width:26px; height:18px; color:#b9c0cc; }
+.st .st-arrow svg { width:26px; height:14px; fill:none; stroke:currentColor; stroke-width:1.8;
+  stroke-linecap:round; stroke-linejoin:round; }
+.sw.c2 { background:#8ea9dd; }  .st .sw.c2 + b { color:#3f66c2; }
+.sw.c3 { background:#7c3aed; }  .st .sw.c3 + b { color:#7c3aed; }
+.sw.c4 { background:#0e7490; }  .st .sw.c4 + b { color:#0e7490; }
+.sw.c5 { background:repeating-linear-gradient(-45deg,#33415f 0 4px,#4a5b80 4px 8px); }  .st .sw.c5 + b { color:#33415f; }
+.sw.c6 { background:#1d4ed8; }  .st .sw.c6 + b { color:#1d4ed8; }
+
+/* ---- the CTA under the expanded field ---- */
+.story-cta { display:none; }
+.hero-genie-on .story-cta { display:flex; justify-content:center; align-items:center; gap:16px;
+  margin-top:22px; opacity:clamp(0, calc((var(--exp, 0) - 0.8) / 0.15), 1); }
+.hero-genie-on .story-cta .btn { padding:14px 28px; font-size:15px; }
+
+/* ---- Hover.css-style effects: buttons float, bars grow ---- */
+#screen-hero .btn, .btn-nav { transition:transform .25s ease, box-shadow .25s ease; }
+#screen-hero .btn:hover, .btn-nav:hover { transform:translateY(-3px);
+  box-shadow:0 10px 22px -10px rgba(29,78,216,.55); }
+.ff-bar { transition:transform .2s ease; transform-origin:center; }
+.ff-track:hover .ff-bar { transform:scaleY(1.3); }
+
+/* ---- the second precedent row: the same rounds, priced per paying user ---- */
+.ff-bar.priv2 { background:#a78bfa; }
+.hf-bar.priv2, .ff-bar.priv2 { --glow:167,139,250; }
+
+/* ---- the premium badge, now the loudest thing on the card ---- */
+.prem-badge { top:calc(50% - 34px); }
+.prem-badge em { font-size:46px; letter-spacing:-.03em; }
+.prem-badge span { font-size:11.5px; margin-top:4px; }
+.prem-badge .pa { width:30px; height:27px; }
+.prem-badge .pa.up { left:-38px; top:-8px; }
+.prem-badge .pa.dn { left:-38px; bottom:-2px; }
+
+/* ---- hero stats in the page's own sans, one voice with the copy ---- */
+.hero-stats em { font-family:var(--sans); font-weight:700; word-spacing:normal; letter-spacing:-.015em;
+  font-size:20px; }
+
+/* ---- rest-state strip: the investors column ---- */
+.d-mini { gap:26px; }
+.dm-col.keyinv { min-width:0; }
+.dm-col.keyinv i { grid-template-columns:auto auto auto; gap:0 10px; white-space:nowrap; }
+.dm-col.keyinv i em { white-space:nowrap; }
+.dm-col.keyinv i b.lead { white-space:nowrap; }
+
+/* ---- the opening: headline word by word, then everything else ---- */
+.hero-intro .hero-copy h1 .w { display:inline-block; opacity:0; filter:blur(7px);
+  transform:translateY(.35em); animation:wreveal .62s cubic-bezier(.2,.7,.2,1) forwards;
+  animation-delay:calc(120ms + var(--wi, 0) * 75ms); }
+@keyframes wreveal { to { opacity:1; filter:blur(0); transform:none; } }
+.hero-intro .hero-copy > :not(h1), .hero-intro .hero-vis .ffcard { opacity:0; transform:translateY(14px);
+  animation:blockreveal .7s ease forwards; animation-delay:var(--bd, 1.2s); }
+@keyframes blockreveal { to { opacity:1; transform:none; } }
+.hero-intro .hero-copy > :not(h1) { --bd:1.25s; }
+.hero-intro .hero-copy .sub-strong { --bd:1.2s; }
+.hero-intro .hero-copy .sub { --bd:1.3s; }
+.hero-intro .hero-copy .cta-stack { --bd:1.4s; }
+.hero-intro .hero-copy .hero-stats { --bd:1.5s; }
+.hero-intro .hero-vis .ffcard { --bd:1.45s; }
+.hero-intro.intro-done .hero-copy h1 .w, .hero-intro.intro-done .hero-copy > :not(h1),
+.hero-intro.intro-done .hero-vis .ffcard { animation:none; opacity:1; transform:none; filter:none; }
+
+@media (max-width:900px) {
+  .hero-story { display:block; margin-top:28px; }
+  .steps { grid-template-columns:1fr; gap:18px; }
+  .st, .story-cta { opacity:1; transform:none; }
+  .st .st-arrow { display:none; }
+  #screen-hero .hero-genie-on .hero .hero-grid { display:grid; min-height:0; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-intro .hero-copy h1 .w, .hero-intro .hero-copy > :not(h1), .hero-intro .hero-vis .ffcard {
+    animation:none; opacity:1; transform:none; filter:none; }
+}
