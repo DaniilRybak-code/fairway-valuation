@@ -19,6 +19,11 @@
 set +e
 cd "$(dirname "$0")/.." || exit 0
 
+if [ "$FAIRWAY_NO_GIT" = "1" ]; then
+  echo 'SKIPPED   FAIRWAY_NO_GIT=1. This check runs git, and D10 says no git runs on the laptop'
+  echo '          through the bridge. Run it yourself in your own terminal.'
+  exit 0
+fi
 if [ ! -d .git ]; then echo 'not a git working tree, nothing to report'; exit 0; fi
 if [ -f .git/index.lock ]; then
   echo "LOCK      .git/index.lock exists ($(ls -l .git/index.lock 2>/dev/null | awk '{print $6, $7, $8}'))."

@@ -120,3 +120,56 @@
   .hero-intro .hero-copy h1 .w, .hero-intro .hero-copy > :not(h1), .hero-intro .hero-vis .ffcard {
     animation:none; opacity:1; transform:none; filter:none; }
 }
+
+/* ================= v9.1, 4-Sep-2026: Daniil's page-2 markup.
+   The card reads in $; the metric cells carry a pop-up with the arithmetic
+   behind $0.78m (the same white card the peers use); every bar's hover is the
+   sum, "$x of your metric times the range", not a repeat of the multiple's
+   source; the regression bar explains R-squared and the DCF bar the WACC
+   build-up; chip 5 lines up with the others; Our read gets serif titles
+   outside the boxes, concerns under advocacy, and a likely-investors table. */
+
+/* ---- the metric pop-up: same card as .peer-tip, but it drops BELOW the cell so the
+   top rows never cover the card's head or the story above it ---- */
+.ff-metric.has-calc { position:relative; cursor:help; }
+.ff-metric.has-calc:hover { color:var(--ff-rust); }
+.calc-tip { display:none; position:absolute; right:0; top:calc(100% + 6px); z-index:24;
+  width:264px; background:var(--ff-paper); border:1px solid var(--ff-rule-hard); border-radius:8px;
+  padding:10px 12px 9px; box-shadow:0 14px 34px -14px rgba(20,24,31,.35); text-align:left;
+  color:var(--ff-ink); font-family:var(--sans); }
+.ff-metric.has-calc:hover .calc-tip { display:block; }
+.calc-tip b { display:block; font-family:var(--sans); font-size:8.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ff-mute); font-weight:700; margin-bottom:6px; }
+.calc-tip i { display:flex; justify-content:space-between; gap:12px; font-style:normal;
+  font-size:11.5px; font-weight:500; color:var(--ff-ink); padding:2.5px 0; }
+.calc-tip i em { font-style:normal; font-family:var(--mono); color:var(--ff-soft); white-space:nowrap; }
+.calc-tip i.sum { border-top:1px solid var(--ff-rule-hard); margin-top:3px; padding-top:5px; font-weight:600; }
+.calc-tip i.sum em { color:var(--ff-ink); font-weight:600; }
+.calc-tip u { display:block; text-decoration:none; font-size:10px; line-height:1.4;
+  color:var(--ff-mute); margin-top:6px; font-weight:400; }
+/* the pop-up must not be clipped while the column is still spawning */
+.hero-genie-on .ff-metric.has-calc:hover { overflow:visible; }
+
+/* ---- the longer bar hovers (regression, DCF) get a wider box ---- */
+.has-tip.wide::after { width:330px; }
+
+/* ---- chip 5: the reviewer row carries a 14px negative margin, so its note
+   sat 14px right of the others ---- */
+.hero-genie-on .ff-row.conclusion .ff-note { right:14px; }
+
+/* ---- Our read: titles outside the boxes in the title face; three columns,
+   the middle one stacked; the likely-investors table on the right ---- */
+.or-grid { grid-template-columns:5fr 4fr 4fr; gap:14px; align-items:start; }
+.or-blk { display:flex; flex-direction:column; gap:7px; }
+.or-blk .or + .or-t { margin-top:8px; }
+.or-t { margin:0; font-family:var(--serif); font-size:15px; font-weight:600; letter-spacing:-.012em;
+  line-height:1.2; color:var(--ff-ink); }
+.or-col.funds i { padding:2px 0; }
+.or-col.funds i em small { font-family:var(--sans); font-size:9px; color:var(--ff-mute); margin-left:5px; }
+.or-col.funds u { margin-top:6px; font-size:9.5px; line-height:1.35; }
+.hero-genie-on .our-read { max-height:calc(480px * var(--exp, 0)); }
+
+@media (max-width:900px) {
+  .calc-tip { right:auto; left:0; }
+  .or-grid { grid-template-columns:1fr; }
+}

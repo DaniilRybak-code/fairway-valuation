@@ -32,7 +32,18 @@ run() {
   shift
   "$@" || fail=1
 }
-run "0 PUSHED          is anything of yours only on this laptop"       sh tools/check_pushed.sh
+# CHECK 0 RUNS GIT, SO IT IS OPT-OUTABLE AND THE OPT-OUT IS NOT OPTIONAL FOR AN AGENT.
+# D10: nobody runs any git command on Daniil's machine through the bridge, including read-only
+# ones, because they leave an index.lock he cannot clear. check_pushed.sh runs git status and git
+# fetch, so an agent running this suite through the bridge MUST run it as
+#   FAIRWAY_NO_GIT=1 sh tools/check_all.sh
+# Daniil running it in his own terminal wants check 0 and should not set the variable. This was
+# added at 20:05 on 4-Sep after Opus ran the suite through the bridge and left exactly that lock.
+if [ "$FAIRWAY_NO_GIT" = "1" ]; then
+  printf '\n=== 0 PUSHED          SKIPPED: FAIRWAY_NO_GIT=1, no git may run through the bridge ===\n'
+else
+  run "0 PUSHED          is anything of yours only on this laptop"       sh tools/check_pushed.sh
+fi
 run "1 INTAKE          did the supplied file reach the engine"        python3 tools/check_intake.py
 run "2 RAW COVERAGE    is every supplied row accounted for"           python3 tools/check_raw_coverage.py
 run "3 FIELD REACH     does every figure reach a row"                 python3 tools/check_field_reach.py

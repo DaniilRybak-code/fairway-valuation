@@ -24,6 +24,19 @@ THIN = 3          # fewer than this and the list is not worth showing as a list
 def main():
     callable_rows = [d for d in I.INVESTORS if 'CALLABLE' in (d.get('layer') or '')]
     rend = [d for d in callable_rows if I.renderable(d)[0]]
+    # THE VOCABULARY REPORT. A sector name that matches no archetype matches no founder, and it
+    # fails silently: the house simply never appears and nothing says why. Nine houses tagged
+    # "Insurance" were invisible to every insurance founder until 4-Sep. The aliases in
+    # investors.SECTOR_ALIASES translate what can be translated; what is printed below is what
+    # cannot, and each one is either a missing alias or an industry our taxonomy does not carry.
+    arch = {r[f].strip() for r in M.listed + M.private
+            for f in ('archetype', 'archetype_secondary') if r.get(f)}
+    reach, dead = I.sector_vocabulary(arch)
+    print('SECTORS %d category names in the file | %d reach a founder | %d reach nobody'
+          % (len(reach) + len(dead), len(reach), len(dead)))
+    for c, (n, _h) in sorted(dead.items(), key=lambda x: -x[1][0]):
+        print('        %-40s %3d houses carry it and no founder can match it' % (c, n))
+
     print('TABLE   %d houses | %d carry a CALLABLE layer | %d of those can render'
           % (len(I.INVESTORS), len(callable_rows), len(rend)))
 

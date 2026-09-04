@@ -92,3 +92,24 @@ without any payment rail at all.
 4. **The ICO fee.** Ten minutes.
 
 Items 2, 3 and 4 together are under an hour. Item 1 is not in your control and is the one to start.
+
+---
+
+# DECIDED, 4 September 2026
+
+Daniil's answers to the three open items above, in his own words, applied.
+
+1. **Price: 750 USD.** Not GBP. The page asks the founder to pick a currency for their ranges, so
+   the price has to be written as $750 or "750 USD" and never as a bare 750. The meta description
+   ending "Free." changes on the same deploy.
+2. **Entity: none.** Sole trader. The disclaimer written for a company is replaced.
+3. **Address for service: 29 Westbourne Terrace, London W2 3UN.** His home address, chosen over the
+   £50-a-year registered office. It will be public on the live page and in the repo.
+
+The disclaimer is therefore ready except for one field, the contact email:
+
+> Fairway is a service of Daniil Rybak, trading as Fairway, 29 Westbourne Terrace, London W2 3UN.
+> Contact [email].
+
+Still open from this document: the ICO data protection fee (about £52, ten minutes), the SM&CR
+answer, and whether the fee is taken before or after the founder sees the review.

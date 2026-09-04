@@ -46,17 +46,105 @@ def _f(v):
         return None
 
 
+# ---------------------------------------------------------------------------
+# ONE VOCABULARY, WRITTEN TWO WAYS, AND THE SECOND ONE WAS INVISIBLE.
+#
+# Daniil, 4-Sep-2026: fix the investor sector column, and do not break peer selection doing it.
+#
+# A house reaches a founder when the founder's ARCHETYPE appears in the house's
+# screening_categories, matched as an exact string. The archetypes come from our tag files
+# ("Insurance Technology", "Consumer & Prosumer Software"). The screening categories came partly
+# from the same vocabulary and partly from the enrichment pulls, which wrote the market in their
+# own words ("Insurance", "Personal Software / Productivity"). The two never meet, and no error is
+# ever raised: the house simply never matches anybody. Nine houses are tagged Insurance and
+# `florin`, an insurance carrier, was shown none of them. It is the geography substring bug of
+# 3-Sep in a different costume, and the same lesson: a facet that silently scores nothing looks
+# exactly like a thin database.
+#
+# THE TRANSLATION IS HERE AND NOT IN THE FILE, on purpose. Rewriting data/investors.csv would
+# destroy the evidence of what each pull actually said, and the file is the audit trail. The
+# original name is kept alongside the archetype it maps to, so an exact match that already worked
+# still works and nothing that matched before can stop matching.
+#
+# THIS CANNOT TOUCH PEER SELECTION. screening_categories exists in exactly one module, this one:
+# match_reference.py never reads it, has no import of investors.py, and its own archetypes come
+# from the tag files. Comparable selection is unchanged by anything in this block, and the golden
+# suite is the proof: the core, secondary and private lanes of all 102 fixtures must not move.
+#
+# An entry here is a judgement about our own taxonomy and is written down as one. A category with
+# no honest archetype (Healthcare, Life Sciences, Climate & Energy: industries, not business
+# models) is deliberately absent and reported by tools/investor_coverage.py rather than forced.
+SECTOR_ALIASES = {
+    'Insurance': ('Insurance Technology',),
+    'Personal Software / Productivity': ('Consumer & Prosumer Software',),
+    'Consumer subscription': ('Consumer & Prosumer Software',),
+    'Enterprise Applications': ('Business Applications',),
+    'Cloud & Infrastructure Software': ('Cloud & Infrastructure',),
+    'Agent Ops': ('Data, AI & Developer Tools',),
+    'Scraping / Data for AI': ('Data, AI & Developer Tools',),
+    # HubSpot and Klaviyo are tagged Marketing & Customer Engagement in our own listed set, which
+    # is where a sales-engagement fund's portfolio sits in our vocabulary.
+    'Sales Engagement': ('Marketing & Customer Engagement',),
+    'Communications & Customer Engagement': ('Communications & Collaboration',
+                                             'Marketing & Customer Engagement'),
+    # Shopify is Commerce & Payments Software here and BASE is Commerce Enablement & Fulfilment;
+    # a fund that calls itself e-commerce enablement backs both, so it is offered to both.
+    'E-commerce Enablement': ('Commerce Enablement & Fulfilment', 'Commerce & Payments Software'),
+    'D2C / Consumer Brand': ('Consumer Brand',),
+    'D2C': ('Consumer Brand',),
+    'Consumer Marketplace': ('Third-Party Marketplace',),
+    'B2B Marketplace': ('Third-Party Marketplace',),
+    'B2B marketplace': ('Third-Party Marketplace',),
+    'Marketplace aggregator': ('Third-Party Marketplace',),
+    'Real Estate Marketplace': ('Classifieds & Listings',),   # Zillow is Classifieds & Listings
+    'Streaming & Creator': ('Streaming & Digital Media',),
+    'Education': ('Online Learning',),
+    'Financial Data': ('Financial Data & Index',),
+    'Lending': ('Lending & Credit',),
+    'Travel Booking': ('Travel Booking & OTA',),
+}
+
+
 def _sectors(cell):
     """"Sector(n); Sector(n)" where n is that house's DEAL COUNT in the sector, not part of the
-    name. Splitting without stripping it produced one bucket per deal count on 3-Sep."""
+    name. Splitting without stripping it produced one bucket per deal count on 3-Sep.
+
+    The archetype each name maps to is added beside it, never instead of it, so an exact match
+    that already worked cannot be lost. Deal counts carry across unchanged.
+    """
     out = {}
     for c in (cell or '').split(';'):
         c = c.strip()
         if not c:
             continue
         m = re.match(r'^(.*?)\((\d+)\)$', c)
-        out[(m.group(1) if m else c).strip()] = int(m.group(2)) if m else 0
+        name = (m.group(1) if m else c).strip()
+        n = int(m.group(2)) if m else 0
+        out[name] = n
+        for a in SECTOR_ALIASES.get(name, ()):
+            out[a] = max(out.get(a, 0), n)
     return out
+
+
+def sector_vocabulary(archetypes):
+    """Which screening categories reach a founder and which cannot, given our archetypes.
+
+    Reported by tools/investor_coverage.py. A category that is neither an archetype nor aliased to
+    one is a category no founder can ever match: today those are industries rather than business
+    models, and forcing them into the taxonomy would be worse than naming them here.
+    """
+    seen, reach, dead = {}, {}, {}
+    for d in INVESTORS:
+        for c in (d.get('screening_categories') or '').split(';'):
+            c = re.sub(r'\(\d+\)$', '', c.strip()).strip()
+            if not c:
+                continue
+            seen[c] = seen.get(c, 0) + 1
+    for c, n in seen.items():
+        targets = (c,) if c in archetypes else SECTOR_ALIASES.get(c, ())
+        hit = [t for t in targets if t in archetypes]
+        (reach if hit else dead)[c] = (n, hit)
+    return reach, dead
 
 
 # THE SAME TOKENISER THE PEER MATCHER USES, imported rather than rewritten so "embedded payments"

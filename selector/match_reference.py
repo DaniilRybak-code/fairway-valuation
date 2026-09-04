@@ -425,6 +425,59 @@ for _r in listed:
         stale_rows.append(_r)
 
 # ---------------------------------------------------------------------------
+# A NEGATIVE OR ZERO MULTIPLE IS NOT A PRICE. IT IS n.m.
+#
+# Daniil, 4-Sep-2026: "Negative multiples are not allowed, they should be marked as n.m."
+#
+# Found by the recommendations check the same evening: `tash` was being shown a listed revenue
+# range of "-3.8x to 10.7x". The -3.8x is XP Inc, whose enterprise value came through at -$15.9bn
+# because a broker's client balances net against its market capitalisation in the equity-to-AV
+# bridge. The arithmetic is correct and the result is meaningless, which is what n.m. means on
+# every comp sheet a banker has ever read.
+#
+# WHAT THIS DOES NOT DO IS DROP THE COMPANY. XP Inc stays in the universe with its name, its tags,
+# its revenue and its growth: it is a real comparable and it can be shown as context. It simply
+# carries no meaningful multiple, so it cannot enter a range, a median or a quartile. The original
+# figure is kept on the row under nm_<field> so nothing is lost, and every row that loses a
+# multiple this way is named by tools/check_engine_reach.py, count in and count out.
+#
+# The same idiom as the stale sweep above, deliberately: one place, after the universe is built,
+# so no assignment site can be added later that forgets the rule.
+# ---------------------------------------------------------------------------
+NM = 'n.m.'
+MULT_FIELDS = ('mult', 'mult_alt', 'gp_mult', 'pb_mult', 'pe_mult', 'gmv_mult')
+not_meaningful = []
+
+
+def _sweep_nm(rows, where):
+    out = []
+    for r in rows:
+        for k in MULT_FIELDS:
+            v = r.get(k)
+            if v is not None and v <= 0:
+                r['nm_' + k] = v
+                r[k] = None
+                r.setdefault('nm_fields', []).append(k)
+                out.append((where, r.get('exchange_ticker') or r.get('company_key') or '',
+                            r.get('company_name', ''), k, v))
+    return out
+
+
+def multiple_display(row, field='mult'):
+    """What a comp sheet prints for this multiple.
+
+    The figure when it is meaningful, the string 'n.m.' when we hold one and it is not, and None
+    when we simply do not hold one. The three are different statements and a renderer that shows a
+    blank for the middle case is telling the founder we have no data when we have a fact.
+    """
+    if row.get(field) is not None:
+        return row[field]
+    return NM if ('nm_' + field) in row else None
+
+
+not_meaningful += _sweep_nm(listed, 'listed')
+
+# ---------------------------------------------------------------------------
 # PRIVATE UNIVERSE
 # Two files today: the software rounds and the consumer rounds. They share a schema.
 # A round is only eligible for a RANGE if in_medians is 1; every other row stays visible
@@ -622,6 +675,8 @@ for rfile, tfile in [('private-rounds.csv','private-companies-tags.csv'),
             private.append(row)
     except FileNotFoundError:
         pass
+
+not_meaningful += _sweep_nm(private, 'private')
 
 W = dict(tags_cap=12.0, arch=3.0, arch_soft=1.5, industry=3.0, function=2.0,
          buyer=2.5, acv=1.5, rev_model=2.5, gtm=2.0, role=1.0,

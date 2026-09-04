@@ -50,7 +50,7 @@
    "high": 10.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": -3.8,
+   "low": 2.3,
    "mid": 10.2,
    "n": 3,
    "period_mix": {
@@ -78,13 +78,13 @@
     "portfolio"
    ],
    "show_retention": false,
-   "spread": -2.8,
+   "spread": 4.7,
    "table": [
     {
      "company": "XP Inc.",
      "growth_basis": "CAGR_CY0_CY2",
      "growth_pct": 11.0,
-     "multiple": -3.8,
+     "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:XP"
@@ -355,20 +355,20 @@
     "ticker": "ENXTPA:WLN"
    },
    {
-    "company": "CAB Payments Holdings plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same revenue model; same AI stance",
-    "score": 6.5,
-    "ticker": "LSE:CABP"
-   },
-   {
     "company": "Priority Technology Holdings",
     "family": "fintech",
     "in_medians": true,
     "reason": "same end market; same revenue model; same AI stance",
     "score": 6.5,
     "ticker": "NASDAQCM:PRTH"
+   },
+   {
+    "company": "Digital Garage, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same revenue model; same AI stance",
+    "score": 6.5,
+    "ticker": "TSE:4819"
    }
   ],
   "secondary_range": {
@@ -387,7 +387,7 @@
    "high": 2.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
+   "low": 0.8,
    "mid": 1.3,
    "n": 5,
    "period_mix": {
@@ -406,17 +406,8 @@
     "card"
    ],
    "show_retention": false,
-   "spread": -1.0,
+   "spread": 3.3,
    "table": [
-    {
-     "company": "CAB Payments Holdings plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
-     "multiple": -2.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:CABP"
-    },
     {
      "company": "Worldline SA",
      "growth_basis": "FILE_UNSPECIFIED_HORIZON",
@@ -425,6 +416,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ENXTPA:WLN"
+    },
+    {
+     "company": "Digital Garage, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 11.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:4819"
     },
     {
      "company": "Marqeta, Inc.",

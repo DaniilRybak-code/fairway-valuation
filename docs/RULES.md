@@ -144,6 +144,18 @@ Single forward years exist to estimate volume, never to sort peers into growth b
 *Agreed 31 Aug. Built:* yes. Cost today: 319 of 511 listed rows can rank on growth, 192 cannot,
 because they carry only one forward year.
 
+**B11. A multiple that is negative or zero is not a price. It is n.m.**
+*Added 4 Sep, Daniil: "Negative multiples are not allowed, they should be marked as n.m."* A
+negative enterprise value is arithmetic, not evidence: a broker or a payments company holding client
+balances nets its own cash against its market capitalisation and comes out below zero. The company
+is not dropped. It keeps its name, its tags, its revenue and its growth and can be shown as context;
+it simply carries no meaningful multiple, so it cannot enter a range, a median or a quartile, and
+the page prints `n.m.` rather than a blank, because a blank says we hold nothing when we hold a
+fact. The original figure stays on the row under `nm_<field>`, and every row this touches is named
+by `tools/check_engine_reach.py`, count in and count out.
+*Built:* yes, in the loader, one sweep after the universe is built. Four figures on four companies
+today.
+
 **B10. Entity matters as much as period.**
 Whose revenue is it, and does it belong to the thing being valued? Flipkart India Private Limited is
 the wholesale arm; Flipkart Internet Private Limited is the marketplace. Same group, five times
@@ -239,6 +251,26 @@ between them. **If it cannot name what it dropped, it is not allowed to drop it.
 did. A hand-written `git add` list is a second place for work to be silently lost: it fails when a
 file is forgotten, and it fails again when a whole block is skipped. Every commit instruction handed
 to Daniil is `git add -A`, and every handover names the SHA that the state was verified against.
+
+**D14. A ruling, a rule change or a data pull is committed the moment it lands, not at the end of
+the day.**
+*Added 4 Sep, Daniil: "as soon as we make some decision regarding rules, data, or when we get the
+new data pull, we commit it immediately or at least make a note of it to be committed. We do not
+want to lose any work."* D7 says a session ends with a commit and D9 says a ruling that lives only
+in a conversation is not in the product. D14 is the tighter version of both, because a session can
+end unexpectedly: an agent hits its context limit, a laptop sleeps, a chat is closed. The unit is
+the decision, not the day.
+
+Three parts:
+
+1. **The moment a decision is made, it is written into code or a file in the same turn**, and
+   committed at the next natural break rather than held for a handover.
+2. **A data pull is committed on arrival**, before it is loaded, analysed or argued about. The raw
+   file is the record of what was sent (D1, D12), and an unpushed raw file is a pull that can
+   disappear without anyone knowing it existed.
+3. **When a commit genuinely cannot happen now**, the decision goes on the TO COMMIT list at the
+   foot of the status document in the same turn, with the file it lives in. An item on that list
+   is unfinished work, not finished work.
 
 ---
 

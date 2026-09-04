@@ -133,6 +133,25 @@ def main():
         if bad:
             failures += 1
 
+    # CHECK 3, A ROW THAT REACHES THE ENGINE AND CARRIES NO PRICE.
+    #
+    # Daniil, 4-Sep-2026: "Negative multiples are not allowed, they should be marked as n.m."
+    # The loader applies that rule, and this is the count in, count out, name what fell. These
+    # companies are NOT dropped: they keep their name, their tags and their revenue and can be
+    # shown as context. They cannot enter a range, a median or a quartile, which is what n.m.
+    # means, and a silent version of that would be exactly the class of loss D-rules exist to stop.
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    sys.path.insert(0, os.path.join(here, 'selector'))
+    import match_reference as M
+    print('\nCHECK 3 -- multiples that are not meaningful, marked n.m. rather than dropped')
+    priced = len([r for r in M.listed if r.get('mult') is not None])
+    print('   listed rows %d | carry a revenue multiple %d | marked n.m. %d'
+          % (len(M.listed), priced, len(M.not_meaningful)))
+    for where, tk, name, field, value in M.not_meaningful:
+        print('      n.m.  %-8s %-30s %-9s was %s' % (where, name[:30], field, value))
+    if not M.not_meaningful:
+        print('      none')
+
     print('\n%s' % ('PASS: every row reaches the engine and no round votes twice.' if not failures
                     else 'FAIL: %d finding(s) above. A row in the file and not in the engine is ABSENT, '
                          'not pending (D8); a round counted twice is a silent double vote.' % failures))

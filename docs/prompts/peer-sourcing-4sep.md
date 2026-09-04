@@ -97,25 +97,33 @@ disclosed at announcement, 2023 onwards.
 
 ---
 
-# Part B. The funds behind the founders who get nobody to call
+# Part B. Consumer and consumer-education funds
 
-## What this is
+## What this is, corrected on 4 September at 20:02 UK
 
-The reveal ends with a list headed **"writing first cheques in your sector right now"**. Across the
-102 companies we test, that list averages 7.2 houses. **Seven founders get zero**, and six of them
-sit in two sectors:
+This section originally said that seven founders were shown nobody to call and that not one house
+in the file carried their sector. That was true when it was written and it is no longer the whole
+truth: the cause was half an empty shelf and half a vocabulary fault. A house reaches a founder
+only when the founder's sector name appears in the house's own sector column as an exact string,
+and the enrichment pulls had written the market in their own words ("Personal Software /
+Productivity" where our name is "Consumer & Prosumer Software"). That is now translated at read
+time, and the seven founders get eight houses each.
 
-| founder | what they do | our sector name for them |
+**What is left is a real and much narrower gap, which is what this pull is for.**
+
+| our sector name | callable houses that now reach it | what they are |
 |---|---|---|
-| `goldfish` | Local-first AI memory layer for Mac and Windows | Consumer & Prosumer Software |
-| `acti` | Mobile keyboard that embeds AI agents into any text field | Consumer & Prosumer Software |
-| `welltory` | Health tracking app built on heart-rate variability | Consumer & Prosumer Software |
-| `planeat` | Meal planning, grocery lists and nutrition tracking | Consumer & Prosumer Software |
-| `wondering` | Gamified consumer learning app, self-paced lessons | Online Learning |
-| `befreed` | Personalised audio learning and book summaries | Online Learning |
+| Consumer & Prosumer Software | 14 | mostly generalists: Accel, Sequoia, Andreessen Horowitz, Index, Dawn, Notion, South Park Commons, Uncork |
+| Online Learning | 3 | Founders Factory, Mercia Ventures, SFC Capital |
 
-We hold 445 houses and 92 of them can be called. **Not one carries either of those two sector
-names.** This is not a ranking problem, it is an empty shelf.
+Three houses is not a call list, and a consumer AI app founder handed four multi-stage generalists
+is being told something they already knew. The founders behind this pull are `goldfish` (local-first
+AI memory layer), `acti` (agentic mobile keyboard), `welltory` (heart-rate variability tracking),
+`planeat` (meal planning), `wondering` (gamified consumer learning) and `befreed` (audio learning).
+
+**So the bar for this pull is specialists, not names.** A generalist that also does consumer is
+already here. What is missing is the fund whose portfolio page is mostly consumer apps, or mostly
+consumer education, and which led a first cheque into one in the last twelve months.
 
 ## What I need back
 
@@ -129,7 +137,7 @@ recent_deal_1_company,recent_deal_1_date,recent_deal_1_source_url,recent_deal_2_
 recent_deal_2_date,recent_deal_2_source_url,cheque_range_source,geographies_source,last_verified
 ```
 
-**Fifteen houses per cluster, thirty in total.** Six good houses beat twelve loose ones, and a house
+**Fifteen houses per cluster, thirty in total, and a house we already hold does not count towards the fifteen.** Six good houses beat twelve loose ones, and a house
 that fails any rule below is worth less than no house at all, because a founder who calls a fund
 that does not write their cheque stops believing the rest of the page.
 

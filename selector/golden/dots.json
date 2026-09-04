@@ -62,7 +62,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -71,14 +71,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.3,
+   "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.9,
-   "mid": 1.95,
-   "n": 6,
+   "low": 1.8,
+   "mid": 2.1,
+   "n": 5,
    "period_mix": {
-    "NTM": 6
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -96,17 +96,8 @@
     "payouts"
    ],
    "show_retention": false,
-   "spread": -1.1,
+   "spread": 2.9,
    "table": [
-    {
-     "company": "CAB Payments Holdings plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
-     "multiple": -2.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:CABP"
-    },
     {
      "company": "The Western Union Company",
      "growth_basis": "CAGR_CY0_CY2",

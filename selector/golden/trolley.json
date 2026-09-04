@@ -62,23 +62,23 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 2.3,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 6.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.9,
-   "mid": 1.95,
-   "n": 6,
+   "low": 1.8,
+   "mid": 2.1,
+   "n": 5,
    "period_mix": {
-    "NTM": 6
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -86,7 +86,43 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "The Western Union Company",
+     "mult": 0.9,
+     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Payoneer Global Inc.",
+     "mult": 1.8,
+     "reason": "both do Cross-Border Payments; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Remitly Global, Inc.",
+     "mult": 2.1,
+     "reason": "both do Cross-Border Payments; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Flywire Corporation",
+     "mult": 2.3,
+     "reason": "both do Cross-Border Payments; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Corpay, Inc.",
+     "mult": 6.1,
+     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -96,17 +132,8 @@
     "payouts"
    ],
    "show_retention": false,
-   "spread": -2.7,
+   "spread": 6.8,
    "table": [
-    {
-     "company": "CAB Payments Holdings plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
-     "multiple": -2.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:CABP"
-    },
     {
      "company": "The Western Union Company",
      "growth_basis": "CAGR_CY0_CY2",
