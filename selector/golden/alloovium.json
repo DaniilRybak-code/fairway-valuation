@@ -1,0 +1,850 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "AppFolio, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same business function; sold the same way",
+    "score": 11.0,
+    "ticker": "NASDAQGM:APPF"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation, intelligence; related type of business; same kind of customer; same revenue model",
+    "score": 8.9,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of intelligence; related type of business; same kind of customer; same revenue model",
+    "score": 8.8,
+    "ticker": "NYSE:SMWB"
+   },
+   {
+    "company": "Red Violet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of records; related type of business; same kind of customer; sold the same way",
+    "score": 6.6,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "Yext, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of review; related type of business; same kind of customer; sold the same way",
+    "score": 6.6,
+    "ticker": "NYSE:YEXT"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of project; related type of business; same revenue model",
+    "score": 5.6,
+    "ticker": "NASDAQGS:TEAM"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 6
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 6.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 4.15,
+   "n": 6,
+   "period_mix": {
+    "NTM": 6
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "intelligence",
+    "project",
+    "records",
+    "review"
+   ],
+   "show_retention": true,
+   "spread": 5.6,
+   "table": [
+    {
+     "company": "Yext, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 0.0,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": 95.0,
+     "ticker": "NYSE:YEXT"
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "NTM",
+     "growth_pct": -2.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "NTM",
+     "growth_pct": 11.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
+     "company": "Atlassian Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 6.1,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NASDAQGS:TEAM"
+    },
+    {
+     "company": "AppFolio, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 6.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:APPF"
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 10.0,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     },
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Greenoaks",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     },
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gong",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Undisclosed (Nasdaq Private Market secondary)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "DST",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "OpenAI Startup Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "NEA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Goldman Sachs AM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Sixth Street",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     },
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tidemark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Viking Global Investors (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "BDT & MSD Partners (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "J.P. Morgan Growth Equity Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Blue Owl",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Alkeon Capital (new)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Goldman Sachs Alternatives (existing)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Eurazeo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bpifrance",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "General Atlantic",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
+    "score": 7.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 150.0,
+    "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
+    "score": 7.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gong",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of intelligence; related type of business; same kind of customer; same revenue model",
+    "score": 11.3,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "Harvey",
+    "date": "Jun-25",
+    "in_medians": false,
+    "mult": 66.7,
+    "reason": "both do Document Review; same type of business; same kind of customer; same revenue model",
+    "score": 13.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Clio",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "shares the language of document; same type of business; same business function; same revenue model",
+    "score": 15.3,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "AlphaSense",
+    "date": "Jun-24",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "shares the language of document, intelligence; related type of business; same kind of customer; same revenue model",
+    "score": 9.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Doctolib",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "shares the language of records; same type of business; same business function; same revenue model",
+    "score": 15.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 3
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 105.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 15.0,
+   "mid": 20.0,
+   "n": 3,
+   "period_mix": {
+    "RUN_RATE": 3
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Clio",
+     "mult": 15.0,
+     "reason": "shares the language of document; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "AlphaSense",
+     "mult": 20.0,
+     "reason": "shares the language of document, intelligence; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Sierra",
+     "mult": 105.3,
+     "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "automation",
+    "document",
+    "intelligence"
+   ],
+   "spread": 7.0,
+   "tag_evidence": 0.5,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 53,
+  "secondary": [
+   {
+    "company": "Procore Technologies, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of construction, project; same type of business; same business function; same kind of customer",
+    "score": 9.7,
+    "ticker": "NYSE:PCOR"
+   },
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "score": 8.6,
+    "ticker": "NASDAQGS:INTA"
+   },
+   {
+    "company": "Planisware SAS",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of project; same business function; same kind of customer; same revenue model",
+    "score": 8.6,
+    "ticker": "ENXTPA:PLNW"
+   },
+   {
+    "company": "Asana, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of project; same business function; same kind of customer; same revenue model",
+    "score": 7.6,
+    "ticker": "NYSE:ASAN"
+   },
+   {
+    "company": "Trimble Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of construction; same type of business; same kind of customer",
+    "score": 7.1,
+    "ticker": "NASDAQGS:TRMB"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.5,
+   "mid": 4.6,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Asana, Inc.",
+     "mult": 2.3,
+     "reason": "shares the language of project; same business function; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Planisware SAS",
+     "mult": 6.4,
+     "reason": "shares the language of project; same business function; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "construction",
+    "project"
+   ],
+   "show_retention": true,
+   "spread": 1.5,
+   "table": [
+    {
+     "company": "Trimble Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:TRMB"
+    },
+    {
+     "company": "Intapp, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": 123.0,
+     "ticker": "NASDAQGS:INTA"
+    },
+    {
+     "company": "Procore Technologies, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 106.0,
+     "ticker": "NYSE:PCOR"
+    }
+   ],
+   "tag_evidence": 1.2,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "The document intelligence layer for construction"
+}

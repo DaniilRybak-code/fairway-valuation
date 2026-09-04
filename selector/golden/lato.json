@@ -1,0 +1,589 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Morningstar, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Investment Research, Private Market Data; same type of business; same end market; same business function",
+    "score": 17.2,
+    "ticker": "NASDAQ:MORN"
+   },
+   {
+    "company": "FactSet Research Systems Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Market Data; same type of business; same end market; same business function",
+    "score": 15.5,
+    "ticker": "NYSE:FDS"
+   },
+   {
+    "company": "CRISIL Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of research; same type of business; same end market; same business function",
+    "score": 12.8,
+    "ticker": "NSEI:CRISIL"
+   },
+   {
+    "company": "MSCI Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of data, private; same type of business; same end market; same business function",
+    "score": 10.7,
+    "ticker": "NYSE:MSCI"
+   },
+   {
+    "company": "S&P Global Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Market Data, Research; same type of business; same end market; same business function",
+    "score": 10.5,
+    "ticker": "NYSE:SPGI"
+   },
+   {
+    "company": "London Stock Exchange Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Market Data; same type of business; same end market; same business function",
+    "score": 10.4,
+    "ticker": "LSE:LSEG"
+   },
+   {
+    "company": "Clarkson PLC",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of research; related type of business; same end market; same kind of customer",
+    "score": 10.3,
+    "ticker": "LSE:CKN"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 9.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.4,
+   "mid": 5.3,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Clarkson PLC",
+     "mult": 1.6,
+     "reason": "shares the language of research; related type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Morningstar, Inc.",
+     "mult": 3.4,
+     "reason": "both do Investment Research, Private Market Data; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FactSet Research Systems Inc.",
+     "mult": 4.6,
+     "reason": "both do Market Data; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "London Stock Exchange Group plc",
+     "mult": 5.3,
+     "reason": "both do Market Data; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "CRISIL Limited",
+     "mult": 7.2,
+     "reason": "shares the language of research; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "S&P Global Inc.",
+     "mult": 9.5,
+     "reason": "both do Market Data, Research; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "MSCI Inc.",
+     "mult": 12.7,
+     "reason": "shares the language of data, private; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "data",
+    "intelligence",
+    "investment",
+    "market",
+    "private",
+    "research"
+   ],
+   "show_retention": false,
+   "spread": 7.9,
+   "table": [
+    {
+     "company": "Clarkson PLC",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:CKN"
+    },
+    {
+     "company": "Morningstar, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 3.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MORN"
+    },
+    {
+     "company": "FactSet Research Systems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FDS"
+    },
+    {
+     "company": "London Stock Exchange Group plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 5.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:LSEG"
+    },
+    {
+     "company": "CRISIL Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 7.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:CRISIL"
+    },
+    {
+     "company": "S&P Global Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 1.0,
+     "multiple": 9.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:SPGI"
+    },
+    {
+     "company": "MSCI Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 12.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:MSCI"
+    }
+   ],
+   "tag_evidence": 4.7,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European",
+    "house_type": "Venture",
+    "investor": "MiddleGame Ventures",
+    "not_published": null,
+    "recent_deal": "Theia Insights",
+    "recent_deal_date": "2026-03",
+    "recent_deal_url": "https://www.middlegamevc.com/articles/our-investment-in-theia-insights/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Specialist early-stage investor in financial-services infrastructure, payments, capital-markets data and regtech.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "US-based, North America and Europe",
+    "house_type": "Venture",
+    "investor": "Motive Ventures",
+    "not_published": null,
+    "recent_deal": "Neno",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://motivepartners.com/content/why-we-invested-in-neno",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Fintech specialist backing digital banking, credit and capital-markets infrastructure from pre-seed to Series A.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Viking Global Investors (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "BDT & MSD Partners (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "J.P. Morgan Growth Equity Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Blue Owl",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Alkeon Capital (new)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Goldman Sachs Alternatives (existing)",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "AlphaSense",
+    "date": "Jun-24",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "both do Market Intelligence; related type of business; same end market; same business function",
+    "score": 22.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "ARR",
+    "bound": "",
+    "company": "Chainalysis",
+    "date": "May-22",
+    "in_medians": true,
+    "mult": 45.26,
+    "reason": "related type of business; same end market; same revenue model; sold the same way",
+    "score": 12.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 45.26,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 20.0,
+   "mid": 45.26,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "intelligence",
+    "market",
+    "research"
+   ],
+   "spread": 2.3,
+   "tag_evidence": 3.7,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 51,
+  "secondary": [
+   {
+    "company": "Moody's Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of data; same type of business; same end market; same business function",
+    "score": 10.1,
+    "ticker": "NYSE:MCO"
+   },
+   {
+    "company": "Fair Isaac Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; sold the same way",
+    "score": 8.5,
+    "ticker": "NYSE:FICO"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.2,
+   "mid": 10.35,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "data"
+   ],
+   "show_retention": false,
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "Fair Isaac Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 21.0,
+     "multiple": 10.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FICO"
+    },
+    {
+     "company": "Moody's Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 10.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:MCO"
+    }
+   ],
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  }
+ },
+ "label": "AI-powered market research and deal diligence for institutional investors"
+}

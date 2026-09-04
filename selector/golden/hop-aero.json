@@ -1,0 +1,904 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "FedEx Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of cargo, delivery; same type of business; same business function; same kind of customer",
+    "score": 12.3,
+    "ticker": "NYSE:FDX"
+   },
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
+    "score": 12.0,
+    "ticker": "NYSE:UPS"
+   },
+   {
+    "company": "SG Holdings Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
+    "score": 12.0,
+    "ticker": "TSE:9143"
+   },
+   {
+    "company": "Deutsche Post AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+    "score": 11.8,
+    "ticker": "XTRA:DHL"
+   },
+   {
+    "company": "Delhivery Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+    "score": 11.8,
+    "ticker": "NSEI:DELHIVERY"
+   },
+   {
+    "company": "PostNL N.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "score": 11.7,
+    "ticker": "ENXTAM:PNL"
+   },
+   {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "score": 11.7,
+    "ticker": "SZSE:002352"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 1.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 0.9,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "PostNL N.V.",
+     "mult": 0.3,
+     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "mult": 0.5,
+     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "mult": 0.7,
+     "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Deutsche Post AG",
+     "mult": 0.9,
+     "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FedEx Corporation",
+     "mult": 1.1,
+     "reason": "shares the language of cargo, delivery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "United Parcel Service",
+     "mult": 1.2,
+     "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "cargo",
+    "delivery",
+    "logistics"
+   ],
+   "show_retention": false,
+   "spread": 8.3,
+   "table": [
+    {
+     "company": "PostNL N.V.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:PNL"
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SZSE:002352"
+    },
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9143"
+    },
+    {
+     "company": "Deutsche Post AG",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DHL"
+    },
+    {
+     "company": "FedEx Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FDX"
+    },
+    {
+     "company": "United Parcel Service",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UPS"
+    },
+    {
+     "company": "Delhivery Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 17.0,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:DELHIVERY"
+    }
+   ],
+   "tag_evidence": 0.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 4.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European, including Israel",
+    "house_type": "Venture",
+    "investor": "Planet A Ventures",
+    "not_published": null,
+    "recent_deal": "Gigaton",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based; global transportation opportunities, including Europe",
+    "house_type": "Venture",
+    "investor": "Trucks Venture Capital",
+    "not_published": null,
+    "recent_deal": "Providio AI",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://providio.ai/blog/from-human-to-superhuman",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed investor in transportation systems, freight, aviation and mobility infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "North America and Europe, selectively global",
+    "house_type": "Venture",
+    "investor": "Dynamo Ventures",
+    "not_published": null,
+    "recent_deal": "UNIT AI",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.dynamo.vc/insights/unit-ai",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Southern Europe and Latin America, especially Spain",
+    "house_type": "Venture",
+    "investor": "Kfund",
+    "not_published": null,
+    "recent_deal": "Pollen",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe and US",
+    "house_type": "Venture",
+    "investor": "Pale blue dot",
+    "not_published": null,
+    "recent_deal": "Staer",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://paleblue.vc/portfolio/staer",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Europe-focused (Berlin); invests internationally",
+    "house_type": "Venture",
+    "investor": "FoodLabs",
+    "not_published": null,
+    "recent_deal": "Reformed",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Europe-focused, invests globally",
+    "house_type": "Venture",
+    "investor": "Speedinvest",
+    "not_published": null,
+    "recent_deal": "Kyrok?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "BOND",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "Mubadala Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "Northzone",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "REWE",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Blackstone Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "TPG Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "ChrysCapital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Investcorp",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Norwest",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Glovo",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Delivery Hero (acquirer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Glovo",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "all-stock)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Wolt",
+      "date": "Nov-21"
+     }
+    ],
+    "investor": "DoorDash",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "Blackstone Horizons",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "Guggenheim Investments",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "Hedosophia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "Adage Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     },
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Fidelity",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 1",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "Atreides",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gopuff",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "Eldridge",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Baillie Gifford",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Chimera",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Steadview Capital",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Flink",
+    "date": "Sep-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of delivery; same type of business; same business function",
+    "score": 7.2,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Xpressbees",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": 8.94,
+    "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+    "score": 12.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Glovo",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of delivery; same type of business; same business function",
+    "score": 7.2,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Wolt",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 23.5,
+    "reason": "shares the language of delivery; same type of business; same business function",
+    "score": 7.2,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "CONTEMPORANEOUS_PRESS",
+    "bound": "",
+    "company": "Gopuff",
+    "date": "Jul-21",
+    "in_medians": true,
+    "mult": 44.12,
+    "reason": "shares the language of delivery; same type of business; same business function",
+    "score": 7.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Delhivery",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 5.97,
+    "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+    "score": 12.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "NET_REVENUE": 4
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Wolt"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 44.12,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 5.97,
+   "mid": 23.5,
+   "n": 4,
+   "period_mix": {
+    "LTM": 4
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Delhivery",
+     "mult": 5.97,
+     "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Xpressbees",
+     "mult": 8.94,
+     "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Wolt",
+     "mult": 23.5,
+     "reason": "shares the language of delivery; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Gopuff",
+     "mult": 44.12,
+     "reason": "shares the language of delivery; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "delivery",
+    "logistics"
+   ],
+   "spread": 7.4,
+   "tag_evidence": 0.5,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 63,
+  "secondary": [
+   {
+    "company": "Blue Dart Express Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "score": 11.7,
+    "ticker": "NSEI:BLUEDART"
+   },
+   {
+    "company": "J&T Global Express Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "score": 9.7,
+    "ticker": "SEHK:1519"
+   },
+   {
+    "company": "Grupo Traxion, S.A.B. de C.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Cargo Transport; related type of business; same kind of customer; sold the same way",
+    "score": 9.5,
+    "ticker": "BMV:TRAXION A"
+   },
+   {
+    "company": "Pkp Cargo S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of cargo, transport; related type of business; same kind of customer; sold the same way",
+    "score": 9.2,
+    "ticker": "WSE:PKP"
+   },
+   {
+    "company": "Mitsubishi Logistics",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics, transport; related type of business; same kind of customer; sold the same way",
+    "score": 8.9,
+    "ticker": "TSE:9301"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.6,
+   "mid": 0.7,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "mult": 0.2,
+     "reason": "both do Cargo Transport; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Pkp Cargo S.A.",
+     "mult": 0.6,
+     "reason": "shares the language of cargo, transport; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "J&T Global Express Limited",
+     "mult": 0.7,
+     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Blue Dart Express Limited",
+     "mult": 1.7,
+     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Mitsubishi Logistics",
+     "mult": 2.1,
+     "reason": "shares the language of logistics, transport; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "cargo",
+    "delivery",
+    "logistics",
+    "transport"
+   ],
+   "show_retention": false,
+   "spread": 10.5,
+   "table": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BMV:TRAXION A"
+    },
+    {
+     "company": "Pkp Cargo S.A.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 9.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:PKP"
+    },
+    {
+     "company": "J&T Global Express Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 18.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:1519"
+    },
+    {
+     "company": "Blue Dart Express Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:BLUEDART"
+    },
+    {
+     "company": "Mitsubishi Logistics",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9301"
+    }
+   ],
+   "tag_evidence": 1.5,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Autonomous rocket cargo delivery to contested environments in minutes"
+}

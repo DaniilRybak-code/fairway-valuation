@@ -1,0 +1,617 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of document; same type of business; same kind of customer; same revenue model",
+    "score": 11.3,
+    "ticker": "NASDAQGS:ADBE"
+   },
+   {
+    "company": "Figma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same revenue model; sold the same way",
+    "score": 8.8,
+    "ticker": "NYSE:FIG"
+   },
+   {
+    "company": "Autodesk, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same revenue model",
+    "score": 6.8,
+    "ticker": "NASDAQGS:ADSK"
+   },
+   {
+    "company": "Bentley Systems, Incorporated",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same revenue model",
+    "score": 5.8,
+    "ticker": "NASDAQGS:BSY"
+   },
+   {
+    "company": "Nemetschek SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same revenue model",
+    "score": 5.8,
+    "ticker": "XTRA:NEM"
+   },
+   {
+    "company": "PTC Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same revenue model",
+    "score": 5.8,
+    "ticker": "NASDAQGS:PTC"
+   },
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same revenue model",
+    "score": 5.8,
+    "ticker": "ENXTPA:DSY"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 6.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.1,
+   "mid": 5.8,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "design",
+    "document"
+   ],
+   "show_retention": true,
+   "spread": 1.9,
+   "table": [
+    {
+     "company": "Adobe Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.1,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ADBE"
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "NTM",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "Nemetschek SE",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 4.9,
+     "recurring_pct": 92.2,
+     "retention_pct": null,
+     "ticker": "XTRA:NEM"
+    },
+    {
+     "company": "Autodesk, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 13.0,
+     "multiple": 5.8,
+     "recurring_pct": 97.0,
+     "retention_pct": 105.0,
+     "ticker": "NASDAQGS:ADSK"
+    },
+    {
+     "company": "PTC Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 6.2,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTC"
+    },
+    {
+     "company": "Bentley Systems, Incorporated",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 12.0,
+     "multiple": 6.7,
+     "recurring_pct": 92.0,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:BSY"
+    },
+    {
+     "company": "Figma, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 32.0,
+     "multiple": 7.6,
+     "recurring_pct": null,
+     "retention_pct": 136.0,
+     "ticker": "NYSE:FIG"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Gamma",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gamma",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uncork Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gamma",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "South Park Commons",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Menlo Anthology",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Databricks Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Canva",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Fidelity Management & Research",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Canva",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "J.P. Morgan Asset Management",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Figma",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tender participants not disclosed",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gamma",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 21.0,
+    "reason": "both do Slide Generation, Document Design; same business function; same kind of customer; same revenue model",
+    "score": 22.6,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Notion",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 18.3,
+    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+    "score": 12.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "reason": "shares the language of ai, builder, generation; related type of business; same kind of customer; sold the same way",
+    "score": 13.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Canva",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 12.7,
+    "reason": "both do Templates; same type of business; same kind of customer; same revenue model",
+    "score": 17.4,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Figma",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 17.9,
+    "reason": "shares the language of design; same type of business; same revenue model; sold the same way",
+    "score": 11.8,
+    "type": "SECONDARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2,
+    "ARR_RUNRATE": 2
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 33.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 12.7,
+   "mid": 21.0,
+   "n": 4,
+   "period_mix": {
+    "RUN_RATE": 4
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "ai",
+    "builder",
+    "design",
+    "document",
+    "generation",
+    "presentation",
+    "slide",
+    "templates"
+   ],
+   "spread": 2.6,
+   "tag_evidence": 5.1,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 25,
+  "secondary": [
+   {
+    "company": "Dropbox, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of document; same kind of customer; same revenue model; sold the same way",
+    "score": 8.3,
+    "ticker": "NASDAQGS:DBX"
+   },
+   {
+    "company": "Box, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of document; related type of business; same revenue model",
+    "score": 5.3,
+    "ticker": "NYSE:BOX"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.6,
+   "mid": 3.85,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "document"
+   ],
+   "show_retention": true,
+   "spread": 1.1,
+   "table": [
+    {
+     "company": "Box, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 3.6,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:BOX"
+    },
+    {
+     "company": "Dropbox, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DBX"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": true
+  }
+ },
+ "label": "AI presentations without the AI slop"
+}

@@ -1,0 +1,520 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+    "score": 7.7,
+    "ticker": "NYSE:UPS"
+   },
+   {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+    "score": 7.7,
+    "ticker": "SZSE:002352"
+   },
+   {
+    "company": "Delhivery Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+    "score": 7.7,
+    "ticker": "NSEI:DELHIVERY"
+   },
+   {
+    "company": "Expeditors International",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, supply; same type of business; same kind of customer",
+    "score": 7.2,
+    "ticker": "NYSE:EXPD"
+   },
+   {
+    "company": "Sinotrans Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, supply; same type of business; same kind of customer",
+    "score": 7.2,
+    "ticker": "SEHK:598"
+   },
+   {
+    "company": "Radiant Logistics, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of agents; same type of business; same kind of customer",
+    "score": 6.8,
+    "ticker": "NYSEAM:RLGT"
+   },
+   {
+    "company": "STEF SA",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain; same type of business; same kind of customer",
+    "score": 5.9,
+    "ticker": "ENXTPA:STF"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 1.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.6,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Sinotrans Limited",
+     "mult": 0.4,
+     "reason": "shares the language of chain, supply; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Radiant Logistics, Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of agents; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "mult": 0.5,
+     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "STEF SA",
+     "mult": 0.6,
+     "reason": "shares the language of chain; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "United Parcel Service",
+     "mult": 1.2,
+     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Expeditors International",
+     "mult": 1.8,
+     "reason": "shares the language of chain, supply; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "agents",
+    "chain",
+    "supply"
+   ],
+   "show_retention": false,
+   "spread": 6.2,
+   "table": [
+    {
+     "company": "Sinotrans Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:598"
+    },
+    {
+     "company": "Radiant Logistics, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSEAM:RLGT"
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SZSE:002352"
+    },
+    {
+     "company": "STEF SA",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:STF"
+    },
+    {
+     "company": "United Parcel Service",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UPS"
+    },
+    {
+     "company": "Expeditors International",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 0.0,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:EXPD"
+    },
+    {
+     "company": "Delhivery Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 17.0,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:DELHIVERY"
+    }
+   ],
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Backed VC",
+    "not_published": null,
+    "recent_deal": "Round",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://www.finsmes.com/2026/04/round-raises-6m-in-seed-funding.html",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Manufacturing and automation alongside frontier tech. $500k to $5M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Southern Europe and Latin America, especially Spain",
+    "house_type": "Venture",
+    "investor": "Kfund",
+    "not_published": null,
+    "recent_deal": "Pollen",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe and US",
+    "house_type": "Venture",
+    "investor": "Pale blue dot",
+    "not_published": null,
+    "recent_deal": "Staer",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://paleblue.vc/portfolio/staer",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 4.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European, including Israel",
+    "house_type": "Venture",
+    "investor": "Planet A Ventures",
+    "not_published": null,
+    "recent_deal": "Gigaton",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based; global transportation opportunities, including Europe",
+    "house_type": "Venture",
+    "investor": "Trucks Venture Capital",
+    "not_published": null,
+    "recent_deal": "Providio AI",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://providio.ai/blog/from-human-to-superhuman",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed investor in transportation systems, freight, aviation and mobility infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "North America and Europe, selectively global",
+    "house_type": "Venture",
+    "investor": "Dynamo Ventures",
+    "not_published": null,
+    "recent_deal": "UNIT AI",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.dynamo.vc/insights/unit-ai",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.15,
+    "deal_note": "Regional fund deployments (MEIF II) with Maven named as fund manager, not balance-sheet venture cheques.",
+    "geographies": "UK; South West England",
+    "house_type": "Venture",
+    "investor": "Maven Capital Partners",
+    "not_published": null,
+    "recent_deal": "Xentra",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.uktech.news/cybersecurity/cybersecurity-provider-xentra-secures-2-7m-20260720",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "The SWIF Maven Equity Fund invests in earlier stage and established companies located across the South West of England.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Europe-focused (Berlin); invests internationally",
+    "house_type": "Venture",
+    "investor": "FoodLabs",
+    "not_published": null,
+    "recent_deal": "Reformed",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "WayCool Foods",
+      "date": "Jun-22"
+     }
+    ],
+    "investor": "Lightrock and existing investors",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ninjacart",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Walmart",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ninjacart",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Flipkart",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "WayCool Foods",
+    "date": "Jun-22",
+    "in_medians": true,
+    "mult": 5.91,
+    "reason": "shares the language of chain, supply; related type of business; sold the same way",
+    "score": 5.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Ninjacart",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 7.1,
+    "reason": "both do Supply Chain; related type of business; sold the same way",
+    "score": 5.7,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {},
+  "private_window_months": 56,
+  "secondary": [
+   {
+    "company": "Lindsay Australia Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain; same type of business; same kind of customer",
+    "score": 5.9,
+    "ticker": "ASX:LAU"
+   },
+   {
+    "company": "Lineage, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of automation; same type of business; same kind of customer",
+    "score": 5.6,
+    "ticker": "NASDAQGS:LINE"
+   },
+   {
+    "company": "Snowman Logistics Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain; same type of business; same kind of customer",
+    "score": 5.9,
+    "ticker": "NSEI:SNOWMAN"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 3.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 1.9,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Lindsay Australia Limited",
+     "mult": 0.5,
+     "reason": "shares the language of chain; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Lineage, Inc.",
+     "mult": 3.3,
+     "reason": "shares the language of automation; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "chain"
+   ],
+   "show_retention": false,
+   "spread": 6.6,
+   "table": [
+    {
+     "company": "Lindsay Australia Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:LAU"
+    },
+    {
+     "company": "Lineage, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 2.0,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:LINE"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "Agentic supply chain optimization"
+}

@@ -1,0 +1,1130 @@
+{
+ "expected": {
+  "all_ranges": {
+   "listed": {
+    "BOOK": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BOOK",
+     "basis_label": "price to book",
+     "basis_mix": {
+      "UNKNOWN": 6
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "book_value",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 2.6,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 0.7,
+     "mid": 1.8,
+     "n": 6,
+     "period_mix": {
+      "NTM": 6
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Qfin Holdings, Inc.",
+       "mult": 0.3,
+       "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Oportun Financial Corporation",
+       "mult": 0.7,
+       "reason": "shares the language of credit, lending, underwriting; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Merchants Bancorp",
+       "mult": 1.0,
+       "reason": "shares the language of lending, loan; related type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Pagaya Technologies Ltd.",
+       "mult": 2.6,
+       "reason": "shares the language of credit, loan, underwriting; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Funding Circle Holdings plc",
+       "mult": 2.6,
+       "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Upstart Holdings, Inc.",
+       "mult": 2.8,
+       "reason": "both do Alternative Credit Data; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      }
+     ],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "alternative",
+      "credit",
+      "data",
+      "lending",
+      "loan",
+      "risk",
+      "scoring",
+      "underwriting"
+     ],
+     "show_retention": false,
+     "spread": 9.3,
+     "table": [
+      {
+       "company": "Qfin Holdings, Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 0.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:QFIN"
+      },
+      {
+       "company": "Oportun Financial Corporation",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 0.7,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:OPRT"
+      },
+      {
+       "company": "Merchants Bancorp",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 1.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:MBIN"
+      },
+      {
+       "company": "Pagaya Technologies Ltd.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 2.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:PGY"
+      },
+      {
+       "company": "Funding Circle Holdings plc",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 2.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "LSE:FCH"
+      },
+      {
+       "company": "Upstart Holdings, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 34.0,
+       "multiple": 2.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:UPST"
+      }
+     ],
+     "tag_evidence": 2.2,
+     "thin": false,
+     "triangulated": false
+    },
+    "EARNINGS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "EARNINGS",
+     "basis_label": "price to earnings",
+     "basis_mix": {
+      "UNKNOWN": 6
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "net_income",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 8.5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 3.5,
+     "mid": 6.2,
+     "n": 6,
+     "period_mix": {
+      "NTM": 6
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "alternative",
+      "credit",
+      "data",
+      "lending",
+      "loan",
+      "risk",
+      "scoring",
+      "underwriting"
+     ],
+     "show_retention": false,
+     "spread": 6.0,
+     "table": [
+      {
+       "company": "Qfin Holdings, Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 2.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:QFIN"
+      },
+      {
+       "company": "Oportun Financial Corporation",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 3.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:OPRT"
+      },
+      {
+       "company": "Pagaya Technologies Ltd.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 4.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:PGY"
+      },
+      {
+       "company": "Upstart Holdings, Inc.",
+       "growth_basis": "CAGR_CY0_CY2",
+       "growth_pct": 34.0,
+       "multiple": 7.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:UPST"
+      },
+      {
+       "company": "Merchants Bancorp",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 8.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:MBIN"
+      },
+      {
+       "company": "Funding Circle Holdings plc",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": null,
+       "multiple": 15.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "LSE:FCH"
+      }
+     ],
+     "tag_evidence": 2.2,
+     "thin": false,
+     "triangulated": false
+    }
+   },
+   "private": {
+    "ARR": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "ARR",
+     "basis_label": "enterprise value to ARR",
+     "basis_mix": {
+      "ARR": 1
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "arr",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 8.9,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 8.9,
+     "mid": 8.9,
+     "n": 1,
+     "period_mix": {
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "credit",
+      "lending"
+     ],
+     "sole": "Zopa",
+     "spread": 1.0,
+     "tag_evidence": 0.3,
+     "thin": true,
+     "triangulated": false
+    },
+    "BOOK": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BOOK",
+     "basis_label": "price to book",
+     "basis_mix": {
+      "BOOK": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "book_value",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.6,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 3.17,
+     "mid": 5.6,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 1,
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "credit",
+      "lending"
+     ],
+     "spread": 1.8,
+     "tag_evidence": 0.3,
+     "thin": true,
+     "triangulated": false
+    },
+    "BORROWERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BORROWERS",
+     "basis_label": "dollars of enterprise value per borrower",
+     "basis_mix": {
+      "BORROWERS": 1
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "borrowers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 500.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 500.0,
+     "mid": 500.0,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "emerging",
+      "lending"
+     ],
+     "sole": "MNT-Halan",
+     "spread": 1.0,
+     "tag_evidence": 0.8,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Upstart Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Alternative Credit Data; same type of business; same end market; same business function",
+    "score": 14.2,
+    "ticker": "NASDAQ:UPST"
+   },
+   {
+    "company": "Pagaya Technologies Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, loan, underwriting; same type of business; same end market; same business function",
+    "score": 12.6,
+    "ticker": "NASDAQ:PGY"
+   },
+   {
+    "company": "Qfin Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+    "score": 10.3,
+    "ticker": "NASDAQ:QFIN"
+   },
+   {
+    "company": "Funding Circle Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+    "score": 9.3,
+    "ticker": "LSE:FCH"
+   },
+   {
+    "company": "Merchants Bancorp",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending, loan; related type of business; same end market; same business function",
+    "score": 9.1,
+    "ticker": "NASDAQ:MBIN"
+   },
+   {
+    "company": "Oportun Financial Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending, underwriting; same type of business; same end market; same business function",
+    "score": 8.9,
+    "ticker": "NASDAQ:OPRT"
+   },
+   {
+    "company": "World Acceptance Corporation",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of credit, lending, underwriting; same type of business; same end market; same business function",
+    "score": 8.9,
+    "ticker": "NASDAQ:WRLD"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 6
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.7,
+   "mid": 1.8,
+   "n": 6,
+   "period_mix": {
+    "NTM": 6
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Qfin Holdings, Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Oportun Financial Corporation",
+     "mult": 0.7,
+     "reason": "shares the language of credit, lending, underwriting; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Merchants Bancorp",
+     "mult": 1.0,
+     "reason": "shares the language of lending, loan; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Pagaya Technologies Ltd.",
+     "mult": 2.6,
+     "reason": "shares the language of credit, loan, underwriting; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Funding Circle Holdings plc",
+     "mult": 2.6,
+     "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Upstart Holdings, Inc.",
+     "mult": 2.8,
+     "reason": "both do Alternative Credit Data; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "alternative",
+    "credit",
+    "data",
+    "lending",
+    "loan",
+    "risk",
+    "scoring",
+    "underwriting"
+   ],
+   "show_retention": false,
+   "spread": 9.3,
+   "table": [
+    {
+     "company": "Qfin Holdings, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:QFIN"
+    },
+    {
+     "company": "Oportun Financial Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:OPRT"
+    },
+    {
+     "company": "Merchants Bancorp",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MBIN"
+    },
+    {
+     "company": "Pagaya Technologies Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:PGY"
+    },
+    {
+     "company": "Funding Circle Holdings plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:FCH"
+    },
+    {
+     "company": "Upstart Holdings, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 34.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:UPST"
+    }
+   ],
+   "tag_evidence": 2.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Europe and North America",
+    "house_type": "Venture",
+    "investor": "DN Capital",
+    "not_published": null,
+    "recent_deal": "Fimple",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://fimple.co/news/fimple-raises-series-a",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Seed/Series A investor backing European digital-finance, credit and banking software businesses.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "US-based, North America and Europe",
+    "house_type": "Venture",
+    "investor": "Motive Ventures",
+    "not_published": null,
+    "recent_deal": "Neno",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://motivepartners.com/content/why-we-invested-in-neno",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Fintech specialist backing digital banking, credit and capital-markets infrastructure from pre-seed to Series A.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe",
+    "house_type": "Venture",
+    "investor": "13books Capital",
+    "not_published": null,
+    "recent_deal": "Aria",
+    "recent_deal_date": "2026-03",
+    "recent_deal_url": "https://www.13books.com/insights/why-we-invested-in-aria",
+    "stage_bands": "Seed; Series A",
+    "thesis": "European fintech specialist investing from seed in banking, lending and financial infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Primarily UK, broader Europe",
+    "house_type": "Venture",
+    "investor": "Outward VC",
+    "not_published": null,
+    "recent_deal": "Infrawatch",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://outwardvc.com/articles/why-we-invested-in-infrawatch/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Early-stage investor in technology for regulated industries, including payments, fintech operations and compliance infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Europe-focused, invests globally",
+    "house_type": "Venture",
+    "investor": "Speedinvest",
+    "not_published": null,
+    "recent_deal": "Kyrok?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Creditas",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Andbank (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Tabby",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Blue Pool Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Tabby",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Hassana Investment Company",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "MNT-Halan",
+      "date": "Feb-23"
+     }
+    ],
+    "investor": "Chimera Abu Dhabi",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Atom Bank",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Toscafund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Atom Bank",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Infinity Investment Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Atom Bank",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "BBVA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zopa",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zopa",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "Chimera",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zopa",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "existing investors",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "Q3 results released on financing close date; closed quarter",
+    "bound": "",
+    "company": "Creditas",
+    "date": "Dec-25",
+    "in_medians": false,
+    "mult": 7.41,
+    "reason": "shares the language of lending; same type of business; same end market; same business function",
+    "score": 11.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY ended 2024-12-31",
+    "bound": "",
+    "company": "Kriya",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": 0.6,
+    "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
+    "score": 12.8,
+    "type": "CONTROL_ACQUISITION"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Tabby",
+    "date": "Feb-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of credit; same type of business; same end market; same business function",
+    "score": 12.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "MNT-Halan",
+    "date": "Feb-23",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of emerging, lending; same type of business; same end market; same business function",
+    "score": 11.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "inception 2015 to 2022-04-11",
+    "bound": "",
+    "company": "Stenn",
+    "date": "Apr-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "same type of business; same end market; same business function",
+    "score": 12.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Atom Bank",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of lending; related type of business; same end market; same business function",
+    "score": 9.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Zopa",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 8.9,
+    "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
+    "score": 11.3,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "BOOK",
+   "basis_label": "price to book",
+   "basis_mix": {
+    "BOOK": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.17,
+   "mid": 5.6,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 1,
+    "UNKNOWN": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "credit",
+    "lending"
+   ],
+   "spread": 1.8,
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 58,
+  "secondary": [
+   {
+    "company": "The Bancorp, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending; same end market; same business function; same kind of customer",
+    "score": 10.7,
+    "ticker": "NASDAQ:TBBK"
+   },
+   {
+    "company": "Coastal Financial Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending; same end market; same business function; same kind of customer",
+    "score": 10.7,
+    "ticker": "NASDAQ:CCB"
+   },
+   {
+    "company": "OppFi Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, underwriting; same type of business; same end market; same business function",
+    "score": 8.7,
+    "ticker": "NYSE:OPFI"
+   },
+   {
+    "company": "Dave Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, underwriting; same type of business; same end market; same business function",
+    "score": 8.7,
+    "ticker": "NASDAQ:DAVE"
+   },
+   {
+    "company": "NewtekOne, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of lending; related type of business; same end market; same business function",
+    "score": 8.7,
+    "ticker": "NASDAQ:NEWT"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 8.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.8,
+   "mid": 1.3,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "NewtekOne, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of lending; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "OppFi Inc.",
+     "mult": 1.3,
+     "reason": "shares the language of credit, underwriting; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Dave Inc.",
+     "mult": 8.3,
+     "reason": "shares the language of credit, underwriting; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [
+    {
+     "company": "Coastal Financial Corporation",
+     "mult": 1.3,
+     "reason": "shares the language of lending; same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "The Bancorp, Inc.",
+     "mult": 3.2,
+     "reason": "shares the language of lending; same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "credit",
+    "lending",
+    "underwriting"
+   ],
+   "show_retention": false,
+   "spread": 10.4,
+   "table": [
+    {
+     "company": "NewtekOne, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:NEWT"
+    },
+    {
+     "company": "OppFi Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:OPFI"
+    },
+    {
+     "company": "Dave Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": null,
+     "multiple": 8.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:DAVE"
+    }
+   ],
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Automate credit assessment for lenders in emerging markets"
+}

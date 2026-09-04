@@ -1,0 +1,636 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Veeva Systems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of clinical; same type of business; same end market; same business function",
+    "score": 17.6,
+    "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare, supply; same type of business; same end market; same kind of customer",
+    "score": 12.2,
+    "ticker": "TSX:TCS"
+   },
+   {
+    "company": "Samsara Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
+    "score": 12.1,
+    "ticker": "NYSE:IOT"
+   },
+   {
+    "company": "Waystar Holding Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
+    "score": 11.0,
+    "ticker": "NASDAQGS:WAY"
+   },
+   {
+    "company": "Phreesia, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; same type of business; same end market; sold the same way",
+    "score": 9.4,
+    "ticker": "NYSE:PHR"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 9.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.4,
+   "mid": 3.2,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Phreesia, Inc.",
+     "mult": 1.4,
+     "reason": "shares the language of healthcare; same type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tecsys Inc.",
+     "mult": 1.9,
+     "reason": "shares the language of healthcare, supply; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Waystar Holding Corp.",
+     "mult": 4.5,
+     "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "mult": 9.7,
+     "reason": "shares the language of clinical; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [
+    {
+     "company": "Samsara Inc.",
+     "mult": 9.6,
+     "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "clinical",
+    "healthcare",
+    "hospital",
+    "supply"
+   ],
+   "show_retention": true,
+   "spread": 6.9,
+   "table": [
+    {
+     "company": "Phreesia, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PHR"
+    },
+    {
+     "company": "Tecsys Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
+    },
+    {
+     "company": "Waystar Holding Corp.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 11.0,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WAY"
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 9.7,
+     "recurring_pct": 84.0,
+     "retention_pct": null,
+     "ticker": "NYSE:VEEV"
+    }
+   ],
+   "tag_evidence": 1.0,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 4.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European, including Israel",
+    "house_type": "Venture",
+    "investor": "Planet A Ventures",
+    "not_published": null,
+    "recent_deal": "Gigaton",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based; global transportation opportunities, including Europe",
+    "house_type": "Venture",
+    "investor": "Trucks Venture Capital",
+    "not_published": null,
+    "recent_deal": "Providio AI",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://providio.ai/blog/from-human-to-superhuman",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed investor in transportation systems, freight, aviation and mobility infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Europe-focused, invests globally",
+    "house_type": "Venture",
+    "investor": "Speedinvest",
+    "not_published": null,
+    "recent_deal": "Kyrok?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Backed VC",
+    "not_published": null,
+    "recent_deal": "Round",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://www.finsmes.com/2026/04/round-raises-6m-in-seed-funding.html",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Manufacturing and automation alongside frontier tech. $500k to $5M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "North America and Europe, selectively global",
+    "house_type": "Venture",
+    "investor": "Dynamo Ventures",
+    "not_published": null,
+    "recent_deal": "UNIT AI",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.dynamo.vc/insights/unit-ai",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.15,
+    "deal_note": "Regional fund deployments (MEIF II) with Maven named as fund manager, not balance-sheet venture cheques.",
+    "geographies": "UK; South West England",
+    "house_type": "Venture",
+    "investor": "Maven Capital Partners",
+    "not_published": null,
+    "recent_deal": "Xentra",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.uktech.news/cybersecurity/cybersecurity-provider-xentra-secures-2-7m-20260720",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "The SWIF Maven Equity Fund invests in earlier stage and established companies located across the South West of England.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Southern Europe and Latin America, especially Spain",
+    "house_type": "Venture",
+    "investor": "Kfund",
+    "not_published": null,
+    "recent_deal": "Pollen",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe and US",
+    "house_type": "Venture",
+    "investor": "Pale blue dot",
+    "not_published": null,
+    "recent_deal": "Staer",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://paleblue.vc/portfolio/staer",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Aledade",
+      "date": "Jun-23"
+     }
+    ],
+    "investor": "Lightspeed Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Eurazeo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bpifrance",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "General Atlantic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "Uprising",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cityblock Health",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Thirty Madison",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "HealthQuest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Virta Health",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Tiger Global Management",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Aledade",
+    "date": "Jun-23",
+    "in_medians": true,
+    "mult": 7.37,
+    "reason": "shares the language of care; same type of business; same end market; same business function",
+    "score": 13.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2021",
+    "bound": "",
+    "company": "Incredible Health",
+    "date": "Aug-22",
+    "in_medians": true,
+    "mult": 66.0,
+    "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
+    "score": 14.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Doctolib",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "same type of business; same end market; same business function; same revenue model",
+    "score": 18.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Devoted Health",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 51.4,
+    "reason": "shares the language of care; related type of business; same end market; same AI stance",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cityblock Health",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 14.25,
+    "reason": "shares the language of care; same type of business; same end market; same business function",
+    "score": 16.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Thirty Madison",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of care; same type of business; same end market; same business function",
+    "score": 11.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Virta Health",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 57.1,
+    "reason": "shares the language of care; same type of business; same end market; same business function",
+    "score": 16.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 14.25,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.0,
+   "mid": 14.25,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "care"
+   ],
+   "spread": 1.4,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 64,
+  "secondary": [
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of clinical; same kind of customer; same revenue model; sold the same way",
+    "score": 9.6,
+    "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "Kinaxis Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of supply; same type of business; same kind of customer; sold the same way",
+    "score": 8.8,
+    "ticker": "TSX:KXS"
+   },
+   {
+    "company": "AMN Healthcare Services, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of healthcare, hospital; same end market; same kind of customer; sold the same way",
+    "score": 8.5,
+    "ticker": "NYSE:AMN"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 4.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.6,
+   "mid": 4.1,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "AMN Healthcare Services, Inc.",
+     "mult": 0.6,
+     "reason": "shares the language of healthcare, hospital; same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "mult": 4.1,
+     "reason": "shares the language of clinical; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Kinaxis Inc.",
+     "mult": 4.5,
+     "reason": "shares the language of supply; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "clinical",
+    "healthcare",
+    "hospital",
+    "supply"
+   ],
+   "show_retention": false,
+   "spread": 7.5,
+   "table": [
+    {
+     "company": "AMN Healthcare Services, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -21.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:AMN"
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "NTM",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "Kinaxis Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 4.5,
+     "recurring_pct": 62.1,
+     "retention_pct": null,
+     "ticker": "TSX:KXS"
+    }
+   ],
+   "tag_evidence": 1.0,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Logistics infrastructure to modernize healthcare operations"
+}

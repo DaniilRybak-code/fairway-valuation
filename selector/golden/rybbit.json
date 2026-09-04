@@ -1,0 +1,789 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Amplitude, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Product Analytics, Session Replay; same type of business; same business function; sold the same way",
+    "score": 15.6,
+    "ticker": "NASDAQCM:AMPL"
+   },
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+    "score": 11.1,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Web Analytics; same type of business; same business function",
+    "score": 10.8,
+    "ticker": "NYSE:SMWB"
+   },
+   {
+    "company": "Red Violet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of analytics; same type of business; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of source; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of tracking; same type of business; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "NASDAQGS:TEAM"
+   },
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Analytics; same type of business; same business function; same revenue model",
+    "score": 8.6,
+    "ticker": "NYSE:SNOW"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 10.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.5,
+   "mid": 5.2,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Similarweb Ltd.",
+     "mult": 2.2,
+     "reason": "both do Web Analytics; same type of business; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Amplitude, Inc.",
+     "mult": 3.5,
+     "reason": "both do Product Analytics, Session Replay; same type of business; same business function; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Elastic N.V.",
+     "mult": 4.2,
+     "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GitLab Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of source; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Atlassian Corporation",
+     "mult": 6.1,
+     "reason": "shares the language of tracking; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "mult": 10.0,
+     "reason": "shares the language of analytics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 15.6,
+     "reason": "both do Analytics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "analytics",
+    "product",
+    "replay",
+    "session",
+    "source",
+    "tracking",
+    "web"
+   ],
+   "show_retention": true,
+   "spread": 7.1,
+   "table": [
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "NTM",
+     "growth_pct": 11.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
+     "company": "Amplitude, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": 105.0,
+     "ticker": "NASDAQCM:AMPL"
+    },
+    {
+     "company": "Elastic N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 4.2,
+     "recurring_pct": null,
+     "retention_pct": 112.0,
+     "ticker": "NYSE:ESTC"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.2,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    },
+    {
+     "company": "Atlassian Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 18.0,
+     "multiple": 6.1,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NASDAQGS:TEAM"
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 10.0,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
+    },
+    {
+     "company": "Snowflake Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 15.6,
+     "recurring_pct": null,
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
+    }
+   ],
+   "tag_evidence": 7.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.2,
+    "cheque_low_m": 3.2,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "MMC Ventures",
+    "not_published": null,
+    "recent_deal": "Fifth Dimension",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.vestbee.com/insights/articles/london-based-fifth-dimension-raises-26-m-series-a-led-by-hv-capital",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI-first companies. Around $3.2M average seed cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     },
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Menlo Anthology",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Databricks Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Amplify",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Weights & Biases",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "CoreWeave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "CRV",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Notable",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Bedrock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Geodesic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "ARR / annual revenue",
+    "bound": "",
+    "company": "Contentsquare",
+    "date": "Jul-22",
+    "in_medians": true,
+    "mult": 28.0,
+    "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
+    "score": 16.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
+    "in_medians": true,
+    "mult": 10.3,
+    "reason": "shares the language of web; same type of business; same business function; same kind of customer",
+    "score": 18.2,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "reason": "shares the language of web; same type of business; same revenue model; sold the same way",
+    "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Mid-2025 annualized run-rate",
+    "bound": "",
+    "company": "Supabase",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 72.86,
+    "reason": "both do Open Source; related type of business; same kind of customer; same revenue model",
+    "score": 14.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Open Source; same type of business; same kind of customer; sold the same way",
+    "score": 12.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of tracking; same type of business; same kind of customer; sold the same way",
+    "score": 13.5,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vercel",
+    "date": "May-24",
+    "in_medians": false,
+    "mult": 32.5,
+    "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
+    "score": 13.2,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2,
+    "ARR_RUNRATE": 2
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 72.86,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.3,
+   "mid": 33.0,
+   "n": 4,
+   "period_mix": {
+    "RUN_RATE": 4
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Oxylabs",
+     "mult": 10.3,
+     "reason": "shares the language of web; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Contentsquare",
+     "mult": 28.0,
+     "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Lovable",
+     "mult": 33.0,
+     "reason": "shares the language of web; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Supabase",
+     "mult": 72.86,
+     "reason": "both do Open Source; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "analytics",
+    "open",
+    "product",
+    "replay",
+    "session",
+    "source",
+    "web"
+   ],
+   "spread": 7.1,
+   "tag_evidence": 10.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 49,
+  "secondary": [
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of web; same kind of customer; same revenue model; sold the same way",
+    "score": 8.2,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Web Analytics; related type of business; sold the same way",
+    "score": 7.8,
+    "ticker": "NASDAQGS:ADBE"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 29.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.1,
+   "mid": 16.8,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Adobe Inc.",
+     "mult": 4.1,
+     "reason": "both do Web Analytics; related type of business; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 29.5,
+     "reason": "shares the language of web; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "analytics",
+    "web"
+   ],
+   "show_retention": true,
+   "spread": 7.2,
+   "table": [
+    {
+     "company": "Adobe Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.1,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ADBE"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 29.5,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
+   "tag_evidence": 3.3,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "The open source Google Analytics replacement"
+}

@@ -1,0 +1,463 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "XP Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of investing; same type of business; same end market; same kind of customer",
+    "score": 12.6,
+    "ticker": "NASDAQ:XP"
+   },
+   {
+    "company": "HUB24 Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of portfolio; same type of business; same end market",
+    "score": 6.5,
+    "ticker": "ASX:HUB"
+   },
+   {
+    "company": "Netwealth Group Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of portfolio; same type of business; same end market",
+    "score": 6.5,
+    "ticker": "ASX:NWL"
+   },
+   {
+    "company": "Robinhood Markets, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of trading; same type of business; same kind of customer",
+    "score": 5.8,
+    "ticker": "NASDAQ:HOOD"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": -3.8,
+   "mid": 10.2,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Robinhood Markets, Inc.",
+     "mult": 15.1,
+     "reason": "shares the language of trading; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "investing",
+    "portfolio"
+   ],
+   "show_retention": false,
+   "spread": -2.8,
+   "table": [
+    {
+     "company": "XP Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 11.0,
+     "multiple": -3.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:XP"
+    },
+    {
+     "company": "HUB24 Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 10.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:HUB"
+    },
+    {
+     "company": "Netwealth Group Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 10.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:NWL"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe-focused",
+    "house_type": "Venture",
+    "investor": "Market One Capital",
+    "not_published": null,
+    "recent_deal": "Juo",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://www.juo.io/blog/juo-raises-seed-round",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Specialist seed investor in marketplaces, network effects and marketplace-plus platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US-based, invests globally including Europe",
+    "house_type": "Venture",
+    "investor": "FJ Labs",
+    "not_published": null,
+    "recent_deal": "Liablix?",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://www.liablix.com/news/liablix-raises-1-3m-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Global marketplace specialist investing in consumer, B2B and vertical transaction platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe-focused, selective US",
+    "house_type": "Venture",
+    "investor": "Heartcore Capital",
+    "not_published": null,
+    "recent_deal": "Dott",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://www.dott.com/press-release/dott-announces-new-funding/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Consumer-technology investor backing commerce, travel and vertical marketplace models.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 25.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based, invests in Europe",
+    "house_type": "Venture",
+    "investor": "General Catalyst",
+    "not_published": null,
+    "recent_deal": "Sword Health",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://swordhealth.com/newsroom/sword-health-funding",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Global technology investor with a health-assurance strategy spanning care delivery, software and diagnostics.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe-focused",
+    "house_type": "Venture",
+    "investor": "HV Capital",
+    "not_published": null,
+    "recent_deal": "Flip",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.getflip.com/en/news/flip-raises-25-million",
+    "stage_bands": "Seed; Series A",
+    "thesis": "European investor in consumer internet, commerce, marketplaces and transaction platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 50.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "Europe and US",
+    "house_type": "Venture",
+    "investor": "Northzone",
+    "not_published": null,
+    "recent_deal": "Brickanta?",
+    "recent_deal_date": "2026-02",
+    "recent_deal_url": "https://www.brickanta.com/news/brickanta-raises-8m-seed",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Multi-stage investor in marketplaces, consumer platforms, fintech and software.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Passion Capital",
+    "not_published": null,
+    "recent_deal": "geoSurge",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.eu-startups.com/2026/07/londons-geosurge-raises-e10-million-to-help-brands-understand-ai-generated-outputs/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Fintech, insurtech and marketplaces. \u00a31M to \u00a32M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "The Zebra",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Hedosophia (reported",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "FY2023 revenue",
+    "bound": "",
+    "company": "Raisin",
+    "date": "Mar-23",
+    "in_medians": true,
+    "mult": 6.43,
+    "reason": "shares the language of marketplace; same type of business; same end market; same kind of customer",
+    "score": 16.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "The Zebra",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 6.67,
+    "reason": "shares the language of marketplace; related type of business; same end market; same kind of customer",
+    "score": 18.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 6.67,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 6.67,
+   "mid": 6.67,
+   "n": 1,
+   "period_mix": {
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "marketplace"
+   ],
+   "sole": "The Zebra",
+   "spread": 1.0,
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 64,
+  "secondary": [
+   {
+    "company": "MONY Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same revenue model; sold the same way",
+    "score": 7.5,
+    "ticker": "LSE:MONY"
+   },
+   {
+    "company": "Marqeta, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of card; same end market; same revenue model; same AI stance",
+    "score": 6.7,
+    "ticker": "NASDAQ:MQ"
+   },
+   {
+    "company": "Worldline SA",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of card; same end market; same revenue model; same AI stance",
+    "score": 6.7,
+    "ticker": "ENXTPA:WLN"
+   },
+   {
+    "company": "CAB Payments Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same revenue model; same AI stance",
+    "score": 6.5,
+    "ticker": "LSE:CABP"
+   },
+   {
+    "company": "Priority Technology Holdings",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same revenue model; same AI stance",
+    "score": 6.5,
+    "ticker": "NASDAQCM:PRTH"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.7,
+   "mid": 1.3,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "card"
+   ],
+   "show_retention": false,
+   "spread": -1.0,
+   "table": [
+    {
+     "company": "CAB Payments Holdings plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": -2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:CABP"
+    },
+    {
+     "company": "Worldline SA",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -1.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:WLN"
+    },
+    {
+     "company": "Marqeta, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MQ"
+    },
+    {
+     "company": "Priority Technology Holdings",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 7.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQCM:PRTH"
+    },
+    {
+     "company": "MONY Group plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.0,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:MONY"
+    }
+   ],
+   "tag_evidence": 0.2,
+   "thin": false,
+   "triangulated": true
+  }
+ },
+ "label": "The investment platform for sports and trading cards"
+}

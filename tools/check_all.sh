@@ -10,6 +10,7 @@
 # unused for two days while every check below stage 2 passed, because they all begin by reading
 # data/ and it had never got there.
 #
+#   0  pushed        is anything of yours only on this laptop (reports, never fails)
 #   1  intake        did the supplied FILE reach the engine at all
 #   2  raw coverage  is every supplied ROW accounted for
 #   3  field reach   does every supplied FIGURE reach a row, and is every column read
@@ -21,6 +22,8 @@
 #   9  period        does a founder's own revenue convert onto each comparable's basis
 #  10  quiz walker   does every fork ask only what peers can answer, and does every answer land
 #  11  investor rails no contact details, no incomplete cards, both layers labelled
+#  12  investor reach does a founder get a list at all
+#  13  the read       does every number in the recommendations trace to a real figure
 set -e
 cd "$(dirname "$0")/.."
 fail=0
@@ -29,6 +32,7 @@ run() {
   shift
   "$@" || fail=1
 }
+run "0 PUSHED          is anything of yours only on this laptop"       sh tools/check_pushed.sh
 run "1 INTAKE          did the supplied file reach the engine"        python3 tools/check_intake.py
 run "2 RAW COVERAGE    is every supplied row accounted for"           python3 tools/check_raw_coverage.py
 run "3 FIELD REACH     does every figure reach a row"                 python3 tools/check_field_reach.py
@@ -41,6 +45,7 @@ run "9 PERIOD           does the founder's own figure convert"        python3 to
 run "10 QUIZ WALKER     does every answer land somewhere"              python3 tools/quiz_walker.py
 run "11 INVESTOR RAILS  no contact details, no incomplete cards"       python3 tools/check_investor_compliance.py
 run "12 INVESTOR REACH  does a founder get a list at all"              python3 tools/investor_coverage.py
+run "13 THE READ         does every number in it trace to something"    python3 tools/recommendations_check.py
 printf '\n'
 if [ "$fail" = "1" ]; then
   echo 'ONE OR MORE CHECKS FAILED. The stage that failed is where the data stopped.'

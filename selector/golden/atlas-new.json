@@ -1,0 +1,932 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
+    "score": 11.3,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "GB Group plc",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Location Intelligence; same type of business; same revenue model",
+    "score": 10.4,
+    "ticker": "LSE:GBG"
+   },
+   {
+    "company": "Red Violet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of data; same type of business; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of data; same type of business; same business function; same revenue model",
+    "score": 8.6,
+    "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of analysis, intelligence; same type of business; same business function",
+    "score": 7.9,
+    "ticker": "NYSE:SMWB"
+   },
+   {
+    "company": "Palantir Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of data, intelligence; same type of business; same business function; same AI stance",
+    "score": 7.3,
+    "ticker": "NASDAQGS:PLTR"
+   },
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Location API; same type of business; same kind of customer",
+    "score": 7.1,
+    "ticker": "ENXTAM:TOM2"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 15.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.5,
+   "mid": 10.0,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "both do Location API; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GB Group plc",
+     "mult": 1.5,
+     "reason": "both do Location Intelligence; same type of business; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "mult": 2.2,
+     "reason": "shares the language of analysis, intelligence; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "mult": 10.0,
+     "reason": "shares the language of data; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 14.9,
+     "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 15.6,
+     "reason": "shares the language of data; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "mult": 39.0,
+     "reason": "shares the language of data, intelligence; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "agent",
+    "analysis",
+    "api",
+    "data",
+    "intelligence",
+    "location",
+    "maps"
+   ],
+   "show_retention": true,
+   "spread": 65.0,
+   "table": [
+    {
+     "company": "TomTom N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -1.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:TOM2"
+    },
+    {
+     "company": "GB Group plc",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 4.0,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": 101.1,
+     "ticker": "LSE:GBG"
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "NTM",
+     "growth_pct": 11.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 10.0,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Snowflake Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 15.6,
+     "recurring_pct": null,
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 66.0,
+     "multiple": 39.0,
+     "recurring_pct": null,
+     "retention_pct": 157.0,
+     "ticker": "NASDAQGS:PLTR"
+    }
+   ],
+   "tag_evidence": 3.9,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Altimeter Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Dragoneer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     },
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Greenoaks",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Sequoia Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     },
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     },
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Conviction",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Avra",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Operator Collective",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Frontline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     },
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Amplify",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Prysm",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Google AI Futures Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Amex Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
+    "in_medians": true,
+    "mult": 10.3,
+    "reason": "shares the language of agent, api, data; same type of business; same business function; same kind of customer",
+    "score": 18.6,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anthropic",
+    "date": "May-26",
+    "in_medians": false,
+    "mult": 20.5,
+    "reason": "shares the language of agent, api; same type of business; same kind of customer; same revenue model",
+    "score": 14.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "reason": "shares the language of automation; related type of business; same revenue model; same AI stance",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "reason": "shares the language of automation, data, intelligence; related type of business; same revenue model; sold the same way",
+    "score": 11.4,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 150.0,
+    "reason": "shares the language of agent, automation; related type of business; same revenue model; same AI stance",
+    "score": 8.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
+    "score": 13.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "shares the language of agent; same type of business; same revenue model; sold the same way",
+    "score": 13.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 3,
+    "ARR_RUNRATE": 1
+   },
+   "bounded": true,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 105.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.3,
+   "mid": 50.0,
+   "n": 4,
+   "period_mix": {
+    "RUN_RATE": 4
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Oxylabs",
+     "mult": 10.3,
+     "reason": "shares the language of agent, api, data; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "shares the language of agent; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of automation, data, intelligence; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Sierra",
+     "mult": 105.3,
+     "reason": "shares the language of automation; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "agent",
+    "api",
+    "automation",
+    "data",
+    "intelligence"
+   ],
+   "spread": 10.2,
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 11,
+  "secondary": [
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api, data; same kind of customer; same revenue model; sold the same way",
+    "score": 8.4,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
+    "score": 8.3,
+    "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of agent; same kind of customer; same revenue model; sold the same way",
+    "score": 8.3,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Sinch AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same kind of customer; same revenue model",
+    "score": 6.3,
+    "ticker": "OM:SINCH"
+   },
+   {
+    "company": "Teradata Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of data; same type of business; same business function",
+    "score": 6.1,
+    "ticker": "NYSE:TDC"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 29.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.4,
+   "mid": 1.4,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Agora, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Teradata Corporation",
+     "mult": 1.4,
+     "reason": "shares the language of data; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of api, data; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 29.5,
+     "reason": "shares the language of agent; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "agent",
+    "api",
+    "data"
+   ],
+   "show_retention": true,
+   "spread": 59.0,
+   "table": [
+    {
+     "company": "Agora, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:API"
+    },
+    {
+     "company": "Teradata Corporation",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 1.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": 108.0,
+     "ticker": "NYSE:TDC"
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:SINCH"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 29.5,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "The AI agent for maps and spatial data"
+}

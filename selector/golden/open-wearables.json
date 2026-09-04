@@ -1,0 +1,742 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Consensus Cloud Solutions, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of interoperability; same type of business; same end market; same revenue model",
+    "score": 10.1,
+    "ticker": "NASDAQGS:CCSI"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api, data, platform; related type of business; same kind of customer; same revenue model",
+    "score": 10.0,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 9.8,
+    "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
+    "score": 9.8,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
+    "score": 9.8,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Sinch AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 8.8,
+    "ticker": "OM:SINCH"
+   },
+   {
+    "company": "Phreesia, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of digital; same type of business; same end market; same revenue model",
+    "score": 8.6,
+    "ticker": "NYSE:PHR"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 14.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.4,
+   "mid": 3.1,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Agora, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Phreesia, Inc.",
+     "mult": 1.4,
+     "reason": "shares the language of digital; same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "mult": 3.1,
+     "reason": "shares the language of interoperability; same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of api, data, platform; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 14.9,
+     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 29.5,
+     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "api",
+    "data",
+    "digital",
+    "infrastructure",
+    "interoperability",
+    "platform"
+   ],
+   "show_retention": true,
+   "spread": 59.0,
+   "table": [
+    {
+     "company": "Agora, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:API"
+    },
+    {
+     "company": "Phreesia, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PHR"
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 2.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:SINCH"
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CCSI"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 29.5,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": null,
+    "deal_note": "Regional fund deployments (NPIF II) with Mercia named as fund manager. Play Padel excluded: that was Mercia Business Loans, not Mercia Ventures.",
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Mercia Ventures",
+    "not_published": null,
+    "recent_deal": "VisaDoc",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.mercia.co.uk/business-visa-platform-raises-funding-to-meet-overwhelming-demand/",
+    "stage_bands": "Seed; Series A; Series B",
+    "thesis": "We invest in companies with early traction and a clear route to growth, providing up to \u00a310m of initial capital.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.5,
+    "cheque_low_m": 0.1,
+    "deal_note": "Both deals are Future Planet Capital Regional, formerly Midven. The main fund has published no deal news since 2022.",
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Future Planet Capital",
+    "not_published": null,
+    "recent_deal": "Furbnow",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://bdaily.co.uk/articles/2026/07/24/proptech-firm-heats-up-growth-plans-with-25-million-support",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "UKI2S invests in pre-seed to seed+ companies built on the UK's publicly funded science and knowledge base.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Aledade",
+      "date": "Jun-23"
+     }
+    ],
+    "investor": "Lightspeed Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Eurazeo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bpifrance",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "General Atlantic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cityblock Health",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Thirty Madison",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "HealthQuest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Virta Health",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Tiger Global Management",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ro",
+      "date": "Mar-21"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ro",
+      "date": "Mar-21"
+     }
+    ],
+    "investor": "FirstMark Capital and TQ Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Aledade",
+    "date": "Jun-23",
+    "in_medians": true,
+    "mult": 7.37,
+    "reason": "shares the language of health; same type of business; same end market",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2021",
+    "bound": "",
+    "company": "Incredible Health",
+    "date": "Aug-22",
+    "in_medians": true,
+    "mult": 66.0,
+    "reason": "same type of business; same end market",
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Doctolib",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "same type of business; same end market",
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cityblock Health",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 14.25,
+    "reason": "shares the language of health; same type of business; same end market",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Thirty Madison",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "same type of business; same end market; same AI stance",
+    "score": 10.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Virta Health",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 57.1,
+    "reason": "shares the language of health; same type of business; same end market",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Ro",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 16.67,
+    "reason": "shares the language of health; same type of business; same end market; same AI stance",
+    "score": 10.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 14.25,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.0,
+   "mid": 14.25,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "health"
+   ],
+   "spread": 1.4,
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 65,
+  "secondary": [
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+    "score": 8.6,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api, data, digital; related type of business; same business function; same kind of customer",
+    "score": 8.4,
+    "ticker": "ENXTAM:TOM2"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same AI stance",
+    "score": 7.0,
+    "ticker": "TSX:TCS"
+   },
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+    "score": 6.6,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "Unity Software Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of digital; same business function; same kind of customer; sold the same way",
+    "score": 6.6,
+    "ticker": "NYSE:U"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 7.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.9,
+   "mid": 3.9,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of api, data, digital; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tecsys Inc.",
+     "mult": 1.9,
+     "reason": "same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Qt Group Oyj",
+     "mult": 3.9,
+     "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "GitLab Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Unity Software Inc.",
+     "mult": 7.2,
+     "reason": "shares the language of digital; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "api",
+    "data",
+    "digital",
+    "platform"
+   ],
+   "show_retention": true,
+   "spread": 12.0,
+   "table": [
+    {
+     "company": "TomTom N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -1.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:TOM2"
+    },
+    {
+     "company": "Tecsys Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.2,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    },
+    {
+     "company": "Unity Software Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 21.0,
+     "multiple": 7.2,
+     "recurring_pct": null,
+     "retention_pct": 106.0,
+     "ticker": "NYSE:U"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Open infrastructure for wearable-powered health products"
+}

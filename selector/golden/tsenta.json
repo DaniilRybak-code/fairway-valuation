@@ -1,0 +1,545 @@
+{
+ "expected": {
+  "all_ranges": {
+   "listed": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "UNKNOWN": 3
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 0.2,
+     "mid": 1.0,
+     "n": 3,
+     "period_mix": {
+      "NTM": 3
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Robert Walters plc",
+       "mult": 0.2,
+       "reason": "shares the language of search; same type of business; same business function",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
+       "company": "hipages Group Holdings",
+       "mult": 1.0,
+       "reason": "shares the language of job; same type of business; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Bengo4.com, Inc.",
+       "mult": 5.5,
+       "reason": "shares the language of matching; same kind of customer; sold the same way",
+       "tier": "BROAD",
+       "transaction_type": ""
+      }
+     ],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "job",
+      "matching",
+      "search"
+     ],
+     "show_retention": false,
+     "spread": 27.5,
+     "table": [
+      {
+       "company": "Robert Walters plc",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": 5.0,
+       "multiple": 0.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "LSE:RWA"
+      },
+      {
+       "company": "hipages Group Holdings",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": 12.0,
+       "multiple": 1.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "ASX:HPG"
+      },
+      {
+       "company": "Bengo4.com, Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": 18.0,
+       "multiple": 5.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "TSE:6027"
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": false
+    }
+   },
+   "private": {}
+  },
+  "core": [
+   {
+    "company": "hipages Group Holdings",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of job; same type of business; same revenue model",
+    "score": 7.1,
+    "ticker": "ASX:HPG"
+   },
+   {
+    "company": "Robert Walters plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of search; same type of business; same business function",
+    "score": 6.2,
+    "ticker": "LSE:RWA"
+   },
+   {
+    "company": "Bengo4.com, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of matching; same kind of customer; sold the same way",
+    "score": 6.1,
+    "ticker": "TSE:6027"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 5.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.2,
+   "mid": 1.0,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Robert Walters plc",
+     "mult": 0.2,
+     "reason": "shares the language of search; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "hipages Group Holdings",
+     "mult": 1.0,
+     "reason": "shares the language of job; same type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Bengo4.com, Inc.",
+     "mult": 5.5,
+     "reason": "shares the language of matching; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "job",
+    "matching",
+    "search"
+   ],
+   "show_retention": false,
+   "spread": 27.5,
+   "table": [
+    {
+     "company": "Robert Walters plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 0.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:RWA"
+    },
+    {
+     "company": "hipages Group Holdings",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 12.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:HPG"
+    },
+    {
+     "company": "Bengo4.com, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 18.0,
+     "multiple": 5.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:6027"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US-based, invests globally including Europe",
+    "house_type": "Venture",
+    "investor": "FJ Labs",
+    "not_published": null,
+    "recent_deal": "Liablix?",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://www.liablix.com/news/liablix-raises-1-3m-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Global marketplace specialist investing in consumer, B2B and vertical transaction platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 25.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based, invests in Europe",
+    "house_type": "Venture",
+    "investor": "General Catalyst",
+    "not_published": null,
+    "recent_deal": "Sword Health",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://swordhealth.com/newsroom/sword-health-funding",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Global technology investor with a health-assurance strategy spanning care delivery, software and diagnostics.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe-focused",
+    "house_type": "Venture",
+    "investor": "HV Capital",
+    "not_published": null,
+    "recent_deal": "Flip",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.getflip.com/en/news/flip-raises-25-million",
+    "stage_bands": "Seed; Series A",
+    "thesis": "European investor in consumer internet, commerce, marketplaces and transaction platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe-focused, selective US",
+    "house_type": "Venture",
+    "investor": "Heartcore Capital",
+    "not_published": null,
+    "recent_deal": "Dott",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://www.dott.com/press-release/dott-announces-new-funding/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Consumer-technology investor backing commerce, travel and vertical marketplace models.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe-focused",
+    "house_type": "Venture",
+    "investor": "Market One Capital",
+    "not_published": null,
+    "recent_deal": "Juo",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://www.juo.io/blog/juo-raises-seed-round",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Specialist seed investor in marketplaces, network effects and marketplace-plus platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 50.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "Europe and US",
+    "house_type": "Venture",
+    "investor": "Northzone",
+    "not_published": null,
+    "recent_deal": "Brickanta?",
+    "recent_deal_date": "2026-02",
+    "recent_deal_url": "https://www.brickanta.com/news/brickanta-raises-8m-seed",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Multi-stage investor in marketplaces, consumer platforms, fintech and software.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Passion Capital",
+    "not_published": null,
+    "recent_deal": "geoSurge",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.eu-startups.com/2026/07/londons-geosurge-raises-e10-million-to-help-brands-understand-ai-generated-outputs/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Fintech, insurtech and marketplaces. \u00a31M to \u00a32M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     },
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "Lightrock India",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "McKinley Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "March Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IFC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IIFL",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Shiprocket",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": 16.03,
+    "reason": "shares the language of aggregation; sold the same way",
+    "score": 5.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "upGrad",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 7.27,
+    "reason": "shares the language of career; same kind of customer; same revenue model",
+    "score": 7.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "BROAD",
+  "private_range": {},
+  "private_window_months": 60,
+  "secondary": [
+   {
+    "company": "WW International, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of coaching; same kind of customer; same revenue model",
+    "score": 5.6,
+    "ticker": "NASDAQGM:WW"
+   },
+   {
+    "company": "Peloton Interactive, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of coaching; same kind of customer; same revenue model",
+    "score": 5.6,
+    "ticker": "NASDAQGS:PTON"
+   },
+   {
+    "company": "Cookpad Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of search; same kind of customer; same revenue model",
+    "score": 6.2,
+    "ticker": "TSE:2193"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.8,
+   "mid": 0.95,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "coaching"
+   ],
+   "show_retention": false,
+   "spread": 1.4,
+   "table": [
+    {
+     "company": "WW International, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 2.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:WW"
+    },
+    {
+     "company": "Peloton Interactive, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 0.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTON"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": true
+  }
+ },
+ "label": "AI career agent that finds matching jobs and applies on your behalf"
+}

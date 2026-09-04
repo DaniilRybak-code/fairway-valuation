@@ -1,0 +1,589 @@
+{
+ "expected": {
+  "all_ranges": {
+   "listed": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "UNKNOWN": 4
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 4.7,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 0.4,
+     "mid": 0.45,
+     "n": 4,
+     "period_mix": {
+      "NTM": 4
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Chegg, Inc.",
+       "mult": 0.4,
+       "reason": "same type of business; same end market; same kind of customer; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Nerdy Inc.",
+       "mult": 0.4,
+       "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Coursera, Inc.",
+       "mult": 0.5,
+       "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Duolingo, Inc.",
+       "mult": 4.7,
+       "reason": "shares the language of app, consumer, learning; same type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      }
+     ],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "app",
+      "consumer",
+      "learning"
+     ],
+     "show_retention": false,
+     "spread": 11.8,
+     "table": [
+      {
+       "company": "Chegg, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": -26.0,
+       "multiple": 0.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:CHGG"
+      },
+      {
+       "company": "Nerdy Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": 3.0,
+       "multiple": 0.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:NRDY"
+      },
+      {
+       "company": "Coursera, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 12.0,
+       "multiple": 0.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:COUR"
+      },
+      {
+       "company": "Duolingo, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 13.0,
+       "multiple": 4.7,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQGS:DUOL"
+      }
+     ],
+     "tag_evidence": 0.9,
+     "thin": false,
+     "triangulated": false
+    }
+   },
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 15.38,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.27,
+     "mid": 15.38,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "spread": 2.1,
+     "tag_evidence": 0.0,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Duolingo, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app, consumer, learning; same type of business; same end market; same kind of customer",
+    "score": 15.9,
+    "ticker": "NASDAQGS:DUOL"
+   },
+   {
+    "company": "Coursera, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
+    "score": 14.7,
+    "ticker": "NYSE:COUR"
+   },
+   {
+    "company": "Chegg, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same kind of customer; same revenue model",
+    "score": 14.0,
+    "ticker": "NYSE:CHGG"
+   },
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
+    "score": 11.7,
+    "ticker": "TSE:4686"
+   },
+   {
+    "company": "Nerdy Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
+    "score": 11.6,
+    "ticker": "NYSE:NRDY"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 4.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.45,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Chegg, Inc.",
+     "mult": 0.4,
+     "reason": "same type of business; same end market; same kind of customer; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nerdy Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coursera, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "mult": 4.7,
+     "reason": "shares the language of app, consumer, learning; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "app",
+    "consumer",
+    "learning"
+   ],
+   "show_retention": false,
+   "spread": 11.8,
+   "table": [
+    {
+     "company": "Chegg, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -26.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHGG"
+    },
+    {
+     "company": "Nerdy Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NRDY"
+    },
+    {
+     "company": "Coursera, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:COUR"
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.0,
+     "multiple": 4.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DUOL"
+    }
+   ],
+   "tag_evidence": 0.9,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "LEAD School",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LEAD School",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "GSV Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vedantu",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "ABC World Asia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IFC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IIFL",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "MasterClass",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Fidelity Management & Research Company",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "LEAD School",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 142.17,
+    "reason": "same type of business; same end market",
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vedantu",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 15.38,
+    "reason": "same type of business; same end market; same kind of customer; same revenue model",
+    "score": 16.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "upGrad",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 7.27,
+    "reason": "same type of business; same end market; same kind of customer; same revenue model",
+    "score": 16.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "MasterClass",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 27.5,
+    "reason": "shares the language of consumer, courses; related type of business; same end market; same kind of customer",
+    "score": 15.2,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 15.38,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 7.27,
+   "mid": 15.38,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [],
+   "spread": 2.1,
+   "tag_evidence": 0.0,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 63,
+  "secondary": [
+   {
+    "company": "Match Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
+    "score": 8.3,
+    "ticker": "NASDAQGS:MTCH"
+   },
+   {
+    "company": "Bumble Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
+    "score": 8.3,
+    "ticker": "NASDAQGS:BMBL"
+   },
+   {
+    "company": "Grindr Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
+    "score": 8.3,
+    "ticker": "NYSE:GRND"
+   },
+   {
+    "company": "The New York Times Company",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of consumer; same kind of customer; same revenue model; same purchase frequency",
+    "score": 8.1,
+    "ticker": "NYSE:NYT"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.9,
+   "mid": 3.3,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "app",
+    "consumer"
+   ],
+   "show_retention": false,
+   "spread": 5.7,
+   "table": [
+    {
+     "company": "Bumble Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -2.0,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:BMBL"
+    },
+    {
+     "company": "The New York Times Company",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NYT"
+    },
+    {
+     "company": "Match Group, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.0,
+     "multiple": 3.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:MTCH"
+    },
+    {
+     "company": "Grindr Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.0,
+     "multiple": 5.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:GRND"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Duolingo for learning anything"
+}

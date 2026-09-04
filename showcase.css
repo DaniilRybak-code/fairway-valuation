@@ -1106,3 +1106,23 @@ a.ivk-deal:hover { border-bottom-color:var(--ff-rule-hard); }
   .inv-call { grid-template-columns:1fr; }
   .snap.read-sec { min-height:auto; }
 }
+
+/* ---------------------------------------------------------------------------
+   THE FIX LIST (recommendations.js). Five dimensions at most, ordered by how
+   much each one moves the founder's range. Deliberately quieter than the
+   investor cards: this block is read, not scanned, so it is one column of
+   paragraphs rather than a grid of tiles. The consequence sentence carries the
+   accent because it is the one neither a deck analyser nor a founder's own
+   spreadsheet can write.
+   --------------------------------------------------------------------------- */
+.fix-list { display: flex; flex-direction: column; gap: 14px; }
+.fxc { border: 1px solid rgba(0,0,0,.09); border-radius: 10px; padding: 14px 16px; background: #fff; }
+.fxc-h { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.fxc-n { font-variant-numeric: tabular-nums; font-size: 12px; opacity: .45; min-width: 12px; }
+.fxc-d { font-size: 14px; letter-spacing: .01em; text-transform: lowercase; }
+.fxc-i { margin-left: auto; font-size: 11.5px; opacity: .6; font-variant-numeric: tabular-nums; }
+.fxc p { margin: 0 0 7px; font-size: 13.5px; line-height: 1.5; }
+.fxc-a { font-weight: 600; }
+.fxc-c { margin-bottom: 0 !important; padding-left: 10px; border-left: 2px solid rgba(0,0,0,.14); opacity: .88; }
+.fix-footer { margin-top: 12px; }
+@media (max-width: 640px) { .fxc { padding: 12px; } .fxc-i { margin-left: 0; width: 100%; } }

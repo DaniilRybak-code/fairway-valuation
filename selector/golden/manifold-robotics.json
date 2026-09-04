@@ -1,0 +1,524 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "GXO Logistics, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Warehouse Robotics; same type of business; same kind of customer; sold the same way",
+    "score": 14.3,
+    "ticker": "NYSE:GXO"
+   },
+   {
+    "company": "ID Logistics Group SA",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of fulfilment, warehouse; same type of business; same kind of customer; sold the same way",
+    "score": 10.7,
+    "ticker": "ENXTPA:IDL"
+   },
+   {
+    "company": "Delhivery Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of fulfilment; related type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NSEI:DELHIVERY"
+   },
+   {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of a; related type of business; same business function; same kind of customer",
+    "score": 10.4,
+    "ticker": "SZSE:002352"
+   },
+   {
+    "company": "Lineage, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Warehouse Automation; same type of business; same kind of customer; sold the same way",
+    "score": 9.2,
+    "ticker": "NASDAQGS:LINE"
+   },
+   {
+    "company": "Americold Realty Trust",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of handling; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "NYSE:COLD"
+   },
+   {
+    "company": "Tritax Big Box REIT plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of warehouse; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "LSE:BBOX"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 3.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 2.5,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "ID Logistics Group SA",
+     "mult": 0.5,
+     "reason": "shares the language of fulfilment, warehouse; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "mult": 0.5,
+     "reason": "shares the language of a; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GXO Logistics, Inc.",
+     "mult": 0.7,
+     "reason": "both do Warehouse Robotics; same type of business; same kind of customer; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of fulfilment; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Lineage, Inc.",
+     "mult": 3.3,
+     "reason": "both do Warehouse Automation; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Americold Realty Trust",
+     "mult": 3.5,
+     "reason": "shares the language of handling; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tritax Big Box REIT plc",
+     "mult": 18.3,
+     "reason": "shares the language of warehouse; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "a",
+    "automation",
+    "fulfilment",
+    "handling",
+    "robotics",
+    "warehouse"
+   ],
+   "show_retention": false,
+   "spread": 36.6,
+   "table": [
+    {
+     "company": "ID Logistics Group SA",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:IDL"
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SZSE:002352"
+    },
+    {
+     "company": "GXO Logistics, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:GXO"
+    },
+    {
+     "company": "Delhivery Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 17.0,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:DELHIVERY"
+    },
+    {
+     "company": "Lineage, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 2.0,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:LINE"
+    },
+    {
+     "company": "Americold Realty Trust",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -1.0,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:COLD"
+    },
+    {
+     "company": "Tritax Big Box REIT plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 6.0,
+     "multiple": 18.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:BBOX"
+    }
+   ],
+   "tag_evidence": 4.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Backed VC",
+    "not_published": null,
+    "recent_deal": "Round",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://www.finsmes.com/2026/04/round-raises-6m-in-seed-funding.html",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Manufacturing and automation alongside frontier tech. $500k to $5M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe and US",
+    "house_type": "Venture",
+    "investor": "Pale blue dot",
+    "not_published": null,
+    "recent_deal": "Staer",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://paleblue.vc/portfolio/staer",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "North America and Europe, selectively global",
+    "house_type": "Venture",
+    "investor": "Dynamo Ventures",
+    "not_published": null,
+    "recent_deal": "UNIT AI",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.dynamo.vc/insights/unit-ai",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Europe-focused (Berlin); invests internationally",
+    "house_type": "Venture",
+    "investor": "FoodLabs",
+    "not_published": null,
+    "recent_deal": "Reformed",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Southern Europe and Latin America, especially Spain",
+    "house_type": "Venture",
+    "investor": "Kfund",
+    "not_published": null,
+    "recent_deal": "Pollen",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.15,
+    "deal_note": "Regional fund deployments (MEIF II) with Maven named as fund manager, not balance-sheet venture cheques.",
+    "geographies": "UK; South West England",
+    "house_type": "Venture",
+    "investor": "Maven Capital Partners",
+    "not_published": null,
+    "recent_deal": "Xentra",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.uktech.news/cybersecurity/cybersecurity-provider-xentra-secures-2-7m-20260720",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "The SWIF Maven Equity Fund invests in earlier stage and established companies located across the South West of England.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 4.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European, including Israel",
+    "house_type": "Venture",
+    "investor": "Planet A Ventures",
+    "not_published": null,
+    "recent_deal": "Gigaton",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "Lightrock India",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "McKinley Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "March Capital",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Shiprocket",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": 16.03,
+    "reason": "both do Fulfilment; same type of business; same business function",
+    "score": 7.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {},
+  "private_window_months": 48,
+  "secondary": [
+   {
+    "company": "Sinotrans Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of a; same type of business; same kind of customer; sold the same way",
+    "score": 8.9,
+    "ticker": "SEHK:598"
+   },
+   {
+    "company": "PostNL N.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of service; same business function; same kind of customer; sold the same way",
+    "score": 8.7,
+    "ticker": "ENXTAM:PNL"
+   },
+   {
+    "company": "Blue Dart Express Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of service; same business function; same kind of customer; sold the same way",
+    "score": 8.7,
+    "ticker": "NSEI:BLUEDART"
+   },
+   {
+    "company": "Baozun Inc.",
+    "family": "consumer",
+    "in_medians": false,
+    "reason": "shares the language of fulfilment; same type of business; same kind of customer; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:BZUN"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.3,
+   "mid": 0.4,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "a",
+    "service"
+   ],
+   "show_retention": false,
+   "spread": 5.7,
+   "table": [
+    {
+     "company": "PostNL N.V.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:PNL"
+    },
+    {
+     "company": "Sinotrans Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:598"
+    },
+    {
+     "company": "Blue Dart Express Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:BLUEDART"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Deployment-ready robotic labor for the supply chain industry"
+}

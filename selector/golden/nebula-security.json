@@ -1,0 +1,842 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "CrowdStrike Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+    "score": 8.7,
+    "ticker": "NASDAQGS:CRWD"
+   },
+   {
+    "company": "Varonis Systems, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+    "score": 8.7,
+    "ticker": "NASDAQGS:VRNS"
+   },
+   {
+    "company": "Palo Alto Networks, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do SOC Automation; same type of business; sold the same way",
+    "score": 7.8,
+    "ticker": "NASDAQGS:PANW"
+   },
+   {
+    "company": "Qualys, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of attack, security; same type of business; sold the same way",
+    "score": 7.7,
+    "ticker": "NASDAQGS:QLYS"
+   },
+   {
+    "company": "SentinelOne, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Threat Detection; same type of business; same AI stance",
+    "score": 7.1,
+    "ticker": "NYSE:S"
+   },
+   {
+    "company": "Netskope, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of security; same type of business; sold the same way",
+    "score": 6.1,
+    "ticker": "NASDAQGS:NTSK"
+   },
+   {
+    "company": "Rubrik, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of security; same type of business; sold the same way",
+    "score": 6.1,
+    "ticker": "NYSE:RBRK"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 18.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 5.4,
+   "mid": 7.1,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "SentinelOne, Inc.",
+     "mult": 4.9,
+     "reason": "both do Threat Detection; same type of business; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Varonis Systems, Inc.",
+     "mult": 5.4,
+     "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Netskope, Inc.",
+     "mult": 5.4,
+     "reason": "shares the language of security; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Qualys, Inc.",
+     "mult": 7.1,
+     "reason": "shares the language of attack, security; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Rubrik, Inc.",
+     "mult": 9.3,
+     "reason": "shares the language of security; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Palo Alto Networks, Inc.",
+     "mult": 18.2,
+     "reason": "both do SOC Automation; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "CrowdStrike Holdings, Inc.",
+     "mult": 31.9,
+     "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ai",
+    "attack",
+    "automation",
+    "detection",
+    "response",
+    "security",
+    "soc",
+    "threat"
+   ],
+   "show_retention": true,
+   "spread": 6.5,
+   "table": [
+    {
+     "company": "SentinelOne, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 19.0,
+     "multiple": 4.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:S"
+    },
+    {
+     "company": "Varonis Systems, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 19.0,
+     "multiple": 5.4,
+     "recurring_pct": 91.8,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:VRNS"
+    },
+    {
+     "company": "Netskope, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 24.0,
+     "multiple": 5.4,
+     "recurring_pct": null,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:NTSK"
+    },
+    {
+     "company": "Qualys, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 7.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:QLYS"
+    },
+    {
+     "company": "Rubrik, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 25.0,
+     "multiple": 9.3,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:RBRK"
+    },
+    {
+     "company": "Palo Alto Networks, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 22.0,
+     "multiple": 18.2,
+     "recurring_pct": 80.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PANW"
+    },
+    {
+     "company": "CrowdStrike Holdings, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 31.9,
+     "recurring_pct": 95.2,
+     "retention_pct": 115.0,
+     "ticker": "NASDAQGS:CRWD"
+    }
+   ],
+   "tag_evidence": 1.7,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Lightspeed Venture Partners",
+    "not_published": [
+     "cheque"
+    ],
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We stand behind our companies with high conviction from Seed to Series F and beyond.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "",
+    "house_type": "",
+    "investor": "Thrive Capital",
+    "not_published": [
+     "cheque",
+     "geography"
+    ],
+    "recent_deal": "Ramp",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://techcrunch.com/2025/11/17/ramp-hits-32b-valuation-just-three-months-after-hitting-22-5b/",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Thrive Capital builds and invests in internet, software and technology-enabled companies.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Abnormal Security",
+      "date": "Aug-24"
+     },
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Wellington",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Abnormal Security",
+      "date": "Aug-24"
+     },
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Greylock",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Abnormal Security",
+      "date": "Aug-24"
+     }
+    ],
+    "investor": "Menlo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Abnormal Security",
+      "date": "Aug-24"
+     }
+    ],
+    "investor": "Insight",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Abnormal Security",
+      "date": "Aug-24"
+     }
+    ],
+    "investor": "CrowdStrike Falcon Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Huntress",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Kleiner Perkins",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Huntress",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Huntress",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Huntress",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "JMI Equity",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     },
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Lightspeed",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Thrive",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Cyberstarts",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Greenoaks",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cyera",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cyera",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "Spark Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cyera",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "Georgian",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cyera",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "AT&T Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cyera",
+      "date": "Apr-24"
+     },
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     },
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Accel",
+    "n": 3
+   },
+   {
+    "backed": [
+     {
+      "company": "Cyera",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "Qatar Investment Authority",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "Evolution Equity",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "boldstart",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "Sands Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Slack Fund",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Abnormal Security",
+    "date": "Aug-24",
+    "in_medians": true,
+    "mult": 25.5,
+    "reason": "shares the language of ai, security; same type of business; same revenue model; sold the same way",
+    "score": 13.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Huntress",
+    "date": "Jun-24",
+    "in_medians": false,
+    "mult": 15.5,
+    "reason": "shares the language of detection, response, security; same type of business; same revenue model",
+    "score": 12.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Wiz",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 34.3,
+    "reason": "shares the language of attack, security; same type of business; sold the same way",
+    "score": 10.2,
+    "type": "MIXED"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Cyera",
+    "date": "Apr-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of security; same type of business; sold the same way; same AI stance",
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Snyk",
+    "date": "Dec-22",
+    "in_medians": false,
+    "mult": 41.1,
+    "reason": "shares the language of security; same type of business; same revenue model",
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "1Password",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 45.3,
+    "reason": "shares the language of security; same type of business; same revenue model",
+    "score": 8.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 3
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 45.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 25.5,
+   "mid": 34.3,
+   "n": 3,
+   "period_mix": {
+    "RUN_RATE": 3
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "ai",
+    "attack",
+    "security"
+   ],
+   "spread": 1.8,
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 55,
+  "secondary": [
+   {
+    "company": "BlackLine, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same kind of customer; same revenue model; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:BL"
+   },
+   {
+    "company": "Five9, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same kind of customer; same revenue model; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGM:FIVN"
+   },
+   {
+    "company": "NICE Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai; same kind of customer; same revenue model; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:NICE"
+   },
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Simulation; same kind of customer; same revenue model; sold the same way",
+    "score": 7.6,
+    "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same business function; sold the same way; same AI stance",
+    "score": 7.1,
+    "ticker": "NYSE:PATH"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.0,
+   "mid": 2.5,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ai",
+    "automation",
+    "simulation"
+   ],
+   "show_retention": true,
+   "spread": 2.4,
+   "table": [
+    {
+     "company": "NICE Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 1.8,
+     "recurring_pct": 89.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:NICE"
+    },
+    {
+     "company": "Five9, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 2.0,
+     "recurring_pct": 94.0,
+     "retention_pct": 106.0,
+     "ticker": "NASDAQGM:FIVN"
+    },
+    {
+     "company": "BlackLine, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 2.5,
+     "recurring_pct": 95.0,
+     "retention_pct": 102.0,
+     "ticker": "NASDAQGS:BL"
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "NTM",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "UiPath, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:PATH"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Autonomous AI defense system for cyber attack"
+}

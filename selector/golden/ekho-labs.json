@@ -1,0 +1,701 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NYSE:UPS"
+   },
+   {
+    "company": "Delhivery Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NSEI:DELHIVERY"
+   },
+   {
+    "company": "Pkp Cargo S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of carrier, freight; same type of business; same kind of customer; sold the same way",
+    "score": 10.7,
+    "ticker": "WSE:PKP"
+   },
+   {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+    "score": 10.7,
+    "ticker": "SZSE:002352"
+   },
+   {
+    "company": "FedEx Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of freight; related type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NYSE:FDX"
+   },
+   {
+    "company": "JSL S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+    "score": 10.4,
+    "ticker": "BOVESPA:JSLG3"
+   },
+   {
+    "company": "Grupo Traxion, S.A.B. de C.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+    "score": 10.4,
+    "ticker": "BMV:TRAXION A"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 1.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 0.7,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "mult": 0.2,
+     "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "mult": 0.5,
+     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Pkp Cargo S.A.",
+     "mult": 0.6,
+     "reason": "shares the language of carrier, freight; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "JSL S.A.",
+     "mult": 0.7,
+     "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FedEx Corporation",
+     "mult": 1.1,
+     "reason": "shares the language of freight; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "United Parcel Service",
+     "mult": 1.2,
+     "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "carrier",
+    "chain",
+    "freight",
+    "logistics",
+    "supply"
+   ],
+   "show_retention": false,
+   "spread": 12.5,
+   "table": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BMV:TRAXION A"
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SZSE:002352"
+    },
+    {
+     "company": "Pkp Cargo S.A.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 9.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:PKP"
+    },
+    {
+     "company": "JSL S.A.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BOVESPA:JSLG3"
+    },
+    {
+     "company": "FedEx Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FDX"
+    },
+    {
+     "company": "United Parcel Service",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UPS"
+    },
+    {
+     "company": "Delhivery Limited",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 17.0,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:DELHIVERY"
+    }
+   ],
+   "tag_evidence": 1.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 4.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European, including Israel",
+    "house_type": "Venture",
+    "investor": "Planet A Ventures",
+    "not_published": null,
+    "recent_deal": "Gigaton",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based; global transportation opportunities, including Europe",
+    "house_type": "Venture",
+    "investor": "Trucks Venture Capital",
+    "not_published": null,
+    "recent_deal": "Providio AI",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://providio.ai/blog/from-human-to-superhuman",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed investor in transportation systems, freight, aviation and mobility infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "Lightrock India",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "McKinley Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "March Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Blackstone Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "TPG Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "ChrysCapital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Investcorp",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Xpressbees",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "Norwest",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Fidelity",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Baillie Gifford",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Chimera",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Steadview Capital",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Shiprocket",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": 16.03,
+    "reason": "shares the language of logistics; same type of business; same business function",
+    "score": 7.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Xpressbees",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": 8.94,
+    "reason": "shares the language of logistics; related type of business; same business function; sold the same way",
+    "score": 9.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Delhivery",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 5.97,
+    "reason": "both do Freight; related type of business; same business function; sold the same way",
+    "score": 10.4,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "NET_REVENUE": 2
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 8.94,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 5.97,
+   "mid": 8.94,
+   "n": 2,
+   "period_mix": {
+    "LTM": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "freight",
+    "logistics"
+   ],
+   "spread": 1.5,
+   "tag_evidence": 0.9,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 63,
+  "secondary": [
+   {
+    "company": "Deutsche Post AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; related type of business; same business function; same kind of customer",
+    "score": 10.3,
+    "ticker": "XTRA:DHL"
+   },
+   {
+    "company": "SG Holdings Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; related type of business; same business function; same kind of customer",
+    "score": 10.3,
+    "ticker": "TSE:9143"
+   },
+   {
+    "company": "XPO, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of freight; same type of business; same kind of customer; sold the same way",
+    "score": 10.1,
+    "ticker": "NYSE:XPO"
+   },
+   {
+    "company": "C.H. Robinson Worldwide",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of carrier, freight, logistics; same type of business; same kind of customer; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQGS:CHRW"
+   },
+   {
+    "company": "GXO Logistics, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same kind of customer; sold the same way",
+    "score": 9.8,
+    "ticker": "NYSE:GXO"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.7,
+   "mid": 0.9,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "carrier",
+    "freight",
+    "logistics"
+   ],
+   "show_retention": false,
+   "spread": 3.9,
+   "table": [
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9143"
+    },
+    {
+     "company": "GXO Logistics, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:GXO"
+    },
+    {
+     "company": "Deutsche Post AG",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DHL"
+    },
+    {
+     "company": "C.H. Robinson Worldwide",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 7.0,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CHRW"
+    },
+    {
+     "company": "XPO, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:XPO"
+    }
+   ],
+   "tag_evidence": 1.5,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "World model for freight"
+}

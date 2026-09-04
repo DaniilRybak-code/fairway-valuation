@@ -1,0 +1,691 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do CRM, Sales Automation; same type of business; same kind of customer; same revenue model",
+    "score": 15.8,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Salesforce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do CRM, Sales Automation; related type of business; same business function; same revenue model",
+    "score": 11.8,
+    "ticker": "NYSE:CRM"
+   },
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do CRM; related type of business; same kind of customer; same revenue model",
+    "score": 9.9,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
+    "score": 7.6,
+    "ticker": "NYSE:KVYO"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.7,
+   "mid": 2.9,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "crm",
+    "management",
+    "sales"
+   ],
+   "show_retention": true,
+   "spread": 1.9,
+   "table": [
+    {
+     "company": "Freshworks Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 104.0,
+     "ticker": "NASDAQGS:FRSH"
+    },
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
+     "company": "Salesforce, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 5.0,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NYSE:CRM"
+    }
+   ],
+   "tag_evidence": 3.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     },
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Conviction",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Avra",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Operator Collective",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Frontline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Semrush",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Adobe",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Gong",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Undisclosed (Nasdaq Private Market secondary)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Tribe Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Nexus Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Insight Partners (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Foundation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Founders Circle Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "HubSpot Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Notion",
+    "date": "Jan-26",
+    "in_medians": false,
+    "mult": 18.3,
+    "reason": "shares the language of ai, management; related type of business; same kind of customer; same revenue model",
+    "score": 13.1,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "reason": "both do Sales Intelligence; same type of business; same business function; sold the same way",
+    "score": 12.4,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 4.3,
+    "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+    "score": 15.3,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gong",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of deal, intelligence, sales; same type of business; same business function; same revenue model",
+    "score": 14.7,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Apollo.io",
+    "date": "Aug-23",
+    "in_medians": false,
+    "mult": 16.7,
+    "reason": "both do Sales Intelligence; same type of business; same business function; same kind of customer",
+    "score": 19.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of ai; same type of business; same kind of customer; same revenue model",
+    "score": 17.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Gorgias",
+    "date": "Aug-22",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
+    "score": 12.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "NET_REVENUE": 2
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 50.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
+   "low": 4.3,
+   "mid": 33.3,
+   "n": 3,
+   "period_mix": {
+    "LTM": 1,
+    "NTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "shares the language of ai; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "both do Sales Intelligence; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "ai",
+    "automation",
+    "enrichment",
+    "intelligence",
+    "sales"
+   ],
+   "spread": 11.6,
+   "tag_evidence": 1.4,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 48,
+  "secondary": [
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Sales Intelligence; related type of business; same business function; same revenue model",
+    "score": 8.6,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "Zoom Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of contact; related type of business; same revenue model; sold the same way",
+    "score": 7.3,
+    "ticker": "NASDAQGS:ZM"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 3.05,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "contact",
+    "enrichment",
+    "intelligence",
+    "sales"
+   ],
+   "show_retention": true,
+   "spread": 1.8,
+   "table": [
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "NTM",
+     "growth_pct": -2.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "Zoom Communications, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 4.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": 99.0,
+     "ticker": "NASDAQGS:ZM"
+    }
+   ],
+   "tag_evidence": 1.6,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "The autonomous CRM that helps you sell more"
+}

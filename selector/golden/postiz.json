@@ -1,0 +1,729 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+    "score": 10.6,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Sprout Social, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Social Scheduling; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "NASDAQCM:SPT"
+   },
+   {
+    "company": "Sprinklr, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of media, social; same type of business; same revenue model",
+    "score": 7.0,
+    "ticker": "NYSE:CXM"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.2,
+   "mid": 1.6,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "media",
+    "platform",
+    "scheduling",
+    "social"
+   ],
+   "show_retention": true,
+   "spread": 2.5,
+   "table": [
+    {
+     "company": "Sprout Social, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NASDAQCM:SPT"
+    },
+    {
+     "company": "Sprinklr, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 1.6,
+     "recurring_pct": 89.0,
+     "retention_pct": 104.0,
+     "ticker": "NYSE:CXM"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    }
+   ],
+   "tag_evidence": 1.1,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Semrush",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Adobe",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Insight Partners (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Foundation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Founders Circle Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "HubSpot Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Blue Owl Capital (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "MSD Partners (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "B Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Franklin Templeton",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Harmony Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Insight Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "D1 Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "October 2014 run-rate",
+    "bound": "",
+    "company": "Buffer",
+    "date": "Oct-14",
+    "in_medians": true,
+    "mult": 12.8,
+    "reason": "both do Social Media Scheduling, Publishing, Content Calendar; same type of business; same business function; same kind of customer",
+    "score": 30.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 4.3,
+    "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+    "score": 19.8,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+    "score": 19.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "6sense",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 47.3,
+    "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+    "score": 13.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Klaviyo",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 32.6,
+    "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+    "score": 15.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Yotpo",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 14.0,
+    "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+    "score": 15.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2,
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 3
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 47.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
+   "low": 4.3,
+   "mid": 32.6,
+   "n": 6,
+   "period_mix": {
+    "LTM": 2,
+    "NTM": 1,
+    "RUN_RATE": 3
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Buffer",
+     "mult": 12.8,
+     "reason": "both do Social Media Scheduling, Publishing, Content Calendar; same type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Yotpo",
+     "mult": 14.0,
+     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Klaviyo",
+     "mult": 32.6,
+     "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "6sense",
+     "mult": 47.3,
+     "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "calendar",
+    "content",
+    "media",
+    "platform",
+    "publishing",
+    "scheduling",
+    "social"
+   ],
+   "spread": 11.0,
+   "tag_evidence": 8.5,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 142,
+  "secondary": [
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform, source; related type of business; same revenue model; sold the same way",
+    "score": 8.7,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "PagerDuty, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of scheduling; related type of business; same revenue model; same AI stance",
+    "score": 7.6,
+    "ticker": "NYSE:PD"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform, tools; related type of business; same revenue model; sold the same way",
+    "score": 7.6,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; same kind of customer; sold the same way; same AI stance",
+    "score": 6.6,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
+    "company": "Salesforce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; related type of business; same revenue model; same AI stance",
+    "score": 6.1,
+    "ticker": "NYSE:CRM"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.1,
+   "mid": 4.45,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Wix.com Ltd.",
+     "mult": 2.0,
+     "reason": "shares the language of platform; same kind of customer; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "platform",
+    "scheduling",
+    "source",
+    "tools"
+   ],
+   "show_retention": true,
+   "spread": 2.5,
+   "table": [
+    {
+     "company": "PagerDuty, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 1.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": 97.0,
+     "ticker": "NYSE:PD"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "Salesforce, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 5.0,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NYSE:CRM"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.2,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    }
+   ],
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Agentic social media scheduler"
+}

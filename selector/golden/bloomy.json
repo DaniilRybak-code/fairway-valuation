@@ -1,0 +1,723 @@
+{
+ "expected": {
+  "all_ranges": {
+   "listed": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "UNKNOWN": 4
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 4.7,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 0.4,
+     "mid": 0.45,
+     "n": 4,
+     "period_mix": {
+      "NTM": 4
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Nerdy Inc.",
+       "mult": 0.4,
+       "reason": "shares the language of learning, school; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Chegg, Inc.",
+       "mult": 0.4,
+       "reason": "shares the language of tools; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Coursera, Inc.",
+       "mult": 0.5,
+       "reason": "shares the language of learning; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      },
+      {
+       "company": "Duolingo, Inc.",
+       "mult": 4.7,
+       "reason": "both do Adaptive Learning; same type of business; same end market; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": ""
+      }
+     ],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "adaptive",
+      "learning",
+      "school",
+      "tools"
+     ],
+     "show_retention": false,
+     "spread": 11.8,
+     "table": [
+      {
+       "company": "Nerdy Inc.",
+       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+       "growth_pct": 3.0,
+       "multiple": 0.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:NRDY"
+      },
+      {
+       "company": "Chegg, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": -26.0,
+       "multiple": 0.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:CHGG"
+      },
+      {
+       "company": "Coursera, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 12.0,
+       "multiple": 0.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:COUR"
+      },
+      {
+       "company": "Duolingo, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 13.0,
+       "multiple": 4.7,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQGS:DUOL"
+      }
+     ],
+     "tag_evidence": 4.2,
+     "thin": false,
+     "triangulated": false
+    }
+   },
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": true,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 15.38,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.27,
+     "mid": 15.38,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "spread": 2.1,
+     "tag_evidence": 0.0,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Duolingo, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Adaptive Learning; same type of business; same end market; same AI stance",
+    "score": 11.2,
+    "ticker": "NASDAQGS:DUOL"
+   },
+   {
+    "company": "Nerdy Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning, school; same type of business; same end market",
+    "score": 7.2,
+    "ticker": "NYSE:NRDY"
+   },
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning, software; same type of business; same end market",
+    "score": 6.6,
+    "ticker": "TSE:4686"
+   },
+   {
+    "company": "Coursera, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same end market",
+    "score": 6.6,
+    "ticker": "NYSE:COUR"
+   },
+   {
+    "company": "Chegg, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of tools; same type of business; same end market",
+    "score": 6.5,
+    "ticker": "NYSE:CHGG"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 4.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.45,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Nerdy Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of learning, school; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Chegg, Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of tools; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coursera, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of learning; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "mult": 4.7,
+     "reason": "both do Adaptive Learning; same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "adaptive",
+    "learning",
+    "school",
+    "tools"
+   ],
+   "show_retention": false,
+   "spread": 11.8,
+   "table": [
+    {
+     "company": "Nerdy Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NRDY"
+    },
+    {
+     "company": "Chegg, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -26.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHGG"
+    },
+    {
+     "company": "Coursera, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:COUR"
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.0,
+     "multiple": 4.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DUOL"
+    }
+   ],
+   "tag_evidence": 4.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "LEAD School",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LEAD School",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "GSV Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vedantu",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "ABC World Asia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IFC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IIFL",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "LEAD School",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 142.17,
+    "reason": "both do School Software, Curriculum; same type of business; same end market; same business function",
+    "score": 17.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vedantu",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 15.38,
+    "reason": "same type of business; same end market",
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "upGrad",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 7.27,
+    "reason": "same type of business; same end market",
+    "score": 8.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": true,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 15.38,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 7.27,
+   "mid": 15.38,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [],
+   "spread": 2.1,
+   "tag_evidence": 0.0,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 60,
+  "secondary": [
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "score": 6.7,
+    "ticker": "NYSE:UPS"
+   },
+   {
+    "company": "FedEx Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "score": 6.7,
+    "ticker": "NYSE:FDX"
+   },
+   {
+    "company": "PostNL N.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "score": 6.7,
+    "ticker": "ENXTAM:PNL"
+   },
+   {
+    "company": "SG Holdings Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "score": 6.7,
+    "ticker": "TSE:9143"
+   },
+   {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "score": 6.7,
+    "ticker": "SZSE:002352"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 0.7,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "delivery"
+   ],
+   "show_retention": false,
+   "spread": 4.0,
+   "table": [
+    {
+     "company": "PostNL N.V.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 3.0,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:PNL"
+    },
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 8.0,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SZSE:002352"
+    },
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9143"
+    },
+    {
+     "company": "FedEx Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FDX"
+    },
+    {
+     "company": "United Parcel Service",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 4.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UPS"
+    }
+   ],
+   "tag_evidence": 0.2,
+   "thin": false,
+   "triangulated": true
+  }
+ },
+ "label": "AI-native learning for every school"
+}

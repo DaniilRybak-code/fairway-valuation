@@ -1,0 +1,615 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do CRM; related type of business; same kind of customer; same revenue model",
+    "score": 9.9,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do CRM; related type of business; same kind of customer; same revenue model",
+    "score": 9.9,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Pexip Holding ASA",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of meeting; same type of business; same revenue model",
+    "score": 7.1,
+    "ticker": "OB:PEXIP"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.7,
+   "mid": 2.8,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "crm",
+    "meeting"
+   ],
+   "show_retention": true,
+   "spread": 1.9,
+   "table": [
+    {
+     "company": "Freshworks Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 104.0,
+     "ticker": "NASDAQGS:FRSH"
+    },
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Pexip Holding ASA",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 11.0,
+     "multiple": 5.1,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "OB:PEXIP"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Gong",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Undisclosed (Nasdaq Private Market secondary)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Salesloft",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Vista Equity Partners (majority)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Salesloft",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Mubadala (co-investor)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Premji Invest (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "STEADFAST Capital Ventures (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Sequoia Capital Global Equities",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Vista Public Strategies",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Lone Pine",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Sands Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Mayfield",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "DFJ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Trinity",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Calendly",
+      "date": "Jan-21"
+     }
+    ],
+    "investor": "OpenView",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Calendly",
+      "date": "Jan-21"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Gong",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": null,
+    "reason": "both do Conversation Intelligence; same revenue model; same AI stance",
+    "score": 10.4,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Salesloft",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "both do Conversation Intelligence; related type of business; same revenue model",
+    "score": 10.4,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Outreach",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": null,
+    "reason": "both do Conversation Intelligence; related type of business; same revenue model",
+    "score": 10.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Calendly",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 42.9,
+    "reason": "shares the language of meeting, sync; same type of business; same business function; same revenue model",
+    "score": 17.2,
+    "type": "MIXED"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "NET_REVENUE": 1
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Salesloft"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 42.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 23.0,
+   "mid": 42.9,
+   "n": 2,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "conversation",
+    "intelligence",
+    "meeting",
+    "sync"
+   ],
+   "spread": 1.9,
+   "tag_evidence": 3.9,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 67,
+  "secondary": [
+   {
+    "company": "NICE Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Call Recording; same revenue model",
+    "score": 7.7,
+    "ticker": "NASDAQGS:NICE"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Conversation Intelligence; same revenue model",
+    "score": 7.4,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "PagerDuty, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of call; related type of business; same revenue model",
+    "score": 6.6,
+    "ticker": "NYSE:PD"
+   },
+   {
+    "company": "Dropbox, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of sync; same revenue model; sold the same way",
+    "score": 6.1,
+    "ticker": "NASDAQGS:DBX"
+   },
+   {
+    "company": "Salesforce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do CRM; related type of business; same revenue model",
+    "score": 5.4,
+    "ticker": "NYSE:CRM"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.8,
+   "mid": 2.15,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Dropbox, Inc.",
+     "mult": 4.1,
+     "reason": "shares the language of sync; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "call",
+    "conversation",
+    "crm",
+    "intelligence",
+    "recording"
+   ],
+   "show_retention": true,
+   "spread": 2.8,
+   "table": [
+    {
+     "company": "NICE Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 1.8,
+     "recurring_pct": 89.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:NICE"
+    },
+    {
+     "company": "PagerDuty, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 1.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": 97.0,
+     "ticker": "NYSE:PD"
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "NTM",
+     "growth_pct": -2.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "Salesforce, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 5.0,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NYSE:CRM"
+    }
+   ],
+   "tag_evidence": 4.2,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "AI meeting notes, bot-free and inside your chat tools"
+}

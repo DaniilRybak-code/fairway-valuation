@@ -1,0 +1,663 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Figma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do UI Design, Design System; same type of business; same business function; same revenue model",
+    "score": 12.6,
+    "ticker": "NYSE:FIG"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ui; related type of business; same business function; same kind of customer",
+    "score": 12.1,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "Autodesk, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same revenue model",
+    "score": 9.8,
+    "ticker": "NASDAQGS:ADSK"
+   },
+   {
+    "company": "Bentley Systems, Incorporated",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "NASDAQGS:BSY"
+   },
+   {
+    "company": "Cadence Design Systems, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same kind of customer",
+    "score": 8.8,
+    "ticker": "NASDAQGS:CDNS"
+   },
+   {
+    "company": "Nemetschek SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "XTRA:NEM"
+   },
+   {
+    "company": "PTC Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "NASDAQGS:PTC"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 7.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.9,
+   "mid": 6.2,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "design",
+    "system",
+    "ui"
+   ],
+   "show_retention": true,
+   "spread": 3.3,
+   "table": [
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "Nemetschek SE",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 4.9,
+     "recurring_pct": 92.2,
+     "retention_pct": null,
+     "ticker": "XTRA:NEM"
+    },
+    {
+     "company": "Autodesk, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 13.0,
+     "multiple": 5.8,
+     "recurring_pct": 97.0,
+     "retention_pct": 105.0,
+     "ticker": "NASDAQGS:ADSK"
+    },
+    {
+     "company": "PTC Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 6.2,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTC"
+    },
+    {
+     "company": "Bentley Systems, Incorporated",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 12.0,
+     "multiple": 6.7,
+     "recurring_pct": 92.0,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:BSY"
+    },
+    {
+     "company": "Figma, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 32.0,
+     "multiple": 7.6,
+     "recurring_pct": null,
+     "retention_pct": 136.0,
+     "ticker": "NYSE:FIG"
+    },
+    {
+     "company": "Cadence Design Systems, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 12.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CDNS"
+    }
+   ],
+   "tag_evidence": 1.1,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Canva",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Fidelity Management & Research",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Canva",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "J.P. Morgan Asset Management",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Weights & Biases",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "CoreWeave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Figma",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tender participants not disclosed",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "CRV",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Notable",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Bedrock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Geodesic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Atlassian Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Citi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Vertex",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Canva",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 12.7,
+    "reason": "shares the language of design; same type of business; same business function; same revenue model",
+    "score": 18.3,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of registry; related type of business; same business function; same kind of customer",
+    "score": 18.1,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Figma",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 17.9,
+    "reason": "both do UI Design, Design System; same type of business; same business function; same revenue model",
+    "score": 17.6,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vercel",
+    "date": "May-24",
+    "in_medians": false,
+    "mult": 32.5,
+    "reason": "shares the language of frontend; related type of business; same business function; same kind of customer",
+    "score": 15.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Docker",
+    "date": "Mar-22",
+    "in_medians": false,
+    "mult": 42.0,
+    "reason": "shares the language of building, registry; related type of business; same business function; same kind of customer",
+    "score": 18.7,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "ARR_RUNRATE": 1
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 17.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 12.7,
+   "mid": 17.9,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "design",
+    "system",
+    "ui"
+   ],
+   "spread": 1.4,
+   "tag_evidence": 1.1,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 53,
+  "secondary": [
+   {
+    "company": "Synopsys, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same kind of customer",
+    "score": 8.8,
+    "ticker": "NASDAQGS:SNPS"
+   },
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "Ooma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of system; same revenue model; sold the same way; same AI stance",
+    "score": 6.8,
+    "ticker": "NYSE:OOMA"
+   },
+   {
+    "company": "Arteris, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of design; same type of business; same business function; same AI stance",
+    "score": 6.3,
+    "ticker": "NASDAQGM:AIP"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 8.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.1,
+   "mid": 8.2,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Ooma, Inc.",
+     "mult": 1.9,
+     "reason": "shares the language of system; same revenue model; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "design"
+   ],
+   "show_retention": false,
+   "spread": 2.0,
+   "table": [
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "NTM",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "Synopsys, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 8.2,
+     "recurring_pct": 78.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:SNPS"
+    },
+    {
+     "company": "Arteris, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 30.0,
+     "multiple": 8.2,
+     "recurring_pct": 90.5,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:AIP"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": true
+  }
+ },
+ "label": "UI building blocks for the agentic internet"
+}

@@ -1,0 +1,401 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "ZhongAn Online P&C Insurance Co., Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Digital Insurance; same type of business",
+    "score": 7.5,
+    "ticker": "SEHK:6060"
+   },
+   {
+    "company": "PayPoint plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same revenue model",
+    "score": 8.0,
+    "ticker": "LSE:PAY"
+   },
+   {
+    "company": "SS&C Technologies Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of administration, automation; same end market; same business function",
+    "score": 6.5,
+    "ticker": "NASDAQ:SSNC"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 3.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 2.0,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "ZhongAn Online P&C Insurance Co., Ltd.",
+     "mult": 0.4,
+     "reason": "both do Digital Insurance; same type of business",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PayPoint plc",
+     "mult": 2.0,
+     "reason": "same end market; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "SS&C Technologies Holdings, Inc.",
+     "mult": 3.8,
+     "reason": "shares the language of administration, automation; same end market; same business function",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "administration",
+    "automation",
+    "digital",
+    "insurance"
+   ],
+   "show_retention": false,
+   "spread": 9.5,
+   "table": [
+    {
+     "company": "ZhongAn Online P&C Insurance Co., Ltd.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:6060"
+    },
+    {
+     "company": "PayPoint plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:PAY"
+    },
+    {
+     "company": "SS&C Technologies Holdings, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 3.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:SSNC"
+    }
+   ],
+   "tag_evidence": 3.5,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "The Zebra",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Hedosophia (reported",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Alan",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Prosus",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "Uprising",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "Annualized GWP / revenue proxy",
+    "bound": "",
+    "company": "Coalition",
+    "date": "Jul-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Underwriting; same type of business; same end market; same kind of customer",
+    "score": 12.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Revenue",
+    "bound": "",
+    "company": "Wefox",
+    "date": "Jul-22",
+    "in_medians": true,
+    "mult": 14.06,
+    "reason": "shares the language of digital, insurance; same type of business; same end market",
+    "score": 8.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "The Zebra",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 6.67,
+    "reason": "shares the language of carrier, insurance; same type of business; same end market; sold the same way",
+    "score": 12.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Alan",
+    "date": "Jun-26",
+    "in_medians": true,
+    "mult": 6.88,
+    "reason": "both do Claims; same type of business; same kind of customer",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Devoted Health",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 51.4,
+    "reason": "both do Insurance; same type of business; sold the same way",
+    "score": 7.4,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "ARR_RUNRATE": 1
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 6.88,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 6.67,
+   "mid": 6.88,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "carrier",
+    "claims",
+    "digital",
+    "insurance"
+   ],
+   "spread": 1.0,
+   "tag_evidence": 1.1,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 64,
+  "secondary": [
+   {
+    "company": "HUB24 Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of administration; same end market; same business function",
+    "score": 6.4,
+    "ticker": "ASX:HUB"
+   },
+   {
+    "company": "Netwealth Group Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of administration; same end market; same business function",
+    "score": 6.4,
+    "ticker": "ASX:NWL"
+   },
+   {
+    "company": "nCino, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of digital; same end market; same business function",
+    "score": 6.1,
+    "ticker": "NASDAQGS:NCNO"
+   },
+   {
+    "company": "Temenos AG",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of digital; same end market; same business function",
+    "score": 6.1,
+    "ticker": "SWX:TEMN"
+   },
+   {
+    "company": "Broadridge Financial Solutions, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function",
+    "score": 6.0,
+    "ticker": "NYSE:BR"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.7,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.9,
+   "mid": 5.5,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "administration",
+    "digital"
+   ],
+   "show_retention": true,
+   "spread": 3.6,
+   "table": [
+    {
+     "company": "Broadridge Financial Solutions, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BR"
+    },
+    {
+     "company": "nCino, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 9.0,
+     "multiple": 3.9,
+     "recurring_pct": 87.9,
+     "retention_pct": 112.0,
+     "ticker": "NASDAQGS:NCNO"
+    },
+    {
+     "company": "Temenos AG",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 5.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SWX:TEMN"
+    },
+    {
+     "company": "HUB24 Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 10.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:HUB"
+    },
+    {
+     "company": "Netwealth Group Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 10.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:NWL"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "The insurance carrier with zero underwriters"
+}

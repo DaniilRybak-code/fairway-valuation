@@ -1,0 +1,236 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "PSI Software SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of energy; same end market; same business function; sold the same way",
+    "score": 8.5,
+    "ticker": "XTRA:PSAN"
+   },
+   {
+    "company": "Indian Energy Exchange Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of energy, power; same end market; sold the same way; same AI stance",
+    "score": 7.1,
+    "ticker": "NSEI:IEX"
+   },
+   {
+    "company": "MONY Group plc",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of energy, generation; same kind of customer; same purchase frequency",
+    "score": 5.3,
+    "ticker": "LSE:MONY"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.85,
+    "cheque_low_m": 0.15,
+    "deal_note": null,
+    "geographies": "UK-focused; can invest across the UK, Europe and North America",
+    "house_type": "Venture",
+    "investor": "Ascension",
+    "not_published": null,
+    "recent_deal": "Hosel?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.ascension.vc/insights/summer-newsletter-2026",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor with a consumer-led strategy for technology serving mass-market users; stated cheque range is GBP 150k-850k.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Eka Ventures",
+    "not_published": null,
+    "recent_deal": "Medly AI",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://tech.eu/2026/08/19/medly-ai-raises-8m-to-bring-ai-powered-tutoring-to-more-students/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed investor in consumer-led technology across health, wellbeing, sustainability and essential services; stated individual investment is GBP 1m-3m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 20.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; invests across Europe and the US",
+    "house_type": "Venture",
+    "investor": "Felix Capital",
+    "not_published": null,
+    "recent_deal": "Throne Science",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.streetinsider.com/Business/Throne+Science+Raises",
+    "stage_bands": "Seed; Series A",
+    "thesis": "First- or second-institutional-round investor in technology-enabled consumer brands, commerce and culture; stated typical initial investment is $1m-$20m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Europe-focused (Berlin); invests internationally",
+    "house_type": "Venture",
+    "investor": "FoodLabs",
+    "not_published": null,
+    "recent_deal": "Reformed",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Hoxton Ventures",
+    "not_published": null,
+    "recent_deal": "Phagos",
+    "recent_deal_date": "2025-10",
+    "recent_deal_url": "https://www.eu-startups.com/2025/10/paris-based-phagos-raises-e25-million-to-create-a-sustainable-alternative-to-antibiotics/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Broad tech with a consumer and fintech lean. $500k to $5M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Western Europe",
+    "house_type": "Venture",
+    "investor": "Slingshot Ventures",
+    "not_published": null,
+    "recent_deal": "Toothfairy",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://capital-riesgo.es/en/articles/toothfairy-series-a-investment",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed-stage investor in digital consumer life, including consumer brands, platforms and marketplaces; stated typical initial ticket is EUR 500k-3m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-based; invests in the UK and internationally",
+    "house_type": "Venture",
+    "investor": "True",
+    "not_published": null,
+    "recent_deal": "Pinpoint",
+    "recent_deal_date": "2025-10",
+    "recent_deal_url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/pinpoint-raises-2-5",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in consumer products, consumer platforms and retail technology; its venture page states a typical GBP 250k-1m cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Octopus Energy Group",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Generation Investment Management",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Octopus Energy Group",
+      "date": "May-24"
+     }
+    ],
+    "investor": "CPP Investments",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Enpal",
+      "date": "Jan-23"
+     }
+    ],
+    "investor": "TPG Rise Climate",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "BROAD",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Octopus Energy Group",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 0.57,
+    "reason": "shares the language of energy; same type of business; same end market; same business function",
+    "score": 11.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Enpal",
+    "date": "Jan-23",
+    "in_medians": true,
+    "mult": 5.5,
+    "reason": "shares the language of energy; same type of business; same end market; same business function",
+    "score": 13.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {},
+  "private_window_months": 43,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "We make the most compact nuclear reactors"
+}

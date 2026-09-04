@@ -1,0 +1,649 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of web; same type of business; same business function; same kind of customer",
+    "score": 13.2,
+    "ticker": "NASDAQGS:ADBE"
+   },
+   {
+    "company": "Figma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of web; same type of business; same business function; same revenue model",
+    "score": 10.7,
+    "ticker": "NYSE:FIG"
+   },
+   {
+    "company": "Dropbox, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+    "score": 8.2,
+    "ticker": "NASDAQGS:DBX"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 7.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.1,
+   "mid": 4.1,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "app",
+    "web"
+   ],
+   "show_retention": true,
+   "spread": 1.9,
+   "table": [
+    {
+     "company": "Adobe Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.1,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ADBE"
+    },
+    {
+     "company": "Dropbox, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DBX"
+    },
+    {
+     "company": "Figma, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 32.0,
+     "multiple": 7.6,
+     "recurring_pct": null,
+     "retention_pct": 136.0,
+     "ticker": "NYSE:FIG"
+    }
+   ],
+   "tag_evidence": 0.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.2,
+    "cheque_low_m": 3.2,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "MMC Ventures",
+    "not_published": null,
+    "recent_deal": "Fifth Dimension",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.vestbee.com/insights/articles/london-based-fifth-dimension-raises-26-m-series-a-led-by-hv-capital",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI-first companies. Around $3.2M average seed cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Menlo Anthology",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Databricks Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Prysm",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Google AI Futures Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Amex Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     },
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Anysphere / Cursor",
+      "date": "Jun-25"
+     },
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Thrive",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Anysphere / Cursor",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anysphere / Cursor",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Weights & Biases",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "CoreWeave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Microsoft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Altimeter",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Figma",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tender participants not disclosed",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "reason": "both do AI App Builder, Vibe Coding, Web App Builder; related type of business; same business function; same kind of customer",
+    "score": 25.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "both do App Builder, Vibe Coding; related type of business; same business function; sold the same way",
+    "score": 15.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Jul-2025",
+    "bound": "",
+    "company": "Perplexity",
+    "date": "Jul-25",
+    "in_medians": true,
+    "mult": 120.0,
+    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+    "score": 13.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "reason": "both do Code Generation; related type of business; same business function; same revenue model",
+    "score": 17.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of prompt; related type of business; same business function; same revenue model",
+    "score": 16.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "OpenAI",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 54.5,
+    "reason": "shares the language of ai, generation; related type of business; same revenue model; sold the same way",
+    "score": 11.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Figma",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 17.9,
+    "reason": "shares the language of web; same type of business; same business function; same revenue model",
+    "score": 14.7,
+    "type": "SECONDARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2,
+    "ARR_RUNRATE": 3
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 120.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 17.9,
+   "mid": 20.0,
+   "n": 5,
+   "period_mix": {
+    "RUN_RATE": 5
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Figma",
+     "mult": 17.9,
+     "reason": "shares the language of web; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Anysphere / Cursor",
+     "mult": 19.8,
+     "reason": "both do Code Generation; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "both do App Builder, Vibe Coding; related type of business; same business function; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Lovable",
+     "mult": 33.0,
+     "reason": "both do AI App Builder, Vibe Coding, Web App Builder; related type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Perplexity",
+     "mult": 120.0,
+     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "ai",
+    "app",
+    "builder",
+    "code",
+    "coding",
+    "generation",
+    "no",
+    "to",
+    "vibe",
+    "web"
+   ],
+   "spread": 6.7,
+   "tag_evidence": 9.5,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 25,
+  "secondary": [
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of app, web; related type of business; same revenue model",
+    "score": 6.4,
+    "ticker": "NYSE:SMWB"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 2.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 2.2,
+   "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "app",
+    "web"
+   ],
+   "show_retention": true,
+   "sole": "Similarweb Ltd.",
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "NTM",
+     "growth_pct": 11.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "The best way to build any app"
+}

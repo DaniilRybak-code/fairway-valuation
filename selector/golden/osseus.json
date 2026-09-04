@@ -1,0 +1,600 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ci, development, platform; related type of business; same business function; same kind of customer",
+    "score": 13.6,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Embedded Development; related type of business; same business function; same kind of customer",
+    "score": 12.4,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "Unity Software Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of development; same type of business; same business function; same kind of customer",
+    "score": 10.9,
+    "ticker": "NYSE:U"
+   },
+   {
+    "company": "Cadence Design Systems, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Simulation; same type of business; same business function; same kind of customer",
+    "score": 9.1,
+    "ticker": "NASDAQGS:CDNS"
+   },
+   {
+    "company": "Synopsys, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Simulation; same type of business; same business function; same kind of customer",
+    "score": 9.1,
+    "ticker": "NASDAQGS:SNPS"
+   },
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Simulation; same type of business; same business function; same revenue model",
+    "score": 8.1,
+    "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "PTC Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "NASDAQGS:PTC"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 8.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.1,
+   "mid": 6.2,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ci",
+    "development",
+    "embedded",
+    "platform",
+    "simulation"
+   ],
+   "show_retention": true,
+   "spread": 3.3,
+   "table": [
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "NTM",
+     "growth_pct": 0.0,
+     "multiple": 4.1,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 5.2,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    },
+    {
+     "company": "PTC Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 6.2,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTC"
+    },
+    {
+     "company": "Unity Software Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 21.0,
+     "multiple": 7.2,
+     "recurring_pct": null,
+     "retention_pct": 106.0,
+     "ticker": "NYSE:U"
+    },
+    {
+     "company": "Synopsys, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 17.0,
+     "multiple": 8.2,
+     "recurring_pct": 78.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:SNPS"
+    },
+    {
+     "company": "Cadence Design Systems, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 12.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CDNS"
+    }
+   ],
+   "tag_evidence": 1.1,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Prysm",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Google AI Futures Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Amex Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "Premji",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "Radical Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "ICONIQ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "Adobe Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "B Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     },
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Citi Ventures",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "CRV",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Notable",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Bedrock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Geodesic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Atlassian Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Vertex",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "shares the language of deployment, development; related type of business; same business function; sold the same way",
+    "score": 13.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Writer",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": 40.4,
+    "reason": "shares the language of platform; related type of business; same revenue model; same AI stance",
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vercel",
+    "date": "May-24",
+    "in_medians": false,
+    "mult": 32.5,
+    "reason": "shares the language of ci, platform; related type of business; same business function; same kind of customer",
+    "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Docker",
+    "date": "Mar-22",
+    "in_medians": false,
+    "mult": 42.0,
+    "reason": "shares the language of development; related type of business; same business function; same kind of customer",
+    "score": 16.4,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 20.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 20.0,
+   "mid": 20.0,
+   "n": 1,
+   "period_mix": {
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "deployment",
+    "development"
+   ],
+   "sole": "Replit",
+   "spread": 1.0,
+   "tag_evidence": 1.0,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 53,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "The intelligent development platform for robotics"
+}

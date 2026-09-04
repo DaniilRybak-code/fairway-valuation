@@ -1,0 +1,828 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Cloudflare, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Zero Trust; related type of business; same kind of customer; same revenue model",
+    "score": 11.5,
+    "ticker": "NYSE:NET"
+   },
+   {
+    "company": "DigitalOcean Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of hosting, managed; related type of business; same kind of customer; same revenue model",
+    "score": 11.2,
+    "ticker": "NYSE:DOCN"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of application; related type of business; same kind of customer; same revenue model",
+    "score": 11.0,
+    "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of managed; related type of business; same kind of customer; same revenue model",
+    "score": 10.8,
+    "ticker": "NASDAQGM:MDB"
+   },
+   {
+    "company": "Akamai Technologies, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of application; same type of business; same revenue model",
+    "score": 8.0,
+    "ticker": "NASDAQGS:AKAM"
+   },
+   {
+    "company": "A10 Networks, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Zero Trust; same type of business; same AI stance",
+    "score": 7.5,
+    "ticker": "NYSE:ATEN"
+   },
+   {
+    "company": "Netskope, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of secure, security, trust; same type of business",
+    "score": 6.4,
+    "ticker": "NASDAQGS:NTSK"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 14.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.7,
+   "mid": 8.7,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Akamai Technologies, Inc.",
+     "mult": 4.1,
+     "reason": "shares the language of application; same type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "A10 Networks, Inc.",
+     "mult": 4.7,
+     "reason": "both do Zero Trust; same type of business; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Netskope, Inc.",
+     "mult": 5.4,
+     "reason": "shares the language of secure, security, trust; same type of business",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "DigitalOcean Holdings, Inc.",
+     "mult": 8.7,
+     "reason": "shares the language of hosting, managed; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "MongoDB, Inc.",
+     "mult": 10.0,
+     "reason": "shares the language of managed; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 14.9,
+     "reason": "shares the language of application; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "mult": 29.5,
+     "reason": "both do Zero Trust; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "application",
+    "hosting",
+    "managed",
+    "secure",
+    "security",
+    "trust",
+    "zero"
+   ],
+   "show_retention": true,
+   "spread": 7.2,
+   "table": [
+    {
+     "company": "Akamai Technologies, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:AKAM"
+    },
+    {
+     "company": "A10 Networks, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 13.0,
+     "multiple": 4.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ATEN"
+    },
+    {
+     "company": "Netskope, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 24.0,
+     "multiple": 5.4,
+     "recurring_pct": null,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:NTSK"
+    },
+    {
+     "company": "DigitalOcean Holdings, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 42.0,
+     "multiple": 8.7,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:DOCN"
+    },
+    {
+     "company": "MongoDB, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 10.0,
+     "recurring_pct": 97.0,
+     "retention_pct": 121.0,
+     "ticker": "NASDAQGM:MDB"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 27.0,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    },
+    {
+     "company": "Cloudflare, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 31.0,
+     "multiple": 29.5,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
+    }
+   ],
+   "tag_evidence": 1.5,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Decagon",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": "Jan 2023",
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US; Europe",
+    "house_type": "",
+    "investor": "Sequoia Capital",
+    "not_published": null,
+    "recent_deal": "Sierra",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+    "stage_bands": "Pre-seed; Seed; Series A; Series B; Series C",
+    "thesis": "Arc is Sequoia's bi-annual open call for pre-seed and seed stage founders.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.5,
+    "cheque_low_m": 0.1,
+    "deal_note": "Both deals are Future Planet Capital Regional, formerly Midven. The main fund has published no deal news since 2022.",
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Future Planet Capital",
+    "not_published": null,
+    "recent_deal": "Furbnow",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://bdaily.co.uk/articles/2026/07/24/proptech-firm-heats-up-growth-plans-with-25-million-support",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "UKI2S invests in pre-seed to seed+ companies built on the UK's publicly funded science and knowledge base.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": null,
+    "deal_note": "Regional fund deployments (NPIF II) with Mercia named as fund manager. Play Padel excluded: that was Mercia Business Loans, not Mercia Ventures.",
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Mercia Ventures",
+    "not_published": null,
+    "recent_deal": "VisaDoc",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.mercia.co.uk/business-visa-platform-raises-funding-to-meet-overwhelming-demand/",
+    "stage_bands": "Seed; Series A; Series B",
+    "thesis": "We invest in companies with early traction and a clear route to growth, providing up to \u00a310m of initial capital.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Lightspeed Venture Partners",
+    "not_published": [
+     "cheque"
+    ],
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We stand behind our companies with high conviction from Seed to Series F and beyond.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "",
+    "house_type": "",
+    "investor": "Thrive Capital",
+    "not_published": [
+     "cheque",
+     "geography"
+    ],
+    "recent_deal": "Ramp",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://techcrunch.com/2025/11/17/ramp-hits-32b-valuation-just-three-months-after-hitting-22-5b/",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Thrive Capital builds and invests in internet, software and technology-enabled companies.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Prysm",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Google AI Futures Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Amex Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     },
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     },
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Accel",
+    "n": 3
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "CRV",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Notable",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Bedrock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Geodesic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vercel",
+      "date": "May-24"
+     },
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "Qatar Investment Authority",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "Evolution Equity",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "boldstart",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "Sands Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Atlassian Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Citi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Vertex",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Lightspeed",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "1Password",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Slack Fund",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "both do Deployment Hosting; related type of business; same business function; same revenue model",
+    "score": 13.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vercel",
+    "date": "May-24",
+    "in_medians": false,
+    "mult": 32.5,
+    "reason": "shares the language of hosting; related type of business; same business function; same kind of customer",
+    "score": 18.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Snyk",
+    "date": "Dec-22",
+    "in_medians": false,
+    "mult": 41.1,
+    "reason": "both do Application Security; same type of business; same kind of customer; sold the same way",
+    "score": 12.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Docker",
+    "date": "Mar-22",
+    "in_medians": false,
+    "mult": 42.0,
+    "reason": "shares the language of runtime; related type of business; same business function; same kind of customer",
+    "score": 15.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "1Password",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 45.3,
+    "reason": "shares the language of security, trust; same type of business; sold the same way; same AI stance",
+    "score": 10.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "ARR_RUNRATE": 1
+   },
+   "bounded": true,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 45.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 20.0,
+   "mid": 45.3,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "deployment",
+    "hosting",
+    "security",
+    "trust"
+   ],
+   "spread": 2.3,
+   "tag_evidence": 1.1,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 55,
+  "secondary": [
+   {
+    "company": "IONOS Group SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of hosting; related type of business; sold the same way; same AI stance",
+    "score": 7.0,
+    "ticker": "XTRA:IOS"
+   },
+   {
+    "company": "Dynatrace, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of application; related type of business; same revenue model",
+    "score": 6.5,
+    "ticker": "NYSE:DT"
+   },
+   {
+    "company": "Zscaler, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Zero Trust; same type of business",
+    "score": 6.4,
+    "ticker": "NASDAQGS:ZS"
+   },
+   {
+    "company": "GoDaddy Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of hosting; related type of business; sold the same way",
+    "score": 6.0,
+    "ticker": "NYSE:GDDY"
+   },
+   {
+    "company": "Fortinet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of secure, security; same type of business",
+    "score": 5.5,
+    "ticker": "NASDAQGS:FTNT"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 13.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.6,
+   "mid": 5.8,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "application",
+    "hosting",
+    "secure",
+    "security",
+    "trust",
+    "zero"
+   ],
+   "show_retention": true,
+   "spread": 4.7,
+   "table": [
+    {
+     "company": "GoDaddy Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 85.0,
+     "ticker": "NYSE:GDDY"
+    },
+    {
+     "company": "IONOS Group SE",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 3.6,
+     "recurring_pct": 80.0,
+     "retention_pct": null,
+     "ticker": "XTRA:IOS"
+    },
+    {
+     "company": "Dynatrace, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 5.8,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NYSE:DT"
+    },
+    {
+     "company": "Zscaler, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 19.0,
+     "multiple": 6.8,
+     "recurring_pct": 98.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ZS"
+    },
+    {
+     "company": "Fortinet, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 13.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:FTNT"
+    }
+   ],
+   "tag_evidence": 1.4,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Hosting platform for software you don't want to have hacked"
+}

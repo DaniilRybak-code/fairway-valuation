@@ -1,0 +1,754 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Weave Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Practice Management; same type of business; same end market; same kind of customer",
+    "score": 11.7,
+    "ticker": "NYSE:WEAV"
+   },
+   {
+    "company": "Veeva Systems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of clinical, management; same type of business; same end market; same business function",
+    "score": 11.1,
+    "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Consensus Cloud Solutions, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; sold the same way",
+    "score": 8.0,
+    "ticker": "NASDAQGS:CCSI"
+   },
+   {
+    "company": "Waystar Holding Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of cycle, management, patient; same type of business; same end market",
+    "score": 7.8,
+    "ticker": "NASDAQGS:WAY"
+   },
+   {
+    "company": "SMS Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer",
+    "score": 7.0,
+    "ticker": "TSE:2175"
+   },
+   {
+    "company": "Medley, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer",
+    "score": 7.0,
+    "ticker": "TSE:4480"
+   },
+   {
+    "company": "Phreesia, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of patient; same type of business; same end market",
+    "score": 6.6,
+    "ticker": "NYSE:PHR"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 4.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.6,
+   "mid": 2.6,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Phreesia, Inc.",
+     "mult": 1.4,
+     "reason": "shares the language of patient; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Medley, Inc.",
+     "mult": 1.6,
+     "reason": "related type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Weave Communications, Inc.",
+     "mult": 1.9,
+     "reason": "both do Practice Management; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SMS Co., Ltd.",
+     "mult": 2.6,
+     "reason": "related type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "mult": 3.1,
+     "reason": "same type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Waystar Holding Corp.",
+     "mult": 4.5,
+     "reason": "shares the language of cycle, management, patient; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "mult": 9.7,
+     "reason": "shares the language of clinical, management; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "clinical",
+    "cycle",
+    "management",
+    "patient",
+    "practice",
+    "revenue"
+   ],
+   "show_retention": true,
+   "spread": 6.9,
+   "table": [
+    {
+     "company": "Phreesia, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PHR"
+    },
+    {
+     "company": "Medley, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 19.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:4480"
+    },
+    {
+     "company": "Weave Communications, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": 92.0,
+     "ticker": "NYSE:WEAV"
+    },
+    {
+     "company": "SMS Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 9.0,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:2175"
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CCSI"
+    },
+    {
+     "company": "Waystar Holding Corp.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 11.0,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WAY"
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 9.7,
+     "recurring_pct": 84.0,
+     "retention_pct": null,
+     "ticker": "NYSE:VEEV"
+    }
+   ],
+   "tag_evidence": 1.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.3,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "SFC Capital",
+    "not_published": null,
+    "recent_deal": "Prema Cognition",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/18/prema-cognition-secures-550k-investment-led-by-sfc-capital/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "The most active UK early-stage investor by deal count. SEIS-led, \u00a3100k to \u00a3300k.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Aledade",
+      "date": "Jun-23"
+     }
+    ],
+    "investor": "Lightspeed Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Eurazeo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bpifrance",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "General Atlantic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cityblock Health",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Thirty Madison",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "HealthQuest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Virta Health",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Tiger Global Management",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ro",
+      "date": "Mar-21"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ro",
+      "date": "Mar-21"
+     }
+    ],
+    "investor": "FirstMark Capital and TQ Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mews",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "EQT Growth (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mews",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Atomico",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mews",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "HarbourVest Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mews",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Kinnevik",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mews",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Battery Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mews",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Aledade",
+    "date": "Jun-23",
+    "in_medians": true,
+    "mult": 7.37,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 19.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Doctolib",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "both do Practice Management, Patient Records; same type of business; same end market; same business function",
+    "score": 22.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cityblock Health",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 14.25,
+    "reason": "same type of business; same end market; same business function",
+    "score": 12.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Thirty Madison",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "same type of business; same end market; same business function",
+    "score": 11.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Virta Health",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 57.1,
+    "reason": "same type of business; same end market; same business function",
+    "score": 12.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Ro",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 16.67,
+    "reason": "same type of business; same end market; same business function",
+    "score": 11.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Mews",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 12.5,
+    "reason": "both do Revenue Management; same type of business; same business function; same kind of customer",
+    "score": 14.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 14.25,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.0,
+   "mid": 12.5,
+   "n": 3,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "management",
+    "revenue"
+   ],
+   "spread": 1.4,
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 65,
+  "secondary": [
+   {
+    "company": "EverCommerce Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Practice Management; same type of business; same business function; same kind of customer",
+    "score": 10.1,
+    "ticker": "NASDAQGS:EVCM"
+   },
+   {
+    "company": "IVU Traffic Technologies AG",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of scheduling; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "XTRA:IVU"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "TSX:TCS"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same revenue model; sold the same way",
+    "score": 5.6,
+    "ticker": "NASDAQGS:GTM"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.9,
+   "mid": 2.2,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "mult": 2.2,
+     "reason": "shares the language of automation; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "management",
+    "practice",
+    "scheduling"
+   ],
+   "show_retention": true,
+   "spread": 1.5,
+   "table": [
+    {
+     "company": "Tecsys Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 6.0,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
+    },
+    {
+     "company": "IVU Traffic Technologies AG",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 8.0,
+     "multiple": 2.2,
+     "recurring_pct": 48.0,
+     "retention_pct": null,
+     "ticker": "XTRA:IVU"
+    },
+    {
+     "company": "EverCommerce Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 2.9,
+     "recurring_pct": null,
+     "retention_pct": 94.0,
+     "ticker": "NASDAQGS:EVCM"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "The AI operating system for specialty medical practices"
+}

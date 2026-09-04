@@ -1,0 +1,250 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "Upwork Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of talent; same type of business; same kind of customer",
+    "score": 6.1,
+    "ticker": "NASDAQGS:UPWK"
+   },
+   {
+    "company": "Visional, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of matching, recruiting; same kind of customer; sold the same way",
+    "score": 5.7,
+    "ticker": "TSE:4194"
+   },
+   {
+    "company": "SMS Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of matching; same business function; same kind of customer",
+    "score": 5.1,
+    "ticker": "TSE:2175"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 2.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.2,
+   "mid": 2.5,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "matching",
+    "recruiting",
+    "talent"
+   ],
+   "show_retention": false,
+   "spread": 2.2,
+   "table": [
+    {
+     "company": "Upwork Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:UPWK"
+    },
+    {
+     "company": "Visional, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 18.0,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:4194"
+    },
+    {
+     "company": "SMS Co., Ltd.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 9.0,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:2175"
+    }
+   ],
+   "tag_evidence": 1.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US-based, invests globally including Europe",
+    "house_type": "Venture",
+    "investor": "FJ Labs",
+    "not_published": null,
+    "recent_deal": "Liablix?",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://www.liablix.com/news/liablix-raises-1-3m-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Global marketplace specialist investing in consumer, B2B and vertical transaction platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 25.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based, invests in Europe",
+    "house_type": "Venture",
+    "investor": "General Catalyst",
+    "not_published": null,
+    "recent_deal": "Sword Health",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://swordhealth.com/newsroom/sword-health-funding",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Global technology investor with a health-assurance strategy spanning care delivery, software and diagnostics.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe-focused",
+    "house_type": "Venture",
+    "investor": "HV Capital",
+    "not_published": null,
+    "recent_deal": "Flip",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.getflip.com/en/news/flip-raises-25-million",
+    "stage_bands": "Seed; Series A",
+    "thesis": "European investor in consumer internet, commerce, marketplaces and transaction platforms.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [],
+  "listed_proximity": "ADJACENT",
+  "private": [],
+  "private_proximity": "NONE",
+  "private_range": {},
+  "private_window_months": 24,
+  "secondary": [],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "An AI agent matching candidates to the right roles"
+}

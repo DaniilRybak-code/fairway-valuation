@@ -1,0 +1,724 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation; related type of business; same business function; same kind of customer",
+    "score": 8.7,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Professional Services Automation; same type of business; same end market",
+    "score": 8.1,
+    "ticker": "NASDAQGS:INTA"
+   },
+   {
+    "company": "LegalZoom.com, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of business, legal, services; same type of business; same end market",
+    "score": 7.0,
+    "ticker": "NASDAQGS:LZ"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation; related type of business; same revenue model; sold the same way",
+    "score": 6.2,
+    "ticker": "NASDAQGS:GTM"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 4.6,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.1,
+   "mid": 2.5,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "business",
+    "client",
+    "legal",
+    "marketing",
+    "professional",
+    "services"
+   ],
+   "show_retention": true,
+   "spread": 4.2,
+   "table": [
+    {
+     "company": "LegalZoom.com, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:LZ"
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "NTM",
+     "growth_pct": -2.0,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Intapp, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": 123.0,
+     "ticker": "NASDAQGS:INTA"
+    }
+   ],
+   "tag_evidence": 2.1,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.3,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "SFC Capital",
+    "not_published": null,
+    "recent_deal": "Prema Cognition",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/18/prema-cognition-secures-550k-investment-led-by-sfc-capital/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "The most active UK early-stage investor by deal count. SEIS-led, \u00a3100k to \u00a3300k.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     },
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "DST",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "OpenAI Startup Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "NEA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Goldman Sachs AM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Sixth Street",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tidemark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Semrush",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Adobe",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "TravelPerk",
+      "date": "Jan-24"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2 (lead",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "TravelPerk",
+      "date": "Jan-24"
+     }
+    ],
+    "investor": "Kinnevik",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "TravelPerk",
+      "date": "Jan-24"
+     }
+    ],
+    "investor": "Felix Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Insight Partners (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Foundation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Founders Circle Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "HubSpot Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "Harvey",
+    "date": "Jun-25",
+    "in_medians": false,
+    "mult": 66.7,
+    "reason": "shares the language of legal, professional, services; same type of business; same end market; same revenue model",
+    "score": 14.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Clio",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "shares the language of client, firm, law; same type of business; same end market; same kind of customer",
+    "score": 20.4,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 4.3,
+    "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+    "score": 13.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "TravelPerk",
+    "date": "Jan-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of business; same type of business; same kind of customer; sold the same way",
+    "score": 10.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+    "score": 15.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "October 2014 run-rate",
+    "bound": "",
+    "company": "Buffer",
+    "date": "Oct-14",
+    "in_medians": true,
+    "mult": 12.8,
+    "reason": "shares the language of business, marketing; related type of business; same business function; same kind of customer",
+    "score": 13.8,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2,
+    "NET_REVENUE": 2
+   },
+   "bounded": true,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 33.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
+   "low": 4.3,
+   "mid": 15.0,
+   "n": 4,
+   "period_mix": {
+    "LTM": 1,
+    "NTM": 1,
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Buffer",
+     "mult": 12.8,
+     "reason": "shares the language of business, marketing; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Clio",
+     "mult": 15.0,
+     "reason": "shares the language of client, firm, law; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "business",
+    "client",
+    "firm",
+    "law",
+    "legal",
+    "marketing"
+   ],
+   "spread": 7.7,
+   "tag_evidence": 2.4,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 142,
+  "secondary": [
+   {
+    "company": "EverCommerce Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of services; same type of business; same kind of customer; sold the same way",
+    "score": 7.7,
+    "ticker": "NASDAQGS:EVCM"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation; related type of business; same business function; same kind of customer",
+    "score": 6.2,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Ooma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of business; same kind of customer; same revenue model",
+    "score": 5.2,
+    "ticker": "NYSE:OOMA"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.9,
+   "mid": 2.9,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "business",
+    "marketing",
+    "services"
+   ],
+   "show_retention": true,
+   "spread": 1.6,
+   "table": [
+    {
+     "company": "Ooma, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 12.0,
+     "multiple": 1.9,
+     "recurring_pct": 92.0,
+     "retention_pct": null,
+     "ticker": "NYSE:OOMA"
+    },
+    {
+     "company": "EverCommerce Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 5.0,
+     "multiple": 2.9,
+     "recurring_pct": null,
+     "retention_pct": 94.0,
+     "ticker": "NASDAQGS:EVCM"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    }
+   ],
+   "tag_evidence": 0.2,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "AI growth engine for corporate law firms"
+}

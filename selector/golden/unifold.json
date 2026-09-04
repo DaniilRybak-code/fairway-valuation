@@ -1,0 +1,637 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "WEX Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of multi, payments; related type of business; same end market; same business function",
+    "score": 11.7,
+    "ticker": "NYSE:WEX"
+   },
+   {
+    "company": "Usio, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+    "score": 11.2,
+    "ticker": "NASDAQGM:USIO"
+   },
+   {
+    "company": "PayPoint plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment; related type of business; same end market; same business function",
+    "score": 11.1,
+    "ticker": "LSE:PAY"
+   },
+   {
+    "company": "Coinbase Global, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Digital Asset Custody, Stablecoin; same type of business; sold the same way; same AI stance",
+    "score": 11.1,
+    "ticker": "NASDAQ:COIN"
+   },
+   {
+    "company": "Repay Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payments; related type of business; same end market; same business function",
+    "score": 11.1,
+    "ticker": "NASDAQCM:RPAY"
+   },
+   {
+    "company": "Bullish",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Custody, Stablecoin; same type of business; same end market; same AI stance",
+    "score": 10.1,
+    "ticker": "NYSE:BLSH"
+   },
+   {
+    "company": "Bakkt, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Crypto Custody; same type of business; same end market; same AI stance",
+    "score": 9.5,
+    "ticker": "NYSE:BKKT"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 6
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 7.1,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.7,
+   "mid": 2.0,
+   "n": 6,
+   "period_mix": {
+    "NTM": 6
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Usio, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "mult": 1.7,
+     "reason": "shares the language of payments; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "WEX Inc.",
+     "mult": 2.0,
+     "reason": "shares the language of multi, payments; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PayPoint plc",
+     "mult": 2.0,
+     "reason": "shares the language of payment; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coinbase Global, Inc.",
+     "mult": 7.1,
+     "reason": "both do Digital Asset Custody, Stablecoin; same type of business; sold the same way; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Bullish",
+     "mult": 13.5,
+     "reason": "both do Custody, Stablecoin; same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "asset",
+    "crypto",
+    "custody",
+    "digital",
+    "multi",
+    "payment",
+    "payments",
+    "stablecoin"
+   ],
+   "show_retention": false,
+   "spread": 19.3,
+   "table": [
+    {
+     "company": "Usio, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 10.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:USIO"
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 27.0,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQCM:RPAY"
+    },
+    {
+     "company": "WEX Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 2.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WEX"
+    },
+    {
+     "company": "PayPoint plc",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 5.0,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:PAY"
+    },
+    {
+     "company": "Coinbase Global, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": -3.0,
+     "multiple": 7.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:COIN"
+    },
+    {
+     "company": "Bullish",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 19.0,
+     "multiple": 13.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BLSH"
+    }
+   ],
+   "tag_evidence": 5.1,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Europe-focused, invests globally",
+    "house_type": "Venture",
+    "investor": "Speedinvest",
+    "not_published": null,
+    "recent_deal": "Kyrok?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 7.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "Global; US, Africa, India, Southeast Asia and Latin America",
+    "house_type": "Venture",
+    "investor": "Flourish Ventures",
+    "not_published": null,
+    "recent_deal": "Stream",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://app.dealroom.co/news/feed/stream-raises-5-2m-seed-extension-to-expand-financial-infrastructure",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Global fintech investor in payment rails, merchant infrastructure, embedded finance, compliance and financial health.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "US-based, North America and Europe",
+    "house_type": "Venture",
+    "investor": "Motive Ventures",
+    "not_published": null,
+    "recent_deal": "Neno",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://motivepartners.com/content/why-we-invested-in-neno",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Fintech specialist backing digital banking, credit and capital-markets infrastructure from pre-seed to Series A.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Primarily UK, broader Europe",
+    "house_type": "Venture",
+    "investor": "Outward VC",
+    "not_published": null,
+    "recent_deal": "Infrawatch",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://outwardvc.com/articles/why-we-invested-in-infrawatch/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Early-stage investor in technology for regulated industries, including payments, fintech operations and compliance infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK/Europe; backs European founders building globally",
+    "house_type": "Venture",
+    "investor": "firstminute capital",
+    "not_published": null,
+    "recent_deal": "Neno",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.neno.co/resources/content/blog/neno-raises-8-6-million-to-build-ai-native-financial-services",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor whose fintech portfolio includes payment acquiring, cross-border payments and SME financial operating infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European",
+    "house_type": "Venture",
+    "investor": "MiddleGame Ventures",
+    "not_published": null,
+    "recent_deal": "Theia Insights",
+    "recent_deal_date": "2026-03",
+    "recent_deal_url": "https://www.middlegamevc.com/articles/our-investment-in-theia-insights/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Specialist early-stage investor in financial-services infrastructure, payments, capital-markets data and regtech.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "LocalGlobe / Latitude",
+    "not_published": null,
+    "recent_deal": "Microagi",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://sifted.eu/articles/munich-robotics-startup-microagi-raises-55m-germanys-largest-ever-seed-round",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Fintech, health, climate and marketplaces. \u00a3500k to \u00a32M at seed.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "ConsenSys",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "ParaFi Capital",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "ConsenSys",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 70.0,
+    "reason": "same type of business; same end market; same kind of customer; same revenue model",
+    "score": 21.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annual revenue",
+    "bound": "",
+    "company": "Blockchain.com",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 9.33,
+    "reason": "both do Custody; same type of business; same end market; same revenue model",
+    "score": 14.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "ARR",
+    "bound": "",
+    "company": "Fireblocks",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 80.0,
+    "reason": "both do Digital Asset Custody; same type of business; same end market; same AI stance",
+    "score": 16.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annual revenue",
+    "bound": "",
+    "company": "MoonPay",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 22.67,
+    "reason": "both do Crypto On-Ramp; same type of business; same end market; same business function",
+    "score": 19.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Net revenue",
+    "bound": "",
+    "company": "Stripe",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 16.34,
+    "reason": "shares the language of payment, payments; related type of business; same business function; same kind of customer",
+    "score": 16.7,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 80.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 16.34,
+   "mid": 80.0,
+   "n": 2,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "asset",
+    "crypto",
+    "custody",
+    "digital",
+    "payment",
+    "payments"
+   ],
+   "spread": 4.9,
+   "tag_evidence": 4.5,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 57,
+  "secondary": [
+   {
+    "company": "Fawry for Banking Technology",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment; same end market; same business function; same revenue model",
+    "score": 9.6,
+    "ticker": "CASE:FWRY"
+   },
+   {
+    "company": "Marqeta, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer; same AI stance",
+    "score": 9.5,
+    "ticker": "NASDAQ:MQ"
+   },
+   {
+    "company": "Digital Garage, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
+    "score": 9.2,
+    "ticker": "TSE:4819"
+   },
+   {
+    "company": "Worldline SA",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+    "score": 8.7,
+    "ticker": "ENXTPA:WLN"
+   },
+   {
+    "company": "Euronext N.V.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Custody; same end market; same revenue model; same AI stance",
+    "score": 7.9,
+    "ticker": "ENXTPA:ENX"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 8.5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.8,
+   "mid": 1.3,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Worldline SA",
+     "mult": 0.7,
+     "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Digital Garage, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Marqeta, Inc.",
+     "mult": 1.3,
+     "reason": "same end market; same business function; same kind of customer; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Fawry for Banking Technology",
+     "mult": 4.0,
+     "reason": "shares the language of payment; same end market; same business function; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Euronext N.V.",
+     "mult": 8.5,
+     "reason": "both do Custody; same end market; same revenue model; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "crypto",
+    "custody",
+    "payment",
+    "payments"
+   ],
+   "show_retention": false,
+   "spread": 12.1,
+   "table": [
+    {
+     "company": "Worldline SA",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": -1.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:WLN"
+    },
+    {
+     "company": "Digital Garage, Inc.",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 11.0,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:4819"
+    },
+    {
+     "company": "Marqeta, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 14.0,
+     "multiple": 1.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MQ"
+    },
+    {
+     "company": "Fawry for Banking Technology",
+     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_pct": 32.0,
+     "multiple": 4.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "CASE:FWRY"
+    },
+    {
+     "company": "Euronext N.V.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 8.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:ENX"
+    }
+   ],
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Multi-chain deposit and payment infrastructure"
+}
