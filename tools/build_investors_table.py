@@ -24,6 +24,7 @@ from datetime import date
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import load_seed_screen
 import load_investor_enrichment
+import load_investor_pull_5sep
 
 OUT = 'data/investors.csv'
 
@@ -511,6 +512,9 @@ def build():
     # It overrides the promotion rule above on purpose: see tools/load_investor_enrichment.py.
     load_investor_enrichment.apply_to(rows, aliases=NAME_ALIASES,
                                      dropped=DROP_KEYS)
+    # ------------------------------------------------- Claude's 5-Sep pull for the two thin
+    # clusters, applied after the enrichment so a rebuild never loses it. Merge rule in the module.
+    load_investor_pull_5sep.apply_to(rows, aliases=NAME_ALIASES)
 
     rows.sort(key=lambda r: (r['layer'] == 'EVIDENCE', -int(r['rounds_in_set'] or 0), r['investor_name']))
 

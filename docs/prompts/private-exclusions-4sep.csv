@@ -1,0 +1,291 @@
+company_name,round_date,has_multiple,revenue_basis,transaction_type
+"1Password",Jan-22,yes,ARR,PRIMARY
+"6sense",Jan-22,yes,ARR_RUNRATE,PRIMARY
+"AG1",Jan-22,yes,ARR_RUNRATE,PRIMARY
+"AG1 (Athletic Greens)",Jan-22,yes,GROSS_REVENUE,PRIMARY
+"Abnormal Security",Aug-24,yes,ARR,PRIMARY
+"Airwallex",Dec-25,yes,ARR_RUNRATE,PRIMARY
+"Airwallex",May-25,yes,ARR_RUNRATE,PRIMARY
+"Airwallex",Nov-21,yes,ARR_RUNRATE,PRIMARY
+"Airwallex",Oct-22,yes,ARR_RUNRATE,PRIMARY
+"Airwallex",Sep-21,yes,ARR_RUNRATE,PRIMARY
+"Alan",Jun-26,yes,ARR,PRIMARY
+"Alan",May-22,yes,ARR,PRIMARY
+"Alan",Sep-24,yes,ARR,PRIMARY
+"Aledade",Jun-23,yes,GROSS_REVENUE,PRIMARY
+"Algolia",Jul-21,yes,ARR,PRIMARY
+"AlphaSense",Jun-22,yes,ARR,PRIMARY
+"AlphaSense",Jun-24,yes,ARR,PRIMARY
+"AlphaSense",Sep-23,yes,ARR,PRIMARY
+"Ankorstore",Jan-22,no,NONE,PRIMARY
+"Anthropic",Feb-26,yes,ARR_RUNRATE,PRIMARY
+"Anthropic",Jan-24,yes,ARR_RUNRATE,PRIMARY
+"Anthropic",Mar-25,yes,ARR_RUNRATE,PRIMARY
+"Anthropic",May-23,no,NONE,PRIMARY
+"Anthropic",May-26,yes,ARR_RUNRATE,PRIMARY
+"Anthropic",Sep-25,yes,ARR_RUNRATE,PRIMARY
+"Anysphere / Cursor",Jun-25,yes,ARR,PRIMARY
+"Apollo.io",Aug-23,yes,ARR,PRIMARY
+"Atom Bank",Feb-22,no,NONE,PRIMARY
+"Atom Bank",Nov-23,yes,GROSS_REVENUE,PRIMARY
+"Away",May-19,yes,NET_REVENUE,PRIMARY
+"Back Market",Jan-22,no,NONE,PRIMARY
+"Better.com",May-21,yes,NET_REVENUE,PRIMARY
+"BetterUp",Oct-21,yes,ARR,PRIMARY
+"Billie",Oct-21,no,NONE,PRIMARY
+"BlockFi",Mar-21,yes,GROSS_REVENUE,PRIMARY
+"Blockchain.com",Mar-22,yes,GROSS_REVENUE,PRIMARY
+"Blockworks",May-23,yes,GROSS_REVENUE,PRIMARY
+"Brex",Jan-22,yes,ARR_RUNRATE,PRIMARY
+"Brex",Oct-21,yes,ARR_RUNRATE,PRIMARY
+"Bright Data (Luminati)",Aug-17,no,NONE,CONTROL
+"Buffer",Oct-14,yes,ARR,PRIMARY
+"Calendly",Jan-21,yes,NET_REVENUE,MIXED
+"Calm",Dec-20,no,NONE,PRIMARY
+"Calm",Feb-19,yes,ARR_RUNRATE,PRIMARY
+"Calm",Jul-19,yes,ARR_RUNRATE,PRIMARY
+"Canva",Apr-24,yes,NET_REVENUE,SECONDARY
+"Canva",Aug-25,yes,ARR_RUNRATE,SECONDARY
+"Carta",Aug-21,yes,ARR,PRIMARY
+"Cato Networks",Sep-23,yes,ARR,PRIMARY
+"Celonis",Aug-22,no,NONE,PRIMARY
+"Chainalysis",Jun-21,yes,ARR,PRIMARY
+"Chainalysis",May-22,yes,ARR,PRIMARY
+"Checkout.com",Dec-23,yes,GROSS_REVENUE,PRIMARY
+"Chime",Apr-24,yes,GROSS_REVENUE,PRIMARY
+"Chime",Aug-21,yes,GROSS_REVENUE,PRIMARY
+"Cityblock Health",Sep-21,yes,ARR_RUNRATE,PRIMARY
+"Clay",Jan-26,yes,ARR,SECONDARY
+"Clearco",Apr-21,no,NONE,PRIMARY
+"Clearco",Jul-21,no,NONE,PRIMARY
+"Clio",Jul-24,yes,ARR,MIXED
+"Coalition",Jul-22,no,NONE,PRIMARY
+"Cohere",Jun-23,yes,ARR,PRIMARY
+"CommerceIQ",Mar-22,no,NONE,PRIMARY
+"ConsenSys",Mar-22,yes,GROSS_REVENUE,PRIMARY
+"Contentsquare",Jul-22,yes,ARR,PRIMARY
+"Creditas",Dec-20,yes,NET_REVENUE,PRIMARY
+"Creditas",Dec-25,yes,NET_REVENUE,PRIMARY
+"Creditas",Jan-22,yes,ARR_RUNRATE,PRIMARY
+"Creditas",Jul-22,yes,NET_REVENUE,PRIMARY
+"Cyera",Apr-24,no,NONE,PRIMARY
+"Databricks",Sep-23,yes,ARR_RUNRATE,PRIMARY
+"DeHaat",Oct-22,yes,GROSS_REVENUE,PRIMARY
+"Decagon",Jan-26,yes,ARR_RUNRATE,PRIMARY
+"Deel",May-22,yes,ARR,PRIMARY
+"Deel",Oct-25,yes,ARR_RUNRATE,PRIMARY
+"Deezer",Aug-18,no,NONE,PRIMARY
+"Delhivery",May-21,yes,NET_REVENUE,PRIMARY
+"Devoted Health",Oct-21,yes,GROSS_REVENUE,PRIMARY
+"Discord",Sep-21,yes,GROSS_REVENUE,PRIMARY
+"Docker",Mar-22,yes,ARR,PRIMARY
+"Doctolib",Mar-22,yes,GROSS_REVENUE,PRIMARY
+"Dream Sports",Nov-21,yes,GROSS_REVENUE,PRIMARY
+"EGYM",Jul-23,yes,GROSS_REVENUE,PRIMARY
+"ElasticRun",Feb-22,yes,GROSS_REVENUE,PRIMARY
+"ElevenLabs",Jan-25,yes,ARR,PRIMARY
+"Enpal",Jan-23,yes,GROSS_REVENUE,PRIMARY
+"Epic Games",Apr-21,yes,GROSS_REVENUE,PRIMARY
+"Epic Games",Apr-22,yes,GROSS_REVENUE,PRIMARY
+"Fabric",Feb-22,no,NONE,PRIMARY
+"Factorial",Oct-22,yes,GROSS_REVENUE,PRIMARY
+"Faire",Nov-21,no,NONE,PRIMARY
+"Faire",Nov-25,no,ARR_RUNRATE,SECONDARY
+"Figma",Jul-24,yes,ARR,SECONDARY
+"Fireblocks",Jan-22,yes,ARR,PRIMARY
+"Fireblocks",Jul-21,yes,ARR,PRIMARY
+"Flink",Sep-24,no,NONE,MIXED
+"Flipkart",Jul-21,yes,GROSS_REVENUE,PRIMARY
+"Flipkart",Jul-23,yes,GROSS_REVENUE,SECONDARY
+"Flo Health",Sep-21,no,NONE,PRIMARY
+"FloQast",Apr-24,yes,ARR,PRIMARY
+"Fundbox",Nov-21,yes,ARR_RUNRATE,PRIMARY
+"GOAT Group",Jun-21,no,NONE,PRIMARY
+"Gamma",Nov-25,yes,ARR,MIXED
+"Glean",Jun-25,yes,ARR,PRIMARY
+"Glossier",Jul-21,no,NONE,PRIMARY
+"Glossier",Mar-19,yes,NET_REVENUE,PRIMARY
+"Glovo",Dec-21,no,NONE,CONTROL
+"GoCardless",Feb-22,no,NONE,PRIMARY
+"Gong",Jun-21,no,NONE,PRIMARY
+"Gong",Nov-25,no,ARR,SECONDARY
+"Gopuff",Jul-21,yes,NET_REVENUE,PRIMARY
+"Gorgias",Aug-22,no,NONE,PRIMARY
+"Gorillas",Oct-21,yes,ARR_RUNRATE,PRIMARY
+"Guesty",Apr-24,yes,NET_REVENUE,PRIMARY
+"Guild Education",Jun-22,yes,ARR,PRIMARY
+"Happy Money",Feb-22,yes,ARR_RUNRATE,PRIMARY
+"Harry's",Mar-21,yes,NET_REVENUE,PRIMARY
+"Harvey",Jun-25,yes,ARR_RUNRATE,PRIMARY
+"HiBob",Sep-23,yes,ARR,PRIMARY
+"Hopper",Feb-22,no,NONE,SECONDARY
+"Huel",Nov-22,yes,NET_REVENUE,PRIMARY
+"Huntress",Jun-24,yes,ARR_RUNRATE,PRIMARY
+"Incredible Health",Aug-22,yes,GROSS_REVENUE,PRIMARY
+"Invisible Technologies",Sep-25,yes,NET_REVENUE,PRIMARY
+"Jasper",Oct-22,yes,NET_REVENUE,PRIMARY
+"Jobandtalent",Dec-21,yes,GROSS_REVENUE,PRIMARY
+"Klarna",Jul-22,yes,BANK_NOI,PRIMARY
+"Klarna",Jun-21,yes,BANK_NOI,PRIMARY
+"Klarna",Mar-21,yes,BANK_NOI,PRIMARY
+"Klaviyo",May-21,yes,NET_REVENUE,PRIMARY
+"Konfio",Sep-21,yes,GROSS_REVENUE,PRIMARY
+"Kriya",Oct-25,yes,GROSS_REVENUE,CONTROL_ACQUISITION
+"LEAD School",Jan-22,yes,GROSS_REVENUE,PRIMARY
+"LangChain",Oct-25,no,NONE,PRIMARY
+"Liquid Death",Mar-24,no,NONE,PRIMARY
+"Liquid Death",Oct-22,yes,NET_REVENUE,PRIMARY
+"Loadsmart",Feb-22,yes,GROSS_REVENUE,PRIMARY
+"Loadsmart",Nov-20,yes,GROSS_REVENUE,PRIMARY
+"Loft",Mar-21,yes,ARR_RUNRATE,PRIMARY
+"Loop Returns",Jul-21,no,NONE,PRIMARY
+"Lovable",Dec-25,yes,ARR_RUNRATE,PRIMARY
+"MNT-Halan",Feb-23,no,GROSS_REVENUE,PRIMARY
+"Mailchimp",Sep-21,yes,NET_REVENUE,CONTROL
+"Mambu",Dec-21,yes,ARR,PRIMARY
+"Marqeta",May-19,yes,NET_REVENUE,PRIMARY
+"Marqeta",May-20,yes,GROSS_REVENUE,PRIMARY
+"MasterClass",May-21,yes,GROSS_REVENUE,PRIMARY
+"Meesho",May-24,yes,NET_REVENUE,PRIMARY
+"Meesho",Sep-21,yes,NET_REVENUE,PRIMARY
+"Mercury",Mar-25,yes,ARR_RUNRATE,PRIMARY
+"Mews",Jan-26,yes,NET_REVENUE,PRIMARY
+"Mews",Mar-24,yes,NET_REVENUE,PRIMARY
+"Mirakl",Sep-21,no,NONE,PRIMARY
+"Miro",Jan-22,yes,ARR,PRIMARY
+"Mollie",Jun-21,yes,GROSS_REVENUE,PRIMARY
+"Mollie",Sep-20,no,NONE,PRIMARY
+"Monzo",May-24,yes,GROSS_REVENUE,PRIMARY
+"Monzo Bank",Dec-21,yes,GROSS_REVENUE,PRIMARY
+"MoonPay",Nov-21,yes,GROSS_REVENUE,PRIMARY
+"N26",Oct-21,yes,GROSS_REVENUE,PRIMARY
+"Ninjacart",Dec-21,yes,GROSS_REVENUE,PRIMARY
+"Noom",May-21,yes,GROSS_REVENUE,PRIMARY
+"Notion",Jan-26,yes,ARR,SECONDARY
+"Nubank",Jun-21,yes,GROSS_REVENUE,PRIMARY
+"OLIPOP",Feb-25,yes,NET_REVENUE,PRIMARY
+"Octopus Energy Group",Dec-21,yes,GROSS_REVENUE,PRIMARY
+"Octopus Energy Group",Dec-23,yes,GROSS_REVENUE,PRIMARY
+"Octopus Energy Group",Jul-22,yes,GROSS_REVENUE,PRIMARY
+"Octopus Energy Group",May-24,yes,GROSS_REVENUE,PRIMARY
+"Octopus Energy Group",Sep-21,yes,GROSS_REVENUE,PRIMARY
+"Olive & June",Dec-24,yes,GROSS_REVENUE,PRIMARY
+"OneTrust",Jul-23,yes,ARR,PRIMARY
+"OpenAI",Mar-25,yes,ARR_RUNRATE,PRIMARY
+"Oura",Dec-24,yes,GROSS_REVENUE,PRIMARY
+"Outreach",Jun-21,no,ARR,PRIMARY
+"Oxylabs",Jul-26,yes,ARR,MIXED
+"Packable",Sep-21,yes,GROSS_REVENUE,PRIMARY
+"Patreon",Apr-21,yes,ARR_RUNRATE,PRIMARY
+"PayFit",Jan-22,yes,ARR,PRIMARY
+"Perplexity",Dec-24,no,NONE,PRIMARY
+"Perplexity",Jan-24,yes,ARR,PRIMARY
+"Perplexity",Jul-25,yes,ARR_RUNRATE,PRIMARY
+"Perplexity",Sep-25,no,ARR,PRIMARY
+"Personio",Jun-22,no,ARR,PRIMARY
+"Pine Labs",May-21,yes,NET_REVENUE,PRIMARY
+"Pipe",May-21,no,NONE,PRIMARY
+"Plaid",Apr-21,yes,GROSS_REVENUE,PRIMARY
+"Plaid",Apr-25,yes,ARR,PRIMARY
+"Pleo",Dec-21,yes,ARR,PRIMARY
+"Qonto",Jan-22,yes,ARR_RUNRATE,PRIMARY
+"Quince",Jul-25,no,NONE,PRIMARY
+"Quince",Mar-26,yes,NET_REVENUE,PRIMARY
+"Raisin",Mar-23,yes,GROSS_REVENUE,PRIMARY
+"Ramp",Aug-21,yes,ARR_RUNRATE,PRIMARY
+"Ramp",Jul-25,yes,ARR_RUNRATE,PRIMARY
+"Ramp",Nov-25,yes,ARR_RUNRATE,MIXED
+"Rapyd",Aug-21,no,NONE,PRIMARY
+"Rapyd",Jan-21,yes,GROSS_REVENUE,PRIMARY
+"Razorpay",Dec-21,no,GROSS_REVENUE,PRIMARY
+"Recharge",May-21,no,NONE,PRIMARY
+"Remote",Apr-22,yes,ARR,PRIMARY
+"Rent the Runway",Mar-19,no,NONE,PRIMARY
+"Replit",Sep-25,yes,ARR_RUNRATE,PRIMARY
+"Restore Hyper Wellness",Dec-21,yes,GROSS_REVENUE,PRIMARY
+"Revolut",Aug-24,yes,GROSS_REVENUE,PRIMARY
+"Revolut",Jul-21,yes,GROSS_REVENUE,PRIMARY
+"Revolut",Nov-23,yes,GROSS_REVENUE,PRIMARY
+"Revolut",Nov-25,yes,GROSS_REVENUE,PRIMARY
+"Rippling",Apr-24,yes,ARR,SECONDARY
+"Ro",Mar-21,yes,GROSS_REVENUE,PRIMARY
+"Roblox",Jan-21,yes,GROSS_REVENUE,PRIMARY
+"Rokt",Dec-22,no,NONE,SECONDARY
+"Rokt",Jan-25,no,GROSS_REVENUE,SECONDARY
+"SHEIN",Apr-22,no,NONE,PRIMARY
+"SHEIN",Jan-24,yes,NET_REVENUE,SECONDARY
+"SHEIN",May-23,yes,NET_REVENUE,PRIMARY
+"SKIMS",Jul-23,yes,NET_REVENUE,PRIMARY
+"SKIMS",Nov-25,yes,NET_REVENUE,PRIMARY
+"Salesloft",Apr-19,yes,ARR,PRIMARY
+"Salesloft",Dec-21,yes,ARR,CONTROL
+"Savage X Fenty",Feb-21,yes,NET_REVENUE,PRIMARY
+"Scale AI",Jun-25,yes,NET_REVENUE,CONTROL
+"Scale AI",May-24,yes,ARR,MIXED
+"Semrush",Nov-25,yes,NET_REVENUE,CONTROL
+"Shiprocket",Aug-22,yes,GROSS_REVENUE,PRIMARY
+"Sierra",May-26,yes,ARR,PRIMARY
+"Sierra",Sep-25,yes,ARR_RUNRATE,PRIMARY
+"Snyk",Dec-22,yes,ARR,PRIMARY
+"Spendesk",Jan-22,yes,ARR,PRIMARY
+"Starling Bank",Mar-21,yes,ARR_RUNRATE,PRIMARY
+"Stenn",Apr-22,no,NONE,PRIMARY
+"StockX",Apr-21,yes,GROSS_REVENUE,MIXED
+"Strava",May-25,yes,ARR,PRIMARY
+"Stripe",Feb-24,yes,NET_REVENUE,PRIMARY
+"Stripe",Feb-25,yes,NET_REVENUE,PRIMARY
+"Stripe",Mar-23,yes,NET_REVENUE,PRIMARY
+"SumUp",Dec-23,yes,GROSS_REVENUE,PRIMARY
+"SumUp",Jun-22,yes,ARR_RUNRATE,PRIMARY
+"Supabase",Oct-25,yes,ARR_RUNRATE,PRIMARY
+"Tabby",Feb-25,no,NONE,PRIMARY
+"Tabby",Nov-23,no,NONE,PRIMARY
+"Tala",Aug-19,no,NONE,PRIMARY
+"Tala",Oct-21,no,NONE,PRIMARY
+"The Zebra",Apr-21,yes,ARR_RUNRATE,PRIMARY
+"Thirty Madison",Jun-21,yes,ARR_RUNRATE,PRIMARY
+"Thrasio",Jul-20,no,NET_REVENUE,PRIMARY
+"Thrasio",Oct-21,no,NET_REVENUE,PRIMARY
+"Tipalti",Dec-21,no,NONE,PRIMARY
+"TravelPerk",Jan-24,no,NONE,PRIMARY
+"Trendyol",Aug-21,no,NONE,PRIMARY
+"Turing",Mar-25,yes,ARR,PRIMARY
+"Upgrade",Aug-21,yes,ARR_RUNRATE,PRIMARY
+"Upgrade",Nov-21,no,NONE,PRIMARY
+"Vanta",Jul-24,yes,ARR,PRIMARY
+"Vedantu",Sep-21,yes,ARR_RUNRATE,PRIMARY
+"Vegrow",Dec-23,yes,GROSS_REVENUE,PRIMARY
+"Vercel",May-24,yes,ARR_RUNRATE,PRIMARY
+"Vestiaire Collective",Sep-21,no,NONE,PRIMARY
+"Vinted",Apr-26,yes,NET_REVENUE,SECONDARY
+"Vinted",May-21,no,NONE,PRIMARY
+"Vinted",Oct-24,yes,NET_REVENUE,SECONDARY
+"Virta Health",Apr-21,yes,GROSS_REVENUE,PRIMARY
+"Voodoo",Aug-21,yes,GROSS_REVENUE,PRIMARY
+"Vuori",Nov-24,no,NONE,SECONDARY
+"Vuori",Oct-21,no,NONE,SECONDARY
+"WHOOP",Mar-26,yes,ARR_RUNRATE,PRIMARY
+"WayCool Foods",Jun-22,yes,GROSS_REVENUE,PRIMARY
+"Wayflyer",Feb-22,no,NONE,PRIMARY
+"Wefox",Jul-22,yes,GROSS_REVENUE,PRIMARY
+"Weights & Biases",Mar-25,no,NONE,CONTROL
+"Whatnot",Aug-26,no,NONE,PRIMARY
+"Whatnot",Jan-25,no,,PRIMARY
+"Whatnot",Jul-22,no,NONE,PRIMARY
+"Whatnot",Oct-25,no,NONE,MIXED
+"Wiz",Mar-26,no,ARR,CONTROL
+"Wiz",May-24,yes,ARR,MIXED
+"Wolt",Nov-21,yes,NET_REVENUE,CONTROL
+"Writer",Nov-24,yes,ARR,PRIMARY
+"Writer",Sep-23,yes,ARR,PRIMARY
+"Xpansiv",Jul-22,no,NONE,PRIMARY
+"Xpressbees",Feb-22,yes,NET_REVENUE,PRIMARY
+"Yotpo",Mar-21,yes,ARR,PRIMARY
+"Zepz",Aug-21,yes,GROSS_REVENUE,PRIMARY
+"Zepz",Oct-24,yes,NET_REVENUE,PRIMARY
+"Zilch",Nov-21,no,NONE,PRIMARY
+"Zopa",Oct-21,yes,ARR_RUNRATE,PRIMARY
+"dLocal",Apr-21,yes,NET_REVENUE,PRIMARY
+"dbt Labs",Feb-22,no,NONE,PRIMARY
+"upGrad",Aug-21,yes,ARR_RUNRATE,PRIMARY
+"wefox",May-21,yes,GROSS_REVENUE,PRIMARY

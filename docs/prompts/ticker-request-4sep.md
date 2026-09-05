@@ -7,26 +7,71 @@ screen. Anything to do with PRIVATE rounds and investor houses is Claude's own w
 
 **Checked against the universe at 20:45 UK.** The first draft of this list had 41 names. Eighteen of
 them are already in the file, which is the most useful thing this document found. What is left is
-23 names across seven lanes, and four lanes turn out not to need a pull at all.
+19 names across six lanes, after four more came out for no longer being listed.
 
 ---
 
-## Read this part first: four lanes are not a data problem
+## Read this first: two things I got wrong, and one thing the engine is doing
 
-| lane | how many of my candidates we already hold | what that means |
+### 1. Four of my names no longer trade. My error, checked at 21:10 UK.
+
+| name | what happened | still listed? |
 |---|---|---|
-| `orchids` | 5 of 5: Wix, Appian, Pegasystems, GitLab, JFrog | nothing to pull. The names are in the file and the matcher is not reaching them |
-| `projectx` | 4 of 5: DigitalOcean, Fastly, Akamai, Nutanix | one name to pull, the rest is matcher work |
-| `goldfish` | 4 of 5: Asana, Box, Cerence, Docebo | one name to pull, the rest is matcher work |
-| `wispr-flow` | 3 of 5: SoundHound, Cerence, NICE | two names to pull, the rest is matcher work |
+| Sapiens International | Advent take-private, $2.5bn at $43.50 a share, completed | no |
+| Learning Technologies Group | General Atlantic take-private, about $1bn, completed | no |
+| Udemy | acquired by Coursera, delisted from Nasdaq (Form 25) | no |
+| Accolade | acquired by Transcarent, $621m, completed April 2025 | no |
 
-The thin-lane diagnosis said the next best comparable was not in our database. For these four lanes
-that reading was wrong, or right only in the narrow sense that our own relevance gate bars the names
-before they can be counted. Either way it is my work to fix, not a pull for you: the question is why
-a prompt-to-app builder does not reach Wix, and the answer is in the tag vocabulary or the axis-B
-gate, not in Capital IQ. I have put it on the status document.
+They are out of the list below. None of them is in our data, so nothing we already hold is stale
+because of this. The lesson is a rule rather than an apology: **a listed comparable has to still be
+listed**, and I proposed four that were not. Nothing in the pipeline checks that today.
 
----
+These four are not worthless. Every one is a priced control transaction with a disclosed value, and
+rulebook B6 already says a control deal prices and carries its label. They are now targets in the
+private work order, where they belong.
+
+### 2. Wix and JFrog are in the database. Here is exactly why the engine does not use them.
+
+You are right that they are held, and the honest answer is that two different rules exclude them.
+
+**Wix is excluded by its own tags.** For `orchids` it scores 4.6 against a relative floor of 5.9
+(45 per cent of the best score in the universe, 13.2) and an absolute floor of 5.0. It is in the
+family and it passes the relevance gate: it simply scores too low, because in our file Wix is
+archetyped **Cloud & Infrastructure / Commerce & Payments Software** with buyer **SMB**, while
+`orchids` is Design & Engineering / Data, AI & Developer Tools with buyer PROSUMER. No archetype
+overlap, different buyer, 1.6 tag points out of a possible 12. That is a tagging judgement, not a
+bug: whoever tagged Wix read it as hosting plus payments. I would argue Wix's primary archetype
+should be **Design & Engineering** with Commerce & Payments Software secondary, because what Wix
+sells is building a site or an app. That is a data ruling and it is yours: it changes which founders
+see Wix.
+
+**JFrog and GitLab are excluded by the relevance gate, and they score well above the floor.**
+
+| name | score | floor | family | relevance gate | shared tag tokens |
+|---|---|---|---|---|---|
+| GitLab | 9.0 | 5.9 | yes | **fails** | 0 |
+| JFrog | 6.5 | 5.9 | yes | **fails** | 0 |
+| Akamai (for `projectx`) | 6.0 | 5.5 | yes | **fails** | 0 |
+| Nutanix (for `projectx`) | 5.1 | 5.5 | yes | passes | 0.1 |
+
+`_relevant` says a candidate must share at least one product-tag token, or share a specific
+non-Horizontal industry. GitLab and JFrog share `orchids`' secondary archetype exactly, Data, AI &
+Developer Tools, and that counts for nothing in the gate. Both are Horizontal, so the industry route
+fails too, and they are dropped despite scoring 9.0 and 6.5.
+
+That gate was added on 26 August, after Publora was handed Perplexity, LangChain and Semrush on
+nothing but "developer-facing and consumption-priced". It was right then and it is wrong here.
+**My proposal, and it needs your ruling because it will move fixtures: an exact archetype match, in
+either slot, should satisfy relevance on its own.** Sharing "Data, AI & Developer Tools" as a named
+archetype is a stronger statement than sharing one tag word, and the tag-word test was only ever a
+proxy for it. Nutanix is a separate and smaller question: it scores 5.1 against a 5.5 relative
+floor, so it is excluded by arithmetic and would arrive with a slightly wider floor.
+
+### 3. Three of my other candidates were simply bad picks
+
+For `goldfish` I proposed Asana (scores 3.0), Box (1.0) and Docebo (0.0), and for `wispr-flow`,
+NICE (1.0). The engine is right to refuse them: a corporate learning platform is not a comparable
+for a local-first AI memory app. Those are gone from the list.
 
 ## What to bring back
 
@@ -51,7 +96,7 @@ Two things that matter more than the list:
    revenue model, product role, AI stance, product tags and one-line description. This is the join
    that lost 29 lenders on 30 August.
 
-## The list, 23 names
+## The list, 19 names
 
 Tickers are my best reading and are to be confirmed on the screen. If one does not resolve, the
 company name is the thing I mean.
@@ -67,7 +112,7 @@ Our card-issuing set is three names. We already hold Pathward Financial.
 | Edenred | ENXTPA:EDEN | issued instruments with programmatic spend controls, the nearest listed read on controlled agent spend |
 | Pluxee | ENXTPA:PLX | the Sodexo spin-out, same shape as Edenred and a cleaner read |
 
-### `evergrove` — voice agents for workers' compensation care coordination. 5 names
+### `evergrove` — voice agents for workers' compensation care coordination. 4 names
 The engine reached for general insurance software. The business is claims and care coordination.
 
 | company | ticker | why it belongs |
@@ -75,29 +120,31 @@ The engine reached for general insurance software. The business is claims and ca
 | CorVel | NASDAQ:CRVL | workers' compensation claims and care management, the exact end market |
 | Crawford & Company | NYSE:CRD.B | claims management and adjusting at scale |
 | ExlService | NASDAQ:EXLS | insurance claims operations and analytics |
-| Sapiens International | NASDAQ:SPNS | core insurance software including claims |
 | Verisk Analytics | NASDAQ:VRSK | claims data and decisioning, the reference point for the asset class |
 
-### `insurf` — the AI decision layer for health insurance. 5 names
+### `insurf` — the AI decision layer for health insurance. 4 names
 Payer decisioning and utilisation management, not general insurtech.
 
 | company | ticker | why it belongs |
 |---|---|---|
 | Evolent Health | NYSE:EVH | payer decisioning and specialty utilisation management, the direct comparable |
 | MultiPlan | NYSE:MPLN | claims pricing and payment integrity for payers |
-| Accolade | NASDAQ:ACCD | care navigation sold to payers and employers |
 | Alignment Healthcare | NASDAQ:ALHC | technology-led payer, the buyer's own economics |
 | Progyny | NASDAQ:PGNY | managed benefit with a decisioning layer, useful as a margin read |
 
-### `honen` — company documents turned into courses with an AI tutor. 4 names
+### `honen` — company documents turned into courses with an AI tutor. 2 names
 Corporate training, not consumer learning. We already hold Docebo.
 
 | company | ticker | why it belongs |
 |---|---|---|
 | Skillsoft | NYSE:SKIL | enterprise training content and platform |
 | D2L | TSX:DTOL | learning platform sold to institutions and employers |
-| Learning Technologies Group | AIM:LTG | corporate learning and talent, UK-listed |
-| Udemy | NASDAQ:UDMY | its business segment is enterprise upskilling, which is honen's market |
+
+**Two names is thin, and the reason is the answer.** Listed corporate learning has been bought out
+one company at a time: Learning Technologies Group by General Atlantic, Udemy into Coursera,
+Instructure and PowerSchool before them. The public set for this lane is disappearing, which is an
+argument for pricing `honen` off precedent transactions rather than off listed comparables. Those
+take-privates are in the private work order.
 
 ### Three single names for the matcher lanes
 

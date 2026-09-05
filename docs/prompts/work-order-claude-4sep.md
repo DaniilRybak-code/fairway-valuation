@@ -42,62 +42,85 @@ Everything below is executable by a Claude session with the repo open. It needs 
 
 # Part 1. Private rounds
 
-## Step 0, and do not skip it
+## The diagnosis is already run. Read it before sourcing anything.
 
-Eighteen fixtures currently fail the gate for want of private evidence, but **not all of them are
-sourcing gaps**. A private lane can be short for four different reasons and only two of them are
-fixed by finding more rounds:
-
-| reason | fixed by sourcing? |
-|---|---|
-| there are no rounds in the lane at all | yes |
-| the rounds are there but none disclosed a revenue figure | yes |
-| the rounds are there and priced, but the set is tiered BROAD, which prices nothing by design | no |
-| the rounds are there and priced, but they are held out of the medians by a ruling | no |
-
-Run these two first and read them together:
+Eighteen fixtures fail the gate for want of private evidence. They do NOT all fail for the same
+reason, and one of those reasons is not fixed by finding more rounds. Run at 20:45 UK on
+4 September against the current file; re-run if the data has moved:
 
 ```
 python3 tools/thin_lane_diagnosis.py
 python3 tools/peer_universe_check.py
 ```
 
-The diagnosis asks our own database for the next best comparable in each thin lane. Where it comes
-back with a name we already hold, the lane is a matcher or tier question and sourcing will not fix
-it. Work only the lanes it confirms as genuine gaps, and say in the handover which ones you skipped
-and why.
+### (a) The basis trap, four fixtures. This is the finding that matters most.
 
-## The eighteen, with what we already hold
+`bizmark`, `nursa`, `paymentkit` and `apollo-atomics` each hold two private rounds, both in the
+medians, both priced, both tier-compatible, and their private range is still empty. The reason is
+`basis_mult`: **a round whose disclosed figure is GROSS revenue cannot price a founder who answers
+on NET.** Gross never bands with net, and a fixture carries no revenue answer so it defaults to
+NET_REVENUE. WayCool Foods, Ninjacart, Incredible Health, Jobandtalent, MoonPay, Octopus Energy and
+Enpal are all gross rows, so for these four founders the lane is full and prices nothing.
 
-Each row is a real company the engine was tested against. Find rounds for the business as described,
-not for the sector word: the sector word already matched and was not enough.
+Across the file: **71 of 290 private rounds are on a gross basis, and 151 of the 219 priced rounds
+are usable by a net-basis founder.**
 
-| fixture | what it does | archetype | what its private lane already holds |
-|---|---|---|---|
-| `agentcard` | debit cards for AI agents | Card Issuing & BaaS | Stripe, Marqeta |
-| `apollo-atomics` | compact nuclear microreactors | Owned-Inventory Retail / Design & Engineering | Octopus Energy, Enpal |
-| `bizmark` | agentic supply chain optimisation | Commerce Enablement & Fulfilment | WayCool Foods, Ninjacart |
-| `clera` | AI agent matching candidates to roles | Freelance & Services Marketplace | nothing at all |
-| `finn` | all-inclusive car subscription on an owned fleet | Owned-Inventory Retail / Local Delivery | Quince, Enpal, AG1, Packable |
-| `levelten` | marketplace for renewable power purchase agreements | Market Infrastructure & Exchange | Xpansiv, The Zebra |
-| `manifold-robotics` | robots-as-a-service for warehouses | Commerce Enablement & Fulfilment | Shiprocket |
-| `marble` | autonomous back-of-house for restaurants | Vertical Software | Mews, Guesty |
-| `nursa` | per-diem nursing shift marketplace | Freelance & Services Marketplace | Incredible Health, Jobandtalent |
-| `osseus` | development platform for robotics | Design & Engineering / Dev Tools | Replit, Writer, Vercel, Docker |
-| `paymentkit` | billing that survives a processor shutdown | Commerce & Payments Software | MoonPay, Recharge |
-| `payna` | AI licensing agent for regulated industries | Vertical Software | Harvey, Clio |
-| `priori-legal` | marketplace of flexible legal talent | Freelance & Services Marketplace | Harvey, Clio, Loadsmart, Jobandtalent |
-| `standout` | agentic hiring marketplace | Freelance & Services Marketplace | Jobandtalent |
-| `tash` | investment platform for sports and trading cards | Wealth & Capital Markets Platform | Raisin, The Zebra |
-| `tsenta` | AI career agent that applies on your behalf | Freelance & Services Marketplace | Shiprocket, upGrad |
-| `ultrasonium` | metal additive manufacturing | Owned-Inventory Retail / Design & Engineering | nothing at all |
-| `wispr-flow` | voice productivity for writing and meetings | Consumer & Prosumer Software | ElevenLabs, Perplexity, OpenAI, Discord |
+> **Prioritise rounds where the disclosed figure is NET revenue or ARR.** A gross-revenue round is
+> still worth having, because it prices a founder who answers gross, but it will not move any of
+> these four fixtures, and adding more of them looks like progress while changing nothing.
 
-Read that last column as the shape of the problem. `finn` holds four consumer rounds and none of
-them is a car subscription; `osseus` holds four developer-tool rounds and none of them is robotics;
-`priori-legal` holds legal software but no talent marketplace. The lanes are not empty, they are
-filled with the nearest thing the engine could reach, which is exactly the failure the pull exists
-to correct.
+Record the basis honestly whichever it is. Never relabel a gross figure as net to make it price.
+
+### (b) Nothing in the lane at all, two fixtures
+
+`clera` (AI candidate matching) and `ultrasonium` (metal additive manufacturing). `ultrasonium` is
+marked OUT_OF_MARKET and is not worth hunting; `clera` is.
+
+### (c) The set is too far away to price, one fixture
+
+`tsenta` is tiered BROAD, which prices nothing by design. Only a genuinely closer round raises the
+tier, so a loosely related round does not help.
+
+### (d) One usable round where two are needed, eleven fixtures
+
+`agentcard`, `finn`, `levelten`, `manifold-robotics`, `marble`, `osseus`, `payna`, `priori-legal`,
+`standout`, `tash`, `wispr-flow`. Each draws a diamond rather than a range. One or two good rounds
+each closes the group, and this is where the pull pays best. Check `osseus` first: it holds four
+rounds and three are held out of the medians by an earlier ruling.
+
+## Control transactions, added 4 September on Daniil's suggestion
+
+Six companies I proposed as listed comparables turned out to have been taken private or acquired.
+That makes them useless as listed peers and valuable as something else: each is a priced control
+transaction in a sector where our private lane is thin.
+
+**Rulebook B6 already governs this.** "A control deal prices, but carries its label. A takeover
+price includes a control premium that a minority round never gets. M&A anchors mark the field as
+labelled diamonds; they do not feed the range." The file already carries `transaction_type` with
+nine CONTROL rows and one CONTROL_ACQUISITION, so nothing new has to be built: these load as
+labelled anchors, not into the range.
+
+| target | acquirer | value | what it prices | which fixtures it helps |
+|---|---|---|---|---|
+| Sapiens International | Advent International | $2.5bn, $43.50 a share | insurance software | `evergrove`, `insurf`, `florin`, `denta` |
+| Learning Technologies Group | General Atlantic | about $1bn | corporate learning | `honen`, `bloomy` |
+| Udemy | Coursera | delisted from Nasdaq, value to confirm | consumer and enterprise learning | `honen`, `wondering`, `befreed` |
+| Accolade | Transcarent | $621m | payer-facing care navigation | `insurf`, `evergrove` |
+| Confluent | IBM | $11bn, $31 a share, completed 17 Mar 2026 | real-time data infrastructure sold to developers | `projectx`, `osseus`, `orchids` |
+| Verint Systems | Thoma Bravo (via Calabrio) | $2bn all-cash, completed | conversation and voice analytics | `wispr-flow`, `dograh`, `akkari` |
+
+**What is still needed for each, and it is the part that makes them usable.** The announced
+consideration is the easy half. The row does not price until it carries the target's revenue at the
+announcement date, on a named basis, from the target's own last filing before the deal, with the URL.
+Do not take a revenue figure from the press release summary unless the release states it.
+
+Set `transaction_type` to CONTROL, and never let one of these feed a range: B6 is a rule, not a
+preference, and a control premium quietly inside a founder's range is exactly the overstatement the
+honesty layer exists to prevent.
+
+While you are there: **listed corporate learning is being taken private one company at a time**
+(LTG, Udemy, and Instructure and PowerSchool before them). That is why `honen`'s listed lane is thin
+and it will not get better. Control transactions are the honest answer for that lane.
 
 ## What a good row looks like
 

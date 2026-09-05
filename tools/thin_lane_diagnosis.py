@@ -84,11 +84,13 @@ def main():
                 if r.get('company_key') in shown or not f(r.get(need_key)):
                     continue
                 sc, why = M.score(prof, r, M.WP, use_fin=False)
-                if M._relevant(prof, r, why):
+                if not M._relevant(prof, r, why):
+                    t = 'BARRED_RELEVANCE'
+                else:
                     t = M._tier(prof, r, why)
                     if t != 'BROAD' and sc < cut:
                         t = 'UNDER_CUT'
-                    spare.append((sc, '%s [%s]' % (r['company_name'], t)))
+                spare.append((sc, '%s [%s %.1f]' % (r['company_name'], t, sc)))
             spare = [n for _s, n in sorted(set(spare), reverse=True)]
         else:
             core, sec, _t = M.peer_groups(prof, M.listed)
@@ -105,11 +107,18 @@ def main():
                 if r['company_name'] in shown or not f(r.get(lkey)):
                     continue
                 sc, why = M.score(prof, r)
-                if M._relevant(prof, r, why):
+                # A NAME WE HOLD THAT A GATE BARS IS NOT A NAME WE DO NOT HOLD.
+                # Until 4-Sep this loop skipped anything failing _relevant, so GitLab (scoring 9.0
+                # for orchids) and JFrog (6.5) were invisible here and the lane was reported as a
+                # sourcing request. I then asked Daniil to pull both from Capital IQ. They were
+                # already in the file. The gate that bars a name is now printed WITH the name.
+                if not M._relevant(prof, r, why):
+                    t = 'BARRED_RELEVANCE'
+                else:
                     t = M._tier(prof, r, why)
                     if t != 'BROAD' and sc < cut:
                         t = 'UNDER_CUT'
-                    spare.append((sc, '%s [%s]' % (r['company_name'], t)))
+                spare.append((sc, '%s [%s %.1f]' % (r['company_name'], t, sc)))
             spare = [n for _s, n in sorted(set(spare), reverse=True)]
         if wrong:
             print('   MULTIPLE ON THE WRONG BASIS, one figure each away from usable:')
@@ -129,17 +138,32 @@ def main():
         # the best name in the lane, so a name can be related, priced, in the right tier and still
         # rank too far behind the leader to belong. DeHaat against Priori Legal is the case: it is
         # ADJACENT and priced on net, and it sits under the cut the lane's own top name sets.
-        near = [x for x in spare if '[BROAD]' not in x and '[UNDER_CUT]' not in x]
+        near = [x for x in spare if '[BROAD' not in x and '[UNDER_CUT' not in x
+                and '[BARRED_RELEVANCE' not in x]
+        barred = [x for x in spare if '[BARRED_RELEVANCE' in x]
+        far = [x for x in spare if '[BROAD' in x or '[UNDER_CUT' in x]
         if near:
             print('   ALSO RELATED AND PRICED ON THE RIGHT BASIS, NOT SHOWN (%d): %s'
                   % (len(near), ', '.join(near[:8]) + (' ...' if len(near) > 8 else '')))
-        else:
-            print('   NOTHING RELATED LEFT THAT CARRIES THIS BASIS. This one is a sourcing request.')
+        # THE HEADLINE MAY NOT CONTRADICT THE LIST UNDER IT. The old version printed "nothing
+        # related left, this one is a sourcing request" and then named six companies we hold on
+        # the next line. Whoever read the headline and not the parenthesis went and sourced names
+        # that were already in the file. A lane is only a sourcing request when the file is
+        # genuinely empty of candidates.
+        if barred:
+            print('   HELD AND BARRED BY THE RELEVANCE GATE, score shown (%d): %s' % (len(barred),
+                  ', '.join(barred[:8]) + (' ...' if len(barred) > 8 else '')))
+            print('      These are IN THE FILE. Sourcing more names does not reach them; the gate')
+            print('      does. _relevant wants a shared tag token or a shared specific industry,')
+            print('      and an exact archetype match on its own counts for nothing.')
+        if far:
+            print('   HELD, RELATED, BARRED BY TIER OR SCORE (%d): %s' % (len(far),
+                  ', '.join(far[:8]) + (' ...' if len(far) > 8 else '')))
+        if not spare:
+            print('   NOTHING IN THE FILE AT ALL FOR THIS LANE. This one is a sourcing request.')
             sourcing.append('%s / %s (%s)' % (key, lane, need_basis))
-        far = [x for x in spare if '[BROAD]' in x]
-        if far and not near:
-            print('   (only BROAD-tier names remain, which the no-unrelated-comparable rule bars: %s)'
-                  % ', '.join(far[:6]))
+        elif not near:
+            print('   NOT A SOURCING REQUEST UNTIL THE NAMES ABOVE ARE RULED ON.')
         print()
     print('----')
     print('%d thin lanes. %d of them are genuine sourcing requests:' % (len(thin), len(sourcing)))

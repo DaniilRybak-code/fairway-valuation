@@ -1,0 +1,54 @@
+# RAW TRANSCRIPTION. Public comps pull of 4-Sep-2026, rows 508 to 523 of the I_Public_Comps tab.
+# Source: screenshot supplied by Daniil at 21:40 UK on 4-Sep-2026. There is no CSV: the pull is run
+# in a separate sandbox and cannot be exported, so this transcription IS the record (D1).
+# Transcribed by Claude Opus 5 from the screenshot, column by column, 4-Sep-2026 21:45 UK.
+#
+# NOT YET VERIFIED BY A SECOND READ. Every figure below must be checked against the screen before
+# it is loaded into data/peers-*.csv. Nothing here has reached the engine.
+#
+# COLUMNS ARE THE SCREEN'S OWN, NOT THE ENGINE'S (D11). The screen gives a combined
+# equity-to-AV bridge and does not break out net debt, minority interest or associates, so those
+# three columns do not exist here rather than being guessed at.
+#
+# THREE THINGS TO SETTLE BEFORE LOADING, all recorded in docs/public-pull-verdicts-4sep.md:
+#  1. CURRENCY. The headers say ($MM). Edenred and Pluxee are Euronext Paris listings. If those two
+#     rows are in EUR and the rest in USD, every multiple for them is wrong by the EUR/USD rate.
+#  2. GROWTH BASIS. This screen gives CY+1, CY+2 and CY+3 year-on-year plus a CY+1 to CY+3 CAGR.
+#     The engine's existing listed column is a CY+0 to CY+2 CAGR. These are NOT the same measure
+#     and must not be loaded into the same column (rule B9 and the g_basis machinery).
+#  3. CUSTOMER FLOAT, SOURCED 4-Sep-2026 21:55 UK. Daniil's ruling: the bridge INCREASES by the
+#     customer funds, because client money in cash is not shareholder cash and net debt should be
+#     higher. Figures read from the companies' own reporting, not estimated:
+#       Edenred, 31-Dec-2025: "Vouchers in circulation (Float)" EUR 6,125m; restricted cash
+#         EUR 1,661m; reported net debt EUR 1,241m; FY2025 revenue EUR 2,961m.
+#         Source: https://www.edenred.com/system/files/documents/2026-02-24-edenred-fy-2025-pr.pdf
+#       Pluxee, 31-Aug-2025: "Float-related cash" EUR 2,736m (value in circulation and related
+#         payables less net trade receivables related to the float); restricted cash related to
+#         float EUR 854m; net financial cash position +EUR 1,163m; FY2025 revenue EUR 1,287m.
+#         Source: https://www.pluxeegroup.com/sites/g/files/jclxxe221/files/2025-10/Pluxee%20FY26_Press%20Release%20EN.pdf
+#     ADJUSTED FIGURES ARE IN THE av_adj COLUMNS BELOW, at an ASSUMED USD/EUR of 1.12. That rate is
+#     the one open item: the screen is in USD and the float is in EUR, and the rate the screen used
+#     is not on it. Replace 1.12 with the screen's own rate before loading.
+#     A second open item is whether the screen's cash already excludes restricted cash. If it does,
+#     adding the full float double counts the restricted portion, so both readings are carried:
+#       Edenred  full float -> AV 17,033, 4.7x revenue | less restricted -> AV 15,173, 4.2x
+#       Pluxee   full float -> AV  4,220, 2.8x revenue | less restricted -> AV  3,264, 2.2x
+#     Paysign holds cardholder funds on the same principle and has not been adjusted: its float is
+#     not disclosed at the level these two disclose it, and its bridge is only -22.
+ticker,company_name,market_cap_musd,price_per_share,eq_to_av_bridge_musd,av_musd,n_estimates,revenue_ntm_musd,gross_profit_ntm_musd,net_income_ntm_musd,bvps_ntm,av_ntm_revenue_x,av_ntm_gp_x,pe_ntm_x,pbv_ntm_x,rev_growth_cy1_yoy_pct,rev_growth_cy2_yoy_pct,rev_growth_cy3_yoy_pct,rev_cagr_cy1_cy3_pct,ni_growth_cy2_reported_pct,customer_float_eur_m,av_adj_full_float_musd,av_adj_full_float_rev_x,av_adj_ex_restricted_musd,av_adj_ex_restricted_rev_x,float_source_url
+NYSE:GDOT,Green Dot Corporation,747,13,0,747,3,2491,0,86,,0.3,,8.7,,14.9,6.7,6.7,6.7,4.6,,,,,,
+NASDAQ:PAYS,"Paysign, Inc.",700,12,-22,678,5,127,80,36,,5.3,8.5,19.6,,39.8,16.2,16.2,16.2,27.6,,,,,,
+NASDAQ:PMTS,CPI Card Group Inc.,327,28,300,626,4,637,210,40,,1.0,3.0,8.1,,11.2,8.2,6.7,7.4,18.9,,,,,,
+ENXTPA:EDEN,Edenred SE,8027,35,2146,10173,16,3592,3271,641,,2.8,3.1,12.5,,8.7,6.5,6.8,6.7,12.9,6125,17033,4.7,15173,4.2,https://www.edenred.com/system/files/documents/2026-02-24-edenred-fy-2025-pr.pdf
+ENXTPA:PLX,Pluxee N.V.,2546,18,-1390,1156,14,1501,1363,253,,0.8,0.8,10.0,,-0.4,1.7,3.1,2.4,2.8,2736,4220,2.8,3264,2.2,https://www.pluxeegroup.com/sites/g/files/jclxxe221/files/2025-10/Pluxee%20FY26_Press%20Release%20EN.pdf
+NYSE:CRD.B,Crawford & Company,608,12,199,808,2,1307,379,51,,0.6,2.1,12.0,,1.4,2.8,2.8,2.8,14.0,,,,,,
+NASDAQ:EXLS,"ExlService Holdings, Inc.",5673,37,200,5874,10,2598,998,381,,2.3,5.9,14.9,,15.4,11.7,11.8,11.7,11.7,,,,,,
+NASDAQ:VRSK,"Verisk Analytics, Inc.",25296,194,4041,29336,18,3366,2375,1082,,8.7,12.4,23.4,,4.8,6.7,6.7,6.7,9.9,,,,,,
+NYSE:EVH,"Evolent Health, Inc.",484,4,855,1339,16,3079,433,37,,0.4,3.1,13.1,,40.5,25.1,11.3,18.0,97.0,,,,,,
+NYSE:CTEV,Claritev Corporation,667,39,4686,5353,5,1051,778,117,,5.1,6.9,5.7,,5.2,5.2,5.2,5.2,27.9,,,,,,
+NASDAQ:ALHC,"Alignment Healthcare, Inc.",2819,14,0,2819,12,6074,753,131,2,0.5,3.7,21.5,7.3,32.1,24.6,24.0,24.3,39.3,,,,,,
+NASDAQ:PGNY,"Progyny, Inc.",1969,26,-214,1754,11,1467,384,183,,1.2,4.6,10.7,,6.7,10.0,6.7,8.1,10.0,,,,,,
+NYSE:SKIL,Skillsoft Corp.,59,7,467,525,1,340,130,3,,1.5,4.1,16.9,,-20.7,-24.8,-25.0,-24.9,,,,,,,
+TSX:DTOL,D2L Inc.,387,7,-84,303,7,246,176,32,,1.2,1.7,12.2,,7.1,9.3,9.5,9.4,42.9,,,,,,
+NASDAQ:MNDY,monday.com Ltd.,4080,97,-846,3234,25,1620,1422,285,,2.0,2.3,14.3,,19.4,15.2,14.7,14.9,21.4,,,,,,
+NASDAQ:LPSN,"LivePerson, Inc.",37,3,302,339,3,152,47,-40,,2.2,7.1,,,-17.8,-35.9,-35.9,-35.9,,,,,,,

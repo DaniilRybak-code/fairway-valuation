@@ -182,6 +182,16 @@ excluded outright.
 
 **C5. Never scrape a vendor. Check redistribution terms in writing before signing any data licence.**
 
+**C7. A listed comparable has to still be listed, and the agent proposing it has to have checked.**
+*Added 4 Sep*, after I put four companies on a ticker request that no longer trade: Sapiens
+International (Advent, $2.5bn), Learning Technologies Group (General Atlantic, about $1bn), Udemy
+(into Coursera) and Accolade (Transcarent, $621m). None was in our data, so nothing we hold went
+stale, but all four would have wasted a Capital IQ pull and one of them would have been priced off a
+dead quote if the screen had returned one. Two consequences: check before proposing, and treat the
+delisting itself as evidence, because a take-private is a priced control transaction under B6 and
+belongs in the private file. Whole sectors are disappearing from the listed side this way, corporate
+learning first among them.
+
 **C6. Test only on real companies. Never invent one.**
 
 ---

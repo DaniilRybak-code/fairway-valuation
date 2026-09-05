@@ -44,6 +44,7 @@ Also fine: attach the CSV or the .xlsx to the conversation.
 
 | arrived | what | rows | raw file | working file | wired into engine |
 |---|---|---|---|---|---|
+| 2026-09-04 | Public pull, 16 names for the eight thin listed lanes | 16 | `data/raw/2026-09-04_public-pull-16-names.csv`, transcribed from screenshot (no CSV possible, separate sandbox) | not yet loaded | **no**, three questions open: currency of the two Euronext rows, growth basis (CY+1 to CY+3, a third definition), and customer float for Edenred and Pluxee |
 | 2026-08-30 | Listed specialty finance and lending, P/E and P/BV | 79 | transcribed from screenshot, NO RAW | `data/peers-lending.csv` | **no**, needs tags |
 | 2026-08-30 | Listed logistics, services marketplaces, consumer subscription, payments | 123 | transcribed from screenshot, NO RAW | `data/peers-logistics-services.csv` | **no**, needs tags |
 | 2026-08-30 | Private financing transaction database, 58 valuation-backed rounds | 58 | transcribed from screenshot, NO RAW | `data/private-rounds-master-30aug.csv` | **no**, source URLs missing |
@@ -57,6 +58,9 @@ Also fine: attach the CSV or the .xlsx to the conversation.
 | earlier | Listed consumer commerce, first pull, superseded above | 71 | not recorded | `data/peers-ecommerce.csv` | yes |
 | earlier | Private rounds, software and fintech | 99 | not recorded | `data/private-rounds.csv` | yes |
 | earlier | Private rounds, consumer | 50 | not recorded | `data/private-rounds-consumer.csv` | yes |
+| 2026-09-05 | **Private rounds, Claude's pull for the 18 thin private lanes** (work order of 4 Sep): 24 rounds plus the three control transactions named in the order (Sapiens, Accolade, Udemy). about 460 candidate-lane examinations across 18 lanes, every rejection named by lane in `docs/handover-2026-09-05-claude.md` | 27 rounds, 24 companies | `data/raw/2026-09-05_private-rounds-claude.csv` | `data/private-rounds.csv` after `tools/load_claude_pull_5sep.py` | **not yet**: raw committed first (D14), then the load script |
+| 2026-09-05 | Tag rows for the 24 companies above, same vocabulary as `private-companies-tags.csv` | 24 | `data/raw/2026-09-05_private-companies-tags-claude.csv` | `data/private-companies-tags.csv` after the same load | **not yet**, same step |
+| 2026-09-05 | **Investor houses, Claude's pull for Consumer & Prosumer Software and Online Learning**: 17 CALLABLE first-cheque houses and 2 EVIDENCE, each with a dated deal read on its URL; 100 funds examined | 19 | `data/raw/2026-09-05_investor-pull-claude.csv` | `data/investors.csv`, rebuilt by `tools/build_investors_table.py` through `tools/load_investor_pull_5sep.py` | **not yet**, same step |
 
 ## Three growth definitions now live in the files, and none of them may be blended
 
@@ -1509,3 +1513,19 @@ substring. A check that cries wolf on its first run is a check nobody runs twice
 **What Day 2 still needs is the data, not the code**: 62 of 140 callable rows render, and ten of the
 43 fixtures get fewer than three callable investors. That is the enrichment pull, and it is the only
 thing standing between the current lists and the design.
+
+## 2026-09-05 (evening): Claude's private-round and investor pull, raw files only
+
+Three raw files landed under the 4-Sep work order (`docs/prompts/work-order-claude-4sep.md`), built by
+`tools/build_claude_pull_5sep.py` and `tools/build_claude_investor_pull_5sep.py` so every figure is
+reproducible from the script, and every figure was read on the URL in its row on 5 September. Nothing
+is loaded yet: rule D14 says the raw files are committed before anything is built on them, so the load
+is a second step, `python3 tools/load_claude_pull_5sep.py`, which refuses to run until git says the raw
+files are in a commit. That step was rehearsed end to end in a scratch copy: 27 rounds and 24 tag rows
+load, the investor table rebuilds to 506 houses, the golden snapshots rebaseline, the gate goes from
+81 to 89 of 102, and all fourteen checks pass. Counts, rejections by name and the checks' output are in
+`docs/handover-2026-09-05-claude.md`.
+
+One caution for whoever loads: the session's web search was capped at 200 calls and ran out partway
+through, so the rejections marked "no source" in the handover are weaker than the keeps. The keeps were
+all verified page by page after the cap; the misses may not be.
