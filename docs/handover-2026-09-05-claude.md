@@ -322,3 +322,106 @@ build_investors_table.py.
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015S1xtdo14ySg8B73qvYBsv" && git push
 ```
+
+
+---
+
+# Addendum, 5 September, late evening: rulings, control transactions, investor round two
+
+Written 23:20 UK. Opus loaded the pull above at 21:54 UK (`dad1b3f`, gate 81 to 89) and then A12
+(`d1f8966`, 89 to 90). What follows is on top of that.
+
+## Daniil's two rulings, and what each changes
+
+**1. Gross rows price a founder's gross revenue.** His words: "we calculate the multiple based on gross
+revenue and ask the founder for both gross and net revenues (and explain in the quiz that some
+precedents were priced on net and some on gross; providing both will enlarge the dataset applied)."
+Nothing changes in the data: Mercor, Micro1, Juspay and Cashfree are already labelled GROSS_REVENUE
+and price a gross answer today. What changes is the quiz and the engine: the quiz asks for both
+figures, the lane prices net rows against the net answer and gross rows against the gross answer,
+and the reveal says which precedents were priced on which. Today a founder gives one figure on one
+basis and the fixtures carry net only (`TEST_REVENUE_BASIS` in `selector/golden_profiles.py`), which
+is why clera, standout, nursa, tsenta and paymentkit read as unpriced. That is a build for the wiring
+week, recorded in STATUS as his ruling of 5 September; the peer-universe gate should then count a
+lane as priced on either basis.
+
+**2. Floors are figures.** His words: "I never ruled to hold anything out of median because something
+is stated as floor. It is customary to say 'more than' in such announcements, which just take that
+figure for the valuation purposes." The three rows I had held out (Moss, Restaurant365, AuditBoard)
+go back into the medians at their stated figures, bound left empty, by `tools/load_claude_pull_5sep_part2.py`.
+The file's own practice was already against me (Invisible, Cato and the other threshold rows sit in
+the medians with a bound); the hold-out was my reading, not his, and it is withdrawn. Udemy stays
+flagged for a different reason: no standalone price is stated, only an exchange ratio and a 41%
+ownership split, and he listed its value as "to confirm".
+
+## The six control transactions on his list
+
+| target | acquirer | consideration | row | denominator (LTM, filed) | x |
+|---|---|---|---|---|---|
+| Confluent | IBM | $31 a share, EV $11bn, completed 17-Mar-2026 | `confluent-2025-12`, new | $1,113.1m to Sep-25 | 9.9 |
+| Sapiens International | Advent | $43.50 a share, $2.5bn | `sapiens-2025-08`, loaded 21:54 | $549.1m to Jun-25 | 4.6 |
+| Verint Systems | Thoma Bravo (via Calabrio) | $20.50 a share, EV $2bn | `verint-2025-08`, new | $893.8m to Jul-25 | 2.2 |
+| Learning Technologies Group | General Atlantic | 100p a share, GBP802.4m fully diluted | `learning-technologies-group-2024-12`, new | GBP528.0m to Jun-24 ($668.8m at 1.2667) | 1.5 |
+| Accolade | Transcarent | $7.03 a share, $621m | `accolade-2025-01`, loaded 21:54 | $446.7m to Nov-24 | 1.4 |
+| Udemy | Coursera | 0.800 Coursera shares per share; 41% of a $2.5bn combined implied equity value | `udemy-2025-12`, loaded 21:54, held for confirmation | $795.8m to Sep-25 | 1.3 |
+
+Sources: Confluent and Verint from the targets' own 8-K releases and results releases on sec.gov;
+LTG from the Rule 2.7 announcement of 4-Dec-2024 on Investegate ("values the entire issued, and to be
+issued, ordinary share capital of LTG at approximately GBP802.4 million on a fully diluted basis"),
+its 2023 annual report and its half-year results 2024. Every component and URL is in the row's notes.
+Confluent and Verint are enterprise values; the other four are equity values. All six carry
+`transaction_type=CONTROL` and `target_was_listed=1`, so the engine treats them as labelled anchors
+(B6), never as range members.
+
+## Investor pull, round two
+
+**Another 55 consumer funds and 26 learning funds examined; 24 rows written, 14 CALLABLE.** With round
+one that is 31 callable houses sourced today, against the thirty asked for. Consumer: Flex Capital,
+The Family Fund, GV, Canaan, Town Hall Ventures (healthcare only, $3m floor). Learning: Outlast Fund,
+UCP, Movens Capital, Firstpick VC, Founderful, 10x Founders, Specialist VC, White Star Capital,
+Trilogy Equity Partners. Every deal sentence and every cheque page was re-read by me before writing.
+Two of the agents' keeps fell on re-reading: Antler (its deal, BiMA, is a hardware projector) and
+Triple Point (its deal, Lateral, is consumer insurance, not an app), which is kept as EVIDENCE with the
+reason in the row. The ten EVIDENCE rows are real, sourced houses that fail question zero for a stated
+reason (Correlation never leads; Seek and 3TS are growth; Endeavor Catalyst is members-only; ForsVC is
+games-only; Raga, Otherwise, Offline and Karman could not be read or state no lead practice).
+
+Consumer learning deals found in the window and used or rejected are listed in the project copy of
+this handover. Eight co-investors on good deals have unreachable websites (Active Partners, Coalition
+Capital, Dent Capital, Generations Fund, Vento Ventures, Foundry Square, Factorial Capital, Tetherpoint)
+and are the first thing a search-enabled session should recover.
+
+After the part-2 load the table holds 532 houses, 156 callable. `investor_check.py` still refuses the
+rows with an unpublished or one-sided cheque (see the note above; the engine renders them).
+
+## Commit 3, the raw files and the part-2 script
+
+```
+cd ~/fairway-valuation && git add -A && git commit -m "5-Sep evening: investor round two (24 houses), three control transactions, floor ruling script
+
+Round two of the investor pull: 14 CALLABLE and 10 EVIDENCE houses for Consumer &
+Prosumer Software and Online Learning, every deal read on its URL; with round one,
+31 callable houses sourced today. Confluent (IBM, EV \$11bn), Verint (Thoma Bravo,
+EV \$2bn) and Learning Technologies Group (General Atlantic, GBP802.4m) as CONTROL
+rows with LTM denominators from filed figures.
+
+tools/load_claude_pull_5sep_part2.py applies Daniil's ruling that a stated floor is
+the figure (Moss, Restaurant365, AuditBoard back into the medians), loads the raw
+files and rebuilds the investor table; refuses to run until the raw files are in a
+commit. Manifest, STATUS and handover updated.
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_015S1xtdo14ySg8B73qvYBsv" && git push
+```
+
+## Commit 4, the load
+
+```
+cd ~/fairway-valuation && python3 tools/load_claude_pull_5sep_part2.py && sh tools/check_all.sh; git add -A && git commit -m "Load 5-Sep part 2: floors released on Daniil's ruling, three control anchors, investor table 506 to 532
+
+Gate holds at 90 of 102; check 1 still names 2026-09-04_public-pull-16-names.csv,
+which predates this and is not loaded by it.
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_015S1xtdo14ySg8B73qvYBsv" && git push
+```

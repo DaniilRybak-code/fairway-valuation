@@ -58,6 +58,8 @@ Also fine: attach the CSV or the .xlsx to the conversation.
 | earlier | Listed consumer commerce, first pull, superseded above | 71 | not recorded | `data/peers-ecommerce.csv` | yes |
 | earlier | Private rounds, software and fintech | 99 | not recorded | `data/private-rounds.csv` | yes |
 | earlier | Private rounds, consumer | 50 | not recorded | `data/private-rounds-consumer.csv` | yes |
+| 2026-09-05 | **Control transactions, Claude**: Confluent (IBM, EV $11bn), Verint (Thoma Bravo, EV $2bn), Learning Technologies Group (General Atlantic, GBP802.4m), each with an LTM denominator built from filed figures | 3 | `data/raw/2026-09-05_control-transactions-claude.csv` (+ `-tags-`) | `data/private-rounds.csv` after `tools/load_claude_pull_5sep_part2.py` | **not yet**: raw committed first (D14), then the part-2 script |
+| 2026-09-05 | **Investor houses, round two**: 14 CALLABLE and 10 EVIDENCE for the same two clusters, every deal read on its URL | 24 | `data/raw/2026-09-05_investor-pull-claude-round2.csv` | `data/investors.csv` via the same source hook | **not yet**, same step |
 | 2026-09-05 | **Private rounds, Claude's pull for the 18 thin private lanes** (work order of 4 Sep): 24 rounds plus the three control transactions named in the order (Sapiens, Accolade, Udemy). about 460 candidate-lane examinations across 18 lanes, every rejection named by lane in `docs/handover-2026-09-05-claude.md` | 27 rounds, 24 companies | `data/raw/2026-09-05_private-rounds-claude.csv` | `data/private-rounds.csv` after `tools/load_claude_pull_5sep.py` | **not yet**: raw committed first (D14), then the load script |
 | 2026-09-05 | Tag rows for the 24 companies above, same vocabulary as `private-companies-tags.csv` | 24 | `data/raw/2026-09-05_private-companies-tags-claude.csv` | `data/private-companies-tags.csv` after the same load | **not yet**, same step |
 | 2026-09-05 | **Investor houses, Claude's pull for Consumer & Prosumer Software and Online Learning**: 17 CALLABLE first-cheque houses and 2 EVIDENCE, each with a dated deal read on its URL; 100 funds examined | 19 | `data/raw/2026-09-05_investor-pull-claude.csv` | `data/investors.csv`, rebuilt by `tools/build_investors_table.py` through `tools/load_investor_pull_5sep.py` | **not yet**, same step |
@@ -1529,3 +1531,14 @@ load, the investor table rebuilds to 506 houses, the golden snapshots rebaseline
 One caution for whoever loads: the session's web search was capped at 200 calls and ran out partway
 through, so the rejections marked "no source" in the handover are weaker than the keeps. The keeps were
 all verified page by page after the cap; the misses may not be.
+
+## 2026-09-05 (late evening): rulings and additions after the pull was loaded
+
+Opus loaded the 5-Sep pull at 21:54 UK (`dad1b3f`). Daniil then ruled on the evening's questions and
+added six control transactions. Three raw files landed: round two of the investor pull (24 houses,
+14 callable, taking the two clusters to 31 callable houses sourced today), and the three control
+transactions from his list that were not yet in the file (Confluent, Verint, LTG; Sapiens, Accolade and
+Udemy were already in). The ruling on floors is applied by `tools/load_claude_pull_5sep_part2.py`,
+which also loads the two raw files and rebuilds the investor table, and refuses to run until the raw
+files are in a commit. Dry run: gate stays at 90 of 102, all checks pass except the pre-existing
+intake failure on `2026-09-04_public-pull-16-names.csv`, which is not part of this work.

@@ -19,6 +19,7 @@ the pull's fields and empty generated fields. Nothing is dropped and the merge i
 import csv, io, os, re
 
 SRC = 'data/raw/2026-09-05_investor-pull-claude.csv'
+SRC2 = 'data/raw/2026-09-05_investor-pull-claude-round2.csv'   # round two, same rules, 14 CALLABLE and 10 EVIDENCE
 
 PULL_FIELDS = ('house_type', 'layer', 'geographies', 'stage_bands', 'first_cheque_low_m',
                'first_cheque_high_m', 'cheque_currency', 'thesis_one_liner', 'screening_categories',
@@ -41,10 +42,13 @@ def _stem(n):
 
 
 def load():
-    if not os.path.exists(SRC):
-        return []
-    lines = [l for l in open(SRC, encoding='utf-8') if not l.startswith('#')]
-    return list(csv.DictReader(io.StringIO(''.join(lines))))
+    out = []
+    for src in (SRC, SRC2):
+        if not os.path.exists(src):
+            continue
+        lines = [l for l in open(src, encoding='utf-8') if not l.startswith('#')]
+        out += list(csv.DictReader(io.StringIO(''.join(lines))))
+    return out
 
 
 def apply_to(rows, aliases=None):
