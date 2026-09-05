@@ -16,59 +16,39 @@
 #  2. GROWTH BASIS. This screen gives CY+1, CY+2 and CY+3 year-on-year plus a CY+1 to CY+3 CAGR.
 #     The engine's existing listed column is a CY+0 to CY+2 CAGR. These are NOT the same measure
 #     and must not be loaded into the same column (rule B9 and the g_basis machinery).
-#  3. CUSTOMER FLOAT, RESOLVED 5-Sep-2026 21:35 UK after Daniil re-pulled both rows and checked the
-#     companies' own net debt notes. The first version of this adjustment was built on a wrong
-#     premise and is corrected here.
+#  3. CUSTOMER FLOAT: RULED, NO ADJUSTMENT. Daniil, 5-Sep-2026 21:50 UK: "take Edenred and Pluxee
+#     as per my figures. P/E multiples are more aligned to them, so AV in my spreadsheet is ok."
+#     The enterprise values below are the screen's own and are NOT adjusted for customer float.
+#     The reasoning, and it holds: P/E is computed on market capitalisation, so it is untouched by
+#     the bridge, and Edenred at 12.5x against Pluxee at 10.0x is two companies priced sensibly
+#     against each other. The bridge is doing what a bridge does, and the difference between them
+#     on enterprise value is a real balance-sheet difference: Edenred carries net debt of 2,175 and
+#     Pluxee net cash of 1,365.
 #
-#     WHAT DANIIL ESTABLISHED, and it settles both open questions at once:
-#       Edenred's reported net debt ALREADY EXCLUDES restricted cash. Its own note 6.5 nets debt of
-#         EUR 4,826m against cash and other financial assets of EUR 3,585m to give net debt of
-#         EUR 1,241m at 31-Dec-2025 (EUR 1,764m at 30-Jun-2026). Restricted cash of EUR 1,661m is
-#         not in that 3,585m. So the bridge is already clean of float ASSETS, and the float
-#         LIABILITY is also outside it. Net debt is float-neutral in both directions.
-#       Pluxee reports a net cash position EXCLUDING restricted cash of EUR 1,270m.
+#     WHAT WAS INVESTIGATED AND SET ASIDE, kept because it is the audit trail for the ruling:
+#       Edenred's note 6.5 nets debt of EUR 4,826m against cash and other financial assets of
+#         EUR 3,585m for net debt of EUR 1,241m at 31-Dec-2025; restricted cash of EUR 1,661m is
+#         NOT in that 3,585m, so the reported bridge is already clean of float assets.
+#       Pluxee reports net cash EXCLUDING restricted cash of EUR 1,270m. Against the screen bridge
+#         of -1,365 that gives the rate the screen used: USD/EUR 1.0748, DERIVED not assumed, which
+#         also answers the currency question on these two rows. They are USD.
+#       Had the float been added on the net basis it would have given Edenred 4.2x and Pluxee 2.7x.
+#         Not applied.
 #
-#     THAT GIVES US THE FX RATE, which was the other open item. Pluxee's re-pulled screen bridge is
-#     -1,365 ($MM) against a reported net cash position of EUR 1,270m, so the screen is in USD at
-#     USD/EUR 1.0748. Cross-check on Edenred is loose (its bridge of 2,175 against net debt of
-#     EUR 1,764m at 30-Jun-2026 = USD 1,896m, the USD 279m difference being minority interests,
-#     pensions and other bridge items the note does not carry), which is consistent but not proof.
-#     RATE TO USE: 1.0748, derived, not assumed. Replace it if the screen states its own.
+#     THE ONE THING THAT SURVIVES THE RULING, for whoever bands these two: on the screen's own
+#     figures Edenred prices at 2.8x revenue and Pluxee at 0.8x, while their earnings multiples are
+#     12.5x and 10.0x. For these two the EARNINGS multiple is the comparable measure and the revenue
+#     multiple is not. Putting both in one revenue band would produce a 0.8x to 2.8x range out of
+#     two companies doing the same thing. Flagged, not decided.
 #
-#     THE CORRECT ADJUSTMENT IS THE NET FLOAT, NOT THE GROSS FLOAT. Adding the gross voucher
-#     liability while the float assets sit outside the bridge would overstate the enterprise value
-#     by the whole of those assets. Net float = float liability less the assets backing it:
-#       Pluxee   EUR 2,736m, the company's own "float-related cash", explicitly defined as value in
-#                circulation and related payables MINUS net trade receivables related to the float.
-#                A net figure as published, so it is used as published.
-#       Edenred  EUR 6,125m vouchers in circulation less EUR 1,661m restricted cash = EUR 4,464m.
-#                THIS IS THE ONE APPROXIMATION LEFT: Edenred does not publish the trade receivables
-#                related to its float, so the true net float is somewhat below 4,464 and the
-#                adjusted multiple below is a ceiling. One line from the balance sheet closes it.
-#
-#     RESULT, at 1.0748:
-#       Edenred  AV 10,203 + 4,798 = 15,001  ->  4.2x revenue (was 2.8x), 4.6x gross profit
-#       Pluxee   AV  1,181 + 2,941 =  4,122  ->  2.7x revenue (was 0.8x), 3.0x gross profit
-#     The gap between two direct competitors falls from 3.5x to 1.55x, and Pluxee still trades at a
-#     discount, which is what it has done since the spin.
-#
-#     Sources: Edenred FY2025 press release and note 6.5 net debt table supplied by Daniil;
-#       https://www.edenred.com/system/files/documents/2026-02-24-edenred-fy-2025-pr.pdf
-#       Pluxee Fiscal 2025 press release;
-#       https://www.pluxeegroup.com/sites/g/files/jclxxe221/files/2025-10/Pluxee%20FY26_Press%20Release%20EN.pdf
-#     Paysign holds cardholder funds on the same principle, does not disclose a float at this level,
-#     and its bridge is only -22. Not adjusted, flagged.
-#
-#  4. THE TWO EURONEXT ROWS WERE RE-PULLED on 5-Sep and moved slightly. Both are updated below and
-#     the original 4-Sep figures are kept here so nothing is lost:
-#       Edenred  bridge 2,146 -> 2,175, AV 10,173 -> 10,203
-#       Pluxee   bridge -1,390 -> -1,365, AV 1,156 -> 1,181
-ticker,company_name,market_cap_musd,price_per_share,eq_to_av_bridge_musd,av_musd,n_estimates,revenue_ntm_musd,gross_profit_ntm_musd,net_income_ntm_musd,bvps_ntm,av_ntm_revenue_x,av_ntm_gp_x,pe_ntm_x,pbv_ntm_x,rev_growth_cy1_yoy_pct,rev_growth_cy2_yoy_pct,rev_growth_cy3_yoy_pct,rev_cagr_cy1_cy3_pct,ni_growth_cy2_reported_pct,net_float_eur_m,av_adj_musd,av_adj_rev_x,av_adj_musd_dup,av_adj_rev_x_dup,float_source_url
+#  4. THE TWO EURONEXT ROWS WERE RE-PULLED on 5-Sep and are updated below. The 4-Sep figures, kept
+#     so nothing is lost: Edenred bridge 2,146 and AV 10,173; Pluxee bridge -1,390 and AV 1,156.
+ticker,company_name,market_cap_musd,price_per_share,eq_to_av_bridge_musd,av_musd,n_estimates,revenue_ntm_musd,gross_profit_ntm_musd,net_income_ntm_musd,bvps_ntm,av_ntm_revenue_x,av_ntm_gp_x,pe_ntm_x,pbv_ntm_x,rev_growth_cy1_yoy_pct,rev_growth_cy2_yoy_pct,rev_growth_cy3_yoy_pct,rev_cagr_cy1_cy3_pct,ni_growth_cy2_reported_pct,net_float_eur_m_NOT_APPLIED,av_adj_musd_NOT_APPLIED,av_adj_rev_x_NOT_APPLIED,unused_a,unused_b,float_source_url
 NYSE:GDOT,Green Dot Corporation,747,13,0,747,3,2491,0,86,,0.3,,8.7,,14.9,6.7,6.7,6.7,4.6,,,,,,
 NASDAQ:PAYS,"Paysign, Inc.",700,12,-22,678,5,127,80,36,,5.3,8.5,19.6,,39.8,16.2,16.2,16.2,27.6,,,,,,
 NASDAQ:PMTS,CPI Card Group Inc.,327,28,300,626,4,637,210,40,,1.0,3.0,8.1,,11.2,8.2,6.7,7.4,18.9,,,,,,
-ENXTPA:EDEN,Edenred SE,8027,35,2175,10203,16,3592,3271,641,,2.8,3.1,12.5,,8.7,6.5,6.8,6.7,12.9,4464,15001,4.2,15001,4.2,https://www.edenred.com/system/files/documents/2026-02-24-edenred-fy-2025-pr.pdf
-ENXTPA:PLX,Pluxee N.V.,2546,18,-1365,1181,14,1501,1363,253,,0.8,0.8,10.0,,-0.4,1.7,3.1,2.4,2.8,2736,4122,2.7,4122,2.7,https://www.pluxeegroup.com/sites/g/files/jclxxe221/files/2025-10/Pluxee%20FY26_Press%20Release%20EN.pdf
+ENXTPA:EDEN,Edenred SE,8027,35,2175,10203,16,3592,3271,641,,2.8,3.1,12.5,,8.7,6.5,6.8,6.7,12.9,,,,,,https://www.edenred.com/system/files/documents/2026-02-24-edenred-fy-2025-pr.pdf
+ENXTPA:PLX,Pluxee N.V.,2546,18,-1365,1181,14,1501,1363,253,,0.8,0.8,10.0,,-0.4,1.7,3.1,2.4,2.8,,,,,,https://www.pluxeegroup.com/sites/g/files/jclxxe221/files/2025-10/Pluxee%20FY26_Press%20Release%20EN.pdf
 NYSE:CRD.B,Crawford & Company,608,12,199,808,2,1307,379,51,,0.6,2.1,12.0,,1.4,2.8,2.8,2.8,14.0,,,,,,
 NASDAQ:EXLS,"ExlService Holdings, Inc.",5673,37,200,5874,10,2598,998,381,,2.3,5.9,14.9,,15.4,11.7,11.8,11.7,11.7,,,,,,
 NASDAQ:VRSK,"Verisk Analytics, Inc.",25296,194,4041,29336,18,3366,2375,1082,,8.7,12.4,23.4,,4.8,6.7,6.7,6.7,9.9,,,,,,
