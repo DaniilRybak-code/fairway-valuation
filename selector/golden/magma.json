@@ -448,6 +448,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "LangChain",
       "date": "Oct-25"
      }
@@ -604,16 +614,6 @@
     ],
     "investor": "Acrew Capital",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Scale AI",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Meta Platforms",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -652,6 +652,17 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of data; same type of business; same kind of customer; same revenue model",
+    "score": 16.6,
+    "type": "CONTROL"
+   },
+   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
@@ -683,17 +694,6 @@
     "reason": "both do Model Evaluation; same type of business; same business function; same AI stance",
     "score": 13.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "",
-    "company": "Scale AI",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 14.5,
-    "reason": "both do Model Evaluation, Training Data; same type of business; same business function; same AI stance",
-    "score": 13.1,
-    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -711,27 +711,24 @@
    "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
-    "Scale AI"
+    "Confluent"
    ],
    "dispersed": false,
    "display": "RANGE",
    "high": 50.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
    "mid": 14.9,
    "n": 5,
    "period_mix": {
-    "LTM": 1,
-    "NTM": 1,
+    "LTM": 2,
     "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -749,12 +746,12 @@
     "model",
     "training"
    ],
-   "spread": 4.9,
+   "spread": 5.1,
    "tag_evidence": 1.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 14,
+  "private_window_months": 11,
   "secondary": [
    {
     "company": "Cloudflare, Inc.",

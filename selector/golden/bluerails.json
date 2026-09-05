@@ -466,7 +466,7 @@
     "bound": "",
     "company": "Restaurant365",
     "date": "May-23",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 10.0,
     "reason": "same type of business; same end market; same kind of customer",
     "score": 11.5,
@@ -491,8 +491,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
-    "ARR_RUNRATE": 1,
+    "ARR": 2,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -501,18 +500,23 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 39.42,
+   "high": 23.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 12.5,
-   "mid": 23.0,
+   "low": 10.0,
+   "mid": 12.5,
    "n": 3,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 2
+    "NOT STATED": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NOT STATED": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -522,7 +526,15 @@
     }
    },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "Brex",
+     "mult": 39.42,
+     "reason": "shares the language of booking; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "shared_words": [
     "agent",
     "ai",
@@ -533,7 +545,7 @@
     "manager",
     "payments"
    ],
-   "spread": 3.2,
+   "spread": 2.3,
    "tag_evidence": 5.0,
    "thin": false,
    "triangulated": false

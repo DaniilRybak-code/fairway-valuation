@@ -399,6 +399,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Lovable",
       "date": "Dec-25"
      },
@@ -626,6 +636,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
+    "score": 16.8,
+    "type": "CONTROL"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
@@ -668,17 +689,6 @@
     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
     "score": 11.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "Jul-2025",
-    "bound": "",
-    "company": "Perplexity",
-    "date": "Jul-25",
-    "in_medians": true,
-    "mult": 120.0,
-    "reason": "both do AI Browser; related type of business; same business function; sold the same way",
-    "score": 11.7,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -689,24 +699,28 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 3,
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 2
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 120.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
-   "mid": 20.0,
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 33.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
+   "mid": 14.9,
    "n": 5,
    "period_mix": {
-    "LTM": 1,
-    "RUN_RATE": 4
+    "LTM": 2,
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -718,43 +732,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Oxylabs",
-     "mult": 10.3,
-     "reason": "both do Web Scraping, Scraper API; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Invisible Technologies",
-     "mult": 14.9,
-     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "both do No-Code; same type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Perplexity",
-     "mult": 120.0,
-     "reason": "both do AI Browser; related type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "agent",
@@ -762,18 +740,19 @@
     "api",
     "browser",
     "code",
+    "infrastructure",
     "no",
     "proxy",
     "scraper",
     "scraping",
     "web"
    ],
-   "spread": 11.7,
+   "spread": 3.3,
    "tag_evidence": 2.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 13,
+  "private_window_months": 11,
   "secondary": [
    {
     "company": "Dynatrace, Inc.",

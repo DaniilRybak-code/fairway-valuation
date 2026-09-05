@@ -401,6 +401,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Lovable",
       "date": "Dec-25"
      },
@@ -561,66 +571,6 @@
     ],
     "investor": "Amplify",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Vanara Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Princeville Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "HOF Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Freestyle VC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Greycroft",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Acrew Capital",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -646,6 +596,17 @@
     "reason": "both do MCP; same type of business; same kind of customer; same AI stance",
     "score": 13.2,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of infrastructure; same type of business; same kind of customer; sold the same way",
+    "score": 13.3,
+    "type": "CONTROL"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -690,17 +651,6 @@
     "reason": "shares the language of source; related type of business; same kind of customer; sold the same way",
     "score": 11.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Invisible Technologies",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 14.9,
-    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-    "score": 11.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -716,14 +666,18 @@
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 72.86,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
    "mid": 25.0,
    "n": 5,
    "period_mix": {
@@ -742,18 +696,18 @@
    },
    "points": [
     {
+     "company": "Confluent",
+     "mult": 9.88,
+     "reason": "shares the language of infrastructure; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
      "company": "Oxylabs",
      "mult": 10.3,
      "reason": "shares the language of agent, ai, api; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
-    },
-    {
-     "company": "Invisible Technologies",
-     "mult": 14.9,
-     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     },
     {
      "company": "Genspark",
@@ -782,15 +736,16 @@
     "agent",
     "ai",
     "api",
+    "infrastructure",
     "search",
     "source"
    ],
-   "spread": 7.1,
+   "spread": 7.4,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 10,
   "secondary": [
    {
     "company": "C3.ai, Inc.",

@@ -615,7 +615,7 @@
     "bound": "",
     "company": "Restaurant365",
     "date": "May-23",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
     "score": 14.1,
@@ -629,7 +629,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 4,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -646,13 +646,18 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 23.0,
-   "n": 4,
+   "mid": 15.0,
+   "n": 5,
    "period_mix": {
+    "NOT STATED": 1,
     "NTM": 1,
     "RUN_RATE": 3
    },
    "period_span": {
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -669,6 +674,13 @@
      "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Restaurant365",
+     "mult": 10.0,
+     "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Clio",
@@ -694,6 +706,7 @@
    ],
    "positioning": [],
    "shared_words": [
+    "automation",
     "business",
     "client",
     "firm",

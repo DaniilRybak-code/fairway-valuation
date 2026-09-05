@@ -522,7 +522,7 @@
     "bound": "",
     "company": "AuditBoard",
     "date": "May-24",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 15.0,
     "reason": "shares the language of automation, management; same type of business; same kind of customer; same revenue model",
     "score": 15.6,
@@ -536,14 +536,15 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 3,
     "NET_REVENUE": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 1,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 2,
    "control_names": [
-    "Sapiens International"
+    "Sapiens International",
+    "AuditBoard"
    ],
    "dispersed": false,
    "display": "RANGE",
@@ -554,10 +555,10 @@
    ],
    "low": 4.55,
    "mid": 15.0,
-   "n": 4,
+   "n": 5,
    "period_mix": {
     "LTM": 2,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -572,6 +573,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "automation",
     "management",
     "operations",
     "software"

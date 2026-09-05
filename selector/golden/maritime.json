@@ -403,14 +403,10 @@
      {
       "company": "Clay",
       "date": "Jan-26"
-     },
-     {
-      "company": "Anysphere / Cursor",
-      "date": "Jun-25"
      }
     ],
     "investor": "DST Global",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -450,6 +446,16 @@
      }
     ],
     "investor": "Frontline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
     "n": 1
    },
    {
@@ -595,26 +601,6 @@
     ],
     "investor": "Coatue",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Anysphere / Cursor",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Thrive",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Anysphere / Cursor",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -653,6 +639,17 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
+    "score": 14.8,
+    "type": "CONTROL"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
@@ -684,17 +681,6 @@
     "reason": "shares the language of agent, ai, hosting; related type of business; same business function; same revenue model",
     "score": 15.3,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Anysphere / Cursor",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 19.8,
-    "reason": "shares the language of ai; related type of business; same business function; same kind of customer",
-    "score": 14.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -704,25 +690,35 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
-    "ARR_RUNRATE": 2
+    "ARR": 2,
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
    "dispersed": false,
    "display": "RANGE",
    "high": 50.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
    "mid": 20.0,
    "n": 5,
    "period_mix": {
-    "RUN_RATE": 5
+    "LTM": 1,
+    "RUN_RATE": 4
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -734,14 +730,15 @@
     "agent",
     "agents",
     "ai",
-    "hosting"
+    "hosting",
+    "infrastructure"
    ],
-   "spread": 4.9,
+   "spread": 5.1,
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 14,
+  "private_window_months": 11,
   "secondary": [
    {
     "company": "SoundHound AI, Inc.",

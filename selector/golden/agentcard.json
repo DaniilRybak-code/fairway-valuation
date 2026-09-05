@@ -267,7 +267,7 @@
     "cheque_high_m": 5.0,
     "cheque_low_m": 0.25,
     "deal_note": null,
-    "geographies": "Europe-focused, invests globally",
+    "geographies": "Europe-focused; invests globally",
     "house_type": "Venture",
     "investor": "Speedinvest",
     "not_published": null,
@@ -406,7 +406,7 @@
     "bound": "",
     "company": "Moss",
     "date": "Aug-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 14.29,
     "reason": "both do Programmatic Spend Controls; same type of business; same business function",
     "score": 12.4,
@@ -442,6 +442,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR": 1,
     "ARR_RUNRATE": 2
    },
    "bounded": true,
@@ -454,10 +455,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 5.6,
-   "mid": 18.75,
-   "n": 2,
+   "mid": 14.29,
+   "n": 3,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "RUN_RATE": {
@@ -481,7 +482,7 @@
    ],
    "spread": 3.3,
    "tag_evidence": 8.9,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 20,

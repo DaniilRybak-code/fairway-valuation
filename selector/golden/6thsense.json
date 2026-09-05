@@ -525,6 +525,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Replit",
       "date": "Sep-25"
      }
@@ -550,66 +560,6 @@
      }
     ],
     "investor": "Amex Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Vanara Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Princeville Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "HOF Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Freestyle VC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Greycroft",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Acrew Capital",
     "n": 1
    }
   ],
@@ -673,23 +623,23 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
+    "score": 13.8,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
     "company": "Replit",
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of ai; same type of business; same business function; same revenue model",
     "score": 13.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Invisible Technologies",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 14.9,
-    "reason": "shares the language of ai; same type of business; sold the same way; same AI stance",
-    "score": 11.6,
     "type": "PRIMARY"
    }
   ],
@@ -706,14 +656,18 @@
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 105.3,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
    "mid": 20.0,
    "n": 5,
    "period_mix": {
@@ -732,18 +686,18 @@
    },
    "points": [
     {
+     "company": "Confluent",
+     "mult": 9.88,
+     "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
      "company": "Oxylabs",
      "mult": 10.3,
      "reason": "shares the language of ai; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
-    },
-    {
-     "company": "Invisible Technologies",
-     "mult": 14.9,
-     "reason": "shares the language of ai; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     },
     {
      "company": "Replit",
@@ -770,9 +724,10 @@
    "positioning": [],
    "shared_words": [
     "ai",
+    "infrastructure",
     "stack"
    ],
-   "spread": 10.2,
+   "spread": 10.7,
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false

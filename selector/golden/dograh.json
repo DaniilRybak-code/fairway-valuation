@@ -475,6 +475,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Lovable",
       "date": "Dec-25"
      }
@@ -581,6 +591,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
+    "score": 14.8,
+    "type": "CONTROL"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
@@ -589,17 +610,6 @@
     "mult": 33.0,
     "reason": "shares the language of ai; related type of business; same business function; same revenue model",
     "score": 14.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Mid-2025 annualized run-rate",
-    "bound": "",
-    "company": "Supabase",
-    "date": "Oct-25",
-    "in_medians": true,
-    "mult": 72.86,
-    "reason": "both do Open Source; related type of business; same business function; same kind of customer",
-    "score": 18.7,
     "type": "PRIMARY"
    }
   ],
@@ -611,30 +621,47 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 105.3,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
-   "mid": 50.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
+   "mid": 33.0,
    "n": 5,
    "period_mix": {
-    "RUN_RATE": 5
+    "LTM": 1,
+    "RUN_RATE": 4
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
    "points": [
+    {
+     "company": "Confluent",
+     "mult": 9.88,
+     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
     {
      "company": "Oxylabs",
      "mult": 10.3,
@@ -657,13 +684,6 @@
      "transaction_type": "SECONDARY"
     },
     {
-     "company": "Supabase",
-     "mult": 72.86,
-     "reason": "both do Open Source; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
      "company": "Sierra",
      "mult": 105.3,
      "reason": "both do AI Agents, Voice AI; related type of business; same revenue model; same AI stance",
@@ -677,16 +697,15 @@
     "ai",
     "api",
     "automation",
-    "open",
-    "source",
+    "infrastructure",
     "voice"
    ],
-   "spread": 10.2,
-   "tag_evidence": 1.2,
+   "spread": 10.7,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 10,
+  "private_window_months": 8,
   "secondary": [
    {
     "company": "Cloudflare, Inc.",

@@ -417,28 +417,20 @@
      {
       "company": "Sierra",
       "date": "May-26"
-     },
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
      }
     ],
     "investor": "Benchmark",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
      {
       "company": "Sierra",
       "date": "May-26"
-     },
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
      }
     ],
     "investor": "Sequoia",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -533,6 +525,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Genspark",
       "date": "Nov-25"
      }
@@ -588,46 +590,6 @@
      }
     ],
     "investor": "Lanchi Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "IVP",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "CapitalG",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "Sapphire Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "Amplify",
     "n": 1
    }
   ],
@@ -689,6 +651,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of data; same type of business; same kind of customer; same revenue model",
+    "score": 15.1,
+    "type": "CONTROL"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Genspark",
@@ -697,17 +670,6 @@
     "mult": 25.0,
     "reason": "shares the language of agent, automation; related type of business; sold the same way; same AI stance",
     "score": 9.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "PRESS_REPORTED",
-    "bound": "",
-    "company": "LangChain",
-    "date": "Oct-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
-    "score": 13.8,
     "type": "PRIMARY"
    }
   ],
@@ -719,30 +681,47 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "ARR_RUNRATE": 1
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 105.3,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
-   "mid": 50.0,
-   "n": 4,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
+   "mid": 25.0,
+   "n": 5,
    "period_mix": {
+    "LTM": 1,
     "RUN_RATE": 4
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
    "points": [
+    {
+     "company": "Confluent",
+     "mult": 9.88,
+     "reason": "shares the language of data; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
     {
      "company": "Oxylabs",
      "mult": 10.3,
@@ -780,12 +759,12 @@
     "data",
     "intelligence"
    ],
-   "spread": 10.2,
+   "spread": 10.7,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 10,
+  "private_window_months": 9,
   "secondary": [
    {
     "company": "Twilio Inc.",

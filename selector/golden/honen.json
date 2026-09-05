@@ -131,42 +131,72 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 2
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 1
      },
      "bounded": false,
-     "closeness": "THIN_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 1,
+     "control_names": [
+      "Learning Technologies Group"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
      "high": 15.38,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 7.27,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Learning Technologies Group"
+     ],
+     "low": 1.52,
      "mid": 15.38,
      "n": 2,
      "period_mix": {
-      "RUN_RATE": 2
+      "LTM": 1,
+      "RUN_RATE": 1
      },
      "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Learning Technologies Group",
+       "mult": 1.52,
+       "reason": "both do LMS, Workforce Development; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Vedantu",
+       "mult": 15.38,
+       "reason": "shares the language of prep; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
-      "prep"
+      "corporate",
+      "development",
+      "lms",
+      "prep",
+      "training",
+      "workforce"
      ],
-     "spread": 2.1,
-     "tag_evidence": 0.6,
+     "spread": 10.1,
+     "tag_evidence": 5.5,
      "thin": true,
-     "triangulated": true
+     "triangulated": false
     }
    }
   },
@@ -524,36 +554,6 @@
     ],
     "investor": "ABC World Asia",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "upGrad",
-      "date": "Aug-21"
-     }
-    ],
-    "investor": "Temasek",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "upGrad",
-      "date": "Aug-21"
-     }
-    ],
-    "investor": "IFC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "upGrad",
-      "date": "Aug-21"
-     }
-    ],
-    "investor": "IIFL",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -567,6 +567,17 @@
     "mult": 1.29,
     "reason": "shares the language of corporate, course; same type of business; same end market; sold the same way",
     "score": 11.9,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Learning Technologies Group",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 1.52,
+    "reason": "both do LMS, Workforce Development; same type of business; same end market; same business function",
+    "score": 18.0,
     "type": "CONTROL"
    },
    {
@@ -590,17 +601,6 @@
     "reason": "shares the language of prep; same type of business; same end market",
     "score": 8.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "upGrad",
-    "date": "Aug-21",
-    "in_medians": true,
-    "mult": 7.27,
-    "reason": "same type of business; same end market",
-    "score": 8.0,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "DIRECT",
@@ -610,40 +610,70 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Learning Technologies Group"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 15.38,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 7.27,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Learning Technologies Group"
+   ],
+   "low": 1.52,
    "mid": 15.38,
    "n": 2,
    "period_mix": {
-    "RUN_RATE": 2
+    "LTM": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Learning Technologies Group",
+     "mult": 1.52,
+     "reason": "both do LMS, Workforce Development; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Vedantu",
+     "mult": 15.38,
+     "reason": "shares the language of prep; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
-    "prep"
+    "corporate",
+    "development",
+    "lms",
+    "prep",
+    "training",
+    "workforce"
    ],
-   "spread": 2.1,
-   "tag_evidence": 0.6,
+   "spread": 10.1,
+   "tag_evidence": 5.5,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
-  "private_window_months": 60,
+  "private_window_months": 59,
   "secondary": [
    {
     "company": "Infomart Corporation",

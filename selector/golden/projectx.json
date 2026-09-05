@@ -333,6 +333,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Anthropic",
       "date": "May-26"
      }
@@ -539,40 +549,21 @@
     ],
     "investor": "CoreWeave",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Turing",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Khazanah Nasional",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Turing",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "WestBridge Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Turing",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Sozo Ventures",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "both do Cloud Execution Environment; related type of business; same kind of customer; same revenue model",
+    "score": 18.8,
+    "type": "CONTROL"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -638,45 +629,44 @@
     "reason": "shares the language of agent; related type of business; same business function; same kind of customer",
     "score": 14.8,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Turing",
-    "date": "Mar-25",
-    "in_medians": true,
-    "mult": 13.2,
-    "reason": "shares the language of cloud; related type of business; same business function; same AI stance",
-    "score": 9.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 2
+    "ARR": 1,
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
    "dispersed": false,
    "display": "RANGE",
    "high": 25.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
    "mid": 20.0,
    "n": 4,
    "period_mix": {
-    "RUN_RATE": 4
+    "LTM": 1,
+    "RUN_RATE": 3
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -689,10 +679,11 @@
     "browser",
     "cloud",
     "environment",
+    "execution",
     "workspace"
    ],
-   "spread": 2.4,
-   "tag_evidence": 1.5,
+   "spread": 2.5,
+   "tag_evidence": 4.3,
    "thin": false,
    "triangulated": false
   },

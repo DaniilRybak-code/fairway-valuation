@@ -469,7 +469,7 @@
     "bound": "",
     "company": "Restaurant365",
     "date": "May-23",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 10.0,
     "reason": "both do Restaurant Back Office, Inventory And Ordering, Food Cost Management; same type of business; same end market; same business function",
     "score": 34.5,
@@ -483,7 +483,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -495,15 +495,20 @@
    "high": 23.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 12.5,
-   "mid": 23.0,
-   "n": 2,
+   "low": 10.0,
+   "mid": 12.5,
+   "n": 3,
    "period_mix": {
     "LTM": 1,
+    "NOT STATED": 1,
     "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NOT STATED": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -515,14 +520,22 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "automation",
+    "back",
+    "cost",
+    "food",
+    "inventory",
+    "invoice",
     "management",
+    "office",
     "operations",
     "ordering",
-    "restaurant"
+    "restaurant",
+    "vendor"
    ],
-   "spread": 1.8,
-   "tag_evidence": 4.5,
-   "thin": true,
+   "spread": 2.3,
+   "tag_evidence": 12.0,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 39,

@@ -125,39 +125,73 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 2
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
+     "control_n": 1,
+     "control_names": [
+      "Learning Technologies Group"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
      "high": 15.38,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 7.27,
-     "mid": 15.38,
-     "n": 2,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Learning Technologies Group"
+     ],
+     "low": 1.52,
+     "mid": 7.27,
+     "n": 3,
      "period_mix": {
+      "LTM": 1,
       "RUN_RATE": 2
      },
      "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Learning Technologies Group",
+       "mult": 1.52,
+       "reason": "shares the language of learning; same type of business; same end market; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "upGrad",
+       "mult": 7.27,
+       "reason": "same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Vedantu",
+       "mult": 15.38,
+       "reason": "same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
-     "shared_words": [],
-     "spread": 2.1,
-     "tag_evidence": 0.0,
-     "thin": true,
+     "shared_words": [
+      "learning"
+     ],
+     "spread": 10.1,
+     "tag_evidence": 0.6,
+     "thin": false,
      "triangulated": true
     }
    }
@@ -402,6 +436,23 @@
    },
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 6.0,
+    "cheque_low_m": 2.0,
+    "deal_note": "GeekWire, 6-Aug-2026: Wild Zebra, an AI maths and reading tutor that families buy at $48 a month per child (and schools through E3n), raised $6m: 'The oversubscribed seed round was led by Bellevue, Wash.-based Trilogy Equity Partners, with participation from Tetherpoint Capital and angel investors'. trilogyequity.com/about: 'Most of the time, this is at the Seed stage although at times we will also invest at Pre-Seed or Series A' and 'our initial investment will range from $2 to $6 million'.",
+    "geographies": "Pacific Northwest: Seattle, Bellevue, and the broader Washington, Oregon, and British Columbia region",
+    "house_type": "VC",
+    "investor": "Trilogy Equity Partners",
+    "not_published": null,
+    "recent_deal": "Wild Zebra",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.geekwire.com/2026/this-startup-just-raised-6m-for-an-ai-tutor-that-helps-kids-figure-it-out-themselves/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Early-stage technology companies rooted in the Pacific Northwest; our sweet spot is leading fundraising rounds.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 1.0,
     "cheque_low_m": 1.0,
     "deal_note": null,
@@ -431,23 +482,6 @@
     "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 8.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "UK-based; Europe-focused",
-    "house_type": "Venture",
-    "investor": "Notion Capital",
-    "not_published": null,
-    "recent_deal": "Kraken",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
@@ -550,6 +584,17 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
+    "company": "Learning Technologies Group",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 1.52,
+    "reason": "shares the language of learning; same type of business; same end market; sold the same way",
+    "score": 13.1,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
     "company": "LEAD School",
     "date": "Jan-22",
     "in_medians": true,
@@ -588,35 +633,69 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "control_n": 1,
+   "control_names": [
+    "Learning Technologies Group"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 15.38,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 7.27,
-   "mid": 15.38,
-   "n": 2,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Learning Technologies Group"
+   ],
+   "low": 1.52,
+   "mid": 7.27,
+   "n": 3,
    "period_mix": {
+    "LTM": 1,
     "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Learning Technologies Group",
+     "mult": 1.52,
+     "reason": "shares the language of learning; same type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "upGrad",
+     "mult": 7.27,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Vedantu",
+     "mult": 15.38,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
-   "shared_words": [],
-   "spread": 2.1,
-   "tag_evidence": 0.0,
-   "thin": true,
+   "shared_words": [
+    "learning"
+   ],
+   "spread": 10.1,
+   "tag_evidence": 0.6,
+   "thin": false,
    "triangulated": true
   },
   "private_window_months": 60,

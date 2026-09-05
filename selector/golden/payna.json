@@ -529,7 +529,7 @@
     "bound": "",
     "company": "AuditBoard",
     "date": "May-24",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 15.0,
     "reason": "both do Compliance Workflow, Regulatory Compliance, Compliance Automation; same type of business; same kind of customer; same revenue model",
     "score": 17.1,
@@ -540,7 +540,7 @@
     "bound": "",
     "company": "Restaurant365",
     "date": "May-23",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of automation, management; same type of business; same business function; same revenue model",
     "score": 15.1,
@@ -549,27 +549,29 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "anchor_dropped": true,
+   "anchor_dropped": false,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2
+    "ARR": 3
    },
    "bounded": true,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "AuditBoard"
+   ],
    "dispersed": false,
    "display": "RANGE",
    "high": 56.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 15.0,
-   "mid": 56.0,
-   "n": 2,
+   "mid": 15.0,
+   "n": 3,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "RUN_RATE": {
@@ -578,14 +580,26 @@
     }
    },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "Restaurant365",
+     "mult": 10.0,
+     "reason": "shares the language of automation, management; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "shared_words": [
-    "management"
+    "automation",
+    "compliance",
+    "management",
+    "regulatory",
+    "workflow"
    ],
    "spread": 3.7,
-   "tag_evidence": 0.0,
-   "thin": true,
-   "triangulated": true
+   "tag_evidence": 4.6,
+   "thin": false,
+   "triangulated": false
   },
   "private_window_months": 39,
   "secondary": [

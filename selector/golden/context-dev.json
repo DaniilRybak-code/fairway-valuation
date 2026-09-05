@@ -449,6 +449,16 @@
    {
     "backed": [
      {
+      "company": "Confluent",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "IBM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Lovable",
       "date": "Dec-25"
      },
@@ -559,66 +569,6 @@
     ],
     "investor": "CoreWeave",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "CRV",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Notable",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Bedrock",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Geodesic",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -657,6 +607,17 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Confluent",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 9.88,
+    "reason": "shares the language of data; same type of business; same kind of customer; same revenue model",
+    "score": 18.6,
+    "type": "CONTROL"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
     "company": "Lovable",
@@ -688,17 +649,6 @@
     "reason": "shares the language of llm; same type of business; same kind of customer; sold the same way",
     "score": 11.9,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Vercel",
-    "date": "May-24",
-    "in_medians": false,
-    "mult": 32.5,
-    "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
-    "score": 16.7,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -709,24 +659,34 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 1
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Confluent"
+   ],
    "dispersed": false,
    "display": "RANGE",
    "high": 50.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.3,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Confluent"
+   ],
+   "low": 9.88,
    "mid": 33.0,
-   "n": 3,
+   "n": 4,
    "period_mix": {
+    "LTM": 1,
     "RUN_RATE": 3
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -742,12 +702,12 @@
     "web",
     "website"
    ],
-   "spread": 4.9,
+   "spread": 5.1,
    "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 27,
+  "private_window_months": 17,
   "secondary": [
    {
     "company": "Teradata Corporation",

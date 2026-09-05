@@ -532,7 +532,7 @@
     "bound": "",
     "company": "Restaurant365",
     "date": "May-23",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
     "score": 10.6,
@@ -546,7 +546,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 3,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -564,12 +564,17 @@
    ],
    "low": 4.3,
    "mid": 23.0,
-   "n": 3,
+   "n": 4,
    "period_mix": {
+    "NOT STATED": 1,
     "NTM": 1,
     "RUN_RATE": 2
    },
    "period_span": {
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -586,6 +591,13 @@
      "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Restaurant365",
+     "mult": 10.0,
+     "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Owner",
@@ -608,6 +620,7 @@
     "automation",
     "enrichment",
     "intelligence",
+    "management",
     "sales"
    ],
    "spread": 11.6,
