@@ -463,21 +463,121 @@
    {
     "backed": [
      {
-      "company": "Glovo",
-      "date": "Dec-21"
+      "company": "Moove",
+      "date": "Aug-26"
      }
     ],
-    "investor": "Delivery Hero (acquirer",
+    "investor": "Mubadala Investment Company",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Glovo",
-      "date": "Dec-21"
+      "company": "Moove",
+      "date": "Aug-26"
      }
     ],
-    "investor": "all-stock)",
+    "investor": "Woven Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Ion Pacific (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Uber",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "BlackRock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Prosus Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Accel Leaders Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Elevation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Fundamentum",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "WestBridge Capital (extension",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Jun-2025)",
     "n": 1
    }
   ],
@@ -528,6 +628,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Moove",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 5.0,
+    "reason": "shares the language of own; same type of business; same kind of customer; same AI stance",
+    "score": 11.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Quince",
@@ -541,24 +652,13 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "SHEIN",
-    "date": "Jan-24",
-    "in_medians": false,
-    "mult": 1.4,
-    "reason": "shares the language of online; same type of business; same business function; same kind of customer",
-    "score": 21.1,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Glovo",
-    "date": "Dec-21",
+    "company": "Spinny",
+    "date": "Mar-25",
     "in_medians": true,
-    "mult": null,
-    "reason": "shares the language of delivery; related type of business; same end market; same kind of customer",
-    "score": 11.7,
-    "type": "CONTROL"
+    "mult": 2.75,
+    "reason": "both do Home Delivery; same type of business; same business function; same kind of customer",
+    "score": 17.9,
+    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -568,30 +668,70 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 3
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 44.12,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.1,
-   "mid": 44.12,
-   "n": 2,
+   "low": 2.75,
+   "mid": 10.1,
+   "n": 4,
    "period_mix": {
-    "LTM": 2
+    "FY2025": 1,
+    "LTM": 2,
+    "RUN_RATE": 1
    },
    "period_span": {
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Spinny",
+     "mult": 2.75,
+     "reason": "both do Home Delivery; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Moove",
+     "mult": 5.0,
+     "reason": "shares the language of own; same type of business; same kind of customer; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Quince",
+     "mult": 10.1,
+     "reason": "shares the language of home; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Gopuff",
+     "mult": 44.12,
+     "reason": "both do Own Inventory; related type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "delivery",
@@ -601,9 +741,9 @@
     "own",
     "retail"
    ],
-   "spread": 4.4,
+   "spread": 16.0,
    "tag_evidence": 1.5,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 61,

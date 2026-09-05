@@ -211,9 +211,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -309,6 +309,126 @@
    {
     "backed": [
      {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Investissement Quebec",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Desjardins Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Fidelity Investments Canada",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "BlackRock-managed funds and accounts",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Qatar Investment Authority",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Abu Dhabi Investment Council",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Greycroft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Lux Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Bond",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Replit",
       "date": "Sep-25"
      }
@@ -345,70 +465,6 @@
     ],
     "investor": "Coatue",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     }
-    ],
-    "investor": "Premji",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     }
-    ],
-    "investor": "Radical Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     }
-    ],
-    "investor": "ICONIQ",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     }
-    ],
-    "investor": "Adobe Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     }
-    ],
-    "investor": "B Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     },
-     {
-      "company": "Docker",
-      "date": "Mar-22"
-     }
-    ],
-    "investor": "Citi Ventures",
-    "n": 2
    },
    {
     "backed": [
@@ -497,12 +553,44 @@
       "date": "Mar-22"
      }
     ],
+    "investor": "Citi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Docker",
+      "date": "Mar-22"
+     }
+    ],
     "investor": "Vertex",
     "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": ">=",
+    "company": "Vention",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "both do Robotics Development Platform, Robot Fleet Tooling; same type of business; same business function; sold the same way",
+    "score": 21.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Applied Intuition",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 37.5,
+    "reason": "both do Simulation And Test, Robotics Development Platform, Embedded Deployment; same type of business; same business function; same revenue model",
+    "score": 27.0,
+    "type": "MIXED"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -512,17 +600,6 @@
     "mult": 20.0,
     "reason": "shares the language of deployment, development; related type of business; same business function; sold the same way",
     "score": 13.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Writer",
-    "date": "Nov-24",
-    "in_medians": false,
-    "mult": 40.4,
-    "reason": "shares the language of platform; related type of business; same revenue model; same AI stance",
-    "score": 10.1,
     "type": "PRIMARY"
    },
    {
@@ -551,26 +628,27 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR": 1,
     "ARR_RUNRATE": 1
    },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 20.0,
+   "display": "RANGE",
+   "high": 37.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 20.0,
-   "mid": 20.0,
-   "n": 1,
+   "mid": 37.5,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -582,11 +660,16 @@
    "positioning": [],
    "shared_words": [
     "deployment",
-    "development"
+    "development",
+    "embedded",
+    "platform",
+    "robotics",
+    "simulation",
+    "test",
+    "tooling"
    ],
-   "sole": "Replit",
-   "spread": 1.0,
-   "tag_evidence": 1.0,
+   "spread": 1.9,
+   "tag_evidence": 12.0,
    "thin": true,
    "triangulated": false
   },

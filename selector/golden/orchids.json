@@ -140,9 +140,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -320,28 +320,100 @@
      {
       "company": "Replit",
       "date": "Sep-25"
-     },
-     {
-      "company": "OpenAI",
-      "date": "Mar-25"
      }
     ],
     "investor": "Coatue",
-    "n": 2
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Framer",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Framer",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Atomico (co-led)",
+    "n": 1
    },
    {
     "backed": [
      {
       "company": "Anysphere / Cursor",
       "date": "Jun-25"
-     },
-     {
-      "company": "OpenAI",
-      "date": "Mar-25"
      }
     ],
     "investor": "Thrive",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -372,46 +444,6 @@
     ],
     "investor": "CoreWeave",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "OpenAI",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "SoftBank",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "OpenAI",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Microsoft",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "OpenAI",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Altimeter",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Figma",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Tender participants not disclosed",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -436,6 +468,28 @@
     "mult": 20.0,
     "reason": "both do App Builder, Vibe Coding; related type of business; same business function; sold the same way",
     "score": 15.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
+    "score": 13.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Framer",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 40.0,
+    "reason": "shares the language of ai, builder, code; related type of business; same kind of customer; same revenue model",
+    "score": 16.4,
     "type": "PRIMARY"
    },
    {
@@ -470,28 +524,6 @@
     "reason": "shares the language of prompt; related type of business; same business function; same revenue model",
     "score": 16.6,
     "type": "CONTROL"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "OpenAI",
-    "date": "Mar-25",
-    "in_medians": false,
-    "mult": 54.5,
-    "reason": "shares the language of ai, generation; related type of business; same revenue model; sold the same way",
-    "score": 11.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "Figma",
-    "date": "Jul-24",
-    "in_medians": true,
-    "mult": 17.9,
-    "reason": "shares the language of web; same type of business; same business function; same revenue model",
-    "score": 14.7,
-    "type": "SECONDARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -502,7 +534,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 3
+    "ARR_RUNRATE": 4
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
@@ -513,11 +545,11 @@
    "high": 120.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 17.9,
-   "mid": 20.0,
-   "n": 5,
+   "low": 19.8,
+   "mid": 33.0,
+   "n": 6,
    "period_mix": {
-    "RUN_RATE": 5
+    "RUN_RATE": 6
    },
    "period_span": {
     "RUN_RATE": {
@@ -526,13 +558,6 @@
     }
    },
    "points": [
-    {
-     "company": "Figma",
-     "mult": 17.9,
-     "reason": "shares the language of web; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
     {
      "company": "Anysphere / Cursor",
      "mult": 19.8,
@@ -548,10 +573,24 @@
      "transaction_type": "PRIMARY"
     },
     {
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
      "company": "Lovable",
      "mult": 33.0,
      "reason": "both do AI App Builder, Vibe Coding, Web App Builder; related type of business; same business function; same kind of customer",
      "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Framer",
+     "mult": 40.0,
+     "reason": "shares the language of ai, builder, code; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
@@ -575,12 +614,12 @@
     "vibe",
     "web"
    ],
-   "spread": 6.7,
+   "spread": 6.1,
    "tag_evidence": 9.5,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 25,
+  "private_window_months": 17,
   "secondary": [
    {
     "company": "Similarweb Ltd.",

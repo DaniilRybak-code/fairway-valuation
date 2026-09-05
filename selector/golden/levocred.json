@@ -172,6 +172,23 @@
   "investors_callable": [
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 3.0,
     "cheque_low_m": 0.25,
     "deal_note": null,
@@ -288,26 +305,123 @@
     "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 1.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "UK",
-    "house_type": "Venture",
-    "investor": "Concept Ventures",
-    "not_published": null,
-    "recent_deal": "Archestra.AI",
-    "recent_deal_date": "2026-06",
-    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
-    "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Sapiens International",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Advent International",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     },
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Headline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Mar-2026)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Atlassian Ventures and NVentures (extension)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Bessemer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "ICONIQ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Y Combinator",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -412,6 +526,17 @@
   "listed_proximity": "DIRECT",
   "private": [
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Sapiens International",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 4.55,
+    "reason": "same type of business; same end market; sold the same way",
+    "score": 11.0,
+    "type": "CONTROL"
+   },
+   {
     "basis": "ARR / revenue",
     "bound": "",
     "company": "Mambu",
@@ -431,6 +556,28 @@
     "mult": 49.33,
     "reason": "same type of business; same end market; same revenue model",
     "score": 11.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Owner",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "shares the language of operations; same type of business; same revenue model; same AI stance",
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Legora",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 56.0,
+    "reason": "shares the language of document; same type of business; same kind of customer; same revenue model",
+    "score": 16.3,
     "type": "PRIMARY"
    },
    {
@@ -463,37 +610,90 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3
+    "ARR": 2,
+    "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "control_n": 1,
+   "control_names": [
+    "Sapiens International"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 49.33,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 15.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Sapiens International"
+   ],
+   "low": 4.55,
    "mid": 22.0,
    "n": 3,
    "period_mix": {
-    "RUN_RATE": 3
+    "LTM": 1,
+    "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [],
+   "points": [
+    {
+     "company": "Sapiens International",
+     "mult": 4.55,
+     "reason": "same type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Mambu",
+     "mult": 22.0,
+     "reason": "both do Loan Servicing; related type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Carta",
+     "mult": 49.33,
+     "reason": "same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [
+    {
+     "company": "Clio",
+     "mult": 15.0,
+     "reason": "shares the language of document; same type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Owner",
+     "mult": 23.0,
+     "reason": "shares the language of operations; same type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Legora",
+     "mult": 56.0,
+     "reason": "shares the language of document; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "shared_words": [
-    "document",
     "loan",
     "servicing"
    ],
-   "spread": 3.3,
+   "spread": 10.8,
    "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false

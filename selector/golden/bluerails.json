@@ -114,6 +114,23 @@
   },
   "investors_callable": [
    {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
     "cheque_figure_dated": "21 Nov 2022",
     "cheque_high_m": null,
     "cheque_low_m": 1.0,
@@ -231,26 +248,39 @@
     "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 3.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "UK/Europe; backs European founders building globally",
-    "house_type": "Venture",
-    "investor": "firstminute capital",
-    "not_published": null,
-    "recent_deal": "Neno",
-    "recent_deal_date": "2026-08",
-    "recent_deal_url": "https://www.neno.co/resources/content/blog/neno-raises-8-6-million-to-build-ai-native-financial-services",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Seed investor whose fintech portfolio includes payment acquiring, cross-border payments and SME financial operating infrastructure.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Headline",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -316,10 +346,14 @@
      {
       "company": "Guesty",
       "date": "Apr-24"
+     },
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
     "investor": "KKR",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -360,10 +394,51 @@
     ],
     "investor": "Sixth Street",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "L Catterton (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Owner",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "shares the language of agent, ai, direct; same type of business; same end market; same kind of customer",
+    "score": 15.5,
+    "type": "PRIMARY"
+   },
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
@@ -387,6 +462,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Restaurant365",
+    "date": "May-23",
+    "in_medians": false,
+    "mult": 10.0,
+    "reason": "same type of business; same end market; same kind of customer",
+    "score": 11.5,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "Annualized revenue",
     "bound": "",
     "company": "Brex",
@@ -405,6 +491,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR": 1,
     "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
@@ -418,11 +505,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 12.5,
-   "mid": 39.42,
-   "n": 2,
+   "mid": 23.0,
+   "n": 3,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -437,15 +524,18 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "agent",
+    "ai",
     "booking",
     "channel",
+    "direct",
     "hotel",
     "manager",
     "payments"
    ],
    "spread": 3.2,
    "tag_evidence": 5.0,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 55,

@@ -220,6 +220,23 @@
   "investors_callable": [
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 5.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
@@ -299,7 +316,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -336,26 +353,39 @@
     "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 1.0,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "UK",
-    "house_type": "Venture",
-    "investor": "Fuel Ventures",
-    "not_published": null,
-    "recent_deal": "PANTA",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
-    "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Coursera (acquirer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "all-stock)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Accolade",
+      "date": "Jan-25"
+     }
+    ],
+    "investor": "Transcarent",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -364,16 +394,6 @@
      }
     ],
     "investor": "GIC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "DeHaat",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Sofina Ventures",
     "n": 1
    }
   ],
@@ -402,6 +422,17 @@
     "type": "SECONDARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Udemy",
+    "date": "Dec-25",
+    "in_medians": false,
+    "mult": 1.29,
+    "reason": "shares the language of marketplace; related type of business; same revenue model; same AI stance",
+    "score": 9.1,
+    "type": "CONTROL"
+   },
+   {
     "basis": "DISCLOSED_RUNRATE",
     "bound": "<=",
     "company": "Faire",
@@ -411,6 +442,17 @@
     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
     "score": 18.6,
     "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Accolade",
+    "date": "Jan-25",
+    "in_medians": true,
+    "mult": 1.39,
+    "reason": "related type of business; same end market; sold the same way; same AI stance",
+    "score": 11.0,
+    "type": "CONTROL"
    },
    {
     "basis": "FILED_ACCOUNTS",
@@ -433,28 +475,6 @@
     "reason": "shares the language of marketplace, network; same type of business; same revenue model",
     "score": 9.2,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "FILED_ACCOUNTS",
-    "bound": "",
-    "company": "Flipkart",
-    "date": "Jul-23",
-    "in_medians": false,
-    "mult": 5.2,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 10.6,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "DeHaat",
-    "date": "Oct-22",
-    "in_medians": true,
-    "mult": 4.5,
-    "reason": "shares the language of marketplace, network; same type of business; same revenue model; same AI stance",
-    "score": 9.7,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -464,22 +484,26 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Accolade"
+   ],
    "dispersed": false,
    "display": "RANGE",
    "high": 7.3,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 4.2,
-   "mid": 7.3,
-   "n": 2,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Accolade"
+   ],
+   "low": 1.39,
+   "mid": 4.2,
+   "n": 3,
    "period_mix": {
-    "LTM": 2
+    "LTM": 3
    },
    "period_span": {
     "LTM": {
@@ -492,12 +516,12 @@
    "shared_words": [
     "marketplace"
    ],
-   "spread": 1.7,
+   "spread": 5.3,
    "tag_evidence": 0.1,
-   "thin": true,
+   "thin": false,
    "triangulated": true
   },
-  "private_window_months": 46,
+  "private_window_months": 32,
   "secondary": [
    {
     "company": "Airbnb, Inc.",

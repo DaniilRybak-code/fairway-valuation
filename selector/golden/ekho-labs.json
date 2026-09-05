@@ -244,9 +244,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -356,6 +356,16 @@
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "E2open",
+      "date": "May-25"
+     }
+    ],
+    "investor": "WiseTech Global",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -490,6 +500,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "E2open",
+    "date": "May-25",
+    "in_medians": true,
+    "mult": 3.46,
+    "reason": "both do Logistics Visibility; same type of business; same revenue model; sold the same way",
+    "score": 13.1,
+    "type": "CONTROL"
+   },
+   {
     "basis": "DISCLOSED_EXACT",
     "bound": "",
     "company": "Shiprocket",
@@ -530,24 +551,33 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "E2open"
+   ],
    "dispersed": false,
    "display": "RANGE",
    "high": 8.94,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 5.97,
-   "mid": 8.94,
-   "n": 2,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "E2open"
+   ],
+   "low": 3.46,
+   "mid": 5.97,
+   "n": 3,
    "period_mix": {
+    "FY2025": 1,
     "LTM": 2
    },
    "period_span": {
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -556,12 +586,15 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "chain",
     "freight",
-    "logistics"
+    "logistics",
+    "supply",
+    "visibility"
    ],
-   "spread": 1.5,
-   "tag_evidence": 0.9,
-   "thin": true,
+   "spread": 2.6,
+   "tag_evidence": 1.6,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 63,

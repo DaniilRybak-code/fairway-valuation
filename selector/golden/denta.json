@@ -220,6 +220,23 @@
   "investors_callable": [
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 5.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
@@ -336,23 +353,6 @@
     "thesis": "Insurance-only investor backing new distribution, AI/data infrastructure and underserved risks.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 5.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "UK/Europe and North America",
-    "house_type": "Venture",
-    "investor": "Anthemis",
-    "not_published": null,
-    "recent_deal": "Gangkhar?",
-    "recent_deal_date": "2026-03",
-    "recent_deal_url": "https://www.anthemis.com/insights/gangkhar/",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Financial-services specialist backing insurance infrastructure, embedded protection and technology-led risk businesses.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
@@ -364,6 +364,16 @@
      }
     ],
     "investor": "Prosus",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Accolade",
+      "date": "Jan-25"
+     }
+    ],
+    "investor": "Transcarent",
     "n": 1
    },
    {
@@ -435,16 +445,6 @@
     ],
     "investor": "SoftBank",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Thirty Madison",
-      "date": "Jun-21"
-     }
-    ],
-    "investor": "HealthQuest Capital",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -459,6 +459,17 @@
     "reason": "both do Claims; same type of business; same end market; same kind of customer",
     "score": 13.2,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Accolade",
+    "date": "Jan-25",
+    "in_medians": true,
+    "mult": 1.39,
+    "reason": "shares the language of benefits, claims; related type of business; same end market",
+    "score": 7.2,
+    "type": "CONTROL"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -514,17 +525,6 @@
     "reason": "related type of business; same end market; same business function",
     "score": 9.0,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Thirty Madison",
-    "date": "Jun-21",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "related type of business; same end market; same business function; sold the same way",
-    "score": 12.0,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -535,30 +535,62 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "control_n": 1,
+   "control_names": [
+    "Accolade"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 14.25,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 6.88,
-   "mid": 10.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Accolade"
+   ],
+   "low": 1.39,
+   "mid": 6.88,
    "n": 3,
    "period_mix": {
-    "RUN_RATE": 3
+    "LTM": 1,
+    "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Accolade",
+     "mult": 1.39,
+     "reason": "shares the language of benefits, claims; related type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Alan",
+     "mult": 6.88,
+     "reason": "both do Claims; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Cityblock Health",
+     "mult": 14.25,
+     "reason": "related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "benefits",
@@ -566,12 +598,12 @@
     "digital",
     "insurance"
    ],
-   "spread": 2.1,
+   "spread": 10.3,
    "tag_evidence": 1.7,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 62,
+  "private_window_months": 59,
   "secondary": [
    {
     "company": "Hims & Hers Health, Inc.",

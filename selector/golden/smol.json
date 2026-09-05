@@ -260,6 +260,66 @@
    {
     "backed": [
      {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Accel Leaders Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Elevation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Fundamentum",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "WestBridge Capital (extension",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Jun-2025)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Oura",
       "date": "Dec-24"
      }
@@ -327,6 +387,17 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
+    "company": "Spinny",
+    "date": "Mar-25",
+    "in_medians": true,
+    "mult": 2.75,
+    "reason": "shares the language of delivery; related type of business; same business function; same kind of customer",
+    "score": 13.7,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
     "company": "Oura",
     "date": "Dec-24",
     "in_medians": true,
@@ -345,17 +416,6 @@
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
     "score": 18.9,
     "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Huel",
-    "date": "Nov-22",
-    "in_medians": true,
-    "mult": 3.3,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 28.0,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -377,15 +437,20 @@
    "high": 10.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.3,
+   "low": 2.75,
    "mid": 9.18,
    "n": 4,
    "period_mix": {
-    "LTM": 2,
+    "FY2025": 1,
+    "LTM": 1,
     "NTM": 1,
     "RUN_RATE": 1
    },
    "period_span": {
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -403,12 +468,13 @@
    "positioning": [],
    "shared_words": [
     "consumer",
+    "delivery",
     "direct",
     "subscription",
     "to"
    ],
-   "spread": 3.1,
-   "tag_evidence": 0.5,
+   "spread": 3.7,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
   },

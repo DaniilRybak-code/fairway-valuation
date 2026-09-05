@@ -284,6 +284,126 @@
    {
     "backed": [
      {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Mubadala Investment Company",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Woven Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Ion Pacific (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Uber",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "BlackRock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Prosus Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Accel Leaders Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Elevation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Fundamentum",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "WestBridge Capital (extension",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Spinny",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Jun-2025)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Enpal",
       "date": "Jan-23"
      }
@@ -294,6 +414,28 @@
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Moove",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 5.0,
+    "reason": "both do Car Subscription, Owned Vehicle Fleet, EV Fleet; same type of business; same kind of customer; same revenue model",
+    "score": 25.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Spinny",
+    "date": "Mar-25",
+    "in_medians": true,
+    "mult": 2.75,
+    "reason": "both do Ownership Alternative; same type of business; same business function; same kind of customer",
+    "score": 22.2,
+    "type": "MIXED"
+   },
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
@@ -342,29 +484,40 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 10.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.1,
-   "mid": 10.1,
-   "n": 1,
+   "low": 2.75,
+   "mid": 5.0,
+   "n": 3,
    "period_mix": {
-    "LTM": 1
+    "FY2025": 1,
+    "LTM": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -372,13 +525,19 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "alternative",
+    "car",
+    "ev",
+    "fleet",
     "owned",
-    "to"
+    "ownership",
+    "subscription",
+    "to",
+    "vehicle"
    ],
-   "sole": "Quince",
-   "spread": 1.0,
-   "tag_evidence": 0.2,
-   "thin": true,
+   "spread": 3.7,
+   "tag_evidence": 11.4,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 59,

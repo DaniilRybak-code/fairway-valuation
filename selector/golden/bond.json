@@ -107,9 +107,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -213,7 +213,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -241,10 +241,14 @@
      {
       "company": "Notion",
       "date": "Jan-26"
+     },
+     {
+      "company": "Zuora",
+      "date": "Oct-24"
      }
     ],
     "investor": "GIC",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -353,6 +357,16 @@
    {
     "backed": [
      {
+      "company": "Zuora",
+      "date": "Oct-24"
+     }
+    ],
+    "investor": "Silver Lake",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Calendly",
       "date": "Jan-21"
      }
@@ -407,6 +421,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Zuora",
+    "date": "Oct-24",
+    "in_medians": true,
+    "mult": 3.81,
+    "reason": "shares the language of to; related type of business; same revenue model",
+    "score": 6.6,
+    "type": "CONTROL"
+   },
+   {
     "basis": "NONE",
     "bound": "",
     "company": "Gorgias",
@@ -448,22 +473,26 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "control_n": 1,
+   "control_names": [
+    "Zuora"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 72.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 21.0,
-   "mid": 47.0,
-   "n": 4,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Zuora"
+   ],
+   "low": 3.81,
+   "mid": 42.9,
+   "n": 5,
    "period_mix": {
-    "LTM": 1,
+    "LTM": 2,
     "RUN_RATE": 3
    },
    "period_span": {
@@ -476,15 +505,52 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Zuora",
+     "mult": 3.81,
+     "reason": "shares the language of to; related type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Gamma",
+     "mult": 21.0,
+     "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Calendly",
+     "mult": 42.9,
+     "reason": "shares the language of meeting; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Pleo",
+     "mult": 47.0,
+     "reason": "shares the language of company; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Glean",
+     "mult": 72.0,
+     "reason": "shares the language of ai, assistant; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "ai",
     "assistant",
     "company",
-    "meeting"
+    "meeting",
+    "to"
    ],
-   "spread": 3.4,
+   "spread": 18.9,
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false

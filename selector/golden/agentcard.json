@@ -301,65 +301,166 @@
    {
     "backed": [
      {
-      "company": "Marqeta",
-      "date": "May-20"
+      "company": "Moss",
+      "date": "Aug-26"
      }
     ],
-    "investor": "Undisclosed",
+    "investor": "Portage",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moss",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Cherry Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Ribbit Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Khosla Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Goodwater Capital (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "NEA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Y Combinator",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Haun Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Coinbase Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Tiger Global",
     "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "Net revenue",
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
-    "company": "Stripe",
-    "date": "Feb-25",
-    "in_medians": true,
-    "mult": 16.34,
-    "reason": "both do Issuing; related type of business; same business function; same kind of customer",
-    "score": 17.3,
+    "company": "Moss",
+    "date": "Aug-26",
+    "in_medians": false,
+    "mult": 14.29,
+    "reason": "both do Programmatic Spend Controls; same type of business; same business function",
+    "score": 12.4,
     "type": "PRIMARY"
    },
    {
-    "basis": "CONTEMPORANEOUS_PRESS_THRESHOLD",
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
-    "company": "Marqeta",
-    "date": "May-20",
-    "in_medians": false,
-    "mult": 14.3,
-    "reason": "both do Card Issuing; same type of business; same business function",
-    "score": 9.8,
+    "company": "Slash",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 5.6,
+    "reason": "both do Programmatic Spend Controls, Card API; same type of business; same business function; same revenue model",
+    "score": 22.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "BVNK",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 18.75,
+    "reason": "both do Virtual Card Issuing, Machine To Machine Payments, Payments API; same type of business; same end market; same business function",
+    "score": 24.3,
     "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
+  "private_proximity": "DIRECT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 2
    },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 16.34,
+   "display": "RANGE",
+   "high": 18.75,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 16.34,
-   "mid": 16.34,
-   "n": 1,
+   "low": 5.6,
+   "mid": 18.75,
+   "n": 2,
    "period_mix": {
-    "LTM": 1
+    "RUN_RATE": 2
    },
    "period_span": {
-    "LTM": {
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -368,16 +469,22 @@
    "positioning": [],
    "shared_words": [
     "api",
+    "card",
+    "controls",
     "issuing",
-    "payments"
+    "machine",
+    "payments",
+    "programmatic",
+    "spend",
+    "to",
+    "virtual"
    ],
-   "sole": "Stripe",
-   "spread": 1.0,
-   "tag_evidence": 0.8,
+   "spread": 3.3,
+   "tag_evidence": 8.9,
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 75,
+  "private_window_months": 20,
   "secondary": [
    {
     "company": "Fawry for Banking Technology",

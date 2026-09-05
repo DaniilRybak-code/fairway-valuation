@@ -222,23 +222,6 @@
   "investors_callable": [
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "India; Indian-origin founders anywhere",
-    "house_type": "",
-    "investor": "Accel",
-    "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
     "cheque_high_m": 1.0,
     "cheque_low_m": null,
     "deal_note": null,
@@ -268,6 +251,23 @@
     "recent_deal_url": "https://lovable.dev/blog/series-b",
     "stage_bands": "Seed; Series A; Series B; Series C",
     "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -455,6 +455,66 @@
    {
     "backed": [
      {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "LangChain",
       "date": "Oct-25"
      }
@@ -561,46 +621,6 @@
     ],
     "investor": "Acrew Capital",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Prysm",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Google AI Futures Fund",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Amex Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -639,6 +659,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "both do AI Search; related type of business; sold the same way; same AI stance",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
@@ -670,17 +701,6 @@
     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
     "score": 11.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Replit",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 20.0,
-    "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
-    "score": 10.3,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -694,7 +714,7 @@
     "ARR_RUNRATE": 3,
     "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
@@ -704,7 +724,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 20.0,
+   "mid": 25.0,
    "n": 5,
    "period_mix": {
     "LTM": 1,
@@ -736,9 +756,9 @@
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "both do AI Search; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -762,6 +782,7 @@
     "agent",
     "ai",
     "api",
+    "search",
     "source"
    ],
    "spread": 7.1,

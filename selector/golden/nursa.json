@@ -239,6 +239,46 @@
    {
     "backed": [
      {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Felicis",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Robinhood Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Jobandtalent",
       "date": "Dec-21"
      }
@@ -318,6 +358,28 @@
     "mult": 66.0,
     "reason": "both do Healthcare Staffing, Credentialing; related type of business; same end market; same business function",
     "score": 10.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Mercor",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 22.22,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 12.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Micro1",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+    "score": 12.1,
     "type": "PRIMARY"
    },
    {

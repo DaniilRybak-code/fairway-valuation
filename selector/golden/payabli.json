@@ -358,6 +358,26 @@
    {
     "backed": [
      {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "KRAFTON",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Apis Growth Fund II",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Pine Labs",
       "date": "May-21"
      }
@@ -450,6 +470,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cashfree Payments",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 9.52,
+    "reason": "both do Payments API; same type of business; same business function; same revenue model",
+    "score": 14.5,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "UK entity revenue",
     "bound": "",
     "company": "Checkout.com",
@@ -503,17 +534,6 @@
     "reason": "shares the language of payment, payments; related type of business; same business function; same AI stance",
     "score": 9.7,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "FY2020 unclear whether closed",
-    "bound": "",
-    "company": "Rapyd",
-    "date": "Jan-21",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "shares the language of embedded, payment, payments; same type of business; same business function; same revenue model",
-    "score": 15.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -558,7 +578,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 67,
+  "private_window_months": 64,
   "secondary": [
    {
     "company": "Marqeta, Inc.",

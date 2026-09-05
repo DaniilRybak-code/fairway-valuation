@@ -100,6 +100,23 @@
   "investors_callable": [
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 5.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
@@ -179,7 +196,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -216,26 +233,117 @@
     "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 1.0,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "UK",
-    "house_type": "Venture",
-    "investor": "Fuel Ventures",
-    "not_published": null,
-    "recent_deal": "PANTA",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
-    "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Mar-2026)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Atlassian Ventures and NVentures (extension)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     },
+     {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Bessemer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     },
+     {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "ICONIQ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Y Combinator",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Felicis",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Mercor",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Robinhood Ventures",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -450,6 +558,39 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Legora",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 56.0,
+    "reason": "both do In-House Legal; related type of business; same end market; same kind of customer",
+    "score": 13.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Mercor",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 22.22,
+    "reason": "shares the language of marketplace, talent; same type of business; same revenue model; sold the same way",
+    "score": 12.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Micro1",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "both do Talent Marketplace; same type of business; same revenue model; sold the same way",
+    "score": 12.7,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "Harvey",
@@ -501,22 +642,22 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1
+    "ARR": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 15.0,
+   "display": "RANGE",
+   "high": 56.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 15.0,
-   "mid": 15.0,
-   "n": 1,
+   "mid": 56.0,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -527,12 +668,13 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "house",
+    "in",
     "legal",
     "management"
    ],
-   "sole": "Clio",
-   "spread": 1.0,
-   "tag_evidence": 0.6,
+   "spread": 3.7,
+   "tag_evidence": 1.4,
    "thin": true,
    "triangulated": false
   },

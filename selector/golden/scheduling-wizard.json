@@ -162,6 +162,23 @@
   },
   "investors_callable": [
    {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
     "cheque_figure_dated": "21 Nov 2022",
     "cheque_high_m": null,
     "cheque_low_m": 1.0,
@@ -279,26 +296,19 @@
     "thesis": "The SWIF Maven Equity Fund invests in earlier stage and established companies located across the South West of England.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 3.5,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "Southern Europe and Latin America, especially Spain",
-    "house_type": "Venture",
-    "investor": "Kfund",
-    "not_published": null,
-    "recent_deal": "Pollen",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Accolade",
+      "date": "Jan-25"
+     }
+    ],
+    "investor": "Transcarent",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -378,20 +388,21 @@
     ],
     "investor": "HealthQuest Capital",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Virta Health",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Tiger Global Management",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Accolade",
+    "date": "Jan-25",
+    "in_medians": true,
+    "mult": 1.39,
+    "reason": "both do Care Coordination; same type of business; same end market; sold the same way",
+    "score": 17.2,
+    "type": "CONTROL"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": ">=",
@@ -457,17 +468,6 @@
     "reason": "shares the language of care; same type of business; same end market; same business function",
     "score": 11.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Virta Health",
-    "date": "Apr-21",
-    "in_medians": true,
-    "mult": 57.1,
-    "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 16.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "DIRECT",
@@ -477,40 +477,73 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Accolade"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 14.25,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.0,
-   "mid": 14.25,
-   "n": 2,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Accolade"
+   ],
+   "low": 1.39,
+   "mid": 10.0,
+   "n": 3,
    "period_mix": {
+    "LTM": 1,
     "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Accolade",
+     "mult": 1.39,
+     "reason": "both do Care Coordination; same type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Thirty Madison",
+     "mult": 10.0,
+     "reason": "shares the language of care; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Cityblock Health",
+     "mult": 14.25,
+     "reason": "shares the language of care; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
-    "care"
+    "care",
+    "coordination"
    ],
-   "spread": 1.4,
-   "tag_evidence": 0.6,
-   "thin": true,
-   "triangulated": true
+   "spread": 10.3,
+   "tag_evidence": 4.2,
+   "thin": false,
+   "triangulated": false
   },
-  "private_window_months": 64,
+  "private_window_months": 62,
   "secondary": [
    {
     "company": "Dassault Systemes SE",

@@ -360,61 +360,85 @@
    {
     "backed": [
      {
-      "company": "Shiprocket",
-      "date": "Aug-22"
+      "company": "Berkshire Grey",
+      "date": "Mar-23"
      }
     ],
-    "investor": "Temasek",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "Lightrock India",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "McKinley Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "March Capital",
+    "investor": "SoftBank Group (acquirer",
     "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "DISCLOSED_EXACT",
+    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "Shiprocket",
-    "date": "Aug-22",
-    "in_medians": false,
-    "mult": 16.03,
-    "reason": "both do Fulfilment; same type of business; same business function",
-    "score": 7.6,
-    "type": "PRIMARY"
+    "company": "Berkshire Grey",
+    "date": "Mar-23",
+    "in_medians": true,
+    "mult": 5.69,
+    "reason": "both do Warehouse Robotics, Fulfilment Automation, Material Handling; same type of business; same business function; sold the same way",
+    "score": 26.5,
+    "type": "CONTROL"
    }
   ],
-  "private_proximity": "ADJACENT",
-  "private_range": {},
-  "private_window_months": 48,
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Berkshire Grey"
+   ],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 5.69,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Berkshire Grey"
+   ],
+   "low": 5.69,
+   "mid": 5.69,
+   "n": 1,
+   "period_mix": {
+    "FY2022": 1
+   },
+   "period_span": {
+    "FY2022": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "a",
+    "as",
+    "automation",
+    "fulfilment",
+    "handling",
+    "labour",
+    "material",
+    "robotic",
+    "robotics",
+    "robots",
+    "service",
+    "warehouse"
+   ],
+   "sole": "Berkshire Grey",
+   "spread": 1.0,
+   "tag_evidence": 12.0,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 41,
   "secondary": [
    {
     "company": "Sinotrans Limited",

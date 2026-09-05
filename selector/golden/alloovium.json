@@ -153,6 +153,23 @@
   "investors_callable": [
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 1.0,
     "cheque_low_m": null,
     "deal_note": null,
@@ -165,23 +182,6 @@
     "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
     "stage_bands": "Seed; Series A; Series B; Series C",
     "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "India; Indian-origin founders anywhere",
-    "house_type": "",
-    "investor": "Accel",
-    "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -283,7 +283,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
@@ -304,10 +304,14 @@
      {
       "company": "Sierra",
       "date": "May-26"
+     },
+     {
+      "company": "Legora",
+      "date": "Apr-26"
      }
     ],
     "investor": "Benchmark",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -331,6 +335,80 @@
      }
     ],
     "investor": "Greenoaks",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Mar-2026)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Atlassian Ventures and NVentures (extension)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Bessemer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     },
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "ICONIQ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Y Combinator",
     "n": 1
    },
    {
@@ -420,6 +498,76 @@
    {
     "backed": [
      {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "BlackRock-managed funds and accounts",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Qatar Investment Authority",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Abu Dhabi Investment Council",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Greycroft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Lux Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Bond",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Clio",
       "date": "Jul-24"
      }
@@ -452,14 +600,10 @@
      {
       "company": "Clio",
       "date": "Jul-24"
-     },
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
      }
     ],
     "investor": "CapitalG",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -469,106 +613,6 @@
      }
     ],
     "investor": "Tidemark",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
-     }
-    ],
-    "investor": "Viking Global Investors (co-lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
-     }
-    ],
-    "investor": "BDT & MSD Partners (co-lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
-     }
-    ],
-    "investor": "J.P. Morgan Growth Equity Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
-     }
-    ],
-    "investor": "SoftBank Vision Fund 2",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
-     }
-    ],
-    "investor": "Blue Owl",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
-     }
-    ],
-    "investor": "Alkeon Capital (new)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "AlphaSense",
-      "date": "Jun-24"
-     }
-    ],
-    "investor": "Goldman Sachs Alternatives (existing)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Doctolib",
-      "date": "Mar-22"
-     }
-    ],
-    "investor": "Eurazeo",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Doctolib",
-      "date": "Mar-22"
-     }
-    ],
-    "investor": "Bpifrance",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Doctolib",
-      "date": "Mar-22"
-     }
-    ],
-    "investor": "General Atlantic",
     "n": 1
    }
   ],
@@ -583,6 +627,17 @@
     "mult": 105.3,
     "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
     "score": 7.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Legora",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 56.0,
+    "reason": "both do Document Review; same type of business; same kind of customer; same revenue model",
+    "score": 13.9,
     "type": "PRIMARY"
    },
    {
@@ -619,6 +674,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Applied Intuition",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 37.5,
+    "reason": "shares the language of intelligence; related type of business; same revenue model; same AI stance",
+    "score": 7.8,
+    "type": "MIXED"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Clio",
@@ -628,28 +694,6 @@
     "reason": "shares the language of document; same type of business; same business function; same revenue model",
     "score": 15.3,
     "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "AlphaSense",
-    "date": "Jun-24",
-    "in_medians": true,
-    "mult": 20.0,
-    "reason": "shares the language of document, intelligence; related type of business; same kind of customer; same revenue model",
-    "score": 9.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Doctolib",
-    "date": "Mar-22",
-    "in_medians": true,
-    "mult": 32.0,
-    "reason": "shares the language of records; same type of business; same business function; same revenue model",
-    "score": 15.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -659,10 +703,10 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3
+    "ARR": 4
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": true,
@@ -671,10 +715,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 15.0,
-   "mid": 20.0,
-   "n": 3,
+   "mid": 56.0,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "RUN_RATE": {
@@ -691,9 +735,16 @@
      "transaction_type": "MIXED"
     },
     {
-     "company": "AlphaSense",
-     "mult": 20.0,
-     "reason": "shares the language of document, intelligence; related type of business; same kind of customer; same revenue model",
+     "company": "Applied Intuition",
+     "mult": 37.5,
+     "reason": "shares the language of intelligence; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Legora",
+     "mult": 56.0,
+     "reason": "both do Document Review; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -709,14 +760,15 @@
    "shared_words": [
     "automation",
     "document",
-    "intelligence"
+    "intelligence",
+    "review"
    ],
    "spread": 7.0,
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 53,
+  "private_window_months": 25,
   "secondary": [
    {
     "company": "Procore Technologies, Inc.",

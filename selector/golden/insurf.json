@@ -145,6 +145,23 @@
   "investors_callable": [
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "India; Indian-origin founders anywhere",
+    "house_type": "",
+    "investor": "Accel",
+    "not_published": null,
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 0.25,
     "cheque_low_m": 0.1,
     "deal_note": null,
@@ -258,24 +275,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 5.0,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "UK/Europe-based; Europe-focused",
-    "house_type": "Venture",
-    "investor": "Connect Ventures",
-    "not_published": null,
-    "recent_deal": "Zellify?",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
@@ -289,6 +289,16 @@
      }
     ],
     "investor": "Prosus",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Accolade",
+      "date": "Jan-25"
+     }
+    ],
+    "investor": "Transcarent",
     "n": 1
    },
    {
@@ -360,16 +370,6 @@
     ],
     "investor": "SoftBank",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Thirty Madison",
-      "date": "Jun-21"
-     }
-    ],
-    "investor": "HealthQuest Capital",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -384,6 +384,17 @@
     "reason": "both do Claims; same type of business; same end market",
     "score": 9.2,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Accolade",
+    "date": "Jan-25",
+    "in_medians": true,
+    "mult": 1.39,
+    "reason": "both do Payer Decisioning, Utilisation Management; related type of business; same end market; sold the same way",
+    "score": 18.0,
+    "type": "CONTROL"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -439,17 +450,6 @@
     "reason": "shares the language of health, management; related type of business; same end market; same business function",
     "score": 12.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Thirty Madison",
-    "date": "Jun-21",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "related type of business; same end market; same business function",
-    "score": 9.0,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -460,42 +460,77 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Accolade"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 14.25,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 6.88,
-   "mid": 10.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Accolade"
+   ],
+   "low": 1.39,
+   "mid": 6.88,
    "n": 3,
    "period_mix": {
-    "RUN_RATE": 3
+    "LTM": 1,
+    "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Accolade",
+     "mult": 1.39,
+     "reason": "both do Payer Decisioning, Utilisation Management; related type of business; same end market; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Alan",
+     "mult": 6.88,
+     "reason": "both do Claims; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Cityblock Health",
+     "mult": 14.25,
+     "reason": "shares the language of health, management; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "claims",
+    "decisioning",
     "health",
-    "management"
+    "management",
+    "payer",
+    "utilisation"
    ],
-   "spread": 2.1,
-   "tag_evidence": 1.2,
+   "spread": 10.3,
+   "tag_evidence": 9.0,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 62,
+  "private_window_months": 59,
   "secondary": [
    {
     "company": "AMN Healthcare Services, Inc.",

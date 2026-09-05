@@ -346,16 +346,128 @@
    {
     "backed": [
      {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Ribbit Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Khosla Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Goodwater Capital (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "NEA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Slash",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Y Combinator",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Haun Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Coinbase Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "ConsenSys",
       "date": "Mar-22"
      }
     ],
     "investor": "ParaFi Capital",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Juspay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Slash",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 5.6,
+    "reason": "both do Stablecoin Payments; same business function; same revenue model; sold the same way",
+    "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "BVNK",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 18.75,
+    "reason": "both do Stablecoin Payments, Payment Rails, On Ramp Off Ramp; related type of business; same end market; same business function",
+    "score": 25.0,
+    "type": "PRIMARY"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": ">=",
@@ -401,15 +513,15 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "Net revenue",
+    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "Stripe",
-    "date": "Feb-25",
+    "company": "Juspay",
+    "date": "Jan-26",
     "in_medians": true,
-    "mult": 16.34,
-    "reason": "shares the language of payment, payments; related type of business; same business function; same kind of customer",
-    "score": 16.7,
-    "type": "PRIMARY"
+    "mult": 20.41,
+    "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+    "score": 16.2,
+    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -420,47 +532,69 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 2
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 80.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 16.34,
-   "mid": 80.0,
-   "n": 2,
+   "low": 5.6,
+   "mid": 18.75,
+   "n": 3,
    "period_mix": {
-    "LTM": 1,
-    "RUN_RATE": 1
+    "RUN_RATE": 3
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Slash",
+     "mult": 5.6,
+     "reason": "both do Stablecoin Payments; same business function; same revenue model; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "BVNK",
+     "mult": 18.75,
+     "reason": "both do Stablecoin Payments, Payment Rails, On Ramp Off Ramp; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Fireblocks",
+     "mult": 80.0,
+     "reason": "both do Digital Asset Custody; same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "asset",
     "crypto",
     "custody",
     "digital",
+    "off",
+    "on",
     "payment",
-    "payments"
+    "payments",
+    "rails",
+    "ramp",
+    "stablecoin"
    ],
-   "spread": 4.9,
-   "tag_evidence": 4.5,
-   "thin": true,
+   "spread": 14.3,
+   "tag_evidence": 9.0,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 57,

@@ -357,6 +357,16 @@
    {
     "backed": [
      {
+      "company": "E2open",
+      "date": "May-25"
+     }
+    ],
+    "investor": "WiseTech Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Flink",
       "date": "Sep-24"
      }
@@ -592,6 +602,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "E2open",
+    "date": "May-25",
+    "in_medians": true,
+    "mult": 3.46,
+    "reason": "shares the language of logistics; related type of business; sold the same way",
+    "score": 6.3,
+    "type": "CONTROL"
+   },
+   {
     "basis": "NONE",
     "bound": "",
     "company": "Flink",
@@ -665,32 +686,47 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 4
+    "NET_REVENUE": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
-   "control_n": 1,
+   "control_n": 2,
    "control_names": [
+    "E2open",
     "Wolt"
    ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 44.12,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 5.97,
-   "mid": 23.5,
-   "n": 4,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "E2open"
+   ],
+   "low": 3.46,
+   "mid": 8.94,
+   "n": 5,
    "period_mix": {
+    "FY2025": 1,
     "LTM": 4
    },
    "period_span": {
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
    "points": [
+    {
+     "company": "E2open",
+     "mult": 3.46,
+     "reason": "shares the language of logistics; related type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
     {
      "company": "Delhivery",
      "mult": 5.97,
@@ -725,7 +761,7 @@
     "delivery",
     "logistics"
    ],
-   "spread": 7.4,
+   "spread": 12.8,
    "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false

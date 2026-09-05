@@ -28,6 +28,9 @@ import csv, io, os, re, sys
 
 # supplied file -> (company column, date column, the loaded files it may land in)
 SOURCES = {
+    'data/raw/2026-09-05_private-rounds-claude.csv': (
+        'company_name', 'date_iso',
+        ['data/private-rounds.csv', 'data/private-rounds-consumer.csv']),
     'data/raw/2026-09-01_private-transactions-daniil.csv': (
         'company', 'txn_date',
         ['data/private-rounds.csv', 'data/private-rounds-consumer.csv']),

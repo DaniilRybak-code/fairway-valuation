@@ -346,9 +346,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -390,6 +390,40 @@
    },
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": "Emerge's own post, 13-Nov-2025: 'We're delighted to announce our investment in Songscription', a '$5M seed round led by Reach Capital alongside 10x Founders and Dent Capital'. Emerge's own post, 29-Sep-2025: 'MyEdSpace has raised $15M (GBP11.9M) in a Series A led by White Star Capital, with participation from Educapital, Active Partners, Coalition Capital, and us'; MyEdSpace streams live lessons to students at home who pay per hour. Cheque from emergecapital.vc: 'Early stage investment $500k-$2.5M'; stage 'Pre-seed and seed founders'.",
+    "geographies": "Europe (the first specialist future of work and learning investor in Europe)",
+    "house_type": "VC",
+    "investor": "Emerge",
+    "not_published": null,
+    "recent_deal": "Songscription",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://emergecapital.vc/songscription-raises-5m-to-become-the-shazam-for-sheet-music/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "First money in for founders building the future of human capital development.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.5,
+    "cheque_low_m": 0.1,
+    "deal_note": "TechCrunch, 10-Sep-2025: 'The startup's $4 million seed round was led by Eniac Ventures ... The round also includes investment from Haystack, Factorial Capital, Homebrew, Offline Ventures'. Oboe is a consumer AI learning app with a free tier, $15 and $40 a month plans. Cheque from homebrew.co: '90% of what we do is pre-seed/seed investments of between $100k and $500k.' Deal sits exactly twelve months back on 5-Sep-2026.",
+    "geographies": "North or South America, initially targeting markets in those geographies",
+    "house_type": "VC",
+    "investor": "Homebrew",
+    "not_published": null,
+    "recent_deal": "Oboe",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Capital, counsel and commitment for mission-driven founders reimagining the world we live in.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 15.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
@@ -418,7 +452,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -438,43 +472,29 @@
     "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 8.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "UK-based; Europe-focused",
-    "house_type": "Venture",
-    "investor": "Notion Capital",
-    "not_published": null,
-    "recent_deal": "Kraken",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 1.5,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "UK-based, invests across the UK and Europe",
-    "house_type": "Venture",
-    "investor": "Playfair Capital",
-    "not_published": null,
-    "recent_deal": "Zerolook",
-    "recent_deal_date": "2026-08",
-    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Coursera (acquirer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "all-stock)",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -538,6 +558,17 @@
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Udemy",
+    "date": "Dec-25",
+    "in_medians": false,
+    "mult": 1.29,
+    "reason": "shares the language of corporate, course; same type of business; same end market; sold the same way",
+    "score": 11.9,
+    "type": "CONTROL"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",

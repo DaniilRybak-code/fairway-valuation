@@ -158,9 +158,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -385,6 +385,66 @@
     ],
     "investor": "Undisclosed (Nasdaq Private Market secondary)",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -456,14 +516,14 @@
     "type": "SECONDARY"
    },
    {
-    "basis": "Jul-2025",
-    "bound": "",
-    "company": "Perplexity",
-    "date": "Jul-25",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
     "in_medians": true,
-    "mult": 120.0,
-    "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
-    "score": 9.8,
+    "mult": 25.0,
+    "reason": "shares the language of automation; related type of business; sold the same way; same AI stance",
+    "score": 9.6,
     "type": "PRIMARY"
    }
   ],
@@ -486,13 +546,13 @@
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 120.0,
+   "high": 105.3,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 50.0,
+   "mid": 25.0,
    "n": 5,
    "period_mix": {
     "NTM": 1,
@@ -524,6 +584,13 @@
      "transaction_type": "MIXED"
     },
     {
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "shares the language of automation; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
      "company": "Clay",
      "mult": 50.0,
      "reason": "both do Data Enrichment, Outbound Automation; same type of business; same business function; same revenue model",
@@ -534,13 +601,6 @@
      "company": "Sierra",
      "mult": 105.3,
      "reason": "shares the language of automation; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Perplexity",
-     "mult": 120.0,
-     "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
@@ -555,12 +615,12 @@
     "research",
     "sales"
    ],
-   "spread": 27.9,
+   "spread": 24.5,
    "tag_evidence": 2.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 13,
+  "private_window_months": 9,
   "secondary": [
    {
     "company": "Red Violet, Inc.",

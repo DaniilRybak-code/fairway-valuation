@@ -262,6 +262,16 @@
    {
     "backed": [
      {
+      "company": "Sapiens International",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Advent International",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "The Zebra",
       "date": "Apr-21"
      }
@@ -302,6 +312,17 @@
   ],
   "listed_proximity": "DIRECT",
   "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Sapiens International",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 4.55,
+    "reason": "both do Policy Administration; related type of business; same end market; same business function",
+    "score": 15.6,
+    "type": "CONTROL"
+   },
    {
     "basis": "Annualized GWP / revenue proxy",
     "bound": "",
@@ -366,24 +387,34 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 1
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Sapiens International"
+   ],
    "dispersed": false,
    "display": "RANGE",
    "high": 6.88,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 6.67,
-   "mid": 6.88,
-   "n": 2,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Sapiens International"
+   ],
+   "low": 4.55,
+   "mid": 6.67,
+   "n": 3,
    "period_mix": {
+    "LTM": 1,
     "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -392,14 +423,16 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "administration",
     "carrier",
     "claims",
     "digital",
-    "insurance"
+    "insurance",
+    "policy"
    ],
-   "spread": 1.0,
-   "tag_evidence": 1.1,
-   "thin": true,
+   "spread": 1.5,
+   "tag_evidence": 5.1,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 64,

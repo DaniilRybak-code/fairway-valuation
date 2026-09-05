@@ -125,9 +125,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -214,7 +214,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -254,6 +254,36 @@
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Headline",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -391,76 +421,57 @@
    {
     "backed": [
      {
-      "company": "Jasper",
-      "date": "Oct-22"
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "Insight Partners (lead)",
+    "investor": "KKR",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Jasper",
-      "date": "Oct-22"
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "Coatue",
+    "investor": "L Catterton (co-led)",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Jasper",
-      "date": "Oct-22"
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
     "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "IVP",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Foundation Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Founders Circle Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "HubSpot Ventures",
     "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Owner",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
+    "score": 11.1,
+    "type": "PRIMARY"
+   },
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
@@ -517,25 +528,14 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
-    "company": "Jasper",
-    "date": "Oct-22",
-    "in_medians": true,
-    "mult": 33.3,
-    "reason": "shares the language of ai; same type of business; same kind of customer; same revenue model",
-    "score": 17.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Gorgias",
-    "date": "Aug-22",
-    "in_medians": true,
-    "mult": null,
-    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
-    "score": 12.1,
+    "company": "Restaurant365",
+    "date": "May-23",
+    "in_medians": false,
+    "mult": 10.0,
+    "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
+    "score": 10.6,
     "type": "PRIMARY"
    }
   ],
@@ -546,10 +546,10 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
-    "NET_REVENUE": 2
+    "ARR": 2,
+    "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
@@ -563,18 +563,13 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 33.3,
+   "mid": 23.0,
    "n": 3,
    "period_mix": {
-    "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -593,9 +588,9 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "shares the language of ai; same type of business; same kind of customer; same revenue model",
+     "company": "Owner",
+     "mult": 23.0,
+     "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -620,7 +615,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 48,
+  "private_window_months": 39,
   "secondary": [
    {
     "company": "ZoomInfo Technologies Inc.",

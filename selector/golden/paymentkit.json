@@ -298,35 +298,143 @@
     "why": "sector and stage; your location was not resolved"
    }
   ],
-  "investors_evidence": [],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Juspay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "KRAFTON",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Apis Growth Fund II",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zuora",
+      "date": "Oct-24"
+     }
+    ],
+    "investor": "Silver Lake",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zuora",
+      "date": "Oct-24"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   }
+  ],
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "Annual revenue",
+    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "MoonPay",
-    "date": "Nov-21",
+    "company": "Juspay",
+    "date": "Jan-26",
     "in_medians": true,
-    "mult": 22.67,
-    "reason": "both do Payments Infrastructure; related type of business; same end market; same business function",
-    "score": 16.3,
+    "mult": 20.41,
+    "reason": "both do Payment Orchestration, Payments Failover, Processor Redundancy; same type of business; same end market; same business function",
+    "score": 29.8,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cashfree Payments",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 9.52,
+    "reason": "both do Subscription Billing; related type of business; same end market; same business function",
+    "score": 22.6,
     "type": "PRIMARY"
    },
    {
-    "basis": "NONE",
+    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "Recharge",
-    "date": "May-21",
+    "company": "Zuora",
+    "date": "Oct-24",
     "in_medians": true,
-    "mult": null,
-    "reason": "both do Payments; same type of business; same business function; sold the same way",
-    "score": 12.5,
-    "type": "PRIMARY"
+    "mult": 3.81,
+    "reason": "both do Subscription Billing, Billing Infrastructure, Payments; same type of business; same business function",
+    "score": 13.8,
+    "type": "CONTROL"
    }
   ],
-  "private_proximity": "ADJACENT",
-  "private_range": {},
-  "private_window_months": 63,
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 1,
+   "control_names": [
+    "Zuora"
+   ],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 3.81,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Zuora"
+   ],
+   "low": 3.81,
+   "mid": 3.81,
+   "n": 1,
+   "period_mix": {
+    "LTM": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "billing",
+    "infrastructure",
+    "payments",
+    "subscription"
+   ],
+   "sole": "Zuora",
+   "spread": 1.0,
+   "tag_evidence": 6.8,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 22,
   "secondary": [
    {
     "company": "Worldline SA",

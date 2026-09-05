@@ -358,6 +358,26 @@
    {
     "backed": [
      {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "KRAFTON",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Apis Growth Fund II",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Pine Labs",
       "date": "May-21"
      }
@@ -394,46 +414,6 @@
     ],
     "investor": "Moore Strategic Ventures",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Alkeon Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "BOND",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "D1 Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -447,6 +427,17 @@
     "mult": 16.34,
     "reason": "shares the language of payments; same type of business; same business function; same kind of customer",
     "score": 16.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cashfree Payments",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 9.52,
+    "reason": "shares the language of payments; same type of business; same business function; same revenue model",
+    "score": 14.1,
     "type": "PRIMARY"
    },
    {
@@ -503,17 +494,6 @@
     "reason": "both do Merchant Payments; same type of business; same business function; same AI stance",
     "score": 9.2,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "dLocal",
-    "date": "Apr-21",
-    "in_medians": true,
-    "mult": 48.0,
-    "reason": "shares the language of payments; related type of business; same business function; same AI stance",
-    "score": 9.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -523,7 +503,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 3
+    "NET_REVENUE": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -531,14 +511,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 48.0,
+   "high": 30.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 16.34,
    "mid": 30.3,
-   "n": 3,
+   "n": 2,
    "period_mix": {
-    "LTM": 3
+    "LTM": 2
    },
    "period_span": {
     "LTM": {
@@ -552,12 +532,12 @@
     "merchant",
     "payments"
    ],
-   "spread": 2.9,
+   "spread": 1.9,
    "tag_evidence": 0.2,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
-  "private_window_months": 64,
+  "private_window_months": 63,
   "secondary": [
    {
     "company": "Marqeta, Inc.",

@@ -106,33 +106,32 @@
     }
    },
    "private": {
-    "REVENUE": {
+    "PAYING_SUBSCRIBERS": {
      "anchor_dropped": false,
      "band": "ADJACENT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
+     "basis": "PAYING_SUBSCRIBERS",
+     "basis_label": "dollars of enterprise value per paying subscriber",
      "basis_mix": {
-      "ARR": 1,
-      "ARR_RUNRATE": 1
+      "PAYING_SUBSCRIBERS": 1
      },
      "bounded": true,
-     "closeness": "THIN_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "revenue",
+     "display": "DIAMOND",
+     "founder_field": "subscribers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 120.0,
+     "high": 2700.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 21.0,
-     "mid": 120.0,
-     "n": 2,
+     "low": 2700.0,
+     "mid": 2700.0,
+     "n": 1,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 1
      },
      "period_span": {
       "RUN_RATE": {
@@ -143,12 +142,96 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai"
+      "ai",
+      "app"
      ],
-     "spread": 5.7,
-     "tag_evidence": 0.1,
+     "sole": "Suno",
+     "spread": 1.0,
+     "tag_evidence": 0.3,
      "thin": true,
-     "triangulated": true
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "ARR_RUNRATE": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 120.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 18.0,
+     "mid": 25.0,
+     "n": 5,
+     "period_mix": {
+      "RUN_RATE": 5
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Suno",
+       "mult": 18.0,
+       "reason": "shares the language of ai, app; same type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Gamma",
+       "mult": 21.0,
+       "reason": "shares the language of ai; same type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Genspark",
+       "mult": 25.0,
+       "reason": "shares the language of ai; same type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Framer",
+       "mult": 40.0,
+       "reason": "shares the language of ai, builder; same type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Perplexity",
+       "mult": 120.0,
+       "reason": "shares the language of ai; same type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "app",
+      "builder"
+     ],
+     "spread": 6.7,
+     "tag_evidence": 0.4,
+     "thin": false,
+     "triangulated": false
     }
    }
   },
@@ -360,9 +443,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -387,6 +470,40 @@
    },
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 0.5,
+    "cheque_low_m": 0.1,
+    "deal_note": "TechCrunch, 10-Sep-2025: 'The startup's $4 million seed round was led by Eniac Ventures ... The round also includes investment from Haystack, Factorial Capital, Homebrew, Offline Ventures'. Oboe is a consumer AI learning app with a free tier, $15 and $40 a month plans. Cheque from homebrew.co: '90% of what we do is pre-seed/seed investments of between $100k and $500k.' Deal sits exactly twelve months back on 5-Sep-2026.",
+    "geographies": "North or South America, initially targeting markets in those geographies",
+    "house_type": "VC",
+    "investor": "Homebrew",
+    "not_published": null,
+    "recent_deal": "Oboe",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Capital, counsel and commitment for mission-driven founders reimagining the world we live in.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.25,
+    "cheque_low_m": null,
+    "deal_note": "Pulse 2.0, 10-Jul-2026: 'Index Ventures has led a $13 million seed round for Marker, a London-based startup developing an AI-native word processor ... The funding round includes participation from LocalGlobe, Betaworks, Radical Ventures, Tiny VC and Otherwise Fund'. Cheque from the Camp application page: 'Betaworks and our syndicate partners will each invest up to $250k for a total of up to $500k investment per team'; the Betaworks half is recorded. Stage: the Camp page describes Betaworks as 'a pre-seed and seed stage investor'.",
+    "geographies": "companies based anywhere in the world; in-person time in NYC required for Camp",
+    "house_type": "VC",
+    "investor": "Betaworks",
+    "not_published": null,
+    "recent_deal": "Marker",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://pulse2.com/marker-raises-13-million-seed-funding-to-build-an-ai-native-word-processor/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "A thematic investment and in-residence program for startups building in frontier technologies.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 15.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
@@ -401,43 +518,109 @@
     "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": 0.25,
-    "deal_note": null,
-    "geographies": "UK-focused",
-    "house_type": "Venture",
-    "investor": "Episode 1 Ventures",
-    "not_published": null,
-    "recent_deal": "Osprey Security",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 8.0,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "UK-based; Europe-focused",
-    "house_type": "Venture",
-    "investor": "Notion Capital",
-    "not_published": null,
-    "recent_deal": "Kraken",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Bond Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Forerunner",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Union Square Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Alkeon",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Quiet",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Matrix",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Lightspeed",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Menlo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Schroders Capital",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -466,6 +649,86 @@
      }
     ],
     "investor": "South Park Commons",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Framer",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Framer",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Atomico (co-led)",
     "n": 1
    },
    {
@@ -562,6 +825,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "<=",
+    "company": "Suno",
+    "date": "Jun-26",
+    "in_medians": true,
+    "mult": 18.0,
+    "reason": "shares the language of ai, app; same type of business; same kind of customer; sold the same way",
+    "score": 14.3,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Gamma",
@@ -571,6 +845,28 @@
     "reason": "shares the language of ai; same type of business; same business function; sold the same way",
     "score": 14.6,
     "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of ai; same type of business; same business function; sold the same way",
+    "score": 14.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Framer",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 40.0,
+    "reason": "shares the language of ai, builder; same type of business; same business function; sold the same way",
+    "score": 12.9,
+    "type": "PRIMARY"
    },
    {
     "basis": "Jul-2025",
@@ -613,23 +909,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
-    "ARR_RUNRATE": 1
+    "ARR": 3,
+    "ARR_RUNRATE": 2
    },
    "bounded": true,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 120.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 21.0,
-   "mid": 120.0,
-   "n": 2,
+   "low": 18.0,
+   "mid": 25.0,
+   "n": 5,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 5
    },
    "period_span": {
     "RUN_RATE": {
@@ -637,15 +933,53 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Suno",
+     "mult": 18.0,
+     "reason": "shares the language of ai, app; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Gamma",
+     "mult": 21.0,
+     "reason": "shares the language of ai; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "shares the language of ai; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Framer",
+     "mult": 40.0,
+     "reason": "shares the language of ai, builder; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Perplexity",
+     "mult": 120.0,
+     "reason": "shares the language of ai; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
-    "ai"
+    "ai",
+    "app",
+    "builder"
    ],
-   "spread": 5.7,
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "spread": 6.7,
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
   },
   "private_window_months": 19,
   "secondary": [],

@@ -392,6 +392,26 @@
    {
     "backed": [
      {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "KRAFTON",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cashfree Payments",
+      "date": "Feb-25"
+     }
+    ],
+    "investor": "Apis Growth Fund II",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Zepz",
       "date": "Oct-24"
      }
@@ -438,46 +458,6 @@
     ],
     "investor": "Coller Capital",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Alkeon Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "BOND",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "D1 Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -491,6 +471,17 @@
     "mult": 8.0,
     "reason": "both do Cross-Border Payments, Payouts; same type of business; same business function; sold the same way",
     "score": 16.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cashfree Payments",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 9.52,
+    "reason": "both do Payouts; related type of business; same business function; same revenue model",
+    "score": 12.7,
     "type": "PRIMARY"
    },
    {
@@ -547,17 +538,6 @@
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
     "score": 13.7,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "dLocal",
-    "date": "Apr-21",
-    "in_medians": true,
-    "mult": 48.0,
-    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 12.5,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -568,7 +548,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -576,14 +556,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 48.0,
+   "high": 16.34,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.0,
    "mid": 16.34,
-   "n": 3,
+   "n": 2,
    "period_mix": {
-    "LTM": 2,
+    "LTM": 1,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -606,12 +586,12 @@
     "payouts",
     "tax"
    ],
-   "spread": 6.0,
+   "spread": 2.0,
    "tag_evidence": 1.6,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
-  "private_window_months": 64,
+  "private_window_months": 62,
   "secondary": [
    {
     "company": "Repay Holdings Corporation",

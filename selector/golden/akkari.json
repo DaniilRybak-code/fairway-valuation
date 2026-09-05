@@ -357,6 +357,36 @@
    {
     "backed": [
      {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Headline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Sierra",
       "date": "May-26"
      }
@@ -572,6 +602,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Owner",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "shares the language of ai, operations; related type of business; sold the same way; same AI stance",
+    "score": 9.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "<=",
     "company": "Sierra",
@@ -634,7 +675,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 4,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -649,11 +690,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 23.0,
-   "mid": 50.0,
-   "n": 4,
+   "mid": 33.3,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -673,6 +714,7 @@
     "automation",
     "customer",
     "deflection",
+    "operations",
     "service"
    ],
    "spread": 4.6,

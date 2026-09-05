@@ -231,9 +231,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -320,7 +320,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -363,6 +363,36 @@
    {
     "backed": [
      {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Owner",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Headline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Sierra",
       "date": "May-26"
      }
@@ -385,14 +415,10 @@
      {
       "company": "Sierra",
       "date": "May-26"
-     },
-     {
-      "company": "Glean",
-      "date": "Jun-25"
      }
     ],
     "investor": "Sequoia",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -413,14 +439,10 @@
      {
       "company": "Ramp",
       "date": "Nov-25"
-     },
-     {
-      "company": "Glean",
-      "date": "Jun-25"
      }
     ],
     "investor": "Coatue",
-    "n": 3
+    "n": 2
    },
    {
     "backed": [
@@ -621,50 +643,21 @@
     ],
     "investor": "Acrew Capital",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Glean",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Wellington",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Glean",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Khosla",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Glean",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Bicycle",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Glean",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Altimeter",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Owner",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "shares the language of ai, operations; related type of business; same AI stance",
+    "score": 6.2,
+    "type": "PRIMARY"
+   },
    {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "<=",
@@ -730,17 +723,6 @@
     "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
     "score": 8.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Glean",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 72.0,
-    "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
-    "score": 8.1,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -764,7 +746,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 14.9,
-   "mid": 50.0,
+   "mid": 32.0,
    "n": 5,
    "period_mix": {
     "LTM": 1,
@@ -789,6 +771,13 @@
      "transaction_type": "PRIMARY"
     },
     {
+     "company": "Owner",
+     "mult": 23.0,
+     "reason": "shares the language of ai, operations; related type of business; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
      "company": "Ramp",
      "mult": 32.0,
      "reason": "shares the language of automation; related type of business; same kind of customer",
@@ -801,13 +790,6 @@
      "reason": "shares the language of ai, automation, gtm; related type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Glean",
-     "mult": 72.0,
-     "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     },
     {
      "company": "Sierra",
@@ -823,14 +805,15 @@
     "ai",
     "automation",
     "customer",
-    "gtm"
+    "gtm",
+    "operations"
    ],
    "spread": 7.1,
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 14,
+  "private_window_months": 11,
   "secondary": [
    {
     "company": "Cass Information Systems",

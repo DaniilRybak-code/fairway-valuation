@@ -218,9 +218,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -373,6 +373,66 @@
    {
     "backed": [
      {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "LangChain",
       "date": "Oct-25"
      }
@@ -509,66 +569,6 @@
     ],
     "investor": "Sozo Ventures",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "CRV",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Notable",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Bedrock",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Geodesic",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vercel",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -593,6 +593,17 @@
     "mult": 20.5,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 13.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of agent, workspace; related type of business; sold the same way; same AI stance",
+    "score": 8.9,
     "type": "PRIMARY"
    },
    {
@@ -638,17 +649,6 @@
     "reason": "shares the language of cloud; related type of business; same business function; same AI stance",
     "score": 9.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Vercel",
-    "date": "May-24",
-    "in_medians": false,
-    "mult": 32.5,
-    "reason": "shares the language of cloud; same type of business; same business function; same kind of customer",
-    "score": 19.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -659,22 +659,22 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 1
+    "ARR_RUNRATE": 2
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 20.0,
+   "high": 25.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 13.2,
-   "n": 3,
+   "mid": 20.0,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "RUN_RATE": {
@@ -688,14 +688,15 @@
     "agent",
     "browser",
     "cloud",
-    "environment"
+    "environment",
+    "workspace"
    ],
-   "spread": 1.9,
+   "spread": 2.4,
    "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 27,
+  "private_window_months": 17,
   "secondary": [
    {
     "company": "Snowflake Inc.",

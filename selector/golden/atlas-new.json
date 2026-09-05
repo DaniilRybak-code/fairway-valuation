@@ -246,9 +246,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -352,7 +352,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
@@ -495,14 +495,10 @@
      {
       "company": "Decagon",
       "date": "Jan-26"
-     },
-     {
-      "company": "Replit",
-      "date": "Sep-25"
      }
     ],
     "investor": "Coatue",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -532,6 +528,66 @@
      }
     ],
     "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
     "n": 1
    },
    {
@@ -572,36 +628,6 @@
      }
     ],
     "investor": "Amplify",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Prysm",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Google AI Futures Fund",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Amex Ventures",
     "n": 1
    }
   ],
@@ -663,6 +689,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of agent, automation; related type of business; sold the same way; same AI stance",
+    "score": 9.9,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
@@ -670,17 +707,6 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
-    "score": 13.8,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Replit",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 20.0,
-    "reason": "shares the language of agent; same type of business; same revenue model; sold the same way",
     "score": 13.8,
     "type": "PRIMARY"
    }
@@ -725,9 +751,9 @@
      "transaction_type": "MIXED"
     },
     {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "shares the language of agent; same type of business; same revenue model; sold the same way",
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "shares the language of agent, automation; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -759,7 +785,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 10,
   "secondary": [
    {
     "company": "Twilio Inc.",

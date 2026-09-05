@@ -225,9 +225,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -357,31 +357,21 @@
    {
     "backed": [
      {
-      "company": "WayCool Foods",
-      "date": "Jun-22"
+      "company": "E2open",
+      "date": "May-25"
      }
     ],
-    "investor": "Lightrock and existing investors",
+    "investor": "WiseTech Global",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Ninjacart",
-      "date": "Dec-21"
+      "company": "Berkshire Grey",
+      "date": "Mar-23"
      }
     ],
-    "investor": "Walmart",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Ninjacart",
-      "date": "Dec-21"
-     }
-    ],
-    "investor": "Flipkart",
+    "investor": "SoftBank Group (acquirer",
     "n": 1
    }
   ],
@@ -390,29 +380,87 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "WayCool Foods",
-    "date": "Jun-22",
+    "company": "E2open",
+    "date": "May-25",
     "in_medians": true,
-    "mult": 5.91,
-    "reason": "shares the language of chain, supply; related type of business; sold the same way",
-    "score": 5.7,
-    "type": "PRIMARY"
+    "mult": 3.46,
+    "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
+    "score": 18.1,
+    "type": "CONTROL"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "Ninjacart",
-    "date": "Dec-21",
+    "company": "Berkshire Grey",
+    "date": "Mar-23",
     "in_medians": true,
-    "mult": 7.1,
-    "reason": "both do Supply Chain; related type of business; sold the same way",
-    "score": 5.7,
-    "type": "PRIMARY"
+    "mult": 5.69,
+    "reason": "shares the language of automation; same type of business; same business function; same AI stance",
+    "score": 10.1,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
-  "private_range": {},
-  "private_window_months": 56,
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "NET_REVENUE": 2
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 2,
+   "control_names": [
+    "E2open",
+    "Berkshire Grey"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 5.69,
+   "listed_target_n": 2,
+   "listed_target_names": [
+    "E2open",
+    "Berkshire Grey"
+   ],
+   "low": 3.46,
+   "mid": 5.69,
+   "n": 2,
+   "period_mix": {
+    "FY2022": 1,
+    "FY2025": 1
+   },
+   "period_span": {
+    "FY2022": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "automation",
+    "chain",
+    "demand",
+    "inventory",
+    "management",
+    "optimisation",
+    "planning",
+    "procurement",
+    "supplier",
+    "supply"
+   ],
+   "spread": 1.6,
+   "tag_evidence": 9.6,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 41,
   "secondary": [
    {
     "company": "Lindsay Australia Limited",

@@ -192,9 +192,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -298,12 +298,52 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Investissement Quebec",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Desjardins Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Fidelity Investments Canada",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -322,6 +362,26 @@
      }
     ],
     "investor": "J.P. Morgan Asset Management",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Framer",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Framer",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Atomico (co-led)",
     "n": 1
    },
    {
@@ -448,6 +508,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": ">=",
+    "company": "Vention",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of design; same type of business; same business function; sold the same way",
+    "score": 13.3,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "",
     "company": "Canva",
@@ -457,6 +528,17 @@
     "reason": "shares the language of design; same type of business; same business function; same revenue model",
     "score": 18.3,
     "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Framer",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 40.0,
+    "reason": "shares the language of design; related type of business; same revenue model; sold the same way",
+    "score": 13.3,
+    "type": "PRIMARY"
    },
    {
     "basis": "NONE",
@@ -510,7 +592,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "ARR_RUNRATE": 1
    },
    "bounded": true,
@@ -519,14 +601,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 17.9,
+   "high": 40.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 12.7,
    "mid": 17.9,
-   "n": 2,
+   "n": 3,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "RUN_RATE": {
@@ -541,9 +623,9 @@
     "system",
     "ui"
    ],
-   "spread": 1.4,
+   "spread": 3.1,
    "tag_evidence": 1.1,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 53,

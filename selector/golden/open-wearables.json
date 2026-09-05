@@ -228,9 +228,9 @@
     "house_type": "",
     "investor": "Accel",
     "not_published": null,
-    "recent_deal": "Decagon",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://decagon.ai/blog/series-d-announcement",
+    "recent_deal": "Legora",
+    "recent_deal_date": "2026-04",
+    "recent_deal_url": "https://legora.com/newsroom/legora-extends-series-d-with-additional-50-million-welcomes-atlassian-and-nventures-as-investors",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Accel Atoms is a pre-seed scaling program for Indian and Indian-origin founders building from anywhere, for companies that have raised under $2M.",
     "tier": 1,
@@ -300,7 +300,7 @@
     "recent_deal_date": "2026-06",
     "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "AI, deep tech and infrastructure software. Around \u00a31M average first cheque.",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -357,6 +357,16 @@
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Accolade",
+      "date": "Jan-25"
+     }
+    ],
+    "investor": "Transcarent",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -426,30 +436,21 @@
     ],
     "investor": "Tiger Global Management",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Ro",
-      "date": "Mar-21"
-     }
-    ],
-    "investor": "General Catalyst",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Ro",
-      "date": "Mar-21"
-     }
-    ],
-    "investor": "FirstMark Capital and TQ Ventures",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Accolade",
+    "date": "Jan-25",
+    "in_medians": true,
+    "mult": 1.39,
+    "reason": "shares the language of health; same type of business; same end market",
+    "score": 8.6,
+    "type": "CONTROL"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": ">=",
@@ -515,17 +516,6 @@
     "reason": "shares the language of health; same type of business; same end market",
     "score": 8.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Ro",
-    "date": "Mar-21",
-    "in_medians": true,
-    "mult": 16.67,
-    "reason": "shares the language of health; same type of business; same end market; same AI stance",
-    "score": 10.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "DIRECT",
@@ -535,40 +525,72 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "control_n": 1,
+   "control_names": [
+    "Accolade"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 14.25,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 10.0,
-   "mid": 14.25,
-   "n": 2,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Accolade"
+   ],
+   "low": 1.39,
+   "mid": 10.0,
+   "n": 3,
    "period_mix": {
+    "LTM": 1,
     "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Accolade",
+     "mult": 1.39,
+     "reason": "shares the language of health; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Thirty Madison",
+     "mult": 10.0,
+     "reason": "same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Cityblock Health",
+     "mult": 14.25,
+     "reason": "shares the language of health; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "health"
    ],
-   "spread": 1.4,
+   "spread": 10.3,
    "tag_evidence": 0.6,
-   "thin": true,
+   "thin": false,
    "triangulated": true
   },
-  "private_window_months": 65,
+  "private_window_months": 64,
   "secondary": [
    {
     "company": "Qt Group Oyj",
