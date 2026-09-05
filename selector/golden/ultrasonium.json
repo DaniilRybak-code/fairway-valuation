@@ -167,12 +167,282 @@
     "why": "sector and stage; your location was not resolved"
    }
   ],
-  "investors_evidence": [],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Mubadala Investment Company",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Woven Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Ion Pacific (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Uber",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "BlackRock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Moove",
+      "date": "Aug-26"
+     }
+    ],
+    "investor": "Prosus Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "BOND",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "Mubadala Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "Northzone",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Flink",
+      "date": "Sep-24"
+     }
+    ],
+    "investor": "REWE",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Octopus Energy Group",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Generation Investment Management",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Octopus Energy Group",
+      "date": "May-24"
+     }
+    ],
+    "investor": "CPP Investments",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Berkshire Grey",
+      "date": "Mar-23"
+     }
+    ],
+    "investor": "SoftBank Group (acquirer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Enpal",
+      "date": "Jan-23"
+     }
+    ],
+    "investor": "TPG Rise Climate",
+    "n": 1
+   }
+  ],
   "listed_proximity": "BROAD",
-  "private": [],
-  "private_proximity": "NONE",
-  "private_range": {},
-  "private_window_months": 24,
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Moove",
+    "date": "Aug-26",
+    "in_medians": true,
+    "mult": 5.0,
+    "reason": "same type of business; same business function; same AI stance",
+    "score": 9.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Quince",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 10.1,
+    "reason": "related type of business; same revenue model; same cost structure; same AI stance",
+    "score": 13.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Estimated CY2024 at closing",
+    "bound": "",
+    "company": "Olive & June",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 2.61,
+    "reason": "related type of business; same revenue model; same AI stance",
+    "score": 9.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Flink",
+    "date": "Sep-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "related type of business; same business function; same AI stance",
+    "score": 7.0,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Octopus Energy Group",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 0.57,
+    "reason": "same type of business; same business function",
+    "score": 7.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Berkshire Grey",
+    "date": "Mar-23",
+    "in_medians": true,
+    "mult": 5.69,
+    "reason": "related type of business; same business function; same revenue model; sold the same way",
+    "score": 12.5,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Enpal",
+    "date": "Jan-23",
+    "in_medians": true,
+    "mult": 5.5,
+    "reason": "same type of business; same business function; same AI stance",
+    "score": 9.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 2
+   },
+   "bounded": true,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Berkshire Grey"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.1,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Berkshire Grey"
+   ],
+   "low": 5.0,
+   "mid": 5.69,
+   "n": 3,
+   "period_mix": {
+    "FY2022": 1,
+    "LTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "FY2022": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [],
+   "spread": 2.0,
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
+  },
+  "private_window_months": 43,
   "secondary": [
    {
     "company": "DSV A/S",

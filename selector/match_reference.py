@@ -991,10 +991,48 @@ def _tier(p, r, why):
 # Measured across the 21 real profiles this removes 28 of 97 private members. Publora and Mailwarm
 # fall to a single name each, which is the honest answer for them: one loosely related company,
 # drawn as a diamond and captioned as one.
+# THE ARCHETYPE FALLBACK, AND WHY IT IS A RECORDED FAILURE RATHER THAN A THIRD ROUTE.
+#
+# Daniil, 5-Sep-2026: "Not satisfying this gate is a failure and should be flagged to us. BUT, as a
+# fallback, we can defer to archetypes. For the MVP we should implement the fallback, but we need to
+# get recording such failures and enrich the database as we go."
+#
+# The two routes above are evidence that two companies do the same thing. Sharing an archetype is
+# not evidence, it is a label, and the labels are too coarse to carry the weight: "Vertical
+# Software" holds 120 of our rows and contains stock exchanges, core banking, auto classifieds and
+# property management software in the same bucket. Accepting an archetype match everywhere would
+# hand Publora, a social publishing API, the Perplexity and LangChain rounds that the gate was
+# written on 26-Aug to stop.
+#
+# So the fallback is a RESCUE, not a loosening. It fires only for a lane that cannot otherwise
+# price at all, it is recorded every time it fires, and the record is the enrichment list. A
+# founder with a healthy lane never sees a fallback name.
+_ALLOW_ARCHETYPE_FALLBACK = False
+archetype_fallbacks = []          # (lane, founder tag signature, company, shared archetype)
+
+
+def relevance_route(p, r, why):
+    """How this candidate cleared the relevance gate, or None if it did not. Read by the checks."""
+    if _tag_points(why) > 0:
+        return 'shared product vocabulary'
+    pi = (p.get('industry') or '').strip()
+    if bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip():
+        return 'same specific end market'
+    mine = {p.get('archetype'), p.get('archetype_secondary')} - {None, ''}
+    theirs = {r.get('archetype'), r.get('archetype_secondary')} - {None, ''}
+    return 'ARCHETYPE FALLBACK' if (mine & theirs) else None
+
+
 def _relevant(p, r, why):
     if _tag_points(why) > 0: return True
     pi = (p.get('industry') or '').strip()
-    return bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip()
+    if bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip():
+        return True
+    if _ALLOW_ARCHETYPE_FALLBACK:
+        mine = {p.get('archetype'), p.get('archetype_secondary')} - {None, ''}
+        theirs = {r.get('archetype'), r.get('archetype_secondary')} - {None, ''}
+        return bool(mine & theirs)
+    return False
 
 
 # AND EXPLAIN THE SELECTION. `why` is already the score's own working; this turns it into the
@@ -1346,7 +1384,7 @@ def _trim_to_match_quality(prof, ordered):
         return ordered[:max(WANT_MIN, min(strong, WANT_TARGET))]
     return ordered[:WANT_MAX]
 
-def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
+def _select_private_strict(prof, priv, want=5, window_months=24, asof=(2026, 8)):
     priv = same_family(prof, priv)                   # same gate on the private side
     priv = balance_sheet_compatible(prof, priv)      # lenders and non-lenders never mix
     pband = (prof.get('growth_band') or band_of(prof.get('growth'))).upper()
@@ -1573,7 +1611,7 @@ def pricing_eligible(row):
     # fires on a row handed in from outside the loader, such as a test.
     return _norm_t(row.get('exchange_ticker', '')) not in _KILLED
 
-def peer_groups(prof, universe, scorer=None, want=5):
+def _peer_groups_strict(prof, universe, scorer=None, want=5):
     scorer = scorer or (lambda p, r: score(p, r))
     universe = same_family(prof, universe)          # gate on business nature before ranking on detail
     universe = balance_sheet_compatible(prof, universe)   # same rule on the listed lane
@@ -2469,3 +2507,67 @@ def regression_range(prof, universe, which='rev', want=REGRESSION_N):
                 low=round(max(0.0, v[0]), 1), mid=round((v[0]+v[1])/2, 1), high=round(v[1], 1),
                 peers=[{'company': r['company_name'], 'ticker': r.get('exchange_ticker', ''),
                         'growth': r['g'], 'mult': r[key]} for _g, _m, r in pts])
+
+
+# ---------------------------------------------------------------------------
+# THE RESCUE PASS. Both lanes are built strictly first. A lane that comes back unable to price
+# is rebuilt with the archetype fallback open, and everything the fallback added is recorded by
+# name, because that record IS the enrichment list: every entry is a founder we could only serve
+# on a label rather than on evidence.
+# ---------------------------------------------------------------------------
+MIN_PRICED_LANE = 2
+
+
+def _priced_in(lane):
+    n = 0
+    for _sw, r in lane:
+        if any(r.get(k) is not None for k in MULT_FIELDS):
+            n += 1
+    return n
+
+
+def _sig(prof):
+    return (prof.get('product_tags') or prof.get('archetype') or '?')[:44]
+
+
+def _record(lane_name, prof, before, after):
+    have = {r.get('company_name') for _sw, r in before}
+    for _sw, r in after:
+        if r.get('company_name') not in have:
+            mine = {prof.get('archetype'), prof.get('archetype_secondary')} - {None, ''}
+            theirs = {r.get('archetype'), r.get('archetype_secondary')} - {None, ''}
+            shared = sorted(mine & theirs)
+            archetype_fallbacks.append((lane_name, _sig(prof), r.get('company_name'),
+                                        shared[0] if shared else '?'))
+
+
+def peer_groups(prof, universe, scorer=None, want=5):
+    global _ALLOW_ARCHETYPE_FALLBACK
+    core, sec, tier = _peer_groups_strict(prof, universe, scorer, want)
+    if _priced_in(core) >= MIN_PRICED_LANE:
+        return core, sec, tier
+    _ALLOW_ARCHETYPE_FALLBACK = True
+    try:
+        core2, sec2, tier2 = _peer_groups_strict(prof, universe, scorer, want)
+    finally:
+        _ALLOW_ARCHETYPE_FALLBACK = False
+    if _priced_in(core2) <= _priced_in(core):
+        return core, sec, tier
+    _record('listed', prof, core, core2)
+    return core2, sec2, tier2
+
+
+def select_private(prof, priv, want=5, window_months=24, asof=(2026, 8)):
+    global _ALLOW_ARCHETYPE_FALLBACK
+    picked, months, tier = _select_private_strict(prof, priv, want, window_months, asof)
+    if _priced_in(picked) >= MIN_PRICED_LANE:
+        return picked, months, tier
+    _ALLOW_ARCHETYPE_FALLBACK = True
+    try:
+        picked2, months2, tier2 = _select_private_strict(prof, priv, want, window_months, asof)
+    finally:
+        _ALLOW_ARCHETYPE_FALLBACK = False
+    if _priced_in(picked2) <= _priced_in(picked):
+        return picked, months, tier
+    _record('private', prof, picked, picked2)
+    return picked2, months2, tier2

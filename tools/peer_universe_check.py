@@ -171,6 +171,33 @@ def main():
         print('Rule 0 is satisfied, and nothing in the product reads a secondary range today, so')
         print('these pass on a number no founder currently sees. Either the reveal starts reading')
         print('the secondary range or these are a false pass. Flagged, not decided.')
+    # THE ARCHETYPE FALLBACK REGISTER. Daniil, 5-Sep: not clearing the relevance gate is a FAILURE
+    # and has to be flagged, and the fallback is the MVP's way of not punishing the founder for our
+    # thin database. Every founder served on a label rather than on evidence is named here, and
+    # this list is the enrichment brief. It is reported, never a pass or a fail.
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    sys.path.insert(0, os.path.join(here, 'selector'))
+    import match_reference as M                      # noqa: E402
+    from golden_profiles import PROFILES             # noqa: E402
+    del M.archetype_fallbacks[:]
+    for _k, _l, _p in PROFILES:
+        M.peer_groups(_p, M.listed)
+        M.select_private(_p, M.private)
+    if M.archetype_fallbacks:
+        by_founder = {}
+        for lane, sig, name, arch in M.archetype_fallbacks:
+            by_founder.setdefault((lane, sig), []).append('%s [%s]' % (name, arch))
+        print('\nSERVED ON A LABEL, NOT ON EVIDENCE (%d comparables, %d lanes):'
+              % (len(M.archetype_fallbacks), len(by_founder)))
+        for (lane, sig), names in sorted(by_founder.items()):
+            print('   %-8s %s' % (lane, sig))
+            print('            %s' % ', '.join(names[:6]))
+        print('   These lanes could not price at all on shared vocabulary or a shared end market,')
+        print('   so the archetype fallback opened. Each one is a hole in the database, not a')
+        print('   feature. THIS LIST IS THE ENRICHMENT BRIEF for the next pull.')
+    else:
+        print('\nNo founder needed the archetype fallback. Every lane priced on real evidence.')
+
     empty_secondary = sorted(k for k, v, f, fc, w in rows if v == 'PASS' and fc['secondary'] == 0)
     if empty_secondary:
         print('\nPASSING WITH AN EMPTY SECONDARY LANE (%d): %s'

@@ -83,6 +83,26 @@ No other sector may touch the book path.
 *Built:* yes, and the fence reads the PRIMARY business type only. It used to read either slot, which
 wrongly fenced out Payoneer, Wise and Block for holding customer money.
 
+**A12. Failing the relevance gate is a FAILURE, and the archetype fallback is how we serve the
+founder anyway. Every use is recorded.**
+*Added 5 Sep, Daniil: "Not satisfying this gate is a failure and should be flagged to us. BUT, as a
+fallback, we can defer to archetypes... we need to get recording such failures and enrich the
+database as we go, but we cannot keep spending time on this only."*
+
+Three parts, and the third is the one that decays if nobody watches it:
+
+1. **The gate is unchanged.** A comparable earns its place by shared product vocabulary or a shared
+   specific end market. Sharing an archetype is a label, not evidence, and the labels are too coarse
+   to carry it: `Vertical Software` holds 120 rows and contains stock exchanges and restaurant
+   software (`docs/taxonomy-review-5sep.md`).
+2. **The fallback is a RESCUE, not a loosening.** It opens only for a lane that cannot price at all,
+   never for a founder whose lane is already healthy. Applied everywhere it would hand a social
+   publishing API the Perplexity round, which is the failure the gate was written to stop.
+3. **Every rescue is named on every run** by `tools/peer_universe_check.py`, under "served on a
+   label, not on evidence". That list is the enrichment brief. **Four enrichment passes are
+   scheduled before the pilot** and the register is what they work from. We do not chase this
+   between them: there is a product to ship.
+
 **A11. Hardware needs no archetype.**
 
 ---

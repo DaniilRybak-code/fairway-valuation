@@ -1,8 +1,165 @@
 {
  "expected": {
-  "core": [],
+  "core": [
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
+    "score": 10.5,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
+    "score": 9.5,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same kind of customer; sold the same way",
+    "score": 8.5,
+    "ticker": "WSE:TXT"
+   },
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same kind of customer; sold the same way",
+    "score": 7.0,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "Braze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function",
+    "score": 6.0,
+    "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "Sprout Social, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function",
+    "score": 6.0,
+    "ticker": "NASDAQCM:SPT"
+   },
+   {
+    "company": "Yext, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function",
+    "score": 6.0,
+    "ticker": "NYSE:YEXT"
+   }
+  ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.8,
+   "mid": 2.8,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [],
+   "show_retention": true,
+   "spread": 2.8,
+   "table": [
+    {
+     "company": "Sprout Social, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 7.0,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NASDAQCM:SPT"
+    },
+    {
+     "company": "Yext, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 0.0,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": 95.0,
+     "ticker": "NYSE:YEXT"
+    },
+    {
+     "company": "Freshworks Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 15.0,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 104.0,
+     "ticker": "NASDAQGS:FRSH"
+    },
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 16.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Text S.A.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 3.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:TXT"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 23.0,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
+     "company": "Braze, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 20.0,
+     "multiple": 3.4,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NASDAQGS:BRZE"
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -324,7 +481,7 @@
     "n": 1
    }
   ],
-  "listed_proximity": "CONTEXT",
+  "listed_proximity": "ADJACENT",
   "private": [
    {
     "basis": "DISCLOSED_UNDEFINED_BASIS",
@@ -451,6 +608,22 @@
     "ticker": "TSX:LSPD"
    },
    {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function",
+    "score": 6.0,
+    "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "LiveRamp Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same business function; same AI stance",
+    "score": 5.5,
+    "ticker": "NYSE:RAMP"
+   },
+   {
     "company": "Opera Limited",
     "family": "software",
     "in_medians": true,
@@ -460,7 +633,88 @@
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.9,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.9,
+   "mid": 2.1,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Lightspeed Commerce Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of inventory; same kind of customer; same revenue model; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Shoper S.A.",
+     "mult": 4.1,
+     "reason": "shares the language of marketplace; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ad"
+   ],
+   "show_retention": true,
+   "spread": 2.1,
+   "table": [
+    {
+     "company": "Opera Limited",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 19.0,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:OPRA"
+    },
+    {
+     "company": "LiveRamp Holdings, Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 2.1,
+     "recurring_pct": 75.5,
+     "retention_pct": 107.0,
+     "ticker": "NYSE:RAMP"
+    },
+    {
+     "company": "Zeta Global Holdings Corp.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 28.0,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:ZETA"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Book 2.5m billboards worldwide like you book an Uber"
