@@ -42,45 +42,44 @@ ENXTPA:PLX at 0.8x AV/revenue against ENXTPA:EDEN at 2.8x. The cause is the brid
 +$2,146m of net debt, Pluxee -$1,390m of net cash. Both hold large customer float, and float is
 client money, not shareholder cash. Pluxee's enterprise value is understated by roughly the float.
 This is exactly the XP Inc and CAB Payments pattern ruled on earlier today.
-**Daniil's ruling, 4-Sep: the bridge INCREASES by the customer funds**, because client money held
-in cash is not shareholder cash and net debt should be higher. A different correction from the XP
-and CAB ruling and the right one here: those had a bridge so corrupted it went negative and the
-answer was to price on equity value; these have a bridge that is directionally sound and too small.
+**Ruled and now resolved (5-Sep 21:35 UK).** My first version of this adjustment was built on a
+wrong premise and Daniil corrected it by checking the companies' own net debt notes.
 
-    AV = market cap + bridge + customer funds
+**What that established, and it closes both open questions at once.** Edenred's note 6.5 nets debt
+of EUR 4,826m against cash and other financial assets of EUR 3,585m to give net debt of EUR 1,241m
+at 31-Dec-2025 (EUR 1,764m at 30-Jun-2026). **Restricted cash of EUR 1,661m is not in that 3,585m.**
+So the reported bridge is already clean of float assets, and the float liability is also outside it:
+net debt is float-neutral in both directions. Pluxee reports a net cash position excluding
+restricted cash of EUR 1,270m.
 
-**Figures read from the companies' own reporting, 4-Sep 21:55 UK, not estimated.**
+**That gives the FX rate, which was the other open item.** Pluxee's re-pulled screen bridge is
+-1,365 ($MM) against a reported net cash position of EUR 1,270m, so the screen is USD at
+**USD/EUR 1.0748** — derived, not assumed. Edenred cross-checks loosely (bridge 2,175 against
+EUR 1,764m = USD 1,896m; the USD 279m difference is minorities, pensions and other bridge items the
+note does not carry), which is consistent but not proof.
 
-| | Edenred (31-Dec-2025) | Pluxee (31-Aug-2025) |
+**The correct adjustment is the NET float, not the gross float.** Adding the gross voucher liability
+while the float assets sit outside the bridge would overstate the enterprise value by the whole of
+those assets. That was the error in my first version.
+
+| | Edenred | Pluxee |
 |---|---|---|
-| customer float, company's own label | "Vouchers in circulation (Float)" EUR 6,125m | "Float-related cash" EUR 2,736m |
-| restricted cash | EUR 1,661m | EUR 854m (float-related) |
-| reported net position | net debt EUR 1,241m | net cash EUR 1,163m |
-| reported revenue | FY2025 EUR 2,961m | FY2025 EUR 1,287m |
+| net float | EUR 6,125m vouchers less EUR 1,661m restricted cash = **EUR 4,464m** | **EUR 2,736m**, the company's own "float-related cash", already net of float receivables |
+| AV as re-pulled | 10,203 → 2.8x | 1,181 → 0.8x |
+| **AV + net float** | **15,001 → 4.2x revenue, 4.6x gross profit** | **4,122 → 2.7x revenue, 3.0x gross profit** |
 
-Sources: [Edenred FY2025 press release](https://www.edenred.com/system/files/documents/2026-02-24-edenred-fy-2025-pr.pdf),
-[Pluxee Fiscal 2025 press release](https://www.pluxeegroup.com/sites/g/files/jclxxe221/files/2025-10/Pluxee%20FY26_Press%20Release%20EN.pdf).
+The gap between two direct competitors falls from 3.5x to 1.55x, and Pluxee still sits at a
+discount, which is what it has done since the spin.
 
-**The adjustment, at an assumed USD/EUR of 1.12:**
+**One approximation is left, and it is Edenred's.** It does not publish the trade receivables
+related to its float, so its true net float is somewhat below EUR 4,464m and 4.2x is a ceiling. One
+line from its balance sheet closes that. Pluxee needs nothing further: its figure is published net.
 
-| | AV as pulled | AV/revenue | AV + full float | AV/revenue | AV + float less restricted | AV/revenue |
-|---|---|---|---|---|---|---|
-| Edenred | 10,173 | 2.8x | 17,033 | **4.7x** | 15,173 | **4.2x** |
-| Pluxee | 1,156 | 0.8x | 4,220 | **2.8x** | 3,264 | **2.2x** |
+**Both Euronext rows were re-pulled on 5-Sep and moved slightly.** Edenred bridge 2,146 → 2,175 and
+AV 10,173 → 10,203; Pluxee bridge -1,390 → -1,365 and AV 1,156 → 1,181. The raw file carries the new
+figures and keeps the old ones in its header.
 
-The 3.5x gap between two direct competitors becomes 1.7x on the full-float reading and 1.9x on the
-other, which is roughly the discount Pluxee has actually traded at since the spin. Both readings are
-carried in the raw file rather than one being chosen, because two things are still open:
-
-1. **The FX rate.** 1.12 is my assumption. The screen is in USD and the float is in EUR, and the
-   rate the screen used is not on the screen. One number from you replaces it.
-2. **Whether the screen's cash already excludes restricted cash.** If it does, adding the full float
-   double counts the restricted portion, and the right column is the second one. That is a question
-   about how the pull treats restricted cash, not about the companies.
-
-**Paysign is left unadjusted.** It holds cardholder funds on the same principle, but does not
-disclose a float at the level these two do, and its bridge is only -22, so the correction is small
-and unsourceable. Flagged rather than guessed.
+**Paysign is left unadjusted**: same principle, no float disclosed at this level, bridge of only -22.
 
 ### 4. Claritev and Skillsoft are leverage, not price
 NYSE:CTEV: market cap $667m, enterprise value $5,353m, so **88% of the enterprise value is debt**.
