@@ -430,6 +430,23 @@
    },
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 1.0,
+    "deal_note": "TechCrunch, 10-Sep-2025, $4m seed led by Eniac with 'investment from Haystack, Factorial Capital, Homebrew'. Cheque from haystack.vc: 'We typically invest $1M to $3M in initial rounds and can lead or participate.' STAGE BAND LEFT EMPTY: the site says 'earliest stages' and 'initial rounds', not a named band, and silence is not a claim; the render gate will hold this row until a band is stated or ruled.",
+    "geographies": "Silicon Valley and beyond",
+    "house_type": "VC",
+    "investor": "Haystack",
+    "not_published": null,
+    "recent_deal": "Oboe",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
+    "stage_bands": "Early stage",
+    "thesis": "Backing outlier founders at the earliest stages.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 0.5,
     "cheque_low_m": 0.1,
     "deal_note": "TechCrunch, 10-Sep-2025: 'The startup's $4 million seed round was led by Eniac Ventures ... The round also includes investment from Haystack, Factorial Capital, Homebrew, Offline Ventures'. Oboe is a consumer AI learning app with a free tier, $15 and $40 a month plans. Cheque from homebrew.co: '90% of what we do is pre-seed/seed investments of between $100k and $500k.' Deal sits exactly twelve months back on 5-Sep-2026.",
@@ -459,23 +476,6 @@
     "recent_deal_url": "https://pulse2.com/marker-raises-13-million-seed-funding-to-build-an-ai-native-word-processor/",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "A thematic investment and in-residence program for startups building in frontier technologies.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 15.0,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "UK-based, invests across Europe and North America",
-    "house_type": "Venture",
-    "investor": "Air Street Capital",
-    "not_published": null,
-    "recent_deal": "Alta Ares",
-    "recent_deal_date": "2026-06",
-    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
-    "stage_bands": "Seed; Series A",
-    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }

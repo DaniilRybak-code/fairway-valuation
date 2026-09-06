@@ -1,0 +1,197 @@
+<title>Fairway Comparable Selection</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F2F4F1; --panel:#FFFFFF; --ink:#1B2620; --muted:#5E6B64; --rule:#D3DAD5;
+  --green:#2C6A4E; --green-soft:#DCEAE2; --amber:#A8701A; --amber-soft:#F4E7CF;
+  --listed:#2C6A4E; --private:#3F5F9E; --private-soft:#DDE5F3;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --body:'Source Sans 3','Segoe UI',Helvetica,Arial,sans-serif;
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#131A16; --panel:#1B2420; --ink:#E7EDE8; --muted:#A3B0A8; --rule:#2F3B35;
+    --green:#7CC7A0; --green-soft:#1F3A2E; --amber:#E0B064; --amber-soft:#3B2E17;
+    --listed:#7CC7A0; --private:#9DB6EA; --private-soft:#22304A;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131A16; --panel:#1B2420; --ink:#E7EDE8; --muted:#A3B0A8; --rule:#2F3B35;
+  --green:#7CC7A0; --green-soft:#1F3A2E; --amber:#E0B064; --amber-soft:#3B2E17;
+  --listed:#7CC7A0; --private:#9DB6EA; --private-soft:#22304A;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;margin:0}
+.page{max-width:1120px;margin:0 auto;padding:40px 28px 72px}
+h1{font-family:var(--display);font-weight:700;font-size:40px;line-height:1.1;margin:0 0 10px;text-wrap:balance;letter-spacing:-0.01em}
+h2{font-family:var(--display);font-weight:600;font-size:26px;margin:52px 0 6px;text-wrap:balance}
+h3{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
+p{max-width:68ch;margin:0 0 12px}
+.lead{font-size:19px;color:var(--ink);max-width:62ch}
+.stamp{font-family:var(--mono);font-size:13px;color:var(--muted);margin-bottom:26px}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
+@media (max-width:760px){.lanes{grid-template-columns:1fr}}
+.lane{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:18px 20px 14px}
+.lane h3{color:var(--ink)}
+.lane.listed h3 span{color:var(--listed)} .lane.private h3 span{color:var(--private)}
+.lane svg{width:100%;height:auto;display:block;overflow:visible}
+.bar-label{font-family:var(--body);font-size:13px;fill:var(--ink)}
+.bar-count{font-family:var(--mono);font-size:13px;fill:var(--ink)}
+.bar-note{font-family:var(--body);font-size:12px;fill:var(--muted)}
+.lane .result{font-size:14px;color:var(--muted);margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--rule)}
+.lane .result b{color:var(--ink);font-weight:600}
+.ladder{display:grid;grid-template-columns:52px 1.25fr 1fr 1fr;border-top:2px solid var(--ink);margin-top:14px}
+@media (max-width:860px){.ladder{grid-template-columns:44px 1fr}.ladder .cell.l,.ladder .cell.p{grid-column:2}.ladder .cell.n{grid-row:span 3}}
+.ladder .head{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 12px 8px;border-bottom:1px solid var(--rule)}
+.ladder .head.l{color:var(--listed)} .ladder .head.p{color:var(--private)}
+.ladder .cell{padding:14px 12px 16px;border-bottom:1px solid var(--rule);font-size:15px}
+.ladder .cell.n{font-family:var(--mono);font-size:15px;color:var(--muted);padding-top:16px}
+.ladder .cell.n.gate{color:var(--green);font-weight:500}
+.ladder .cell .name{font-family:var(--display);font-weight:600;font-size:19px;margin:0 0 4px;display:block}
+.ladder .cell .rule{margin:0;max-width:52ch}
+.ladder .cell.l,.ladder .cell.p{color:var(--ink)}
+.ladder .cell.l::before,.ladder .cell.p::before{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.ladder .cell.l::before{content:"Listed lane";color:var(--listed)} .ladder .cell.p::before{content:"Private lane";color:var(--private)}
+@media (min-width:861px){.ladder .cell.l::before,.ladder .cell.p::before{display:none}}
+.chip{display:inline-block;font-family:var(--mono);font-size:12px;padding:2px 7px;border-radius:3px;background:var(--green-soft);color:var(--green);margin-top:6px}
+.chip.warn{background:var(--amber-soft);color:var(--amber)}
+.chip.priv{background:var(--private-soft);color:var(--private)}
+.kind{font-size:13px;color:var(--muted)}
+.record{background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--amber);border-radius:6px;padding:16px 20px;margin-top:22px}
+.record p{max-width:78ch}
+.today{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+@media (max-width:760px){.today{grid-template-columns:repeat(2,1fr)}}
+.today div{border-top:2px solid var(--rule);padding-top:8px}
+.today .num{font-family:var(--mono);font-size:24px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.today .cap{font-size:13px;color:var(--muted)}
+.foot{font-size:13px;color:var(--muted);margin-top:40px;border-top:1px solid var(--rule);padding-top:12px;max-width:none}
+a{color:var(--green)}
+</style>
+
+<div class="page">
+<h1>How Fairway picks a founder's comparables</h1>
+<p class="lead">Every founder is matched twice: once against listed companies, once against private funding rounds. The two never mix. A comparable has to survive every stage below, in this order, and the page can say at which stage every name got in or was kept out.</p>
+<p class="stamp">Drawn 6 September 2026 from the engine at origin fb260b2. Counts are real: one test company, marble, walked through both lanes.</p>
+
+<h2>One founder, both lanes</h2>
+<p><b>marble</b>: the autonomous back-of-house for restaurants. Tagged Vertical Software, end market Hospitality, product words Restaurant Back Office, Inventory And Ordering, Food Cost Management, Vendor Invoice Automation. No revenue figure is used anywhere in selection.</p>
+
+<div class="lanes">
+  <div class="lane listed">
+    <h3><span>Listed lane</span> 511 companies in the file</h3>
+    <svg viewBox="0 0 520 250" role="img" aria-label="Listed lane funnel for marble">
+      <g font-size="13">
+        <rect x="150" y="6"   width="360" height="22" fill="var(--listed)" opacity=".18"/><text class="bar-label" x="0" y="22">All listed rows</text><text class="bar-count" x="156" y="22">511</text>
+        <rect x="150" y="40"  width="132" height="22" fill="var(--listed)" opacity=".30"/><text class="bar-label" x="0" y="56">1 Family gate</text><text class="bar-count" x="156" y="56">187</text><text class="bar-note" x="290" y="56">software, or shares Hospitality</text>
+        <rect x="150" y="74"  width="132" height="22" fill="var(--listed)" opacity=".30"/><text class="bar-label" x="0" y="90">2 Lender fence</text><text class="bar-count" x="156" y="90">187</text><text class="bar-note" x="290" y="90">no lenders removed: none were in</text>
+        <rect x="150" y="108" width="26"  height="22" fill="var(--listed)" opacity=".55"/><text class="bar-label" x="0" y="124">5 Relevance gate</text><text class="bar-count" x="184" y="124">37</text><text class="bar-note" x="290" y="124">a shared product word or end market</text>
+        <rect x="150" y="142" width="7"   height="22" fill="var(--listed)" opacity=".8"/><text class="bar-label" x="0" y="158">6 Pricing tiers</text><text class="bar-count" x="164" y="158">9</text><text class="bar-note" x="290" y="158">3 direct, 6 adjacent; 28 broad stay as context</text>
+        <rect x="150" y="176" width="3"   height="22" fill="var(--listed)"/><text class="bar-label" x="0" y="192">9 Core shown</text><text class="bar-count" x="160" y="192">4</text><text class="bar-note" x="290" y="192">Toast, PAR, Agilysys, Samsara</text>
+        <rect x="150" y="210" width="2"   height="22" fill="var(--listed)"/><text class="bar-label" x="0" y="226">12 Price the range</text><text class="bar-count" x="160" y="226">3</text><text class="bar-note" x="290" y="226">2.0x to 7.7x revenue</text>
+      </g>
+    </svg>
+    <p class="result">Result: a core of four names, <b>three carry a usable multiple</b>, labelled ADJACENT because the weakest member only shares the type of business. Five more sit in the wider ring as context.</p>
+  </div>
+  <div class="lane private">
+    <h3><span>Private lane</span> 320 rounds in the file</h3>
+    <svg viewBox="0 0 520 284" role="img" aria-label="Private lane funnel for marble">
+      <g font-size="13">
+        <rect x="150" y="6"   width="360" height="22" fill="var(--private)" opacity=".18"/><text class="bar-label" x="0" y="22">All private rounds</text><text class="bar-count" x="156" y="22">320</text>
+        <rect x="150" y="40"  width="158" height="22" fill="var(--private)" opacity=".30"/><text class="bar-label" x="0" y="56">1 Family gate</text><text class="bar-count" x="156" y="56">140</text><text class="bar-note" x="316" y="56">software, or shares Hospitality</text>
+        <rect x="150" y="74"  width="158" height="22" fill="var(--private)" opacity=".30"/><text class="bar-label" x="0" y="90">2 Lender fence</text><text class="bar-count" x="156" y="90">140</text>
+        <rect x="150" y="108" width="158" height="22" fill="var(--private)" opacity=".30"/><text class="bar-label" x="0" y="124">3 Growth band</text><text class="bar-count" x="156" y="124">140</text><text class="bar-note" x="316" y="124">founder's growth unknown, so nothing excluded</text>
+        <rect x="150" y="142" width="34"  height="22" fill="var(--private)" opacity=".55"/><text class="bar-label" x="0" y="158">5 Relevance gate</text><text class="bar-count" x="192" y="158">30</text>
+        <rect x="150" y="176" width="7"   height="22" fill="var(--private)" opacity=".8"/><text class="bar-label" x="0" y="192">6 Pricing tiers</text><text class="bar-count" x="164" y="192">6</text><text class="bar-note" x="316" y="192">5 direct, 1 adjacent; 24 broad</text>
+        <rect x="150" y="210" width="5"   height="22" fill="var(--private)"/><text class="bar-label" x="0" y="226">7 to 9 Floors and trim</text><text class="bar-count" x="162" y="226">4</text><text class="bar-note" x="316" y="226">Owner, Mews, Guesty, Restaurant365</text>
+        <rect x="150" y="244" width="3"   height="22" fill="var(--private)"/><text class="bar-label" x="0" y="260">12 Price the range</text><text class="bar-count" x="160" y="260">3</text><text class="bar-note" x="316" y="260">10.0x to 23.0x; Guesty held out of the medians</text>
+      </g>
+    </svg>
+    <p class="result">Result: four names shown, <b>three price the net-revenue range</b>, labelled DIRECT because every one shares real product words. The oldest round is 39 months old, and the page says so.</p>
+  </div>
+</div>
+
+<h2>The stages, in the order the engine runs them</h2>
+<p>Numbering is the real order. A name that fails at stage 1 never reaches stage 5. The right-hand columns say where the two lanes differ; where a stage is the same for both, the cell says so.</p>
+
+<div class="ladder">
+  <div class="head">#</div><div class="head">Stage and the rule in plain words</div><div class="head l">Listed lane</div><div class="head p">Private lane</div>
+
+  <div class="cell n">0</div>
+  <div class="cell"><span class="name">The profile</span><p class="rule">Ten tags describe the founder: what kind of business (archetype, and a second one), which end market, who buys, how it is sold, how it charges, and the product words from their website. No revenue, no size, no date is used to choose a comparable. Size and recency may only trim and order.</p></div>
+  <div class="cell l">Same profile, both lanes.</div>
+  <div class="cell p">Same profile. If the founder gives a growth rate it is banded here for stage 3.</div>
+
+  <div class="cell n gate">1</div>
+  <div class="cell"><span class="name">The family gate</span><p class="rule">Compare like with like before comparing detail. Every row sits in one of three families: software, consumer, fintech. A candidate passes if it is in the founder's family, or if it serves the same specific end market (Toast is fintech, a restaurant software founder is software, both serve Hospitality). "Horizontal" is not an end market and never bridges.</p><span class="chip">marble: 511 to 187 listed, 320 to 140 private</span></div>
+  <div class="cell l">Same test.</div>
+  <div class="cell p">Same test. Family is learned from the primary archetype by majority vote, which is why Vention (design software family) cannot reach manifold-robotics (consumer family) although the two share both archetypes.</div>
+
+  <div class="cell n gate">2</div>
+  <div class="cell"><span class="name">The lender fence</span><p class="rule">A lender is priced on its book, not its revenue, and a lender's multiple carries its funding and credit losses. So lenders and deposit banks only ever price other lenders, and nothing else may price them. Rule A10.</p></div>
+  <div class="cell l">Same fence, reads the primary archetype only.</div>
+  <div class="cell p">Same fence.</div>
+
+  <div class="cell n gate">3</div>
+  <div class="cell"><span class="name">The growth band</span><p class="rule">Mature and hyper-growth rounds do not belong in one comparison. Bands are fitted on private rounds themselves: mature below 65 per cent a year, growing 65 to 162, hyper above. Neighbouring bands may sit together; opposite ends may not. An unknown band on either side never excludes anything.</p></div>
+  <div class="cell l">Not applied. Public comparables are what they are, most of them mature.</div>
+  <div class="cell p">Applied. Today no test company carries a growth rate, so this stage removes nothing on the 102.</div>
+
+  <div class="cell n">4</div>
+  <div class="cell"><span class="name">The score</span><p class="rule">Every survivor is scored against the founder. Shared product words weigh most (up to 12 points: 3 for a whole tag in common, less for a shared word, and a word carried by many companies is worth very little). Then the archetype, the end market, the function, the buyer, the revenue model, how it is sold. The score ranks; on its own it never admits a name.</p><span class="chip warn">Today: the word-weight file dates from 24 August; 193 generic words score at full weight</span></div>
+  <div class="cell l">Also scores growth and gross margin when both sides have them.</div>
+  <div class="cell p">Business-nature weights only; growth and margin are not scored here.</div>
+
+  <div class="cell n gate">5</div>
+  <div class="cell"><span class="name">The relevance gate</span><p class="rule">Nothing with nothing to do with the founder. A candidate must share product vocabulary (any shared word at all) or the same specific end market. Sharing only the archetype label is not evidence, because the labels are too coarse: Vertical Software holds stock exchanges and restaurant software. Rule A12.</p><span class="chip warn">Today: 246 of 1,185 shown names clear this gate on generic words alone</span></div>
+  <div class="cell l">Same gate.</div>
+  <div class="cell p">Same gate.</div>
+
+  <div class="cell n">6</div>
+  <div class="cell"><span class="name">The tier ladder</span><p class="rule">Each survivor is labelled by how close it is. DIRECT: anchored on real product words (3 points or more), or the same specific end market plus the same archetype. ADJACENT: does the same kind of thing (shares an archetype) but the products differ. BROAD: same family only; shown as context, never prices. The set fills DIRECT first, then ADJACENT; it falls to BROAD only when both are empty. A mixed set is labelled by its weakest member.</p></div>
+  <div class="cell l">Core also needs axis B, who it sells to: a peer in the same end market, a horizontal peer, the same primary archetype, or 3 points of product words. Names that qualify but miss axis B go to the wider ring, never lost.</div>
+  <div class="cell p">Same ladder. Rows whose revenue is a range rather than a figure are kept only on 3 points of product words.</div>
+
+  <div class="cell n gate">7</div>
+  <div class="cell"><span class="name">The floors</span><p class="rule">Three of them. Absolute: below 5.0 points a name is not a comparable. Relative: below 45 per cent of the best score in the tier it is dropped, so one excellent match raises the bar for everyone. Adequacy: a DIRECT set needs its best name above 12.0, because 45 per cent of a bad score is a worse score.</p><span class="chip">manifold-robotics: Berkshire Grey scores 26.5, so the bar is 11.9 and nothing else clears it</span></div>
+  <div class="cell l">Same floors.</div>
+  <div class="cell p">Same floors.</div>
+
+  <div class="cell n">8</div>
+  <div class="cell"><span class="name">One round per company</span><p class="rule">One company, one vote, never an average of its rounds. Take the latest round, unless the priced rounds are more than 30 per cent apart; then the company was a different business at each one, and the round whose revenue is closest to the founder's is taken. A round that cannot price this founder loses the tie to one that can.</p></div>
+  <div class="cell l">Not needed: one row per company.</div>
+  <div class="cell p">Applied. Fires on eight companies today (Klarna, Zepz, Scale AI, SHEIN among them).</div>
+
+  <div class="cell n">9</div>
+  <div class="cell"><span class="name">Order and trim</span><p class="rule">DIRECT names first, then most recent first within a tier; a direct name is never displaced by a newer adjacent one. Three to five names on an almost perfect match, five to seven where the match is weaker, because a weak set needs the spread to do the work.</p></div>
+  <div class="cell l">Core capped at seven, then trimmed on quality. The wider ring holds everything else that cleared the floors.</div>
+  <div class="cell p">Same sizing. The age of the oldest round shown is reported; nothing is excluded for age.</div>
+
+  <div class="cell n gate">10</div>
+  <div class="cell"><span class="name">The top-up</span><p class="rule">A lane that cannot price is not a lane. If too few of the chosen names carry a usable multiple on the founder's basis, the lane reaches down its own ranked list for names that do, giving up the weakest name that cannot. Topped-up names are marked so the page can say they were reached for.</p></div>
+  <div class="cell l">Core must price three names.</div>
+  <div class="cell p">Lane must price two names.</div>
+
+  <div class="cell n gate">11</div>
+  <div class="cell"><span class="name">The rescue, recorded</span><p class="rule">If a lane still cannot price two names, both lanes are rebuilt once with the archetype label allowed as evidence. The rescue is kept only if it adds a priced name, and every name it admits is printed on the No-comps list. A founder served on a label is a hole in the database, not a feature. Rule A12.</p><span class="chip warn">Today: fires for 2 lanes of 204 (blindspot listed, ultrasonium private)</span></div>
+  <div class="cell l">Same.</div>
+  <div class="cell p">Same.</div>
+
+  <div class="cell n">12</div>
+  <div class="cell"><span class="name">The ranges, one per reading</span><p class="rule">Each lane's names are priced on each reading the founder's quiz fork supports, and readings never mix: net revenue with net, gross with gross, book with book, a count with the same kind of count. One priced name draws as a point, never a range. A spread wider than 6x draws as a scatter, not a band. Names held out of the medians stay visible and do not price. Listed and private are never averaged together.</p></div>
+  <div class="cell l">Revenue (or book and earnings for a lender). Listed rows carry no gross or net label, so a gross range is not offered here.</div>
+  <div class="cell p">Net, and gross where the fork asks; book, ARR, originations for a lender; throughput and per-user readings where two rounds can price them.</div>
+</div>
+
+<div class="record">
+  <h3>What the gate scores, and what today's engine says</h3>
+  <p>A test company passes when it has one public lane and one private lane that each price at least two names, three distinct names in all, and at least one lane resting on more than a shared word. The No-comps list holds two kinds of entry: founders served on a label by stage 11, and founders served nothing at all. It is resolved once, in bulk, after the 18 September march.</p>
+  <div class="today">
+    <div><div class="num">95 / 102</div><div class="cap">test companies pass the gate</div></div>
+    <div><div class="num">7</div><div class="cap">on the No-comps list, served nothing: apollo-atomics, fundraisly, levelten, lyka, manifold-robotics, tash, ultrasonium</div></div>
+    <div><div class="num">2</div><div class="cap">lanes served on a label by the rescue, 14 names, all recorded</div></div>
+    <div><div class="num">246 / 1,185</div><div class="cap">shown names admitted at stage 5 on generic words alone; the finding of 6 September</div></div>
+  </div>
+</div>
+
+<p class="foot">Source: selector/match_reference.py at fb260b2, docs/RULES.md, and docs/matching-refinement-6sep.md for the measurements. Rules named in brackets are the rulebook's own numbers. Stages marked in green are gates that remove names; the others rank, label, or draw.</p>
+</div>

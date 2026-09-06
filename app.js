@@ -529,11 +529,21 @@ async function submitLead() {
 
   const result = computeResult();
   try {
-    await fetch(CONFIG.leadEndpoint, {
+    /* THE LEAD CARRIES NO FIGURE. Until 6-Sep-2026 this line posted the whole `responses` object
+       plus every number computeResult had just worked out, so a founder's revenue, ARR, EBITDA and
+       last round landed in the sheet at the moment they typed their email, before they had seen
+       anything. buildLeadRecord in reveal-request.js loops over an allowlist of profile fields and
+       two ratios, and api/lead.js blanks every figure column unless it sees a consent block, so
+       the boundary is held at both ends. The figures go later, once, when the founder presses the
+       button on the result screen. */
+    const res = await fetch(CONFIG.leadEndpoint, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(Object.assign({}, responses, { computed: result }))
+      body: JSON.stringify(buildLeadRecord(responses))
     });
+    const out = await res.json().catch(function () { return {}; });
+    /* Kept so the consent post can be joined to this row rather than arriving as an orphan. */
+    if (out && out.lead_id) window.__fairwayLeadId = out.lead_id;
     track('lead_captured', {});
   } catch (e) {
     console.error('[fairway] lead post failed', e);

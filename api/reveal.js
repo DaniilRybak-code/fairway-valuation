@@ -9,6 +9,26 @@
  * about the founder's own answers. Every numeric field the model emits is
  * dropped by enforce(). A model may not put a number on this page.
  *
+ * NO FIGURE REACHES THIS ENDPOINT, and from 6-Sep-2026 that is enforced here as well as in the
+ * page. Daniil's instruction was that we do not receive a founder's financials unless they choose,
+ * after seeing their field, to send them for review. The body this endpoint now receives is the
+ * profile, the growth rate and the gross margin: labels and two percentages. `answers` below reads
+ * only those, so a body that still carries a figure has it dropped on the floor here rather than
+ * forwarded to a model.
+ *
+ * WHAT LEFT WITH THE FIGURES. This endpoint used to subtract the midpoint of the founder's stated
+ * raise from the stage median to build its anchor sentence. The raise is an amount, so it is gone
+ * from the request. field.js has always done that same subtraction on the page, from a value in
+ * the browser, so nothing the founder sees changes: the deduction moved to the side of the wall
+ * that already had the number.
+ *
+ * THE ENGINE PAYLOAD IS NOT SERVED FROM HERE YET, and the response says so rather than pretending.
+ * selector/reveal_payload.py builds the whole reveal in one pass and it is Python; this endpoint is
+ * a Node function. `payload: null` with a named reason is what the client reads, and reveal-client
+ * .js renders nothing rather than something wrong when it sees one. Standing up the Python side is
+ * the next piece of the wiring week and it does not change the boundary: that request carries the
+ * same allowlisted body this one does.
+ *
  * Env: ANTHROPIC_API_KEY (required), ANTHROPIC_MODEL (optional)
  */
 
@@ -18,10 +38,9 @@ import { COMPS } from '../data/comps.js';
 
 export const config = { maxDuration: 60 };
 
-const RAISE_MIDPOINT = {
-  'Under $500k': 0.35, '$500k–$1M': 0.75, '$1M–$2.5M': 1.75,
-  '$2.5M–$5M': 3.75, '$5M–$10M': 7.5, 'Over $10M': 12
-};
+/* RAISE_MIDPOINT USED TO LIVE HERE and it is deleted, not moved. The raise is an amount and this
+   endpoint no longer receives one. The same table still lives in app.js, where the browser needs
+   it to draw the stage-anchor row of the football field. */
 
 const cache = new Map();
 const hits = new Map();
@@ -33,13 +52,21 @@ export default async function handler(req, res) {
   if (rateLimited(ip)) { res.status(429).json({ error: 'rate_limited' }); return; }
 
   const a = typeof req.body === 'string' ? safeParse(req.body) : (req.body || {});
-  /* Contact details are never sent to the model. Nothing here identifies a person. */
+  /* Contact details are never sent to the model. Nothing here identifies a person.
+   *
+   * AND NEITHER IS A FIGURE. This object is the allowlist, server side. `revenue`, `profit`,
+   * `raise`, `timing`, `growth_detail`, `concerns` and `concern_notes` were all read here until
+   * 6-Sep-2026 and all of them are gone: the first four are amounts or facts about the founder's
+   * own money, and the last three are free text, which is where founders write figures when a box
+   * does not ask for one. What is left is the profile and two percentages. */
   const answers = {
     stage: s(a.stage), sector: s(a.sector), sector_detail: s(a.sector_detail),
-    revenue: s(a.revenue), growth: s(a.growth), growth_detail: s(a.growth_detail),
-    profit: s(a.profit), raise: s(a.raise), timing: s(a.timing),
-    concerns: Array.isArray(a.concerns) ? a.concerns.map(s) : [],
-    concern_notes: s(a.concern_notes),
+    sectors: Array.isArray(a.sectors) ? a.sectors.map(s) : [],
+    website: s(a.website), company: s(a.company),
+    revenue_model: s(a.revenue_model),
+    growth: s(a.growth),
+    growth_yoy: n(a.growth_yoy), growth_plan: n(a.growth_plan),
+    gross_margin: n(a.gross_margin),
     country: String(req.headers['x-vercel-ip-country'] || '')
   };
 
@@ -54,7 +81,7 @@ export default async function handler(req, res) {
   const fallback = deterministic(answers, anchor);
 
   if (!process.env.ANTHROPIC_API_KEY) {
-    res.status(200).json({ ...fallback, source: 'fallback', reason: 'no_api_key' });
+    res.status(200).json({ ...fallback, ...ENGINE_PAYLOAD, source: 'fallback', reason: 'no_api_key' });
     return;
   }
 
@@ -62,17 +89,28 @@ export default async function handler(req, res) {
     const out = await callModel(answers, anchor);
     const clean = enforce(out, anchor, fallback);
     cache.set(key, { at: Date.now(), payload: clean });
-    res.status(200).json(clean);
+    res.status(200).json({ ...clean, ...ENGINE_PAYLOAD });
   } catch (err) {
     console.error('[fairway-reveal] model call failed:', err && err.message);
-    res.status(200).json({ ...fallback, source: 'fallback', reason: 'model_error' });
+    res.status(200).json({ ...fallback, ...ENGINE_PAYLOAD, source: 'fallback', reason: 'model_error' });
   }
 }
+
+/* THE CONTRACT THE PAGE READS, stated even though there is nothing behind it yet. reveal-client.js
+   renders the peer charts, the honesty caveats, the fix list and both investor layers from
+   `payload`, and renders none of them when `payload` is null. Saying null with a reason is how the
+   page knows the difference between "the engine has nothing for you" and "the engine is not
+   plugged in", and it is what stops a half-drawn reveal from looking like a finished one. */
+const ENGINE_PAYLOAD = {
+  payload: null,
+  payload_reason: 'engine_not_served: selector/reveal_payload.py is Python and this endpoint is '
+                + 'Node. Serving it is the next piece of the wiring week. The request body does '
+                + 'not change when it lands.'
+};
 
 /* ---------- anchors ---------- */
 
 function buildAnchor(a) {
-  const raise = RAISE_MIDPOINT[a.raise] || 1.0;
   const stageRow = COMPS.stages[a.stage] || {};
   const sectorRow = COMPS.sectors[a.sector] || null;
   const regionRow = COMPS.regions[a.country] || null;
@@ -81,8 +119,11 @@ function buildAnchor(a) {
   let basis = '';
 
   if (stageRow.post_median_m) {
-    preAnchor = Math.max(stageRow.post_median_m - raise, 0.3);
-    basis = `${a.stage} median post-money of $${stageRow.post_median_m}M (${stageRow.source}), less the midpoint of the stated raise`;
+    /* THE MEDIAN, NOT THE MEDIAN LESS THE RAISE. The raise is an amount and it does not reach this
+       endpoint. field.js draws the same row with the deduction applied, from the value it holds in
+       the browser, so the founder still sees a pre-money figure. */
+    preAnchor = stageRow.post_median_m;
+    basis = `${a.stage} median post-money of $${stageRow.post_median_m}M (${stageRow.source}), before the round you are raising`;
   } else {
     /* No published anchor for this stage. Say so and widen rather than guess. */
     const seed = COMPS.stages['Seed'];
@@ -105,7 +146,6 @@ function buildAnchor(a) {
      more: what the model gets is the basis sentence, so it can write prose that
      is honest about what the page is standing on. */
   return {
-    raise,
     hasVerifiedAnchor: !!preAnchor,
     basis: basis || 'stage and sector patterns rather than a published comp set',
     vintage: COMPS.vintage
@@ -244,6 +284,8 @@ function enforce(out, anchor, fallback) {
 /* ---------- small helpers ---------- */
 function safeParse(x) { try { return JSON.parse(x); } catch (e) { return {}; } }
 function s(v) { return v === undefined || v === null ? '' : String(v).slice(0, 1200); }
+/* A percentage, or nothing. Never a string, so a figure smuggled in as text does not survive. */
+function n(v) { return typeof v === 'number' && isFinite(v) ? v : null; }
 function t(v, n) { return String(v === undefined || v === null ? '' : v).slice(0, n); }
 function round1(n) { return Math.round(n * 10) / 10; }
 

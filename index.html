@@ -42,6 +42,10 @@
             <div class="cta-stack">
               <button class="btn" onclick="startQuiz()" id="hook-cta">Try it free</button>
               <span class="cta-note">About four minutes &middot; no card</span>
+              <!-- SAID BEFORE THE QUIZ, NOT AFTER IT. Daniil, 6-Sep-2026. This sentence and the
+                   code have to agree: reveal-request.js is the allowlist it describes, and check
+                   15 fails if a figure is ever added to it. -->
+              <span class="cta-note" id="privacy-line-hero">We do not receive your revenue figures. Your comparable companies are chosen on your growth rate and your gross margin, which are percentages and say nothing about the size of your business, and the multiplication happens in your browser. Your figures reach us only if you press the button at the end of your reveal.</span>
             </div>
             <div class="hero-stats">
               <div class="hs"><em>5 peers</em><b>Chosen, not filtered</b><span>Sometimes three, sometimes seven &mdash; as many as truly match your business. Never a laundry list of twenty.</span></div>
@@ -334,7 +338,7 @@
 
   <footer>
     <div class="wrap">
-      <p class="disclaimer"><strong>Your data.</strong> The figures you enter are used to produce your valuation and the review that follows, and for nothing else. They are never sold and never shared with investors. Your name, email and phone number are held only in our own records and are never sent to the service that writes your commentary, which receives the business figures alone. We do not use your answers to train models. We keep them for [RETENTION PERIOD] and delete them sooner on request: email [PRIVACY EMAIL]. Fairway is operated by [COMPANY NAME], registered in England and Wales, company number [COMPANY NUMBER]. Full privacy policy at [PRIVACY POLICY LINK].</p>
+      <p class="disclaimer"><strong>Your data.</strong> The figures you type stay in your browser. What reaches us is your company profile, your website, your growth rate and your gross margin, which is what chooses your comparable companies, plus your name, email and phone number so that a person can write back to you. We do not receive your revenue, your ARR, whether you are profitable, your last round, or the size of the round you are raising. None of those reach the service that writes your commentary, which receives no figure at all. Your figures come to us only if you press &ldquo;Send my figures for the banker review&rdquo; on your result page, and we keep the wording you agreed to beside them. Nothing is sold and nothing is shared with investors. We do not use your answers to train models. We keep what you send for [RETENTION PERIOD] and delete it sooner on request: email [PRIVACY EMAIL]. Fairway is operated by [COMPANY NAME], registered in England and Wales, company number [COMPANY NUMBER]. Full privacy policy at [PRIVACY POLICY LINK].</p>
       <p class="disclaimer">Fairway provides informational valuation ranges and investor-fit analysis. This is not investment advice, a fairness opinion, or a regulated valuation, and should not be relied upon for legal, tax, or audit purposes. Flat fee, paid upfront; nothing is tied to whether or at what price you raise. Firm names indicate the prior employers of members of the reviewing team and do not imply any endorsement by, or affiliation with, those firms. Investor information is drawn from public sources and is not an introduction, solicitation, or recommendation.</p>
     </div>
   </footer>
@@ -352,6 +356,9 @@
     <div class="quiz-shell">
       <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
       <div class="step-label" id="step-label">Step 1 of 9</div>
+      <!-- Repeated here because the hero can be skipped: /?hook= links and the nav button both
+           land a founder on this screen without the sentence above ever being on their page. -->
+      <p class="q-help" id="privacy-line-quiz">We do not receive your revenue figures. Your comparable companies are chosen on your growth rate and your gross margin, which are percentages and say nothing about the size of your business, and the multiplication happens in your browser. Your figures reach us only if you press the button at the end of your reveal.</p>
 
       <div class="q-block" data-step="1">
         <h2 class="q-title">What stage are you at?</h2>
@@ -627,6 +634,14 @@
           </select>, taken from where you are. Change it if that is wrong.</span>
       </p>
 
+      <!-- THE PEER CHARTS AND THE HONESTY CAVEATS, both drawn by reveal-client.js from the one
+           payload selector/reveal_payload.py builds. Daniil, 6-Sep-2026: a founder who gives no
+           numbers at all still sees how the comparable companies traded, which is the argument.
+           Where the founder DID give a figure, the value beside each bar is worked out in their
+           browser from a number that never left it. Empty until the engine answers. -->
+      <div class="read-grid" id="peer-charts"></div>
+      <div id="honesty-block"></div>
+
       <!-- THE FIX LIST, drawn by recommendations.js from the selector's own payload rather than
            written here. Five dimensions, three sentences each, ordered by how much of the range
            each one moves. Same contract and same failure mode as the investor block below it:
@@ -645,8 +660,18 @@
 
       <div class="review-badge">
         <span class="dot"></span>
-        <span><strong>Under review now.</strong> A reviewer reads every set of answers that comes through here by hand and emails you their read on where inside these methods you actually sit, within 24 hours. That part is free.</span>
+        <span><strong>Ready for review.</strong> A reviewer reads a founder's answers by hand and emails their read on where inside these methods you actually sit, within 24 hours. That part is free. It needs your figures, and we do not have them.</span>
       </div>
+
+      <!-- THE CONSENT BUTTON. Daniil, 6-Sep-2026: "if the user wants to have his numbers and ff
+           reviewed, he presses a button and it comes through to us, in which case he would
+           specifically agree for us to see it."
+
+           IT SITS HERE, BESIDE THE 24-HOUR PROMISE, because that read is the thing it buys. It is
+           drawn by reveal-client.js so that the wording can name the founder's own answers one by
+           one rather than saying "your data", and so that the exact wording clicked is stored
+           beside the figures. Nothing above this line has been sent to us. -->
+      <div id="consent-block"></div>
 
       <!-- 2. WHAT BEING PRICED LOW COSTS. Loss, not gain. -->
       <div class="cost-card">
@@ -793,7 +818,7 @@
 
   <footer>
     <div class="wrap">
-      <p class="disclaimer"><strong>Your data.</strong> The figures you enter are used to produce your valuation and the review that follows, and for nothing else. They are never sold and never shared with investors. Your name, email and phone number are held only in our own records and are never sent to the service that writes your commentary, which receives the business figures alone. We do not use your answers to train models. We keep them for [RETENTION PERIOD] and delete them sooner on request: email [PRIVACY EMAIL]. Fairway is operated by [COMPANY NAME], registered in England and Wales, company number [COMPANY NUMBER]. Full privacy policy at [PRIVACY POLICY LINK].</p>
+      <p class="disclaimer"><strong>Your data.</strong> The figures you type stay in your browser. What reaches us is your company profile, your website, your growth rate and your gross margin, which is what chooses your comparable companies, plus your name, email and phone number so that a person can write back to you. We do not receive your revenue, your ARR, whether you are profitable, your last round, or the size of the round you are raising. None of those reach the service that writes your commentary, which receives no figure at all. Your figures come to us only if you press &ldquo;Send my figures for the banker review&rdquo; on your result page, and we keep the wording you agreed to beside them. Nothing is sold and nothing is shared with investors. We do not use your answers to train models. We keep what you send for [RETENTION PERIOD] and delete it sooner on request: email [PRIVACY EMAIL]. Fairway is operated by [COMPANY NAME], registered in England and Wales, company number [COMPANY NUMBER]. Full privacy policy at [PRIVACY POLICY LINK].</p>
       <p class="disclaimer">Fairway provides informational valuation ranges and investor-fit analysis. This is not investment advice, a fairness opinion, or a regulated valuation, and should not be relied upon for legal, tax, or audit purposes. Flat fee, paid upfront; nothing is tied to whether or at what price you raise. Firm names indicate the prior employers of members of the reviewing team and do not imply any endorsement by, or affiliation with, those firms. Investor information is drawn from public sources and is not an introduction, solicitation, or recommendation.</p>
     </div>
   </footer>
@@ -811,6 +836,11 @@
 <!-- The fix list. Loaded after app.js and alongside investors.js, which is the contract written at
      the top of the file, and before reveal-client.js, which is what calls both renderers. -->
 <script src="/recommendations.js"></script>
+<!-- THE BOUNDARY LOADS BEFORE THE CLIENT THAT USES IT. reveal-request.js holds the allowlist and
+     every request body in the product; reveal-figures.js holds the founder's figures and does the
+     multiplication in this browser. reveal-client.js calls both and must load after them. -->
+<script src="/reveal-request.js"></script>
+<script src="/reveal-figures.js"></script>
 <script src="/reveal-client.js"></script>
 <script src="/showcase.js"></script>
 </body>

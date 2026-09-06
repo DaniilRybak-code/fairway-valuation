@@ -317,13 +317,37 @@ def gaps(d):
     return out
 
 
-def _stage_for(prof, raise_musd=None):
-    """The founder's stage, from the raise if they gave one, else from revenue.
+# THE STAGE BANDS, IN THE WORDS THE INVESTOR TABLE USES. The founder's own answer to step 1 of the
+# quiz is written in exactly these words, so it needs no translation, only recognising.
+STAGE_NAMES = ('Pre-seed', 'Seed', 'Series A', 'Series B', 'Series C')
 
-    The quiz already asks the raise amount and it is the strongest single facet: as vcconf put it,
-    "a $25K angel and a $15M fund are different conversations, and knowing which one you are looking
-    at saves you the email."
+
+def _stage_for(prof, raise_musd=None):
+    """The founder's stage. Their own answer first, then the raise, then revenue.
+
+    THE FOUNDER'S ANSWER COMES FIRST, and until 6-Sep-2026 it was not read at all. Step 1 of the
+    quiz asks "what stage are you at?" and this function derived the answer from the size of the
+    round instead. Reading the answer is better on its own terms, and it is what lets the stage
+    gate keep working once the amounts stop reaching the engine.
+
+    MEASURED, 6-Sep-2026, across the 102 fixtures. With the raise and no stated stage the call list
+    is 813 cards and every fixture gets houses. With neither it collapses to 44 cards and 92 of the
+    102 fixtures get none, because a house that publishes a stage band can only be matched against
+    a founder who has one. With the stated stage and no raise it is 813 cards at Seed, 724 at
+    Pre-seed and 797 at Series A, and no fixture is left without a house.
+
+    WHAT IS STILL LOST WITHOUT THE RAISE is `_cheque_fits`, which drops a house whose published
+    first cheque cannot fund the round. At a $3m raise that excluded 3 of 156 callable houses. It
+    returns None without a raise, which never excludes, so those 3 are now shown with their
+    published cheque range on the card for the founder to judge.
+
+    The raise is still used when it is given. The paid tiers have it, because the founder has
+    consented to us reading their figures by then.
     """
+    stated = (prof.get('stage') or '').strip()
+    for name in STAGE_NAMES:
+        if stated.lower() == name.lower():
+            return name
     r = _f(raise_musd)
     if r is None:
         rev = _f(prof.get('revenue')) or _f(prof.get('arr'))
@@ -332,6 +356,45 @@ def _stage_for(prof, raise_musd=None):
         return None
     return ('Pre-seed' if r < 1 else 'Seed' if r < 5 else 'Series A' if r < 20
             else 'Series B' if r < 60 else 'Series C')
+
+
+# WHAT A HOUSE MEANS WHEN IT SAYS "EARLY STAGE".
+#
+# Daniil, 6-Sep-2026: "some of these houses clearly state that they are early stage. It is good
+# enough, we dont have to look for them to say exactly Series A or Seed."
+#
+# He is right, and this map is what makes that safe rather than harmful. The stage band is an EXACT
+# STRING match and a HARD GATE: `if stages and stage and not stage_hit: continue`. So writing
+# "Early stage" into the file without this map would not loosen anything, it would EXCLUDE Haystack
+# from every seed founder, because "Seed" is not the string "Early stage". A band nobody can match
+# is worse than a blank one.
+#
+# The founder can only be Pre-seed, Seed or Series A: those are the three buttons in the quiz. So
+# both of these phrases cover the whole of what a founder can be, and the filtering that still
+# matters is done by the cheque. Town Hall says "we invest across all stages" and writes $3m to
+# $30m initial cheques; it is _cheque_fits that keeps it away from a pre-seed founder raising
+# $500k, which is the right instrument for it.
+STAGE_COVERS = {
+    'EARLY STAGE': ('Pre-seed', 'Seed', 'Series A'),
+    'ALL STAGES': ('Pre-seed', 'Seed', 'Series A'),
+}
+
+
+def _stages_of(d):
+    """The founder stages a house's published band actually covers.
+
+    A band we recognise as a phrase expands to the stages it means; anything else is taken
+    literally, which is how every band in the file behaved before this existed.
+    """
+    out = []
+    for s in (d.get('stage_bands') or '').split(';'):
+        s = s.strip()
+        if not s:
+            continue
+        for x in STAGE_COVERS.get(s.upper(), (s,)):
+            if x not in out:          # "Pre-seed; Early stage" would otherwise list Pre-seed twice
+                out.append(x)
+    return out
 
 
 def _cheque_fits(d, raise_musd):
@@ -358,7 +421,7 @@ def match_callable(prof, raise_musd=None, want=8):
         secs = _sectors(d.get('screening_categories'))
         sector_hit = bool(mine & set(secs))
         sector_any = not secs
-        stages = [s.strip() for s in (d.get('stage_bands') or '').split(';') if s.strip()]
+        stages = _stages_of(d)
         stage_hit = bool(stage) and stage in stages
         stage_any = not stages
         # A PUBLISHED STAGE BAND IS A HARD GATE, NOT ONE FACET OF THREE. The enrichment turned

@@ -518,6 +518,23 @@
    },
    {
     "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 1.0,
+    "deal_note": "TechCrunch, 10-Sep-2025, $4m seed led by Eniac with 'investment from Haystack, Factorial Capital, Homebrew'. Cheque from haystack.vc: 'We typically invest $1M to $3M in initial rounds and can lead or participate.' STAGE BAND LEFT EMPTY: the site says 'earliest stages' and 'initial rounds', not a named band, and silence is not a claim; the render gate will hold this row until a band is stated or ruled.",
+    "geographies": "Silicon Valley and beyond",
+    "house_type": "VC",
+    "investor": "Haystack",
+    "not_published": null,
+    "recent_deal": "Oboe",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
+    "stage_bands": "Early stage",
+    "thesis": "Backing outlier founders at the earliest stages.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
     "cheque_high_m": 2.5,
     "cheque_low_m": 0.5,
     "deal_note": "Emerge's own post, 13-Nov-2025: 'We're delighted to announce our investment in Songscription', a '$5M seed round led by Reach Capital alongside 10x Founders and Dent Capital'. Emerge's own post, 29-Sep-2025: 'MyEdSpace has raised $15M (GBP11.9M) in a Series A led by White Star Capital, with participation from Educapital, Active Partners, Coalition Capital, and us'; MyEdSpace streams live lessons to students at home who pay per hour. Cheque from emergecapital.vc: 'Early stage investment $500k-$2.5M'; stage 'Pre-seed and seed founders'.",
@@ -547,23 +564,6 @@
     "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Capital, counsel and commitment for mission-driven founders reimagining the world we live in.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 1.0,
-    "cheque_low_m": null,
-    "deal_note": "Tech Funding News, 5-May-2026, $15m seed: 'Investors include GV, Lerer Hippeau Ventures, BoxGroup, and Shine Capital.' Second deal shows it co-leads: TechCrunch, 23-Apr-2026, Era Computer '$9 million seed round (led by Abstract Ventures and BoxGroup)', a device software platform rather than a consumer app. Cheque from boxgroup.com/about: 'Investing up to $1M'; low end not published.",
-    "geographies": "Built in NYC + SF; funds companies anywhere",
-    "house_type": "VC",
-    "investor": "BoxGroup",
-    "not_published": null,
-    "recent_deal": "MOTHER.tech (Degen app)",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://techfundingnews.com/mother-tech-15m-seed-gv-lerer-hippeau-degen-ai-app/",
-    "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "The Earliest Investor: we invest as early as the pre-seed round and as late as Series A.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }

@@ -1,4 +1,4 @@
-/* Receives everything the funnel collects and writes it somewhere durable.
+/* Receives what the funnel collects and writes it somewhere durable.
  *
  * Flow: browser POSTs JSON -> this function flattens it into a fixed column
  * order -> POSTs to LEAD_WEBHOOK_URL (a Google Apps Script web app bound to a
@@ -6,6 +6,22 @@
  *
  * The function sends `fields` alongside `values` so the sheet can write its own
  * header row on first use. Column order lives here and nowhere else.
+ *
+ * THE FIGURE COLUMNS ARE EMPTY UNLESS THE FOUNDER PRESSED THE BUTTON.
+ *
+ * Daniil, 6-Sep-2026: "we only take a record of the company data (profile, website), without
+ * storing the numbers... if the user wants to have his numbers and ff reviewed, he presses a
+ * button and it comes through to us, in which case he would specifically agree for us to see it."
+ *
+ * The page holds up its end: buildLeadRecord in reveal-request.js sends no figure. This function
+ * holds up the other end. Every column in FIGURE_COLUMNS below is written as an empty string
+ * unless the body carries `consent.figures === true`, so a future change to the page that starts
+ * sending figures again still writes nothing to the sheet. A boundary enforced at one end only is
+ * a boundary that lasts until the next hurried edit.
+ *
+ * IT NEVER DROPS SILENTLY. The log line names how many figure fields arrived and were refused, so
+ * a page that starts leaking shows up in the logs on the first request rather than in the sheet a
+ * month later.
  *
  * Env vars:
  *   LEAD_WEBHOOK_URL  the Apps Script /exec URL. Without it nothing persists.
@@ -22,8 +38,30 @@ const FIELDS = [
   'concerns', 'concern_notes', 'context_link',
   'ntm_revenue_m', 'exit_arr_m', 'run_rate_arr_m',
   'hook_variant', 'utm_source', 'country', 'region', 'city',
-  'user_agent', 'status', 'reviewer_notes', 'sent_at'
+  'user_agent', 'status', 'reviewer_notes', 'sent_at',
+  /* ADDED 6-Sep-2026, AT THE END, so an existing sheet keeps every column it already has in the
+     position it already has it. `figures_consent` is the column a reviewer sorts on to find the
+     rows they are allowed to read numbers in. */
+  'figures_consent', 'consent_at', 'consent_wording'
 ];
+
+/* THE COLUMNS THAT HOLD A FIGURE. Blank unless consent. Growth and margin are NOT on this list
+   and that is deliberate: they are ratios, the engine needs them to choose the comparables, and
+   the page says so in as many words rather than claiming we receive nothing. */
+const FIGURE_COLUMNS = [
+  'revenue', 'revenue_exact_monthly', 'arr_exact', 'recurring_pct',
+  'profitability', 'raise_band', 'timing',
+  'ebitda_ltm', 'last_round_amount', 'last_round_value', 'last_round_type', 'last_round_date',
+  'growth_detail', 'concern_notes', 'context_link',
+  'ntm_revenue_m', 'exit_arr_m', 'run_rate_arr_m'
+];
+
+/* Consent is a positive act and nothing else counts as one. A missing block, a string "true", a
+   truthy object: none of them open the figure columns. */
+function hasFigureConsent(body) {
+  const c = body && body.consent;
+  return !!(c && c.figures === true);
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -33,6 +71,7 @@ export default async function handler(req, res) {
 
   const body = typeof req.body === 'string' ? safeParse(req.body) : (req.body || {});
   const c = body.computed || {};
+  const consented = hasFigureConsent(body);
 
   const record = {
     timestamp_utc: new Date().toISOString(),
@@ -94,12 +133,29 @@ export default async function handler(req, res) {
     /* Reviewer workflow columns, filled in by a human in the sheet. */
     status: body.type === 'partial' ? 'abandoned' : (body.type === 'enrichment' ? 'enriched' : 'new'),
     reviewer_notes: '',
-    sent_at: ''
+    sent_at: '',
+
+    figures_consent: consented ? 'yes' : '',
+    consent_at: consented ? str((body.consent || {}).at) : '',
+    consent_wording: consented ? str((body.consent || {}).wording) : ''
   };
+
+  /* THE GATE. Count what arrived, name it in the log, and blank it. */
+  let refused = [];
+  if (!consented) {
+    refused = FIGURE_COLUMNS.filter(f => record[f] !== '' && record[f] !== undefined && record[f] !== null);
+    FIGURE_COLUMNS.forEach(f => { record[f] = ''; });
+  }
 
   const values = FIELDS.map(f => (record[f] === undefined || record[f] === null ? '' : record[f]));
 
+  /* The log carries the record AFTER the gate, so a figure the founder has not consented to is
+     not written to a log line either. */
   console.log('[fairway-lead]', JSON.stringify(record));
+  if (refused.length) {
+    console.warn('[fairway-lead] refused %d figure field(s) with no consent block: %s',
+                 refused.length, refused.join(', '));
+  }
 
   let forwarded = false;
   const hook = process.env.LEAD_WEBHOOK_URL;
@@ -125,7 +181,8 @@ export default async function handler(req, res) {
   }
 
   /* Always 200. A storage failure must never cost the founder their result. */
-  res.status(200).json({ ok: true, forwarded, lead_id: record.lead_id });
+  res.status(200).json({ ok: true, forwarded, lead_id: record.lead_id,
+                        figures_stored: consented, figures_refused: refused.length });
 }
 
 function safeParse(s) { try { return JSON.parse(s); } catch (e) { return { raw: s }; } }

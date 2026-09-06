@@ -392,6 +392,46 @@ for them knows the lock is over real work, which is a better argument for paying
 *Built:* `reveal_payload.build(prof, tier='free')` and check 14, which asserts that no multiple and
 no range endpoint appears anywhere outside the listed lane of a free payload.
 
+**E9. A founder's own figures stay in their browser until they press a button that says so.**
+*Added 6 Sep, on Daniil's instruction: "we only take a record of the company data (profile,
+website), without storing the numbers... if the user wants to have his numbers and ff reviewed, he
+presses a button and it comes through to us, in which case he would specifically agree for us to
+see it."*
+
+**What may leave the browser on the free path.** The company profile (stage, sector chips, the
+sector written in their own words, website, company name, country, how they charge, and the fork
+labels: how a lender funds its book, what unit a volume is in, which measure a revenue figure is
+on), the growth rate, and the gross margin. Every one of those is either a label or a percentage.
+None of them says how big the business is.
+
+**What does not.** Revenue in any form, ARR, gross revenue, book value, net income, originations,
+volume, every user count, EBITDA, the last round, whether they are profitable, the size of the round
+they are raising, and the free-text boxes, which is where a founder writes a figure when no box has
+asked for one.
+
+**Two things cross and the copy says so.** The growth rate gates which private rounds a founder is
+compared against and ranks the peers; the gross margin decides whether the reveal leads on revenue
+or on gross profit. They are needed and they are ratios. The sentence on the page says exactly that
+rather than claiming we receive nothing.
+
+**Why it costs nothing.** Selection needs those two ratios. Pricing is one multiplication and it
+happens in the browser. The proof is the gate: all 102 test fixtures carry no revenue, no growth
+rate and no margin, and 95 of them pass.
+
+**Both ends, not one.** `reveal-request.js` is the only place in the product that builds a request
+body and it builds every one by looping over the allowlist. `api/lead.js` blanks every figure column
+unless the body carries `consent.figures === true`, and `api/reveal.js` reads only the allowlisted
+fields, so a page that starts leaking again still writes nothing and sends nothing to a model.
+
+**The button.** One request, triggered by the founder, wording that names what is being sent and to
+whom, and the wording itself stored beside the figures. It buys the free 24-hour banker read.
+
+*Built and checked:* check 15, `tools/check_request_boundary.py`. It runs the request builders with
+a sentinel value in every figure the quiz collects and looks for those values in every request body,
+in the Vercel log line and in the prompt that goes to the model; it handles `api/lead.js` twice,
+with and without consent; and it compares the browser's multiplication against `round(v * low, 2)`,
+which is the sum `match_reference.py` does and check 14 recomputes.
+
 ---
 
 ## What this table says about us
