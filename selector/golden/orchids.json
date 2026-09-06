@@ -8,27 +8,27 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
-      "ARR_RUNRATE": 4
+      "ARR": 3,
+      "ARR_RUNRATE": 2
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 120.0,
+     "high": 40.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 19.8,
-     "mid": 33.0,
-     "n": 6,
+     "low": 17.9,
+     "mid": 20.0,
+     "n": 5,
      "period_mix": {
-      "RUN_RATE": 6
+      "RUN_RATE": 5
      },
      "period_span": {
       "RUN_RATE": {
@@ -36,50 +36,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Anysphere / Cursor",
-       "mult": 19.8,
-       "reason": "both do Code Generation; related type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Replit",
-       "mult": 20.0,
-       "reason": "both do App Builder, Vibe Coding; related type of business; same business function; sold the same way",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Lovable",
-       "mult": 33.0,
-       "reason": "both do AI App Builder, Vibe Coding, Web App Builder; related type of business; same business function; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Framer",
-       "mult": 40.0,
-       "reason": "shares the language of ai, builder, code; related type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Perplexity",
-       "mult": 120.0,
-       "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "ai",
@@ -93,8 +50,18 @@
       "vibe",
       "web"
      ],
-     "spread": 6.1,
+     "spread": 2.2,
      "table": [
+      {
+       "company": "Figma",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 17.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
       {
        "company": "Anysphere / Cursor",
        "date": "Jun-25",
@@ -111,16 +78,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Genspark",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 25.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -144,19 +101,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Perplexity",
-       "date": "Jul-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 120.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 9.5,
+     "tag_evidence": 8.7,
      "thin": false,
      "triangulated": false
     }
@@ -184,7 +131,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
-    "score": 8.2,
+    "score": 8.1,
     "ticker": "NASDAQGS:DBX"
    }
   ],
@@ -254,7 +201,7 @@
      "ticker": "NYSE:FIG"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": false
   },
@@ -482,70 +429,14 @@
      {
       "company": "Replit",
       "date": "Sep-25"
+     },
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
      }
     ],
     "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Emergence Capital Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "SBI Investment",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "LG Technology Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Pavilion Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Uphonest Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Lanchi Ventures",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -572,10 +463,14 @@
      {
       "company": "Anysphere / Cursor",
       "date": "Jun-25"
+     },
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
      }
     ],
     "investor": "Thrive",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -606,6 +501,46 @@
     ],
     "investor": "CoreWeave",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Microsoft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Altimeter",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Figma",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tender participants not disclosed",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -618,7 +553,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do AI App Builder, Vibe Coding, Web App Builder; related type of business; same business function; same kind of customer",
-    "score": 25.5,
+    "score": 24.7,
     "type": "PRIMARY"
    },
    {
@@ -629,18 +564,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "both do App Builder, Vibe Coding; related type of business; same business function; sold the same way",
-    "score": 15.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Genspark",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
-    "score": 13.1,
+    "score": 15.6,
     "type": "PRIMARY"
    },
    {
@@ -651,18 +575,7 @@
     "in_medians": true,
     "mult": 40.0,
     "reason": "shares the language of ai, builder, code; related type of business; same kind of customer; same revenue model",
-    "score": 16.4,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Jul-2025",
-    "bound": "",
-    "company": "Perplexity",
-    "date": "Jul-25",
-    "in_medians": true,
-    "mult": 120.0,
-    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-    "score": 13.1,
+    "score": 15.9,
     "type": "PRIMARY"
    },
    {
@@ -673,7 +586,7 @@
     "in_medians": true,
     "mult": 19.8,
     "reason": "both do Code Generation; related type of business; same business function; same revenue model",
-    "score": 17.4,
+    "score": 17.2,
     "type": "PRIMARY"
    },
    {
@@ -686,6 +599,28 @@
     "reason": "shares the language of prompt; related type of business; same business function; same revenue model",
     "score": 16.6,
     "type": "CONTROL"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "OpenAI",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 54.5,
+    "reason": "shares the language of ai, generation; related type of business; same revenue model; sold the same way",
+    "score": 11.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Figma",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 17.9,
+    "reason": "shares the language of web; same type of business; same business function; same revenue model",
+    "score": 14.7,
+    "type": "SECONDARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -695,23 +630,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 4
+    "ARR": 3,
+    "ARR_RUNRATE": 2
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 120.0,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 40.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 19.8,
-   "mid": 33.0,
-   "n": 6,
+   "low": 17.9,
+   "mid": 20.0,
+   "n": 5,
    "period_mix": {
-    "RUN_RATE": 6
+    "RUN_RATE": 5
    },
    "period_span": {
     "RUN_RATE": {
@@ -719,50 +654,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Anysphere / Cursor",
-     "mult": 19.8,
-     "reason": "both do Code Generation; related type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "both do App Builder, Vibe Coding; related type of business; same business function; sold the same way",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "both do AI App Builder, Vibe Coding, Web App Builder; related type of business; same business function; same kind of customer",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Framer",
-     "mult": 40.0,
-     "reason": "shares the language of ai, builder, code; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Perplexity",
-     "mult": 120.0,
-     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "ai",
@@ -776,8 +668,18 @@
     "vibe",
     "web"
    ],
-   "spread": 6.1,
+   "spread": 2.2,
    "table": [
+    {
+     "company": "Figma",
+     "date": "Jul-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 17.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
     {
      "company": "Anysphere / Cursor",
      "date": "Jun-25",
@@ -794,16 +696,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Genspark",
-     "date": "Nov-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 25.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -827,30 +719,20 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Perplexity",
-     "date": "Jul-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 120.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 9.5,
+   "tag_evidence": 8.7,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 17,
+  "private_window_months": 25,
   "secondary": [
    {
     "company": "Similarweb Ltd.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of app, web; related type of business; same revenue model",
-    "score": 6.4,
+    "score": 6.2,
     "ticker": "NYSE:SMWB"
    }
   ],
@@ -903,7 +785,7 @@
      "ticker": "NYSE:SMWB"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.2,
    "thin": true,
    "triangulated": false
   }

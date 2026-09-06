@@ -8,153 +8,7 @@
      "basis": "BOOK",
      "basis_label": "price to book",
      "basis_mix": {
-      "UNKNOWN": 6
-     },
-     "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "book_value",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 3.8,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 1.0,
-     "mid": 1.4500000000000002,
-     "n": 6,
-     "period_mix": {
-      "NTM": 6
-     },
-     "period_span": {
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Velocity Financial, Inc.",
-       "mult": 0.8,
-       "reason": "shares the language of broker; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Inter & Co, Inc.",
-       "mult": 1.0,
-       "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      },
-      {
-       "company": "LendingClub Corporation",
-       "mult": 1.1,
-       "reason": "shares the language of bank; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      },
-      {
-       "company": "SoFi Technologies, Inc.",
-       "mult": 1.8,
-       "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Nu Holdings Ltd.",
-       "mult": 3.8,
-       "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Chime Financial, Inc.",
-       "mult": 6.2,
-       "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      }
-     ],
-     "positioning": [],
-     "post_stated_n": 0,
-     "shared_words": [
-      "bank",
-      "broker",
-      "mortgage"
-     ],
-     "show_retention": false,
-     "spread": 7.8,
-     "table": [
-      {
-       "company": "Velocity Financial, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 16.3,
-       "multiple": 0.8,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:VEL"
-      },
-      {
-       "company": "Inter & Co, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 18.9,
-       "multiple": 1.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQ:INTR"
-      },
-      {
-       "company": "LendingClub Corporation",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 12.0,
-       "multiple": 1.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:LC"
-      },
-      {
-       "company": "SoFi Technologies, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 23.3,
-       "multiple": 1.8,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQ:SOFI"
-      },
-      {
-       "company": "Nu Holdings Ltd.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 23.3,
-       "multiple": 3.8,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:NU"
-      },
-      {
-       "company": "Chime Financial, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 18.8,
-       "multiple": 6.2,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQ:CHYM"
-      }
-     ],
-     "tag_evidence": 0.6,
-     "thin": false,
-     "triangulated": false
-    },
-    "EARNINGS": {
-     "anchor_dropped": false,
-     "band": "DIRECT",
-     "basis": "EARNINGS",
-     "basis_label": "price to earnings",
-     "basis_mix": {
-      "UNKNOWN": 5
+      "UNKNOWN": 3
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -162,18 +16,18 @@
      "control_names": [],
      "dispersed": false,
      "display": "RANGE",
-     "founder_field": "net_income",
+     "founder_field": "book_value",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 21.4,
+     "high": 1.8,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 6.2,
-     "mid": 7.5,
-     "n": 5,
+     "low": 0.4,
+     "mid": 0.8,
+     "n": 3,
      "period_mix": {
-      "NTM": 5
+      "NTM": 3
      },
      "period_span": {
       "NTM": {
@@ -190,8 +44,93 @@
       "mortgage"
      ],
      "show_retention": false,
-     "spread": 3.5,
+     "spread": 4.5,
      "table": [
+      {
+       "company": "Onity Group Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 8.5,
+       "multiple": 0.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:ONIT"
+      },
+      {
+       "company": "Velocity Financial, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 16.3,
+       "multiple": 0.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:VEL"
+      },
+      {
+       "company": "SoFi Technologies, Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 23.3,
+       "multiple": 1.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NASDAQ:SOFI"
+      }
+     ],
+     "tag_evidence": 0.4,
+     "thin": false,
+     "triangulated": false
+    },
+    "EARNINGS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "EARNINGS",
+     "basis_label": "price to earnings",
+     "basis_mix": {
+      "UNKNOWN": 3
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "net_income",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 21.4,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 4.5,
+     "mid": 6.1,
+     "n": 3,
+     "period_mix": {
+      "NTM": 3
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "bank",
+      "broker",
+      "mortgage"
+     ],
+     "show_retention": false,
+     "spread": 4.8,
+     "table": [
+      {
+       "company": "Onity Group Inc.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 8.5,
+       "multiple": 4.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:ONIT"
+      },
       {
        "company": "Velocity Financial, Inc.",
        "growth_basis": "CAGR_CY1_CY3",
@@ -200,33 +139,6 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NYSE:VEL"
-      },
-      {
-       "company": "Inter & Co, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 18.9,
-       "multiple": 6.2,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQ:INTR"
-      },
-      {
-       "company": "LendingClub Corporation",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 12.0,
-       "multiple": 7.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:LC"
-      },
-      {
-       "company": "Nu Holdings Ltd.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 23.3,
-       "multiple": 13.6,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:NU"
       },
       {
        "company": "SoFi Technologies, Inc.",
@@ -238,7 +150,7 @@
        "ticker": "NASDAQ:SOFI"
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.4,
      "thin": false,
      "triangulated": false
     }
@@ -297,7 +209,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.2,
      "thin": true,
      "triangulated": false
     },
@@ -368,7 +280,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.2,
      "thin": true,
      "triangulated": false
     },
@@ -450,7 +362,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": false
     }
@@ -462,7 +374,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of broker; same type of business; same end market; same business function",
-    "score": 14.1,
+    "score": 13.9,
     "ticker": "NYSE:VEL"
    },
    {
@@ -470,63 +382,39 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
-    "score": 11.6,
+    "score": 11.2,
     "ticker": "NASDAQ:SOFI"
    },
    {
-    "company": "LendingClub Corporation",
+    "company": "Onity Group Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of bank; same type of business; same business function; same kind of customer",
-    "score": 11.3,
-    "ticker": "NYSE:LC"
-   },
-   {
-    "company": "Nu Holdings Ltd.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-    "score": 9.8,
-    "ticker": "NYSE:NU"
-   },
-   {
-    "company": "Inter & Co, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-    "score": 9.8,
-    "ticker": "NASDAQ:INTR"
-   },
-   {
-    "company": "Chime Financial, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-    "score": 7.3,
-    "ticker": "NASDAQ:CHYM"
+    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
+    "score": 14.2,
+    "ticker": "NYSE:ONIT"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 3.8,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.0,
-   "mid": 1.45,
-   "n": 6,
+   "low": 0.4,
+   "mid": 0.8,
+   "n": 3,
    "period_mix": {
-    "NTM": 6
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -534,50 +422,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Velocity Financial, Inc.",
-     "mult": 0.8,
-     "reason": "shares the language of broker; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Inter & Co, Inc.",
-     "mult": 1.0,
-     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "LendingClub Corporation",
-     "mult": 1.1,
-     "reason": "shares the language of bank; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SoFi Technologies, Inc.",
-     "mult": 1.8,
-     "reason": "both do Mortgage; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Nu Holdings Ltd.",
-     "mult": 3.8,
-     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Chime Financial, Inc.",
-     "mult": 6.2,
-     "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -586,8 +431,17 @@
     "mortgage"
    ],
    "show_retention": false,
-   "spread": 7.8,
+   "spread": 4.5,
    "table": [
+    {
+     "company": "Onity Group Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.5,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:ONIT"
+    },
     {
      "company": "Velocity Financial, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -598,24 +452,6 @@
      "ticker": "NYSE:VEL"
     },
     {
-     "company": "Inter & Co, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.9,
-     "multiple": 1.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:INTR"
-    },
-    {
-     "company": "LendingClub Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 12.0,
-     "multiple": 1.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:LC"
-    },
-    {
      "company": "SoFi Technologies, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 23.3,
@@ -623,27 +459,9 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:SOFI"
-    },
-    {
-     "company": "Nu Holdings Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 23.3,
-     "multiple": 3.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:NU"
-    },
-    {
-     "company": "Chime Financial, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.8,
-     "multiple": 6.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:CHYM"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
   },
@@ -951,7 +769,7 @@
     "in_medians": true,
     "mult": 4.73,
     "reason": "shares the language of uk; related type of business; same business function; same kind of customer",
-    "score": 14.6,
+    "score": 14.2,
     "type": "PRIMARY"
    },
    {
@@ -962,7 +780,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of bank, uk; related type of business; same business function; same kind of customer",
-    "score": 14.9,
+    "score": 14.2,
     "type": "PRIMARY"
    },
    {
@@ -973,7 +791,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "both do UK; same type of business; same business function; same kind of customer",
-    "score": 13.1,
+    "score": 12.7,
     "type": "PRIMARY"
    },
    {
@@ -984,7 +802,7 @@
     "in_medians": true,
     "mult": 8.9,
     "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
-    "score": 18.4,
+    "score": 17.7,
     "type": "PRIMARY"
    },
    {
@@ -995,7 +813,7 @@
     "in_medians": true,
     "mult": 8.79,
     "reason": "shares the language of mortgage; same type of business; same kind of customer; same AI stance",
-    "score": 9.9,
+    "score": 9.7,
     "type": "PRIMARY"
    },
    {
@@ -1006,7 +824,7 @@
     "in_medians": true,
     "mult": 7.59,
     "reason": "shares the language of bank, uk; related type of business; same business function; same kind of customer",
-    "score": 14.9,
+    "score": 14.2,
     "type": "PRIMARY"
    }
   ],
@@ -1074,7 +892,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.2,
    "thin": true,
    "triangulated": false
   },
@@ -1085,23 +903,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of bank, broker, funding; same type of business; same business function; same kind of customer",
-    "score": 14.5,
+    "score": 13.8,
     "ticker": "ASX:PPM"
-   },
-   {
-    "company": "Onity Group Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
-    "score": 14.4,
-    "ticker": "NYSE:ONIT"
    },
    {
     "company": "PennyMac Financial Services, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of broker, mortgage; same type of business; same business function; same kind of customer",
-    "score": 14.0,
+    "score": 13.6,
     "ticker": "NYSE:PFSI"
    },
    {
@@ -1109,16 +919,24 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
-    "score": 13.9,
+    "score": 13.2,
     "ticker": "LSE:SUS"
    },
    {
-    "company": "Cembra Money Bank AG",
+    "company": "Rocket Companies, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of bank; related type of business; same business function; same kind of customer",
-    "score": 11.8,
-    "ticker": "SWX:CMBN"
+    "reason": "shares the language of mortgage; same type of business; same business function; same kind of customer",
+    "score": 10.2,
+    "ticker": "NYSE:RKT"
+   },
+   {
+    "company": "UWM Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of broker, mortgage; same type of business; same business function; same revenue model",
+    "score": 10.1,
+    "ticker": "NYSE:UWMC"
    }
   ],
   "secondary_range": {
@@ -1134,10 +952,10 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.8,
+   "high": 1.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
+   "low": 0.9,
    "mid": 0.9,
    "n": 5,
    "period_mix": {
@@ -1160,17 +978,8 @@
     "uk"
    ],
    "show_retention": false,
-   "spread": 4.5,
+   "spread": 1.9,
    "table": [
-    {
-     "company": "Onity Group Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.5,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:ONIT"
-    },
     {
      "company": "PennyMac Financial Services, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1199,16 +1008,25 @@
      "ticker": "LSE:SUS"
     },
     {
-     "company": "Cembra Money Bank AG",
+     "company": "Rocket Companies, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 1.9,
-     "multiple": 1.8,
+     "growth_pct": 8.0,
+     "multiple": 1.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "SWX:CMBN"
+     "ticker": "NYSE:RKT"
+    },
+    {
+     "company": "UWM Holdings Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.4,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:UWMC"
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   }

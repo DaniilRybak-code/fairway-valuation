@@ -67,7 +67,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.1,
+     "tag_evidence": 1.0,
      "thin": true,
      "triangulated": false
     }
@@ -79,7 +79,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Zero Trust; related type of business; same kind of customer; same revenue model",
-    "score": 11.5,
+    "score": 11.3,
     "ticker": "NYSE:NET"
    },
    {
@@ -87,7 +87,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of hosting, managed; related type of business; same kind of customer; same revenue model",
-    "score": 11.2,
+    "score": 11.1,
     "ticker": "NYSE:DOCN"
    },
    {
@@ -95,7 +95,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of application; related type of business; same kind of customer; same revenue model",
-    "score": 11.0,
+    "score": 10.9,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -103,7 +103,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of managed; related type of business; same kind of customer; same revenue model",
-    "score": 10.8,
+    "score": 10.7,
     "ticker": "NASDAQGM:MDB"
    },
    {
@@ -111,7 +111,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of application; same type of business; same revenue model",
-    "score": 8.0,
+    "score": 7.9,
     "ticker": "NASDAQGS:AKAM"
    },
    {
@@ -119,7 +119,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Zero Trust; same type of business; same AI stance",
-    "score": 7.5,
+    "score": 7.2,
     "ticker": "NYSE:ATEN"
    },
    {
@@ -127,7 +127,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of secure, security, trust; same type of business",
-    "score": 6.4,
+    "score": 6.2,
     "ticker": "NASDAQGS:NTSK"
    }
   ],
@@ -288,7 +288,7 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
   },
@@ -664,7 +664,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "both do Deployment Hosting; related type of business; same business function; same revenue model",
-    "score": 13.6,
+    "score": 13.5,
     "type": "PRIMARY"
    },
    {
@@ -675,7 +675,7 @@
     "in_medians": false,
     "mult": 32.5,
     "reason": "shares the language of hosting; related type of business; same business function; same kind of customer",
-    "score": 18.0,
+    "score": 17.9,
     "type": "PRIMARY"
    },
    {
@@ -686,7 +686,7 @@
     "in_medians": false,
     "mult": 41.1,
     "reason": "both do Application Security; same type of business; same kind of customer; sold the same way",
-    "score": 12.1,
+    "score": 12.0,
     "type": "PRIMARY"
    },
    {
@@ -708,7 +708,7 @@
     "in_medians": true,
     "mult": 45.3,
     "reason": "shares the language of security, trust; same type of business; sold the same way; same AI stance",
-    "score": 10.5,
+    "score": 10.4,
     "type": "PRIMARY"
    }
   ],
@@ -774,7 +774,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 1.0,
    "thin": true,
    "triangulated": false
   },
@@ -785,7 +785,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of hosting; related type of business; sold the same way; same AI stance",
-    "score": 7.0,
+    "score": 6.9,
     "ticker": "XTRA:IOS"
    },
    {
@@ -793,7 +793,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of application; related type of business; same revenue model",
-    "score": 6.5,
+    "score": 6.4,
     "ticker": "NYSE:DT"
    },
    {
@@ -801,7 +801,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Zero Trust; same type of business",
-    "score": 6.4,
+    "score": 6.2,
     "ticker": "NASDAQGS:ZS"
    },
    {
@@ -809,7 +809,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of hosting; related type of business; sold the same way",
-    "score": 6.0,
+    "score": 5.9,
     "ticker": "NYSE:GDDY"
    },
    {
@@ -909,7 +909,7 @@
      "ticker": "NASDAQGS:FTNT"
     }
    ],
-   "tag_evidence": 1.4,
+   "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
   }

@@ -47,7 +47,7 @@
        "company": "Micro1",
        "mult": 10.0,
        "reason": "both do Candidate Matching, Talent Marketplace; same type of business; same business function; same revenue model",
-       "tier": "DIRECT",
+       "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
@@ -111,75 +111,51 @@
   },
   "core": [
    {
-    "company": "Angi Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQGS:ANGI"
-   },
-   {
-    "company": "Freelancer Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 10.1,
-    "ticker": "ASX:FLN"
-   },
-   {
     "company": "Upwork Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Talent Marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 8.7,
+    "score": 8.5,
     "ticker": "NASDAQGS:UPWK"
    },
    {
-    "company": "Fiverr International Ltd.",
-    "family": "consumer",
-    "in_medians": false,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 8.1,
-    "ticker": "NYSE:FVRR"
-   },
-   {
-    "company": "Airtasker Limited",
+    "company": "SMS Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same revenue model",
-    "score": 7.6,
-    "ticker": "ASX:ART"
+    "reason": "shares the language of matching; same business function; same kind of customer",
+    "score": 5.8,
+    "ticker": "TSE:2175"
    },
    {
-    "company": "hipages Group Holdings",
+    "company": "SEEK Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "ASX:HPG"
+    "reason": "shares the language of candidate, marketplace, talent; same kind of customer; same purchase frequency",
+    "score": 5.6,
+    "ticker": "ASX:SEK"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.3,
+   "high": 3.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.0,
-   "mid": 1.2,
-   "n": 5,
+   "low": 1.2,
+   "mid": 2.6,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -191,39 +167,14 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "candidate",
     "marketplace",
+    "matching",
     "talent"
    ],
    "show_retention": false,
-   "spread": 3.2,
+   "spread": 2.9,
    "table": [
-    {
-     "company": "Angi Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.0,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:ANGI"
-    },
-    {
-     "company": "hipages Group Holdings",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.7,
-     "multiple": 1.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:HPG"
-    },
-    {
-     "company": "Freelancer Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.3,
-     "multiple": 1.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:FLN"
-    },
     {
      "company": "Upwork Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -234,16 +185,25 @@
      "ticker": "NASDAQGS:UPWK"
     },
     {
-     "company": "Airtasker Limited",
+     "company": "SMS Co., Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.4,
-     "multiple": 1.3,
+     "growth_pct": 9.7,
+     "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "ASX:ART"
+     "ticker": "TSE:2175"
+    },
+    {
+     "company": "SEEK Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.7,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:SEK"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -518,7 +478,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "both do Candidate Matching, Talent Marketplace; same type of business; same business function; same revenue model",
-    "score": 18.2,
+    "score": 17.6,
     "type": "PRIMARY"
    },
    {
@@ -529,7 +489,7 @@
     "in_medians": true,
     "mult": 2.08,
     "reason": "shares the language of hiring, marketplace; same type of business; same business function; same revenue model",
-    "score": 13.7,
+    "score": 13.6,
     "type": "PRIMARY"
    }
   ],
@@ -538,67 +498,35 @@
   "private_window_months": 56,
   "secondary": [
    {
-    "company": "Booking Holdings Inc.",
+    "company": "C.H. Robinson Worldwide",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same purchase frequency",
-    "score": 8.1,
-    "ticker": "NASDAQGS:BKNG"
-   },
-   {
-    "company": "Expedia Group, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same purchase frequency",
-    "score": 8.1,
-    "ticker": "NASDAQGS:EXPE"
-   },
-   {
-    "company": "Trip.com Group Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same purchase frequency",
-    "score": 8.1,
-    "ticker": "NASDAQGS:TCOM"
-   },
-   {
-    "company": "SMS Co., Ltd.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of matching; same business function; same kind of customer",
-    "score": 6.1,
-    "ticker": "TSE:2175"
-   },
-   {
-    "company": "Alibaba Group Holding Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model",
-    "score": 6.1,
-    "ticker": "NYSE:BABA"
+    "reason": "shares the language of sourcing; same revenue model",
+    "score": 5.1,
+    "ticker": "NASDAQGS:CHRW"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
-   "high": 4.8,
+   "display": "DIAMOND",
+   "high": 1.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
-   "mid": 2.1,
-   "n": 5,
+   "low": 1.0,
+   "mid": 1.0,
+   "n": 1,
    "period_mix": {
-    "NTM": 5
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -610,61 +538,25 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "marketplace",
-    "matching"
+    "sourcing"
    ],
    "show_retention": false,
-   "spread": 3.7,
+   "sole": "C.H. Robinson Worldwide",
+   "spread": 1.0,
    "table": [
     {
-     "company": "Alibaba Group Holding Limited",
+     "company": "C.H. Robinson Worldwide",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.8,
-     "multiple": 1.3,
+     "growth_pct": 5.3,
+     "multiple": 1.0,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:BABA"
-    },
-    {
-     "company": "Trip.com Group Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.9,
-     "multiple": 1.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:TCOM"
-    },
-    {
-     "company": "Expedia Group, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.3,
-     "multiple": 2.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:EXPE"
-    },
-    {
-     "company": "SMS Co., Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.7,
-     "multiple": 2.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:2175"
-    },
-    {
-     "company": "Booking Holdings Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.8,
-     "multiple": 4.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:BKNG"
+     "ticker": "NASDAQGS:CHRW"
     }
    ],
    "tag_evidence": 0.6,
-   "thin": false,
-   "triangulated": false
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Agentic hiring marketplace"

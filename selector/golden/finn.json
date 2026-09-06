@@ -92,7 +92,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 11.4,
+     "tag_evidence": 10.3,
      "thin": false,
      "triangulated": false
     },
@@ -170,7 +170,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of car, owned; same type of business; same end market; same business function",
-    "score": 15.0,
+    "score": 14.7,
     "ticker": "NYSE:CVNA"
    },
    {
@@ -178,7 +178,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of car, owned; same type of business; same end market; same business function",
-    "score": 13.0,
+    "score": 12.7,
     "ticker": "NYSE:KMX"
    },
    {
@@ -186,7 +186,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
-    "score": 9.7,
+    "score": 9.6,
     "ticker": "NYSE:CPNG"
    },
    {
@@ -198,19 +198,11 @@
     "ticker": "NASDAQGS:JD"
    },
    {
-    "company": "Amazon.com, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
-    "score": 7.1,
-    "ticker": "NASDAQGS:AMZN"
-   },
-   {
     "company": "AUTO1 Group SE",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of car; related type of business; same end market; sold the same way",
-    "score": 6.8,
+    "score": 6.7,
     "ticker": "XTRA:AG1"
    }
   ],
@@ -257,13 +249,6 @@
      "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
-    },
-    {
-     "company": "Amazon.com, Inc.",
-     "mult": 3.2,
-     "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
@@ -302,7 +287,7 @@
      "ticker": "NYSE:CVNA"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
@@ -586,7 +571,7 @@
     "in_medians": true,
     "mult": 5.0,
     "reason": "both do Car Subscription, Owned Vehicle Fleet, EV Fleet; same type of business; same kind of customer; same revenue model",
-    "score": 25.9,
+    "score": 24.8,
     "type": "PRIMARY"
    },
    {
@@ -597,7 +582,7 @@
     "in_medians": true,
     "mult": 2.75,
     "reason": "both do Ownership Alternative; same type of business; same business function; same kind of customer",
-    "score": 22.2,
+    "score": 21.5,
     "type": "MIXED"
    },
    {
@@ -608,7 +593,7 @@
     "in_medians": true,
     "mult": 10.1,
     "reason": "shares the language of owned, to; related type of business; same business function; same kind of customer",
-    "score": 13.7,
+    "score": 13.6,
     "type": "PRIMARY"
    },
    {
@@ -620,17 +605,6 @@
     "mult": 5.5,
     "reason": "shares the language of ev; same type of business; same kind of customer; sold the same way",
     "score": 14.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "At announcement",
-    "bound": "",
-    "company": "AG1 (Athletic Greens)",
-    "date": "Jan-22",
-    "in_medians": false,
-    "mult": 8.77,
-    "reason": "shares the language of subscription; related type of business; same kind of customer; same revenue model",
-    "score": 14.1,
     "type": "PRIMARY"
    },
    {
@@ -732,7 +706,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 11.4,
+   "tag_evidence": 10.3,
    "thin": false,
    "triangulated": false
   },
@@ -743,7 +717,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of owned, subscription, to; related type of business; same business function; same kind of customer",
-    "score": 13.8,
+    "score": 13.7,
     "ticker": "NYSE:BARK"
    },
    {
@@ -751,7 +725,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of subscription, to; related type of business; same business function; same kind of customer",
-    "score": 13.7,
+    "score": 13.6,
     "ticker": "NYSE:HIMS"
    },
    {
@@ -759,7 +733,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of owned, subscription, to; same type of business; same business function; same kind of customer",
-    "score": 13.3,
+    "score": 13.2,
     "ticker": "XTRA:HFG"
    },
    {
@@ -767,7 +741,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of owned, subscription, to; same type of business; same business function; same kind of customer",
-    "score": 13.3,
+    "score": 13.2,
     "ticker": "TSE:3182"
    },
    {
@@ -775,7 +749,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of owned, subscription; same type of business; same business function; same kind of customer",
-    "score": 11.7,
+    "score": 11.6,
     "ticker": "NYSE:CHWY"
    }
   ],
@@ -900,7 +874,7 @@
      "ticker": "NYSE:HIMS"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

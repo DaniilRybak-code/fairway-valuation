@@ -80,7 +80,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
     },
@@ -127,9 +127,9 @@
        "transaction_type": "MIXED"
       },
       {
-       "company": "Lovable",
-       "mult": 33.0,
-       "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+       "company": "Replit",
+       "mult": 20.0,
+       "reason": "shares the language of agent, ai; related type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -167,11 +167,11 @@
        "ticker": ""
       },
       {
-       "company": "Lovable",
-       "date": "Dec-25",
+       "company": "Replit",
+       "date": "Sep-25",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 33.0,
+       "multiple": 20.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -197,7 +197,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
     }
@@ -209,7 +209,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NYSE:NET"
    },
    {
@@ -217,39 +217,31 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NASDAQGS:DDOG"
-   },
-   {
-    "company": "SentinelOne, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same AI stance",
-    "score": 5.1,
-    "ticker": "NYSE:S"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 29.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.9,
-   "mid": 14.9,
-   "n": 3,
+   "low": 14.9,
+   "mid": 22.2,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -257,29 +249,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "SentinelOne, Inc.",
-     "mult": 4.9,
-     "reason": "shares the language of ai; same type of business; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 14.9,
-     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "mult": 29.5,
-     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -287,17 +257,8 @@
     "ai"
    ],
    "show_retention": true,
-   "spread": 6.0,
+   "spread": 2.0,
    "table": [
-    {
-     "company": "SentinelOne, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.5,
-     "multiple": 4.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:S"
-    },
     {
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -317,8 +278,8 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.3,
-   "thin": false,
+   "tag_evidence": 0.2,
+   "thin": true,
    "triangulated": false
   },
   "investors_callable": [
@@ -547,10 +508,14 @@
      {
       "company": "Decagon",
       "date": "Jan-26"
+     },
+     {
+      "company": "Replit",
+      "date": "Sep-25"
      }
     ],
     "investor": "Coatue",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -635,65 +600,21 @@
    {
     "backed": [
      {
-      "company": "Lovable",
-      "date": "Dec-25"
-     },
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
      {
       "company": "LangChain",
       "date": "Oct-25"
      }
     ],
     "investor": "CapitalG",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Menlo Anthology",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "NVentures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Salesforce Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Databricks Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "IVP",
     "n": 1
    },
    {
@@ -715,6 +636,36 @@
     ],
     "investor": "Amplify",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Prysm",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Google AI Futures Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Amex Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -727,7 +678,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-    "score": 11.8,
+    "score": 11.7,
     "type": "MIXED"
    },
    {
@@ -738,7 +689,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-    "score": 13.8,
+    "score": 13.7,
     "type": "PRIMARY"
    },
    {
@@ -749,7 +700,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-    "score": 8.9,
+    "score": 8.8,
     "type": "PRIMARY"
    },
    {
@@ -760,7 +711,7 @@
     "in_medians": false,
     "mult": 150.0,
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-    "score": 9.2,
+    "score": 8.9,
     "type": "PRIMARY"
    },
    {
@@ -771,19 +722,8 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of agents, ai; related type of business; same revenue model",
-    "score": 6.9,
+    "score": 6.8,
     "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Lovable",
-    "date": "Dec-25",
-    "in_medians": true,
-    "mult": 33.0,
-    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
-    "score": 11.6,
-    "type": "PRIMARY"
    },
    {
     "basis": "PRESS_REPORTED",
@@ -793,7 +733,18 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of agent; related type of business; same business function; same kind of customer",
-    "score": 13.3,
+    "score": 13.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "shares the language of agent, ai; related type of business; same business function; same revenue model",
+    "score": 11.7,
     "type": "PRIMARY"
    }
   ],
@@ -837,9 +788,9 @@
      "transaction_type": "MIXED"
     },
     {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "shares the language of agent, ai; related type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -877,11 +828,11 @@
      "ticker": ""
     },
     {
-     "company": "Lovable",
-     "date": "Dec-25",
+     "company": "Replit",
+     "date": "Sep-25",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 33.0,
+     "multiple": 20.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -907,151 +858,14 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 10,
-  "secondary": [
-   {
-    "company": "SoundHound AI, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-    "score": 7.1,
-    "ticker": "NASDAQGM:SOUN"
-   },
-   {
-    "company": "Dynatrace, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model",
-    "score": 6.1,
-    "ticker": "NYSE:DT"
-   },
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model",
-    "score": 6.1,
-    "ticker": "NYSE:SNOW"
-   },
-   {
-    "company": "Cerence Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same business function; same AI stance",
-    "score": 5.6,
-    "ticker": "NASDAQGS:CRNC"
-   }
-  ],
+  "private_window_months": 11,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 4
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 15.6,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 1.5,
-   "mid": 8.3,
-   "n": 4,
-   "period_mix": {
-    "NTM": 4
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [
-    {
-     "company": "Cerence Inc.",
-     "mult": 1.5,
-     "reason": "shares the language of ai; related type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Dynatrace, Inc.",
-     "mult": 5.8,
-     "reason": "shares the language of ai; related type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "mult": 10.8,
-     "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "shares the language of ai; related type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [
-    "ai"
-   ],
-   "show_retention": true,
-   "spread": 10.4,
-   "table": [
-    {
-     "company": "Cerence Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.9,
-     "multiple": 1.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:CRNC"
-    },
-    {
-     "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.5,
-     "multiple": 5.8,
-     "recurring_pct": null,
-     "retention_pct": 110.0,
-     "ticker": "NYSE:DT"
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.9,
-     "multiple": 10.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:SOUN"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": false,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Guarantee your agents use the right evidence before they act"

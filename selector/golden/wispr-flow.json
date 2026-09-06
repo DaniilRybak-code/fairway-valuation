@@ -76,7 +76,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.2,
+     "tag_evidence": 4.0,
      "thin": false,
      "triangulated": false
     }
@@ -88,7 +88,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of desktop; same type of business; same kind of customer; sold the same way",
-    "score": 9.1,
+    "score": 8.9,
     "ticker": "NASDAQGS:DBX"
    },
    {
@@ -96,7 +96,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of desktop; same type of business; sold the same way",
-    "score": 7.6,
+    "score": 7.4,
     "ticker": "NASDAQGS:OPRA"
    },
    {
@@ -104,7 +104,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of desktop; same type of business",
-    "score": 5.6,
+    "score": 5.4,
     "ticker": "HLSE:FSECURE"
    }
   ],
@@ -173,7 +173,7 @@
      "ticker": "NASDAQGS:DBX"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
   },
@@ -497,7 +497,7 @@
     "in_medians": true,
     "mult": 40.0,
     "reason": "both do Desktop Productivity; same type of business; same business function; same kind of customer",
-    "score": 20.2,
+    "score": 20.0,
     "type": "PRIMARY"
    },
    {
@@ -508,7 +508,7 @@
     "in_medians": false,
     "mult": 36.7,
     "reason": "both do Text to Speech, Speech to Text; related type of business; sold the same way; same AI stance",
-    "score": 12.7,
+    "score": 12.5,
     "type": "PRIMARY"
    },
    {
@@ -530,7 +530,7 @@
     "in_medians": true,
     "mult": 120.0,
     "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
-    "score": 11.9,
+    "score": 11.8,
     "type": "PRIMARY"
    },
    {
@@ -541,7 +541,7 @@
     "in_medians": false,
     "mult": 54.5,
     "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
-    "score": 10.4,
+    "score": 10.3,
     "type": "PRIMARY"
    }
   ],
@@ -616,7 +616,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.2,
+   "tag_evidence": 4.0,
    "thin": false,
    "triangulated": false
   },
@@ -627,7 +627,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of desktop; related type of business; sold the same way",
-    "score": 6.1,
+    "score": 5.9,
     "ticker": "NASDAQGS:GEN"
    }
   ],
@@ -679,7 +679,7 @@
      "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.4,
    "thin": true,
    "triangulated": true
   }

@@ -384,7 +384,7 @@
     "in_medians": false,
     "mult": 16.7,
     "reason": "both do Cold Email; same type of business; same kind of customer; sold the same way",
-    "score": 13.8,
+    "score": 13.6,
     "type": "PRIMARY"
    },
    {
@@ -481,7 +481,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of email, infrastructure; same kind of customer; sold the same way; same AI stance",
-    "score": 7.0,
+    "score": 6.8,
     "ticker": "XTRA:IOS"
    },
    {
@@ -489,16 +489,8 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Infrastructure Monitoring; same revenue model; sold the same way",
-    "score": 6.2,
+    "score": 5.9,
     "ticker": "NASDAQGS:DDOG"
-   },
-   {
-    "company": "Cloudflare, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of infrastructure; same revenue model; sold the same way",
-    "score": 5.8,
-    "ticker": "NYSE:NET"
    },
    {
     "company": "GoDaddy Inc.",
@@ -515,6 +507,14 @@
     "reason": "shares the language of email; same kind of customer; sold the same way",
     "score": 5.7,
     "ticker": "NASDAQGS:INTU"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of email; same revenue model; sold the same way",
+    "score": 5.7,
+    "ticker": "NYSE:TWLO"
    }
   ],
   "secondary_range": {
@@ -528,9 +528,9 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 29.5,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.6,
@@ -545,43 +545,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "GoDaddy Inc.",
-     "mult": 2.8,
-     "reason": "shares the language of email; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "IONOS Group SE",
-     "mult": 3.6,
-     "reason": "shares the language of email, infrastructure; same kind of customer; sold the same way; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Intuit Inc.",
-     "mult": 4.0,
-     "reason": "shares the language of email; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 14.9,
-     "reason": "both do Infrastructure Monitoring; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "mult": 29.5,
-     "reason": "shares the language of infrastructure; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -590,7 +554,7 @@
     "monitoring"
    ],
    "show_retention": true,
-   "spread": 10.5,
+   "spread": 5.3,
    "table": [
     {
      "company": "GoDaddy Inc.",
@@ -620,6 +584,15 @@
      "ticker": "NASDAQGS:INTU"
     },
     {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    },
+    {
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 22.9,
@@ -627,18 +600,9 @@
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 28.4,
-     "multiple": 29.5,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
   }

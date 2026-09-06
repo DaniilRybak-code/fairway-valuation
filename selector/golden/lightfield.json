@@ -66,7 +66,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.8,
+     "tag_evidence": 0.4,
      "thin": true,
      "triangulated": false
     },
@@ -77,13 +77,15 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 3,
+      "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
+     "control_n": 2,
      "control_names": [
-      "Semrush"
+      "Semrush",
+      "AuditBoard"
      ],
      "dispersed": true,
      "display": "SCATTER",
@@ -91,19 +93,24 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.0,
+     "high": 50.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 50.0,
-     "n": 4,
+     "mid": 15.0,
+     "n": 5,
      "period_mix": {
+      "NOT STATED": 1,
       "NTM": 1,
       "RUN_RATE": 3
      },
      "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "NTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -122,9 +129,23 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Owner",
-       "mult": 23.0,
-       "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
+       "company": "Restaurant365",
+       "mult": 10.0,
+       "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "AuditBoard",
+       "mult": 15.0,
+       "reason": "shares the language of automation, workflow; related type of business; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Brex",
+       "mult": 39.42,
+       "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -134,13 +155,6 @@
        "reason": "both do Sales Intelligence; same type of business; same business function; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Glean",
-       "mult": 72.0,
-       "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -148,9 +162,10 @@
       "ai",
       "automation",
       "intelligence",
-      "sales"
+      "sales",
+      "workflow"
      ],
-     "spread": 16.7,
+     "spread": 11.6,
      "table": [
       {
        "company": "Semrush",
@@ -163,11 +178,31 @@
        "ticker": ""
       },
       {
-       "company": "Owner",
-       "date": "Aug-26",
+       "company": "Restaurant365",
+       "date": "May-23",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 23.0,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "AuditBoard",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Brex",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 39.42,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -181,19 +216,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Glean",
-       "date": "Jun-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 72.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 0.8,
+     "tag_evidence": 0.7,
      "thin": false,
      "triangulated": false
     }
@@ -205,7 +230,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do CRM, Sales Automation; same type of business; same kind of customer; same revenue model",
-    "score": 12.8,
+    "score": 12.6,
     "ticker": "NYSE:HUBS"
    },
    {
@@ -225,22 +250,6 @@
     "ticker": "NYSE:KVYO"
    },
    {
-    "company": "Five9, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NASDAQGM:FIVN"
-   },
-   {
-    "company": "NICE Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NASDAQGS:NICE"
-   },
-   {
     "company": "BILL Holdings, Inc.",
     "family": "software",
     "in_medians": true,
@@ -253,23 +262,23 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.8,
+   "high": 3.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 2.45,
-   "n": 6,
+   "low": 2.2,
+   "mid": 2.75,
+   "n": 4,
    "period_mix": {
-    "NTM": 6
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -281,32 +290,13 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "automation",
     "crm",
     "sales"
    ],
    "show_retention": true,
-   "spread": 1.7,
+   "spread": 1.4,
    "table": [
-    {
-     "company": "NICE Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.5,
-     "multiple": 1.8,
-     "recurring_pct": 89.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:NICE"
-    },
-    {
-     "company": "Five9, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.8,
-     "multiple": 2.0,
-     "recurring_pct": 94.0,
-     "retention_pct": 106.0,
-     "ticker": "NASDAQGM:FIVN"
-    },
     {
      "company": "BILL Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -344,7 +334,7 @@
      "ticker": "NYSE:KVYO"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -490,70 +480,6 @@
    {
     "backed": [
      {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Redpoint",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Headline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "GIC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     },
-     {
-      "company": "Glean",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Index Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Clay",
       "date": "Jan-26"
      }
@@ -624,138 +550,96 @@
    {
     "backed": [
      {
-      "company": "Glean",
-      "date": "Jun-25"
+      "company": "AuditBoard",
+      "date": "May-24"
      }
     ],
-    "investor": "Wellington",
+    "investor": "Hg (buyer)",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Glean",
-      "date": "Jun-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "Khosla",
+    "investor": "Bain Capital Ventures",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Glean",
-      "date": "Jun-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "Bicycle",
+    "investor": "Sequoia",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Glean",
-      "date": "Jun-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "Altimeter",
+    "investor": "Tribe Capital",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Glean",
-      "date": "Jun-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "Coatue",
+    "investor": "Nexus Venture Partners",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Writer",
-      "date": "Nov-24"
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "Premji",
+    "investor": "KKR",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Writer",
-      "date": "Nov-24"
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "Radical Ventures",
+    "investor": "L Catterton (co-led)",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Writer",
-      "date": "Nov-24"
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "ICONIQ",
+    "investor": "ICONIQ Growth",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Writer",
-      "date": "Nov-24"
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "Adobe Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     }
-    ],
-    "investor": "B Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Writer",
-      "date": "Nov-24"
-     }
-    ],
-    "investor": "Citi Ventures",
+    "investor": "Bessemer Venture Partners",
     "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Owner",
-    "date": "Aug-26",
-    "in_medians": true,
-    "mult": 23.0,
-    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
-    "score": 11.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Notion",
-    "date": "Jan-26",
-    "in_medians": false,
-    "mult": 18.3,
-    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
-    "score": 13.1,
-    "type": "SECONDARY"
-   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -764,7 +648,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "both do Sales Intelligence; same type of business; same business function; sold the same way",
-    "score": 11.8,
+    "score": 11.4,
     "type": "SECONDARY"
    },
    {
@@ -775,7 +659,7 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
-    "score": 15.3,
+    "score": 15.2,
     "type": "CONTROL"
    },
    {
@@ -786,29 +670,51 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of intelligence, sales; same type of business; same business function; same revenue model",
-    "score": 14.1,
+    "score": 13.8,
     "type": "SECONDARY"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Glean",
-    "date": "Jun-25",
+    "bound": "",
+    "company": "AuditBoard",
+    "date": "May-24",
     "in_medians": true,
-    "mult": 72.0,
-    "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "type": "PRIMARY"
+    "mult": 15.0,
+    "reason": "shares the language of automation, workflow; related type of business; same revenue model",
+    "score": 8.7,
+    "type": "CONTROL"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
     "bound": "",
-    "company": "Writer",
-    "date": "Nov-24",
+    "company": "Apollo.io",
+    "date": "Aug-23",
     "in_medians": false,
-    "mult": 40.4,
-    "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-    "score": 8.6,
+    "mult": 16.7,
+    "reason": "both do Sales Intelligence; same type of business; same business function; same kind of customer",
+    "score": 18.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Restaurant365",
+    "date": "May-23",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+    "score": 10.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annualized revenue",
+    "bound": "",
+    "company": "Brex",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 39.42,
+    "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+    "score": 9.6,
     "type": "PRIMARY"
    }
   ],
@@ -820,29 +726,36 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
+   "control_n": 2,
    "control_names": [
-    "Semrush"
+    "Semrush",
+    "AuditBoard"
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 72.0,
+   "high": 50.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 50.0,
-   "n": 4,
+   "mid": 15.0,
+   "n": 5,
    "period_mix": {
+    "NOT STATED": 1,
     "NTM": 1,
     "RUN_RATE": 3
    },
    "period_span": {
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -861,9 +774,23 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Owner",
-     "mult": 23.0,
-     "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
+     "company": "Restaurant365",
+     "mult": 10.0,
+     "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "AuditBoard",
+     "mult": 15.0,
+     "reason": "shares the language of automation, workflow; related type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Brex",
+     "mult": 39.42,
+     "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -873,13 +800,6 @@
      "reason": "both do Sales Intelligence; same type of business; same business function; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Glean",
-     "mult": 72.0,
-     "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -887,9 +807,10 @@
     "ai",
     "automation",
     "intelligence",
-    "sales"
+    "sales",
+    "workflow"
    ],
-   "spread": 16.7,
+   "spread": 11.6,
    "table": [
     {
      "company": "Semrush",
@@ -902,11 +823,31 @@
      "ticker": ""
     },
     {
-     "company": "Owner",
-     "date": "Aug-26",
+     "company": "Restaurant365",
+     "date": "May-23",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 23.0,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "AuditBoard",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Brex",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 39.42,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -920,30 +861,20 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Glean",
-     "date": "Jun-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 72.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 21,
+  "private_window_months": 55,
   "secondary": [
    {
     "company": "Salesforce, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do CRM, Sales Automation; related type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "NYSE:CRM"
    },
    {
@@ -951,7 +882,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Intelligence; related type of business; same business function; same revenue model",
-    "score": 7.7,
+    "score": 7.4,
     "ticker": "NASDAQGS:GTM"
    },
    {
@@ -1031,7 +962,7 @@
      "ticker": "NYSE:CRM"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

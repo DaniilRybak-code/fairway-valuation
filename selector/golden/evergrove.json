@@ -102,7 +102,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
     },
@@ -214,7 +214,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.4,
+     "tag_evidence": 7.8,
      "thin": false,
      "triangulated": false
     }
@@ -242,7 +242,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of claims, management; related type of business; same end market; sold the same way",
-    "score": 7.1,
+    "score": 6.9,
     "ticker": "NASDAQGS:WAY"
    },
    {
@@ -358,7 +358,7 @@
      "ticker": "NYSE:VEEV"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
   },
@@ -602,7 +602,7 @@
     "in_medians": true,
     "mult": 6.88,
     "reason": "both do Claims; same type of business; same end market",
-    "score": 9.2,
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
@@ -613,7 +613,7 @@
     "in_medians": true,
     "mult": 1.39,
     "reason": "both do Claims Communication, Care Coordination; related type of business; same end market; sold the same way",
-    "score": 17.4,
+    "score": 16.8,
     "type": "CONTROL"
    },
    {
@@ -624,7 +624,7 @@
     "in_medians": true,
     "mult": 51.4,
     "reason": "shares the language of care; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.3,
     "type": "PRIMARY"
    },
    {
@@ -635,7 +635,7 @@
     "in_medians": true,
     "mult": 7.37,
     "reason": "shares the language of care; related type of business; same end market; same business function",
-    "score": 9.6,
+    "score": 9.3,
     "type": "PRIMARY"
    },
    {
@@ -668,7 +668,7 @@
     "in_medians": true,
     "mult": 14.25,
     "reason": "both do Care Management; related type of business; same end market; same business function",
-    "score": 12.6,
+    "score": 12.3,
     "type": "PRIMARY"
    }
   ],
@@ -777,7 +777,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 8.4,
+   "tag_evidence": 7.8,
    "thin": false,
    "triangulated": false
   },

@@ -69,7 +69,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.1,
      "thin": true,
      "triangulated": false
     },
@@ -159,7 +159,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.5,
+     "tag_evidence": 8.1,
      "thin": true,
      "triangulated": false
     },
@@ -329,7 +329,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.5,
+     "tag_evidence": 8.1,
      "thin": false,
      "triangulated": false
     }
@@ -349,7 +349,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Social Scheduling; same type of business; same business function; same revenue model",
-    "score": 10.6,
+    "score": 10.3,
     "ticker": "NASDAQCM:SPT"
    },
    {
@@ -357,7 +357,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of media, social; same type of business; same revenue model",
-    "score": 7.0,
+    "score": 6.8,
     "ticker": "NYSE:CXM"
    }
   ],
@@ -429,7 +429,7 @@
      "ticker": "NYSE:KVYO"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -763,7 +763,7 @@
     "in_medians": true,
     "mult": 12.8,
     "reason": "both do Social Media Scheduling, Publishing, Content Calendar; same type of business; same business function; same kind of customer",
-    "score": 30.0,
+    "score": 29.6,
     "type": "PRIMARY"
    },
    {
@@ -774,7 +774,7 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-    "score": 19.8,
+    "score": 19.6,
     "type": "CONTROL"
    },
    {
@@ -785,7 +785,7 @@
     "in_medians": true,
     "mult": 33.3,
     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-    "score": 19.8,
+    "score": 19.6,
     "type": "PRIMARY"
    },
    {
@@ -818,7 +818,7 @@
     "in_medians": true,
     "mult": 14.0,
     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-    "score": 15.8,
+    "score": 15.6,
     "type": "PRIMARY"
    }
   ],
@@ -985,7 +985,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 8.5,
+   "tag_evidence": 8.1,
    "thin": false,
    "triangulated": false
   },
@@ -1004,7 +1004,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of scheduling; related type of business; same revenue model; same AI stance",
-    "score": 7.6,
+    "score": 7.4,
     "ticker": "NYSE:PD"
    },
    {
@@ -1012,7 +1012,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of platform, tools; related type of business; same revenue model; sold the same way",
-    "score": 7.6,
+    "score": 7.3,
     "ticker": "HLSE:QTCOM"
    },
    {

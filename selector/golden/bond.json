@@ -2,85 +2,14 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
-     "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
-     },
-     "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "business_customers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 188000.0,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 71000.0,
-     "mid": 188000.0,
-     "n": 2,
-     "period_mix": {
-      "RUN_RATE": 1,
-      "UNKNOWN": 1
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [
-      "ai",
-      "company"
-     ],
-     "spread": 2.6,
-     "table": [
-      {
-       "company": "Gorgias",
-       "date": "Aug-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 71000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Pleo",
-       "date": "Dec-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 188000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.6,
-     "thin": true,
-     "triangulated": false
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
-      "NET_REVENUE": 2
+      "ARR": 2,
+      "NET_REVENUE": 3
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -102,11 +31,11 @@
       "Zuora"
      ],
      "low": 2.24,
-     "mid": 21.0,
+     "mid": 42.9,
      "n": 5,
      "period_mix": {
-      "LTM": 2,
-      "RUN_RATE": 3
+      "LTM": 3,
+      "RUN_RATE": 2
      },
      "period_span": {
       "LTM": {
@@ -134,9 +63,9 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Gamma",
-       "mult": 21.0,
-       "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+       "company": "Calendly",
+       "mult": 42.9,
+       "reason": "shares the language of meeting; related type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
@@ -160,6 +89,7 @@
       "ai",
       "assistant",
       "company",
+      "meeting",
       "to"
      ],
      "spread": 32.1,
@@ -185,11 +115,11 @@
        "ticker": ""
       },
       {
-       "company": "Gamma",
-       "date": "Nov-25",
+       "company": "Calendly",
+       "date": "Jan-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 21.0,
+       "multiple": 42.9,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -243,7 +173,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai, to; same type of business; same kind of customer; same AI stance",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "ENXTPA:ALBFR"
    }
   ],
@@ -460,74 +390,6 @@
    {
     "backed": [
      {
-      "company": "Notion",
-      "date": "Jan-26"
-     },
-     {
-      "company": "Zuora",
-      "date": "Oct-24"
-     }
-    ],
-    "investor": "GIC",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     },
-     {
-      "company": "Glean",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Index Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gamma",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gamma",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Uncork Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gamma",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "South Park Commons",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Verint Systems",
       "date": "Aug-25"
      }
@@ -598,38 +460,56 @@
    {
     "backed": [
      {
+      "company": "Glean",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Zuora",
       "date": "Oct-24"
      }
     ],
     "investor": "Silver Lake",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zuora",
+      "date": "Oct-24"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Calendly",
+      "date": "Jan-21"
+     }
+    ],
+    "investor": "OpenView",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Calendly",
+      "date": "Jan-21"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Notion",
-    "date": "Jan-26",
-    "in_medians": false,
-    "mult": 18.3,
-    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
-    "score": 12.6,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Gamma",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 21.0,
-    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
-    "score": 14.6,
-    "type": "MIXED"
-   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -638,7 +518,7 @@
     "in_medians": true,
     "mult": 2.24,
     "reason": "shares the language of ai, to; related type of business; same revenue model",
-    "score": 6.7,
+    "score": 6.6,
     "type": "CONTROL"
    },
    {
@@ -664,17 +544,6 @@
     "type": "CONTROL"
    },
    {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Gorgias",
-    "date": "Aug-22",
-    "in_medians": true,
-    "mult": null,
-    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-    "score": 10.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "ARR",
     "bound": "",
     "company": "Pleo",
@@ -682,8 +551,19 @@
     "in_medians": true,
     "mult": 47.0,
     "reason": "shares the language of company; same type of business; same revenue model; sold the same way",
-    "score": 12.1,
+    "score": 11.9,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Calendly",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 42.9,
+    "reason": "shares the language of meeting; related type of business; same business function; same revenue model",
+    "score": 13.1,
+    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -693,8 +573,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
-    "NET_REVENUE": 2
+    "ARR": 2,
+    "NET_REVENUE": 3
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -712,11 +592,11 @@
     "Zuora"
    ],
    "low": 2.24,
-   "mid": 21.0,
+   "mid": 42.9,
    "n": 5,
    "period_mix": {
-    "LTM": 2,
-    "RUN_RATE": 3
+    "LTM": 3,
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -744,9 +624,9 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Gamma",
-     "mult": 21.0,
-     "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+     "company": "Calendly",
+     "mult": 42.9,
+     "reason": "shares the language of meeting; related type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
     },
@@ -770,6 +650,7 @@
     "ai",
     "assistant",
     "company",
+    "meeting",
     "to"
    ],
    "spread": 32.1,
@@ -795,11 +676,11 @@
      "ticker": ""
     },
     {
-     "company": "Gamma",
-     "date": "Nov-25",
+     "company": "Calendly",
+     "date": "Jan-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 21.0,
+     "multiple": 42.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -829,30 +710,14 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 56,
+  "private_window_months": 67,
   "secondary": [
-   {
-    "company": "Five9, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same kind of customer; same revenue model",
-    "score": 7.1,
-    "ticker": "NASDAQGM:FIVN"
-   },
-   {
-    "company": "NICE Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same kind of customer; same revenue model",
-    "score": 7.1,
-    "ticker": "NASDAQGS:NICE"
-   },
    {
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of company, to; same kind of customer; same revenue model",
-    "score": 6.7,
+    "score": 6.5,
     "ticker": "NASDAQGS:GTM"
    }
   ],
@@ -860,7 +725,7 @@
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -868,15 +733,15 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "high": 2.2,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 2.0,
-   "n": 3,
+   "low": 2.2,
+   "mid": 2.2,
+   "n": 1,
    "period_mix": {
-    "NTM": 3
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -888,31 +753,13 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "company",
     "to"
    ],
    "show_retention": true,
-   "spread": 1.2,
+   "sole": "ZoomInfo Technologies Inc.",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "NICE Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.5,
-     "multiple": 1.8,
-     "recurring_pct": 89.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:NICE"
-    },
-    {
-     "company": "Five9, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.8,
-     "multiple": 2.0,
-     "recurring_pct": 94.0,
-     "retention_pct": 106.0,
-     "ticker": "NASDAQGM:FIVN"
-    },
     {
      "company": "ZoomInfo Technologies Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -923,8 +770,8 @@
      "ticker": "NASDAQGS:GTM"
     }
    ],
-   "tag_evidence": 0.7,
-   "thin": false,
+   "tag_evidence": 0.5,
+   "thin": true,
    "triangulated": false
   }
  },

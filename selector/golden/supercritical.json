@@ -2,13 +2,13 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "REVENUE": {
+    "MERCHANTS": {
      "anchor_dropped": false,
      "band": "ADJACENT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
+     "basis": "MERCHANTS",
+     "basis_label": "dollars of enterprise value per merchant",
      "basis_mix": {
-      "NET_REVENUE": 2
+      "MERCHANTS": 2
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -16,18 +16,86 @@
      "control_names": [],
      "dispersed": false,
      "display": "RANGE",
+     "founder_field": "merchants",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 10000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 8863.64,
+     "mid": 10000.0,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "marketplace",
+      "net",
+      "zero"
+     ],
+     "spread": 1.1,
+     "table": [
+      {
+       "company": "Meesho",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8863.64,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ankorstore",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 7.3,
+     "high": 4.2,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 4.2,
-     "mid": 7.3,
-     "n": 2,
+     "mid": 4.2,
+     "n": 1,
      "period_mix": {
-      "LTM": 2
+      "LTM": 1
      },
      "period_span": {
       "LTM": {
@@ -41,7 +109,8 @@
       "marketplace",
       "zero"
      ],
-     "spread": 1.7,
+     "sole": "Meesho",
+     "spread": 1.0,
      "table": [
       {
        "company": "Meesho",
@@ -52,19 +121,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Vinted",
-       "date": "Apr-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 7.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.4,
      "thin": true,
      "triangulated": false
     },
@@ -74,14 +133,14 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 2
+      "REVENUE_GROSS": 1
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "RANGE",
+     "display": "DIAMOND",
      "founder_field": "revenue_gross",
      "founder_high": null,
      "founder_low": null,
@@ -89,19 +148,14 @@
      "high": 6.68,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 5.2,
+     "low": 6.68,
      "mid": 6.68,
-     "n": 2,
+     "n": 1,
      "period_mix": {
-      "FY ENDED 31-MAR-2023": 1,
-      "LTM": 1
+      "FY ENDED 31-MAR-2023": 1
      },
      "period_span": {
       "FY ENDED 31-MAR-2023": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
@@ -112,18 +166,9 @@
       "marketplace",
       "sourcing"
      ],
-     "spread": 1.3,
+     "sole": "Vegrow",
+     "spread": 1.0,
      "table": [
-      {
-       "company": "Loadsmart",
-       "date": "Feb-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 5.2,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Vegrow",
        "date": "Dec-23",
@@ -135,7 +180,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": true,
      "triangulated": false
     }
@@ -143,67 +188,35 @@
   },
   "core": [
    {
-    "company": "PDD Holdings Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQGS:PDD"
-   },
-   {
-    "company": "eBay Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQGS:EBAY"
-   },
-   {
-    "company": "Etsy, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQGS:ETSY"
-   },
-   {
-    "company": "Auction Technology Group plc",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same kind of customer",
-    "score": 11.1,
-    "ticker": "LSE:ATG"
-   },
-   {
     "company": "Sea Limited",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of credit, marketplace; same type of business; same business function; same revenue model",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "NYSE:SE"
    },
    {
-    "company": "Allegro.eu S.A.",
+    "company": "MercadoLibre, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "WSE:ALE"
+    "reason": "shares the language of credit, marketplace; same type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "NASDAQGS:MELI"
    },
    {
-    "company": "Full Truck Alliance Co. Ltd.",
+    "company": "Xometry, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same kind of customer",
-    "score": 8.6,
-    "ticker": "NYSE:YMM"
+    "reason": "shares the language of marketplace, supplier; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NASDAQGS:XMTR"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -212,14 +225,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 3.3,
+   "high": 4.8,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.8,
-   "mid": 3.2,
-   "n": 7,
+   "mid": 2.2,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -232,20 +245,12 @@
    "post_stated_n": 0,
    "shared_words": [
     "credit",
-    "marketplace"
+    "marketplace",
+    "supplier"
    ],
    "show_retention": false,
-   "spread": 5.6,
+   "spread": 2.7,
    "table": [
-    {
-     "company": "PDD Holdings Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.1,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:PDD"
-    },
     {
      "company": "Sea Limited",
      "growth_basis": "CAGR_CY1_CY3",
@@ -256,52 +261,25 @@
      "ticker": "NYSE:SE"
     },
     {
-     "company": "Full Truck Alliance Co. Ltd.",
+     "company": "MercadoLibre, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.7,
-     "multiple": 2.8,
+     "growth_pct": 26.3,
+     "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:YMM"
+     "ticker": "NASDAQGS:MELI"
     },
     {
-     "company": "Etsy, Inc.",
+     "company": "Xometry, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.4,
-     "multiple": 3.2,
+     "growth_pct": 20.8,
+     "multiple": 4.8,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:ETSY"
-    },
-    {
-     "company": "Auction Technology Group plc",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.8,
-     "multiple": 3.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:ATG"
-    },
-    {
-     "company": "Allegro.eu S.A.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.6,
-     "multiple": 3.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "WSE:ALE"
-    },
-    {
-     "company": "eBay Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.5,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:EBAY"
+     "ticker": "NASDAQGS:XMTR"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -453,72 +431,10 @@
     ],
     "investor": "GIC",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "SoftBank Latin America Fund (lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "BlackRock",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "CSX",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "Janus Henderson",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "GMV_ONLY",
-    "bound": "",
-    "company": "Whatnot",
-    "date": "Aug-26",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Vinted",
-    "date": "Apr-26",
-    "in_medians": true,
-    "mult": 7.3,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 15.1,
-    "type": "SECONDARY"
-   },
    {
     "basis": "DISCLOSED_RUNRATE",
     "bound": "<=",
@@ -527,7 +443,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of marketplace, net; same type of business; same business function; same revenue model",
-    "score": 17.2,
+    "score": 17.1,
     "type": "SECONDARY"
    },
    {
@@ -538,7 +454,7 @@
     "in_medians": true,
     "mult": 4.2,
     "reason": "shares the language of marketplace, zero; same type of business; same business function; same revenue model",
-    "score": 17.6,
+    "score": 17.4,
     "type": "PRIMARY"
    },
    {
@@ -549,29 +465,18 @@
     "in_medians": true,
     "mult": 6.68,
     "reason": "shares the language of marketplace, sourcing; same type of business; same revenue model; same AI stance",
-    "score": 11.7,
+    "score": 11.6,
     "type": "PRIMARY"
    },
    {
-    "basis": "FILED_ACCOUNTS",
+    "basis": "NONE",
     "bound": "",
-    "company": "Flipkart",
-    "date": "Jul-23",
-    "in_medians": false,
-    "mult": 5.2,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 12.6,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "Disclosed at pricing; FY2021 closed",
-    "bound": "<=",
-    "company": "Loadsmart",
-    "date": "Feb-22",
+    "company": "Ankorstore",
+    "date": "Jan-22",
     "in_medians": true,
-    "mult": 5.2,
-    "reason": "shares the language of marketplace; same type of business; same revenue model; sold the same way",
-    "score": 12.1,
+    "mult": null,
+    "reason": "shares the language of marketplace, net; same type of business; same business function; same revenue model",
+    "score": 19.1,
     "type": "PRIMARY"
    }
   ],
@@ -582,22 +487,22 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "RANGE",
-   "high": 7.3,
+   "display": "DIAMOND",
+   "high": 4.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.2,
-   "mid": 7.3,
-   "n": 2,
+   "mid": 4.2,
+   "n": 1,
    "period_mix": {
-    "LTM": 2
+    "LTM": 1
    },
    "period_span": {
     "LTM": {
@@ -611,7 +516,8 @@
     "marketplace",
     "zero"
    ],
-   "spread": 1.7,
+   "sole": "Meesho",
+   "spread": 1.0,
    "table": [
     {
      "company": "Meesho",
@@ -622,86 +528,76 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Vinted",
-     "date": "Apr-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 7.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.4,
    "thin": true,
    "triangulated": false
   },
-  "private_window_months": 54,
+  "private_window_months": 55,
   "secondary": [
-   {
-    "company": "Trip.com Group Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 12.1,
-    "ticker": "NASDAQGS:TCOM"
-   },
-   {
-    "company": "Xometry, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace, supplier; same type of business; same business function; same kind of customer",
-    "score": 11.7,
-    "ticker": "NASDAQGS:XMTR"
-   },
    {
     "company": "GigaCloud Technology Inc",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace, sourcing; same type of business; same business function; same kind of customer",
-    "score": 11.7,
+    "score": 11.6,
     "ticker": "NASDAQGM:GCT"
    },
    {
-    "company": "Airbnb, Inc.",
+    "company": "C.H. Robinson Worldwide",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; related type of business; same business function; same revenue model",
-    "score": 11.6,
-    "ticker": "NASDAQGS:ABNB"
+    "reason": "shares the language of sourcing; same kind of customer; same revenue model; sold the same way",
+    "score": 8.6,
+    "ticker": "NASDAQGS:CHRW"
    },
    {
-    "company": "Booking Holdings Inc.",
+    "company": "IndiaMART InterMESH Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:BKNG"
+    "reason": "shares the language of marketplace, supplier; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "NSEI:INDIAMART"
+   },
+   {
+    "company": "PSI Software SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; sold the same way; same AI stance",
+    "score": 6.0,
+    "ticker": "XTRA:PSAN"
+   },
+   {
+    "company": "Indian Energy Exchange Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; sold the same way; same AI stance",
+    "score": 6.0,
+    "ticker": "NSEI:IEX"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 6.4,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 12.7,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.1,
-   "mid": 4.8,
-   "n": 3,
+   "mid": 2.3,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -709,23 +605,44 @@
      "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [
+   "points": [
     {
-     "company": "Trip.com Group Limited",
-     "mult": 1.9,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "company": "C.H. Robinson Worldwide",
+     "mult": 1.0,
+     "reason": "shares the language of sourcing; same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
-     "company": "Booking Holdings Inc.",
-     "mult": 4.8,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "company": "GigaCloud Technology Inc",
+     "mult": 1.1,
+     "reason": "shares the language of marketplace, sourcing; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PSI Software SE",
+     "mult": 2.3,
+     "reason": "same end market; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "IndiaMART InterMESH Limited",
+     "mult": 3.9,
+     "reason": "shares the language of marketplace, supplier; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Indian Energy Exchange Limited",
+     "mult": 12.7,
+     "reason": "same end market; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "marketplace",
@@ -733,8 +650,17 @@
     "supplier"
    ],
    "show_retention": false,
-   "spread": 5.8,
+   "spread": 12.7,
    "table": [
+    {
+     "company": "C.H. Robinson Worldwide",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
+     "multiple": 1.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CHRW"
+    },
     {
      "company": "GigaCloud Technology Inc",
      "growth_basis": "CAGR_CY1_CY3",
@@ -745,25 +671,34 @@
      "ticker": "NASDAQGM:GCT"
     },
     {
-     "company": "Xometry, Inc.",
+     "company": "PSI Software SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 20.8,
-     "multiple": 4.8,
-     "recurring_pct": null,
+     "growth_pct": 10.2,
+     "multiple": 2.3,
+     "recurring_pct": 39.3,
      "retention_pct": null,
-     "ticker": "NASDAQGS:XMTR"
+     "ticker": "XTRA:PSAN"
     },
     {
-     "company": "Airbnb, Inc.",
+     "company": "IndiaMART InterMESH Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.1,
-     "multiple": 6.4,
+     "growth_pct": 10.8,
+     "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:ABNB"
+     "ticker": "NSEI:INDIAMART"
+    },
+    {
+     "company": "Indian Energy Exchange Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -1.9,
+     "multiple": 12.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:IEX"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

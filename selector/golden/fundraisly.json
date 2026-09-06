@@ -8,101 +8,39 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
-      "NET_REVENUE": 2
+      "ARR": 1
      },
      "bounded": true,
      "closeness": "THIN_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Semrush"
-     ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 50.0,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Semrush"
-     ],
-     "low": 4.3,
-     "mid": 23.0,
-     "n": 5,
+     "high": 12.2,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 12.2,
+     "mid": 12.2,
+     "n": 1,
      "period_mix": {
-      "LTM": 1,
-      "NTM": 1,
-      "RUN_RATE": 3
+      "RUN_RATE": 1
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "shares the language of ai; same type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Plaid",
-       "mult": 12.2,
-       "reason": "related type of business; same end market",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Owner",
-       "mult": 23.0,
-       "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Jasper",
-       "mult": 33.3,
-       "reason": "shares the language of ai; same type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
-     "shared_words": [
-      "ai"
-     ],
-     "spread": 11.6,
+     "shared_words": [],
+     "sole": "Plaid",
+     "spread": 1.0,
      "table": [
-      {
-       "company": "Semrush",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 4.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Plaid",
        "date": "Apr-25",
@@ -112,40 +50,10 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Owner",
-       "date": "Aug-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Jasper",
-       "date": "Oct-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 33.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Clay",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 50.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
-     "thin": false,
+     "tag_evidence": 0.0,
+     "thin": true,
      "triangulated": true
     }
    }
@@ -455,96 +363,6 @@
    {
     "backed": [
      {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Redpoint",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Headline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "DST Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Conviction",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Avra",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Operator Collective",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Frontline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Semrush",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Adobe",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Apollo.io",
       "date": "Aug-23"
      }
@@ -581,113 +399,10 @@
     ],
     "investor": "Nexus Venture Partners",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Insight Partners (lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "IVP",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Foundation Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Founders Circle Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "HubSpot Ventures",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Owner",
-    "date": "Aug-26",
-    "in_medians": true,
-    "mult": 23.0,
-    "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Clay",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 50.0,
-    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "",
-    "company": "Semrush",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 4.3,
-    "reason": "shares the language of ai; same type of business; same kind of customer",
-    "score": 7.6,
-    "type": "CONTROL"
-   },
    {
     "basis": "ARR (> threshold)",
     "bound": "<=",
@@ -707,18 +422,7 @@
     "in_medians": false,
     "mult": 16.7,
     "reason": "shares the language of database; same type of business; same business function; same kind of customer",
-    "score": 13.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Jasper",
-    "date": "Oct-22",
-    "in_medians": true,
-    "mult": 33.3,
-    "reason": "shares the language of ai; same type of business; same kind of customer",
-    "score": 7.6,
+    "score": 12.8,
     "type": "PRIMARY"
    }
   ],
@@ -729,97 +433,35 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
-    "NET_REVENUE": 2
+    "ARR": 1
    },
    "bounded": true,
    "closeness": "THIN_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Semrush"
-   ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 50.0,
-   "listed_target_n": 1,
-   "listed_target_names": [
-    "Semrush"
-   ],
-   "low": 4.3,
-   "mid": 23.0,
-   "n": 5,
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 12.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 12.2,
+   "mid": 12.2,
+   "n": 1,
    "period_mix": {
-    "LTM": 1,
-    "NTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 1
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "shares the language of ai; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Plaid",
-     "mult": 12.2,
-     "reason": "related type of business; same end market",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Owner",
-     "mult": 23.0,
-     "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "shares the language of ai; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
-   "shared_words": [
-    "ai"
-   ],
-   "spread": 11.6,
+   "shared_words": [],
+   "sole": "Plaid",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "Semrush",
-     "date": "Nov-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 4.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Plaid",
      "date": "Apr-25",
@@ -829,43 +471,13 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Owner",
-     "date": "Aug-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Jasper",
-     "date": "Oct-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 33.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Clay",
-     "date": "Jan-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 50.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": false,
+   "tag_evidence": 0.0,
+   "thin": true,
    "triangulated": true
   },
-  "private_window_months": 46,
+  "private_window_months": 36,
   "secondary": [
    {
     "company": "Qualco Group S.A.",

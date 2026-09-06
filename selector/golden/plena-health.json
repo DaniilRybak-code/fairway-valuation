@@ -188,7 +188,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": false
     },
@@ -341,7 +341,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of cycle, management, patient; same type of business; same end market",
-    "score": 7.8,
+    "score": 7.4,
     "ticker": "NASDAQGS:WAY"
    },
    {
@@ -525,7 +525,7 @@
      "ticker": "NYSE:VEEV"
     }
    ],
-   "tag_evidence": 1.8,
+   "tag_evidence": 1.4,
    "thin": false,
    "triangulated": false
   },
@@ -895,7 +895,7 @@
     "in_medians": true,
     "mult": 12.5,
     "reason": "both do Revenue Management; same type of business; same business function; same kind of customer",
-    "score": 14.1,
+    "score": 13.7,
     "type": "PRIMARY"
    }
   ],
@@ -974,7 +974,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
@@ -993,7 +993,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of scheduling; same type of business; same business function",
-    "score": 6.6,
+    "score": 6.4,
     "ticker": "XTRA:IVU"
    },
    {

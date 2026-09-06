@@ -9,7 +9,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 3
+      "NET_REVENUE": 4
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -25,11 +25,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2.75,
-     "mid": 9.18,
-     "n": 4,
+     "mid": 5.0,
+     "n": 5,
      "period_mix": {
       "FY2025": 1,
-      "LTM": 1,
+      "LTM": 2,
       "NTM": 1,
       "RUN_RATE": 1
      },
@@ -73,6 +73,16 @@
        "ticker": ""
       },
       {
+       "company": "Huel",
+       "date": "Nov-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "SKIMS",
        "date": "Nov-25",
        "growth_basis": "",
@@ -83,11 +93,11 @@
        "ticker": ""
       },
       {
-       "company": "WHOOP",
-       "date": "Mar-26",
+       "company": "AG1",
+       "date": "Jan-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 9.18,
+       "multiple": 8.8,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -103,65 +113,9 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": false
-    },
-    "REVENUE_GROSS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "REVENUE_GROSS",
-     "basis_label": "enterprise value to gross revenue",
-     "basis_mix": {
-      "REVENUE_GROSS": 1
-     },
-     "bounded": false,
-     "closeness": "THIN_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "DIAMOND",
-     "founder_field": "revenue_gross",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 23.1,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 23.1,
-     "mid": 23.1,
-     "n": 1,
-     "period_mix": {
-      "LTM": 1
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [
-      "subscription"
-     ],
-     "sole": "Oura",
-     "spread": 1.0,
-     "table": [
-      {
-       "company": "Oura",
-       "date": "Dec-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.1,
-     "thin": true,
-     "triangulated": true
     }
    }
   },
@@ -171,7 +125,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer, Consumables; same type of business; same end market; same business function",
-    "score": 24.1,
+    "score": 23.6,
     "ticker": "NYSE:BARK"
    },
    {
@@ -179,7 +133,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same end market; same business function",
-    "score": 16.9,
+    "score": 16.5,
     "ticker": "NYSE:YETI"
    },
    {
@@ -187,7 +141,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumables; related type of business; same end market; same business function",
-    "score": 12.7,
+    "score": 12.6,
     "ticker": "NYSE:CHWY"
    },
    {
@@ -195,7 +149,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; related type of business; same end market; same business function",
-    "score": 12.2,
+    "score": 12.1,
     "ticker": "NYSE:W"
    }
   ],
@@ -279,7 +233,7 @@
      "ticker": "NYSE:YETI"
     }
    ],
-   "tag_evidence": 1.6,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -481,26 +435,6 @@
     ],
     "investor": "Jun-2025)",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Oura",
-      "date": "Dec-24"
-     }
-    ],
-    "investor": "Fidelity Management & Research Company",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Oura",
-      "date": "Dec-24"
-     }
-    ],
-    "investor": "Dexcom",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -524,18 +458,7 @@
     "in_medians": true,
     "mult": 10.1,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 21.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Exiting CY2025",
-    "bound": "",
-    "company": "WHOOP",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 9.18,
-    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
-    "score": 15.6,
+    "score": 21.7,
     "type": "PRIMARY"
    },
    {
@@ -546,7 +469,7 @@
     "in_medians": true,
     "mult": 5.0,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 18.9,
+    "score": 18.7,
     "type": "PRIMARY"
    },
    {
@@ -557,19 +480,8 @@
     "in_medians": true,
     "mult": 2.75,
     "reason": "shares the language of delivery; related type of business; same business function; same kind of customer",
-    "score": 13.7,
+    "score": 13.6,
     "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Oura",
-    "date": "Dec-24",
-    "in_medians": true,
-    "mult": 23.1,
-    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
-    "score": 15.6,
-    "type": "PRIMARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -579,8 +491,30 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 18.9,
+    "score": 18.7,
     "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Huel",
+    "date": "Nov-22",
+    "in_medians": true,
+    "mult": 3.3,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 27.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "CONTEMPORANEOUS_PRESS",
+    "bound": "",
+    "company": "AG1",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 8.8,
+    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
+    "score": 27.7,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -591,7 +525,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 4
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -603,11 +537,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.75,
-   "mid": 9.18,
-   "n": 4,
+   "mid": 5.0,
+   "n": 5,
    "period_mix": {
     "FY2025": 1,
-    "LTM": 1,
+    "LTM": 2,
     "NTM": 1,
     "RUN_RATE": 1
    },
@@ -651,6 +585,16 @@
      "ticker": ""
     },
     {
+     "company": "Huel",
+     "date": "Nov-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "SKIMS",
      "date": "Nov-25",
      "growth_basis": "",
@@ -661,11 +605,11 @@
      "ticker": ""
     },
     {
-     "company": "WHOOP",
-     "date": "Mar-26",
+     "company": "AG1",
+     "date": "Jan-22",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 9.18,
+     "multiple": 8.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -681,7 +625,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
@@ -692,7 +636,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same type of business; same business function; same kind of customer",
-    "score": 20.0,
+    "score": 19.7,
     "ticker": "NYSE:HIMS"
    },
    {
@@ -700,7 +644,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 16.0,
+    "score": 15.8,
     "ticker": "NYSE:FIGS"
    },
    {
@@ -708,7 +652,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 15.4,
+    "score": 15.2,
     "ticker": "NYSE:WRBY"
    },
    {
@@ -716,16 +660,16 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 13.4,
+    "score": 13.2,
     "ticker": "NYSE:ONON"
    },
    {
-    "company": "WW International, Inc.",
+    "company": "LifeMD, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGM:WW"
+    "reason": "shares the language of consumer, direct, subscription; same type of business; same kind of customer; same revenue model",
+    "score": 11.2,
+    "ticker": "NASDAQGM:LFMD"
    }
   ],
   "secondary_range": {
@@ -767,16 +711,16 @@
     "to"
    ],
    "show_retention": false,
-   "spread": 3.6,
+   "spread": 4.8,
    "table": [
     {
-     "company": "WW International, Inc.",
+     "company": "LifeMD, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 0.8,
+     "growth_pct": 16.2,
+     "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGM:WW"
+     "ticker": "NASDAQGM:LFMD"
     },
     {
      "company": "On Holding AG",
@@ -815,7 +759,7 @@
      "ticker": "NYSE:FIGS"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   }

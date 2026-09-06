@@ -150,7 +150,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 2.4,
+     "tag_evidence": 2.2,
      "thin": false,
      "triangulated": false
     }
@@ -170,7 +170,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Professional Services Automation; same type of business; same end market",
-    "score": 8.1,
+    "score": 7.5,
     "ticker": "NASDAQGS:INTA"
    },
    {
@@ -178,7 +178,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of business, legal, services; same type of business; same end market",
-    "score": 7.0,
+    "score": 6.6,
     "ticker": "NASDAQGS:LZ"
    },
    {
@@ -270,7 +270,7 @@
      "ticker": "NASDAQGS:INTA"
     }
    ],
-   "tag_evidence": 2.1,
+   "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
   },
@@ -708,7 +708,7 @@
     "in_medians": true,
     "mult": 56.0,
     "reason": "shares the language of firm, law, legal; same type of business; same end market; same revenue model",
-    "score": 15.3,
+    "score": 15.1,
     "type": "PRIMARY"
    },
    {
@@ -719,7 +719,7 @@
     "in_medians": false,
     "mult": 66.7,
     "reason": "shares the language of legal, professional, services; same type of business; same end market; same revenue model",
-    "score": 14.9,
+    "score": 14.4,
     "type": "PRIMARY"
    },
    {
@@ -730,7 +730,7 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "shares the language of client, firm, law; same type of business; same end market; same kind of customer",
-    "score": 20.4,
+    "score": 20.2,
     "type": "MIXED"
    },
    {
@@ -741,7 +741,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "shares the language of business, marketing; same type of business; same business function; same kind of customer",
-    "score": 19.3,
+    "score": 19.2,
     "type": "PRIMARY"
    },
    {
@@ -763,7 +763,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of business; same type of business; same kind of customer; sold the same way",
-    "score": 10.7,
+    "score": 10.6,
     "type": "PRIMARY"
    },
    {
@@ -923,7 +923,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 2.4,
+   "tag_evidence": 2.2,
    "thin": false,
    "triangulated": false
   },
@@ -934,7 +934,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of services; same type of business; same kind of customer; sold the same way",
-    "score": 7.7,
+    "score": 7.6,
     "ticker": "NASDAQGS:EVCM"
    },
    {
@@ -950,7 +950,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of business; same kind of customer; same revenue model",
-    "score": 5.2,
+    "score": 5.1,
     "ticker": "NYSE:OOMA"
    }
   ],

@@ -87,7 +87,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 5.9,
+     "tag_evidence": 4.7,
      "thin": false,
      "triangulated": false
     }
@@ -99,7 +99,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
-    "score": 10.6,
+    "score": 9.6,
     "ticker": "ENXTAM:PNL"
    },
    {
@@ -107,7 +107,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, last, mile; same type of business; same business function; same revenue model",
-    "score": 10.6,
+    "score": 9.6,
     "ticker": "TSE:9064"
    },
    {
@@ -115,7 +115,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of last, mile, network; same type of business; same business function; same revenue model",
-    "score": 10.4,
+    "score": 9.6,
     "ticker": "NYSE:ZTO"
    },
    {
@@ -123,7 +123,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
-    "score": 9.7,
+    "score": 8.9,
     "ticker": "NYSE:UPS"
    },
    {
@@ -131,24 +131,24 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
-    "score": 9.7,
+    "score": 8.9,
     "ticker": "TSE:9143"
    },
    {
-    "company": "Deutsche Post AG",
+    "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
-    "score": 9.4,
-    "ticker": "XTRA:DHL"
+    "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "NYSE:FDX"
    },
    {
-    "company": "Delhivery Limited",
+    "company": "InPost S.A.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
-    "score": 9.4,
-    "ticker": "NSEI:DELHIVERY"
+    "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same revenue model",
+    "score": 8.8,
+    "ticker": "ENXTAM:INPST"
    }
   ],
   "core_range": {
@@ -168,7 +168,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.3,
-   "mid": 0.9,
+   "mid": 1.1,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -202,9 +202,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Deutsche Post AG",
-     "mult": 0.9,
-     "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+     "company": "FedEx Corporation",
+     "mult": 1.1,
+     "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -223,9 +223,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Delhivery Limited",
-     "mult": 2.5,
-     "reason": "shares the language of logistics, parcel; same type of business; same business function; same revenue model",
+     "company": "InPost S.A.",
+     "mult": 2.3,
+     "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -241,7 +241,7 @@
     "parcel"
    ],
    "show_retention": false,
-   "spread": 8.3,
+   "spread": 7.7,
    "table": [
     {
      "company": "PostNL N.V.",
@@ -271,13 +271,13 @@
      "ticker": "TSE:9143"
     },
     {
-     "company": "Deutsche Post AG",
+     "company": "FedEx Corporation",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.9,
+     "growth_pct": 1.8,
+     "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "XTRA:DHL"
+     "ticker": "NYSE:FDX"
     },
     {
      "company": "United Parcel Service",
@@ -298,16 +298,16 @@
      "ticker": "NYSE:ZTO"
     },
     {
-     "company": "Delhivery Limited",
+     "company": "InPost S.A.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.6,
-     "multiple": 2.5,
+     "growth_pct": 15.6,
+     "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NSEI:DELHIVERY"
+     "ticker": "ENXTAM:INPST"
     }
    ],
-   "tag_evidence": 2.1,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -621,7 +621,7 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "both do Parcel Delivery, Last Mile, Reverse Logistics; same type of business; same business function; same revenue model",
-    "score": 19.9,
+    "score": 18.7,
     "type": "PRIMARY"
    },
    {
@@ -632,7 +632,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of delivery; same type of business; same end market; same AI stance",
-    "score": 10.2,
+    "score": 10.1,
     "type": "PRIMARY"
    },
    {
@@ -643,7 +643,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "both do Reverse Logistics; same end market; same business function; same kind of customer",
-    "score": 16.4,
+    "score": 16.1,
     "type": "PRIMARY"
    },
    {
@@ -654,7 +654,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of delivery; same type of business; same business function; same AI stance",
-    "score": 9.2,
+    "score": 9.1,
     "type": "MIXED"
    },
    {
@@ -665,7 +665,7 @@
     "in_medians": false,
     "mult": 16.03,
     "reason": "both do Last Mile; related type of business; same business function; same kind of customer",
-    "score": 15.5,
+    "score": 14.9,
     "type": "PRIMARY"
    },
    {
@@ -676,7 +676,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of delivery, multi, network; same type of business; same business function; same AI stance",
-    "score": 9.9,
+    "score": 9.3,
     "type": "CONTROL"
    },
    {
@@ -687,7 +687,7 @@
     "in_medians": true,
     "mult": 23.5,
     "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
-    "score": 9.3,
+    "score": 9.1,
     "type": "CONTROL"
    }
   ],
@@ -773,7 +773,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 5.9,
+   "tag_evidence": 4.7,
    "thin": false,
    "triangulated": false
   },
@@ -784,7 +784,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, network; same type of business; same kind of customer; same cost structure",
-    "score": 12.3,
+    "score": 12.1,
     "ticker": "XTRA:DHER"
    },
    {
@@ -792,7 +792,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, network; same type of business; same kind of customer; same cost structure",
-    "score": 11.3,
+    "score": 11.1,
     "ticker": "NASDAQGS:DASH"
    },
    {
@@ -807,40 +807,40 @@
     "company": "SPS Commerce, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of network; same end market; same kind of customer; sold the same way",
-    "score": 9.6,
+    "reason": "same end market; same kind of customer; sold the same way; same AI stance",
+    "score": 9.5,
     "ticker": "NASDAQGS:SPSC"
    },
    {
-    "company": "FedEx Corporation",
-    "family": "consumer",
+    "company": "Nayax Ltd.",
+    "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same revenue model",
-    "score": 9.4,
-    "ticker": "NYSE:FDX"
+    "reason": "same end market; same kind of customer; same revenue model; same AI stance",
+    "score": 9.0,
+    "ticker": "NASDAQ:NYAX"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 4.7,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.8,
-   "mid": 1.1,
-   "n": 3,
+   "mid": 3.4,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -848,8 +848,7 @@
      "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [
+   "points": [
     {
      "company": "Lightspeed Commerce Inc.",
      "mult": 0.7,
@@ -858,22 +857,52 @@
      "transaction_type": ""
     },
     {
+     "company": "Delivery Hero SE",
+     "mult": 0.8,
+     "reason": "shares the language of delivery, network; same type of business; same kind of customer; same cost structure",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "SPS Commerce, Inc.",
      "mult": 3.4,
-     "reason": "shares the language of network; same end market; same kind of customer; sold the same way",
+     "reason": "same end market; same kind of customer; sold the same way; same AI stance",
      "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nayax Ltd.",
+     "mult": 3.5,
+     "reason": "same end market; same kind of customer; same revenue model; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "DoorDash, Inc.",
+     "mult": 4.7,
+     "reason": "shares the language of delivery, network; same type of business; same kind of customer; same cost structure",
+     "tier": "ADJACENT",
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "delivery",
-    "network",
-    "parcel"
+    "network"
    ],
    "show_retention": false,
-   "spread": 5.9,
+   "spread": 6.7,
    "table": [
+    {
+     "company": "Lightspeed Commerce Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.8,
+     "multiple": 0.7,
+     "recurring_pct": 30.2,
+     "retention_pct": null,
+     "ticker": "TSX:LSPD"
+    },
     {
      "company": "Delivery Hero SE",
      "growth_basis": "CAGR_CY1_CY3",
@@ -884,13 +913,22 @@
      "ticker": "XTRA:DHER"
     },
     {
-     "company": "FedEx Corporation",
+     "company": "SPS Commerce, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 1.8,
-     "multiple": 1.1,
+     "growth_pct": 6.7,
+     "multiple": 3.4,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:SPSC"
+    },
+    {
+     "company": "Nayax Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:FDX"
+     "ticker": "NASDAQ:NYAX"
     },
     {
      "company": "DoorDash, Inc.",
@@ -902,7 +940,7 @@
      "ticker": "NASDAQGS:DASH"
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": false
   }

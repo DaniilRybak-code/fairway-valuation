@@ -2,36 +2,32 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "REVENUE": {
+    "BUSINESS_CUSTOMERS": {
      "anchor_dropped": false,
      "band": "ADJACENT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "NET_REVENUE": 3
+      "BUSINESS_CUSTOMERS": 2
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Accolade"
-     ],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "revenue",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 7.3,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Accolade"
-     ],
-     "low": 1.39,
-     "mid": 4.2,
-     "n": 3,
+     "high": 2333333.33,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 19333.33,
+     "mid": 2333333.33,
+     "n": 2,
      "period_mix": {
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "LTM": {
@@ -39,12 +35,115 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Doctolib",
+       "mult": 19333.33,
+       "reason": "shares the language of patient; related type of business; same end market; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Aledade",
+       "mult": 2333333.33,
+       "reason": "related type of business; same end market; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
-      "marketplace"
+      "patient"
      ],
-     "spread": 5.3,
+     "spread": 120.7,
+     "table": [
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2333333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": true
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Accolade"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 14.25,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Accolade"
+     ],
+     "low": 1.39,
+     "mid": 14.25,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Accolade",
+       "mult": 1.39,
+       "reason": "related type of business; same end market; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Cityblock Health",
+       "mult": 14.25,
+       "reason": "related type of business; same end market; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [],
+     "spread": 10.3,
      "table": [
       {
        "company": "Accolade",
@@ -57,28 +156,18 @@
        "ticker": ""
       },
       {
-       "company": "Meesho",
-       "date": "May-24",
+       "company": "Cityblock Health",
+       "date": "Sep-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 4.2,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Vinted",
-       "date": "Apr-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 7.3,
+       "multiple": 14.25,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
-     "thin": false,
+     "tag_evidence": 0.0,
+     "thin": true,
      "triangulated": true
     },
     "REVENUE_GROSS": {
@@ -87,31 +176,27 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 2
+      "REVENUE_GROSS": 5
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Udemy"
-     ],
-     "dispersed": false,
-     "display": "RANGE",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue_gross",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 6.68,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Udemy"
-     ],
-     "low": 1.29,
-     "mid": 6.68,
-     "n": 2,
+     "high": 66.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 4.5,
+     "mid": 7.37,
+     "n": 5,
      "period_mix": {
       "FY ENDED 31-MAR-2023": 1,
-      "LTM": 1
+      "LTM": 4
      },
      "period_span": {
       "FY ENDED 31-MAR-2023": {
@@ -123,20 +208,57 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "DeHaat",
+       "mult": 4.5,
+       "reason": "shares the language of marketplace, network; same type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Vegrow",
+       "mult": 6.68,
+       "reason": "shares the language of marketplace, network; same type of business; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Aledade",
+       "mult": 7.37,
+       "reason": "related type of business; same end market; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Doctolib",
+       "mult": 32.0,
+       "reason": "shares the language of patient; related type of business; same end market; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Incredible Health",
+       "mult": 66.0,
+       "reason": "related type of business; same end market; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
       "marketplace",
-      "network"
+      "network",
+      "patient"
      ],
-     "spread": 5.2,
+     "spread": 14.7,
      "table": [
       {
-       "company": "Udemy",
-       "date": "Dec-25",
+       "company": "DeHaat",
+       "date": "Oct-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 1.29,
+       "multiple": 4.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -150,47 +272,45 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.37,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Incredible Health",
+       "date": "Aug-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 66.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
-     "thin": true,
+     "tag_evidence": 0.6,
+     "thin": false,
      "triangulated": false
     }
    }
   },
   "core": [
-   {
-    "company": "PDD Holdings Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGS:PDD"
-   },
-   {
-    "company": "eBay Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGS:EBAY"
-   },
-   {
-    "company": "Etsy, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGS:ETSY"
-   },
-   {
-    "company": "Auction Technology Group plc",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same kind of customer",
-    "score": 12.1,
-    "ticker": "LSE:ATG"
-   },
    {
     "company": "Veeva Systems Inc.",
     "family": "software",
@@ -204,7 +324,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace, platform; same type of business; same business function; same kind of customer",
-    "score": 9.7,
+    "score": 9.6,
     "ticker": "NASDAQGM:CRGO"
    },
    {
@@ -212,8 +332,40 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
-    "score": 9.7,
+    "score": 9.6,
     "ticker": "NYSE:YMM"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "TSX:TCS"
+   },
+   {
+    "company": "Alibaba Group Holding Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of marketplace, network; same type of business; same business function; same revenue model",
+    "score": 8.6,
+    "ticker": "NYSE:BABA"
+   },
+   {
+    "company": "Waystar Holding Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of patient; related type of business; same end market; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:WAY"
+   },
+   {
+    "company": "Phreesia, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of patient; related type of business; same end market; sold the same way",
+    "score": 8.1,
+    "ticker": "NYSE:PHR"
    }
   ],
   "core_range": {
@@ -229,11 +381,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 3.9,
+   "high": 4.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.4,
-   "mid": 3.2,
+   "mid": 1.9,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -246,9 +398,9 @@
    },
    "points": [
     {
-     "company": "PDD Holdings Inc.",
-     "mult": 0.7,
-     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+     "company": "Alibaba Group Holding Limited",
+     "mult": 1.3,
+     "reason": "shares the language of marketplace, network; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -260,6 +412,20 @@
      "transaction_type": ""
     },
     {
+     "company": "Phreesia, Inc.",
+     "mult": 1.4,
+     "reason": "shares the language of patient; related type of business; same end market; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tecsys Inc.",
+     "mult": 1.9,
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Full Truck Alliance Co. Ltd.",
      "mult": 2.8,
      "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
@@ -267,23 +433,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Etsy, Inc.",
-     "mult": 3.2,
-     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Auction Technology Group plc",
-     "mult": 3.3,
-     "reason": "shares the language of marketplace; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "eBay Inc.",
-     "mult": 3.9,
-     "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
+     "company": "Waystar Holding Corp.",
+     "mult": 4.5,
+     "reason": "shares the language of patient; related type of business; same end market; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -301,20 +453,21 @@
     "clinical",
     "marketplace",
     "network",
+    "patient",
     "platform",
     "trial"
    ],
-   "show_retention": false,
-   "spread": 13.9,
+   "show_retention": true,
+   "spread": 7.5,
    "table": [
     {
-     "company": "PDD Holdings Inc.",
+     "company": "Alibaba Group Holding Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.1,
-     "multiple": 0.7,
+     "growth_pct": 12.8,
+     "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:PDD"
+     "ticker": "NYSE:BABA"
     },
     {
      "company": "Freightos Limited",
@@ -326,6 +479,24 @@
      "ticker": "NASDAQGM:CRGO"
     },
     {
+     "company": "Phreesia, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.3,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PHR"
+    },
+    {
+     "company": "Tecsys Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
+    },
+    {
      "company": "Full Truck Alliance Co. Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 11.7,
@@ -335,31 +506,13 @@
      "ticker": "NYSE:YMM"
     },
     {
-     "company": "Etsy, Inc.",
+     "company": "Waystar Holding Corp.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.4,
-     "multiple": 3.2,
+     "growth_pct": 11.3,
+     "multiple": 4.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:ETSY"
-    },
-    {
-     "company": "Auction Technology Group plc",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.8,
-     "multiple": 3.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:ATG"
-    },
-    {
-     "company": "eBay Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.5,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:EBAY"
+     "ticker": "NASDAQGS:WAY"
     },
     {
      "company": "Veeva Systems Inc.",
@@ -517,26 +670,6 @@
    {
     "backed": [
      {
-      "company": "Udemy",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Coursera (acquirer",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Udemy",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "all-stock)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Accolade",
       "date": "Jan-25"
      }
@@ -553,54 +686,70 @@
     ],
     "investor": "GIC",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Aledade",
+      "date": "Jun-23"
+     }
+    ],
+    "investor": "Lightspeed Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "DeHaat",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Sofina Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Eurazeo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bpifrance",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "General Atlantic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cityblock Health",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "GMV_ONLY",
-    "bound": "",
-    "company": "Whatnot",
-    "date": "Aug-26",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 17.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Vinted",
-    "date": "Apr-26",
-    "in_medians": true,
-    "mult": 7.3,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 17.1,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Udemy",
-    "date": "Dec-25",
-    "in_medians": true,
-    "mult": 1.29,
-    "reason": "shares the language of marketplace; related type of business; same revenue model; same AI stance",
-    "score": 9.1,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_RUNRATE",
-    "bound": "<=",
-    "company": "Faire",
-    "date": "Nov-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 18.6,
-    "type": "SECONDARY"
-   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -613,17 +762,6 @@
     "type": "CONTROL"
    },
    {
-    "basis": "FILED_ACCOUNTS",
-    "bound": "",
-    "company": "Meesho",
-    "date": "May-24",
-    "in_medians": true,
-    "mult": 4.2,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "INR 3,610m at 0.01201",
     "bound": "",
     "company": "Vegrow",
@@ -631,7 +769,62 @@
     "in_medians": true,
     "mult": 6.68,
     "reason": "shares the language of marketplace, network; same type of business; same revenue model",
-    "score": 9.2,
+    "score": 9.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Aledade",
+    "date": "Jun-23",
+    "in_medians": true,
+    "mult": 7.37,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "DeHaat",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 4.5,
+    "reason": "shares the language of marketplace, network; same type of business; same revenue model; same AI stance",
+    "score": 9.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2021",
+    "bound": "",
+    "company": "Incredible Health",
+    "date": "Aug-22",
+    "in_medians": true,
+    "mult": 66.0,
+    "reason": "related type of business; same end market; sold the same way; same AI stance",
+    "score": 11.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Doctolib",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "shares the language of patient; related type of business; same end market; same AI stance",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cityblock Health",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 14.25,
+    "reason": "related type of business; same end market; sold the same way; same AI stance",
+    "score": 11.0,
     "type": "PRIMARY"
    }
   ],
@@ -642,7 +835,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 3
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -650,31 +844,49 @@
    "control_names": [
     "Accolade"
    ],
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 7.3,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 14.25,
    "listed_target_n": 1,
    "listed_target_names": [
     "Accolade"
    ],
    "low": 1.39,
-   "mid": 4.2,
-   "n": 3,
+   "mid": 14.25,
+   "n": 2,
    "period_mix": {
-    "LTM": 3
+    "LTM": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [],
-   "shared_words": [
-    "marketplace"
+   "points": [
+    {
+     "company": "Accolade",
+     "mult": 1.39,
+     "reason": "related type of business; same end market; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Cityblock Health",
+     "mult": 14.25,
+     "reason": "related type of business; same end market; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
    ],
-   "spread": 5.3,
+   "positioning": [],
+   "shared_words": [],
+   "spread": 10.3,
    "table": [
     {
      "company": "Accolade",
@@ -687,38 +899,28 @@
      "ticker": ""
     },
     {
-     "company": "Meesho",
-     "date": "May-24",
+     "company": "Cityblock Health",
+     "date": "Sep-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 4.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Vinted",
-     "date": "Apr-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 7.3,
+     "multiple": 14.25,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": false,
+   "tag_evidence": 0.0,
+   "thin": true,
    "triangulated": true
   },
-  "private_window_months": 32,
+  "private_window_months": 59,
   "secondary": [
    {
     "company": "Airbnb, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace, network; related type of business; same business function; same revenue model",
-    "score": 12.7,
+    "score": 12.6,
     "ticker": "NASDAQGS:ABNB"
    },
    {
@@ -726,7 +928,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
-    "score": 12.2,
+    "score": 12.1,
     "ticker": "NASDAQGS:XMTR"
    },
    {
@@ -734,34 +936,34 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of marketplace, network; same type of business; same business function; same kind of customer",
-    "score": 11.2,
+    "score": 11.1,
     "ticker": "NASDAQGM:GCT"
    },
    {
-    "company": "Booking Holdings Inc.",
+    "company": "RB Global, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:BKNG"
+    "reason": "shares the language of site; same type of business; same business function; same kind of customer",
+    "score": 10.0,
+    "ticker": "NYSE:RBA"
    },
    {
-    "company": "Expedia Group, Inc.",
+    "company": "Copart, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:EXPE"
+    "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+    "score": 9.6,
+    "ticker": "NASDAQGS:CPRT"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -770,11 +972,11 @@
    "high": 6.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.1,
+   "low": 3.8,
    "mid": 4.8,
-   "n": 3,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -783,26 +985,13 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Expedia Group, Inc.",
-     "mult": 2.1,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Booking Holdings Inc.",
-     "mult": 4.8,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "marketplace",
-    "network"
+    "network",
+    "platform",
+    "site"
    ],
    "show_retention": false,
    "spread": 5.8,
@@ -817,6 +1006,15 @@
      "ticker": "NASDAQGM:GCT"
     },
     {
+     "company": "RB Global, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.2,
+     "multiple": 3.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:RBA"
+    },
+    {
      "company": "Xometry, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 20.8,
@@ -824,6 +1022,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:XMTR"
+    },
+    {
+     "company": "Copart, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.9,
+     "multiple": 5.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CPRT"
     },
     {
      "company": "Airbnb, Inc.",
@@ -835,7 +1042,7 @@
      "ticker": "NASDAQGS:ABNB"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   }

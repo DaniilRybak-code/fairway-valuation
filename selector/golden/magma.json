@@ -2,94 +2,13 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
-     "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
-     },
-     "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "business_customers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 357142.86,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 10285.71,
-     "mid": 357142.86,
-     "n": 2,
-     "period_mix": {
-      "RUN_RATE": 2
-     },
-     "period_span": {
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Oxylabs",
-       "mult": 10285.71,
-       "reason": "shares the language of agent, data; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Clay",
-       "mult": 357142.86,
-       "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      }
-     ],
-     "positioning": [],
-     "shared_words": [
-      "agent",
-      "data"
-     ],
-     "spread": 34.7,
-     "table": [
-      {
-       "company": "Oxylabs",
-       "date": "Jul-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10285.71,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Clay",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 357142.86,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.3,
-     "thin": true,
-     "triangulated": false
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
+      "ARR": 1,
       "ARR_RUNRATE": 1,
       "NET_REVENUE": 2
      },
@@ -97,7 +16,7 @@
      "closeness": "STRONG_OVERLAP",
      "control_n": 1,
      "control_names": [
-      "Confluent"
+      "Scale AI"
      ],
      "dispersed": false,
      "display": "RANGE",
@@ -105,20 +24,23 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 50.0,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Confluent"
-     ],
-     "low": 9.88,
+     "high": 20.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.3,
      "mid": 14.9,
-     "n": 5,
+     "n": 4,
      "period_mix": {
-      "LTM": 2,
-      "RUN_RATE": 3
+      "LTM": 1,
+      "NTM": 1,
+      "RUN_RATE": 2
      },
      "period_span": {
       "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       },
@@ -136,24 +58,24 @@
       "model",
       "training"
      ],
-     "spread": 5.1,
+     "spread": 1.9,
      "table": [
-      {
-       "company": "Confluent",
-       "date": "Dec-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 9.88,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Oxylabs",
        "date": "Jul-26",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Scale AI",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -177,19 +99,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Clay",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 50.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 1.6,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
@@ -201,7 +113,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Observability, LLM Observability; same type of business; same kind of customer; same revenue model",
-    "score": 13.3,
+    "score": 13.1,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -213,67 +125,35 @@
     "ticker": "NYSE:ESTC"
    },
    {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same type of business; same business function; same revenue model",
-    "score": 9.6,
-    "ticker": "NYSE:SNOW"
-   },
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "NASDAQCM:RDVT"
-   },
-   {
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Observability; same type of business; same revenue model",
     "score": 8.1,
     "ticker": "NYSE:DT"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same type of business; same business function; same AI stance",
-    "score": 7.1,
-    "ticker": "NASDAQGS:PLTR"
-   },
-   {
-    "company": "Teradata Corporation",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same type of business; same business function",
-    "score": 7.1,
-    "ticker": "NYSE:TDC"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 15.6,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.2,
-   "mid": 10.0,
-   "n": 7,
+   "mid": 5.8,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -281,77 +161,17 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Teradata Corporation",
-     "mult": 1.4,
-     "reason": "shares the language of data; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Elastic N.V.",
-     "mult": 4.2,
-     "reason": "both do Observability; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Dynatrace, Inc.",
-     "mult": 5.8,
-     "reason": "both do Observability; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "mult": 10.0,
-     "reason": "shares the language of data; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 14.9,
-     "reason": "both do Observability, LLM Observability; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "shares the language of data; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 39.0,
-     "reason": "shares the language of data; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "data",
     "llm",
     "observability"
    ],
    "show_retention": true,
-   "spread": 27.9,
+   "spread": 3.5,
    "table": [
-    {
-     "company": "Teradata Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 1.7,
-     "multiple": 1.4,
-     "recurring_pct": null,
-     "retention_pct": 108.0,
-     "ticker": "NYSE:TDC"
-    },
     {
      "company": "Elastic N.V.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -371,15 +191,6 @@
      "ticker": "NYSE:DT"
     },
     {
-     "company": "Red Violet, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
-     "multiple": 10.0,
-     "recurring_pct": 77.0,
-     "retention_pct": 95.0,
-     "ticker": "NASDAQCM:RDVT"
-    },
-    {
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 22.9,
@@ -387,27 +198,9 @@
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 47.0,
-     "multiple": 39.0,
-     "recurring_pct": null,
-     "retention_pct": 157.0,
-     "ticker": "NASDAQGS:PLTR"
     }
    ],
-   "tag_evidence": 1.3,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -593,66 +386,6 @@
    {
     "backed": [
      {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "DST Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Conviction",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Avra",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Operator Collective",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Frontline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Confluent",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "IBM",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "LangChain",
       "date": "Oct-25"
      }
@@ -809,6 +542,26 @@
     ],
     "investor": "Acrew Capital",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Scale AI",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Meta Platforms",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Weights & Biases",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "CoreWeave",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -821,7 +574,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent, data; same type of business; same business function; same kind of customer",
-    "score": 19.8,
+    "score": 19.7,
     "type": "MIXED"
    },
    {
@@ -832,30 +585,8 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "both do LLM; same type of business; same kind of customer; same revenue model",
-    "score": 16.5,
+    "score": 16.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Clay",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 50.0,
-    "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
-    "score": 9.6,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Confluent",
-    "date": "Dec-25",
-    "in_medians": true,
-    "mult": 9.88,
-    "reason": "shares the language of data; same type of business; same kind of customer; same revenue model",
-    "score": 16.6,
-    "type": "CONTROL"
    },
    {
     "basis": "PRESS_REPORTED",
@@ -865,7 +596,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do LLM Observability, Agent Evaluation; same type of business; same kind of customer; sold the same way",
-    "score": 16.9,
+    "score": 16.7,
     "type": "PRIMARY"
    },
    {
@@ -876,7 +607,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of agent; same type of business; same revenue model; sold the same way",
-    "score": 13.8,
+    "score": 13.6,
     "type": "PRIMARY"
    },
    {
@@ -887,8 +618,30 @@
     "in_medians": true,
     "mult": 14.9,
     "reason": "both do Model Evaluation; same type of business; same business function; same AI stance",
-    "score": 13.1,
+    "score": 12.5,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Scale AI",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 14.5,
+    "reason": "both do Model Evaluation, Training Data; same type of business; same business function; same AI stance",
+    "score": 12.5,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do LLM Observability, Agent Evaluation, Model Training; same type of business; same kind of customer; sold the same way",
+    "score": 15.6,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -898,7 +651,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 1,
     "ARR_RUNRATE": 1,
     "NET_REVENUE": 2
    },
@@ -906,24 +659,27 @@
    "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
-    "Confluent"
+    "Scale AI"
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 50.0,
-   "listed_target_n": 1,
-   "listed_target_names": [
-    "Confluent"
-   ],
-   "low": 9.88,
+   "high": 20.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.3,
    "mid": 14.9,
-   "n": 5,
+   "n": 4,
    "period_mix": {
-    "LTM": 2,
-    "RUN_RATE": 3
+    "LTM": 1,
+    "NTM": 1,
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -941,24 +697,24 @@
     "model",
     "training"
    ],
-   "spread": 5.1,
+   "spread": 1.9,
    "table": [
-    {
-     "company": "Confluent",
-     "date": "Dec-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 9.88,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Oxylabs",
      "date": "Jul-26",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Scale AI",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -982,70 +738,44 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Clay",
-     "date": "Jan-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 50.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 1.6,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 17,
   "secondary": [
    {
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; same kind of customer; same revenue model; sold the same way",
-    "score": 9.3,
-    "ticker": "NYSE:NET"
-   },
-   {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same kind of customer; same revenue model; sold the same way",
     "score": 9.1,
-    "ticker": "NYSE:TWLO"
-   },
-   {
-    "company": "TomTom N.V.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "ENXTAM:TOM2"
+    "ticker": "NYSE:NET"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "DIAMOND",
    "high": 29.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.6,
-   "mid": 5.2,
-   "n": 3,
+   "low": 29.5,
+   "mid": 29.5,
+   "n": 1,
    "period_mix": {
-    "NTM": 3
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -1053,56 +783,16 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "TomTom N.V.",
-     "mult": 0.6,
-     "reason": "shares the language of data; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Twilio Inc.",
-     "mult": 5.2,
-     "reason": "shares the language of data; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "mult": 29.5,
-     "reason": "shares the language of agent; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "agent",
-    "data"
+    "agent"
    ],
    "show_retention": true,
-   "spread": 49.2,
+   "sole": "Cloudflare, Inc.",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "TomTom N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.9,
-     "multiple": 0.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTAM:TOM2"
-    },
-    {
-     "company": "Twilio Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.6,
-     "multiple": 5.2,
-     "recurring_pct": null,
-     "retention_pct": 116.0,
-     "ticker": "NYSE:TWLO"
-    },
     {
      "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1113,9 +803,9 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.3,
-   "thin": false,
-   "triangulated": false
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Monetize your agent's traces"

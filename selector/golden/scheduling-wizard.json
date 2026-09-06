@@ -78,7 +78,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": true
     },
@@ -186,7 +186,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.2,
+     "tag_evidence": 3.9,
      "thin": false,
      "triangulated": false
     },
@@ -302,7 +302,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
     }
@@ -318,27 +318,27 @@
     "ticker": "NYSE:VEEV"
    },
    {
-    "company": "Tecsys Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of healthcare, supply; same type of business; same end market; same kind of customer",
-    "score": 12.2,
-    "ticker": "TSX:TCS"
-   },
-   {
     "company": "Samsara Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
-    "score": 12.1,
+    "score": 11.8,
     "ticker": "NYSE:IOT"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare, supply; same type of business; same end market; same kind of customer",
+    "score": 11.8,
+    "ticker": "TSX:TCS"
    },
    {
     "company": "Waystar Holding Corp.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
-    "score": 11.0,
+    "score": 10.8,
     "ticker": "NASDAQGS:WAY"
    },
    {
@@ -346,7 +346,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of healthcare; same type of business; same end market; sold the same way",
-    "score": 9.4,
+    "score": 9.2,
     "ticker": "NYSE:PHR"
    }
   ],
@@ -464,7 +464,7 @@
      "ticker": "NYSE:VEEV"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -708,7 +708,7 @@
     "in_medians": true,
     "mult": 1.39,
     "reason": "both do Care Coordination; same type of business; same end market; sold the same way",
-    "score": 17.2,
+    "score": 16.9,
     "type": "CONTROL"
    },
    {
@@ -719,7 +719,7 @@
     "in_medians": true,
     "mult": 7.37,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 13.6,
+    "score": 13.3,
     "type": "PRIMARY"
    },
    {
@@ -730,7 +730,7 @@
     "in_medians": true,
     "mult": 66.0,
     "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
-    "score": 14.0,
+    "score": 13.8,
     "type": "PRIMARY"
    },
    {
@@ -752,7 +752,7 @@
     "in_medians": true,
     "mult": 51.4,
     "reason": "shares the language of care; related type of business; same end market; same AI stance",
-    "score": 8.6,
+    "score": 8.3,
     "type": "PRIMARY"
    },
    {
@@ -763,7 +763,7 @@
     "in_medians": true,
     "mult": 14.25,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 16.6,
+    "score": 16.3,
     "type": "PRIMARY"
    },
    {
@@ -774,7 +774,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 11.6,
+    "score": 11.3,
     "type": "PRIMARY"
    }
   ],
@@ -879,7 +879,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.2,
+   "tag_evidence": 3.9,
    "thin": false,
    "triangulated": false
   },
@@ -898,7 +898,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of supply; same type of business; same kind of customer; sold the same way",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "TSX:KXS"
    },
    {
@@ -906,7 +906,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of healthcare, hospital; same end market; same kind of customer; sold the same way",
-    "score": 8.5,
+    "score": 8.2,
     "ticker": "NYSE:AMN"
    }
   ],
@@ -1000,7 +1000,7 @@
      "ticker": "TSX:KXS"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   }

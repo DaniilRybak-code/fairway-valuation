@@ -8,14 +8,14 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 3
+      "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
@@ -23,11 +23,11 @@
      "high": 1000000.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10285.71,
-     "mid": 357142.86,
-     "n": 3,
+     "low": 357142.86,
+     "mid": 1000000.0,
+     "n": 2,
      "period_mix": {
-      "RUN_RATE": 3
+      "RUN_RATE": 2
      },
      "period_span": {
       "RUN_RATE": {
@@ -35,29 +35,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Oxylabs",
-       "mult": 10285.71,
-       "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Clay",
-       "mult": 357142.86,
-       "reason": "both do Data Enrichment, Outbound Automation; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Gong",
-       "mult": 1000000.0,
-       "reason": "shares the language of sales; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "automation",
@@ -68,18 +46,8 @@
       "research",
       "sales"
      ],
-     "spread": 97.2,
+     "spread": 2.8,
      "table": [
-      {
-       "company": "Oxylabs",
-       "date": "Jul-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10285.71,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Clay",
        "date": "Jan-26",
@@ -101,8 +69,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 2.6,
-     "thin": false,
+     "tag_evidence": 2.3,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -111,14 +79,14 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
-      "NET_REVENUE": 2
+      "ARR": 2,
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 2,
+     "control_n": 1,
      "control_names": [
-      "Confluent",
       "Semrush"
      ],
      "dispersed": true,
@@ -127,25 +95,19 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 105.3,
-     "listed_target_n": 2,
+     "high": 120.0,
+     "listed_target_n": 1,
      "listed_target_names": [
-      "Confluent",
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 10.3,
+     "mid": 50.0,
      "n": 5,
      "period_mix": {
-      "LTM": 1,
       "NTM": 1,
-      "RUN_RATE": 3
+      "RUN_RATE": 4
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "NTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -164,18 +126,11 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Confluent",
-       "mult": 9.88,
-       "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
+       "company": "Genspark",
+       "mult": 25.0,
+       "reason": "shares the language of automation; related type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Oxylabs",
-       "mult": 10.3,
-       "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
+       "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
@@ -190,6 +145,13 @@
        "reason": "shares the language of automation; same type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Perplexity",
+       "mult": 120.0,
+       "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -202,7 +164,7 @@
       "research",
       "sales"
      ],
-     "spread": 24.5,
+     "spread": 27.9,
      "table": [
       {
        "company": "Semrush",
@@ -215,21 +177,11 @@
        "ticker": ""
       },
       {
-       "company": "Confluent",
-       "date": "Dec-25",
+       "company": "Genspark",
+       "date": "Nov-25",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 9.88,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Oxylabs",
-       "date": "Jul-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.3,
+       "multiple": 25.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -253,9 +205,19 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Perplexity",
+       "date": "Jul-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 120.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 2.6,
+     "tag_evidence": 2.3,
      "thin": false,
      "triangulated": false
     }
@@ -267,7 +229,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of automation, data; same type of business; same kind of customer; same revenue model",
-    "score": 10.2,
+    "score": 10.1,
     "ticker": "NYSE:KVYO"
    },
    {
@@ -275,7 +237,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Automation; same type of business; same kind of customer; sold the same way",
-    "score": 8.9,
+    "score": 8.7,
     "ticker": "NYSE:HUBS"
    },
    {
@@ -354,7 +316,7 @@
      "ticker": "NYSE:ZETA"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
@@ -630,16 +592,6 @@
    {
     "backed": [
      {
-      "company": "Confluent",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "IBM",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Semrush",
       "date": "Nov-25"
      }
@@ -656,21 +608,70 @@
     ],
     "investor": "Undisclosed (Nasdaq Private Market secondary)",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Oxylabs",
-    "date": "Jul-26",
-    "in_medians": true,
-    "mult": 10.3,
-    "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
-    "score": 9.6,
-    "type": "MIXED"
-   },
    {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "<=",
@@ -690,7 +691,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "both do Data Enrichment, Outbound Automation; same type of business; same business function; same revenue model",
-    "score": 18.6,
+    "score": 18.3,
     "type": "SECONDARY"
    },
    {
@@ -705,17 +706,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Confluent",
-    "date": "Dec-25",
-    "in_medians": true,
-    "mult": 9.88,
-    "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
-    "score": 9.6,
-    "type": "CONTROL"
-   },
-   {
     "basis": "DISCLOSED_FORECAST",
     "bound": "",
     "company": "Semrush",
@@ -723,7 +713,7 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "shares the language of research; same type of business; same kind of customer; sold the same way",
-    "score": 13.3,
+    "score": 13.2,
     "type": "CONTROL"
    },
    {
@@ -734,8 +724,30 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of sales; same type of business; same business function; same AI stance",
-    "score": 10.3,
+    "score": 10.1,
     "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of automation; related type of business; sold the same way; same AI stance",
+    "score": 9.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Jul-2025",
+    "bound": "",
+    "company": "Perplexity",
+    "date": "Jul-25",
+    "in_medians": true,
+    "mult": 120.0,
+    "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
+    "score": 9.7,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -745,37 +757,31 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
-    "NET_REVENUE": 2
+    "ARR": 2,
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 2,
+   "control_n": 1,
    "control_names": [
-    "Confluent",
     "Semrush"
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 105.3,
-   "listed_target_n": 2,
+   "high": 120.0,
+   "listed_target_n": 1,
    "listed_target_names": [
-    "Confluent",
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 10.3,
+   "mid": 50.0,
    "n": 5,
    "period_mix": {
-    "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -794,18 +800,11 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Confluent",
-     "mult": 9.88,
-     "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "shares the language of automation; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Oxylabs",
-     "mult": 10.3,
-     "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
@@ -820,6 +819,13 @@
      "reason": "shares the language of automation; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Perplexity",
+     "mult": 120.0,
+     "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -832,7 +838,7 @@
     "research",
     "sales"
    ],
-   "spread": 24.5,
+   "spread": 27.9,
    "table": [
     {
      "company": "Semrush",
@@ -845,21 +851,11 @@
      "ticker": ""
     },
     {
-     "company": "Confluent",
-     "date": "Dec-25",
+     "company": "Genspark",
+     "date": "Nov-25",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 9.88,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Oxylabs",
-     "date": "Jul-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.3,
+     "multiple": 25.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -883,20 +879,30 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Perplexity",
+     "date": "Jul-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 120.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
-   "tag_evidence": 2.6,
+   "tag_evidence": 2.3,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 9,
+  "private_window_months": 13,
   "secondary": [
    {
     "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Data Enrichment; related type of business; same revenue model",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "NASDAQCM:RDVT"
    },
    {
@@ -904,47 +910,31 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Data Enrichment, Lead Enrichment; related type of business; same business function",
-    "score": 6.2,
+    "score": 5.8,
     "ticker": "NASDAQGS:GTM"
-   },
-   {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; same revenue model; sold the same way",
-    "score": 5.6,
-    "ticker": "NYSE:TWLO"
-   },
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; related type of business; same revenue model",
-    "score": 5.1,
-    "ticker": "NYSE:SNOW"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 15.6,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.2,
-   "mid": 10.0,
-   "n": 3,
+   "mid": 6.1,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -952,38 +942,8 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "mult": 2.2,
-     "reason": "both do Data Enrichment, Lead Enrichment; related type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "mult": 10.0,
-     "reason": "both do Data Enrichment; related type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "shares the language of data; related type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [
-    {
-     "company": "Twilio Inc.",
-     "mult": 5.2,
-     "reason": "shares the language of data; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "automation",
@@ -993,7 +953,7 @@
     "sales"
    ],
    "show_retention": true,
-   "spread": 7.1,
+   "spread": 4.5,
    "table": [
     {
      "company": "ZoomInfo Technologies Inc.",
@@ -1012,19 +972,10 @@
      "recurring_pct": 77.0,
      "retention_pct": 95.0,
      "ticker": "NASDAQCM:RDVT"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
     }
    ],
-   "tag_evidence": 1.7,
-   "thin": false,
+   "tag_evidence": 1.3,
+   "thin": true,
    "triangulated": false
   }
  },

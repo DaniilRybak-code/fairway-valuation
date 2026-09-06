@@ -78,7 +78,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": true
     },
@@ -158,7 +158,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": true
     }
@@ -170,7 +170,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of energy; same end market; same business function; sold the same way",
-    "score": 8.5,
+    "score": 8.3,
     "ticker": "XTRA:PSAN"
    },
    {
@@ -178,7 +178,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of energy, power; same end market; sold the same way; same AI stance",
-    "score": 7.1,
+    "score": 6.9,
     "ticker": "NSEI:IEX"
    },
    {
@@ -186,7 +186,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of energy, generation; same kind of customer; same purchase frequency",
-    "score": 5.3,
+    "score": 5.0,
     "ticker": "LSE:MONY"
    }
   ],
@@ -373,7 +373,7 @@
     "in_medians": true,
     "mult": 0.57,
     "reason": "shares the language of energy; same type of business; same end market; same business function",
-    "score": 11.5,
+    "score": 11.3,
     "type": "PRIMARY"
    },
    {
@@ -384,7 +384,7 @@
     "in_medians": true,
     "mult": 5.5,
     "reason": "shares the language of energy; same type of business; same end market; same business function",
-    "score": 13.5,
+    "score": 13.3,
     "type": "PRIMARY"
    }
   ],

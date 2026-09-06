@@ -54,7 +54,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
+     "tag_evidence": 0.0,
      "thin": true,
      "triangulated": true
     },
@@ -110,7 +110,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
+     "tag_evidence": 0.0,
      "thin": true,
      "triangulated": true
     }
@@ -130,7 +130,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of portfolio; same type of business; same end market",
-    "score": 6.5,
+    "score": 6.2,
     "ticker": "ASX:HUB"
    },
    {
@@ -138,7 +138,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of portfolio; same type of business; same end market",
-    "score": 6.5,
+    "score": 6.2,
     "ticker": "ASX:NWL"
    },
    {
@@ -146,7 +146,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of trading; same type of business; same kind of customer",
-    "score": 5.8,
+    "score": 5.7,
     "ticker": "NASDAQ:HOOD"
    }
   ],
@@ -387,8 +387,8 @@
     "date": "Mar-23",
     "in_medians": true,
     "mult": 6.43,
-    "reason": "shares the language of marketplace; same type of business; same end market; same kind of customer",
-    "score": 16.6,
+    "reason": "same type of business; same end market; same kind of customer; sold the same way",
+    "score": 16.5,
     "type": "PRIMARY"
    },
    {
@@ -398,8 +398,8 @@
     "date": "Apr-21",
     "in_medians": true,
     "mult": 6.67,
-    "reason": "shares the language of marketplace; related type of business; same end market; same kind of customer",
-    "score": 18.1,
+    "reason": "related type of business; same end market; same kind of customer; same revenue model",
+    "score": 18.0,
     "type": "PRIMARY"
    }
   ],
@@ -452,7 +452,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.0,
    "thin": true,
    "triangulated": true
   },
@@ -471,7 +471,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of card; same end market; same revenue model; same AI stance",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "NASDAQ:MQ"
    },
    {
@@ -479,7 +479,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of card; same end market; same revenue model; same AI stance",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "ENXTPA:WLN"
    },
    {
@@ -582,7 +582,7 @@
      "ticker": "LSE:MONY"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
   }

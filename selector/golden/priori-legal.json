@@ -8,14 +8,14 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2
+      "ARR": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "RANGE",
+     "display": "DIAMOND",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -23,11 +23,11 @@
      "high": 56.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 15.0,
+     "low": 56.0,
      "mid": 56.0,
-     "n": 2,
+     "n": 1,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 1
      },
      "period_span": {
       "RUN_RATE": {
@@ -40,21 +40,11 @@
      "shared_words": [
       "house",
       "in",
-      "legal",
-      "management"
+      "legal"
      ],
-     "spread": 3.7,
+     "sole": "Legora",
+     "spread": 1.0,
      "table": [
-      {
-       "company": "Clio",
-       "date": "Jul-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 15.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Legora",
        "date": "Apr-26",
@@ -66,7 +56,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.4,
+     "tag_evidence": 1.2,
      "thin": true,
      "triangulated": false
     },
@@ -200,24 +190,24 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of legal, management; related type of business; same end market; same kind of customer",
-    "score": 9.6,
+    "score": 9.4,
     "ticker": "NASDAQGS:INTA"
    },
    {
-    "company": "Airtasker Limited",
+    "company": "Upwork Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "ASX:ART"
+    "reason": "both do Talent Marketplace; same type of business; same business function; same revenue model",
+    "score": 11.5,
+    "ticker": "NASDAQGS:UPWK"
    },
    {
-    "company": "Freelancer Limited",
+    "company": "Cars.com Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "ASX:FLN"
+    "reason": "shares the language of in; related type of business; sold the same way; same cost structure",
+    "score": 11.2,
+    "ticker": "NYSE:CARS"
    }
   ],
   "core_range": {
@@ -227,7 +217,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -237,7 +227,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.2,
-   "mid": 1.3,
+   "mid": 1.4,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -252,30 +242,32 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "in",
     "legal",
     "management",
-    "marketplace"
+    "marketplace",
+    "talent"
    ],
    "show_retention": true,
    "spread": 3.8,
    "table": [
     {
-     "company": "Freelancer Limited",
+     "company": "Upwork Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.3,
+     "growth_pct": 2.9,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "ASX:FLN"
+     "ticker": "NASDAQGS:UPWK"
     },
     {
-     "company": "Airtasker Limited",
+     "company": "Cars.com Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.4,
-     "multiple": 1.3,
+     "growth_pct": 2.4,
+     "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "ASX:ART"
+     "ticker": "NYSE:CARS"
     },
     {
      "company": "Intapp, Inc.",
@@ -287,7 +279,7 @@
      "ticker": "NASDAQGS:INTA"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
@@ -591,56 +583,6 @@
    {
     "backed": [
      {
-      "company": "Clio",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "NEA",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clio",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Goldman Sachs AM",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clio",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Sixth Street",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clio",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "CapitalG",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clio",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Tidemark",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Loadsmart",
       "date": "Feb-22"
      }
@@ -759,7 +701,7 @@
     "in_medians": true,
     "mult": 56.0,
     "reason": "both do In-House Legal; related type of business; same end market; same kind of customer",
-    "score": 13.9,
+    "score": 13.7,
     "type": "PRIMARY"
    },
    {
@@ -770,7 +712,7 @@
     "in_medians": true,
     "mult": 22.22,
     "reason": "shares the language of marketplace, talent; same type of business; same revenue model; sold the same way",
-    "score": 12.7,
+    "score": 12.5,
     "type": "PRIMARY"
    },
    {
@@ -781,7 +723,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "both do Talent Marketplace; same type of business; same revenue model; sold the same way",
-    "score": 12.7,
+    "score": 12.5,
     "type": "PRIMARY"
    },
    {
@@ -792,19 +734,8 @@
     "in_medians": false,
     "mult": 66.7,
     "reason": "shares the language of legal, management; related type of business; same end market; same kind of customer",
-    "score": 13.1,
+    "score": 12.9,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Clio",
-    "date": "Jul-24",
-    "in_medians": true,
-    "mult": 15.0,
-    "reason": "shares the language of legal, management; related type of business; same end market",
-    "score": 6.6,
-    "type": "MIXED"
    },
    {
     "basis": "Disclosed at pricing; FY2021 closed",
@@ -836,22 +767,22 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2
+    "ARR": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "high": 56.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 15.0,
+   "low": 56.0,
    "mid": 56.0,
-   "n": 2,
+   "n": 1,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 1
    },
    "period_span": {
     "RUN_RATE": {
@@ -864,21 +795,11 @@
    "shared_words": [
     "house",
     "in",
-    "legal",
-    "management"
+    "legal"
    ],
-   "spread": 3.7,
+   "sole": "Legora",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "Clio",
-     "date": "Jul-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 15.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Legora",
      "date": "Apr-26",
@@ -890,51 +811,51 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.4,
+   "tag_evidence": 1.2,
    "thin": true,
    "triangulated": false
   },
   "private_window_months": 56,
   "secondary": [
    {
-    "company": "Angi Inc.",
+    "company": "AMN Healthcare Services, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same revenue model; same cost structure",
-    "score": 12.1,
-    "ticker": "NASDAQGS:ANGI"
+    "reason": "shares the language of management, staffing; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "NYSE:AMN"
    },
    {
-    "company": "Trip.com Group Limited",
+    "company": "Robert Walters plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 12.1,
-    "ticker": "NASDAQGS:TCOM"
+    "reason": "shares the language of staffing; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "LSE:RWA"
    },
    {
-    "company": "Upwork Inc.",
+    "company": "Hays plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "both do Talent Marketplace; same type of business; same business function; same revenue model",
-    "score": 11.7,
-    "ticker": "NASDAQGS:UPWK"
+    "reason": "shares the language of staffing; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "LSE:HAS"
    },
    {
-    "company": "Cars.com Inc.",
+    "company": "Roblox Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of in; related type of business; sold the same way; same cost structure",
-    "score": 11.2,
-    "ticker": "NYSE:CARS"
+    "reason": "shares the language of in; same revenue model; same cost structure",
+    "score": 6.2,
+    "ticker": "NYSE:RBLX"
    },
    {
-    "company": "Booking Holdings Inc.",
+    "company": "Mitsubishi Logistics",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:BKNG"
+    "reason": "shares the language of house; same kind of customer; sold the same way; same AI stance",
+    "score": 6.1,
+    "ticker": "TSE:9301"
    }
   ],
   "secondary_range": {
@@ -950,11 +871,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.4,
+   "high": 0.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.4,
-   "mid": 1.2,
+   "low": 0.2,
+   "mid": 0.2,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -968,58 +889,57 @@
    "points": [],
    "positioning": [
     {
-     "company": "Trip.com Group Limited",
-     "mult": 1.9,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "company": "Mitsubishi Logistics",
+     "mult": 2.1,
+     "reason": "shares the language of house; same kind of customer; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
-     "company": "Booking Holdings Inc.",
-     "mult": 4.8,
-     "reason": "shares the language of marketplace; same business function; same revenue model; same cost structure",
+     "company": "Roblox Corporation",
+     "mult": 3.7,
+     "reason": "shares the language of in; same revenue model; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "in",
-    "marketplace",
-    "talent"
+    "management",
+    "staffing"
    ],
    "show_retention": false,
-   "spread": 3.5,
+   "spread": 3.0,
    "table": [
     {
-     "company": "Angi Inc.",
+     "company": "Robert Walters plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.0,
-     "multiple": 0.4,
+     "growth_pct": 5.5,
+     "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:ANGI"
+     "ticker": "LSE:RWA"
     },
     {
-     "company": "Upwork Inc.",
+     "company": "Hays plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.9,
-     "multiple": 1.2,
+     "growth_pct": 1.6,
+     "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:UPWK"
+     "ticker": "LSE:HAS"
     },
     {
-     "company": "Cars.com Inc.",
+     "company": "AMN Healthcare Services, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.4,
-     "multiple": 1.4,
+     "growth_pct": -9.2,
+     "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:CARS"
+     "ticker": "NYSE:AMN"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

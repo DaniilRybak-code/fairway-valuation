@@ -20,11 +20,11 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 3.4,
+     "high": 3.8,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 1.8,
-     "mid": 1.9,
+     "low": 1.9,
+     "mid": 2.5,
      "n": 5,
      "period_mix": {
       "NTM": 5
@@ -44,7 +44,7 @@
       "lending"
      ],
      "show_retention": false,
-     "spread": 3.1,
+     "spread": 3.5,
      "table": [
       {
        "company": "LendingClub Corporation",
@@ -54,15 +54,6 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "NYSE:LC"
-      },
-      {
-       "company": "SoFi Technologies, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 23.3,
-       "multiple": 1.8,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQ:SOFI"
       },
       {
        "company": "Klarna Group plc",
@@ -90,9 +81,18 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "OM:AVARDA"
+      },
+      {
+       "company": "Nu Holdings Ltd.",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 23.3,
+       "multiple": 3.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "NYSE:NU"
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
     },
@@ -146,9 +146,9 @@
        "transaction_type": ""
       },
       {
-       "company": "SoFi Technologies, Inc.",
-       "mult": 21.4,
-       "reason": "shares the language of credit; same type of business; same business function; same revenue model",
+       "company": "Nu Holdings Ltd.",
+       "mult": 13.6,
+       "reason": "shares the language of credit, lending; related type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": ""
       }
@@ -199,7 +199,7 @@
        "ticker": "NYSE:KLAR"
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
     }
@@ -211,7 +211,73 @@
      "basis": "ARR",
      "basis_label": "enterprise value to ARR",
      "basis_mix": {
-      "ARR": 1
+      "ARR": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "arr",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 11.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 8.9,
+     "mid": 11.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "credit",
+      "lending"
+     ],
+     "spread": 1.2,
+     "table": [
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Happy Money",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 11.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": true,
+     "triangulated": false
+    },
+    "BOOK": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BOOK",
+     "basis_label": "price to book",
+     "basis_mix": {
+      "BOOK": 1
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -219,15 +285,15 @@
      "control_names": [],
      "dispersed": false,
      "display": "DIAMOND",
-     "founder_field": "arr",
+     "founder_field": "book_value",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 8.9,
+     "high": 5.6,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 8.9,
-     "mid": 8.9,
+     "low": 5.6,
+     "mid": 5.6,
      "n": 1,
      "period_mix": {
       "RUN_RATE": 1
@@ -252,84 +318,13 @@
        "date": "Oct-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 8.9,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.3,
-     "thin": true,
-     "triangulated": false
-    },
-    "BOOK": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "BOOK",
-     "basis_label": "price to book",
-     "basis_mix": {
-      "BOOK": 2
-     },
-     "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "book_value",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 5.6,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 3.17,
-     "mid": 5.6,
-     "n": 2,
-     "period_mix": {
-      "RUN_RATE": 1,
-      "UNKNOWN": 1
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [
-      "credit",
-      "lending"
-     ],
-     "spread": 1.8,
-     "table": [
-      {
-       "company": "Atom Bank",
-       "date": "Feb-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 3.17,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Zopa",
-       "date": "Oct-21",
-       "growth_basis": "",
-       "growth_pct": null,
        "multiple": 5.6,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.1,
      "thin": true,
      "triangulated": false
     }
@@ -341,7 +336,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, financing, lending; same type of business; same end market; same kind of customer",
-    "score": 11.4,
+    "score": 10.8,
     "ticker": "OM:AVARDA"
    },
    {
@@ -349,7 +344,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "NASDAQ:AFRM"
    },
    {
@@ -357,7 +352,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same end market; same kind of customer",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "NYSE:KLAR"
    },
    {
@@ -365,7 +360,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "ASX:ZIP"
    },
    {
@@ -373,7 +368,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "NYSE:LC"
    },
    {
@@ -381,16 +376,16 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "NYSE:ENVA"
    },
    {
-    "company": "SoFi Technologies, Inc.",
+    "company": "Nu Holdings Ltd.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "NASDAQ:SOFI"
+    "reason": "shares the language of credit, lending; related type of business; same business function; same revenue model",
+    "score": 7.1,
+    "ticker": "NYSE:NU"
    }
   ],
   "core_range": {
@@ -406,11 +401,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 3.4,
+   "high": 3.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 1.9,
+   "low": 1.9,
+   "mid": 2.5,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -430,7 +425,7 @@
     "lending"
    ],
    "show_retention": false,
-   "spread": 3.1,
+   "spread": 3.5,
    "table": [
     {
      "company": "LendingClub Corporation",
@@ -440,15 +435,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:LC"
-    },
-    {
-     "company": "SoFi Technologies, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 23.3,
-     "multiple": 1.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:SOFI"
     },
     {
      "company": "Klarna Group plc",
@@ -476,9 +462,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "OM:AVARDA"
+    },
+    {
+     "company": "Nu Holdings Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.3,
+     "multiple": 3.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NU"
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
@@ -699,11 +694,21 @@
    {
     "backed": [
      {
-      "company": "Creditas",
-      "date": "Dec-25"
+      "company": "Happy Money",
+      "date": "Feb-22"
      }
     ],
-    "investor": "Andbank (lead)",
+    "investor": "Anthemis Group",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Happy Money",
+      "date": "Feb-22"
+     }
+    ],
+    "investor": "CMFG Ventures",
     "n": 1
    },
    {
@@ -735,36 +740,6 @@
     ],
     "investor": "existing investors",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Atom Bank",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "Toscafund",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Atom Bank",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "Infinity Investment Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Atom Bank",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "BBVA",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -777,7 +752,7 @@
     "in_medians": true,
     "mult": 5.16,
     "reason": "shares the language of credit, financing; same type of business; same end market; sold the same way",
-    "score": 11.7,
+    "score": 11.2,
     "type": "PRIMARY"
    },
    {
@@ -788,7 +763,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of advance, capital, cash; same type of business; same end market; same business function",
-    "score": 16.4,
+    "score": 15.6,
     "type": "PRIMARY"
    },
    {
@@ -799,18 +774,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of capital, inventory; same type of business; same end market; same business function",
-    "score": 15.2,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Q3 results released on financing close date; closed quarter",
-    "bound": "",
-    "company": "Creditas",
-    "date": "Dec-25",
-    "in_medians": false,
-    "mult": 7.41,
-    "reason": "shares the language of lending; same type of business; same business function; same revenue model",
-    "score": 14.2,
+    "score": 14.8,
     "type": "PRIMARY"
    },
    {
@@ -821,8 +785,30 @@
     "in_medians": false,
     "mult": 0.6,
     "reason": "both do Working Capital; same type of business; same business function; same kind of customer",
-    "score": 13.8,
+    "score": 13.2,
     "type": "CONTROL_ACQUISITION"
+   },
+   {
+    "basis": "inception 2015 to 2022-04-11",
+    "bound": "",
+    "company": "Stenn",
+    "date": "Apr-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of financing; same type of business; same business function; same kind of customer",
+    "score": 12.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Happy Money",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": 11.0,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same AI stance",
+    "score": 9.1,
+    "type": "PRIMARY"
    },
    {
     "basis": "REPORTED_CONTEMPORANEOUS",
@@ -832,18 +818,7 @@
     "in_medians": true,
     "mult": 8.9,
     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 14.3,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Atom Bank",
-    "date": "Feb-22",
-    "in_medians": true,
-    "mult": null,
-    "reason": "shares the language of lending; related type of business; same business function; same revenue model",
-    "score": 10.7,
+    "score": 14.1,
     "type": "PRIMARY"
    }
   ],
@@ -854,29 +829,24 @@
    "basis": "BOOK",
    "basis_label": "price to book",
    "basis_mix": {
-    "BOOK": 2
+    "BOOK": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "high": 5.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.17,
+   "low": 5.6,
    "mid": 5.6,
-   "n": 2,
+   "n": 1,
    "period_mix": {
-    "RUN_RATE": 1,
-    "UNKNOWN": 1
+    "RUN_RATE": 1
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -888,18 +858,9 @@
     "credit",
     "lending"
    ],
-   "spread": 1.8,
+   "sole": "Zopa",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "Atom Bank",
-     "date": "Feb-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 3.17,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Zopa",
      "date": "Oct-21",
@@ -911,7 +872,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.1,
    "thin": true,
    "triangulated": false
   },
@@ -922,31 +883,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same business function; same kind of customer",
-    "score": 13.3,
+    "score": 13.1,
     "ticker": "NYSE:VEL"
-   },
-   {
-    "company": "UWM Holdings Corporation",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of lending; same type of business; same business function; same kind of customer",
-    "score": 12.2,
-    "ticker": "NYSE:UWMC"
-   },
-   {
-    "company": "OSB Group Plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of lending; related type of business; same business function; same kind of customer",
-    "score": 11.7,
-    "ticker": "LSE:OSB"
    },
    {
     "company": "S&U plc",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 10.8,
+    "score": 10.6,
     "ticker": "LSE:SUS"
    },
    {
@@ -954,8 +899,24 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
-    "score": 10.8,
+    "score": 10.6,
     "ticker": "ASX:PPM"
+   },
+   {
+    "company": "Regional Management Corp.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "NYSE:RM"
+   },
+   {
+    "company": "Funding Circle Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of credit, lending; same type of business; same business function; same kind of customer",
+    "score": 10.1,
+    "ticker": "LSE:FCH"
    }
   ],
   "secondary_range": {
@@ -971,7 +932,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.5,
+   "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.8,
@@ -994,16 +955,16 @@
     "lending"
    ],
    "show_retention": false,
-   "spread": 2.1,
+   "spread": 3.7,
    "table": [
     {
-     "company": "OSB Group Plc",
+     "company": "Regional Management Corp.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.3,
+     "growth_pct": 6.4,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "LSE:OSB"
+     "ticker": "NYSE:RM"
     },
     {
      "company": "Velocity Financial, Inc.",
@@ -1033,16 +994,16 @@
      "ticker": "ASX:PPM"
     },
     {
-     "company": "UWM Holdings Corporation",
+     "company": "Funding Circle Holdings plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 16.4,
-     "multiple": 1.5,
+     "growth_pct": 10.7,
+     "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:UWMC"
+     "ticker": "LSE:FCH"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": false
   }

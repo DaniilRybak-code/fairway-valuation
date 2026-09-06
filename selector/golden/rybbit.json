@@ -82,7 +82,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 10.8,
+     "tag_evidence": 10.7,
      "thin": true,
      "triangulated": false
     },
@@ -203,7 +203,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 10.8,
+     "tag_evidence": 10.7,
      "thin": false,
      "triangulated": false
     }
@@ -215,7 +215,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Product Analytics, Session Replay; same type of business; same business function; sold the same way",
-    "score": 15.6,
+    "score": 15.5,
     "ticker": "NASDAQCM:AMPL"
    },
    {
@@ -231,7 +231,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Web Analytics; same type of business; same business function",
-    "score": 10.8,
+    "score": 10.5,
     "ticker": "NYSE:SMWB"
    },
    {
@@ -255,7 +255,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of tracking; same type of business; same kind of customer; sold the same way",
-    "score": 9.0,
+    "score": 8.8,
     "ticker": "NASDAQGS:TEAM"
    },
    {
@@ -424,7 +424,7 @@
      "ticker": "NYSE:SNOW"
     }
    ],
-   "tag_evidence": 7.6,
+   "tag_evidence": 7.5,
    "thin": false,
    "triangulated": false
   },
@@ -752,7 +752,7 @@
     "in_medians": true,
     "mult": 28.0,
     "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
-    "score": 16.8,
+    "score": 16.7,
     "type": "PRIMARY"
    },
    {
@@ -763,7 +763,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of web; same type of business; same business function; same kind of customer",
-    "score": 18.2,
+    "score": 18.1,
     "type": "MIXED"
    },
    {
@@ -785,7 +785,7 @@
     "in_medians": true,
     "mult": 72.86,
     "reason": "both do Open Source; related type of business; same kind of customer; same revenue model",
-    "score": 14.2,
+    "score": 14.0,
     "type": "PRIMARY"
    },
    {
@@ -796,7 +796,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Open Source; same type of business; same kind of customer; sold the same way",
-    "score": 12.7,
+    "score": 12.5,
     "type": "PRIMARY"
    },
    {
@@ -807,7 +807,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of tracking; same type of business; same kind of customer; sold the same way",
-    "score": 13.5,
+    "score": 13.3,
     "type": "CONTROL"
    },
    {
@@ -936,7 +936,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 10.8,
+   "tag_evidence": 10.7,
    "thin": false,
    "triangulated": false
   },
@@ -955,7 +955,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Web Analytics; related type of business; sold the same way",
-    "score": 7.8,
+    "score": 7.7,
     "ticker": "NASDAQGS:ADBE"
    }
   ],
@@ -1031,7 +1031,7 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 3.3,
+   "tag_evidence": 3.2,
    "thin": true,
    "triangulated": false
   }

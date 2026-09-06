@@ -50,13 +50,6 @@
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "WHOOP",
-       "mult": 9.18,
-       "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
        "company": "Quince",
        "mult": 10.1,
        "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
@@ -103,7 +96,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.5,
+     "tag_evidence": 1.3,
      "thin": false,
      "triangulated": false
     }
@@ -115,7 +108,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct, food, meal; same end market; same business function; same kind of customer",
-    "score": 13.4,
+    "score": 12.9,
     "ticker": "TSE:3182"
    },
    {
@@ -123,7 +116,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct, meal, subscription; same end market; same business function; same kind of customer",
-    "score": 12.9,
+    "score": 12.7,
     "ticker": "XTRA:HFG"
    },
    {
@@ -131,7 +124,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct; same end market; same business function; same kind of customer",
-    "score": 10.7,
+    "score": 10.6,
     "ticker": "LSE:WINE"
    },
    {
@@ -306,7 +299,7 @@
     "in_medians": true,
     "mult": 3.3,
     "reason": "both do Nutrition; same type of business; same end market; same business function",
-    "score": 33.0,
+    "score": 32.8,
     "type": "PRIMARY"
    },
    {
@@ -328,7 +321,7 @@
     "in_medians": false,
     "mult": 8.77,
     "reason": "both do Nutrition; same type of business; same end market; same kind of customer",
-    "score": 22.4,
+    "score": 22.2,
     "type": "PRIMARY"
    },
    {
@@ -339,18 +332,7 @@
     "in_medians": true,
     "mult": 10.1,
     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-    "score": 21.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Exiting CY2025",
-    "bound": "",
-    "company": "WHOOP",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 9.18,
-    "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
-    "score": 15.6,
+    "score": 21.6,
     "type": "PRIMARY"
    },
    {
@@ -361,8 +343,19 @@
     "in_medians": true,
     "mult": 5.0,
     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-    "score": 18.7,
+    "score": 18.6,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Vuori",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "score": 18.6,
+    "type": "SECONDARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -406,13 +399,6 @@
      "company": "SKIMS",
      "mult": 5.0,
      "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "WHOOP",
-     "mult": 9.18,
-     "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -463,7 +449,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 1.3,
    "thin": false,
    "triangulated": false
   },
@@ -474,7 +460,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct, dog, pet; same type of business; same business function; same kind of customer",
-    "score": 21.0,
+    "score": 20.8,
     "ticker": "NYSE:BARK"
    },
    {
@@ -482,7 +468,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct, subscription; same type of business; same business function; same kind of customer",
-    "score": 19.8,
+    "score": 19.6,
     "ticker": "NYSE:HIMS"
    },
    {
@@ -490,7 +476,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-    "score": 15.2,
+    "score": 15.1,
     "ticker": "NYSE:WRBY"
    },
    {
@@ -498,7 +484,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-    "score": 15.2,
+    "score": 15.1,
     "ticker": "NYSE:FIGS"
    },
    {
@@ -506,7 +492,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-    "score": 13.2,
+    "score": 13.1,
     "ticker": "NYSE:ONON"
    }
   ],

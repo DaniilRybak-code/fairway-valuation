@@ -8,7 +8,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 4
+      "REVENUE_GROSS": 2
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -24,11 +24,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2.08,
-     "mid": 22.22,
-     "n": 4,
+     "mid": 66.0,
+     "n": 2,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 3
+      "RUN_RATE": 1
      },
      "period_span": {
       "LTM": {
@@ -45,20 +45,6 @@
        "company": "Jobandtalent",
        "mult": 2.08,
        "reason": "both do Shift Staffing; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Micro1",
-       "mult": 10.0,
-       "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Mercor",
-       "mult": 22.22,
-       "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -91,26 +77,6 @@
        "ticker": ""
       },
       {
-       "company": "Micro1",
-       "date": "Sep-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Mercor",
-       "date": "Oct-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 22.22,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Incredible Health",
        "date": "Aug-22",
        "growth_basis": "",
@@ -121,8 +87,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.7,
-     "thin": false,
+     "tag_evidence": 1.4,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -133,24 +99,24 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Healthcare Staffing; same type of business; same end market; same business function",
-    "score": 10.0,
+    "score": 9.8,
     "ticker": "NYSE:AMN"
    },
    {
-    "company": "Freelancer Limited",
+    "company": "SMS Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 9.1,
-    "ticker": "ASX:FLN"
+    "reason": "shares the language of facility, healthcare, nursing; same end market; same business function; same kind of customer",
+    "score": 9.8,
+    "ticker": "TSE:2175"
    },
    {
-    "company": "Airtasker Limited",
+    "company": "Medley, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "ASX:ART"
+    "reason": "shares the language of healthcare; same end market; same business function; same kind of customer",
+    "score": 8.7,
+    "ticker": "TSE:4480"
    }
   ],
   "core_range": {
@@ -160,17 +126,17 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.3,
+   "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
-   "mid": 1.2,
+   "mid": 1.6,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -185,12 +151,13 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "facility",
     "healthcare",
-    "marketplace",
+    "nursing",
     "staffing"
    ],
    "show_retention": false,
-   "spread": 2.2,
+   "spread": 4.3,
    "table": [
     {
      "company": "AMN Healthcare Services, Inc.",
@@ -202,25 +169,25 @@
      "ticker": "NYSE:AMN"
     },
     {
-     "company": "Freelancer Limited",
+     "company": "Medley, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.3,
-     "multiple": 1.2,
+     "growth_pct": 17.7,
+     "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "ASX:FLN"
+     "ticker": "TSE:4480"
     },
     {
-     "company": "Airtasker Limited",
+     "company": "SMS Co., Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.4,
-     "multiple": 1.3,
+     "growth_pct": 9.7,
+     "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "ASX:ART"
+     "ticker": "TSE:2175"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 1.3,
    "thin": false,
    "triangulated": false
   },
@@ -366,46 +333,6 @@
    {
     "backed": [
      {
-      "company": "Mercor",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "Felicis",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Mercor",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "Benchmark",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Mercor",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "General Catalyst",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Mercor",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "Robinhood Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Jobandtalent",
       "date": "Dec-21"
      }
@@ -474,7 +401,7 @@
     "n": 1
    }
   ],
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "FY2021",
@@ -484,29 +411,7 @@
     "in_medians": true,
     "mult": 66.0,
     "reason": "both do Healthcare Staffing, Credentialing; related type of business; same end market; same business function",
-    "score": 10.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Mercor",
-    "date": "Oct-25",
-    "in_medians": true,
-    "mult": 22.22,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 12.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Micro1",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "shares the language of marketplace; same type of business; same business function; same revenue model",
-    "score": 12.1,
+    "score": 10.4,
     "type": "PRIMARY"
    },
    {
@@ -517,7 +422,7 @@
     "in_medians": true,
     "mult": 2.08,
     "reason": "both do Shift Staffing; same type of business; same business function; same revenue model",
-    "score": 15.3,
+    "score": 15.2,
     "type": "PRIMARY"
    }
   ],
@@ -526,44 +431,44 @@
   "private_window_months": 56,
   "secondary": [
    {
-    "company": "Upwork Inc.",
+    "company": "trivago N.V.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 13.6,
-    "ticker": "NASDAQGS:UPWK"
+    "reason": "shares the language of per; same kind of customer; same cost structure",
+    "score": 7.6,
+    "ticker": "NASDAQGS:TRVG"
    },
    {
-    "company": "Angi Inc.",
-    "family": "consumer",
+    "company": "Weave Communications, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 12.6,
-    "ticker": "NASDAQGS:ANGI"
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NYSE:WEAV"
    },
    {
-    "company": "PDD Holdings Inc.",
+    "company": "Robert Walters plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
-    "score": 10.6,
-    "ticker": "NASDAQGS:PDD"
+    "reason": "shares the language of staffing; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "LSE:RWA"
    },
    {
-    "company": "eBay Inc.",
+    "company": "Hays plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
-    "score": 10.6,
-    "ticker": "NASDAQGS:EBAY"
+    "reason": "shares the language of staffing; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "LSE:HAS"
    },
    {
-    "company": "Trip.com Group Limited",
-    "family": "consumer",
+    "company": "Consensus Cloud Solutions, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
-    "score": 10.6,
-    "ticker": "NASDAQGS:TCOM"
+    "reason": "shares the language of healthcare; same end market; sold the same way",
+    "score": 5.2,
+    "ticker": "NASDAQGS:CCSI"
    }
   ],
   "secondary_range": {
@@ -573,17 +478,17 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 3.9,
+   "high": 3.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 1.2,
+   "low": 0.2,
+   "mid": 0.3,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -596,37 +501,37 @@
    },
    "points": [
     {
-     "company": "Angi Inc.",
-     "mult": 0.4,
-     "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
+     "company": "Robert Walters plc",
+     "mult": 0.2,
+     "reason": "shares the language of staffing; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "PDD Holdings Inc.",
-     "mult": 0.7,
-     "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+     "company": "Hays plc",
+     "mult": 0.2,
+     "reason": "shares the language of staffing; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "trivago N.V.",
+     "mult": 0.3,
+     "reason": "shares the language of per; same kind of customer; same cost structure",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
-     "company": "Upwork Inc.",
-     "mult": 1.2,
-     "reason": "shares the language of marketplace; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Trip.com Group Limited",
+     "company": "Weave Communications, Inc.",
      "mult": 1.9,
-     "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+     "reason": "same end market; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
-     "company": "eBay Inc.",
-     "mult": 3.9,
-     "reason": "shares the language of marketplace; same kind of customer; same revenue model; same cost structure",
+     "company": "Consensus Cloud Solutions, Inc.",
+     "mult": 3.1,
+     "reason": "shares the language of healthcare; same end market; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
@@ -634,60 +539,62 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "marketplace"
+    "healthcare",
+    "per",
+    "staffing"
    ],
-   "show_retention": false,
-   "spread": 9.8,
+   "show_retention": true,
+   "spread": 15.5,
    "table": [
     {
-     "company": "Angi Inc.",
+     "company": "Robert Walters plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.0,
-     "multiple": 0.4,
+     "growth_pct": 5.5,
+     "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:ANGI"
+     "ticker": "LSE:RWA"
     },
     {
-     "company": "PDD Holdings Inc.",
+     "company": "Hays plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.1,
-     "multiple": 0.7,
+     "growth_pct": 1.6,
+     "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:PDD"
+     "ticker": "LSE:HAS"
     },
     {
-     "company": "Upwork Inc.",
+     "company": "trivago N.V.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.9,
-     "multiple": 1.2,
+     "growth_pct": 10.0,
+     "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:UPWK"
+     "ticker": "NASDAQGS:TRVG"
     },
     {
-     "company": "Trip.com Group Limited",
+     "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.9,
+     "growth_pct": 13.8,
      "multiple": 1.9,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:TCOM"
+     "retention_pct": 92.0,
+     "ticker": "NYSE:WEAV"
     },
     {
-     "company": "eBay Inc.",
+     "company": "Consensus Cloud Solutions, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.5,
-     "multiple": 3.9,
+     "growth_pct": 5.3,
+     "multiple": 3.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:EBAY"
+     "ticker": "NASDAQGS:CCSI"
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Per-diem shift marketplace matching healthcare facilities with local licensed clinicians"

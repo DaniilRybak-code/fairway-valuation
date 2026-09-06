@@ -66,7 +66,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 0.9,
      "thin": true,
      "triangulated": false
     },
@@ -151,7 +151,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 0.9,
      "thin": false,
      "triangulated": false
     }
@@ -659,7 +659,7 @@
     "in_medians": true,
     "mult": 33.3,
     "reason": "shares the language of ad, campaign; same type of business; same business function; same kind of customer",
-    "score": 15.7,
+    "score": 15.4,
     "type": "PRIMARY"
    },
    {
@@ -774,26 +774,18 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 59,
   "secondary": [
    {
-    "company": "Shoper S.A.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of marketplace; same kind of customer; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "WSE:SHO"
-   },
-   {
     "company": "Lightspeed Commerce Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of inventory; same kind of customer; same revenue model; same AI stance",
-    "score": 6.3,
+    "score": 6.1,
     "ticker": "TSX:LSPD"
    },
    {
@@ -811,14 +803,6 @@
     "reason": "related type of business; same business function; same AI stance",
     "score": 5.5,
     "ticker": "NYSE:RAMP"
-   },
-   {
-    "company": "Opera Limited",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ad; related type of business; sold the same way",
-    "score": 5.1,
-    "ticker": "NASDAQGS:OPRA"
    }
   ],
   "secondary_range": {
@@ -837,7 +821,7 @@
    "high": 3.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
+   "low": 0.7,
    "mid": 2.1,
    "n": 3,
    "period_mix": {
@@ -850,37 +834,22 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Lightspeed Commerce Inc.",
-     "mult": 0.7,
-     "reason": "shares the language of inventory; same kind of customer; same revenue model; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Shoper S.A.",
-     "mult": 4.1,
-     "reason": "shares the language of marketplace; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ad"
+    "inventory"
    ],
    "show_retention": true,
-   "spread": 2.1,
+   "spread": 5.6,
    "table": [
     {
-     "company": "Opera Limited",
+     "company": "Lightspeed Commerce Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.7,
-     "multiple": 1.9,
-     "recurring_pct": null,
+     "growth_pct": 10.8,
+     "multiple": 0.7,
+     "recurring_pct": 30.2,
      "retention_pct": null,
-     "ticker": "NASDAQGS:OPRA"
+     "ticker": "TSX:LSPD"
     },
     {
      "company": "LiveRamp Holdings, Inc.",
@@ -901,7 +870,7 @@
      "ticker": "NYSE:ZETA"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
   }

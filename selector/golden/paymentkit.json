@@ -61,7 +61,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 6.8,
+     "tag_evidence": 6.5,
      "thin": true,
      "triangulated": false
     },
@@ -139,7 +139,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 11.8,
+     "tag_evidence": 11.5,
      "thin": true,
      "triangulated": false
     }
@@ -151,7 +151,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of billing, payment, payments; related type of business; same end market; same business function",
-    "score": 11.5,
+    "score": 11.3,
     "ticker": "NASDAQGM:USIO"
    },
    {
@@ -174,16 +174,16 @@
     "company": "Repay Holdings Corporation",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same end market; same business function",
-    "score": 11.1,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 11.0,
     "ticker": "NASDAQCM:RPAY"
    },
    {
     "company": "WEX Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same end market; same business function",
-    "score": 11.1,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 11.0,
     "ticker": "NYSE:WEX"
    },
    {
@@ -199,7 +199,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
-    "score": 9.7,
+    "score": 9.6,
     "ticker": "NYSE:PAY"
    }
   ],
@@ -301,7 +301,7 @@
      "ticker": "NYSE:WEX"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
@@ -505,7 +505,7 @@
     "in_medians": true,
     "mult": 20.41,
     "reason": "both do Payment Orchestration, Payments Failover, Processor Redundancy; same type of business; same end market; same business function",
-    "score": 29.8,
+    "score": 29.5,
     "type": "MIXED"
    },
    {
@@ -516,7 +516,7 @@
     "in_medians": true,
     "mult": 9.52,
     "reason": "both do Subscription Billing; related type of business; same end market; same business function",
-    "score": 22.6,
+    "score": 22.4,
     "type": "PRIMARY"
    },
    {
@@ -527,7 +527,7 @@
     "in_medians": true,
     "mult": 3.81,
     "reason": "both do Subscription Billing, Billing Infrastructure, Payments; same type of business; same business function",
-    "score": 13.8,
+    "score": 13.4,
     "type": "CONTROL"
    }
   ],
@@ -587,7 +587,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 6.8,
+   "tag_evidence": 6.5,
    "thin": true,
    "triangulated": false
   },
@@ -598,7 +598,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "ENXTPA:WLN"
    },
    {
@@ -606,7 +606,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "NYSE:EVTC"
    },
    {
@@ -622,7 +622,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of payment, payments; same type of business; same end market; same business function",
-    "score": 8.2,
+    "score": 8.1,
     "ticker": "NASDAQGS:ACIW"
    },
    {
@@ -715,7 +715,7 @@
      "ticker": "NASDAQGS:ACIW"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": false
   }

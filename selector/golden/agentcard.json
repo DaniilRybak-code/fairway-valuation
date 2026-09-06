@@ -83,7 +83,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.9,
+     "tag_evidence": 7.9,
      "thin": false,
      "triangulated": false
     }
@@ -95,23 +95,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Card Issuing, Card API; same type of business; same end market; same business function",
-    "score": 16.0,
+    "score": 15.1,
     "ticker": "NASDAQ:MQ"
-   },
-   {
-    "company": "WEX Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of card, payments, virtual; related type of business; same end market; same business function",
-    "score": 10.8,
-    "ticker": "NYSE:WEX"
    },
    {
     "company": "PayPoint plc",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of card, machine; related type of business; same end market; same business function",
-    "score": 10.8,
+    "score": 10.7,
     "ticker": "LSE:PAY"
    },
    {
@@ -119,15 +111,23 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of card, issuing, payments; related type of business; same end market; same business function",
-    "score": 10.7,
+    "score": 10.3,
     "ticker": "NASDAQGM:USIO"
+   },
+   {
+    "company": "WEX Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of card, payments, virtual; related type of business; same end market; same business function",
+    "score": 10.3,
+    "ticker": "NYSE:WEX"
    },
    {
     "company": "Repay Holdings Corporation",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same end market; same business function",
-    "score": 10.1,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 10.0,
     "ticker": "NASDAQCM:RPAY"
    },
    {
@@ -135,15 +135,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of card, issuing, payments; related type of business; same end market; same business function",
-    "score": 8.2,
+    "score": 7.8,
     "ticker": "ENXTPA:WLN"
    },
    {
     "company": "AvenuesAI Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same end market; same business function",
-    "score": 7.6,
+    "reason": "related type of business; same end market; same business function",
+    "score": 7.5,
     "ticker": "NSEI:CCAVENUE"
    }
   ],
@@ -226,15 +226,6 @@
      "ticker": "NASDAQCM:RPAY"
     },
     {
-     "company": "WEX Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.6,
-     "multiple": 2.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:WEX"
-    },
-    {
      "company": "PayPoint plc",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": -4.2,
@@ -242,9 +233,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "LSE:PAY"
+    },
+    {
+     "company": "WEX Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.6,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WEX"
     }
    ],
-   "tag_evidence": 4.5,
+   "tag_evidence": 3.6,
    "thin": false,
    "triangulated": false
   },
@@ -498,7 +498,7 @@
     "in_medians": true,
     "mult": 14.29,
     "reason": "both do Programmatic Spend Controls; same type of business; same business function",
-    "score": 12.4,
+    "score": 11.7,
     "type": "PRIMARY"
    },
    {
@@ -509,7 +509,7 @@
     "in_medians": true,
     "mult": 5.6,
     "reason": "both do Programmatic Spend Controls, Card API; same type of business; same business function; same revenue model",
-    "score": 22.4,
+    "score": 21.4,
     "type": "PRIMARY"
    },
    {
@@ -520,7 +520,7 @@
     "in_medians": true,
     "mult": 18.75,
     "reason": "both do Virtual Card Issuing, Machine To Machine Payments, Payments API; same type of business; same end market; same business function",
-    "score": 24.3,
+    "score": 23.3,
     "type": "PRIMARY"
    }
   ],
@@ -602,7 +602,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 8.9,
+   "tag_evidence": 7.9,
    "thin": false,
    "triangulated": false
   },
@@ -613,7 +613,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of agent; same end market; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.6,
     "ticker": "CASE:FWRY"
    }
   ],
@@ -665,7 +665,7 @@
      "ticker": "CASE:FWRY"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
   }

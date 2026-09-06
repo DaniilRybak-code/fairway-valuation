@@ -97,7 +97,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 2.6,
+     "tag_evidence": 1.7,
      "thin": false,
      "triangulated": false
     }
@@ -109,7 +109,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery Network; same type of business; same business function; same kind of customer",
-    "score": 18.1,
+    "score": 16.6,
     "ticker": "TSE:9143"
    },
    {
@@ -117,31 +117,31 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
-    "score": 15.7,
+    "score": 14.2,
     "ticker": "NYSE:FDX"
-   },
-   {
-    "company": "United Parcel Service",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Parcel Delivery, Own Fleet; same type of business; same business function; same kind of customer",
-    "score": 15.1,
-    "ticker": "NYSE:UPS"
    },
    {
     "company": "PostNL N.V.",
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery; same type of business; same business function; same kind of customer",
-    "score": 15.1,
+    "score": 14.1,
     "ticker": "ENXTAM:PNL"
+   },
+   {
+    "company": "United Parcel Service",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Parcel Delivery, Own Fleet; same type of business; same business function; same kind of customer",
+    "score": 13.6,
+    "ticker": "NYSE:UPS"
    },
    {
     "company": "S.F. Holding Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
-    "score": 15.1,
+    "score": 13.6,
     "ticker": "SZSE:002352"
    },
    {
@@ -149,7 +149,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
-    "score": 14.8,
+    "score": 13.5,
     "ticker": "XTRA:DHL"
    },
    {
@@ -157,7 +157,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, network, own; same type of business; same business function; same kind of customer",
-    "score": 14.5,
+    "score": 13.4,
     "ticker": "NSEI:BLUEDART"
    }
   ],
@@ -269,7 +269,7 @@
      "ticker": "NSEI:BLUEDART"
     }
    ],
-   "tag_evidence": 5.1,
+   "tag_evidence": 3.6,
    "thin": false,
    "triangulated": false
   },
@@ -663,7 +663,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of delivery, own; same type of business; same end market; same AI stance",
-    "score": 10.8,
+    "score": 10.2,
     "type": "PRIMARY"
    },
    {
@@ -674,7 +674,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
-    "score": 9.8,
+    "score": 9.2,
     "type": "MIXED"
    },
    {
@@ -685,7 +685,7 @@
     "in_medians": false,
     "mult": 16.03,
     "reason": "both do Last Mile; related type of business; same business function; same revenue model",
-    "score": 12.3,
+    "score": 12.0,
     "type": "PRIMARY"
    },
    {
@@ -696,7 +696,7 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
-    "score": 19.6,
+    "score": 18.7,
     "type": "PRIMARY"
    },
    {
@@ -707,7 +707,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
-    "score": 9.3,
+    "score": 9.1,
     "type": "CONTROL"
    },
    {
@@ -718,7 +718,7 @@
     "in_medians": true,
     "mult": 23.5,
     "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
-    "score": 9.3,
+    "score": 9.1,
     "type": "CONTROL"
    },
    {
@@ -729,7 +729,7 @@
     "in_medians": true,
     "mult": 44.12,
     "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
-    "score": 9.8,
+    "score": 9.2,
     "type": "PRIMARY"
    }
   ],
@@ -825,7 +825,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 2.6,
+   "tag_evidence": 1.7,
    "thin": false,
    "triangulated": false
   },
@@ -836,7 +836,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of parcel; same type of business; same business function; same kind of customer",
-    "score": 13.6,
+    "score": 13.2,
     "ticker": "NSEI:DELHIVERY"
    },
    {
@@ -844,7 +844,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of last, mile, network; same type of business; same business function; same kind of customer",
-    "score": 12.9,
+    "score": 12.1,
     "ticker": "NYSE:ZTO"
    },
    {
@@ -852,7 +852,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of last, mile, own; related type of business; same kind of customer; same revenue model",
-    "score": 12.3,
+    "score": 11.5,
     "ticker": "NSEI:CONCOR"
    },
    {
@@ -860,7 +860,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same kind of customer",
-    "score": 11.9,
+    "score": 11.3,
     "ticker": "SEHK:1519"
    },
    {
@@ -868,18 +868,18 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, fleet, last; same type of business; same business function; same revenue model",
-    "score": 11.8,
+    "score": 9.9,
     "ticker": "TSE:9064"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "DIRECT",
+   "band": "ADJACENT",
    "basis_mix": {
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "SHARED_PRODUCT",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -905,7 +905,7 @@
      "company": "Yamato Holdings Co.",
      "mult": 0.3,
      "reason": "shares the language of delivery, fleet, last; same type of business; same business function; same revenue model",
-     "tier": "DIRECT",
+     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
@@ -997,7 +997,7 @@
      "ticker": "NSEI:CONCOR"
     }
    ],
-   "tag_evidence": 3.3,
+   "tag_evidence": 1.4,
    "thin": false,
    "triangulated": false
   }

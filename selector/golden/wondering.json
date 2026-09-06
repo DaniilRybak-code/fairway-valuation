@@ -168,7 +168,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.4,
      "thin": false,
      "triangulated": true
     },
@@ -273,7 +273,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 2.5,
+     "tag_evidence": 2.0,
      "thin": false,
      "triangulated": false
     }
@@ -285,7 +285,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of app, consumer, learning; same type of business; same end market; same kind of customer",
-    "score": 15.9,
+    "score": 15.5,
     "ticker": "NASDAQGS:DUOL"
    },
    {
@@ -293,7 +293,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
-    "score": 14.7,
+    "score": 14.4,
     "ticker": "NYSE:COUR"
    },
    {
@@ -309,7 +309,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
-    "score": 11.7,
+    "score": 11.4,
     "ticker": "TSE:4686"
    },
    {
@@ -317,7 +317,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
-    "score": 11.6,
+    "score": 11.4,
     "ticker": "NYSE:NRDY"
    }
   ],
@@ -426,7 +426,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
@@ -670,7 +670,7 @@
     "in_medians": true,
     "mult": 1.29,
     "reason": "both do Self Paced Learning, Consumer Learning; same type of business; same end market; same kind of customer",
-    "score": 17.0,
+    "score": 16.5,
     "type": "CONTROL"
    },
    {
@@ -681,7 +681,7 @@
     "in_medians": true,
     "mult": 1.52,
     "reason": "shares the language of learning; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.4,
     "type": "CONTROL"
    },
    {
@@ -725,7 +725,7 @@
     "in_medians": true,
     "mult": 27.5,
     "reason": "shares the language of consumer, courses; related type of business; same end market; same kind of customer",
-    "score": 15.2,
+    "score": 15.1,
     "type": "PRIMARY"
    }
   ],
@@ -829,7 +829,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
   },
@@ -840,7 +840,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
-    "score": 8.3,
+    "score": 8.1,
     "ticker": "NASDAQGS:MTCH"
    },
    {
@@ -848,7 +848,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
-    "score": 8.3,
+    "score": 8.1,
     "ticker": "NASDAQGS:BMBL"
    },
    {
@@ -856,23 +856,15 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
-    "score": 8.3,
-    "ticker": "NYSE:GRND"
-   },
-   {
-    "company": "The New York Times Company",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of consumer; same kind of customer; same revenue model; same purchase frequency",
     "score": 8.1,
-    "ticker": "NYSE:NYT"
+    "ticker": "NYSE:GRND"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -885,10 +877,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.9,
-   "mid": 3.3,
-   "n": 4,
+   "mid": 3.6,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -916,15 +908,6 @@
      "ticker": "NASDAQGS:BMBL"
     },
     {
-     "company": "The New York Times Company",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.4,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:NYT"
-    },
-    {
      "company": "Match Group, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 4.8,
@@ -943,7 +926,7 @@
      "ticker": "NYSE:GRND"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": false
   }

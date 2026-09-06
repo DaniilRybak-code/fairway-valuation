@@ -143,7 +143,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
@@ -155,7 +155,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of developer, framework; same type of business; same business function; same kind of customer",
-    "score": 12.5,
+    "score": 12.3,
     "ticker": "HLSE:QTCOM"
    },
    {
@@ -265,7 +265,7 @@
      "ticker": "NASDAQGS:GTLB"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -643,7 +643,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
-    "score": 17.1,
+    "score": 16.9,
     "type": "PRIMARY"
    },
    {
@@ -654,7 +654,7 @@
     "in_medians": true,
     "mult": 9.88,
     "reason": "shares the language of developer; same type of business; same kind of customer; sold the same way",
-    "score": 13.4,
+    "score": 13.2,
     "type": "CONTROL"
    },
    {
@@ -665,7 +665,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "shares the language of app; same type of business; same business function; sold the same way",
-    "score": 13.2,
+    "score": 13.1,
     "type": "PRIMARY"
    },
    {
@@ -676,7 +676,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Open Source; same type of business; same business function; same kind of customer",
-    "score": 19.8,
+    "score": 19.6,
     "type": "PRIMARY"
    },
    {
@@ -687,7 +687,7 @@
     "in_medians": true,
     "mult": 72.86,
     "reason": "both do Open Source; related type of business; same business function; same kind of customer",
-    "score": 15.2,
+    "score": 15.0,
     "type": "PRIMARY"
    },
    {
@@ -698,7 +698,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of app; same type of business; same business function; sold the same way",
-    "score": 13.2,
+    "score": 13.1,
     "type": "PRIMARY"
    },
    {
@@ -709,7 +709,7 @@
     "in_medians": true,
     "mult": 19.8,
     "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
-    "score": 16.9,
+    "score": 16.7,
     "type": "PRIMARY"
    }
   ],
@@ -851,7 +851,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -870,7 +870,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of developer; same kind of customer; sold the same way",
-    "score": 6.9,
+    "score": 6.7,
     "ticker": "NYSE:DOCN"
    }
   ],

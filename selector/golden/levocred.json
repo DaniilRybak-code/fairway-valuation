@@ -128,7 +128,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.4,
      "thin": false,
      "triangulated": false
     }
@@ -140,15 +140,15 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Loan Servicing; same type of business; same end market; same kind of customer",
-    "score": 11.6,
+    "score": 10.9,
     "ticker": "ATSE:QLCO"
    },
    {
     "company": "Q2 Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of lending; same type of business; same end market; same kind of customer",
-    "score": 10.7,
+    "reason": "same type of business; same end market; same kind of customer; sold the same way",
+    "score": 10.5,
     "ticker": "NYSE:QTWO"
    },
    {
@@ -156,7 +156,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
-    "score": 10.3,
+    "score": 10.1,
     "ticker": "NASDAQ:JKHY"
    },
    {
@@ -172,24 +172,24 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Document Verification; related type of business; same end market; same AI stance",
-    "score": 9.4,
+    "score": 9.2,
     "ticker": "NASDAQCM:MITK"
    },
    {
-    "company": "Blend Labs, Inc.",
+    "company": "Alkami Technology, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "both do Loan Origination; same type of business; same end market; sold the same way",
-    "score": 9.2,
-    "ticker": "NYSE:BLND"
+    "reason": "same type of business; same end market; same kind of customer",
+    "score": 8.5,
+    "ticker": "NASDAQGS:ALKT"
    },
    {
-    "company": "nCino, Inc.",
+    "company": "Alfa Financial Software Holdings PLC",
     "family": "software",
     "in_medians": true,
-    "reason": "both do Loan Origination; same type of business; same end market; sold the same way",
-    "score": 9.2,
-    "ticker": "NASDAQGS:NCNO"
+    "reason": "both do Loan Servicing; same type of business; same end market; sold the same way",
+    "score": 8.4,
+    "ticker": "LSE:ALFA"
    }
   ],
   "core_range": {
@@ -208,7 +208,7 @@
    "high": 4.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.3,
+   "low": 3.0,
    "mid": 3.6,
    "n": 7,
    "period_mix": {
@@ -228,7 +228,6 @@
     "document",
     "lending",
     "loan",
-    "origination",
     "servicing",
     "verification"
    ],
@@ -245,15 +244,6 @@
      "ticker": "ATSE:QLCO"
     },
     {
-     "company": "Blend Labs, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.5,
-     "multiple": 2.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:BLND"
-    },
-    {
      "company": "Fidelity National Information Services, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 4.2,
@@ -261,6 +251,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:FIS"
+    },
+    {
+     "company": "Alfa Financial Software Holdings PLC",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.4,
+     "multiple": 3.4,
+     "recurring_pct": 33.9,
+     "retention_pct": 112.0,
+     "ticker": "LSE:ALFA"
     },
     {
      "company": "Mitek Systems, Inc.",
@@ -272,13 +271,13 @@
      "ticker": "NASDAQCM:MITK"
     },
     {
-     "company": "nCino, Inc.",
+     "company": "Alkami Technology, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.6,
-     "multiple": 3.9,
-     "recurring_pct": 87.9,
-     "retention_pct": 112.0,
-     "ticker": "NASDAQGS:NCNO"
+     "growth_pct": 15.6,
+     "multiple": 4.0,
+     "recurring_pct": null,
+     "retention_pct": 115.0,
+     "ticker": "NASDAQGS:ALKT"
     },
     {
      "company": "Q2 Holdings, Inc.",
@@ -299,7 +298,7 @@
      "ticker": "NASDAQ:JKHY"
     }
    ],
-   "tag_evidence": 3.9,
+   "tag_evidence": 3.7,
    "thin": false,
    "triangulated": false
   },
@@ -678,7 +677,7 @@
     "in_medians": true,
     "mult": 22.0,
     "reason": "both do Loan Servicing; related type of business; same end market; sold the same way",
-    "score": 10.0,
+    "score": 9.4,
     "type": "PRIMARY"
    },
    {
@@ -700,7 +699,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "shares the language of operations; same type of business; same revenue model; same AI stance",
-    "score": 10.1,
+    "score": 9.8,
     "type": "PRIMARY"
    },
    {
@@ -711,7 +710,7 @@
     "in_medians": true,
     "mult": 56.0,
     "reason": "shares the language of document; same type of business; same kind of customer; same revenue model",
-    "score": 16.3,
+    "score": 16.2,
     "type": "PRIMARY"
    },
    {
@@ -722,7 +721,7 @@
     "in_medians": false,
     "mult": 66.7,
     "reason": "shares the language of document; same type of business; same kind of customer; same revenue model",
-    "score": 16.3,
+    "score": 16.2,
     "type": "PRIMARY"
    },
    {
@@ -733,7 +732,7 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "shares the language of document; same type of business; same revenue model",
-    "score": 7.8,
+    "score": 7.7,
     "type": "MIXED"
    }
   ],
@@ -860,7 +859,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
   },
@@ -875,14 +874,6 @@
     "ticker": "NYSE:FDS"
    },
    {
-    "company": "Alfa Financial Software Holdings PLC",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Loan Servicing; same type of business; same end market; sold the same way",
-    "score": 9.0,
-    "ticker": "LSE:ALFA"
-   },
-   {
     "company": "PAR Technology Corporation",
     "family": "software",
     "in_medians": true,
@@ -894,17 +885,25 @@
     "company": "CRISIL Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit; same end market; same kind of customer; sold the same way",
-    "score": 8.6,
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 8.5,
     "ticker": "NSEI:CRISIL"
    },
    {
-    "company": "Alkami Technology, Inc.",
+    "company": "Blend Labs, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same end market; same kind of customer",
-    "score": 8.5,
-    "ticker": "NASDAQGS:ALKT"
+    "reason": "both do Loan Origination; same type of business; same end market; sold the same way",
+    "score": 8.4,
+    "ticker": "NYSE:BLND"
+   },
+   {
+    "company": "nCino, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Loan Origination; same type of business; same end market; sold the same way",
+    "score": 8.4,
+    "ticker": "NASDAQGS:NCNO"
    }
   ],
   "secondary_range": {
@@ -920,11 +919,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.0,
+   "high": 3.9,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.0,
-   "mid": 3.4,
+   "mid": 2.3,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -947,7 +946,7 @@
     {
      "company": "CRISIL Limited",
      "mult": 7.2,
-     "reason": "shares the language of credit; same end market; same kind of customer; sold the same way",
+     "reason": "same end market; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
@@ -955,12 +954,13 @@
    "post_stated_n": 0,
    "shared_words": [
     "back",
+    "lending",
     "loan",
     "office",
-    "servicing"
+    "origination"
    ],
    "show_retention": true,
-   "spread": 2.0,
+   "spread": 1.9,
    "table": [
     {
      "company": "PAR Technology Corporation",
@@ -972,22 +972,22 @@
      "ticker": "NYSE:PAR"
     },
     {
-     "company": "Alfa Financial Software Holdings PLC",
+     "company": "Blend Labs, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.4,
-     "multiple": 3.4,
-     "recurring_pct": 33.9,
-     "retention_pct": 112.0,
-     "ticker": "LSE:ALFA"
+     "growth_pct": 10.5,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BLND"
     },
     {
-     "company": "Alkami Technology, Inc.",
+     "company": "nCino, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.6,
-     "multiple": 4.0,
-     "recurring_pct": null,
-     "retention_pct": 115.0,
-     "ticker": "NASDAQGS:ALKT"
+     "growth_pct": 8.6,
+     "multiple": 3.9,
+     "recurring_pct": 87.9,
+     "retention_pct": 112.0,
+     "ticker": "NASDAQGS:NCNO"
     }
    ],
    "tag_evidence": 1.2,

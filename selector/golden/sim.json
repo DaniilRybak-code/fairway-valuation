@@ -80,7 +80,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
     },
@@ -198,7 +198,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
     }
@@ -218,71 +218,39 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
-    "score": 11.3,
+    "score": 11.2,
     "ticker": "NASDAQGS:DDOG"
    },
    {
-    "company": "SoundHound AI, Inc.",
+    "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 7.6,
-    "ticker": "NASDAQGM:SOUN"
-   },
-   {
-    "company": "Dynatrace, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NYSE:DT"
-   },
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NYSE:SNOW"
-   },
-   {
-    "company": "C3.ai, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same AI stance",
-    "score": 6.1,
-    "ticker": "NYSE:AI"
-   },
-   {
-    "company": "Coveo Solutions Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same AI stance",
-    "score": 6.1,
-    "ticker": "TSX:CVO"
+    "reason": "shares the language of agent, ai; same kind of customer; same revenue model; sold the same way",
+    "score": 8.2,
+    "ticker": "NYSE:NET"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 14.9,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 29.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.6,
-   "mid": 5.8,
-   "n": 7,
+   "low": 5.2,
+   "mid": 14.9,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -290,57 +258,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Coveo Solutions Inc.",
-     "mult": 1.1,
-     "reason": "shares the language of ai; same type of business; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "C3.ai, Inc.",
-     "mult": 4.6,
-     "reason": "shares the language of ai; same type of business; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "GitLab Inc.",
-     "mult": 5.2,
-     "reason": "shares the language of source; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Dynatrace, Inc.",
-     "mult": 5.8,
-     "reason": "shares the language of ai; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "mult": 10.8,
-     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 14.9,
-     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "shares the language of ai; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -349,26 +267,8 @@
     "source"
    ],
    "show_retention": true,
-   "spread": 14.2,
+   "spread": 5.7,
    "table": [
-    {
-     "company": "Coveo Solutions Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.5,
-     "multiple": 1.1,
-     "recurring_pct": null,
-     "retention_pct": 99.0,
-     "ticker": "TSX:CVO"
-    },
-    {
-     "company": "C3.ai, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.1,
-     "multiple": 4.6,
-     "recurring_pct": 91.0,
-     "retention_pct": null,
-     "ticker": "NYSE:AI"
-    },
     {
      "company": "GitLab Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -377,24 +277,6 @@
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
      "ticker": "NASDAQGS:GTLB"
-    },
-    {
-     "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.5,
-     "multiple": 5.8,
-     "recurring_pct": null,
-     "retention_pct": 110.0,
-     "ticker": "NYSE:DT"
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.9,
-     "multiple": 10.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:SOUN"
     },
     {
      "company": "Datadog, Inc.",
@@ -406,13 +288,13 @@
      "ticker": "NASDAQGS:DDOG"
     },
     {
-     "company": "Snowflake Inc.",
+     "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
+     "growth_pct": 28.4,
+     "multiple": 29.5,
      "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
+     "retention_pct": 120.0,
+     "ticker": "NYSE:NET"
     }
    ],
    "tag_evidence": 0.6,
@@ -801,7 +683,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
-    "score": 15.3,
+    "score": 15.2,
     "type": "MIXED"
    },
    {
@@ -812,7 +694,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
-    "score": 14.3,
+    "score": 14.2,
     "type": "PRIMARY"
    },
    {
@@ -823,7 +705,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-    "score": 8.9,
+    "score": 8.8,
     "type": "PRIMARY"
    },
    {
@@ -834,7 +716,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of agents, ai; related type of business; same revenue model; sold the same way",
-    "score": 9.9,
+    "score": 9.8,
     "type": "SECONDARY"
    },
    {
@@ -845,7 +727,7 @@
     "in_medians": false,
     "mult": 150.0,
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-    "score": 9.2,
+    "score": 8.9,
     "type": "PRIMARY"
    },
    {
@@ -856,7 +738,7 @@
     "in_medians": false,
     "mult": 18.3,
     "reason": "both do AI Agents; related type of business; sold the same way",
-    "score": 8.5,
+    "score": 8.4,
     "type": "SECONDARY"
    },
    {
@@ -867,7 +749,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "shares the language of ai, builder; same type of business; same business function; same revenue model",
-    "score": 16.9,
+    "score": 16.8,
     "type": "PRIMARY"
    }
   ],
@@ -982,89 +864,14 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 8,
-  "secondary": [
-   {
-    "company": "Cloudflare, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of agent, ai; same kind of customer; same revenue model; sold the same way",
-    "score": 8.3,
-    "ticker": "NYSE:NET"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same AI stance",
-    "score": 6.1,
-    "ticker": "NASDAQGS:PLTR"
-   }
-  ],
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 2
-   },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 39.0,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 29.5,
-   "mid": 34.25,
-   "n": 2,
-   "period_mix": {
-    "NTM": 2
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [
-    "agent",
-    "ai"
-   ],
-   "show_retention": true,
-   "spread": 1.3,
-   "table": [
-    {
-     "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 28.4,
-     "multiple": 29.5,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:NET"
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 47.0,
-     "multiple": 39.0,
-     "recurring_pct": null,
-     "retention_pct": 157.0,
-     "ticker": "NASDAQGS:PLTR"
-    }
-   ],
-   "tag_evidence": 0.3,
-   "thin": true,
-   "triangulated": false
+   "denominator": "rev"
   }
  },
  "label": "Open-source workspace for AI agents and workflows"

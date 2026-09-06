@@ -2,6 +2,89 @@
  "expected": {
   "all_ranges": {
    "private": {
+    "MERCHANTS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "MERCHANTS",
+     "basis_label": "dollars of enterprise value per merchant",
+     "basis_mix": {
+      "MERCHANTS": 2
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "merchants",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 15384615.38,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 54166.67,
+     "mid": 15384615.38,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Mollie",
+       "mult": 54166.67,
+       "reason": "both do Payouts; related type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "dLocal",
+       "mult": 15384615.38,
+       "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "border",
+      "cross",
+      "payments",
+      "payouts"
+     ],
+     "spread": 284.0,
+     "table": [
+      {
+       "company": "Mollie",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 54166.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "dLocal",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15384615.38,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": false
+    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
@@ -9,7 +92,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 1
+      "NET_REVENUE": 2
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -21,14 +104,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 16.34,
+     "high": 48.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 8.0,
      "mid": 16.34,
-     "n": 2,
+     "n": 3,
      "period_mix": {
-      "LTM": 1,
+      "LTM": 2,
       "RUN_RATE": 1
      },
      "period_span": {
@@ -51,7 +134,7 @@
       "payouts",
       "tax"
      ],
-     "spread": 2.0,
+     "spread": 6.0,
      "table": [
       {
        "company": "Airwallex",
@@ -72,10 +155,20 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "dLocal",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 48.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 1.6,
-     "thin": true,
+     "tag_evidence": 0.7,
+     "thin": false,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -84,7 +177,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 4
+      "REVENUE_GROSS": 3
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -101,10 +194,10 @@
      "listed_target_names": [],
      "low": 9.52,
      "mid": 44.34,
-     "n": 4,
+     "n": 3,
      "period_mix": {
       "FY2024": 1,
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "FY2024": {
@@ -135,16 +228,6 @@
        "ticker": ""
       },
       {
-       "company": "MoonPay",
-       "date": "Nov-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 22.67,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Checkout.com",
        "date": "Dec-23",
        "growth_basis": "",
@@ -165,7 +248,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.4,
      "thin": false,
      "triangulated": false
     }
@@ -177,7 +260,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 8.4,
+    "score": 8.2,
     "ticker": "NYSE:WU"
    },
    {
@@ -185,7 +268,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
-    "score": 8.4,
+    "score": 8.2,
     "ticker": "NYSE:CPAY"
    },
    {
@@ -193,23 +276,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 7.4,
+    "score": 7.2,
     "ticker": "LSE:CABP"
-   },
-   {
-    "company": "Al Ansari Financial Services PJSC",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
-    "score": 7.1,
-    "ticker": "DFM:ALANSARI"
    },
    {
     "company": "Payoneer Global Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; same type of business; same business function",
-    "score": 7.0,
+    "score": 6.6,
     "ticker": "NASDAQ:PAYO"
    },
    {
@@ -217,7 +292,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; same type of business; same business function",
-    "score": 6.4,
+    "score": 6.2,
     "ticker": "NASDAQ:FLYW"
    },
    {
@@ -225,15 +300,23 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; same type of business; same business function",
-    "score": 6.4,
+    "score": 6.2,
     "ticker": "NASDAQ:RELY"
+   },
+   {
+    "company": "Wise plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; same type of business; same business function",
+    "score": 6.2,
+    "ticker": "LSE:WISE"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -242,14 +325,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.3,
+   "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.6,
-   "mid": 1.95,
-   "n": 6,
+   "mid": 2.1,
+   "n": 7,
    "period_mix": {
-    "NTM": 6
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -289,6 +372,13 @@
     {
      "company": "Flywire Corporation",
      "mult": 2.3,
+     "reason": "both do Cross-Border Payments; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Wise plc",
+     "mult": 2.6,
      "reason": "both do Cross-Border Payments; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
@@ -358,6 +448,15 @@
      "ticker": "NASDAQ:FLYW"
     },
     {
+     "company": "Wise plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.0,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:WISE"
+    },
+    {
      "company": "Corpay, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.7,
@@ -367,7 +466,7 @@
      "ticker": "NYSE:CPAY"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -629,6 +728,46 @@
     ],
     "investor": "Coller Capital",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "dLocal",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Alkeon Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "dLocal",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "BOND",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "dLocal",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "D1 Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "dLocal",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -641,7 +780,7 @@
     "in_medians": true,
     "mult": 8.0,
     "reason": "both do Cross-Border Payments, Payouts; same type of business; same business function; sold the same way",
-    "score": 16.1,
+    "score": 15.2,
     "type": "PRIMARY"
    },
    {
@@ -652,7 +791,7 @@
     "in_medians": true,
     "mult": 9.52,
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 12.7,
+    "score": 12.4,
     "type": "PRIMARY"
    },
    {
@@ -663,7 +802,7 @@
     "in_medians": true,
     "mult": 16.34,
     "reason": "both do Tax, Global Payments; related type of business; same business function; same revenue model",
-    "score": 12.3,
+    "score": 11.5,
     "type": "PRIMARY"
    },
    {
@@ -674,7 +813,7 @@
     "in_medians": false,
     "mult": 6.3,
     "reason": "both do Cross-Border Payments; same type of business; same business function; same revenue model",
-    "score": 13.9,
+    "score": 13.7,
     "type": "PRIMARY"
    },
    {
@@ -685,18 +824,7 @@
     "in_medians": true,
     "mult": 44.34,
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 11.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Annual revenue",
-    "bound": "",
-    "company": "MoonPay",
-    "date": "Nov-21",
-    "in_medians": true,
-    "mult": 22.67,
-    "reason": "shares the language of payments; related type of business; same business function; same revenue model",
-    "score": 12.1,
+    "score": 11.4,
     "type": "PRIMARY"
    },
    {
@@ -707,7 +835,18 @@
     "in_medians": true,
     "mult": 54.17,
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 13.7,
+    "score": 13.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "dLocal",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 48.0,
+    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+    "score": 12.1,
     "type": "PRIMARY"
    }
   ],
@@ -719,7 +858,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -727,14 +866,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 16.34,
+   "high": 48.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.0,
    "mid": 16.34,
-   "n": 2,
+   "n": 3,
    "period_mix": {
-    "LTM": 1,
+    "LTM": 2,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -757,7 +896,7 @@
     "payouts",
     "tax"
    ],
-   "spread": 2.0,
+   "spread": 6.0,
    "table": [
     {
      "company": "Airwallex",
@@ -778,76 +917,70 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "dLocal",
+     "date": "Apr-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 48.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
-   "tag_evidence": 1.6,
-   "thin": true,
+   "tag_evidence": 0.7,
+   "thin": false,
    "triangulated": false
   },
-  "private_window_months": 62,
+  "private_window_months": 64,
   "secondary": [
-   {
-    "company": "Repay Holdings Corporation",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
-    "score": 10.6,
-    "ticker": "NASDAQCM:RPAY"
-   },
-   {
-    "company": "Usio, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same business function; same kind of customer",
-    "score": 10.6,
-    "ticker": "NASDAQGM:USIO"
-   },
-   {
-    "company": "WEX Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; same business function; same kind of customer; same revenue model",
-    "score": 9.1,
-    "ticker": "NYSE:WEX"
-   },
-   {
-    "company": "Tyro Payments Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; related type of business; same business function; sold the same way",
-    "score": 8.6,
-    "ticker": "ASX:TYR"
-   },
    {
     "company": "DLocal Limited",
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; related type of business; same business function; same AI stance",
-    "score": 6.9,
+    "score": 6.7,
     "ticker": "NASDAQ:DLO"
+   },
+   {
+    "company": "Worldline SA",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Cross-Border Payments; related type of business; same business function; same AI stance",
+    "score": 5.7,
+    "ticker": "ENXTPA:WLN"
+   },
+   {
+    "company": "Nayax Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of global, payments; related type of business; same revenue model; same AI stance",
+    "score": 5.2,
+    "ticker": "NASDAQ:NYAX"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 1.9,
+   "high": 3.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.6,
-   "mid": 1.2,
-   "n": 4,
+   "low": 0.7,
+   "mid": 1.9,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -856,50 +989,25 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "WEX Inc.",
-     "mult": 2.0,
-     "reason": "shares the language of payments; same business function; same kind of customer; same revenue model",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "border",
     "cross",
+    "global",
     "payments"
    ],
    "show_retention": false,
-   "spread": 3.2,
+   "spread": 5.0,
    "table": [
     {
-     "company": "Tyro Payments Limited",
+     "company": "Worldline SA",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.8,
-     "multiple": 0.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:TYR"
-    },
-    {
-     "company": "Usio, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.5,
+     "growth_pct": 0.5,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGM:USIO"
-    },
-    {
-     "company": "Repay Holdings Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.5,
-     "multiple": 1.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQCM:RPAY"
+     "ticker": "ENXTPA:WLN"
     },
     {
      "company": "DLocal Limited",
@@ -909,9 +1017,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:DLO"
+    },
+    {
+     "company": "Nayax Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:NYAX"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

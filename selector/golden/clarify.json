@@ -68,7 +68,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.4,
+     "tag_evidence": 1.0,
      "thin": true,
      "triangulated": false
     },
@@ -78,7 +78,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
+      "ARR": 2,
+      "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -99,7 +100,7 @@
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 23.0,
+     "mid": 47.3,
      "n": 4,
      "period_mix": {
       "NOT STATED": 1,
@@ -136,9 +137,9 @@
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Owner",
-       "mult": 23.0,
-       "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
+       "company": "6sense",
+       "mult": 47.3,
+       "reason": "both do Sales Intelligence; same type of business; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -154,6 +155,7 @@
      "shared_words": [
       "ai",
       "automation",
+      "contact",
       "enrichment",
       "intelligence",
       "management",
@@ -182,11 +184,11 @@
        "ticker": ""
       },
       {
-       "company": "Owner",
-       "date": "Aug-26",
+       "company": "6sense",
+       "date": "Jan-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 23.0,
+       "multiple": 47.3,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -202,7 +204,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.4,
+     "tag_evidence": 1.2,
      "thin": false,
      "triangulated": false
     }
@@ -214,7 +216,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do CRM, Sales Automation; same type of business; same kind of customer; same revenue model",
-    "score": 15.8,
+    "score": 15.6,
     "ticker": "NYSE:HUBS"
    },
    {
@@ -222,7 +224,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do CRM, Sales Automation; related type of business; same business function; same revenue model",
-    "score": 11.8,
+    "score": 11.6,
     "ticker": "NYSE:CRM"
    },
    {
@@ -319,7 +321,7 @@
      "ticker": "NYSE:CRM"
     }
    ],
-   "tag_evidence": 3.8,
+   "tag_evidence": 3.6,
    "thin": false,
    "triangulated": false
   },
@@ -462,36 +464,6 @@
    }
   ],
   "investors_evidence": [
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Redpoint",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Headline",
-    "n": 1
-   },
    {
     "backed": [
      {
@@ -665,21 +637,110 @@
     ],
     "investor": "Bessemer Venture Partners",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Blue Owl Capital (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "MSD Partners (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "B Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Franklin Templeton",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Harmony Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Insight Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "D1 Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Owner",
-    "date": "Aug-26",
-    "in_medians": true,
-    "mult": 23.0,
-    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
-    "score": 11.1,
-    "type": "PRIMARY"
-   },
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
@@ -699,7 +760,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "both do Sales Intelligence; same type of business; same business function; sold the same way",
-    "score": 12.4,
+    "score": 12.0,
     "type": "SECONDARY"
    },
    {
@@ -710,7 +771,7 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
-    "score": 15.3,
+    "score": 15.2,
     "type": "CONTROL"
    },
    {
@@ -721,7 +782,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of deal, intelligence, sales; same type of business; same business function; same revenue model",
-    "score": 14.7,
+    "score": 14.4,
     "type": "SECONDARY"
    },
    {
@@ -732,7 +793,7 @@
     "in_medians": false,
     "mult": 16.7,
     "reason": "both do Sales Intelligence; same type of business; same business function; same kind of customer",
-    "score": 19.5,
+    "score": 19.2,
     "type": "PRIMARY"
    },
    {
@@ -745,6 +806,17 @@
     "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
     "score": 10.6,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "6sense",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 47.3,
+    "reason": "both do Sales Intelligence; same type of business; same revenue model",
+    "score": 9.7,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -754,7 +826,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 2,
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -771,7 +844,7 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 23.0,
+   "mid": 47.3,
    "n": 4,
    "period_mix": {
     "NOT STATED": 1,
@@ -808,9 +881,9 @@
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Owner",
-     "mult": 23.0,
-     "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
+     "company": "6sense",
+     "mult": 47.3,
+     "reason": "both do Sales Intelligence; same type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -826,6 +899,7 @@
    "shared_words": [
     "ai",
     "automation",
+    "contact",
     "enrichment",
     "intelligence",
     "management",
@@ -854,11 +928,11 @@
      "ticker": ""
     },
     {
-     "company": "Owner",
-     "date": "Aug-26",
+     "company": "6sense",
+     "date": "Jan-22",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 23.0,
+     "multiple": 47.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -874,18 +948,18 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.4,
+   "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 39,
+  "private_window_months": 55,
   "secondary": [
    {
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Intelligence; related type of business; same business function; same revenue model",
-    "score": 8.6,
+    "score": 8.2,
     "ticker": "NASDAQGS:GTM"
    },
    {
@@ -957,7 +1031,7 @@
      "ticker": "NASDAQGS:ZM"
     }
    ],
-   "tag_evidence": 1.6,
+   "tag_evidence": 1.2,
    "thin": true,
    "triangulated": false
   }

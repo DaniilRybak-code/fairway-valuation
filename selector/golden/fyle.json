@@ -3,7 +3,7 @@
   "all_ranges": {
    "private": {
     "REVENUE": {
-     "anchor_dropped": true,
+     "anchor_dropped": false,
      "band": "DIRECT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
@@ -90,7 +90,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
     },
@@ -103,7 +103,7 @@
       "REVENUE_GROSS": 1
      },
      "bounded": false,
-     "closeness": "SHARED_PRODUCT",
+     "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -151,7 +151,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 3.4,
+     "tag_evidence": 2.8,
      "thin": true,
      "triangulated": false
     }
@@ -179,7 +179,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of brand, home; same type of business; same end market; same business function",
-    "score": 21.0,
+    "score": 20.7,
     "ticker": "NYSE:WRBY"
    },
    {
@@ -513,7 +513,7 @@
     "in_medians": true,
     "mult": 10.1,
     "reason": "shares the language of brand, home; same type of business; same end market; same business function",
-    "score": 32.0,
+    "score": 31.7,
     "type": "PRIMARY"
    },
    {
@@ -535,7 +535,7 @@
     "in_medians": true,
     "mult": 2.61,
     "reason": "both do Nail Care, Beauty, At-Home Manicure; same type of business; same end market; same kind of customer",
-    "score": 21.9,
+    "score": 21.3,
     "type": "PRIMARY"
    },
    {
@@ -557,7 +557,7 @@
     "in_medians": true,
     "mult": 4.6,
     "reason": "shares the language of brand, care; same type of business; same end market; same business function",
-    "score": 23.2,
+    "score": 22.8,
     "type": "PRIMARY"
    },
    {
@@ -585,7 +585,7 @@
   ],
   "private_proximity": "DIRECT",
   "private_range": {
-   "anchor_dropped": true,
+   "anchor_dropped": false,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
@@ -668,7 +668,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },

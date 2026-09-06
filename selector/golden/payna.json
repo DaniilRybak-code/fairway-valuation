@@ -87,7 +87,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.6,
+     "tag_evidence": 4.5,
      "thin": false,
      "triangulated": false
     }
@@ -625,7 +625,7 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "both do Compliance Workflow, Regulatory Compliance, Compliance Automation; same type of business; same kind of customer; same revenue model",
-    "score": 17.1,
+    "score": 17.0,
     "type": "CONTROL"
    },
    {
@@ -722,7 +722,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.6,
+   "tag_evidence": 4.5,
    "thin": false,
    "triangulated": false
   },
@@ -743,37 +743,29 @@
     "reason": "shares the language of automation; same kind of customer; same revenue model",
     "score": 6.1,
     "ticker": "NASDAQGS:BL"
-   },
-   {
-    "company": "SPS Commerce, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of compliance, management; same type of business; sold the same way",
-    "score": 5.3,
-    "ticker": "NASDAQGS:SPSC"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 3.4,
+   "high": 2.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.2,
-   "mid": 2.5,
-   "n": 3,
+   "mid": 2.35,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -785,12 +777,10 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "compliance",
-    "management"
+    "automation"
    ],
    "show_retention": true,
-   "spread": 1.5,
+   "spread": 1.1,
    "table": [
     {
      "company": "ZoomInfo Technologies Inc.",
@@ -809,20 +799,11 @@
      "recurring_pct": 95.0,
      "retention_pct": 102.0,
      "ticker": "NASDAQGS:BL"
-    },
-    {
-     "company": "SPS Commerce, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.7,
-     "multiple": 3.4,
-     "recurring_pct": 96.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:SPSC"
     }
    ],
-   "tag_evidence": 0.3,
-   "thin": false,
-   "triangulated": false
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "AI licensing agent for regulated industries"

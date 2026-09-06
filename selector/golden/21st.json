@@ -76,7 +76,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.1,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     },
@@ -132,7 +132,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.2,
      "thin": true,
      "triangulated": true
     }
@@ -144,7 +144,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do UI Design, Design System; same type of business; same business function; same revenue model",
-    "score": 12.6,
+    "score": 12.5,
     "ticker": "NYSE:FIG"
    },
    {
@@ -160,7 +160,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same revenue model",
-    "score": 9.8,
+    "score": 9.7,
     "ticker": "NASDAQGS:ADSK"
    },
    {
@@ -168,7 +168,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NASDAQGS:BSY"
    },
    {
@@ -176,7 +176,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same kind of customer",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NASDAQGS:CDNS"
    },
    {
@@ -184,7 +184,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "XTRA:NEM"
    },
    {
@@ -192,7 +192,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NASDAQGS:PTC"
    }
   ],
@@ -299,7 +299,7 @@
      "ticker": "NASDAQGS:CDNS"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -653,7 +653,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of design; same type of business; same business function; sold the same way",
-    "score": 13.3,
+    "score": 13.2,
     "type": "PRIMARY"
    },
    {
@@ -664,7 +664,7 @@
     "in_medians": true,
     "mult": 12.7,
     "reason": "shares the language of design; same type of business; same business function; same revenue model",
-    "score": 18.3,
+    "score": 18.2,
     "type": "SECONDARY"
    },
    {
@@ -675,7 +675,7 @@
     "in_medians": true,
     "mult": 40.0,
     "reason": "shares the language of design; related type of business; same revenue model; sold the same way",
-    "score": 13.3,
+    "score": 13.2,
     "type": "PRIMARY"
    },
    {
@@ -697,7 +697,7 @@
     "in_medians": true,
     "mult": 17.9,
     "reason": "both do UI Design, Design System; same type of business; same business function; same revenue model",
-    "score": 17.6,
+    "score": 17.5,
     "type": "SECONDARY"
    },
    {
@@ -794,7 +794,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -805,7 +805,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same kind of customer",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NASDAQGS:SNPS"
    },
    {
@@ -813,7 +813,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "ENXTPA:DSY"
    },
    {
@@ -821,7 +821,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of system; same revenue model; sold the same way; same AI stance",
-    "score": 6.8,
+    "score": 6.7,
     "ticker": "NYSE:OOMA"
    },
    {
@@ -829,7 +829,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of design; same type of business; same business function; same AI stance",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "NASDAQGM:AIP"
    }
   ],
@@ -906,7 +906,7 @@
      "ticker": "NASDAQGM:AIP"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true
   }

@@ -107,7 +107,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of ordering, restaurant; related type of business; same end market; same business function",
-    "score": 12.9,
+    "score": 12.8,
     "ticker": "NYSE:TOST"
    },
    {
@@ -115,7 +115,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Back Office; same type of business; same end market; same business function",
-    "score": 11.1,
+    "score": 11.0,
     "ticker": "NYSE:PAR"
    },
    {
@@ -123,7 +123,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of management, restaurant; same type of business; same end market; same business function",
-    "score": 9.3,
+    "score": 9.2,
     "ticker": "NASDAQGS:AGYS"
    },
    {
@@ -131,7 +131,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of management, operations; same type of business; same business function",
-    "score": 6.6,
+    "score": 6.4,
     "ticker": "NYSE:IOT"
    }
   ],
@@ -212,7 +212,7 @@
      "ticker": "NASDAQGS:AGYS"
     }
    ],
-   "tag_evidence": 2.1,
+   "tag_evidence": 2.0,
    "thin": false,
    "triangulated": false
   },
@@ -540,7 +540,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "both do Restaurant Operations; same type of business; same end market; same kind of customer",
-    "score": 24.5,
+    "score": 24.1,
     "type": "PRIMARY"
    },
    {
@@ -562,7 +562,7 @@
     "in_medians": false,
     "mult": 9.0,
     "reason": "shares the language of management, operations; same type of business; same end market; same business function",
-    "score": 19.6,
+    "score": 19.4,
     "type": "PRIMARY"
    },
    {
@@ -678,7 +678,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Inventory Management; related type of business; same business function; same kind of customer",
-    "score": 9.6,
+    "score": 9.3,
     "ticker": "TSX:LSPD"
    },
    {
@@ -686,7 +686,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of management, vendor; same type of business; same kind of customer; sold the same way",
-    "score": 8.1,
+    "score": 8.0,
     "ticker": "NASDAQGS:SPSC"
    },
    {
@@ -694,7 +694,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of restaurant; same type of business; same business function",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "NYSE:VYX"
    },
    {
@@ -829,7 +829,7 @@
      "ticker": "NASDAQGS:INTA"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   }

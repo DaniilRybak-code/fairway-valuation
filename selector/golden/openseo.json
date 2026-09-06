@@ -71,7 +71,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
     },
@@ -82,8 +82,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 1,
-      "ARR_RUNRATE": 1,
-      "NET_REVENUE": 3
+      "NET_REVENUE": 2
      },
      "bounded": false,
      "closeness": "SHARED_PRODUCT",
@@ -97,18 +96,18 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.86,
+     "high": 50.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 33.3,
-     "n": 5,
+     "mid": 32.6,
+     "n": 3,
      "period_mix": {
-      "LTM": 2,
+      "LTM": 1,
       "NTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 1
      },
      "period_span": {
       "LTM": {
@@ -140,25 +139,11 @@
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Jasper",
-       "mult": 33.3,
-       "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
        "company": "Clay",
        "mult": 50.0,
        "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Supabase",
-       "mult": 72.86,
-       "reason": "both do Open Source; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -168,16 +153,14 @@
       "backlink",
       "data",
       "keyword",
-      "open",
       "platform",
       "rank",
       "research",
       "seo",
-      "source",
       "tracking",
       "visibility"
      ],
-     "spread": 16.9,
+     "spread": 11.6,
      "table": [
       {
        "company": "Semrush",
@@ -200,31 +183,11 @@
        "ticker": ""
       },
       {
-       "company": "Jasper",
-       "date": "Oct-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 33.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Clay",
        "date": "Jan-26",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 50.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Supabase",
-       "date": "Oct-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 72.86,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -242,7 +205,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Keyword Research, SEO, Rank Tracking; related type of business; same AI stance",
-    "score": 13.7,
+    "score": 13.4,
     "ticker": "NYSE:SMWB"
    },
    {
@@ -250,7 +213,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
-    "score": 13.2,
+    "score": 13.1,
     "ticker": "NYSE:KVYO"
    },
    {
@@ -334,7 +297,7 @@
      "ticker": "NYSE:KVYO"
     }
    ],
-   "tag_evidence": 9.2,
+   "tag_evidence": 8.9,
    "thin": false,
    "triangulated": false
   },
@@ -536,116 +499,6 @@
     ],
     "investor": "Frontline",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Apollo.io",
-      "date": "Aug-23"
-     }
-    ],
-    "investor": "Bain Capital Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Apollo.io",
-      "date": "Aug-23"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Apollo.io",
-      "date": "Aug-23"
-     }
-    ],
-    "investor": "Tribe Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Apollo.io",
-      "date": "Aug-23"
-     }
-    ],
-    "investor": "Nexus Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Insight Partners (lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "IVP",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Foundation Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Founders Circle Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "HubSpot Ventures",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -669,41 +522,8 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
-    "score": 15.4,
+    "score": 15.3,
     "type": "SECONDARY"
-   },
-   {
-    "basis": "Mid-2025 annualized run-rate",
-    "bound": "",
-    "company": "Supabase",
-    "date": "Oct-25",
-    "in_medians": true,
-    "mult": 72.86,
-    "reason": "both do Open Source; related type of business; same revenue model; sold the same way",
-    "score": 12.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Apollo.io",
-    "date": "Aug-23",
-    "in_medians": false,
-    "mult": 16.7,
-    "reason": "shares the language of data; same type of business; same kind of customer; sold the same way",
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Jasper",
-    "date": "Oct-22",
-    "in_medians": true,
-    "mult": 33.3,
-    "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
-    "score": 16.1,
-    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -713,7 +533,7 @@
     "in_medians": true,
     "mult": 32.6,
     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
-    "score": 15.7,
+    "score": 15.6,
     "type": "PRIMARY"
    }
   ],
@@ -725,8 +545,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 2
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -736,18 +555,18 @@
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 72.86,
+   "high": 50.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 33.3,
-   "n": 5,
+   "mid": 32.6,
+   "n": 3,
    "period_mix": {
-    "LTM": 2,
+    "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
@@ -779,25 +598,11 @@
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
      "company": "Clay",
      "mult": 50.0,
      "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Supabase",
-     "mult": 72.86,
-     "reason": "both do Open Source; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -807,16 +612,14 @@
     "backlink",
     "data",
     "keyword",
-    "open",
     "platform",
     "rank",
     "research",
     "seo",
-    "source",
     "tracking",
     "visibility"
    ],
-   "spread": 16.9,
+   "spread": 11.6,
    "table": [
     {
      "company": "Semrush",
@@ -839,31 +642,11 @@
      "ticker": ""
     },
     {
-     "company": "Jasper",
-     "date": "Oct-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 33.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Clay",
      "date": "Jan-26",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 50.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Supabase",
-     "date": "Oct-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 72.86,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -876,67 +659,59 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Datadog, Inc.",
+    "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:DDOG"
-   },
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of data; related type of business; same revenue model; same AI stance",
-    "score": 7.1,
-    "ticker": "NASDAQCM:RDVT"
+    "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
+    "score": 6.6,
+    "ticker": "NYSE:TWLO"
    },
    {
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai, platform; same kind of customer; sold the same way; same AI stance",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "NASDAQGS:WIX"
    },
    {
-    "company": "Twilio Inc.",
+    "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
-    "score": 6.7,
-    "ticker": "NYSE:TWLO"
+    "reason": "shares the language of platform, source; related type of business; sold the same way; same AI stance",
+    "score": 6.2,
+    "ticker": "NASDAQGS:GTLB"
    },
    {
-    "company": "Cloudflare, Inc.",
+    "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; same revenue model; sold the same way; same AI stance",
-    "score": 6.6,
-    "ticker": "NYSE:NET"
+    "reason": "shares the language of ai, data, platform; related type of business; same revenue model; same AI stance",
+    "score": 6.1,
+    "ticker": "NYSE:SNOW"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 29.5,
+   "high": 15.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.2,
-   "mid": 10.0,
-   "n": 5,
+   "low": 2.0,
+   "mid": 5.2,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -953,6 +728,13 @@
      "transaction_type": ""
     },
     {
+     "company": "GitLab Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of platform, source; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Twilio Inc.",
      "mult": 5.2,
      "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
@@ -960,24 +742,10 @@
      "transaction_type": ""
     },
     {
-     "company": "Red Violet, Inc.",
-     "mult": 10.0,
-     "reason": "shares the language of data; related type of business; same revenue model; same AI stance",
+     "company": "Snowflake Inc.",
+     "mult": 15.6,
+     "reason": "shares the language of ai, data, platform; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 14.9,
-     "reason": "shares the language of ai; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "mult": 29.5,
-     "reason": "shares the language of ai; same revenue model; sold the same way; same AI stance",
-     "tier": "BROAD",
      "transaction_type": ""
     }
    ],
@@ -986,10 +754,11 @@
    "shared_words": [
     "ai",
     "data",
-    "platform"
+    "platform",
+    "source"
    ],
    "show_retention": true,
-   "spread": 14.8,
+   "spread": 7.8,
    "table": [
     {
      "company": "Wix.com Ltd.",
@@ -1001,6 +770,15 @@
      "ticker": "NASDAQGS:WIX"
     },
     {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
+     "multiple": 5.2,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    },
+    {
      "company": "Twilio Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 10.6,
@@ -1010,34 +788,16 @@
      "ticker": "NYSE:TWLO"
     },
     {
-     "company": "Red Violet, Inc.",
+     "company": "Snowflake Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
-     "multiple": 10.0,
-     "recurring_pct": 77.0,
-     "retention_pct": 95.0,
-     "ticker": "NASDAQCM:RDVT"
-    },
-    {
-     "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 22.9,
-     "multiple": 14.9,
+     "growth_pct": 25.8,
+     "multiple": 15.6,
      "recurring_pct": null,
-     "retention_pct": 122.0,
-     "ticker": "NASDAQGS:DDOG"
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 28.4,
-     "multiple": 29.5,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:NET"
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   }

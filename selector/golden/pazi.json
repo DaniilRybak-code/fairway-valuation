@@ -2,13 +2,79 @@
  "expected": {
   "all_ranges": {
    "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 357142.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 306250.0,
+     "mid": 357142.86,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "automation"
+     ],
+     "spread": 1.2,
+     "table": [
+      {
+       "company": "Vanta",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 306250.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 357142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": true,
+     "triangulated": false
+    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
+      "ARR": 4,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -29,11 +95,11 @@
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 50.0,
-     "n": 4,
+     "mid": 24.5,
+     "n": 5,
      "period_mix": {
       "NTM": 1,
-      "RUN_RATE": 3
+      "RUN_RATE": 4
      },
      "period_span": {
       "NTM": {
@@ -57,6 +123,13 @@
        "company": "Owner",
        "mult": 23.0,
        "reason": "shares the language of agent, ai, business; related type of business; same kind of customer; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Vanta",
+       "mult": 24.5,
+       "reason": "shares the language of automation; related type of business; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -108,6 +181,16 @@
        "ticker": ""
       },
       {
+       "company": "Vanta",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 24.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Clay",
        "date": "Jan-26",
        "growth_basis": "",
@@ -128,7 +211,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
     }
@@ -148,7 +231,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, automation; same type of business; same business function; same AI stance",
-    "score": 8.4,
+    "score": 8.2,
     "ticker": "NYSE:PATH"
    },
    {
@@ -156,7 +239,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of automation, business; same type of business; same business function",
-    "score": 7.3,
+    "score": 7.1,
     "ticker": "NASDAQGS:PEGA"
    },
    {
@@ -168,19 +251,11 @@
     "ticker": "NYSE:HUBS"
    },
    {
-    "company": "innoscripta SE",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of credit; same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "XTRA:1INN"
-   },
-   {
     "company": "SAP SE",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of business; same type of business; same business function",
-    "score": 6.2,
+    "score": 6.1,
     "ticker": "XTRA:SAP"
    },
    {
@@ -188,8 +263,16 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of automation, business; same type of business",
-    "score": 5.3,
+    "score": 5.1,
     "ticker": "NASDAQGM:APPN"
+   },
+   {
+    "company": "Sidetrade SA",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, credit; same type of business; same AI stance",
+    "score": 5.1,
+    "ticker": "ENXTPA:ALBFR"
    }
   ],
   "core_range": {
@@ -205,7 +288,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.4,
+   "high": 4.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.8,
@@ -225,6 +308,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
+    "ai",
     "automation",
     "business",
     "credit",
@@ -270,6 +354,15 @@
      "ticker": "NASDAQGM:APPN"
     },
     {
+     "company": "Sidetrade SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
+     "multiple": 3.7,
+     "recurring_pct": 87.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:ALBFR"
+    },
+    {
      "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.0,
@@ -277,15 +370,6 @@
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
-    },
-    {
-     "company": "innoscripta SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 27.3,
-     "multiple": 4.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:1INN"
     },
     {
      "company": "SAP SE",
@@ -497,8 +581,8 @@
       "date": "May-26"
      },
      {
-      "company": "Notion",
-      "date": "Jan-26"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
     "investor": "Sequoia",
@@ -513,30 +597,6 @@
     ],
     "investor": "Greenoaks",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "GIC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     },
-     {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Index Ventures",
-    "n": 2
    },
    {
     "backed": [
@@ -596,6 +656,16 @@
      }
     ],
     "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
     "n": 1
    },
    {
@@ -687,6 +757,36 @@
     ],
     "investor": "Citi Ventures",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vanta",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Goldman Sachs Alternatives",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vanta",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "J.P. Morgan",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vanta",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Atlassian Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -699,7 +799,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "shares the language of agent, ai, business; related type of business; same kind of customer; same AI stance",
-    "score": 10.2,
+    "score": 9.6,
     "type": "PRIMARY"
    },
    {
@@ -710,19 +810,8 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
-    "score": 9.3,
+    "score": 8.8,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Notion",
-    "date": "Jan-26",
-    "in_medians": false,
-    "mult": 18.3,
-    "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
-    "score": 11.1,
-    "type": "SECONDARY"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -732,7 +821,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
-    "score": 9.7,
+    "score": 9.6,
     "type": "SECONDARY"
    },
    {
@@ -743,7 +832,7 @@
     "in_medians": false,
     "mult": 150.0,
     "reason": "shares the language of agent, ai, automation; related type of business; same revenue model; same AI stance",
-    "score": 8.9,
+    "score": 8.7,
     "type": "PRIMARY"
    },
    {
@@ -754,7 +843,7 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
-    "score": 9.8,
+    "score": 9.7,
     "type": "CONTROL"
    },
    {
@@ -765,7 +854,18 @@
     "in_medians": false,
     "mult": 40.4,
     "reason": "shares the language of ai, content; related type of business; same AI stance",
-    "score": 6.8,
+    "score": 6.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vanta",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 24.5,
+    "reason": "shares the language of automation; related type of business; same kind of customer",
+    "score": 6.6,
     "type": "PRIMARY"
    }
   ],
@@ -776,7 +876,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 4,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -793,11 +893,11 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 50.0,
-   "n": 4,
+   "mid": 24.5,
+   "n": 5,
    "period_mix": {
     "NTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "NTM": {
@@ -821,6 +921,13 @@
      "company": "Owner",
      "mult": 23.0,
      "reason": "shares the language of agent, ai, business; related type of business; same kind of customer; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Vanta",
+     "mult": 24.5,
+     "reason": "shares the language of automation; related type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -872,6 +979,16 @@
      "ticker": ""
     },
     {
+     "company": "Vanta",
+     "date": "Jul-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 24.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "Clay",
      "date": "Jan-26",
      "growth_basis": "",
@@ -892,11 +1009,11 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 21,
+  "private_window_months": 25,
   "secondary": [
    {
     "company": "Klaviyo, Inc.",
@@ -907,27 +1024,11 @@
     "ticker": "NYSE:KVYO"
    },
    {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NASDAQGS:WIX"
-   },
-   {
-    "company": "SoundHound AI, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-    "score": 6.1,
-    "ticker": "NASDAQGM:SOUN"
-   },
-   {
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai; same revenue model; sold the same way",
-    "score": 5.8,
+    "score": 5.7,
     "ticker": "NYSE:NET"
    },
    {
@@ -935,8 +1036,24 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai; same revenue model; sold the same way",
-    "score": 5.8,
+    "score": 5.7,
     "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Ooma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of business; same kind of customer; sold the same way",
+    "score": 5.6,
+    "ticker": "NYSE:OOMA"
+   },
+   {
+    "company": "Zoom Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of team; related type of business; sold the same way",
+    "score": 5.1,
+    "ticker": "NASDAQGS:ZM"
    }
   ],
   "secondary_range": {
@@ -946,7 +1063,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -956,7 +1073,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.0,
-   "mid": 10.8,
+   "mid": 3.9,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -969,9 +1086,9 @@
    },
    "points": [
     {
-     "company": "Wix.com Ltd.",
-     "mult": 2.0,
-     "reason": "shares the language of ai; same kind of customer; sold the same way",
+     "company": "Ooma, Inc.",
+     "mult": 1.9,
+     "reason": "shares the language of business; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -983,9 +1100,9 @@
      "transaction_type": ""
     },
     {
-     "company": "SoundHound AI, Inc.",
-     "mult": 10.8,
-     "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
+     "company": "Zoom Communications, Inc.",
+     "mult": 3.9,
+     "reason": "shares the language of team; related type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -1009,19 +1126,21 @@
    "shared_words": [
     "agent",
     "ai",
-    "automation"
+    "automation",
+    "business",
+    "team"
    ],
    "show_retention": true,
-   "spread": 14.8,
+   "spread": 15.5,
    "table": [
     {
-     "company": "Wix.com Ltd.",
+     "company": "Ooma, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.4,
-     "multiple": 2.0,
-     "recurring_pct": 71.0,
+     "growth_pct": 6.6,
+     "multiple": 1.9,
+     "recurring_pct": 92.0,
      "retention_pct": null,
-     "ticker": "NASDAQGS:WIX"
+     "ticker": "NYSE:OOMA"
     },
     {
      "company": "Klaviyo, Inc.",
@@ -1033,13 +1152,13 @@
      "ticker": "NYSE:KVYO"
     },
     {
-     "company": "SoundHound AI, Inc.",
+     "company": "Zoom Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.9,
-     "multiple": 10.8,
+     "growth_pct": 4.2,
+     "multiple": 3.9,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:SOUN"
+     "retention_pct": 99.0,
+     "ticker": "NASDAQGS:ZM"
     },
     {
      "company": "Datadog, Inc.",
@@ -1060,7 +1179,7 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

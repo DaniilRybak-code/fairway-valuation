@@ -11,104 +11,20 @@
       "UNKNOWN": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "book_value",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 2.6,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 0.4,
-     "mid": 1.5,
-     "n": 2,
-     "period_mix": {
-      "NTM": 2
-     },
-     "period_span": {
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Grenke AG",
-       "mult": 0.4,
-       "reason": "shares the language of sme; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Funding Circle Holdings plc",
-       "mult": 2.6,
-       "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      }
-     ],
-     "positioning": [],
-     "post_stated_n": 0,
-     "shared_words": [
-      "business",
-      "credit",
-      "lending",
-      "loan",
-      "sme"
-     ],
-     "show_retention": false,
-     "spread": 6.5,
-     "table": [
-      {
-       "company": "Grenke AG",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 6.0,
-       "multiple": 0.4,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "XTRA:GLJ"
-      },
-      {
-       "company": "Funding Circle Holdings plc",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 10.7,
-       "multiple": 2.6,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "LSE:FCH"
-      }
-     ],
-     "tag_evidence": 1.5,
-     "thin": true,
-     "triangulated": false
-    },
-    "EARNINGS": {
-     "anchor_dropped": false,
-     "band": "DIRECT",
-     "basis": "EARNINGS",
-     "basis_label": "price to earnings",
-     "basis_mix": {
-      "UNKNOWN": 2
-     },
-     "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
      "display": "RANGE",
-     "founder_field": "net_income",
+     "founder_field": "book_value",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 15.5,
+     "high": 0.5,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 7.2,
-     "mid": 11.35,
+     "low": 0.4,
+     "mid": 0.45,
      "n": 2,
      "period_mix": {
       "NTM": 2
@@ -123,15 +39,85 @@
      "positioning": [],
      "post_stated_n": 0,
      "shared_words": [
-      "business",
-      "credit",
-      "lending",
-      "loan",
       "sme"
      ],
      "show_retention": false,
-     "spread": 2.2,
+     "spread": 1.2,
      "table": [
+      {
+       "company": "Grenke AG",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 6.0,
+       "multiple": 0.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "XTRA:GLJ"
+      },
+      {
+       "company": "Far East Horizon Limited",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 3.9,
+       "multiple": 0.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "SEHK:3360"
+      }
+     ],
+     "tag_evidence": 0.2,
+     "thin": true,
+     "triangulated": true
+    },
+    "EARNINGS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "EARNINGS",
+     "basis_label": "price to earnings",
+     "basis_mix": {
+      "UNKNOWN": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "net_income",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 7.2,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.0,
+     "mid": 7.1,
+     "n": 2,
+     "period_mix": {
+      "NTM": 2
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "post_stated_n": 0,
+     "shared_words": [
+      "sme"
+     ],
+     "show_retention": false,
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Far East Horizon Limited",
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 3.9,
+       "multiple": 7.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": "SEHK:3360"
+      },
       {
        "company": "Grenke AG",
        "growth_basis": "CAGR_CY1_CY3",
@@ -140,20 +126,11 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": "XTRA:GLJ"
-      },
-      {
-       "company": "Funding Circle Holdings plc",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 10.7,
-       "multiple": 15.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "LSE:FCH"
       }
      ],
-     "tag_evidence": 1.5,
+     "tag_evidence": 0.2,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     }
    },
    "private": {
@@ -210,7 +187,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.1,
      "thin": true,
      "triangulated": false
     },
@@ -282,7 +259,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.1,
      "thin": true,
      "triangulated": false
     },
@@ -338,7 +315,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
+     "tag_evidence": 0.0,
      "thin": true,
      "triangulated": true
     }
@@ -346,60 +323,60 @@
   },
   "core": [
    {
-    "company": "Time Finance plc",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-    "score": 15.1,
-    "ticker": "AIM:TIME"
-   },
-   {
     "company": "Five-Star Business Finance Limited",
     "family": "fintech",
     "in_medians": false,
     "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-    "score": 15.1,
+    "score": 14.7,
     "ticker": "NSEI:FIVESTAR"
+   },
+   {
+    "company": "Time Finance plc",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 14.4,
+    "ticker": "AIM:TIME"
    },
    {
     "company": "Cholamandalam Investment and Finance Company Limited",
     "family": "fintech",
     "in_medians": false,
     "reason": "both do SME Lending; same type of business; same end market; same business function",
-    "score": 14.8,
+    "score": 14.3,
     "ticker": "NSEI:CHOLAFIN"
-   },
-   {
-    "company": "Credit Acceptance Corporation",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
-    "score": 14.7,
-    "ticker": "NASDAQ:CACC"
    },
    {
     "company": "Grenke AG",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of sme; same type of business; same end market; same business function",
-    "score": 14.6,
+    "score": 14.2,
     "ticker": "XTRA:GLJ"
+   },
+   {
+    "company": "Credit Acceptance Corporation",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "shares the language of credit, lending, loan; same type of business; same end market; same business function",
+    "score": 14.2,
+    "ticker": "NASDAQ:CACC"
    },
    {
     "company": "Shriram Finance Limited",
     "family": "fintech",
     "in_medians": false,
     "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-    "score": 14.5,
+    "score": 14.1,
     "ticker": "NSEI:SHRIRAMFIN"
    },
    {
-    "company": "Funding Circle Holdings plc",
+    "company": "Far East Horizon Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-    "score": 14.5,
-    "ticker": "LSE:FCH"
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 14.0,
+    "ticker": "SEHK:3360"
    }
   ],
   "core_range": {
@@ -409,17 +386,17 @@
     "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 2.6,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 0.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
-   "mid": 1.5,
+   "mid": 0.45,
    "n": 2,
    "period_mix": {
     "NTM": 2
@@ -430,33 +407,14 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Grenke AG",
-     "mult": 0.4,
-     "reason": "shares the language of sme; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Funding Circle Holdings plc",
-     "mult": 2.6,
-     "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "business",
-    "credit",
-    "lending",
-    "loan",
     "sme"
    ],
    "show_retention": false,
-   "spread": 6.5,
+   "spread": 1.2,
    "table": [
     {
      "company": "Grenke AG",
@@ -468,18 +426,18 @@
      "ticker": "XTRA:GLJ"
     },
     {
-     "company": "Funding Circle Holdings plc",
+     "company": "Far East Horizon Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.7,
-     "multiple": 2.6,
+     "growth_pct": 3.9,
+     "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "LSE:FCH"
+     "ticker": "SEHK:3360"
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -735,8 +693,8 @@
     "date": "Dec-25",
     "in_medians": false,
     "mult": 7.41,
-    "reason": "shares the language of lending; same type of business; same end market; same business function",
-    "score": 21.2,
+    "reason": "same type of business; same end market; same business function; same revenue model",
+    "score": 21.0,
     "type": "PRIMARY"
    },
    {
@@ -747,7 +705,7 @@
     "in_medians": false,
     "mult": 0.6,
     "reason": "both do Working Capital; same type of business; same end market; same business function",
-    "score": 18.0,
+    "score": 17.3,
     "type": "CONTROL_ACQUISITION"
    },
    {
@@ -757,8 +715,8 @@
     "date": "Feb-25",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of credit; same type of business; same end market; same business function",
-    "score": 11.1,
+    "reason": "same type of business; same end market; same business function",
+    "score": 11.0,
     "type": "PRIMARY"
    },
    {
@@ -768,8 +726,8 @@
     "date": "Feb-23",
     "in_medians": true,
     "mult": null,
-    "reason": "shares the language of lending; same type of business; same end market; same business function",
-    "score": 19.7,
+    "reason": "same type of business; same end market; same business function; same revenue model",
+    "score": 19.5,
     "type": "PRIMARY"
    },
    {
@@ -780,7 +738,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of sme; same type of business; same end market; same business function",
-    "score": 17.1,
+    "score": 16.7,
     "type": "PRIMARY"
    },
    {
@@ -791,7 +749,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "both do Business Lending; related type of business; same end market; same business function",
-    "score": 17.9,
+    "score": 17.6,
     "type": "PRIMARY"
    },
    {
@@ -802,7 +760,7 @@
     "in_medians": true,
     "mult": 8.9,
     "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
-    "score": 21.3,
+    "score": 21.1,
     "type": "PRIMARY"
    }
   ],
@@ -871,34 +829,34 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.1,
    "thin": true,
    "triangulated": false
   },
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "Far East Horizon Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 14.0,
-    "ticker": "SEHK:3360"
-   },
-   {
     "company": "Live Oak Bancshares, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of business, lending; related type of business; same end market; same business function",
-    "score": 13.9,
+    "score": 13.6,
     "ticker": "NYSE:LOB"
+   },
+   {
+    "company": "Funding Circle Holdings plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+    "score": 13.5,
+    "ticker": "LSE:FCH"
    },
    {
     "company": "UWM Holdings Corporation",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of lending, origination; same type of business; same end market; same business function",
-    "score": 13.8,
+    "score": 13.2,
     "ticker": "NYSE:UWMC"
    },
    {
@@ -906,7 +864,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of lending, loan, origination; related type of business; same end market; same business function",
-    "score": 13.7,
+    "score": 12.9,
     "ticker": "NASDAQ:MBIN"
    },
    {
@@ -914,7 +872,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of loan, sme; related type of business; same end market; same business function",
-    "score": 13.5,
+    "score": 12.8,
     "ticker": "BIT:IF"
    }
   ],
@@ -929,13 +887,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 1.5,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 2.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 1.0,
+   "low": 1.0,
+   "mid": 1.3,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -946,18 +904,55 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Banca IFIS S.p.A.",
+     "mult": 0.4,
+     "reason": "shares the language of loan, sme; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Merchants Bancorp",
+     "mult": 1.0,
+     "reason": "shares the language of lending, loan, origination; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Live Oak Bancshares, Inc.",
+     "mult": 1.3,
+     "reason": "shares the language of business, lending; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "UWM Holdings Corporation",
+     "mult": 1.5,
+     "reason": "shares the language of lending, origination; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Funding Circle Holdings plc",
+     "mult": 2.6,
+     "reason": "shares the language of business, credit, lending; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "business",
+    "credit",
     "lending",
     "loan",
     "origination",
     "sme"
    ],
    "show_retention": false,
-   "spread": 3.8,
+   "spread": 6.5,
    "table": [
     {
      "company": "Banca IFIS S.p.A.",
@@ -967,15 +962,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "BIT:IF"
-    },
-    {
-     "company": "Far East Horizon Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.9,
-     "multiple": 0.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "SEHK:3360"
     },
     {
      "company": "Merchants Bancorp",
@@ -1003,9 +989,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:UWMC"
+    },
+    {
+     "company": "Funding Circle Holdings plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.7,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:FCH"
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   }

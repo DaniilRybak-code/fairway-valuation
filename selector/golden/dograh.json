@@ -81,7 +81,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
     },
@@ -113,7 +113,7 @@
       "Confluent"
      ],
      "low": 9.88,
-     "mid": 33.0,
+     "mid": 50.0,
      "n": 5,
      "period_mix": {
       "LTM": 1,
@@ -145,18 +145,18 @@
        "transaction_type": "MIXED"
       },
       {
-       "company": "Lovable",
-       "mult": 33.0,
-       "reason": "shares the language of ai; related type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
        "company": "Clay",
        "mult": 50.0,
        "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Supabase",
+       "mult": 72.86,
+       "reason": "both do Open Source; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       },
       {
        "company": "Sierra",
@@ -173,6 +173,8 @@
       "api",
       "automation",
       "infrastructure",
+      "open",
+      "source",
       "voice"
      ],
      "spread": 10.7,
@@ -198,21 +200,21 @@
        "ticker": ""
       },
       {
-       "company": "Lovable",
-       "date": "Dec-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 33.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Clay",
        "date": "Jan-26",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.86,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -228,7 +230,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
@@ -240,7 +242,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Voice API; same type of business; same kind of customer; same revenue model",
-    "score": 12.7,
+    "score": 12.4,
     "ticker": "NYSE:TWLO"
    },
    {
@@ -248,7 +250,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Voice API; related type of business; same kind of customer; same revenue model",
-    "score": 11.2,
+    "score": 10.9,
     "ticker": "NASDAQGS:API"
    },
    {
@@ -256,7 +258,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai, infrastructure; related type of business; same kind of customer; same revenue model",
-    "score": 10.8,
+    "score": 10.7,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -264,7 +266,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Voice API; same type of business; same kind of customer; same revenue model",
-    "score": 10.7,
+    "score": 10.4,
     "ticker": "OM:SINCH"
    },
    {
@@ -274,13 +276,21 @@
     "reason": "shares the language of source; related type of business; same business function; same kind of customer",
     "score": 9.6,
     "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "PagerDuty, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of call; related type of business; same kind of customer",
+    "score": 5.6,
+    "ticker": "NYSE:PD"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -289,14 +299,14 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 14.9,
+   "high": 5.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.4,
-   "mid": 5.2,
-   "n": 5,
+   "mid": 3.65,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -316,6 +326,13 @@
      "company": "Sinch AB (publ)",
      "mult": 1.4,
      "reason": "both do Voice API; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PagerDuty, Inc.",
+     "mult": 2.1,
+     "reason": "shares the language of call; related type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -346,6 +363,7 @@
    "shared_words": [
     "ai",
     "api",
+    "call",
     "infrastructure",
     "source",
     "voice"
@@ -370,6 +388,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "OM:SINCH"
+    },
+    {
+     "company": "PagerDuty, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.7,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": 97.0,
+     "ticker": "NYSE:PD"
     },
     {
      "company": "Twilio Inc.",
@@ -399,7 +426,7 @@
      "ticker": "NASDAQGS:DDOG"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -715,56 +742,6 @@
     ],
     "investor": "IBM",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "CapitalG",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Menlo Anthology",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "NVentures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Salesforce Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Databricks Ventures",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -777,7 +754,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
-    "score": 14.9,
+    "score": 14.7,
     "type": "MIXED"
    },
    {
@@ -788,7 +765,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
-    "score": 13.9,
+    "score": 13.7,
     "type": "PRIMARY"
    },
    {
@@ -799,7 +776,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do AI Agents, Voice AI; related type of business; same revenue model; same AI stance",
-    "score": 9.4,
+    "score": 9.1,
     "type": "PRIMARY"
    },
    {
@@ -810,7 +787,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
-    "score": 10.0,
+    "score": 9.8,
     "type": "SECONDARY"
    },
    {
@@ -821,7 +798,7 @@
     "in_medians": false,
     "mult": 150.0,
     "reason": "both do AI Agents, Voice Agents; related type of business; same revenue model; same AI stance",
-    "score": 9.4,
+    "score": 9.1,
     "type": "PRIMARY"
    },
    {
@@ -832,18 +809,18 @@
     "in_medians": true,
     "mult": 9.88,
     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
-    "score": 14.8,
+    "score": 14.7,
     "type": "CONTROL"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
+    "basis": "Mid-2025 annualized run-rate",
     "bound": "",
-    "company": "Lovable",
-    "date": "Dec-25",
+    "company": "Supabase",
+    "date": "Oct-25",
     "in_medians": true,
-    "mult": 33.0,
-    "reason": "shares the language of ai; related type of business; same business function; same revenue model",
-    "score": 14.6,
+    "mult": 72.86,
+    "reason": "both do Open Source; related type of business; same business function; same kind of customer",
+    "score": 18.5,
     "type": "PRIMARY"
    }
   ],
@@ -872,7 +849,7 @@
     "Confluent"
    ],
    "low": 9.88,
-   "mid": 33.0,
+   "mid": 50.0,
    "n": 5,
    "period_mix": {
     "LTM": 1,
@@ -904,18 +881,18 @@
      "transaction_type": "MIXED"
     },
     {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "shares the language of ai; related type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
      "company": "Clay",
      "mult": 50.0,
      "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Supabase",
+     "mult": 72.86,
+     "reason": "both do Open Source; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Sierra",
@@ -932,6 +909,8 @@
     "api",
     "automation",
     "infrastructure",
+    "open",
+    "source",
     "voice"
    ],
    "spread": 10.7,
@@ -957,21 +936,21 @@
      "ticker": ""
     },
     {
-     "company": "Lovable",
-     "date": "Dec-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 33.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Clay",
      "date": "Jan-26",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.86,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -987,18 +966,18 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 8,
+  "private_window_months": 10,
   "secondary": [
    {
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai, infrastructure; same kind of customer; same revenue model; sold the same way",
-    "score": 9.3,
+    "score": 9.2,
     "ticker": "NYSE:NET"
    },
    {
@@ -1006,7 +985,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Voice AI; related type of business; same revenue model; same AI stance",
-    "score": 8.0,
+    "score": 7.9,
     "ticker": "NASDAQGM:SOUN"
    },
    {
@@ -1014,7 +993,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; related type of business; same business function; same kind of customer",
-    "score": 7.3,
+    "score": 7.2,
     "ticker": "ENXTAM:TOM2"
    },
    {
@@ -1022,7 +1001,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Voice AI; related type of business; same business function; same AI stance",
-    "score": 6.5,
+    "score": 6.4,
     "ticker": "NASDAQGS:CRNC"
    },
    {
@@ -1030,7 +1009,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai, infrastructure; related type of business; same revenue model",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "NYSE:DT"
    }
   ],
@@ -1149,7 +1128,7 @@
      "ticker": "NASDAQGM:SOUN"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   }

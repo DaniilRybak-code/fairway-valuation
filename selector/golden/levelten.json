@@ -54,7 +54,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
+     "tag_evidence": 0.0,
      "thin": true,
      "triangulated": true
     },
@@ -111,7 +111,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.1,
+     "tag_evidence": 0.9,
      "thin": true,
      "triangulated": false
     }
@@ -123,7 +123,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
-    "score": 10.7,
+    "score": 10.5,
     "ticker": "NSEI:IEX"
    },
    {
@@ -131,7 +131,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of purchase; same type of business; same kind of customer; sold the same way",
-    "score": 8.9,
+    "score": 8.7,
     "ticker": "LSE:CKN"
    },
    {
@@ -234,7 +234,7 @@
      "ticker": "NASDAQ:CME"
     }
    ],
-   "tag_evidence": 1.7,
+   "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
   },
@@ -398,7 +398,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of energy, renewable; same type of business; same end market; sold the same way",
-    "score": 14.1,
+    "score": 13.9,
     "type": "PRIMARY"
    },
    {
@@ -408,8 +408,8 @@
     "date": "Apr-21",
     "in_medians": true,
     "mult": 6.67,
-    "reason": "shares the language of marketplace; related type of business; same revenue model; same AI stance",
-    "score": 9.1,
+    "reason": "related type of business; same revenue model; same AI stance",
+    "score": 9.0,
     "type": "PRIMARY"
    }
   ],
@@ -462,7 +462,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.0,
    "thin": true,
    "triangulated": true
   },
@@ -473,7 +473,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of energy; same type of business; sold the same way; same AI stance",
-    "score": 6.5,
+    "score": 6.3,
     "ticker": "NSEI:MCX"
    },
    {
@@ -481,7 +481,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of energy; same end market; sold the same way; same AI stance",
-    "score": 6.5,
+    "score": 6.3,
     "ticker": "XTRA:PSAN"
    },
    {
@@ -497,7 +497,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of energy; same type of business; sold the same way",
-    "score": 5.5,
+    "score": 5.3,
     "ticker": "NYSE:ICE"
    },
    {

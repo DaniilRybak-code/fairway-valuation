@@ -9,8 +9,8 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 1,
-      "ARR_RUNRATE": 2,
-      "NET_REVENUE": 2
+      "ARR_RUNRATE": 3,
+      "NET_REVENUE": 1
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -18,23 +18,23 @@
      "control_names": [
       "Confluent"
      ],
-     "dispersed": false,
-     "display": "RANGE",
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 33.0,
+     "high": 120.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
      "low": 9.88,
-     "mid": 14.9,
+     "mid": 20.0,
      "n": 5,
      "period_mix": {
-      "LTM": 2,
-      "RUN_RATE": 3
+      "LTM": 1,
+      "RUN_RATE": 4
      },
      "period_span": {
       "LTM": {
@@ -46,7 +46,43 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Confluent",
+       "mult": 9.88,
+       "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Oxylabs",
+       "mult": 10.3,
+       "reason": "both do Web Scraping, Scraper API; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Replit",
+       "mult": 20.0,
+       "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Lovable",
+       "mult": 33.0,
+       "reason": "both do No-Code; same type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Perplexity",
+       "mult": 120.0,
+       "reason": "both do AI Browser; related type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
       "agent",
@@ -61,7 +97,7 @@
       "scraping",
       "web"
      ],
-     "spread": 3.3,
+     "spread": 12.1,
      "table": [
       {
        "company": "Confluent",
@@ -79,16 +115,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 10.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Invisible Technologies",
-       "date": "Sep-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 14.9,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -112,9 +138,19 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Perplexity",
+       "date": "Jul-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 120.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 2.6,
+     "tag_evidence": 2.3,
      "thin": false,
      "triangulated": false
     }
@@ -126,7 +162,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; same revenue model",
-    "score": 12.6,
+    "score": 12.3,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -134,7 +170,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do AI Agent Infrastructure; related type of business; same kind of customer; same revenue model",
-    "score": 11.3,
+    "score": 11.0,
     "ticker": "NYSE:NET"
    },
    {
@@ -142,7 +178,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 10.8,
+    "score": 10.7,
     "ticker": "NASDAQGS:API"
    },
    {
@@ -150,32 +186,32 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 10.8,
+    "score": 10.7,
     "ticker": "NYSE:TWLO"
-   },
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same business function; same revenue model",
-    "score": 9.6,
-    "ticker": "NYSE:SNOW"
    },
    {
     "company": "Sinch AB (publ)",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "OM:SINCH"
    },
    {
-    "company": "SoundHound AI, Inc.",
+    "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "ticker": "NASDAQGM:SOUN"
+    "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
+    "score": 7.7,
+    "ticker": "NYSE:DT"
+   },
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Web Scraping; same type of business; same business function",
+    "score": 6.8,
+    "ticker": "NYSE:SMWB"
    }
   ],
   "core_range": {
@@ -191,11 +227,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 15.6,
+   "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.4,
-   "mid": 10.8,
+   "mid": 5.2,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -222,6 +258,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Similarweb Ltd.",
+     "mult": 2.2,
+     "reason": "both do Web Scraping; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Twilio Inc.",
      "mult": 5.2,
      "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
@@ -229,9 +272,9 @@
      "transaction_type": ""
     },
     {
-     "company": "SoundHound AI, Inc.",
-     "mult": 10.8,
-     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
+     "company": "Dynatrace, Inc.",
+     "mult": 5.8,
+     "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -239,13 +282,6 @@
      "company": "Datadog, Inc.",
      "mult": 14.9,
      "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "shares the language of ai; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -264,6 +300,7 @@
     "ai",
     "api",
     "infrastructure",
+    "scraping",
     "web"
    ],
    "show_retention": true,
@@ -288,6 +325,15 @@
      "ticker": "OM:SINCH"
     },
     {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
      "company": "Twilio Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 10.6,
@@ -297,13 +343,13 @@
      "ticker": "NYSE:TWLO"
     },
     {
-     "company": "SoundHound AI, Inc.",
+     "company": "Dynatrace, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.9,
-     "multiple": 10.8,
+     "growth_pct": 14.5,
+     "multiple": 5.8,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:SOUN"
+     "retention_pct": 110.0,
+     "ticker": "NYSE:DT"
     },
     {
      "company": "Datadog, Inc.",
@@ -313,15 +359,6 @@
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
     },
     {
      "company": "Cloudflare, Inc.",
@@ -669,66 +706,6 @@
     ],
     "investor": "Coatue",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Vanara Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Princeville Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "HOF Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Freestyle VC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Greycroft",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Acrew Capital",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -741,7 +718,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "both do Web Scraping, Scraper API; same type of business; same business function; same kind of customer",
-    "score": 22.1,
+    "score": 21.8,
     "type": "MIXED"
    },
    {
@@ -752,7 +729,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "both do MCP; same type of business; same kind of customer; same revenue model",
-    "score": 16.7,
+    "score": 16.4,
     "type": "PRIMARY"
    },
    {
@@ -763,7 +740,7 @@
     "in_medians": true,
     "mult": 9.88,
     "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
-    "score": 16.8,
+    "score": 16.6,
     "type": "CONTROL"
    },
    {
@@ -774,7 +751,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do No-Code; same type of business; same revenue model; sold the same way",
-    "score": 14.7,
+    "score": 14.5,
     "type": "PRIMARY"
    },
    {
@@ -785,7 +762,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
-    "score": 15.3,
+    "score": 15.1,
     "type": "PRIMARY"
    },
    {
@@ -796,17 +773,17 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
-    "score": 14.4,
+    "score": 14.3,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Invisible Technologies",
-    "date": "Sep-25",
+    "basis": "Jul-2025",
+    "bound": "",
+    "company": "Perplexity",
+    "date": "Jul-25",
     "in_medians": true,
-    "mult": 14.9,
-    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+    "mult": 120.0,
+    "reason": "both do AI Browser; related type of business; same business function; sold the same way",
     "score": 11.6,
     "type": "PRIMARY"
    }
@@ -819,8 +796,8 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 2,
-    "NET_REVENUE": 2
+    "ARR_RUNRATE": 3,
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -828,19 +805,19 @@
    "control_names": [
     "Confluent"
    ],
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 33.0,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 120.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
    "low": 9.88,
-   "mid": 14.9,
+   "mid": 20.0,
    "n": 5,
    "period_mix": {
-    "LTM": 2,
-    "RUN_RATE": 3
+    "LTM": 1,
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -852,7 +829,43 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Confluent",
+     "mult": 9.88,
+     "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Oxylabs",
+     "mult": 10.3,
+     "reason": "both do Web Scraping, Scraper API; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Lovable",
+     "mult": 33.0,
+     "reason": "both do No-Code; same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Perplexity",
+     "mult": 120.0,
+     "reason": "both do AI Browser; related type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "agent",
@@ -867,7 +880,7 @@
     "scraping",
     "web"
    ],
-   "spread": 3.3,
+   "spread": 12.1,
    "table": [
     {
      "company": "Confluent",
@@ -885,16 +898,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 10.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Invisible Technologies",
-     "date": "Sep-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -918,76 +921,78 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Perplexity",
+     "date": "Jul-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 120.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
-   "tag_evidence": 2.6,
+   "tag_evidence": 2.3,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 13,
   "secondary": [
-   {
-    "company": "Dynatrace, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
-    "score": 7.8,
-    "ticker": "NYSE:DT"
-   },
-   {
-    "company": "C3.ai, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-    "score": 7.1,
-    "ticker": "NYSE:AI"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same business function; same AI stance",
-    "score": 7.1,
-    "ticker": "NASDAQGS:PLTR"
-   },
    {
     "company": "TomTom N.V.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; same type of business; same kind of customer",
-    "score": 6.8,
+    "score": 6.7,
     "ticker": "ENXTAM:TOM2"
    },
    {
-    "company": "Similarweb Ltd.",
+    "company": "Akamai Technologies, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "both do Web Scraping; same type of business; same business function",
-    "score": 6.8,
-    "ticker": "NYSE:SMWB"
+    "reason": "shares the language of web; related type of business; same revenue model",
+    "score": 6.2,
+    "ticker": "NASDAQGS:AKAM"
+   },
+   {
+    "company": "IONOS Group SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of infrastructure, web; related type of business; sold the same way",
+    "score": 5.8,
+    "ticker": "XTRA:IOS"
+   },
+   {
+    "company": "GoDaddy Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of web; related type of business; sold the same way",
+    "score": 5.7,
+    "ticker": "NYSE:GDDY"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 39.0,
+   "high": 4.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.2,
-   "mid": 4.6,
-   "n": 5,
+   "low": 0.6,
+   "mid": 3.2,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -1004,30 +1009,23 @@
      "transaction_type": ""
     },
     {
-     "company": "Similarweb Ltd.",
-     "mult": 2.2,
-     "reason": "both do Web Scraping; same type of business; same business function",
+     "company": "GoDaddy Inc.",
+     "mult": 2.8,
+     "reason": "shares the language of web; related type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "C3.ai, Inc.",
-     "mult": 4.6,
-     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "company": "IONOS Group SE",
+     "mult": 3.6,
+     "reason": "shares the language of infrastructure, web; related type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "Dynatrace, Inc.",
-     "mult": 5.8,
-     "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 39.0,
-     "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+     "company": "Akamai Technologies, Inc.",
+     "mult": 4.1,
+     "reason": "shares the language of web; related type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -1035,14 +1033,12 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "api",
     "infrastructure",
-    "scraping",
     "web"
    ],
    "show_retention": true,
-   "spread": 65.0,
+   "spread": 6.8,
    "table": [
     {
      "company": "TomTom N.V.",
@@ -1054,43 +1050,34 @@
      "ticker": "ENXTAM:TOM2"
     },
     {
-     "company": "Similarweb Ltd.",
+     "company": "GoDaddy Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.7,
-     "multiple": 2.2,
+     "growth_pct": 5.1,
+     "multiple": 2.8,
      "recurring_pct": null,
-     "retention_pct": 100.0,
-     "ticker": "NYSE:SMWB"
+     "retention_pct": 85.0,
+     "ticker": "NYSE:GDDY"
     },
     {
-     "company": "C3.ai, Inc.",
+     "company": "IONOS Group SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.1,
-     "multiple": 4.6,
-     "recurring_pct": 91.0,
+     "growth_pct": 9.0,
+     "multiple": 3.6,
+     "recurring_pct": 80.0,
      "retention_pct": null,
-     "ticker": "NYSE:AI"
+     "ticker": "XTRA:IOS"
     },
     {
-     "company": "Dynatrace, Inc.",
+     "company": "Akamai Technologies, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.5,
-     "multiple": 5.8,
+     "growth_pct": 12.0,
+     "multiple": 4.1,
      "recurring_pct": null,
-     "retention_pct": 110.0,
-     "ticker": "NYSE:DT"
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 47.0,
-     "multiple": 39.0,
-     "recurring_pct": null,
-     "retention_pct": 157.0,
-     "ticker": "NASDAQGS:PLTR"
+     "retention_pct": null,
+     "ticker": "NASDAQGS:AKAM"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   }

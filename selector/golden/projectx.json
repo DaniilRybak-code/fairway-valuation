@@ -8,11 +8,11 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 1,
-      "ARR_RUNRATE": 2,
+      "ARR": 2,
+      "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "SHARED_PRODUCT",
      "control_n": 1,
      "control_names": [
@@ -24,13 +24,13 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 25.0,
+     "high": 20.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
      "low": 9.88,
-     "mid": 20.0,
+     "mid": 13.2,
      "n": 4,
      "period_mix": {
       "LTM": 1,
@@ -53,10 +53,9 @@
       "browser",
       "cloud",
       "environment",
-      "execution",
-      "workspace"
+      "execution"
      ],
-     "spread": 2.5,
+     "spread": 2.0,
      "table": [
       {
        "company": "Confluent",
@@ -79,21 +78,21 @@
        "ticker": ""
       },
       {
-       "company": "Replit",
-       "date": "Sep-25",
+       "company": "Turing",
+       "date": "Mar-25",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 20.0,
+       "multiple": 13.2,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       },
       {
-       "company": "Genspark",
-       "date": "Nov-25",
+       "company": "Replit",
+       "date": "Sep-25",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 25.0,
+       "multiple": 20.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -111,7 +110,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
-    "score": 12.3,
+    "score": 12.1,
     "ticker": "NYSE:NET"
    },
    {
@@ -135,7 +134,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, cloud; related type of business; same kind of customer; same revenue model",
-    "score": 10.8,
+    "score": 10.7,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -488,66 +487,6 @@
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Emergence Capital Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "SBI Investment",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "LG Technology Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Pavilion Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Uphonest Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Lanchi Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "LangChain",
       "date": "Oct-25"
      }
@@ -654,6 +593,36 @@
     ],
     "investor": "CoreWeave",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Khazanah Nasional",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Sozo Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -677,7 +646,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
-    "score": 14.8,
+    "score": 14.6,
     "type": "MIXED"
    },
    {
@@ -688,18 +657,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
-    "score": 13.8,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Genspark",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "shares the language of agent, workspace; related type of business; sold the same way; same AI stance",
-    "score": 8.9,
+    "score": 13.6,
     "type": "PRIMARY"
    },
    {
@@ -710,7 +668,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of agent; related type of business; same business function; same kind of customer",
-    "score": 16.3,
+    "score": 16.1,
     "type": "PRIMARY"
    },
    {
@@ -721,7 +679,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of agent, browser, cloud; related type of business; same business function; same revenue model",
-    "score": 16.0,
+    "score": 15.9,
     "type": "PRIMARY"
    },
    {
@@ -732,8 +690,19 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of agent; related type of business; same business function; same kind of customer",
-    "score": 14.8,
+    "score": 14.6,
     "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Turing",
+    "date": "Mar-25",
+    "in_medians": true,
+    "mult": 13.2,
+    "reason": "shares the language of cloud; related type of business; same business function; same AI stance",
+    "score": 9.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -743,11 +712,11 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
-    "ARR_RUNRATE": 2,
+    "ARR": 2,
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 1,
    "control_names": [
@@ -755,13 +724,13 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 25.0,
+   "high": 20.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
    "low": 9.88,
-   "mid": 20.0,
+   "mid": 13.2,
    "n": 4,
    "period_mix": {
     "LTM": 1,
@@ -784,10 +753,9 @@
     "browser",
     "cloud",
     "environment",
-    "execution",
-    "workspace"
+    "execution"
    ],
-   "spread": 2.5,
+   "spread": 2.0,
    "table": [
     {
      "company": "Confluent",
@@ -810,21 +778,21 @@
      "ticker": ""
     },
     {
-     "company": "Replit",
-     "date": "Sep-25",
+     "company": "Turing",
+     "date": "Mar-25",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 20.0,
+     "multiple": 13.2,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     },
     {
-     "company": "Genspark",
-     "date": "Nov-25",
+     "company": "Replit",
+     "date": "Sep-25",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 25.0,
+     "multiple": 20.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

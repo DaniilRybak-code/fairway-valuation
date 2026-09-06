@@ -157,7 +157,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 0.7,
      "thin": true,
      "triangulated": false
     },
@@ -241,7 +241,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 2.4,
+     "tag_evidence": 1.6,
      "thin": false,
      "triangulated": false
     }
@@ -253,7 +253,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of ecommerce, shopify; same type of business; same end market; same business function",
-    "score": 14.7,
+    "score": 14.5,
     "ticker": "TSE:4477"
    },
    {
@@ -269,7 +269,7 @@
     "family": "consumer",
     "in_medians": false,
     "reason": "shares the language of ecommerce, fulfilment, management; same type of business; same end market; same business function",
-    "score": 10.7,
+    "score": 9.9,
     "ticker": "NASDAQGS:BZUN"
    },
    {
@@ -349,7 +349,7 @@
      "ticker": "NASDAQ:NYAX"
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -573,7 +573,7 @@
     "in_medians": true,
     "mult": 4.15,
     "reason": "both do Ecommerce Fulfilment; related type of business; same end market",
-    "score": 8.4,
+    "score": 7.6,
     "type": "PRIMARY"
    },
    {
@@ -606,7 +606,7 @@
     "in_medians": true,
     "mult": 5.69,
     "reason": "both do Fulfilment Automation, Order Fulfilment; same type of business; same AI stance",
-    "score": 7.2,
+    "score": 6.7,
     "type": "CONTROL"
    },
    {
@@ -617,7 +617,7 @@
     "in_medians": false,
     "mult": 16.03,
     "reason": "both do Fulfilment, Seller Tools; same type of business; same kind of customer; sold the same way",
-    "score": 12.2,
+    "score": 11.3,
     "type": "PRIMARY"
    },
    {
@@ -713,7 +713,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 0.7,
    "thin": true,
    "triangulated": false
   },
@@ -724,7 +724,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
-    "score": 7.9,
+    "score": 7.8,
     "ticker": "WSE:SHO"
    },
    {
@@ -732,7 +732,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of store; same end market; same kind of customer; sold the same way",
-    "score": 7.9,
+    "score": 7.8,
     "ticker": "NASDAQGS:SHOP"
    }
   ],
@@ -792,7 +792,7 @@
      "ticker": "NASDAQGS:SHOP"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": true,
    "triangulated": true
   }

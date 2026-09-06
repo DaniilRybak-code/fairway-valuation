@@ -78,7 +78,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.8,
+     "tag_evidence": 1.4,
      "thin": false,
      "triangulated": false
     },
@@ -94,8 +94,10 @@
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
+     "control_n": 1,
+     "control_names": [
+      "Verint Systems"
+     ],
      "dispersed": true,
      "display": "SCATTER",
      "founder_field": "revenue",
@@ -103,9 +105,11 @@
      "founder_low": null,
      "founder_metric": null,
      "high": 105.3,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 14.9,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Verint Systems"
+     ],
+     "low": 2.24,
      "mid": 32.0,
      "n": 5,
      "period_mix": {
@@ -124,11 +128,11 @@
      },
      "points": [
       {
-       "company": "Invisible Technologies",
-       "mult": 14.9,
-       "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
+       "company": "Verint Systems",
+       "mult": 2.24,
+       "reason": "shares the language of ai, automation; related type of business; sold the same way",
        "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
+       "transaction_type": "CONTROL"
       },
       {
        "company": "Owner",
@@ -168,14 +172,14 @@
       "gtm",
       "operations"
      ],
-     "spread": 7.1,
+     "spread": 47.0,
      "table": [
       {
-       "company": "Invisible Technologies",
-       "date": "Sep-25",
+       "company": "Verint Systems",
+       "date": "Aug-25",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 14.9,
+       "multiple": 2.24,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -241,7 +245,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ai, order; same type of business; same kind of customer; sold the same way",
-    "score": 10.1,
+    "score": 10.0,
     "ticker": "ENXTPA:ALBFR"
    },
    {
@@ -249,7 +253,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Workflow Automation; same type of business; same business function; sold the same way",
-    "score": 9.9,
+    "score": 9.8,
     "ticker": "NASDAQGS:PEGA"
    },
    {
@@ -261,20 +265,20 @@
     "ticker": "NASDAQGS:DOCU"
    },
    {
-    "company": "Zaggle Prepaid Ocean Services",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
-    "score": 9.1,
-    "ticker": "NSEI:ZAGGLE"
-   },
-   {
     "company": "Workday, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of planning; same type of business; same kind of customer; sold the same way",
-    "score": 8.9,
+    "score": 8.8,
     "ticker": "NASDAQGS:WDAY"
+   },
+   {
+    "company": "Zaggle Prepaid Ocean Services",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
+    "score": 8.7,
+    "ticker": "NSEI:ZAGGLE"
    },
    {
     "company": "BlackLine, Inc.",
@@ -444,7 +448,7 @@
      "ticker": "NASDAQGS:WDAY"
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -814,61 +818,21 @@
    {
     "backed": [
      {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
+      "company": "Verint Systems",
+      "date": "Aug-25"
      }
     ],
-    "investor": "Vanara Capital",
+    "investor": "Thoma Bravo (acquirer",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
+      "company": "Verint Systems",
+      "date": "Aug-25"
      }
     ],
-    "investor": "Princeville Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "HOF Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Freestyle VC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Greycroft",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Acrew Capital",
+    "investor": "via portfolio company Calabrio)",
     "n": 1
    }
   ],
@@ -882,7 +846,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "shares the language of ai, operations; related type of business; same AI stance",
-    "score": 6.2,
+    "score": 5.9,
     "type": "PRIMARY"
    },
    {
@@ -915,7 +879,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of ai, automation, gtm; related type of business; same kind of customer",
-    "score": 7.3,
+    "score": 7.2,
     "type": "SECONDARY"
    },
    {
@@ -926,7 +890,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "both do Deal Execution; related type of business; same kind of customer; sold the same way",
-    "score": 13.3,
+    "score": 12.9,
     "type": "SECONDARY"
    },
    {
@@ -942,14 +906,14 @@
    },
    {
     "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Invisible Technologies",
-    "date": "Sep-25",
+    "bound": "",
+    "company": "Verint Systems",
+    "date": "Aug-25",
     "in_medians": true,
-    "mult": 14.9,
-    "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
-    "score": 8.1,
-    "type": "PRIMARY"
+    "mult": 2.24,
+    "reason": "shares the language of ai, automation; related type of business; sold the same way",
+    "score": 7.6,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -965,14 +929,18 @@
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
+   "control_n": 1,
+   "control_names": [
+    "Verint Systems"
+   ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 105.3,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 14.9,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Verint Systems"
+   ],
+   "low": 2.24,
    "mid": 32.0,
    "n": 5,
    "period_mix": {
@@ -991,11 +959,11 @@
    },
    "points": [
     {
-     "company": "Invisible Technologies",
-     "mult": 14.9,
-     "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
+     "company": "Verint Systems",
+     "mult": 2.24,
+     "reason": "shares the language of ai, automation; related type of business; sold the same way",
      "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
+     "transaction_type": "CONTROL"
     },
     {
      "company": "Owner",
@@ -1035,14 +1003,14 @@
     "gtm",
     "operations"
    ],
-   "spread": 7.1,
+   "spread": 47.0,
    "table": [
     {
-     "company": "Invisible Technologies",
-     "date": "Sep-25",
+     "company": "Verint Systems",
+     "date": "Aug-25",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 14.9,
+     "multiple": 2.24,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1092,22 +1060,14 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 11,
+  "private_window_months": 12,
   "secondary": [
-   {
-    "company": "Cass Information Systems",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of b2b, commercial; same type of business; same kind of customer; sold the same way",
-    "score": 8.5,
-    "ticker": "NASDAQGS:CASS"
-   },
    {
     "company": "SAP SE",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of planning, platform; same type of business; same business function; sold the same way",
-    "score": 8.5,
+    "score": 8.4,
     "ticker": "XTRA:SAP"
    },
    {
@@ -1115,16 +1075,8 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
-    "score": 8.2,
-    "ticker": "NYSE:IOT"
-   },
-   {
-    "company": "Braze, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation, channel, customer; related type of business; same kind of customer; sold the same way",
     "score": 7.9,
-    "ticker": "NASDAQGS:BRZE"
+    "ticker": "NYSE:IOT"
    },
    {
     "company": "Intapp, Inc.",
@@ -1133,6 +1085,22 @@
     "reason": "shares the language of automation, deal, lifecycle; same business function; same kind of customer; sold the same way",
     "score": 7.8,
     "ticker": "NASDAQGS:INTA"
+   },
+   {
+    "company": "Cass Information Systems",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of b2b, commercial; same type of business; same kind of customer; sold the same way",
+    "score": 7.8,
+    "ticker": "NASDAQGS:CASS"
+   },
+   {
+    "company": "ServiceNow, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Workflow Automation; same type of business; sold the same way",
+    "score": 7.7,
+    "ticker": "NYSE:NOW"
    }
   ],
   "secondary_range": {
@@ -1148,11 +1116,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.9,
+   "high": 8.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 3.4,
+   "mid": 4.9,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -1184,14 +1152,13 @@
    "shared_words": [
     "automation",
     "b2b",
-    "channel",
     "commercial",
-    "customer",
     "planning",
-    "platform"
+    "platform",
+    "workflow"
    ],
-   "show_retention": true,
-   "spread": 1.5,
+   "show_retention": false,
+   "spread": 2.5,
    "table": [
     {
      "company": "Cass Information Systems",
@@ -1203,15 +1170,6 @@
      "ticker": "NASDAQGS:CASS"
     },
     {
-     "company": "Braze, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.5,
-     "multiple": 3.4,
-     "recurring_pct": null,
-     "retention_pct": 110.0,
-     "ticker": "NASDAQGS:BRZE"
-    },
-    {
      "company": "SAP SE",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 11.9,
@@ -1219,9 +1177,18 @@
      "recurring_pct": 63.6,
      "retention_pct": null,
      "ticker": "XTRA:SAP"
+    },
+    {
+     "company": "ServiceNow, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.8,
+     "multiple": 8.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NOW"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   }

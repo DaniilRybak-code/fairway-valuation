@@ -107,7 +107,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.9,
+     "tag_evidence": 1.7,
      "thin": false,
      "triangulated": false
     }
@@ -135,63 +135,31 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do AI Agent Monitoring; same type of business; same kind of customer; sold the same way",
-    "score": 9.2,
+    "score": 8.9,
     "ticker": "NASDAQGS:DDOG"
-   },
-   {
-    "company": "C3.ai, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "ticker": "NYSE:AI"
-   },
-   {
-    "company": "Coveo Solutions Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "ticker": "TSX:CVO"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "ticker": "NASDAQGS:PLTR"
-   },
-   {
-    "company": "Rezolve AI PLC",
-    "family": "software",
-    "in_medians": false,
-    "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-    "score": 6.6,
-    "ticker": "NASDAQGM:RZLV"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.9,
-   "mid": 4.9,
-   "n": 6,
+   "mid": 5.2,
+   "n": 3,
    "period_mix": {
-    "NTM": 6
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -199,50 +167,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Coveo Solutions Inc.",
-     "mult": 1.1,
-     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Qt Group Oyj",
-     "mult": 3.9,
-     "reason": "shares the language of framework; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "C3.ai, Inc.",
-     "mult": 4.6,
-     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "GitLab Inc.",
-     "mult": 5.2,
-     "reason": "both do CI/CD; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 14.9,
-     "reason": "both do AI Agent Monitoring; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 39.0,
-     "reason": "shares the language of ai; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -254,17 +179,8 @@
     "monitoring"
    ],
    "show_retention": true,
-   "spread": 35.5,
+   "spread": 3.8,
    "table": [
-    {
-     "company": "Coveo Solutions Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.5,
-     "multiple": 1.1,
-     "recurring_pct": null,
-     "retention_pct": 99.0,
-     "ticker": "TSX:CVO"
-    },
     {
      "company": "Qt Group Oyj",
      "growth_basis": "CAGR_CY1_CY3",
@@ -273,15 +189,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "HLSE:QTCOM"
-    },
-    {
-     "company": "C3.ai, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.1,
-     "multiple": 4.6,
-     "recurring_pct": 91.0,
-     "retention_pct": null,
-     "ticker": "NYSE:AI"
     },
     {
      "company": "GitLab Inc.",
@@ -300,15 +207,6 @@
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 47.0,
-     "multiple": 39.0,
-     "recurring_pct": null,
-     "retention_pct": 157.0,
-     "ticker": "NASDAQGS:PLTR"
     }
    ],
    "tag_evidence": 1.2,
@@ -739,7 +637,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent, ai; same type of business; same kind of customer; sold the same way",
-    "score": 11.8,
+    "score": 11.7,
     "type": "MIXED"
    },
    {
@@ -750,7 +648,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same AI stance",
-    "score": 10.8,
+    "score": 10.7,
     "type": "PRIMARY"
    },
    {
@@ -761,7 +659,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do No-Code; same type of business; same business function; sold the same way",
-    "score": 14.4,
+    "score": 14.0,
     "type": "PRIMARY"
    },
    {
@@ -772,7 +670,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Agent Orchestration, Agent Framework, Agent Evaluation; same type of business; same business function; same kind of customer",
-    "score": 19.2,
+    "score": 18.9,
     "type": "PRIMARY"
    },
    {
@@ -783,7 +681,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of agent, ai, builder; same type of business; same business function; sold the same way",
-    "score": 15.8,
+    "score": 15.5,
     "type": "PRIMARY"
    },
    {
@@ -794,7 +692,7 @@
     "in_medians": true,
     "mult": 14.9,
     "reason": "shares the language of ai, deployment, evaluation; same type of business; same AI stance",
-    "score": 8.9,
+    "score": 8.7,
     "type": "PRIMARY"
    },
    {
@@ -911,51 +809,51 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.9,
+   "tag_evidence": 1.7,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 14,
   "secondary": [
    {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do No-Code; same revenue model; sold the same way",
-    "score": 7.9,
-    "ticker": "NASDAQGS:WIX"
-   },
-   {
     "company": "UiPath, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Agent Orchestration; related type of business; same revenue model; same AI stance",
-    "score": 7.9,
+    "score": 7.6,
     "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do No-Code; same revenue model; sold the same way",
+    "score": 7.5,
+    "ticker": "NASDAQGS:WIX"
    },
    {
     "company": "Appian Corporation",
     "family": "software",
     "in_medians": true,
     "reason": "both do No-Code; related type of business; same revenue model",
-    "score": 7.0,
+    "score": 6.8,
     "ticker": "NASDAQGM:APPN"
-   },
-   {
-    "company": "Sidetrade SA",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-    "score": 6.4,
-    "ticker": "ENXTPA:ALBFR"
    },
    {
     "company": "Pegasystems Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of code; related type of business; same revenue model",
-    "score": 6.4,
+    "score": 6.3,
     "ticker": "NASDAQGS:PEGA"
+   },
+   {
+    "company": "ServiceNow, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of code; related type of business; same revenue model",
+    "score": 6.3,
+    "ticker": "NYSE:NOW"
    }
   ],
   "secondary_range": {
@@ -971,11 +869,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.3,
+   "high": 8.2,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.9,
-   "mid": 3.5,
+   "mid": 3.8,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -999,14 +897,12 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "agents",
-    "ai",
     "code",
     "no",
     "orchestration"
    ],
    "show_retention": true,
-   "spread": 1.5,
+   "spread": 2.8,
    "table": [
     {
      "company": "Pegasystems Inc.",
@@ -1027,15 +923,6 @@
      "ticker": "NASDAQGM:APPN"
     },
     {
-     "company": "Sidetrade SA",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.2,
-     "multiple": 3.7,
-     "recurring_pct": 87.0,
-     "retention_pct": null,
-     "ticker": "ENXTPA:ALBFR"
-    },
-    {
      "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.0,
@@ -1043,9 +930,18 @@
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
+    },
+    {
+     "company": "ServiceNow, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.8,
+     "multiple": 8.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NOW"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   }

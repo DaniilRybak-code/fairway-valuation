@@ -55,7 +55,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.1,
      "thin": true,
      "triangulated": false
     },
@@ -65,8 +65,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
-      "ARR_RUNRATE": 2
+      "ARR": 2,
+      "ARR_RUNRATE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -82,10 +82,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 18.0,
-     "mid": 25.0,
-     "n": 5,
+     "mid": 40.0,
+     "n": 3,
      "period_mix": {
-      "RUN_RATE": 5
+      "RUN_RATE": 3
      },
      "period_span": {
       "RUN_RATE": {
@@ -98,20 +98,6 @@
        "company": "Suno",
        "mult": 18.0,
        "reason": "shares the language of ai, app; same type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Gamma",
-       "mult": 21.0,
-       "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -150,26 +136,6 @@
        "ticker": ""
       },
       {
-       "company": "Gamma",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 21.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Genspark",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 25.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Framer",
        "date": "Aug-25",
        "growth_basis": "",
@@ -190,7 +156,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.5,
      "thin": false,
      "triangulated": false
     }
@@ -202,7 +168,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; same type of business; same kind of customer; sold the same way",
-    "score": 9.6,
+    "score": 9.2,
     "ticker": "NASDAQGS:DBX"
    },
    {
@@ -210,7 +176,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; same type of business; sold the same way",
-    "score": 7.8,
+    "score": 7.5,
     "ticker": "NASDAQGS:OPRA"
    },
    {
@@ -218,7 +184,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of app; same type of business; sold the same way",
-    "score": 7.2,
+    "score": 7.1,
     "ticker": "OM:TRUE B"
    },
    {
@@ -226,7 +192,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of app; same type of business; sold the same way",
-    "score": 6.2,
+    "score": 6.1,
     "ticker": "ASX:360"
    },
    {
@@ -234,7 +200,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; same type of business",
-    "score": 5.8,
+    "score": 5.5,
     "ticker": "HLSE:FSECURE"
    }
   ],
@@ -323,7 +289,7 @@
      "ticker": "ASX:360"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
@@ -569,96 +535,6 @@
    {
     "backed": [
      {
-      "company": "Gamma",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gamma",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Uncork Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gamma",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "South Park Commons",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Emergence Capital Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "SBI Investment",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "LG Technology Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Pavilion Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Uphonest Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Lanchi Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Framer",
       "date": "Aug-25"
      }
@@ -737,29 +613,7 @@
     "in_medians": true,
     "mult": 18.0,
     "reason": "shares the language of ai, app; same type of business; sold the same way; same AI stance",
-    "score": 10.8,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Gamma",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 21.0,
-    "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
-    "score": 18.1,
-    "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Genspark",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
-    "score": 18.1,
+    "score": 10.6,
     "type": "PRIMARY"
    },
    {
@@ -770,7 +624,7 @@
     "in_medians": true,
     "mult": 40.0,
     "reason": "shares the language of ai, desktop; same type of business; same business function; same kind of customer",
-    "score": 16.7,
+    "score": 16.5,
     "type": "PRIMARY"
    },
    {
@@ -803,8 +657,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
-    "ARR_RUNRATE": 2
+    "ARR": 2,
+    "ARR_RUNRATE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -816,10 +670,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 18.0,
-   "mid": 25.0,
-   "n": 5,
+   "mid": 40.0,
+   "n": 3,
    "period_mix": {
-    "RUN_RATE": 5
+    "RUN_RATE": 3
    },
    "period_span": {
     "RUN_RATE": {
@@ -832,20 +686,6 @@
      "company": "Suno",
      "mult": 18.0,
      "reason": "shares the language of ai, app; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Gamma",
-     "mult": 21.0,
-     "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -884,26 +724,6 @@
      "ticker": ""
     },
     {
-     "company": "Gamma",
-     "date": "Nov-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 21.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Genspark",
-     "date": "Nov-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 25.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Framer",
      "date": "Aug-25",
      "growth_basis": "",
@@ -924,7 +744,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
@@ -935,7 +755,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; related type of business; sold the same way",
-    "score": 6.3,
+    "score": 6.0,
     "ticker": "NASDAQGS:GEN"
    }
   ],
@@ -988,7 +808,7 @@
      "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.5,
    "thin": true,
    "triangulated": false
   }

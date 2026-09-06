@@ -132,7 +132,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.9,
+     "tag_evidence": 8.2,
      "thin": true,
      "triangulated": false
     }
@@ -144,7 +144,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ci, development, platform; related type of business; same business function; same kind of customer",
-    "score": 13.6,
+    "score": 13.4,
     "ticker": "NASDAQGS:GTLB"
    },
    {
@@ -152,7 +152,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Embedded Development; related type of business; same business function; same kind of customer",
-    "score": 12.4,
+    "score": 11.9,
     "ticker": "HLSE:QTCOM"
    },
    {
@@ -160,7 +160,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of development; same type of business; same business function; same kind of customer",
-    "score": 10.9,
+    "score": 10.7,
     "ticker": "NYSE:U"
    },
    {
@@ -301,7 +301,7 @@
      "ticker": "NASDAQGS:CDNS"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
@@ -715,7 +715,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "both do Robotics Development Platform, Robot Fleet Tooling; same type of business; same business function; sold the same way",
-    "score": 21.4,
+    "score": 20.7,
     "type": "PRIMARY"
    },
    {
@@ -737,7 +737,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of deployment, development; related type of business; same business function; sold the same way",
-    "score": 13.5,
+    "score": 13.3,
     "type": "PRIMARY"
    },
    {
@@ -759,7 +759,7 @@
     "in_medians": false,
     "mult": 42.0,
     "reason": "shares the language of development; related type of business; same business function; same kind of customer",
-    "score": 16.4,
+    "score": 16.2,
     "type": "PRIMARY"
    }
   ],
@@ -834,9 +834,67 @@
    "triangulated": false
   },
   "private_window_months": 53,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; related type of business; same revenue model",
+    "score": 6.1,
+    "ticker": "NASDAQGS:GTM"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 2.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 2.2,
+   "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "platform"
+   ],
+   "show_retention": true,
+   "sole": "ZoomInfo Technologies Inc.",
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    }
+   ],
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "The intelligent development platform for robotics"

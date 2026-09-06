@@ -140,7 +140,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": false
     }
@@ -152,7 +152,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of cargo, delivery; same type of business; same business function; same kind of customer",
-    "score": 12.3,
+    "score": 12.2,
     "ticker": "NYSE:FDX"
    },
    {
@@ -160,7 +160,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
-    "score": 12.0,
+    "score": 11.7,
     "ticker": "NYSE:UPS"
    },
    {
@@ -168,31 +168,15 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
-    "score": 12.0,
+    "score": 11.7,
     "ticker": "TSE:9143"
-   },
-   {
-    "company": "Deutsche Post AG",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
-    "score": 11.8,
-    "ticker": "XTRA:DHL"
-   },
-   {
-    "company": "Delhivery Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
-    "score": 11.8,
-    "ticker": "NSEI:DELHIVERY"
    },
    {
     "company": "PostNL N.V.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
-    "score": 11.7,
+    "score": 11.6,
     "ticker": "ENXTAM:PNL"
    },
    {
@@ -200,8 +184,24 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
-    "score": 11.7,
+    "score": 11.6,
     "ticker": "SZSE:002352"
+   },
+   {
+    "company": "Blue Dart Express Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NSEI:BLUEDART"
+   },
+   {
+    "company": "Deutsche Post AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "XTRA:DHL"
    }
   ],
   "core_range": {
@@ -215,8 +215,8 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 1.2,
    "listed_target_n": 0,
    "listed_target_names": [],
@@ -232,57 +232,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "PostNL N.V.",
-     "mult": 0.3,
-     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "S.F. Holding Co., Ltd.",
-     "mult": 0.5,
-     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SG Holdings Co., Ltd.",
-     "mult": 0.7,
-     "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Deutsche Post AG",
-     "mult": 0.9,
-     "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "FedEx Corporation",
-     "mult": 1.1,
-     "reason": "shares the language of cargo, delivery; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "United Parcel Service",
-     "mult": 1.2,
-     "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Delhivery Limited",
-     "mult": 2.5,
-     "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -291,7 +241,7 @@
     "logistics"
    ],
    "show_retention": false,
-   "spread": 8.3,
+   "spread": 5.7,
    "table": [
     {
      "company": "PostNL N.V.",
@@ -348,16 +298,16 @@
      "ticker": "NYSE:UPS"
     },
     {
-     "company": "Delhivery Limited",
+     "company": "Blue Dart Express Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.6,
-     "multiple": 2.5,
+     "growth_pct": 9.0,
+     "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NSEI:DELHIVERY"
+     "ticker": "NSEI:BLUEDART"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
@@ -755,7 +705,7 @@
     "in_medians": true,
     "mult": 3.46,
     "reason": "shares the language of logistics; related type of business; sold the same way",
-    "score": 6.3,
+    "score": 6.1,
     "type": "CONTROL"
    },
    {
@@ -766,7 +716,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of delivery; same type of business; same business function",
-    "score": 7.2,
+    "score": 7.1,
     "type": "MIXED"
    },
    {
@@ -777,7 +727,7 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
-    "score": 12.0,
+    "score": 11.7,
     "type": "PRIMARY"
    },
    {
@@ -788,7 +738,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of delivery; same type of business; same business function",
-    "score": 7.2,
+    "score": 7.1,
     "type": "CONTROL"
    },
    {
@@ -799,7 +749,7 @@
     "in_medians": true,
     "mult": 23.5,
     "reason": "shares the language of delivery; same type of business; same business function",
-    "score": 7.2,
+    "score": 7.1,
     "type": "CONTROL"
    },
    {
@@ -810,7 +760,7 @@
     "in_medians": true,
     "mult": 44.12,
     "reason": "shares the language of delivery; same type of business; same business function",
-    "score": 7.2,
+    "score": 7.1,
     "type": "PRIMARY"
    },
    {
@@ -821,7 +771,7 @@
     "in_medians": true,
     "mult": 5.97,
     "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
-    "score": 12.0,
+    "score": 11.7,
     "type": "PRIMARY"
    }
   ],
@@ -960,26 +910,26 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Blue Dart Express Limited",
+    "company": "Delhivery Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
-    "score": 11.7,
-    "ticker": "NSEI:BLUEDART"
+    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NSEI:DELHIVERY"
    },
    {
     "company": "J&T Global Express Limited",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
-    "score": 9.7,
+    "score": 9.6,
     "ticker": "SEHK:1519"
    },
    {
@@ -987,7 +937,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Cargo Transport; related type of business; same kind of customer; sold the same way",
-    "score": 9.5,
+    "score": 9.1,
     "ticker": "BMV:TRAXION A"
    },
    {
@@ -995,7 +945,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of cargo, transport; related type of business; same kind of customer; sold the same way",
-    "score": 9.2,
+    "score": 9.0,
     "ticker": "WSE:PKP"
    },
    {
@@ -1003,7 +953,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of logistics, transport; related type of business; same kind of customer; sold the same way",
-    "score": 8.9,
+    "score": 8.4,
     "ticker": "TSE:9301"
    }
   ],
@@ -1020,7 +970,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.1,
+   "high": 2.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
@@ -1058,16 +1008,16 @@
      "transaction_type": ""
     },
     {
-     "company": "Blue Dart Express Limited",
-     "mult": 1.7,
-     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+     "company": "Mitsubishi Logistics",
+     "mult": 2.1,
+     "reason": "shares the language of logistics, transport; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "Mitsubishi Logistics",
-     "mult": 2.1,
-     "reason": "shares the language of logistics, transport; related type of business; same kind of customer; sold the same way",
+     "company": "Delhivery Limited",
+     "mult": 2.5,
+     "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -1081,7 +1031,7 @@
     "transport"
    ],
    "show_retention": false,
-   "spread": 10.5,
+   "spread": 12.5,
    "table": [
     {
      "company": "Grupo Traxion, S.A.B. de C.V.",
@@ -1111,15 +1061,6 @@
      "ticker": "SEHK:1519"
     },
     {
-     "company": "Blue Dart Express Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.0,
-     "multiple": 1.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NSEI:BLUEDART"
-    },
-    {
      "company": "Mitsubishi Logistics",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 4.0,
@@ -1127,9 +1068,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "TSE:9301"
+    },
+    {
+     "company": "Delhivery Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.6,
+     "multiple": 2.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:DELHIVERY"
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   }

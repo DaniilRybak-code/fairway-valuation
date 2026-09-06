@@ -86,7 +86,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.6,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
@@ -98,7 +98,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
-    "score": 11.6,
+    "score": 10.5,
     "ticker": "NYSE:UPS"
    },
    {
@@ -106,23 +106,15 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
-    "score": 11.6,
+    "score": 10.5,
     "ticker": "NSEI:DELHIVERY"
-   },
-   {
-    "company": "Pkp Cargo S.A.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of carrier, freight; same type of business; same kind of customer; sold the same way",
-    "score": 10.7,
-    "ticker": "WSE:PKP"
    },
    {
     "company": "S.F. Holding Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-    "score": 10.7,
+    "score": 10.3,
     "ticker": "SZSE:002352"
    },
    {
@@ -130,24 +122,32 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of freight; related type of business; same business function; same kind of customer",
-    "score": 10.6,
+    "score": 10.1,
     "ticker": "NYSE:FDX"
    },
    {
-    "company": "JSL S.A.",
+    "company": "Deutsche Post AG",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
-    "score": 10.4,
-    "ticker": "BOVESPA:JSLG3"
+    "reason": "shares the language of logistics; related type of business; same business function; same kind of customer",
+    "score": 10.1,
+    "ticker": "XTRA:DHL"
    },
    {
-    "company": "Grupo Traxion, S.A.B. de C.V.",
+    "company": "SG Holdings Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
-    "score": 10.4,
-    "ticker": "BMV:TRAXION A"
+    "reason": "shares the language of logistics; related type of business; same business function; same kind of customer",
+    "score": 10.1,
+    "ticker": "TSE:9143"
+   },
+   {
+    "company": "Pkp Cargo S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of carrier, freight; same type of business; same kind of customer; sold the same way",
+    "score": 9.9,
+    "ticker": "WSE:PKP"
    }
   ],
   "core_range": {
@@ -161,13 +161,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 1.2,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 0.7,
+   "low": 0.6,
+   "mid": 0.9,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -178,57 +178,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Grupo Traxion, S.A.B. de C.V.",
-     "mult": 0.2,
-     "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "S.F. Holding Co., Ltd.",
-     "mult": 0.5,
-     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Pkp Cargo S.A.",
-     "mult": 0.6,
-     "reason": "shares the language of carrier, freight; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "JSL S.A.",
-     "mult": 0.7,
-     "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "FedEx Corporation",
-     "mult": 1.1,
-     "reason": "shares the language of freight; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "United Parcel Service",
-     "mult": 1.2,
-     "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Delhivery Limited",
-     "mult": 2.5,
-     "reason": "shares the language of chain, freight, logistics; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -239,17 +189,8 @@
     "supply"
    ],
    "show_retention": false,
-   "spread": 12.5,
+   "spread": 5.0,
    "table": [
-    {
-     "company": "Grupo Traxion, S.A.B. de C.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.1,
-     "multiple": 0.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "BMV:TRAXION A"
-    },
     {
      "company": "S.F. Holding Co., Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -269,13 +210,22 @@
      "ticker": "WSE:PKP"
     },
     {
-     "company": "JSL S.A.",
+     "company": "SG Holdings Co., Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.4,
+     "growth_pct": 4.0,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "BOVESPA:JSLG3"
+     "ticker": "TSE:9143"
+    },
+    {
+     "company": "Deutsche Post AG",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DHL"
     },
     {
      "company": "FedEx Corporation",
@@ -305,7 +255,7 @@
      "ticker": "NSEI:DELHIVERY"
     }
    ],
-   "tag_evidence": 1.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
@@ -599,7 +549,7 @@
     "in_medians": true,
     "mult": 3.46,
     "reason": "both do Logistics Visibility; same type of business; same revenue model; sold the same way",
-    "score": 13.1,
+    "score": 12.5,
     "type": "CONTROL"
    },
    {
@@ -610,7 +560,7 @@
     "in_medians": false,
     "mult": 16.03,
     "reason": "shares the language of logistics; same type of business; same business function",
-    "score": 7.3,
+    "score": 7.1,
     "type": "PRIMARY"
    },
    {
@@ -621,7 +571,7 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "shares the language of logistics; related type of business; same business function; sold the same way",
-    "score": 9.8,
+    "score": 9.6,
     "type": "PRIMARY"
    },
    {
@@ -632,7 +582,7 @@
     "in_medians": true,
     "mult": 5.97,
     "reason": "both do Freight; related type of business; same business function; sold the same way",
-    "score": 10.4,
+    "score": 9.7,
     "type": "PRIMARY"
    }
   ],
@@ -717,51 +667,51 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.6,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Deutsche Post AG",
+    "company": "JSL S.A.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics; related type of business; same business function; same kind of customer",
-    "score": 10.3,
-    "ticker": "XTRA:DHL"
+    "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+    "score": 9.7,
+    "ticker": "BOVESPA:JSLG3"
    },
    {
-    "company": "SG Holdings Co., Ltd.",
+    "company": "Grupo Traxion, S.A.B. de C.V.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics; related type of business; same business function; same kind of customer",
-    "score": 10.3,
-    "ticker": "TSE:9143"
+    "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+    "score": 9.7,
+    "ticker": "BMV:TRAXION A"
    },
    {
     "company": "XPO, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of freight; same type of business; same kind of customer; sold the same way",
-    "score": 10.1,
+    "score": 9.6,
     "ticker": "NYSE:XPO"
-   },
-   {
-    "company": "C.H. Robinson Worldwide",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of carrier, freight, logistics; same type of business; same kind of customer; sold the same way",
-    "score": 10.0,
-    "ticker": "NASDAQGS:CHRW"
    },
    {
     "company": "GXO Logistics, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of logistics; same type of business; same kind of customer; sold the same way",
-    "score": 9.8,
+    "score": 9.6,
     "ticker": "NYSE:GXO"
+   },
+   {
+    "company": "ID Logistics Group SA",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same kind of customer; sold the same way",
+    "score": 9.6,
+    "ticker": "ENXTPA:IDL"
    }
   ],
   "secondary_range": {
@@ -775,13 +725,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 2.7,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 0.9,
+   "low": 0.5,
+   "mid": 0.7,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -792,25 +742,78 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "mult": 0.2,
+     "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "ID Logistics Group SA",
+     "mult": 0.5,
+     "reason": "shares the language of logistics; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "JSL S.A.",
+     "mult": 0.7,
+     "reason": "shares the language of freight, logistics; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GXO Logistics, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of logistics; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "XPO, Inc.",
+     "mult": 2.7,
+     "reason": "shares the language of freight; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "carrier",
     "freight",
     "logistics"
    ],
    "show_retention": false,
-   "spread": 3.9,
+   "spread": 13.5,
    "table": [
     {
-     "company": "SG Holdings Co., Ltd.",
+     "company": "Grupo Traxion, S.A.B. de C.V.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.0,
+     "growth_pct": 8.1,
+     "multiple": 0.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BMV:TRAXION A"
+    },
+    {
+     "company": "ID Logistics Group SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.4,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:IDL"
+    },
+    {
+     "company": "JSL S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.4,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "TSE:9143"
+     "ticker": "BOVESPA:JSLG3"
     },
     {
      "company": "GXO Logistics, Inc.",
@@ -822,24 +825,6 @@
      "ticker": "NYSE:GXO"
     },
     {
-     "company": "Deutsche Post AG",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:DHL"
-    },
-    {
-     "company": "C.H. Robinson Worldwide",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.3,
-     "multiple": 1.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:CHRW"
-    },
-    {
      "company": "XPO, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 5.8,
@@ -849,7 +834,7 @@
      "ticker": "NYSE:XPO"
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

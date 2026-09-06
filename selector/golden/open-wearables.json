@@ -95,7 +95,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": true
     },
@@ -202,7 +202,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": true
     },
@@ -316,7 +316,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": true
     }
@@ -336,7 +336,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api, data, platform; related type of business; same kind of customer; same revenue model",
-    "score": 10.0,
+    "score": 9.8,
     "ticker": "NYSE:TWLO"
    },
    {
@@ -344,7 +344,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 9.8,
+    "score": 9.7,
     "ticker": "NASDAQGS:API"
    },
    {
@@ -352,7 +352,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
-    "score": 9.8,
+    "score": 9.7,
     "ticker": "NYSE:NET"
    },
    {
@@ -360,7 +360,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
-    "score": 9.8,
+    "score": 9.7,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -368,15 +368,15 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "OM:SINCH"
    },
    {
     "company": "Phreesia, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of digital; same type of business; same end market; same revenue model",
-    "score": 8.6,
+    "reason": "same type of business; same end market; same revenue model",
+    "score": 8.5,
     "ticker": "NYSE:PHR"
    }
   ],
@@ -419,7 +419,7 @@
     {
      "company": "Phreesia, Inc.",
      "mult": 1.4,
-     "reason": "shares the language of digital; same type of business; same end market; same revenue model",
+     "reason": "same type of business; same end market; same revenue model",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -770,7 +770,7 @@
     "in_medians": true,
     "mult": 1.39,
     "reason": "shares the language of health; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.2,
     "type": "CONTROL"
    },
    {
@@ -781,7 +781,7 @@
     "in_medians": true,
     "mult": 7.37,
     "reason": "shares the language of health; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.2,
     "type": "PRIMARY"
    },
    {
@@ -814,7 +814,7 @@
     "in_medians": true,
     "mult": 14.25,
     "reason": "shares the language of health; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.2,
     "type": "PRIMARY"
    },
    {
@@ -836,7 +836,7 @@
     "in_medians": true,
     "mult": 57.1,
     "reason": "shares the language of health; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.2,
     "type": "PRIMARY"
    }
   ],
@@ -940,7 +940,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true
   },
@@ -959,7 +959,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of api, data, digital; related type of business; same business function; same kind of customer",
-    "score": 8.4,
+    "score": 8.2,
     "ticker": "ENXTAM:TOM2"
    },
    {
@@ -979,35 +979,35 @@
     "ticker": "NASDAQGS:GTLB"
    },
    {
-    "company": "Unity Software Inc.",
+    "company": "Weave Communications, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of digital; same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NYSE:U"
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "NYSE:WEAV"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 7.2,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 1.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
-   "mid": 3.9,
-   "n": 5,
+   "low": 0.6,
+   "mid": 1.9,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -1015,21 +1015,8 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "TomTom N.V.",
-     "mult": 0.6,
-     "reason": "shares the language of api, data, digital; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Tecsys Inc.",
-     "mult": 1.9,
-     "reason": "same type of business; same end market; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
+   "points": [],
+   "positioning": [
     {
      "company": "Qt Group Oyj",
      "mult": 3.9,
@@ -1043,25 +1030,16 @@
      "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
-    },
-    {
-     "company": "Unity Software Inc.",
-     "mult": 7.2,
-     "reason": "shares the language of digital; same business function; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
     }
    ],
-   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "api",
     "data",
-    "digital",
-    "platform"
+    "digital"
    ],
    "show_retention": true,
-   "spread": 12.0,
+   "spread": 3.2,
    "table": [
     {
      "company": "TomTom N.V.",
@@ -1082,34 +1060,16 @@
      "ticker": "TSX:TCS"
     },
     {
-     "company": "Qt Group Oyj",
+     "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.7,
-     "multiple": 3.9,
+     "growth_pct": 13.8,
+     "multiple": 1.9,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "HLSE:QTCOM"
-    },
-    {
-     "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.6,
-     "multiple": 5.2,
-     "recurring_pct": 90.0,
-     "retention_pct": 118.0,
-     "ticker": "NASDAQGS:GTLB"
-    },
-    {
-     "company": "Unity Software Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.2,
-     "multiple": 7.2,
-     "recurring_pct": null,
-     "retention_pct": 106.0,
-     "ticker": "NYSE:U"
+     "retention_pct": 92.0,
+     "ticker": "NYSE:WEAV"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

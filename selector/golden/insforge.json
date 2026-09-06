@@ -226,7 +226,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 11.2,
+     "tag_evidence": 10.3,
      "thin": false,
      "triangulated": false
     }
@@ -246,7 +246,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai, edge; same type of business; same kind of customer; same revenue model",
-    "score": 12.9,
+    "score": 12.8,
     "ticker": "NYSE:NET"
    },
    {
@@ -254,7 +254,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of storage; same type of business; same kind of customer; same revenue model",
-    "score": 12.6,
+    "score": 12.4,
     "ticker": "NASDAQGM:BLZE"
    },
    {
@@ -262,7 +262,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Database, Vector Database; related type of business; same kind of customer; same revenue model",
-    "score": 11.6,
+    "score": 11.4,
     "ticker": "NASDAQGM:MDB"
    },
    {
@@ -270,7 +270,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent, ai, llm; related type of business; same kind of customer; same revenue model",
-    "score": 11.2,
+    "score": 11.1,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -881,7 +881,7 @@
     "in_medians": true,
     "mult": 72.86,
     "reason": "both do Postgres, Backend as a Service, Edge Functions; same type of business; same business function; same kind of customer",
-    "score": 30.7,
+    "score": 29.8,
     "type": "PRIMARY"
    },
    {
@@ -903,7 +903,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
-    "score": 14.8,
+    "score": 14.7,
     "type": "MIXED"
    },
    {
@@ -914,7 +914,7 @@
     "in_medians": false,
     "mult": 20.5,
     "reason": "both do LLM, Coding Agent; related type of business; same kind of customer; same revenue model",
-    "score": 15.2,
+    "score": 14.8,
     "type": "PRIMARY"
    },
    {
@@ -925,7 +925,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "shares the language of ai, coding; related type of business; same business function; same revenue model",
-    "score": 15.2,
+    "score": 15.1,
     "type": "PRIMARY"
    },
    {
@@ -936,7 +936,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of agent, llm; related type of business; same business function; same kind of customer",
-    "score": 16.7,
+    "score": 16.5,
     "type": "PRIMARY"
    },
    {
@@ -947,7 +947,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "both do AI Coding Agent; related type of business; same business function; same revenue model",
-    "score": 15.4,
+    "score": 15.3,
     "type": "PRIMARY"
    }
   ],
@@ -1089,7 +1089,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 11.2,
+   "tag_evidence": 10.3,
    "thin": false,
    "triangulated": false
   },
@@ -1100,16 +1100,8 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of service; related type of business; same business function; same kind of customer",
-    "score": 9.2,
+    "score": 9.1,
     "ticker": "NASDAQGS:TEAM"
-   },
-   {
-    "company": "SoundHound AI, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model; same AI stance",
-    "score": 7.1,
-    "ticker": "NASDAQGM:SOUN"
    },
    {
     "company": "Akamai Technologies, Inc.",
@@ -1118,29 +1110,13 @@
     "reason": "shares the language of edge; related type of business; same revenue model",
     "score": 6.6,
     "ticker": "NASDAQGS:AKAM"
-   },
-   {
-    "company": "Dynatrace, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model",
-    "score": 6.1,
-    "ticker": "NYSE:DT"
-   },
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same revenue model",
-    "score": 6.1,
-    "ticker": "NYSE:SNOW"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -1149,14 +1125,14 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 15.6,
+   "high": 6.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.8,
-   "mid": 6.1,
-   "n": 5,
+   "low": 4.1,
+   "mid": 5.1,
+   "n": 2,
    "period_mix": {
-    "NTM": 5
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -1168,12 +1144,11 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "edge",
     "service"
    ],
    "show_retention": true,
-   "spread": 3.8,
+   "spread": 1.5,
    "table": [
     {
      "company": "Akamai Technologies, Inc.",
@@ -1185,15 +1160,6 @@
      "ticker": "NASDAQGS:AKAM"
     },
     {
-     "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.5,
-     "multiple": 5.8,
-     "recurring_pct": null,
-     "retention_pct": 110.0,
-     "ticker": "NYSE:DT"
-    },
-    {
      "company": "Atlassian Corporation",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 14.7,
@@ -1201,28 +1167,10 @@
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NASDAQGS:TEAM"
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.9,
-     "multiple": 10.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:SOUN"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
     }
    ],
    "tag_evidence": 0.6,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   }
  },

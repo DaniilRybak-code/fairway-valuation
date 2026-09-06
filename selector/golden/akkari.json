@@ -67,7 +67,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
     },
@@ -77,8 +77,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4,
-      "NET_REVENUE": 1
+      "ARR": 4
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -96,17 +95,12 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 23.0,
-     "mid": 33.3,
-     "n": 5,
+     "mid": 50.0,
+     "n": 4,
      "period_mix": {
-      "LTM": 1,
       "RUN_RATE": 4
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -146,16 +140,6 @@
        "ticker": ""
       },
       {
-       "company": "Jasper",
-       "date": "Oct-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 33.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Clay",
        "date": "Jan-26",
        "growth_basis": "",
@@ -176,7 +160,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.5,
+     "tag_evidence": 1.2,
      "thin": false,
      "triangulated": false
     }
@@ -192,14 +176,6 @@
     "ticker": "NYSE:ZETA"
    },
    {
-    "company": "SoundHound AI, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
-    "score": 8.6,
-    "ticker": "NASDAQGM:SOUN"
-   },
-   {
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
@@ -212,7 +188,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of automation, customer; same type of business; same kind of customer",
-    "score": 6.8,
+    "score": 6.7,
     "ticker": "NASDAQGS:BRZE"
    },
    {
@@ -224,43 +200,43 @@
     "ticker": "NYSE:CXM"
    },
    {
-    "company": "Five9, Inc.",
+    "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "NASDAQGM:FIVN"
+    "reason": "shares the language of automation, customer; same type of business; same revenue model",
+    "score": 5.7,
+    "ticker": "NYSE:KVYO"
    },
    {
-    "company": "NICE Ltd.",
+    "company": "LiveRamp Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai; same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "NASDAQGS:NICE"
+    "reason": "shares the language of customer; related type of business; same kind of customer",
+    "score": 5.2,
+    "ticker": "NYSE:RAMP"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 3.9,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 3.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 2.2,
-   "n": 7,
+   "low": 2.1,
+   "mid": 2.6,
+   "n": 6,
    "period_mix": {
-    "NTM": 7
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -268,66 +244,15 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Sprinklr, Inc.",
-     "mult": 1.6,
-     "reason": "shares the language of customer; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "NICE Ltd.",
-     "mult": 1.8,
-     "reason": "shares the language of ai; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Five9, Inc.",
-     "mult": 2.0,
-     "reason": "shares the language of ai; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "mult": 2.2,
-     "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Braze, Inc.",
-     "mult": 3.4,
-     "reason": "shares the language of automation, customer; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Zeta Global Holdings Corp.",
-     "mult": 3.9,
-     "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "mult": 10.8,
-     "reason": "shares the language of ai; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "automation",
     "customer"
    ],
    "show_retention": true,
-   "spread": 6.8,
+   "spread": 2.4,
    "table": [
     {
      "company": "Sprinklr, Inc.",
@@ -339,22 +264,13 @@
      "ticker": "NYSE:CXM"
     },
     {
-     "company": "NICE Ltd.",
+     "company": "LiveRamp Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.5,
-     "multiple": 1.8,
-     "recurring_pct": 89.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:NICE"
-    },
-    {
-     "company": "Five9, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.8,
-     "multiple": 2.0,
-     "recurring_pct": 94.0,
-     "retention_pct": 106.0,
-     "ticker": "NASDAQGM:FIVN"
+     "growth_pct": 7.7,
+     "multiple": 2.1,
+     "recurring_pct": 75.5,
+     "retention_pct": 107.0,
+     "ticker": "NYSE:RAMP"
     },
     {
      "company": "ZoomInfo Technologies Inc.",
@@ -364,6 +280,15 @@
      "recurring_pct": null,
      "retention_pct": 89.0,
      "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
     },
     {
      "company": "Braze, Inc.",
@@ -382,18 +307,9 @@
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:ZETA"
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.9,
-     "multiple": 10.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:SOUN"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
@@ -611,14 +527,10 @@
      {
       "company": "Decagon",
       "date": "Jan-26"
-     },
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
      }
     ],
     "investor": "Coatue",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -703,66 +615,6 @@
    {
     "backed": [
      {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Insight Partners (lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "IVP",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Foundation Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Founders Circle Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "HubSpot Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Salesloft",
       "date": "Dec-21"
      }
@@ -791,7 +643,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "shares the language of ai, operations; related type of business; sold the same way; same AI stance",
-    "score": 9.2,
+    "score": 8.9,
     "type": "PRIMARY"
    },
    {
@@ -802,7 +654,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do AI Agents, Customer Service Automation, Deflection; same type of business; same kind of customer; same revenue model",
-    "score": 15.5,
+    "score": 15.2,
     "type": "PRIMARY"
    },
    {
@@ -813,7 +665,7 @@
     "in_medians": false,
     "mult": 150.0,
     "reason": "both do AI Agents, Customer Support Automation; same type of business; same kind of customer; same revenue model",
-    "score": 15.3,
+    "score": 14.9,
     "type": "PRIMARY"
    },
    {
@@ -824,19 +676,8 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of agents, ai, automation; same type of business; same kind of customer; same revenue model",
-    "score": 12.5,
+    "score": 12.3,
     "type": "SECONDARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Jasper",
-    "date": "Oct-22",
-    "in_medians": true,
-    "mult": 33.3,
-    "reason": "shares the language of ai; same type of business; same AI stance",
-    "score": 7.1,
-    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -857,8 +698,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4,
-    "NET_REVENUE": 1
+    "ARR": 4
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -872,17 +712,12 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 23.0,
-   "mid": 33.3,
-   "n": 5,
+   "mid": 50.0,
+   "n": 4,
    "period_mix": {
-    "LTM": 1,
     "RUN_RATE": 4
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -922,16 +757,6 @@
      "ticker": ""
     },
     {
-     "company": "Jasper",
-     "date": "Oct-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 33.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Clay",
      "date": "Jan-26",
      "growth_basis": "",
@@ -952,7 +777,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
   },
@@ -963,7 +788,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of operations; same business function; same kind of customer",
-    "score": 6.1,
+    "score": 5.8,
     "ticker": "NYSE:IOT"
    },
    {
@@ -971,24 +796,8 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of automation, customer, service; related type of business; same business function",
-    "score": 5.9,
-    "ticker": "NASDAQGS:PEGA"
-   },
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation, customer; same type of business; same revenue model",
     "score": 5.8,
-    "ticker": "NYSE:KVYO"
-   },
-   {
-    "company": "LiveRamp Holdings, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of customer; related type of business; same kind of customer",
-    "score": 5.2,
-    "ticker": "NYSE:RAMP"
+    "ticker": "NASDAQGS:PEGA"
    },
    {
     "company": "Twilio Inc.",
@@ -997,6 +806,22 @@
     "reason": "shares the language of customer; related type of business; same revenue model",
     "score": 5.2,
     "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same business function; same AI stance",
+    "score": 5.1,
+    "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "Rezolve AI PLC",
+    "family": "software",
+    "in_medians": false,
+    "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+    "score": 5.2,
+    "ticker": "NASDAQGM:RZLV"
    }
   ],
   "secondary_range": {
@@ -1006,17 +831,17 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 5.2,
+   "high": 9.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 2.95,
+   "low": 2.9,
+   "mid": 4.75,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -1028,33 +853,17 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Samsara Inc.",
-     "mult": 9.6,
-     "reason": "shares the language of operations; same business function; same kind of customer",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "automation",
     "customer",
+    "operations",
     "service"
    ],
    "show_retention": true,
-   "spread": 2.5,
+   "spread": 3.3,
    "table": [
-    {
-     "company": "LiveRamp Holdings, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.7,
-     "multiple": 2.1,
-     "recurring_pct": 75.5,
-     "retention_pct": 107.0,
-     "ticker": "NYSE:RAMP"
-    },
     {
      "company": "Pegasystems Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1065,13 +874,13 @@
      "ticker": "NASDAQGS:PEGA"
     },
     {
-     "company": "Klaviyo, Inc.",
+     "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 3.0,
+     "growth_pct": 8.0,
+     "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
+     "ticker": "NYSE:PATH"
     },
     {
      "company": "Twilio Inc.",
@@ -1081,9 +890,18 @@
      "recurring_pct": null,
      "retention_pct": 116.0,
      "ticker": "NYSE:TWLO"
+    },
+    {
+     "company": "Samsara Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.2,
+     "multiple": 9.6,
+     "recurring_pct": null,
+     "retention_pct": 115.0,
+     "ticker": "NYSE:IOT"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   }

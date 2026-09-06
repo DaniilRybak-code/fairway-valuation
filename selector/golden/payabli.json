@@ -8,7 +8,7 @@
      "basis": "MERCHANTS",
      "basis_label": "dollars of enterprise value per merchant",
      "basis_mix": {
-      "MERCHANTS": 3
+      "MERCHANTS": 2
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -23,11 +23,11 @@
      "high": 15384615.38,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 21428.57,
-     "mid": 54166.67,
-     "n": 3,
+     "low": 54166.67,
+     "mid": 15384615.38,
+     "n": 2,
      "period_mix": {
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "LTM": {
@@ -36,13 +36,6 @@
       }
      },
      "points": [
-      {
-       "company": "Pine Labs",
-       "mult": 21428.57,
-       "reason": "shares the language of payments; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
       {
        "company": "Mollie",
        "mult": 54166.67,
@@ -63,18 +56,8 @@
       "payment",
       "payments"
      ],
-     "spread": 717.9,
+     "spread": 284.0,
      "table": [
-      {
-       "company": "Pine Labs",
-       "date": "May-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 21428.57,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Mollie",
        "date": "Jun-21",
@@ -96,8 +79,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
-     "thin": false,
+     "tag_evidence": 0.1,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -106,7 +89,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "NET_REVENUE": 3
+      "NET_REVENUE": 2
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -122,10 +105,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 16.34,
-     "mid": 30.3,
-     "n": 3,
+     "mid": 48.0,
+     "n": 2,
      "period_mix": {
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "LTM": {
@@ -153,16 +136,6 @@
        "ticker": ""
       },
       {
-       "company": "Pine Labs",
-       "date": "May-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 30.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "dLocal",
        "date": "Apr-21",
        "growth_basis": "",
@@ -173,8 +146,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
-     "thin": false,
+     "tag_evidence": 0.3,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -183,7 +156,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 4
+      "REVENUE_GROSS": 5
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -199,11 +172,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 9.52,
-     "mid": 44.34,
-     "n": 4,
+     "mid": 25.0,
+     "n": 5,
      "period_mix": {
       "FY2024": 1,
-      "LTM": 3
+      "LTM": 4
      },
      "period_span": {
       "FY2024": {
@@ -219,6 +192,7 @@
      "positioning": [],
      "shared_words": [
       "api",
+      "embedded",
       "infrastructure",
       "payment",
       "payments"
@@ -246,6 +220,16 @@
        "ticker": ""
       },
       {
+       "company": "Rapyd",
+       "date": "Jan-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 25.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Checkout.com",
        "date": "Dec-23",
        "growth_basis": "",
@@ -266,7 +250,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
     }
@@ -278,23 +262,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of embedded, payments, vertical; same type of business; same business function; same revenue model",
-    "score": 10.6,
-    "ticker": "NASDAQCM:RPAY"
-   },
-   {
-    "company": "Tyro Payments Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of payments; same type of business; same business function; sold the same way",
     "score": 10.1,
-    "ticker": "ASX:TYR"
+    "ticker": "NASDAQCM:RPAY"
    },
    {
     "company": "Usio, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
-    "score": 9.7,
+    "score": 9.6,
     "ticker": "NASDAQGM:USIO"
    },
    {
@@ -318,7 +294,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
-    "score": 8.2,
+    "score": 8.1,
     "ticker": "NASDAQ:DLO"
    },
    {
@@ -326,8 +302,16 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
-    "score": 8.2,
+    "score": 8.1,
     "ticker": "BIT:NEXI"
+   },
+   {
+    "company": "GMO Payment Gateway, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+    "score": 8.1,
+    "ticker": "TSE:3769"
    }
   ],
   "core_range": {
@@ -343,11 +327,11 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 2.4,
+   "high": 4.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 1.9,
+   "low": 1.7,
+   "mid": 2.0,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -359,13 +343,6 @@
     }
    },
    "points": [
-    {
-     "company": "Tyro Payments Limited",
-     "mult": 0.6,
-     "reason": "shares the language of payments; same type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
     {
      "company": "Usio, Inc.",
      "mult": 0.7,
@@ -407,6 +384,13 @@
      "reason": "shares the language of payment; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "GMO Payment Gateway, Inc.",
+     "mult": 5.0,
+     "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
    "positioning": [],
@@ -418,17 +402,8 @@
     "vertical"
    ],
    "show_retention": false,
-   "spread": 6.7,
+   "spread": 7.1,
    "table": [
-    {
-     "company": "Tyro Payments Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.8,
-     "multiple": 0.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:TYR"
-    },
     {
      "company": "Usio, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -482,9 +457,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "CASE:FWRY"
+    },
+    {
+     "company": "GMO Payment Gateway, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.8,
+     "multiple": 5.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:3769"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -650,46 +634,6 @@
    {
     "backed": [
      {
-      "company": "Pine Labs",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Baron Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Pine Labs",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Duro",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Pine Labs",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Marshall Wace",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Pine Labs",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Moore Strategic Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "dLocal",
       "date": "Apr-21"
      }
@@ -738,7 +682,7 @@
     "in_medians": true,
     "mult": 16.34,
     "reason": "shares the language of api, payment, payments; same type of business; same business function; same kind of customer",
-    "score": 17.0,
+    "score": 16.8,
     "type": "PRIMARY"
    },
    {
@@ -749,7 +693,7 @@
     "in_medians": true,
     "mult": 9.52,
     "reason": "both do Payments API; same type of business; same business function; same revenue model",
-    "score": 14.5,
+    "score": 14.3,
     "type": "PRIMARY"
    },
    {
@@ -760,7 +704,7 @@
     "in_medians": true,
     "mult": 44.34,
     "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
-    "score": 13.2,
+    "score": 13.1,
     "type": "PRIMARY"
    },
    {
@@ -771,7 +715,7 @@
     "in_medians": true,
     "mult": 22.67,
     "reason": "both do Payments Infrastructure; related type of business; same business function; same revenue model",
-    "score": 12.3,
+    "score": 12.2,
     "type": "PRIMARY"
    },
    {
@@ -782,18 +726,7 @@
     "in_medians": true,
     "mult": 54.17,
     "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
-    "score": 15.2,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Pine Labs",
-    "date": "May-21",
-    "in_medians": true,
-    "mult": 30.3,
-    "reason": "shares the language of payments; same type of business; same business function; same AI stance",
-    "score": 9.1,
+    "score": 15.1,
     "type": "PRIMARY"
    },
    {
@@ -804,7 +737,18 @@
     "in_medians": true,
     "mult": 48.0,
     "reason": "shares the language of payment, payments; related type of business; same business function; same AI stance",
-    "score": 9.7,
+    "score": 9.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2020 unclear whether closed",
+    "bound": "",
+    "company": "Rapyd",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of embedded, payment, payments; same type of business; same business function; same revenue model",
+    "score": 15.3,
     "type": "PRIMARY"
    }
   ],
@@ -815,7 +759,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 3
+    "NET_REVENUE": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -827,10 +771,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 16.34,
-   "mid": 30.3,
-   "n": 3,
+   "mid": 48.0,
+   "n": 2,
    "period_mix": {
-    "LTM": 3
+    "LTM": 2
    },
    "period_span": {
     "LTM": {
@@ -858,16 +802,6 @@
      "ticker": ""
     },
     {
-     "company": "Pine Labs",
-     "date": "May-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 30.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "dLocal",
      "date": "Apr-21",
      "growth_basis": "",
@@ -878,51 +812,51 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.5,
-   "thin": false,
+   "tag_evidence": 0.3,
+   "thin": true,
    "triangulated": false
   },
-  "private_window_months": 64,
+  "private_window_months": 67,
   "secondary": [
-   {
-    "company": "Marqeta, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of api, embedded; related type of business; same business function; same kind of customer",
-    "score": 8.7,
-    "ticker": "NASDAQ:MQ"
-   },
    {
     "company": "WEX Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of payments, vertical; related type of business; same business function; same revenue model",
-    "score": 8.7,
+    "score": 8.4,
     "ticker": "NYSE:WEX"
    },
    {
-    "company": "GMO Payment Gateway, Inc.",
+    "company": "Marqeta, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
-    "score": 8.2,
-    "ticker": "TSE:3769"
+    "reason": "shares the language of api, embedded; related type of business; same business function; same kind of customer",
+    "score": 8.3,
+    "ticker": "NASDAQ:MQ"
    },
    {
     "company": "Adyen N.V.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of payment, payments, unified; same type of business; same business function",
-    "score": 7.8,
+    "score": 7.7,
     "ticker": "ENXTAM:ADYEN"
    },
    {
-    "company": "Nayax Ltd.",
+    "company": "Global Payments Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments, saas; same type of business; same revenue model; same AI stance",
-    "score": 7.3,
-    "ticker": "NASDAQ:NYAX"
+    "reason": "shares the language of payment, payments; same type of business; same business function",
+    "score": 7.1,
+    "ticker": "NYSE:GPN"
+   },
+   {
+    "company": "PagSeguro Digital Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+    "score": 7.1,
+    "ticker": "NYSE:PAGS"
    }
   ],
   "secondary_range": {
@@ -936,13 +870,13 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 6.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 3.5,
+   "low": 1.3,
+   "mid": 2.0,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -953,7 +887,43 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "PagSeguro Digital Ltd.",
+     "mult": 0.6,
+     "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Marqeta, Inc.",
+     "mult": 1.3,
+     "reason": "shares the language of api, embedded; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "WEX Inc.",
+     "mult": 2.0,
+     "reason": "shares the language of payments, vertical; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Global Payments Inc.",
+     "mult": 3.4,
+     "reason": "shares the language of payment, payments; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Adyen N.V.",
+     "mult": 6.1,
+     "reason": "shares the language of payment, payments, unified; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -961,13 +931,21 @@
     "embedded",
     "payment",
     "payments",
-    "saas",
     "unified",
     "vertical"
    ],
    "show_retention": false,
-   "spread": 4.7,
+   "spread": 10.2,
    "table": [
+    {
+     "company": "PagSeguro Digital Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.6,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PAGS"
+    },
     {
      "company": "Marqeta, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -987,22 +965,13 @@
      "ticker": "NYSE:WEX"
     },
     {
-     "company": "Nayax Ltd.",
+     "company": "Global Payments Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 22.9,
-     "multiple": 3.5,
+     "growth_pct": 5.1,
+     "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQ:NYAX"
-    },
-    {
-     "company": "GMO Payment Gateway, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 16.8,
-     "multiple": 5.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:3769"
+     "ticker": "NYSE:GPN"
     },
     {
      "company": "Adyen N.V.",
@@ -1014,7 +983,7 @@
      "ticker": "ENXTAM:ADYEN"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   }

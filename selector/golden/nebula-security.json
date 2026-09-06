@@ -79,7 +79,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
+     "tag_evidence": 0.1,
      "thin": true,
      "triangulated": false
     },
@@ -168,7 +168,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of detection, response, security; same type of business; sold the same way",
-    "score": 8.7,
+    "score": 8.4,
     "ticker": "NASDAQGS:CRWD"
    },
    {
@@ -176,7 +176,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of detection, response, security; same type of business; sold the same way",
-    "score": 8.7,
+    "score": 8.4,
     "ticker": "NASDAQGS:VRNS"
    },
    {
@@ -200,7 +200,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Threat Detection; same type of business; same AI stance",
-    "score": 7.1,
+    "score": 7.0,
     "ticker": "NYSE:S"
    },
    {
@@ -378,7 +378,7 @@
      "ticker": "NASDAQGS:CRWD"
     }
    ],
-   "tag_evidence": 1.7,
+   "tag_evidence": 1.4,
    "thin": false,
    "triangulated": false
   },
@@ -777,7 +777,7 @@
     "in_medians": false,
     "mult": 15.5,
     "reason": "shares the language of detection, response, security; same type of business; same revenue model",
-    "score": 12.3,
+    "score": 12.0,
     "type": "PRIMARY"
    },
    {
@@ -910,22 +910,6 @@
     "ticker": "NASDAQGS:BL"
    },
    {
-    "company": "Five9, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same kind of customer; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGM:FIVN"
-   },
-   {
-    "company": "NICE Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai; same kind of customer; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:NICE"
-   },
-   {
     "company": "Dassault Systemes SE",
     "family": "software",
     "in_medians": true,
@@ -940,6 +924,22 @@
     "reason": "shares the language of automation; same business function; sold the same way; same AI stance",
     "score": 7.1,
     "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same kind of customer; same revenue model",
+    "score": 7.1,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same business function; same kind of customer; sold the same way",
+    "score": 6.6,
+    "ticker": "NASDAQGS:INTA"
    }
   ],
   "secondary_range": {
@@ -955,11 +955,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.3,
+   "high": 4.6,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 2.5,
+   "low": 2.5,
+   "mid": 4.1,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -974,30 +974,20 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "automation",
     "simulation"
    ],
    "show_retention": true,
-   "spread": 2.4,
+   "spread": 2.1,
    "table": [
     {
-     "company": "NICE Ltd.",
+     "company": "ZoomInfo Technologies Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.5,
-     "multiple": 1.8,
-     "recurring_pct": 89.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:NICE"
-    },
-    {
-     "company": "Five9, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.8,
-     "multiple": 2.0,
-     "recurring_pct": 94.0,
-     "retention_pct": 106.0,
-     "ticker": "NASDAQGM:FIVN"
+     "growth_pct": -0.3,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
     },
     {
      "company": "BlackLine, Inc.",
@@ -1025,6 +1015,15 @@
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
+    },
+    {
+     "company": "Intapp, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.4,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": 123.0,
+     "ticker": "NASDAQGS:INTA"
     }
    ],
    "tag_evidence": 0.6,

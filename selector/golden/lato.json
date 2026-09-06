@@ -80,7 +80,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 3.7,
+     "tag_evidence": 3.5,
      "thin": true,
      "triangulated": false
     },
@@ -147,7 +147,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 3.7,
+     "tag_evidence": 3.5,
      "thin": true,
      "triangulated": false
     }
@@ -159,7 +159,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Investment Research, Private Market Data; same type of business; same end market; same business function",
-    "score": 17.2,
+    "score": 16.4,
     "ticker": "NASDAQ:MORN"
    },
    {
@@ -167,7 +167,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Market Data; same type of business; same end market; same business function",
-    "score": 15.5,
+    "score": 15.3,
     "ticker": "NYSE:FDS"
    },
    {
@@ -175,23 +175,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of research; same type of business; same end market; same business function",
-    "score": 12.8,
+    "score": 12.7,
     "ticker": "NSEI:CRISIL"
-   },
-   {
-    "company": "MSCI Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of data, private; same type of business; same end market; same business function",
-    "score": 10.7,
-    "ticker": "NYSE:MSCI"
    },
    {
     "company": "S&P Global Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Market Data, Research; same type of business; same end market; same business function",
-    "score": 10.5,
+    "score": 10.3,
     "ticker": "NYSE:SPGI"
    },
    {
@@ -199,15 +191,23 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Market Data; same type of business; same end market; same business function",
-    "score": 10.4,
+    "score": 10.3,
     "ticker": "LSE:LSEG"
+   },
+   {
+    "company": "MSCI Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of data, private; same type of business; same end market; same business function",
+    "score": 10.3,
+    "ticker": "NYSE:MSCI"
    },
    {
     "company": "Clarkson PLC",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of research; related type of business; same end market; same kind of customer",
-    "score": 10.3,
+    "score": 10.2,
     "ticker": "LSE:CKN"
    }
   ],
@@ -367,7 +367,7 @@
      "ticker": "NYSE:MSCI"
     }
    ],
-   "tag_evidence": 4.7,
+   "tag_evidence": 3.9,
    "thin": false,
    "triangulated": false
   },
@@ -601,7 +601,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "both do Market Intelligence; related type of business; same end market; same business function",
-    "score": 22.7,
+    "score": 22.5,
     "type": "PRIMARY"
    },
    {
@@ -676,7 +676,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 3.7,
+   "tag_evidence": 3.5,
    "thin": true,
    "triangulated": false
   },
@@ -686,8 +686,8 @@
     "company": "Moody's Corporation",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of data; same type of business; same end market; same business function",
-    "score": 10.1,
+    "reason": "same type of business; same end market; same business function; sold the same way",
+    "score": 10.0,
     "ticker": "NYSE:MCO"
    },
    {
@@ -697,29 +697,53 @@
     "reason": "related type of business; same end market; same business function; sold the same way",
     "score": 8.5,
     "ticker": "NYSE:FICO"
+   },
+   {
+    "company": "Q2 Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NYSE:QTWO"
+   },
+   {
+    "company": "Qualco Group S.A.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "ATSE:QLCO"
+   },
+   {
+    "company": "Usio, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NASDAQGM:USIO"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 10.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.2,
-   "mid": 10.35,
-   "n": 2,
+   "low": 1.6,
+   "mid": 4.1,
+   "n": 5,
    "period_mix": {
-    "NTM": 2
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -727,15 +751,78 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Usio, Inc.",
+     "mult": 0.7,
+     "reason": "same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Qualco Group S.A.",
+     "mult": 1.6,
+     "reason": "same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Q2 Holdings, Inc.",
+     "mult": 4.1,
+     "reason": "same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Fair Isaac Corporation",
+     "mult": 10.2,
+     "reason": "related type of business; same end market; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Moody's Corporation",
+     "mult": 10.5,
+     "reason": "same type of business; same end market; same business function; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "data"
    ],
-   "show_retention": false,
-   "spread": 1.0,
+   "show_retention": true,
+   "spread": 15.0,
    "table": [
+    {
+     "company": "Usio, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:USIO"
+    },
+    {
+     "company": "Qualco Group S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.0,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ATSE:QLCO"
+    },
+    {
+     "company": "Q2 Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.4,
+     "multiple": 4.1,
+     "recurring_pct": 83.0,
+     "retention_pct": 119.0,
+     "ticker": "NYSE:QTWO"
+    },
     {
      "company": "Fair Isaac Corporation",
      "growth_basis": "CAGR_CY1_CY3",
@@ -755,8 +842,8 @@
      "ticker": "NYSE:MCO"
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": true,
+   "tag_evidence": 0.0,
+   "thin": false,
    "triangulated": true
   }
  },

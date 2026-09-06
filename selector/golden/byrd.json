@@ -13,21 +13,19 @@
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Wolt"
-     ],
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 23.5,
+     "high": 10.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 8.94,
-     "mid": 10.3,
+     "low": 5.97,
+     "mid": 8.94,
      "n": 3,
      "period_mix": {
       "LTM": 2,
@@ -50,13 +48,22 @@
       "cross",
       "fulfilment",
       "logistics",
-      "network",
       "party",
       "shipping",
       "third"
      ],
-     "spread": 2.6,
+     "spread": 1.7,
      "table": [
+      {
+       "company": "Delhivery",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.97,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
       {
        "company": "Xpressbees",
        "date": "Feb-22",
@@ -76,19 +83,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Wolt",
-       "date": "Nov-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 1.6,
+     "tag_evidence": 1.1,
      "thin": false,
      "triangulated": false
     },
@@ -145,7 +142,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.2,
+     "tag_evidence": 3.6,
      "thin": true,
      "triangulated": false
     }
@@ -153,43 +150,35 @@
   },
   "core": [
    {
-    "company": "Delhivery Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of border, cross, fulfilment; same type of business; same business function; same revenue model",
-    "score": 9.8,
-    "ticker": "NSEI:DELHIVERY"
-   },
-   {
     "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of network, shipping; same type of business; same business function; same revenue model",
-    "score": 9.2,
+    "score": 9.1,
     "ticker": "NYSE:FDX"
+   },
+   {
+    "company": "Delhivery Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of border, cross, fulfilment; same type of business; same business function; same revenue model",
+    "score": 9.0,
+    "ticker": "NSEI:DELHIVERY"
    },
    {
     "company": "Deutsche Post AG",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of border, cross, logistics; same type of business; same business function; same revenue model",
-    "score": 9.2,
+    "score": 8.8,
     "ticker": "XTRA:DHL"
-   },
-   {
-    "company": "InPost S.A.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
-    "score": 9.2,
-    "ticker": "ENXTAM:INPST"
    },
    {
     "company": "PostNL N.V.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
-    "score": 8.9,
+    "score": 8.7,
     "ticker": "ENXTAM:PNL"
    },
    {
@@ -197,15 +186,23 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
-    "score": 8.9,
+    "score": 8.7,
     "ticker": "SEHK:1519"
+   },
+   {
+    "company": "InPost S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
+    "score": 8.7,
+    "ticker": "ENXTAM:INPST"
    },
    {
     "company": "United Parcel Service",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of logistics, network; same type of business; same business function; same revenue model",
-    "score": 8.9,
+    "score": 8.6,
     "ticker": "NYSE:UPS"
    }
   ],
@@ -366,7 +363,7 @@
      "ticker": "NSEI:DELHIVERY"
     }
    ],
-   "tag_evidence": 1.3,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -602,31 +599,41 @@
    {
     "backed": [
      {
-      "company": "Glovo",
-      "date": "Dec-21"
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
-    "investor": "Delivery Hero (acquirer",
+    "investor": "Fidelity",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Glovo",
-      "date": "Dec-21"
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
-    "investor": "all-stock)",
+    "investor": "Baillie Gifford",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Wolt",
-      "date": "Nov-21"
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
-    "investor": "DoorDash",
+    "investor": "Chimera",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Steadview Capital",
     "n": 1
    }
   ],
@@ -640,7 +647,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of fulfilment; same type of business; same end market; same AI stance",
-    "score": 10.6,
+    "score": 10.2,
     "type": "PRIMARY"
    },
    {
@@ -651,7 +658,7 @@
     "in_medians": true,
     "mult": 4.15,
     "reason": "both do Ecommerce Fulfilment; same end market; same AI stance",
-    "score": 10.2,
+    "score": 9.6,
     "type": "PRIMARY"
    },
    {
@@ -662,7 +669,7 @@
     "in_medians": false,
     "mult": 16.03,
     "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
-    "score": 15.5,
+    "score": 14.9,
     "type": "PRIMARY"
    },
    {
@@ -673,30 +680,8 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "both do Third-Party Logistics, Cross-Border Shipping; same type of business; same business function; same revenue model",
-    "score": 15.6,
+    "score": 15.1,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Glovo",
-    "date": "Dec-21",
-    "in_medians": true,
-    "mult": null,
-    "reason": "shares the language of network; same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Wolt",
-    "date": "Nov-21",
-    "in_medians": true,
-    "mult": 23.5,
-    "reason": "shares the language of network; same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "CONTROL"
    },
    {
     "basis": "GMV_ONLY",
@@ -707,6 +692,17 @@
     "mult": null,
     "reason": "shares the language of party, third; related type of business; same kind of customer; same cost structure",
     "score": 14.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Delhivery",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 5.97,
+    "reason": "both do Third-Party Logistics; same type of business; same business function; same revenue model",
+    "score": 14.3,
     "type": "PRIMARY"
    }
   ],
@@ -722,17 +718,15 @@
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Wolt"
-   ],
+   "control_n": 0,
+   "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 23.5,
+   "high": 10.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 8.94,
-   "mid": 10.3,
+   "low": 5.97,
+   "mid": 8.94,
    "n": 3,
    "period_mix": {
     "LTM": 2,
@@ -755,13 +749,22 @@
     "cross",
     "fulfilment",
     "logistics",
-    "network",
     "party",
     "shipping",
     "third"
    ],
-   "spread": 2.6,
+   "spread": 1.7,
    "table": [
+    {
+     "company": "Delhivery",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.97,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
     {
      "company": "Xpressbees",
      "date": "Feb-22",
@@ -781,86 +784,76 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Wolt",
-     "date": "Nov-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 1.6,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 60,
+  "private_window_months": 63,
   "secondary": [
-   {
-    "company": "Meituan",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
-    "score": 12.1,
-    "ticker": "SEHK:3690"
-   },
-   {
-    "company": "Eternal Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
-    "score": 12.1,
-    "ticker": "NSEI:ETERNAL"
-   },
-   {
-    "company": "Swiggy Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
-    "score": 12.1,
-    "ticker": "NSEI:SWIGGY"
-   },
-   {
-    "company": "Maplebear Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of network; same type of business; same kind of customer; same cost structure",
-    "score": 11.1,
-    "ticker": "NASDAQGS:CART"
-   },
    {
     "company": "Lightspeed Commerce Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of processing; same end market; same business function; same kind of customer",
-    "score": 10.7,
+    "score": 10.6,
     "ticker": "TSX:LSPD"
+   },
+   {
+    "company": "SPS Commerce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; sold the same way; same AI stance",
+    "score": 9.5,
+    "ticker": "NASDAQGS:SPSC"
+   },
+   {
+    "company": "Allegro.eu S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of network, party, third; same kind of customer; same cost structure; same purchase frequency",
+    "score": 9.3,
+    "ticker": "WSE:ALE"
+   },
+   {
+    "company": "Sea Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of party, third; same kind of customer; same cost structure; same purchase frequency",
+    "score": 9.3,
+    "ticker": "NYSE:SE"
+   },
+   {
+    "company": "Nayax Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same revenue model; same AI stance",
+    "score": 9.0,
+    "ticker": "NASDAQ:NYAX"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.6,
+   "high": 3.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 2.15,
-   "n": 4,
+   "low": 1.8,
+   "mid": 3.3,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -869,62 +862,66 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Lightspeed Commerce Inc.",
-     "mult": 0.7,
-     "reason": "shares the language of processing; same end market; same business function; same kind of customer",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "network"
+    "network",
+    "party",
+    "processing",
+    "third"
    ],
    "show_retention": false,
-   "spread": 3.7,
+   "spread": 5.0,
    "table": [
     {
-     "company": "Meituan",
+     "company": "Lightspeed Commerce Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
+     "growth_pct": 10.8,
      "multiple": 0.7,
-     "recurring_pct": null,
+     "recurring_pct": 30.2,
      "retention_pct": null,
-     "ticker": "SEHK:3690"
+     "ticker": "TSX:LSPD"
     },
     {
-     "company": "Swiggy Limited",
+     "company": "Sea Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 23.3,
-     "multiple": 1.9,
+     "growth_pct": 20.0,
+     "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NSEI:SWIGGY"
+     "ticker": "NYSE:SE"
     },
     {
-     "company": "Maplebear Inc.",
+     "company": "Allegro.eu S.A.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.1,
-     "multiple": 2.4,
+     "growth_pct": 11.6,
+     "multiple": 3.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:CART"
+     "ticker": "WSE:ALE"
     },
     {
-     "company": "Eternal Limited",
+     "company": "SPS Commerce, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 40.7,
-     "multiple": 2.6,
+     "growth_pct": 6.7,
+     "multiple": 3.4,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:SPSC"
+    },
+    {
+     "company": "Nayax Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NSEI:ETERNAL"
+     "ticker": "NASDAQ:NYAX"
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "European third-party logistics running pick, pack and returns from its own warehouse network"

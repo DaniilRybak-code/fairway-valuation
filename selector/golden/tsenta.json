@@ -65,7 +65,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.3,
+     "tag_evidence": 3.9,
      "thin": true,
      "triangulated": false
     }
@@ -77,7 +77,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of job; same type of business; same revenue model",
-    "score": 7.1,
+    "score": 6.8,
     "ticker": "ASX:HPG"
    },
    {
@@ -93,7 +93,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of matching; same kind of customer; sold the same way",
-    "score": 6.1,
+    "score": 5.8,
     "ticker": "TSE:6027"
    }
   ],
@@ -186,7 +186,7 @@
      "ticker": "TSE:6027"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
@@ -380,7 +380,7 @@
     "in_medians": true,
     "mult": 22.22,
     "reason": "both do Candidate Matching; same type of business; same business function; same AI stance",
-    "score": 15.7,
+    "score": 15.4,
     "type": "PRIMARY"
    },
    {
@@ -391,7 +391,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "both do Candidate Matching; same type of business; same business function; same AI stance",
-    "score": 15.8,
+    "score": 15.4,
     "type": "PRIMARY"
    }
   ],

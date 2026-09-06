@@ -71,7 +71,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 3
+      "ARR_RUNRATE": 2
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
@@ -87,10 +87,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 7.27,
-     "mid": 9.18,
-     "n": 3,
+     "mid": 15.38,
+     "n": 2,
      "period_mix": {
-      "RUN_RATE": 3
+      "RUN_RATE": 2
      },
      "period_span": {
       "RUN_RATE": {
@@ -100,9 +100,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "subscription"
-     ],
+     "shared_words": [],
      "spread": 2.1,
      "table": [
       {
@@ -111,16 +109,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 7.27,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "WHOOP",
-       "date": "Mar-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 9.18,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -136,8 +124,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
-     "thin": false,
+     "tag_evidence": 0.0,
+     "thin": true,
      "triangulated": true
     },
     "REVENUE_GROSS": {
@@ -146,7 +134,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 3
+      "REVENUE_GROSS": 2
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -166,10 +154,10 @@
       "Udemy"
      ],
      "low": 1.29,
-     "mid": 23.1,
-     "n": 3,
+     "mid": 27.5,
+     "n": 2,
      "period_mix": {
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "LTM": {
@@ -184,13 +172,6 @@
        "reason": "both do Consumer Learning, Learning Subscription; same type of business; same end market; same business function",
        "tier": "DIRECT",
        "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Oura",
-       "mult": 23.1,
-       "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       },
       {
        "company": "MasterClass",
@@ -220,16 +201,6 @@
        "ticker": ""
       },
       {
-       "company": "Oura",
-       "date": "Dec-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "MasterClass",
        "date": "May-21",
        "growth_basis": "",
@@ -240,8 +211,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.4,
-     "thin": false,
+     "tag_evidence": 0.9,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -252,7 +223,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same type of business; same end market; same business function",
-    "score": 18.4,
+    "score": 18.1,
     "ticker": "NASDAQGS:DUOL"
    },
    {
@@ -260,15 +231,15 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same type of business; same end market; same business function",
-    "score": 16.8,
+    "score": 16.4,
     "ticker": "NYSE:COUR"
    },
    {
     "company": "Chegg, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of subscription; same type of business; same end market; same business function",
-    "score": 16.1,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 16.0,
     "ticker": "NYSE:CHGG"
    },
    {
@@ -276,7 +247,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of consumer, learning, subscription; same type of business; same end market; same business function",
-    "score": 15.8,
+    "score": 15.4,
     "ticker": "TSE:4686"
    },
    {
@@ -284,7 +255,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning; same type of business; same end market; same business function",
-    "score": 15.6,
+    "score": 15.4,
     "ticker": "NYSE:NRDY"
    }
   ],
@@ -320,7 +291,7 @@
     {
      "company": "Chegg, Inc.",
      "mult": 0.4,
-     "reason": "shares the language of subscription; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -394,7 +365,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 1.4,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -602,23 +573,9 @@
      {
       "company": "MasterClass",
       "date": "May-21"
-     },
-     {
-      "company": "Oura",
-      "date": "Dec-24"
      }
     ],
     "investor": "Fidelity Management & Research Company",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Oura",
-      "date": "Dec-24"
-     }
-    ],
-    "investor": "Dexcom",
     "n": 1
    }
   ],
@@ -632,7 +589,7 @@
     "in_medians": true,
     "mult": 1.29,
     "reason": "both do Consumer Learning, Learning Subscription; same type of business; same end market; same business function",
-    "score": 15.9,
+    "score": 15.4,
     "type": "CONTROL"
    },
    {
@@ -665,40 +622,18 @@
     "in_medians": true,
     "mult": 27.5,
     "reason": "both do Consumer Subscription; related type of business; same end market; same business function",
-    "score": 20.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Exiting CY2025",
-    "bound": "",
-    "company": "WHOOP",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 9.18,
-    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Oura",
-    "date": "Dec-24",
-    "in_medians": true,
-    "mult": 23.1,
-    "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
-    "score": 15.1,
+    "score": 20.6,
     "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
+  "private_proximity": "DIRECT",
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 3
+    "ARR_RUNRATE": 2
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -710,10 +645,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 7.27,
-   "mid": 9.18,
-   "n": 3,
+   "mid": 15.38,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -723,9 +658,7 @@
    },
    "points": [],
    "positioning": [],
-   "shared_words": [
-    "subscription"
-   ],
+   "shared_words": [],
    "spread": 2.1,
    "table": [
     {
@@ -734,16 +667,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 7.27,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "WHOOP",
-     "date": "Mar-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 9.18,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -759,8 +682,8 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": false,
+   "tag_evidence": 0.0,
+   "thin": true,
    "triangulated": true
   },
   "private_window_months": 63,
@@ -770,7 +693,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 12.2,
+    "score": 12.1,
     "ticker": "NASDAQGS:MTCH"
    },
    {
@@ -778,7 +701,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 12.2,
+    "score": 12.1,
     "ticker": "NASDAQGS:BMBL"
    },
    {
@@ -786,7 +709,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Subscription Audio, Podcasts; same business function; same kind of customer; same revenue model",
-    "score": 11.3,
+    "score": 11.1,
     "ticker": "NYSE:SPOT"
    },
    {
@@ -794,7 +717,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 10.2,
+    "score": 10.1,
     "ticker": "NYSE:GRND"
    },
    {
@@ -802,7 +725,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 10.2,
+    "score": 10.1,
     "ticker": "NYSE:NYT"
    }
   ],
@@ -892,7 +815,7 @@
      "ticker": "NYSE:GRND"
     }
    ],
-   "tag_evidence": 1.3,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   }

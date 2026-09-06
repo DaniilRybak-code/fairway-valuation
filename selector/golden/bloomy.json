@@ -168,7 +168,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.4,
      "thin": false,
      "triangulated": true
     },
@@ -268,7 +268,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Adaptive Learning; same type of business; same end market; same AI stance",
-    "score": 11.2,
+    "score": 11.0,
     "ticker": "NASDAQGS:DUOL"
    },
    {
@@ -276,7 +276,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning, school; same type of business; same end market",
-    "score": 7.2,
+    "score": 7.0,
     "ticker": "NYSE:NRDY"
    },
    {
@@ -284,7 +284,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning, software; same type of business; same end market",
-    "score": 6.6,
+    "score": 6.4,
     "ticker": "TSE:4686"
    },
    {
@@ -292,7 +292,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning; same type of business; same end market",
-    "score": 6.6,
+    "score": 6.4,
     "ticker": "NYSE:COUR"
    },
    {
@@ -300,7 +300,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of tools; same type of business; same end market",
-    "score": 6.5,
+    "score": 6.2,
     "ticker": "NYSE:CHGG"
    }
   ],
@@ -410,7 +410,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 4.2,
+   "tag_evidence": 4.0,
    "thin": false,
    "triangulated": false
   },
@@ -644,7 +644,7 @@
     "in_medians": true,
     "mult": 1.29,
     "reason": "shares the language of learning; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.4,
     "type": "CONTROL"
    },
    {
@@ -655,7 +655,7 @@
     "in_medians": true,
     "mult": 1.52,
     "reason": "shares the language of learning; same type of business; same end market; sold the same way",
-    "score": 13.1,
+    "score": 12.9,
     "type": "CONTROL"
    },
    {
@@ -792,7 +792,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.4,
    "thin": false,
    "triangulated": true
   },
@@ -803,7 +803,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "NYSE:UPS"
    },
    {
@@ -811,7 +811,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "NYSE:FDX"
    },
    {
@@ -819,7 +819,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "ENXTAM:PNL"
    },
    {
@@ -827,7 +827,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "TSE:9143"
    },
    {
@@ -835,7 +835,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
-    "score": 6.7,
+    "score": 6.6,
     "ticker": "SZSE:002352"
    }
   ],
@@ -922,7 +922,7 @@
      "ticker": "NYSE:UPS"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
   }

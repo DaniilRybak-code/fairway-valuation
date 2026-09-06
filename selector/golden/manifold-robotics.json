@@ -81,23 +81,15 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Warehouse Robotics; same type of business; same kind of customer; sold the same way",
-    "score": 14.3,
+    "score": 13.5,
     "ticker": "NYSE:GXO"
-   },
-   {
-    "company": "ID Logistics Group SA",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of fulfilment, warehouse; same type of business; same kind of customer; sold the same way",
-    "score": 10.7,
-    "ticker": "ENXTPA:IDL"
    },
    {
     "company": "Delhivery Limited",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of fulfilment; related type of business; same business function; same kind of customer",
-    "score": 10.6,
+    "score": 10.2,
     "ticker": "NSEI:DELHIVERY"
    },
    {
@@ -105,16 +97,16 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of a; related type of business; same business function; same kind of customer",
-    "score": 10.4,
+    "score": 10.2,
     "ticker": "SZSE:002352"
    },
    {
-    "company": "Lineage, Inc.",
+    "company": "ID Logistics Group SA",
     "family": "consumer",
     "in_medians": true,
-    "reason": "both do Warehouse Automation; same type of business; same kind of customer; sold the same way",
-    "score": 9.2,
-    "ticker": "NASDAQGS:LINE"
+    "reason": "shares the language of fulfilment, warehouse; same type of business; same kind of customer; sold the same way",
+    "score": 9.9,
+    "ticker": "ENXTPA:IDL"
    },
    {
     "company": "Americold Realty Trust",
@@ -125,11 +117,19 @@
     "ticker": "NYSE:COLD"
    },
    {
+    "company": "Lineage, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Warehouse Automation; same type of business; same kind of customer; sold the same way",
+    "score": 8.8,
+    "ticker": "NASDAQGS:LINE"
+   },
+   {
     "company": "Tritax Big Box REIT plc",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of warehouse; same type of business; same kind of customer; sold the same way",
-    "score": 9.1,
+    "score": 8.7,
     "ticker": "LSE:BBOX"
    }
   ],
@@ -163,16 +163,16 @@
    },
    "points": [
     {
-     "company": "ID Logistics Group SA",
+     "company": "S.F. Holding Co., Ltd.",
      "mult": 0.5,
-     "reason": "shares the language of fulfilment, warehouse; same type of business; same kind of customer; sold the same way",
+     "reason": "shares the language of a; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "S.F. Holding Co., Ltd.",
+     "company": "ID Logistics Group SA",
      "mult": 0.5,
-     "reason": "shares the language of a; related type of business; same business function; same kind of customer",
+     "reason": "shares the language of fulfilment, warehouse; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -226,15 +226,6 @@
    "spread": 36.6,
    "table": [
     {
-     "company": "ID Logistics Group SA",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.4,
-     "multiple": 0.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTPA:IDL"
-    },
-    {
      "company": "S.F. Holding Co., Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.1,
@@ -242,6 +233,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "SZSE:002352"
+    },
+    {
+     "company": "ID Logistics Group SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.4,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:IDL"
     },
     {
      "company": "GXO Logistics, Inc.",
@@ -289,7 +289,7 @@
      "ticker": "LSE:BBOX"
     }
    ],
-   "tag_evidence": 4.8,
+   "tag_evidence": 4.0,
    "thin": false,
    "triangulated": false
   },
@@ -532,7 +532,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of a; same type of business; same kind of customer; sold the same way",
-    "score": 8.9,
+    "score": 8.7,
     "ticker": "SEHK:598"
    },
    {
@@ -540,7 +540,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of service; same business function; same kind of customer; sold the same way",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "ENXTAM:PNL"
    },
    {
@@ -548,7 +548,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of service; same business function; same kind of customer; sold the same way",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "NSEI:BLUEDART"
    },
    {
@@ -556,7 +556,7 @@
     "family": "consumer",
     "in_medians": false,
     "reason": "shares the language of fulfilment; same type of business; same kind of customer; sold the same way",
-    "score": 8.1,
+    "score": 7.7,
     "ticker": "NASDAQGS:BZUN"
    }
   ],
@@ -626,7 +626,7 @@
      "ticker": "NSEI:BLUEDART"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }
