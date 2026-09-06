@@ -459,3 +459,193 @@ common. Reproduce: the listing script is in this session's log; the same facts c
 | Sapiens | florin | yes | edviro ("management", "software"); levocred (label plus industry) |
 | Accolade | evergrove, insurf, scheduling-wizard | yes | denta, open-wearables ("benefits", "health"); inato (label plus industry) |
 | Udemy | befreed, wondering | yes | bloomy, honen ("learning", "course"); inato ("marketplace") |
+
+---
+
+# Follow-ups, 6 September, evening (Fable, 22:10 UK)
+
+Daniil's thirteen points of the afternoon, in his order, each with what was done. Worked in a fresh
+clone of origin at `5e518d2` (the regenerated weights and the rebaselined golden, both pushed).
+Suite before: gate 94 of 102, golden 0, sixteen checks, only check 1 red. Suite after: gate 94,
+golden 0 against the rebaselined fixtures, **seventeen checks**, only check 1 red.
+
+**Applied (four things, each with count in and count out):**
+
+- **StockX released into the medians** on the ruling that a "more than" figure is a ceiling, not an
+  exclusion (`tools/apply_stockx_release_6sep.py`: 52 rows in, 52 out, 1 changed, 0 dropped). It
+  prices the GROSS lane only, as "at most 9.5x". It reaches no fixture yet: tash is in the fintech
+  family and StockX in the consumer one (see point 5).
+- **Check 16, `tools/check_token_weights.py`**: recomputes the weight file from the seven tag files on
+  every suite run and fails if the committed file differs, printing the one command that fixes it.
+  This is why it can never sit stale for two weeks again (point 2).
+- **The No-comps list has a third kind of entry** (check 8): comparables that cleared the relevance
+  gate with no whole tag in common and either only words carried by 25 or more companies, or the
+  end market alone. **293 names across 69 fixtures today.** Recorded, not removed (point 12).
+- **BVNK's archetypes swapped** to Crypto & Digital Assets first, Card Issuing & BaaS second, on
+  Daniil's word (`tools/apply_bvnk_swap_6sep.py`: 204 rows in, 204 out, 1 changed). Measured first:
+  0 fixtures change peers. Golden moved for two fixtures in text only (agentcard's score digit,
+  unifold's reason for BVNK) and was rebaselined for that reason.
+
+**Measured and rejected, with the numbers** (`tools/measure_matching_variants_6sep.py <name>`):
+
+| variant | what it does | result | why rejected |
+|---|---|---|---|
+| family_vocab | family gate admits a row sharing an archetype and a rare word | 13 change; tash gains Whatnot, StockX | also admits Harvey and Legora into health insurance, Gong and Semrush into a freight model, on "review", "deal", "forecasting" |
+| family_vocab (whole tag or two words) | tighter version | 11 change, manifold not reached | still admits Gong and Harvey |
+| tier_floor | relative floor judged within a tier | 29 change, gate 95 | Costco and FirstCash into a laundry subscription, Delivery Hero into a snack box, Anthropic into an SEO tool |
+| rescue_words | below the relative floor only for names sharing a whole tag or rare word, only when the lane cannot price two | on its own moves nothing (family gate first) | kept as a tool; safe but blocked |
+| family_secondary | admits a row whose primary archetype is the founder's secondary | 23 change, gate 95 | passes levelten on Whatnot, Vinted, Faire, Meesho |
+| endmarket_primary | end-market route needs the founder's primary archetype | 24 change, gate 94 | inato swaps healthcare names for Ninjacart, Glovo, Wolt |
+| retag_manifold (+ Berkshire Grey) | Design & Engineering first | manifold's listed core becomes Cadence, Synopsys, UiPath; bizmark fails | wrong |
+| retag_tash | Third-Party Marketplace first | tash passes on Whatnot, StockX, eBay; loses Robinhood, HUB24, Netwealth | trades the listed lane for the private one |
+
+**The conclusion, plainly.** Five different loosenings of the family gate were measured and every
+one admitted wrong names somewhere. The family gate is right. For manifold-robotics (Vention,
+Applied Intuition) and tash (Whatnot, StockX) the names Daniil wants are held back by the family
+each row was FILED under, and no rule that reaches them without also reaching the wrong ones was
+found in an evening. The remaining route is the one rule A2 already uses for OFX and EML: **a named
+list, with a written reason each, that cannot spread.** An "also compare with" list per test
+company (manifold: Vention, Applied Intuition; tash: Whatnot, StockX), pinned past the family gate
+and the relative floor, is the banker's judgement the free-tier review exists to apply. Not built;
+on the takeover list.
+
+**Answers to the numbered points:**
+
+1. Yes. levelten, manifold-robotics and tash are on the No-comps list, kind 2, and have been since
+   check 8 started printing it; levelten is also now kind 1 (The Zebra reaches it only through the
+   recorded fallback since the weights were regenerated).
+2. The weight file: every company carries a list of product words. When a founder and a company
+   share a word, the engine adds points for it, and the file says how much each word is worth: 5
+   divided by the number of companies carrying it, so "marketplace" (75 carriers) is worth 0.07 and
+   "robotics" (5 or fewer) is worth 1.0. It was stale because it is produced by a script, the script
+   read five of seven files from a folder path that no longer existed, nobody re-ran it after the
+   lending and logistics files arrived, and nothing checked it. Regenerated (your commit
+   `5e518d2`), and check 16 now guards it.
+3. levelten: we hold exchanges on the listed side (its core is Indian Energy Exchange, Clarkson, CME;
+   secondary MCX, Deutsche Boerse, ICE) and three climate rows on the private side (Xpansiv, which
+   prices on tonnes of CO2 only; Octopus Energy and Enpal, energy retail and solar, wrong kind of
+   business). Noted on the No-comps list for the bulk pass: a peer like Xpansiv with a revenue
+   figure, or Xpansiv's own revenue at the round. The quiz: the exchange fork already asks for a
+   throughput volume and its unit (levelten routes there); a climate company on the marketplace
+   fork is not asked. Noted in the status file for the quiz work.
+4. Berkshire Grey is in. Vention and Applied Intuition are behind the family gate and the relative
+   floor; see the conclusion above.
+5. Robinhood is already in tash's listed core (with XP, HUB24, Netwealth). StockX is released
+   (above). Whatnot has never disclosed revenue: all four rounds are GMV only, and no fork offers a
+   GMV reading yet (rule B8's wiring). Both are behind the family gate.
+6. edviro: agreed and recorded. It sits in kind 3 today (AuditBoard on "automation, management").
+   When the taxonomy rule is built after the pilot, edviro falls to the archetype fallback and is
+   served other vertical software as a recorded rescue, which is exactly the instruction.
+7. ultrasonium: Mensch und Maschine, DocuSign and Roper never reached it. They appeared only in a
+   variant I measured and rejected on the morning (moving its archetype to Design & Engineering):
+   DocuSign came through on the word "contract" (Contract Manufacturing against Contract
+   Management), which is the generic-word problem again. Today its listed lane is empty and its
+   private lane is the recorded fallback. Vention ships hardware ordered through its design
+   platform ("mostly hardware revenue" in the row) and is tagged Design & Engineering, which is
+   why it can reach a manufacturer at all; a software row cannot. Nothing is broken in the engine
+   here; the pool holds no metal manufacturer.
+8. The six payments rows all carry function Finance & Payments, and the differences you name are
+   in the fields the engine reads: Slash and Moss are Card Issuing & BaaS (Slash TRANSACTION_FEE,
+   Moss PLATFORM); Zuora is billing software (Commerce & Payments Software, SEATS, ENTERPRISE);
+   Juspay is orchestration and Cashfree a gateway (both TRANSACTION_FEE, INFRA_LAYER; Juspay
+   ENTERPRISE, Cashfree SMB). BVNK swapped to Crypto & Digital Assets first, as above.
+9. Accolade is the Transcarent take-private: CONTROL, $621m, LTM revenue $446.7m to Nov-24, 1.39x,
+   marked as a control transaction on the field (rule B6) and never in a minority median.
+10. Geography: **there is no country or region field on a private row.** Finn (Germany) and Moove
+    (Africa and emerging markets, now Japan) match on Car Subscription, Owned Vehicle Fleet, EV
+    Fleet, and nothing can flag the difference. Takeover item: a `country` column on both private
+    files and a caveat in the honesty copy when it differs.
+11. Owner: the regenerated weights already took it out of fundraisly, elentaria, pazi, clarify and
+    lightfield; it stays with marble.
+12. inato: DeHaat and Vegrow reach it on "marketplace" and "network" (kind 3, recorded); Accolade,
+    Aledade, Cityblock and Tecsys on the end market alone (kind 3, recorded); Waystar and Phreesia
+    on the word "patient". Requiring the founder's primary archetype on the end-market route was
+    measured and swaps the healthcare names for Ninjacart, Glovo and Wolt, which is worse. inato has
+    no comparable in the pool. Tecsys's industry tag (Healthcare & Life Sciences) is questionable
+    for a supply-chain software company; re-tag candidate for the bulk pass.
+13. Owner and fundraisly are no longer paired (point 11). Owner cannot be paired with Toast: one is
+    a private round and the other a listed company, and the lanes never mix; the listed lane for a
+    restaurant founder already leads with Toast (marble's core: Toast, PAR, Agilysys).
+
+**Commands for Daniil** (the six new or changed files were written into your working tree over the
+bridge; no git ran):
+
+```
+cd ~/fairway-valuation && rm -f .git/index.lock && git add -A && git commit -m "StockX released (threshold ruling), BVNK swapped, check 16 guards the token weights, No-comps list kind 3, follow-ups answered
+
+Fable, 6-Sep evening. StockX gross ceiling in_medians 0 to 1 (52 rows in, 52 out). BVNK to
+Crypto & Digital Assets primary (204 in, 204 out; golden text-only move on agentcard and unifold,
+rebaselined). tools/check_token_weights.py is check 16. peer_universe_check prints kind 3:
+293 comparables across 69 fixtures admitted on generic words or the end market alone. Eight
+matcher variants measured for manifold and tash and rejected with the names each let through.
+Gate 94 of 102, golden 0 moved, only check 1 red.
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01DZUddHXsVGtwUWxWNxGgLu" && git push
+```
+
+---
+
+# Follow-ups, 6 September, late evening (Fable, 23:40 UK)
+
+**First, the push.** Origin is still at `5e518d2`. The terminal shows `git add -A` then `git push`,
+and "Everything up-to-date": the `git commit` step between them was skipped, so the files are
+staged on the Mac and nothing left it. The one command at the foot of the status document does all
+three steps. Everything from this evening, including what follows, is in that same batch.
+
+**The ceiling ruling applied throughout.** Of 320 private rounds, 84 are held out of the medians.
+Twelve carry a printed multiple with a ceiling or floor mark. Ten were held for the bound and
+nothing else and are released by `tools/apply_ceiling_ruling_6sep.py` (268 rows in, 268 out, 10
+changed): Anthropic Sep-25 (at most 36.6x) and May-26 (at most 20.5x), Databricks (at most 28.7x),
+Docker (at most 42.0x), Miro (at most 58.3x), Notion (at most 18.3x), PayFit (at most 45.5x),
+Vercel (at most 32.5x), Decagon (at most 150x), Factorial (at least 33.3x). Two stay held for a
+reason the ruling does not touch, named in the script: Perplexity Jan-24 (the valuation is
+press-reported, not company-disclosed) and Marqeta May-20 (the revenue basis is unstated). One
+flag: Factorial's field says GROSS and its own note says "corrected to NET"; released on the field,
+contradiction to the B3 audit. **27 fixtures' private ranges gain these names** (the AI and
+developer-tool founders, mostly), golden rebaselined on that reason. The other 72 held rows carry no
+multiple at all, or are duplicates, estimates, secondary-only rounds, originations multiples, or
+rows with an entity or period problem; none is a threshold case.
+
+**BVNK.** "Infrastructure" was my loose word; the label it carries has nothing to do with ports.
+On "payments / market / DeFi infrastructure" it now reads Crypto & Digital Assets first and
+Cross-Border & FX second (settlement rails), instead of Card Issuing second. Measured: BVNK enters
+trolley's and dots' private lanes (both payouts businesses) in place of dLocal and Rapyd. Three
+fixtures rebaselined (trolley, dots, agentcard's score digit).
+
+**"293 names" explained.** Not 293 companies without comparables. There are 1,117 comparable slots
+across the 102 test companies (one name sitting in one founder's lane). 294 of those slots got in
+on weak evidence: 217 on a word carried by 25 or more companies ("marketplace", "automation",
+"payments"), 77 on the end market alone with no product word in common (any healthcare company for
+inato). They are spread over 69 test companies and 116 of the 204 lanes. **Only 3 lanes rest on
+nothing else** (moov's listed lane, all payments companies sharing "payments", which is fine; smol's
+and hop-aero's private lanes, which are not). Check 8 now prints exactly this split. It is a map of
+where the evidence is thin, for the bulk pass and for the banker reading the free tier, not a
+count of failures. The names are kept because every tighter gate measured today cost real peers.
+
+**Tags for the four names: the honest answer, and what was built instead.** Product tags cannot do
+it. The family gate runs before any word is scored and reads only the archetype family and the end
+market, so no tag on Vention or Whatnot reaches it; and the five rule-level ways of opening that
+gate measured this afternoon each let wrong names through elsewhere. What works without touching
+the rest of the dataset is the thing rule A2 already does for OFX and EML, in reverse: **a named
+list on the founder's side, with a written reason each.** Built as `also_compare` on the profile
+(`selector/golden_profiles.py`): a named row passes the family gate and the relative floor for
+that founder only, sits at least ADJACENT, is marked `pinned` with the reason, and is printed by
+check 8 under PINNED BY NAME on every run. First entries, your words: manifold-robotics: Vention,
+Applied Intuition; tash: Whatnot, StockX. **Measured: exactly two fixtures change. Gate 94 to 96.**
+manifold-robotics prices Berkshire Grey 5.69x and Applied Intuition at most 37.5x on the net
+reading, Vention at least 10.0x on the gross reading; tash prices Raisin 6.43x and StockX at most
+9.5x on the gross reading, Whatnot shown and unpriced (GMV only, until a GMV reading exists).
+
+**One flake fixed on the way.** ZoomInfo's score for floqer read 5.8 in one run and 5.9 in the next:
+the word points were summed over an unordered set, whose order differs per Python process, and the
+float landed either side of a rounding boundary. Now summed in sorted order
+(`selector/match_reference.py`, `tag_overlap`); golden verified stable across three hash seeds.
+
+**Suite after all of it:** gate 96 of 102, golden 0 moved against the rebaselined fixtures,
+seventeen checks, only check 1 red. Files changed: `selector/match_reference.py`,
+`selector/golden_profiles.py`, 33 fixtures under `selector/golden/`, `data/private-rounds.csv`,
+`data/private-rounds-consumer.csv`, `data/private-companies-tags.csv`, `tools/check_all.sh`,
+`tools/peer_universe_check.py`, `tools/check_token_weights.py`, `tools/apply_ceiling_ruling_6sep.py`,
+`tools/apply_stockx_release_6sep.py`, `tools/apply_bvnk_swap_6sep.py`,
+`tools/measure_matching_variants_6sep.py`, this document and the status document.

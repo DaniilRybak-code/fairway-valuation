@@ -89,7 +89,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2
+      "ARR": 2,
+      "ARR_RUNRATE": 2
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -101,14 +102,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 20.0,
+     "high": 32.5,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.3,
-     "mid": 20.0,
-     "n": 2,
+     "mid": 20.5,
+     "n": 4,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 4
      },
      "period_span": {
       "RUN_RATE": {
@@ -120,9 +121,10 @@
      "positioning": [],
      "shared_words": [
       "api",
+      "mcp",
       "platform"
      ],
-     "spread": 1.9,
+     "spread": 3.2,
      "table": [
       {
        "company": "Oxylabs",
@@ -143,10 +145,30 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vercel",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
-     "thin": true,
+     "tag_evidence": 0.8,
+     "thin": false,
      "triangulated": false
     }
    }
@@ -807,7 +829,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "both do MCP; same type of business; same kind of customer",
     "score": 10.8,
@@ -851,7 +873,7 @@
     "bound": "<=",
     "company": "Vercel",
     "date": "May-24",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 32.5,
     "reason": "shares the language of platform; related type of business; same kind of customer; sold the same way",
     "score": 11.1,
@@ -876,7 +898,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2
+    "ARR": 2,
+    "ARR_RUNRATE": 2
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -884,14 +907,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 20.0,
+   "high": 32.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 20.0,
-   "n": 2,
+   "mid": 20.5,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 4
    },
    "period_span": {
     "RUN_RATE": {
@@ -903,9 +926,10 @@
    "positioning": [],
    "shared_words": [
     "api",
+    "mcp",
     "platform"
    ],
-   "spread": 1.9,
+   "spread": 3.2,
    "table": [
     {
      "company": "Oxylabs",
@@ -926,10 +950,30 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vercel",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": true,
+   "tag_evidence": 0.8,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 36,

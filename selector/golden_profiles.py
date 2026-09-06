@@ -846,7 +846,11 @@ REAL_3 += [
    industry='Financial Services', function='Marketplace Operations', buyer='CONSUMER', gtm_motion='PAID_ACQUISITION',
    revenue_model='TAKE_RATE', product_role='DESTINATION', asset_intensity='', purchase_frequency='REPEAT_TRANSACTION',
    ai_stance='AI_NEUTRAL', growth=None, gm=None,
-   product_tags='Collectibles Investing|Fractional Ownership|Trading Card Marketplace|Alternative Assets|Portfolio Tracking')),
+   product_tags='Collectibles Investing|Fractional Ownership|Trading Card Marketplace|Alternative Assets|Portfolio Tracking',
+   # ALSO COMPARE WITH, Daniil 6-Sep-2026: "Whatnot also seems good enough, as StockX." Both are
+   # collectibles marketplaces in the consumer family; tash is filed in fintech.
+   also_compare={'Whatnot': 'Daniil, 6 Sep 2026: collectibles and trading-card marketplace, good enough',
+                 'StockX': 'Daniil, 6 Sep 2026: collectibles resale marketplace, good enough'})),
  ('ekho-labs', 'World model for freight',
   dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Data, AI & Developer Tools',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
@@ -858,7 +862,12 @@ REAL_3 += [
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='OWN_PRODUCT', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
-   product_tags='Warehouse Robotics|Robotic Labour|Fulfilment Automation|Material Handling|Robots As A Service')),
+   product_tags='Warehouse Robotics|Robotic Labour|Fulfilment Automation|Material Handling|Robots As A Service',
+   # ALSO COMPARE WITH, Daniil 6-Sep-2026: "Berkshire grey indeed seems to be a good match for manifold.
+   # Vention also seems good enough. Applied intuition seems also good enough." Both sit in the
+   # software family (Design & Engineering) and under the relative floor set by Berkshire Grey.
+   also_compare={'Vention': 'Daniil, 6 Sep 2026: industrial automation cells and robots, good enough',
+                 'Applied Intuition': 'Daniil, 6 Sep 2026: robotics development platform, good enough'})),
  ('bizmark', 'Agentic supply chain optimization',
   dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Business Applications',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='MIDMARKET',

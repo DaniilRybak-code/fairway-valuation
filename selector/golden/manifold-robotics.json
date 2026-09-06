@@ -8,38 +8,59 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
+      "ARR": 1,
       "NET_REVENUE": 1
      },
-     "bounded": false,
+     "bounded": true,
      "closeness": "SHARED_PRODUCT",
      "control_n": 1,
      "control_names": [
       "Berkshire Grey"
      ],
-     "dispersed": false,
-     "display": "DIAMOND",
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 5.69,
+     "high": 37.5,
      "listed_target_n": 1,
      "listed_target_names": [
       "Berkshire Grey"
      ],
      "low": 5.69,
-     "mid": 5.69,
-     "n": 1,
+     "mid": 37.5,
+     "n": 2,
      "period_mix": {
-      "FY2022": 1
+      "FY2022": 1,
+      "RUN_RATE": 1
      },
      "period_span": {
       "FY2022": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Berkshire Grey",
+       "mult": 5.69,
+       "reason": "both do Warehouse Robotics, Fulfilment Automation, Material Handling; same type of business; same business function; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Applied Intuition",
+       "mult": 37.5,
+       "reason": "shares the language of robotics; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      }
+     ],
      "positioning": [],
      "shared_words": [
       "a",
@@ -55,8 +76,7 @@
       "service",
       "warehouse"
      ],
-     "sole": "Berkshire Grey",
-     "spread": 1.0,
+     "spread": 6.6,
      "table": [
       {
        "company": "Berkshire Grey",
@@ -67,9 +87,76 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Applied Intuition",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 37.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
      "tag_evidence": 12.0,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 10.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.0,
+     "mid": 10.0,
+     "n": 1,
+     "period_mix": {
+      "NOT STATED": 1
+     },
+     "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "automation",
+      "robotics"
+     ],
+     "sole": "Vention",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Vention",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.7,
      "thin": true,
      "triangulated": false
     }
@@ -441,6 +528,126 @@
     ],
     "investor": "SoftBank Group (acquirer",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "BlackRock-managed funds and accounts",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Qatar Investment Authority",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Abu Dhabi Investment Council",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Greycroft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Lux Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Bond",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Investissement Quebec",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Desjardins Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Fidelity Investments Canada",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -455,43 +662,86 @@
     "reason": "both do Warehouse Robotics, Fulfilment Automation, Material Handling; same type of business; same business function; sold the same way",
     "score": 26.5,
     "type": "CONTROL"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Applied Intuition",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 37.5,
+    "reason": "shares the language of robotics; related type of business; sold the same way; same AI stance",
+    "score": 8.6,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": ">=",
+    "company": "Vention",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of automation, robotics; related type of business; same kind of customer",
+    "score": 7.2,
+    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "DIRECT",
+  "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR": 1,
     "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 1,
    "control_names": [
     "Berkshire Grey"
    ],
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 5.69,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 37.5,
    "listed_target_n": 1,
    "listed_target_names": [
     "Berkshire Grey"
    ],
    "low": 5.69,
-   "mid": 5.69,
-   "n": 1,
+   "mid": 37.5,
+   "n": 2,
    "period_mix": {
-    "FY2022": 1
+    "FY2022": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
     "FY2022": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Berkshire Grey",
+     "mult": 5.69,
+     "reason": "both do Warehouse Robotics, Fulfilment Automation, Material Handling; same type of business; same business function; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Applied Intuition",
+     "mult": 37.5,
+     "reason": "shares the language of robotics; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "a",
@@ -507,8 +757,7 @@
     "service",
     "warehouse"
    ],
-   "sole": "Berkshire Grey",
-   "spread": 1.0,
+   "spread": 6.6,
    "table": [
     {
      "company": "Berkshire Grey",
@@ -516,6 +765,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 5.69,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Applied Intuition",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 37.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

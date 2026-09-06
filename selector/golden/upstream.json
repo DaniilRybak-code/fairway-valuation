@@ -2,13 +2,94 @@
  "expected": {
   "all_ranges": {
    "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 3
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 343216.67,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 134615.38,
+     "mid": 142857.14,
+     "n": 3,
+     "period_mix": {
+      "NTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "team",
+      "tracking"
+     ],
+     "spread": 2.5,
+     "table": [
+      {
+       "company": "Miro",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 134615.38,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Factorial",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 142857.14,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "PayFit",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 343216.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": false
+    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 1,
+      "ARR": 4,
       "NET_REVENUE": 2
      },
      "bounded": true,
@@ -27,11 +108,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 15.0,
-     "mid": 42.9,
-     "n": 3,
+     "mid": 45.5,
+     "n": 6,
      "period_mix": {
       "LTM": 2,
-      "RUN_RATE": 1
+      "RUN_RATE": 4
      },
      "period_span": {
       "LTM": {
@@ -48,8 +129,10 @@
      "shared_words": [
       "ai",
       "assistant",
+      "client",
       "email",
-      "team"
+      "team",
+      "tracking"
      ],
      "spread": 4.8,
      "table": [
@@ -59,6 +142,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Notion",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 18.3,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -74,6 +167,26 @@
        "ticker": ""
       },
       {
+       "company": "PayFit",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 45.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Miro",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 58.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Glean",
        "date": "Jun-25",
        "growth_basis": "",
@@ -84,9 +197,65 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 33.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 33.3,
+     "mid": 33.3,
+     "n": 1,
+     "period_mix": {
+      "NTM": 1
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "tracking"
+     ],
+     "sole": "Factorial",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Factorial",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.3,
+     "thin": true,
+     "triangulated": true
     }
    }
   },
@@ -617,7 +786,7 @@
     "bound": "<=",
     "company": "Notion",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 18.3,
     "reason": "both do Email Client; same type of business; same business function; same kind of customer",
     "score": 18.8,
@@ -639,7 +808,7 @@
     "bound": ">=",
     "company": "Factorial",
     "date": "Oct-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 33.3,
     "reason": "shares the language of tracking; related type of business; same kind of customer; same revenue model",
     "score": 10.3,
@@ -650,7 +819,7 @@
     "bound": "<=",
     "company": "Miro",
     "date": "Jan-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 58.3,
     "reason": "shares the language of team; same type of business; same revenue model; sold the same way",
     "score": 12.1,
@@ -661,7 +830,7 @@
     "bound": "<=",
     "company": "PayFit",
     "date": "Jan-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 45.5,
     "reason": "shares the language of tracking; related type of business; same kind of customer; same revenue model",
     "score": 10.3,
@@ -697,7 +866,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 4,
     "NET_REVENUE": 2
    },
    "bounded": true,
@@ -712,11 +881,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 15.0,
-   "mid": 42.9,
-   "n": 3,
+   "mid": 45.5,
+   "n": 6,
    "period_mix": {
     "LTM": 2,
-    "RUN_RATE": 1
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -733,8 +902,10 @@
    "shared_words": [
     "ai",
     "assistant",
+    "client",
     "email",
-    "team"
+    "team",
+    "tracking"
    ],
    "spread": 4.8,
    "table": [
@@ -744,6 +915,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Notion",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 18.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -759,6 +940,26 @@
      "ticker": ""
     },
     {
+     "company": "PayFit",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 45.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Miro",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 58.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "Glean",
      "date": "Jun-25",
      "growth_basis": "",
@@ -769,7 +970,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },

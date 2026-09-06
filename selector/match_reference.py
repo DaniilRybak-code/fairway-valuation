@@ -60,7 +60,11 @@ def tag_overlap(a, b):
     ta = set(); tb = set()
     for x in A: ta |= toks(x)
     for x in B: tb |= toks(x)
-    shared = 0.6 * sum(TOKW.get(t, 1.0) for t in (ta & tb))
+    # SUMMED IN SORTED ORDER, fixed 6-Sep-2026. A set of strings iterates in a different order in
+    # every Python process, and floating-point addition is not associative, so the same overlap
+    # summed two ways landed either side of a rounding boundary: ZoomInfo scored 5.8 for floqer in
+    # one run and 5.9 in the next, and golden reported a move that was not one.
+    shared = 0.6 * sum(TOKW.get(t, 1.0) for t in sorted(ta & tb))
     return 3.0*exact + shared
 
 def norm(t):
@@ -826,13 +830,31 @@ def balance_sheet_compatible(prof, rows):
     want = is_balance_sheet(prof)
     return [r for r in rows if is_balance_sheet(r) == want]
 
+# THE "ALSO COMPARE WITH" LIST, added 6-Sep-2026 on Daniil's question of whether a name can be let
+# through for one founder without touching the rest of the dataset. It can, and this is the only
+# way that was measured to do it. A founder profile may carry `also_compare`, a dict of company name
+# to the written reason, and a named row passes the family gate and the relative floor FOR THAT
+# FOUNDER ONLY. It is the mirror of LISTED_NOT_PRICING (rule A2): a named list with a reason each,
+# which is what stops it spreading. Five rule-level loosenings of the family gate were measured on
+# 6-Sep and every one admitted wrong names somewhere (docs/matching-refinement-6sep.md,
+# "Follow-ups"); a name pinned by a banker for one company admits nothing anywhere else. Every pin
+# is recorded in `pinned_names` and printed by tools/peer_universe_check.py on every run.
+pinned_names = []                 # (lane, founder tag signature, company, reason)
+
+
+def _pins(prof):
+    return prof.get('also_compare') or {}
+
+
 def same_family(prof, universe):
     f, ind = family_of(prof), (prof.get('industry') or '').strip()
     if not f: return universe
     bridged = ind and ind != 'Horizontal'
+    pins = _pins(prof)
     out = [r for r in universe
            if family_of(r) == f
-           or (bridged and (r.get('industry') or '').strip() == ind)]
+           or (bridged and (r.get('industry') or '').strip() == ind)
+           or r.get('company_name') in pins]
     return out or universe
 
 
@@ -983,7 +1005,7 @@ def _tier(p, r, why):
         return 'DIRECT'
     mine = {p.get('archetype'), p.get('archetype_secondary')} - {None, ''}
     theirs = {r.get('archetype'), r.get('archetype_secondary')} - {None, ''}
-    if mine & theirs:
+    if mine & theirs or r.get('company_name') in _pins(p):
         return 'ADJACENT'
     return 'BROAD'
 
@@ -1497,6 +1519,17 @@ def _select_private_strict(prof, priv, want=5, window_months=24, asof=(2026, 8))
                     break
                 ordered.pop(drop)
             ordered.append((z[0], r)); have.add(r['transaction_id'])
+    # PINNED BY NAME. A row on the founder's also_compare list joins the lane past the relative
+    # floor, from the one-round-per-company pool, marked so the reveal can say a banker put it there.
+    pins = _pins(prof)
+    if pins:
+        have = {z[1]['company_name'] for z in ordered}
+        for z in pool:
+            name = z[1]['company_name']
+            if name in pins and name not in have and z[1].get('display_gate') != 'NO_FIELD':
+                r = dict(z[1]); r['pinned'] = pins[name]
+                ordered.append((z[0], r)); have.add(name)
+                pinned_names.append(('private', _sig(prof), name, pins[name]))
     if not ordered: return [], window_months, 'NONE'
     oldest = min(c[1]['date_iso'] for c in ordered)
     y, m = int(oldest[:4]), int(oldest[5:7])
@@ -1823,6 +1856,15 @@ def _peer_groups_strict(prof, universe, scorer=None, want=5):
                 if sum(1 for y in core if _prices(y)) >= WANT_MIN:
                     break
 
+        pins = _pins(prof)
+        if pins:
+            have = {x[1]['company_name'] for x in core}
+            for x in scored:
+                name = x[1]['company_name']
+                if name in pins and name not in have:
+                    x[1]['pinned'] = pins[name]
+                    core.append(x); picked.add(id(x)); have.add(name)
+                    pinned_names.append(('listed', _sig(prof), name, pins[name]))
         room = WANT_MAX if len(core) < WANT_MIN else want
         secondary = [x for x in wide if id(x) not in picked][:room]
         return core, secondary, anchored_tier

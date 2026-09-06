@@ -2,97 +2,14 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "MERCHANTS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "MERCHANTS",
-     "basis_label": "dollars of enterprise value per merchant",
-     "basis_mix": {
-      "MERCHANTS": 2
-     },
-     "bounded": false,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "merchants",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 15384615.38,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 54166.67,
-     "mid": 15384615.38,
-     "n": 2,
-     "period_mix": {
-      "LTM": 2
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Mollie",
-       "mult": 54166.67,
-       "reason": "both do Payouts; related type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "dLocal",
-       "mult": 15384615.38,
-       "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [],
-     "shared_words": [
-      "border",
-      "cross",
-      "payments",
-      "payouts"
-     ],
-     "spread": 284.0,
-     "table": [
-      {
-       "company": "Mollie",
-       "date": "Jun-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 54166.67,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "dLocal",
-       "date": "Apr-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 15384615.38,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.6,
-     "thin": true,
-     "triangulated": false
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 1,
-      "NET_REVENUE": 2
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -104,15 +21,15 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 48.0,
+     "high": 18.75,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 8.0,
      "mid": 16.34,
      "n": 3,
      "period_mix": {
-      "LTM": 2,
-      "RUN_RATE": 1
+      "LTM": 1,
+      "RUN_RATE": 2
      },
      "period_span": {
       "LTM": {
@@ -134,7 +51,7 @@
       "payouts",
       "tax"
      ],
-     "spread": 6.0,
+     "spread": 2.3,
      "table": [
       {
        "company": "Airwallex",
@@ -157,11 +74,11 @@
        "ticker": ""
       },
       {
-       "company": "dLocal",
-       "date": "Apr-21",
+       "company": "BVNK",
+       "date": "Dec-24",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 48.0,
+       "multiple": 18.75,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -682,6 +599,36 @@
    {
     "backed": [
      {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Haun Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Coinbase Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Zepz",
       "date": "Oct-24"
      }
@@ -728,46 +675,6 @@
     ],
     "investor": "Coller Capital",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Alkeon Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "BOND",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "D1 Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -806,6 +713,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "BVNK",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 18.75,
+    "reason": "shares the language of border, cross, payments; related type of business; same business function; same revenue model",
+    "score": 12.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "Reported around round",
     "bound": "",
     "company": "Zepz",
@@ -837,17 +755,6 @@
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
     "score": 13.4,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "dLocal",
-    "date": "Apr-21",
-    "in_medians": true,
-    "mult": 48.0,
-    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 12.1,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -857,8 +764,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -866,15 +773,15 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 48.0,
+   "high": 18.75,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.0,
    "mid": 16.34,
    "n": 3,
    "period_mix": {
-    "LTM": 2,
-    "RUN_RATE": 1
+    "LTM": 1,
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -896,7 +803,7 @@
     "payouts",
     "tax"
    ],
-   "spread": 6.0,
+   "spread": 2.3,
    "table": [
     {
      "company": "Airwallex",
@@ -919,11 +826,11 @@
      "ticker": ""
     },
     {
-     "company": "dLocal",
-     "date": "Apr-21",
+     "company": "BVNK",
+     "date": "Dec-24",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 48.0,
+     "multiple": 18.75,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -933,7 +840,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 64,
+  "private_window_months": 62,
   "secondary": [
    {
     "company": "DLocal Limited",

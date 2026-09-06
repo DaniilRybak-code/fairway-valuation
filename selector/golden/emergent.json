@@ -9,7 +9,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 1,
-      "ARR_RUNRATE": 2
+      "ARR_RUNRATE": 3
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
@@ -25,10 +25,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 19.8,
-     "mid": 20.0,
-     "n": 3,
+     "mid": 20.5,
+     "n": 4,
      "period_mix": {
-      "RUN_RATE": 3
+      "RUN_RATE": 4
      },
      "period_span": {
       "RUN_RATE": {
@@ -69,6 +69,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -559,7 +569,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of ai, coding; related type of business; same kind of customer; same revenue model",
     "score": 12.6,
@@ -607,7 +617,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 3
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
@@ -619,10 +629,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 19.8,
-   "mid": 20.0,
-   "n": 3,
+   "mid": 20.5,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "RUN_RATE": {
@@ -663,6 +673,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

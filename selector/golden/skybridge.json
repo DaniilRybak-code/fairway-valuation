@@ -3,17 +3,17 @@
   "all_ranges": {
    "private": {
     "REVENUE": {
-     "anchor_dropped": true,
-     "band": "ADJACENT",
+     "anchor_dropped": false,
+     "band": "DIRECT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 1,
-      "ARR_RUNRATE": 3,
+      "ARR_RUNRATE": 4,
       "NET_REVENUE": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "SHARED_PRODUCT",
      "control_n": 1,
      "control_names": [
       "Confluent"
@@ -30,11 +30,11 @@
       "Confluent"
      ],
      "low": 9.88,
-     "mid": 20.0,
-     "n": 5,
+     "mid": 20.5,
+     "n": 6,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 5
      },
      "period_span": {
       "LTM": {
@@ -69,6 +69,13 @@
        "transaction_type": "PRIMARY"
       },
       {
+       "company": "Anthropic",
+       "mult": 20.5,
+       "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
        "company": "Lovable",
        "mult": 33.0,
        "reason": "shares the language of app; same type of business; same business function; sold the same way",
@@ -86,8 +93,12 @@
      "positioning": [],
      "shared_words": [
       "app",
+      "context",
       "developer",
+      "mcp",
+      "model",
       "open",
+      "protocol",
       "source"
      ],
      "spread": 7.4,
@@ -123,6 +134,16 @@
        "ticker": ""
       },
       {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Lovable",
        "date": "Dec-25",
        "growth_basis": "",
@@ -143,7 +164,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 4.9,
      "thin": false,
      "triangulated": false
     }
@@ -640,7 +661,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
     "score": 16.9,
@@ -715,17 +736,17 @@
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
-   "anchor_dropped": true,
-   "band": "ADJACENT",
+   "anchor_dropped": false,
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 3,
+    "ARR_RUNRATE": 4,
     "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 1,
    "control_names": [
     "Confluent"
@@ -738,11 +759,11 @@
     "Confluent"
    ],
    "low": 9.88,
-   "mid": 20.0,
-   "n": 5,
+   "mid": 20.5,
+   "n": 6,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "LTM": {
@@ -777,6 +798,13 @@
      "transaction_type": "PRIMARY"
     },
     {
+     "company": "Anthropic",
+     "mult": 20.5,
+     "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
      "company": "Lovable",
      "mult": 33.0,
      "reason": "shares the language of app; same type of business; same business function; sold the same way",
@@ -794,8 +822,12 @@
    "positioning": [],
    "shared_words": [
     "app",
+    "context",
     "developer",
+    "mcp",
+    "model",
     "open",
+    "protocol",
     "source"
    ],
    "spread": 7.4,
@@ -831,6 +863,16 @@
      "ticker": ""
     },
     {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "Lovable",
      "date": "Dec-25",
      "growth_basis": "",
@@ -851,7 +893,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 4.9,
    "thin": false,
    "triangulated": false
   },

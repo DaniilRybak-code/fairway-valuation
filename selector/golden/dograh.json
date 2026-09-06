@@ -92,7 +92,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 3,
-      "ARR_RUNRATE": 1,
+      "ARR_RUNRATE": 3,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -107,17 +107,17 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 105.3,
+     "high": 150.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
      "low": 9.88,
      "mid": 50.0,
-     "n": 5,
+     "n": 7,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 6
      },
      "period_span": {
       "LTM": {
@@ -145,6 +145,13 @@
        "transaction_type": "MIXED"
       },
       {
+       "company": "Anthropic",
+       "mult": 20.5,
+       "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
        "company": "Clay",
        "mult": 50.0,
        "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
@@ -164,6 +171,13 @@
        "reason": "both do AI Agents, Voice AI; related type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "both do AI Agents, Voice Agents; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -177,7 +191,7 @@
       "source",
       "voice"
      ],
-     "spread": 10.7,
+     "spread": 15.2,
      "table": [
       {
        "company": "Confluent",
@@ -195,6 +209,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -225,6 +249,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -762,7 +796,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
     "score": 13.7,
@@ -795,7 +829,7 @@
     "bound": "<=",
     "company": "Decagon",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 150.0,
     "reason": "both do AI Agents, Voice Agents; related type of business; same revenue model; same AI stance",
     "score": 9.1,
@@ -832,7 +866,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 3,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -843,17 +877,17 @@
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 105.3,
+   "high": 150.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
    "low": 9.88,
    "mid": 50.0,
-   "n": 5,
+   "n": 7,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 6
    },
    "period_span": {
     "LTM": {
@@ -881,6 +915,13 @@
      "transaction_type": "MIXED"
     },
     {
+     "company": "Anthropic",
+     "mult": 20.5,
+     "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
      "company": "Clay",
      "mult": 50.0,
      "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
@@ -900,6 +941,13 @@
      "reason": "both do AI Agents, Voice AI; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "both do AI Agents, Voice Agents; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -913,7 +961,7 @@
     "source",
     "voice"
    ],
-   "spread": 10.7,
+   "spread": 15.2,
    "table": [
     {
      "company": "Confluent",
@@ -931,6 +979,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -961,6 +1019,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

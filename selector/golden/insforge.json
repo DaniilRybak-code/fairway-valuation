@@ -92,7 +92,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 2,
-      "ARR_RUNRATE": 3
+      "ARR_RUNRATE": 4
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
@@ -109,9 +109,9 @@
      "listed_target_names": [],
      "low": 10.3,
      "mid": 22.5,
-     "n": 5,
+     "n": 6,
      "period_mix": {
-      "RUN_RATE": 5
+      "RUN_RATE": 6
      },
      "period_span": {
       "RUN_RATE": {
@@ -131,6 +131,13 @@
        "company": "Replit",
        "mult": 20.0,
        "reason": "both do AI Coding Agent; related type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Anthropic",
+       "mult": 20.5,
+       "reason": "both do LLM, Coding Agent; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -167,6 +174,8 @@
       "database",
       "edge",
       "functions",
+      "llm",
+      "model",
       "postgres",
       "search",
       "service",
@@ -191,6 +200,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -911,7 +930,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "both do LLM, Coding Agent; related type of business; same kind of customer; same revenue model",
     "score": 14.8,
@@ -959,7 +978,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 3
+    "ARR_RUNRATE": 4
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
@@ -972,9 +991,9 @@
    "listed_target_names": [],
    "low": 10.3,
    "mid": 22.5,
-   "n": 5,
+   "n": 6,
    "period_mix": {
-    "RUN_RATE": 5
+    "RUN_RATE": 6
    },
    "period_span": {
     "RUN_RATE": {
@@ -994,6 +1013,13 @@
      "company": "Replit",
      "mult": 20.0,
      "reason": "both do AI Coding Agent; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Anthropic",
+     "mult": 20.5,
+     "reason": "both do LLM, Coding Agent; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -1030,6 +1056,8 @@
     "database",
     "edge",
     "functions",
+    "llm",
+    "model",
     "postgres",
     "search",
     "service",
@@ -1054,6 +1082,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

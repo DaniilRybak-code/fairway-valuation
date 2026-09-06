@@ -89,7 +89,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 3,
-      "ARR_RUNRATE": 1,
+      "ARR_RUNRATE": 2,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -104,17 +104,17 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 105.3,
+     "high": 150.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Verint Systems"
      ],
      "low": 2.24,
-     "mid": 32.0,
-     "n": 5,
+     "mid": 50.0,
+     "n": 6,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 5
      },
      "period_span": {
       "LTM": {
@@ -161,6 +161,13 @@
        "reason": "both do Agentic AI; related type of business; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "shares the language of ai, automation, customer; related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -172,7 +179,7 @@
       "gtm",
       "operations"
      ],
-     "spread": 47.0,
+     "spread": 67.0,
      "table": [
       {
        "company": "Verint Systems",
@@ -220,6 +227,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -865,7 +882,7 @@
     "bound": "<=",
     "company": "Decagon",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 150.0,
     "reason": "shares the language of ai, automation, customer; related type of business; same kind of customer; sold the same way",
     "score": 11.8,
@@ -924,7 +941,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -935,17 +952,17 @@
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 105.3,
+   "high": 150.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Verint Systems"
    ],
    "low": 2.24,
-   "mid": 32.0,
-   "n": 5,
+   "mid": 50.0,
+   "n": 6,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "LTM": {
@@ -992,6 +1009,13 @@
      "reason": "both do Agentic AI; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "shares the language of ai, automation, customer; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -1003,7 +1027,7 @@
     "gtm",
     "operations"
    ],
-   "spread": 47.0,
+   "spread": 67.0,
    "table": [
     {
      "company": "Verint Systems",
@@ -1051,6 +1075,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

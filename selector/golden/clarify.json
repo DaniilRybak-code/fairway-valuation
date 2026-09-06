@@ -78,7 +78,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
+      "ARR": 3,
       "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
@@ -100,12 +100,12 @@
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 47.3,
-     "n": 4,
+     "mid": 18.3,
+     "n": 5,
      "period_mix": {
       "NOT STATED": 1,
       "NTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
       "NOT STATED": {
@@ -135,6 +135,13 @@
        "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Notion",
+       "mult": 18.3,
+       "reason": "shares the language of ai, management; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
       },
       {
        "company": "6sense",
@@ -179,6 +186,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Notion",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 18.3,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -746,7 +763,7 @@
     "bound": "<=",
     "company": "Notion",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 18.3,
     "reason": "shares the language of ai, management; related type of business; same kind of customer; same revenue model",
     "score": 13.1,
@@ -826,7 +843,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 3,
     "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
@@ -844,12 +861,12 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 47.3,
-   "n": 4,
+   "mid": 18.3,
+   "n": 5,
    "period_mix": {
     "NOT STATED": 1,
     "NTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "NOT STATED": {
@@ -879,6 +896,13 @@
      "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Notion",
+     "mult": 18.3,
+     "reason": "shares the language of ai, management; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
     },
     {
      "company": "6sense",
@@ -923,6 +947,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Notion",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 18.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

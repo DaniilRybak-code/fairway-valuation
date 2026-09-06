@@ -93,9 +93,9 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 2,
-      "ARR_RUNRATE": 2
+      "ARR_RUNRATE": 3
      },
-     "bounded": false,
+     "bounded": true,
      "closeness": "SHARED_PRODUCT",
      "control_n": 0,
      "control_names": [],
@@ -109,10 +109,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.3,
-     "mid": 33.0,
-     "n": 4,
+     "mid": 32.5,
+     "n": 5,
      "period_mix": {
-      "RUN_RATE": 4
+      "RUN_RATE": 5
      },
      "period_span": {
       "RUN_RATE": {
@@ -133,6 +133,13 @@
        "mult": 28.0,
        "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
        "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Vercel",
+       "mult": 32.5,
+       "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
@@ -178,6 +185,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 28.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vercel",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -815,7 +832,7 @@
     "bound": "<=",
     "company": "Vercel",
     "date": "May-24",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 32.5,
     "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
     "score": 13.2,
@@ -830,9 +847,9 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 2
+    "ARR_RUNRATE": 3
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
@@ -842,10 +859,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 33.0,
-   "n": 4,
+   "mid": 32.5,
+   "n": 5,
    "period_mix": {
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "RUN_RATE": {
@@ -866,6 +883,13 @@
      "mult": 28.0,
      "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
      "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Vercel",
+     "mult": 32.5,
+     "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
@@ -911,6 +935,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 28.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vercel",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

@@ -2,14 +2,97 @@
  "expected": {
   "all_ranges": {
    "private": {
+    "REGISTERED_USERS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "REGISTERED_USERS",
+     "basis_label": "dollars of enterprise value per registered user",
+     "basis_mix": {
+      "REGISTERED_USERS": 2
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "registered_users",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 3250.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 75.0,
+     "mid": 3250.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Replit",
+       "mult": 75.0,
+       "reason": "shares the language of deployment, development; related type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Vercel",
+       "mult": 3250.0,
+       "reason": "shares the language of ci, platform; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "ci",
+      "deployment",
+      "development",
+      "platform"
+     ],
+     "spread": 43.3,
+     "table": [
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 75.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vercel",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3250.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.8,
+     "thin": true,
+     "triangulated": false
+    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "DIRECT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 1,
-      "ARR_RUNRATE": 1
+      "ARR": 2,
+      "ARR_RUNRATE": 2
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
@@ -21,14 +104,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 37.5,
+     "high": 42.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 20.0,
      "mid": 37.5,
-     "n": 2,
+     "n": 4,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 4
      },
      "period_span": {
       "RUN_RATE": {
@@ -39,6 +122,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
+      "ci",
       "deployment",
       "development",
       "embedded",
@@ -48,7 +132,7 @@
       "test",
       "tooling"
      ],
-     "spread": 1.9,
+     "spread": 2.1,
      "table": [
       {
        "company": "Replit",
@@ -56,6 +140,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vercel",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -69,10 +163,20 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Docker",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 42.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
      "tag_evidence": 12.0,
-     "thin": true,
+     "thin": false,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -745,7 +849,7 @@
     "bound": "<=",
     "company": "Vercel",
     "date": "May-24",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 32.5,
     "reason": "shares the language of ci, platform; related type of business; same business function; same kind of customer",
     "score": 13.2,
@@ -756,7 +860,7 @@
     "bound": "<=",
     "company": "Docker",
     "date": "Mar-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 42.0,
     "reason": "shares the language of development; related type of business; same business function; same kind of customer",
     "score": 16.2,
@@ -770,8 +874,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
-    "ARR_RUNRATE": 1
+    "ARR": 2,
+    "ARR_RUNRATE": 2
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
@@ -779,14 +883,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 37.5,
+   "high": 42.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 20.0,
    "mid": 37.5,
-   "n": 2,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 2
+    "RUN_RATE": 4
    },
    "period_span": {
     "RUN_RATE": {
@@ -797,6 +901,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "ci",
     "deployment",
     "development",
     "embedded",
@@ -806,7 +911,7 @@
     "test",
     "tooling"
    ],
-   "spread": 1.9,
+   "spread": 2.1,
    "table": [
     {
      "company": "Replit",
@@ -814,6 +919,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vercel",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -827,10 +942,20 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Docker",
+     "date": "Mar-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 42.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
    "tag_evidence": 12.0,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
   "private_window_months": 53,

@@ -9,7 +9,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 2,
-      "ARR_RUNRATE": 2,
+      "ARR_RUNRATE": 3,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -26,11 +26,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.3,
-     "mid": 19.8,
-     "n": 5,
+     "mid": 20.0,
+     "n": 6,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 5
      },
      "period_span": {
       "LTM": {
@@ -92,6 +92,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -645,7 +655,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same AI stance",
     "score": 10.7,
@@ -715,7 +725,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 2,
+    "ARR_RUNRATE": 3,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -728,11 +738,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 19.8,
-   "n": 5,
+   "mid": 20.0,
+   "n": 6,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "LTM": {
@@ -794,6 +804,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

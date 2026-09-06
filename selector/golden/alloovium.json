@@ -8,7 +8,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4
+      "ARR": 4,
+      "ARR_RUNRATE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -20,14 +21,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 105.3,
+     "high": 150.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 15.0,
      "mid": 56.0,
-     "n": 4,
+     "n": 5,
      "period_mix": {
-      "RUN_RATE": 4
+      "RUN_RATE": 5
      },
      "period_span": {
       "RUN_RATE": {
@@ -63,6 +64,13 @@
        "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -72,7 +80,7 @@
       "intelligence",
       "review"
      ],
-     "spread": 7.0,
+     "spread": 10.0,
      "table": [
       {
        "company": "Clio",
@@ -110,6 +118,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -766,7 +784,7 @@
     "bound": "<=",
     "company": "Decagon",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 150.0,
     "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
     "score": 7.6,
@@ -824,7 +842,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4
+    "ARR": 4,
+    "ARR_RUNRATE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -832,14 +851,14 @@
    "control_names": [],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 105.3,
+   "high": 150.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 15.0,
    "mid": 56.0,
-   "n": 4,
+   "n": 5,
    "period_mix": {
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "RUN_RATE": {
@@ -875,6 +894,13 @@
      "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -884,7 +910,7 @@
     "intelligence",
     "review"
    ],
-   "spread": 7.0,
+   "spread": 10.0,
    "table": [
     {
      "company": "Clio",
@@ -922,6 +948,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

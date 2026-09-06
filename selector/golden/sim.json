@@ -90,8 +90,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
-      "ARR_RUNRATE": 1
+      "ARR": 4,
+      "ARR_RUNRATE": 3
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -103,14 +103,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 105.3,
+     "high": 150.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.3,
-     "mid": 50.0,
-     "n": 4,
+     "mid": 33.0,
+     "n": 7,
      "period_mix": {
-      "RUN_RATE": 4
+      "RUN_RATE": 7
      },
      "period_span": {
       "RUN_RATE": {
@@ -125,6 +125,20 @@
        "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
+      },
+      {
+       "company": "Notion",
+       "mult": 18.3,
+       "reason": "both do AI Agents; related type of business; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Anthropic",
+       "mult": 20.5,
+       "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       },
       {
        "company": "Lovable",
@@ -146,6 +160,13 @@
        "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -153,9 +174,10 @@
       "agent",
       "agents",
       "ai",
-      "builder"
+      "builder",
+      "workspace"
      ],
-     "spread": 10.2,
+     "spread": 14.6,
      "table": [
       {
        "company": "Oxylabs",
@@ -163,6 +185,26 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Notion",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 18.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -196,9 +238,19 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.9,
      "thin": false,
      "triangulated": false
     }
@@ -691,7 +743,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
     "score": 14.2,
@@ -724,7 +776,7 @@
     "bound": "<=",
     "company": "Decagon",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 150.0,
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
     "score": 8.9,
@@ -735,7 +787,7 @@
     "bound": "<=",
     "company": "Notion",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 18.3,
     "reason": "both do AI Agents; related type of business; sold the same way",
     "score": 8.4,
@@ -760,8 +812,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
-    "ARR_RUNRATE": 1
+    "ARR": 4,
+    "ARR_RUNRATE": 3
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -769,14 +821,14 @@
    "control_names": [],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 105.3,
+   "high": 150.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
-   "mid": 50.0,
-   "n": 4,
+   "mid": 33.0,
+   "n": 7,
    "period_mix": {
-    "RUN_RATE": 4
+    "RUN_RATE": 7
    },
    "period_span": {
     "RUN_RATE": {
@@ -791,6 +843,20 @@
      "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
+    },
+    {
+     "company": "Notion",
+     "mult": 18.3,
+     "reason": "both do AI Agents; related type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Anthropic",
+     "mult": 20.5,
+     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Lovable",
@@ -812,6 +878,13 @@
      "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -819,9 +892,10 @@
     "agent",
     "agents",
     "ai",
-    "builder"
+    "builder",
+    "workspace"
    ],
-   "spread": 10.2,
+   "spread": 14.6,
    "table": [
     {
      "company": "Oxylabs",
@@ -829,6 +903,26 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Notion",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 18.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -862,9 +956,19 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },

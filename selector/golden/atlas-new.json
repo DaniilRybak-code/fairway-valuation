@@ -93,7 +93,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 3,
-      "ARR_RUNRATE": 1,
+      "ARR_RUNRATE": 3,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -108,17 +108,17 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 105.3,
+     "high": 150.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
      "low": 4.3,
      "mid": 25.0,
-     "n": 5,
+     "n": 7,
      "period_mix": {
       "NTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 6
      },
      "period_span": {
       "NTM": {
@@ -146,6 +146,13 @@
        "transaction_type": "MIXED"
       },
       {
+       "company": "Anthropic",
+       "mult": 20.5,
+       "reason": "shares the language of agent, api; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
        "company": "Genspark",
        "mult": 25.0,
        "reason": "shares the language of agent, automation; related type of business; sold the same way; same AI stance",
@@ -165,6 +172,13 @@
        "reason": "shares the language of automation; related type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "shares the language of agent, automation; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -176,7 +190,7 @@
       "data",
       "intelligence"
      ],
-     "spread": 24.5,
+     "spread": 34.9,
      "table": [
       {
        "company": "Semrush",
@@ -194,6 +208,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -224,6 +248,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -798,7 +832,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of agent, api; same type of business; same kind of customer; same revenue model",
     "score": 14.3,
@@ -831,7 +865,7 @@
     "bound": "<=",
     "company": "Decagon",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 150.0,
     "reason": "shares the language of agent, automation; related type of business; same revenue model; same AI stance",
     "score": 8.7,
@@ -868,7 +902,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 3,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -879,17 +913,17 @@
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 105.3,
+   "high": 150.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
    "low": 4.3,
    "mid": 25.0,
-   "n": 5,
+   "n": 7,
    "period_mix": {
     "NTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 6
    },
    "period_span": {
     "NTM": {
@@ -917,6 +951,13 @@
      "transaction_type": "MIXED"
     },
     {
+     "company": "Anthropic",
+     "mult": 20.5,
+     "reason": "shares the language of agent, api; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
      "company": "Genspark",
      "mult": 25.0,
      "reason": "shares the language of agent, automation; related type of business; sold the same way; same AI stance",
@@ -936,6 +977,13 @@
      "reason": "shares the language of automation; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "shares the language of agent, automation; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -947,7 +995,7 @@
     "data",
     "intelligence"
    ],
-   "spread": 24.5,
+   "spread": 34.9,
    "table": [
     {
      "company": "Semrush",
@@ -965,6 +1013,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -995,6 +1053,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

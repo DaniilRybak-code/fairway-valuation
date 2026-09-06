@@ -9,10 +9,10 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 2,
-      "ARR_RUNRATE": 1,
+      "ARR_RUNRATE": 2,
       "NET_REVENUE": 1
      },
-     "bounded": false,
+     "bounded": true,
      "closeness": "SHARED_PRODUCT",
      "control_n": 1,
      "control_names": [
@@ -24,17 +24,17 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 20.0,
+     "high": 20.5,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
      "low": 9.88,
      "mid": 13.2,
-     "n": 4,
+     "n": 5,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 3
+      "RUN_RATE": 4
      },
      "period_span": {
       "LTM": {
@@ -55,7 +55,7 @@
       "environment",
       "execution"
      ],
-     "spread": 2.0,
+     "spread": 2.1,
      "table": [
       {
        "company": "Confluent",
@@ -93,6 +93,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -654,7 +664,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 13.6,
@@ -713,10 +723,10 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 1,
    "control_names": [
@@ -724,17 +734,17 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 20.0,
+   "high": 20.5,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
    "low": 9.88,
    "mid": 13.2,
-   "n": 4,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -755,7 +765,7 @@
     "environment",
     "execution"
    ],
-   "spread": 2.0,
+   "spread": 2.1,
    "table": [
     {
      "company": "Confluent",
@@ -793,6 +803,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

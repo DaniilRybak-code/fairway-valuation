@@ -191,6 +191,7 @@ def main():
     import match_reference as M                      # noqa: E402
     from golden_profiles import PROFILES             # noqa: E402
     del M.archetype_fallbacks[:]
+    del M.pinned_names[:]
     for _k, _l, _p in PROFILES:
         M.peer_groups(_p, M.listed)
         M.select_private(_p, M.private)
@@ -233,6 +234,72 @@ def main():
             print('   %-18s %s' % (k, reason_of[k][:96]))
     else:
         print('          None. Every fixture reached a defensible set on both lanes.')
+    # KIND 3, added 6-Sep-2026 on Daniil's afternoon follow-ups. A comparable can clear the relevance
+    # gate on evidence that is technically evidence and practically nothing: a word carried by 25 or
+    # more companies ("marketplace", "ai", "platform"), or the end market alone with no product word
+    # in common (any healthcare company for a clinical-trials marketplace). Daniil's examples:
+    # DeHaat, an agritech marketplace, shown to inato on "marketplace" and "network"; Cityblock and
+    # Tecsys shown to inato on Healthcare alone. These names are not removed here, because every
+    # tightening of the gate that was measured on 6-Sep cost real peers elsewhere (see
+    # docs/matching-refinement-6sep.md 3c). They are RECORDED, so the bulk pass can see them and a
+    # banker reading the free-tier answers can strike them.
+    def _kind3(prof, r, why):
+        route = M.relevance_route(prof, r, why)
+        A = {x.strip().lower() for x in (prof.get('product_tags') or '').split('|') if x.strip()}
+        B = {x.strip().lower() for x in (r.get('product_tags') or '').split('|') if x.strip()}
+        if A & B:
+            return None
+        shared = M.toks(prof.get('product_tags') or '') & M.toks(r.get('product_tags') or '')
+        if route == 'shared product vocabulary':
+            if max(M.TOKW.get(t, 1.0) for t in shared) <= 0.2:
+                return 'generic words: ' + ', '.join(sorted(shared))
+            return None
+        if route == 'same specific end market' and not shared:
+            return 'end market alone: ' + (prof.get('industry') or '')
+        return None
+
+    kind3 = {}
+    kind3_n = slots = words = market = lanes_touched = 0
+    bare = []
+    for _k, _l, _p in PROFILES:
+        core, _sec, _t = M.peer_groups(_p, M.listed)
+        picked, _m, _t2 = M.select_private(_p, M.private)
+        for lane, grp in (('listed', core), ('private', picked)):
+            flags = []
+            for (sc, why), r in grp:
+                slots += 1
+                tag = _kind3(_p, r, why)
+                flags.append(bool(tag))
+                if tag:
+                    kind3.setdefault(_k, []).append('%s (%s; %s)' % (r['company_name'], lane, tag))
+                    kind3_n += 1
+                    if tag.startswith('generic'):
+                        words += 1
+                    else:
+                        market += 1
+            if any(flags):
+                lanes_touched += 1
+            if flags and all(flags):
+                bare.append('%s %s' % (_k, lane))
+    print('\n  PINNED BY NAME  (the also_compare list, rule A2 in reverse: a name, a founder, a reason)')
+    if M.pinned_names:
+        for lane, sig, name, reason in sorted(set(M.pinned_names)):
+            print('   %-8s %-44s %-20s %s' % (lane, sig, name, reason[:90]))
+    else:
+        print('          None.')
+    print('\n  KIND 3  SERVED ON A GENERIC WORD OR ON THE END MARKET ALONE')
+    print('          %d of %d comparable slots (a name in a founder\'s lane) cleared the relevance gate'
+          % (kind3_n, slots))
+    print('          with no whole tag in common: %d on words carried by 25 or more companies, %d on'
+          % (words, market))
+    print('          the end market alone. %d fixtures and %d of %d lanes carry at least one.'
+          % (len(kind3), lanes_touched, 2 * len(PROFILES)))
+    print('          LANES RESTING ON NOTHING ELSE: %d%s' % (len(bare), (': ' + ', '.join(bare)) if bare else ''))
+    print('          Kept in the lanes (every tighter gate measured on 6-Sep cost real peers elsewhere);')
+    print('          recorded so the bulk pass and the banker read can see them.')
+    for k in sorted(kind3):
+        print('   %-18s %s' % (k, '; '.join(kind3[k])[:220]))
+
     print('\n  Resolved in ONE bulk pass after the 18 September march and before launch')
     print('  (rule A12 part 3). Not chased lane by lane in between.')
 

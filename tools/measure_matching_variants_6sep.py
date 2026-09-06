@@ -288,7 +288,139 @@ RETAG_ULTRASONIUM_BOTH = [(PROFILE,
    ai_stance='AI_NEUTRAL', growth=None, gm=None,
    product_tags='Additive Manufacturing""")]
 
-VARIANTS = {'retag_ultrasonium_industry': RETAG_ULTRASONIUM_INDUSTRY, 'retag_ultrasonium_both': RETAG_ULTRASONIUM_BOTH,
+# 6-Sep afternoon, Daniil's follow-ups. (a) THE FAMILY GATE NEVER BLOCKS THE SAME KIND OF BUSINESS
+# SPEAKING THE FOUNDER'S OWN LANGUAGE: a row that shares an archetype slot AND a whole tag or a rare
+# word (weight 1.0, carried by five companies or fewer) passes the family gate. Vention and Applied
+# Intuition share Design & Engineering and "robotics" with manifold; Whatnot and StockX share
+# Third-Party Marketplace and "collectibles" with tash.
+FAMILY_VOCAB = [
+    ("""    out = [r for r in universe
+           if family_of(r) == f
+           or (bridged and (r.get('industry') or '').strip() == ind)]
+    return out or universe""",
+     """    mine = {prof.get('archetype'), prof.get('archetype_secondary')} - {None, ''}
+    A = {x.strip().lower() for x in (prof.get('product_tags') or '').split('|') if x.strip()}
+    ptoks = toks(prof.get('product_tags') or '')
+
+    def _same_kind_same_words(r):
+        theirs = {r.get('archetype'), r.get('archetype_secondary')} - {None, ''}
+        if not (mine & theirs):
+            return False
+        B = {x.strip().lower() for x in (r.get('product_tags') or '').split('|') if x.strip()}
+        if A & B:
+            return True
+        shared = ptoks & toks(r.get('product_tags') or '')
+        return len(shared) >= 2 and any(t not in TOKW for t in shared)
+    out = [r for r in universe
+           if family_of(r) == f
+           or (bridged and (r.get('industry') or '').strip() == ind)
+           or _same_kind_same_words(r)]
+    return out or universe"""),
+]
+
+# (b) THE RELATIVE FLOOR IS JUDGED WITHIN A TIER. Today an ADJACENT name is cut at 45 per cent of
+# the best DIRECT score, so one excellent comparable evicts every adjacent one (Daniil, 26-Aug:
+# "one coincidence should not evict four decent comps"). Here each name is judged against the
+# best score IN ITS OWN TIER, never below the absolute floor.
+TIER_FLOOR = [
+    ("""        cut = max(FLOOR_REL * rows[0][0][0], FLOOR_ABS)
+        return [x for x in rows if x[0][0] >= cut], (only or t)""",
+     """        best = {}
+        for x in rows:
+            tt = _tier(prof, x[1], x[0][1])
+            best[tt] = max(best.get(tt, 0.0), x[0][0])
+        return [x for x in rows
+                if x[0][0] >= max(FLOOR_REL * best[_tier(prof, x[1], x[0][1])], FLOOR_ABS)], (only or t)"""),
+]
+
+# (c) THE END-MARKET ROUTE NEEDS THE FOUNDER'S PRIMARY ARCHETYPE. "Same specific end market" admits
+# any healthcare company to a clinical-trials marketplace (inato: Cityblock, Tecsys, Waystar).
+# Here the row must also carry the founder's PRIMARY archetype in either slot.
+ENDMARKET_PRIMARY = [
+    ("""    pi = (p.get('industry') or '').strip()
+    if bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip():
+        return 'same specific end market'""",
+     """    pi = (p.get('industry') or '').strip()
+    if (bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip()
+            and p.get('archetype') in (r.get('archetype'), r.get('archetype_secondary'))):
+        return 'same specific end market'"""),
+    ("""    pi = (p.get('industry') or '').strip()
+    if bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip():
+        return True""",
+     """    pi = (p.get('industry') or '').strip()
+    if (bool(pi) and pi != 'Horizontal' and pi == (r.get('industry') or '').strip()
+            and p.get('archetype') in (r.get('archetype'), r.get('archetype_secondary'))):
+        return True"""),
+]
+
+STOCKX_RELEASE = row_retag('StockX', in_medians=True)
+
+# (d) THE RESCUE ON WORDS. When the private lane still cannot price two names, reach below the
+# RELATIVE floor (never below the absolute one, never outside the pricing tiers, never through the
+# archetype fallback) for priced names that share a whole tag or a rare word with the founder.
+RESCUE_WORDS = [
+    ("""    if not ordered: return [], window_months, 'NONE'
+    oldest = min(c[1]['date_iso'] for c in ordered)""",
+     """    if sum(1 for z in ordered if _p(z)) < 2 and not _ALLOW_ARCHETYPE_FALLBACK:
+        have = {z[1]['transaction_id'] for z in ordered}
+        _A = {x.strip().lower() for x in (prof.get('product_tags') or '').split('|') if x.strip()}
+        _pt = toks(prof.get('product_tags') or '')
+
+        def _specific(r):
+            B = {x.strip().lower() for x in (r.get('product_tags') or '').split('|') if x.strip()}
+            return bool(_A & B) or any(t not in TOKW for t in (_pt & toks(r.get('product_tags') or '')))
+        deep = sorted([z for z in pool
+                       if z[1]['transaction_id'] not in have and _p(z)
+                       and z[0][0] >= FLOOR_ABS and _relevant(prof, z[1], z[0][1])
+                       and _tier(prof, z[1], z[0][1]) in PRICING_TIERS and _specific(z[1])],
+                      key=lambda z: -z[0][0])
+        for z in deep:
+            if sum(1 for y in ordered if _p(y)) >= 2:
+                break
+            r = dict(z[1]); r['topped_up'] = True; r['below_relative_floor'] = True
+            ordered.append((z[0], r)); have.add(r['transaction_id'])
+    if not ordered: return [], window_months, 'NONE'
+    oldest = min(c[1]['date_iso'] for c in ordered)"""),
+]
+
+RETAG_MANIFOLD = [(PROFILE,
+    """  dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Design & Engineering',
+   industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='OWN_PRODUCT', purchase_frequency='',""",
+    """  dict(archetype='Design & Engineering', archetype_secondary='Commerce Enablement & Fulfilment',
+   industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='OWN_PRODUCT', purchase_frequency='',""")]
+RETAG_BG = row_retag('Berkshire Grey', archetype='Design & Engineering', archetype_secondary='Commerce Enablement & Fulfilment')
+RETAG_TASH = [(PROFILE,
+    """  dict(archetype='Wealth & Capital Markets Platform', archetype_secondary='Third-Party Marketplace',
+   industry='Financial Services', function='Marketplace Operations', buyer='CONSUMER', gtm_motion='PAID_ACQUISITION',""",
+    """  dict(archetype='Third-Party Marketplace', archetype_secondary='Wealth & Capital Markets Platform',
+   industry='Financial Services', function='Marketplace Operations', buyer='CONSUMER', gtm_motion='PAID_ACQUISITION',""")]
+
+# (e) THE FOUNDER'S SECOND NATURE IS THE ROW'S FIRST. The family gate admits a row whose PRIMARY
+# archetype is the founder's declared SECONDARY archetype. The founder has said "I am also this
+# kind of business"; a row that is first and foremost that kind of business may be compared.
+FAMILY_SECONDARY = [
+    ("""    out = [r for r in universe
+           if family_of(r) == f
+           or (bridged and (r.get('industry') or '').strip() == ind)]
+    return out or universe""",
+     """    sec = (prof.get('archetype_secondary') or '').strip()
+    out = [r for r in universe
+           if family_of(r) == f
+           or (bridged and (r.get('industry') or '').strip() == ind)
+           or (sec and (r.get('archetype') or '').strip() == sec)]
+    return out or universe"""),
+]
+
+BVNK_SWAP = row_retag('BVNK', archetype='Crypto & Digital Assets', archetype_secondary='Card Issuing & BaaS')
+
+BVNK_XBORDER = row_retag('BVNK', archetype='Crypto & Digital Assets', archetype_secondary='Cross-Border & FX')
+
+VARIANTS = {'bvnk_xborder': BVNK_XBORDER, 'bvnk_swap': BVNK_SWAP, 'family_secondary': FAMILY_SECONDARY, 'retag_manifold': RETAG_MANIFOLD, 'retag_bg': RETAG_BG, 'retag_tash': RETAG_TASH,
+            'rescue_words': RESCUE_WORDS, 'family_vocab': FAMILY_VOCAB, 'tier_floor': TIER_FLOOR, 'endmarket_primary': ENDMARKET_PRIMARY,
+            'stockx_release': STOCKX_RELEASE,
+            'retag_ultrasonium_industry': RETAG_ULTRASONIUM_INDUSTRY, 'retag_ultrasonium_both': RETAG_ULTRASONIUM_BOTH,
             'lane_topup': LANE_TOPUP, 'vocab25': vocab_gate(0.2), 'vocab10': vocab_gate(0.5), 'vocab50': vocab_gate(0.1),
             'taxonomy': TAXONOMY, 'taxonomy_fallback_raw': TAXONOMY_FALLBACK_RAW,
             'retag_ultrasonium': RETAG_ULTRASONIUM, 'retag_apollo': RETAG_APOLLO,

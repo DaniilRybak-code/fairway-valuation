@@ -89,7 +89,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 1,
+      "ARR_RUNRATE": 2,
       "NET_REVENUE": 2
      },
      "bounded": true,
@@ -106,11 +106,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 8.0,
-     "mid": 16.34,
-     "n": 3,
+     "mid": 18.75,
+     "n": 4,
      "period_mix": {
       "LTM": 2,
-      "RUN_RATE": 1
+      "RUN_RATE": 2
      },
      "period_span": {
       "LTM": {
@@ -154,6 +154,16 @@
        "ticker": ""
       },
       {
+       "company": "BVNK",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 18.75,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "dLocal",
        "date": "Apr-21",
        "growth_basis": "",
@@ -174,7 +184,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 4
+      "REVENUE_GROSS": 3
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -191,10 +201,10 @@
      "listed_target_names": [],
      "low": 9.52,
      "mid": 44.34,
-     "n": 4,
+     "n": 3,
      "period_mix": {
       "FY2024": 1,
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "FY2024": {
@@ -222,16 +232,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 9.52,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Rapyd",
-       "date": "Jan-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 25.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -574,6 +574,40 @@
    {
     "backed": [
      {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Haun Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Coinbase Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "BVNK",
+      "date": "Dec-24"
+     },
+     {
+      "company": "dLocal",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
       "company": "dLocal",
       "date": "Apr-21"
      }
@@ -599,16 +633,6 @@
      }
     ],
     "investor": "D1 Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Tiger Global",
     "n": 1
    }
   ],
@@ -648,6 +672,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "BVNK",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 18.75,
+    "reason": "both do Payments API; related type of business; same business function; same revenue model",
+    "score": 12.2,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "UK entity revenue",
     "bound": "",
     "company": "Checkout.com",
@@ -679,17 +714,6 @@
     "reason": "shares the language of payments, payouts; same type of business; same business function; same AI stance",
     "score": 11.9,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "FY2020 unclear whether closed",
-    "bound": "",
-    "company": "Rapyd",
-    "date": "Jan-21",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 13.4,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -699,7 +723,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 2
    },
    "bounded": true,
@@ -712,11 +736,11 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.0,
-   "mid": 16.34,
-   "n": 3,
+   "mid": 18.75,
+   "n": 4,
    "period_mix": {
     "LTM": 2,
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "LTM": {
@@ -760,6 +784,16 @@
      "ticker": ""
     },
     {
+     "company": "BVNK",
+     "date": "Dec-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 18.75,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "dLocal",
      "date": "Apr-21",
      "growth_basis": "",
@@ -774,7 +808,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 67,
+  "private_window_months": 64,
   "secondary": [
    {
     "company": "WEX Inc.",

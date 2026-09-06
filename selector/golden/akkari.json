@@ -77,7 +77,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4
+      "ARR": 4,
+      "ARR_RUNRATE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -85,20 +86,20 @@
      "control_names": [
       "Salesloft"
      ],
-     "dispersed": false,
-     "display": "RANGE",
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 105.3,
+     "high": 150.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 23.0,
      "mid": 50.0,
-     "n": 4,
+     "n": 5,
      "period_mix": {
-      "RUN_RATE": 4
+      "RUN_RATE": 5
      },
      "period_span": {
       "RUN_RATE": {
@@ -106,7 +107,43 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Owner",
+       "mult": 23.0,
+       "reason": "shares the language of ai, operations; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Salesloft",
+       "mult": 23.0,
+       "reason": "shares the language of automation; same type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of agents, ai, automation; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Sierra",
+       "mult": 105.3,
+       "reason": "both do AI Agents, Customer Service Automation, Deflection; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "both do AI Agents, Customer Support Automation; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
       "agents",
@@ -115,9 +152,10 @@
       "customer",
       "deflection",
       "operations",
-      "service"
+      "service",
+      "support"
      ],
-     "spread": 4.6,
+     "spread": 6.5,
      "table": [
       {
        "company": "Owner",
@@ -155,6 +193,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -662,7 +710,7 @@
     "bound": "<=",
     "company": "Decagon",
     "date": "Jan-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 150.0,
     "reason": "both do AI Agents, Customer Support Automation; same type of business; same kind of customer; same revenue model",
     "score": 14.9,
@@ -698,7 +746,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4
+    "ARR": 4,
+    "ARR_RUNRATE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -706,16 +755,16 @@
    "control_names": [
     "Salesloft"
    ],
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 105.3,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 150.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 23.0,
    "mid": 50.0,
-   "n": 4,
+   "n": 5,
    "period_mix": {
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "RUN_RATE": {
@@ -723,7 +772,43 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Owner",
+     "mult": 23.0,
+     "reason": "shares the language of ai, operations; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Salesloft",
+     "mult": 23.0,
+     "reason": "shares the language of automation; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of agents, ai, automation; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Sierra",
+     "mult": 105.3,
+     "reason": "both do AI Agents, Customer Service Automation, Deflection; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "both do AI Agents, Customer Support Automation; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "agents",
@@ -732,9 +817,10 @@
     "customer",
     "deflection",
     "operations",
-    "service"
+    "service",
+    "support"
    ],
-   "spread": 4.6,
+   "spread": 6.5,
    "table": [
     {
      "company": "Owner",
@@ -772,6 +858,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

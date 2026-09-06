@@ -2,13 +2,99 @@
  "expected": {
   "all_ranges": {
    "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 2333333.33,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 37500.0,
+     "mid": 2333333.33,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 1,
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Docker",
+       "mult": 37500.0,
+       "reason": "shares the language of runtime; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "dbt Labs",
+       "mult": 2333333.33,
+       "reason": "shares the language of control; same type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "control",
+      "runtime"
+     ],
+     "spread": 62.2,
+     "table": [
+      {
+       "company": "Docker",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 37500.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "dbt Labs",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2333333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": false
+    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 1,
+      "ARR": 2,
       "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
@@ -24,17 +110,17 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 37.5,
+     "high": 42.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
      "low": 9.88,
-     "mid": 33.0,
-     "n": 3,
+     "mid": 37.5,
+     "n": 4,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
       "LTM": {
@@ -52,10 +138,11 @@
       "ai",
       "infrastructure",
       "robotics",
+      "runtime",
       "sensor",
       "stack"
      ],
-     "spread": 3.8,
+     "spread": 4.3,
      "table": [
       {
        "company": "Confluent",
@@ -83,6 +170,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 37.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Docker",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 42.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -713,7 +810,7 @@
     "bound": "<=",
     "company": "Docker",
     "date": "Mar-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 42.0,
     "reason": "shares the language of runtime; same type of business; same business function; same kind of customer",
     "score": 12.1,
@@ -738,7 +835,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
@@ -750,17 +847,17 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 37.5,
+   "high": 42.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
    "low": 9.88,
-   "mid": 33.0,
-   "n": 3,
+   "mid": 37.5,
+   "n": 4,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -778,10 +875,11 @@
     "ai",
     "infrastructure",
     "robotics",
+    "runtime",
     "sensor",
     "stack"
    ],
-   "spread": 3.8,
+   "spread": 4.3,
    "table": [
     {
      "company": "Confluent",
@@ -809,6 +907,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 37.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Docker",
+     "date": "Mar-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 42.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""

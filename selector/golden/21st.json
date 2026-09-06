@@ -2,17 +2,98 @@
  "expected": {
   "all_ranges": {
    "private": {
+    "REGISTERED_USERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REGISTERED_USERS",
+     "basis_label": "dollars of enterprise value per registered user",
+     "basis_mix": {
+      "REGISTERED_USERS": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "registered_users",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 3250.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 175.0,
+     "mid": 3250.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Canva",
+       "mult": 175.0,
+       "reason": "shares the language of design; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Vercel",
+       "mult": 3250.0,
+       "reason": "shares the language of frontend; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "design",
+      "frontend"
+     ],
+     "spread": 18.6,
+     "table": [
+      {
+       "company": "Canva",
+       "date": "Aug-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 175.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vercel",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3250.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": false
+    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
-      "ARR_RUNRATE": 1
+      "ARR": 3,
+      "ARR_RUNRATE": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -21,14 +102,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 40.0,
+     "high": 42.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 12.7,
-     "mid": 17.9,
-     "n": 3,
+     "mid": 32.5,
+     "n": 5,
      "period_mix": {
-      "RUN_RATE": 3
+      "RUN_RATE": 5
      },
      "period_span": {
       "RUN_RATE": {
@@ -39,11 +120,14 @@
      "points": [],
      "positioning": [],
      "shared_words": [
+      "building",
       "design",
+      "frontend",
+      "registry",
       "system",
       "ui"
      ],
-     "spread": 3.1,
+     "spread": 3.3,
      "table": [
       {
        "company": "Canva",
@@ -66,6 +150,16 @@
        "ticker": ""
       },
       {
+       "company": "Vercel",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Framer",
        "date": "Aug-25",
        "growth_basis": "",
@@ -74,9 +168,19 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Docker",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 42.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 1.2,
      "thin": false,
      "triangulated": false
     },
@@ -705,7 +809,7 @@
     "bound": "<=",
     "company": "Vercel",
     "date": "May-24",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 32.5,
     "reason": "shares the language of frontend; related type of business; same business function; same kind of customer",
     "score": 15.1,
@@ -716,7 +820,7 @@
     "bound": "<=",
     "company": "Docker",
     "date": "Mar-22",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 42.0,
     "reason": "shares the language of building, registry; related type of business; same business function; same kind of customer",
     "score": 18.7,
@@ -730,23 +834,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 1
+    "ARR": 3,
+    "ARR_RUNRATE": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 40.0,
+   "high": 42.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 12.7,
-   "mid": 17.9,
-   "n": 3,
+   "mid": 32.5,
+   "n": 5,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 5
    },
    "period_span": {
     "RUN_RATE": {
@@ -757,11 +861,14 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "building",
     "design",
+    "frontend",
+    "registry",
     "system",
     "ui"
    ],
-   "spread": 3.1,
+   "spread": 3.3,
    "table": [
     {
      "company": "Canva",
@@ -784,6 +891,16 @@
      "ticker": ""
     },
     {
+     "company": "Vercel",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "Framer",
      "date": "Aug-25",
      "growth_basis": "",
@@ -792,9 +909,19 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Docker",
+     "date": "Mar-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 42.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
   },

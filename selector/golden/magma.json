@@ -9,10 +9,10 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 1,
-      "ARR_RUNRATE": 1,
+      "ARR_RUNRATE": 2,
       "NET_REVENUE": 2
      },
-     "bounded": false,
+     "bounded": true,
      "closeness": "STRONG_OVERLAP",
      "control_n": 1,
      "control_names": [
@@ -24,16 +24,16 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 20.0,
+     "high": 20.5,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.3,
      "mid": 14.9,
-     "n": 4,
+     "n": 5,
      "period_mix": {
       "LTM": 1,
       "NTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
       "LTM": {
@@ -55,10 +55,11 @@
       "agent",
       "data",
       "evaluation",
+      "llm",
       "model",
       "training"
      ],
-     "spread": 1.9,
+     "spread": 2.0,
      "table": [
       {
        "company": "Oxylabs",
@@ -96,6 +97,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -582,7 +593,7 @@
     "bound": "<=",
     "company": "Anthropic",
     "date": "May-26",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 20.5,
     "reason": "both do LLM; same type of business; same kind of customer; same revenue model",
     "score": 16.1,
@@ -652,10 +663,10 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 1,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 2
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
@@ -663,16 +674,16 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 20.0,
+   "high": 20.5,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.3,
    "mid": 14.9,
-   "n": 4,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -694,10 +705,11 @@
     "agent",
     "data",
     "evaluation",
+    "llm",
     "model",
     "training"
    ],
-   "spread": 1.9,
+   "spread": 2.0,
    "table": [
     {
      "company": "Oxylabs",
@@ -735,6 +747,16 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
