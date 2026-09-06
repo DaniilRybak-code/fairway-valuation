@@ -1,11 +1,17 @@
-# Public pull, 4 September 2026: read and verdicts
+# Public pull of 16 names: read and verdicts
+
+**Date corrected 5 September 2026, in the audit of the day's log.** This document and the raw file
+it describes were both written on **5 September**, not 4 September: they first exist in commit
+`224ec60`, made at 21:28 UK on 5 September, and no earlier commit contains either of them. The file
+name keeps `4sep` because the MANIFEST, check 1 and the status document all point at it by that
+name; the date is corrected here rather than by renaming four references.
 
 16 rows received as a screenshot of `I_Public_Comps` rows 508 to 523.
 
 **THERE WILL BE NO CSV.** The pull runs in a separate sandbox and cannot be exported, so a
 transcription is the only record there will ever be. It is written down:
-`data/raw/2026-09-04_public-pull-16-names.csv`, 16 rows, transcribed column by column at 21:45 UK on
-4 September, with a MANIFEST row. This is a standing change to D1 for this pull route: where a
+`data/raw/2026-09-04_public-pull-16-names.csv`, 16 rows, transcribed column by column on
+5 September, with a MANIFEST row. This is a standing change to D1 for this pull route: where a
 screenshot is the only possible delivery, the transcription IS the raw file, and it is written
 before anything else happens.
 
@@ -106,3 +112,54 @@ Verisk (8.7x revenue, 12.4x gross profit, 18 estimates), ExlService (2.3x / 5.9x
 
 Send the CSV. On arrival: `check_raw_coverage`, then the tag rows (I write those), then
 `FAIRWAY_NO_GIT=1 sh tools/check_all.sh`, then a golden diff read before anything is committed.
+
+---
+
+## The growth definition, settled 6 September 2026
+
+**This was the last thing blocking the load.** The raw file's header said: "This screen gives CY+1,
+CY+2 and CY+3 year-on-year plus a CY+1 to CY+3 CAGR. The engine's existing listed column is a CY+0
+to CY+2 CAGR. These are NOT the same measure and must not be loaded into the same column."
+
+**Daniil, 6 September:** "CY+1 to CY+3 growth is a CAGR of CY+1 to CY+3. It is 2026, so in our case
+it is 2026 to 2028."
+
+So on the screens he pulls, **CY+1 is the current year**. CY+1 to CY+3 is then the current year plus
+two, which is the same window as CY+0 to CY+2 on a screen that calls the current year CY+0. Two
+naming conventions, one measure.
+
+**The arithmetic agrees, and it was tested rather than assumed.** This pull carries the year-on-year
+series and the CAGR side by side, so the window can be recovered from the numbers:
+
+| what was compounded | reproduces the printed CAGR on |
+|---|---|
+| the CY+2 and CY+3 yearly rates (two years, starting from the CY+1 level) | **16 of 16 rows** |
+| the CY+1, CY+2 and CY+3 yearly rates (three years) | 2 of 16 |
+| the CY+1 and CY+2 yearly rates (two years, starting from the CY+0 level) | 2 of 16 |
+
+Tolerance 0.35 of a percentage point, which is what rounding on the printed inputs allows. The
+first row is exact on every name including the two that shrink (Skillsoft, LivePerson) and the one
+that is flat (Claritev), so it is not an artefact of a narrow spread.
+
+**CORRECTION, 6 September, and it is mine.** The paragraph above is right about THIS SCREEN and
+the sentence that followed it was not. I wrote that the two CAGRs are therefore the same window
+under two names. That assumed the software and fintech files' CY+0 is the same calendar year as
+this screen's CY+1, and nothing supported it. Measured properly against the revenue LEVELS stored
+in the same rows: the ecommerce file's CY1-CY3 CAGR reconciles with `revenue_local_cy1` to
+`revenue_local_cy3` on 73 of 73 and with cy0 to cy2 on 10 of 74; the software file's CY0-CY2 CAGR
+reconciles with `revenue_local_cy0` to `revenue_local_cy2` on 164 of 167 and fintech on 83 of 84;
+and cy0 differs from cy1 on every row carrying both. **So in our own files the two columns are
+anchored a year apart.** Which calendar year each screen calls CY+0 cannot be settled from inside
+the data: only two companies sit in both files and neither carries the levels needed to line them
+up. The load is still unblocked, because this pull's CAGR goes into the `cy1_cy3` column either
+way; what is not settled is whether the software and fintech CAGRs are a year behind, and the
+answer to that is Daniil's single-source reload.
+
+**What this means for the load.** The CAGR goes into `revenue_growth_cagr_cy1_cy3_pct`, the column
+the loader already reads and which 72 ecommerce rows already use. Those rows get `g_basis` of
+`CAGR_CY1_CY3`, which is already accepted and already ranks a peer. No new column, no code change,
+and the label still records which screen the number came from.
+
+**One correction that follows.** The comment in `match_reference.py` describing the two CAGRs as
+"anchored a year apart" and "NOT the same measure" was wrong, and it has been corrected with this
+measurement written into it. Nothing downstream was broken by it: `g_rank` already accepted both.

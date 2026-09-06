@@ -1,5 +1,94 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 2
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 2,
+     "control_names": [
+      "E2open",
+      "Berkshire Grey"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.69,
+     "listed_target_n": 2,
+     "listed_target_names": [
+      "E2open",
+      "Berkshire Grey"
+     ],
+     "low": 3.46,
+     "mid": 5.69,
+     "n": 2,
+     "period_mix": {
+      "FY2022": 1,
+      "FY2025": 1
+     },
+     "period_span": {
+      "FY2022": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "automation",
+      "chain",
+      "demand",
+      "inventory",
+      "management",
+      "optimisation",
+      "planning",
+      "procurement",
+      "supplier",
+      "supply"
+     ],
+     "spread": 1.6,
+     "table": [
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.46,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Berkshire Grey",
+       "date": "Mar-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.69,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 9.6,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "United Parcel Service",
@@ -149,8 +238,8 @@
    "table": [
     {
      "company": "Sinotrans Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.6,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -158,7 +247,7 @@
     },
     {
      "company": "Radiant Logistics, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 5.0,
      "multiple": 0.4,
      "recurring_pct": null,
@@ -167,8 +256,8 @@
     },
     {
      "company": "S.F. Holding Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -176,7 +265,7 @@
     },
     {
      "company": "STEF SA",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 3.0,
      "multiple": 0.6,
      "recurring_pct": null,
@@ -185,8 +274,8 @@
     },
     {
      "company": "United Parcel Service",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.5,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -194,8 +283,8 @@
     },
     {
      "company": "Expeditors International",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.9,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -203,8 +292,8 @@
     },
     {
      "company": "Delhivery Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.6,
      "multiple": 2.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -456,6 +545,28 @@
     "supply"
    ],
    "spread": 1.6,
+   "table": [
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.46,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Berkshire Grey",
+     "date": "Mar-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.69,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 9.6,
    "thin": true,
    "triangulated": false
@@ -542,8 +653,8 @@
    "table": [
     {
      "company": "Lindsay Australia Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.4,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -551,8 +662,8 @@
     },
     {
      "company": "Lineage, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.8,
      "multiple": 3.3,
      "recurring_pct": null,
      "retention_pct": null,

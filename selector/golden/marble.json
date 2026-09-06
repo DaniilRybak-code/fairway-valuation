@@ -1,5 +1,106 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 23.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.0,
+     "mid": 12.5,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "NOT STATED": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "automation",
+      "back",
+      "cost",
+      "food",
+      "inventory",
+      "invoice",
+      "management",
+      "office",
+      "operations",
+      "ordering",
+      "restaurant",
+      "vendor"
+     ],
+     "spread": 2.3,
+     "table": [
+      {
+       "company": "Restaurant365",
+       "date": "May-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mews",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 12.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Owner",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 12.0,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Toast, Inc.",
@@ -85,8 +186,8 @@
    "table": [
     {
      "company": "PAR Technology Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 13.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.0,
      "multiple": 2.0,
      "recurring_pct": 63.3,
      "retention_pct": null,
@@ -94,8 +195,8 @@
     },
     {
      "company": "Toast, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.9,
      "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -103,8 +204,8 @@
     },
     {
      "company": "Agilysys, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.4,
      "multiple": 7.7,
      "recurring_pct": 64.5,
      "retention_pct": null,
@@ -534,6 +635,38 @@
     "vendor"
    ],
    "spread": 2.3,
+   "table": [
+    {
+     "company": "Restaurant365",
+     "date": "May-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Mews",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 12.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Owner",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 12.0,
    "thin": false,
    "triangulated": false
@@ -661,8 +794,8 @@
    "table": [
     {
      "company": "Lightspeed Commerce Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.8,
      "multiple": 0.7,
      "recurring_pct": 30.2,
      "retention_pct": null,
@@ -670,8 +803,8 @@
     },
     {
      "company": "NCR Voyix Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": -10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.1,
      "multiple": 1.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -679,8 +812,8 @@
     },
     {
      "company": "SPS Commerce, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.7,
      "multiple": 3.4,
      "recurring_pct": 96.0,
      "retention_pct": null,
@@ -688,8 +821,8 @@
     },
     {
      "company": "Intapp, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.4,
      "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": 123.0,

@@ -1,5 +1,151 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 5
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 2,
+     "control_names": [
+      "E2open",
+      "Wolt"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 44.12,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "E2open"
+     ],
+     "low": 3.46,
+     "mid": 8.94,
+     "n": 5,
+     "period_mix": {
+      "FY2025": 1,
+      "LTM": 4
+     },
+     "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "E2open",
+       "mult": 3.46,
+       "reason": "shares the language of logistics; related type of business; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Delhivery",
+       "mult": 5.97,
+       "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Xpressbees",
+       "mult": 8.94,
+       "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Wolt",
+       "mult": 23.5,
+       "reason": "shares the language of delivery; same type of business; same business function",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Gopuff",
+       "mult": 44.12,
+       "reason": "shares the language of delivery; same type of business; same business function",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "delivery",
+      "logistics"
+     ],
+     "spread": 12.8,
+     "table": [
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.46,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Delhivery",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.97,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Xpressbees",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.94,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Wolt",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Gopuff",
+       "date": "Jul-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 44.12,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.5,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "FedEx Corporation",
@@ -149,8 +295,8 @@
    "table": [
     {
      "company": "PostNL N.V.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -158,8 +304,8 @@
     },
     {
      "company": "S.F. Holding Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -167,7 +313,7 @@
     },
     {
      "company": "SG Holdings Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 4.0,
      "multiple": 0.7,
      "recurring_pct": null,
@@ -176,8 +322,8 @@
     },
     {
      "company": "Deutsche Post AG",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -185,8 +331,8 @@
     },
     {
      "company": "FedEx Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.8,
      "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -194,8 +340,8 @@
     },
     {
      "company": "United Parcel Service",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.5,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -203,8 +349,8 @@
     },
     {
      "company": "Delhivery Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.6,
      "multiple": 2.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -762,6 +908,58 @@
     "logistics"
    ],
    "spread": 12.8,
+   "table": [
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.46,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Delhivery",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.97,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Xpressbees",
+     "date": "Feb-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 8.94,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Wolt",
+     "date": "Nov-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Gopuff",
+     "date": "Jul-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 44.12,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
@@ -887,8 +1085,8 @@
    "table": [
     {
      "company": "Grupo Traxion, S.A.B. de C.V.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
      "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -896,8 +1094,8 @@
     },
     {
      "company": "Pkp Cargo S.A.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.3,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -905,8 +1103,8 @@
     },
     {
      "company": "J&T Global Express Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.5,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -914,8 +1112,8 @@
     },
     {
      "company": "Blue Dart Express Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.0,
      "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -923,8 +1121,8 @@
     },
     {
      "company": "Mitsubishi Logistics",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.0,
      "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": null,

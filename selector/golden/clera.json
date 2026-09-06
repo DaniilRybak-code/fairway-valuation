@@ -1,5 +1,81 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 22.22,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.0,
+     "mid": 22.22,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "applicant",
+      "automation",
+      "candidate",
+      "interview",
+      "matching",
+      "recruiting",
+      "screening",
+      "talent"
+     ],
+     "spread": 2.2,
+     "table": [
+      {
+       "company": "Micro1",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mercor",
+       "date": "Oct-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 22.22,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 12.0,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Upwork Inc.",
@@ -68,7 +144,7 @@
     {
      "company": "Upwork Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.0,
+     "growth_pct": 2.9,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -76,8 +152,8 @@
     },
     {
      "company": "Visional, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.1,
      "multiple": 2.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -85,8 +161,8 @@
     },
     {
      "company": "SMS Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.7,
      "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,

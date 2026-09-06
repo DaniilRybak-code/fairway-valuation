@@ -91,8 +91,8 @@
      "table": [
       {
        "company": "Velocity Financial, Inc.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 16.3,
        "multiple": 0.8,
        "recurring_pct": null,
        "retention_pct": null,
@@ -100,8 +100,8 @@
       },
       {
        "company": "Inter & Co, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 24.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 18.9,
        "multiple": 1.0,
        "recurring_pct": null,
        "retention_pct": null,
@@ -118,8 +118,8 @@
       },
       {
        "company": "SoFi Technologies, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 31.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 23.3,
        "multiple": 1.8,
        "recurring_pct": null,
        "retention_pct": null,
@@ -127,8 +127,8 @@
       },
       {
        "company": "Nu Holdings Ltd.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 32.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 23.3,
        "multiple": 3.8,
        "recurring_pct": null,
        "retention_pct": null,
@@ -136,8 +136,8 @@
       },
       {
        "company": "Chime Financial, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 23.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 18.8,
        "multiple": 6.2,
        "recurring_pct": null,
        "retention_pct": null,
@@ -194,8 +194,8 @@
      "table": [
       {
        "company": "Velocity Financial, Inc.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 16.3,
        "multiple": 6.1,
        "recurring_pct": null,
        "retention_pct": null,
@@ -203,8 +203,8 @@
       },
       {
        "company": "Inter & Co, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 24.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 18.9,
        "multiple": 6.2,
        "recurring_pct": null,
        "retention_pct": null,
@@ -221,8 +221,8 @@
       },
       {
        "company": "Nu Holdings Ltd.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 32.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 23.3,
        "multiple": 13.6,
        "recurring_pct": null,
        "retention_pct": null,
@@ -230,8 +230,8 @@
       },
       {
        "company": "SoFi Technologies, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 31.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 23.3,
        "multiple": 21.4,
        "recurring_pct": null,
        "retention_pct": null,
@@ -285,6 +285,18 @@
      ],
      "sole": "Zopa",
      "spread": 1.0,
+     "table": [
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.9,
      "thin": true,
      "triangulated": false
@@ -334,8 +346,112 @@
       "uk"
      ],
      "spread": 1.8,
+     "table": [
+      {
+       "company": "Atom Bank",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.9,
      "thin": true,
+     "triangulated": false
+    },
+    "CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "CUSTOMERS",
+     "basis_label": "dollars of enterprise value per consumer customer",
+     "basis_mix": {
+      "CUSTOMERS": 3
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 2060.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 577.78,
+     "mid": 2000.0,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1,
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "bank",
+      "uk"
+     ],
+     "spread": 3.6,
+     "table": [
+      {
+       "company": "Monzo",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 577.78,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Zilch",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2060.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.9,
+     "thin": false,
      "triangulated": false
     }
    }
@@ -474,8 +590,8 @@
    "table": [
     {
      "company": "Velocity Financial, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.3,
      "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -483,8 +599,8 @@
     },
     {
      "company": "Inter & Co, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 24.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.9,
      "multiple": 1.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -501,8 +617,8 @@
     },
     {
      "company": "SoFi Technologies, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.3,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -510,8 +626,8 @@
     },
     {
      "company": "Nu Holdings Ltd.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 32.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.3,
      "multiple": 3.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -519,8 +635,8 @@
     },
     {
      "company": "Chime Financial, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.8,
      "multiple": 6.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -936,6 +1052,28 @@
     "uk"
    ],
    "spread": 1.8,
+   "table": [
+    {
+     "company": "Atom Bank",
+     "date": "Feb-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.17,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Zopa",
+     "date": "Oct-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.9,
    "thin": true,
    "triangulated": false
@@ -1026,8 +1164,8 @@
    "table": [
     {
      "company": "Onity Group Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.5,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -1035,8 +1173,8 @@
     },
     {
      "company": "PennyMac Financial Services, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
      "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -1044,8 +1182,8 @@
     },
     {
      "company": "Pepper Money Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.7,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -1053,8 +1191,8 @@
     },
     {
      "company": "S&U plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.8,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -1062,8 +1200,8 @@
     },
     {
      "company": "Cembra Money Bank AG",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.9,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,

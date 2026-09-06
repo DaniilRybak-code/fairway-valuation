@@ -1,5 +1,155 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 50.0,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 23.0,
+     "n": 5,
+     "period_mix": {
+      "LTM": 1,
+      "NTM": 1,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "shares the language of ai; same type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Plaid",
+       "mult": 12.2,
+       "reason": "related type of business; same end market",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Owner",
+       "mult": 23.0,
+       "reason": "shares the language of ai; related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Jasper",
+       "mult": 33.3,
+       "reason": "shares the language of ai; same type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of ai; same type of business; same business function; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "ai"
+     ],
+     "spread": 11.6,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Plaid",
+       "date": "Apr-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 12.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Owner",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": false,
+     "triangulated": true
+    }
+   }
+  },
   "core": [
    {
     "company": "CRISIL Limited",
@@ -97,8 +247,8 @@
    "table": [
     {
      "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.0,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": 102.0,
@@ -106,8 +256,8 @@
     },
     {
      "company": "Morningstar, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.9,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -115,8 +265,8 @@
     },
     {
      "company": "FactSet Research Systems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.8,
      "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -124,8 +274,8 @@
     },
     {
      "company": "CRISIL Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.1,
      "multiple": 7.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -133,8 +283,8 @@
     },
     {
      "company": "S&P Global Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
      "multiple": 9.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -142,8 +292,8 @@
     },
     {
      "company": "Moody's Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
      "multiple": 10.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -151,8 +301,8 @@
     },
     {
      "company": "MSCI Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.5,
      "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -659,6 +809,58 @@
     "ai"
    ],
    "spread": 11.6,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Plaid",
+     "date": "Apr-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 12.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Owner",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Jasper",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -758,8 +960,8 @@
    "table": [
     {
      "company": "Clarkson PLC",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.5,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -767,8 +969,8 @@
     },
     {
      "company": "London Stock Exchange Group plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.9,
      "multiple": 5.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -776,8 +978,8 @@
     },
     {
      "company": "Deutsche Boerse AG",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.4,
      "multiple": 8.3,
      "recurring_pct": null,
      "retention_pct": null,

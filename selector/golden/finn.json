@@ -1,5 +1,169 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 10.1,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 2.75,
+     "mid": 5.0,
+     "n": 3,
+     "period_mix": {
+      "FY2025": 1,
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "alternative",
+      "car",
+      "ev",
+      "fleet",
+      "owned",
+      "ownership",
+      "subscription",
+      "to",
+      "vehicle"
+     ],
+     "spread": 3.7,
+     "table": [
+      {
+       "company": "Spinny",
+       "date": "Mar-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2.75,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Moove",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Quince",
+       "date": "Mar-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 11.4,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 4.15,
+     "mid": 5.5,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ev",
+      "owned"
+     ],
+     "spread": 1.3,
+     "table": [
+      {
+       "company": "Packable",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.15,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Enpal",
+       "date": "Jan-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Carvana Co.",
@@ -112,8 +276,8 @@
    "table": [
     {
      "company": "AUTO1 Group SE",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.5,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -536,6 +700,38 @@
     "vehicle"
    ],
    "spread": 3.7,
+   "table": [
+    {
+     "company": "Spinny",
+     "date": "Mar-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 2.75,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Moove",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Quince",
+     "date": "Mar-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 11.4,
    "thin": false,
    "triangulated": false
@@ -660,8 +856,8 @@
    "table": [
     {
      "company": "HelloFresh SE",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.7,
      "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -670,7 +866,7 @@
     {
      "company": "BARK, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.0,
+     "growth_pct": 3.1,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -678,8 +874,8 @@
     },
     {
      "company": "Oisix Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.2,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -688,7 +884,7 @@
     {
      "company": "Chewy, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
+     "growth_pct": 6.7,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -697,7 +893,7 @@
     {
      "company": "Hims & Hers Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.0,
+     "growth_pct": 18.1,
      "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,

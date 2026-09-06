@@ -1,5 +1,163 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 3
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Accolade"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 7.3,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Accolade"
+     ],
+     "low": 1.39,
+     "mid": 4.2,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "marketplace"
+     ],
+     "spread": 5.3,
+     "table": [
+      {
+       "company": "Accolade",
+       "date": "Jan-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.39,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Meesho",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vinted",
+       "date": "Apr-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Udemy"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 6.68,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Udemy"
+     ],
+     "low": 1.29,
+     "mid": 6.68,
+     "n": 2,
+     "period_mix": {
+      "FY ENDED 31-MAR-2023": 1,
+      "LTM": 1
+     },
+     "period_span": {
+      "FY ENDED 31-MAR-2023": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "marketplace",
+      "network"
+     ],
+     "spread": 5.2,
+     "table": [
+      {
+       "company": "Udemy",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.29,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vegrow",
+       "date": "Dec-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 6.68,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.2,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "PDD Holdings Inc.",
@@ -152,7 +310,7 @@
     {
      "company": "PDD Holdings Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.0,
+     "growth_pct": 10.1,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -160,8 +318,8 @@
     },
     {
      "company": "Freightos Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.4,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -169,8 +327,8 @@
     },
     {
      "company": "Full Truck Alliance Co. Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -179,7 +337,7 @@
     {
      "company": "Etsy, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.0,
+     "growth_pct": 4.4,
      "multiple": 3.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -187,8 +345,8 @@
     },
     {
      "company": "Auction Technology Group plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.8,
      "multiple": 3.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -197,7 +355,7 @@
     {
      "company": "eBay Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.0,
+     "growth_pct": 6.5,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -205,8 +363,8 @@
     },
     {
      "company": "Veeva Systems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
      "multiple": 9.7,
      "recurring_pct": 84.0,
      "retention_pct": null,
@@ -426,7 +584,7 @@
     "bound": "",
     "company": "Udemy",
     "date": "Dec-25",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 1.29,
     "reason": "shares the language of marketplace; related type of business; same revenue model; same AI stance",
     "score": 9.1,
@@ -517,6 +675,38 @@
     "marketplace"
    ],
    "spread": 5.3,
+   "table": [
+    {
+     "company": "Accolade",
+     "date": "Jan-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 1.39,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Meesho",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vinted",
+     "date": "Apr-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 7.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -619,8 +809,8 @@
    "table": [
     {
      "company": "GigaCloud Technology Inc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.4,
      "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -628,8 +818,8 @@
     },
     {
      "company": "Xometry, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 22.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 20.8,
      "multiple": 4.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -638,7 +828,7 @@
     {
      "company": "Airbnb, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.0,
+     "growth_pct": 11.1,
      "multiple": 6.4,
      "recurring_pct": null,
      "retention_pct": null,

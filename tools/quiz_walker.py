@@ -110,7 +110,12 @@ def peers_on(basis):
 # A question may declare a basis that is not itself a BASIS_KEYS entry, because it feeds one.
 ALIAS = {'NET_REVENUE': 'REVENUE', 'ARR': 'ARR', 'BOOK': 'BOOK', 'EARNINGS': 'EARNINGS',
          'ORIGINATIONS': 'ORIGINATIONS', 'THROUGHPUT': 'THROUGHPUT',
-         'SUBSCRIBERS': 'PAYING_SUBSCRIBERS', 'BORROWERS': 'BORROWERS', 'LOAN_BOOK': None}
+         'SUBSCRIBERS': 'PAYING_SUBSCRIBERS', 'BORROWERS': 'BORROWERS', 'LOAN_BOOK': None,
+         # The quiz names the measure the way a founder would say it; the engine names the range
+         # it builds from it. Added 5-Sep-2026 with the gross question, and this walk is what
+         # would have caught the gap: without this line the question reads as unbacked, because
+         # peers_on() looks GROSS_REVENUE up in BASIS_KEYS and finds nothing.
+         'GROSS_REVENUE': 'REVENUE_GROSS'}
 
 
 def main():

@@ -1,5 +1,187 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Salesloft"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 575000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 357142.86,
+     "mid": 575000.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "agents",
+      "ai",
+      "automation"
+     ],
+     "spread": 1.6,
+     "table": [
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 357142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Salesloft",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 575000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.5,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 4,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Salesloft"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 105.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 23.0,
+     "mid": 33.3,
+     "n": 5,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "agents",
+      "ai",
+      "automation",
+      "customer",
+      "deflection",
+      "operations",
+      "service"
+     ],
+     "spread": 4.6,
+     "table": [
+      {
+       "company": "Owner",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Salesloft",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Sierra",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.5,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Zeta Global Holdings Corp.",
@@ -149,8 +331,8 @@
    "table": [
     {
      "company": "Sprinklr, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 1.6,
      "recurring_pct": 89.0,
      "retention_pct": 104.0,
@@ -158,8 +340,8 @@
     },
     {
      "company": "NICE Ltd.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
      "multiple": 1.8,
      "recurring_pct": 89.0,
      "retention_pct": null,
@@ -167,8 +349,8 @@
     },
     {
      "company": "Five9, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.8,
      "multiple": 2.0,
      "recurring_pct": 94.0,
      "retention_pct": 106.0,
@@ -176,8 +358,8 @@
     },
     {
      "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "NTM",
-     "growth_pct": -2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
      "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 89.0,
@@ -185,8 +367,8 @@
     },
     {
      "company": "Braze, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -194,8 +376,8 @@
     },
     {
      "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.3,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -203,8 +385,8 @@
     },
     {
      "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
      "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -718,6 +900,58 @@
     "service"
    ],
    "spread": 4.6,
+   "table": [
+    {
+     "company": "Owner",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Salesloft",
+     "date": "Dec-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Jasper",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Sierra",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
@@ -814,8 +1048,8 @@
    "table": [
     {
      "company": "LiveRamp Holdings, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
      "multiple": 2.1,
      "recurring_pct": 75.5,
      "retention_pct": 107.0,
@@ -823,8 +1057,8 @@
     },
     {
      "company": "Pegasystems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.3,
      "multiple": 2.9,
      "recurring_pct": 57.9,
      "retention_pct": null,
@@ -832,8 +1066,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -841,8 +1075,8 @@
     },
     {
      "company": "Twilio Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
      "multiple": 5.2,
      "recurring_pct": null,
      "retention_pct": 116.0,

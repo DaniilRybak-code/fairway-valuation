@@ -64,8 +64,8 @@
      "table": [
       {
        "company": "Lufax Holding Ltd",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 1.4,
        "multiple": 0.1,
        "recurring_pct": null,
        "retention_pct": null,
@@ -73,8 +73,8 @@
       },
       {
        "company": "Avarda Bank AB (publ)",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 19.7,
        "multiple": 3.4,
        "recurring_pct": null,
        "retention_pct": null,
@@ -132,8 +132,8 @@
      "table": [
       {
        "company": "Lufax Holding Ltd",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 1.4,
        "multiple": 6.2,
        "recurring_pct": null,
        "retention_pct": null,
@@ -141,8 +141,8 @@
       },
       {
        "company": "Avarda Bank AB (publ)",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 19.7,
        "multiple": 14.2,
        "recurring_pct": null,
        "retention_pct": null,
@@ -197,6 +197,28 @@
       "terms"
      ],
      "spread": 1.0,
+     "table": [
+      {
+       "company": "Happy Money",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 11.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Fundbox",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 11.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 1.9,
      "thin": true,
      "triangulated": false
@@ -318,8 +340,8 @@
    "table": [
     {
      "company": "Lufax Holding Ltd",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.4,
      "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -327,8 +349,8 @@
     },
     {
      "company": "Avarda Bank AB (publ)",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.7,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -784,8 +806,8 @@
    "table": [
     {
      "company": "Qfin Holdings, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -3.4,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -793,8 +815,8 @@
     },
     {
      "company": "Velocity Financial, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.3,
      "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -802,8 +824,8 @@
     },
     {
      "company": "Klarna Group plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -811,8 +833,8 @@
     },
     {
      "company": "Funding Circle Holdings plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.7,
      "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -820,8 +842,8 @@
     },
     {
      "company": "Dave Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 24.6,
      "multiple": 8.3,
      "recurring_pct": null,
      "retention_pct": null,

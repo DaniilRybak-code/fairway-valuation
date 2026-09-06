@@ -1,5 +1,340 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72846.15,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 46666.67,
+     "mid": 72846.15,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "content",
+      "platform"
+     ],
+     "spread": 1.6,
+     "table": [
+      {
+       "company": "Yotpo",
+       "date": "Mar-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 46666.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72846.15,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.3,
+     "thin": true,
+     "triangulated": false
+    },
+    "PAYING_SUBSCRIBERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "PAYING_SUBSCRIBERS",
+     "basis_label": "dollars of enterprise value per paying subscriber",
+     "basis_mix": {
+      "PAYING_SUBSCRIBERS": 2
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "subscribers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 21428.57,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 2142.86,
+     "mid": 21428.57,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Buffer",
+       "mult": 2142.86,
+       "reason": "both do Social Media Scheduling, Publishing, Content Calendar; same type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Jasper",
+       "mult": 21428.57,
+       "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "calendar",
+      "content",
+      "media",
+      "publishing",
+      "scheduling",
+      "social"
+     ],
+     "spread": 10.0,
+     "table": [
+      {
+       "company": "Buffer",
+       "date": "Oct-14",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21428.57,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 8.5,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 3
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 1,
+     "control_names": [
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 47.3,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 32.6,
+     "n": 6,
+     "period_mix": {
+      "LTM": 2,
+      "NTM": 1,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Buffer",
+       "mult": 12.8,
+       "reason": "both do Social Media Scheduling, Publishing, Content Calendar; same type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Yotpo",
+       "mult": 14.0,
+       "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Klaviyo",
+       "mult": 32.6,
+       "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Jasper",
+       "mult": 33.3,
+       "reason": "shares the language of content; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "6sense",
+       "mult": 47.3,
+       "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "calendar",
+      "content",
+      "media",
+      "platform",
+      "publishing",
+      "scheduling",
+      "social"
+     ],
+     "spread": 11.0,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Buffer",
+       "date": "Oct-14",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 12.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Yotpo",
+       "date": "Mar-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "6sense",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 47.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 8.5,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Klaviyo, Inc.",
@@ -68,8 +403,8 @@
    "table": [
     {
      "company": "Sprout Social, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.2,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
@@ -77,8 +412,8 @@
     },
     {
      "company": "Sprinklr, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 1.6,
      "recurring_pct": 89.0,
      "retention_pct": 104.0,
@@ -86,8 +421,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -588,6 +923,68 @@
     "social"
    ],
    "spread": 11.0,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Buffer",
+     "date": "Oct-14",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 12.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Yotpo",
+     "date": "Mar-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Klaviyo",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Jasper",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "6sense",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 47.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 8.5,
    "thin": false,
    "triangulated": false
@@ -685,8 +1082,8 @@
    "table": [
     {
      "company": "PagerDuty, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.7,
      "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": 97.0,
@@ -694,8 +1091,8 @@
     },
     {
      "company": "Qt Group Oyj",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -703,8 +1100,8 @@
     },
     {
      "company": "Salesforce, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.7,
      "multiple": 5.0,
      "recurring_pct": 95.0,
      "retention_pct": null,
@@ -712,8 +1109,8 @@
     },
     {
      "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,

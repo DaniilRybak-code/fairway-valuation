@@ -1,108 +1,6 @@
 {
  "expected": {
   "all_ranges": {
-   "listed": {
-    "REVENUE": {
-     "anchor_dropped": false,
-     "band": "DIRECT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
-     "basis_mix": {
-      "UNKNOWN": 3
-     },
-     "bounded": false,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "revenue",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 14.4,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 1.6,
-     "mid": 12.7,
-     "n": 3,
-     "period_mix": {
-      "NTM": 3
-     },
-     "period_span": {
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Clarkson PLC",
-       "mult": 1.6,
-       "reason": "shares the language of purchase; same type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Indian Energy Exchange Limited",
-       "mult": 12.7,
-       "reason": "shares the language of energy, power, renewable; same type of business; same end market; sold the same way",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "CME Group Inc.",
-       "mult": 14.4,
-       "reason": "shares the language of index; same type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      }
-     ],
-     "positioning": [],
-     "post_stated_n": 0,
-     "shared_words": [
-      "energy",
-      "index",
-      "power",
-      "purchase",
-      "renewable"
-     ],
-     "show_retention": false,
-     "spread": 9.0,
-     "table": [
-      {
-       "company": "Clarkson PLC",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": 3.0,
-       "multiple": 1.6,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "LSE:CKN"
-      },
-      {
-       "company": "Indian Energy Exchange Limited",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 9.0,
-       "multiple": 12.7,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NSEI:IEX"
-      },
-      {
-       "company": "CME Group Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 6.0,
-       "multiple": 14.4,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQ:CME"
-      }
-     ],
-     "tag_evidence": 1.7,
-     "thin": false,
-     "triangulated": false
-    }
-   },
    "private": {
     "REVENUE": {
      "anchor_dropped": false,
@@ -144,6 +42,18 @@
      ],
      "sole": "The Zebra",
      "spread": 1.0,
+     "table": [
+      {
+       "company": "The Zebra",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 6.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.1,
      "thin": true,
      "triangulated": true
@@ -189,6 +99,18 @@
      ],
      "sole": "Xpansiv",
      "spread": 1.0,
+     "table": [
+      {
+       "company": "Xpansiv",
+       "date": "Jul-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 11.52,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 1.1,
      "thin": true,
      "triangulated": false
@@ -286,8 +208,8 @@
    "table": [
     {
      "company": "Clarkson PLC",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.5,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -295,8 +217,8 @@
     },
     {
      "company": "Indian Energy Exchange Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -1.9,
      "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -304,8 +226,8 @@
     },
     {
      "company": "CME Group Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 14.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -528,6 +450,18 @@
    ],
    "sole": "The Zebra",
    "spread": 1.0,
+   "table": [
+    {
+     "company": "The Zebra",
+     "date": "Apr-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 6.67,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
@@ -630,8 +564,8 @@
    "table": [
     {
      "company": "Deutsche Boerse AG",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.4,
      "multiple": 8.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -639,8 +573,8 @@
     },
     {
      "company": "Intercontinental Exchange, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.0,
      "multiple": 9.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -648,8 +582,8 @@
     },
     {
      "company": "Multi Commodity Exchange of India Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 40.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.1,
      "multiple": 25.4,
      "recurring_pct": null,
      "retention_pct": null,

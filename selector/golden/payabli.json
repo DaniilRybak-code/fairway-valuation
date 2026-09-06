@@ -1,5 +1,277 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "MERCHANTS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "MERCHANTS",
+     "basis_label": "dollars of enterprise value per merchant",
+     "basis_mix": {
+      "MERCHANTS": 3
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "merchants",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 15384615.38,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 21428.57,
+     "mid": 54166.67,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Pine Labs",
+       "mult": 21428.57,
+       "reason": "shares the language of payments; same type of business; same business function; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Mollie",
+       "mult": 54166.67,
+       "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "dLocal",
+       "mult": 15384615.38,
+       "reason": "shares the language of payment, payments; related type of business; same business function; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "payment",
+      "payments"
+     ],
+     "spread": 717.9,
+     "table": [
+      {
+       "company": "Pine Labs",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21428.57,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mollie",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 54166.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "dLocal",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15384615.38,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.2,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 3
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 48.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 16.34,
+     "mid": 30.3,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "api",
+      "payment",
+      "payments"
+     ],
+     "spread": 2.9,
+     "table": [
+      {
+       "company": "Stripe",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 16.34,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Pine Labs",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 30.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "dLocal",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 48.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.5,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 54.17,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 9.52,
+     "mid": 44.34,
+     "n": 4,
+     "period_mix": {
+      "FY2024": 1,
+      "LTM": 3
+     },
+     "period_span": {
+      "FY2024": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "api",
+      "infrastructure",
+      "payment",
+      "payments"
+     ],
+     "spread": 5.7,
+     "table": [
+      {
+       "company": "Cashfree Payments",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.52,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "MoonPay",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 22.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Checkout.com",
+       "date": "Dec-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 44.34,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mollie",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 54.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.5,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Repay Holdings Corporation",
@@ -150,8 +422,8 @@
    "table": [
     {
      "company": "Tyro Payments Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.8,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -159,8 +431,8 @@
     },
     {
      "company": "Usio, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -168,8 +440,8 @@
     },
     {
      "company": "Repay Holdings Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.5,
      "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -177,8 +449,8 @@
     },
     {
      "company": "DLocal Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 39.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 26.2,
      "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -186,8 +458,8 @@
     },
     {
      "company": "PayPoint plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -4.2,
      "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -195,8 +467,8 @@
     },
     {
      "company": "Nexi S.p.A.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.7,
      "multiple": 2.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -204,8 +476,8 @@
     },
     {
      "company": "Fawry for Banking Technology",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 32.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 31.5,
      "multiple": 4.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -574,6 +846,38 @@
     "payments"
    ],
    "spread": 2.9,
+   "table": [
+    {
+     "company": "Stripe",
+     "date": "Feb-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 16.34,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Pine Labs",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 30.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "dLocal",
+     "date": "Apr-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 48.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
@@ -666,8 +970,8 @@
    "table": [
     {
      "company": "Marqeta, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.3,
      "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -675,8 +979,8 @@
     },
     {
      "company": "WEX Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.6,
      "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -684,8 +988,8 @@
     },
     {
      "company": "Nayax Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 22.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -693,8 +997,8 @@
     },
     {
      "company": "GMO Payment Gateway, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.8,
      "multiple": 5.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -702,8 +1006,8 @@
     },
     {
      "company": "Adyen N.V.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 21.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 20.5,
      "multiple": 6.1,
      "recurring_pct": null,
      "retention_pct": null,

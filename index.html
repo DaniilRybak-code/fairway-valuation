@@ -627,6 +627,17 @@
           </select>, taken from where you are. Change it if that is wrong.</span>
       </p>
 
+      <!-- THE FIX LIST, drawn by recommendations.js from the selector's own payload rather than
+           written here. Five dimensions, three sentences each, ordered by how much of the range
+           each one moves. Same contract and same failure mode as the investor block below it:
+           empty until the engine answers, and empty rather than a heading with nothing under it
+           if the engine never does.
+
+           MOUNTED ABOVE THE INVESTOR LAYERS ON PURPOSE. The fix list is about the founder's own
+           number and the investor list is about who to call about it, so the founder reads what
+           moves their range before they read who to take it to. -->
+      <div class="read-grid" id="recommendation-blocks"></div>
+
       <!-- THE TWO INVESTOR LAYERS, drawn by investors.js from the selector's own payload rather
            than written here. Empty until the engine answers, and it stays empty rather than
            showing a heading with nothing under it if the engine never does. -->
@@ -797,6 +808,9 @@
 <script src="/app-result.js"></script>
 <script src="/app-site.js"></script>
 <script src="/investors.js"></script>
+<!-- The fix list. Loaded after app.js and alongside investors.js, which is the contract written at
+     the top of the file, and before reveal-client.js, which is what calls both renderers. -->
+<script src="/recommendations.js"></script>
 <script src="/reveal-client.js"></script>
 <script src="/showcase.js"></script>
 </body>

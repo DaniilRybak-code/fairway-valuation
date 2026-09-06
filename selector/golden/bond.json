@@ -1,5 +1,226 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 188000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 71000.0,
+     "mid": 188000.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 1,
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "company"
+     ],
+     "spread": 2.6,
+     "table": [
+      {
+       "company": "Gorgias",
+       "date": "Aug-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 71000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Pleo",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 188000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 2,
+     "control_names": [
+      "Verint Systems",
+      "Zuora"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72.0,
+     "listed_target_n": 2,
+     "listed_target_names": [
+      "Verint Systems",
+      "Zuora"
+     ],
+     "low": 2.24,
+     "mid": 21.0,
+     "n": 5,
+     "period_mix": {
+      "LTM": 2,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Verint Systems",
+       "mult": 2.24,
+       "reason": "shares the language of ai, to; related type of business; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Zuora",
+       "mult": 3.81,
+       "reason": "shares the language of to; related type of business; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Gamma",
+       "mult": 21.0,
+       "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Pleo",
+       "mult": 47.0,
+       "reason": "shares the language of company; same type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Glean",
+       "mult": 72.0,
+       "reason": "shares the language of ai, assistant; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "assistant",
+      "company",
+      "to"
+     ],
+     "spread": 32.1,
+     "table": [
+      {
+       "company": "Verint Systems",
+       "date": "Aug-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2.24,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Zuora",
+       "date": "Oct-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.81,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Gamma",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Pleo",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 47.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Glean",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Asana, Inc.",
@@ -67,8 +288,8 @@
    "table": [
     {
      "company": "Asana, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.2,
      "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": 96.0,
@@ -76,8 +297,8 @@
     },
     {
      "company": "BlackLine, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.4,
      "multiple": 2.5,
      "recurring_pct": 95.0,
      "retention_pct": 102.0,
@@ -85,8 +306,8 @@
     },
     {
      "company": "Sidetrade SA",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
      "multiple": 3.7,
      "recurring_pct": 87.0,
      "retention_pct": null,
@@ -552,6 +773,58 @@
     "to"
    ],
    "spread": 32.1,
+   "table": [
+    {
+     "company": "Verint Systems",
+     "date": "Aug-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 2.24,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Zuora",
+     "date": "Oct-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.81,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Gamma",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 21.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Pleo",
+     "date": "Dec-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 47.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Glean",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -624,8 +897,8 @@
    "table": [
     {
      "company": "NICE Ltd.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
      "multiple": 1.8,
      "recurring_pct": 89.0,
      "retention_pct": null,
@@ -633,8 +906,8 @@
     },
     {
      "company": "Five9, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.8,
      "multiple": 2.0,
      "recurring_pct": 94.0,
      "retention_pct": 106.0,
@@ -642,8 +915,8 @@
     },
     {
      "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "NTM",
-     "growth_pct": -2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
      "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 89.0,

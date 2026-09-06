@@ -1,5 +1,105 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "ARR_RUNRATE": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 33.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.3,
+     "mid": 20.0,
+     "n": 4,
+     "period_mix": {
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "app",
+      "builder",
+      "code",
+      "coding",
+      "deployment",
+      "full",
+      "generation",
+      "stack",
+      "to",
+      "vibe"
+     ],
+     "spread": 3.2,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anysphere / Cursor",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 9.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Datadog, Inc.",
@@ -66,8 +166,8 @@
    "table": [
     {
      "company": "Synopsys, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.9,
      "multiple": 8.2,
      "recurring_pct": 78.0,
      "retention_pct": null,
@@ -75,8 +175,8 @@
     },
     {
      "company": "Cadence Design Systems, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
      "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -84,8 +184,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -567,6 +667,48 @@
     "vibe"
    ],
    "spread": 3.2,
+   "table": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anysphere / Cursor",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 19.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 9.9,
    "thin": false,
    "triangulated": false
@@ -663,8 +805,8 @@
    "table": [
     {
      "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.3,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -672,8 +814,8 @@
     },
     {
      "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.5,
      "multiple": 5.8,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -681,8 +823,8 @@
     },
     {
      "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
      "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -690,8 +832,8 @@
     },
     {
      "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.8,
      "multiple": 15.6,
      "recurring_pct": null,
      "retention_pct": 126.0,

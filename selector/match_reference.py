@@ -173,16 +173,36 @@ def _ingest(mfile, tfile, fam_for):
         # asked for growth over the last twelve months, so the two are NOT like for like, and
         # closing that gap is an open item, not something to paper over here.
         #
-        # THE ECOMMERCE PULL USES A THIRD DEFINITION AGAIN and it is read here rather than blended.
-        # That file carries four revenue years and its CAGR runs CY+1 to CY+3; the software and
-        # fintech files carry two years and theirs runs CY+0 to CY+2. Both are two-year forward
-        # CAGRs, anchored a year apart. They are close cousins and NOT the same measure, so g_basis
-        # records which one every row is carrying and no comparison across them can be made blind.
-        r['g'] = _f(m.get('revenue_growth_cagr_cy0_cy2_pct'))
-        r['g_basis'] = 'CAGR_CY0_CY2'
+        # ONE GROWTH MEASURE FOR THE WHOLE LISTED UNIVERSE: CY+1 TO CY+3.
+        #
+        # Daniil, 6-Sep-2026: "ALL peers in the dataset I provided measure CY+1 to CY+3 CAGR...
+        # align all data to that." He was right and the history here is worth keeping, because I got
+        # it wrong twice before getting it right.
+        #
+        # The five peers files carried growth in three columns: cagr_cy0_cy2 (software, fintech),
+        # cagr_cy1_cy3 (ecommerce) and an unlabelled revenue_growth_pct (logistics and services). On
+        # 5-Sep I decided the two CAGRs were the same window under two names; on 6-Sep I decided
+        # they were a year apart. BOTH WERE WRONG, and the real answer was simpler and worse: the
+        # growth columns were STALE. None of them matched the database Daniil supplied on
+        # 1 September, which had been sitting in data/raw/2026-09-01_listed-full-refresh.csv with
+        # 500 rows and one CAGR column all along. Ours were rounded to whole percentages (Visa 12.0,
+        # Alibaba 18.0, FedEx 4.0), his carry a decimal (10.9, 12.8, 1.8), and 5 of 166 software
+        # rows agreed. The 1-September refresh had updated the market data and never touched growth.
+        #
+        # tools/align_growth_to_1sep_6sep.py fixed that: 516 of 533 listed rows now carry his CAGR,
+        # his three year-on-year rates and his broker-estimate count, and the stale cagr_cy0_cy2
+        # column is blanked on every row it filled. 495 rows read CAGR_CY1_CY3 and 498 can rank a
+        # peer, against 319 before, because the 123 logistics rows had no usable horizon at all.
+        #
+        # THE ORDER BELOW IS THE PRECEDENCE AND CY1_CY3 IS FIRST ON PURPOSE. cagr_cy0_cy2 is kept
+        # only as a fallback for the 17 rows not in his database, which keep whatever they had and
+        # are named in the alignment script's output. g_basis still records which column a row read,
+        # because that is how the next mix would be caught.
+        r['g'] = _f(m.get('revenue_growth_cagr_cy1_cy3_pct'))
+        r['g_basis'] = 'CAGR_CY1_CY3'
         if r['g'] is None:
-            r['g'] = _f(m.get('revenue_growth_cagr_cy1_cy3_pct'))
-            r['g_basis'] = 'CAGR_CY1_CY3'
+            r['g'] = _f(m.get('revenue_growth_cagr_cy0_cy2_pct'))
+            r['g_basis'] = 'CAGR_CY0_CY2'
         if r['g'] is None:
             r['g'] = _f(m.get('revenue_growth_ntm_pct'))
             r['g_basis'] = 'NTM'
@@ -1310,43 +1330,61 @@ NET_EQUIVALENT = ('NET_REVENUE', 'ARR', 'ARR_RUNRATE', 'BANK_NOI', '')
 GROSS_EQUIVALENT = ('GROSS_REVENUE',)
 
 
-def basis_compatible(prof, row):
-    """True when the row's denominator measures the same thing the founder was asked for.
-
-    TWO WAYS THIS GATE MUST NOT FIRE, both found within minutes of switching it on.
-
-    A LENDER HAS NO REVENUE DENOMINATOR AT ALL. It is priced on price to book, the quiz never asks
-    it for revenue, and the gate has nothing to compare. Left unguarded it silently emptied all four
-    lender fixtures, which had been pricing correctly off Zopa at 5.6x book.
-
-    AND 'NONE' IS NOT A BASIS, IT IS THE ABSENCE OF ONE. Rows priced on book carry revenue_basis
-    NONE, and treating that as a mismatch is the same bug wearing a different hat. Unknown and
-    absent both pass; the range already reports the mix so the gap stays visible.
-    """
-    if is_balance_sheet(prof):
-        return True
-    fb = (prof.get('revenue_basis') or 'NET_REVENUE').strip().upper()
-    rb = (row.get('revenue_basis') or '').strip().upper()
-    if rb in ('', 'NONE', 'UNKNOWN'):
-        return True                       # unknown never excludes; it is flagged elsewhere
-    if fb in ('BOTH', 'ANY'):
-        return True                       # the founder gave us both, so either side is like for like
-    alt = (row.get('revenue_basis_alt') or '').strip().upper()
-    if fb == 'GROSS_REVENUE':
-        return rb in GROSS_EQUIVALENT or alt in GROSS_EQUIVALENT
-    return rb in NET_EQUIVALENT or alt in NET_EQUIVALENT
+# basis_compatible() USED TO LIVE HERE AND WAS DELETED ON 6-Sep-2026, on Daniil's word, because it
+# was never called by anything. It was written on 31-Aug as the gross-versus-net fence, four
+# documents describe it as the fence, and no line of code has ever asked it a question. The real
+# fence is basis_mult() below, which does the job correctly and has done since it was written.
+#
+# It is deleted rather than kept, and the reason is the danger of the thing rather than its cost.
+# A function that looks load-bearing, reads as load-bearing, and is documented as load-bearing will
+# eventually be trusted by somebody who does not check whether it runs. That is worse than no
+# function at all. Nothing was lost: everything it knew is written into basis_mult below.
+#
+# TWO THINGS IT KNEW THAT MUST STAY KNOWN, both found within minutes of switching it on in August,
+# and both still enforced in basis_mult:
+#
+# A LENDER HAS NO REVENUE DENOMINATOR AT ALL. It is priced on price to book, the quiz never asks it
+# for revenue, and a basis test has nothing to compare. Left unguarded it silently emptied all four
+# lender fixtures, which had been pricing correctly off Zopa at 5.6x book. basis_mult's first line
+# returns the row's own multiple untouched for a balance-sheet profile, which is that guard.
+#
+# 'NONE' IS NOT A BASIS, IT IS THE ABSENCE OF ONE. Rows priced on book carry revenue_basis NONE, and
+# treating that as a mismatch is the same bug wearing a different hat. Unknown and absent read as
+# net-equivalent rather than as a mismatch, and the range reports the mix so the gap stays visible.
 
 
-def basis_mult(prof, row, key='mult'):
+def basis_mult(prof, row, key='mult', basis=None):
     """The multiple on the SAME basis the founder was asked for, swapping to the row's alternative
-    reading where it holds one. Returns None when the row cannot answer on that basis at all."""
+    reading where it holds one. Returns None when the row cannot answer on that basis at all.
+
+    THIS IS THE GROSS-VERSUS-NET FENCE. There is no other one: as of 6-Sep-2026 this function is the
+    only thing in the engine that stops a gross denominator pricing a net founder or the reverse. If
+    it is changed, rule B3 is what is being changed.
+
+    `basis` names WHICH RANGE is being built, and it was added 5-Sep-2026 with the gross question.
+    A founder who gave both figures gets two ranges, not one mixed one: the net range asks this
+    function for the net reading of every row, the gross range asks for the gross reading, and a
+    row that cannot answer on the range being built is dropped from THAT range and stays in the
+    other. Before this argument existed, a founder marked BOTH got every row's headline multiple
+    whichever measure it was on, which is precisely the averaging rule B3 forbids.
+    """
     if key != 'mult' or is_balance_sheet(prof):
         return row.get(key)
     fb = (prof.get('revenue_basis') or 'NET_REVENUE').strip().upper()
     rb = (row.get('revenue_basis') or '').strip().upper()
-    if rb in ('', 'NONE', 'UNKNOWN') or fb in ('BOTH', 'ANY'):
-        return row.get('mult')
-    want_gross = fb == 'GROSS_REVENUE'
+    b = (basis or '').strip().upper()
+    if b in ('REVENUE', 'REVENUE_GROSS'):
+        # The range being built decides the measure, and it beats the profile-level label because
+        # a founder who answered both questions has no single one.
+        want_gross = b == 'REVENUE_GROSS'
+        if rb in ('', 'NONE', 'UNKNOWN'):
+            # Unknown reads as net-equivalent throughout the engine, so it serves the net range
+            # and never the gross one. Counting it in both would count one round twice.
+            return None if want_gross else row.get('mult')
+    else:
+        if rb in ('', 'NONE', 'UNKNOWN') or fb in ('BOTH', 'ANY'):
+            return row.get('mult')
+        want_gross = fb == 'GROSS_REVENUE'
     row_is_gross = rb in GROSS_EQUIVALENT
     if want_gross == row_is_gross:
         return row.get('mult')
@@ -1526,9 +1564,15 @@ PERIOD_KINDS = ('LTM', 'NTM', 'RUN_RATE')
 FORWARD_PERIODS = ('NTM', 'RUN_RATE', 'ARR', 'ARR_RUNRATE')
 
 
-def founder_revenue_for(prof, period):
-    """(value, how_we_got_it). None when the founder gave us nothing to work from."""
-    rev, g = _f(prof.get('revenue')), _f(prof.get('growth'))
+def founder_revenue_for(prof, period, field='revenue'):
+    """(value, how_we_got_it). None when the founder gave us nothing to work from.
+
+    `field` names WHICH revenue the founder gave. Added 5-Sep-2026 with the gross question: a
+    founder now gives net revenue and gross revenue, and each one is compared only against rounds
+    priced on its own measure. The period conversion is identical for the two, so it is the same
+    function with the field swapped rather than a second copy that can drift.
+    """
+    rev, g = _f(prof.get(field)), _f(prof.get('growth'))
     if rev is None:
         return None, 'NO_REVENUE_GIVEN'
     p = (period or 'LTM').strip().upper()
@@ -1548,6 +1592,18 @@ def founder_revenue_for(prof, period):
 # arrives, is stored, and stops.
 BASIS_FOUNDER_FIELD = {
     'REVENUE': 'revenue',
+    # THE SECOND REVENUE FIGURE. Daniil, 5-Sep-2026, 23:35 UK: the quiz asks a founder for BOTH net
+    # and gross revenue, and the engine stores and uses both, each against rounds priced on its own
+    # measure. Before this, the quiz asked for net only, so every round disclosing a gross figure
+    # was held back: 66 priceable gross rounds in a file of 320, sitting in the right archetype for
+    # a founder who could not reach them. Six of the twelve fixtures failing the gate fail for this
+    # reason alone.
+    #
+    # THIS DOES NOT LOOSEN RULE B3. Gross still never bands with net. It is the opposite: because
+    # the two now have separate founder figures and separate ranges, a gross round can be used
+    # without ever being averaged into a net one. Mixing them was the only thing the old default
+    # was protecting against, and it protected by throwing the rounds away.
+    'REVENUE_GROSS': 'revenue_gross',
     'ARR': 'arr',
     'BOOK': 'book_value',
     'EARNINGS': 'net_income',
@@ -1573,9 +1629,11 @@ def founder_metric_for(prof, basis):
     field = BASIS_FOUNDER_FIELD.get(basis)
     if not field:
         return None, None
-    if basis == 'REVENUE':
-        # Revenue alone is period-sensitive and already has its own machinery.
-        return _f(prof.get('revenue')), field
+    if basis in ('REVENUE', 'REVENUE_GROSS'):
+        # Revenue alone is period-sensitive and already has its own machinery. Gross revenue is
+        # the same measure read one line higher up the income statement, so it takes the same
+        # machinery rather than a second one.
+        return _f(prof.get(field)), field
     return _f(prof.get(field)), field
 
 
@@ -1846,6 +1904,16 @@ def basis_for(prof):
 # private lane key, listed lane key, and what the reveal should call it
 BASIS_KEYS = {'BOOK':    ('mult_book', 'pb_mult', 'price to book'),
               'REVENUE': ('mult',      'mult',    'enterprise value to revenue'),
+              # THE GROSS READING, PRIVATE LANE ONLY, AND THE LISTED KEY IS None ON PURPOSE.
+              #
+              # The listed files carry no revenue_basis column at all. Every listed multiple is
+              # therefore basis-unknown, and the engine treats unknown as net-equivalent so that a
+              # blank never silently excludes a name. Offering a listed GROSS range would mean
+              # relabelling 513 rows we have never tagged, which is inventing a fact. The listed
+              # basis tagging is a known hole and it is already on the post-launch list; until it
+              # is filled, a founder's gross figure is compared against private rounds only, and
+              # the reveal says which measure each lane is on.
+              'REVENUE_GROSS': ('mult', None, 'enterprise value to gross revenue'),
               # A LENDER IS NOT PRICED ON ONE MEASURE. Daniil, 3-Sep-2026: "public peers are priced
               # off book value or net income. Private peers very often (but not always) are priced
               # off ARR. So when we ask the question to the user we need to ask all of these and
@@ -1878,7 +1946,7 @@ BASIS_KEYS = {'BOOK':    ('mult_book', 'pb_mult', 'price to book'),
               # announcement states "over 2 million are borrowers" against a $1bn valuation.
               'BORROWERS': ('gmv_mult', None, 'dollars of enterprise value per borrower'),
               'MEMBERS': ('gmv_mult', None, 'dollars of enterprise value per member'),
-              'CUSTOMERS': ('gmv_mult', None, 'dollars of enterprise value per customer'),
+              'CUSTOMERS': ('gmv_mult', None, 'dollars of enterprise value per consumer customer'),
               'BUSINESS_CUSTOMERS': ('gmv_mult', None, 'dollars of enterprise value per business customer'),
               'MERCHANTS': ('gmv_mult', None, 'dollars of enterprise value per merchant'),
               'ACTIVE_USERS': ('gmv_mult', None, 'dollars of enterprise value per monthly active user'),
@@ -1904,10 +1972,48 @@ LANE_BASES = {True:  dict(listed=('BOOK', 'EARNINGS'), private=('BOOK', 'ARR', '
               False: dict(listed=('REVENUE',),          private=('REVENUE',))}
 
 
+def _row_reads_gross(r):
+    """True when this row can answer on a GROSS denominator, on its own label or its alternative."""
+    return ((r.get('revenue_basis') or '').strip().upper() in GROSS_EQUIVALENT
+            or (r.get('revenue_basis_alt') or '').strip().upper() in GROSS_EQUIVALENT)
+
+
 def _basis_row_ok(basis, r):
     """Extra condition a row must meet to belong in THIS basis, beyond having the multiple."""
     if basis == 'ARR':
         return (r.get('revenue_basis') or '').upper() in ('ARR', 'ARR_RUNRATE')
+    if basis == 'REVENUE_GROSS':
+        # SAME MEASURE OR NOTHING, the same test the ARR basis above applies. A row with no basis
+        # label is NOT swept in here: unknown reads as net-equivalent everywhere else in the
+        # engine, and a row can only be counted once.
+        return _row_reads_gross(r)
+    if basis in ('CUSTOMERS', 'BUSINESS_CUSTOMERS'):
+        # A CUSTOMER IS NOT ONE KIND OF THING, AND THIS IS THE SECOND GROSS-VERSUS-NET.
+        #
+        # Found 6-Sep-2026 when Daniil asked what the 20,588x per-user comp was. It is unifold's
+        # chart, and it holds Fireblocks at $10,000,000 of enterprise value per customer beside
+        # MoonPay at $486. Neither figure is wrong. Fireblocks had about 800 INSTITUTIONS; MoonPay
+        # had about 7 million RETAIL CONSUMERS. Putting them in one range is not a wide range, it is
+        # two different measures sharing a label, exactly like gross and net revenue.
+        #
+        # Across all 89 rounds tagged CUSTOMERS the two run from $360 (Glossier, 5m consumers) to
+        # $760,000,000 (Anthropic, ~500 enterprise accounts). Six orders of magnitude.
+        #
+        # THE DATA ALREADY KNOWS WHICH IS WHICH and nothing was reading it: every row carries a
+        # `buyer` field, and CONSUMER is one of its values. So a round whose buyer is CONSUMER
+        # counts consumers and everything else counts businesses. BUSINESS_CUSTOMERS was already a
+        # basis in this engine with zero rows using it; this is what it was for.
+        #
+        # NOT A THRESHOLD, A DISTINCTION. Nothing here is excluded and no number is invented: the
+        # same rounds price, on two charts instead of one, each labelled with what it counts.
+        if not (r.get('vol_periodic') and r.get('vol_metric') in ('CUSTOMERS', 'BUSINESS_CUSTOMERS')):
+            return False
+        is_consumer = (r.get('buyer') or '').strip().upper() == 'CONSUMER'
+        # An explicit BUSINESS_CUSTOMERS tag wins over the buyer field, because it was written
+        # about this figure and the buyer field describes the company.
+        if r.get('vol_metric') == 'BUSINESS_CUSTOMERS':
+            return basis == 'BUSINESS_CUSTOMERS'
+        return (basis == 'CUSTOMERS') == is_consumer
     if basis in COUNT_BASES:
         # SAME KIND OR NOTHING.
         return r.get('vol_metric') == basis and r.get('vol_periodic')
@@ -1943,7 +2049,41 @@ COUNT_BASES = ('PAYING_SUBSCRIBERS', 'BORROWERS', 'MEMBERS', 'CUSTOMERS', 'BUSIN
                'MERCHANTS', 'ACTIVE_USERS', 'REGISTERED_USERS')
 
 
-def bases_for(prof, lane):
+def _fork_asks_gross(prof):
+    """Does this founder's fork put the gross-revenue question in front of them?
+
+    Read off quiz_fork rather than restated here, so the quiz and the engine cannot drift: the
+    fork that asks the question is the fork whose founder gets the range. Imported inside the
+    function because quiz_fork is a leaf module and match_reference is imported by everything;
+    a top-level import would make the two mutually dependent for no gain.
+    """
+    try:
+        import quiz_fork as _Q
+    except ImportError:
+        return False
+    return bool(_Q.FORKS.get(_Q.fork_for(prof), {}).get('asks_gross'))
+
+
+def bases_for(prof, lane, rows=None):
+    """Which readings this founder's fork can support on this lane.
+
+    `rows` is the founder's own picked comparable set, and it was added 6-Sep-2026 on Daniil's
+    instruction that a founder who gives us NO NUMBERS AT ALL should still see how their peers
+    trade: "we should be able just to show the peers and how they trade", as up to four bar charts,
+    public multiples, private net, private gross and private per user, to the extent available.
+
+    Without `rows` this function can only offer a reading the PROFILE justifies: an archetype in the
+    subscriber list, or a count the founder has already typed in. That was enough while the count
+    readings were a refinement on top of a revenue range. It is not enough for a founder who gives
+    nothing, because for them the peer evidence is the whole product, and the evidence is in the
+    rounds rather than in the profile. 48 of the 102 fixtures hold two or more rounds priced on a
+    count basis their profile does not offer them.
+
+    So when the picked set is handed in, a count reading is also offered where the ROUNDS THEMSELVES
+    can price it. Two is the floor, the same floor as everywhere else: one name is not a range
+    (rule A7). Nothing here invents a number. `founder_metric_for` still returns None when the
+    founder has given no count, so the chart shows what the peers did and no price is put on it.
+    """
     out = list(LANE_BASES[bool(is_balance_sheet(prof))][lane])
     # THE FUNDING MODEL DECIDES WHETHER A REVENUE MULTIPLE IS DEFENSIBLE FOR A LENDER, and until
     # 3-Sep-2026 nothing read it. The quiz walker found it: `funding_model` is a REQUIRED question
@@ -1958,6 +2098,22 @@ def bases_for(prof, lane):
         _fm = (prof.get('funding_model') or '').strip().lower()
         if _fm.startswith('marketplace') or 'forward-flow' in _fm or 'forward flow' in _fm:
             out.append('REVENUE')
+    # THE GROSS READING IS OFFERED WHEREVER THE QUIZ ASKS FOR A GROSS FIGURE, on the private lane
+    # only, and the fork itself is what decides. Added 5-Sep-2026 on Daniil's ruling.
+    #
+    # The lending fork is the one that does not ask, and that is deliberate and long-standing: a
+    # lender is not asked for revenue at all, because revenue on a lending business contains
+    # interest earned on borrowed money and scales with leverage rather than with value. A fork
+    # that does not ask for revenue cannot ask which revenue.
+    #
+    # OFFERED ON THE SAME TERMS AS THE NET READING, which means offered whether or not the founder
+    # has answered. That matches how 'REVENUE' has always behaved: the range counts the comparable
+    # rounds that exist, and founder_metric_for returns None when there is no figure to multiply
+    # them by, so the peer set is reported and the price is not. Gating the gross reading on an
+    # answered question while the net reading is ungated would score the same fixture two
+    # different ways.
+    if lane == 'private' and not is_balance_sheet(prof) and _fork_asks_gross(prof):
+        out.append('REVENUE_GROSS')
     # THROUGHPUT is offered on the private lane when the business is an exchange, or when the
     # founder has answered the throughput question with a unit that is not dollars. The second
     # route matters: a founder who tells us they cleared 4 million tonnes should get the comparison
@@ -1976,6 +2132,26 @@ def bases_for(prof, lane):
         for _b in COUNT_BASES:
             if _b not in out and _f(prof.get(_b.lower())):
                 out.append(_b)
+        # AND THE ROUNDS THEMSELVES, where they were handed in. See the docstring: this is the
+        # route that serves a founder who has given us nothing, and it needs two priced rounds of
+        # the same kind before it opens, because one name is not a range.
+        if rows:
+            # ASK EACH BASIS WHETHER THE ROW ANSWERS IT, rather than reading the row's own label and
+            # trusting it. Corrected 6-Sep-2026, the same hour the label was found to be unreliable:
+            # a round tagged CUSTOMERS whose buyer is an enterprise answers BUSINESS_CUSTOMERS and
+            # not CUSTOMERS, so keying this loop on `vol_metric` counted it under a basis it can no
+            # longer price and under none that it can. That silently cut the per-user chart from 54
+            # fixtures to 20.
+            _seen = collections.Counter()
+            for _sw, _r in rows:
+                if _r.get('pre_post') == 'PRE' or not _r.get('in_medians'):
+                    continue
+                for _b in COUNT_BASES:
+                    if _r.get(BASIS_KEYS[_b][0]) and _basis_row_ok(_b, _r):
+                        _seen[_b] += 1
+            for _b in COUNT_BASES:
+                if _b not in out and _seen[_b] >= 2:
+                    out.append(_b)
     return tuple(out)
 
 def denominator(prof, group):
@@ -2271,7 +2447,7 @@ def peer_table(prof, rows, key):
         m = r.get(key)
         if m is None:
             continue
-        out.append({
+        row = {
             'company': r.get('company_name', ''),
             'ticker': r.get('exchange_ticker', ''),
             'multiple': m,
@@ -2279,7 +2455,13 @@ def peer_table(prof, rows, key):
             'growth_basis': r.get('g_basis') or '',
             'retention_pct': r.get('nrr'),
             'recurring_pct': r.get('recurring_pct'),
-        })
+        }
+        # THE DATE, ON A PRIVATE ROUND ONLY. A listed multiple is today's price and needs no date;
+        # a round does, because "Vanta at 17.4x" means something different in Jul-23 and in Jul-26.
+        # Absent on a listed row, so the key simply does not appear there.
+        if r.get('date'):
+            row['date'] = r.get('date')
+        out.append(row)
     return sorted(out, key=lambda z: z['multiple'])
 
 
@@ -2358,7 +2540,10 @@ def all_ranges(prof, listed_group, listed_tier, private_picked, private_tier):
                                     founder_metric=v, founder_field=fld,
                                     founder_low=(None if v is None else round(v * r['low'], 2)),
                                     founder_high=(None if v is None else round(v * r['high'], 2)))
-    for b in bases_for(prof, 'private'):
+    # THE PICKED SET IS HANDED TO bases_for, so a count reading opens on the evidence in the rounds
+    # and not only on what the founder typed. Daniil, 6-Sep-2026: a founder who gives no numbers at
+    # all should still see how their peers trade.
+    for b in bases_for(prof, 'private', rows=private_picked):
         r = private_range(prof, private_picked, private_tier, basis=b)
         if r:
             v, fld = founder_metric_for(prof, b)
@@ -2386,7 +2571,7 @@ def private_range(prof, picked, tier, basis=None):
         # A PRE-MONEY ROW NEVER JOINS A POST-MONEY RANGE. It stays in the comp list with its own
         # label, because hiding it would be its own dishonesty; it simply does not price.
         if r.get('pre_post') == 'PRE': continue
-        m = basis_mult(prof, r, key)
+        m = basis_mult(prof, r, key, basis=basis)
         if m is None: continue
         r = dict(r); r[key] = m
         allpriced.append((sw, r))
@@ -2412,6 +2597,11 @@ def private_range(prof, picked, tier, basis=None):
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
                basis_mix=_basis_mix(priced, basis),
                basis=basis, basis_label=BASIS_KEYS[basis][2],
+               # THE HOVER TABLE, ADDED 6-Sep-2026 AND THE LISTED LANE HAS ALWAYS HAD ONE.
+               # The private lane never did, which nobody noticed while nothing read a payload.
+               # Daniil's free-tier ruling of 6-Sep is what needed it: hovering a blurred private
+               # range must show the comparable names, and there was no list to show.
+               table=peer_table(prof, priced, key),
                period_mix=_period_mix(priced), period_span=_period_span(prof, priced),
                band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:

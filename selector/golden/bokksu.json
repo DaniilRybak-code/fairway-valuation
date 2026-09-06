@@ -1,5 +1,160 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 3
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.4,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 3.3,
+     "mid": 4.6,
+     "n": 3,
+     "period_mix": {
+      "LTM": 2,
+      "NTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [
+      {
+       "company": "AG1",
+       "mult": 8.8,
+       "reason": "shares the language of subscription; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "WHOOP",
+       "mult": 9.18,
+       "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "shared_words": [
+      "subscription"
+     ],
+     "spread": 1.6,
+     "table": [
+      {
+       "company": "Huel",
+       "date": "Nov-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "OLIPOP",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Liquid Death",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 23.1,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 23.1,
+     "mid": 23.1,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "subscription"
+     ],
+     "sole": "Oura",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Oura",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
   "core": [
    {
     "company": "Oisix Inc.",
@@ -118,8 +273,8 @@
    "table": [
     {
      "company": "HelloFresh SE",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.7,
      "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -127,8 +282,8 @@
     },
     {
      "company": "Naked Wines plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": -6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -7.5,
      "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -136,8 +291,8 @@
     },
     {
      "company": "Oisix Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.2,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -146,7 +301,7 @@
     {
      "company": "Coupang, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.0,
+     "growth_pct": 12.7,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -154,8 +309,8 @@
     },
     {
      "company": "Ocado Group plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": -12.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -2.2,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -462,6 +617,38 @@
     "subscription"
    ],
    "spread": 1.6,
+   "table": [
+    {
+     "company": "Huel",
+     "date": "Nov-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "OLIPOP",
+     "date": "Feb-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Liquid Death",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -586,7 +773,7 @@
     {
      "company": "BARK, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.0,
+     "growth_pct": 3.1,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -594,8 +781,8 @@
     },
     {
      "company": "LifeMD, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.2,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -604,7 +791,7 @@
     {
      "company": "Chewy, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
+     "growth_pct": 6.7,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -612,8 +799,8 @@
     },
     {
      "company": "WW International, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
      "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -622,7 +809,7 @@
     {
      "company": "Hims & Hers Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.0,
+     "growth_pct": 18.1,
      "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,

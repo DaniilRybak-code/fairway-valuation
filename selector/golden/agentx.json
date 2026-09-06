@@ -1,5 +1,118 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 33.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.3,
+     "mid": 19.8,
+     "n": 5,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "ai",
+      "builder",
+      "code",
+      "deployment",
+      "evaluation",
+      "no",
+      "orchestration"
+     ],
+     "spread": 3.2,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Invisible Technologies",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anysphere / Cursor",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "GitLab Inc.",
@@ -145,8 +258,8 @@
    "table": [
     {
      "company": "Coveo Solutions Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.5,
      "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": 99.0,
@@ -154,8 +267,8 @@
     },
     {
      "company": "Qt Group Oyj",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -163,8 +276,8 @@
     },
     {
      "company": "C3.ai, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": -14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.1,
      "multiple": 4.6,
      "recurring_pct": 91.0,
      "retention_pct": null,
@@ -172,8 +285,8 @@
     },
     {
      "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
@@ -181,8 +294,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -190,8 +303,8 @@
     },
     {
      "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 66.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 47.0,
      "multiple": 39.0,
      "recurring_pct": null,
      "retention_pct": 157.0,
@@ -746,6 +859,58 @@
     "orchestration"
    ],
    "spread": 3.2,
+   "table": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Invisible Technologies",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anysphere / Cursor",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 19.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.9,
    "thin": false,
    "triangulated": false
@@ -845,8 +1010,8 @@
    "table": [
     {
      "company": "Pegasystems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.3,
      "multiple": 2.9,
      "recurring_pct": 57.9,
      "retention_pct": null,
@@ -854,8 +1019,8 @@
     },
     {
      "company": "Appian Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.1,
      "multiple": 3.3,
      "recurring_pct": 79.5,
      "retention_pct": 116.0,
@@ -863,8 +1028,8 @@
     },
     {
      "company": "Sidetrade SA",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
      "multiple": 3.7,
      "recurring_pct": 87.0,
      "retention_pct": null,
@@ -872,8 +1037,8 @@
     },
     {
      "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": 109.0,

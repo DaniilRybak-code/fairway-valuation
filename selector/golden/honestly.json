@@ -1,5 +1,266 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 3
+     },
+     "bounded": true,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 454545.45,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 46666.67,
+     "mid": 72846.15,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1,
+      "UNKNOWN": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Yotpo",
+       "mult": 46666.67,
+       "reason": "same type of business; same end market; same business function; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Klaviyo",
+       "mult": 72846.15,
+       "reason": "same type of business; same end market; same business function; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "CommerceIQ",
+       "mult": 454545.45,
+       "reason": "same type of business; same end market; same business function; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [
+      {
+       "company": "Contentsquare",
+       "mult": 5600000.0,
+       "reason": "shares the language of analysis, product; same type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "shared_words": [],
+     "spread": 9.7,
+     "table": [
+      {
+       "company": "Yotpo",
+       "date": "Mar-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 46666.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72846.15,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "CommerceIQ",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 454545.45,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.0,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 32.6,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 14.0,
+     "n": 5,
+     "period_mix": {
+      "LTM": 1,
+      "NTM": 1,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "shares the language of analysis; same type of business; same business function",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Buffer",
+       "mult": 12.8,
+       "reason": "shares the language of social; same type of business; same business function; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Yotpo",
+       "mult": 14.0,
+       "reason": "same type of business; same end market; same business function; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Contentsquare",
+       "mult": 28.0,
+       "reason": "shares the language of analysis, product; same type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Klaviyo",
+       "mult": 32.6,
+       "reason": "same type of business; same end market; same business function; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "analysis",
+      "product",
+      "social"
+     ],
+     "spread": 7.6,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Buffer",
+       "date": "Oct-14",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 12.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Yotpo",
+       "date": "Mar-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Contentsquare",
+       "date": "Jul-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 28.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Sprout Social, Inc.",
@@ -90,8 +351,8 @@
    "table": [
     {
      "company": "Sprout Social, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.2,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
@@ -99,8 +360,8 @@
     },
     {
      "company": "Sprinklr, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 1.6,
      "recurring_pct": 89.0,
      "retention_pct": 104.0,
@@ -108,8 +369,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -439,6 +700,58 @@
     "social"
    ],
    "spread": 7.6,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Buffer",
+     "date": "Oct-14",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 12.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Yotpo",
+     "date": "Mar-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Contentsquare",
+     "date": "Jul-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 28.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Klaviyo",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
@@ -554,8 +867,8 @@
    "table": [
     {
      "company": "Riskified Ltd.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.4,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": 105.0,
@@ -563,8 +876,8 @@
     },
     {
      "company": "Dassault Systemes SE",
-     "growth_basis": "NTM",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.2,
      "multiple": 4.1,
      "recurring_pct": 82.0,
      "retention_pct": null,
@@ -572,8 +885,8 @@
     },
     {
      "company": "PTC Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
      "multiple": 6.2,
      "recurring_pct": 95.0,
      "retention_pct": null,
@@ -581,8 +894,8 @@
     },
     {
      "company": "Manhattan Associates, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.7,
      "multiple": 10.1,
      "recurring_pct": 37.7,
      "retention_pct": null,

@@ -1,5 +1,158 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 11466666.67,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 1000000.0,
+     "mid": 11466666.67,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "AlphaSense",
+       "mult": 1000000.0,
+       "reason": "both do Market Intelligence; related type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Chainalysis",
+       "mult": 11466666.67,
+       "reason": "related type of business; same end market; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "intelligence",
+      "market",
+      "research"
+     ],
+     "spread": 11.5,
+     "table": [
+      {
+       "company": "AlphaSense",
+       "date": "Jun-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1000000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Chainalysis",
+       "date": "May-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 11466666.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 3.7,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 45.26,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 20.0,
+     "mid": 45.26,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "intelligence",
+      "market",
+      "research"
+     ],
+     "spread": 2.3,
+     "table": [
+      {
+       "company": "AlphaSense",
+       "date": "Jun-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Chainalysis",
+       "date": "May-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 45.26,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 3.7,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Morningstar, Inc.",
@@ -152,8 +305,8 @@
    "table": [
     {
      "company": "Clarkson PLC",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.5,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -161,8 +314,8 @@
     },
     {
      "company": "Morningstar, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.9,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -170,8 +323,8 @@
     },
     {
      "company": "FactSet Research Systems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.8,
      "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -179,8 +332,8 @@
     },
     {
      "company": "London Stock Exchange Group plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.9,
      "multiple": 5.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -188,8 +341,8 @@
     },
     {
      "company": "CRISIL Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.1,
      "multiple": 7.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -197,8 +350,8 @@
     },
     {
      "company": "S&P Global Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.0,
      "multiple": 9.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -206,8 +359,8 @@
     },
     {
      "company": "MSCI Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.5,
      "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -501,6 +654,28 @@
     "research"
    ],
    "spread": 2.3,
+   "table": [
+    {
+     "company": "AlphaSense",
+     "date": "Jun-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Chainalysis",
+     "date": "May-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 45.26,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 3.7,
    "thin": true,
    "triangulated": false
@@ -563,8 +738,8 @@
    "table": [
     {
      "company": "Fair Isaac Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 21.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.9,
      "multiple": 10.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -572,8 +747,8 @@
     },
     {
      "company": "Moody's Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
      "multiple": 10.5,
      "recurring_pct": null,
      "retention_pct": null,

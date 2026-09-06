@@ -1,5 +1,162 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "PAYING_SUBSCRIBERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "PAYING_SUBSCRIBERS",
+     "basis_label": "dollars of enterprise value per paying subscriber",
+     "basis_mix": {
+      "PAYING_SUBSCRIBERS": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Mailchimp"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "subscribers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 21428.57,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 15000.0,
+     "mid": 21428.57,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ad",
+      "campaign"
+     ],
+     "spread": 1.4,
+     "table": [
+      {
+       "company": "Mailchimp",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21428.57,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.2,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Mailchimp"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 47.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 15.0,
+     "mid": 33.3,
+     "n": 3,
+     "period_mix": {
+      "LTM": 2,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ad",
+      "advertising",
+      "campaign"
+     ],
+     "spread": 3.2,
+     "table": [
+      {
+       "company": "Mailchimp",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "6sense",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 47.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.2,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "HubSpot, Inc.",
@@ -95,8 +252,8 @@
    "table": [
     {
      "company": "Sprout Social, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.2,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
@@ -104,8 +261,8 @@
     },
     {
      "company": "Yext, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.9,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": 95.0,
@@ -113,8 +270,8 @@
     },
     {
      "company": "Freshworks Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
      "multiple": 2.7,
      "recurring_pct": null,
      "retention_pct": 104.0,
@@ -122,8 +279,8 @@
     },
     {
      "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.0,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": 102.0,
@@ -131,8 +288,8 @@
     },
     {
      "company": "Text S.A.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -140,8 +297,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -149,8 +306,8 @@
     },
     {
      "company": "Braze, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -585,6 +742,38 @@
     "campaign"
    ],
    "spread": 3.2,
+   "table": [
+    {
+     "company": "Mailchimp",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Jasper",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "6sense",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 47.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
@@ -686,8 +875,8 @@
    "table": [
     {
      "company": "Opera Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 19.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
      "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -695,8 +884,8 @@
     },
     {
      "company": "LiveRamp Holdings, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
      "multiple": 2.1,
      "recurring_pct": 75.5,
      "retention_pct": 107.0,
@@ -704,8 +893,8 @@
     },
     {
      "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.3,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": 120.0,

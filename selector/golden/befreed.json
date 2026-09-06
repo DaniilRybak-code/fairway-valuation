@@ -1,124 +1,70 @@
 {
  "expected": {
   "all_ranges": {
-   "listed": {
-    "REVENUE": {
+   "private": {
+    "CUSTOMERS": {
      "anchor_dropped": false,
      "band": "DIRECT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
+     "basis": "CUSTOMERS",
+     "basis_label": "dollars of enterprise value per consumer customer",
      "basis_mix": {
-      "UNKNOWN": 4
+      "CUSTOMERS": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "revenue",
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "customers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 4.7,
+     "high": 19354.84,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 0.4,
-     "mid": 0.45,
-     "n": 4,
+     "low": 5000.0,
+     "mid": 19354.84,
+     "n": 2,
      "period_mix": {
-      "NTM": 4
+      "RUN_RATE": 2
      },
      "period_span": {
-      "NTM": {
+      "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Chegg, Inc.",
-       "mult": 0.4,
-       "reason": "shares the language of subscription; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Nerdy Inc.",
-       "mult": 0.4,
-       "reason": "shares the language of learning; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Coursera, Inc.",
-       "mult": 0.5,
-       "reason": "both do Consumer Subscription; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Duolingo, Inc.",
-       "mult": 4.7,
-       "reason": "both do Consumer Subscription; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      }
-     ],
+     "points": [],
      "positioning": [],
-     "post_stated_n": 0,
-     "shared_words": [
-      "consumer",
-      "learning",
-      "subscription",
-      "tutor"
-     ],
-     "show_retention": false,
-     "spread": 11.8,
+     "shared_words": [],
+     "spread": 3.9,
      "table": [
       {
-       "company": "Chegg, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": -26.0,
-       "multiple": 0.4,
+       "company": "Vedantu",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5000.0,
        "recurring_pct": null,
        "retention_pct": null,
-       "ticker": "NYSE:CHGG"
+       "ticker": ""
       },
       {
-       "company": "Nerdy Inc.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": 3.0,
-       "multiple": 0.4,
+       "company": "upGrad",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19354.84,
        "recurring_pct": null,
        "retention_pct": null,
-       "ticker": "NYSE:NRDY"
-      },
-      {
-       "company": "Coursera, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 12.0,
-       "multiple": 0.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:COUR"
-      },
-      {
-       "company": "Duolingo, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 13.0,
-       "multiple": 4.7,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQGS:DUOL"
+       "ticker": ""
       }
      ],
-     "tag_evidence": 1.4,
-     "thin": false,
-     "triangulated": false
-    }
-   },
-   "private": {
+     "tag_evidence": 0.0,
+     "thin": true,
+     "triangulated": true
+    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "DIRECT",
@@ -158,9 +104,145 @@
       "subscription"
      ],
      "spread": 2.1,
+     "table": [
+      {
+       "company": "upGrad",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.27,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "WHOOP",
+       "date": "Mar-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.18,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vedantu",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.38,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.1,
      "thin": false,
      "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 3
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Udemy"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 27.5,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Udemy"
+     ],
+     "low": 1.29,
+     "mid": 23.1,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Udemy",
+       "mult": 1.29,
+       "reason": "both do Consumer Learning, Learning Subscription; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Oura",
+       "mult": 23.1,
+       "reason": "shares the language of subscription; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "MasterClass",
+       "mult": 27.5,
+       "reason": "both do Consumer Subscription; related type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "consumer",
+      "education",
+      "learning",
+      "subscription"
+     ],
+     "spread": 21.3,
+     "table": [
+      {
+       "company": "Udemy",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.29,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Oura",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "MasterClass",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 27.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.4,
+     "thin": false,
+     "triangulated": false
     }
    }
   },
@@ -278,7 +360,7 @@
     {
      "company": "Chegg, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -26.0,
+     "growth_pct": -26.3,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -286,8 +368,8 @@
     },
     {
      "company": "Nerdy Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.4,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -296,7 +378,7 @@
     {
      "company": "Coursera, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.0,
+     "growth_pct": 12.3,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -305,7 +387,7 @@
     {
      "company": "Duolingo, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.0,
+     "growth_pct": 13.4,
      "multiple": 4.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -547,7 +629,7 @@
     "bound": "",
     "company": "Udemy",
     "date": "Dec-25",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 1.29,
     "reason": "both do Consumer Learning, Learning Subscription; same type of business; same end market; same business function",
     "score": 15.9,
@@ -645,6 +727,38 @@
     "subscription"
    ],
    "spread": 2.1,
+   "table": [
+    {
+     "company": "upGrad",
+     "date": "Aug-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 7.27,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "WHOOP",
+     "date": "Mar-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 9.18,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vedantu",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.38,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": false,
    "triangulated": true
@@ -735,7 +849,7 @@
     {
      "company": "Bumble Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -2.0,
+     "growth_pct": -1.6,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -744,7 +858,7 @@
     {
      "company": "The New York Times Company",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.0,
+     "growth_pct": 6.4,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -753,7 +867,7 @@
     {
      "company": "Match Group, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.0,
+     "growth_pct": 4.8,
      "multiple": 3.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -762,7 +876,7 @@
     {
      "company": "Spotify Technology S.A.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
+     "growth_pct": 13.9,
      "multiple": 4.2,
      "recurring_pct": null,
      "retention_pct": null,

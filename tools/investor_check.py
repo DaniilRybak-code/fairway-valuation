@@ -50,15 +50,27 @@ def check_row(r):
             pass                                   # already reported above
         elif age > ACTIVITY_MONTHS:
             bad.append('most recent deal is %d months old, the rule is %d' % (age, ACTIVITY_MONTHS))
-        # A SIZE THE FOUNDER CAN JUDGE, not necessarily a first cheque. For a curated seed fund
-        # the honest number is its first-cheque range; for a house promoted out of our own rounds
-        # it is the size of round it joins, because a first cheque is not something our data knows
-        # and inventing one would be worse than leaving it out. Either satisfies the rule; neither
-        # is optional. Amended 02-Sep-2026 when the promotion pass was added.
-        has_cheque = r.get('first_cheque_low_m') and r.get('first_cheque_high_m')
-        has_round = r.get('round_size_low_m') and r.get('round_size_high_m')
+        # AN UNPUBLISHED CHEQUE DOES NOT BLOCK. Daniil ruled this on 3-Sep-2026 and the ENGINE has
+        # applied it since that day; this check did not, so the two have been contradicting each
+        # other in the same suite run: `investors.py` renders 156 callable houses and this file
+        # said 138. Corrected 6-Sep-2026 on Daniil's word.
+        #
+        # His reasoning, and it is the right way round. Refusing a house that has not published a
+        # first-cheque range does not describe an inactive fund, it describes a fund with a sparse
+        # website. benchmark.com is two office addresses. thrivecap.com is one sentence. Both led
+        # seed rounds this year. Withholding them from every founder because their marketing page is
+        # thin is our failure, not theirs.
+        #
+        # So a missing cheque is a SOFT note now: the house renders and the card says "First cheque
+        # not published", which is true and useful and the same discipline we hold a comparable to.
+        # A ceiling or a floor alone is a real published figure and reads as "up to $5m".
+        has_cheque = r.get('first_cheque_low_m') or r.get('first_cheque_high_m')
+        has_round = r.get('round_size_low_m') or r.get('round_size_high_m')
         if not (has_cheque or has_round):
-            bad.append('no first-cheque range and no round-size range')
+            soft.append('first cheque not published, and the card says so')
+        # WHAT STILL HOLDS THE LINE IS THE STAGE BAND, and that half of the ruling is unchanged: a
+        # house that says where it comes in is believed and filtered on, so IVP saying "typically
+        # Series B, floor $15m" stays away from a pre-seed founder whatever else it publishes.
         if not r.get('stage_bands'):
             bad.append('no stage band')
         if not r.get('screening_categories'):

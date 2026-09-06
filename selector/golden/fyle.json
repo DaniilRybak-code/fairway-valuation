@@ -1,5 +1,162 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": true,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 4
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 10.1,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 4.6,
+     "mid": 9.3,
+     "n": 4,
+     "period_mix": {
+      "LTM": 3,
+      "NTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "brand",
+      "care",
+      "home"
+     ],
+     "spread": 2.2,
+     "table": [
+      {
+       "company": "Harry's",
+       "date": "Mar-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "SKIMS",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Away",
+       "date": "May-19",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Quince",
+       "date": "Mar-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.7,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 2.61,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 2.61,
+     "mid": 2.61,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "at",
+      "beauty",
+      "care",
+      "home",
+      "manicure",
+      "nail"
+     ],
+     "sole": "Olive & June",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Olive & June",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2.61,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 3.4,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "FIGS, Inc.",
@@ -151,7 +308,7 @@
     {
      "company": "ASOS Plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.0,
+     "growth_pct": 1.7,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -160,7 +317,7 @@
     {
      "company": "Revolve Group, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.0,
+     "growth_pct": 8.1,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -169,7 +326,7 @@
     {
      "company": "On Holding AG",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 20.0,
+     "growth_pct": 19.5,
      "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -178,7 +335,7 @@
     {
      "company": "Warby Parker Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 26.0,
+     "growth_pct": 24.4,
      "multiple": 2.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -187,7 +344,7 @@
     {
      "company": "FIGS, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
+     "growth_pct": 7.1,
      "multiple": 2.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -196,7 +353,7 @@
     {
      "company": "e.l.f. Beauty, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.0,
+     "growth_pct": 9.7,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -469,6 +626,48 @@
     "home"
    ],
    "spread": 2.2,
+   "table": [
+    {
+     "company": "Harry's",
+     "date": "Mar-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "SKIMS",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Away",
+     "date": "May-19",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 9.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Quince",
+     "date": "Mar-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
@@ -585,7 +784,7 @@
     {
      "company": "Vipshop Holdings Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.0,
+     "growth_pct": 0.5,
      "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -594,7 +793,7 @@
     {
      "company": "BARK, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.0,
+     "growth_pct": 3.1,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -603,7 +802,7 @@
     {
      "company": "YETI Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
+     "growth_pct": 6.7,
      "multiple": 1.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -612,7 +811,7 @@
     {
      "company": "The RealReal, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.0,
+     "growth_pct": 11.1,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,

@@ -1,5 +1,97 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 3
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "E2open"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 8.94,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "E2open"
+     ],
+     "low": 3.46,
+     "mid": 5.97,
+     "n": 3,
+     "period_mix": {
+      "FY2025": 1,
+      "LTM": 2
+     },
+     "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "chain",
+      "freight",
+      "logistics",
+      "supply",
+      "visibility"
+     ],
+     "spread": 2.6,
+     "table": [
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.46,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Delhivery",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.97,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Xpressbees",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.94,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.6,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "United Parcel Service",
@@ -151,8 +243,8 @@
    "table": [
     {
      "company": "Grupo Traxion, S.A.B. de C.V.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
      "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -160,8 +252,8 @@
     },
     {
      "company": "S.F. Holding Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -169,8 +261,8 @@
     },
     {
      "company": "Pkp Cargo S.A.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.3,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -178,8 +270,8 @@
     },
     {
      "company": "JSL S.A.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.4,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -187,8 +279,8 @@
     },
     {
      "company": "FedEx Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.8,
      "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -196,8 +288,8 @@
     },
     {
      "company": "United Parcel Service",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.5,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -205,8 +297,8 @@
     },
     {
      "company": "Delhivery Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.6,
      "multiple": 2.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -593,6 +685,38 @@
     "visibility"
    ],
    "spread": 2.6,
+   "table": [
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.46,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Delhivery",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.97,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Xpressbees",
+     "date": "Feb-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 8.94,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.6,
    "thin": false,
    "triangulated": false
@@ -681,7 +805,7 @@
    "table": [
     {
      "company": "SG Holdings Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 4.0,
      "multiple": 0.7,
      "recurring_pct": null,
@@ -690,8 +814,8 @@
     },
     {
      "company": "GXO Logistics, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -699,8 +823,8 @@
     },
     {
      "company": "Deutsche Post AG",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -708,8 +832,8 @@
     },
     {
      "company": "C.H. Robinson Worldwide",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 1.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -717,8 +841,8 @@
     },
     {
      "company": "XPO, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.8,
      "multiple": 2.7,
      "recurring_pct": null,
      "retention_pct": null,

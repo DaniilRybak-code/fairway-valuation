@@ -1,5 +1,11 @@
 # Handover, evening of 31 August 2026, Opus to Fable
 
+> **CORRECTION added 6 September 2026.** This document describes `basis_compatible()` as the
+> gross-versus-net gate. It was never called by any line of code and has been deleted. The fence
+> that actually runs, and always did, is `basis_mult()` in `selector/match_reference.py`. Everything
+> `basis_compatible` knew, the lender guard included, is written there. The rest of this document
+> stands as the record of what was found and believed on 31 August; only that one function is wrong.
+
 **Three weeks to the pilot. It goes live the week of 21 September, which is 15 working days away.**
 
 Read this against `Fairway_roadmap_2026-08-31.md`, which I have marked up item by item tonight.

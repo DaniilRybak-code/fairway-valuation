@@ -1,5 +1,78 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 45.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 20.0,
+     "mid": 45.3,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "deployment",
+      "hosting",
+      "security",
+      "trust"
+     ],
+     "spread": 2.3,
+     "table": [
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "1Password",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 45.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.1,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Cloudflare, Inc.",
@@ -153,8 +226,8 @@
    "table": [
     {
      "company": "Akamai Technologies, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.0,
      "multiple": 4.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -162,8 +235,8 @@
     },
     {
      "company": "A10 Networks, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 13.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.5,
      "multiple": 4.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -171,8 +244,8 @@
     },
     {
      "company": "Netskope, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 24.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 21.0,
      "multiple": 5.4,
      "recurring_pct": null,
      "retention_pct": 118.0,
@@ -180,8 +253,8 @@
     },
     {
      "company": "DigitalOcean Holdings, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 42.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 51.1,
      "multiple": 8.7,
      "recurring_pct": null,
      "retention_pct": 102.0,
@@ -189,8 +262,8 @@
     },
     {
      "company": "MongoDB, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.6,
      "multiple": 10.0,
      "recurring_pct": 97.0,
      "retention_pct": 121.0,
@@ -198,8 +271,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -207,8 +280,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -679,6 +752,28 @@
     "trust"
    ],
    "spread": 2.3,
+   "table": [
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "1Password",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 45.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.1,
    "thin": true,
    "triangulated": false
@@ -770,8 +865,8 @@
    "table": [
     {
      "company": "GoDaddy Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.1,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": 85.0,
@@ -779,8 +874,8 @@
     },
     {
      "company": "IONOS Group SE",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.0,
      "multiple": 3.6,
      "recurring_pct": 80.0,
      "retention_pct": null,
@@ -788,8 +883,8 @@
     },
     {
      "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.5,
      "multiple": 5.8,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -797,8 +892,8 @@
     },
     {
      "company": "Zscaler, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 19.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.6,
      "multiple": 6.8,
      "recurring_pct": 98.0,
      "retention_pct": null,
@@ -806,8 +901,8 @@
     },
     {
      "company": "Fortinet, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
      "multiple": 13.2,
      "recurring_pct": null,
      "retention_pct": null,

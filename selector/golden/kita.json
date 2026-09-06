@@ -96,8 +96,8 @@
      "table": [
       {
        "company": "Qfin Holdings, Inc.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": -3.4,
        "multiple": 0.3,
        "recurring_pct": null,
        "retention_pct": null,
@@ -105,8 +105,8 @@
       },
       {
        "company": "Oportun Financial Corporation",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 7.2,
        "multiple": 0.7,
        "recurring_pct": null,
        "retention_pct": null,
@@ -114,8 +114,8 @@
       },
       {
        "company": "Merchants Bancorp",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 5.8,
        "multiple": 1.0,
        "recurring_pct": null,
        "retention_pct": null,
@@ -123,8 +123,8 @@
       },
       {
        "company": "Pagaya Technologies Ltd.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 14.4,
        "multiple": 2.6,
        "recurring_pct": null,
        "retention_pct": null,
@@ -132,8 +132,8 @@
       },
       {
        "company": "Funding Circle Holdings plc",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 10.7,
        "multiple": 2.6,
        "recurring_pct": null,
        "retention_pct": null,
@@ -141,8 +141,8 @@
       },
       {
        "company": "Upstart Holdings, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 34.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 28.3,
        "multiple": 2.8,
        "recurring_pct": null,
        "retention_pct": null,
@@ -204,8 +204,8 @@
      "table": [
       {
        "company": "Qfin Holdings, Inc.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": -3.4,
        "multiple": 2.6,
        "recurring_pct": null,
        "retention_pct": null,
@@ -213,8 +213,8 @@
       },
       {
        "company": "Oportun Financial Corporation",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 7.2,
        "multiple": 3.5,
        "recurring_pct": null,
        "retention_pct": null,
@@ -222,8 +222,8 @@
       },
       {
        "company": "Pagaya Technologies Ltd.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 14.4,
        "multiple": 4.5,
        "recurring_pct": null,
        "retention_pct": null,
@@ -231,8 +231,8 @@
       },
       {
        "company": "Upstart Holdings, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 34.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 28.3,
        "multiple": 7.9,
        "recurring_pct": null,
        "retention_pct": null,
@@ -240,8 +240,8 @@
       },
       {
        "company": "Merchants Bancorp",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 5.8,
        "multiple": 8.5,
        "recurring_pct": null,
        "retention_pct": null,
@@ -249,8 +249,8 @@
       },
       {
        "company": "Funding Circle Holdings plc",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 10.7,
        "multiple": 15.5,
        "recurring_pct": null,
        "retention_pct": null,
@@ -304,6 +304,18 @@
      ],
      "sole": "Zopa",
      "spread": 1.0,
+     "table": [
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
@@ -353,6 +365,28 @@
       "lending"
      ],
      "spread": 1.8,
+     "table": [
+      {
+       "company": "Atom Bank",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
@@ -398,6 +432,18 @@
      ],
      "sole": "MNT-Halan",
      "spread": 1.0,
+     "table": [
+      {
+       "company": "MNT-Halan",
+       "date": "Feb-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 500.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.8,
      "thin": true,
      "triangulated": false
@@ -551,8 +597,8 @@
    "table": [
     {
      "company": "Qfin Holdings, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -3.4,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -560,8 +606,8 @@
     },
     {
      "company": "Oportun Financial Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -569,8 +615,8 @@
     },
     {
      "company": "Merchants Bancorp",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.8,
      "multiple": 1.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -578,8 +624,8 @@
     },
     {
      "company": "Pagaya Technologies Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.4,
      "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -587,8 +633,8 @@
     },
     {
      "company": "Funding Circle Holdings plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.7,
      "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -596,8 +642,8 @@
     },
     {
      "company": "Upstart Holdings, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 34.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.3,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -970,6 +1016,28 @@
     "lending"
    ],
    "spread": 1.8,
+   "table": [
+    {
+     "company": "Atom Bank",
+     "date": "Feb-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.17,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Zopa",
+     "date": "Oct-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.3,
    "thin": true,
    "triangulated": false
@@ -1095,8 +1163,8 @@
    "table": [
     {
      "company": "NewtekOne, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.9,
      "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -1104,8 +1172,8 @@
     },
     {
      "company": "OppFi Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.4,
      "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -1113,8 +1181,8 @@
     },
     {
      "company": "Dave Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 24.6,
      "multiple": 8.3,
      "recurring_pct": null,
      "retention_pct": null,

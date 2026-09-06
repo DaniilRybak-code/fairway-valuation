@@ -1,5 +1,270 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "MERCHANTS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "MERCHANTS",
+     "basis_label": "dollars of enterprise value per merchant",
+     "basis_mix": {
+      "MERCHANTS": 2
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "merchants",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 54166.67,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 2125.0,
+     "mid": 54166.67,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "SumUp",
+       "mult": 2125.0,
+       "reason": "both do Tap to Pay; same type of business; same business function; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Mollie",
+       "mult": 54166.67,
+       "reason": "shares the language of payments; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "card",
+      "pay",
+      "payments",
+      "tap",
+      "to"
+     ],
+     "spread": 25.5,
+     "table": [
+      {
+       "company": "SumUp",
+       "date": "Dec-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2125.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mollie",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 54166.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 4.3,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 16.34,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 12.2,
+     "mid": 16.34,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "api",
+      "payments"
+     ],
+     "spread": 1.3,
+     "table": [
+      {
+       "company": "Plaid",
+       "date": "Apr-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 12.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Stripe",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 16.34,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.4,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 5
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 54.17,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 9.52,
+     "mid": 41.67,
+     "n": 5,
+     "period_mix": {
+      "FY2024": 1,
+      "LTM": 4
+     },
+     "period_span": {
+      "FY2024": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "api",
+      "card",
+      "pay",
+      "payments",
+      "tap",
+      "to"
+     ],
+     "spread": 5.7,
+     "table": [
+      {
+       "company": "Cashfree Payments",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.52,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "MoonPay",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 22.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "SumUp",
+       "date": "Dec-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 41.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Checkout.com",
+       "date": "Dec-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 44.34,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mollie",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 54.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 4.3,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Repay Holdings Corporation",
@@ -150,8 +415,8 @@
    "table": [
     {
      "company": "One MobiKwik Systems Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.5,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -159,8 +424,8 @@
     },
     {
      "company": "Usio, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -168,8 +433,8 @@
     },
     {
      "company": "PayPal Holdings, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.4,
      "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -177,8 +442,8 @@
     },
     {
      "company": "Repay Holdings Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.5,
      "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -186,8 +451,8 @@
     },
     {
      "company": "PayPoint plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -4.2,
      "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -195,8 +460,8 @@
     },
     {
      "company": "Nexi S.p.A.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.7,
      "multiple": 2.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -204,8 +469,8 @@
     },
     {
      "company": "GMO Payment Gateway, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.8,
      "multiple": 5.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -499,6 +764,28 @@
     "payments"
    ],
    "spread": 1.3,
+   "table": [
+    {
+     "company": "Plaid",
+     "date": "Apr-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 12.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Stripe",
+     "date": "Feb-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 16.34,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": true,
    "triangulated": false
@@ -623,8 +910,8 @@
    "table": [
     {
      "company": "Tyro Payments Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.8,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -632,8 +919,8 @@
     },
     {
      "company": "PagSeguro Digital Ltd.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.6,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -641,8 +928,8 @@
     },
     {
      "company": "Marqeta, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.3,
      "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -650,8 +937,8 @@
     },
     {
      "company": "DLocal Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 39.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 26.2,
      "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -659,8 +946,8 @@
     },
     {
      "company": "One97 Communications Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 25.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.7,
      "multiple": 7.7,
      "recurring_pct": null,
      "retention_pct": null,

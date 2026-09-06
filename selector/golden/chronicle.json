@@ -1,5 +1,183 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REGISTERED_USERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REGISTERED_USERS",
+     "basis_label": "dollars of enterprise value per registered user",
+     "basis_mix": {
+      "REGISTERED_USERS": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "registered_users",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 175.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 30.0,
+     "mid": 175.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "design",
+      "document",
+      "generation",
+      "presentation",
+      "slide",
+      "templates"
+     ],
+     "spread": 5.8,
+     "table": [
+      {
+       "company": "Gamma",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 30.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Canva",
+       "date": "Aug-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 175.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 5.1,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "ARR_RUNRATE": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 40.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 12.7,
+     "mid": 21.0,
+     "n": 5,
+     "period_mix": {
+      "RUN_RATE": 5
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "builder",
+      "design",
+      "document",
+      "generation",
+      "presentation",
+      "slide",
+      "templates"
+     ],
+     "spread": 3.1,
+     "table": [
+      {
+       "company": "Canva",
+       "date": "Aug-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 12.7,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Figma",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 17.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Gamma",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Framer",
+       "date": "Aug-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 40.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 5.1,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Adobe Inc.",
@@ -98,8 +276,8 @@
    "table": [
     {
      "company": "Adobe Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.9,
      "multiple": 4.1,
      "recurring_pct": 96.0,
      "retention_pct": null,
@@ -107,8 +285,8 @@
     },
     {
      "company": "Dassault Systemes SE",
-     "growth_basis": "NTM",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.2,
      "multiple": 4.1,
      "recurring_pct": 82.0,
      "retention_pct": null,
@@ -116,8 +294,8 @@
     },
     {
      "company": "Nemetschek SE",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.2,
      "multiple": 4.9,
      "recurring_pct": 92.2,
      "retention_pct": null,
@@ -125,8 +303,8 @@
     },
     {
      "company": "Autodesk, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 13.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.0,
      "multiple": 5.8,
      "recurring_pct": 97.0,
      "retention_pct": 105.0,
@@ -134,8 +312,8 @@
     },
     {
      "company": "PTC Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
      "multiple": 6.2,
      "recurring_pct": 95.0,
      "retention_pct": null,
@@ -143,8 +321,8 @@
     },
     {
      "company": "Bentley Systems, Incorporated",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 12.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
      "multiple": 6.7,
      "recurring_pct": 92.0,
      "retention_pct": 109.0,
@@ -152,8 +330,8 @@
     },
     {
      "company": "Figma, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 32.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.8,
      "multiple": 7.6,
      "recurring_pct": null,
      "retention_pct": 136.0,
@@ -577,6 +755,58 @@
     "templates"
    ],
    "spread": 3.1,
+   "table": [
+    {
+     "company": "Canva",
+     "date": "Aug-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 12.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Figma",
+     "date": "Jul-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 17.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Gamma",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 21.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Framer",
+     "date": "Aug-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 40.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 5.1,
    "thin": false,
    "triangulated": false
@@ -639,7 +869,7 @@
    "table": [
     {
      "company": "Box, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
+     "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 9.0,
      "multiple": 3.6,
      "recurring_pct": null,
@@ -648,8 +878,8 @@
     },
     {
      "company": "Dropbox, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.2,
      "multiple": 4.1,
      "recurring_pct": null,
      "retention_pct": null,

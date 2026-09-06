@@ -1,7 +1,19 @@
-# RAW TRANSCRIPTION. Public comps pull of 4-Sep-2026, rows 508 to 523 of the I_Public_Comps tab.
-# Source: screenshot supplied by Daniil at 21:40 UK on 4-Sep-2026. There is no CSV: the pull is run
-# in a separate sandbox and cannot be exported, so this transcription IS the record (D1).
-# Transcribed by Claude Opus 5 from the screenshot, column by column, 4-Sep-2026 21:45 UK.
+# RAW TRANSCRIPTION. Public comps pull, rows 508 to 523 of the I_Public_Comps tab.
+# Source: screenshot supplied by Daniil, transcribed the same evening. There is no CSV: the pull is
+# run in a separate sandbox and cannot be exported, so this transcription IS the record (D1).
+# Transcribed by Claude Opus 5 from the screenshot, column by column.
+#
+# DATE CORRECTED 5-Sep-2026 (audit of the day's log). This header used to say the screenshot was
+# supplied at 21:40 UK on 4-Sep and transcribed at 21:45 UK on 4-Sep. Both are wrong: the file
+# first exists in commit 224ec60, made at 21:28 UK on 5 SEPTEMBER, and no earlier commit contains
+# it. The 21:45 stamp is also later than the commit that carries it, so it was written ahead of
+# the clock as well as on the wrong day. The work is 5 September and no exact minute is claimed,
+# because the commit is the only evidence and it gives an upper bound, not a moment.
+#
+# THE FILE NAME STILL SAYS 2026-09-04 AND IS DELIBERATELY NOT CHANGED. It is referenced by the
+# MANIFEST, by check 1, by docs/public-pull-verdicts-4sep.md and by the status document, and it is
+# the name Daniil knows this pull by. Renaming it to correct a date would break four references to
+# fix a label; the correction belongs here, in the record itself.
 #
 # NOT YET VERIFIED BY A SECOND READ. Every figure below must be checked against the screen before
 # it is loaded into data/peers-*.csv. Nothing here has reached the engine.

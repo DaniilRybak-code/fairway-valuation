@@ -1,5 +1,143 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 1
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 37.5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 20.0,
+     "mid": 37.5,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "deployment",
+      "development",
+      "embedded",
+      "platform",
+      "robotics",
+      "simulation",
+      "test",
+      "tooling"
+     ],
+     "spread": 1.9,
+     "table": [
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Applied Intuition",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 37.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 12.0,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 10.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.0,
+     "mid": 10.0,
+     "n": 1,
+     "period_mix": {
+      "NOT STATED": 1
+     },
+     "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "development",
+      "fleet",
+      "platform",
+      "robot",
+      "robotics",
+      "tooling"
+     ],
+     "sole": "Vention",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Vention",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 8.9,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "GitLab Inc.",
@@ -101,8 +239,8 @@
    "table": [
     {
      "company": "Qt Group Oyj",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -110,8 +248,8 @@
     },
     {
      "company": "Dassault Systemes SE",
-     "growth_basis": "NTM",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.2,
      "multiple": 4.1,
      "recurring_pct": 82.0,
      "retention_pct": null,
@@ -119,8 +257,8 @@
     },
     {
      "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
@@ -128,8 +266,8 @@
     },
     {
      "company": "PTC Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
      "multiple": 6.2,
      "recurring_pct": 95.0,
      "retention_pct": null,
@@ -137,8 +275,8 @@
     },
     {
      "company": "Unity Software Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 21.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.2,
      "multiple": 7.2,
      "recurring_pct": null,
      "retention_pct": 106.0,
@@ -146,8 +284,8 @@
     },
     {
      "company": "Synopsys, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.9,
      "multiple": 8.2,
      "recurring_pct": 78.0,
      "retention_pct": null,
@@ -155,8 +293,8 @@
     },
     {
      "company": "Cadence Design Systems, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
      "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -669,6 +807,28 @@
     "tooling"
    ],
    "spread": 1.9,
+   "table": [
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Applied Intuition",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 37.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 12.0,
    "thin": true,
    "triangulated": false

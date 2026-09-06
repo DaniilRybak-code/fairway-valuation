@@ -57,6 +57,7 @@ run "10 QUIZ WALKER     does every answer land somewhere"              python3 t
 run "11 INVESTOR RAILS  no contact details, no incomplete cards"       python3 tools/check_investor_compliance.py
 run "12 INVESTOR REACH  does a founder get a list at all"              python3 tools/investor_coverage.py
 run "13 THE READ         does every number in it trace to something"    python3 tools/recommendations_check.py
+run "14 ONE PAYLOAD      does the whole reveal assemble in one pass"     python3 tools/check_reveal_payload.py
 printf '\n'
 if [ "$fail" = "1" ]; then
   echo 'ONE OR MORE CHECKS FAILED. The stage that failed is where the data stopped.'

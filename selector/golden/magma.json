@@ -1,5 +1,200 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 357142.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10285.71,
+     "mid": 357142.86,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10285.71,
+       "reason": "shares the language of agent, data; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Clay",
+       "mult": 357142.86,
+       "reason": "shares the language of data; related type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "data"
+     ],
+     "spread": 34.7,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10285.71,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 357142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.3,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 2
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Confluent"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 50.0,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Confluent"
+     ],
+     "low": 9.88,
+     "mid": 14.9,
+     "n": 5,
+     "period_mix": {
+      "LTM": 2,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "data",
+      "evaluation",
+      "model",
+      "training"
+     ],
+     "spread": 5.1,
+     "table": [
+      {
+       "company": "Confluent",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.88,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Invisible Technologies",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.6,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Datadog, Inc.",
@@ -150,8 +345,8 @@
    "table": [
     {
      "company": "Teradata Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.7,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": 108.0,
@@ -159,8 +354,8 @@
     },
     {
      "company": "Elastic N.V.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
      "multiple": 4.2,
      "recurring_pct": null,
      "retention_pct": 112.0,
@@ -168,8 +363,8 @@
     },
     {
      "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.5,
      "multiple": 5.8,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -177,8 +372,8 @@
     },
     {
      "company": "Red Violet, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.3,
      "multiple": 10.0,
      "recurring_pct": 77.0,
      "retention_pct": 95.0,
@@ -186,8 +381,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -195,8 +390,8 @@
     },
     {
      "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.8,
      "multiple": 15.6,
      "recurring_pct": null,
      "retention_pct": 126.0,
@@ -204,8 +399,8 @@
     },
     {
      "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 66.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 47.0,
      "multiple": 39.0,
      "recurring_pct": null,
      "retention_pct": 157.0,
@@ -747,6 +942,58 @@
     "training"
    ],
    "spread": 5.1,
+   "table": [
+    {
+     "company": "Confluent",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 9.88,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Invisible Technologies",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.6,
    "thin": false,
    "triangulated": false
@@ -840,8 +1087,8 @@
    "table": [
     {
      "company": "TomTom N.V.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": -1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.9,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -849,8 +1096,8 @@
     },
     {
      "company": "Twilio Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
      "multiple": 5.2,
      "recurring_pct": null,
      "retention_pct": 116.0,
@@ -858,8 +1105,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,

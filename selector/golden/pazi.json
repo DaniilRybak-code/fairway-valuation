@@ -1,5 +1,139 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 105.3,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 50.0,
+     "n": 4,
+     "period_mix": {
+      "NTM": 1,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Owner",
+       "mult": 23.0,
+       "reason": "shares the language of agent, ai, business; related type of business; same kind of customer; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Sierra",
+       "mult": 105.3,
+       "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "ai",
+      "automation",
+      "based",
+      "business",
+      "content",
+      "operations"
+     ],
+     "spread": 24.5,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Owner",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Sierra",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.2,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Asana, Inc.",
@@ -101,8 +235,8 @@
    "table": [
     {
      "company": "Asana, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.2,
      "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": 96.0,
@@ -110,8 +244,8 @@
     },
     {
      "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.0,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": 102.0,
@@ -119,8 +253,8 @@
     },
     {
      "company": "Pegasystems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.3,
      "multiple": 2.9,
      "recurring_pct": 57.9,
      "retention_pct": null,
@@ -128,8 +262,8 @@
     },
     {
      "company": "Appian Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.1,
      "multiple": 3.3,
      "recurring_pct": 79.5,
      "retention_pct": 116.0,
@@ -137,8 +271,8 @@
     },
     {
      "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -146,8 +280,8 @@
     },
     {
      "company": "innoscripta SE",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 38.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 27.3,
      "multiple": 4.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -155,8 +289,8 @@
     },
     {
      "company": "SAP SE",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.9,
      "multiple": 4.9,
      "recurring_pct": 63.6,
      "retention_pct": null,
@@ -716,6 +850,48 @@
     "operations"
    ],
    "spread": 24.5,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Owner",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Sierra",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
@@ -840,8 +1016,8 @@
    "table": [
     {
      "company": "Wix.com Ltd.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 12.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
      "multiple": 2.0,
      "recurring_pct": 71.0,
      "retention_pct": null,
@@ -849,8 +1025,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -858,8 +1034,8 @@
     },
     {
      "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
      "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -867,8 +1043,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -876,8 +1052,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,

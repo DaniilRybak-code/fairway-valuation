@@ -1,129 +1,6 @@
 {
  "expected": {
   "all_ranges": {
-   "listed": {
-    "REVENUE": {
-     "anchor_dropped": false,
-     "band": "DIRECT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
-     "basis_mix": {
-      "UNKNOWN": 4
-     },
-     "bounded": false,
-     "closeness": "SHARED_PRODUCT",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "revenue",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 4.7,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 0.4,
-     "mid": 0.45,
-     "n": 4,
-     "period_mix": {
-      "NTM": 4
-     },
-     "period_span": {
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Nerdy Inc.",
-       "mult": 0.4,
-       "reason": "shares the language of ai; same type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Chegg, Inc.",
-       "mult": 0.4,
-       "reason": "same type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Coursera, Inc.",
-       "mult": 0.5,
-       "reason": "same type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      },
-      {
-       "company": "Duolingo, Inc.",
-       "mult": 4.7,
-       "reason": "both do AI Tutor; same type of business; same end market; same AI stance",
-       "tier": "DIRECT",
-       "transaction_type": ""
-      }
-     ],
-     "positioning": [
-      {
-       "company": "Docebo Inc.",
-       "mult": 2.3,
-       "reason": "both do LMS, Corporate Training; related type of business; same end market; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": ""
-      }
-     ],
-     "post_stated_n": 0,
-     "shared_words": [
-      "ai",
-      "tutor"
-     ],
-     "show_retention": false,
-     "spread": 11.8,
-     "table": [
-      {
-       "company": "Nerdy Inc.",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": 3.0,
-       "multiple": 0.4,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:NRDY"
-      },
-      {
-       "company": "Chegg, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": -26.0,
-       "multiple": 0.4,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:CHGG"
-      },
-      {
-       "company": "Coursera, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 12.0,
-       "multiple": 0.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:COUR"
-      },
-      {
-       "company": "Duolingo, Inc.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 13.0,
-       "multiple": 4.7,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQGS:DUOL"
-      }
-     ],
-     "tag_evidence": 3.7,
-     "thin": false,
-     "triangulated": false
-    }
-   },
    "private": {
     "REVENUE": {
      "anchor_dropped": false,
@@ -194,7 +71,115 @@
       "workforce"
      ],
      "spread": 10.1,
+     "table": [
+      {
+       "company": "Learning Technologies Group",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.52,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vedantu",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.38,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 5.5,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": true,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Udemy"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 142.17,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Udemy"
+     ],
+     "low": 1.29,
+     "mid": 142.17,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Udemy",
+       "mult": 1.29,
+       "reason": "shares the language of corporate, course; same type of business; same end market; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "LEAD School",
+       "mult": 142.17,
+       "reason": "shares the language of training; same type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "corporate",
+      "course",
+      "training"
+     ],
+     "spread": 110.2,
+     "table": [
+      {
+       "company": "Udemy",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.29,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "LEAD School",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 142.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.9,
      "thin": true,
      "triangulated": false
     }
@@ -327,8 +312,8 @@
    "table": [
     {
      "company": "Nerdy Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.4,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -337,7 +322,7 @@
     {
      "company": "Chegg, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -26.0,
+     "growth_pct": -26.3,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -346,7 +331,7 @@
     {
      "company": "Coursera, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.0,
+     "growth_pct": 12.3,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -355,7 +340,7 @@
     {
      "company": "Duolingo, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.0,
+     "growth_pct": 13.4,
      "multiple": 4.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -563,7 +548,7 @@
     "bound": "",
     "company": "Udemy",
     "date": "Dec-25",
-    "in_medians": false,
+    "in_medians": true,
     "mult": 1.29,
     "reason": "shares the language of corporate, course; same type of business; same end market; sold the same way",
     "score": 11.9,
@@ -669,6 +654,28 @@
     "workforce"
    ],
    "spread": 10.1,
+   "table": [
+    {
+     "company": "Learning Technologies Group",
+     "date": "Dec-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 1.52,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vedantu",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.38,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 5.5,
    "thin": true,
    "triangulated": false
@@ -724,8 +731,8 @@
    "table": [
     {
      "company": "Infomart Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.8,
      "multiple": 6.6,
      "recurring_pct": null,
      "retention_pct": null,

@@ -1,5 +1,232 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 3
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 1000000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 357142.86,
+     "mid": 640000.0,
+     "n": 3,
+     "period_mix": {
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "automation",
+      "deal",
+      "execution",
+      "gtm",
+      "revenue"
+     ],
+     "spread": 2.8,
+     "table": [
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 357142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ramp",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 640000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Gong",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1000000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.8,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 105.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 14.9,
+     "mid": 32.0,
+     "n": 5,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Invisible Technologies",
+       "mult": 14.9,
+       "reason": "shares the language of ai; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Owner",
+       "mult": 23.0,
+       "reason": "shares the language of ai, operations; related type of business; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Ramp",
+       "mult": 32.0,
+       "reason": "shares the language of automation; related type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of ai, automation, gtm; related type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Sierra",
+       "mult": 105.3,
+       "reason": "both do Agentic AI; related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "agentic",
+      "ai",
+      "automation",
+      "customer",
+      "gtm",
+      "operations"
+     ],
+     "spread": 7.1,
+     "table": [
+      {
+       "company": "Invisible Technologies",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Owner",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ramp",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Sierra",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "UiPath, Inc.",
@@ -155,8 +382,8 @@
    "table": [
     {
      "company": "Zaggle Prepaid Ocean Services",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 32.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 29.7,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -164,8 +391,8 @@
     },
     {
      "company": "BlackLine, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.4,
      "multiple": 2.5,
      "recurring_pct": 95.0,
      "retention_pct": 102.0,
@@ -173,8 +400,8 @@
     },
     {
      "company": "Pegasystems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.3,
      "multiple": 2.9,
      "recurring_pct": 57.9,
      "retention_pct": null,
@@ -182,8 +409,8 @@
     },
     {
      "company": "DocuSign, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
      "multiple": 3.2,
      "recurring_pct": null,
      "retention_pct": 102.0,
@@ -191,8 +418,8 @@
     },
     {
      "company": "Sidetrade SA",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
      "multiple": 3.7,
      "recurring_pct": 87.0,
      "retention_pct": null,
@@ -200,8 +427,8 @@
     },
     {
      "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -209,8 +436,8 @@
     },
     {
      "company": "Workday, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
      "multiple": 4.3,
      "recurring_pct": 93.0,
      "retention_pct": null,
@@ -809,6 +1036,58 @@
     "operations"
    ],
    "spread": 7.1,
+   "table": [
+    {
+     "company": "Invisible Technologies",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Owner",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Ramp",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Sierra",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
@@ -916,8 +1195,8 @@
    "table": [
     {
      "company": "Cass Information Systems",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.5,
      "multiple": 3.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -925,8 +1204,8 @@
     },
     {
      "company": "Braze, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -934,8 +1213,8 @@
     },
     {
      "company": "SAP SE",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.9,
      "multiple": 4.9,
      "recurring_pct": 63.6,
      "retention_pct": null,

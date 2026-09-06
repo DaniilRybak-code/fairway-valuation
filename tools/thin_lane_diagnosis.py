@@ -54,7 +54,7 @@ def main():
             if isinstance(n, int) and n < 2:
                 thin.append((k, lane, rng, e))
     print('THIN LANES AND WHY. A lane is thin when fewer than two comparables actually price it.\n')
-    sourcing = []
+    sourcing, ruling, matcher = [], [], []
     for key, lane, rng, e in thin:
         prof = profs[key]
         need_basis = M.basis_for(prof)
@@ -141,7 +141,9 @@ def main():
         near = [x for x in spare if '[BROAD' not in x and '[UNDER_CUT' not in x
                 and '[BARRED_RELEVANCE' not in x]
         barred = [x for x in spare if '[BARRED_RELEVANCE' in x]
-        far = [x for x in spare if '[BROAD' in x or '[UNDER_CUT' in x]
+        under = [x for x in spare if '[UNDER_CUT' in x]
+        broad = [x for x in spare if '[BROAD' in x]
+        far = under + broad
         if near:
             print('   ALSO RELATED AND PRICED ON THE RIGHT BASIS, NOT SHOWN (%d): %s'
                   % (len(near), ', '.join(near[:8]) + (' ...' if len(near) > 8 else '')))
@@ -159,15 +161,54 @@ def main():
         if far:
             print('   HELD, RELATED, BARRED BY TIER OR SCORE (%d): %s' % (len(far),
                   ', '.join(far[:8]) + (' ...' if len(far) > 8 else '')))
-        if not spare:
-            print('   NOTHING IN THE FILE AT ALL FOR THIS LANE. This one is a sourcing request.')
+        # WHICH OF THE NAMES ABOVE IS ACTUALLY A CANDIDATE, and this is the correction of 5-Sep.
+        #
+        # The old test was `if not spare`: a lane counted as a sourcing request only when the file
+        # held literally nothing, and ANY held name stood the request down. That put a barred name
+        # on the same footing as a usable one and produced the headline "12 thin lanes, 0 genuine
+        # sourcing requests" on the very evening a pull into those same lanes moved eight fixtures
+        # from FAIL to PASS. The headline was wrong and it was the loudest line in the output.
+        #
+        # A name is a CANDIDATE only if sourcing is not what stands between it and the founder:
+        #   near        related, priced on the right basis, simply not shown. A matcher question.
+        #   UNDER_CUT   related and priced, ranked too far behind the lane's best name. A ruling.
+        # A name is NOT a candidate when a rule we believe in bars it, and more names of the same
+        # kind would be barred the same way:
+        #   BARRED_RELEVANCE  the gate wants shared vocabulary or a shared end market, and rule A12
+        #                     part 1 says an archetype label is not evidence. Docker for paymentkit
+        #                     and Zepz for tash are the live examples. The fix for this lane is a
+        #                     RELEVANT name we do not yet hold, which is exactly a sourcing request.
+        #   BROAD             shares no archetype. Rule A8: nothing unrelated may be shown.
+        candidates = near + under
+        if not candidates:
+            if not spare:
+                print('   NOTHING IN THE FILE AT ALL FOR THIS LANE. This one is a sourcing request.')
+            else:
+                print('   NO CANDIDATE IN THE FILE. Every name above is barred by a rule we keep')
+                print('   (%d by the relevance gate, %d as unrelated), so more of the same would'
+                      % (len(barred), len(broad)))
+                print('   be barred too. THIS IS A SOURCING REQUEST: it needs a name that clears')
+                print('   the gate, not more names that do not.')
             sourcing.append('%s / %s (%s)' % (key, lane, need_basis))
         elif not near:
+            ruling.append('%s / %s' % (key, lane))
             print('   NOT A SOURCING REQUEST UNTIL THE NAMES ABOVE ARE RULED ON.')
+        else:
+            matcher.append('%s / %s' % (key, lane))
         print()
     print('----')
-    print('%d thin lanes. %d of them are genuine sourcing requests:' % (len(thin), len(sourcing)))
+    print('%d thin lanes, split by what would actually fix them.\n' % len(thin))
+    print('SOURCING requests (%d): no name in the file clears the rules for that lane.'
+          % len(sourcing))
     for x in sourcing:
+        print('   %s' % x)
+    print('\nAWAITING A RULING (%d): we hold a related, priced name that ranks below the lane cut.'
+          % len(ruling))
+    for x in ruling:
+        print('   %s' % x)
+    print('\nMATCHER questions (%d): a usable name is in the file and is not being shown.'
+          % len(matcher))
+    for x in matcher:
         print('   %s' % x)
     return 0
 

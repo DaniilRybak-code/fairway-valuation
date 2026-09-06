@@ -1,5 +1,316 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 3
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 20000000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 19333.33,
+     "mid": 2333333.33,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Doctolib",
+       "mult": 19333.33,
+       "reason": "both do Practice Management, Patient Records; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Aledade",
+       "mult": 2333333.33,
+       "reason": "same type of business; same end market; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Virta Health",
+       "mult": 20000000.0,
+       "reason": "same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [
+      {
+       "company": "Mews",
+       "mult": 166666.67,
+       "reason": "both do Revenue Management; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "shared_words": [
+      "management",
+      "patient",
+      "practice",
+      "records"
+     ],
+     "spread": 1034.5,
+     "table": [
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2333333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Virta Health",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20000000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.8,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 14.25,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.0,
+     "mid": 12.5,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "management",
+      "revenue"
+     ],
+     "spread": 1.4,
+     "table": [
+      {
+       "company": "Thirty Madison",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mews",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 12.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Cityblock Health",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.25,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 57.1,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.37,
+     "mid": 32.0,
+     "n": 4,
+     "period_mix": {
+      "LTM": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Aledade",
+       "mult": 7.37,
+       "reason": "same type of business; same end market; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Ro",
+       "mult": 16.67,
+       "reason": "same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Doctolib",
+       "mult": 32.0,
+       "reason": "both do Practice Management, Patient Records; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Virta Health",
+       "mult": 57.1,
+       "reason": "same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "management",
+      "patient",
+      "practice",
+      "records"
+     ],
+     "spread": 7.7,
+     "table": [
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.37,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ro",
+       "date": "Mar-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 16.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Virta Health",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 57.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.8,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Weave Communications, Inc.",
@@ -152,8 +463,8 @@
    "table": [
     {
      "company": "Phreesia, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.3,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -161,8 +472,8 @@
     },
     {
      "company": "Medley, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 19.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.7,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -170,8 +481,8 @@
     },
     {
      "company": "Weave Communications, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.8,
      "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": 92.0,
@@ -179,8 +490,8 @@
     },
     {
      "company": "SMS Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 9.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.7,
      "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -188,8 +499,8 @@
     },
     {
      "company": "Consensus Cloud Solutions, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 3.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -197,8 +508,8 @@
     },
     {
      "company": "Waystar Holding Corp.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
      "multiple": 4.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -206,8 +517,8 @@
     },
     {
      "company": "Veeva Systems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
      "multiple": 9.7,
      "recurring_pct": 84.0,
      "retention_pct": null,
@@ -631,6 +942,38 @@
     "revenue"
    ],
    "spread": 1.4,
+   "table": [
+    {
+     "company": "Thirty Madison",
+     "date": "Jun-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Mews",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 12.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Cityblock Health",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.25,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
@@ -719,8 +1062,8 @@
    "table": [
     {
      "company": "Tecsys Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
      "multiple": 1.9,
      "recurring_pct": 58.0,
      "retention_pct": 106.0,
@@ -728,8 +1071,8 @@
     },
     {
      "company": "IVU Traffic Technologies AG",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.0,
      "multiple": 2.2,
      "recurring_pct": 48.0,
      "retention_pct": null,
@@ -737,8 +1080,8 @@
     },
     {
      "company": "EverCommerce Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.7,
      "multiple": 2.9,
      "recurring_pct": null,
      "retention_pct": 94.0,

@@ -95,15 +95,35 @@ Three parts, and the third is the one that decays if nobody watches it:
    specific end market. Sharing an archetype is a label, not evidence, and the labels are too coarse
    to carry it: `Vertical Software` holds 120 rows and contains stock exchanges and restaurant
    software (`docs/taxonomy-review-5sep.md`).
-2. **The fallback is a RESCUE, not a loosening.** It opens only for a lane that cannot price at all,
-   never for a founder whose lane is already healthy. Applied everywhere it would hand a social
-   publishing API the Perplexity round, which is the failure the gate was written to stop.
-3. **Every rescue is named on every run** by `tools/peer_universe_check.py`, under "served on a
-   label, not on evidence". That list is the enrichment brief. **Four enrichment passes are
-   scheduled before the pilot** and the register is what they work from. We do not chase this
-   between them: there is a product to ship.
+2. **The fallback is a RESCUE, not a loosening.** Stated as the code applies it, because the first
+   wording of this rule was looser than the thing it described. The fallback opens for a lane
+   holding FEWER THAN TWO priced comparables, and what it admits is KEPT ONLY IF IT ADDS A PRICED
+   NAME. A lane that is already healthy never sees it, and a rescue that brings in five names and
+   prices none of them is discarded rather than shown. Applied everywhere instead, it would hand a
+   social publishing API the Perplexity round, which is the failure the gate was written to stop.
+3. **Every rescue is named on every run** by `tools/peer_universe_check.py`, and it is named in the
+   NO-COMPS LIST alongside the companies that got no comparables at all. Those are the two kinds of
+   entry and they belong on one list: a founder served on a label and a founder served on nothing
+   are both founders the database could not answer.
 
-**A11. Hardware needs no archetype.**
+   **What we do about it, and this is the part that decays if nobody watches it.** Daniil, 5 Sep,
+   23:10 UK: the pool is large enough, there will always be blind spots, and the pilot is the best
+   way to find them. So **we do not chase comparables lane by lane as the list grows.** On 8, 11, 15
+   and 18 September we run a MARCH, not a data pull: 30 to 40 new test companies each time, scored
+   the way the 3-Sep march scored them, each march adding to the No-comps list. **The list is
+   resolved in bulk once, after the 18 September march and before launch.** Between the marches the
+   work is on the matching machine and the tagging, not on enlarging the pool. A proposal to pull
+   data outside that one bulk pass is this rule telling you to stop.
+
+**A11. Hardware is filed under what it sells, not under a hardware archetype.**
+We have no hardware archetype and we are not adding one, because the taxonomy sorts businesses by
+what they do commercially rather than by whether the thing they ship is physical. A company that
+makes a physical product and sells it to consumers is Owned-Inventory Retail; one that engineers it
+to order is Design & Engineering. That is where both hardware fixtures sit today.
+*Live consequence, and it is not comfortable:* `ultrasonium`, a metal manufacturer, carries
+Owned-Inventory Retail, and on that label the archetype fallback offered it Moove, Quince, Olive &
+June and Flink. It fails the gate anyway, so nothing wrong reaches a founder, but the rule is doing
+worse work here than it does elsewhere and the tagging review has it.
 
 ---
 
@@ -129,6 +149,26 @@ single biggest known hole in the rulebook.
 genuinely net and the rows labelled gross are genuinely gross.** A label nobody checked is not
 evidence. 100 private rows currently carry a basis somebody read off the business model rather than
 off the source document.
+
+**B3a. The quiz asks the founder for BOTH figures, and the engine keeps both.**
+*Added 5 Sep, Daniil, 23:35 UK.* Until then the quiz asked for net revenue only, and that single
+default threw away every round priced on a gross figure: 66 of our 320 private rounds hold a usable
+gross multiple, sitting in the right archetype next to founders who could not reach them. Six of the
+twelve fixtures failing the peer-universe gate failed for that reason and no other.
+
+So the founder is asked for net revenue and for gross revenue, with the difference explained beside
+the question in plain words: gross is everything that passes through the business before the money
+that was never theirs goes back out, net is the part they keep. **A founder who gives one figure is
+served on that one.** Neither question blocks them.
+
+**This does not loosen B3; it is what makes B3 affordable.** Gross still never bands with net. The
+founder's net figure is compared only against rounds priced on net, the gross figure only against
+rounds priced on gross, and the two produce TWO SEPARATE RANGES, each labelled with the measure it
+is built on. Mixing them was the only thing the net-only default protected against, and it protected
+by throwing the evidence away.
+*Built:* yes, on the private lane. **Not on the listed lane, and deliberately:** listed rows carry no
+basis field at all (see B3 above), so a listed gross range would mean relabelling 513 rows nobody has
+read. Until that hole is filled, a founder's gross figure meets private rounds only.
 
 **B4. Forward and trailing numbers never sit in the same comparison.**
 Run rate and ARR are FORWARD, because both annualise what the business is earning now rather than
@@ -325,14 +365,32 @@ reader has to decode. No em dashes.
 **E7. Every comment Daniil makes gets reflected in the product, and anything that cannot be is
 flagged to him immediately.**
 
-**E8. A lane the founder has not paid for is ABSENT FROM THE PAYLOAD, never blurred in the page.**
-*Added 4 Sep*, with the three tiers (free reveal with lanes locked, $250 for the full field, $750
-for the advocacy pack). A CSS blur over a number that is sitting in the DOM is not a paywall, it is
-a dare: inspect the element and read it. The engine builds two payloads and the free one does not
-contain the figures behind the lock. What the free tier may carry about a locked lane is its
-EXISTENCE and its SHAPE (that it exists, how many comparables stand behind it, what kind of
-evidence they are), never its numbers, its names or its multiples. This is a rule about honesty as
-much as revenue: a lock that can be picked in ten seconds tells a founder what we think of them.
+**E8. A number the founder has not paid for is ABSENT FROM THE PAYLOAD, never merely blurred in
+the page.**
+*Added 4 Sep. Amended by Daniil 6 Sep, and the amendment is the reason the wording above changed
+from "a lane" to "a number".*
+
+**What the three tiers are** (Daniil, 6 Sep, settling the apparent contradiction on the live page):
+the **free** tier is the reveal plus a banker reading every set of answers by hand within 24 hours
+to confirm the comparables make sense; **$250** unblocks the full football field, private tiers and
+DCF included; **$750** is a full valuation presentation. The free review is not a contradiction of
+the $250 tier: one checks that the comparable set is sane, the other hands over the field.
+
+**What the free tier shows.** The PUBLIC lane in full and free. Everything non-public blurred, and
+on hovering a blurred range **the list of comparable companies, without their multiples**.
+
+**Which half of the old rule survives, and it is the important half.** A CSS blur over a number
+sitting in the DOM is not a paywall, it is a dare: inspect the element and read it. So the FIGURES
+behind the lock still never reach the browser. The free payload carries, for a locked lane: that it
+exists, how many comparables stand behind it, what kind of evidence they are, and now their NAMES.
+It carries no multiple, no low, mid or high, and no founder value. The blur the founder sees is
+drawn over nothing; there is nothing behind it to inspect.
+
+**What changed, plainly:** names used to be withheld with the numbers, and Daniil has ruled they
+should be shown. That is a good trade. A founder who can see that we hold Vanta, Personio and Miro
+for them knows the lock is over real work, which is a better argument for paying than a grey box.
+*Built:* `reveal_payload.build(prof, tier='free')` and check 14, which asserts that no multiple and
+no range endpoint appears anywhere outside the listed lane of a free payload.
 
 ---
 

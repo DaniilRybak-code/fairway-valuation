@@ -1,5 +1,154 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 3,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Confluent"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72.86,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Confluent"
+     ],
+     "low": 9.88,
+     "mid": 20.0,
+     "n": 5,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Confluent",
+       "mult": 9.88,
+       "reason": "shares the language of developer; same type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Anysphere / Cursor",
+       "mult": 19.8,
+       "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Replit",
+       "mult": 20.0,
+       "reason": "shares the language of app; same type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Lovable",
+       "mult": 33.0,
+       "reason": "shares the language of app; same type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Supabase",
+       "mult": 72.86,
+       "reason": "both do Open Source; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "app",
+      "developer",
+      "open",
+      "source"
+     ],
+     "spread": 7.4,
+     "table": [
+      {
+       "company": "Confluent",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.88,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anysphere / Cursor",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.2,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Qt Group Oyj",
@@ -90,8 +239,8 @@
    "table": [
     {
      "company": "TomTom N.V.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": -1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.9,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -99,8 +248,8 @@
     },
     {
      "company": "Qt Group Oyj",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -108,8 +257,8 @@
     },
     {
      "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
@@ -650,6 +799,58 @@
     "source"
    ],
    "spread": 7.4,
+   "table": [
+    {
+     "company": "Confluent",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 9.88,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anysphere / Cursor",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 19.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.86,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.2,
    "thin": false,
    "triangulated": false
@@ -728,8 +929,8 @@
    "table": [
     {
      "company": "Agora, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.1,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -737,8 +938,8 @@
     },
     {
      "company": "DigitalOcean Holdings, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 42.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 51.1,
      "multiple": 8.7,
      "recurring_pct": null,
      "retention_pct": 102.0,

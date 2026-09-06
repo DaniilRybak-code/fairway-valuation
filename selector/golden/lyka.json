@@ -1,5 +1,114 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 3
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.4,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 3.3,
+     "mid": 4.6,
+     "n": 3,
+     "period_mix": {
+      "LTM": 2,
+      "NTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [
+      {
+       "company": "SKIMS",
+       "mult": 5.0,
+       "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "WHOOP",
+       "mult": 9.18,
+       "reason": "shares the language of subscription; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Quince",
+       "mult": 10.1,
+       "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "shared_words": [
+      "direct",
+      "meal",
+      "nutrition",
+      "subscription"
+     ],
+     "spread": 1.6,
+     "table": [
+      {
+       "company": "Huel",
+       "date": "Nov-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "OLIPOP",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Liquid Death",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.5,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Oisix Inc.",
@@ -322,6 +431,38 @@
     "subscription"
    ],
    "spread": 1.6,
+   "table": [
+    {
+     "company": "Huel",
+     "date": "Nov-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "OLIPOP",
+     "date": "Feb-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Liquid Death",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false

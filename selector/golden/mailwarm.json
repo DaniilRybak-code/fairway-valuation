@@ -1,5 +1,76 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Mailchimp"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 32.6,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 15.0,
+     "mid": 32.6,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "email"
+     ],
+     "spread": 2.2,
+     "table": [
+      {
+       "company": "Mailchimp",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.2,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
   "core": [
    {
     "company": "Klaviyo, Inc.",
@@ -74,8 +145,8 @@
    "table": [
     {
      "company": "Yext, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.9,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": 95.0,
@@ -83,8 +154,8 @@
     },
     {
      "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.0,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": 102.0,
@@ -92,8 +163,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -101,8 +172,8 @@
     },
     {
      "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.3,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -377,6 +448,28 @@
     "email"
    ],
    "spread": 2.2,
+   "table": [
+    {
+     "company": "Mailchimp",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Klaviyo",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.2,
    "thin": true,
    "triangulated": true
@@ -501,8 +594,8 @@
    "table": [
     {
      "company": "GoDaddy Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.1,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": 85.0,
@@ -510,8 +603,8 @@
     },
     {
      "company": "IONOS Group SE",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.0,
      "multiple": 3.6,
      "recurring_pct": 80.0,
      "retention_pct": null,
@@ -519,8 +612,8 @@
     },
     {
      "company": "Intuit Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.6,
      "multiple": 4.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -528,8 +621,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -537,8 +630,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,

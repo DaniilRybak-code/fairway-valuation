@@ -1,110 +1,6 @@
 {
  "expected": {
   "all_ranges": {
-   "listed": {
-    "REVENUE": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
-     "basis_mix": {
-      "UNKNOWN": 6
-     },
-     "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "revenue",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 4.4,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 3.0,
-     "mid": 3.9,
-     "n": 6,
-     "period_mix": {
-      "NTM": 6
-     },
-     "period_span": {
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "post_stated_n": 0,
-     "shared_words": [
-      "app",
-      "mobile"
-     ],
-     "show_retention": false,
-     "spread": 2.4,
-     "table": [
-      {
-       "company": "Opera Limited",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 19.0,
-       "multiple": 1.9,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQGS:OPRA"
-      },
-      {
-       "company": "F-Secure Oyj",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 6.0,
-       "multiple": 3.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "HLSE:FSECURE"
-      },
-      {
-       "company": "Truecaller AB (publ)",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 5.0,
-       "multiple": 3.7,
-       "recurring_pct": 45.0,
-       "retention_pct": null,
-       "ticker": "OM:TRUE B"
-      },
-      {
-       "company": "Dropbox, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 0.0,
-       "multiple": 4.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQGS:DBX"
-      },
-      {
-       "company": "Life360, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 30.0,
-       "multiple": 4.4,
-       "recurring_pct": 75.4,
-       "retention_pct": null,
-       "ticker": "ASX:360"
-      },
-      {
-       "company": "Gen Digital Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 10.0,
-       "multiple": 4.6,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NASDAQGS:GEN"
-      }
-     ],
-     "tag_evidence": 0.5,
-     "thin": false,
-     "triangulated": false
-    }
-   },
    "private": {
     "PAYING_SUBSCRIBERS": {
      "anchor_dropped": false,
@@ -147,6 +43,18 @@
      ],
      "sole": "Suno",
      "spread": 1.0,
+     "table": [
+      {
+       "company": "Suno",
+       "date": "Jun-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2700.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
@@ -229,6 +137,58 @@
       "builder"
      ],
      "spread": 6.7,
+     "table": [
+      {
+       "company": "Suno",
+       "date": "Jun-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 18.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Gamma",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Genspark",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 25.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Framer",
+       "date": "Aug-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 40.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Perplexity",
+       "date": "Jul-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 120.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.4,
      "thin": false,
      "triangulated": false
@@ -325,8 +285,8 @@
    "table": [
     {
      "company": "Opera Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 19.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
      "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -334,8 +294,8 @@
     },
     {
      "company": "F-Secure Oyj",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": null,
@@ -343,8 +303,8 @@
     },
     {
      "company": "Truecaller AB (publ)",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.4,
      "multiple": 3.7,
      "recurring_pct": 45.0,
      "retention_pct": null,
@@ -352,8 +312,8 @@
     },
     {
      "company": "Dropbox, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.2,
      "multiple": 4.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -361,8 +321,8 @@
     },
     {
      "company": "Life360, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 30.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.9,
      "multiple": 4.4,
      "recurring_pct": 75.4,
      "retention_pct": null,
@@ -370,8 +330,8 @@
     },
     {
      "company": "Gen Digital Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.3,
      "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -977,6 +937,58 @@
     "builder"
    ],
    "spread": 6.7,
+   "table": [
+    {
+     "company": "Suno",
+     "date": "Jun-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 18.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Gamma",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 21.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Genspark",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 25.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Framer",
+     "date": "Aug-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 40.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Perplexity",
+     "date": "Jul-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 120.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false

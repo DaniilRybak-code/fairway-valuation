@@ -1,5 +1,208 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 357142.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10285.71,
+     "mid": 357142.86,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10285.71,
+       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Clay",
+       "mult": 357142.86,
+       "reason": "shares the language of agents, ai; related type of business; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "agents",
+      "ai"
+     ],
+     "spread": 34.7,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10285.71,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 357142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.4,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "ARR_RUNRATE": 1
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 105.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.3,
+     "mid": 50.0,
+     "n": 4,
+     "period_mix": {
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10.3,
+       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Lovable",
+       "mult": 33.0,
+       "reason": "shares the language of ai; related type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of agents, ai; related type of business; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Sierra",
+       "mult": 105.3,
+       "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "agents",
+      "ai"
+     ],
+     "spread": 10.2,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Sierra",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.4,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Cloudflare, Inc.",
@@ -88,8 +291,8 @@
    "table": [
     {
      "company": "SentinelOne, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 19.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.5,
      "multiple": 4.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -97,8 +300,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -106,8 +309,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -662,6 +865,48 @@
     "ai"
    ],
    "spread": 10.2,
+   "table": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Sierra",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.4,
    "thin": false,
    "triangulated": false
@@ -769,8 +1014,8 @@
    "table": [
     {
      "company": "Cerence Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": -3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.9,
      "multiple": 1.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -778,8 +1023,8 @@
     },
     {
      "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.5,
      "multiple": 5.8,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -787,8 +1032,8 @@
     },
     {
      "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
      "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -796,8 +1041,8 @@
     },
     {
      "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.8,
      "multiple": 15.6,
      "recurring_pct": null,
      "retention_pct": 126.0,

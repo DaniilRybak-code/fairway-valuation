@@ -1,5 +1,98 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 1,
+     "control_names": [
+      "Wolt"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 23.5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 8.94,
+     "mid": 10.3,
+     "n": 3,
+     "period_mix": {
+      "LTM": 2,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "delivery",
+      "last",
+      "logistics",
+      "mile",
+      "network",
+      "parcel",
+      "reverse"
+     ],
+     "spread": 2.6,
+     "table": [
+      {
+       "company": "Xpressbees",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.94,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Gorillas",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Wolt",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 5.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "PostNL N.V.",
@@ -152,8 +245,8 @@
    "table": [
     {
      "company": "PostNL N.V.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -161,8 +254,8 @@
     },
     {
      "company": "Yamato Holdings Co.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.6,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -170,7 +263,7 @@
     },
     {
      "company": "SG Holdings Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
+     "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 4.0,
      "multiple": 0.7,
      "recurring_pct": null,
@@ -179,8 +272,8 @@
     },
     {
      "company": "Deutsche Post AG",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -188,8 +281,8 @@
     },
     {
      "company": "United Parcel Service",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.5,
      "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -197,8 +290,8 @@
     },
     {
      "company": "ZTO Express (Cayman) Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.3,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -206,8 +299,8 @@
     },
     {
      "company": "Delhivery Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.6,
      "multiple": 2.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -648,6 +741,38 @@
     "reverse"
    ],
    "spread": 2.6,
+   "table": [
+    {
+     "company": "Xpressbees",
+     "date": "Feb-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 8.94,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Gorillas",
+     "date": "Oct-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Wolt",
+     "date": "Nov-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 5.9,
    "thin": false,
    "triangulated": false
@@ -752,7 +877,7 @@
     {
      "company": "Delivery Hero SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.0,
+     "growth_pct": 9.5,
      "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -760,8 +885,8 @@
     },
     {
      "company": "FedEx Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.8,
      "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -770,7 +895,7 @@
     {
      "company": "DoorDash, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.0,
+     "growth_pct": 19.5,
      "multiple": 4.7,
      "recurring_pct": null,
      "retention_pct": null,

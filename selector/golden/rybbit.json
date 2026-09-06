@@ -1,5 +1,214 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5600000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10285.71,
+     "mid": 5600000.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10285.71,
+       "reason": "shares the language of web; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Contentsquare",
+       "mult": 5600000.0,
+       "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "analytics",
+      "product",
+      "replay",
+      "session",
+      "web"
+     ],
+     "spread": 544.4,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10285.71,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Contentsquare",
+       "date": "Jul-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5600000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 10.8,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "ARR_RUNRATE": 2
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.3,
+     "mid": 33.0,
+     "n": 4,
+     "period_mix": {
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10.3,
+       "reason": "shares the language of web; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Contentsquare",
+       "mult": 28.0,
+       "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Lovable",
+       "mult": 33.0,
+       "reason": "shares the language of web; same type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Supabase",
+       "mult": 72.86,
+       "reason": "both do Open Source; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "analytics",
+      "open",
+      "product",
+      "replay",
+      "session",
+      "source",
+      "web"
+     ],
+     "spread": 7.1,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Contentsquare",
+       "date": "Jul-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 28.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 10.8,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Amplitude, Inc.",
@@ -153,8 +362,8 @@
    "table": [
     {
      "company": "Similarweb Ltd.",
-     "growth_basis": "NTM",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
      "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
@@ -162,8 +371,8 @@
     },
     {
      "company": "Amplitude, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.7,
      "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": 105.0,
@@ -171,8 +380,8 @@
     },
     {
      "company": "Elastic N.V.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
      "multiple": 4.2,
      "recurring_pct": null,
      "retention_pct": 112.0,
@@ -180,8 +389,8 @@
     },
     {
      "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
@@ -189,8 +398,8 @@
     },
     {
      "company": "Atlassian Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
      "multiple": 6.1,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -198,8 +407,8 @@
     },
     {
      "company": "Red Violet, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.3,
      "multiple": 10.0,
      "recurring_pct": 77.0,
      "retention_pct": 95.0,
@@ -207,8 +416,8 @@
     },
     {
      "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.8,
      "multiple": 15.6,
      "recurring_pct": null,
      "retention_pct": 126.0,
@@ -685,6 +894,48 @@
     "web"
    ],
    "spread": 7.1,
+   "table": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Contentsquare",
+     "date": "Jul-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 28.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.86,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 10.8,
    "thin": false,
    "triangulated": false
@@ -763,8 +1014,8 @@
    "table": [
     {
      "company": "Adobe Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.9,
      "multiple": 4.1,
      "recurring_pct": 96.0,
      "retention_pct": null,
@@ -772,8 +1023,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,

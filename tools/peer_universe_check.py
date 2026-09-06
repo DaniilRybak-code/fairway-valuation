@@ -171,10 +171,21 @@ def main():
         print('Rule 0 is satisfied, and nothing in the product reads a secondary range today, so')
         print('these pass on a number no founder currently sees. Either the reveal starts reading')
         print('the secondary range or these are a false pass. Flagged, not decided.')
-    # THE ARCHETYPE FALLBACK REGISTER. Daniil, 5-Sep: not clearing the relevance gate is a FAILURE
-    # and has to be flagged, and the fallback is the MVP's way of not punishing the founder for our
-    # thin database. Every founder served on a label rather than on evidence is named here, and
-    # this list is the enrichment brief. It is reported, never a pass or a fail.
+    # THE NO-COMPS LIST. Daniil named it on 5-Sep at 23:10 UK, and the name matters: it was briefly
+    # called "the register", which in banking means a register of shareholders, so it is not used
+    # here again.
+    #
+    # It holds TWO KINDS OF ENTRY and they belong together, because they are the same failure at
+    # two depths. A company SERVED ON A LABEL got comparables the relevance gate would not allow,
+    # admitted by the archetype fallback because its lane could not price at all. A company with NO
+    # COMPARABLES AT ALL got nothing. In both cases the database could not answer the question the
+    # founder asked, and in both cases the answer is a test company we should be able to serve and
+    # cannot.
+    #
+    # WHAT HAPPENS TO IT. Nothing, until the bulk pass. Rule A12 part 3: the four dates before the
+    # pilot (8, 11, 15 and 18 September) are MARCHES, 30 to 40 new test companies each, and the list
+    # is resolved in ONE pass after the last of them and before launch. It is printed on every run
+    # so it stays visible, not so it gets chased.
     here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     sys.path.insert(0, os.path.join(here, 'selector'))
     import match_reference as M                      # noqa: E402
@@ -183,20 +194,47 @@ def main():
     for _k, _l, _p in PROFILES:
         M.peer_groups(_p, M.listed)
         M.select_private(_p, M.private)
+
+    no_comps = sorted(k for k, v, f, fc, w in rows if v == 'FAIL')
+    lanes_rescued = {(l, g) for l, g, _n, _a in M.archetype_fallbacks}
+    print('\n' + '=' * 78)
+    print('THE NO-COMPS LIST: every test company the database could not answer')
+    # TWO COUNTS, NOT ONE SUM. A fixture can appear in both kinds at once (ultrasonium is rescued
+    # on its private lane AND fails the gate), so adding them would count it twice, and this list
+    # is the brief for the bulk pass. An inflated brief is a worse brief.
+    print('  %d lanes served on a label   |   %d of %d fixtures not served at all'
+          % (len(lanes_rescued), len(no_comps), len(rows)))
+    print('=' * 78)
+
+    print('\n  KIND 1  SERVED ON A LABEL, NOT ON EVIDENCE')
     if M.archetype_fallbacks:
         by_founder = {}
         for lane, sig, name, arch in M.archetype_fallbacks:
             by_founder.setdefault((lane, sig), []).append('%s [%s]' % (name, arch))
-        print('\nSERVED ON A LABEL, NOT ON EVIDENCE (%d comparables, %d lanes):'
+        print('          %d comparables across %d lanes. These lanes could not price at all on'
               % (len(M.archetype_fallbacks), len(by_founder)))
+        print('          shared vocabulary or a shared end market, so the archetype fallback')
+        print('          opened. Each one is a hole in the database, not a feature.')
         for (lane, sig), names in sorted(by_founder.items()):
             print('   %-8s %s' % (lane, sig))
             print('            %s' % ', '.join(names[:6]))
-        print('   These lanes could not price at all on shared vocabulary or a shared end market,')
-        print('   so the archetype fallback opened. Each one is a hole in the database, not a')
-        print('   feature. THIS LIST IS THE ENRICHMENT BRIEF for the next pull.')
     else:
-        print('\nNo founder needed the archetype fallback. Every lane priced on real evidence.')
+        print('          None. No founder needed the archetype fallback and every lane priced on')
+        print('          real evidence.')
+
+    print('\n  KIND 2  NO COMPARABLES AT ALL, or not enough of them to be a range')
+    if no_comps:
+        print('          %d of %d fixtures. These are the gate failures above, listed again here'
+              % (len(no_comps), len(rows)))
+        print('          because a founder we cannot serve is the same problem whether we served')
+        print('          them a label or served them nothing.')
+        reason_of = {k: '; '.join(f) for k, v, f, fc, w in rows if v == 'FAIL'}
+        for k in no_comps:
+            print('   %-18s %s' % (k, reason_of[k][:96]))
+    else:
+        print('          None. Every fixture reached a defensible set on both lanes.')
+    print('\n  Resolved in ONE bulk pass after the 18 September march and before launch')
+    print('  (rule A12 part 3). Not chased lane by lane in between.')
 
     empty_secondary = sorted(k for k, v, f, fc, w in rows if v == 'PASS' and fc['secondary'] == 0)
     if empty_secondary:

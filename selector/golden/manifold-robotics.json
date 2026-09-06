@@ -1,5 +1,80 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 1,
+     "control_names": [
+      "Berkshire Grey"
+     ],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.69,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Berkshire Grey"
+     ],
+     "low": 5.69,
+     "mid": 5.69,
+     "n": 1,
+     "period_mix": {
+      "FY2022": 1
+     },
+     "period_span": {
+      "FY2022": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "a",
+      "as",
+      "automation",
+      "fulfilment",
+      "handling",
+      "labour",
+      "material",
+      "robotic",
+      "robotics",
+      "robots",
+      "service",
+      "warehouse"
+     ],
+     "sole": "Berkshire Grey",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Berkshire Grey",
+       "date": "Mar-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.69,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 12.0,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "GXO Logistics, Inc.",
@@ -152,8 +227,8 @@
    "table": [
     {
      "company": "ID Logistics Group SA",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.4,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -161,8 +236,8 @@
     },
     {
      "company": "S.F. Holding Co., Ltd.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -170,8 +245,8 @@
     },
     {
      "company": "GXO Logistics, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -179,8 +254,8 @@
     },
     {
      "company": "Delhivery Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.6,
      "multiple": 2.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -188,8 +263,8 @@
     },
     {
      "company": "Lineage, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.8,
      "multiple": 3.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -197,8 +272,8 @@
     },
     {
      "company": "Americold Realty Trust",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": -1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.7,
      "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -206,8 +281,8 @@
     },
     {
      "company": "Tritax Big Box REIT plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.9,
      "multiple": 18.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -434,6 +509,18 @@
    ],
    "sole": "Berkshire Grey",
    "spread": 1.0,
+   "table": [
+    {
+     "company": "Berkshire Grey",
+     "date": "Mar-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.69,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 12.0,
    "thin": true,
    "triangulated": false
@@ -513,8 +600,8 @@
    "table": [
     {
      "company": "PostNL N.V.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -522,8 +609,8 @@
     },
     {
      "company": "Sinotrans Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 4.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.6,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -531,8 +618,8 @@
     },
     {
      "company": "Blue Dart Express Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.0,
      "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,

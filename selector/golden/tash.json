@@ -1,5 +1,121 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 6.67,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 6.67,
+     "mid": 6.67,
+     "n": 1,
+     "period_mix": {
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "marketplace"
+     ],
+     "sole": "The Zebra",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "The Zebra",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 6.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": true,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 6.43,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 6.43,
+     "mid": 6.43,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "marketplace"
+     ],
+     "sole": "Raisin",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Raisin",
+       "date": "Mar-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 6.43,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
   "core": [
    {
     "company": "XP Inc.",
@@ -82,8 +198,8 @@
    "table": [
     {
      "company": "XP Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.8,
      "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -91,8 +207,8 @@
     },
     {
      "company": "HUB24 Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.6,
      "multiple": 10.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -100,8 +216,8 @@
     },
     {
      "company": "Netwealth Group Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.8,
      "multiple": 10.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -324,6 +440,18 @@
    ],
    "sole": "The Zebra",
    "spread": 1.0,
+   "table": [
+    {
+     "company": "The Zebra",
+     "date": "Apr-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 6.67,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
@@ -410,8 +538,8 @@
    "table": [
     {
      "company": "Worldline SA",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": -1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.5,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -419,8 +547,8 @@
     },
     {
      "company": "Marqeta, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.3,
      "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -428,8 +556,8 @@
     },
     {
      "company": "Priority Technology Holdings",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 7.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.1,
      "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -437,8 +565,8 @@
     },
     {
      "company": "CAB Payments Holdings plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.8,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -447,7 +575,7 @@
     {
      "company": "MONY Group plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.0,
+     "growth_pct": 3.3,
      "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,

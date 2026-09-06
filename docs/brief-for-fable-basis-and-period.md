@@ -69,9 +69,11 @@ is honest and a wrong label prices somebody.
 
 Half of this is built. Look at these three before writing anything:
 
-- `basis_compatible(prof, row)` refuses a gross row for a net founder and the reverse. Guarded so it
-  never fires on a lender, which has no revenue denominator; without the guard it silently emptied
-  all four lender fixtures within minutes of being switched on.
+- ~~`basis_compatible(prof, row)`~~ **CORRECTION, 6-Sep-2026: this function was never called by
+  anything and has been deleted.** It was written on 31-Aug as the gross-versus-net fence and this
+  document, like three others, described it as the fence. No line of code ever asked it a question.
+  Everything it knew, including the lender guard that stops it emptying all four lender fixtures,
+  is written into `basis_mult` below, which is and always was the only fence.
 - `basis_mult(prof, row)` handles a row that holds TWO readings of the same period. Zepz is the
   first: $338m gross from the round announcement at 14.8x, $238m net from the filed accounts at
   21.0x, same twelve months. A net founder sees 21.0x, a gross founder sees 14.8x.
@@ -80,12 +82,14 @@ Half of this is built. Look at these three before writing anything:
 
 **What is missing on the engine side:**
 
-1. **The listed lane has no basis gate at all.** Once the tags exist, `basis_compatible` has to run
-   on the listed side too. Today it runs only on private.
-2. **The quiz cannot ask which basis the founder is giving.** The gate already understands NET,
-   GROSS and BOTH on the profile. There is no question producing that value, so it defaults to net
-   for everyone. Daniil wants the founder to be able to give either or both, and then be priced on
-   like for like.
+1. **The listed lane has no basis gate at all.** Still true, and still the biggest known hole: 513
+   listed rows carry no basis field. Once the tags exist, `basis_mult` has to run on the listed side
+   too, and `BASIS_KEYS['REVENUE_GROSS']` gains its listed key, which is `None` today precisely
+   because those tags do not exist. Today the fence runs on the private lane only.
+2. ~~**The quiz cannot ask which basis the founder is giving.**~~ **DONE, 5-Sep-2026.** The quiz
+   asks for both figures in all eight revenue-asking forks, `apply_answers` sets NET_REVENUE,
+   GROSS_REVENUE or BOTH from what was actually answered, and the engine builds a separate range per
+   measure (rulebook B3a). A founder who gives one figure is served on that one.
 3. **A run rate is not a trailing year.** It annualises the latest month or quarter, so on a fast
    grower it sits between LTM and NTM. 60 of our private rows are run rates, our largest bucket, and
    they are currently treated as if they were trailing. Labelled, not resolved.

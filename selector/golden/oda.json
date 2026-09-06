@@ -1,5 +1,193 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 3
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 44.12,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 2.75,
+     "mid": 10.1,
+     "n": 4,
+     "period_mix": {
+      "FY2025": 1,
+      "LTM": 2,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Spinny",
+       "mult": 2.75,
+       "reason": "both do Home Delivery; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Moove",
+       "mult": 5.0,
+       "reason": "shares the language of own; same type of business; same kind of customer; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Quince",
+       "mult": 10.1,
+       "reason": "shares the language of home; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Gopuff",
+       "mult": 44.12,
+       "reason": "both do Own Inventory; related type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "delivery",
+      "grocery",
+      "home",
+      "inventory",
+      "own",
+      "retail"
+     ],
+     "spread": 16.0,
+     "table": [
+      {
+       "company": "Spinny",
+       "date": "Mar-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2.75,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Moove",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Quince",
+       "date": "Mar-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Gopuff",
+       "date": "Jul-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 44.12,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.5,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.91,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 5.91,
+     "mid": 5.91,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "sole": "WayCool Foods",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "WayCool Foods",
+       "date": "Jun-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.91,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.0,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
   "core": [
    {
     "company": "Ocado Group plc",
@@ -152,8 +340,8 @@
    "table": [
     {
      "company": "HelloFresh SE",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.7,
      "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -161,8 +349,8 @@
     },
     {
      "company": "Naked Wines plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": -6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -7.5,
      "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -170,8 +358,8 @@
     },
     {
      "company": "Oisix Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.2,
      "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -179,8 +367,8 @@
     },
     {
      "company": "Ocado Group plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": -12.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -2.2,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -742,6 +930,48 @@
     "retail"
    ],
    "spread": 16.0,
+   "table": [
+    {
+     "company": "Spinny",
+     "date": "Mar-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 2.75,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Moove",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Quince",
+     "date": "Mar-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Gopuff",
+     "date": "Jul-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 44.12,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
@@ -834,7 +1064,7 @@
     {
      "company": "Vipshop Holdings Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.0,
+     "growth_pct": 0.5,
      "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
@@ -843,7 +1073,7 @@
     {
      "company": "ASOS Plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.0,
+     "growth_pct": 1.7,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -852,7 +1082,7 @@
     {
      "company": "Zalando SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.0,
+     "growth_pct": 5.4,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -861,7 +1091,7 @@
     {
      "company": "Chewy, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
+     "growth_pct": 6.7,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -870,7 +1100,7 @@
     {
      "company": "Revolve Group, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.0,
+     "growth_pct": 8.1,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,

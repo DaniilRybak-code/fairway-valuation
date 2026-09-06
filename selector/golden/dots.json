@@ -1,5 +1,177 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 16.34,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 8.0,
+     "mid": 16.34,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "api",
+      "multi",
+      "payments",
+      "payouts",
+      "tax"
+     ],
+     "spread": 2.0,
+     "table": [
+      {
+       "company": "Airwallex",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Stripe",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 16.34,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.3,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 54.17,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 9.52,
+     "mid": 44.34,
+     "n": 4,
+     "period_mix": {
+      "FY2024": 1,
+      "LTM": 3
+     },
+     "period_span": {
+      "FY2024": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "api",
+      "multi",
+      "payments",
+      "payouts"
+     ],
+     "spread": 5.7,
+     "table": [
+      {
+       "company": "Cashfree Payments",
+       "date": "Feb-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.52,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "MoonPay",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 22.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Checkout.com",
+       "date": "Dec-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 44.34,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mollie",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 54.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.3,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Payoneer Global Inc.",
@@ -100,8 +272,8 @@
    "table": [
     {
      "company": "The Western Union Company",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.2,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -109,8 +281,8 @@
     },
     {
      "company": "CAB Payments Holdings plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.8,
      "multiple": 1.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -118,8 +290,8 @@
     },
     {
      "company": "Payoneer Global Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 8.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.2,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -127,8 +299,8 @@
     },
     {
      "company": "Remitly Global, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 21.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.2,
      "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -136,8 +308,8 @@
     },
     {
      "company": "Flywire Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 21.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
      "multiple": 2.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -145,8 +317,8 @@
     },
     {
      "company": "Wise plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.0,
      "multiple": 2.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -543,6 +715,28 @@
     "tax"
    ],
    "spread": 2.0,
+   "table": [
+    {
+     "company": "Airwallex",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 8.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Stripe",
+     "date": "Feb-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 16.34,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 1.3,
    "thin": true,
    "triangulated": false
@@ -638,8 +832,8 @@
    "table": [
     {
      "company": "One MobiKwik Systems Limited",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.5,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -647,8 +841,8 @@
     },
     {
      "company": "Usio, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -656,8 +850,8 @@
     },
     {
      "company": "Marqeta, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.3,
      "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
@@ -665,8 +859,8 @@
     },
     {
      "company": "Repay Holdings Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.5,
      "multiple": 1.7,
      "recurring_pct": null,
      "retention_pct": null,

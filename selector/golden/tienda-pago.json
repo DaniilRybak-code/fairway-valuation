@@ -57,8 +57,8 @@
       },
       {
        "company": "SoFi Technologies, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 31.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 23.3,
        "multiple": 1.8,
        "recurring_pct": null,
        "retention_pct": null,
@@ -66,8 +66,8 @@
       },
       {
        "company": "Klarna Group plc",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 18.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 15.6,
        "multiple": 1.9,
        "recurring_pct": null,
        "retention_pct": null,
@@ -75,8 +75,8 @@
       },
       {
        "company": "Enova International, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 20.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 17.6,
        "multiple": 2.5,
        "recurring_pct": null,
        "retention_pct": null,
@@ -84,8 +84,8 @@
       },
       {
        "company": "Avarda Bank AB (publ)",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 19.7,
        "multiple": 3.4,
        "recurring_pct": null,
        "retention_pct": null,
@@ -164,8 +164,8 @@
      "table": [
       {
        "company": "Affirm Holdings, Inc.",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 27.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 25.3,
        "multiple": 14.0,
        "recurring_pct": null,
        "retention_pct": null,
@@ -173,8 +173,8 @@
       },
       {
        "company": "Avarda Bank AB (publ)",
-       "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-       "growth_pct": null,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 19.7,
        "multiple": 14.2,
        "recurring_pct": null,
        "retention_pct": null,
@@ -182,8 +182,8 @@
       },
       {
        "company": "Zip Co Limited",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 19.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 6.2,
        "multiple": 17.7,
        "recurring_pct": null,
        "retention_pct": null,
@@ -191,8 +191,8 @@
       },
       {
        "company": "Klarna Group plc",
-       "growth_basis": "CAGR_CY0_CY2",
-       "growth_pct": 18.0,
+       "growth_basis": "CAGR_CY1_CY3",
+       "growth_pct": 15.6,
        "multiple": 24.8,
        "recurring_pct": null,
        "retention_pct": null,
@@ -246,6 +246,18 @@
      ],
      "sole": "Zopa",
      "spread": 1.0,
+     "table": [
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 8.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
@@ -295,6 +307,28 @@
       "lending"
      ],
      "spread": 1.8,
+     "table": [
+      {
+       "company": "Atom Bank",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Zopa",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
      "tag_evidence": 0.3,
      "thin": true,
      "triangulated": false
@@ -409,8 +443,8 @@
     },
     {
      "company": "SoFi Technologies, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.3,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -418,8 +452,8 @@
     },
     {
      "company": "Klarna Group plc",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 1.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -427,8 +461,8 @@
     },
     {
      "company": "Enova International, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.6,
      "multiple": 2.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -436,8 +470,8 @@
     },
     {
      "company": "Avarda Bank AB (publ)",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.7,
      "multiple": 3.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -855,6 +889,28 @@
     "lending"
    ],
    "spread": 1.8,
+   "table": [
+    {
+     "company": "Atom Bank",
+     "date": "Feb-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.17,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Zopa",
+     "date": "Oct-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.3,
    "thin": true,
    "triangulated": false
@@ -942,8 +998,8 @@
    "table": [
     {
      "company": "OSB Group Plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.3,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
@@ -951,8 +1007,8 @@
     },
     {
      "company": "Velocity Financial, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.3,
      "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -960,8 +1016,8 @@
     },
     {
      "company": "S&U plc",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.8,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -969,8 +1025,8 @@
     },
     {
      "company": "Pepper Money Limited",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.7,
      "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -978,8 +1034,8 @@
     },
     {
      "company": "UWM Holdings Corporation",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": null,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.4,
      "multiple": 1.5,
      "recurring_pct": null,
      "retention_pct": null,

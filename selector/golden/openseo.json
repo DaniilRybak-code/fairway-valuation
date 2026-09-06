@@ -1,5 +1,241 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 357142.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 72846.15,
+     "mid": 357142.86,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "data",
+      "platform",
+      "research"
+     ],
+     "spread": 4.9,
+     "table": [
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72846.15,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 357142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.4,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 3
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 1,
+     "control_names": [
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72.86,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 33.3,
+     "n": 5,
+     "period_mix": {
+      "LTM": 2,
+      "NTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "both do SEO, Keyword Research, Backlink Analysis; same type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Klaviyo",
+       "mult": 32.6,
+       "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Jasper",
+       "mult": 33.3,
+       "reason": "shares the language of ai; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Supabase",
+       "mult": 72.86,
+       "reason": "both do Open Source; related type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "analysis",
+      "backlink",
+      "data",
+      "keyword",
+      "open",
+      "platform",
+      "rank",
+      "research",
+      "seo",
+      "source",
+      "tracking",
+      "visibility"
+     ],
+     "spread": 16.9,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 12.0,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Similarweb Ltd.",
@@ -72,8 +308,8 @@
    "table": [
     {
      "company": "Yext, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.9,
      "multiple": 1.8,
      "recurring_pct": null,
      "retention_pct": 95.0,
@@ -81,8 +317,8 @@
     },
     {
      "company": "Similarweb Ltd.",
-     "growth_basis": "NTM",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
      "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 100.0,
@@ -90,8 +326,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -581,6 +817,58 @@
     "visibility"
    ],
    "spread": 16.9,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Klaviyo",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Jasper",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.86,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 12.0,
    "thin": false,
    "triangulated": false
@@ -705,8 +993,8 @@
    "table": [
     {
      "company": "Wix.com Ltd.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 12.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
      "multiple": 2.0,
      "recurring_pct": 71.0,
      "retention_pct": null,
@@ -714,8 +1002,8 @@
     },
     {
      "company": "Twilio Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
      "multiple": 5.2,
      "recurring_pct": null,
      "retention_pct": 116.0,
@@ -723,8 +1011,8 @@
     },
     {
      "company": "Red Violet, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.3,
      "multiple": 10.0,
      "recurring_pct": 77.0,
      "retention_pct": 95.0,
@@ -732,8 +1020,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -741,8 +1029,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,

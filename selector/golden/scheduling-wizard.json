@@ -1,5 +1,313 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": true,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 2333333.33,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 19333.33,
+     "mid": 2333333.33,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Doctolib",
+       "mult": 19333.33,
+       "reason": "same type of business; same end market; same business function; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Aledade",
+       "mult": 2333333.33,
+       "reason": "shares the language of care; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "care"
+     ],
+     "spread": 120.7,
+     "table": [
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2333333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": true
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 1,
+     "control_names": [
+      "Accolade"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 14.25,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Accolade"
+     ],
+     "low": 1.39,
+     "mid": 10.0,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Accolade",
+       "mult": 1.39,
+       "reason": "both do Care Coordination; same type of business; same end market; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Thirty Madison",
+       "mult": 10.0,
+       "reason": "shares the language of care; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Cityblock Health",
+       "mult": 14.25,
+       "reason": "shares the language of care; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "care",
+      "coordination"
+     ],
+     "spread": 10.3,
+     "table": [
+      {
+       "company": "Accolade",
+       "date": "Jan-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.39,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Thirty Madison",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Cityblock Health",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.25,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 4.2,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": true,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 66.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.37,
+     "mid": 51.4,
+     "n": 4,
+     "period_mix": {
+      "LTM": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Aledade",
+       "mult": 7.37,
+       "reason": "shares the language of care; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Doctolib",
+       "mult": 32.0,
+       "reason": "same type of business; same end market; same business function; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Devoted Health",
+       "mult": 51.4,
+       "reason": "shares the language of care; related type of business; same end market; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Incredible Health",
+       "mult": 66.0,
+       "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "care",
+      "healthcare",
+      "hospital"
+     ],
+     "spread": 9.0,
+     "table": [
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.37,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Devoted Health",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 51.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Incredible Health",
+       "date": "Aug-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 66.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.0,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Veeva Systems Inc.",
@@ -121,8 +429,8 @@
    "table": [
     {
      "company": "Phreesia, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.3,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -130,8 +438,8 @@
     },
     {
      "company": "Tecsys Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
      "multiple": 1.9,
      "recurring_pct": 58.0,
      "retention_pct": 106.0,
@@ -139,8 +447,8 @@
     },
     {
      "company": "Waystar Holding Corp.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 11.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
      "multiple": 4.5,
      "recurring_pct": null,
      "retention_pct": null,
@@ -148,8 +456,8 @@
     },
     {
      "company": "Veeva Systems Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
      "multiple": 9.7,
      "recurring_pct": 84.0,
      "retention_pct": null,
@@ -539,6 +847,38 @@
     "coordination"
    ],
    "spread": 10.3,
+   "table": [
+    {
+     "company": "Accolade",
+     "date": "Jan-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 1.39,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Thirty Madison",
+     "date": "Jun-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Cityblock Health",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.25,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 4.2,
    "thin": false,
    "triangulated": false
@@ -634,8 +974,8 @@
    "table": [
     {
      "company": "AMN Healthcare Services, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": -21.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -9.2,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -643,8 +983,8 @@
     },
     {
      "company": "Dassault Systemes SE",
-     "growth_basis": "NTM",
-     "growth_pct": 0.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.2,
      "multiple": 4.1,
      "recurring_pct": 82.0,
      "retention_pct": null,
@@ -652,8 +992,8 @@
     },
     {
      "company": "Kinaxis Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.4,
      "multiple": 4.5,
      "recurring_pct": 62.1,
      "retention_pct": null,

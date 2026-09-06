@@ -1,5 +1,161 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 4,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 56.0,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 15.0,
+     "n": 5,
+     "period_mix": {
+      "NOT STATED": 1,
+      "NTM": 1,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Restaurant365",
+       "mult": 10.0,
+       "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clio",
+       "mult": 15.0,
+       "reason": "shares the language of client, firm, law; same type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Owner",
+       "mult": 23.0,
+       "reason": "shares the language of business, marketing; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Legora",
+       "mult": 56.0,
+       "reason": "shares the language of firm, law, legal; same type of business; same end market; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "automation",
+      "business",
+      "client",
+      "firm",
+      "law",
+      "legal",
+      "marketing"
+     ],
+     "spread": 13.0,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Restaurant365",
+       "date": "May-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clio",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Owner",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Legora",
+       "date": "Apr-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 56.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 2.4,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "HubSpot, Inc.",
@@ -79,8 +235,8 @@
    "table": [
     {
      "company": "LegalZoom.com, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
      "multiple": 1.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -88,8 +244,8 @@
     },
     {
      "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "NTM",
-     "growth_pct": -2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
      "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": 89.0,
@@ -97,8 +253,8 @@
     },
     {
      "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.0,
      "multiple": 2.8,
      "recurring_pct": null,
      "retention_pct": 102.0,
@@ -106,8 +262,8 @@
     },
     {
      "company": "Intapp, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 14.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.4,
      "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": 123.0,
@@ -715,6 +871,58 @@
     "marketing"
    ],
    "spread": 13.0,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Restaurant365",
+     "date": "May-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clio",
+     "date": "Jul-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Owner",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Legora",
+     "date": "Apr-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 56.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 2.4,
    "thin": false,
    "triangulated": false
@@ -788,8 +996,8 @@
    "table": [
     {
      "company": "Ooma, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 12.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.6,
      "multiple": 1.9,
      "recurring_pct": 92.0,
      "retention_pct": null,
@@ -797,8 +1005,8 @@
     },
     {
      "company": "EverCommerce Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.7,
      "multiple": 2.9,
      "recurring_pct": null,
      "retention_pct": 94.0,
@@ -806,8 +1014,8 @@
     },
     {
      "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 23.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
      "multiple": 3.0,
      "recurring_pct": null,
      "retention_pct": 109.0,

@@ -1,5 +1,327 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 3
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 20000000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 19333.33,
+     "mid": 2333333.33,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Doctolib",
+       "mult": 19333.33,
+       "reason": "same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Aledade",
+       "mult": 2333333.33,
+       "reason": "shares the language of health; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Virta Health",
+       "mult": 20000000.0,
+       "reason": "shares the language of health; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "health"
+     ],
+     "spread": 1034.5,
+     "table": [
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2333333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Virta Health",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20000000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Accolade"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 14.25,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Accolade"
+     ],
+     "low": 1.39,
+     "mid": 10.0,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Accolade",
+       "mult": 1.39,
+       "reason": "shares the language of health; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Thirty Madison",
+       "mult": 10.0,
+       "reason": "same type of business; same end market; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Cityblock Health",
+       "mult": 14.25,
+       "reason": "shares the language of health; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "health"
+     ],
+     "spread": 10.3,
+     "table": [
+      {
+       "company": "Accolade",
+       "date": "Jan-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.39,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Thirty Madison",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Cityblock Health",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.25,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 66.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.37,
+     "mid": 57.1,
+     "n": 4,
+     "period_mix": {
+      "LTM": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Aledade",
+       "mult": 7.37,
+       "reason": "shares the language of health; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Doctolib",
+       "mult": 32.0,
+       "reason": "same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Virta Health",
+       "mult": 57.1,
+       "reason": "shares the language of health; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Incredible Health",
+       "mult": 66.0,
+       "reason": "same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "health"
+     ],
+     "spread": 9.0,
+     "table": [
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.37,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Virta Health",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 57.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Incredible Health",
+       "date": "Aug-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 66.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": true
+    }
+   }
+  },
   "core": [
    {
     "company": "Consensus Cloud Solutions, Inc.",
@@ -152,8 +474,8 @@
    "table": [
     {
      "company": "Agora, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.1,
      "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": 109.0,
@@ -161,8 +483,8 @@
     },
     {
      "company": "Phreesia, Inc.",
-     "growth_basis": "FILE_UNSPECIFIED_HORIZON",
-     "growth_pct": 5.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.3,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -170,8 +492,8 @@
     },
     {
      "company": "Sinch AB (publ)",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 2.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.1,
      "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
@@ -179,8 +501,8 @@
     },
     {
      "company": "Consensus Cloud Solutions, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 3.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
      "multiple": 3.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -188,8 +510,8 @@
     },
     {
      "company": "Twilio Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
      "multiple": 5.2,
      "recurring_pct": null,
      "retention_pct": 116.0,
@@ -197,8 +519,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -206,8 +528,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -586,6 +908,38 @@
     "health"
    ],
    "spread": 10.3,
+   "table": [
+    {
+     "company": "Accolade",
+     "date": "Jan-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 1.39,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Thirty Madison",
+     "date": "Jun-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Cityblock Health",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.25,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
@@ -711,8 +1065,8 @@
    "table": [
     {
      "company": "TomTom N.V.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": -1.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.9,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
@@ -720,8 +1074,8 @@
     },
     {
      "company": "Tecsys Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 6.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
      "multiple": 1.9,
      "recurring_pct": 58.0,
      "retention_pct": 106.0,
@@ -729,8 +1083,8 @@
     },
     {
      "company": "Qt Group Oyj",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
      "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
@@ -738,8 +1092,8 @@
     },
     {
      "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 17.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
      "multiple": 5.2,
      "recurring_pct": 90.0,
      "retention_pct": 118.0,
@@ -747,8 +1101,8 @@
     },
     {
      "company": "Unity Software Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 21.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.2,
      "multiple": 7.2,
      "recurring_pct": null,
      "retention_pct": 106.0,

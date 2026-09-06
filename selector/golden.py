@@ -59,8 +59,23 @@ def snap(prof):
     # RECORDED FOR ANY FORK WITH MORE THAN ONE READING, not just the lenders. The exchange fork
     # prices on throughput, and a fixture judged only on its revenue range would be marked thin
     # while holding a perfectly good throughput range.
-    if len(M.bases_for(prof, 'private')) > 1 or len(M.bases_for(prof, 'listed')) > 1:
-        out['all_ranges'] = M.all_ranges(prof, core, listed_tier, picked, priv_tier)
+    #
+    # ONE LANE AT A TIME, CHANGED 5-Sep-2026 WITH THE GROSS READING. Every non-lending fork now
+    # carries two private readings, net and gross, so this block fires for 89 fixtures instead of
+    # nine, and the listed half of it was pure duplication: for a fork with a single listed basis,
+    # all_ranges['listed']['REVENUE'] restates core_range line for line, peer table and all. It
+    # also reaches nothing, because the gate reads all_ranges under the lane keys 'core',
+    # 'secondary' and 'private', and never under 'listed'.
+    #
+    # So each lane is recorded only when that lane holds more than one reading, which is what the
+    # comment above always meant. A lender keeps both lanes: its listed side genuinely holds two,
+    # book and earnings. NOTHING THAT WAS RECORDED BEFORE IS DROPPED, and the nine lending and
+    # exchange fixtures that already carried all_ranges are unchanged by this line.
+    ar = M.all_ranges(prof, core, listed_tier, picked, priv_tier)
+    ar = {lane: rngs for lane, rngs in ar.items()
+          if len(M.bases_for(prof, lane, rows=(picked if lane == 'private' else None))) > 1}
+    if ar:
+        out['all_ranges'] = ar
     # THE INVESTOR LISTS ARE SNAPSHOTTED LIKE THE RANGES. Fable's Day 2 acceptance test: "each of
     # the 43 fixtures gets its investor list snapshotted like ranges, so a data edit that flips a
     # founder's list shows up in a diff." Without it, an edit to investors.csv could silently change

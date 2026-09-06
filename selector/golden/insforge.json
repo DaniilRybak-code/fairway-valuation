@@ -1,5 +1,237 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 225000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10285.71,
+     "mid": 225000.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10285.71,
+       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Algolia",
+       "mult": 225000.0,
+       "reason": "both do Vector Search; related type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "ai",
+      "search",
+      "vector"
+     ],
+     "spread": 21.9,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10285.71,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Algolia",
+       "date": "Jul-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 225000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 3.8,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "ARR_RUNRATE": 3
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.3,
+     "mid": 22.5,
+     "n": 5,
+     "period_mix": {
+      "RUN_RATE": 5
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10.3,
+       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Replit",
+       "mult": 20.0,
+       "reason": "both do AI Coding Agent; related type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Algolia",
+       "mult": 22.5,
+       "reason": "both do Vector Search; related type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Lovable",
+       "mult": 33.0,
+       "reason": "shares the language of ai, coding; related type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Supabase",
+       "mult": 72.86,
+       "reason": "both do Postgres, Backend as a Service, Edge Functions; same type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "a",
+      "agent",
+      "ai",
+      "as",
+      "backend",
+      "coding",
+      "database",
+      "edge",
+      "functions",
+      "postgres",
+      "search",
+      "service",
+      "storage",
+      "vector"
+     ],
+     "spread": 7.1,
+     "table": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Algolia",
+       "date": "Jul-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 22.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 11.2,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
   "core": [
    {
     "company": "Elastic N.V.",
@@ -155,8 +387,8 @@
    "table": [
     {
      "company": "Elastic N.V.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
      "multiple": 4.2,
      "recurring_pct": null,
      "retention_pct": 112.0,
@@ -164,8 +396,8 @@
     },
     {
      "company": "Fastly, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.6,
      "multiple": 4.2,
      "recurring_pct": null,
      "retention_pct": 117.0,
@@ -173,8 +405,8 @@
     },
     {
      "company": "Backblaze, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 22.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.7,
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": 103.0,
@@ -182,8 +414,8 @@
     },
     {
      "company": "Twilio Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 15.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
      "multiple": 5.2,
      "recurring_pct": null,
      "retention_pct": 116.0,
@@ -191,8 +423,8 @@
     },
     {
      "company": "MongoDB, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 20.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.6,
      "multiple": 10.0,
      "recurring_pct": 97.0,
      "retention_pct": 121.0,
@@ -200,8 +432,8 @@
     },
     {
      "company": "Datadog, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 27.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
      "multiple": 14.9,
      "recurring_pct": null,
      "retention_pct": 122.0,
@@ -209,8 +441,8 @@
     },
     {
      "company": "Cloudflare, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 31.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 28.4,
      "multiple": 29.5,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -805,6 +1037,58 @@
     "vector"
    ],
    "spread": 7.1,
+   "table": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Algolia",
+     "date": "Jul-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 22.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.86,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
    "tag_evidence": 11.2,
    "thin": false,
    "triangulated": false
@@ -893,8 +1177,8 @@
    "table": [
     {
      "company": "Akamai Technologies, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 10.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.0,
      "multiple": 4.1,
      "recurring_pct": null,
      "retention_pct": null,
@@ -902,8 +1186,8 @@
     },
     {
      "company": "Dynatrace, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 16.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.5,
      "multiple": 5.8,
      "recurring_pct": null,
      "retention_pct": 110.0,
@@ -911,8 +1195,8 @@
     },
     {
      "company": "Atlassian Corporation",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 18.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
      "multiple": 6.1,
      "recurring_pct": null,
      "retention_pct": 120.0,
@@ -920,8 +1204,8 @@
     },
     {
      "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
      "multiple": 10.8,
      "recurring_pct": null,
      "retention_pct": null,
@@ -929,8 +1213,8 @@
     },
     {
      "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY0_CY2",
-     "growth_pct": 28.0,
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.8,
      "multiple": 15.6,
      "recurring_pct": null,
      "retention_pct": 126.0,

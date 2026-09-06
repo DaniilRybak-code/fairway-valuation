@@ -1,5 +1,169 @@
 {
  "expected": {
+  "all_ranges": {
+   "private": {
+    "CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "CUSTOMERS",
+     "basis_label": "dollars of enterprise value per consumer customer",
+     "basis_mix": {
+      "CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 73333.33,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 1168.83,
+     "mid": 73333.33,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Octopus Energy Group",
+       "mult": 1168.83,
+       "reason": "shares the language of energy; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Enpal",
+       "mult": 73333.33,
+       "reason": "shares the language of energy; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "energy"
+     ],
+     "spread": 62.7,
+     "table": [
+      {
+       "company": "Octopus Energy Group",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1168.83,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Enpal",
+       "date": "Jan-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 73333.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.5,
+     "thin": true,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 5.5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 0.57,
+     "mid": 5.5,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Octopus Energy Group",
+       "mult": 0.57,
+       "reason": "shares the language of energy; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Enpal",
+       "mult": 5.5,
+       "reason": "shares the language of energy; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "energy"
+     ],
+     "spread": 9.6,
+     "table": [
+      {
+       "company": "Octopus Energy Group",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 0.57,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Enpal",
+       "date": "Jan-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.5,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
   "core": [
    {
     "company": "PSI Software SE",

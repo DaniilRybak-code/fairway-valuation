@@ -74,12 +74,54 @@ CORE = [
              'against and whether the regression method can run at all.'),
 ]
 
+# THE SECOND REVENUE QUESTION: GROSS AS WELL AS NET.
+#
+# Daniil, 5-Sep-2026, 23:35 UK. Until tonight the quiz asked for net revenue only, and said so in
+# every label. That was one instruction to the founder and one silent instruction to the engine:
+# any round that disclosed a GROSS figure could never price anybody. In a file of 320 private
+# rounds, 66 are priced on a gross figure and hold a usable multiple. They sit in the right
+# archetypes, next to the right founders, unreachable. Six of the twelve fixtures failing the
+# peer-universe gate fail for this reason and no other.
+#
+# WHAT THE TWO WORDS MEAN, and this is the wording the founder sees rather than a definition kept
+# in a document they never read. GROSS revenue is everything that passes through the business
+# before the money that is not yours goes back out: the whole basket, the whole transaction, the
+# whole ticket. NET revenue is the part you keep: the commission, the fee, the take rate, the
+# margin. On a payments or a marketplace business the two are roughly ten times apart, which is
+# why a range built by mixing them is not a range at all.
+#
+# THIS IS NOT A LOOSENING OF RULE B3. Gross still never bands with net. It is what makes using
+# gross rounds safe: the founder's gross figure is compared only against rounds priced on gross,
+# the net figure only against rounds priced on net, and the two produce two separate ranges. A
+# founder who answers one question is served on that one, exactly as before.
+#
+# OPTIONAL, EVERYWHERE. The net question keeps whatever status it had in its fork. Making the
+# second one required would block a founder who has only one figure, which is most of them outside
+# payments and marketplaces, and the ruling says a founder who gives one figure is served on it.
+GROSS_WHY = (
+    'Plain words: GROSS revenue is everything that passes through you before you pay out the part '
+    'that was never yours. NET revenue is the part you keep. Answer both and you get two ranges '
+    'instead of one, each built only from rounds priced the same way as the figure it uses, '
+    'because a gross multiple applied to a net number is wrong by roughly your take rate. '
+    'We hold 66 rounds priced on gross revenue that a net-only answer cannot reach.')
+
+
+def _gross_q(label, why=None):
+    """The gross-revenue question, one definition so eight forks cannot word it eight ways."""
+    return dict(key='gross_revenue', label=label, kind='money', required=False,
+                maps_to='profile.revenue_gross', peer_field='revenue_musd',
+                basis='GROSS_REVENUE', why=(why + ' ' + GROSS_WHY) if why else GROSS_WHY)
+
+
 # Every fork keys off the archetype the profiler assigns, so the founder never picks from a menu.
+# `asks_gross` is read by the engine (bases_for) to decide whether this founder is offered a gross
+# range at all, so the quiz and the engine cannot drift apart on which forks have the question.
 FORKS = {
  'software': dict(
     archetypes=('Business Applications', 'Vertical Software', 'Cybersecurity', 'Data, AI & Developer Tools',
                 'Cloud & Infrastructure', 'Design & Engineering', 'Communications & Collaboration',
                 'Consumer & Prosumer Software', 'Software Consolidator', 'Online Learning'),
+    asks_gross=True,
     questions=[
       dict(key='arr', label='What is your ARR?', kind='money', required=True,
            maps_to='profile.revenue', peer_field='revenue_musd', basis='ARR',
@@ -100,10 +142,19 @@ FORKS = {
                'often disclosed when revenue is not. We hold Flo Health at $533 of enterprise '
                'value per paying subscriber and Calm at $500. PAYING, not registered: a price per '
                'registered user compares a business that monetises with one that does not.'),
+      # ASKED ON THIS FORK TOO, and the reason is not obvious. ARR is net by construction, so a
+      # pure SaaS founder will leave this blank. But this fork holds ten archetypes, and the
+      # software archetypes carry 30 priceable gross rounds across 13 fixtures: a business filed
+      # under Vertical Software that resells hardware, or bills a customer for pass-through spend,
+      # has a gross figure and is currently priced as though it did not.
+      _gross_q('Gross revenue over the same period, if it differs from your ARR',
+               'Leave this blank if your ARR is the whole of what you bill and keep, which for '
+               'most software businesses it is.'),
     ]),
  'marketplace': dict(
     archetypes=('Third-Party Marketplace', 'Classifieds & Listings', 'Freelance & Services Marketplace',
                 'Travel Booking & OTA', 'Gaming & Virtual Economy'),
+    asks_gross=True,
     questions=[
       dict(key='gmv', label='Gross merchandise value, if you have it to hand', kind='money',
            required=False, maps_to='profile.volume', peer_field='gmv_musd / volume_musd',
@@ -113,6 +164,11 @@ FORKS = {
       dict(key='net_revenue', label='Net revenue over the same period', kind='money', required=True,
            maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='The figure we actually price on.'),
+      # THE FORK WHERE THIS MATTERS MOST. Four of the six fixtures that gain a private lane from
+      # this question are talent and services marketplaces: Mercor, Micro1, Jobandtalent and
+      # Incredible Health all disclose a gross figure, all sit in the right archetype, and none of
+      # them could price anybody before tonight.
+      _gross_q('Gross revenue, if you book the whole transaction rather than your commission'),
     ]),
  # PAYING SUBSCRIBERS, for a consumer subscription business. Added 3-Sep-2026, Daniil: "especially
  # if the company is PRE REVENUE, you can calculate value having number of users in denominator."
@@ -127,6 +183,7 @@ FORKS = {
  'consumer_subscription': dict(
     archetypes=('Consumer & Prosumer Software', 'Streaming & Digital Media',
                 'Dating & Social Network'),
+    asks_gross=True,
     questions=[
       dict(key='paying_subscribers', label='Paying subscribers today', kind='quantity',
            required=True, maps_to='profile.subscribers', peer_field='volume_musd',
@@ -145,6 +202,7 @@ FORKS = {
            kind='money', required=False, maps_to='profile.revenue',
            peer_field='revenue_musd', basis='NET_REVENUE',
            why='Optional. Answer it and you get a revenue range as well as a per-subscriber one.'),
+      _gross_q('Gross revenue over the same period, if the two differ'),
     ]),
  # AN EXCHANGE IS JUDGED ON WHAT IT MOVES, NOT WHAT IT EARNS. Added 3-Sep-2026 on Daniil's
  # ruling about Xpansiv: "sustainability business, no? If CO2 volume was quoted in the release,
@@ -163,6 +221,7 @@ FORKS = {
  # eleven dollars fifty per annual tonne of CO2 equivalent, never 11.52x.
  'exchange': dict(
     archetypes=('Market Infrastructure & Exchange', 'Financial Data & Index'),
+    asks_gross=True,
     questions=[
       dict(key='throughput_volume',
            label='Volume transacted or cleared on your platform over the last twelve months',
@@ -184,14 +243,21 @@ FORKS = {
            why='Optional here and required almost everywhere else, deliberately. Most exchanges we '
                'hold disclose throughput and no revenue line at all, Xpansiv among them. Answer it '
                'and you get a revenue range as well.'),
+      _gross_q('Gross revenue over the same period, if you report one'),
     ]),
  'ecommerce': dict(
     archetypes=('Consumer Brand', 'Owned-Inventory Retail', 'Commerce Enablement & Fulfilment'),
+    asks_gross=True,
     questions=[
       dict(key='net_revenue', label='Net revenue over the last twelve months', kind='money',
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='NET, not gross or retail sales. This is where OLIPOP went wrong: its $400m is gross '
                'sales, and it is the only priced consumer row in the file on a gross basis.'),
+      # AND NOW WE ASK FOR OLIPOP'S NUMBER TOO, instead of only warning about it. Eight ecommerce
+      # fixtures reach 14 gross rounds that a net-only answer cannot use. Retail sales before
+      # returns, discounts and marketplace fees is a real measure a consumer brand knows; it is
+      # only wrong when it is handed over labelled as net.
+      _gross_q('Gross or retail sales over the same period, before returns and discounts'),
       dict(key='gross_margin', label='Gross margin', kind='percent', required=True,
            maps_to='profile.gm', peer_field='gross_margin_pct',
            why='Not optional for a consumer brand. Across our listed consumer set the revenue '
@@ -223,11 +289,17 @@ FORKS = {
     # price one.
     archetypes=('Merchant Acquiring & PSP', 'Payment Network', 'Cross-Border & FX',
                 'Commerce & Payments Software', 'Card Issuing & BaaS', 'Crypto & Digital Assets'),
+    asks_gross=True,
     questions=[
       dict(key='net_revenue', label='Net revenue after interchange and scheme fees', kind='money',
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='Gross and net revenue on a payments business differ by roughly an order of '
-               'magnitude, and we store net.'),
+               'magnitude, and we store both.'),
+      # THE ORDER-OF-MAGNITUDE FORK. Seven payments fixtures reach 28 gross rounds, Juspay and
+      # Cashfree among them, and paymentkit's whole private lane is those two. An Indian payments
+      # company almost always discloses the gross line, so asking only for net asks that founder
+      # for the number their own announcements do not carry.
+      _gross_q('Gross revenue, before interchange and scheme fees are paid out'),
     ]),
  # A LENDER IS NOT ASKED FOR REVENUE. For a lending business, revenue contains interest earned on
  # BORROWED money, so it scales with leverage rather than with value, and enterprise value adds back
@@ -349,9 +421,11 @@ FORKS = {
     # listed comparables only. The sourcing list carries the gap: Substack, Cameo, DAZN, Curiosity,
     # Rumble pre-listing. Until those land this fork collects answers and shows the listed side.
     priceable_private=False,
+    asks_gross=True,
     questions=[
       dict(key='net_revenue', label='Net revenue over the last twelve months', kind='money',
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE'),
+      _gross_q('Gross revenue over the same period, if the two differ'),
       dict(key='paying_users_k', label='Paying subscribers', kind='count', required=False,
            maps_to='profile.paying_users_k', peer_field='paying_users_k',
            why='Paying, not registered or monthly active. Lets us show an enterprise value per '
@@ -359,6 +433,7 @@ FORKS = {
     ]),
  'delivery': dict(
     archetypes=('Local Delivery & On-Demand',),
+    asks_gross=True,
     questions=[
       dict(key='gmv', label='Gross transaction value, if you have it to hand', kind='money',
            required=False, maps_to='profile.volume', peer_field='volume_musd',
@@ -367,6 +442,10 @@ FORKS = {
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
            why='Flink reports the full basket as gross revenue and Glovo reports a commission. Same '
                'category, revenue figures about ten times apart, so we have to know which one this is.'),
+      # AND NOW WE CAN HOLD BOTH, which is what this fork's own note has wanted since it was
+      # written: Flink's basket and Glovo's commission stop being an either-or and become two
+      # ranges, each built from rounds priced the same way.
+      _gross_q('The full basket over the same period, if you book the whole order'),
     ]),
 }
 
@@ -423,6 +502,7 @@ def apply_answers(prof, answers):
     """Map answers onto the profile fields the engine reads. Returns a NEW profile."""
     p = dict(prof)
     m = {'growth_pct': 'growth', 'gross_margin': 'gm', 'arr': 'revenue', 'net_revenue': 'revenue',
+         'gross_revenue': 'revenue_gross',
          'gmv': 'volume', 'tpv': 'volume', 'nrr_pct': 'nrr', 'paying_users_k': 'paying_users_k',
          'funding_model': 'funding_model', 'asset_intensity': 'asset_intensity',
          'growth_3m_pct': 'growth_3m', 'country': 'country'}
@@ -433,8 +513,27 @@ def apply_answers(prof, answers):
     if p.get('growth_3m') not in (None, ''):
         try: p['growth'] = round(((1 + float(p['growth_3m'])/100.0) ** 4 - 1) * 100, 1)
         except (TypeError, ValueError): pass
+    # WHICH MEASURE THE FOUNDER ANSWERED ON, and this loop used to be a last-one-wins accident.
+    # It walked the fork's questions in order and let whichever basis-carrying question came last
+    # set the profile's basis, which was harmless while exactly one revenue question existed per
+    # fork and is not harmless now that two do.
+    #
+    # The rule, and it is the ruling of 5-Sep-2026 written out: a founder who answered both gets
+    # BOTH, and the engine builds one range per measure. A founder who answered one is served on
+    # that one. Nothing here mixes them; BOTH is a statement that two separate ranges are
+    # available, never that the two may be averaged.
+    answered = {k for k, v in (answers or {}).items() if v not in (None, '')}
+    gave_net = bool(answered & {'net_revenue', 'arr'})
+    gave_gross = 'gross_revenue' in answered
     for q in questions_for(prof):
-        if q.get('basis') and q['key'] in (answers or {}): p['revenue_basis'] = q['basis']
+        if q.get('basis') in (None, '', 'NET_REVENUE', 'GROSS_REVENUE'): continue
+        if q['key'] in answered: p['revenue_basis'] = q['basis']
+    if gave_net and gave_gross:
+        p['revenue_basis'] = 'BOTH'
+    elif gave_gross:
+        p['revenue_basis'] = 'GROSS_REVENUE'
+    elif gave_net and not p.get('revenue_basis'):
+        p['revenue_basis'] = 'NET_REVENUE'
     return p
 
 def unbacked():
