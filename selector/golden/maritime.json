@@ -955,14 +955,6 @@
   "private_window_months": 17,
   "secondary": [
    {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai, hosting; same type of business; sold the same way",
-    "score": 6.5,
-    "ticker": "NASDAQGS:WIX"
-   },
-   {
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
@@ -975,7 +967,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -983,15 +975,15 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "high": 5.8,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 3.9,
-   "n": 2,
+   "low": 5.8,
+   "mid": 5.8,
+   "n": 1,
    "period_mix": {
-    "NTM": 2
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -1004,21 +996,12 @@
    "post_stated_n": 0,
    "shared_words": [
     "ai",
-    "hosting",
     "infrastructure"
    ],
    "show_retention": true,
-   "spread": 2.9,
+   "sole": "Dynatrace, Inc.",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "Wix.com Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.4,
-     "multiple": 2.0,
-     "recurring_pct": 71.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:WIX"
-    },
     {
      "company": "Dynatrace, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1029,7 +1012,7 @@
      "ticker": "NYSE:DT"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.2,
    "thin": true,
    "triangulated": false
   }

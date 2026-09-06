@@ -1024,21 +1024,13 @@
     "reason": "shares the language of web, website; related type of business; sold the same way",
     "score": 6.1,
     "ticker": "XTRA:IOS"
-   },
-   {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of web, website; related type of business; sold the same way; same AI stance",
-    "score": 6.1,
-    "ticker": "NASDAQGS:WIX"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -1050,11 +1042,11 @@
    "high": 4.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 2.8,
-   "n": 5,
+   "low": 0.6,
+   "mid": 3.2,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -1067,13 +1059,6 @@
      "company": "TomTom N.V.",
      "mult": 0.6,
      "reason": "shares the language of api, data; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Wix.com Ltd.",
-     "mult": 2.0,
-     "reason": "shares the language of web, website; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -1118,15 +1103,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "ENXTAM:TOM2"
-    },
-    {
-     "company": "Wix.com Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.4,
-     "multiple": 2.0,
-     "recurring_pct": 71.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:WIX"
     },
     {
      "company": "GoDaddy Inc.",

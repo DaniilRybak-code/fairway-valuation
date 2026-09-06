@@ -154,6 +154,14 @@
     "ticker": "ASX:360"
    },
    {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, builder; same type of business; same business function; sold the same way",
+    "score": 8.3,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
     "company": "Gen Digital Inc.",
     "family": "software",
     "in_medians": true,
@@ -182,10 +190,10 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -194,11 +202,11 @@
    "high": 4.4,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.0,
-   "mid": 3.9,
-   "n": 6,
+   "low": 2.0,
+   "mid": 3.7,
+   "n": 7,
    "period_mix": {
-    "NTM": 6
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -210,7 +218,9 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "ai",
     "app",
+    "builder",
     "mobile"
    ],
    "show_retention": false,
@@ -224,6 +234,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:OPRA"
+    },
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
     },
     {
      "company": "F-Secure Oyj",
@@ -271,7 +290,7 @@
      "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },

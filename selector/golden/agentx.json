@@ -836,20 +836,20 @@
   "private_window_months": 14,
   "secondary": [
    {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do No-Code; related type of business; same revenue model; sold the same way",
+    "score": 9.0,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
     "company": "UiPath, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Agent Orchestration; related type of business; same revenue model; same AI stance",
     "score": 7.6,
     "ticker": "NYSE:PATH"
-   },
-   {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do No-Code; same revenue model; sold the same way",
-    "score": 7.5,
-    "ticker": "NASDAQGS:WIX"
    },
    {
     "company": "Appian Corporation",
@@ -880,7 +880,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -893,10 +893,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.9,
-   "mid": 3.8,
-   "n": 4,
+   "mid": 3.3,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -905,25 +905,28 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Wix.com Ltd.",
-     "mult": 2.0,
-     "reason": "both do No-Code; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "agent",
+    "ai",
+    "builder",
     "code",
     "no",
     "orchestration"
    ],
    "show_retention": true,
-   "spread": 2.8,
+   "spread": 4.1,
    "table": [
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
+    },
     {
      "company": "Pegasystems Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -961,7 +964,7 @@
      "ticker": "NYSE:NOW"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   }

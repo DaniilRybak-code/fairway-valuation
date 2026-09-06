@@ -88,7 +88,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
+      "ARR": 2,
       "ARR_RUNRATE": 2,
       "NET_REVENUE": 1
      },
@@ -111,10 +111,10 @@
      ],
      "low": 2.24,
      "mid": 50.0,
-     "n": 6,
+     "n": 5,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 5
+      "RUN_RATE": 4
      },
      "period_span": {
       "LTM": {
@@ -133,13 +133,6 @@
        "reason": "shares the language of ai, automation; related type of business; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Owner",
-       "mult": 23.0,
-       "reason": "shares the language of ai, operations; related type of business; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       },
       {
        "company": "Ramp",
@@ -176,8 +169,7 @@
       "ai",
       "automation",
       "customer",
-      "gtm",
-      "operations"
+      "gtm"
      ],
      "spread": 67.0,
      "table": [
@@ -187,16 +179,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 2.24,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Owner",
-       "date": "Aug-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -611,36 +593,6 @@
    {
     "backed": [
      {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Redpoint",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Headline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Sierra",
       "date": "May-26"
      }
@@ -851,21 +803,70 @@
     ],
     "investor": "via portfolio company Calabrio)",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "Premji",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "Radical Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "ICONIQ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "Adobe Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "B Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Writer",
+      "date": "Nov-24"
+     }
+    ],
+    "investor": "Citi Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Owner",
-    "date": "Aug-26",
-    "in_medians": true,
-    "mult": 23.0,
-    "reason": "shares the language of ai, operations; related type of business; same AI stance",
-    "score": 5.9,
-    "type": "PRIMARY"
-   },
    {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "<=",
@@ -931,6 +932,17 @@
     "reason": "shares the language of ai, automation; related type of business; sold the same way",
     "score": 7.6,
     "type": "CONTROL"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Writer",
+    "date": "Nov-24",
+    "in_medians": false,
+    "mult": 40.4,
+    "reason": "shares the language of ai, platform; related type of business; sold the same way; same AI stance",
+    "score": 9.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -940,7 +952,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 2,
     "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
@@ -959,10 +971,10 @@
    ],
    "low": 2.24,
    "mid": 50.0,
-   "n": 6,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 5
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -981,13 +993,6 @@
      "reason": "shares the language of ai, automation; related type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Owner",
-     "mult": 23.0,
-     "reason": "shares the language of ai, operations; related type of business; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     },
     {
      "company": "Ramp",
@@ -1024,8 +1029,7 @@
     "ai",
     "automation",
     "customer",
-    "gtm",
-    "operations"
+    "gtm"
    ],
    "spread": 67.0,
    "table": [
@@ -1035,16 +1039,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 2.24,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Owner",
-     "date": "Aug-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1094,7 +1088,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 12,
+  "private_window_months": 21,
   "secondary": [
    {
     "company": "SAP SE",

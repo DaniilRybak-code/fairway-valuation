@@ -649,3 +649,29 @@ seventeen checks, only check 1 red. Files changed: `selector/match_reference.py`
 `tools/peer_universe_check.py`, `tools/check_token_weights.py`, `tools/apply_ceiling_ruling_6sep.py`,
 `tools/apply_stockx_release_6sep.py`, `tools/apply_bvnk_swap_6sep.py`,
 `tools/measure_matching_variants_6sep.py`, this document and the status document.
+
+## Appendix C. The prompt this work ran on (Daniil, 5 Sep, 23:10 UK; moved here from the status document on 6 Sep when the to-do was closed)
+
+> Fairway, matching refinement. Read `claude/Fairway_STATUS_2026-09.md` first, then `docs/RULES.md`
+> and `docs/taxonomy-review-5sep.md`. The pool is not to be enlarged; the job is to make the engine
+> find the comparables it already holds, and to stop it serving wrong ones. Work from a fresh clone
+> in the cloud, never git on the laptop. Do these in order and report each with counts: (1) The two
+> fixtures that still fail on the private lane (levelten, manifold-robotics) and tash, which holds
+> one net round and one gross round so neither lane is a range. For each, list every held round in
+> its archetype and say exactly why it does not price: no revenue, barred by the relevance gate, or
+> outside the 24-month window. The gross-basis cases are DONE, not deferred: Opus built the
+> net-and-gross split on 5 Sep and it flipped clera, nursa, paymentkit, standout and tsenta, so do
+> not re-diagnose them. Propose the smallest change for the rest that would let a real comparable
+> through without letting a wrong one through, and say which fixtures it moves. (2) Measure the
+> taxonomy proposal before Daniil rules on it: apply "for Vertical Software, Data AI & Developer
+> Tools, Business Applications and Cloud & Infrastructure, an archetype match counts only if the
+> industry matches too" on a scratch copy, and report which of the 102 fixtures change peers, which
+> gain, which lose. (3) The tags. Check the two hardware fixtures tagged Owned-Inventory Retail (see
+> rulebook A11, which now records why), the 24 tag rows Claude wrote on 5 Sep (the handover names its
+> own doubtful calls: Moove, Vention, Owner, Sapiens, Accolade, Udemy), and any row where the
+> fallback served a nonsense comparable. Propose re-tags as a list with the reason beside each; do
+> not apply them. (4) Run the full suite (`FAIRWAY_NO_GIT=1 sh tools/check_all.sh`, fifteen checks
+> now) before and after every change; golden must not move without the reason written down. Rules
+> that bind you: never drop a row silently, count in and count out on every change, no figure from
+> your own head, no em dashes, plain words. Hand back a short document with the proposals and the
+> commands for Daniil (`git add -A`).

@@ -107,14 +107,6 @@
   },
   "core": [
    {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai, commerce; related type of business; same kind of customer; same revenue model",
-    "score": 9.6,
-    "ticker": "NASDAQGS:WIX"
-   },
-   {
     "company": "Agilysys, Inc.",
     "family": "software",
     "in_medians": true,
@@ -168,15 +160,7 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Wix.com Ltd.",
-     "mult": 2.0,
-     "reason": "shares the language of ai, commerce; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "hotel",
@@ -531,7 +515,7 @@
     "n": 1
    }
   ],
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -690,6 +674,14 @@
   "private_window_months": 55,
   "secondary": [
    {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, commerce; same kind of customer; same revenue model; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
     "company": "IONOS Group SE",
     "family": "software",
     "in_medians": true,
@@ -720,14 +712,6 @@
     "reason": "shares the language of agent, agentic; same revenue model; same AI stance",
     "score": 5.2,
     "ticker": "NYSE:PATH"
-   },
-   {
-    "company": "Gen Digital Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of manager; same revenue model; sold the same way",
-    "score": 5.1,
-    "ticker": "NASDAQGS:GEN"
    }
   ],
   "secondary_range": {
@@ -743,11 +727,11 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 4.6,
+   "high": 4.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.6,
-   "mid": 4.1,
+   "low": 2.0,
+   "mid": 3.6,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -764,14 +748,14 @@
    "shared_words": [
     "agent",
     "agentic",
+    "ai",
     "checkout",
     "commerce",
     "infrastructure",
-    "manager",
     "payments"
    ],
    "show_retention": true,
-   "spread": 4.6,
+   "spread": 4.3,
    "table": [
     {
      "company": "NCR Voyix Corporation",
@@ -781,6 +765,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:VYX"
+    },
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
     },
     {
      "company": "IONOS Group SE",
@@ -808,15 +801,6 @@
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
-    },
-    {
-     "company": "Gen Digital Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.3,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:GEN"
     }
    ],
    "tag_evidence": 0.7,

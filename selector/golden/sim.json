@@ -973,9 +973,68 @@
    "triangulated": false
   },
   "private_window_months": 8,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, builder; related type of business; sold the same way",
+    "score": 5.8,
+    "ticker": "NASDAQGS:WIX"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 2.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.0,
+   "mid": 2.0,
+   "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ai",
+    "builder"
+   ],
+   "show_retention": false,
+   "sole": "Wix.com Ltd.",
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
   }
  },
  "label": "Open-source workspace for AI agents and workflows"

@@ -781,6 +781,14 @@
     "ticker": "NASDAQGS:DBX"
    },
    {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, builder, design; related type of business; same business function; sold the same way",
+    "score": 7.0,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
     "company": "Box, Inc.",
     "family": "software",
     "in_medians": true,
@@ -793,10 +801,10 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -805,11 +813,11 @@
    "high": 4.1,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.6,
-   "mid": 3.85,
-   "n": 2,
+   "low": 2.0,
+   "mid": 3.6,
+   "n": 3,
    "period_mix": {
-    "NTM": 2
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -821,11 +829,23 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "ai",
+    "builder",
+    "design",
     "document"
    ],
    "show_retention": true,
-   "spread": 1.1,
+   "spread": 2.0,
    "table": [
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
+    },
     {
      "company": "Box, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -845,9 +865,9 @@
      "ticker": "NASDAQGS:DBX"
     }
    ],
-   "tag_evidence": 0.2,
-   "thin": true,
-   "triangulated": true
+   "tag_evidence": 0.5,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "AI presentations without the AI slop"

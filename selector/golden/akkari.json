@@ -77,7 +77,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4,
+      "ARR": 3,
       "ARR_RUNRATE": 1
      },
      "bounded": true,
@@ -96,10 +96,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 23.0,
-     "mid": 50.0,
-     "n": 5,
+     "mid": 105.3,
+     "n": 4,
      "period_mix": {
-      "RUN_RATE": 5
+      "RUN_RATE": 4
      },
      "period_span": {
       "RUN_RATE": {
@@ -108,13 +108,6 @@
       }
      },
      "points": [
-      {
-       "company": "Owner",
-       "mult": 23.0,
-       "reason": "shares the language of ai, operations; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
       {
        "company": "Salesloft",
        "mult": 23.0,
@@ -151,22 +144,11 @@
       "automation",
       "customer",
       "deflection",
-      "operations",
       "service",
       "support"
      ],
      "spread": 6.5,
      "table": [
-      {
-       "company": "Owner",
-       "date": "Aug-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Salesloft",
        "date": "Dec-21",
@@ -503,36 +485,6 @@
    {
     "backed": [
      {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Redpoint",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Headline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Sierra",
       "date": "May-26"
      }
@@ -684,17 +636,6 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Owner",
-    "date": "Aug-26",
-    "in_medians": true,
-    "mult": 23.0,
-    "reason": "shares the language of ai, operations; related type of business; sold the same way; same AI stance",
-    "score": 8.9,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "REPORTED_CONTEMPORANEOUS",
     "bound": "<=",
     "company": "Sierra",
@@ -746,7 +687,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4,
+    "ARR": 3,
     "ARR_RUNRATE": 1
    },
    "bounded": true,
@@ -761,10 +702,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 23.0,
-   "mid": 50.0,
-   "n": 5,
+   "mid": 105.3,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 5
+    "RUN_RATE": 4
    },
    "period_span": {
     "RUN_RATE": {
@@ -773,13 +714,6 @@
     }
    },
    "points": [
-    {
-     "company": "Owner",
-     "mult": 23.0,
-     "reason": "shares the language of ai, operations; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
     {
      "company": "Salesloft",
      "mult": 23.0,
@@ -816,22 +750,11 @@
     "automation",
     "customer",
     "deflection",
-    "operations",
     "service",
     "support"
    ],
    "spread": 6.5,
    "table": [
-    {
-     "company": "Owner",
-     "date": "Aug-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Salesloft",
      "date": "Dec-21",
