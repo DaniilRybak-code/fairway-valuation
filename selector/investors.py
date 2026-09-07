@@ -635,9 +635,43 @@ def geography_line(card):
     return g if g else 'No stated investing geography'
 
 
+# HOW MANY EXTRA HOUSES TO SEND SO THE BROWSER CAN DO THE CHEQUE FILTER ITSELF.
+#
+# Daniil, 7-Sep-2026: "can we not do the work of refining the universe of potential investors
+# without me actually seeing what amount they are raising? How is it possible we are able to build
+# a football field for them without me seeing the revenue figure, but cannot figure out the
+# investor universe without raise amount reaching me?"
+#
+# He is right, and the answer was in front of us: it is the SAME TRICK THE FOOTBALL FIELD USES.
+# The field works because the server sends MULTIPLES and the browser multiplies them by a revenue
+# figure that never leaves it. The investor list can work the same way. The server sends the
+# candidate houses WITH THEIR PUBLISHED CHEQUE RANGES, which are our data and not the founder's,
+# and the browser drops the ones that cannot fund the round it holds locally.
+#
+# So the choice was never "the raise leaves, or the filter dies". Both were wrong.
+#
+# THE ONLY COST IS SENDING A FEW MORE HOUSES THAN THE FOUNDER WILL SEE. If the page shows eight and
+# the browser filters some out, the server must have sent more than eight or the list comes up
+# short. Six extra is enough: measured across all 102 fixtures on 7 September, the cheque filter
+# removes at most 3 houses from any one list at any raise between $250k and $10m.
+#
+# AND THE OVER-FETCH REVEALS NOTHING. Every house sent is one the founder's SECTOR and STAGE
+# already qualified; which of them the browser then hides is decided on this side of the wall and
+# never sent back. An observer on our side sees the same fifteen names for every seed fintech
+# founder in the country.
+CHEQUE_FILTER_OVERFETCH = 6
+
+
 def reveal_payload(prof, picked, raise_musd=None, want=8):
-    """Everything the reveal needs for both layers, and nothing it does not."""
-    callable_rows = match_callable(prof, raise_musd=raise_musd, want=want)
+    """Everything the reveal needs for both layers, and nothing it does not.
+
+    WITH NO RAISE, THE FILTER MOVES TO THE BROWSER rather than being skipped. See
+    CHEQUE_FILTER_OVERFETCH above: extra candidates go out, each carrying its published cheque
+    range, and `cheque_filter` tells the page to finish the job with the figure it holds.
+    """
+    browser_filters = _f(raise_musd) is None
+    fetch = want + CHEQUE_FILTER_OVERFETCH if browser_filters else want
+    callable_rows = match_callable(prof, raise_musd=raise_musd, want=fetch)
     evidence_rows = match_evidence(picked)
     cards = []
     for c in callable_rows:
@@ -651,6 +685,18 @@ def reveal_payload(prof, picked, raise_musd=None, want=8):
             'heading': 'Writing first cheques in your sector right now',
             'cards': cards,
             'count': len(cards),
+            # THE INSTRUCTION TO THE BROWSER, and the rule it must apply, sent as data rather than
+            # assumed. `low <= raise * 1.5 and (high is None or high >= raise * 0.05)` is exactly
+            # what _cheque_fits does on this side when a raise IS given, and check 15 asserts the
+            # page's copy of it agrees with this one on every fixture, so the two cannot drift.
+            'cheque_filter': ({
+                'apply': True,
+                'show': want,
+                'low_multiple': 1.5,
+                'high_multiple': 0.05,
+                'note': ('Some of these may write cheques far larger or smaller than you are '
+                         'raising. Your browser hides those; we never see the figure it used.'),
+            } if browser_filters else None),
             # NEVER PADDED, and the page should say so rather than look thin by accident.
             'note': ('%d houses match. We do not pad the list: a shorter list of houses that write '
                      'your cheque is worth more than a longer one that does not.' % len(cards))

@@ -35,6 +35,7 @@
       sec.classList.add('p3-on');
       io.disconnect();
     });
-  }, { threshold: 0.25 });
+  }, { threshold: 0.02 });   /* a low threshold: on a phone the section is several screens tall,
+                                so a quarter of it can never be in view at once */
   io.observe(sec);
 })();

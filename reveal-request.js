@@ -112,8 +112,29 @@ var REVEAL_FIELDS = REVEAL_PROFILE_FIELDS.concat(REVEAL_FORK_LABELS).concat(REVE
  * filled in on 6 September; the stage gate now does almost all of this filter's work, and the
  * cheque range is printed on the card either way.
  *
- * On those numbers the honest recommendation is NO: it is the largest promise on the page bought
- * back for 1.6 per cent of one founder's list. The ruling is still Daniil's.
+ * ANSWERED 7 SEPTEMBER 2026, AND THE ANSWER WAS THAT THE QUESTION WAS WRONG.
+ *
+ * Daniil: "can we not do the work of refining the universe of potential investors without me
+ * actually seeing what amount they are raising? How is it possible we are able to build a football
+ * field for them without me seeing the revenue figure, but cannot figure out the investor universe
+ * without raise amount reaching me? In any case, I do not think we need to compromise here on
+ * privacy."
+ *
+ * He was right on both counts. The football field works because the server sends MULTIPLES and the
+ * browser multiplies them by a figure that never leaves it. The investor list now works the same
+ * way: selector/investors.reveal_payload sends the candidate houses WITH their published cheque
+ * ranges, which are our data about funds and not the founder's data about themselves, and
+ * investors.invChequeFits drops the ones that cannot fund the round. Six extra candidates go out so
+ * the list does not come up short.
+ *
+ * MEASURED ACROSS ALL 102 FIXTURES at a $500k raise: the browser path produces the IDENTICAL list
+ * to sending us the raise, on 102 of 102. Nothing is lost and the raise stays where it belongs.
+ *
+ * The rule now exists in two languages, which is the shape that drifts, so
+ * tools/check_request_boundary.py runs both copies over every distinct cheque shape in
+ * data/investors.csv at five raises and fails on the first disagreement. 345 cases today.
+ *
+ * THE RAISE IS NOT ADDED TO THE ALLOWLIST AND THIS QUESTION IS CLOSED.
  * ------------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------------

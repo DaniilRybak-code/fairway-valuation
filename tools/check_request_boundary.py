@@ -347,9 +347,27 @@ def main():                                                     # noqa: C901
                    % (type(exc).__name__, exc))
 
     spec_path = None
+    cheque_cases = []
     if engine_rows:
         fh = tempfile.NamedTemporaryFile('w', suffix='.json', delete=False, encoding='utf-8')
-        json.dump({'rows': engine_rows, 'probes': list(ARITHMETIC_PROBES)}, fh)
+        # THE CHEQUE CASES, so the page's copy of the filter can be checked against the engine's.
+        # Real cards off data/investors.csv, at raises spanning pre-seed to Series A, plus the two
+        # shapes that decide the edges: a published floor with no ceiling, and no range at all.
+        import investors as _INV                                    # noqa: E402
+        _seen_shapes = set()
+        for _d in _INV.INVESTORS:
+            _lo, _hi = _INV._f(_d.get('first_cheque_low_m')), _INV._f(_d.get('first_cheque_high_m'))
+            _shape = (_lo, _hi)
+            if _shape in _seen_shapes:
+                continue
+            _seen_shapes.add(_shape)
+            for _r in (0.25, 0.5, 1.0, 3.0, 10.0):
+                cheque_cases.append({'lo': _lo, 'hi': _hi, 'raise': _r,
+                                      'low_multiple': 1.5, 'high_multiple': 0.05})
+            if len(cheque_cases) > 900:
+                break
+        json.dump({'rows': engine_rows, 'probes': list(ARITHMETIC_PROBES),
+                   'cheque_cases': cheque_cases}, fh)
         fh.close()
         spec_path = fh.name
 
@@ -528,6 +546,44 @@ def main():                                                     # noqa: C901
                                 'out of the profiler prompt, and served tier=free to a body '
                                 'claiming paid'
                       % (len(py_allow), len(FIGURE_NAMES) + len(FREE_TEXT_NAMES))))
+
+    # ---- 10. THE CHEQUE FILTER RUNS IN THE BROWSER AND MUST GIVE THE ENGINE'S ANSWER ----
+    #
+    # Daniil, 7-Sep-2026, on the raise: "can we not do the work of refining the universe of
+    # potential investors without me actually seeing what amount they are raising?" We can, and the
+    # answer was the football field's own trick: the server sends the houses WITH their published
+    # cheque ranges, and the browser drops the ones that cannot fund the round it holds. So the raise
+    # never leaves and the filter still runs.
+    #
+    # The cost is that one rule now exists in two languages, which is the shape that drifts. This
+    # runs both copies over every distinct cheque shape in data/investors.csv at five raises and
+    # fails on the first disagreement.
+    if probe and probe.get('chequeCases') is not None:
+        import investors as INV                                     # noqa: E402
+        want = [INV._cheque_fits({'first_cheque_low_m': c['lo'], 'first_cheque_high_m': c['hi']},
+                                 c['raise'])
+                for c in cheque_cases]
+        got = probe['chequeCases']
+        # The engine returns None for "unknown, never used to exclude"; the page returns true,
+        # because the page's job is to decide whether to SHOW the card and an unknown always shows.
+        want = [True if w is None else w for w in want]
+        if len(want) != len(got):
+            bad.append('the cheque filter was asked %d questions and the page answered %d'
+                       % (len(want), len(got)))
+        else:
+            wrong = [(i, want[i], got[i]) for i in range(len(want)) if bool(want[i]) != bool(got[i])]
+            if wrong:
+                i, w, g = wrong[0]
+                c = cheque_cases[i]
+                bad.append('the cheque filter disagrees across the wall: a house publishing %s to %s '
+                           'against a %sm raise is %s by the engine and %s by the page (%d of %d '
+                           'cases disagree)'
+                           % (c['lo'], c['hi'], c['raise'], 'kept' if w else 'dropped',
+                              'kept' if g else 'dropped', len(wrong), len(want)))
+            else:
+                notes.append(('CHEQUE', 'the browser-side investor filter agrees with the engine on '
+                                        'all %d cases, so the raise can stay in the browser and the '
+                                        'filter still runs' % len(want)))
 
     print('ALLOWLIST %d fields may leave on the free path, every one a label or a percentage'
           % len(declared))

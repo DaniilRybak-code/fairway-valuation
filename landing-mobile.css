@@ -1,0 +1,73 @@
+/* The landing on a phone. 7 Sep 2026, after Daniil opened v0.1 on an iPhone.
+   Everything here sits under one media query, so the desktop look does not change.
+
+   What was wrong, measured on an iPhone 13 (390px wide): the hero card (the football field) could
+   not shrink below 480px, so the hero grid, the wrap and the whole page were wider than the screen
+   and the hero copy sat 73px off the left edge; the nav wrapped into three lines; the page 3 blocks
+   never appeared, because their reveal waited for a quarter of a three-screen-tall section to be in
+   view at once (fixed in landing-p3.js). */
+
+@media (max-width:640px) {
+  html, body { overflow-x:hidden; }
+
+  /* frame */
+  .wrap-wide, .nav-inner, .wrap { padding-left:18px; padding-right:18px; box-sizing:border-box; max-width:100%; }
+  .snap { min-height:auto; padding:44px 0; }
+  .snap.first { padding:0 0 24px; }
+
+  /* nav: the brand and the button; the two text links go */
+  .nav-inner { padding-top:10px; padding-bottom:10px; }
+  .nav-links { gap:12px; }
+  .nav-links a.link { display:none; }
+  .nav .btn-nav { white-space:nowrap; padding:9px 14px; font-size:13px; }
+
+  /* hero: one column, and nothing may be wider than the screen */
+  #screen-hero .hero .wrap-wide, #screen-hero .hero-genie-on .hero .wrap-wide { width:100%; min-width:0; }
+  #screen-hero .hero .hero-grid, #screen-hero .hero-genie-on .hero .hero-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:22px; }
+  #screen-hero .hero .hero-copy, #screen-hero .hero-genie-on .hero-copy { width:auto; max-width:100%; min-width:0; opacity:1; transform:none; visibility:visible; }
+  #screen-hero .hero .hero-vis, #screen-hero .hero-genie-on .hero-vis { position:static; width:auto; max-width:100%; min-width:0; transform:none; }
+  #screen-hero .hero .hero-copy h1 { font-size:27px; max-width:none; }
+  #screen-hero .hero .hero-grid .sub { margin-bottom:20px; }
+  .cta-stack { gap:10px 14px; }
+  .cta-note { white-space:normal; }
+  .hero-stats { grid-template-columns:1fr; gap:14px; }
+  .scroll-cue { display:none; }
+
+  /* the football field card: shrink to the screen, let the labels wrap */
+  .ffcard, .mini-ff { max-width:100%; min-width:0; }
+  .ffcard-head, .ffcard.compact .ffcard-head { padding:12px 14px 10px; }
+  .ffcard-body, .ffcard.compact .ffcard-body { padding:8px 14px 14px; }
+  .ffx-head, .ff-row, .ffx-axis,
+  .hero-genie-on .ffx-head, .hero-genie-on .ff-row, .hero-genie-on .ffx-axis { grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; }
+  .ff-param, .ff-cell, .ff-track { min-width:0; }
+  .ff-metric, .ff-mult { white-space:normal; max-width:150px; }
+  .ff-anno, .ff-anno.note { max-width:140px; white-space:normal; }
+  .ff-delta { flex-direction:column; gap:12px; max-width:none; }
+  .d-mini { flex-direction:column; gap:12px; }
+  .or-grid { grid-template-columns:1fr; }
+  .or-cols { flex-direction:column; gap:12px; }
+  .steps { grid-template-columns:1fr; gap:16px; }
+  .story-cta { flex-wrap:wrap; }
+
+  /* page 3, "Under the hood": one column, the button under the title */
+  .snap.read-sec.p3 { min-height:auto; padding:44px 0 36px; }
+  .p3-head { flex-direction:column; align-items:flex-start; gap:14px; }
+  .p3-title { font-size:26px; }
+  .p3-cta { align-items:flex-start; padding-bottom:0; }
+  .p3-cta span { white-space:normal; }
+  .p3-rules { grid-template-columns:1fr; }
+  .p3-rule { border-left:none; padding:10px 0; border-top:1px solid var(--ff-rule); }
+  .p3-rule:first-child { border-top:none; }
+  .p3-rail { height:auto; }
+  .p3-track { display:none; }
+  .p3-stops { position:static; display:flex; flex-wrap:wrap; gap:10px 18px; }
+  .p3-stop b { white-space:normal; }
+  .p3-line { grid-template-columns:1fr; gap:14px; }
+  .p3-card { padding:18px 16px 16px; }
+  .p3-funs { grid-template-columns:1fr; gap:14px; }
+  .p3-table td.r { white-space:normal; }
+
+  /* the strip of prior employers and the footer */
+  .marquee { overflow:hidden; }
+  footer .disclaimer { text-align:left; }
+}

@@ -21,6 +21,7 @@ const ROOT = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
 
 const RQ = require(ROOT + '/reveal-request.js');
 const FG = require(ROOT + '/reveal-figures.js');
+const IV = require(ROOT + '/investors.js');
 
 /* SENTINELS. Every figure in this object is a value that appears nowhere else in the repo, so if
    one of them turns up in a request body or a model prompt there is no argument about where it
@@ -60,6 +61,14 @@ const RESPONSES = Object.assign({
 }, SENTINEL);
 
 const out = { sentinels: SENTINEL };
+
+/* THE CHEQUE FILTER, BOTH SIDES. Added 7-Sep-2026 with the browser-side investor filter. The rule
+   that drops a fund whose first cheque cannot fund the round now exists twice: in
+   selector/investors._cheque_fits, and in investors.invChequeFits, because the raise stays in the
+   browser and the filter has to run where the raise is. Two copies of one rule is exactly the
+   shape that drifts, so the Python side sends real cards and real raises through here and compares
+   the answers one by one. The cases come from the spec file, not from this file. */
+out.chequeCases = null;
 
 /* ---- 1. the three request builders ---- */
 const reveal = RQ.buildRevealRequest(RESPONSES);
@@ -163,6 +172,15 @@ if (arg) {
                low: priced ? priced.low : null, high: priced ? priced.high : null };
     });
   }).flat();
+
+  /* The cheque cases, answered by the PAGE's copy of the rule. */
+  if (spec.cheque_cases) {
+    out.chequeCases = spec.cheque_cases.map(function (c) {
+      return IV.invChequeFits({ cheque_low_m: c.lo, cheque_high_m: c.hi },
+                              c.raise,
+                              { low_multiple: c.low_multiple, high_multiple: c.high_multiple });
+    });
+  }
 }
 
 /* ---- 5. what the page can price at all ---- */

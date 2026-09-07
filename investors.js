@@ -78,12 +78,64 @@ function invEvidenceChip(e) {
 }
 
 /* payload is exactly what selector/investors.py reveal_payload() returns. */
+/* ---------------------------------------------------------------------------
+ * THE CHEQUE FILTER, DONE HERE BECAUSE THE RAISE IS HERE.
+ *
+ * Daniil, 7-Sep-2026: "can we not do the work of refining the universe of potential investors
+ * without me actually seeing what amount they are raising?" Yes, and this is how.
+ *
+ * It is the football field's own trick. The field works because the server sends MULTIPLES and
+ * this page multiplies them by a revenue figure that never leaves it. The same shape works here:
+ * the server sends the candidate houses WITH THEIR PUBLISHED CHEQUE RANGES, which are our data
+ * about funds and not the founder's data about themselves, and this function drops the ones that
+ * cannot fund the round. The raise never leaves the browser and the filter still runs.
+ *
+ * THIS IS A COPY OF selector/investors._cheque_fits AND IT MUST STAY ONE. The rule and both
+ * multiples arrive in the payload rather than being written here, so the server owns the rule and
+ * this owns only the arithmetic. tools/check_request_boundary.py runs both sides over every
+ * fixture and fails if they ever disagree.
+ *
+ * AN UNKNOWN CHEQUE NEVER EXCLUDES. A house that has not published a range keeps its place and
+ * says "First cheque not published" on its card, exactly as it does on the paid path. Excluding on
+ * an absence would quietly punish the funds that publish least.
+ * ------------------------------------------------------------------------- */
+function invChequeFits(card, raiseM, rule) {
+  const lo = card.cheque_low_m, hi = card.cheque_high_m;
+  if (!(raiseM > 0) || lo === null || lo === undefined) return true;
+  return lo <= raiseM * rule.low_multiple
+      && (hi === null || hi === undefined || hi >= raiseM * rule.high_multiple);
+}
+
+/* The raise as a number of millions, from the value the quiz already holds. RAISE_MIDPOINT is
+   app.js's own table and is what the football field's stage row already uses, so there is one
+   reading of "how much are you raising" on the page and not two. */
+function invRaiseMusd() {
+  if (typeof responses === 'undefined' || !responses) return null;
+  if (typeof RAISE_MIDPOINT !== 'undefined' && RAISE_MIDPOINT && responses.raise) {
+    const v = RAISE_MIDPOINT[responses.raise];
+    if (typeof v === 'number' && isFinite(v) && v > 0) return v;
+  }
+  return null;
+}
+
 function renderInvestors(payload, mountId) {
   const mount = document.getElementById(mountId || 'investor-blocks');
   if (!mount || !payload) return false;
   const cal = payload.callable || {};
   const ev = payload.evidence || {};
-  const cards = cal.cards || [];
+  let cards = cal.cards || [];
+
+  /* THE FILTER, WHEN THE SERVER ASKS FOR IT. It sends more candidates than the founder will see
+     and this cuts them down. If the founder has not said what they are raising, nothing is cut and
+     they simply see the top of the list, which is what they saw before this existed. */
+  const rule = cal.cheque_filter;
+  if (rule && rule.apply) {
+    const raiseM = invRaiseMusd();
+    if (raiseM > 0) {
+      cards = cards.filter(function (c) { return invChequeFits(c, raiseM, rule); });
+    }
+    cards = cards.slice(0, rule.show || 8);
+  }
   const chips = ev.chips || [];
   if (!cards.length && !chips.length) { mount.innerHTML = ''; return false; }
 
@@ -91,9 +143,20 @@ function renderInvestors(payload, mountId) {
   if (cards.length) {
     html.push('<div class="rd wide"><b class="rd-t">' + invEsc(cal.heading) + '</b>');
     html.push('<div class="inv-call">' + cards.map(invCallableCard).join('') + '</div>');
-    /* NEVER PADDED, and the page says so rather than looking thin by accident. */
-    if (cal.note) html.push('<p class="microcopy" style="margin-top:10px;">'
-                            + invEsc(cal.note) + '</p>');
+    /* NEVER PADDED, and the page says so rather than looking thin by accident.
+
+       THE SERVER'S NOTE COUNTS WHAT IT SENT, NOT WHAT IS SHOWN. When the browser has done the
+       cheque filter the two differ, and printing "14 houses match" above eight cards would be a
+       plain untruth, so the note is rewritten here from the number actually on the screen. */
+    const shown = cards.length;
+    let note = cal.note;
+    if (rule && rule.apply) {
+      note = (shown < (rule.show || 8))
+        ? shown + ' houses write a cheque the size of your round. We do not pad the list: a shorter '
+          + 'list of houses that write your cheque is worth more than a longer one that does not.'
+        : rule.note;
+    }
+    if (note) html.push('<p class="microcopy" style="margin-top:10px;">' + invEsc(note) + '</p>');
     html.push('</div>');
   }
   if (chips.length) {
@@ -112,3 +175,12 @@ function renderInvestors(payload, mountId) {
 }
 
 if (typeof window !== 'undefined') { window.renderInvestors = renderInvestors; }
+
+/* THE ONE EXPORT, AND IT IS FOR A CHECK. tools/request_boundary_probe.mjs requires this file so
+   that tools/check_request_boundary.py can run invChequeFits beside selector/investors._cheque_fits
+   over real cards and real raises, and fail if the two ever disagree. The rule lives in two places
+   because the raise stays in the browser; this is what stops the two copies drifting apart.
+   In the page, `module` is undefined and this block does nothing. */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { invChequeFits: invChequeFits };
+}
