@@ -1,26 +1,41 @@
-/* The landing on a phone. 7 Sep 2026, after Daniil opened v0.1 on an iPhone.
-   Everything here sits under one media query, so the desktop look does not change.
+/* The landing on a phone. Third pass, 7 Sep 2026, after Daniil opened the second pass on an iPhone
+   and could not read it. Everything sits under one media query, so the desktop does not change.
 
-   Daniil's brief for the phone: the same three pages as on a desktop, one after another, sized for
-   an iPhone. So the genie stays on (showcase.js turns it on at 640px and below): the hero pins,
-   the copy fades as the card rises from under it to the top of the screen, the story block
-   arrives, and once the genie is done the pinned content is shifted up by the scroll
-   (--card-shift, set by showcase.js) so the field scrolls through like normal text. Then page 3.
+   WHAT WAS WRONG WITH THE SECOND PASS, measured on an iPhone 13 profile (390 x 664 visible):
+   the page was 11.7 screens tall. The field card was pinned and scrolled through by the genie
+   (the desktop's scroll-driven move), and its rows were laid out two columns wide, so the
+   football field ran across THREE screens with the axis out of sight; you could not see it as
+   one chart. "Under the hood" then took four more screens.
 
-   What was wrong before this, measured on an iPhone 13 profile (390px wide): the hero card could
-   not shrink below 480px, so the whole page was wider than the screen and the hero copy sat 73px
-   off the left edge; the nav wrapped into three lines; page 3 never appeared, because its reveal
-   waited for a quarter of a three-screen-tall section to be in view (fixed in landing-p3.js). */
+   WHAT THIS PASS DOES, following the phone patterns of the pages Daniil sent (wisprflow.ai,
+   trychert.com, both read at 390px): one column, one idea per screen, the graphic small enough
+   to be seen whole, big type for the copy, a full-width button, everything else out of the way.
+   The pinned move is OFF on phones (showcase.js skips it below 900px again). The three pages
+   still arrive one after another; they are now five screens, not twelve:
+
+     1  the hero: headline, the promise, the button, the three facts
+     2  the football field as ONE chart: nine bars on one axis, the method and the multiple on a
+        line above each bar, the implied $m at each end of the bar, and the six numbered callouts
+        sitting under the bars they explain
+     3  Our read: the universe in two columns, advocacy beside concerns, the likely investors,
+        then the button again
+     4  Under the hood: the four rules two-up, the two funnels side by side, and the four things
+        Fairway does as tap-to-open rows (landing-p3.js folds them on phones; the words are all
+        still there, one tap away, and the page can be taken in at a glance)
+     5  the reviewing team strip and the disclaimers
+
+   Trade-offs made on purpose, each reversible in one line: the five-step story block is hidden
+   (the six callouts on the field say the same things, next to the bars they describe); the
+   hover pop-ups are off (nothing hovers on a phone); the founder-metric column ($0.78m NTM
+   revenue) is hidden, the multiple stays; the last-round marker row ("feeds nothing") is hidden
+   so the chart and its callouts fit one screen; the rest-state investor strip under the field
+   is hidden because Our read, right under it, carries the same names. */
 
 @media (max-width:640px) {
   html { overflow-x:hidden; }
-  /* the card changes height as the genie plays; without this a browser that anchors the scroll
-     position to content below the fold jumps the page when the reader scrolls back to the top */
-  html, body { overflow-anchor:none; }
 
   /* frame */
   .wrap-wide, .nav-inner, .wrap { padding-left:18px; padding-right:18px; box-sizing:border-box; max-width:100%; }
-  .snap { min-height:auto; padding:44px 0; }
 
   /* nav: the brand and the button; the two text links go */
   .nav-inner { padding-top:10px; padding-bottom:10px; }
@@ -28,93 +43,186 @@
   .nav-links a.link { display:none; }
   .nav .btn-nav { white-space:nowrap; padding:9px 14px; font-size:13px; }
 
-  /* ---- page 1 and 2: the genie, stacked ---- */
-  #screen-hero .snap.first { padding:0; min-height:0; }
-  #screen-hero .snap.first.hero-genie-on { display:block; min-height:0; }   /* height set by showcase.js */
-  #screen-hero .hero-genie-on .hero { position:sticky; top:0; min-height:100vh; overflow:visible; }
-  #screen-hero .hero .wrap-wide, #screen-hero .hero-genie-on .hero .wrap-wide { width:100%; min-width:0; }
-  #screen-hero .hero .hero-grid, #screen-hero .hero-genie-on .hero .hero-grid { display:block; position:relative; min-height:calc(100vh - 24px); padding-top:18px; }
-  #screen-hero .hero .hero-copy, #screen-hero .hero-genie-on .hero-copy { width:100%; max-width:100%; min-width:0; }
-  #screen-hero .hero-genie-on .hero-copy { opacity:calc(1 - var(--exp, 0) * 1.7); transform:translateY(calc(-30px * var(--exp, 0))); visibility:visible; }
-  #screen-hero .hero-genie-mid .hero-copy { visibility:hidden; }
-  #screen-hero .hero .hero-copy h1 { font-size:27px; max-width:none; margin-bottom:14px; }
-  #screen-hero .hero .hero-grid .sub { margin-bottom:16px; }
-  .cta-stack { gap:10px 14px; }
-  .cta-note { white-space:normal; }
-  #privacy-line-hero { font-size:10px; line-height:1.45; }
-  .hero-stats { grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; margin-top:18px; }
-  .hero-stats em { font-size:15px; }
-  .hero-stats .hs b { font-size:11px; line-height:1.25; }
-  .hero-stats .hs span { display:none; }
+  /* ================= screen 1: the hero ================= */
+  #screen-hero .snap.first { min-height:0; padding:0; display:block; }
+  #screen-hero .hero { min-height:0; display:block; padding:14px 0 0; }
+  #screen-hero .hero .wrap-wide { width:100%; min-width:0; }
+  /* the three blocks stack: copy, then the story title, then the card with its button */
+  #screen-hero .hero .hero-grid { display:flex; flex-direction:column; gap:0; min-height:0; padding:0; }
+  #screen-hero .hero .hero-copy { order:0; width:100%; max-width:100%; min-width:0; padding-bottom:40px; }
+  #screen-hero .hero .hero-story { order:1; }
+  #screen-hero .hero .hero-vis { order:2; width:100%; max-width:none; min-width:0; }
+  #screen-hero .hero .hero-grid .kicker { margin-bottom:12px; }
+  #screen-hero .hero .hero-copy h1 { font-size:32px; line-height:1.08; max-width:none; margin:0 0 16px; }
+  .sub-strong { font-size:16.5px; line-height:1.35; margin:0 0 8px; }
+  #screen-hero .hero .hero-grid .sub { font-size:16px; line-height:1.5; margin:0 0 22px; max-width:none; }
+  .cta-stack { flex-direction:column; align-items:stretch; gap:10px; }
+  #screen-hero .hero .btn { width:100%; padding:16px 20px; font-size:16px; text-align:center; }
+  .cta-note { white-space:normal; text-align:center; }
+  /* the privacy sentence stays (said before the quiz, Daniil 6 Sep); readable, not shouting */
+  #privacy-line-hero { text-align:left; font-family:var(--sans); font-size:11.5px; line-height:1.5; letter-spacing:0;
+    color:var(--ff-soft); margin-top:2px; }
+  .hero-stats { grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; margin-top:24px; padding-top:16px; }
+  .hero-stats em { font-size:15px; height:auto; line-height:1.2; margin-bottom:4px; word-spacing:normal; }
+  .hero-stats .hs b { font-size:11px; line-height:1.3; margin:0; }
+  .hero-stats .hs span, .hero-stats .hs:hover span { display:none; }
   .scroll-cue { display:none; }
 
-  /* the card: full width, rising from under the copy (--card-top, measured) to under the story
-     block (--story-h, measured), then shifted up with the scroll once the genie is done */
-  #screen-hero .hero .hero-vis { width:100%; max-width:none; min-width:0; }
-  #screen-hero .hero-genie-on .hero-vis { position:absolute; left:0; right:0; width:100%; transform:none;
-    top:calc(var(--card-top, 60vh) * (1 - var(--exp, 0)) + var(--story-h, 320px) * var(--exp, 0) + var(--card-shift, 0px)); }
-  #screen-hero .hero-genie-on .hero-story { position:absolute; left:0; right:0; margin:0; text-align:left;
-    top:calc(8px + var(--card-shift, 0px)); }
-  #screen-hero .hero-genie-on + .field-anchor { height:0; }   /* the section's own height already leaves room */
-  /* the story block is compact, so the card's head is on the screen when the genie is done:
-     the five steps in one tight column, the colour on the titles rather than on swatches */
-  .hero-genie-on .hero-story .steps { grid-template-columns:1fr; gap:9px; padding:0; }
-  .hero-genie-on .st { gap:2px; opacity:var(--nseen); transform:translateY(calc(10px * (1 - var(--nseen)))); }
-  .hero-genie-on .st .st-arrow, .hero-genie-on .st .sw { display:none; }
-  .hero-genie-on .st b { font-size:15.5px; line-height:1.15; }
-  .hero-genie-on .st p { font-size:11.5px; line-height:1.35; }
+  /* ================= screen 2: the field, one chart ================= */
+  /* the story block gives its title to the field; the five steps are said by the callouts */
+  .hero-story { display:block; margin:0 0 12px; text-align:left; }
   .hs-eyebrow { margin-bottom:6px; }
-  .hs-title { font-size:24px; margin-bottom:6px; }
-  .hs-lede { font-size:13px; margin-bottom:12px; }
-  .hero-genie-on .story-cta { flex-wrap:wrap; opacity:clamp(0, calc((var(--exp, 0) - 0.8) / 0.15), 1); }
+  .hs-title { font-size:25px; line-height:1.08; margin:0 0 4px; }
+  .hs-lede, .steps { display:none; }
 
-  /* the field card on a phone: two columns throughout, labels wrap, the rest-state strip folds
-     away as "Our read" unfolds, as it does on a desktop */
   .ffcard, .mini-ff { max-width:100%; min-width:0; }
-  .ffcard-head, .ffcard.compact .ffcard-head { padding:12px 14px 10px; }
-  .ffcard-body, .ffcard.compact .ffcard-body { padding:8px 14px 14px; }
-  .ffx-head, .ff-row, .ffx-axis,
-  .hero-genie-on .ffx-head, .hero-genie-on .ff-row, .hero-genie-on .ffx-axis { grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; }
-  .hero-genie-on .ffx-head { display:none; }
-  .ff-param, .ff-cell, .ff-track { min-width:0; }
-  .ff-metric, .ff-mult, .hero-genie-on:not(.genie-done) .ff-metric, .hero-genie-on:not(.genie-done) .ff-mult {
-    white-space:normal; overflow:visible; max-width:150px; }
-  .hero-genie-on .ff-foot { max-height:calc(8px + 200px * var(--exp, 0)); }
-  .hero-genie-on.genie-done .ff-foot { max-height:none; }
-  .ff-anno, .ff-anno.note { display:none; }
-  .hero-genie-on .ff-note { display:none; }
+  .ffcard { border-radius:12px; }
+  /* the head on two lines: the name with the axis caption on its right, the facts under both */
+  .ffcard-head, .ffcard.compact .ffcard-head { padding:11px 14px 8px; gap:0 10px; flex-wrap:wrap; align-items:baseline; }
+  .ffcard.compact .ffcard-head > div:first-child { display:contents; }
+  .ffcard.compact .ffcard-head .co { order:1; flex:1 1 auto; font-size:17px; line-height:1.2; }
+  .ffcard.compact .ffcard-head .cap { order:2; flex:none; font-size:8.5px; letter-spacing:.12em; white-space:nowrap; }
+  .ffcard.compact .ffcard-head .meta { order:3; flex:1 0 100%; font-size:9.5px; margin-top:3px; line-height:1.3; }
   .hover-hint { display:none; }   /* nothing hovers on a phone */
-  /* the bars are short on a 324px track, so the two end figures sit outside the bar, not on it */
-  .ff-end.lo { transform:translateX(calc(-100% - 5px)); }
-  .ff-end.hi { transform:translateX(5px); }
-  .ff-delta, .hero-genie-on .ff-delta { flex-direction:column; gap:12px; max-width:none;
-    opacity:clamp(0, calc(1 - (var(--exp, 0) - 0.4) / 0.25), 1); max-height:calc(520px * (1 - var(--exp, 0))); overflow:hidden; }
-  .d-mini, .hero-genie-on .d-mini { flex-direction:column; gap:12px; opacity:1; }
-  .hero-genie-on .our-read { display:block; max-height:calc(900px * var(--exp, 0)); overflow:hidden;
-    opacity:clamp(0, calc((var(--exp, 0) - 0.55) / 0.35), 1); }
-  .hero-genie-on.genie-done .our-read { max-height:none; overflow:visible; }
-  .or-grid { grid-template-columns:1fr; }
-  .or-cols { flex-direction:column; gap:12px; }
+  .ffcard-body, .ffcard.compact .ffcard-body { padding:2px 14px 12px; }
+  .ffx-head { display:none; }
+  .ff-group { font-size:8.5px; line-height:1.2; letter-spacing:.14em; padding:6px 0 0; margin-top:0; border-top:1px solid var(--ff-rule); }
 
-  /* ---- page 3, "Under the hood": one column, the button under the title ---- */
-  .snap.read-sec.p3 { min-height:100vh; padding:44px 0 36px; }
-  .p3-head { flex-direction:column; align-items:flex-start; gap:14px; }
-  .p3-title { font-size:26px; }
-  .p3-cta { align-items:flex-start; padding-bottom:0; }
-  .p3-cta span { white-space:normal; }
-  .p3-rules { grid-template-columns:1fr; }
-  .p3-rule { border-left:none; padding:10px 0; border-top:1px solid var(--ff-rule); }
+  /* a row is three lines: the method and its multiple, the bar, the callout */
+  .ff-row, .ffcard.compact .ff-row { display:grid; grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"param mult" "cell cell" "note note"; gap:0 6px; align-items:end;
+    min-height:0; padding:4px 0 1px; border-top:1px solid var(--ff-rule); position:relative; }
+  .ff-row:first-of-type { border-top:none; }
+  /* the last-round marker ("feeds nothing") is the one row the chart can spare on a phone */
+  .ffcard .ff-row.lr-row { display:none; }
+  .ff-row.conclusion, .ffcard.compact .ff-row.conclusion { min-height:0; margin:0 -14px; padding:5px 14px 3px; border-top:1px solid var(--ff-rule-hard); }
+  /* the method and its sub-label on ONE line; a long sub-label loses its tail, not its start */
+  .ff-param { grid-area:param; grid-column:auto; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    font-size:12.5px; line-height:1.25; }   /* its own line box, not the body's 24px one */
+  .ff-param strong, .ffcard.compact .ff-param strong { display:inline; font-size:12.5px; line-height:1.25; }
+  .ff-param > span, .ffcard.compact .ff-param > span { display:inline; font-size:9px; margin:0 0 0 4px; color:var(--ff-mute); }
+  .ff-param .lock-tag { display:none; }   /* "Unrefined range" already says it */
+  .ff-metric { display:none; }
+  .ff-mult, .ffcard.compact .ff-mult { grid-area:mult; grid-column:auto; font-size:10px; line-height:1.25; white-space:nowrap;
+    text-align:right; margin:0; padding-bottom:1px; }
+  .ff-mult .sub, .ffcard.compact .ff-mult .sub, #screen-hero .hero .ffcard .ff-mult .sub { display:none; }
+  .ff-row.lr-row .ff-mult { display:none; }
+  /* 22px of lead-in so the lowest figure ("3.8") has room to the left of its bar */
+  .ff-cell, .ffcard.compact .ff-cell { grid-area:cell; grid-column:auto; padding:0 0 0 22px; margin:1px 0 0; min-width:0; line-height:0; align-self:auto; }
+  .ff-track, .ffcard.compact .ff-track { min-height:20px; height:20px; }
+  .ffcard.compact .ff-bar { height:10px; top:calc(50% - 5px); }
+  .ffcard.compact .ff-bar.unrefined { height:8px; top:calc(50% - 4px); }
+  .ffcard.compact .ff-bar.band { height:12px; top:calc(50% - 6px); }
+  .ffcard.compact .ff-diamond { width:10px; height:10px; margin-left:-5px; top:calc(50% - 5px); }
+  /* the two figures sit level with the bar, outside its ends: on a 326px track a bar is 35px wide */
+  .ffcard.compact .ff-end, .ffcard.compact .ff-point-label { top:50%; font-size:9.5px; line-height:1; }
+  .ff-end.lo, .ffcard.compact .ff-end.lo { transform:translate(calc(-100% - 4px), -50%); }
+  .ff-end.hi, .ffcard.compact .ff-end.hi { transform:translate(4px, -50%); }
+  .ffcard.compact .ff-point-label.marker { transform:translate(7px, -50%); }
+  /* the +53% badge: small, at the free right end of the core row's track */
+  .prem-badge { right:0; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:6px; text-align:left; }
+  .prem-badge em { font-size:17px; line-height:1; }
+  .prem-badge span { font-size:8.5px; line-height:1.15; margin:0; max-width:96px; }
+  .prem-badge .pa { display:none; }
+  /* the hover pop-ups are off: a tap would pin them open */
+  .has-tip::after { display:none; }
+  .calc-tip, .peer-tip { display:none !important; }
+  .ff-mult.has-peers, .ff-metric.has-calc, .has-tip { cursor:default; }
+  .ff-anno, .ff-anno.note { display:none; }
+
+  /* the numbered callouts, under the bars they explain */
+  .ff-note, .hero-genie-on .ff-note { grid-area:note; display:flex; align-items:flex-start; gap:7px; position:static;
+    width:auto; transform:none; opacity:1; pointer-events:auto; margin:2px 0 3px; }
+  .ff-note .fn { width:15px; height:15px; font-size:8.5px; margin-top:0; }
+  .ff-note p { font-size:10.5px; line-height:1.28; font-weight:600; text-wrap:pretty; }
+
+  .ffx-axis, .ffcard.compact .ffx-axis { display:block; padding-top:4px; border-top:1px solid var(--ff-rule-hard); }
+  .ffx-axis > div:not(.ff-cell) { display:none; }
+  .ffx-axis .ff-cell, .ffcard.compact .ffx-axis .ff-cell { padding:0 0 0 22px; height:14px; margin:0; }
+  .ffx-axis b { font-size:9px; top:2px; }
+
+  .ff-delta, .d-mini { display:none; }   /* the rest-state strip repeats Our read */
+
+  /* ================= screen 3: Our read ================= */
+  .our-read, .hero-genie-on .our-read { display:flex; flex-direction:column; margin:14px -14px 0; padding:14px 14px 0;
+    border-top:2px solid var(--ff-rule-hard); max-height:none; opacity:1; overflow:visible; }
+  .our-read .ff-note { order:-1; margin:0 0 12px; }
+  .or-k { font-size:9px; margin-bottom:6px; }
+  .or-grid { display:grid; grid-template-columns:1fr; gap:10px; }
+  .or-blk { gap:6px; }
+  .or-t { font-size:14.5px; }
+  .or { padding:11px 12px 10px; border-radius:8px; }
+  .or-cols { flex-direction:row; gap:16px; }
+  .or-col { align-content:start; }
+  .or-col i { font-size:11px; }
+  /* advocacy beside concerns: two titles on one line, two boxes under them */
+  .or-blk:nth-child(2) { display:grid; grid-template-columns:1fr 1fr; grid-template-areas:"t1 t2" "b1 b2"; gap:6px 10px; align-items:start; }
+  .or-blk:nth-child(2) > .or-t:nth-of-type(1) { grid-area:t1; }
+  .or-blk:nth-child(2) > .or:nth-of-type(1) { grid-area:b1; }
+  .or-blk:nth-child(2) > .or-t:nth-of-type(2) { grid-area:t2; margin-top:0; }
+  .or-blk:nth-child(2) > .or:nth-of-type(2) { grid-area:b2; }
+  .or ul li { font-size:11px; line-height:1.35; margin-bottom:6px; padding-left:12px; }
+  .or-col.funds i { padding:2px 0; }
+  .or-col.funds u { font-size:9.5px; margin-top:6px; }
+
+  /* the button under the field */
+  .story-cta, .hero-genie-on .story-cta { display:flex; flex-direction:column; align-items:stretch; gap:8px;
+    margin:18px 0 32px; opacity:1; }
+  .story-cta .btn, .hero-genie-on .story-cta .btn { width:100%; padding:16px 20px; font-size:16px; }
+  .field-anchor { height:0; scroll-margin-top:0; }
+
+  /* ================= screen 4: Under the hood ================= */
+  .snap.read-sec.p3 { min-height:0; padding:36px 0 32px; }
+  .p3-head { flex-direction:column; align-items:stretch; gap:14px; }
+  .p3-eyerow { gap:10px; margin-bottom:8px; }
+  .p3-title { font-size:26px; line-height:1.1; }
+  .p3-lede { font-size:14px; line-height:1.5; }
+  /* the button closes the page (landing-p3.js moves it under the four rows on phones): the
+     button under Our read is only a screen above, so two of them at the top would be a repeat */
+  .p3-cta { align-items:stretch; padding-bottom:0; gap:6px; }
+  .p3 .wrap-wide > .p3-cta { margin-top:18px; }
+  .p3-btn { width:100%; padding:15px 20px; }
+  .p3-cta span { white-space:normal; text-align:center; }
+  /* the four rules, two up */
+  .p3-rules { grid-template-columns:1fr 1fr; gap:0; margin-top:18px; }
+  .p3-rule { padding:10px 12px 10px 0; border-left:none; border-top:none; }
   .p3-rule:first-child { border-top:none; }
-  .p3-rail { height:auto; }
+  .p3-rule:nth-child(2n) { padding-left:12px; padding-right:0; border-left:1px solid var(--ff-rule); }
+  .p3-rule:nth-child(n+3) { border-top:1px solid var(--ff-rule); }
+  .p3-rule b { font-size:12.5px; line-height:1.25; margin-bottom:3px; }
+  .p3-rule span { display:block; font-size:10.5px; line-height:1.4; }
+  /* the rail: without the script it is a wrapped row; with it, landing-p3.js moves each stop
+     into its card as the row you tap, and hides the rail */
+  .p3-rail { height:auto; margin-top:14px; }
   .p3-track { display:none; }
-  .p3-stops { position:static; display:flex; flex-wrap:wrap; gap:10px 18px; }
-  .p3-stop b { white-space:normal; }
-  .p3-line { grid-template-columns:1fr; gap:14px; }
-  .p3-card { padding:18px 16px 16px; }
-  .p3-funs { grid-template-columns:1fr; gap:14px; }
+  .p3-stops { position:static; display:flex; flex-wrap:wrap; gap:8px 16px; }
+  .p3-stop b { white-space:normal; background:none; font-size:13px; padding:0; }
+  .p3-line { grid-template-columns:1fr; gap:10px; margin-top:14px; }
+  .p3-card { padding:12px 14px; border-radius:10px; }
+  .p3-h { font-size:16px; }
+  .p3-sub { font-size:12px; }
+  .p3-funs { grid-template-columns:1fr 1fr; gap:0 14px; margin:10px 0 2px; }
+  .p3-fk { margin-bottom:6px; }
+  .p3-fun { gap:5px; }
+  .p3-fr { grid-template-columns:48px minmax(0,1fr); gap:0 8px; }
+  .p3-fr b { font-size:12px; }
+  .p3-fr .p3-tr { height:11px; }
+  .p3-fr span { font-size:9.5px; line-height:1.25; }
   .p3-table td.r { white-space:normal; }
+  /* folded cards: the stop is the row you tap; card 1 keeps its funnels in view */
+  .p3-fold > .p3-stop { padding:2px 0; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+  .p3-fold > .p3-stop::after { content:""; margin-left:auto; width:8px; height:8px; flex:none;
+    border-right:1.5px solid var(--ff-mute); border-bottom:1.5px solid var(--ff-mute); transform:rotate(45deg) translate(-2px,-2px);
+    transition:transform .2s ease; }
+  .p3-fold.open > .p3-stop::after { transform:rotate(-135deg) translate(-2px,-2px); }
+  .p3-fold:not(.open) > :not(.p3-stop):not(.p3-funs) { display:none; }
+  .p3-fold.open > .p3-h { margin-top:12px; }
+  .p3-fold .p3-chip { box-shadow:none; width:24px; height:24px; font-size:11px; }
+  /* the stop arrives with its card, not on the rail's own timetable */
+  .p3.p3-armed .p3-fold > .p3-stop, .p3.p3-on .p3-fold > .p3-stop { animation:none; opacity:1; }
 
-  /* the strip of prior employers and the footer */
-  .marquee { overflow:hidden; }
-  footer .disclaimer { text-align:left; }
+  /* ================= screen 5: the strip and the small print ================= */
+  .marquee { overflow:hidden; padding:14px 0; }
+  footer { padding:22px 0 36px; }
+  footer .disclaimer { text-align:left; font-size:10.5px; line-height:1.45; }
 }
