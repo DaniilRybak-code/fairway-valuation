@@ -66,6 +66,7 @@ run "14 ONE PAYLOAD      does the whole reveal assemble in one pass"     python3
 run "15 THE BOUNDARY     does a founder's figure leave the browser"     python3 tools/check_request_boundary.py
 run "16 TOKEN WEIGHTS   is the word-weight file fresh"                   python3 tools/check_token_weights.py
 run "17 THE PROFILER    can a website put anything into a profile"        python3 tools/check_profiler.py
+run "18 THE LANDING     do page 3 figures and investor rows come from the data" python3 tools/check_landing_page3.py
 printf '\n'
 if [ "$fail" = "1" ]; then
   echo 'ONE OR MORE CHECKS FAILED. The stage that failed is where the data stopped.'
