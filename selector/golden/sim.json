@@ -296,6 +296,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 29.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 5.2,
@@ -975,6 +976,14 @@
   "private_window_months": 8,
   "secondary": [
    {
+    "company": "monday.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of workflow; related type of business; sold the same way",
+    "score": 6.0,
+    "ticker": "NASDAQ:MNDY"
+   },
+   {
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
@@ -987,7 +996,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -995,15 +1004,16 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 2.0,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.0,
    "mid": 2.0,
-   "n": 1,
+   "n": 2,
    "period_mix": {
-    "NTM": 1
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -1016,12 +1026,21 @@
    "post_stated_n": 0,
    "shared_words": [
     "ai",
-    "builder"
+    "builder",
+    "workflow"
    ],
    "show_retention": false,
-   "sole": "Wix.com Ltd.",
    "spread": 1.0,
    "table": [
+    {
+     "company": "monday.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MNDY"
+    },
     {
      "company": "Wix.com Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1032,7 +1051,7 @@
      "ticker": "NASDAQGS:WIX"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.5,
    "thin": true,
    "triangulated": false
   }

@@ -323,7 +323,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of healthcare; same type of business; same end market; sold the same way",
-    "score": 8.2,
+    "score": 8.1,
     "ticker": "NASDAQGS:CCSI"
    },
    {
@@ -373,6 +373,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.9,
@@ -789,7 +790,7 @@
     "in_medians": true,
     "mult": 7.37,
     "reason": "both do Primary Care; same type of business; same end market; same business function",
-    "score": 18.4,
+    "score": 18.3,
     "type": "PRIMARY"
    },
    {
@@ -811,7 +812,7 @@
     "in_medians": true,
     "mult": 14.25,
     "reason": "both do Care Management; same type of business; same end market; same business function",
-    "score": 11.3,
+    "score": 11.2,
     "type": "PRIMARY"
    },
    {
@@ -822,7 +823,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 11.3,
+    "score": 11.2,
     "type": "PRIMARY"
    },
    {
@@ -833,7 +834,7 @@
     "in_medians": true,
     "mult": 57.1,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 11.3,
+    "score": 11.2,
     "type": "PRIMARY"
    },
    {
@@ -949,7 +950,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of healthcare; related type of business; same end market; same kind of customer",
-    "score": 7.2,
+    "score": 7.1,
     "ticker": "TSE:4480"
    },
    {
@@ -957,31 +958,31 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of healthcare; related type of business; same business function; same kind of customer",
-    "score": 7.2,
+    "score": 7.1,
     "ticker": "OM:VIT B"
    },
    {
-    "company": "PAR Technology Corporation",
-    "family": "software",
+    "company": "Alignment Healthcare, Inc.",
+    "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of office; same type of business; same business function",
-    "score": 6.6,
-    "ticker": "NYSE:PAR"
+    "reason": "shares the language of care, operations; related type of business; same end market; same business function",
+    "score": 7.0,
+    "ticker": "NASDAQ:ALHC"
    },
    {
-    "company": "Samsara Inc.",
-    "family": "software",
+    "company": "Evolent Health, Inc.",
+    "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of management, operations; same type of business; same business function",
-    "score": 6.4,
-    "ticker": "NYSE:IOT"
+    "reason": "shares the language of care, management; related type of business; same end market; same business function",
+    "score": 6.7,
+    "ticker": "NYSE:EVH"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -990,14 +991,15 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 9.6,
+   "high": 1.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 2.9,
-   "n": 5,
+   "low": 0.4,
+   "mid": 0.5,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -1006,18 +1008,50 @@
     }
    },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "EverCommerce Inc.",
+     "mult": 2.9,
+     "reason": "both do Practice Management; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Vitec Software Group AB (publ)",
+     "mult": 3.7,
+     "reason": "shares the language of healthcare; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "post_stated_n": 0,
    "shared_words": [
+    "care",
     "healthcare",
     "management",
-    "office",
-    "operations",
-    "practice"
+    "operations"
    ],
-   "show_retention": true,
-   "spread": 6.0,
+   "show_retention": false,
+   "spread": 4.0,
    "table": [
+    {
+     "company": "Evolent Health, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:EVH"
+    },
+    {
+     "company": "Alignment Healthcare, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 24.3,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:ALHC"
+    },
     {
      "company": "Medley, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1026,45 +1060,9 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "TSE:4480"
-    },
-    {
-     "company": "PAR Technology Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.0,
-     "multiple": 2.0,
-     "recurring_pct": 63.3,
-     "retention_pct": null,
-     "ticker": "NYSE:PAR"
-    },
-    {
-     "company": "EverCommerce Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.7,
-     "multiple": 2.9,
-     "recurring_pct": null,
-     "retention_pct": 94.0,
-     "ticker": "NASDAQGS:EVCM"
-    },
-    {
-     "company": "Vitec Software Group AB (publ)",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.3,
-     "multiple": 3.7,
-     "recurring_pct": 86.0,
-     "retention_pct": null,
-     "ticker": "OM:VIT B"
-    },
-    {
-     "company": "Samsara Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.2,
-     "multiple": 9.6,
-     "recurring_pct": null,
-     "retention_pct": 115.0,
-     "ticker": "NYSE:IOT"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   }

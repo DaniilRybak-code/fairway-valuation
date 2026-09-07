@@ -79,7 +79,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.5,
      "thin": false,
      "triangulated": false
     },
@@ -220,11 +220,19 @@
   },
   "core": [
    {
+    "company": "monday.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of team; related type of business; same kind of customer; same revenue model",
+    "score": 10.0,
+    "ticker": "NASDAQ:MNDY"
+   },
+   {
     "company": "Zoom Communications, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of team; same type of business; same revenue model; sold the same way",
-    "score": 10.1,
+    "score": 10.0,
     "ticker": "NASDAQGS:ZM"
    },
    {
@@ -240,7 +248,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of team; same type of business; same revenue model",
-    "score": 8.1,
+    "score": 8.0,
     "ticker": "NYSE:RNG"
    },
    {
@@ -264,7 +272,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -273,14 +281,15 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 5.2,
+   "high": 4.0,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.8,
-   "mid": 3.9,
-   "n": 5,
+   "low": 2.6,
+   "mid": 3.35,
+   "n": 6,
    "period_mix": {
-    "NTM": 5
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -296,8 +305,17 @@
     "team"
    ],
    "show_retention": true,
-   "spread": 2.0,
+   "spread": 2.6,
    "table": [
+    {
+     "company": "monday.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MNDY"
+    },
     {
      "company": "RingCentral, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -344,7 +362,7 @@
      "ticker": "NYSE:TWLO"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
@@ -781,7 +799,7 @@
     "in_medians": true,
     "mult": 58.3,
     "reason": "shares the language of team; same type of business; same revenue model; sold the same way",
-    "score": 12.1,
+    "score": 12.0,
     "type": "PRIMARY"
    },
    {
@@ -814,7 +832,7 @@
     "in_medians": true,
     "mult": 42.9,
     "reason": "shares the language of team; same type of business; same business function; same revenue model",
-    "score": 15.1,
+    "score": 15.0,
     "type": "MIXED"
    }
   ],
@@ -955,7 +973,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of team; related type of business; same revenue model; sold the same way",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "NYSE:ASAN"
    },
    {
@@ -1005,6 +1023,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 6.1,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.8,
@@ -1076,7 +1095,7 @@
      "ticker": "NASDAQGS:TEAM"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   }

@@ -269,6 +269,14 @@
   },
   "core": [
    {
+    "company": "Skillsoft Corp.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of corporate, course, development; same type of business; same end market; same business function",
+    "score": 12.7,
+    "ticker": "NYSE:SKIL"
+   },
+   {
     "company": "Duolingo, Inc.",
     "family": "consumer",
     "in_medians": true,
@@ -277,11 +285,19 @@
     "ticker": "NASDAQGS:DUOL"
    },
    {
+    "company": "D2L Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of course, platform; same type of business; same end market; same revenue model",
+    "score": 9.2,
+    "ticker": "TSX:DTOL"
+   },
+   {
     "company": "Docebo Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do LMS, Corporate Training; related type of business; same end market; same business function",
-    "score": 7.5,
+    "score": 7.4,
     "ticker": "TSX:DCBO"
    },
    {
@@ -307,21 +323,13 @@
     "reason": "same type of business; same end market",
     "score": 6.0,
     "ticker": "NYSE:CHGG"
-   },
-   {
-    "company": "JustSystems Corporation",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same end market",
-    "score": 6.0,
-    "ticker": "TSE:4686"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -330,14 +338,20 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 4.7,
+   "high": 1.5,
+   "levered_names": [
+    {
+     "company": "Skillsoft Corp.",
+     "debt_share_pct": 89.0
+    }
+   ],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
-   "mid": 0.45,
-   "n": 4,
+   "mid": 0.85,
+   "n": 6,
    "period_mix": {
-    "NTM": 4
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -368,6 +382,20 @@
      "transaction_type": ""
     },
     {
+     "company": "D2L Inc.",
+     "mult": 1.2,
+     "reason": "shares the language of course, platform; same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Skillsoft Corp.",
+     "mult": 1.5,
+     "reason": "shares the language of corporate, course, development; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
      "company": "Duolingo, Inc.",
      "mult": 4.7,
      "reason": "both do AI Tutor; same type of business; same end market; same AI stance",
@@ -387,6 +415,11 @@
    "post_stated_n": 0,
    "shared_words": [
     "ai",
+    "corporate",
+    "course",
+    "development",
+    "platform",
+    "training",
     "tutor"
    ],
    "show_retention": false,
@@ -418,6 +451,24 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:COUR"
+    },
+    {
+     "company": "D2L Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.4,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSX:DTOL"
+    },
+    {
+     "company": "Skillsoft Corp.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -24.9,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:SKIL"
     },
     {
      "company": "Duolingo, Inc.",
@@ -829,6 +880,14 @@
     "reason": "shares the language of platform; related type of business; same kind of customer; sold the same way",
     "score": 6.1,
     "ticker": "TSE:2492"
+   },
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "TSE:4686"
    }
   ],
   "secondary_range": {
@@ -845,6 +904,7 @@
    "dispersed": false,
    "display": "DIAMOND",
    "high": 6.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 6.6,

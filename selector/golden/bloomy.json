@@ -168,7 +168,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": true
     },
@@ -264,11 +264,27 @@
   },
   "core": [
    {
+    "company": "Skillsoft Corp.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
+    "score": 14.3,
+    "ticker": "NYSE:SKIL"
+   },
+   {
+    "company": "D2L Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of delivery, learning, platform; same type of business; same end market; same business function",
+    "score": 13.0,
+    "ticker": "TSX:DTOL"
+   },
+   {
     "company": "Duolingo, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Adaptive Learning; same type of business; same end market; same AI stance",
-    "score": 11.0,
+    "score": 10.9,
     "ticker": "NASDAQGS:DUOL"
    },
    {
@@ -276,32 +292,8 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning, school; same type of business; same end market",
-    "score": 7.0,
+    "score": 6.9,
     "ticker": "NYSE:NRDY"
-   },
-   {
-    "company": "JustSystems Corporation",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of learning, software; same type of business; same end market",
-    "score": 6.4,
-    "ticker": "TSE:4686"
-   },
-   {
-    "company": "Coursera, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of learning; same type of business; same end market",
-    "score": 6.4,
-    "ticker": "NYSE:COUR"
-   },
-   {
-    "company": "Chegg, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of tools; same type of business; same end market",
-    "score": 6.2,
-    "ticker": "NYSE:CHGG"
    }
   ],
   "core_range": {
@@ -318,10 +310,16 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.7,
+   "levered_names": [
+    {
+     "company": "Skillsoft Corp.",
+     "debt_share_pct": 89.0
+    }
+   ],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
-   "mid": 0.45,
+   "mid": 1.35,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -341,16 +339,16 @@
      "transaction_type": ""
     },
     {
-     "company": "Chegg, Inc.",
-     "mult": 0.4,
-     "reason": "shares the language of tools; same type of business; same end market",
+     "company": "D2L Inc.",
+     "mult": 1.2,
+     "reason": "shares the language of delivery, learning, platform; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
-     "company": "Coursera, Inc.",
-     "mult": 0.5,
-     "reason": "shares the language of learning; same type of business; same end market",
+     "company": "Skillsoft Corp.",
+     "mult": 1.5,
+     "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -366,9 +364,11 @@
    "post_stated_n": 0,
    "shared_words": [
     "adaptive",
+    "delivery",
     "learning",
+    "platform",
     "school",
-    "tools"
+    "software"
    ],
    "show_retention": false,
    "spread": 11.8,
@@ -383,22 +383,22 @@
      "ticker": "NYSE:NRDY"
     },
     {
-     "company": "Chegg, Inc.",
+     "company": "D2L Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -26.3,
-     "multiple": 0.4,
+     "growth_pct": 9.4,
+     "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:CHGG"
+     "ticker": "TSX:DTOL"
     },
     {
-     "company": "Coursera, Inc.",
+     "company": "Skillsoft Corp.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.3,
-     "multiple": 0.5,
+     "growth_pct": -24.9,
+     "multiple": 1.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:COUR"
+     "ticker": "NYSE:SKIL"
     },
     {
      "company": "Duolingo, Inc.",
@@ -410,7 +410,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 4.0,
+   "tag_evidence": 3.9,
    "thin": false,
    "triangulated": false
   },
@@ -644,7 +644,7 @@
     "in_medians": true,
     "mult": 1.29,
     "reason": "shares the language of learning; same type of business; same end market",
-    "score": 8.4,
+    "score": 8.3,
     "type": "CONTROL"
    },
    {
@@ -655,7 +655,7 @@
     "in_medians": true,
     "mult": 1.52,
     "reason": "shares the language of learning; same type of business; same end market; sold the same way",
-    "score": 12.9,
+    "score": 12.8,
     "type": "CONTROL"
    },
    {
@@ -792,7 +792,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": true
   },
@@ -853,6 +853,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 1.2,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.5,

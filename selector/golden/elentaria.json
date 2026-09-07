@@ -252,7 +252,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Workflow Automation; same type of business; same business function; sold the same way",
-    "score": 9.8,
+    "score": 9.7,
     "ticker": "NASDAQGS:PEGA"
    },
    {
@@ -302,6 +302,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.3,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.5,
@@ -447,7 +448,7 @@
      "ticker": "NASDAQGS:WDAY"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
@@ -1103,7 +1104,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of operations, platform; same business function; same kind of customer; sold the same way",
-    "score": 7.9,
+    "score": 7.8,
     "ticker": "NYSE:IOT"
    },
    {
@@ -1123,12 +1124,12 @@
     "ticker": "NASDAQGS:CASS"
    },
    {
-    "company": "ServiceNow, Inc.",
+    "company": "Braze, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "both do Workflow Automation; same type of business; sold the same way",
+    "reason": "shares the language of automation, channel, customer; related type of business; same kind of customer; sold the same way",
     "score": 7.7,
-    "ticker": "NYSE:NOW"
+    "ticker": "NASDAQGS:BRZE"
    }
   ],
   "secondary_range": {
@@ -1144,11 +1145,12 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 8.2,
+   "high": 4.9,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 4.9,
+   "mid": 3.4,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -1180,13 +1182,14 @@
    "shared_words": [
     "automation",
     "b2b",
+    "channel",
     "commercial",
+    "customer",
     "planning",
-    "platform",
-    "workflow"
+    "platform"
    ],
-   "show_retention": false,
-   "spread": 2.5,
+   "show_retention": true,
+   "spread": 1.5,
    "table": [
     {
      "company": "Cass Information Systems",
@@ -1198,6 +1201,15 @@
      "ticker": "NASDAQGS:CASS"
     },
     {
+     "company": "Braze, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
+     "multiple": 3.4,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NASDAQGS:BRZE"
+    },
+    {
      "company": "SAP SE",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 11.9,
@@ -1205,15 +1217,6 @@
      "recurring_pct": 63.6,
      "retention_pct": null,
      "ticker": "XTRA:SAP"
-    },
-    {
-     "company": "ServiceNow, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.8,
-     "multiple": 8.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:NOW"
     }
    ],
    "tag_evidence": 0.7,

@@ -218,7 +218,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
     }
@@ -232,6 +232,14 @@
     "reason": "both do CRM, Sales Automation; same type of business; same kind of customer; same revenue model",
     "score": 12.6,
     "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "monday.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of workflow; related type of business; same kind of customer; same revenue model",
+    "score": 10.0,
+    "ticker": "NASDAQ:MNDY"
    },
    {
     "company": "Freshworks Inc.",
@@ -262,23 +270,24 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "high": 3.0,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.2,
-   "mid": 2.75,
-   "n": 4,
+   "mid": 2.7,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -292,11 +301,21 @@
    "shared_words": [
     "automation",
     "crm",
-    "sales"
+    "sales",
+    "workflow"
    ],
    "show_retention": true,
-   "spread": 1.4,
+   "spread": 1.5,
    "table": [
+    {
+     "company": "monday.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MNDY"
+    },
     {
      "company": "BILL Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -681,7 +700,7 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "shares the language of automation, workflow; related type of business; same revenue model",
-    "score": 8.7,
+    "score": 8.6,
     "type": "CONTROL"
    },
    {
@@ -863,7 +882,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -908,6 +927,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 5.0,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.2,

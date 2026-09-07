@@ -248,7 +248,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": false
     },
@@ -312,11 +312,19 @@
   },
   "core": [
    {
+    "company": "monday.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of team; same type of business; same business function; same kind of customer",
+    "score": 12.0,
+    "ticker": "NASDAQ:MNDY"
+   },
+   {
     "company": "Asana, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of team; same type of business; same business function; sold the same way",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "NYSE:ASAN"
    },
    {
@@ -350,29 +358,13 @@
     "reason": "shares the language of business; same type of business; same business function",
     "score": 6.1,
     "ticker": "XTRA:SAP"
-   },
-   {
-    "company": "Appian Corporation",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation, business; same type of business",
-    "score": 5.1,
-    "ticker": "NASDAQGM:APPN"
-   },
-   {
-    "company": "Sidetrade SA",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai, credit; same type of business; same AI stance",
-    "score": 5.1,
-    "ticker": "ENXTPA:ALBFR"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -382,13 +374,14 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 4.3,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.8,
-   "mid": 3.3,
-   "n": 7,
+   "low": 2.3,
+   "mid": 2.85,
+   "n": 6,
    "period_mix": {
-    "NTM": 7
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -401,15 +394,22 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "automation",
     "business",
-    "credit",
     "team"
    ],
    "show_retention": true,
-   "spread": 2.1,
+   "spread": 2.5,
    "table": [
+    {
+     "company": "monday.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MNDY"
+    },
     {
      "company": "Asana, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -438,24 +438,6 @@
      "ticker": "NASDAQGS:PEGA"
     },
     {
-     "company": "Appian Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.1,
-     "multiple": 3.3,
-     "recurring_pct": 79.5,
-     "retention_pct": 116.0,
-     "ticker": "NASDAQGM:APPN"
-    },
-    {
-     "company": "Sidetrade SA",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.2,
-     "multiple": 3.7,
-     "recurring_pct": 87.0,
-     "retention_pct": null,
-     "ticker": "ENXTPA:ALBFR"
-    },
-    {
      "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.0,
@@ -474,7 +456,7 @@
      "ticker": "XTRA:SAP"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
@@ -872,7 +854,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
-    "score": 8.8,
+    "score": 8.7,
     "type": "PRIMARY"
    },
    {
@@ -938,7 +920,7 @@
     "in_medians": true,
     "mult": 7.37,
     "reason": "shares the language of based; related type of business; same business function; same kind of customer",
-    "score": 10.2,
+    "score": 10.1,
     "type": "PRIMARY"
    }
   ],
@@ -1081,7 +1063,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
@@ -1118,21 +1100,13 @@
     "reason": "shares the language of business; same kind of customer; sold the same way",
     "score": 5.6,
     "ticker": "NYSE:OOMA"
-   },
-   {
-    "company": "Zoom Communications, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of team; related type of business; sold the same way",
-    "score": 5.1,
-    "ticker": "NASDAQGS:ZM"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -1142,13 +1116,14 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 29.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.0,
-   "mid": 3.9,
-   "n": 5,
+   "low": 1.9,
+   "mid": 8.95,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -1168,13 +1143,6 @@
      "company": "Klaviyo, Inc.",
      "mult": 3.0,
      "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Zoom Communications, Inc.",
-     "mult": 3.9,
-     "reason": "shares the language of team; related type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -1199,8 +1167,7 @@
     "agent",
     "ai",
     "automation",
-    "business",
-    "team"
+    "business"
    ],
    "show_retention": true,
    "spread": 15.5,
@@ -1224,15 +1191,6 @@
      "ticker": "NYSE:KVYO"
     },
     {
-     "company": "Zoom Communications, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.2,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": 99.0,
-     "ticker": "NASDAQGS:ZM"
-    },
-    {
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 22.9,
@@ -1251,7 +1209,7 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

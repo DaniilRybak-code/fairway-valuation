@@ -99,7 +99,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Healthcare Staffing; same type of business; same end market; same business function",
-    "score": 9.8,
+    "score": 9.7,
     "ticker": "NYSE:AMN"
    },
    {
@@ -115,7 +115,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of healthcare; same end market; same business function; same kind of customer",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "TSE:4480"
    }
   ],
@@ -133,6 +133,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 2.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
@@ -447,6 +448,14 @@
     "ticker": "NYSE:WEAV"
    },
    {
+    "company": "Progyny, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; same AI stance",
+    "score": 7.0,
+    "ticker": "NASDAQ:PGNY"
+   },
+   {
     "company": "Robert Walters plc",
     "family": "consumer",
     "in_medians": true,
@@ -461,14 +470,6 @@
     "reason": "shares the language of staffing; same type of business; same business function",
     "score": 6.6,
     "ticker": "LSE:HAS"
-   },
-   {
-    "company": "Consensus Cloud Solutions, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of healthcare; same end market; sold the same way",
-    "score": 5.2,
-    "ticker": "NASDAQGS:CCSI"
    }
   ],
   "secondary_range": {
@@ -484,7 +485,8 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 3.1,
+   "high": 1.9,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.2,
@@ -522,16 +524,16 @@
      "transaction_type": ""
     },
     {
-     "company": "Weave Communications, Inc.",
-     "mult": 1.9,
-     "reason": "same end market; same kind of customer; sold the same way",
+     "company": "Progyny, Inc.",
+     "mult": 1.2,
+     "reason": "same end market; same business function; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
-     "company": "Consensus Cloud Solutions, Inc.",
-     "mult": 3.1,
-     "reason": "shares the language of healthcare; same end market; sold the same way",
+     "company": "Weave Communications, Inc.",
+     "mult": 1.9,
+     "reason": "same end market; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
@@ -539,12 +541,11 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "healthcare",
     "per",
     "staffing"
    ],
    "show_retention": true,
-   "spread": 15.5,
+   "spread": 9.5,
    "table": [
     {
      "company": "Robert Walters plc",
@@ -574,6 +575,15 @@
      "ticker": "NASDAQGS:TRVG"
     },
     {
+     "company": "Progyny, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:PGNY"
+    },
+    {
      "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 13.8,
@@ -581,15 +591,6 @@
      "recurring_pct": null,
      "retention_pct": 92.0,
      "ticker": "NYSE:WEAV"
-    },
-    {
-     "company": "Consensus Cloud Solutions, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.3,
-     "multiple": 3.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:CCSI"
     }
    ],
    "tag_evidence": 0.6,

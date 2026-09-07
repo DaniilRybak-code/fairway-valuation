@@ -329,6 +329,14 @@
     "ticker": "NYSE:VEEV"
    },
    {
+    "company": "Evolent Health, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of management, specialty; related type of business; same end market; same business function",
+    "score": 8.1,
+    "ticker": "NYSE:EVH"
+   },
+   {
     "company": "Consensus Cloud Solutions, Inc.",
     "family": "software",
     "in_medians": true,
@@ -359,14 +367,6 @@
     "reason": "related type of business; same end market; same kind of customer",
     "score": 7.0,
     "ticker": "TSE:4480"
-   },
-   {
-    "company": "Phreesia, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of patient; same type of business; same end market",
-    "score": 6.6,
-    "ticker": "NYSE:PHR"
    }
   ],
   "core_range": {
@@ -383,6 +383,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.6,
@@ -399,9 +400,9 @@
    },
    "points": [
     {
-     "company": "Phreesia, Inc.",
-     "mult": 1.4,
-     "reason": "shares the language of patient; same type of business; same end market",
+     "company": "Evolent Health, Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of management, specialty; related type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -456,19 +457,20 @@
     "management",
     "patient",
     "practice",
-    "revenue"
+    "revenue",
+    "specialty"
    ],
    "show_retention": true,
-   "spread": 6.9,
+   "spread": 24.2,
    "table": [
     {
-     "company": "Phreesia, Inc.",
+     "company": "Evolent Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.3,
-     "multiple": 1.4,
+     "growth_pct": 18.0,
+     "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:PHR"
+     "ticker": "NYSE:EVH"
     },
     {
      "company": "Medley, Inc.",
@@ -989,51 +991,60 @@
     "ticker": "NASDAQGS:EVCM"
    },
    {
+    "company": "monday.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of management, workflow; same business function; same kind of customer; same revenue model",
+    "score": 8.5,
+    "ticker": "NASDAQ:MNDY"
+   },
+   {
+    "company": "Phreesia, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of patient; same type of business; same end market",
+    "score": 6.6,
+    "ticker": "NYSE:PHR"
+   },
+   {
+    "company": "Alignment Healthcare, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function",
+    "score": 6.5,
+    "ticker": "NASDAQ:ALHC"
+   },
+   {
     "company": "IVU Traffic Technologies AG",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of scheduling; same type of business; same business function",
     "score": 6.4,
     "ticker": "XTRA:IVU"
-   },
-   {
-    "company": "Tecsys Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same end market",
-    "score": 6.0,
-    "ticker": "TSX:TCS"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of automation; same revenue model; sold the same way",
-    "score": 5.6,
-    "ticker": "NASDAQGS:GTM"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "high": 2.9,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
-   "mid": 2.2,
-   "n": 3,
+   "low": 0.5,
+   "mid": 1.8,
+   "n": 4,
    "period_mix": {
-    "NTM": 3
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -1044,9 +1055,9 @@
    "points": [],
    "positioning": [
     {
-     "company": "ZoomInfo Technologies Inc.",
-     "mult": 2.2,
-     "reason": "shares the language of automation; same revenue model; sold the same way",
+     "company": "monday.com Ltd.",
+     "mult": 2.0,
+     "reason": "shares the language of management, workflow; same business function; same kind of customer; same revenue model",
      "tier": "BROAD",
      "transaction_type": ""
     }
@@ -1054,20 +1065,30 @@
    "post_stated_n": 0,
    "shared_words": [
     "management",
+    "patient",
     "practice",
     "scheduling"
    ],
    "show_retention": true,
-   "spread": 1.5,
+   "spread": 5.8,
    "table": [
     {
-     "company": "Tecsys Inc.",
+     "company": "Alignment Healthcare, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
-     "multiple": 1.9,
-     "recurring_pct": 58.0,
-     "retention_pct": 106.0,
-     "ticker": "TSX:TCS"
+     "growth_pct": 24.3,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:ALHC"
+    },
+    {
+     "company": "Phreesia, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.3,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PHR"
     },
     {
      "company": "IVU Traffic Technologies AG",

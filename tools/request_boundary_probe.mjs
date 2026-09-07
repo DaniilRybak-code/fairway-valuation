@@ -29,7 +29,13 @@ const SENTINEL = {
   revenue: 'BAND_SENTINEL_9111',
   revenue_exact: 913371,
   arr_exact: 10960452,
-  recurring_pct: 91,
+  /* A PERCENTAGE STILL HAS TO BE DISTINCTIVE. This was 91, and 91 is two digits: it appears in
+     timestamps, durations and byte counts, and the Python side looks for a sentinel by plain
+     substring. On 7-Sep-2026 check 15 passed on its own and failed inside the suite, reporting that
+     api/lead.js had logged recurring_pct, because that run's log happened to contain "91". A check
+     that is sometimes red is worse than one that is always red: it teaches whoever runs it to re-run
+     rather than to look. Six significant figures, still a valid percentage. */
+  recurring_pct: 90.9137,
   ebitda_ltm: -917731,
   last_round_amount: 9155000,
   last_round_value: 9188000,

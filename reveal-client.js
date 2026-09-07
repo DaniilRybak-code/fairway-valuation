@@ -55,15 +55,36 @@
     /* THE ONLY BODY THIS FILE POSTS ON THE FREE PATH, and it is built from the allowlist. */
     const body = (typeof buildRevealRequest === 'function') ? buildRevealRequest(responses) : {};
 
-    fetch('/api/reveal', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(body)
-    })
-      .then(r => r.json())
+    /* TWO ENDPOINTS, ONE BODY, AND THE SAME BODY. /api/reveal writes the prose and /api/payload
+       serves the engine, because the engine is Python and the prose endpoint is Node. They are
+       fetched in parallel rather than chained: neither needs the other's answer, and chaining
+       would make the whole reveal wait for the slower of the two.
+
+       THE BODY IS BUILT ONCE, above, by the one function in the product allowed to build one. Both
+       posts send that same object, so there is one boundary to check and not two, and
+       tools/check_request_boundary.py asserts the Python endpoint's allowlist is the same set of
+       names as this page's. */
+    const post = function (url) {
+      return fetch(url, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body)
+      }).then(r => r.json());
+    };
+
+    post('/api/reveal')
       .then(apply)
       .catch(function (e) {
         console.warn('[fairway] reveal unavailable', e);
+      });
+
+    /* THE ENGINE. Its own promise, so a failure here leaves the prose standing and a failure there
+       leaves the numbers standing. Before 7-Sep-2026 /api/reveal answered payload:null with a
+       reason and this was the block that never ran. */
+    post('/api/payload')
+      .then(applyPayload)
+      .catch(function (e) {
+        console.warn('[fairway] engine unavailable', e);
       });
 
     /* The consent button does not wait for the engine. The 24-hour banker read is offered whether
@@ -90,11 +111,21 @@
       });
     }
 
-    /* THE ENGINE PAYLOAD. `data.payload` is selector/reveal_payload.build() as JSON. When the
-       endpoint has no engine behind it yet it sends payload:null with a reason, and every block
-       below simply does not render, which is the same failure mode the two renderers already
-       have: empty rather than a heading with nothing under it. */
-    payload = data.payload || null;
+    /* THE ENGINE PAYLOAD MOVED TO ITS OWN RESPONSE ON 7-SEP-2026. /api/reveal still carries the
+       key, so a deployment where only the Node function has been updated keeps working; when it is
+       null, which is what it always was, applyPayload simply gets nothing and renders nothing. */
+    if (data.payload) applyPayload(data);
+  }
+
+  /* WHAT THE ENGINE'S ANSWER DOES TO THE PAGE. One function, called from whichever response
+     carries a payload, so there is exactly one place that decides what a reveal looks like.
+
+     RENDERS NOTHING RATHER THAN SOMETHING WRONG. A missing payload leaves the blocks empty, which
+     is the same failure mode the two renderers already have: empty rather than a heading with
+     nothing under it. A half-drawn reveal reads as a finished one, and that is the failure this
+     guard exists to prevent. */
+  function applyPayload(data) {
+    payload = (data && data.payload) || null;
     if (!payload) return;
 
     renderPeerCharts(payload, figures);
@@ -105,6 +136,11 @@
     if (typeof renderInvestors === 'function') {
       renderInvestors(payload.investors, 'investor-blocks');
     }
+    /* THE FOOTBALL FIELD, DRAWN FROM THE PAYLOAD. field.js has drawn its own nine method rows from
+       figures typed into the HTML since the page was built; renderField() replaces them with the
+       lanes the engine actually produced, when field.js offers it. Guarded so that an older
+       field.js on a cached deploy leaves the existing field alone rather than blanking it. */
+    if (typeof renderFieldFromPayload === 'function') renderFieldFromPayload(payload, figures);
     mountConsent();
   }
 

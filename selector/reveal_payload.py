@@ -135,6 +135,46 @@ CHART_ORDER = (('listed', 'REVENUE'), ('listed', 'BOOK'), ('listed', 'EARNINGS')
                ('private', 'THROUGHPUT'))
 
 
+# ---------------------------------------------------------------------------
+# HOW WIDE IS TOO WIDE FOR A PER-USER CHART? DANIIL'S RULING, AND IT IS NOT MADE YET.
+#
+# The question, from the status document's rulings list: a per-user chart compares dollars of
+# enterprise value per customer across the comparables. Some of them run from a few hundred dollars
+# to tens of thousands, and a chart that wide reads as noise rather than as evidence. Should it be
+# drawn at all above some spread?
+#
+# NOTHING IS HIDDEN TODAY. None means today's behaviour exactly: every per-user chart is drawn, and
+# a chart wider than DISPERSION_MAX is already drawn as separate points rather than as a bar, with
+# the SCATTER caveat saying in words that the names are comparable to the founder and not to each
+# other. So the honest description of the current state is not "we show noise"; it is "we show it
+# and we say what it is".
+#
+# MEASURED 7-SEP-2026 ACROSS ALL 102 FIXTURES. 60 per-user charts exist. Setting this constant
+# hides the ones whose high divided by low is above it:
+#
+#     1000   hides  3, keeps 57
+#      500   hides  4, keeps 56
+#      200   hides  6, keeps 54
+#      100   hides 11, keeps 49        <- the recommendation in the status document
+#       50   hides 16, keeps 44
+#       25   hides 26, keeps 34
+#       10   hides 32, keeps 28
+#
+# FOR SCALE, AND THIS IS THE NUMBER THAT DECIDES IT: the 245 revenue charts have a MEDIAN spread of
+# 3.3x and a widest of 110x. A per-user chart at 1,034x is not a wide version of the same thing; it
+# is a different kind of object. The three widest all run $19,333 to $20,000,000 per business
+# customer, which is a chart saying one comparable is worth a thousand of another per customer.
+#
+# THE ARGUMENT FOR SHOWING THEM ANYWAY, since it is a real one: a founder who has typed nothing has
+# only these charts, and hiding the widest takes the only per-user evidence away from the fixtures
+# that have least. Eleven charts at the 100 setting sit on nine fixtures.
+#
+# SET THE NUMBER AND NOTHING ELSE CHANGES. Golden will move on the fixtures that lose a chart, and
+# the reason is this constant, which is why it is a constant with the measurement beside it rather
+# than a threshold buried in a condition.
+PER_USER_SPREAD_MAX = None
+
+
 def charts(ranges):
     """The bar charts this founder can actually be shown, in reading order.
 
@@ -161,6 +201,12 @@ def charts(ranges):
         if not r or (lane, basis) in seen:
             continue
         seen.add((lane, basis))
+        # The per-user width rule, off until Daniil names a number. A locked lane carries no
+        # figures, so it cannot be measured and is never hidden by this: the lock already hides it.
+        if (PER_USER_SPREAD_MAX and basis in M.COUNT_BASES
+                and r.get('low') and r.get('high') and r['low'] > 0
+                and (r['high'] / r['low']) > PER_USER_SPREAD_MAX):
+            continue
         out.append({'lane': lane, 'basis': basis, 'label': r.get('basis_label'),
                     'n': r.get('n'), 'low': r.get('low'), 'mid': r.get('mid'),
                     'high': r.get('high'), 'display': r.get('display'),
@@ -191,7 +237,12 @@ def build(prof, raise_musd=None, want_investors=8, tier='paid'):
     picked, window_months, private_tier = M.select_private(prof, M.private)
     lead = lead_range(prof, picked, private_tier)
 
-    caveats = H.caveats(prof, lead)
+    # THE CAVEATS COME OFF THE LEAD RANGE, AND THE LEAD RANGE IS THE PRIVATE ONE, so on the free
+    # tier they are written without the figures the lock is over. See the long note in
+    # honesty.caveats(): two of the sentences printed the locked high in prose, one line under the
+    # blur, and nothing caught it until the render harness drew the page.
+    lead_locked = (tier == 'free' and 'private' not in FREE_LANES)
+    caveats = H.caveats(prof, lead, redact=lead_locked)
     rngs = lanes(prof, core, listed_tier, picked, private_tier, tier=tier)
     return {
         'tier': tier,

@@ -163,6 +163,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 14.9,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.9,
@@ -669,7 +670,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do No-Code; same type of business; same business function; sold the same way",
-    "score": 14.0,
+    "score": 13.9,
     "type": "PRIMARY"
    },
    {
@@ -713,7 +714,7 @@
     "in_medians": true,
     "mult": 19.8,
     "reason": "shares the language of ai, code; same type of business; same business function; same kind of customer",
-    "score": 16.9,
+    "score": 16.8,
     "type": "PRIMARY"
    }
   ],
@@ -840,7 +841,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do No-Code; related type of business; same revenue model; sold the same way",
-    "score": 9.0,
+    "score": 8.9,
     "ticker": "NASDAQGS:WIX"
    },
    {
@@ -856,7 +857,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do No-Code; related type of business; same revenue model",
-    "score": 6.8,
+    "score": 6.7,
     "ticker": "NASDAQGM:APPN"
    },
    {
@@ -890,6 +891,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 8.2,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.9,
@@ -964,7 +966,7 @@
      "ticker": "NYSE:NOW"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   }

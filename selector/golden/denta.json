@@ -103,7 +103,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.7,
      "thin": false,
      "triangulated": false
     },
@@ -114,66 +114,34 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 1,
-      "ARR_RUNRATE": 1,
-      "NET_REVENUE": 1
+      "ARR_RUNRATE": 2
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Accolade"
-     ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
      "high": 14.25,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Accolade"
-     ],
-     "low": 1.39,
-     "mid": 6.88,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 6.88,
+     "mid": 10.0,
      "n": 3,
      "period_mix": {
-      "LTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Accolade",
-       "mult": 1.39,
-       "reason": "shares the language of benefits, claims; related type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Alan",
-       "mult": 6.88,
-       "reason": "both do Claims; same type of business; same end market; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Cityblock Health",
-       "mult": 14.25,
-       "reason": "related type of business; same end market; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "benefits",
@@ -181,24 +149,24 @@
       "digital",
       "insurance"
      ],
-     "spread": 10.3,
+     "spread": 2.1,
      "table": [
-      {
-       "company": "Accolade",
-       "date": "Jan-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 1.39,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Alan",
        "date": "Jun-26",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 6.88,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Thirty Madison",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -214,13 +182,21 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.7,
      "thin": false,
      "triangulated": false
     }
    }
   },
   "core": [
+   {
+    "company": "Alignment Healthcare, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same business function; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQ:ALHC"
+   },
    {
     "company": "SMS Co., Ltd.",
     "family": "consumer",
@@ -242,8 +218,16 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of claims, provider; related type of business; same end market; same revenue model",
-    "score": 9.0,
+    "score": 8.9,
     "ticker": "NASDAQGS:WAY"
+   },
+   {
+    "company": "Evolent Health, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same business function",
+    "score": 8.0,
+    "ticker": "NYSE:EVH"
    },
    {
     "company": "Weave Communications, Inc.",
@@ -260,22 +244,6 @@
     "reason": "related type of business; same end market; same business function",
     "score": 7.5,
     "ticker": "NYSE:VEEV"
-   },
-   {
-    "company": "ZhongAn Online P&C Insurance Co., Ltd.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Digital Insurance; same type of business",
-    "score": 7.2,
-    "ticker": "SEHK:6060"
-   },
-   {
-    "company": "Tecsys Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same end market",
-    "score": 5.5,
-    "ticker": "TSX:TCS"
    }
   ],
   "core_range": {
@@ -285,16 +253,17 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "SHARED_PRODUCT",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.6,
+   "low": 0.5,
    "mid": 1.9,
    "n": 7,
    "period_mix": {
@@ -308,9 +277,16 @@
    },
    "points": [
     {
-     "company": "ZhongAn Online P&C Insurance Co., Ltd.",
+     "company": "Evolent Health, Inc.",
      "mult": 0.4,
-     "reason": "both do Digital Insurance; same type of business",
+     "reason": "same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Alignment Healthcare, Inc.",
+     "mult": 0.5,
+     "reason": "same type of business; same end market; same business function; sold the same way",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -325,13 +301,6 @@
      "company": "Weave Communications, Inc.",
      "mult": 1.9,
      "reason": "shares the language of dental; related type of business; same end market; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Tecsys Inc.",
-     "mult": 1.9,
-     "reason": "related type of business; same end market",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -362,21 +331,28 @@
    "shared_words": [
     "claims",
     "dental",
-    "digital",
-    "insurance",
     "provider"
    ],
    "show_retention": true,
    "spread": 24.2,
    "table": [
     {
-     "company": "ZhongAn Online P&C Insurance Co., Ltd.",
+     "company": "Evolent Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.0,
+     "growth_pct": 18.0,
      "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "SEHK:6060"
+     "ticker": "NYSE:EVH"
+    },
+    {
+     "company": "Alignment Healthcare, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 24.3,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:ALHC"
     },
     {
      "company": "Medley, Inc.",
@@ -395,15 +371,6 @@
      "recurring_pct": null,
      "retention_pct": 92.0,
      "ticker": "NYSE:WEAV"
-    },
-    {
-     "company": "Tecsys Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
-     "multiple": 1.9,
-     "recurring_pct": 58.0,
-     "retention_pct": 106.0,
-     "ticker": "TSX:TCS"
     },
     {
      "company": "SMS Co., Ltd.",
@@ -433,7 +400,7 @@
      "ticker": "NYSE:VEEV"
     }
    ],
-   "tag_evidence": 3.2,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
@@ -589,16 +556,6 @@
    {
     "backed": [
      {
-      "company": "Accolade",
-      "date": "Jan-25"
-     }
-    ],
-    "investor": "Transcarent",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Devoted Health",
       "date": "Oct-21"
      }
@@ -665,6 +622,16 @@
     ],
     "investor": "SoftBank",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Thirty Madison",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "HealthQuest Capital",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -677,19 +644,8 @@
     "in_medians": true,
     "mult": 6.88,
     "reason": "both do Claims; same type of business; same end market; same kind of customer",
-    "score": 12.5,
+    "score": 12.2,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Accolade",
-    "date": "Jan-25",
-    "in_medians": true,
-    "mult": 1.39,
-    "reason": "shares the language of benefits, claims; related type of business; same end market",
-    "score": 6.8,
-    "type": "CONTROL"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -699,7 +655,7 @@
     "in_medians": true,
     "mult": 51.4,
     "reason": "both do Provider Network, Insurance; same type of business; same end market; sold the same way",
-    "score": 14.8,
+    "score": 14.7,
     "type": "PRIMARY"
    },
    {
@@ -745,6 +701,17 @@
     "reason": "related type of business; same end market; same business function",
     "score": 9.0,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Thirty Madison",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "related type of business; same end market; same business function; sold the same way",
+    "score": 12.0,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -755,62 +722,30 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 1,
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 2
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Accolade"
-   ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
    "high": 14.25,
-   "listed_target_n": 1,
-   "listed_target_names": [
-    "Accolade"
-   ],
-   "low": 1.39,
-   "mid": 6.88,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 6.88,
+   "mid": 10.0,
    "n": 3,
    "period_mix": {
-    "LTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Accolade",
-     "mult": 1.39,
-     "reason": "shares the language of benefits, claims; related type of business; same end market",
-     "tier": "DIRECT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Alan",
-     "mult": 6.88,
-     "reason": "both do Claims; same type of business; same end market; same kind of customer",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Cityblock Health",
-     "mult": 14.25,
-     "reason": "related type of business; same end market; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "benefits",
@@ -818,24 +753,24 @@
     "digital",
     "insurance"
    ],
-   "spread": 10.3,
+   "spread": 2.1,
    "table": [
-    {
-     "company": "Accolade",
-     "date": "Jan-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 1.39,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Alan",
      "date": "Jun-26",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 6.88,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Thirty Madison",
+     "date": "Jun-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -851,12 +786,20 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 59,
+  "private_window_months": 62,
   "secondary": [
+   {
+    "company": "ZhongAn Online P&C Insurance Co., Ltd.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Digital Insurance; same type of business",
+    "score": 7.2,
+    "ticker": "SEHK:6060"
+   },
    {
     "company": "Hims & Hers Health, Inc.",
     "family": "consumer",
@@ -866,48 +809,49 @@
     "ticker": "NYSE:HIMS"
    },
    {
-    "company": "Phreesia, Inc.",
+    "company": "Progyny, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of benefits; same type of business; same end market",
+    "score": 6.3,
+    "ticker": "NASDAQ:PGNY"
+   },
+   {
+    "company": "Crawford & Company",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of administration, claims, insurance; same type of business; same business function",
+    "score": 5.6,
+    "ticker": "NYSE:CRD.B"
+   },
+   {
+    "company": "Tecsys Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of digital, provider; related type of business; same end market",
-    "score": 5.1,
-    "ticker": "NYSE:PHR"
-   },
-   {
-    "company": "WW International, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; sold the same way",
-    "score": 5.0,
-    "ticker": "NASDAQGM:WW"
-   },
-   {
-    "company": "LifeMD, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; sold the same way",
-    "score": 5.0,
-    "ticker": "NASDAQGM:LFMD"
+    "reason": "related type of business; same end market",
+    "score": 5.5,
+    "ticker": "TSX:TCS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
-   "high": 2.0,
+   "high": 1.9,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.6,
-   "mid": 1.1,
+   "low": 0.4,
+   "mid": 0.9,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -919,53 +863,64 @@
     }
    },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "mult": 2.0,
+     "reason": "same end market; sold the same way; same purchase frequency",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "post_stated_n": 0,
    "shared_words": [
+    "administration",
+    "benefits",
+    "claims",
     "digital",
-    "provider"
+    "insurance"
    ],
-   "show_retention": false,
-   "spread": 3.3,
+   "show_retention": true,
+   "spread": 4.7,
    "table": [
     {
-     "company": "LifeMD, Inc.",
+     "company": "ZhongAn Online P&C Insurance Co., Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 16.2,
+     "growth_pct": 10.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SEHK:6060"
+    },
+    {
+     "company": "Crawford & Company",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.8,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGM:LFMD"
+     "ticker": "NYSE:CRD.B"
     },
     {
-     "company": "WW International, Inc.",
+     "company": "Progyny, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 0.8,
+     "growth_pct": 8.1,
+     "multiple": 1.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGM:WW"
+     "ticker": "NASDAQ:PGNY"
     },
     {
-     "company": "Phreesia, Inc.",
+     "company": "Tecsys Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.3,
-     "multiple": 1.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:PHR"
-    },
-    {
-     "company": "Hims & Hers Health, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.1,
-     "multiple": 2.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:HIMS"
+     "growth_pct": 7.2,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 3.1,
    "thin": false,
    "triangulated": false
   }

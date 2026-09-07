@@ -103,7 +103,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.7,
+     "tag_evidence": 8.6,
      "thin": false,
      "triangulated": false
     }
@@ -149,6 +149,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 7.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.1,
@@ -553,7 +554,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do AI App Builder, Vibe Coding, Web App Builder; related type of business; same business function; same kind of customer",
-    "score": 24.7,
+    "score": 24.6,
     "type": "PRIMARY"
    },
    {
@@ -575,7 +576,7 @@
     "in_medians": true,
     "mult": 40.0,
     "reason": "shares the language of ai, builder, code; related type of business; same kind of customer; same revenue model",
-    "score": 15.9,
+    "score": 15.8,
     "type": "PRIMARY"
    },
    {
@@ -586,7 +587,7 @@
     "in_medians": true,
     "mult": 19.8,
     "reason": "both do Code Generation; related type of business; same business function; same revenue model",
-    "score": 17.2,
+    "score": 17.1,
     "type": "PRIMARY"
    },
    {
@@ -721,7 +722,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 8.7,
+   "tag_evidence": 8.6,
    "thin": false,
    "triangulated": false
   },
@@ -734,29 +735,38 @@
     "reason": "shares the language of app, web; related type of business; same revenue model",
     "score": 6.2,
     "ticker": "NYSE:SMWB"
+   },
+   {
+    "company": "monday.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of code, no; same revenue model; sold the same way",
+    "score": 6.2,
+    "ticker": "NASDAQ:MNDY"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
+   "display": "RANGE",
    "high": 2.2,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.2,
-   "mid": 2.2,
-   "n": 1,
+   "low": 2.0,
+   "mid": 2.1,
+   "n": 2,
    "period_mix": {
-    "NTM": 1
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -769,12 +779,22 @@
    "post_stated_n": 0,
    "shared_words": [
     "app",
+    "code",
+    "no",
     "web"
    ],
    "show_retention": true,
-   "sole": "Similarweb Ltd.",
-   "spread": 1.0,
+   "spread": 1.1,
    "table": [
+    {
+     "company": "monday.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MNDY"
+    },
     {
      "company": "Similarweb Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -785,7 +805,7 @@
      "ticker": "NYSE:SMWB"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.7,
    "thin": true,
    "triangulated": false
   }

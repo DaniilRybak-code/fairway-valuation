@@ -52,6 +52,7 @@ FILES = [
     ('data/peers-fintech.csv', 'exchange_ticker', 'listed'),
     ('data/peers-logistics-services.csv', 'exchange_ticker', 'listed'),
     ('data/peers-lending.csv', 'exchange_ticker', 'listed'),
+    ('data/peers-mixed.csv', 'exchange_ticker', 'listed'),
     ('data/private-rounds.csv', 'transaction_id', 'private'),
     ('data/private-rounds-consumer.csv', 'transaction_id', 'private'),
 ]
@@ -156,6 +157,10 @@ REASONED_UNREAD_COLS = {
  'revenue_growth_cy1_pct': 'a single forward year. Daniil, 31-Aug: only a multi-year rate may rank '
                            'a peer, so this is deliberately not an engine input',
  'revenue_growth_cy2_pct': 'same, a single forward year',
+ 'revenue_growth_cy3_pct': 'same, a single forward year. It arrived on 6-Sep-2026 with the growth '
+                           'realignment and was never explained here, which is half of why this '
+                           'check has been red since. n_estimates was the other half and is now '
+                           'read by the loader rather than explained away.',
  # The four retention columns WERE listed here as held-and-not-read. They are read now: Daniil
  # ruled on 3-Sep that retention goes in the hover table next to each public name, so the entries
  # are gone rather than left behind as a stale excuse. This is what the dict is supposed to do:

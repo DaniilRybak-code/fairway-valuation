@@ -102,7 +102,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.5,
      "thin": false,
      "triangulated": false
     },
@@ -214,7 +214,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 7.8,
+     "tag_evidence": 7.7,
      "thin": false,
      "triangulated": false
     }
@@ -222,12 +222,36 @@
   },
   "core": [
    {
+    "company": "Evolent Health, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of care, management; same type of business; same end market; same business function",
+    "score": 12.7,
+    "ticker": "NYSE:EVH"
+   },
+   {
     "company": "Veeva Systems Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same kind of customer",
     "score": 13.5,
     "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Progyny, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same kind of customer; sold the same way",
+    "score": 10.5,
+    "ticker": "NASDAQ:PGNY"
+   },
+   {
+    "company": "Claritev Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of claims, management; related type of business; same end market; same kind of customer",
+    "score": 9.3,
+    "ticker": "NYSE:CTEV"
    },
    {
     "company": "Tecsys Inc.",
@@ -238,25 +262,25 @@
     "ticker": "TSX:TCS"
    },
    {
+    "company": "Alignment Healthcare, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of care; same type of business; same end market; same business function",
+    "score": 8.2,
+    "ticker": "NASDAQ:ALHC"
+   },
+   {
     "company": "Waystar Holding Corp.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of claims, management; related type of business; same end market; sold the same way",
-    "score": 6.9,
+    "score": 6.8,
     "ticker": "NASDAQGS:WAY"
-   },
-   {
-    "company": "Phreesia, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same end market; sold the same way",
-    "score": 6.5,
-    "ticker": "NYSE:PHR"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
     "UNKNOWN": 4
    },
@@ -267,11 +291,17 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 9.7,
+   "high": 5.1,
+   "levered_names": [
+    {
+     "company": "Claritev Corporation",
+     "debt_share_pct": 87.5
+    }
+   ],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.4,
-   "mid": 3.2,
+   "low": 0.4,
+   "mid": 0.85,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -284,12 +314,35 @@
    },
    "points": [
     {
-     "company": "Phreesia, Inc.",
-     "mult": 1.4,
-     "reason": "related type of business; same end market; sold the same way",
-     "tier": "ADJACENT",
+     "company": "Evolent Health, Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of care, management; same type of business; same end market; same business function",
+     "tier": "DIRECT",
      "transaction_type": ""
     },
+    {
+     "company": "Alignment Healthcare, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of care; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Progyny, Inc.",
+     "mult": 1.2,
+     "reason": "same type of business; same end market; same kind of customer; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Claritev Corporation",
+     "mult": 5.1,
+     "reason": "shares the language of claims, management; related type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [
     {
      "company": "Tecsys Inc.",
      "mult": 1.9,
@@ -312,53 +365,53 @@
      "transaction_type": ""
     }
    ],
-   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "care",
     "claims",
     "management"
    ],
-   "show_retention": true,
-   "spread": 6.9,
+   "show_retention": false,
+   "spread": 12.7,
    "table": [
     {
-     "company": "Phreesia, Inc.",
+     "company": "Evolent Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.3,
-     "multiple": 1.4,
+     "growth_pct": 18.0,
+     "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:PHR"
+     "ticker": "NYSE:EVH"
     },
     {
-     "company": "Tecsys Inc.",
+     "company": "Alignment Healthcare, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
-     "multiple": 1.9,
-     "recurring_pct": 58.0,
-     "retention_pct": 106.0,
-     "ticker": "TSX:TCS"
-    },
-    {
-     "company": "Waystar Holding Corp.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.3,
-     "multiple": 4.5,
+     "growth_pct": 24.3,
+     "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:WAY"
+     "ticker": "NASDAQ:ALHC"
     },
     {
-     "company": "Veeva Systems Inc.",
+     "company": "Progyny, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.3,
-     "multiple": 9.7,
-     "recurring_pct": 84.0,
+     "growth_pct": 8.1,
+     "multiple": 1.2,
+     "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:VEEV"
+     "ticker": "NASDAQ:PGNY"
+    },
+    {
+     "company": "Claritev Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.2,
+     "multiple": 5.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CTEV"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
@@ -602,7 +655,7 @@
     "in_medians": true,
     "mult": 6.88,
     "reason": "both do Claims; same type of business; same end market",
-    "score": 8.6,
+    "score": 8.5,
     "type": "PRIMARY"
    },
    {
@@ -613,7 +666,7 @@
     "in_medians": true,
     "mult": 1.39,
     "reason": "both do Claims Communication, Care Coordination; related type of business; same end market; sold the same way",
-    "score": 16.8,
+    "score": 16.7,
     "type": "CONTROL"
    },
    {
@@ -624,7 +677,7 @@
     "in_medians": true,
     "mult": 51.4,
     "reason": "shares the language of care; same type of business; same end market",
-    "score": 8.3,
+    "score": 8.2,
     "type": "PRIMARY"
    },
    {
@@ -635,7 +688,7 @@
     "in_medians": true,
     "mult": 7.37,
     "reason": "shares the language of care; related type of business; same end market; same business function",
-    "score": 9.3,
+    "score": 9.2,
     "type": "PRIMARY"
    },
    {
@@ -668,7 +721,7 @@
     "in_medians": true,
     "mult": 14.25,
     "reason": "both do Care Management; related type of business; same end market; same business function",
-    "score": 12.3,
+    "score": 12.2,
     "type": "PRIMARY"
    }
   ],
@@ -777,12 +830,20 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 7.8,
+   "tag_evidence": 7.7,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 59,
   "secondary": [
+   {
+    "company": "Crawford & Company",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Claims Management; same type of business; same business function; same kind of customer",
+    "score": 9.8,
+    "ticker": "NYSE:CRD.B"
+   },
    {
     "company": "AMN Healthcare Services, Inc.",
     "family": "consumer",
@@ -790,29 +851,38 @@
     "reason": "same end market; same kind of customer; sold the same way",
     "score": 7.5,
     "ticker": "NYSE:AMN"
+   },
+   {
+    "company": "Phreesia, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same end market; sold the same way",
+    "score": 6.5,
+    "ticker": "NYSE:PHR"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "BROAD",
+   "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 1
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 0.6,
+   "display": "RANGE",
+   "high": 1.4,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
    "mid": 0.6,
-   "n": 1,
+   "n": 3,
    "period_mix": {
-    "NTM": 1
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -824,12 +894,21 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "claims",
     "management"
    ],
    "show_retention": false,
-   "sole": "AMN Healthcare Services, Inc.",
-   "spread": 1.0,
+   "spread": 2.3,
    "table": [
+    {
+     "company": "Crawford & Company",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.8,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CRD.B"
+    },
     {
      "company": "AMN Healthcare Services, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -838,11 +917,20 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:AMN"
+    },
+    {
+     "company": "Phreesia, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.3,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PHR"
     }
    ],
-   "tag_evidence": 0.0,
-   "thin": true,
-   "triangulated": true
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "Voice agents that accelerate care coordination in workers' comp"

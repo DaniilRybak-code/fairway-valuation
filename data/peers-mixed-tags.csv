@@ -1,0 +1,52 @@
+"# Fairway positioning tags for the MIXED LISTED SET. Written 7-Sep-2026 (Opus), for the 14 names"
+"# loaded from data/raw/2026-09-04_public-pull-16-names.csv."
+#
+# WHY THIS FILE EXISTS AT ALL. The 5-September public pull returned fourteen loadable names spanning
+# benefits payments, insurance services, healthcare risk, corporate learning and work management.
+# No existing peers file holds that mixture: peers-software is software, peers-fintech is fintech,
+# peers-ecommerce is consumer commerce, peers-lending is balance-sheet lenders and
+# peers-logistics-services is logistics and services marketplaces. Forcing these fourteen into one of
+# those five would have re-counted that file's archetypes, which is the exact failure the
+# _SECONDARY loading order in match_reference.py was built to prevent. So they get their own pair and
+# are loaded as a SECONDARY file, with the family assigned per row from the archetype map the three
+# primary files already produced. No existing archetype is re-counted and no existing founder's peer
+# set moves because of the file's existence.
+#
+# WHAT IS IN THIS FILE AND WHAT IS NOT. Everything here is a CLASSIFICATION: what the company does,
+# who buys it, how it charges. Not one figure is in this file. Every figure lives in
+# data/peers-mixed.csv and is generated straight from the raw transcription by
+# tools/load_public_pull_16_7sep.py, so no number in the loaded set was retyped by a human or an
+# agent.
+#
+# TWO PLACES THE VOCABULARY DOES NOT REACH, RECORDED RATHER THAN PAPERED OVER. Both belong on the
+# taxonomy build list (TAKEOVER item 9), not in a hurried new label today:
+#   1. THERE IS NO ARCHETYPE FOR A RISK-BEARING HEALTH INSURER. Alignment Healthcare underwrites
+#      Medicare Advantage plans and Evolent Health takes clinical risk for health plans. Neither is a
+#      technology vendor. 'Insurance Technology' is the least-wrong label in the vocabulary and it is
+#      wrong: it means insurtech software. They carry it so they are findable, and this note is the
+#      record that they are not what the label says.
+#   2. THERE IS NO ARCHETYPE FOR A BUSINESS-SERVICES OUTSOURCER. Crawford & Company adjusts insurance
+#      claims with people, and ExlService runs other companies' back offices. Neither sells software.
+#      They carry the nearest label with revenue_model SERVICES_LED, which is the field that actually
+#      keeps them away from a software founder's revenue multiple.
+#
+# THE ONE THING A READER SHOULD CHECK FIRST. Alignment Healthcare and Evolent Health carry premium
+# and medical cost through the top line, so their gross margins are 12.4% and 14.1% against 70% to
+# 90% for the software names here. That is not a mistake in the file; it is why
+# docs/public-pull-verdicts-4sep.md issue 5 says the gross-profit denominator must lead for them, and
+# match_reference.denominator() does exactly that on its own once the margin is on the row.
+exchange_ticker,company_name,archetype,archetype_secondary,industry,function,buyer,gtm_motion,revenue_model,product_role,ai_stance,in_medians,mix_note,product_tags,what_it_does
+"NASDAQ:PAYS","Paysign, Inc.",Card Issuing & BaaS,Commerce & Payments Software,Financial Services,Finance & Payments,LOB,ENT_SALES,TRANSACTION_FEE,INFRA_LAYER,AI_NEUTRAL,1,,Prepaid Card Programs|Plasma Donor Compensation|Pharma Copay Assistance|Card Issuing|Payment Processing,"Runs prepaid card programmes for other companies, mainly paying plasma donors and administering pharmaceutical copay assistance."
+"NASDAQ:PMTS",CPI Card Group Inc.,Card Issuing & BaaS,Commerce Enablement & Fulfilment,Financial Services,Finance & Payments,LOB,ENT_SALES,PRODUCT_SALES,INFRA_LAYER,AI_NEUTRAL,1,"Makes and ships a physical product, so its 33% gross margin is a manufacturing margin and not a software one.",Payment Card Manufacturing|Card Personalisation|EMV Chip Cards|Card Fulfilment|Instant Issuance,"Manufactures and personalises physical payment cards for banks and credit unions, and ships them to cardholders."
+"ENXTPA:EDEN",Edenred SE,Payment Network,Card Issuing & BaaS,Financial Services,Finance & Payments,LOB,ENT_SALES,TAKE_RATE,INFRA_LAYER,AI_NEUTRAL,1,,Employee Benefits Vouchers|Meal Vouchers|Fleet Cards|Corporate Payment Solutions|Closed-Loop Payment Network,"Operates closed-loop payment networks for employee benefits such as meal vouchers, plus fleet and corporate payment cards."
+"ENXTPA:PLX",Pluxee N.V.,Payment Network,Card Issuing & BaaS,Financial Services,Finance & Payments,LOB,ENT_SALES,TAKE_RATE,INFRA_LAYER,AI_NEUTRAL,1,"Same business as Edenred. On the screen's own figures the two price 0.8x and 2.8x on revenue and 10.0x and 12.5x on earnings, so for this pair the earnings multiple is the comparable measure and the revenue multiple is not. Flagged in docs/public-pull-verdicts-4sep.md issue 3, not decided.",Employee Benefits Vouchers|Meal Vouchers|Employee Engagement Benefits|Closed-Loop Payment Network,"Employee benefits and engagement business spun out of Sodexo, issuing meal and lifestyle vouchers through a closed-loop network."
+"NYSE:CRD.B",Crawford & Company,Insurance Technology,Business Applications,Insurance,Operations,LOB,ENT_SALES,SERVICES_LED,PLATFORM_SUITE,AI_NEUTRAL,1,"A people-led services business, not a software vendor. See the header note on the vocabulary gap.",Claims Management|Loss Adjusting|Third-Party Administration|Insurance Claims Outsourcing,"Adjusts and administers insurance claims on behalf of insurers and self-insured companies."
+"NASDAQ:EXLS","ExlService Holdings, Inc.","Data, AI & Developer Tools",Business Applications,Horizontal,Data & Analytics,ENT_IT,ENT_SALES,SERVICES_LED,PLATFORM_SUITE,AI_EMBEDDED,1,"A people-led outsourcing and analytics business, not a software vendor. See the header note on the vocabulary gap.",Business Process Management|Insurance Operations Outsourcing|Data Analytics Services|Finance and Accounting Outsourcing,"Runs back-office operations and analytics for insurers, healthcare payers and banks."
+"NASDAQ:VRSK","Verisk Analytics, Inc.",Financial Data & Index,"Data, AI & Developer Tools",Insurance,Data & Analytics,ENT_IT,ENT_SALES,PLATFORM,INFRA_LAYER,AI_EMBEDDED,1,,Insurance Risk Analytics|Catastrophe Modelling|Underwriting Data|Claims Analytics|Property Risk Data,"Sells risk data and analytics to insurers for underwriting, catastrophe modelling and claims."
+"NYSE:EVH","Evolent Health, Inc.",Insurance Technology,Vertical Software,Healthcare & Life Sciences,Operations,LOB,ENT_SALES,SERVICES_LED,PLATFORM_SUITE,AI_NEUTRAL,1,"Carries medical cost through the top line, so its 14.1% gross margin is not a software margin and its 0.4x revenue multiple is not a software multiple. The gross-profit denominator leads for it. See the header note.",Specialty Care Management|Value-Based Care|Utilisation Management|Health Plan Services|Oncology Care Management,"Manages specialty care such as oncology and cardiology for health plans, taking clinical and financial risk."
+"NYSE:CTEV",Claritev Corporation,Vertical Software,Insurance Technology,Healthcare & Life Sciences,Data & Analytics,LOB,ENT_SALES,PLATFORM,INFRA_LAYER,AI_EMBEDDED,1,"88% of its enterprise value is debt, so its 5.1x revenue multiple describes a balance sheet as much as a business. Carried as leverage_debt_share_pct in data/peers-mixed.csv.",Healthcare Cost Management|Out-of-Network Claims Pricing|Payment Integrity|Provider Network Access,"Prices and reviews out-of-network healthcare claims for insurers so they pay less. Formerly MultiPlan, NYSE:MPLN."
+"NASDAQ:ALHC","Alignment Healthcare, Inc.",Insurance Technology,Vertical Software,Healthcare & Life Sciences,Operations,CONSUMER,PAID_ACQUISITION,PREMIUM,DESTINATION,AI_NEUTRAL,1,"A licensed insurer. Premium income is the top line, so its 12.4% gross margin is not a software margin and its 0.5x revenue multiple is not a software multiple. It is the only name in this file carrying a book value per share, so it is also the only one that can price a balance-sheet founder. See the header note.",Medicare Advantage Plans|Senior Health Plans|Value-Based Care|Health Plan Operations,"Underwrites and runs Medicare Advantage health plans for older people in the United States."
+"NASDAQ:PGNY","Progyny, Inc.",Insurance Technology,Vertical Software,Healthcare & Life Sciences,HR & Workforce,LOB,ENT_SALES,SERVICES_LED,AGGREGATOR,AI_NEUTRAL,1,"Passes fertility treatment cost through the top line, which is why its gross margin is 26% against a software peer set.",Fertility Benefits|Family Building Benefits|Employer Health Benefits|Specialty Benefits Management,"Sells fertility and family-building benefit plans to employers and manages the clinic network behind them."
+"NYSE:SKIL",Skillsoft Corp.,Online Learning,Business Applications,Education,HR & Workforce,LOB,ENT_SALES,SEATS,PLATFORM_SUITE,AI_EMBEDDED,1,"89% of its enterprise value is debt, and it is shrinking 25% a year on the screen's own forecast with a single broker estimate behind it. Carried as leverage_debt_share_pct in data/peers-mixed.csv.",Corporate Learning|Compliance Training|Leadership Development|Technical Skills Training|Course Library,"Sells a subscription library of corporate training courses to employers for compliance, leadership and technical skills."
+"TSX:DTOL",D2L Inc.,Online Learning,Vertical Software,Education,Operations,ENT_IT,ENT_SALES,SEATS,SOR,AI_EMBEDDED,1,,Learning Management System|Higher Education Software|Course Delivery|K-12 Learning Platform,"Sells Brightspace, the learning management system universities, schools and employers run their courses on."
+"NASDAQ:MNDY",monday.com Ltd.,Business Applications,Communications & Collaboration,Horizontal,Operations,SMB,PLG,SEATS,PLATFORM_SUITE,AI_EMBEDDED,1,,Work Management|Project Management|Team Collaboration|No-Code Workflow|Work OS,"Sells a work management platform teams use to plan projects, track tasks and build simple workflows."

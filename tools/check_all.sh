@@ -27,6 +27,8 @@
 #  14  one payload   does the whole reveal assemble in one pass
 #  15  the boundary  does a founder's figure ever leave their browser
 #  16  token weights is the word-weight file what the tag files say it is (added 6-Sep after it sat stale two weeks)
+#  17  the profiler   can the model, or a founder's own website, put anything in a profile that the
+#                     tag files did not already contain (added 7-Sep with the profiler itself)
 set -e
 cd "$(dirname "$0")/.."
 fail=0
@@ -63,6 +65,7 @@ run "13 THE READ         does every number in it trace to something"    python3 
 run "14 ONE PAYLOAD      does the whole reveal assemble in one pass"     python3 tools/check_reveal_payload.py
 run "15 THE BOUNDARY     does a founder's figure leave the browser"     python3 tools/check_request_boundary.py
 run "16 TOKEN WEIGHTS   is the word-weight file fresh"                   python3 tools/check_token_weights.py
+run "17 THE PROFILER    can a website put anything into a profile"        python3 tools/check_profiler.py
 printf '\n'
 if [ "$fail" = "1" ]; then
   echo 'ONE OR MORE CHECKS FAILED. The stage that failed is where the data stopped.'

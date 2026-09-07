@@ -315,6 +315,14 @@
     "ticker": "LSE:PAY"
    },
    {
+    "company": "Paysign, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of payment; related type of business; same end market; same business function",
+    "score": 11.1,
+    "ticker": "NASDAQ:PAYS"
+   },
+   {
     "company": "Repay Holdings Corporation",
     "family": "fintech",
     "in_medians": true,
@@ -337,21 +345,13 @@
     "reason": "both do Custody, Stablecoin; same type of business; same end market; same AI stance",
     "score": 9.3,
     "ticker": "NYSE:BLSH"
-   },
-   {
-    "company": "Digital Garage, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
-    "score": 8.8,
-    "ticker": "TSE:4819"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -360,14 +360,15 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 13.5,
+   "high": 7.1,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
-   "mid": 7.1,
-   "n": 3,
+   "low": 1.7,
+   "mid": 2.0,
+   "n": 7,
    "period_mix": {
-    "NTM": 3
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -376,29 +377,6 @@
     }
    },
    "points": [
-    {
-     "company": "Digital Garage, Inc.",
-     "mult": 0.8,
-     "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Coinbase Global, Inc.",
-     "mult": 7.1,
-     "reason": "both do Digital Asset Custody, Stablecoin; same type of business; sold the same way; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Bullish",
-     "mult": 13.5,
-     "reason": "both do Custody, Stablecoin; same type of business; same end market; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [
     {
      "company": "Usio, Inc.",
      "mult": 0.7,
@@ -426,28 +404,88 @@
      "reason": "shares the language of payment; related type of business; same end market; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "Paysign, Inc.",
+     "mult": 5.3,
+     "reason": "shares the language of payment; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coinbase Global, Inc.",
+     "mult": 7.1,
+     "reason": "both do Digital Asset Custody, Stablecoin; same type of business; sold the same way; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Bullish",
+     "mult": 13.5,
+     "reason": "both do Custody, Stablecoin; same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
     }
    ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "asset",
     "crypto",
     "custody",
     "digital",
+    "multi",
     "payment",
+    "payments",
     "stablecoin"
    ],
    "show_retention": false,
-   "spread": 16.9,
+   "spread": 19.3,
    "table": [
     {
-     "company": "Digital Garage, Inc.",
+     "company": "Usio, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
-     "multiple": 0.8,
+     "growth_pct": 10.5,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "TSE:4819"
+     "ticker": "NASDAQGM:USIO"
+    },
+    {
+     "company": "Repay Holdings Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.5,
+     "multiple": 1.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQCM:RPAY"
+    },
+    {
+     "company": "WEX Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.6,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WEX"
+    },
+    {
+     "company": "PayPoint plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -4.2,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:PAY"
+    },
+    {
+     "company": "Paysign, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.2,
+     "multiple": 5.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:PAYS"
     },
     {
      "company": "Coinbase Global, Inc.",
@@ -916,6 +954,14 @@
     "ticker": "NASDAQ:MQ"
    },
    {
+    "company": "Digital Garage, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
+    "score": 8.8,
+    "ticker": "TSE:4819"
+   },
+   {
     "company": "Worldline SA",
     "family": "fintech",
     "in_medians": true,
@@ -930,33 +976,26 @@
     "reason": "both do Custody; same end market; same revenue model; same AI stance",
     "score": 7.8,
     "ticker": "ENXTPA:ENX"
-   },
-   {
-    "company": "Bolsas y Mercados Argentinos S.A.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Custody; same end market; same revenue model; same AI stance",
-    "score": 7.8,
-    "ticker": "BASE:BYMA"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
    "high": 8.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
+   "low": 0.8,
    "mid": 1.3,
    "n": 5,
    "period_mix": {
@@ -977,10 +1016,10 @@
      "transaction_type": ""
     },
     {
-     "company": "Bolsas y Mercados Argentinos S.A.",
-     "mult": 0.7,
-     "reason": "both do Custody; same end market; same revenue model; same AI stance",
-     "tier": "BROAD",
+     "company": "Digital Garage, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
+     "tier": "DIRECT",
      "transaction_type": ""
     },
     {
@@ -1008,6 +1047,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "crypto",
     "custody",
     "payment",
     "payments"
@@ -1025,13 +1065,13 @@
      "ticker": "ENXTPA:WLN"
     },
     {
-     "company": "Bolsas y Mercados Argentinos S.A.",
+     "company": "Digital Garage, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 36.0,
-     "multiple": 0.7,
+     "growth_pct": 7.2,
+     "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "BASE:BYMA"
+     "ticker": "TSE:4819"
     },
     {
      "company": "Marqeta, Inc.",

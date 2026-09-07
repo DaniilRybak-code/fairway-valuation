@@ -35,12 +35,30 @@ def _x(v):
     return ('%g' % round(float(v), 1)) + 'x'
 
 
-def caveats(prof, r, regression=None):
+def caveats(prof, r, regression=None, redact=False):
     """Return the caveats a range owes, most severe first.
 
     `r` is what private_range() or group_range() returns. `regression` is the regression result
     or None. Every entry is {key, severity, text}; the caller shows the first INLINE_MAX inline
     and puts the rest behind the disclosure.
+
+    REDACT IS THE FREE TIER, AND IT IS A THIRD DOOR THAT WAS OPEN UNTIL 7-SEP-2026.
+    -------------------------------------------------------------------------------
+    Rule E8 says the private lane's FIGURES are absent from a free payload, not drawn and covered
+    over, and reveal_payload.build() is careful about it: it nulls the lead range on the free tier
+    with a comment saying that missing this "would hand the free payload the exact numbers the lock
+    is over, through a second door". It then built these caveats from that same unlocked range.
+
+    Two of the sentences below print a figure. `bounded` prints the high as "At most 12.2x" and
+    `scatter` prints the low and the high. So a free founder was shown the ceiling of the lane they
+    had not paid for, in prose, one line under a blur. Check 14 walks every free payload for
+    figures and did not see it, because it reads numeric FIELDS and this is a string. The render
+    harness found it on the first run, on fundraisly, whose locked private high is 12.2 and whose
+    free page said "At most 12.2x".
+
+    So the caveat is still SAID, because a founder is owed the fact that their number is a ceiling
+    or that their comparables do not agree with each other. It is said WITHOUT THE FIGURE. Saying
+    nothing would be the wrong fix: the lock is over the numbers, never over the honesty.
     """
     out = []
     if not r or not r.get('n'):
@@ -70,9 +88,10 @@ def caveats(prof, r, regression=None):
     # --- 2. the number is directional --------------------------------------
     if r.get('bounded'):
         out.append(dict(key='bounded', severity=SEV_DIRECTION, text=(
-            'At most %s. Some of these rounds disclosed revenue as a threshold, "more than $100m" '
-            'rather than a figure, so the true multiple is lower than shown, not higher. We would '
-            'rather understate than flatter.' % _x(hi))))
+            ('A ceiling, not a reading. ' if redact else 'At most %s. ' % _x(hi))
+            + 'Some of these rounds disclosed revenue as a threshold, "more than $100m" '
+              'rather than a figure, so the true multiple is lower than shown, not higher. We would '
+              'rather understate than flatter.')))
 
     # --- 3. everything else -------------------------------------------------
     if r.get('display') == 'DIAMOND':
@@ -82,10 +101,11 @@ def caveats(prof, r, regression=None):
             'will widen it.' % (r.get('sole') or 'that company'))))
     if r.get('display') == 'SCATTER':
         out.append(dict(key='scatter', severity=SEV_CONTEXT, text=(
-            'These companies are comparable to you but they are not comparable to each other: %s '
-            'to %s. Averaging them would produce a number none of them supports, so they are shown '
-            'as separate points. Where you land in that spread is the argument, and it is usually '
-            'about growth.' % (_x(lo), _x(hi)))))
+            'These companies are comparable to you but they are not comparable to each other'
+            + ('. ' if redact else ': %s to %s. ' % (_x(lo), _x(hi)))
+            + 'Averaging them would produce a number none of them supports, so they are shown '
+              'as separate points. Where you land in that spread is the argument, and it is usually '
+              'about growth.')))
     if r.get('closeness') == 'SHARED_PRODUCT':
         out.append(dict(key='shared_product', severity=SEV_CONTEXT, text=(
             'These companies do what you do. Shared product language: %s.' % _words(r.get('shared_words')))))
@@ -109,6 +129,24 @@ def caveats(prof, r, regression=None):
             '%s is a change of control. A buyer of the whole company pays for control, so that '
             'multiple sits above what the same business would fetch in a minority round.'
             % _words(r.get('control_names')))))
+    # MOSTLY DEBT IS NOT MOSTLY BUSINESS.
+    #
+    # docs/public-pull-verdicts-4sep.md issue 4: Claritev's enterprise value is 88 per cent debt and
+    # Skillsoft's 89 per cent, so their multiples describe a balance sheet as much as a business.
+    # The verdict asks for a flag and there was none; this sentence is it. It names the company and
+    # prints the percentage, because printing the working is one of the three rules this file
+    # follows and a founder can check 88 per cent against the company's own accounts.
+    #
+    # Severity is DIRECTION, not CONTEXT: this is the second class of caveat, the number means
+    # something other than it says. It is not the first class, because the company IS a comparable;
+    # what is misleading is the multiple, not the match.
+    if r.get('levered_names'):
+        out.append(dict(key='levered', severity=SEV_DIRECTION, text=(
+            '%s. A company financed mostly by debt shows a high multiple on enterprise value while '
+            'its shareholders own a sliver of it, so read that name as a balance sheet rather than '
+            'as a price for a business like yours.'
+            % _words(['%s carries %.0f%% of its enterprise value as debt'
+                      % (d['company'], d['debt_share_pct']) for d in r['levered_names']]))))
     if r.get('listed_target_names'):
         out.append(dict(key='listed_target', severity=SEV_CONTEXT, text=(
             '%s was a public company when it was bought, so its price was set by the stock market '

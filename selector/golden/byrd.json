@@ -162,7 +162,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of border, cross, fulfilment; same type of business; same business function; same revenue model",
-    "score": 9.0,
+    "score": 8.9,
     "ticker": "NSEI:DELHIVERY"
    },
    {
@@ -220,6 +220,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 2.3,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.7,
@@ -691,7 +692,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of party, third; related type of business; same kind of customer; same cost structure",
-    "score": 14.8,
+    "score": 14.7,
     "type": "PRIMARY"
    },
    {
@@ -821,7 +822,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of party, third; same kind of customer; same cost structure; same purchase frequency",
-    "score": 9.3,
+    "score": 9.2,
     "ticker": "NYSE:SE"
    },
    {
@@ -847,6 +848,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 3.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.8,

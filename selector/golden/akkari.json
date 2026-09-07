@@ -260,6 +260,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 3.4,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.1,
@@ -803,20 +804,20 @@
   "private_window_months": 56,
   "secondary": [
    {
-    "company": "Samsara Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of operations; same business function; same kind of customer",
-    "score": 5.8,
-    "ticker": "NYSE:IOT"
-   },
-   {
     "company": "Pegasystems Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of automation, customer, service; related type of business; same business function",
     "score": 5.8,
     "ticker": "NASDAQGS:PEGA"
+   },
+   {
+    "company": "Samsara Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of operations; same business function; same kind of customer",
+    "score": 5.8,
+    "ticker": "NYSE:IOT"
    },
    {
     "company": "Twilio Inc.",
@@ -857,6 +858,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 9.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.9,

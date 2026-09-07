@@ -60,6 +60,56 @@ function ffTicks(lo, hi) {
 
 /* ---------------- the rows ---------------- */
 
+/* THE ENGINE'S ANSWER, HELD HERE SO THE FIELD CAN READ IT.
+ *
+ * Until 7-Sep-2026 this file drew nine method rows entirely from figures typed into the HTML and
+ * from `r`, the browser's own arithmetic, and four of them printed "in build" where a multiple
+ * belongs. That was honest at the time and it was also a second source of truth: the peer charts
+ * further down the page came from selector/reveal_payload.py and the field came from here, so one
+ * screen could show a range from one run and a caveat from another.
+ *
+ * Now the field reads the SAME payload the charts do. reveal-client.js calls
+ * renderFieldFromPayload() when the engine answers, and nothing else changes: the metric column is
+ * still the founder's own figure held in the browser, the multiple column is the engine's lane, and
+ * the bar is still the two multiplied. The rule this file exists to serve is unchanged and is now
+ * enforceable, because both numbers come from somewhere nameable.
+ *
+ * NULL IS THE NORMAL STATE, NOT AN ERROR. Before the engine answers, and on any deploy where it
+ * does not answer at all, this stays null and every row prints "in build" exactly as before. The
+ * page degrades to what it did yesterday rather than to a blank.
+ */
+var FF_PAYLOAD = null;
+var FF_LAST_R = null;
+
+/* The lane a row prices on, and null when the engine has not produced one. A locked lane on the
+   free tier carries its peer NAMES and no figures (rule E8), so `low` being null is the lock
+   speaking and the row stays locked, which is what it already was. */
+function ffLane(lane, basis) {
+  if (!FF_PAYLOAD || !FF_PAYLOAD.ranges) return null;
+  const l = FF_PAYLOAD.ranges[lane];
+  if (!l) return null;
+  const r = l[basis] || l[Object.keys(l)[0]];
+  if (!r || r.low === null || r.low === undefined) return null;
+  return r;
+}
+
+/* The multiple cell for a lane, with the working printed beside it: how many names it is drawn
+   from and, where the payload carries them, which ones. */
+function ffLaneMult(rng, what) {
+  const names = (rng.peers || []).map(function (x) { return x.company || x; }).filter(Boolean);
+  return {
+    value: ffNum(rng.low) + 'x to ' + ffNum(rng.high) + 'x',
+    sub: 'median ' + ffNum(rng.mid) + 'x',
+    source: what + ' Drawn from ' + rng.n + ' priced ' + (rng.n === 1 ? 'name' : 'names')
+      + (names.length ? ': ' + names.join(', ') + '.' : '.')
+      + (rng.display === 'DIAMOND'
+        ? ' One name is not a range, so this is a marker rather than a spread.'
+        : (rng.display === 'SCATTER'
+          ? ' These names are comparable to you and not to each other, so they are shown as points rather than averaged.'
+          : ''))
+  };
+}
+
 function ffBuildRows(r) {
   const rows = [];
   const sector = responses.sector === 'Other' ? 'Other' : (responses.sector || 'Other');
@@ -147,8 +197,14 @@ function ffBuildRows(r) {
               ? 'You did not give a plan, so that is your last twelve months carried forward unchanged.'
               : 'Derived from the growth band you chose. An exact figure replaces it.')) +
           ' Forward consensus revenue is a sum, so ours is a sum.' },
-    mult: { value: 'in build', source: IN_BUILD },
-    locked: true, pending: true
+    mult: ffLane('listed', 'REVENUE')
+      ? ffLaneMult(ffLane('listed', 'REVENUE'), 'Enterprise value over next-twelve-months revenue, across your core listed peers.')
+      : { value: 'in build', source: IN_BUILD },
+    point: (r.ntmM !== null && ffLane('listed', 'REVENUE')) ? r.ntmM * ffLane('listed', 'REVENUE').mid : null,
+    low: (r.ntmM !== null && ffLane('listed', 'REVENUE')) ? r.ntmM * ffLane('listed', 'REVENUE').low : null,
+    high: (r.ntmM !== null && ffLane('listed', 'REVENUE')) ? r.ntmM * ffLane('listed', 'REVENUE').high : null,
+    locked: !(r.ntmM !== null && ffLane('listed', 'REVENUE')),
+    pending: !ffLane('listed', 'REVENUE')
   });
 
   /* ---- 5. Month-twelve ARR, same peers. */
@@ -159,8 +215,14 @@ function ffBuildRows(r) {
     metric: { value: r.exitArrM === null ? 'needs revenue' : ffMoney(r.exitArrM), sub: 'run-rate in a year',
       source: r.exitArrM === null ? 'Give an exact monthly revenue figure and this becomes a number.'
         : 'Your run-rate a year from now at the growth you gave us, not the twelve-month sum, which is why it is the larger of the two. This row values you at a future date. The more of your revenue that recurs, the better that basis holds.' },
-    mult: { value: 'in build', source: IN_BUILD },
-    locked: true, pending: true
+    mult: ffLane('listed', 'REVENUE')
+      ? ffLaneMult(ffLane('listed', 'REVENUE'), 'The same listed peers, applied to your run-rate a year out rather than to the twelve-month sum.')
+      : { value: 'in build', source: IN_BUILD },
+    point: (r.exitArrM !== null && ffLane('listed', 'REVENUE')) ? r.exitArrM * ffLane('listed', 'REVENUE').mid : null,
+    low: (r.exitArrM !== null && ffLane('listed', 'REVENUE')) ? r.exitArrM * ffLane('listed', 'REVENUE').low : null,
+    high: (r.exitArrM !== null && ffLane('listed', 'REVENUE')) ? r.exitArrM * ffLane('listed', 'REVENUE').high : null,
+    locked: !(r.exitArrM !== null && ffLane('listed', 'REVENUE')),
+    pending: !ffLane('listed', 'REVENUE')
   });
 
   /* ---- 6. Private rounds. A multiple, never a valuation. */
@@ -172,9 +234,19 @@ function ffBuildRows(r) {
     parameter: 'Comparable private rounds',
     basis: [responses.stage, sector].filter(Boolean).join(' · '),
     metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'matched on ' + revLabel + ' MRR' },
-    mult: { value: 'in build',
-      source: 'The multiple, never the valuation. Another company’s post-money tells you nothing without the revenue underneath it, so every round in this set carries a revenue figure and a link to where it came from, or it is not in the set.' },
-    locked: true, pending: true
+    /* THE PRIVATE LANE IS THE LOCKED ONE ON THE FREE TIER. ffLane returns null when the payload
+       carries names and no figures, so this row keeps saying "in build" for a free founder, which
+       is rule E8 doing exactly what it says: the figures are absent from the payload rather than
+       drawn and covered over. */
+    mult: ffLane('private', 'REVENUE')
+      ? ffLaneMult(ffLane('private', 'REVENUE'), 'The multiple, never the valuation. Another company’s post-money tells you nothing without the revenue underneath it, so every round in this set carries a revenue figure and a link to where it came from, or it is not in the set.')
+      : { value: 'in build',
+          source: 'The multiple, never the valuation. Another company’s post-money tells you nothing without the revenue underneath it, so every round in this set carries a revenue figure and a link to where it came from, or it is not in the set.' },
+    point: (r.ntmM !== null && ffLane('private', 'REVENUE')) ? r.ntmM * ffLane('private', 'REVENUE').mid : null,
+    low: (r.ntmM !== null && ffLane('private', 'REVENUE')) ? r.ntmM * ffLane('private', 'REVENUE').low : null,
+    high: (r.ntmM !== null && ffLane('private', 'REVENUE')) ? r.ntmM * ffLane('private', 'REVENUE').high : null,
+    locked: !(r.ntmM !== null && ffLane('private', 'REVENUE')),
+    pending: !ffLane('private', 'REVENUE')
   });
 
   /* ---- 7 to 10. The paid rows. These stay locked after launch. */
@@ -250,7 +322,16 @@ function ffGroupOrder() {
 
 /* ---------------- render ---------------- */
 
+/* CALLED BY reveal-client.js WHEN THE ENGINE ANSWERS. Stores the payload and redraws the field
+   from it. Separate from renderField so that the page's own first draw, which happens before any
+   request comes back, is unchanged and still works with no engine at all. */
+function renderFieldFromPayload(payload, _figures) {
+  FF_PAYLOAD = payload || null;
+  if (FF_LAST_R) renderField(FF_LAST_R);
+}
+
 function renderField(r) {
+  FF_LAST_R = r;
   const wrap = document.getElementById('ff');
   if (!wrap) return;
 

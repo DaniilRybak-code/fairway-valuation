@@ -490,6 +490,36 @@
         </p>
         <p class="q-annual" id="plan-note"></p>
 
+        <!-- THE THIRD LINE. Daniil, 6-Sep-2026: monthly revenue times the growth they plan gives the
+             next-twelve-months figure, it is shown as an editable line, and the edited figure is
+             what the engine prices on.
+
+             WHY IT IS EDITABLE AND NOT JUST DISPLAYED. Compounding a single planned rate over twelve
+             months is a model, and it is our model, not the founder's. A founder with a signed
+             contract landing in month three, or a seasonal business, knows their own next twelve
+             months better than any curve we can fit to one percentage. So the sum is shown, the
+             working behind it is on the hover, and the founder can overwrite it. Overwriting is not
+             a correction to us; it is the answer.
+
+             IT IS AN AMOUNT, SO IT NEVER LEAVES THE BROWSER. Rule E9. It is not on the allowlist in
+             reveal-request.js and it is named in tools/check_request_boundary.py as a figure that is
+             refused, so the same sentinel sweep that guards revenue guards this. -->
+        <div id="ntm-wrap" style="display:none; margin-top:18px;">
+          <label class="field-label" for="ntm-exact">Which makes your next twelve months
+            <span class="optional">Our sum from the two numbers above. Change it if you know better, and the change is what we price.</span>
+          </label>
+          <div class="num-row">
+            <span class="unit" id="ntm-cur">$</span>
+            <input class="field field-num" id="ntm-exact" type="number" step="1000" min="0"
+                   oninput="onNtmType()" aria-label="Your revenue over the next twelve months">
+            <span class="unit">over 12 months</span>
+          </div>
+          <p class="q-annual" id="ntm-note"></p>
+          <p class="slider-read" id="ntm-edited" style="display:none;">
+            <button type="button" class="link-btn" onclick="clearNtm()">Use our sum instead</button>
+          </p>
+        </div>
+
         <button class="btn" style="width:100%; margin-top:16px;" onclick="submitGrowth()">Continue</button>
       </div>
 

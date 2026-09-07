@@ -87,7 +87,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.5,
+     "tag_evidence": 4.4,
      "thin": false,
      "triangulated": false
     }
@@ -133,6 +133,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 9.7,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.1,
@@ -625,7 +626,7 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "both do Compliance Workflow, Regulatory Compliance, Compliance Automation; related type of business; same kind of customer; same revenue model",
-    "score": 15.0,
+    "score": 14.9,
     "type": "CONTROL"
    },
    {
@@ -722,7 +723,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.5,
+   "tag_evidence": 4.4,
    "thin": false,
    "triangulated": false
   },
@@ -759,6 +760,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 2.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.2,

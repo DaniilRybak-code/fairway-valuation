@@ -394,6 +394,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 14.9,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.4,
@@ -971,20 +972,20 @@
     "ticker": "TSX:TCS"
    },
    {
+    "company": "Claritev Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 7.0,
+    "ticker": "NYSE:CTEV"
+   },
+   {
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "NASDAQGS:GTLB"
-   },
-   {
-    "company": "Weave Communications, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same end market",
-    "score": 6.0,
-    "ticker": "NYSE:WEAV"
    }
   ],
   "secondary_range": {
@@ -998,9 +999,15 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 1.9,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 5.1,
+   "levered_names": [
+    {
+     "company": "Claritev Corporation",
+     "debt_share_pct": 87.5
+    }
+   ],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
@@ -1015,7 +1022,29 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of api, data, digital; related type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tecsys Inc.",
+     "mult": 1.9,
+     "reason": "same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Claritev Corporation",
+     "mult": 5.1,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [
     {
      "company": "Qt Group Oyj",
@@ -1039,7 +1068,7 @@
     "digital"
    ],
    "show_retention": true,
-   "spread": 3.2,
+   "spread": 8.5,
    "table": [
     {
      "company": "TomTom N.V.",
@@ -1060,13 +1089,13 @@
      "ticker": "TSX:TCS"
     },
     {
-     "company": "Weave Communications, Inc.",
+     "company": "Claritev Corporation",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.8,
-     "multiple": 1.9,
+     "growth_pct": 5.2,
+     "multiple": 5.1,
      "recurring_pct": null,
-     "retention_pct": 92.0,
-     "ticker": "NYSE:WEAV"
+     "retention_pct": null,
+     "ticker": "NYSE:CTEV"
     }
    ],
    "tag_evidence": 0.2,

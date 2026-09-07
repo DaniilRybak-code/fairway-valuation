@@ -100,7 +100,15 @@ _PRIMARY = [('peers-software.csv',  'peers-software-tags.csv',  'software'),
             ('peers-ecommerce.csv', 'peers-ecommerce-tags.csv', 'consumer'),
             ('peers-fintech.csv',   'peers-fintech-tags.csv',   'fintech')]
 _SECONDARY = [('peers-logistics-services.csv', 'peers-logistics-services-tags.csv'),
-              ('peers-lending.csv',            'peers-lending-tags.csv')]
+              ('peers-lending.csv',            'peers-lending-tags.csv'),
+              # THE MIXED SET, ADDED 7-SEP-2026 with the 5-September public pull. Fourteen names
+              # spanning benefits payments, insurance services, healthcare risk, corporate learning
+              # and work management. It is SECONDARY for exactly the reason written above: dropping
+              # them into any of the three primary files would re-count that file's archetypes and
+              # silently move which companies an existing founder is compared against, with nothing
+              # in a diff to show why. Loaded here, every row takes its family from the map the
+              # primary files already produced, and no existing archetype is re-counted.
+              ('peers-mixed.csv',              'peers-mixed-tags.csv')]
 
 
 def _ingest(mfile, tfile, fam_for):
@@ -264,6 +272,46 @@ def _ingest(mfile, tfile, fam_for):
         r['recurring_pct'] = _f(m.get('recurring_revenue_pct'))
         r['pb_mult'] = _f(m.get('p_bv_x'))          # balance-sheet lenders only
         r['pe_mult'] = _f(m.get('p_e_x'))           # balance-sheet lenders only
+        # HOW MUCH OF THIS COMPANY'S ENTERPRISE VALUE IS DEBT.
+        #
+        # docs/public-pull-verdicts-4sep.md issue 4, 5-Sep-2026: Claritev's enterprise value is
+        # 88 per cent debt and Skillsoft's is 89 per cent, so their revenue multiples of 5.1x and
+        # 1.5x "describe balance sheets, not businesses. A founder shown 5.1x from Claritev is
+        # being compared to a company whose equity is a twelfth of its enterprise value."
+        # The verdict is "load them, and carry a flag", and it ends: "If we have no such flag
+        # today, that is the gap." There was no such flag. This is it.
+        #
+        # IT SAYS SOMETHING, IT DOES NOT DO ANYTHING. The figure reaches the founder as a sentence
+        # in the honesty layer naming the company and the percentage. It does not exclude the row,
+        # it does not move a median and it does not change a band edge. The verdict also says such
+        # a name "should not set the top or the bottom of a band", and that IS a change to how the
+        # number is built rather than to what is said about it, so it is Daniil's to rule and is in
+        # the open decisions box, measured, not applied.
+        #
+        # Only data/peers-mixed.csv carries the column today, so only those fourteen rows can
+        # raise the caveat. Computing it for the whole listed universe is one column in each of the
+        # other four files and is the same ruling.
+        r['leverage_pct'] = _f(m.get('leverage_debt_share_pct'))
+        # HOW MANY BROKERS STAND BEHIND THE FORWARD NUMBER.
+        #
+        # Read 7-Sep-2026, and it should have been read on 6-Sep when it arrived. Daniil's
+        # 1-September database carries a broker-estimate count on every row and
+        # tools/align_growth_to_1sep_6sep.py brought it across, but nothing read it, so
+        # check_field_reach has been failing on it ever since. The suite has had TWO red checks
+        # since 6-Sep, not one: check 1 on the public pull and check 3 on this column and on
+        # revenue_growth_cy3_pct.
+        #
+        # WHY IT MATTERS AND WHAT IT DOES NOT DO YET. A forward multiple built on one analyst is
+        # one person's opinion, not a market price. Skillsoft in the 5-September pull has ONE
+        # estimate behind it and Crawford has two, against 3 to 25 for everything else, and
+        # docs/public-pull-verdicts-4sep.md issue 6 says so: "load, but a one-broker forward number
+        # is a single opinion. If we ever add a coverage floor, this is the evidence for it."
+        #
+        # It is READ AND NOT ACTED ON. Nothing filters, ranks or caveats on it today, because a
+        # coverage floor is a rule and rules are Daniil's. It is on the row so that setting one is
+        # a single line rather than another data pull, and so the check stops reporting a column
+        # the engine holds and ignores.
+        r['n_estimates'] = _f(m.get('n_estimates'))
         r['gm']   = 100*gp/r['rev'] if (gp and r['rev']) else None
         r['acv']  = _f(r.get('acv_usd_disclosed'))
         r['mix_note'] = r.get('mix_note','')
@@ -433,15 +481,51 @@ listed = [_r for _r in listed.values() if _norm_t(_r.get('exchange_ticker')) not
 # So the rule is general and needs no list: THE NEWEST as_of IN THE FILE DEFINES THE CURRENT
 # UNIVERSE. A row older than that was left out of the refresh, stays visible for audit, and cannot
 # price anything. The next refresh enforces this by itself, with nobody having to remember.
+# THE COMPARISON IS PER FILE, AND THAT CORRECTION IS 7-SEP-2026. It used to be one date for the
+# whole universe: CURRENT_AS_OF was the newest as_of anywhere, and any row not carrying it went
+# stale. That worked only because one pull, the 1-September refresh, happened to touch all five
+# peers files at once, so there was exactly one date in the universe.
+#
+# IT BREAKS THE FIRST TIME A PULL ADDS NAMES INSTEAD OF REFRESHING THEM. Loading the fourteen names
+# of the 5-September public pull put a 2026-09-05 into the universe. Under the old rule that made
+# 2026-09-05 the current date, and all 511 rows that came from the 1-September refresh were
+# therefore "left out of the latest refresh" and had every multiple stripped. Fourteen new names
+# silently disarmed the entire comparable universe: the gate still read 97 of 102, because a gate
+# counts names found rather than prices shown, and golden reported 101 of 102 fixtures moved with
+# every range gone. Golden caught it. Nothing else did.
+#
+# The rule's PURPOSE is unchanged and is the sentence above: a company left out of the latest
+# refresh is not part of the current universe. What changed is the reading of "the latest refresh".
+# A refresh refreshes A FILE. peers-software.csv is refreshed by a software pull and
+# peers-mixed.csv by whatever produced it, and neither one being newer says anything about whether
+# a name in the other was dropped. So each file is judged against the newest as_of IN THAT FILE.
+#
+# MEASURED, AND IT CHANGES NOTHING ON TODAY'S DATA. On the universe as it stood before the mixed
+# file was added, the global rule and the per-file rule mark the same 13 rows stale: one in
+# ecommerce, two in fintech, four undated in lending and six undated in logistics. Every file's
+# newest date was 2026-09-01, so the two readings coincide exactly. The per-file rule is what the
+# old one always meant; it simply cannot be broken by a file arriving on a different day.
+#
+# CURRENT_AS_OF is kept, as the newest date anywhere, because it is the honest answer to "how
+# current is this universe" and it is what a header or a footnote would print. It no longer decides
+# anything.
 _AS_OF = [(_r.get('as_of') or '').strip() for _r in listed]
 CURRENT_AS_OF = max([a for a in _AS_OF if a] or [''])
+_FILE_AS_OF = {}
+for _r in listed:
+    _fsrc = _r.get('_src_file') or ''
+    _a = (_r.get('as_of') or '').strip()
+    if _a and _a > _FILE_AS_OF.get(_fsrc, ''):
+        _FILE_AS_OF[_fsrc] = _a
 stale_rows = []
 for _r in listed:
     _a = (_r.get('as_of') or '').strip()
-    if CURRENT_AS_OF and _a != CURRENT_AS_OF:
+    _cur = _FILE_AS_OF.get(_r.get('_src_file') or '', '')
+    if _cur and _a != _cur:
         _r['stale_since'] = _a or 'undated'
-        _r['stale_reason'] = ('left out of the %s refresh, so not part of the current universe. '
-                              'Visible for audit, cannot price.' % CURRENT_AS_OF)
+        _r['stale_reason'] = ('left out of the %s refresh of %s, so not part of the current '
+                              'universe. Visible for audit, cannot price.'
+                              % (_cur, _r.get('_src_file') or 'its file'))
         for _k in ('mult', 'gp_mult', 'pb_mult', 'pe_mult', 'gmv_mult'):
             if _r.get(_k) is not None:
                 _r['stale_' + _k] = _r[_k]
@@ -2419,6 +2503,41 @@ def _listed_targets(rows):
     names = [r.get('company_name', '') for (_sw, r) in rows if r.get('target_was_listed')]
     return len(names), names
 
+
+# THE ONE NUMBER THAT TURNS THE LEVERAGE COLUMN INTO A RULE, and it is Daniil's to set.
+#
+# 80 per cent is not a judgement about capital structure, it is the number that catches exactly the
+# two names docs/public-pull-verdicts-4sep.md issue 4 asks for and nothing else. Measured on the
+# fourteen rows that carry the column on 7-Sep-2026:
+#
+#     90  catches nothing
+#     80  catches Skillsoft 89.0% and Claritev 87.5%           <- the verdict's two, exactly
+#     60  adds Evolent Health 63.9%
+#     40  adds CPI Card Group 47.9%
+#     20  adds Crawford 24.6% and Edenred 21.3%, which is most of a normal balance sheet
+#
+# Below 60 it stops describing unusual leverage and starts describing having any debt at all.
+LEVERAGE_FLAG_PCT = 80.0
+
+
+def _levered(rows):
+    """Names in this range whose enterprise value is mostly debt, with the percentage.
+
+    Same shape as _control and _listed_targets: the range reports what is in it, and the honesty
+    layer decides what to say. Rows with no leverage figure are simply absent, which is every row
+    outside data/peers-mixed.csv today.
+
+    A LIST OF DICTS AND NOT OF TUPLES, WHICH COST HALF AN HOUR ON 7-SEP-2026. The golden snapshots
+    are written and read back as JSON, and JSON has no tuple: a tuple goes out as a list and comes
+    back as a list, so a tuple here never equals its own baseline and seven fixtures reported a
+    move on every run for ever. Every other list on a range object is a list of strings or dicts,
+    which is why nothing had hit this before.
+    """
+    out = [{'company': r.get('company_name', ''), 'debt_share_pct': r['leverage_pct']}
+           for (_sw, r) in rows
+           if r.get('leverage_pct') is not None and r['leverage_pct'] >= LEVERAGE_FLAG_PCT]
+    return len(out), out
+
 # YOU CANNOT AVERAGE 4.3x AND 50x.
 #
 # Daniil, 26-Aug-2026, on OpenSEO: "If the closest peer reads 4.3x, this is what needs to be shown
@@ -2546,6 +2665,7 @@ def group_range(prof, group, which='rev', tier='DIRECT', basis=None):
                triangulated=(close == 'THIN_OVERLAP'), anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
                listed_target_n=_listed_targets(priced)[0], listed_target_names=_listed_targets(priced)[1],
+               levered_names=_levered(priced)[1],
                basis_mix=_basis_mix(priced),
                # THE HOVER TABLE. One line per name actually in this range, with the retention
                # column present only where the names carry a retention figure.

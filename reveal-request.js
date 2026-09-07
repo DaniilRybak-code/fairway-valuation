@@ -78,6 +78,45 @@ var REVEAL_RATIOS = [
 var REVEAL_FIELDS = REVEAL_PROFILE_FIELDS.concat(REVEAL_FORK_LABELS).concat(REVEAL_RATIOS);
 
 /* ---------------------------------------------------------------------------
+ * THE RAISE: DANIIL'S OPEN RULING, WRITTEN DOWN SO THE ANSWER IS SMALL AND THE QUESTION IS CLEAR.
+ *
+ * The question from the status document: the amount the founder is raising left the browser until
+ * rule E9 on 6 September, and it did one job. `_cheque_fits` in selector/investors.py drops an
+ * investor whose published first cheque cannot fund the round, so a fund writing $10m cheques stays
+ * off a pre-seed founder's call list. Without the raise that filter never excludes anyone, and
+ * those houses appear with their published cheque range printed on the card for the founder to
+ * judge for themselves.
+ *
+ * NO FLAG IS PROVIDED HERE ON PURPOSE. Putting the raise back is changing the sentence on the page
+ * that says no figure leaves the browser, and a promise should not be reversible by a boolean
+ * somebody can flip without reading it. The change, if Daniil says yes, is three named edits:
+ *
+ *   1. add 'raise' to REVEAL_PROFILE_FIELDS above, with a comment saying it is the ONE amount that
+ *      leaves, and that it is the ask rather than a figure from the accounts
+ *   2. add 'raise' to ALLOWED in tools/check_request_boundary.py with the same reason, and remove
+ *      it from FIGURE_NAMES, or the check fails by design
+ *   3. add 'raise' to ALLOWED in api/payload.py and pass it to RP.build as raise_musd
+ *
+ * Plus the consent copy on the page, which currently names the founder's answers one by one.
+ *
+ * WHAT IT BUYS, MEASURED 7-SEP-2026 ACROSS ALL 102 FIXTURES, with the stated stage doing the work
+ * it now does:
+ *
+ *     raise $0.5m   812 call-list cards without it, 13 fewer with it   (1.6%)
+ *     raise $1m     812 cards, 0 fewer
+ *     raise $3m     812 cards, 0 fewer
+ *     raise $10m    812 cards, 0 fewer
+ *
+ * So at every raise except the smallest it currently changes NOTHING, and at $500k it removes 13
+ * cards out of 812. The earlier figure of "3 of 156 houses" was counted before stage bands were
+ * filled in on 6 September; the stage gate now does almost all of this filter's work, and the
+ * cheque range is printed on the card either way.
+ *
+ * On those numbers the honest recommendation is NO: it is the largest promise on the page bought
+ * back for 1.6 per cent of one founder's list. The ruling is still Daniil's.
+ * ------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------
  * WHAT NEVER LEAVES WITHOUT A CLICK. Named here so that the check has something to assert
  * against and so that a reader can see the promise as a list rather than as prose.
  * ------------------------------------------------------------------------- */

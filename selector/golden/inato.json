@@ -320,6 +320,22 @@
     "ticker": "NYSE:VEEV"
    },
    {
+    "company": "Claritev Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 10.0,
+    "ticker": "NYSE:CTEV"
+   },
+   {
+    "company": "Progyny, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQ:PGNY"
+   },
+   {
     "company": "Freightos Limited",
     "family": "consumer",
     "in_medians": true,
@@ -344,28 +360,12 @@
     "ticker": "TSX:TCS"
    },
    {
-    "company": "Alibaba Group Holding Limited",
-    "family": "consumer",
+    "company": "Evolent Health, Inc.",
+    "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of marketplace, network; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "NYSE:BABA"
-   },
-   {
-    "company": "Waystar Holding Corp.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of patient; related type of business; same end market; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:WAY"
-   },
-   {
-    "company": "Phreesia, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of patient; related type of business; same end market; sold the same way",
-    "score": 8.1,
-    "ticker": "NYSE:PHR"
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "NYSE:EVH"
    }
   ],
   "core_range": {
@@ -381,10 +381,16 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 4.5,
+   "high": 5.1,
+   "levered_names": [
+    {
+     "company": "Claritev Corporation",
+     "debt_share_pct": 87.5
+    }
+   ],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.4,
+   "low": 1.2,
    "mid": 1.9,
    "n": 7,
    "period_mix": {
@@ -398,9 +404,16 @@
    },
    "points": [
     {
-     "company": "Alibaba Group Holding Limited",
-     "mult": 1.3,
-     "reason": "shares the language of marketplace, network; same type of business; same business function; same revenue model",
+     "company": "Evolent Health, Inc.",
+     "mult": 0.4,
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Progyny, Inc.",
+     "mult": 1.2,
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -408,13 +421,6 @@
      "company": "Freightos Limited",
      "mult": 1.4,
      "reason": "shares the language of marketplace, platform; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Phreesia, Inc.",
-     "mult": 1.4,
-     "reason": "shares the language of patient; related type of business; same end market; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -433,9 +439,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Waystar Holding Corp.",
-     "mult": 4.5,
-     "reason": "shares the language of patient; related type of business; same end market; sold the same way",
+     "company": "Claritev Corporation",
+     "mult": 5.1,
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -453,21 +459,29 @@
     "clinical",
     "marketplace",
     "network",
-    "patient",
     "platform",
     "trial"
    ],
    "show_retention": true,
-   "spread": 7.5,
+   "spread": 24.2,
    "table": [
     {
-     "company": "Alibaba Group Holding Limited",
+     "company": "Evolent Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.8,
-     "multiple": 1.3,
+     "growth_pct": 18.0,
+     "multiple": 0.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:BABA"
+     "ticker": "NYSE:EVH"
+    },
+    {
+     "company": "Progyny, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:PGNY"
     },
     {
      "company": "Freightos Limited",
@@ -477,15 +491,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGM:CRGO"
-    },
-    {
-     "company": "Phreesia, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.3,
-     "multiple": 1.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:PHR"
     },
     {
      "company": "Tecsys Inc.",
@@ -506,13 +511,13 @@
      "ticker": "NYSE:YMM"
     },
     {
-     "company": "Waystar Holding Corp.",
+     "company": "Claritev Corporation",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.3,
-     "multiple": 4.5,
+     "growth_pct": 5.2,
+     "multiple": 5.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:WAY"
+     "ticker": "NYSE:CTEV"
     },
     {
      "company": "Veeva Systems Inc.",
@@ -970,6 +975,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 6.4,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.8,

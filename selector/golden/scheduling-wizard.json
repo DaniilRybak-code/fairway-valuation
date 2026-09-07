@@ -78,7 +78,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.2,
      "thin": true,
      "triangulated": true
     },
@@ -186,7 +186,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 3.9,
+     "tag_evidence": 3.8,
      "thin": false,
      "triangulated": false
     },
@@ -302,7 +302,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.8,
+     "tag_evidence": 0.7,
      "thin": false,
      "triangulated": false
     }
@@ -318,14 +318,6 @@
     "ticker": "NYSE:VEEV"
    },
    {
-    "company": "Samsara Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
-    "score": 11.8,
-    "ticker": "NYSE:IOT"
-   },
-   {
     "company": "Tecsys Inc.",
     "family": "software",
     "in_medians": true,
@@ -334,11 +326,35 @@
     "ticker": "TSX:TCS"
    },
    {
+    "company": "Samsara Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
+    "score": 11.8,
+    "ticker": "NYSE:IOT"
+   },
+   {
+    "company": "Claritev Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; same type of business; same end market; same kind of customer",
+    "score": 11.6,
+    "ticker": "NYSE:CTEV"
+   },
+   {
+    "company": "Evolent Health, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of care; related type of business; same end market; same business function",
+    "score": 11.2,
+    "ticker": "NYSE:EVH"
+   },
+   {
     "company": "Waystar Holding Corp.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
-    "score": 10.8,
+    "score": 10.7,
     "ticker": "NASDAQGS:WAY"
    },
    {
@@ -346,7 +362,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of healthcare; same type of business; same end market; sold the same way",
-    "score": 9.2,
+    "score": 9.1,
     "ticker": "NYSE:PHR"
    }
   ],
@@ -354,7 +370,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -363,14 +379,20 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
-   "high": 9.7,
+   "high": 5.1,
+   "levered_names": [
+    {
+     "company": "Claritev Corporation",
+     "debt_share_pct": 87.5
+    }
+   ],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.4,
    "mid": 3.2,
-   "n": 4,
+   "n": 6,
    "period_mix": {
-    "NTM": 4
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -379,6 +401,13 @@
     }
    },
    "points": [
+    {
+     "company": "Evolent Health, Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of care; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
     {
      "company": "Phreesia, Inc.",
      "mult": 1.4,
@@ -401,6 +430,13 @@
      "transaction_type": ""
     },
     {
+     "company": "Claritev Corporation",
+     "mult": 5.1,
+     "reason": "shares the language of healthcare; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
      "company": "Veeva Systems Inc.",
      "mult": 9.7,
      "reason": "shares the language of clinical; same type of business; same end market; same business function",
@@ -419,14 +455,24 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
+    "care",
     "clinical",
     "healthcare",
     "hospital",
     "supply"
    ],
    "show_retention": true,
-   "spread": 6.9,
+   "spread": 24.2,
    "table": [
+    {
+     "company": "Evolent Health, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:EVH"
+    },
     {
      "company": "Phreesia, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -455,6 +501,15 @@
      "ticker": "NASDAQGS:WAY"
     },
     {
+     "company": "Claritev Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.2,
+     "multiple": 5.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CTEV"
+    },
+    {
      "company": "Veeva Systems Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 12.3,
@@ -464,7 +519,7 @@
      "ticker": "NYSE:VEEV"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
@@ -708,7 +763,7 @@
     "in_medians": true,
     "mult": 1.39,
     "reason": "both do Care Coordination; same type of business; same end market; sold the same way",
-    "score": 16.9,
+    "score": 16.8,
     "type": "CONTROL"
    },
    {
@@ -719,7 +774,7 @@
     "in_medians": true,
     "mult": 7.37,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 13.3,
+    "score": 13.2,
     "type": "PRIMARY"
    },
    {
@@ -730,7 +785,7 @@
     "in_medians": true,
     "mult": 66.0,
     "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
-    "score": 13.8,
+    "score": 13.7,
     "type": "PRIMARY"
    },
    {
@@ -752,7 +807,7 @@
     "in_medians": true,
     "mult": 51.4,
     "reason": "shares the language of care; related type of business; same end market; same AI stance",
-    "score": 8.3,
+    "score": 8.2,
     "type": "PRIMARY"
    },
    {
@@ -763,7 +818,7 @@
     "in_medians": true,
     "mult": 14.25,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 16.3,
+    "score": 16.2,
     "type": "PRIMARY"
    },
    {
@@ -774,7 +829,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of care; same type of business; same end market; same business function",
-    "score": 11.3,
+    "score": 11.2,
     "type": "PRIMARY"
    }
   ],
@@ -879,7 +934,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 3.9,
+   "tag_evidence": 3.8,
    "thin": false,
    "triangulated": false
   },
@@ -892,6 +947,14 @@
     "reason": "shares the language of clinical; same kind of customer; same revenue model; sold the same way",
     "score": 9.6,
     "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "Progyny, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "NASDAQ:PGNY"
    },
    {
     "company": "Kinaxis Inc.",
@@ -912,9 +975,9 @@
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -924,13 +987,14 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.5,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
-   "mid": 4.1,
-   "n": 3,
+   "mid": 2.65,
+   "n": 4,
    "period_mix": {
-    "NTM": 3
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -944,6 +1008,13 @@
      "mult": 0.6,
      "reason": "shares the language of healthcare, hospital; same end market; same kind of customer; sold the same way",
      "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Progyny, Inc.",
+     "mult": 1.2,
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
+     "tier": "DIRECT",
      "transaction_type": ""
     },
     {
@@ -982,6 +1053,15 @@
      "ticker": "NYSE:AMN"
     },
     {
+     "company": "Progyny, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:PGNY"
+    },
+    {
      "company": "Dassault Systemes SE",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 6.2,
@@ -1000,7 +1080,7 @@
      "ticker": "TSX:KXS"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   }

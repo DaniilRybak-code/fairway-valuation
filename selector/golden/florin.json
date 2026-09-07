@@ -40,6 +40,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 3.8,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
@@ -116,7 +117,7 @@
      "ticker": "NASDAQ:SSNC"
     }
    ],
-   "tag_evidence": 3.2,
+   "tag_evidence": 3.1,
    "thin": false,
    "triangulated": false
   },
@@ -320,7 +321,7 @@
     "in_medians": true,
     "mult": 4.55,
     "reason": "both do Policy Administration; related type of business; same end market; same business function",
-    "score": 14.9,
+    "score": 14.7,
     "type": "CONTROL"
    },
    {
@@ -331,7 +332,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Underwriting; same type of business; same end market; same kind of customer",
-    "score": 11.9,
+    "score": 11.8,
     "type": "PRIMARY"
    },
    {
@@ -353,7 +354,7 @@
     "in_medians": true,
     "mult": 6.67,
     "reason": "shares the language of carrier, insurance; same type of business; same end market; sold the same way",
-    "score": 11.5,
+    "score": 11.4,
     "type": "PRIMARY"
    },
    {
@@ -364,7 +365,7 @@
     "in_medians": true,
     "mult": 6.88,
     "reason": "both do Claims; same type of business; same kind of customer",
-    "score": 8.0,
+    "score": 7.9,
     "type": "PRIMARY"
    },
    {
@@ -463,7 +464,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.4,
+   "tag_evidence": 4.2,
    "thin": false,
    "triangulated": false
   },
@@ -524,6 +525,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 10.7,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.9,

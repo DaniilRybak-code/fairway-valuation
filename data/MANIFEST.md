@@ -44,7 +44,7 @@ Also fine: attach the CSV or the .xlsx to the conversation.
 
 | arrived | what | rows | raw file | working file | wired into engine |
 |---|---|---|---|---|---|
-| 2026-09-04 | Public pull, 16 names for the eight thin listed lanes | 16 | `data/raw/2026-09-04_public-pull-16-names.csv`, transcribed from screenshot (no CSV possible, separate sandbox) | not yet loaded | **no**, three questions open: currency of the two Euronext rows, growth basis (CY+1 to CY+3, a third definition), and customer float for Edenred and Pluxee |
+| 2026-09-04 | Public pull, 16 names for the eight thin listed lanes | 16 | `data/raw/2026-09-04_public-pull-16-names.csv`, transcribed from screenshot (no CSV possible, separate sandbox) | **LOADED 7-Sep-2026** by `tools/load_public_pull_16_7sep.py` into `data/peers-mixed.csv` + `data/peers-mixed-tags.csv`: 16 in, 14 out, 2 named (LivePerson excluded on the delisting notice, Green Dot held out for BVPS and P/BV and belongs in `peers-lending.csv`) | **yes**, all three questions closed: the two Euronext rows are USD at a derived USD/EUR 1.0748; no customer-float adjustment (Daniil, 5-Sep); the CAGR is CY+1 to CY+3 and goes into `revenue_growth_cagr_cy1_cy3_pct` (settled 6-Sep, tested 16 of 16) |
 | 2026-08-30 | Listed specialty finance and lending, P/E and P/BV | 79 | transcribed from screenshot, NO RAW | `data/peers-lending.csv` | **no**, needs tags |
 | 2026-08-30 | Listed logistics, services marketplaces, consumer subscription, payments | 123 | transcribed from screenshot, NO RAW | `data/peers-logistics-services.csv` | **no**, needs tags |
 | 2026-08-30 | Private financing transaction database, 58 valuation-backed rounds | 58 | transcribed from screenshot, NO RAW | `data/private-rounds-master-30aug.csv` | **no**, source URLs missing |
@@ -1542,3 +1542,32 @@ Udemy were already in). The ruling on floors is applied by `tools/load_claude_pu
 which also loads the two raw files and rebuilds the investor table, and refuses to run until the raw
 files are in a commit. Dry run: gate stays at 90 of 102, all checks pass except the pre-existing
 intake failure on `2026-09-04_public-pull-16-names.csv`, which is not part of this work.
+
+## 2026-09-07: the public pull loaded, and the two things loading it found
+
+Opus, 7 September. `tools/load_public_pull_16_7sep.py` turns the 5-September transcription into
+`data/peers-mixed.csv`, a sixth peers file loaded as SECONDARY so that no existing archetype is
+re-counted. 16 rows in, 14 written, 2 named and counted. Tags are hand-written in
+`data/peers-mixed-tags.csv`, which also records the two places the archetype vocabulary does not
+reach (a risk-bearing health insurer, and a business-services outsourcer). Check 1 goes green for
+the first time since 5 September.
+
+Golden moved on 100 of 102 fixtures and every move is attributed: 21 fixtures gained one or more of
+the fourteen new names, 15 moved because the token-weight file was regenerated (the new tags file
+makes `loop`, `plans`, `process`, `team` and `workflow` generic), and 64 moved only because the
+range object carries a new `levered_names` key. No figure in any existing row changed.
+
+**TWO THINGS THE LOAD FOUND, both older than the load.**
+
+1. **The stale-universe rule was global and should have been per file.** `CURRENT_AS_OF` was the
+   newest `as_of` anywhere in the universe, and any row not carrying it lost every multiple. That
+   worked only because the 1-September refresh happened to touch all five peers files at once. A
+   sixth file dated 2026-09-05 made all 511 existing rows "left out of the latest refresh" and
+   stripped their multiples. The gate did not notice, because it counts names found rather than
+   prices shown; golden caught it. The comparison is now per source file, which is what "the latest
+   refresh" always meant, and it marks the same 13 rows stale as the old rule did.
+2. **The suite has had two red checks since 6 September, not one.** Check 3 was failing on
+   `n_estimates` and `revenue_growth_cy3_pct`, two columns the 6-September growth realignment
+   brought in that nothing read and nothing explained. `n_estimates` is now read onto the row (it is
+   the broker count a coverage floor would use; nothing filters on it yet) and
+   `revenue_growth_cy3_pct` is explained beside its cy1 and cy2 siblings. All sixteen checks pass.

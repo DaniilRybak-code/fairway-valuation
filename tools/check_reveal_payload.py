@@ -26,6 +26,7 @@ It reports, it does not decide the gate. A fixture with no range is not a failur
 failure in check 8, which is where it belongs.
 """
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,6 +44,34 @@ def close(a, b):
     return abs(a - b) <= max(0.01, abs(b) * 0.005)
 
 
+# THE RAISE IS GONE FROM THE LIVE PATH, SO THIS CHECK MUST NOT PASS ONE. Corrected 7-Sep-2026,
+# when standing up /api/payload showed that RP.build(prof, raise_musd=None) returns ZERO callable
+# investors for all 102 fixtures while this check, passing 3.0, reported all 102 carrying a house.
+#
+# Neither number was wrong; the check was answering a question the product had stopped asking. Rule
+# E9 took the raise out of the request on 6 September, and _stage_for was changed the same day to
+# read the founder's STATED stage instead, which is the answer to step 1 of the quiz. That fix
+# works and the live endpoint gets its 8 cards a founder from it.
+#
+# What nothing noticed is that THE FIXTURES CARRY NO STAGE. They are peer-universe fixtures: they
+# were written to test which comparables a business nature finds, and a stage was never part of
+# that. So with the raise removed and no stage on the profile there is nothing for the stage gate
+# to match, and the check went on passing because it was still handing over a raise the live path
+# cannot have.
+#
+# So the profile is given a stage HERE, as a stated test condition, and the raise is not passed.
+# 'Seed' is not a claim about any of the 102 companies; it is the middle of the three buttons the
+# quiz offers, and the 6-September measurement covered all three (813 cards at Seed, 724 at
+# Pre-seed, 797 at Series A). Putting a real stage on each fixture is a better answer and it is
+# data somebody has to decide rather than a line of code, so it is written up instead of invented.
+LIVE_STAGE = 'Seed'
+
+
+def live(prof):
+    """The profile as the live path actually presents it: a stated stage and no raise."""
+    return dict(prof, stage=prof.get('stage') or LIVE_STAGE)
+
+
 def main():
     bad, built = [], 0
     lanes_with_both = 0
@@ -53,7 +82,7 @@ def main():
     inv_reached = 0
     for key, _label, prof in PROFILES:
         try:
-            p = RP.build(prof, raise_musd=3.0)
+            p = RP.build(live(prof))
         except Exception as exc:                                   # noqa: BLE001
             bad.append('%s: build raised %s: %s' % (key, type(exc).__name__, exc))
             continue
@@ -121,7 +150,7 @@ def main():
     free_ok = 0
     for key, _label, prof in PROFILES:
         try:
-            fp = RP.build(prof, raise_musd=3.0, tier='free')
+            fp = RP.build(live(prof), tier='free')
         except Exception as exc:                                   # noqa: BLE001
             bad.append('%s: free payload raised %s: %s' % (key, type(exc).__name__, exc))
             continue
@@ -155,6 +184,34 @@ def main():
         if lead and (fp.get('lead') or {}).get('lane') not in RP.FREE_LANES:
             bad.append('%s: the free payload carries the private lead range, which is the exact '
                        'set of numbers the lock is over' % key)
+
+        # AND THE SAME NUMBERS CAN LEAVE IN PROSE. Added 7-Sep-2026, after the render harness drew
+        # fundraisly's free page and it said "At most 12.2x", 12.2 being the high of the private
+        # lane the founder had not paid for. The loop above reads FIELDS and a caveat is a STRING,
+        # so eleven fields could be clean while the sentence under them gave the number away.
+        #
+        # Every figure the paid payload holds behind the lock is looked for in every free caveat.
+        # A figure the FREE lanes also show is not a leak: pazi's listed high and private low are
+        # both 4.3, the founder is entitled to the first, and nothing can tell them apart.
+        try:
+            pp = RP.build(live(prof), tier='paid')
+        except Exception:                                          # noqa: BLE001
+            pp = None
+        if pp:
+            hidden, shown = set(), set()
+            for lane, bases in (pp.get('ranges') or {}).items():
+                for rng in bases.values():
+                    for f in ('low', 'mid', 'high', 'founder_low', 'founder_high'):
+                        v = rng.get(f)
+                        if isinstance(v, (int, float)) and abs(v) >= 0.01:
+                            (shown if lane in RP.FREE_LANES else hidden).add(round(float(v), 2))
+            for c in fp['honesty']['inline'] + fp['honesty']['disclosure']:
+                nums = {round(float(x), 2) for x in re.findall(r'\d+\.\d+', c['text'])}
+                hit = sorted(nums & (hidden - shown))
+                if hit:
+                    bad.append('%s: the free caveat "%s" prints %s, which is a figure from a '
+                               'locked lane. Rule E8 is over the numbers wherever they are written.'
+                               % (key, c['key'], ', '.join(str(x) for x in hit)))
 
     n = len(PROFILES)
     print('ONE PAYLOAD, BUILT FOR EVERY FIXTURE\n')

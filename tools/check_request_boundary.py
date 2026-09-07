@@ -96,6 +96,11 @@ FIGURE_NAMES = (
     'revenue', 'revenue_exact', 'revenue_gross', 'arr', 'arr_exact', 'mrr',
     'ebitda', 'ebitda_ltm', 'net_income', 'book_value', 'originations', 'volume',
     'last_round_amount', 'last_round_value', 'raise', 'profit', 'valuation',
+    # THE FOUNDER'S OWN NEXT TWELVE MONTHS, added 7-Sep-2026 with the third line in the quiz. It is
+    # the largest single amount on the page: it is a year of revenue, and a founder who overwrites
+    # our sum has typed their forecast into the browser. Named here so the sentinel sweep proves it
+    # never leaves, rather than it merely being absent from the allowlist.
+    'ntm_revenue_exact', 'ntm_revenue_gross_exact',
     'subscribers', 'borrowers', 'members', 'customers', 'business_customers',
     'merchants', 'active_users', 'registered_users',
     'ntmM', 'exitArrM', 'runRateM', 'markerM', 'ebitdaM', 'computed',
@@ -370,6 +375,16 @@ def main():                                                     # noqa: C901
     sent_ok = 0
     if probe:
         sent = probe['sentinels']
+        # A SENTINEL SHORT ENOUGH TO OCCUR BY ACCIDENT IS NOT A SENTINEL, and the failure it causes
+        # looks exactly like the leak it is meant to detect. Added 7-Sep-2026 after recurring_pct
+        # sat at 91 and a stray "91" in a log line reported a figure leak that had not happened.
+        # This is a defect in the CHECK and it is reported as one, in its own words, so nobody spends
+        # an afternoon looking for a leak in api/lead.js.
+        for _k, _v in sent.items():
+            if len(str(_v)) < 6:
+                bad.append('the sentinel for "%s" is %r, which is too short to be distinctive: a '
+                           'substring that occurs by accident in a log line will be read as a leak. '
+                           'Lengthen it in tools/request_boundary_probe.mjs.' % (_k, _v))
         req = probe['requests']
 
         # 5. the default request body, run rather than read
@@ -449,6 +464,71 @@ def main():                                                     # noqa: C901
 
     # ---- the report ----
     print('THE BOUNDARY: DOES A FOUNDER\'S FIGURE LEAVE THE BROWSER?\n')
+    # ---- 9. THE THIRD DOOR: /api/payload, added 7-Sep-2026 with the Python engine endpoint ----
+    #
+    # On 6 September this check found that the brief named one door and there were two: /api/reveal
+    # was clean and /api/lead was storing every figure at the email step. Standing up the engine
+    # opens a THIRD door, and it opens it in a different language, which is exactly the shape of
+    # thing that gets forgotten. So it is checked here, in the same run, against the same list.
+    #
+    # Three assertions, and the first is the one that would rot: the Python allowlist and the
+    # browser's allowlist must be the same set of names. If someone adds a field to the page and
+    # not to the endpoint the page silently loses it; the other way round, the promise on the page
+    # stops describing what the server accepts.
+    try:
+        import importlib.util as _ilu
+        _sp = _ilu.spec_from_file_location('_fairway_payload_api', 'api/payload.py')
+        _api = _ilu.module_from_spec(_sp)
+        _sp.loader.exec_module(_api)
+    except Exception as _exc:                                   # noqa: BLE001
+        _api = None
+        bad.append('api/payload.py will not import (%s), so the engine endpoint cannot be checked'
+                   % type(_exc).__name__)
+    if _api is not None:
+        py_allow = set(_api.ALLOWED)
+        if py_allow != set(declared):
+            for f in sorted(py_allow - set(declared)):
+                bad.append('api/payload.py accepts "%s", which the page never sends and this '
+                           'check has not agreed to' % f)
+            for f in sorted(set(declared) - py_allow):
+                bad.append('the page sends "%s" and api/payload.py drops it, so the engine is '
+                           'matching on less than the founder answered' % f)
+        # A body carrying every figure name we know, plus the free text. Nothing but the allowlist
+        # may survive filtered().
+        hostile = {k: 123.45 for k in FIGURE_NAMES}
+        hostile.update({k: 'we went from 40k to 90k MRR' for k in FREE_TEXT_NAMES})
+        hostile.update({'stage': 'Seed', 'sector': 'Fintech', 'growth_yoy': '80'})
+        kept = _api.filtered(hostile)
+        for k in list(FIGURE_NAMES) + list(FREE_TEXT_NAMES):
+            if k in kept:
+                bad.append('api/payload.py kept the figure field "%s" off a hostile body' % k)
+        if set(kept) != {'stage', 'sector', 'growth_yoy'}:
+            bad.append('api/payload.py kept %s off a hostile body, expected only the three '
+                       'allowlisted names in it' % sorted(kept))
+        # The model may not be handed a figure, and the prompt may not carry a key. The profiler's
+        # own check owns the vocabulary; this one owns the boundary.
+        seen = {}
+        _api.build(hostile, ask=lambda pr: seen.setdefault('p', pr) and '')
+        prompt = seen.get('p', '')
+        for k in FIGURE_NAMES:
+            if ('"%s"' % k) in prompt or ('123.45' in prompt):
+                bad.append('a figure reached the profiler prompt through /api/payload (%s)' % k)
+                break
+        for _k, _v in os.environ.items():
+            if ('KEY' in _k or 'TOKEN' in _k or 'SECRET' in _k) and _v and len(_v) > 12 \
+                    and _v in prompt:
+                bad.append('an environment secret appears in the profiler prompt')
+                break
+        # The tier is the server's. A browser claiming paid must still get free.
+        claimed = _api.build(dict(hostile, tier='paid'), ask=lambda _p: '')
+        if claimed['payload'].get('tier') != 'free':
+            bad.append('api/payload.py let the client choose its tier, so rule E8 is a suggestion')
+        notes.append(('ENGINE', 'api/payload.py accepts the same %d names as the page, refused all '
+                                '%d figure and free-text fields off a hostile body, kept no figure '
+                                'out of the profiler prompt, and served tier=free to a body '
+                                'claiming paid'
+                      % (len(py_allow), len(FIGURE_NAMES) + len(FREE_TEXT_NAMES))))
+
     print('ALLOWLIST %d fields may leave on the free path, every one a label or a percentage'
           % len(declared))
     print('          %s' % ', '.join(declared))

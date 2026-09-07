@@ -322,6 +322,10 @@ function showRevBands() {
 function pickRevBand(band) {
   responses.revenue = band;
   responses.revenue_exact = null;
+  /* No exact monthly figure means no sum to show, so the third line goes away with it rather than
+     sitting there holding a stale number from a previous answer. */
+  responses.ntm_revenue_exact = null;
+  if (typeof paintNtm === 'function') paintNtm();
   document.getElementById('rev-followups').style.display = 'block';
   track('quiz_answer', { step: 3, key: 'revenue', value: band, exact: null, fallback: true });
 }
@@ -333,6 +337,7 @@ function pickGrowthBand(band) {
   responses.growth = band;
   responses.growth_yoy = null;
   responses.growth_exact = null;
+  if (typeof paintNtm === 'function') paintNtm();
   document.getElementById('growth-detail-wrap').style.display = 'block';
   track('quiz_answer', { step: 4, key: 'growth', value: band, exact: null, fallback: true });
 }
@@ -400,6 +405,7 @@ function paintPlan(pct) {
     '<strong>' + pct + '% planned for the next twelve months.</strong> ' +
     '<button type="button" class="link-btn" onclick="clearPlan()">Use my last twelve months instead</button>';
   paintPlanNote();
+  paintNtm();
 }
 
 /* Says out loud what the two numbers imply about each other. A plan far above
@@ -420,10 +426,106 @@ function paintPlanNote() {
   }
 }
 
+/* ---------------------------------------------------------------------------
+ * THE THIRD LINE: THE FOUNDER'S OWN NEXT TWELVE MONTHS.
+ *
+ * Daniil, 6-Sep-2026: monthly revenue and the growth they plan give the next-twelve-months figure;
+ * it is shown as a third editable line with a hover explaining how it is built; and the edited
+ * figure is what the engine prices on.
+ *
+ * WHY THE EDIT IS THE POINT, not a courtesy. forwardRevenue() compounds one annual rate into a
+ * monthly step and adds twelve months of it. That is a curve, and it is ours. A founder with a
+ * contract landing in month three, or a seasonal business, or a price rise scheduled for April, has
+ * a better answer than any curve fitted to a single percentage. So the sum is shown, the working is
+ * printed under it, and an overwrite wins outright: ntmOverride() is read before the computed sum
+ * everywhere the page prices.
+ *
+ * NET AND GROSS ALIKE. The live quiz collects one revenue figure; the eight forks in
+ * selector/quiz_fork.py collect net and gross separately (rule B3a). The hover names which measure
+ * the founder is looking at, so that when the forks reach the page the founder is never in doubt
+ * which of their two numbers this line is twelve months of.
+ *
+ * IT IS AN AMOUNT AND IT NEVER LEAVES THE BROWSER. Rule E9: `ntm_revenue_exact` is not on the
+ * allowlist in reveal-request.js, and tools/check_request_boundary.py names it as a refused figure
+ * so the sentinel sweep proves it rather than the allowlist merely omitting it.
+ * ------------------------------------------------------------------------- */
+
+/* The sum, in whole units of the founder's own currency. Null when either input is missing, which
+   is the normal case for a founder who has given no revenue. */
+function ntmComputed() {
+  const monthly = responses.revenue_exact || 0;
+  if (!(monthly > 0)) return null;
+  const f = (typeof forwardAnnualGrowth === 'function') ? forwardAnnualGrowth() : null;
+  const r = forwardRevenue(monthly, f);
+  return (r && r.ntmM !== null) ? r.ntmM * 1e6 : null;
+}
+
+/* What the page prices on: the founder's own figure if they typed one, otherwise our sum. */
+function ntmForPricing() {
+  const o = responses.ntm_revenue_exact;
+  if (o !== null && o !== undefined && o > 0) return o;
+  return ntmComputed();
+}
+
+function paintNtm() {
+  const wrap = document.getElementById('ntm-wrap');
+  const box = document.getElementById('ntm-exact');
+  const note = document.getElementById('ntm-note');
+  const edited = document.getElementById('ntm-edited');
+  if (!wrap || !box || !note) return;
+  const sum = ntmComputed();
+  if (sum === null) { wrap.style.display = 'none'; return; }
+  wrap.style.display = '';
+  const curEl = document.getElementById('ntm-cur');
+  if (curEl && typeof curSymbol === 'function') curEl.textContent = curSymbol();
+
+  const overridden = responses.ntm_revenue_exact !== null
+                  && responses.ntm_revenue_exact !== undefined
+                  && responses.ntm_revenue_exact > 0;
+  if (!overridden) box.value = Math.round(sum);
+  if (edited) edited.style.display = overridden ? '' : 'none';
+
+  /* THE WORKING, PRINTED. The same four steps page 2's "How $0.78m is built" pop-up shows, and the
+     same arithmetic app-growth.js does, said in the order a person would do it by hand. */
+  const monthly = responses.revenue_exact || 0;
+  const f = (typeof forwardAnnualGrowth === 'function') ? forwardAnnualGrowth() : null;
+  const pct = (f === null) ? null : Math.round(f * 1000) / 10;
+  const step = (f === null) ? 0 : (Math.pow(1 + f, 1 / 12) - 1) * 100;
+  const basis = (typeof forwardGrowthBasis === 'function') ? forwardGrowthBasis() : '';
+  const measure = (responses.revenue_basis === 'GROSS_REVENUE') ? 'gross revenue' : 'net revenue';
+  note.textContent =
+    fmtPlain(monthly) + ' a month'
+    + (pct === null
+      ? ', carried forward flat because you have not given a growth rate. '
+      : ', growing at ' + pct + '% a year, which is ' + step.toFixed(2) + '% a month. ')
+    + 'Twelve months added up gives ' + fmtPlain(Math.round(sum)) + '. '
+    + (basis === 'plan' ? 'That is the growth you told us you plan, used exactly as you gave it. '
+      : (basis === 'trailing' ? 'That is your last twelve months carried forward unchanged. '
+        : 'Derived from the growth band you chose. '))
+    + 'It is your ' + measure + ', and it stays in this browser.'
+    + (overridden ? ' You have overwritten our sum, and yours is what we price.' : '');
+}
+
+function onNtmType() {
+  const v = parseFloat(document.getElementById('ntm-exact').value);
+  responses.ntm_revenue_exact = (isFinite(v) && v > 0) ? v : null;
+  paintNtm();
+}
+
+function clearNtm() {
+  responses.ntm_revenue_exact = null;
+  const box = document.getElementById('ntm-exact');
+  if (box) box.value = '';
+  paintNtm();
+}
+
 /* Prefill the plan with the trailing rate the first time, so the founder edits a
    sensible starting point rather than facing an empty box. Never overwrites a
    number they have already typed. */
 function paintPlanFallback() {
+  /* The third line is painted whenever this step is shown, so a founder who typed revenue and a
+     trailing rate and never touched the plan box still sees their own next twelve months. */
+  if (typeof paintNtm === 'function') setTimeout(paintNtm, 0);
   if (responses.growth_plan !== null && responses.growth_plan !== undefined) { paintPlanNote(); return; }
   const y = responses.growth_yoy;
   const el = document.getElementById('plan-exact');
@@ -630,6 +732,16 @@ function computeResult() {
   const fwd = forwardAnnualGrowth();
 
   const fwdRev = forwardRevenue(monthly, fwd);
+
+  /* THE FOUNDER'S OWN NEXT TWELVE MONTHS WINS. If they overwrote the third line, that figure is
+     the one every forward row prices on, and the run-rate row is rebuilt from it so the two do not
+     describe different businesses. Nothing here is a coefficient of ours: it is their number, or
+     our sum of their two numbers, and never a blend of the two. */
+  const ntmOwn = (typeof ntmForPricing === 'function') ? ntmForPricing() : null;
+  if (ntmOwn !== null && ntmOwn > 0) {
+    fwdRev.ntmM = ntmOwn / 1e6;
+    if (fwd !== null) fwdRev.exitArrM = (ntmOwn / 12) * (1 + fwd) * 12 / 1e6;
+  }
 
   /* The last round is a MARKER. It is plotted so the founder can see where they
      were priced against where the methods land, and it touches no calculation. */

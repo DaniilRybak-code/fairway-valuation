@@ -21,6 +21,7 @@
      "founder_low": null,
      "founder_metric": null,
      "high": 2.6,
+     "levered_names": [],
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 0.6,
@@ -149,7 +150,7 @@
        "ticker": "NASDAQ:UPST"
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 1.1,
      "thin": false,
      "triangulated": false
     },
@@ -172,6 +173,7 @@
      "founder_low": null,
      "founder_metric": null,
      "high": 7.9,
+     "levered_names": [],
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 4.5,
@@ -257,7 +259,7 @@
        "ticker": "NASDAQ:MBIN"
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 1.1,
      "thin": false,
      "triangulated": false
     }
@@ -456,7 +458,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Alternative Credit Data; same type of business; same end market; same business function",
-    "score": 13.2,
+    "score": 13.1,
     "ticker": "NASDAQ:UPST"
    },
    {
@@ -522,6 +524,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 2.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
@@ -650,7 +653,7 @@
      "ticker": "NASDAQ:UPST"
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -1099,6 +1102,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 2.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.7,

@@ -131,7 +131,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of management, operations; same type of business; same business function",
-    "score": 6.4,
+    "score": 6.3,
     "ticker": "NYSE:IOT"
    }
   ],
@@ -149,6 +149,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 7.7,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.0,
@@ -562,7 +563,7 @@
     "in_medians": false,
     "mult": 9.0,
     "reason": "shares the language of management, operations; same type of business; same end market; same business function",
-    "score": 19.4,
+    "score": 19.3,
     "type": "PRIMARY"
    },
    {
@@ -728,6 +729,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.6,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.7,

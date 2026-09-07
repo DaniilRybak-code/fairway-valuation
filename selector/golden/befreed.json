@@ -211,7 +211,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.8,
      "thin": true,
      "triangulated": false
     }
@@ -223,7 +223,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same type of business; same end market; same business function",
-    "score": 18.1,
+    "score": 18.0,
     "ticker": "NASDAQGS:DUOL"
    },
    {
@@ -255,7 +255,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning; same type of business; same end market; same business function",
-    "score": 15.4,
+    "score": 15.3,
     "ticker": "NYSE:NRDY"
    }
   ],
@@ -273,6 +273,7 @@
    "dispersed": true,
    "display": "SCATTER",
    "high": 4.7,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
@@ -365,7 +366,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -589,7 +590,7 @@
     "in_medians": true,
     "mult": 1.29,
     "reason": "both do Consumer Learning, Learning Subscription; same type of business; same end market; same business function",
-    "score": 15.4,
+    "score": 15.2,
     "type": "CONTROL"
    },
    {
@@ -743,6 +744,7 @@
    "dispersed": false,
    "display": "RANGE",
    "high": 5.1,
+   "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.0,

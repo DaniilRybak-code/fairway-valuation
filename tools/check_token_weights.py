@@ -7,7 +7,7 @@ files by a rule (5 divided by the number of companies carrying a word, for words
 than five), and the only thing that re-ran the rule was a script somebody had to remember to run.
 Between 24 August and 6 September two tag files were added and the private set more than tripled,
 193 words became generic, and every one of them kept full weight. This check recomputes the file
-from the seven tag files on every run and fails if the committed file differs.
+from every tag file on every run and fails if the committed file differs.
 
 The fix when it fails is one command, and the check prints it. No hand edits.
 
@@ -37,7 +37,7 @@ def main():
     moved = sorted(t for t in want if t in have and (want[t][0] != have[t][0]
                                                      or abs(want[t][1] - have[t][1]) > 0.005))
     if not (missing or extra or moved):
-        print('PASS: data/tag-token-weights.csv is exactly what the seven tag files produce today.')
+        print('PASS: data/tag-token-weights.csv is exactly what the %d tag files produce today.' % nfiles)
         return 0
     if missing:
         print('   %d generic words ABSENT from the file, so they score at full weight: %s%s'
