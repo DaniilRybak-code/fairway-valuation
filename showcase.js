@@ -77,18 +77,43 @@
   var wrap = document.querySelector('#screen-hero .snap.first');
   var hero = wrap && wrap.querySelector('.hero');
   var card = wrap && wrap.querySelector('.ffcard');
-  if (!wrap || !hero || !card || reduce || window.innerWidth < 900) return;
+  /* 7-Sep-2026: the genie plays on phones too (Daniil: keep the same three pages, sized for an
+     iPhone). Tablets between 641 and 899px keep the older continuous layout. On a phone the copy
+     and the card stack, so the card rises from under the copy to the top of the screen while the
+     copy fades; once the genie is done the pinned content is shifted up by the scroll so the
+     field scrolls through like normal text. landing-mobile.css carries the geometry. */
+  var phone = window.innerWidth <= 640;
+  if (!wrap || !hero || !card || reduce || (window.innerWidth < 900 && !phone)) return;
   wrap.classList.add('hero-genie-on');
+  if (phone) wrap.classList.add('hero-genie-phone');
   var ticking = false;
+  var travelPx = 0, travelW = 0;
+  function phoneTravel() {
+    /* a phone's toolbar shrinks and grows the viewport as the reader scrolls; the distance the
+       genie plays over is fixed at the first measurement so it does not jump mid-scroll, and
+       only measured again when the width changes (the phone was turned) */
+    if (!travelPx || travelW !== window.innerWidth) {
+      travelPx = Math.round(window.innerHeight * 1.15); travelW = window.innerWidth;
+      wrap.style.setProperty('--travel', travelPx + 'px');
+    }
+    return travelPx;
+  }
   function update() {
     ticking = false;
     var top = wrap.getBoundingClientRect().top;
-    var travel = wrap.offsetHeight - hero.offsetHeight;
+    var travel = phone ? phoneTravel() : wrap.offsetHeight - hero.offsetHeight;
     if (travel < 120) travel = 120;
     var p = Math.min(1, Math.max(0, -top / travel));
     wrap.style.setProperty('--exp', p.toFixed(3));
     wrap.classList.toggle('hero-genie-mid', p > 0.55);
     wrap.classList.toggle('genie-done', p > 0.97);
+    if (phone) {
+      /* the shift stops growing where the hero stops sticking (the section's end), or the
+         content would move twice, with the scroll and with the shift, and leave a gap */
+      var most = Math.max(0, wrap.offsetHeight - hero.offsetHeight - travel);
+      var shift = Math.min(most, Math.max(0, -top - travel));
+      wrap.style.setProperty('--card-shift', (-shift) + 'px');
+    }
   }
   function onScroll() {
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
@@ -108,13 +133,42 @@
   var card = wrap.querySelector('.ffcard');
   if (!grid || !card) return;
   var story = wrap.querySelector('.hero-story');
+  var phone = wrap.classList.contains('hero-genie-phone');
+  var vis = wrap.querySelector('.hero-vis');
+  var copy = wrap.querySelector('.hero-copy');
+  var read = wrap.querySelector('.our-read');
+  function phoneHeight(exp) {
+    /* the section is the genie's travel plus everything that has to scroll through afterwards:
+       the story block, then the expanded card. At rest the card is measured with the "Our read"
+       block still folded, so its unfolded height is added; once the genie is done the card is
+       measured as it stands. */
+    var travel = parseFloat(wrap.style.getPropertyValue('--travel')) || Math.round(window.innerHeight * 1.15);
+    var storyH = story ? story.offsetHeight + 24 : 0;
+    var visH = vis ? vis.offsetHeight : card.offsetHeight;
+    if (exp < 0.97 && read) visH += read.scrollHeight;
+    wrap.style.height = (travel + storyH + visH + 32) + 'px';
+  }
   function measure() {
+    var exp = parseFloat(wrap.style.getPropertyValue('--exp') || '0');
+    if (phone) {
+      if (story) wrap.style.setProperty('--story-h', (story.offsetHeight + 24) + 'px');
+      if (exp <= 0.02 && copy) wrap.style.setProperty('--card-top', (copy.offsetHeight + 28) + 'px');
+      phoneHeight(exp);
+      return;
+    }
     /* the story block's height decides where the expanded card starts */
     if (story) wrap.style.setProperty('--story-h', (story.offsetHeight + 40) + 'px');
-    var exp = parseFloat(wrap.style.getPropertyValue('--exp') || '0');
     if (exp > 0.02) return;
     var top = Math.max(24, Math.round((grid.clientHeight - card.offsetHeight) / 2) + 8);
     wrap.style.setProperty('--card-top', top + 'px');
+  }
+  if (phone) {
+    /* re-measure once the genie has finished, when the card stands at its full height */
+    var done = false;
+    window.addEventListener('scroll', function () {
+      if (done || !wrap.classList.contains('genie-done')) return;
+      done = true; phoneHeight(1);
+    }, { passive: true });
   }
   measure();
   window.addEventListener('resize', measure, { passive: true });

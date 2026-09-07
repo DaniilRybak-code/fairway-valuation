@@ -1,19 +1,26 @@
 /* The landing on a phone. 7 Sep 2026, after Daniil opened v0.1 on an iPhone.
    Everything here sits under one media query, so the desktop look does not change.
 
-   What was wrong, measured on an iPhone 13 (390px wide): the hero card (the football field) could
-   not shrink below 480px, so the hero grid, the wrap and the whole page were wider than the screen
-   and the hero copy sat 73px off the left edge; the nav wrapped into three lines; the page 3 blocks
-   never appeared, because their reveal waited for a quarter of a three-screen-tall section to be in
-   view at once (fixed in landing-p3.js). */
+   Daniil's brief for the phone: the same three pages as on a desktop, one after another, sized for
+   an iPhone. So the genie stays on (showcase.js turns it on at 640px and below): the hero pins,
+   the copy fades as the card rises from under it to the top of the screen, the story block
+   arrives, and once the genie is done the pinned content is shifted up by the scroll
+   (--card-shift, set by showcase.js) so the field scrolls through like normal text. Then page 3.
+
+   What was wrong before this, measured on an iPhone 13 profile (390px wide): the hero card could
+   not shrink below 480px, so the whole page was wider than the screen and the hero copy sat 73px
+   off the left edge; the nav wrapped into three lines; page 3 never appeared, because its reveal
+   waited for a quarter of a three-screen-tall section to be in view (fixed in landing-p3.js). */
 
 @media (max-width:640px) {
-  html, body { overflow-x:hidden; }
+  html { overflow-x:hidden; }
+  /* the card changes height as the genie plays; without this a browser that anchors the scroll
+     position to content below the fold jumps the page when the reader scrolls back to the top */
+  html, body { overflow-anchor:none; }
 
   /* frame */
   .wrap-wide, .nav-inner, .wrap { padding-left:18px; padding-right:18px; box-sizing:border-box; max-width:100%; }
   .snap { min-height:auto; padding:44px 0; }
-  .snap.first { padding:0 0 24px; }
 
   /* nav: the brand and the button; the two text links go */
   .nav-inner { padding-top:10px; padding-bottom:10px; }
@@ -21,36 +28,76 @@
   .nav-links a.link { display:none; }
   .nav .btn-nav { white-space:nowrap; padding:9px 14px; font-size:13px; }
 
-  /* hero: one column, and nothing may be wider than the screen */
+  /* ---- page 1 and 2: the genie, stacked ---- */
+  #screen-hero .snap.first { padding:0; min-height:0; }
+  #screen-hero .snap.first.hero-genie-on { display:block; min-height:0; }   /* height set by showcase.js */
+  #screen-hero .hero-genie-on .hero { position:sticky; top:0; min-height:100vh; overflow:visible; }
   #screen-hero .hero .wrap-wide, #screen-hero .hero-genie-on .hero .wrap-wide { width:100%; min-width:0; }
-  #screen-hero .hero .hero-grid, #screen-hero .hero-genie-on .hero .hero-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:22px; }
-  #screen-hero .hero .hero-copy, #screen-hero .hero-genie-on .hero-copy { width:auto; max-width:100%; min-width:0; opacity:1; transform:none; visibility:visible; }
-  #screen-hero .hero .hero-vis, #screen-hero .hero-genie-on .hero-vis { position:static; width:auto; max-width:100%; min-width:0; transform:none; }
-  #screen-hero .hero .hero-copy h1 { font-size:27px; max-width:none; }
-  #screen-hero .hero .hero-grid .sub { margin-bottom:20px; }
+  #screen-hero .hero .hero-grid, #screen-hero .hero-genie-on .hero .hero-grid { display:block; position:relative; min-height:calc(100vh - 24px); padding-top:18px; }
+  #screen-hero .hero .hero-copy, #screen-hero .hero-genie-on .hero-copy { width:100%; max-width:100%; min-width:0; }
+  #screen-hero .hero-genie-on .hero-copy { opacity:calc(1 - var(--exp, 0) * 1.7); transform:translateY(calc(-30px * var(--exp, 0))); visibility:visible; }
+  #screen-hero .hero-genie-mid .hero-copy { visibility:hidden; }
+  #screen-hero .hero .hero-copy h1 { font-size:27px; max-width:none; margin-bottom:14px; }
+  #screen-hero .hero .hero-grid .sub { margin-bottom:16px; }
   .cta-stack { gap:10px 14px; }
   .cta-note { white-space:normal; }
-  .hero-stats { grid-template-columns:1fr; gap:14px; }
+  #privacy-line-hero { font-size:10px; line-height:1.45; }
+  .hero-stats { grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; margin-top:18px; }
+  .hero-stats em { font-size:15px; }
+  .hero-stats .hs b { font-size:11px; line-height:1.25; }
+  .hero-stats .hs span { display:none; }
   .scroll-cue { display:none; }
 
-  /* the football field card: shrink to the screen, let the labels wrap */
+  /* the card: full width, rising from under the copy (--card-top, measured) to under the story
+     block (--story-h, measured), then shifted up with the scroll once the genie is done */
+  #screen-hero .hero .hero-vis { width:100%; max-width:none; min-width:0; }
+  #screen-hero .hero-genie-on .hero-vis { position:absolute; left:0; right:0; width:100%; transform:none;
+    top:calc(var(--card-top, 60vh) * (1 - var(--exp, 0)) + var(--story-h, 320px) * var(--exp, 0) + var(--card-shift, 0px)); }
+  #screen-hero .hero-genie-on .hero-story { position:absolute; left:0; right:0; margin:0; text-align:left;
+    top:calc(8px + var(--card-shift, 0px)); }
+  #screen-hero .hero-genie-on + .field-anchor { height:0; }   /* the section's own height already leaves room */
+  /* the story block is compact, so the card's head is on the screen when the genie is done:
+     the five steps in one tight column, the colour on the titles rather than on swatches */
+  .hero-genie-on .hero-story .steps { grid-template-columns:1fr; gap:9px; padding:0; }
+  .hero-genie-on .st { gap:2px; opacity:var(--nseen); transform:translateY(calc(10px * (1 - var(--nseen)))); }
+  .hero-genie-on .st .st-arrow, .hero-genie-on .st .sw { display:none; }
+  .hero-genie-on .st b { font-size:15.5px; line-height:1.15; }
+  .hero-genie-on .st p { font-size:11.5px; line-height:1.35; }
+  .hs-eyebrow { margin-bottom:6px; }
+  .hs-title { font-size:24px; margin-bottom:6px; }
+  .hs-lede { font-size:13px; margin-bottom:12px; }
+  .hero-genie-on .story-cta { flex-wrap:wrap; opacity:clamp(0, calc((var(--exp, 0) - 0.8) / 0.15), 1); }
+
+  /* the field card on a phone: two columns throughout, labels wrap, the rest-state strip folds
+     away as "Our read" unfolds, as it does on a desktop */
   .ffcard, .mini-ff { max-width:100%; min-width:0; }
   .ffcard-head, .ffcard.compact .ffcard-head { padding:12px 14px 10px; }
   .ffcard-body, .ffcard.compact .ffcard-body { padding:8px 14px 14px; }
   .ffx-head, .ff-row, .ffx-axis,
   .hero-genie-on .ffx-head, .hero-genie-on .ff-row, .hero-genie-on .ffx-axis { grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; }
+  .hero-genie-on .ffx-head { display:none; }
   .ff-param, .ff-cell, .ff-track { min-width:0; }
-  .ff-metric, .ff-mult { white-space:normal; max-width:150px; }
-  .ff-anno, .ff-anno.note { max-width:140px; white-space:normal; }
-  .ff-delta { flex-direction:column; gap:12px; max-width:none; }
-  .d-mini { flex-direction:column; gap:12px; }
+  .ff-metric, .ff-mult, .hero-genie-on:not(.genie-done) .ff-metric, .hero-genie-on:not(.genie-done) .ff-mult {
+    white-space:normal; overflow:visible; max-width:150px; }
+  .hero-genie-on .ff-foot { max-height:calc(8px + 200px * var(--exp, 0)); }
+  .hero-genie-on.genie-done .ff-foot { max-height:none; }
+  .ff-anno, .ff-anno.note { display:none; }
+  .hero-genie-on .ff-note { display:none; }
+  .hover-hint { display:none; }   /* nothing hovers on a phone */
+  /* the bars are short on a 324px track, so the two end figures sit outside the bar, not on it */
+  .ff-end.lo { transform:translateX(calc(-100% - 5px)); }
+  .ff-end.hi { transform:translateX(5px); }
+  .ff-delta, .hero-genie-on .ff-delta { flex-direction:column; gap:12px; max-width:none;
+    opacity:clamp(0, calc(1 - (var(--exp, 0) - 0.4) / 0.25), 1); max-height:calc(520px * (1 - var(--exp, 0))); overflow:hidden; }
+  .d-mini, .hero-genie-on .d-mini { flex-direction:column; gap:12px; opacity:1; }
+  .hero-genie-on .our-read { display:block; max-height:calc(900px * var(--exp, 0)); overflow:hidden;
+    opacity:clamp(0, calc((var(--exp, 0) - 0.55) / 0.35), 1); }
+  .hero-genie-on.genie-done .our-read { max-height:none; overflow:visible; }
   .or-grid { grid-template-columns:1fr; }
   .or-cols { flex-direction:column; gap:12px; }
-  .steps { grid-template-columns:1fr; gap:16px; }
-  .story-cta { flex-wrap:wrap; }
 
-  /* page 3, "Under the hood": one column, the button under the title */
-  .snap.read-sec.p3 { min-height:auto; padding:44px 0 36px; }
+  /* ---- page 3, "Under the hood": one column, the button under the title ---- */
+  .snap.read-sec.p3 { min-height:100vh; padding:44px 0 36px; }
   .p3-head { flex-direction:column; align-items:flex-start; gap:14px; }
   .p3-title { font-size:26px; }
   .p3-cta { align-items:flex-start; padding-bottom:0; }
