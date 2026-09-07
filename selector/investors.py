@@ -484,11 +484,21 @@ def match_callable(prof, raise_musd=None, want=8):
         # A HOUSE THAT PUBLISHES ITS TERMS OUTRANKS ONE THAT DOES NOT, all else equal. Benchmark
         # belongs on the list; it does not belong above a house of equal fit whose cheque range a
         # founder can actually check themselves.
-        pool.append((tier, len(gaps(d)), -depth, -overlap, d['investor_name'], d, label))
-    pool.sort(key=lambda z: (z[0], z[1], z[2], z[3], z[4]))
+        # A STAGE SPECIALIST OUTRANKS A GENERALIST OF EQUAL FIT. Daniil, 6-Sep-2026: "Accel should
+        # not be above funds that specialize on seed and Series A in my view." Inside a tier the
+        # house whose published band covers FEWER stages goes first: a fund that only writes seed
+        # cheques is a better call for a seed founder than a house that writes them from seed to
+        # Series C, whatever its deal count. Deal count and tag overlap still order the houses that
+        # cover the same number of stages. "All stages" expands to every stage and so ranks last.
+        # NOTE THE DATA LIMIT: this ranks on the band the row carries. Accel's row carries
+        # "Pre-seed; Seed" (a seed programme, not the house), so on 6-Sep this rule alone does not
+        # move it; the band is flagged for a source check in the status document.
+        breadth = len(_stages_of(d))
+        pool.append((tier, len(gaps(d)), breadth, -depth, -overlap, d['investor_name'], d, label))
+    pool.sort(key=lambda z: (z[0], z[1], z[2], z[3], z[4], z[5]))
     # NEVER PADDED. If only four houses clear tier 0 and 1, four is the answer.
     out = []
-    for tier, _ngaps, _negdepth, _overlap, _name, d, label in pool[:want]:
+    for tier, _ngaps, _breadth, _negdepth, _overlap, _name, d, label in pool[:want]:
         if tier >= 3 and len([o for o in out if o['tier'] < 3]) >= 3:
             break                          # do not dilute a good list with two-of-three matches
         out.append(dict(

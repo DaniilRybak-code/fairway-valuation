@@ -43,28 +43,28 @@ const CONCERNS = [
 
 const INVESTORS = {
   'SaaS / B2B software': [
-    { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. First cheques £100k to £1.5M.' },
-    { name: 'Episode 1 Ventures', note: 'UK-only B2B software. £250k to £3M.' },
-    { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. Around £1M average first cheque.' }
+    { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. First cheques $135k to $2.0M.' },
+    { name: 'Episode 1 Ventures', note: 'UK-only B2B software. $340k to $2.7M.' },
+    { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. Around $1.4M average first cheque.' }
   ],
   'AI / ML': [
-    { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. Around £1M average first cheque.' },
+    { name: 'Concept Ventures', note: 'AI, deep tech and infrastructure software. Around $1.4M average first cheque.' },
     { name: 'MMC Ventures', note: 'AI-first companies. Around $3.2M average seed cheque.' },
-    { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. £100k to £1.5M.' }
+    { name: 'Playfair Capital', note: 'AI, enterprise software and developer tools. $135k to $2.0M.' }
   ],
   'Fintech': [
     { name: 'Seedcamp', note: 'Fintech, AI, developer tools and marketplaces. First cheques $350k to $1M.' },
-    { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. £1M to £2M.' },
-    { name: 'LocalGlobe / Latitude', note: 'Fintech, health, climate and marketplaces. £500k to £2M at seed.' }
+    { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. $1.4M to $2.7M.' },
+    { name: 'LocalGlobe / Latitude', note: 'Fintech, health, climate and marketplaces. $675k to $2.7M at seed.' }
   ],
   'Insurtech': [
-    { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. £1M to £2M.' },
+    { name: 'Passion Capital', note: 'Fintech, insurtech and marketplaces. $1.4M to $2.7M.' },
     { name: 'Octopus Ventures', note: 'Fintech, B2B SaaS, health and climate. Active seed through Series A.' },
     { name: 'Seedcamp', note: 'Fintech, AI, developer tools and marketplaces. $350k to $1M.' }
   ],
   'Healthtech / Digital health': [
     { name: 'Octopus Ventures', note: 'Healthtech and biotech alongside B2B SaaS. Active seed through Series A.' },
-    { name: 'Ada Ventures', note: 'Healthy ageing and economic empowerment theses. £250k to £1.5M.' },
+    { name: 'Ada Ventures', note: 'Healthy ageing and economic empowerment theses. $340k to $2.0M.' },
     { name: 'Mercia Ventures', note: 'Life sciences, software and deeptech. Among the most active UK early-stage funds by deal count.' }
   ],
   'Biotech / Life sciences': [
@@ -74,48 +74,48 @@ const INVESTORS = {
   ],
   'Consumer / D2C': [
     { name: 'Hoxton Ventures', note: 'Broad tech with a consumer and fintech lean. $500k to $5M.' },
-    { name: 'Fuel Ventures', note: 'B2C and B2B via SEIS/EIS. High early-stage deal volume. £100k to £1M.' },
+    { name: 'Fuel Ventures', note: 'B2C and B2B via SEIS/EIS. High early-stage deal volume. $135k to $1.4M.' },
     { name: 'Cherry Ventures', note: 'Europe-wide, sector-agnostic at seed. €2M to €7M.' }
   ],
   'Marketplaces': [
     { name: 'Seedcamp', note: 'Marketplaces, fintech, AI and developer tools. First cheques $350k to $1M.' },
-    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k to £1M.' },
-    { name: 'Passion Capital', note: 'Marketplaces, fintech and insurtech. £1M to £2M.' }
+    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. $135k to $1.4M.' },
+    { name: 'Passion Capital', note: 'Marketplaces, fintech and insurtech. $1.4M to $2.7M.' }
   ],
   'Climate / Energy': [
     { name: 'Octopus Ventures', note: 'Climate tech alongside B2B SaaS and deeptech. Active seed through Series A.' },
-    { name: 'Ada Ventures', note: 'Climate equity thesis. £250k to £1.5M.' },
+    { name: 'Ada Ventures', note: 'Climate equity thesis. $340k to $2.0M.' },
     { name: 'Future Planet Capital', note: 'Climate, deeptech and engineering biology. High early-stage deal volume.' }
   ],
   'Deeptech / Hardware': [
-    { name: 'Concept Ventures', note: 'Deep tech, AI and infrastructure software. Around £1M average first cheque.' },
+    { name: 'Concept Ventures', note: 'Deep tech, AI and infrastructure software. Around $1.4M average first cheque.' },
     { name: 'Mercia Ventures', note: 'Deeptech, life sciences and software. Among the most active UK early-stage funds.' },
     { name: 'Future Planet Capital', note: 'Deeptech, space, defence and engineering biology.' }
   ],
   'Cybersecurity': [
-    { name: 'Playfair Capital', note: 'Enterprise software, AI and developer tools. £100k to £1.5M.' },
-    { name: 'Episode 1 Ventures', note: 'UK-only B2B software including infrastructure and security. £250k to £3M.' },
+    { name: 'Playfair Capital', note: 'Enterprise software, AI and developer tools. $135k to $2.0M.' },
+    { name: 'Episode 1 Ventures', note: 'UK-only B2B software including infrastructure and security. $340k to $2.7M.' },
     { name: 'Octopus Ventures', note: 'B2B SaaS and deeptech. Active seed through Series A.' }
   ],
   'Logistics / Supply chain': [
     { name: 'Maven Capital Partners', note: 'SaaS, transport and energy. Among the most active UK early-stage investors by deal count.' },
-    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k to £1M.' },
+    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. $135k to $1.4M.' },
     { name: 'Backed VC', note: 'Manufacturing and automation alongside frontier tech. $500k to $5M.' }
   ],
   'Proptech': [
-    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. £100k to £1M.' },
-    { name: 'Concept Ventures', note: 'Infrastructure software and AI. Around £1M average first cheque.' },
-    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k to £300k.' }
+    { name: 'Fuel Ventures', note: 'B2B SaaS and marketplaces via SEIS/EIS. $135k to $1.4M.' },
+    { name: 'Concept Ventures', note: 'Infrastructure software and AI. Around $1.4M average first cheque.' },
+    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, $135k to $405k.' }
   ],
   'Edtech': [
-    { name: 'Founders Factory', note: 'Multi-sector early-stage via corporate partners. £30k to £250k.' },
-    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k to £300k.' },
+    { name: 'Founders Factory', note: 'Multi-sector early-stage via corporate partners. $40k to $340k.' },
+    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, $135k to $405k.' },
     { name: 'Mercia Ventures', note: 'Software and consumer alongside deeptech. High early-stage deal volume.' }
   ],
   'Other': [
-    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, £100k to £300k.' },
+    { name: 'SFC Capital', note: 'The most active UK early-stage investor by deal count. SEIS-led, $135k to $405k.' },
     { name: 'SyndicateRoom', note: 'Sector-agnostic, high-volume early-stage syndicate.' },
-    { name: 'Fuel Ventures', note: 'B2B SaaS, marketplaces and fintech via SEIS/EIS. £100k to £1M.' }
+    { name: 'Fuel Ventures', note: 'B2B SaaS, marketplaces and fintech via SEIS/EIS. $135k to $1.4M.' }
   ]
 };
 

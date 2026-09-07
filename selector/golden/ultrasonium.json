@@ -39,20 +39,22 @@
       {
        "company": "Octopus Energy Group",
        "mult": 1168.83,
-       "reason": "same type of business; same business function",
+       "reason": "shares the language of energy; same type of business; same business function",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Enpal",
        "mult": 73333.33,
-       "reason": "same type of business; same business function; same AI stance",
+       "reason": "shares the language of energy; same type of business; same business function; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
-     "shared_words": [],
+     "shared_words": [
+      "energy"
+     ],
      "spread": 62.7,
      "table": [
       {
@@ -76,7 +78,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.0,
+     "tag_evidence": 0.3,
      "thin": true,
      "triangulated": true
     },
@@ -86,63 +88,45 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 1,
-      "NET_REVENUE": 2
+      "NET_REVENUE": 1
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "THIN_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Berkshire Grey"
      ],
      "dispersed": false,
-     "display": "RANGE",
+     "display": "DIAMOND",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 10.1,
+     "high": 5.69,
      "listed_target_n": 1,
      "listed_target_names": [
       "Berkshire Grey"
      ],
-     "low": 5.0,
+     "low": 5.69,
      "mid": 5.69,
-     "n": 3,
+     "n": 1,
      "period_mix": {
-      "FY2022": 1,
-      "LTM": 1,
-      "RUN_RATE": 1
+      "FY2022": 1
      },
      "period_span": {
       "FY2022": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
      "points": [],
      "positioning": [],
-     "shared_words": [],
-     "spread": 2.0,
+     "shared_words": [
+      "robotics"
+     ],
+     "sole": "Berkshire Grey",
+     "spread": 1.0,
      "table": [
-      {
-       "company": "Moove",
-       "date": "Aug-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 5.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Berkshire Grey",
        "date": "Mar-23",
@@ -152,20 +136,10 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Quince",
-       "date": "Mar-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 0.0,
-     "thin": false,
+     "tag_evidence": 0.6,
+     "thin": true,
      "triangulated": true
     },
     "REVENUE_GROSS": {
@@ -174,7 +148,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 3
+      "REVENUE_GROSS": 2
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
@@ -190,10 +164,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 0.57,
-     "mid": 2.61,
-     "n": 3,
+     "mid": 5.5,
+     "n": 2,
      "period_mix": {
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "LTM": {
@@ -205,27 +179,22 @@
       {
        "company": "Octopus Energy Group",
        "mult": 0.57,
-       "reason": "same type of business; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Olive & June",
-       "mult": 2.61,
-       "reason": "related type of business; same revenue model; same AI stance",
+       "reason": "shares the language of energy; same type of business; same business function",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Enpal",
        "mult": 5.5,
-       "reason": "same type of business; same business function; same AI stance",
+       "reason": "shares the language of energy; same type of business; same business function; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
-     "shared_words": [],
+     "shared_words": [
+      "energy"
+     ],
      "spread": 9.6,
      "table": [
       {
@@ -234,16 +203,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 0.57,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Olive & June",
-       "date": "Dec-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2.61,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -259,40 +218,104 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.0,
-     "thin": false,
+     "tag_evidence": 0.3,
+     "thin": true,
      "triangulated": true
     }
    }
   },
   "core": [
    {
-    "company": "Deutsche Post AG",
-    "family": "consumer",
+    "company": "PTC Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of contract; same business function; same kind of customer; sold the same way",
-    "score": 7.8,
-    "ticker": "XTRA:DHL"
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "NASDAQGS:PTC"
    },
    {
-    "company": "GXO Logistics, Inc.",
-    "family": "consumer",
+    "company": "Dassault Systemes SE",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of contract; same kind of customer; sold the same way",
-    "score": 5.8,
-    "ticker": "NYSE:GXO"
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "ENXTPA:DSY"
    },
    {
-    "company": "ID Logistics Group SA",
-    "family": "consumer",
+    "company": "Lectra SA",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of contract; same kind of customer; sold the same way",
-    "score": 5.8,
-    "ticker": "ENXTPA:IDL"
+    "reason": "related type of business; same end market; sold the same way; same AI stance",
+    "score": 7.5,
+    "ticker": "ENXTPA:LSS"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 6.2,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.8,
+   "mid": 4.1,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [],
+   "show_retention": false,
+   "spread": 3.4,
+   "table": [
+    {
+     "company": "Lectra SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.1,
+     "multiple": 1.8,
+     "recurring_pct": 75.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:LSS"
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.2,
+     "multiple": 4.1,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "PTC Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
+     "multiple": 6.2,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTC"
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -365,40 +388,6 @@
    },
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": 1.0,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "UK",
-    "house_type": "Venture",
-    "investor": "Fuel Ventures",
-    "not_published": null,
-    "recent_deal": "PANTA",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
-    "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 5.0,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "UK",
-    "house_type": "Venture",
-    "investor": "Hoxton Ventures",
-    "not_published": null,
-    "recent_deal": "Phagos",
-    "recent_deal_date": "2025-10",
-    "recent_deal_url": "https://www.eu-startups.com/2025/10/paris-based-phagos-raises-e25-million-to-create-a-sustainable-alternative-to-antibiotics/",
-    "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "Broad tech with a consumer and fintech lean. $500k to $5M.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
     "cheque_high_m": 3.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
@@ -430,109 +419,43 @@
     "thesis": "Pre-seed and seed investor in consumer products, consumer platforms and retail technology; its venture page states a typical GBP 250k-1m cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused; also considers US/EU businesses with a UK/US angle",
+    "house_type": "Venture",
+    "investor": "dmg ventures",
+    "not_published": null,
+    "recent_deal": "Equi",
+    "recent_deal_date": "2026-02",
+    "recent_deal_url": "https://www.dmgventures.co.uk/new-investment/why-were-backing-equi-raising-the-bar-for-womens-wellbeing",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed-Series A investor in mass-market B2C brands and consumer technology; stated investment range is GBP 250k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
-   {
-    "backed": [
-     {
-      "company": "Moove",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Mubadala Investment Company",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Moove",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Woven Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Moove",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Ion Pacific (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Moove",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Uber",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Moove",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "BlackRock",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Moove",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Prosus Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "BOND",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "Mubadala Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "Northzone",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "REWE",
-    "n": 1
-   },
    {
     "backed": [
      {
@@ -574,52 +497,8 @@
     "n": 1
    }
   ],
-  "listed_proximity": "BROAD",
+  "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Moove",
-    "date": "Aug-26",
-    "in_medians": true,
-    "mult": 5.0,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 9.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Quince",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 10.1,
-    "reason": "related type of business; same revenue model; same cost structure; same AI stance",
-    "score": 13.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Estimated CY2024 at closing",
-    "bound": "",
-    "company": "Olive & June",
-    "date": "Dec-24",
-    "in_medians": true,
-    "mult": 2.61,
-    "reason": "related type of business; same revenue model; same AI stance",
-    "score": 9.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Flink",
-    "date": "Sep-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "related type of business; same business function; same AI stance",
-    "score": 7.0,
-    "type": "MIXED"
-   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -627,8 +506,8 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 0.57,
-    "reason": "same type of business; same business function",
-    "score": 7.0,
+    "reason": "shares the language of energy; same type of business; same business function",
+    "score": 7.3,
     "type": "PRIMARY"
    },
    {
@@ -638,8 +517,8 @@
     "date": "Mar-23",
     "in_medians": true,
     "mult": 5.69,
-    "reason": "related type of business; same business function; same revenue model; sold the same way",
-    "score": 12.5,
+    "reason": "shares the language of robotics; related type of business; same business function; same revenue model",
+    "score": 12.1,
     "type": "CONTROL"
    },
    {
@@ -649,8 +528,8 @@
     "date": "Jan-23",
     "in_medians": true,
     "mult": 5.5,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 9.0,
+    "reason": "shares the language of energy; same type of business; same business function; same AI stance",
+    "score": 9.3,
     "type": "PRIMARY"
    }
   ],
@@ -661,59 +540,41 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Berkshire Grey"
    ],
    "dispersed": false,
-   "display": "RANGE",
-   "high": 10.1,
+   "display": "DIAMOND",
+   "high": 5.69,
    "listed_target_n": 1,
    "listed_target_names": [
     "Berkshire Grey"
    ],
-   "low": 5.0,
+   "low": 5.69,
    "mid": 5.69,
-   "n": 3,
+   "n": 1,
    "period_mix": {
-    "FY2022": 1,
-    "LTM": 1,
-    "RUN_RATE": 1
+    "FY2022": 1
    },
    "period_span": {
     "FY2022": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
    "points": [],
    "positioning": [],
-   "shared_words": [],
-   "spread": 2.0,
+   "shared_words": [
+    "robotics"
+   ],
+   "sole": "Berkshire Grey",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "Moove",
-     "date": "Aug-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 5.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Berkshire Grey",
      "date": "Mar-23",
@@ -723,43 +584,180 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Quince",
-     "date": "Mar-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 0.0,
-   "thin": false,
+   "tag_evidence": 0.6,
+   "thin": true,
    "triangulated": true
   },
   "private_window_months": 43,
   "secondary": [
    {
-    "company": "DSV A/S",
-    "family": "consumer",
+    "company": "Kinaxis Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of contract; same kind of customer; sold the same way",
-    "score": 5.8,
-    "ticker": "CPSE:DSV"
+    "reason": "same end market; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "TSX:KXS"
    },
    {
-    "company": "KLN Logistics Group",
+    "company": "Deutsche Post AG",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of contract; same kind of customer; sold the same way",
-    "score": 5.8,
-    "ticker": "SEHK:636"
+    "reason": "shares the language of contract; same business function; same kind of customer; sold the same way",
+    "score": 6.8,
+    "ticker": "XTRA:DHL"
+   },
+   {
+    "company": "Xometry, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of manufacturing; same end market; same kind of customer",
+    "score": 6.1,
+    "ticker": "NASDAQGS:XMTR"
+   },
+   {
+    "company": "MonotaRO Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of industrial; same end market; same revenue model",
+    "score": 5.9,
+    "ticker": "TSE:3064"
+   },
+   {
+    "company": "GXO Logistics, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of contract, robotics; same kind of customer; sold the same way",
+    "score": 5.4,
+    "ticker": "NYSE:GXO"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 4.8,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.9,
+   "mid": 2.2,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "GXO Logistics, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of contract, robotics; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Deutsche Post AG",
+     "mult": 0.9,
+     "reason": "shares the language of contract; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "MonotaRO Co., Ltd.",
+     "mult": 2.2,
+     "reason": "shares the language of industrial; same end market; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Kinaxis Inc.",
+     "mult": 4.5,
+     "reason": "same end market; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Xometry, Inc.",
+     "mult": 4.8,
+     "reason": "shares the language of manufacturing; same end market; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "contract",
+    "industrial",
+    "manufacturing",
+    "robotics"
+   ],
+   "show_retention": false,
+   "spread": 6.9,
+   "table": [
+    {
+     "company": "GXO Logistics, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:GXO"
+    },
+    {
+     "company": "Deutsche Post AG",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "XTRA:DHL"
+    },
+    {
+     "company": "MonotaRO Co., Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.8,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:3064"
+    },
+    {
+     "company": "Kinaxis Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.4,
+     "multiple": 4.5,
+     "recurring_pct": 62.1,
+     "retention_pct": null,
+     "ticker": "TSX:KXS"
+    },
+    {
+     "company": "Xometry, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 20.8,
+     "multiple": 4.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:XMTR"
+    }
+   ],
+   "tag_evidence": 0.9,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "Metal manufacturing, faster, cheaper and more versatile"

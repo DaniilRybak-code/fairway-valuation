@@ -995,11 +995,15 @@ REAL_3 += [
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='Rocket Cargo Delivery|Autonomous Aerial Logistics|Defence Logistics|Rapid Resupply|Point To Point Transport')),
  ('ultrasonium', 'Metal manufacturing, faster, cheaper and more versatile',
+  # END MARKET SET 6-Sep-2026 on Daniil: "a high-end manufacturing company. Its end markets
+  # (customers) are Aerospace & Defence, Compute & Data Centers, Energy Systems and Robotics."
+  # The industry vocabulary has one label those customers share, Manufacturing; the four markets
+  # he named are carried as product words so a row that names them can meet this founder.
   dict(archetype='Owned-Inventory Retail', archetype_secondary='Design & Engineering',
-   industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   industry='Manufacturing', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PRODUCT_SALES', product_role='BRAND', asset_intensity='OWN_PRODUCT', purchase_frequency='EPISODIC',
    ai_stance='AI_NEUTRAL', growth=None, gm=None,
-   product_tags='Additive Manufacturing|Metal Fabrication|Industrial Production|Contract Manufacturing|Advanced Materials')),
+   product_tags='Additive Manufacturing|Metal Fabrication|Industrial Production|Contract Manufacturing|Advanced Materials|Aerospace And Defence Components|Data Centre Components|Energy Systems Components|Robotics Components')),
  ('apollo-atomics', 'We make the most compact nuclear reactors',
   dict(archetype='Owned-Inventory Retail', archetype_secondary='Design & Engineering',
    industry='Energy & Utilities', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
