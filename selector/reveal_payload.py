@@ -172,6 +172,13 @@ CHART_ORDER = (('listed', 'REVENUE'), ('listed', 'BOOK'), ('listed', 'EARNINGS')
 # SET THE NUMBER AND NOTHING ELSE CHANGES. Golden will move on the fixtures that lose a chart, and
 # the reason is this constant, which is why it is a constant with the measurement beside it rather
 # than a threshold buried in a condition.
+#
+# CLOSED 7-SEP-2026 WITHOUT A NUMBER, and this is the better outcome. Daniil's answer to the
+# question was not a threshold: "I thought we decided to exclude the super high user-based
+# multiples, given they are calculated for B2B clients and such businesses do not price on that
+# basis." Removing those readings at source (PER_CUSTOMER_BUSINESS_MAX in match_reference.py) took
+# the widest per-user chart from 1,034x to 97x, so there is nothing left for a width rule to hide.
+# The lever stays, unset, because a width rule treats a symptom and the rule above treats the cause.
 PER_USER_SPREAD_MAX = None
 
 

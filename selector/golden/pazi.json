@@ -8,68 +8,40 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 3
+      "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 2333333.33,
+     "high": 357142.86,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 306250.0,
      "mid": 357142.86,
-     "n": 3,
+     "n": 2,
      "period_mix": {
-      "LTM": 1,
       "RUN_RATE": 2
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Vanta",
-       "mult": 306250.0,
-       "reason": "shares the language of automation; related type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Clay",
-       "mult": 357142.86,
-       "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Aledade",
-       "mult": 2333333.33,
-       "reason": "shares the language of based; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "ai",
-      "automation",
-      "based"
+      "automation"
      ],
-     "spread": 7.6,
+     "spread": 1.2,
      "table": [
       {
        "company": "Vanta",
@@ -90,20 +62,10 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Aledade",
-       "date": "Jun-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2333333.33,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
      "tag_evidence": 0.1,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -373,6 +335,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
    "high": 4.3,
    "levered_names": [],
    "listed_target_n": 0,
@@ -1115,6 +1078,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 29.5,
    "levered_names": [],
    "listed_target_n": 0,

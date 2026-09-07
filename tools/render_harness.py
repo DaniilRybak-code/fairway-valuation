@@ -51,6 +51,7 @@ LIVE_STAGE = 'Seed'
 
 
 def live(prof):
+    # The fixtures carry their own stage since 7-Sep-2026; this is the backstop, not the source.
     return dict(prof, stage=prof.get('stage') or LIVE_STAGE)
 
 OUT = os.path.join(HERE, 'build', 'reveal')

@@ -159,6 +159,25 @@ def caveats(prof, r, regression=None, redact=False):
             'closest, and the mix is why the spread is wider than it looks.'
             % _words([k.replace('_', ' ').lower() for k in sorted(mix)]))))
 
+    # A TRAILING FIGURE AGAINST A FORWARD MULTIPLE, AND SAY SO.
+    #
+    # Daniil, 7-Sep-2026, ruling on what stands in for the next twelve months when the founder has
+    # given no growth rate: use the trailing figure, and it "should be applicable to both trailing
+    # figures and ntm figures, with the corresponding warning about inconsistency of the bases".
+    #
+    # This is that warning. Every listed multiple in the file is enterprise value over the NEXT
+    # twelve months of revenue, because that is what the broker screens publish. A founder who has
+    # given no growth rate has only a trailing figure, so the page carries their last twelve months
+    # forward unchanged. That is the right stand-in and it is not like for like: a growing company
+    # multiplied this way is understated, and the sentence says which direction the error runs
+    # rather than leaving the founder to guess.
+    if r.get('founder_basis_trailing_on_forward'):
+        out.append(dict(key='trailing_on_forward', severity=SEV_BASIS, text=(
+            'You have not given us a growth rate, so this uses your last twelve months as your '
+            'next twelve months. The comparable companies are priced on their FORECAST revenue, '
+            'so the two are not on the same footing. If you are growing, this understates you, and '
+            'the way to fix it is to give us the growth you plan rather than for us to assume one.')))
+
     # A LENDER IS ON A DIFFERENT AXIS AND MUST BE TOLD SO. Added 27-Aug-2026 with the book basis.
     if basis == 'BOOK':
         out.append(dict(key='book_basis', severity=SEV_BASIS, text=(

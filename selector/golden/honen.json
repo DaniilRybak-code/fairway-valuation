@@ -338,6 +338,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 1.5,
    "levered_names": [
     {
@@ -903,6 +904,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "DIAMOND",
+   "founder_basis_trailing_on_forward": false,
    "high": 6.6,
    "levered_names": [],
    "listed_target_n": 0,

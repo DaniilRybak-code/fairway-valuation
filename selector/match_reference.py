@@ -882,6 +882,56 @@ def family_of(x):
 for _r in private:
     _r['family'] = family_of(_r)
 
+# ---------------------------------------------------------------------------
+# A BUSINESS THAT SELLS A FEW LARGE CONTRACTS IS NOT PRICED PER CUSTOMER.
+#
+# Daniil, 7-Sep-2026: "we decided to exclude the super high user-based multiples, given they are
+# calculated for B2B clients and such businesses do not price on that basis."
+#
+# He is right, and this is the Fireblocks ruling of 6 September written as a rule instead of a
+# name. That day the finding was that a customer is not one kind of thing, and the fix split
+# consumers from businesses. One level down, a BUSINESS customer is not one kind of thing either:
+# Doctolib has 300,000 practitioners at $19,333 each, and Virta Health has 100 employer contracts
+# at $20,000,000 each. Both are filed as business customers. Averaging them is meaningless and
+# putting them on one chart is worse, because the picture beats the caption.
+#
+# MEASURED ACROSS ALL 131 PER-UNIT READINGS IN THE DATA. As one bucket per measure, business
+# customers ran $3,200 to $760,000,000, a spread of 237,500 times. Dropping the readings above
+# this line removes 20 of 131 and takes the widest measure to 1,778 times, which is the consumer
+# and business mix inside CUSTOMERS and is the next thing to fix.
+#
+# WHAT THE LINE MEANS, because a threshold with no meaning is a fudge. Above a million dollars of
+# enterprise value per customer, the "customer" is an enterprise contract: the company has tens or
+# hundreds of them, it is priced on its revenue, and the count is a fact about its sales model
+# rather than a valuation basis. Below it, the count is large enough for an average to describe
+# something. The twenty rows this removes are named on every run of tools/peer_universe_check.py.
+#
+# IT REMOVES A READING, NEVER A COMPANY. The round keeps its revenue multiple, its names and its
+# sources, and still prices every other lane. Only the per-customer figure goes.
+PER_CUSTOMER_BUSINESS_MAX = 1000000.0
+_CONSUMER_BUYERS = {'CONSUMER'}
+# The same tuple as COUNT_BASES below, named here because this sweep runs at import and that
+# constant is defined further down. check_engine_reach asserts the two agree, so they cannot drift.
+_COUNT_BASES_EARLY = ('PAYING_SUBSCRIBERS', 'BORROWERS', 'MEMBERS', 'CUSTOMERS',
+                      'BUSINESS_CUSTOMERS', 'MERCHANTS', 'ACTIVE_USERS', 'REGISTERED_USERS')
+per_customer_dropped = []
+for _r in private:
+    _vb = (_r.get('volume_basis') or '').strip()
+    _v = _r.get('gmv_mult')
+    if (_vb in _COUNT_BASES_EARLY and _v is not None
+            and (_r.get('buyer') or '').strip() not in _CONSUMER_BUYERS
+            and _v > PER_CUSTOMER_BUSINESS_MAX):
+        _r['per_customer_dropped'] = _v
+        _r['per_customer_dropped_reason'] = (
+            '$%s of enterprise value per business customer across %s of them. Above '
+            '$%s a business customer is an enterprise contract, and a company with a few '
+            'hundred of those is priced on its revenue, not on how many it has.'
+            % (format(int(_v), ','),
+               format(int((_r.get('gmv') or 0) * 1e6), ','),
+               format(int(PER_CUSTOMER_BUSINESS_MAX), ',')))
+        _r['gmv_mult'] = None
+        per_customer_dropped.append(_r)
+
 #   FAMILY IS THE GATE, END MARKET IS THE BRIDGE. A pure family gate is too blunt in one
 #   direction. Toast sits in fintech because most of its revenue is card processing, while a
 #   restaurant point-of-sale profile sits in software, so family alone shuts Toast out of a
@@ -2681,6 +2731,16 @@ def group_range(prof, group, which='rev', tier='DIRECT', basis=None):
                period_mix={'NTM': n},
                period_span={'NTM': dict(zip(('founder_revenue', 'basis'),
                                             founder_revenue_for(prof, 'NTM')))},
+               # THE FOUNDER'S FIGURE IS TRAILING AND THIS LANE IS FORWARD. Daniil's ruling of
+               # 7-Sep-2026: when no growth rate is given the trailing figure stands in, on both
+               # the trailing and the forward readings, "with the corresponding warning about
+               # inconsistency of the bases". founder_revenue_for already records that it did
+               # this; the flag is what carries it to honesty.py, which writes the warning. It is
+               # on the LISTED lane only, because every listed multiple in the file is enterprise
+               # value over NEXT twelve months revenue and the private rounds are not.
+               founder_basis_trailing_on_forward=(
+                   founder_revenue_for(prof, 'NTM')[1]
+                   == 'TRAILING_USED_UNCHANGED_NO_GROWTH_GIVEN'),
                band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
         out['sole'] = priced[0][1].get('company_name', '')

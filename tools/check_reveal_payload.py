@@ -68,7 +68,12 @@ LIVE_STAGE = 'Seed'
 
 
 def live(prof):
-    """The profile as the live path actually presents it: a stated stage and no raise."""
+    """The profile as the live path presents it: a stated stage and no raise.
+
+    SINCE 7-SEP-2026 THE FIXTURES CARRY THEIR OWN STAGE (Daniil's ruling; see the note in
+    selector/golden_profiles.py), so this no longer supplies one and is kept only as the single
+    place that says what shape the live path has. If a fixture ever loses its stage, this keeps the
+    check honest instead of letting it report an empty investor list as a pass."""
     return dict(prof, stage=prof.get('stage') or LIVE_STAGE)
 
 

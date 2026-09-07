@@ -2,87 +2,6 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
-     "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
-     },
-     "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "business_customers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 2125000.0,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 68000.0,
-     "mid": 2125000.0,
-     "n": 2,
-     "period_mix": {
-      "RUN_RATE": 2
-     },
-     "period_span": {
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "1Password",
-       "mult": 68000.0,
-       "reason": "shares the language of security; same type of business; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Abnormal Security",
-       "mult": 2125000.0,
-       "reason": "shares the language of ai, security; same type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [],
-     "shared_words": [
-      "ai",
-      "security"
-     ],
-     "spread": 31.2,
-     "table": [
-      {
-       "company": "1Password",
-       "date": "Jan-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 68000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Abnormal Security",
-       "date": "Aug-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2125000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.1,
-     "thin": true,
-     "triangulated": false
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
@@ -233,6 +152,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 18.2,
    "levered_names": [],
    "listed_target_n": 0,
@@ -939,6 +859,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
    "high": 4.6,
    "levered_names": [],
    "listed_target_n": 0,

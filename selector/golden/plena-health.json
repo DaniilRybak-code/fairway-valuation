@@ -8,9 +8,9 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 3
+      "BUSINESS_CUSTOMERS": 2
      },
-     "bounded": false,
+     "bounded": true,
      "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
@@ -20,14 +20,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 20000000.0,
+     "high": 166666.67,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 19333.33,
-     "mid": 2333333.33,
-     "n": 3,
+     "mid": 166666.67,
+     "n": 2,
      "period_mix": {
-      "LTM": 3
+      "LTM": 2
      },
      "period_span": {
       "LTM": {
@@ -44,22 +44,6 @@
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Aledade",
-       "mult": 2333333.33,
-       "reason": "same type of business; same end market; same business function; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Virta Health",
-       "mult": 20000000.0,
-       "reason": "same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [
-      {
        "company": "Mews",
        "mult": 166666.67,
        "reason": "both do Revenue Management; same type of business; same business function; same kind of customer",
@@ -67,13 +51,15 @@
        "transaction_type": "PRIMARY"
       }
      ],
+     "positioning": [],
      "shared_words": [
       "management",
       "patient",
       "practice",
-      "records"
+      "records",
+      "revenue"
      ],
-     "spread": 1034.5,
+     "spread": 8.6,
      "table": [
       {
        "company": "Doctolib",
@@ -86,28 +72,18 @@
        "ticker": ""
       },
       {
-       "company": "Aledade",
-       "date": "Jun-23",
+       "company": "Mews",
+       "date": "Jan-26",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 2333333.33,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Virta Health",
-       "date": "Apr-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 20000000.0,
+       "multiple": 166666.67,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
      "tag_evidence": 1.8,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -382,6 +358,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 4.5,
    "levered_names": [],
    "listed_target_n": 0,
@@ -1036,6 +1013,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
    "high": 2.9,
    "levered_names": [],
    "listed_target_n": 0,

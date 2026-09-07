@@ -1019,3 +1019,24 @@ PROFILES = REAL + REAL_2 + REAL_3
 _dupes = [k for k in set(x[0] for x in PROFILES)
           if sum(1 for x in PROFILES if x[0] == k) > 1]
 assert not _dupes, 'duplicate fixture keys, and a duplicate silently replaces a company: %s' % _dupes
+
+# ---------------------------------------------------------------------------
+# EVERY FIXTURE CARRIES A STAGE. Daniil, 7-Sep-2026: "the 102 companies should carry a stage.
+# Most of them will be Series A or Seed given sourced from Y Combinator and Product Hunt."
+#
+# WHY IT WAS MISSING AND WHY IT MATTERS NOW. These fixtures were written to test which COMPARABLES
+# a business nature finds, and a stage was never part of that question. Then on 6 September the
+# founder's raise stopped reaching the engine (rule E9) and the stage took over the job of deciding
+# which investors a founder should call. From that moment a profile with no stage got no investors
+# at all, and nothing caught it: the one check that walks the investor list was still handing the
+# engine a raise the live product can no longer have. The live path was always fine, because the
+# quiz asks for the stage in step 1 and the profiler copies it across; only the test set was blind.
+#
+# SEED IS A STATED TEST CONDITION, NOT A CLAIM ABOUT ANY OF THESE COMPANIES. It is the middle of
+# the three buttons the quiz offers and the modal answer for a company taken off Y Combinator or
+# Product Hunt. Measured across all 102 on 7 September, the choice barely moves the aggregate:
+# 813 investor cards at Seed, 724 at Pre-seed, 797 at Series A. Where a fixture's real stage is
+# ever established, write it on that fixture and this default stops applying to it.
+_DEFAULT_FIXTURE_STAGE = 'Seed'
+for _k, _label, _p in PROFILES:
+    _p.setdefault('stage', _DEFAULT_FIXTURE_STAGE)

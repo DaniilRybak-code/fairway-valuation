@@ -2,87 +2,6 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "MERCHANTS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "MERCHANTS",
-     "basis_label": "dollars of enterprise value per merchant",
-     "basis_mix": {
-      "MERCHANTS": 2
-     },
-     "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "merchants",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 15384615.38,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 54166.67,
-     "mid": 15384615.38,
-     "n": 2,
-     "period_mix": {
-      "LTM": 2
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Mollie",
-       "mult": 54166.67,
-       "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "dLocal",
-       "mult": 15384615.38,
-       "reason": "shares the language of payment, payments; related type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [],
-     "shared_words": [
-      "payment",
-      "payments"
-     ],
-     "spread": 284.0,
-     "table": [
-      {
-       "company": "Mollie",
-       "date": "Jun-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 54166.67,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "dLocal",
-       "date": "Apr-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 15384615.38,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.1,
-     "thin": true,
-     "triangulated": false
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
@@ -327,6 +246,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 4.0,
    "levered_names": [],
    "listed_target_n": 0,
@@ -873,6 +793,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
    "high": 6.1,
    "levered_names": [],
    "listed_target_n": 0,

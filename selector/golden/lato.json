@@ -2,88 +2,6 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
-     "anchor_dropped": false,
-     "band": "DIRECT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
-     "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
-     },
-     "bounded": true,
-     "closeness": "SHARED_PRODUCT",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "business_customers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 11466666.67,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 1000000.0,
-     "mid": 11466666.67,
-     "n": 2,
-     "period_mix": {
-      "RUN_RATE": 2
-     },
-     "period_span": {
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "AlphaSense",
-       "mult": 1000000.0,
-       "reason": "both do Market Intelligence; related type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Chainalysis",
-       "mult": 11466666.67,
-       "reason": "related type of business; same end market; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [],
-     "shared_words": [
-      "intelligence",
-      "market",
-      "research"
-     ],
-     "spread": 11.5,
-     "table": [
-      {
-       "company": "AlphaSense",
-       "date": "Jun-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 1000000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Chainalysis",
-       "date": "May-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 11466666.67,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 3.5,
-     "thin": true,
-     "triangulated": false
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "DIRECT",
@@ -224,6 +142,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 9.5,
    "levered_names": [],
    "listed_target_n": 0,
@@ -737,6 +656,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 10.5,
    "levered_names": [],
    "listed_target_n": 0,

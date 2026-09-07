@@ -2,86 +2,6 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
-     "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
-     },
-     "bounded": false,
-     "closeness": "THIN_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "business_customers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 2333333.33,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 19333.33,
-     "mid": 2333333.33,
-     "n": 2,
-     "period_mix": {
-      "LTM": 2
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Doctolib",
-       "mult": 19333.33,
-       "reason": "shares the language of patient; related type of business; same end market; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Aledade",
-       "mult": 2333333.33,
-       "reason": "related type of business; same end market; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [],
-     "shared_words": [
-      "patient"
-     ],
-     "spread": 120.7,
-     "table": [
-      {
-       "company": "Doctolib",
-       "date": "Mar-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 19333.33,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Aledade",
-       "date": "Jun-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2333333.33,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.6,
-     "thin": true,
-     "triangulated": true
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
@@ -381,6 +301,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 5.1,
    "levered_names": [
     {
@@ -974,6 +895,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
    "high": 6.4,
    "levered_names": [],
    "listed_target_n": 0,

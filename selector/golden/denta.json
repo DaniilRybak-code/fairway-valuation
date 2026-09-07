@@ -8,7 +8,7 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 3
+      "BUSINESS_CUSTOMERS": 2
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -20,14 +20,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 2333333.33,
+     "high": 148648.65,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 19333.33,
      "mid": 148648.65,
-     "n": 3,
+     "n": 2,
      "period_mix": {
-      "LTM": 2,
+      "LTM": 1,
       "RUN_RATE": 1
      },
      "period_span": {
@@ -54,13 +54,6 @@
        "reason": "both do Claims; same type of business; same end market; same kind of customer",
        "tier": "DIRECT",
        "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Aledade",
-       "mult": 2333333.33,
-       "reason": "related type of business; same end market; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -70,7 +63,7 @@
       "digital",
       "insurance"
      ],
-     "spread": 120.7,
+     "spread": 7.7,
      "table": [
       {
        "company": "Doctolib",
@@ -91,20 +84,10 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Aledade",
-       "date": "Jun-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2333333.33,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
      "tag_evidence": 0.7,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -259,6 +242,7 @@
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
    "high": 4.5,
    "levered_names": [],
    "listed_target_n": 0,
@@ -846,6 +830,7 @@
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
    "high": 1.9,
    "levered_names": [],
    "listed_target_n": 0,
