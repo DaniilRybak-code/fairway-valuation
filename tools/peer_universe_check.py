@@ -24,6 +24,12 @@ THE BAR. Daniil ruled the top line on 4-Sep-2026, closing the empty-lane questio
      overlap tier, so the set rests on something more than a shared archetype word.
   4. A BLANK IS A TRIGGER, NEVER A CONCLUSION. A fixture with no peers at all is the loudest
      failure, not a quiet one.
+  5. A SET A PERSON HAS STRUCK IS NOT A PASS. Added 8-Sep-2026 on Daniil's ruling, after march 1
+     showed three aerospace companies passing rules 0 to 4 on restaurant and hospitality rounds:
+     "such companies should immediately go into the no-comps list." The gate counts names found
+     and cannot judge whether they make sense; a person can. A fixture carrying `struck` on its
+     profile (the reason, in words, by whoever read the set) fails here whatever its lanes hold,
+     and is printed as the fourth kind of entry on the No-comps list.
 
 WHAT THE 4-SEP RULING CHANGED, both ways. It LOOSENED the old bar, which demanded the CORE lane
 specifically and failed a company whose core was empty however good its secondary was. It also
@@ -145,10 +151,18 @@ def main():
     if not files:
         print('no fixtures found in %s' % fixdir)
         return 1
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    sys.path.insert(0, os.path.join(here, 'selector'))
+    from golden_profiles import PROFILES             # noqa: E402
+    struck_of = {k: p['struck'] for k, _l, p in PROFILES if p.get('struck')}
     rows, failed = [], 0
     for f in files:
         key = f[:-5]
         verdict, fails, facts, warns = score(read(os.path.join(fixdir, f)))
+        # RULE 5. A person read the set and struck it; the names it found no longer count.
+        if key in struck_of:
+            verdict = 'FAIL'
+            fails = ['struck on reading: ' + struck_of[key]] + fails
         rows.append((key, verdict, fails, facts, warns))
         if verdict == 'FAIL':
             failed += 1
@@ -186,10 +200,7 @@ def main():
     # pilot (8, 11, 15 and 18 September) are MARCHES, 30 to 40 new test companies each, and the list
     # is resolved in ONE pass after the last of them and before launch. It is printed on every run
     # so it stays visible, not so it gets chased.
-    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    sys.path.insert(0, os.path.join(here, 'selector'))
     import match_reference as M                      # noqa: E402
-    from golden_profiles import PROFILES             # noqa: E402
     del M.archetype_fallbacks[:]
     del M.pinned_names[:]
     for _k, _l, _p in PROFILES:
@@ -203,8 +214,8 @@ def main():
     # TWO COUNTS, NOT ONE SUM. A fixture can appear in both kinds at once (ultrasonium is rescued
     # on its private lane AND fails the gate), so adding them would count it twice, and this list
     # is the brief for the bulk pass. An inflated brief is a worse brief.
-    print('  %d lanes served on a label   |   %d of %d fixtures not served at all'
-          % (len(lanes_rescued), len(no_comps), len(rows)))
+    print('  %d lanes served on a label   |   %d of %d fixtures not served at all, %d of them struck on reading'
+          % (len(lanes_rescued), len(no_comps), len(rows), len(struck_of)))
     print('=' * 78)
 
     print('\n  KIND 1  SERVED ON A LABEL, NOT ON EVIDENCE')
@@ -299,6 +310,23 @@ def main():
     print('          recorded so the bulk pass and the banker read can see them.')
     for k in sorted(kind3):
         print('   %-18s %s' % (k, '; '.join(kind3[k])[:220]))
+
+    # KIND 4, added 8-Sep-2026 on Daniil's ruling (rule 5 above). The gate passed Orca Aerospace,
+    # Constellation Space and Zymbly on Samsara, Owner, Guesty and Restaurant365, because those
+    # rows share the words "operations", "software" and "mission" and the archetype Vertical
+    # Software, and nothing in rules 0 to 4 can tell that a satellite operator is not a
+    # restaurant. A person can, and when they do the fixture is struck: it fails the gate and it
+    # is listed here with what it was shown, so the bulk pass sees the hole and so the same names
+    # are not shown to a founder in that market without a banker striking them first.
+    print('\n  KIND 4  STRUCK ON READING: served on names a person judged irrelevant')
+    if struck_of:
+        print('          %d of %d fixtures. Each passed or would have passed rules 0 to 4; a person read'
+              % (len(struck_of), len(rows)))
+        print('          the set and struck it. They fail the gate and count above as not served.')
+        for k in sorted(struck_of):
+            print('   %-18s %s' % (k, struck_of[k]))
+    else:
+        print('          None.')
 
     print('\n  Resolved in ONE bulk pass after the 18 September march and before launch')
     print('  (rule A12 part 3). Not chased lane by lane in between.')

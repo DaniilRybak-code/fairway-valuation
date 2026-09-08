@@ -102,9 +102,17 @@ Three parts, and the third is the one that decays if nobody watches it:
    prices none of them is discarded rather than shown. Applied everywhere instead, it would hand a
    social publishing API the Perplexity round, which is the failure the gate was written to stop.
 3. **Every rescue is named on every run** by `tools/peer_universe_check.py`, and it is named in the
-   NO-COMPS LIST alongside the companies that got no comparables at all. Those are the two kinds of
+   NO-COMPS LIST alongside the companies that got no comparables at all. Those were the two kinds of
    entry and they belong on one list: a founder served on a label and a founder served on nothing
-   are both founders the database could not answer.
+   are both founders the database could not answer. **Two more kinds joined them.** On 6 Sep,
+   companies served on a generic word or the end market alone (recorded, not removed). On 8 Sep,
+   after march 1 showed Orca Aerospace, Constellation Space and Zymbly passing the gate on
+   restaurant and hospitality rounds, Daniil: *"such companies should immediately go into the
+   no-comps list."* So a fixture whose comparable set a person has read and struck carries the
+   reason on its profile (`struck`), FAILS the gate whatever its lanes hold, and is printed as the
+   fourth kind. The gate counts names found; it cannot judge whether they make sense, and a pass on
+   nonsense is worse than a failure. `tools/fixture_comparables_table.py` writes every fixture
+   beside the names it was shown, which is how the reading is done.
 
    **What we do about it, and this is the part that decays if nobody watches it.** Daniil, 5 Sep,
    23:10 UK: the pool is large enough, there will always be blind spots, and the pilot is the best

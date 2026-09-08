@@ -7,13 +7,18 @@ for them. The point is to find the blind spots before founders do. The pool is b
 found here goes on the No-comps list and is resolved once, in bulk, after the 18 September march.
 Nothing in this document is a request to pull data now.
 
-**Headline.** 40 new companies, fixtures 102 to 142. **Gate 135 of 142** (97 of 102 before; 38 of
-the 40 new companies pass). Two new failures, both honest: Ornadyne (military reconnaissance
-drones) and PRINCEPS (insurance for data centres). Nineteen checks, all pass. Golden rebaselined:
-40 new fixture files, none of the 102 existing fixtures moved.
+**Headline.** 40 new companies, fixtures 102 to 142. **Gate 130 of 142** (97 of 102 before). Of
+the 40 new companies, 33 pass, 2 fail on the gate's own rules (Ornadyne, military drones;
+PRINCEPS, insurance for data centres) and **5 are struck on reading** (section 4, kind 4), which
+Daniil ruled the same evening after seeing the first version of this document: a company passing
+the gate on irrelevant names goes straight on the No-comps list, and from 8 Sep it fails the gate
+too. Nineteen checks, all pass. Golden rebaselined: 40 new fixture files, none of the 102 existing
+fixtures moved; then three of the forty moved their investor list when their real stage was
+written on them (section 8).
 
-**One thing to decide, Daniil, at the foot: whether three of the forty should carry a stage other
-than Seed.**
+**Next for Daniil:** `docs/fixture-comparables-8sep.md` (and the `.csv` beside it, with an empty
+VERDICT column) lists all 142 test companies beside the comparables the engine chose, for reading
+one by one.
 
 ---
 
@@ -117,10 +122,12 @@ test condition, not as a claim about any of them.
 
 ## 3. The gate, re-scored
 
-`python3 tools/peer_universe_check.py`: **142 fixtures, 135 refine the peer universe, 7 do not.**
-Before the march: 97 of 102. Of the 40 new companies, 38 pass.
+`python3 tools/peer_universe_check.py`: **142 fixtures, 130 refine the peer universe, 12 do not.**
+Before the march: 97 of 102. Of the 40 new companies, 33 pass. (The first version of this
+document, written before Daniil's ruling of the evening, read 135 of 142 with 38 of 40 passing; the
+five now struck were among the 38.)
 
-The seven that fail, and why, in the tool's own words:
+The twelve that fail, and why, in the tool's own words:
 
 | fixture | why it fails |
 |---|---|
@@ -131,6 +138,11 @@ The seven that fail, and why, in the tool's own words:
 | mondu | no private lane: 1 priced round. Unchanged. |
 | **ornadyne** (new) | no public lane with 2 priced comparables (core 0, secondary 0); every lane is THIN_OVERLAP; the set rests on nothing but a shared word. The listed side reached government-software names (Tyler Technologies, i3 Verticals, Via) on the Government end market alone; the private side was rescued on the Design & Engineering label with Vention, Canva, Applied Intuition and Figma. There is no defence hardware in the pool. |
 | **princeps** (new) | no public lane with 2 priced comparables (core 0, secondary 0); every lane is THIN_OVERLAP. The listed side reached wealth and banking software (HUB24, Netwealth, nCino, Temenos, SS&C) on the Financial Services end market alone and none of them priced; the private side holds Sapiens, Wefox, Coalition and The Zebra, two of them priced. Insurance for compute infrastructure has no public insurer in the pool. |
+| **orca-aerospace** (new, struck) | passed rules 0 to 4 on Samsara, Constellation Software and Rubrik (listed; the words "operations", "mission" and "recovery") and Owner, Applied Intuition, Guesty and Restaurant365 (private). Struck by Daniil, 8 Sep: none operates spacecraft. |
+| **constellation-space** (new, struck) | passed on Samsara and Constellation Software (listed, "operations" and "mission") beside Amdocs and Cerillion (telecom, fair), and Owner, Guesty and Restaurant365 (private). Struck: nothing in the pool runs a satellite network. |
+| **zymbly** (new, struck) | passed on Samsara, BlackLine and Blackbaud (listed; "operations", "software", "to") and TravelPerk, Owner, Guesty, Restaurant365, Doctolib and Ro (private). Struck: only TravelPerk shares the end market and none does aircraft maintenance. |
+| **vorelios** (new, struck) | passed on the archetype fallback (GB Group, SoundHound, Dynatrace, Snowflake, listed) and Anthropic, Clay, Applied Intuition, Databricks and Cohere (private; "ai", "engineering"). Struck: no engineering-simulation company is in the pool. |
+| **daivin** (new, struck) | passed on the archetype fallback in both lanes: Bentley, PTC, Dassault, Autodesk and Figma (listed) and Vention, Applied Intuition, Figma and Miro (private). Struck: dive gear shown CAD software; the pool holds no hardware maker. |
 
 Eleven pass with an empty secondary lane (allowed since 4 Sep), seven of them new: constellation-
 space, herdr, praxis-robotics, qokedas, remix, simulithic and subvysion, beside acti, bylaw, clera
@@ -139,7 +151,7 @@ name, reported and not decisive.
 
 ## 4. The No-comps list, grown
 
-Check 8 prints all three kinds. After the march:
+Check 8 prints all four kinds. After the march and Daniil's ruling of the evening:
 
 **Kind 1, served on a label, not on evidence: 10 lanes, 52 comparables** (2 lanes, 8 comparables
 before). The eight new lanes, each a hole in the pool rather than a feature:
@@ -155,7 +167,8 @@ before). The eight new lanes, each a hole in the pool rather than a feature:
 | quippy | private | WHOOP, Udemy, Oura, Vedantu, upGrad, MasterClass on Online Learning and consumer software. Its listed lane is fine (Duolingo, Coursera, Nerdy). |
 | subvysion | private | Owner, Mews, Canva, Sapiens, Clio, Guesty on Vertical Software and Design & Engineering. Its listed lane is fine (Nemetschek, Procore, Bentley, Autodesk, Trimble). |
 
-**Kind 2, not served at all: 7 of 142 fixtures** (5 of 102 before), the table in section 3.
+**Kind 2, not served at all: 12 of 142 fixtures** (5 of 102 before), the table in section 3; five
+of the twelve are there because they were struck (kind 4).
 
 **Kind 3, served on a generic word or the end market alone: 428 of 1,570 comparable slots**
 (302 of 1,120 before), 315 on words carried by 25 or more companies and 113 on the end market
@@ -163,6 +176,16 @@ alone; 102 fixtures and 167 of 284 lanes carry at least one. **Lanes resting on 
 (4 before); the four new ones are qokedas listed, praxis-robotics listed, princeps listed and
 ornadyne listed. qokedas and praxis-robotics reach Snowflake and Palantir on the words "ai" and
 "data" alone.
+
+**Kind 4, struck on reading: 5 of 142 fixtures.** New on 8 Sep, on Daniil's ruling after reading
+the first version of this document: "such companies should immediately go into the no-comps
+list." The gate counts names found and prices held and cannot judge whether a name makes sense; a
+person can, and when they strike a set the fixture carries the reason (`struck` on its profile in
+`selector/golden_profiles.py`), fails the gate (rule 5 in `tools/peer_universe_check.py`) and is
+printed under this heading with what it was shown. Struck today: orca-aerospace, constellation-
+space and zymbly (aerospace and aviation shown restaurant and hospitality rounds), vorelios
+(engineering simulation shown frontier-lab rounds on the words "ai" and "engineering") and daivin
+(dive gear shown CAD software on the Design & Engineering label). Rule A12 part 3 records it.
 
 ## 5. What the march found, read by a person rather than by the gate
 
@@ -210,9 +233,23 @@ sense, and that is where a march earns its keep. Reading the 40 new sets side by
    learning peers to arrive; a consumer learning app tagged as consumer software first is served
    on "app".
 
-None of this is chased now. Items 1, 3, 4, 5, 6 and 7 are sourcing gaps for the bulk pass after
-the 18 September march. Item 2 is the taxonomy rule, already ruled, build after the pilot. Item 9
-is a tagging lesson for the profiler and for marches 2 to 4.
+**What happens to each of these, answered plainly after Daniil's questions of the evening.**
+Items 1, 3 and 5 (aerospace and aviation; hardware; engineering simulation): the five fixtures are
+struck, fail the gate and sit on the No-comps list as kind 4, with kind 1 recording the label-only
+lanes of daivin and vorelios as well. Ornadyne (item 3) and PRINCEPS (item 6) already fail on the
+gate's own rules and sit there as kind 2. Item 4 (training-data vendors) and item 7 (government
+affairs): Daniil's reading is that no listed names exist in those sectors, so the private lanes
+stand and nothing is owed; the listed lanes are on the list as kind 3 (generic words) and stay
+there as a record only. Item 2 is the taxonomy rule, already ruled, build after the pilot. Item 9
+is a tagging lesson for the profiler and for marches 2 to 4; Daniil agreed Quippy should reach
+Duolingo. None of the sourcing gaps is chased before the bulk pass after the 18 September march.
+
+**One thing the strikes revealed about the matcher, for the tagging work between marches.** The
+words that carried the three aerospace passes were "operations", "software", "mission",
+"management" and "recovery", and the private lane of vorelios came on "ai" and "engineering".
+None of them is on the generic-word list (a word is generic when 25 or more companies carry it),
+so kind 3 did not catch them, yet none of them identifies a business. Worth a look at the
+token-weight rule before march 2, without loosening anything measured on 6 Sep.
 
 ## 6. Golden: what moved and why, written before the rebaseline
 
@@ -232,18 +269,30 @@ fewer than three (ornadyne, 1); check 13 renders market position for 134 and evi
 142; check 14 assembles 142 of 142 payloads, 140 able to show two or more peer charts with no
 founder figure. Golden 0 of 142 moved. Gate 135 of 142.
 
-## 8. For Daniil: one decision
+## 8. The three stages, looked up on Daniil's instruction
 
-**Three of the forty are visibly not seed companies and carry the Seed default anyway.** World
-Labs (a frontier lab with a long funding history), TwelveLabs (sixth Product Hunt launch, a model
-platform sold to enterprises) and Airtop (sixth launch; the founder previously founded Adap.tv and
-Shopping.com). None of the pages read states a stage, and the rule is that nothing goes on a
-fixture the page did not say, so all three sit at Seed as a test condition. The stage decides
-which investors a founder is shown, so at Seed these three get seed funds. Say a stage for each
-and it goes on the fixture; say nothing and the default stands, which is harmless for a test set
-and wrong for a real founder.
+Daniil, 8 Sep: "check online which stage for these makes sense. If nothing surfaces, leave blank."
+Looked up the same evening; each stage is written on its fixture with the source in the code.
+
+| fixture | what surfaced | stage written |
+|---|---|---|
+| twelvelabs | $100m Series B co-led by NEA and NAVER Ventures, announced 1 July 2026 in the company's own press release (GlobeNewswire; also Bloomberg, Sports Video Group). | Series B |
+| airtop | $25m Series A led by Icon Ventures with Sequoia, XYZ and Spark, announced 27 July 2022 under the company's earlier name Switchboard (TechCrunch); Sequoia's page says "Partnered 2020". No later round surfaced. | Series A |
+| world-labs | A $1bn round announced 18 February 2026 with AMD, Autodesk ($200m), Emerson Collective, Fidelity and Nvidia (TechCrunch), at a reported valuation of about $5bn that the company declined to confirm. **No source names the round by letter.** | Series C, DERIVED: the engine's own top band for a round of that size (`investors._stage_for`), marked as derived in the code. Blank it if you would rather the fixture carried nothing a source did not say. |
+
+Golden moved on exactly these three, and only their investor lists moved (the comparables are
+untouched): at Series B and Series C the seed houses drop out and Andreessen Horowitz leads the
+list; at Series A Cherry Ventures leads Airtop's. Reason written before the rebaseline.
+
+Sources: [TechCrunch, 18 Feb 2026](https://techcrunch.com/2026/02/18/world-labs-lands-200m-from-autodesk-to-bring-world-models-into-3d-workflows/),
+[GlobeNewswire, 1 Jul 2026](https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html),
+[TechCrunch, 27 Jul 2022](https://techcrunch.com/2022/07/27/switchboard-creates-virtual-rooms-to-foster-better-collaboration/),
+[Sequoia](https://sequoiacap.com/companies/airtop/).
 
 ## 9. Files
 
-`selector/golden_profiles.py` (the REAL_4 block, OUT_OF_MARKET extended, PROFILES assembly),
-`selector/golden/*.json` (40 new files), this document, `docs/STATUS-2026-09.md`.
+`selector/golden_profiles.py` (the REAL_4 block, OUT_OF_MARKET extended, PROFILES assembly, five
+`struck` reasons, three stages), `selector/golden/*.json` (40 new files, 3 rebaselined on stage),
+`tools/peer_universe_check.py` (rule 5 and kind 4), `tools/fixture_comparables_table.py` (new),
+`docs/fixture-comparables-8sep.md` and `.csv` (the table for Daniil), `docs/RULES.md` (A12 part 3),
+this document, `docs/STATUS-2026-09.md`.

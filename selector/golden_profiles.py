@@ -1039,10 +1039,21 @@ REAL_3 += [
 # the website and what it said are recorded company by company in docs/march-1-8sep.md.
 #
 # STAGE. None of the forty pages states a funding stage, so the Seed default at the foot of this
-# file applies to all forty as a stated test condition. Three are visibly not seed companies (World
-# Labs, TwelveLabs and Airtop have several launches and a long funding history) and are flagged in
-# the march document for Daniil to rule on; nothing is written on the fixture that the page did
-# not say.
+# file applies as a stated test condition. Three were visibly not seed companies, and on Daniil's
+# instruction of 8-Sep-2026 ("check online which stage makes sense; if nothing surfaces, leave
+# blank") their latest round was looked up and the stage written on the fixture with its source:
+# TwelveLabs Series B (its own press release, 1 Jul 2026); Airtop Series A (TechCrunch, 27 Jul
+# 2022, raised under its earlier name Switchboard; no later round surfaced); World Labs a $1bn
+# round in Feb 2026 that no source names by letter (TechCrunch, 18 Feb 2026), written as Series C
+# because that is the engine's own top band for a round of that size (`investors._stage_for`),
+# and marked as derived so Daniil can blank it.
+#
+# STRUCK ON READING. Daniil, 8-Sep-2026, on being shown that the aerospace fixtures pass the gate
+# on restaurant and hospitality rounds: "such companies should immediately go into the no-comps
+# list." So a fixture can carry `struck`, a reason written by the person who read its comparable
+# set and judged the names irrelevant. A struck fixture FAILS the gate and is printed by check 8
+# as the fourth kind of entry on the No-comps list. Five are struck here; the rest of the 142 are
+# in docs/fixture-comparables-8sep.md for Daniil to read one by one.
 #
 # RANDOM MEANS RANDOM, INCLUDING THE ONES WE CANNOT PRICE. Two are hardware outside the market this
 # product is aimed at, Ornadyne (military reconnaissance drones) and DAIVIN! (tankless dive gear),
@@ -1056,7 +1067,8 @@ REAL_4 = [
  ('orca-aerospace', 'AI spacecraft operators that lives onboard the vehicle',
   # No Aerospace & Defence end market exists in the vocabulary (TAKEOVER item 11), so Horizontal
   # and the market carried as product words.
-  dict(archetype='Vertical Software', archetype_secondary='Data, AI & Developer Tools',
+  dict(struck='Daniil, 8 Sep 2026: aerospace on restaurant rounds goes straight on the No-comps list. Shown Samsara, Constellation Software and Rubrik (listed) on the words operations, mission and recovery, and Owner, Guesty and Restaurant365 (private); none operates spacecraft.',
+   archetype='Vertical Software', archetype_secondary='Data, AI & Developer Tools',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1098,7 +1110,8 @@ REAL_4 = [
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='Coding Agent Runtime|Open Source Agent Orchestration|Terminal Session Server|Agent Fleet Management|Plugin Marketplace|Developer Tools')),
  ('vorelios', 'AI that simulates physics 1000x faster',
-  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Design & Engineering',
+  dict(struck='Fable, 8 Sep 2026, on Daniil\'s ruling of the same day: the listed lane is the archetype fallback (GB Group, SoundHound, Dynatrace, Snowflake) and the private lane is Anthropic, Clay, Applied Intuition, Databricks and Cohere on the words ai and engineering; no engineering-simulation company is in the pool.',
+   archetype='Data, AI & Developer Tools', archetype_secondary='Design & Engineering',
    industry='Horizontal', function='Engineering & Design', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1226,7 +1239,8 @@ REAL_4 = [
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='Personal AI Workspace|Local First Second Brain|Personal Agents|App And File Context Capture|Chief Of Staff Agent|Bring Your Own Model')),
  ('constellation-space', 'AI operating system for mega-scale satellite networks.',
-  dict(archetype='Vertical Software', archetype_secondary='Cloud & Infrastructure',
+  dict(struck='Daniil, 8 Sep 2026: aerospace on restaurant rounds goes straight on the No-comps list. Shown Samsara and Constellation Software (listed, on the words operations and mission) beside Amdocs and Cerillion (telecom software, fair), and Owner, Guesty and Restaurant365 (private); nothing in the pool runs a satellite network.',
+   archetype='Vertical Software', archetype_secondary='Cloud & Infrastructure',
    industry='Telecom', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PLATFORM', product_role='SOR', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1239,7 +1253,8 @@ REAL_4 = [
    product_tags='Construction Project Management|AI Takeoffs And Estimates|Contractor Proposals|Residential Contractor Software|Job Costing|Field Service Operations')),
  ('daivin', 'Tankless Dive Gear - Breath Autonomy at Sea, Land & Space',
   # Hardware for professional, commercial and military divers. OUT_OF_MARKET; rule A11.
-  dict(archetype='Design & Engineering', archetype_secondary='Owned-Inventory Retail',
+  dict(struck='Fable, 8 Sep 2026, on Daniil\'s ruling of the same day: both lanes are the archetype fallback on Design & Engineering, so dive gear was shown Bentley, PTC, Dassault, Autodesk and Figma (listed) and Vention, Applied Intuition, Figma and Miro (private). The pool holds no hardware maker.',
+   archetype='Design & Engineering', archetype_secondary='Owned-Inventory Retail',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PRODUCT_SALES', product_role='BRAND', asset_intensity='OWN_PRODUCT', purchase_frequency='EPISODIC',
    ai_stance='AI_NEUTRAL', growth=None, gm=None,
@@ -1258,7 +1273,8 @@ REAL_4 = [
    product_tags='Marketing Compliance Review|Brand Guideline Enforcement|Ad Content Approval|Regulated Advertising Review|Content Governance|Marketing Workflow Integration')),
  ('zymbly', 'The decision-support layer for aviation ops teams to know what to do',
   # Airlines sit under Travel in the industry vocabulary; there is no Aviation label.
-  dict(archetype='Vertical Software', archetype_secondary='',
+  dict(struck='Daniil, 8 Sep 2026: aviation on restaurant rounds goes straight on the No-comps list. Shown Samsara, BlackLine and Blackbaud (listed, on the words operations, software and to) and TravelPerk, Owner, Guesty, Restaurant365, Doctolib and Ro (private); only TravelPerk shares the end market and none does aircraft maintenance.',
+   archetype='Vertical Software', archetype_secondary='',
    industry='Travel', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1284,14 +1300,21 @@ REAL_4 = [
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='AI Skills Training|Role Based Learning|Corporate Upskilling|Simulated Tool Practice|In Work Guidance|Personalised Courses')),
  ('airtop', 'Build agents that heal themselves.',
-  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Business Applications',
+  # Series A: $25m led by Icon Ventures with Sequoia, XYZ and Spark, announced 27 Jul 2022 under
+  # the company's earlier name Switchboard (TechCrunch); no later round surfaced on 8 Sep 2026.
+  dict(stage='Series A',
+   archetype='Data, AI & Developer Tools', archetype_secondary='Business Applications',
    industry='Horizontal', function='Operations', buyer='SMB', gtm_motion='PLG',
    revenue_model='CONSUMPTION', product_role='TOOL', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='No Code Agent Builder|Browser Automation Agents|Web Workflow Automation|Cloud Browser Infrastructure|Self Healing Automations|Authenticated Web Tasks')),
  ('world-labs', 'Turn text, pics, video, + 3D into camera-controlled HD video',
   # The launch is Atlas; the company is World Labs. A frontier lab selling a world model.
-  dict(archetype='Data, AI & Developer Tools', archetype_secondary='',
+  # DERIVED STAGE: a $1bn round announced 18 Feb 2026 (TechCrunch: AMD, Autodesk, Emerson
+  # Collective, Fidelity, Nvidia) that no source names by letter. Series C is the engine's own
+  # top band for a round of that size, not a name any source gave. Daniil may blank it.
+  dict(stage='Series C',
+   archetype='Data, AI & Developer Tools', archetype_secondary='',
    industry='Horizontal', function='Engineering & Design', buyer='DEV', gtm_motion='PLG',
    revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1311,8 +1334,10 @@ REAL_4 = [
    product_tags='AI Agent Platform|Open Source Digital Workers|Multi Agent Collaboration|Report And Presentation Generation|Enterprise Agent Controls|AI Workforce')),
  ('twelvelabs', 'Video compliance review powered by rules you control',
   # The launch is Compliance by TwelveLabs; the company is TwelveLabs, a video-understanding
-  # model platform sold as an API.
-  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Streaming & Digital Media',
+  # model platform sold as an API. Series B: $100m co-led by NEA and NAVER Ventures, announced
+  # 1 Jul 2026 in the company's own press release (GlobeNewswire).
+  dict(stage='Series B',
+   archetype='Data, AI & Developer Tools', archetype_secondary='Streaming & Digital Media',
    industry='Media & Gaming', function='Data & Analytics', buyer='DEV', gtm_motion='ENT_SALES',
    revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
