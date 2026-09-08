@@ -45,10 +45,7 @@
       });
       rail.hidden = true;
     }
-    /* the button closes the page rather than opening it: the one under Our read is a screen above */
-    var cta = sec.querySelector('.p3-cta');
-    var wrap = sec.querySelector('.wrap-wide');
-    if (cta && wrap) wrap.appendChild(cta);
+    /* the page's button moves to the last page of the phone (showcase.js does that move) */
   }
 
   var counts = window.FAIRWAY_COUNTS;

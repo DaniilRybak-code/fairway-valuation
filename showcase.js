@@ -68,6 +68,73 @@
   io.observe(field);
 })();
 
+/* Phones, 8-Sep-2026 (fourth phone pass): the moves in the DOM that make the four snapping pages of
+   landing-mobile.css out of the desktop's markup. Nothing runs above 640px, nothing changes in
+   index.html, and without this script the page still reads top to bottom in the desktop's order.
+     page 2  the story block (eyebrow, title, lede) moves above the field card and its five steps
+             move below it, so a phone reads title, picture, explanation, button
+     page 1  the privacy sentence under the button folds behind an "i" (Daniil, 8 Sep: it should
+             not be there by default); the quiz screen still shows it in full before question one
+     page 4  page 3's button, the reviewing-team strip and the footer gather into one last page,
+             and the two paragraphs of small print fold behind "Your data" and "About this service" */
+(function () {
+  if (!(window.matchMedia && window.matchMedia('(max-width: 640px)').matches)) return;
+  var vis = document.querySelector('#screen-hero .hero-vis');
+  var story = document.querySelector('#screen-hero .hero-story');
+  var card = vis && vis.querySelector('.ffcard');
+  var cta = vis && vis.querySelector('.story-cta');
+  if (vis && story && card) {
+    var steps = story.querySelector('.steps');
+    vis.insertBefore(story, card);
+    if (steps) { if (cta) vis.insertBefore(steps, cta); else vis.appendChild(steps); }
+    vis.classList.add('ph-page');
+  }
+  var read = document.getElementById('read');
+  if (read) read.classList.add('ph-page');
+
+  /* the "i" after "About four minutes · no card" */
+  var privacy = document.getElementById('privacy-line-hero');
+  var note = privacy && privacy.parentElement && privacy.parentElement.querySelector('.cta-note');
+  if (privacy && note) {
+    var info = document.createElement('button');
+    info.type = 'button'; info.className = 'ph-info'; info.textContent = 'i';
+    info.setAttribute('aria-expanded', 'false');
+    info.setAttribute('aria-controls', 'privacy-line-hero');
+    info.setAttribute('aria-label', 'What we receive and what stays in your browser');
+    info.addEventListener('click', function () {
+      var open = privacy.classList.toggle('open');
+      info.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    note.appendChild(info);
+  }
+
+  /* the last page: page 3's button, the strip, the footer */
+  var marquee = document.querySelector('#screen-hero .marquee');
+  var footer = document.querySelector('#screen-hero footer');
+  var p3cta = document.querySelector('#read .p3-cta');
+  if (marquee && footer) {
+    var last = document.createElement('div');
+    last.className = 'ph-page ph-last';
+    marquee.parentNode.insertBefore(last, marquee);
+    last.appendChild(marquee);
+    if (p3cta) last.appendChild(p3cta);
+    last.appendChild(footer);
+    var labels = ['Your data', 'About this service'];
+    Array.prototype.slice.call(footer.querySelectorAll('.disclaimer')).forEach(function (p, i) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'ph-fold';
+      var strong = p.querySelector('strong');
+      b.textContent = (strong ? strong.textContent.replace(/[.\s]+$/, '') : labels[i]) || labels[i];
+      b.setAttribute('aria-expanded', 'false');
+      b.addEventListener('click', function () {
+        var open = p.classList.toggle('open');
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      p.parentNode.insertBefore(b, p);
+    });
+  }
+})();
+
 /* v8.2: the genie, on the hero itself. The hero pins for two extra viewports;
    the first scroll expands the hero's own field card across the page while the
    copy gives way and the metric and multiple columns spawn on. Reversible.
