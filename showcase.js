@@ -92,6 +92,51 @@
   var read = document.getElementById('read');
   if (read) read.classList.add('ph-page');
 
+  /* the field on the hero (Daniil, 8 Sep): a small slot at the foot of the copy, into which the
+     page-2 card is drawn at 44% size; as the scroll moves from page 1 to page 2 the card glides up
+     and grows into its own place. One element, so the small one and the big one cannot differ.
+     The card stays in page 2's flow; only a transform moves it. Tapping the small one goes to
+     page 2. Skipped under prefers-reduced-motion, where the card simply sits on page 2. */
+  var copy = document.querySelector('#screen-hero .hero-copy');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (vis && card && copy && !reduce) {
+    var thumb = document.createElement('div');
+    thumb.className = 'ph-thumb'; thumb.setAttribute('aria-hidden', 'true');
+    var stats = copy.querySelector('.hero-stats');
+    if (stats) copy.insertBefore(thumb, stats); else copy.appendChild(thumb);
+    var SCALE = 0.44, nat = null, ticking = false;
+    function docTop(el) { var y = 0; while (el) { y += el.offsetTop; el = el.offsetParent; } return y; }
+    function docLeft(el) { var x = 0; while (el) { x += el.offsetLeft; el = el.offsetParent; } return x; }
+    function place() {
+      ticking = false;
+      if (!nat) return;
+      var p2 = docTop(vis);
+      var p = p2 > 0 ? Math.min(1, Math.max(0, window.scrollY / p2)) : 1;
+      if (p >= 1) { card.style.transform = ''; card.classList.remove('ph-small'); return; }
+      var dx = (docLeft(thumb) + thumb.offsetWidth / 2) - (nat.left + nat.w / 2);
+      var dy = (docTop(thumb) + thumb.offsetHeight / 2) - (nat.top + nat.h / 2);
+      var s = SCALE + (1 - SCALE) * p;
+      card.style.transform = 'translate(' + (dx * (1 - p)).toFixed(1) + 'px,' + (dy * (1 - p)).toFixed(1) + 'px) scale(' + s.toFixed(4) + ')';
+      card.classList.toggle('ph-small', p < 0.5);
+    }
+    function measure() {
+      nat = { top: docTop(card), left: docLeft(card), w: card.offsetWidth, h: card.offsetHeight };
+      thumb.style.width = Math.round(nat.w * SCALE) + 'px';
+      thumb.style.height = Math.round(nat.h * SCALE) + 'px';
+      place();
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(place); } }, { passive: true });
+    window.addEventListener('resize', measure, { passive: true });
+    window.addEventListener('load', measure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    /* the page moves when the "i" opens or a row unfolds; the card's own place moves with it */
+    if ('ResizeObserver' in window) new ResizeObserver(function () { measure(); }).observe(document.body);
+    card.addEventListener('click', function () {
+      if (card.classList.contains('ph-small')) vis.scrollIntoView({ behavior: 'smooth' });
+    });
+    measure();
+  }
+
   /* the "i" after "About four minutes · no card" */
   var privacy = document.getElementById('privacy-line-hero');
   var note = privacy && privacy.parentElement && privacy.parentElement.querySelector('.cta-note');

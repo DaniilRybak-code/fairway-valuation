@@ -17,7 +17,8 @@
    and the two paragraphs of small print fold behind a tap. Nothing changes in index.html.
 
      1  the hero: headline, the promise, the button, "About four minutes · no card" with the "i"
-        that opens the privacy sentence, the three facts
+        that opens the privacy sentence, the field drawn small (44%) in a slot above the three
+        facts; on the scroll to page 2 it glides up and grows into its place there (showcase.js)
      2  "One valuation, argued multiple ways": the field as a small picture, 92% wide and about half
         the screen tall, one line per row: the method, the two figures, the bar; then the five things
         Fairway does, one coloured line each, and the button
@@ -59,12 +60,12 @@
   /* the copy fills the rest of the first screen under the nav (56px measured) */
   #screen-hero .hero .hero-copy { width:100%; max-width:100%; min-width:0; min-height:calc(100vh - 56px);
     min-height:calc(100dvh - 56px); box-sizing:border-box; display:flex; flex-direction:column; justify-content:center;
-    padding:8px 0 22px; }
-  #screen-hero .hero .hero-grid .kicker { margin-bottom:10px; }
-  #screen-hero .hero .hero-copy h1 { font-size:31px; line-height:1.08; max-width:none; margin:0 0 14px; }
-  .sub-strong { font-size:16px; line-height:1.35; margin:0 0 8px; }
-  #screen-hero .hero .hero-grid .sub { font-size:15.5px; line-height:1.5; margin:0 0 20px; max-width:none; }
-  .cta-stack { flex-direction:column; align-items:stretch; gap:9px; }
+    padding:4px 0 10px; }
+  #screen-hero .hero .hero-grid .kicker { margin-bottom:8px; }
+  #screen-hero .hero .hero-copy h1 { font-size:30px; line-height:1.08; max-width:none; margin:0 0 10px; }
+  .sub-strong { font-size:16px; line-height:1.35; margin:0 0 6px; }
+  #screen-hero .hero .hero-grid .sub { font-size:15.5px; line-height:1.45; margin:0 0 14px; max-width:none; }
+  .cta-stack { flex-direction:column; align-items:stretch; gap:7px; }
   #screen-hero .hero .btn { width:100%; padding:15px 20px; font-size:16px; text-align:center; }
   .cta-note { white-space:normal; text-align:center; display:flex; align-items:center; justify-content:center; gap:8px; }
   /* the "i": a 20px ring after "no card"; the sentence opens under it on a tap (showcase.js) */
@@ -74,7 +75,16 @@
   #privacy-line-hero { display:none; text-align:left; font-family:var(--sans); font-size:11.5px; line-height:1.5; letter-spacing:0;
     color:var(--ff-soft); margin:0; padding:10px 12px; background:var(--ff-panel); border-radius:8px; }
   #privacy-line-hero.open { display:block; }
-  .hero-stats { grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; margin-top:22px; padding-top:16px; }
+  /* the slot at the foot of the copy that the page-2 card is drawn into at 44% size (showcase.js
+     sizes it from the card); the card glides up and grows into page 2 as the scroll moves there */
+  .ph-thumb { margin:8px auto 6px; flex:none; }
+  .ffcard { transform-origin:center center; }   /* no will-change: the small one must stay crisp, not a scaled bitmap */
+  .ffcard.ph-small { cursor:pointer; }
+  /* on a phone the card is placed by its transform from the first frame, so the opening
+     animation may only fade it in, never move it */
+  .hero-intro .hero-vis .ffcard { animation:ph-fade .7s ease both; animation-delay:1.45s; opacity:1; transform:none; }
+  @keyframes ph-fade { from { opacity:0; } to { opacity:1; } }
+  .hero-stats { grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; margin-top:8px; padding-top:12px; }
   .hero-stats em { font-size:15px; height:auto; line-height:1.2; margin-bottom:4px; word-spacing:normal; }
   .hero-stats .hs b { font-size:11px; line-height:1.3; margin:0; }
   .hero-stats .hs span, .hero-stats .hs:hover span { display:none; }
