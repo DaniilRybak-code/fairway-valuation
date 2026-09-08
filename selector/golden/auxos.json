@@ -1,0 +1,1160 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3,
+      "ARR_RUNRATE": 3,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 150.0,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 56.0,
+     "n": 7,
+     "period_mix": {
+      "NTM": 1,
+      "RUN_RATE": 6
+     },
+     "period_span": {
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "shares the language of ai, research; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Genspark",
+       "mult": 25.0,
+       "reason": "both do Consumer AI; related type of business; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of ai, research; same type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Legora",
+       "mult": 56.0,
+       "reason": "shares the language of ai, research; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Sierra",
+       "mult": 105.3,
+       "reason": "shares the language of ai, customer, pricing; same type of business; same kind of customer; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Perplexity",
+       "mult": 120.0,
+       "reason": "both do Consumer AI; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "shares the language of ai, customer; same type of business; same kind of customer; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "consumer",
+      "customer",
+      "pricing",
+      "research"
+     ],
+     "spread": 34.9,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Genspark",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 25.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Legora",
+       "date": "Apr-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 56.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Sierra",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 105.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Perplexity",
+       "date": "Jul-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 120.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.8,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Market Research; related type of business; same kind of customer; same revenue model",
+    "score": 11.4,
+    "ticker": "NYSE:SMWB"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of market; related type of business; same kind of customer; same revenue model",
+    "score": 9.6,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "Sprinklr, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; same type of business; same kind of customer; same revenue model",
+    "score": 9.2,
+    "ticker": "NYSE:CXM"
+   },
+   {
+    "company": "Braze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; same type of business; same business function; same kind of customer",
+    "score": 8.7,
+    "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; same type of business; same business function; same revenue model",
+    "score": 8.7,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "LiveRamp Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of audience, customer; related type of business; same business function; same kind of customer",
+    "score": 7.8,
+    "ticker": "NYSE:RAMP"
+   },
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; same type of business; same revenue model",
+    "score": 7.7,
+    "ticker": "WSE:TXT"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 2.8,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.1,
+   "mid": 2.2,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "audience",
+    "customer",
+    "market",
+    "research"
+   ],
+   "show_retention": true,
+   "spread": 2.1,
+   "table": [
+    {
+     "company": "Sprinklr, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
+     "multiple": 1.6,
+     "recurring_pct": 89.0,
+     "retention_pct": 104.0,
+     "ticker": "NYSE:CXM"
+    },
+    {
+     "company": "LiveRamp Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
+     "multiple": 2.1,
+     "recurring_pct": 75.5,
+     "retention_pct": 107.0,
+     "ticker": "NYSE:RAMP"
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Text S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:TXT"
+    },
+    {
+     "company": "Braze, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
+     "multiple": 3.4,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NASDAQGS:BRZE"
+    }
+   ],
+   "tag_evidence": 0.9,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     },
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Sierra",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Greenoaks",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Mar-2026)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Atlassian Ventures and NVentures (extension)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Bessemer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "ICONIQ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Y Combinator",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Conviction",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Avra",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Operator Collective",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Frontline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Semrush",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Adobe",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Sierra",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 105.3,
+    "reason": "shares the language of ai, customer, pricing; same type of business; same kind of customer; same AI stance",
+    "score": 11.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Legora",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 56.0,
+    "reason": "shares the language of ai, research; related type of business; same kind of customer; same revenue model",
+    "score": 11.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 150.0,
+    "reason": "shares the language of ai, customer; same type of business; same kind of customer; same AI stance",
+    "score": 10.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "reason": "shares the language of ai, research; same type of business; same kind of customer",
+    "score": 10.3,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 4.3,
+    "reason": "shares the language of ai, research; same type of business; same business function; same revenue model",
+    "score": 13.3,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "both do Consumer AI; related type of business; same AI stance",
+    "score": 6.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Jul-2025",
+    "bound": "",
+    "company": "Perplexity",
+    "date": "Jul-25",
+    "in_medians": true,
+    "mult": 120.0,
+    "reason": "both do Consumer AI; related type of business; same revenue model; same AI stance",
+    "score": 10.3,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 3,
+    "ARR_RUNRATE": 3,
+    "NET_REVENUE": 1
+   },
+   "bounded": true,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Semrush"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 150.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
+   "low": 4.3,
+   "mid": 56.0,
+   "n": 7,
+   "period_mix": {
+    "NTM": 1,
+    "RUN_RATE": 6
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "shares the language of ai, research; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "both do Consumer AI; related type of business; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of ai, research; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    },
+    {
+     "company": "Legora",
+     "mult": 56.0,
+     "reason": "shares the language of ai, research; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Sierra",
+     "mult": 105.3,
+     "reason": "shares the language of ai, customer, pricing; same type of business; same kind of customer; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Perplexity",
+     "mult": 120.0,
+     "reason": "both do Consumer AI; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "shares the language of ai, customer; same type of business; same kind of customer; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "ai",
+    "consumer",
+    "customer",
+    "pricing",
+    "research"
+   ],
+   "spread": 34.9,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Genspark",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 25.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Legora",
+     "date": "Apr-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 56.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Sierra",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 105.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Perplexity",
+     "date": "Jul-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 120.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.8,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 13,
+  "secondary": [
+   {
+    "company": "Amplitude, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of testing; related type of business; same kind of customer",
+    "score": 5.6,
+    "ticker": "NASDAQCM:AMPL"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of testing; related type of business; same revenue model",
+    "score": 5.6,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Simulation; same kind of customer; same revenue model",
+    "score": 5.6,
+    "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "Freshworks Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; related type of business; same revenue model",
+    "score": 5.2,
+    "ticker": "NASDAQGS:FRSH"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; same type of business; same business function",
+    "score": 5.2,
+    "ticker": "NYSE:KVYO"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 3.9,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.7,
+   "mid": 3.25,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Dassault Systemes SE",
+     "mult": 4.1,
+     "reason": "both do Simulation; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "customer",
+    "testing"
+   ],
+   "show_retention": true,
+   "spread": 1.4,
+   "table": [
+    {
+     "company": "Freshworks Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": 104.0,
+     "ticker": "NASDAQGS:FRSH"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
+     "company": "Amplitude, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.7,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": 105.0,
+     "ticker": "NASDAQCM:AMPL"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Simulations of real people for market research"
+}

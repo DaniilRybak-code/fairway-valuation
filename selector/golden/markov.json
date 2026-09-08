@@ -1,0 +1,1058 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Scale AI"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 20.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 13.2,
+     "mid": 14.9,
+     "n": 4,
+     "period_mix": {
+      "LTM": 1,
+      "NTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "data",
+      "expert",
+      "training"
+     ],
+     "spread": 1.5,
+     "table": [
+      {
+       "company": "Turing",
+       "date": "Mar-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 13.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Scale AI",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Invisible Technologies",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "AlphaSense",
+       "date": "Jun-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
+    "score": 11.5,
+    "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
+    "score": 11.5,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Dynatrace, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same revenue model; sold the same way",
+    "score": 9.5,
+    "ticker": "NYSE:DT"
+   },
+   {
+    "company": "GB Group plc",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same revenue model; sold the same way",
+    "score": 9.5,
+    "ticker": "LSE:GBG"
+   },
+   {
+    "company": "MongoDB, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same revenue model",
+    "score": 9.5,
+    "ticker": "NASDAQGM:MDB"
+   },
+   {
+    "company": "Palantir Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; sold the same way; same AI stance",
+    "score": 9.0,
+    "ticker": "NASDAQGS:PLTR"
+   },
+   {
+    "company": "Teradata Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; sold the same way",
+    "score": 9.0,
+    "ticker": "NYSE:TDC"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 15.6,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.5,
+   "mid": 5.8,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Teradata Corporation",
+     "mult": 1.4,
+     "reason": "same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GB Group plc",
+     "mult": 1.5,
+     "reason": "same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Elastic N.V.",
+     "mult": 4.2,
+     "reason": "same type of business; same business function; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Dynatrace, Inc.",
+     "mult": 5.8,
+     "reason": "same type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "MongoDB, Inc.",
+     "mult": 10.0,
+     "reason": "same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 15.6,
+     "reason": "same type of business; same business function; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "mult": 39.0,
+     "reason": "same type of business; same business function; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "data"
+   ],
+   "show_retention": true,
+   "spread": 27.9,
+   "table": [
+    {
+     "company": "Teradata Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 1.7,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": 108.0,
+     "ticker": "NYSE:TDC"
+    },
+    {
+     "company": "GB Group plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.2,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": 101.1,
+     "ticker": "LSE:GBG"
+    },
+    {
+     "company": "Elastic N.V.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
+     "multiple": 4.2,
+     "recurring_pct": null,
+     "retention_pct": 112.0,
+     "ticker": "NYSE:ESTC"
+    },
+    {
+     "company": "Dynatrace, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.5,
+     "multiple": 5.8,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NYSE:DT"
+    },
+    {
+     "company": "MongoDB, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.6,
+     "multiple": 10.0,
+     "recurring_pct": 97.0,
+     "retention_pct": 121.0,
+     "ticker": "NASDAQGM:MDB"
+    },
+    {
+     "company": "Snowflake Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.8,
+     "multiple": 15.6,
+     "recurring_pct": null,
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 47.0,
+     "multiple": 39.0,
+     "recurring_pct": null,
+     "retention_pct": 157.0,
+     "ticker": "NASDAQGS:PLTR"
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Invisible Technologies",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Vanara Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Invisible Technologies",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Princeville Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Invisible Technologies",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "HOF Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Invisible Technologies",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Freestyle VC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Invisible Technologies",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Greycroft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Invisible Technologies",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Acrew Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Scale AI",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Meta Platforms",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Khazanah Nasional",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Sozo Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Weights & Biases",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "CoreWeave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Viking Global Investors (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "BDT & MSD Partners (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "J.P. Morgan Growth Equity Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Blue Owl",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Alkeon Capital (new)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AlphaSense",
+      "date": "Jun-24"
+     }
+    ],
+    "investor": "Goldman Sachs Alternatives (existing)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Bright Data (Luminati)",
+      "date": "Aug-17"
+     }
+    ],
+    "investor": "EMK Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Bright Data (Luminati)",
+      "date": "Aug-17"
+     }
+    ],
+    "investor": "sellers included Horizons Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Bright Data (Luminati)",
+      "date": "Aug-17"
+     }
+    ],
+    "investor": "DFJ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Bright Data (Luminati)",
+      "date": "Aug-17"
+     }
+    ],
+    "investor": "DFJ Tamir Fishman",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Bright Data (Luminati)",
+      "date": "Aug-17"
+     }
+    ],
+    "investor": "Magma",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Bright Data (Luminati)",
+      "date": "Aug-17"
+     }
+    ],
+    "investor": "Trilogy",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Bright Data (Luminati)",
+      "date": "Aug-17"
+     }
+    ],
+    "investor": "Iris",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Invisible Technologies",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 14.9,
+    "reason": "shares the language of data, expert, training; same type of business; same business function; sold the same way",
+    "score": 15.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Scale AI",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 14.5,
+    "reason": "both do Training Data; same type of business; same business function; sold the same way",
+    "score": 14.8,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Turing",
+    "date": "Mar-25",
+    "in_medians": true,
+    "mult": 13.2,
+    "reason": "both do Training Data; same type of business; sold the same way; same AI stance",
+    "score": 11.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of training; same type of business; same AI stance",
+    "score": 7.2,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "AlphaSense",
+    "date": "Jun-24",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "shares the language of expert; same type of business; same business function; sold the same way",
+    "score": 10.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Bright Data (Luminati)",
+    "date": "Aug-17",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Datasets; same type of business; same business function; same revenue model",
+    "score": 13.6,
+    "type": "CONTROL"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2,
+    "NET_REVENUE": 2
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Scale AI"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 20.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 13.2,
+   "mid": 14.9,
+   "n": 4,
+   "period_mix": {
+    "LTM": 1,
+    "NTM": 1,
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "data",
+    "expert",
+    "training"
+   ],
+   "spread": 1.5,
+   "table": [
+    {
+     "company": "Turing",
+     "date": "Mar-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 13.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Scale AI",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Invisible Technologies",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "AlphaSense",
+     "date": "Jun-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.9,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 108,
+  "secondary": [
+   {
+    "company": "Red Violet, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same revenue model",
+    "score": 8.5,
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "SoundHound AI, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same revenue model; same AI stance",
+    "score": 8.5,
+    "ticker": "NASDAQGM:SOUN"
+   },
+   {
+    "company": "ExlService Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "NASDAQ:EXLS"
+   },
+   {
+    "company": "Fair Isaac Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "NYSE:FICO"
+   },
+   {
+    "company": "Datadog, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same revenue model",
+    "score": 7.5,
+    "ticker": "NASDAQGS:DDOG"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 14.9,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.0,
+   "mid": 10.2,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "ExlService Holdings, Inc.",
+     "mult": 2.3,
+     "reason": "same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "mult": 10.0,
+     "reason": "same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Fair Isaac Corporation",
+     "mult": 10.2,
+     "reason": "same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SoundHound AI, Inc.",
+     "mult": 10.8,
+     "reason": "same type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Datadog, Inc.",
+     "mult": 14.9,
+     "reason": "same type of business; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "data"
+   ],
+   "show_retention": true,
+   "spread": 6.5,
+   "table": [
+    {
+     "company": "ExlService Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:EXLS"
+    },
+    {
+     "company": "Red Violet, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.3,
+     "multiple": 10.0,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
+    },
+    {
+     "company": "Fair Isaac Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.9,
+     "multiple": 10.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FICO"
+    },
+    {
+     "company": "SoundHound AI, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
+     "multiple": 10.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:SOUN"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
+  }
+ },
+ "label": "Expert computer-use data for frontier AI labs"
+}

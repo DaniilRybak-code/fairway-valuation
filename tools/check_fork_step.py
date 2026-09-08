@@ -117,6 +117,57 @@ def main():
               'not landing: %s' % sorted(set(answers) - set(landed)) if len(landed) != len(answers)
               else '')
 
+    print('\nEVERY ANSWER REACHES THE BASIS THAT PRICES IT')
+    #
+    # ONE LEVEL DEEPER THAN "DOES IT LAND". Each basis names the profile field it multiplies
+    # (BASIS_FOUNDER_FIELD) and each question names the field its answer lands on
+    # (quiz_fork.apply_answers). When the two disagree the founder answers and the engine never
+    # finds it, and nothing said so: check 10 asks whether an answer lands, never whether the basis
+    # can see it. Two were wrong on 7-Sep and one was the software fork's own first question: `arr`
+    # landed on `revenue` while the ARR basis read `arr`, and every subscriber count landed on
+    # `paying_subscribers` while the basis read `subscribers`.
+    for fork, out in wire.items():
+        prof = profile_for(fork)
+        for q in out['questions']:
+            if q.get('kind') not in ('money', 'quantity', 'count'):
+                continue
+            spec = next((x for x in QF.FORKS[fork]['questions'] if x['key'] == q['key']), {})
+            basis = spec.get('basis')
+            if not basis:
+                continue
+            # A REVIEWER-CONTEXT QUESTION IS ASKED ON PURPOSE AND PRICES NOTHING ON PURPOSE. The
+            # lending fork's net loan book says so in its own why: "Not part of the range. Carried
+            # so the leverage behind your book value is visible to the reviewer." Free or registered
+            # users is the same. They carry a `basis` because that names the measure they ARE, not a
+            # range they feed, so they are exempt here rather than being made to reach one.
+            if spec.get('reviewer_context'):
+                check('%-14s %-20s reviewer context, prices nothing by design'
+                      % (fork, q['key']), True)
+                continue
+            after = QF.apply_answers(prof, {q['key']: 12345})
+            found = None
+            for b, fld in M.BASIS_FOUNDER_FIELD.items():
+                if after.get(fld) == 12345:
+                    found = b
+            check('%-14s %-20s answer reaches a basis' % (fork, q['key']), found is not None,
+                  'lands on a field no basis reads' if found is None else 'reaches %s' % found)
+
+    print('\nNO FIGURE IS EVER REQUIRED')
+    # Daniil, 7-Sep: a founder who gives nothing still gets the peer charts, so a figure they choose
+    # not to give must never be a wall. Drawing the forks turned every fork's required money
+    # question into a disabled button, which was stricter than the plain revenue step it replaced.
+    for fork, spec in QF.FORKS.items():
+        blocking = [q['key'] for q in spec['questions']
+                    if q.get('required') and q.get('kind') in ('money', 'quantity', 'count', 'percent')]
+        check('%-14s requires no figure' % fork, not blocking, ', '.join(blocking))
+    qf = open(os.path.join(HERE, 'quiz-fork.js'), encoding='utf-8').read()
+    check('the page never disables Continue over a missing figure',
+          "q.required && q.kind === 'choice'" in qf,
+          'quiz-fork.js must gate on choice questions only')
+    rc = open(os.path.join(HERE, 'reveal-client.js'), encoding='utf-8').read()
+    check('no figures means no football field', 'hideField()' in rc,
+          'Daniil, 7-Sep: with nothing given, show the bar charts and not the field')
+
     print('\nTHE BROWSER CAN PRICE WHAT EACH FORK ASKS FOR')
     fg = open(os.path.join(HERE, 'reveal-figures.js'), encoding='utf-8').read()
     for fork, out in wire.items():

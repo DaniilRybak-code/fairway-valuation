@@ -1,0 +1,907 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 2,
+      "ARR_RUNRATE": 4
+     },
+     "bounded": true,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 18.3,
+     "mid": 25.0,
+     "n": 6,
+     "period_mix": {
+      "RUN_RATE": 6
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "agent",
+      "ai",
+      "enterprise",
+      "generation",
+      "open",
+      "source"
+     ],
+     "spread": 4.0,
+     "table": [
+      {
+       "company": "Notion",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 18.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Anysphere / Cursor",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Genspark",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 25.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.0,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, platform; related type of business; same business function; same kind of customer",
+    "score": 10.1,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
+    "company": "monday.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of collaboration; same type of business; same kind of customer; sold the same way",
+    "score": 9.8,
+    "ticker": "NASDAQ:MNDY"
+   },
+   {
+    "company": "Asana, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of collaboration; same type of business; sold the same way",
+    "score": 6.3,
+    "ticker": "NYSE:ASAN"
+   },
+   {
+    "company": "UiPath, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of agent; same type of business; same AI stance",
+    "score": 6.1,
+    "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "ServiceNow, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of enterprise, platform; same type of business",
+    "score": 5.2,
+    "ticker": "NYSE:NOW"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 8.2,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.0,
+   "mid": 2.3,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "agent",
+    "ai",
+    "collaboration",
+    "enterprise",
+    "platform"
+   ],
+   "show_retention": true,
+   "spread": 4.1,
+   "table": [
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
+    },
+    {
+     "company": "monday.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.9,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQ:MNDY"
+    },
+    {
+     "company": "Asana, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.2,
+     "multiple": 2.3,
+     "recurring_pct": null,
+     "retention_pct": 96.0,
+     "ticker": "NYSE:ASAN"
+    },
+    {
+     "company": "UiPath, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:PATH"
+    },
+    {
+     "company": "ServiceNow, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.8,
+     "multiple": 8.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NOW"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     },
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Notion",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     },
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Menlo Anthology",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Lovable",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Databricks Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Amplify",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Prysm",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Google AI Futures Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Amex Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anysphere / Cursor",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Thrive",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anysphere / Cursor",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anysphere / Cursor",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Notion",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 18.3,
+    "reason": "shares the language of ai, enterprise; related type of business; same business function; same kind of customer",
+    "score": 14.1,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Lovable",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 33.0,
+    "reason": "shares the language of ai, generation; related type of business; sold the same way; same AI stance",
+    "score": 8.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of agent, ai; related type of business; same business function; sold the same way",
+    "score": 11.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Open Source; related type of business; sold the same way; same AI stance",
+    "score": 9.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Mid-2025 annualized run-rate",
+    "bound": "",
+    "company": "Supabase",
+    "date": "Oct-25",
+    "in_medians": true,
+    "mult": 72.86,
+    "reason": "both do Open Source; related type of business; sold the same way",
+    "score": 7.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Replit",
+    "date": "Sep-25",
+    "in_medians": true,
+    "mult": 20.0,
+    "reason": "shares the language of agent, ai; related type of business; sold the same way; same AI stance",
+    "score": 9.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anysphere / Cursor",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 19.8,
+    "reason": "shares the language of ai, generation; related type of business; sold the same way; same AI stance",
+    "score": 8.2,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 2,
+    "ARR_RUNRATE": 4
+   },
+   "bounded": true,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 72.86,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 18.3,
+   "mid": 25.0,
+   "n": 6,
+   "period_mix": {
+    "RUN_RATE": 6
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "agent",
+    "ai",
+    "enterprise",
+    "generation",
+    "open",
+    "source"
+   ],
+   "spread": 4.0,
+   "table": [
+    {
+     "company": "Notion",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 18.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Anysphere / Cursor",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 19.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Genspark",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 25.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.86,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 1.0,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 14,
+  "secondary": [
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform, source; related type of business; sold the same way",
+    "score": 6.2,
+    "ticker": "NASDAQGS:GTLB"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "founder_basis_trailing_on_forward": false,
+   "high": 5.2,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 5.2,
+   "mid": 5.2,
+   "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "platform",
+    "source"
+   ],
+   "show_retention": true,
+   "sole": "GitLab Inc.",
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "GitLab Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.6,
+     "multiple": 5.2,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    }
+   ],
+   "tag_evidence": 0.7,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "Give everyone their own AI workforce in one platform"
+}

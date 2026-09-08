@@ -1,0 +1,911 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "CUSTOMERS",
+     "basis_label": "dollars of enterprise value per consumer customer",
+     "basis_mix": {
+      "CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 19354.84,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 5000.0,
+     "mid": 19354.84,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "spread": 3.9,
+     "table": [
+      {
+       "company": "Vedantu",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "upGrad",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19354.84,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.0,
+     "thin": true,
+     "triangulated": true
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 3
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 15.38,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.27,
+     "mid": 9.18,
+     "n": 3,
+     "period_mix": {
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "spread": 2.1,
+     "table": [
+      {
+       "company": "upGrad",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.27,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "WHOOP",
+       "date": "Mar-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 9.18,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vedantu",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.38,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.0,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 3
+     },
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Udemy"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 27.5,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Udemy"
+     ],
+     "low": 1.29,
+     "mid": 23.1,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Udemy",
+       "mult": 1.29,
+       "reason": "both do Skills Learning, Consumer Learning; same type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Oura",
+       "mult": 23.1,
+       "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "MasterClass",
+       "mult": 27.5,
+       "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "consumer",
+      "learning",
+      "skills"
+     ],
+     "spread": 21.3,
+     "table": [
+      {
+       "company": "Udemy",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.29,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Oura",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "MasterClass",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 27.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Duolingo, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Adaptive Learning; same type of business; same kind of customer; same revenue model",
+    "score": 13.0,
+    "ticker": "NASDAQGS:DUOL"
+   },
+   {
+    "company": "Coursera, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of consumer, learning; same type of business; same kind of customer; same revenue model",
+    "score": 11.3,
+    "ticker": "NYSE:COUR"
+   },
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of consumer, learning; same type of business; same kind of customer; same revenue model",
+    "score": 10.3,
+    "ticker": "TSE:4686"
+   },
+   {
+    "company": "Nerdy Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
+    "score": 10.3,
+    "ticker": "NYSE:NRDY"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 4.7,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.5,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Nerdy Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coursera, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of consumer, learning; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "mult": 4.7,
+     "reason": "both do Adaptive Learning; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "adaptive",
+    "app",
+    "consumer",
+    "learning"
+   ],
+   "show_retention": false,
+   "spread": 11.8,
+   "table": [
+    {
+     "company": "Nerdy Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.4,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NRDY"
+    },
+    {
+     "company": "Coursera, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:COUR"
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.4,
+     "multiple": 4.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DUOL"
+    }
+   ],
+   "tag_evidence": 1.0,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 3.0,
+    "deal_note": null,
+    "geographies": "North America",
+    "house_type": "",
+    "investor": "Uncork Capital",
+    "not_published": null,
+    "recent_deal": "Gamma",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://www.businesswire.com/news/home/20251110805751/en/Gamma-Surpasses-$100M-ARR-Raises-at-$2.1B-Valuation-as-It-Replaces-PowerPoint-for-the-AI-Era",
+    "stage_bands": "Seed",
+    "thesis": "Uncork is the first major check on the cap table, often leading seed rounds.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "US; India",
+    "house_type": "",
+    "investor": "South Park Commons",
+    "not_published": null,
+    "recent_deal": "Gamma",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://www.businesswire.com/news/home/20251110805751/en/Gamma-Surpasses-$100M-ARR-Raises-at-$2.1B-Valuation-as-It-Replaces-PowerPoint-for-the-AI-Era",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "We are ready to write the first check, for exceptional builders from the SPC community or the larger ecosystem.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": "Emerge's own post, 13-Nov-2025: 'We're delighted to announce our investment in Songscription', a '$5M seed round led by Reach Capital alongside 10x Founders and Dent Capital'. Emerge's own post, 29-Sep-2025: 'MyEdSpace has raised $15M (GBP11.9M) in a Series A led by White Star Capital, with participation from Educapital, Active Partners, Coalition Capital, and us'; MyEdSpace streams live lessons to students at home who pay per hour. Cheque from emergecapital.vc: 'Early stage investment $500k-$2.5M'; stage 'Pre-seed and seed founders'.",
+    "geographies": "Europe (the first specialist future of work and learning investor in Europe)",
+    "house_type": "VC",
+    "investor": "Emerge",
+    "not_published": null,
+    "recent_deal": "Songscription",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://emergecapital.vc/songscription-raises-5m-to-become-the-shazam-for-sheet-music/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "First money in for founders building the future of human capital development.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.5,
+    "cheque_low_m": 0.1,
+    "deal_note": "TechCrunch, 10-Sep-2025: 'The startup's $4 million seed round was led by Eniac Ventures ... The round also includes investment from Haystack, Factorial Capital, Homebrew, Offline Ventures'. Oboe is a consumer AI learning app with a free tier, $15 and $40 a month plans. Cheque from homebrew.co: '90% of what we do is pre-seed/seed investments of between $100k and $500k.' Deal sits exactly twelve months back on 5-Sep-2026.",
+    "geographies": "North or South America, initially targeting markets in those geographies",
+    "house_type": "VC",
+    "investor": "Homebrew",
+    "not_published": null,
+    "recent_deal": "Oboe",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Capital, counsel and commitment for mission-driven founders reimagining the world we live in.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.25,
+    "cheque_low_m": null,
+    "deal_note": "Pulse 2.0, 10-Jul-2026: 'Index Ventures has led a $13 million seed round for Marker, a London-based startup developing an AI-native word processor ... The funding round includes participation from LocalGlobe, Betaworks, Radical Ventures, Tiny VC and Otherwise Fund'. Cheque from the Camp application page: 'Betaworks and our syndicate partners will each invest up to $250k for a total of up to $500k investment per team'; the Betaworks half is recorded. Stage: the Camp page describes Betaworks as 'a pre-seed and seed stage investor'.",
+    "geographies": "companies based anywhere in the world; in-person time in NYC required for Camp",
+    "house_type": "VC",
+    "investor": "Betaworks",
+    "not_published": null,
+    "recent_deal": "Marker",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://pulse2.com/marker-raises-13-million-seed-funding-to-build-an-ai-native-word-processor/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "A thematic investment and in-residence program for startups building in frontier technologies.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Coursera (acquirer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "all-stock)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Oura",
+      "date": "Dec-24"
+     },
+     {
+      "company": "MasterClass",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Fidelity Management & Research Company",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Oura",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Dexcom",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vedantu",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "ABC World Asia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IFC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IIFL",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "Exiting CY2025",
+    "bound": "",
+    "company": "WHOOP",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 9.18,
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 12.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Udemy",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 1.29,
+    "reason": "both do Skills Learning, Consumer Learning; same type of business; same kind of customer",
+    "score": 8.4,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oura",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 23.1,
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 12.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vedantu",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 15.38,
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 15.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "upGrad",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 7.27,
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 15.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "MasterClass",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 27.5,
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 13.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 3
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 15.38,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 7.27,
+   "mid": 9.18,
+   "n": 3,
+   "period_mix": {
+    "RUN_RATE": 3
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [],
+   "spread": 2.1,
+   "table": [
+    {
+     "company": "upGrad",
+     "date": "Aug-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 7.27,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "WHOOP",
+     "date": "Mar-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 9.18,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vedantu",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.38,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
+  },
+  "private_window_months": 63,
+  "secondary": [
+   {
+    "company": "Match Group, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+    "score": 10.3,
+    "ticker": "NASDAQGS:MTCH"
+   },
+   {
+    "company": "Bumble Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+    "score": 10.3,
+    "ticker": "NASDAQGS:BMBL"
+   },
+   {
+    "company": "Grindr Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; same purchase frequency",
+    "score": 8.3,
+    "ticker": "NYSE:GRND"
+   },
+   {
+    "company": "WW International, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+    "score": 7.1,
+    "ticker": "NASDAQGM:WW"
+   },
+   {
+    "company": "Peloton Interactive, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+    "score": 7.1,
+    "ticker": "NASDAQGS:PTON"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 5.1,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.9,
+   "mid": 1.1,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "WW International, Inc.",
+     "mult": 0.8,
+     "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Bumble Inc.",
+     "mult": 0.9,
+     "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Peloton Interactive, Inc.",
+     "mult": 1.1,
+     "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Match Group, Inc.",
+     "mult": 3.6,
+     "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Grindr Inc.",
+     "mult": 5.1,
+     "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; same purchase frequency",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "app",
+    "consumer",
+    "social"
+   ],
+   "show_retention": false,
+   "spread": 6.4,
+   "table": [
+    {
+     "company": "WW International, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:WW"
+    },
+    {
+     "company": "Bumble Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -1.6,
+     "multiple": 0.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:BMBL"
+    },
+    {
+     "company": "Peloton Interactive, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.7,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTON"
+    },
+    {
+     "company": "Match Group, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.8,
+     "multiple": 3.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:MTCH"
+    },
+    {
+     "company": "Grindr Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.0,
+     "multiple": 5.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:GRND"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Helps build social skills through daily practice"
+}

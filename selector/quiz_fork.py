@@ -180,45 +180,59 @@ FORKS = {
  # PAYING is the whole question, and it is why the label says so twice. A price per registered user
  # compares a business that monetises with one that does not, and the gap between the two is the
  # entire business model.
- 'consumer_subscription': dict(
+ # ONE CONSUMER FORK, AND EVERY FIGURE IN IT IS OPTIONAL.
+ #
+ # Daniil, 7-Sep-2026: "Both revenue and user count should be optional for them. If they give both,
+ # we price them on both. If they give either one of them, we show the one that they gave. If they
+ # give nothing, we only show the bar charts with multiples, not football fields."
+ #
+ # THIS REPLACES TWO FORKS THAT COULD NOT BOTH EXIST. `consumer_subscription` (added 3-Sep for the
+ # pre-revenue case) and `media` (added 2-Sep) claimed overlapping archetypes, and
+ # consumer_subscription came first in this dictionary, so it won all of them. **The media fork
+ # could never fire.** It was unreachable from the day it was written, and the quiz walker has
+ # printed "NO FIXTURE ROUTES HERE" for it on every run since.
+ #
+ # The two forks also disagreed about the founder. consumer_subscription REQUIRED a subscriber
+ # count and made revenue optional; media REQUIRED revenue and made the count optional. Measured
+ # against what our own comparables can answer, requiring the count was the wrong way round:
+ #
+ #   Consumer & Prosumer Software   36 comparables, 32 price on revenue, 13 on a count
+ #   Streaming & Digital Media      28 comparables, 21 price on revenue,  5 on a count
+ #   Dating & Social Network         4 comparables,  4 price on revenue,  0 on a count
+ #
+ # and not one LISTED company in any of the three carries a user count at all. A dating founder was
+ # being forced to give a number that prices nothing while revenue, which prices every comparable
+ # they have, was optional.
+ #
+ # Daniil's answer is better than either fork: ask for both, require neither, price whatever
+ # arrives. A founder with revenue gets a revenue range. A pre-revenue founder gets a per-subscriber
+ # range, which is the case he raised on 3 September. One who gives both gets both, as two labelled
+ # ranges that are never averaged. One who gives nothing still gets the peer charts, which is the
+ # ruling of 6 September and is why this fork can require nothing at all.
+ 'consumer': dict(
     archetypes=('Consumer & Prosumer Software', 'Streaming & Digital Media',
                 'Dating & Social Network'),
     asks_gross=True,
     questions=[
+      dict(key='net_revenue', label='Net revenue over the last twelve months', kind='money',
+           required=False, maps_to='profile.revenue', peer_field='revenue_musd',
+           basis='NET_REVENUE',
+           why='Optional, like everything on this page. Give it and you get a revenue range built '
+               'from companies priced the same way.'),
+      _gross_q('Gross revenue over the same period, if the two differ'),
       dict(key='paying_subscribers', label='Paying subscribers today', kind='quantity',
-           required=True, maps_to='profile.subscribers', peer_field='volume_musd',
+           required=False, maps_to='profile.subscribers', peer_field='volume_musd',
            basis='SUBSCRIBERS',
-           why='For a consumer subscription business that has not disclosed revenue, this is what '
-               'a buyer is buying. We hold Flo Health at $533 of enterprise value per paying '
-               'subscriber and Calm at $500. A count at today\'s date, not a total ever '
-               'registered.'),
+           why='Also optional. For a business that has not disclosed revenue this is what a buyer '
+               'is buying: we hold Flo Health at $533 of enterprise value per paying subscriber '
+               'and Calm at $500. A count at today\'s date, not a total ever registered.'),
       dict(key='free_users', label='Free or registered users today, if you want it on the record',
-           kind='quantity', required=False, maps_to='profile.free_users',
+           kind='quantity', required=False, maps_to='profile.registered_users',
            reviewer_context=True,
            why='NOT part of any range, and deliberately. A price per registered user compares a '
                'business that monetises with one that does not. Carried so a reviewer can see the '
                'conversion behind the paying number.'),
-      dict(key='net_revenue', label='Net revenue over the last twelve months, if you have it',
-           kind='money', required=False, maps_to='profile.revenue',
-           peer_field='revenue_musd', basis='NET_REVENUE',
-           why='Optional. Answer it and you get a revenue range as well as a per-subscriber one.'),
-      _gross_q('Gross revenue over the same period, if the two differ'),
     ]),
- # AN EXCHANGE IS JUDGED ON WHAT IT MOVES, NOT WHAT IT EARNS. Added 3-Sep-2026 on Daniil's
- # ruling about Xpansiv: "sustainability business, no? If CO2 volume was quoted in the release,
- # then perhaps these companies are priced as such, hence we should be adding the question to the
- # respective branch of the quiz and show to the founder."
- #
- # It was quoted. Xpansiv's own release states 121.5 MtCO2e cleared on CBL in 2021, and gives no
- # revenue figure at all. That is the shape of this whole archetype: an environmental-commodity
- # exchange, a power-purchase-agreement marketplace or a carbon registry discloses throughput and
- # keeps its take rate to itself. Asking such a founder only for net revenue asks for the one
- # number they are least likely to have and least likely to be judged on.
- #
- # THE UNIT IS A SEPARATE QUESTION AND IT IS REQUIRED, because a ratio may only ever be built from
- # rows sharing a unit. Tonnes of carbon, megawatt hours and dollars are three different
- # denominators, and the answer is shown as a price PER UNIT rather than as a multiple: Xpansiv is
- # eleven dollars fifty per annual tonne of CO2 equivalent, never 11.52x.
  'exchange': dict(
     archetypes=('Market Infrastructure & Exchange', 'Financial Data & Index'),
     asks_gross=True,
@@ -414,23 +428,6 @@ FORKS = {
  #   Streaming, media, social   genuinely distinct: content cost, catalogue and audience rather than
  #                              seats or baskets. That business keeps a fork, below, under its own
  #                              name.
- 'media': dict(
-    archetypes=('Streaming & Digital Media', 'Dating & Social Network'),
-    # NOT YET PRICEABLE, and the fork says so rather than pretending. We hold no private rounds in
-    # streaming, media or social with a revenue figure and a stated period, so a founder here reaches
-    # listed comparables only. The sourcing list carries the gap: Substack, Cameo, DAZN, Curiosity,
-    # Rumble pre-listing. Until those land this fork collects answers and shows the listed side.
-    priceable_private=False,
-    asks_gross=True,
-    questions=[
-      dict(key='net_revenue', label='Net revenue over the last twelve months', kind='money',
-           required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE'),
-      _gross_q('Gross revenue over the same period, if the two differ'),
-      dict(key='paying_users_k', label='Paying subscribers', kind='count', required=False,
-           maps_to='profile.paying_users_k', peer_field='paying_users_k',
-           why='Paying, not registered or monthly active. Lets us show an enterprise value per '
-               'subscriber alongside the revenue multiple.'),
-    ]),
  'delivery': dict(
     archetypes=('Local Delivery & On-Demand',),
     asks_gross=True,
@@ -448,6 +445,32 @@ FORKS = {
       _gross_q('The full basket over the same period, if you book the whole order'),
     ]),
 }
+# ---------------------------------------------------------------------------
+# NO FIGURE IS EVER REQUIRED. Daniil, 7-Sep-2026.
+#
+# His ruling was about the consumer fork: "Both revenue and user count should be optional for them.
+# If they give both, we price them on both. If they give either one of them, we show the one that
+# they gave. If they give nothing, we only show the bar charts with multiples, not football fields."
+#
+# IT CANNOT STOP AT ONE FORK. He ruled on 6 September that a founder who gives no numbers at all
+# still gets a reveal, and the engine has done that since: 101 of the 102 test companies can show
+# two or more peer bar charts with no founder figure. But every one of the nine forks had a REQUIRED
+# money question, and when the forks reached the page on 7 September that requirement became a
+# button a founder could not get past. The fork step was STRICTER than the plain revenue question it
+# replaced, which has had a "We are pre-revenue" escape since it was written.
+#
+# So the rule is general: a figure is never required, anywhere. A question still says which one
+# prices the founder, and the page still marks it, but nothing blocks. The founder decides how much
+# to tell us and the reveal shows exactly what that supports, which is the whole promise.
+#
+# CHOICE QUESTIONS KEEP THEIR REQUIRED FLAG, and there are two. They are labels, not amounts: the
+# lending fork's funding model gates rule B3's lender fence, and the exchange fork's unit says what
+# a volume is counted in. Neither asks a founder to disclose anything about their size.
+for _f in FORKS.values():
+    for _q in _f['questions']:
+        if _q.get('kind') in ('money', 'quantity', 'count', 'percent'):
+            _q['required'] = False
+
 
 # AI-NATIVE IS A MODIFIER, NOT A FORK, and the first version got this wrong.
 #
@@ -501,11 +524,27 @@ def questions_for(prof):
 def apply_answers(prof, answers):
     """Map answers onto the profile fields the engine reads. Returns a NEW profile."""
     p = dict(prof)
-    m = {'growth_pct': 'growth', 'gross_margin': 'gm', 'arr': 'revenue', 'net_revenue': 'revenue',
-         'gross_revenue': 'revenue_gross',
-         'gmv': 'volume', 'tpv': 'volume', 'nrr_pct': 'nrr', 'paying_users_k': 'paying_users_k',
+    # THE MAP IS THE OTHER HALF OF BASIS_FOUNDER_FIELD IN match_reference.py, AND IT HAD DRIFTED.
+    #
+    # Every basis names the profile field it multiplies. This map names the profile field an answer
+    # lands on. When the two disagree the founder answers a question and the engine never finds it,
+    # and nothing said so, because check 10 asks whether an answer LANDS and never whether the
+    # basis that needs it can SEE it. Found 7-Sep-2026 by extending check 20 one level deeper.
+    #
+    # TWO WERE WRONG AND ONE OF THEM WAS THE SOFTWARE FORK'S REQUIRED QUESTION:
+    #   arr                 landed on `revenue`; the ARR basis reads `arr`, so it found nothing.
+    #                       That is the question 57 of the 102 test companies are asked first.
+    #   paying_subscribers  landed on `paying_subscribers`; the basis reads `subscribers`.
+    #
+    # AND `arr` NO LONGER LANDS ON `revenue` AT ALL, which is the same distinction the page has
+    # made since 6-Sep: ARR is a forward run rate and the REVENUE basis is trailing, so pouring one
+    # into the other prices a growing founder against a trailing multiple and overstates them.
+    m = {'growth_pct': 'growth', 'gross_margin': 'gm',
+         'arr': 'arr', 'net_revenue': 'revenue', 'gross_revenue': 'revenue_gross',
+         'gmv': 'volume', 'tpv': 'volume', 'nrr_pct': 'nrr', 'paying_users_k': 'subscribers',
          'funding_model': 'funding_model', 'asset_intensity': 'asset_intensity',
          'growth_3m_pct': 'growth_3m', 'country': 'country',
+         'paying_subscribers': 'subscribers', 'free_users': 'registered_users',
          # THE EXCHANGE FORK'S TWO ANSWERS, WHICH NEVER LANDED. Added 7-Sep-2026, found by check 20
          # walking every fork's answers onto the profile. The unit question declares
          # `maps_to: profile.volume_unit` and this map, which is what actually does the mapping, did
@@ -516,8 +555,7 @@ def apply_answers(prof, answers):
          # The lending fork's own figures, same reason: asked, and never read.
          'book_value': 'book_value', 'net_loan_book': 'net_loan_book',
          'originations': 'originations', 'borrowers': 'borrowers',
-         'net_income': 'net_income', 'paying_subscribers': 'paying_subscribers',
-         'free_users': 'free_users'}
+         'net_income': 'net_income'}
     for k, v in (answers or {}).items():
         if v in (None, ''): continue
         if k in m: p[m[k]] = v

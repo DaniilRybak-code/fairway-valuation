@@ -1,0 +1,375 @@
+{
+ "expected": {
+  "core": [
+   {
+    "company": "HUB24 Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "ASX:HUB"
+   },
+   {
+    "company": "Netwealth Group Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "ASX:NWL"
+   },
+   {
+    "company": "nCino, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "NASDAQGS:NCNO"
+   },
+   {
+    "company": "Temenos AG",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "SWX:TEMN"
+   },
+   {
+    "company": "SS&C Technologies Holdings, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "NASDAQ:SSNC"
+   }
+  ],
+  "core_range": {
+   "denominator": "rev"
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US-based, global insurtech",
+    "house_type": "Venture",
+    "investor": "Markd",
+    "not_published": null,
+    "recent_deal": "Irys Insurtech",
+    "recent_deal_date": "2025-10",
+    "recent_deal_url": "https://www.irysinsurtech.com/news/irys-raises-12-5m-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Insurance-only investor backing new distribution, AI/data infrastructure and underserved risks.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "Europe-focused; also US and Latin America",
+    "house_type": "Venture",
+    "investor": "Mundi Ventures",
+    "not_published": null,
+    "recent_deal": "Artificial Labs",
+    "recent_deal_date": "2026-02",
+    "recent_deal_url": "https://www.artificial.io/news/artificial-labs-raises-45m-series-b",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Specialist investor in insurance technology, including underwriting, distribution and claims infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.2,
+    "deal_note": null,
+    "geographies": "US-based, North America and Europe",
+    "house_type": "Venture",
+    "investor": "Altai Ventures",
+    "not_published": null,
+    "recent_deal": "FurtherAI",
+    "recent_deal_date": "2025-10",
+    "recent_deal_url": "https://www.furtherai.com/blog/furtherai-raises-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Early-stage insurtech investor focused on distribution, underwriting, claims and risk infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.25,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US-based, invests internationally, including Europe",
+    "house_type": "Venture",
+    "investor": "SixThirty Ventures",
+    "not_published": null,
+    "recent_deal": "Angle Health",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://www.anglehealth.com/news/angle-health-raises-134-million",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Seed investor in fintech, insurtech and health-plan infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based, invests internationally",
+    "house_type": "Venture",
+    "investor": "ManchesterStory",
+    "not_published": null,
+    "recent_deal": "FurtherAI",
+    "recent_deal_date": "2025-10",
+    "recent_deal_url": "https://www.furtherai.com/blog/furtherai-raises-series-c",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Early-stage fintech and insurtech investor backing digital distribution and insurance operating infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.05,
+    "deal_note": null,
+    "geographies": "US-based, global, including European seed investments",
+    "house_type": "Venture",
+    "investor": "Plug and Play",
+    "not_published": null,
+    "recent_deal": "Artificial Labs",
+    "recent_deal_date": "2026-02",
+    "recent_deal_url": "https://www.artificial.io/news/artificial-labs-raises-45m-series-b",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Early-stage technology investor with a dedicated insurtech platform spanning underwriting, claims and distribution.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK/Europe and North America",
+    "house_type": "Venture",
+    "investor": "Anthemis",
+    "not_published": null,
+    "recent_deal": "Gangkhar?",
+    "recent_deal_date": "2026-03",
+    "recent_deal_url": "https://www.anthemis.com/insights/gangkhar/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Financial-services specialist backing insurance infrastructure, embedded protection and technology-led risk businesses.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK/Europe",
+    "house_type": "Venture",
+    "investor": "Insurtech Gateway",
+    "not_published": null,
+    "recent_deal": "Maximum Information",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://www.insurtechgateway.com/2026/01/maximum-information-raises-2-3m-seed/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "UK insurtech investor and authorised incubator backing new insurance products and enabling software.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Sapiens International",
+      "date": "Aug-25"
+     }
+    ],
+    "investor": "Advent International",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "The Zebra",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Hedosophia (reported",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "BROAD",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Sapiens International",
+    "date": "Aug-25",
+    "in_medians": true,
+    "mult": 4.55,
+    "reason": "shares the language of insurance; related type of business; same end market; same business function",
+    "score": 13.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "Revenue",
+    "bound": "",
+    "company": "Wefox",
+    "date": "Jul-22",
+    "in_medians": true,
+    "mult": 14.06,
+    "reason": "shares the language of insurance, insurer; same type of business; same end market",
+    "score": 8.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annualized GWP / revenue proxy",
+    "bound": "",
+    "company": "Coalition",
+    "date": "Jul-22",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Underwriting; same type of business; same end market",
+    "score": 8.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "The Zebra",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 6.67,
+    "reason": "shares the language of insurance; same type of business; same end market",
+    "score": 8.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Sapiens International"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 6.67,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Sapiens International"
+   ],
+   "low": 4.55,
+   "mid": 6.67,
+   "n": 2,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 1
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "insurance"
+   ],
+   "spread": 1.5,
+   "table": [
+    {
+     "company": "Sapiens International",
+     "date": "Aug-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.55,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "The Zebra",
+     "date": "Apr-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 6.67,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
+  },
+  "private_window_months": 64,
+  "secondary": [
+   {
+    "company": "Clarkson PLC",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
+    "score": 10.0,
+    "ticker": "LSE:CKN"
+   },
+   {
+    "company": "Usio, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQGM:USIO"
+   },
+   {
+    "company": "Paysign, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQ:PAYS"
+   },
+   {
+    "company": "Evolent Health, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of value; same type of business; same business function; same kind of customer",
+    "score": 9.9,
+    "ticker": "NYSE:EVH"
+   },
+   {
+    "company": "Crawford & Company",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of insurance; same type of business; same business function; same kind of customer",
+    "score": 9.6,
+    "ticker": "NYSE:CRD.B"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "AI-native insurance company for the compute economy"
+}

@@ -140,8 +140,27 @@
        figures typed into the HTML since the page was built; renderField() replaces them with the
        lanes the engine actually produced, when field.js offers it. Guarded so that an older
        field.js on a cached deploy leaves the existing field alone rather than blanking it. */
-    if (typeof renderFieldFromPayload === 'function') renderFieldFromPayload(payload, figures);
+    /* NO FIGURES, NO FOOTBALL FIELD. Daniil, 7-Sep-2026: "If they give nothing, we only show the
+       bar charts with multiples, not football fields." A field whose every row says "needs revenue"
+       is a page telling a founder what they did not do, nine times. The charts say what their peers
+       trade at, which is the argument they can actually use. */
+    var gaveSomething = figures && Object.keys(figures).length > 0;
+    if (!gaveSomething) {
+      hideField();
+    } else if (typeof renderFieldFromPayload === 'function') {
+      renderFieldFromPayload(payload, figures);
+    }
     mountConsent();
+  }
+
+  /* THE FIELD, HIDDEN. Everything from the football field's own heading down goes, rather than the
+     rows alone, so there is no orphan title over an empty space. The charts and the honesty block
+     are untouched and are what the founder reads instead. */
+  function hideField() {
+    ['ff', 'ff-context', 'ff-legend', 'ff-head'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
   }
 
   /* ---------------- the peer charts ----------------

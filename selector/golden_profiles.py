@@ -1013,8 +1013,322 @@ REAL_3 += [
 ]
 
 
+# =============================================================================================
+# MARCH 1 OF FOUR, 8-Sep-2026: 40 more real companies, taking the fixture set from 102 to 142.
+#
+# DANIIL, 5-Sep-2026, 23:10 UK (rule A12 part 3): on 8, 11, 15 and 18 September we run a MARCH,
+# not a data pull. Thirty to forty NEW test companies each time, taken the way the 3-Sep march took
+# them, at random from Y Combinator and Product Hunt, with no regard for whether we hold comparables
+# for them. The point is to find the blind spots before founders do. THE POOL IS BIG ENOUGH: a gap
+# this march finds goes on the No-comps list and is resolved in the one bulk pass after the 18-Sep
+# march, never chased now.
+#
+# HOW THESE FORTY WERE CHOSEN, so the next march can do it the same way. The YC directory pages for
+# the Fall, Summer, Spring and Winter 2026 batches and the Product Hunt weekly leaderboard for the
+# week of 31 August were read in Chrome on 8-Sep-2026. Every company on those pages that was not
+# already one of the 102 went into a pool (36, 68, 55, 59 and 29 names); three Product Hunt entries
+# that were model or feature releases by OpenAI and Google were left out, because a founder cannot
+# be compared with a feature. Eight were then drawn from each pool by a seeded random draw (seed
+# 20260908, the date), so the draw is reproducible and nobody picked companies we already cover.
+# Two guessed page addresses resolved to nothing (playabl-ai, aster) and were found through the
+# directory search instead; nothing was substituted by hand.
+#
+# EVERY ONE IS REAL AND WAS READ OFF ITS OWN PAGE: 32 off ycombinator.com/companies/<slug>, 8 off
+# producthunt.com/products/<slug>. The one-line label is the company's own published tagline. The
+# tags below are written from the page's own description of what the company sells, and the page,
+# the website and what it said are recorded company by company in docs/march-1-8sep.md.
+#
+# STAGE. None of the forty pages states a funding stage, so the Seed default at the foot of this
+# file applies to all forty as a stated test condition. Three are visibly not seed companies (World
+# Labs, TwelveLabs and Airtop have several launches and a long funding history) and are flagged in
+# the march document for Daniil to rule on; nothing is written on the fixture that the page did
+# not say.
+#
+# RANDOM MEANS RANDOM, INCLUDING THE ONES WE CANNOT PRICE. Two are hardware outside the market this
+# product is aimed at, Ornadyne (military reconnaissance drones) and DAIVIN! (tankless dive gear),
+# filed under rule A11 as what they sell and added to OUT_OF_MARKET so the score reads both ways.
+#
+# NO REVENUE, NO GROWTH, NO MARGIN, exactly as on REAL, REAL_2 and REAL_3.
+OUT_OF_MARKET = OUT_OF_MARKET + ('ornadyne', 'daivin')
+
+REAL_4 = [
+ # --- Fall 2026, read off ycombinator.com/companies ---------------------------------------
+ ('orca-aerospace', 'AI spacecraft operators that lives onboard the vehicle',
+  # No Aerospace & Defence end market exists in the vocabulary (TAKEOVER item 11), so Horizontal
+  # and the market carried as product words.
+  dict(archetype='Vertical Software', archetype_secondary='Data, AI & Developer Tools',
+   industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Onboard Spacecraft Autonomy|Satellite Operations Software|Mission Autonomy|Flight Software|Autonomous Fault Recovery|Aerospace And Defence Software')),
+ ('simulithic', 'Simulate how any product change will perform before shipping.',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Marketing & Customer Engagement',
+   industry='Horizontal', function='Data & Analytics', buyer='LOB', gtm_motion='PLG',
+   revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='User Simulation|Product Experimentation|Synthetic A/B Testing|Session Data Modelling|Product Analytics|Pre Ship Impact Prediction')),
+ ('qokedas', 'Data for AI Science',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='',
+   industry='Horizontal', function='Data & Analytics', buyer='ENTERPRISE', gtm_motion='ENT_SALES',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Training Data|Scientific Data Collection|Data For Frontier Labs|Real World Signal Capture|Dataset Licensing')),
+ ('lambda-robotics', 'Robotics for AI Infrastructure',
+  # Robots built and deployed into the data centres that run frontier AI. Filed under what it
+  # sells (rule A11), beside manifold-robotics, which sells robotic labour to warehouses.
+  dict(archetype='Design & Engineering', archetype_secondary='Cloud & Infrastructure',
+   industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='OWN_PRODUCT', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Data Centre Robotics|Robotic Labour|Robots As A Service|Data Centre Operations|Physical AI Infrastructure')),
+ ('quippy', 'Helps build social skills through daily practice',
+  # A practice app with an adaptive curriculum, tagged like wondering ("Duolingo for learning
+  # anything"): learning first, consumer software second. The page's own tags lead with learning.
+  dict(archetype='Online Learning', archetype_secondary='Consumer & Prosumer Software',
+   industry='Horizontal', function='Productivity', buyer='CONSUMER', gtm_motion='PAID_ACQUISITION',
+   revenue_model='SUBSCRIPTION_CONSUMER', product_role='DESTINATION', asset_intensity='', purchase_frequency='SUBSCRIPTION',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Social Skills Practice|Conversation Simulation|Daily Practice App|Adaptive Curriculum|Consumer Learning App|Speech Feedback')),
+ ('herdr', 'building the open agent runtime',
+  # Apache-2.0 runtime; the page states no paid tier, so revenue_model stays blank rather than
+  # guessed, as on anysearch.
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Cloud & Infrastructure',
+   industry='Horizontal', function='Engineering & Design', buyer='DEV', gtm_motion='PLG',
+   revenue_model='', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Coding Agent Runtime|Open Source Agent Orchestration|Terminal Session Server|Agent Fleet Management|Plugin Marketplace|Developer Tools')),
+ ('vorelios', 'AI that simulates physics 1000x faster',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Design & Engineering',
+   industry='Horizontal', function='Engineering & Design', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Physics Simulation|Engineering Simulation|Surrogate Models|CAE Acceleration|Simulation Foundation Models')),
+ ('nodus-compute', 'Intelligent execution layer for AI workloads',
+  # The page carries the tagline and nothing else, so the tags stay close to it.
+  dict(archetype='Cloud & Infrastructure', archetype_secondary='Data, AI & Developer Tools',
+   industry='Horizontal', function='Engineering & Design', buyer='DEV', gtm_motion='PLG',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Workload Execution Layer|Compute Orchestration|GPU Workload Scheduling|AI Infrastructure')),
+
+ # --- Summer 2026, read off ycombinator.com/companies -------------------------------------
+ ('openrelay', 'Distributed, hardware-agnostic AI inference',
+  dict(archetype='Cloud & Infrastructure', archetype_secondary='Data, AI & Developer Tools',
+   industry='Horizontal', function='Engineering & Design', buyer='DEV', gtm_motion='PLG',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Inference Network|Multi Cloud Inference Routing|GPU Capacity Marketplace|Serverless Inference|Hardware Agnostic AI Compute|Inference Endpoint')),
+ ('praxis-robotics', 'Turns real businesses into robotics data vendors',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='',
+   industry='Horizontal', function='Data & Analytics', buyer='ENTERPRISE', gtm_motion='ENT_SALES',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Robotics Training Data|Egocentric Video Capture|Human Demonstration Data|Data For Frontier Labs|Physical AI Data Collection|Dataset Licensing')),
+ ('subvysion', "Autonomous rovers to make the 'Google Maps' of underground utilities",
+  # A mapping SERVICE delivered with its own rover fleet, sold to utility contractors.
+  dict(archetype='Design & Engineering', archetype_secondary='Vertical Software',
+   industry='Construction & Infrastructure', function='Operations', buyer='SMB', gtm_motion='MIDMARKET',
+   revenue_model='SERVICES_LED', product_role='TOOL', asset_intensity='FLEET_OPS', purchase_frequency='EPISODIC',
+   ai_stance='AI_EMBEDDED', growth=None, gm=None,
+   product_tags='Underground Utility Mapping|Ground Penetrating Radar|Autonomous Survey Rovers|Construction Site Mapping|Utility Strike Prevention|3D Subsurface Maps')),
+ ('derya', 'AI Brokers for Industrial Trade',
+  dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Business Applications',
+   industry='Manufacturing', function='Supply Chain', buyer='SMB', gtm_motion='MIDMARKET',
+   revenue_model='SERVICES_LED', product_role='AGGREGATOR', asset_intensity='NONE', purchase_frequency='REPEAT_TRANSACTION',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Supply Chain Outsourcing|Procurement Automation|Freight And Customs Brokerage|Hardware Supply Chain|Component Sourcing|Agentic Logistics')),
+ ('chromie', 'We help startups win gov contracts',
+  dict(archetype='Vertical Software', archetype_secondary='Business Applications',
+   industry='Government', function='Sales', buyer='SMB', gtm_motion='MIDMARKET',
+   revenue_model='SEATS', product_role='SOR', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Government Contracting Software|Capture Management|Proposal Automation|RFP Intelligence|Win Probability Modelling|Company Knowledge Base')),
+ ('opentag', 'Model Agnostic Claude Tag',
+  dict(archetype='Business Applications', archetype_secondary='Communications & Collaboration',
+   industry='Horizontal', function='Productivity', buyer='SMB', gtm_motion='PLG',
+   revenue_model='SEATS', product_role='SOE', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Coworker In Slack|Slack Native Agent|Company Wiki Automation|Workflow Automation Suggestions|Model Agnostic Agent|Team Knowledge Base')),
+ ('princeps', 'AI-native insurance company for the compute economy',
+  dict(archetype='Insurance Technology', archetype_secondary='',
+   industry='Financial Services', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='TRANSACTION_FEE', product_role='SOR', asset_intensity='', purchase_frequency='SUBSCRIPTION',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Compute Infrastructure Insurance|Data Centre Insurance|GPU Residual Value Cover|SLA And Outage Underwriting|AI Native Insurer|Project Finance Enablement')),
+ ('markov', 'Expert computer-use data for frontier AI labs',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='',
+   industry='Horizontal', function='Data & Analytics', buyer='ENTERPRISE', gtm_motion='ENT_SALES',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Computer Use Training Data|Screen Recording Datasets|Expert Workflow Data|Data For Frontier Labs|Data Labelling|Dataset Licensing')),
+
+ # --- Spring 2026, read off ycombinator.com/companies -------------------------------------
+ ('ornadyne', "We're building robot birds for surveillance.",
+  # Defence hardware sold to militaries. OUT_OF_MARKET; filed as what it sells (rule A11).
+  dict(archetype='Design & Engineering', archetype_secondary='',
+   industry='Government', function='Operations', buyer='PUBLIC', gtm_motion='ENT_SALES',
+   revenue_model='PRODUCT_SALES', product_role='BRAND', asset_intensity='OWN_PRODUCT', purchase_frequency='EPISODIC',
+   ai_stance='AI_EMBEDDED', growth=None, gm=None,
+   product_tags='Reconnaissance Drones|Flapping Wing Aircraft|Defence Surveillance Hardware|Autonomous UAS|Military Drones|Aerospace And Defence Components')),
+ ('panacea', 'AI-Native FDA Regulatory Services',
+  # A services firm (ex-FDA consultants plus an AI platform, milestone pricing), so SERVICES_LED.
+  dict(archetype='Vertical Software', archetype_secondary='Business Applications',
+   industry='Healthcare & Life Sciences', function='Legal & Compliance', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='SERVICES_LED', product_role='TOOL', asset_intensity='', purchase_frequency='EPISODIC',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='FDA Regulatory Consulting|Regulatory Submissions|Biotech And Medtech Regulatory Strategy|Tech Enabled Services|Outcome Based Pricing|Regulatory Affairs Automation')),
+ ('gigacatalyst', 'AI-first embedded analytics and reports for customer success',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Business Applications',
+   industry='Horizontal', function='Data & Analytics', buyer='LOB', gtm_motion='MIDMARKET',
+   revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Embedded Analytics|In Product Customisation Layer|Customer Built Dashboards|Embedded AI App Builder|SaaS Expansion Tooling|Customer Success Reports')),
+ ('raspire', 'Autonomous Runtime Security',
+  dict(archetype='Cybersecurity', archetype_secondary='',
+   industry='Horizontal', function='Security', buyer='ENT_IT', gtm_motion='MIDMARKET',
+   revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Mobile App Security|Runtime Application Self Protection|App Hardening|Anti Fraud And Anti Tamper|API Protection|Threat Visibility')),
+ ('playabl', 'TikTok for User-generated Games',
+  # The page says creators can monetise and says nothing about how the platform earns, so the
+  # revenue model is left blank rather than guessed.
+  dict(archetype='Gaming & Virtual Economy', archetype_secondary='Consumer & Prosumer Software',
+   industry='Media & Gaming', function='Content & Community', buyer='CONSUMER', gtm_motion='NETWORK_EFFECT',
+   revenue_model='', product_role='DESTINATION', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='User Generated Games|Prompt To Game Engine|Social Gaming Feed|Game Creation Platform|Creator Monetisation|Casual Games')),
+ ('aster', 'Automating open-ended research.',
+  # An autonomous research lab. What it charges for is not on the page; revenue model blank.
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='',
+   industry='Horizontal', function='Data & Analytics', buyer='ENTERPRISE', gtm_motion='ENT_SALES',
+   revenue_model='', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Autonomous Research Agents|AI For Science|Parallel Agent Orchestration|Research Automation|Neolab')),
+ ('auxos', 'Simulations of real people for market research',
+  dict(archetype='Marketing & Customer Engagement', archetype_secondary='Data, AI & Developer Tools',
+   industry='Horizontal', function='Marketing', buyer='LOB', gtm_motion='MIDMARKET',
+   revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Synthetic Market Research|AI Customer Twins|Simulated Consumer Panels|Concept And Pricing Testing|Audience Simulation|Survey Replacement')),
+ ('lattice-health', 'Monitoring and governance for deployed medical imaging AI',
+  dict(archetype='Vertical Software', archetype_secondary='Data, AI & Developer Tools',
+   industry='Healthcare & Life Sciences', function='Data & Analytics', buyer='ENT_IT', gtm_motion='ENT_SALES',
+   revenue_model='PLATFORM', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_EMBEDDED', growth=None, gm=None,
+   product_tags='Medical Imaging AI Monitoring|AI Governance For Hospitals|Model Drift Detection|Radiology AI Compliance|Post Deployment Surveillance|Healthcare IT')),
+
+ # --- Winter 2026, read off ycombinator.com/companies -------------------------------------
+ ('turnstone', 'Work with agents that already know you',
+  # Runs on the user's own machine and model; no price on the page, revenue model blank.
+  dict(archetype='Consumer & Prosumer Software', archetype_secondary='Business Applications',
+   industry='Horizontal', function='Productivity', buyer='PROSUMER', gtm_motion='PLG',
+   revenue_model='', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Personal AI Workspace|Local First Second Brain|Personal Agents|App And File Context Capture|Chief Of Staff Agent|Bring Your Own Model')),
+ ('constellation-space', 'AI operating system for mega-scale satellite networks.',
+  dict(archetype='Vertical Software', archetype_secondary='Cloud & Infrastructure',
+   industry='Telecom', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='PLATFORM', product_role='SOR', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Satellite Constellation Management|Network Failure Prediction|Autonomous Traffic Rerouting|Satellite Operations Software|Space Networking|Mission Assurance')),
+ ('foreman', 'Keeping contractors on the job site, not behind a desk.',
+  dict(archetype='Vertical Software', archetype_secondary='',
+   industry='Construction & Infrastructure', function='Operations', buyer='SMB', gtm_motion='MIDMARKET',
+   revenue_model='SEATS', product_role='SOR', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Construction Project Management|AI Takeoffs And Estimates|Contractor Proposals|Residential Contractor Software|Job Costing|Field Service Operations')),
+ ('daivin', 'Tankless Dive Gear - Breath Autonomy at Sea, Land & Space',
+  # Hardware for professional, commercial and military divers. OUT_OF_MARKET; rule A11.
+  dict(archetype='Design & Engineering', archetype_secondary='Owned-Inventory Retail',
+   industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='PRODUCT_SALES', product_role='BRAND', asset_intensity='OWN_PRODUCT', purchase_frequency='EPISODIC',
+   ai_stance='AI_NEUTRAL', growth=None, gm=None,
+   product_tags='Tankless Dive Gear|Electrolysis Oxygen Generation|Diving Equipment|Professional Diving Hardware|Life Support Systems|Defence And Commercial Diving')),
+ ('fed10', 'AI Agents for Government Affairs',
+  dict(archetype='Vertical Software', archetype_secondary='Financial Data & Index',
+   industry='Legal & Professional Services', function='Legal & Compliance', buyer='LOB', gtm_motion='MIDMARKET',
+   revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Legislative Monitoring|Regulatory Intelligence|Government Affairs Automation|Policy Threat Detection|Bill Tracking|AI Lobbying Support')),
+ ('veriad', 'Enterprise marketing agents',
+  dict(archetype='Marketing & Customer Engagement', archetype_secondary='Business Applications',
+   industry='Horizontal', function='Legal & Compliance', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Marketing Compliance Review|Brand Guideline Enforcement|Ad Content Approval|Regulated Advertising Review|Content Governance|Marketing Workflow Integration')),
+ ('zymbly', 'The decision-support layer for aviation ops teams to know what to do',
+  # Airlines sit under Travel in the industry vocabulary; there is no Aviation label.
+  dict(archetype='Vertical Software', archetype_secondary='',
+   industry='Travel', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Aircraft Maintenance Software|Technician Copilot|Voice To Compliant Documentation|Maintenance Troubleshooting|Airline MRO Operations|Aviation Maintenance Records')),
+ ('remix', 'Social media content auto-generated with your existing data',
+  dict(archetype='Consumer & Prosumer Software', archetype_secondary='Marketing & Customer Engagement',
+   industry='Horizontal', function='Content & Community', buyer='CONSUMER', gtm_motion='PLG',
+   revenue_model='', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Content Creation App|Social Media Post Generation|Personal Content Agents|Short Form Video Generation|Creator Tools|Photo To Post')),
+
+ # --- Product Hunt, week of 31 August 2026, read off producthunt.com/products ------------
+ ('brandjet', 'Turn public buying signals into sales pipeline',
+  dict(archetype='Marketing & Customer Engagement', archetype_secondary='',
+   industry='Horizontal', function='Marketing', buyer='SMB', gtm_motion='PLG',
+   revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_EMBEDDED', growth=None, gm=None,
+   product_tags='Multichannel Outreach|Brand Monitoring|Sentiment Analysis|Competitor Tracking|Marketing Automation|Sales Outreach Campaigns')),
+ ('myaicademy', 'Learn AI skills for your specific role and team',
+  dict(archetype='Online Learning', archetype_secondary='Business Applications',
+   industry='Education', function='HR & Workforce', buyer='SMB', gtm_motion='PLG',
+   revenue_model='SEATS', product_role='DESTINATION', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Skills Training|Role Based Learning|Corporate Upskilling|Simulated Tool Practice|In Work Guidance|Personalised Courses')),
+ ('airtop', 'Build agents that heal themselves.',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Business Applications',
+   industry='Horizontal', function='Operations', buyer='SMB', gtm_motion='PLG',
+   revenue_model='CONSUMPTION', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='No Code Agent Builder|Browser Automation Agents|Web Workflow Automation|Cloud Browser Infrastructure|Self Healing Automations|Authenticated Web Tasks')),
+ ('world-labs', 'Turn text, pics, video, + 3D into camera-controlled HD video',
+  # The launch is Atlas; the company is World Labs. A frontier lab selling a world model.
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='',
+   industry='Horizontal', function='Engineering & Design', buyer='DEV', gtm_motion='PLG',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='World Model|Generative Video Model|3D Scene Reconstruction|Spatial Intelligence|Foundation Models|Robotics Simulation Data')),
+ ('browzer', 'Put your technical content on autopilot',
+  dict(archetype='Marketing & Customer Engagement', archetype_secondary='Data, AI & Developer Tools',
+   industry='Horizontal', function='Marketing', buyer='SMB', gtm_motion='PLG',
+   revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Developer Documentation Automation|Technical Content Generation|Self Healing Docs|DevRel Tooling|Changelog Generation|SEO Content For Developers')),
+ ('magicrew', 'Give everyone their own AI workforce in one platform',
+  # Open source; the page names no paid tier, so revenue model blank.
+  dict(archetype='Business Applications', archetype_secondary='Data, AI & Developer Tools',
+   industry='Horizontal', function='Productivity', buyer='SMB', gtm_motion='PLG',
+   revenue_model='', product_role='PLATFORM_SUITE', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='AI Agent Platform|Open Source Digital Workers|Multi Agent Collaboration|Report And Presentation Generation|Enterprise Agent Controls|AI Workforce')),
+ ('twelvelabs', 'Video compliance review powered by rules you control',
+  # The launch is Compliance by TwelveLabs; the company is TwelveLabs, a video-understanding
+  # model platform sold as an API.
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='Streaming & Digital Media',
+   industry='Media & Gaming', function='Data & Analytics', buyer='DEV', gtm_motion='ENT_SALES',
+   revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_NATIVE', growth=None, gm=None,
+   product_tags='Video Understanding API|Multimodal Video Models|Video Search And Analysis|Video Compliance Review|Media AI Platform|Foundation Models')),
+ ('dif-sh', 'Markdown feature flags your coding agent installs for you',
+  dict(archetype='Data, AI & Developer Tools', archetype_secondary='',
+   industry='Horizontal', function='Engineering & Design', buyer='DEV', gtm_motion='PLG',
+   revenue_model='CONSUMPTION', product_role='TOOL', asset_intensity='', purchase_frequency='',
+   ai_stance='AI_EMBEDDED', growth=None, gm=None,
+   product_tags='Feature Flags|Open Source Developer Tools|A/B Testing|Experimentation Platform|Markdown Configuration|Coding Agent Integration')),
+]
+
+
 # THE MARCH SET, assembled last so nothing added below the old assembly line is silently excluded.
-PROFILES = REAL + REAL_2 + REAL_3
+# REAL_4 is march 1 of four (8-Sep-2026); marches 2, 3 and 4 append REAL_5, REAL_6 and REAL_7 here.
+PROFILES = REAL + REAL_2 + REAL_3 + REAL_4
 
 _dupes = [k for k in set(x[0] for x in PROFILES)
           if sum(1 for x in PROFILES if x[0] == k) > 1]

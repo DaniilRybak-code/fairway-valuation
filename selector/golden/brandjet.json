@@ -1,0 +1,1205 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
+     "basis_mix": {
+      "BUSINESS_CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "business_customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 357142.86,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 72846.15,
+     "mid": 357142.86,
+     "n": 2,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "automation",
+      "marketing",
+      "sales"
+     ],
+     "spread": 4.9,
+     "table": [
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72846.15,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 357142.86,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 3.2,
+     "thin": true,
+     "triangulated": false
+    },
+    "PAYING_SUBSCRIBERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "PAYING_SUBSCRIBERS",
+     "basis_label": "dollars of enterprise value per paying subscriber",
+     "basis_mix": {
+      "PAYING_SUBSCRIBERS": 2
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 1,
+     "control_names": [
+      "Mailchimp"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "subscribers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 21428.57,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 15000.0,
+     "mid": 21428.57,
+     "n": 2,
+     "period_mix": {
+      "LTM": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "automation",
+      "brand",
+      "marketing"
+     ],
+     "spread": 1.4,
+     "table": [
+      {
+       "company": "Mailchimp",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21428.57,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 3.2,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 4
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 2,
+     "control_names": [
+      "Mailchimp",
+      "Semrush"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 50.0,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Semrush"
+     ],
+     "low": 4.3,
+     "mid": 33.3,
+     "n": 6,
+     "period_mix": {
+      "LTM": 3,
+      "NTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Semrush",
+       "mult": 4.3,
+       "reason": "shares the language of analysis, marketing, tracking; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Mailchimp",
+       "mult": 15.0,
+       "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Klaviyo",
+       "mult": 32.6,
+       "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Jasper",
+       "mult": 33.3,
+       "reason": "shares the language of brand, marketing; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "6sense",
+       "mult": 47.3,
+       "reason": "shares the language of marketing, sales; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clay",
+       "mult": 50.0,
+       "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "analysis",
+      "automation",
+      "brand",
+      "marketing",
+      "sales",
+      "tracking"
+     ],
+     "spread": 11.6,
+     "table": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 4.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Mailchimp",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.6,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "6sense",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 47.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 3.2,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation, Sales Automation; same type of business; same business function; same kind of customer",
+    "score": 17.3,
+    "ticker": "NYSE:HUBS"
+   },
+   {
+    "company": "Klaviyo, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+    "score": 13.7,
+    "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Braze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation; same type of business; same business function; same AI stance",
+    "score": 10.2,
+    "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation; same type of business; same business function; same AI stance",
+    "score": 10.2,
+    "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "Salesforce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Sales Automation, Marketing Automation; related type of business; same revenue model; same AI stance",
+    "score": 9.3,
+    "ticker": "NYSE:CRM"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 5.0,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.0,
+   "mid": 3.4,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "marketing",
+    "sales"
+   ],
+   "show_retention": true,
+   "spread": 1.8,
+   "table": [
+    {
+     "company": "HubSpot, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.0,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
+    },
+    {
+     "company": "Klaviyo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.5,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:KVYO"
+    },
+    {
+     "company": "Braze, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
+     "multiple": 3.4,
+     "recurring_pct": null,
+     "retention_pct": 110.0,
+     "ticker": "NASDAQGS:BRZE"
+    },
+    {
+     "company": "Zeta Global Holdings Corp.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.3,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:ZETA"
+    },
+    {
+     "company": "Salesforce, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.7,
+     "multiple": 5.0,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NYSE:CRM"
+    }
+   ],
+   "tag_evidence": 3.3,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "US; Europe; Asia",
+    "house_type": "",
+    "investor": "Salesforce Ventures",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "Core investment themes are Generative AI, Data and Infrastructure, Security, and Vertical and Horizontal Apps, along with New Frontiers.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Mailchimp",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "Intuit",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Conviction",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Avra",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Operator Collective",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Frontline",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Semrush",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Adobe",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Tribe Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
+    "investor": "Nexus Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Insight Partners (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Foundation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Founders Circle Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "HubSpot Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Blue Owl Capital (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "MSD Partners (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "B Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Franklin Templeton",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Harmony Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Insight Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "D1 Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Mailchimp",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+    "score": 19.7,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Klaviyo",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 32.6,
+    "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+    "score": 18.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 50.0,
+    "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+    "score": 11.7,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": "",
+    "company": "Semrush",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 4.3,
+    "reason": "shares the language of analysis, marketing, tracking; same type of business; same business function; same kind of customer",
+    "score": 20.4,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Apollo.io",
+    "date": "Aug-23",
+    "in_medians": false,
+    "mult": 16.7,
+    "reason": "shares the language of sales; same type of business; same kind of customer; same revenue model",
+    "score": 18.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of brand, marketing; same type of business; same business function; same kind of customer",
+    "score": 19.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "6sense",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 47.3,
+    "reason": "shares the language of marketing, sales; same type of business; same business function; same revenue model",
+    "score": 13.7,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 4
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 2,
+   "control_names": [
+    "Mailchimp",
+    "Semrush"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 50.0,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Semrush"
+   ],
+   "low": 4.3,
+   "mid": 33.3,
+   "n": 6,
+   "period_mix": {
+    "LTM": 3,
+    "NTM": 1,
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Semrush",
+     "mult": 4.3,
+     "reason": "shares the language of analysis, marketing, tracking; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Mailchimp",
+     "mult": 15.0,
+     "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Klaviyo",
+     "mult": 32.6,
+     "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "shares the language of brand, marketing; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "6sense",
+     "mult": 47.3,
+     "reason": "shares the language of marketing, sales; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Clay",
+     "mult": 50.0,
+     "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "SECONDARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "analysis",
+    "automation",
+    "brand",
+    "marketing",
+    "sales",
+    "tracking"
+   ],
+   "spread": 11.6,
+   "table": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 4.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Mailchimp",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Klaviyo",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Jasper",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "6sense",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 47.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 3.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 63,
+  "secondary": [
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Marketing Automation; related type of business; same revenue model; same AI stance",
+    "score": 9.3,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of analysis, sales, tracking; related type of business; same revenue model; same AI stance",
+    "score": 8.0,
+    "ticker": "NYSE:SMWB"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 2.2,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 2.2,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "analysis",
+    "automation",
+    "marketing",
+    "sales",
+    "tracking"
+   ],
+   "show_retention": true,
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    }
+   ],
+   "tag_evidence": 3.3,
+   "thin": true,
+   "triangulated": false
+  }
+ },
+ "label": "Turn public buying signals into sales pipeline"
+}

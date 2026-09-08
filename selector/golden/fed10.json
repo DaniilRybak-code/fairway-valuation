@@ -1,0 +1,914 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 4
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "AuditBoard"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 56.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.0,
+     "mid": 15.0,
+     "n": 4,
+     "period_mix": {
+      "NOT STATED": 1,
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "automation",
+      "regulatory"
+     ],
+     "spread": 5.6,
+     "table": [
+      {
+       "company": "Restaurant365",
+       "date": "May-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clio",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "AuditBoard",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Legora",
+       "date": "Apr-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 56.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.7,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same type of business; same end market; same kind of customer",
+    "score": 8.6,
+    "ticker": "NASDAQGS:INTA"
+   },
+   {
+    "company": "LegalZoom.com, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same business function",
+    "score": 8.0,
+    "ticker": "NASDAQGS:LZ"
+   },
+   {
+    "company": "Samsara Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of tracking; same type of business; same kind of customer",
+    "score": 5.8,
+    "ticker": "NYSE:IOT"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 9.6,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.1,
+   "mid": 4.6,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "LegalZoom.com, Inc.",
+     "mult": 1.1,
+     "reason": "same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Intapp, Inc.",
+     "mult": 4.6,
+     "reason": "shares the language of automation; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Samsara Inc.",
+     "mult": 9.6,
+     "reason": "shares the language of tracking; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "tracking"
+   ],
+   "show_retention": true,
+   "spread": 8.7,
+   "table": [
+    {
+     "company": "LegalZoom.com, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.9,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:LZ"
+    },
+    {
+     "company": "Intapp, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.4,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": 123.0,
+     "ticker": "NASDAQGS:INTA"
+    },
+    {
+     "company": "Samsara Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.2,
+     "multiple": 9.6,
+     "recurring_pct": null,
+     "retention_pct": 115.0,
+     "ticker": "NYSE:IOT"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 7.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "Global; US, Africa, India, Southeast Asia and Latin America",
+    "house_type": "Venture",
+    "investor": "Flourish Ventures",
+    "not_published": null,
+    "recent_deal": "Stream",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://app.dealroom.co/news/feed/stream-raises-5-2m-seed-extension-to-expand-financial-infrastructure",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Global fintech investor in payment rails, merchant infrastructure, embedded finance, compliance and financial health.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European",
+    "house_type": "Venture",
+    "investor": "MiddleGame Ventures",
+    "not_published": null,
+    "recent_deal": "Theia Insights",
+    "recent_deal_date": "2026-03",
+    "recent_deal_url": "https://www.middlegamevc.com/articles/our-investment-in-theia-insights/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Specialist early-stage investor in financial-services infrastructure, payments, capital-markets data and regtech.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Mar-2026)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Atlassian Ventures and NVentures (extension)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Bessemer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "ICONIQ",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Redpoint",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
+    "investor": "Y Combinator",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "DST",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "OpenAI Startup Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "NEA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Goldman Sachs AM",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Sixth Street",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clio",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tidemark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AuditBoard",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Hg (buyer)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "KKR",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "L Catterton (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Legora",
+    "date": "Apr-26",
+    "in_medians": true,
+    "mult": 56.0,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 20.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "Harvey",
+    "date": "Jun-25",
+    "in_medians": false,
+    "mult": 66.7,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 20.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Clio",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "same type of business; same end market; same revenue model; sold the same way",
+    "score": 14.5,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "AuditBoard",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "shares the language of automation, regulatory; related type of business; same business function; same kind of customer",
+    "score": 12.7,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Restaurant365",
+    "date": "May-23",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of automation; same type of business; same revenue model; sold the same way",
+    "score": 10.6,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 4
+   },
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "AuditBoard"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 56.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 10.0,
+   "mid": 15.0,
+   "n": 4,
+   "period_mix": {
+    "NOT STATED": 1,
+    "RUN_RATE": 3
+   },
+   "period_span": {
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "ai",
+    "automation",
+    "regulatory"
+   ],
+   "spread": 5.6,
+   "table": [
+    {
+     "company": "Restaurant365",
+     "date": "May-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clio",
+     "date": "Jul-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "AuditBoard",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Legora",
+     "date": "Apr-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 56.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 39,
+  "secondary": [
+   {
+    "company": "Veeva Systems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of regulatory; same type of business; same kind of customer; same revenue model",
+    "score": 8.6,
+    "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of intelligence, tracking; same kind of customer; same revenue model; sold the same way",
+    "score": 8.4,
+    "ticker": "NYSE:SMWB"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation, intelligence; same kind of customer; same revenue model; sold the same way",
+    "score": 7.3,
+    "ticker": "NASDAQGS:GTM"
+   },
+   {
+    "company": "Riskified Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of policy; same kind of customer; same AI stance",
+    "score": 5.1,
+    "ticker": "NYSE:RSKD"
+   },
+   {
+    "company": "BlackLine, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of automation; same kind of customer; same revenue model",
+    "score": 5.1,
+    "ticker": "NASDAQGS:BL"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 9.7,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.2,
+   "mid": 2.2,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Riskified Ltd.",
+     "mult": 1.4,
+     "reason": "shares the language of policy; same kind of customer; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "mult": 2.2,
+     "reason": "shares the language of intelligence, tracking; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "mult": 2.2,
+     "reason": "shares the language of automation, intelligence; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "BlackLine, Inc.",
+     "mult": 2.5,
+     "reason": "shares the language of automation; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "mult": 9.7,
+     "reason": "shares the language of regulatory; same type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "automation",
+    "intelligence",
+    "policy",
+    "regulatory",
+    "tracking"
+   ],
+   "show_retention": true,
+   "spread": 6.9,
+   "table": [
+    {
+     "company": "Riskified Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.4,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": 105.0,
+     "ticker": "NYSE:RSKD"
+    },
+    {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "BlackLine, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.4,
+     "multiple": 2.5,
+     "recurring_pct": 95.0,
+     "retention_pct": 102.0,
+     "ticker": "NASDAQGS:BL"
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
+     "multiple": 9.7,
+     "recurring_pct": 84.0,
+     "retention_pct": null,
+     "ticker": "NYSE:VEEV"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "AI Agents for Government Affairs"
+}

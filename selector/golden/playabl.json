@@ -1,0 +1,1172 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "PAYING_SUBSCRIBERS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "PAYING_SUBSCRIBERS",
+     "basis_label": "dollars of enterprise value per paying subscriber",
+     "basis_mix": {
+      "PAYING_SUBSCRIBERS": 1
+     },
+     "bounded": true,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "subscribers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 2700.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 2700.0,
+     "mid": 2700.0,
+     "n": 1,
+     "period_mix": {
+      "RUN_RATE": 1
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "creator"
+     ],
+     "sole": "Suno",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Suno",
+       "date": "Jun-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 2700.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.4,
+     "thin": true,
+     "triangulated": true
+    },
+    "REGISTERED_USERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REGISTERED_USERS",
+     "basis_label": "dollars of enterprise value per registered user",
+     "basis_mix": {
+      "REGISTERED_USERS": 3
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "registered_users",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 951.61,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 5.67,
+     "mid": 57.14,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Voodoo",
+       "mult": 5.67,
+       "reason": "shares the language of casual, games, gaming; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Dream Sports",
+       "mult": 57.14,
+       "reason": "same type of business; same end market; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Roblox",
+       "mult": 951.61,
+       "reason": "both do User Generated Games; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "casual",
+      "creator",
+      "games",
+      "gaming",
+      "generated",
+      "monetisation",
+      "user"
+     ],
+     "spread": 167.8,
+     "table": [
+      {
+       "company": "Voodoo",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Dream Sports",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 57.14,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Roblox",
+       "date": "Jan-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 951.61,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 5.1,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 1
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 40.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 18.0,
+     "mid": 40.0,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "creator",
+      "monetisation",
+      "platform"
+     ],
+     "spread": 2.2,
+     "table": [
+      {
+       "company": "Suno",
+       "date": "Jun-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 18.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Patreon",
+       "date": "Apr-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 40.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 4.0,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 31.9,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 5.05,
+     "mid": 23.4,
+     "n": 4,
+     "period_mix": {
+      "LTM": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Voodoo",
+       "mult": 5.05,
+       "reason": "shares the language of casual, games, gaming; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Epic Games",
+       "mult": 6.18,
+       "reason": "shares the language of creator, engine, game; same type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Dream Sports",
+       "mult": 23.4,
+       "reason": "same type of business; same end market; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Roblox",
+       "mult": 31.9,
+       "reason": "both do User Generated Games; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "casual",
+      "creator",
+      "engine",
+      "game",
+      "games",
+      "gaming",
+      "generated",
+      "monetisation",
+      "platform",
+      "user"
+     ],
+     "spread": 6.3,
+     "table": [
+      {
+       "company": "Voodoo",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.05,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Epic Games",
+       "date": "Apr-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 6.18,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Dream Sports",
+       "date": "Nov-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Roblox",
+       "date": "Jan-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 31.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 5.1,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Roblox Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do User-Generated Gaming; same type of business; same end market; same business function",
+    "score": 15.6,
+    "ticker": "NYSE:RBLX"
+   },
+   {
+    "company": "Netflix, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Games; same end market; same business function; same kind of customer",
+    "score": 9.1,
+    "ticker": "NASDAQGS:NFLX"
+   },
+   {
+    "company": "The New York Times Company",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Games; same end market; same business function; same kind of customer",
+    "score": 9.1,
+    "ticker": "NYSE:NYT"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 6.2,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.0,
+   "mid": 3.7,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "creator",
+    "games",
+    "gaming",
+    "generated",
+    "user"
+   ],
+   "show_retention": false,
+   "spread": 2.1,
+   "table": [
+    {
+     "company": "The New York Times Company",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.4,
+     "multiple": 3.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NYT"
+    },
+    {
+     "company": "Roblox Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.6,
+     "multiple": 3.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:RBLX"
+    },
+    {
+     "company": "Netflix, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.7,
+     "multiple": 6.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:NFLX"
+    }
+   ],
+   "tag_evidence": 2.1,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 3.0,
+    "deal_note": null,
+    "geographies": "North America",
+    "house_type": "",
+    "investor": "Uncork Capital",
+    "not_published": null,
+    "recent_deal": "Gamma",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://www.businesswire.com/news/home/20251110805751/en/Gamma-Surpasses-$100M-ARR-Raises-at-$2.1B-Valuation-as-It-Replaces-PowerPoint-for-the-AI-Era",
+    "stage_bands": "Seed",
+    "thesis": "Uncork is the first major check on the cap table, often leading seed rounds.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 10.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "US; India",
+    "house_type": "",
+    "investor": "South Park Commons",
+    "not_published": null,
+    "recent_deal": "Gamma",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://www.businesswire.com/news/home/20251110805751/en/Gamma-Surpasses-$100M-ARR-Raises-at-$2.1B-Valuation-as-It-Replaces-PowerPoint-for-the-AI-Era",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "We are ready to write the first check, for exceptional builders from the SPC community or the larger ecosystem.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.25,
+    "cheque_low_m": null,
+    "deal_note": "Pulse 2.0, 10-Jul-2026: 'Index Ventures has led a $13 million seed round for Marker, a London-based startup developing an AI-native word processor ... The funding round includes participation from LocalGlobe, Betaworks, Radical Ventures, Tiny VC and Otherwise Fund'. Cheque from the Camp application page: 'Betaworks and our syndicate partners will each invest up to $250k for a total of up to $500k investment per team'; the Betaworks half is recorded. Stage: the Camp page describes Betaworks as 'a pre-seed and seed stage investor'.",
+    "geographies": "companies based anywhere in the world; in-person time in NYC required for Camp",
+    "house_type": "VC",
+    "investor": "Betaworks",
+    "not_published": null,
+    "recent_deal": "Marker",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://pulse2.com/marker-raises-13-million-seed-funding-to-build-an-ai-native-word-processor/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "A thematic investment and in-residence program for startups building in frontier technologies.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.5,
+    "cheque_low_m": 0.1,
+    "deal_note": "TechCrunch, 10-Sep-2025: 'The startup's $4 million seed round was led by Eniac Ventures ... The round also includes investment from Haystack, Factorial Capital, Homebrew, Offline Ventures'. Oboe is a consumer AI learning app with a free tier, $15 and $40 a month plans. Cheque from homebrew.co: '90% of what we do is pre-seed/seed investments of between $100k and $500k.' Deal sits exactly twelve months back on 5-Sep-2026.",
+    "geographies": "North or South America, initially targeting markets in those geographies",
+    "house_type": "VC",
+    "investor": "Homebrew",
+    "not_published": null,
+    "recent_deal": "Oboe",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Capital, counsel and commitment for mission-driven founders reimagining the world we live in.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 4.0,
+    "cheque_low_m": 0.25,
+    "deal_note": "TechCrunch, 1-Sep-2026: 'The startup is backed by $3.5 million in pre-seed funding, co-led by NextView Ventures and Baukunst'. Fambot is a consumer AI assistant for family logistics. Cheque from nextview.vc/approach: 'Our initial investments range from $250K to $4M'.",
+    "geographies": "North America; offices in San Francisco, New York, and Boston",
+    "house_type": "VC",
+    "investor": "NextView Ventures",
+    "not_published": null,
+    "recent_deal": "Fambot",
+    "recent_deal_date": "2026-09",
+    "recent_deal_url": "https://techcrunch.com/2026/09/01/fambot-introduces-an-ai-chief-of-staff-for-families/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "We lead rounds for pre-traction companies that leverage AI and software to tackle mass market human problems.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Epic Games",
+      "date": "Apr-22"
+     }
+    ],
+    "investor": "Sony Group",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Epic Games",
+      "date": "Apr-22"
+     }
+    ],
+    "investor": "KIRKBI",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Dream Sports",
+      "date": "Nov-21"
+     }
+    ],
+    "investor": "Falcon Edge",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Dream Sports",
+      "date": "Nov-21"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Dream Sports",
+      "date": "Nov-21"
+     }
+    ],
+    "investor": "D1 Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Dream Sports",
+      "date": "Nov-21"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Dream Sports",
+      "date": "Nov-21"
+     }
+    ],
+    "investor": "RedBird Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Voodoo",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "Groupe Bruxelles Lambert",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Patreon",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Tiger Global Management (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Patreon",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Woodline Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Patreon",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Wellington",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Patreon",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Lone Pine",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Patreon",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "NEA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Patreon",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "Glade Brook",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Patreon",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "DFJ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Roblox",
+      "date": "Jan-21"
+     }
+    ],
+    "investor": "Altimeter Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Roblox",
+      "date": "Jan-21"
+     }
+    ],
+    "investor": "Dragoneer Investment Group",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Bond Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Forerunner",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Union Square Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Alkeon",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Quiet",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Matrix",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Lightspeed",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Menlo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Suno",
+      "date": "Jun-26"
+     }
+    ],
+    "investor": "Schroders Capital",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Epic Games",
+    "date": "Apr-22",
+    "in_medians": true,
+    "mult": 6.18,
+    "reason": "shares the language of creator, engine, game; same type of business; same end market; same kind of customer",
+    "score": 15.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Dream Sports",
+    "date": "Nov-21",
+    "in_medians": true,
+    "mult": 23.4,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 16.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Voodoo",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 5.05,
+    "reason": "shares the language of casual, games, gaming; same type of business; same end market; same business function",
+    "score": 18.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "CONTEMPORANEOUS_PRESS_THRESHOLD",
+    "bound": "<=",
+    "company": "Patreon",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 40.0,
+    "reason": "both do Creator Monetisation; same end market; same kind of customer",
+    "score": 11.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Roblox",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 31.9,
+    "reason": "both do User Generated Games; same type of business; same end market; same business function",
+    "score": 24.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "<=",
+    "company": "Suno",
+    "date": "Jun-26",
+    "in_medians": true,
+    "mult": 18.0,
+    "reason": "shares the language of creator; related type of business; same end market; same business function",
+    "score": 14.9,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "ARR_RUNRATE": 1
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 40.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 18.0,
+   "mid": 40.0,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "creator",
+    "monetisation",
+    "platform"
+   ],
+   "spread": 2.2,
+   "table": [
+    {
+     "company": "Suno",
+     "date": "Jun-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 18.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Patreon",
+     "date": "Apr-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 40.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 4.0,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 67,
+  "secondary": [
+   {
+    "company": "Spotify Technology S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of creator; same end market; same business function; same kind of customer",
+    "score": 8.9,
+    "ticker": "NYSE:SPOT"
+   },
+   {
+    "company": "CuriosityStream Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "NASDAQCM:CURI"
+   },
+   {
+    "company": "Deezer S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "ENXTPA:DEEZR"
+   },
+   {
+    "company": "Viaplay Group AB (publ)",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "OM:VPLAY B"
+   },
+   {
+    "company": "U-NEXT HOLDINGS",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer",
+    "score": 8.5,
+    "ticker": "TSE:9418"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 4.2,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 0.7,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Deezer S.A.",
+     "mult": 0.1,
+     "reason": "same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Viaplay Group AB (publ)",
+     "mult": 0.5,
+     "reason": "same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "U-NEXT HOLDINGS",
+     "mult": 0.7,
+     "reason": "same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "CuriosityStream Inc.",
+     "mult": 1.9,
+     "reason": "same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Spotify Technology S.A.",
+     "mult": 4.2,
+     "reason": "shares the language of creator; same end market; same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "creator"
+   ],
+   "show_retention": false,
+   "spread": 42.0,
+   "table": [
+    {
+     "company": "Deezer S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.2,
+     "multiple": 0.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DEEZR"
+    },
+    {
+     "company": "Viaplay Group AB (publ)",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.7,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:VPLAY B"
+    },
+    {
+     "company": "U-NEXT HOLDINGS",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.8,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9418"
+    },
+    {
+     "company": "CuriosityStream Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQCM:CURI"
+    },
+    {
+     "company": "Spotify Technology S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.9,
+     "multiple": 4.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:SPOT"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": true
+  }
+ },
+ "label": "TikTok for User-generated Games"
+}

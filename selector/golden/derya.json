@@ -1,0 +1,892 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "E2open"
+     ],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 3.46,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "E2open"
+     ],
+     "low": 3.46,
+     "mid": 3.46,
+     "n": 1,
+     "period_mix": {
+      "FY2025": 1
+     },
+     "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "chain",
+      "logistics",
+      "procurement",
+      "supply"
+     ],
+     "sole": "E2open",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.46,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.0,
+     "thin": true,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 10.36,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 5.91,
+     "mid": 7.1,
+     "n": 4,
+     "period_mix": {
+      "FY ENDED 31-MAR-2023": 1,
+      "LTM": 3
+     },
+     "period_span": {
+      "FY ENDED 31-MAR-2023": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "chain",
+      "logistics",
+      "sourcing",
+      "supply"
+     ],
+     "spread": 1.8,
+     "table": [
+      {
+       "company": "WayCool Foods",
+       "date": "Jun-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.91,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vegrow",
+       "date": "Dec-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 6.68,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ninjacart",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "ElasticRun",
+       "date": "Feb-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.36,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.9,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "JSL S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of freight, logistics, outsourcing; same type of business; same business function; same revenue model",
+    "score": 8.3,
+    "ticker": "BOVESPA:JSLG3"
+   },
+   {
+    "company": "ID Logistics Group SA",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
+    "score": 8.2,
+    "ticker": "ENXTPA:IDL"
+   },
+   {
+    "company": "Grupo Traxion, S.A.B. de C.V.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of freight, logistics; same type of business; same business function; same revenue model",
+    "score": 7.7,
+    "ticker": "BMV:TRAXION A"
+   },
+   {
+    "company": "Reysas Tasimacilik ve Lojistik",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of freight, logistics; same type of business; same business function; same revenue model",
+    "score": 7.7,
+    "ticker": "IBSE:RYSAS"
+   },
+   {
+    "company": "GXO Logistics, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "NYSE:GXO"
+   },
+   {
+    "company": "Mitsubishi Logistics",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "TSE:9301"
+   },
+   {
+    "company": "Expeditors International",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Customs Brokerage; same type of business; same business function",
+    "score": 7.2,
+    "ticker": "NYSE:EXPD"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 6
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 1.8,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 0.7,
+   "n": 6,
+   "period_mix": {
+    "NTM": 6
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "mult": 0.2,
+     "reason": "shares the language of freight, logistics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "ID Logistics Group SA",
+     "mult": 0.5,
+     "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "JSL S.A.",
+     "mult": 0.7,
+     "reason": "shares the language of freight, logistics, outsourcing; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "GXO Logistics, Inc.",
+     "mult": 0.7,
+     "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Expeditors International",
+     "mult": 1.8,
+     "reason": "both do Customs Brokerage; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Mitsubishi Logistics",
+     "mult": 2.1,
+     "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "brokerage",
+    "chain",
+    "customs",
+    "freight",
+    "logistics",
+    "outsourcing",
+    "supply"
+   ],
+   "show_retention": false,
+   "spread": 10.5,
+   "table": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
+     "multiple": 0.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BMV:TRAXION A"
+    },
+    {
+     "company": "ID Logistics Group SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.4,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:IDL"
+    },
+    {
+     "company": "JSL S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.4,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BOVESPA:JSLG3"
+    },
+    {
+     "company": "GXO Logistics, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:GXO"
+    },
+    {
+     "company": "Expeditors International",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.9,
+     "multiple": 1.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:EXPD"
+    },
+    {
+     "company": "Mitsubishi Logistics",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9301"
+    }
+   ],
+   "tag_evidence": 1.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": "21 Nov 2022",
+    "cheque_high_m": null,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "Australia and New Zealand; Israel; Southeast Asia",
+    "house_type": "",
+    "investor": "Square Peg",
+    "not_published": null,
+    "recent_deal": "Airwallex",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://www.airwallex.com/newsroom/airwallex-series-g",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Our sweet spot for new investments is Seed to Series A.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "US-based; global transportation opportunities, including Europe",
+    "house_type": "Venture",
+    "investor": "Trucks Venture Capital",
+    "not_published": null,
+    "recent_deal": "Providio AI",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://providio.ai/blog/from-human-to-superhuman",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed investor in transportation systems, freight, aviation and mobility infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "North America and Europe, selectively global",
+    "house_type": "Venture",
+    "investor": "Dynamo Ventures",
+    "not_published": null,
+    "recent_deal": "UNIT AI",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.dynamo.vc/insights/unit-ai",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Southern Europe and Latin America, especially Spain",
+    "house_type": "Venture",
+    "investor": "Kfund",
+    "not_published": null,
+    "recent_deal": "Pollen",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Europe and US",
+    "house_type": "Venture",
+    "investor": "Pale blue dot",
+    "not_published": null,
+    "recent_deal": "Staer",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://paleblue.vc/portfolio/staer",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 4.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Pan-European, including Israel",
+    "house_type": "Venture",
+    "investor": "Planet A Ventures",
+    "not_published": null,
+    "recent_deal": "Gigaton",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Europe-focused (Berlin); invests internationally",
+    "house_type": "Venture",
+    "investor": "FoodLabs",
+    "not_published": null,
+    "recent_deal": "Reformed",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "Europe-focused; invests globally",
+    "house_type": "Venture",
+    "investor": "Speedinvest",
+    "not_published": null,
+    "recent_deal": "Kyrok?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "E2open",
+      "date": "May-25"
+     }
+    ],
+    "investor": "WiseTech Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vegrow",
+      "date": "Dec-23"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "Lightrock India",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "McKinley Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Shiprocket",
+      "date": "Aug-22"
+     }
+    ],
+    "investor": "March Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "WayCool Foods",
+      "date": "Jun-22"
+     }
+    ],
+    "investor": "Lightrock and existing investors",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ninjacart",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Walmart",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ninjacart",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Flipkart",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "E2open",
+    "date": "May-25",
+    "in_medians": true,
+    "mult": 3.46,
+    "reason": "both do Procurement; same type of business; same business function",
+    "score": 8.0,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "INR 3,610m at 0.01201",
+    "bound": "",
+    "company": "Vegrow",
+    "date": "Dec-23",
+    "in_medians": true,
+    "mult": 6.68,
+    "reason": "shares the language of sourcing; related type of business; same business function; same kind of customer",
+    "score": 13.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Shiprocket",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": 16.03,
+    "reason": "shares the language of logistics; same type of business; same kind of customer",
+    "score": 9.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "WayCool Foods",
+    "date": "Jun-22",
+    "in_medians": true,
+    "mult": 5.91,
+    "reason": "both do Sourcing; related type of business; same business function; same kind of customer",
+    "score": 13.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "ElasticRun",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": 10.36,
+    "reason": "both do Logistics; related type of business; same business function; same kind of customer",
+    "score": 13.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Ninjacart",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 7.1,
+    "reason": "both do Supply Chain; related type of business; same business function; same kind of customer",
+    "score": 13.3,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "E2open"
+   ],
+   "dispersed": false,
+   "display": "DIAMOND",
+   "high": 3.46,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "E2open"
+   ],
+   "low": 3.46,
+   "mid": 3.46,
+   "n": 1,
+   "period_mix": {
+    "FY2025": 1
+   },
+   "period_span": {
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "chain",
+    "logistics",
+    "procurement",
+    "supply"
+   ],
+   "sole": "E2open",
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.46,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 1.0,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 56,
+  "secondary": [
+   {
+    "company": "Tegma Gestao Logistica S.A.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
+    "score": 8.2,
+    "ticker": "BOVESPA:TGMA3"
+   },
+   {
+    "company": "Etsy, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of supply; same kind of customer; same cost structure; same purchase frequency",
+    "score": 8.1,
+    "ticker": "NASDAQGS:ETSY"
+   },
+   {
+    "company": "Lindsay Australia Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, freight, logistics; same type of business; same business function; same revenue model",
+    "score": 7.8,
+    "ticker": "ASX:LAU"
+   },
+   {
+    "company": "STEF SA",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of chain, logistics; same type of business; same business function; same revenue model",
+    "score": 7.7,
+    "ticker": "ENXTPA:STF"
+   },
+   {
+    "company": "Americold Realty Trust",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
+    "score": 7.6,
+    "ticker": "NYSE:COLD"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 4
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 3.5,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 0.7,
+   "n": 4,
+   "period_mix": {
+    "NTM": 4
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Lindsay Australia Limited",
+     "mult": 0.5,
+     "reason": "shares the language of chain, freight, logistics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "STEF SA",
+     "mult": 0.6,
+     "reason": "shares the language of chain, logistics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tegma Gestao Logistica S.A.",
+     "mult": 0.8,
+     "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Americold Realty Trust",
+     "mult": 3.5,
+     "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [
+    {
+     "company": "Etsy, Inc.",
+     "mult": 3.2,
+     "reason": "shares the language of supply; same kind of customer; same cost structure; same purchase frequency",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "chain",
+    "freight",
+    "logistics",
+    "outsourcing"
+   ],
+   "show_retention": false,
+   "spread": 7.0,
+   "table": [
+    {
+     "company": "Lindsay Australia Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.4,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:LAU"
+    },
+    {
+     "company": "STEF SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.0,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTPA:STF"
+    },
+    {
+     "company": "Tegma Gestao Logistica S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.5,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "BOVESPA:TGMA3"
+    },
+    {
+     "company": "Americold Realty Trust",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.7,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:COLD"
+    }
+   ],
+   "tag_evidence": 0.7,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "AI Brokers for Industrial Trade"
+}

@@ -1,0 +1,993 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Accolade"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 14.25,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Accolade"
+     ],
+     "low": 1.39,
+     "mid": 10.0,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Accolade",
+       "mult": 1.39,
+       "reason": "same type of business; same end market; same revenue model; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Thirty Madison",
+       "mult": 10.0,
+       "reason": "same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Cityblock Health",
+       "mult": 14.25,
+       "reason": "same type of business; same end market; same revenue model; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [],
+     "spread": 10.3,
+     "table": [
+      {
+       "company": "Accolade",
+       "date": "Jan-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.39,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Thirty Madison",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Cityblock Health",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 14.25,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.0,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 4
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 66.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.37,
+     "mid": 51.4,
+     "n": 4,
+     "period_mix": {
+      "LTM": 4
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Aledade",
+       "mult": 7.37,
+       "reason": "same type of business; same end market; same revenue model; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Doctolib",
+       "mult": 32.0,
+       "reason": "same type of business; same end market; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Devoted Health",
+       "mult": 51.4,
+       "reason": "related type of business; same end market; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Incredible Health",
+       "mult": 66.0,
+       "reason": "shares the language of healthcare; same type of business; same end market; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "healthcare"
+     ],
+     "spread": 9.0,
+     "table": [
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.37,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Devoted Health",
+       "date": "Oct-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 51.4,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Incredible Health",
+       "date": "Aug-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 66.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": false,
+     "triangulated": true
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Claritev Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; same type of business; same end market; same business function",
+    "score": 13.6,
+    "ticker": "NYSE:CTEV"
+   },
+   {
+    "company": "Waystar Holding Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, healthcare, it; same type of business; same end market; same kind of customer",
+    "score": 12.1,
+    "ticker": "NASDAQGS:WAY"
+   },
+   {
+    "company": "Phreesia, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; same type of business; same end market; same kind of customer",
+    "score": 11.6,
+    "ticker": "NYSE:PHR"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; same type of business; same end market; same revenue model",
+    "score": 10.6,
+    "ticker": "TSX:TCS"
+   },
+   {
+    "company": "Consensus Cloud Solutions, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; same type of business; same end market; same kind of customer",
+    "score": 9.6,
+    "ticker": "NASDAQGS:CCSI"
+   },
+   {
+    "company": "Weave Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same revenue model; same AI stance",
+    "score": 9.5,
+    "ticker": "NYSE:WEAV"
+   },
+   {
+    "company": "Veeva Systems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; sold the same way; same AI stance",
+    "score": 9.0,
+    "ticker": "NYSE:VEEV"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 5.1,
+   "levered_names": [
+    {
+     "company": "Claritev Corporation",
+     "debt_share_pct": 87.5
+    }
+   ],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 1.9,
+   "mid": 3.1,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Phreesia, Inc.",
+     "mult": 1.4,
+     "reason": "shares the language of healthcare; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tecsys Inc.",
+     "mult": 1.9,
+     "reason": "shares the language of healthcare; same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Weave Communications, Inc.",
+     "mult": 1.9,
+     "reason": "same type of business; same end market; same revenue model; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "mult": 3.1,
+     "reason": "shares the language of healthcare; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Waystar Holding Corp.",
+     "mult": 4.5,
+     "reason": "shares the language of ai, healthcare, it; same type of business; same end market; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Claritev Corporation",
+     "mult": 5.1,
+     "reason": "shares the language of healthcare; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "mult": 9.7,
+     "reason": "same type of business; same end market; sold the same way; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ai",
+    "healthcare",
+    "it"
+   ],
+   "show_retention": true,
+   "spread": 6.9,
+   "table": [
+    {
+     "company": "Phreesia, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.3,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PHR"
+    },
+    {
+     "company": "Tecsys Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
+    },
+    {
+     "company": "Weave Communications, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.8,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": 92.0,
+     "ticker": "NYSE:WEAV"
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CCSI"
+    },
+    {
+     "company": "Waystar Holding Corp.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WAY"
+    },
+    {
+     "company": "Claritev Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.2,
+     "multiple": 5.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CTEV"
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
+     "multiple": 9.7,
+     "recurring_pct": 84.0,
+     "retention_pct": null,
+     "ticker": "NYSE:VEEV"
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Accolade",
+      "date": "Jan-25"
+     }
+    ],
+    "investor": "Transcarent",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Aledade",
+      "date": "Jun-23"
+     }
+    ],
+    "investor": "Lightspeed Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Eurazeo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bpifrance",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "General Atlantic",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "Uprising",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Cityblock Health",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Thirty Madison",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "HealthQuest Capital",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "DIRECT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Accolade",
+    "date": "Jan-25",
+    "in_medians": true,
+    "mult": 1.39,
+    "reason": "same type of business; same end market; same revenue model; sold the same way",
+    "score": 16.5,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Aledade",
+    "date": "Jun-23",
+    "in_medians": true,
+    "mult": 7.37,
+    "reason": "same type of business; same end market; same revenue model; same AI stance",
+    "score": 13.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2021",
+    "bound": "",
+    "company": "Incredible Health",
+    "date": "Aug-22",
+    "in_medians": true,
+    "mult": 66.0,
+    "reason": "shares the language of healthcare; same type of business; same end market; same revenue model",
+    "score": 16.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Doctolib",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "same type of business; same end market; same AI stance",
+    "score": 10.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Devoted Health",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 51.4,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Cityblock Health",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 14.25,
+    "reason": "same type of business; same end market; same revenue model; sold the same way",
+    "score": 16.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Thirty Madison",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "same type of business; same end market",
+    "score": 8.0,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Accolade"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 14.25,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Accolade"
+   ],
+   "low": 1.39,
+   "mid": 10.0,
+   "n": 3,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Accolade",
+     "mult": 1.39,
+     "reason": "same type of business; same end market; same revenue model; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Thirty Madison",
+     "mult": 10.0,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Cityblock Health",
+     "mult": 14.25,
+     "reason": "same type of business; same end market; same revenue model; sold the same way",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [],
+   "spread": 10.3,
+   "table": [
+    {
+     "company": "Accolade",
+     "date": "Jan-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 1.39,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Thirty Madison",
+     "date": "Jun-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Cityblock Health",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 14.25,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
+  },
+  "private_window_months": 62,
+  "secondary": [
+   {
+    "company": "Fair Isaac Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of detection; related type of business; same business function; same kind of customer",
+    "score": 9.3,
+    "ticker": "NYSE:FICO"
+   },
+   {
+    "company": "Varonis Systems, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of detection, governance; same kind of customer; same revenue model; sold the same way",
+    "score": 8.8,
+    "ticker": "NASDAQGS:VRNS"
+   },
+   {
+    "company": "Vertex, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of compliance; related type of business; same kind of customer; same revenue model",
+    "score": 8.7,
+    "ticker": "NASDAQGM:VERX"
+   },
+   {
+    "company": "Roper Technologies, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; related type of business; same kind of customer; same revenue model",
+    "score": 8.6,
+    "ticker": "NASDAQGS:ROP"
+   },
+   {
+    "company": "SailPoint, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of governance; same kind of customer; same revenue model; sold the same way",
+    "score": 8.5,
+    "ticker": "NASDAQGS:SAIL"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 10.2,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.7,
+   "mid": 5.9,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [
+    {
+     "company": "Varonis Systems, Inc.",
+     "mult": 5.4,
+     "reason": "shares the language of detection, governance; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "SailPoint, Inc.",
+     "mult": 7.5,
+     "reason": "shares the language of governance; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "compliance",
+    "detection",
+    "healthcare"
+   ],
+   "show_retention": true,
+   "spread": 3.8,
+   "table": [
+    {
+     "company": "Vertex, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.9,
+     "multiple": 2.7,
+     "recurring_pct": 85.5,
+     "retention_pct": 105.0,
+     "ticker": "NASDAQGM:VERX"
+    },
+    {
+     "company": "Roper Technologies, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.3,
+     "multiple": 5.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ROP"
+    },
+    {
+     "company": "Fair Isaac Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.9,
+     "multiple": 10.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FICO"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Monitoring and governance for deployed medical imaging AI"
+}

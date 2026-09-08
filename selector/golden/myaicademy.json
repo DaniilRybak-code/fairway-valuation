@@ -1,0 +1,925 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "CUSTOMERS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "CUSTOMERS",
+     "basis_label": "dollars of enterprise value per consumer customer",
+     "basis_mix": {
+      "CUSTOMERS": 2
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "customers",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 19354.84,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 5000.0,
+     "mid": 19354.84,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "upskilling"
+     ],
+     "spread": 3.9,
+     "table": [
+      {
+       "company": "Vedantu",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "upGrad",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 19354.84,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": true
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Learning Technologies Group"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 15.38,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Learning Technologies Group"
+     ],
+     "low": 1.52,
+     "mid": 7.27,
+     "n": 3,
+     "period_mix": {
+      "LTM": 1,
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Learning Technologies Group",
+       "mult": 1.52,
+       "reason": "both do Corporate Learning; same type of business; same end market; same business function",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "upGrad",
+       "mult": 7.27,
+       "reason": "both do Upskilling; same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Vedantu",
+       "mult": 15.38,
+       "reason": "same type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "corporate",
+      "learning",
+      "training",
+      "upskilling"
+     ],
+     "spread": 10.1,
+     "table": [
+      {
+       "company": "Learning Technologies Group",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.52,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "upGrad",
+       "date": "Aug-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.27,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vedantu",
+       "date": "Sep-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.38,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 3
+     },
+     "bounded": false,
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "Udemy"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 142.17,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Udemy"
+     ],
+     "low": 1.29,
+     "mid": 27.5,
+     "n": 3,
+     "period_mix": {
+      "LTM": 3
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "Udemy",
+       "mult": 1.29,
+       "reason": "both do Skills Learning, Corporate Learning; same type of business; same end market; sold the same way",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "MasterClass",
+       "mult": 27.5,
+       "reason": "shares the language of courses; related type of business; same end market",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "LEAD School",
+       "mult": 142.17,
+       "reason": "shares the language of training; same type of business; same end market; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "corporate",
+      "courses",
+      "learning",
+      "skills",
+      "training"
+     ],
+     "spread": 110.2,
+     "table": [
+      {
+       "company": "Udemy",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 1.29,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "MasterClass",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 27.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "LEAD School",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 142.17,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 1.6,
+     "thin": false,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Skillsoft Corp.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Corporate Learning; same type of business; same end market; same business function",
+    "score": 11.7,
+    "ticker": "NYSE:SKIL"
+   },
+   {
+    "company": "D2L Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same end market; same revenue model",
+    "score": 8.8,
+    "ticker": "TSX:DTOL"
+   },
+   {
+    "company": "Duolingo, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of ai, learning; same type of business; same end market; same AI stance",
+    "score": 8.3,
+    "ticker": "NASDAQGS:DUOL"
+   },
+   {
+    "company": "Coursera, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same end market",
+    "score": 7.3,
+    "ticker": "NYSE:COUR"
+   },
+   {
+    "company": "Docebo Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Corporate Training; related type of business; same end market; same business function",
+    "score": 7.1,
+    "ticker": "TSX:DCBO"
+   },
+   {
+    "company": "Chegg, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 7.0,
+    "ticker": "NYSE:CHGG"
+   },
+   {
+    "company": "Nerdy Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of ai, learning; same type of business; same end market",
+    "score": 6.3,
+    "ticker": "NYSE:NRDY"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 6
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 1.5,
+   "levered_names": [
+    {
+     "company": "Skillsoft Corp.",
+     "debt_share_pct": 89.0
+    }
+   ],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 0.85,
+   "n": 6,
+   "period_mix": {
+    "NTM": 6
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Chegg, Inc.",
+     "mult": 0.4,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nerdy Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of ai, learning; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Coursera, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of learning; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "D2L Inc.",
+     "mult": 1.2,
+     "reason": "shares the language of learning; same type of business; same end market; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Skillsoft Corp.",
+     "mult": 1.5,
+     "reason": "both do Corporate Learning; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "mult": 4.7,
+     "reason": "shares the language of ai, learning; same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [
+    {
+     "company": "Docebo Inc.",
+     "mult": 2.3,
+     "reason": "both do Corporate Training; related type of business; same end market; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ai",
+    "corporate",
+    "learning",
+    "skills",
+    "training"
+   ],
+   "show_retention": false,
+   "spread": 11.8,
+   "table": [
+    {
+     "company": "Chegg, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -26.3,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CHGG"
+    },
+    {
+     "company": "Nerdy Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.4,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NRDY"
+    },
+    {
+     "company": "Coursera, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:COUR"
+    },
+    {
+     "company": "D2L Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.4,
+     "multiple": 1.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSX:DTOL"
+    },
+    {
+     "company": "Skillsoft Corp.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -24.9,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:SKIL"
+    },
+    {
+     "company": "Duolingo, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.4,
+     "multiple": 4.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:DUOL"
+    }
+   ],
+   "tag_evidence": 1.2,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.5,
+    "cheque_low_m": 0.5,
+    "deal_note": "Emerge's own post, 13-Nov-2025: 'We're delighted to announce our investment in Songscription', a '$5M seed round led by Reach Capital alongside 10x Founders and Dent Capital'. Emerge's own post, 29-Sep-2025: 'MyEdSpace has raised $15M (GBP11.9M) in a Series A led by White Star Capital, with participation from Educapital, Active Partners, Coalition Capital, and us'; MyEdSpace streams live lessons to students at home who pay per hour. Cheque from emergecapital.vc: 'Early stage investment $500k-$2.5M'; stage 'Pre-seed and seed founders'.",
+    "geographies": "Europe (the first specialist future of work and learning investor in Europe)",
+    "house_type": "VC",
+    "investor": "Emerge",
+    "not_published": null,
+    "recent_deal": "Songscription",
+    "recent_deal_date": "2025-11",
+    "recent_deal_url": "https://emergecapital.vc/songscription-raises-5m-to-become-the-shazam-for-sheet-music/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "First money in for founders building the future of human capital development.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.5,
+    "cheque_low_m": 0.1,
+    "deal_note": "TechCrunch, 10-Sep-2025: 'The startup's $4 million seed round was led by Eniac Ventures ... The round also includes investment from Haystack, Factorial Capital, Homebrew, Offline Ventures'. Oboe is a consumer AI learning app with a free tier, $15 and $40 a month plans. Cheque from homebrew.co: '90% of what we do is pre-seed/seed investments of between $100k and $500k.' Deal sits exactly twelve months back on 5-Sep-2026.",
+    "geographies": "North or South America, initially targeting markets in those geographies",
+    "house_type": "VC",
+    "investor": "Homebrew",
+    "not_published": null,
+    "recent_deal": "Oboe",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://techcrunch.com/2025/09/10/after-selling-to-spotify-anchors-co-founders-are-back-with-oboe-an-ai-powered-app-for-learning/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Capital, counsel and commitment for mission-driven founders reimagining the world we live in.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.25,
+    "cheque_low_m": 0.05,
+    "deal_note": "Outlast's own post, 13-Jan-2026: 'At Outlast Fund, we led Flashka's EUR1M pre-seed round'; Flashka is a consumer AI study app with one million users and recurring revenue. tech.eu, 12-Jan-2026: 'Flashka has closed a EUR1 million Pre-Seed round led by Outlast Fund'. outlastfund.com: 'We write our first check at pre-seed or seed' and 'EUR50-250k - Our first check is shaped by the deal, no fixed formula'.",
+    "geographies": "the Baltics and Nordics; Riga and Stockholm",
+    "house_type": "Micro VC",
+    "investor": "Outlast Fund",
+    "not_published": null,
+    "recent_deal": "Flashka",
+    "recent_deal_date": "2026-01",
+    "recent_deal_url": "https://www.outlastfund.com/post/flashka-raises-1m-pre-seed-and-hits-1m-users-in-a-year",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "We believe in thoughtful progress, ruthless focus on solving the customers problems and the value of sticking with something long enough to make a real difference.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "Coursera (acquirer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Udemy",
+      "date": "Dec-25"
+     }
+    ],
+    "investor": "all-stock)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LEAD School",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LEAD School",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "GSV Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vedantu",
+      "date": "Sep-21"
+     }
+    ],
+    "investor": "ABC World Asia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "Temasek",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IFC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "upGrad",
+      "date": "Aug-21"
+     }
+    ],
+    "investor": "IIFL",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "MasterClass",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Fidelity Management & Research Company",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Udemy",
+    "date": "Dec-25",
+    "in_medians": true,
+    "mult": 1.29,
+    "reason": "both do Skills Learning, Corporate Learning; same type of business; same end market; sold the same way",
+    "score": 12.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Learning Technologies Group",
+    "date": "Dec-24",
+    "in_medians": true,
+    "mult": 1.52,
+    "reason": "both do Corporate Learning; same type of business; same end market; same business function",
+    "score": 11.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "LEAD School",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 142.17,
+    "reason": "shares the language of training; same type of business; same end market; same kind of customer",
+    "score": 11.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Vedantu",
+    "date": "Sep-21",
+    "in_medians": true,
+    "mult": 15.38,
+    "reason": "same type of business; same end market",
+    "score": 9.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "upGrad",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 7.27,
+    "reason": "both do Upskilling; same type of business; same end market",
+    "score": 10.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "MasterClass",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 27.5,
+    "reason": "shares the language of courses; related type of business; same end market",
+    "score": 8.1,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR_RUNRATE": 2,
+    "NET_REVENUE": 1
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "Learning Technologies Group"
+   ],
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 15.38,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Learning Technologies Group"
+   ],
+   "low": 1.52,
+   "mid": 7.27,
+   "n": 3,
+   "period_mix": {
+    "LTM": 1,
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Learning Technologies Group",
+     "mult": 1.52,
+     "reason": "both do Corporate Learning; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "upGrad",
+     "mult": 7.27,
+     "reason": "both do Upskilling; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Vedantu",
+     "mult": 15.38,
+     "reason": "same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
+   "positioning": [],
+   "shared_words": [
+    "corporate",
+    "learning",
+    "training",
+    "upskilling"
+   ],
+   "spread": 10.1,
+   "table": [
+    {
+     "company": "Learning Technologies Group",
+     "date": "Dec-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 1.52,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "upGrad",
+     "date": "Aug-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 7.27,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vedantu",
+     "date": "Sep-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.38,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.6,
+   "thin": false,
+   "triangulated": false
+  },
+  "private_window_months": 63,
+  "secondary": [
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same end market",
+    "score": 6.3,
+    "ticker": "TSE:4686"
+   }
+  ],
+  "secondary_range": {
+   "denominator": "rev"
+  }
+ },
+ "label": "Learn AI skills for your specific role and team"
+}

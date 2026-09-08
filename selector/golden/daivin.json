@@ -1,0 +1,921 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 3
+     },
+     "bounded": true,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 58.3,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 17.9,
+     "mid": 37.5,
+     "n": 3,
+     "period_mix": {
+      "RUN_RATE": 3
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "spread": 3.3,
+     "table": [
+      {
+       "company": "Figma",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 17.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Applied Intuition",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 37.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Miro",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 58.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.0,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 10.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 10.0,
+     "mid": 10.0,
+     "n": 1,
+     "period_mix": {
+      "NOT STATED": 1
+     },
+     "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "hardware"
+     ],
+     "sole": "Vention",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Vention",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.3,
+     "thin": true,
+     "triangulated": true
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Bentley Systems, Incorporated",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NASDAQGS:BSY"
+   },
+   {
+    "company": "PTC Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "NASDAQGS:PTC"
+   },
+   {
+    "company": "Dassault Systemes SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same kind of customer; sold the same way",
+    "score": 7.5,
+    "ticker": "ENXTPA:DSY"
+   },
+   {
+    "company": "Autodesk, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same kind of customer",
+    "score": 6.5,
+    "ticker": "NASDAQGS:ADSK"
+   },
+   {
+    "company": "Figma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same kind of customer",
+    "score": 6.5,
+    "ticker": "NYSE:FIG"
+   },
+   {
+    "company": "Lectra SA",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; sold the same way; same AI stance",
+    "score": 6.0,
+    "ticker": "ENXTPA:LSS"
+   },
+   {
+    "company": "Nemetschek SE",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same kind of customer",
+    "score": 5.5,
+    "ticker": "XTRA:NEM"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 6.7,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.1,
+   "mid": 5.8,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [],
+   "show_retention": true,
+   "spread": 4.2,
+   "table": [
+    {
+     "company": "Lectra SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.1,
+     "multiple": 1.8,
+     "recurring_pct": 75.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:LSS"
+    },
+    {
+     "company": "Dassault Systemes SE",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.2,
+     "multiple": 4.1,
+     "recurring_pct": 82.0,
+     "retention_pct": null,
+     "ticker": "ENXTPA:DSY"
+    },
+    {
+     "company": "Nemetschek SE",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.2,
+     "multiple": 4.9,
+     "recurring_pct": 92.2,
+     "retention_pct": null,
+     "ticker": "XTRA:NEM"
+    },
+    {
+     "company": "Autodesk, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.0,
+     "multiple": 5.8,
+     "recurring_pct": 97.0,
+     "retention_pct": 105.0,
+     "ticker": "NASDAQGS:ADSK"
+    },
+    {
+     "company": "PTC Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
+     "multiple": 6.2,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PTC"
+    },
+    {
+     "company": "Bentley Systems, Incorporated",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
+     "multiple": 6.7,
+     "recurring_pct": 92.0,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:BSY"
+    },
+    {
+     "company": "Figma, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.8,
+     "multiple": 7.6,
+     "recurring_pct": null,
+     "retention_pct": 136.0,
+     "ticker": "NYSE:FIG"
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "Western Europe",
+    "house_type": "Venture",
+    "investor": "Slingshot Ventures",
+    "not_published": null,
+    "recent_deal": "Toothfairy",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://capital-riesgo.es/en/articles/toothfairy-series-a-investment",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed-stage investor in digital consumer life, including consumer brands, platforms and marketplaces; stated typical initial ticket is EUR 500k-3m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 0.85,
+    "cheque_low_m": 0.15,
+    "deal_note": null,
+    "geographies": "UK-focused; can invest across the UK, Europe and North America",
+    "house_type": "Venture",
+    "investor": "Ascension",
+    "not_published": null,
+    "recent_deal": "Hosel?",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.ascension.vc/insights/summer-newsletter-2026",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor with a consumer-led strategy for technology serving mass-market users; stated cheque range is GBP 150k-850k.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 3.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Eka Ventures",
+    "not_published": null,
+    "recent_deal": "Medly AI",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://tech.eu/2026/08/19/medly-ai-raises-8m-to-bring-ai-powered-tutoring-to-more-students/",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Pre-seed and seed investor in consumer-led technology across health, wellbeing, sustainability and essential services; stated individual investment is GBP 1m-3m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 20.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; invests across Europe and the US",
+    "house_type": "Venture",
+    "investor": "Felix Capital",
+    "not_published": null,
+    "recent_deal": "Throne Science",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.streetinsider.com/Business/Throne+Science+Raises",
+    "stage_bands": "Seed; Series A",
+    "thesis": "First- or second-institutional-round investor in technology-enabled consumer brands, commerce and culture; stated typical initial investment is $1m-$20m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "Europe-focused (Berlin); invests internationally",
+    "house_type": "Venture",
+    "investor": "FoodLabs",
+    "not_published": null,
+    "recent_deal": "Reformed",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-based; invests in the UK and internationally",
+    "house_type": "Venture",
+    "investor": "True",
+    "not_published": null,
+    "recent_deal": "Pinpoint",
+    "recent_deal_date": "2025-10",
+    "recent_deal_url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/pinpoint-raises-2-5",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in consumer products, consumer platforms and retail technology; its venture page states a typical GBP 250k-1m cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused; also considers US/EU businesses with a UK/US angle",
+    "house_type": "Venture",
+    "investor": "dmg ventures",
+    "not_published": null,
+    "recent_deal": "Equi",
+    "recent_deal_date": "2026-02",
+    "recent_deal_url": "https://www.dmgventures.co.uk/new-investment/why-were-backing-equi-raising-the-bar-for-womens-wellbeing",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed-Series A investor in mass-market B2C brands and consumer technology; stated investment range is GBP 250k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
+    "not_published": null,
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Investissement Quebec",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Desjardins Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "NVentures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vention",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Fidelity Investments Canada",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "BlackRock-managed funds and accounts",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Qatar Investment Authority",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Abu Dhabi Investment Council",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Greycroft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "General Catalyst",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Lux Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Applied Intuition",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Bond",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Figma",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Tender participants not disclosed",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Miro",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Miro",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Miro",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Atlassian",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Miro",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Dragoneer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Miro",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Miro",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": ">=",
+    "company": "Vention",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of hardware; same type of business; same kind of customer; same revenue model",
+    "score": 12.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Applied Intuition",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 37.5,
+    "reason": "same type of business; sold the same way",
+    "score": 8.0,
+    "type": "MIXED"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "<=",
+    "company": "Figma",
+    "date": "Jul-24",
+    "in_medians": true,
+    "mult": 17.9,
+    "reason": "same type of business; same kind of customer",
+    "score": 8.5,
+    "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Miro",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 58.3,
+    "reason": "related type of business; same kind of customer",
+    "score": 6.5,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "ADJACENT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 3
+   },
+   "bounded": true,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 58.3,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 17.9,
+   "mid": 37.5,
+   "n": 3,
+   "period_mix": {
+    "RUN_RATE": 3
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [],
+   "spread": 3.3,
+   "table": [
+    {
+     "company": "Figma",
+     "date": "Jul-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 17.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Applied Intuition",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 37.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Miro",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 58.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
+  },
+  "private_window_months": 55,
+  "secondary": [
+   {
+    "company": "Veeva Systems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of life; same business function; same kind of customer; sold the same way",
+    "score": 7.1,
+    "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Intapp, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of professional; same business function; same kind of customer; sold the same way",
+    "score": 6.9,
+    "ticker": "NASDAQGS:INTA"
+   },
+   {
+    "company": "Diebold Nixdorf, Incorporated",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of hardware, systems; same business function; sold the same way; same AI stance",
+    "score": 5.9,
+    "ticker": "NYSE:DBD"
+   },
+   {
+    "company": "Zeta Global Holdings Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of generation; same kind of customer; sold the same way",
+    "score": 5.7,
+    "ticker": "NYSE:ZETA"
+   },
+   {
+    "company": "Cass Information Systems",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of commercial; same kind of customer; sold the same way; same AI stance",
+    "score": 5.7,
+    "ticker": "NASDAQGS:CASS"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "BROAD",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 9.7,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 3.3,
+   "mid": 3.9,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Diebold Nixdorf, Incorporated",
+     "mult": 0.8,
+     "reason": "shares the language of hardware, systems; same business function; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Cass Information Systems",
+     "mult": 3.3,
+     "reason": "shares the language of commercial; same kind of customer; sold the same way; same AI stance",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Zeta Global Holdings Corp.",
+     "mult": 3.9,
+     "reason": "shares the language of generation; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Intapp, Inc.",
+     "mult": 4.6,
+     "reason": "shares the language of professional; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "mult": 9.7,
+     "reason": "shares the language of life; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "commercial",
+    "generation",
+    "hardware",
+    "life",
+    "professional",
+    "systems"
+   ],
+   "show_retention": true,
+   "spread": 12.1,
+   "table": [
+    {
+     "company": "Diebold Nixdorf, Incorporated",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.1,
+     "multiple": 0.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:DBD"
+    },
+    {
+     "company": "Cass Information Systems",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.5,
+     "multiple": 3.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CASS"
+    },
+    {
+     "company": "Zeta Global Holdings Corp.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.3,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NYSE:ZETA"
+    },
+    {
+     "company": "Intapp, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.4,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": 123.0,
+     "ticker": "NASDAQGS:INTA"
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
+     "multiple": 9.7,
+     "recurring_pct": 84.0,
+     "retention_pct": null,
+     "ticker": "NYSE:VEEV"
+    }
+   ],
+   "tag_evidence": 0.9,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Tankless Dive Gear - Breath Autonomy at Sea, Land & Space"
+}

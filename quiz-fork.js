@@ -130,17 +130,28 @@ function qfWrongRead() {
   renderStep();
 }
 
-/* Required questions gate the Continue button, optional ones never do. */
+/* NO FIGURE EVER BLOCKS THE BUTTON. Daniil, 7-Sep-2026: a founder who gives nothing still gets the
+   peer charts, so a figure they choose not to give cannot be a wall.
+   THIS WAS A REGRESSION I SHIPPED EARLIER THE SAME DAY. Every fork had a required money question,
+   and drawing the forks turned that flag into a disabled button. The fork step was stricter than
+   the plain revenue question it replaced, which has always had a "We are pre-revenue" escape. The
+   flags are off in selector/quiz_fork.py now and this is the belt to that braces: even if one comes
+   back, a number never gates the page.
+   THE TWO CHOICE QUESTIONS STILL DO, and they are the only ones. The lending fork's funding model
+   and the exchange fork's unit are labels, one tap each, and each one changes how the founder is
+   priced rather than saying anything about their size. */
 function qfChanged() {
   var btn = document.getElementById('qf-continue');
   if (!btn || !FORK_SPEC) return;
-  var missing = FORK_SPEC.questions.filter(function (q) {
-    if (!q.required) return false;
-    if (q.kind === 'choice') return !responses[q.key];
-    return qfNum('qf-' + q.key) === null;
+  var missingChoice = FORK_SPEC.questions.filter(function (q) {
+    return q.required && q.kind === 'choice' && !responses[q.key];
   });
-  btn.disabled = missing.length > 0;
-  btn.textContent = missing.length ? 'Answer the questions above to continue' : 'Continue';
+  var given = FORK_SPEC.questions.filter(function (q) {
+    return q.kind !== 'choice' && qfNum('qf-' + q.key) !== null;
+  }).length;
+  btn.disabled = missingChoice.length > 0;
+  btn.textContent = missingChoice.length ? 'Pick one above to continue'
+                  : (given ? 'Continue' : 'Continue without figures');
 }
 
 function qfRender(spec) {
@@ -150,7 +161,13 @@ function qfRender(spec) {
   var html = ['<h2 class="q-title">' + qfEsc(qfTitleFor(spec.fork)) + '</h2>'];
   html.push(qfReadBack(spec));
   spec.questions.forEach(function (q) { html.push(qfQuestion(q)); });
-  html.push('<button class="btn" id="qf-continue" style="width:100%; margin-top:16px;"'
+  /* SAID OUT LOUD, because a page full of blank number boxes reads as a page that wants them all.
+     A founder who skips every one still gets what their peers trade at, which is most of the
+     argument, and they should know that before they decide how much to type. */
+  html.push('<p class="q-help" style="margin:14px 0 0;">Every figure here is optional. Give what you '
+          + 'have and we price on it. Give none and you still see what companies like yours trade '
+          + 'at, which is the part you can take to a meeting.</p>');
+  html.push('<button class="btn" id="qf-continue" style="width:100%; margin-top:12px;"'
           + ' onclick="qfSubmit()">Continue</button>');
   mount.innerHTML = html.join('');
   mount.style.display = 'block';

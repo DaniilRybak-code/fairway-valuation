@@ -1,0 +1,797 @@
+{
+ "expected": {
+  "all_ranges": {
+   "private": {
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 1,
+      "ARR_RUNRATE": 1
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 95.45,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 20.5,
+     "mid": 95.45,
+     "n": 2,
+     "period_mix": {
+      "RUN_RATE": 2
+     },
+     "period_span": {
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "ai",
+      "api",
+      "foundation",
+      "models"
+     ],
+     "spread": 4.7,
+     "table": [
+      {
+       "company": "Anthropic",
+       "date": "May-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 20.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Cohere",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 95.45,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 4.4,
+     "thin": true,
+     "triangulated": false
+    }
+   }
+  },
+  "core": [
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of search; same type of business; same business function; same kind of customer",
+    "score": 13.2,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of ai, platform; same type of business; same business function; same revenue model",
+    "score": 10.6,
+    "ticker": "NYSE:SNOW"
+   },
+   {
+    "company": "Palantir Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do AI Platform; same type of business; same business function; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:PLTR"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; same type of business; same kind of customer",
+    "score": 6.6,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "Coveo Solutions Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do AI Search; same type of business; sold the same way; same AI stance",
+    "score": 6.3,
+    "ticker": "TSX:CVO"
+   },
+   {
+    "company": "C3.ai, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do AI Platform; same type of business; same business function; same AI stance",
+    "score": 6.1,
+    "ticker": "NYSE:AI"
+   },
+   {
+    "company": "LiveRamp Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of platform; same type of business; sold the same way",
+    "score": 6.1,
+    "ticker": "NYSE:RAMP"
+   }
+  ],
+  "core_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 7
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 15.6,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.1,
+   "mid": 4.2,
+   "n": 7,
+   "period_mix": {
+    "NTM": 7
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Coveo Solutions Inc.",
+     "mult": 1.1,
+     "reason": "both do AI Search; same type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "LiveRamp Holdings, Inc.",
+     "mult": 2.1,
+     "reason": "shares the language of platform; same type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Qt Group Oyj",
+     "mult": 3.9,
+     "reason": "shares the language of platform; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Elastic N.V.",
+     "mult": 4.2,
+     "reason": "shares the language of search; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "C3.ai, Inc.",
+     "mult": 4.6,
+     "reason": "both do AI Platform; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Snowflake Inc.",
+     "mult": 15.6,
+     "reason": "shares the language of ai, platform; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "mult": 39.0,
+     "reason": "both do AI Platform; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "ai",
+    "platform",
+    "search"
+   ],
+   "show_retention": true,
+   "spread": 35.5,
+   "table": [
+    {
+     "company": "Coveo Solutions Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.5,
+     "multiple": 1.1,
+     "recurring_pct": null,
+     "retention_pct": 99.0,
+     "ticker": "TSX:CVO"
+    },
+    {
+     "company": "LiveRamp Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
+     "multiple": 2.1,
+     "recurring_pct": 75.5,
+     "retention_pct": 107.0,
+     "ticker": "NYSE:RAMP"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "Elastic N.V.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
+     "multiple": 4.2,
+     "recurring_pct": null,
+     "retention_pct": 112.0,
+     "ticker": "NYSE:ESTC"
+    },
+    {
+     "company": "C3.ai, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.1,
+     "multiple": 4.6,
+     "recurring_pct": 91.0,
+     "retention_pct": null,
+     "ticker": "NYSE:AI"
+    },
+    {
+     "company": "Snowflake Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 25.8,
+     "multiple": 15.6,
+     "recurring_pct": null,
+     "retention_pct": 126.0,
+     "ticker": "NYSE:SNOW"
+    },
+    {
+     "company": "Palantir Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 47.0,
+     "multiple": 39.0,
+     "recurring_pct": null,
+     "retention_pct": 157.0,
+     "ticker": "NASDAQGS:PLTR"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": false
+  },
+  "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 15.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK-based, invests across Europe and North America",
+    "house_type": "Venture",
+    "investor": "Air Street Capital",
+    "not_published": null,
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
+    "stage_bands": "Seed; Series A",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-focused",
+    "house_type": "Venture",
+    "investor": "Episode 1 Ventures",
+    "not_published": null,
+    "recent_deal": "Osprey Security",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
+    "deal_note": null,
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
+    "house_type": "Venture",
+    "investor": "Seedcamp",
+    "not_published": null,
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
+    "not_published": null,
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   }
+  ],
+  "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Altimeter Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Dragoneer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Greenoaks",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Anthropic",
+      "date": "May-26"
+     }
+    ],
+    "investor": "Sequoia Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "SoftBank",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Microsoft",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Altimeter",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "OpenAI",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Thrive",
+    "n": 1
+   }
+  ],
+  "listed_proximity": "ADJACENT",
+  "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Anthropic",
+    "date": "May-26",
+    "in_medians": true,
+    "mult": 20.5,
+    "reason": "both do Foundation Models; same type of business; same kind of customer; same revenue model",
+    "score": 21.9,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "OpenAI",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": 54.5,
+    "reason": "both do Foundation Models; related type of business; same business function; same AI stance",
+    "score": 11.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annual revenue / ARR proxy",
+    "bound": "",
+    "company": "Cohere",
+    "date": "Jun-23",
+    "in_medians": true,
+    "mult": 95.45,
+    "reason": "both do Foundation Models; same type of business; sold the same way; same AI stance",
+    "score": 14.9,
+    "type": "PRIMARY"
+   }
+  ],
+  "private_proximity": "DIRECT",
+  "private_range": {
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis": "REVENUE",
+   "basis_label": "enterprise value to revenue",
+   "basis_mix": {
+    "ARR": 1,
+    "ARR_RUNRATE": 1
+   },
+   "bounded": true,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 95.45,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 20.5,
+   "mid": 95.45,
+   "n": 2,
+   "period_mix": {
+    "RUN_RATE": 2
+   },
+   "period_span": {
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "shared_words": [
+    "ai",
+    "api",
+    "foundation",
+    "models"
+   ],
+   "spread": 4.7,
+   "table": [
+    {
+     "company": "Anthropic",
+     "date": "May-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 20.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Cohere",
+     "date": "Jun-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 95.45,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    }
+   ],
+   "tag_evidence": 4.4,
+   "thin": true,
+   "triangulated": false
+  },
+  "private_window_months": 38,
+  "secondary": [
+   {
+    "company": "Sinch AB (publ)",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
+    "score": 8.2,
+    "ticker": "OM:SINCH"
+   },
+   {
+    "company": "TomTom N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same type of business; same kind of customer",
+    "score": 6.7,
+    "ticker": "ENXTAM:TOM2"
+   },
+   {
+    "company": "Agora, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Video API; same kind of customer; same revenue model",
+    "score": 6.4,
+    "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api, platform; same kind of customer; same revenue model",
+    "score": 6.2,
+    "ticker": "NYSE:TWLO"
+   },
+   {
+    "company": "Paysafe Limited",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; sold the same way",
+    "score": 6.0,
+    "ticker": "NYSE:PSFE"
+   }
+  ],
+  "secondary_range": {
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 5.2,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.6,
+   "mid": 1.4,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Agora, Inc.",
+     "mult": 0.5,
+     "reason": "both do Video API; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "TomTom N.V.",
+     "mult": 0.6,
+     "reason": "shares the language of api; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "mult": 1.4,
+     "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Paysafe Limited",
+     "mult": 1.4,
+     "reason": "same end market; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Twilio Inc.",
+     "mult": 5.2,
+     "reason": "shares the language of api, platform; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "api",
+    "platform",
+    "video"
+   ],
+   "show_retention": true,
+   "spread": 10.4,
+   "table": [
+    {
+     "company": "Agora, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.1,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:API"
+    },
+    {
+     "company": "TomTom N.V.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.9,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ENXTAM:TOM2"
+    },
+    {
+     "company": "Sinch AB (publ)",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.1,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "OM:SINCH"
+    },
+    {
+     "company": "Paysafe Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.4,
+     "multiple": 1.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:PSFE"
+    },
+    {
+     "company": "Twilio Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 116.0,
+     "ticker": "NYSE:TWLO"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
+  }
+ },
+ "label": "Video compliance review powered by rules you control"
+}
