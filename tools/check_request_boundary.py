@@ -502,6 +502,43 @@ def main():                                                     # noqa: C901
         _api = None
         bad.append('api/payload.py will not import (%s), so the engine endpoint cannot be checked'
                    % type(_exc).__name__)
+    # THE FOURTH DOOR: /api/profile, added 7-Sep-2026 with the fork step. Same allowlist, same
+    # refusal of every figure. It is the endpoint the quiz calls mid-way to find out which fork a
+    # founder gets, and it returns QUESTIONS, so nothing numeric goes either way.
+    try:
+        _sp2 = _ilu.spec_from_file_location('_fairway_profile_api', 'api/profile.py')
+        _prof_api = _ilu.module_from_spec(_sp2)
+        _sp2.loader.exec_module(_prof_api)
+    except Exception as _exc:                                   # noqa: BLE001
+        _prof_api = None
+        bad.append('api/profile.py will not import (%s), so the fork endpoint cannot be checked'
+                   % type(_exc).__name__)
+    if _prof_api is not None:
+        if set(_prof_api.ALLOWED) != set(declared):
+            bad.append('api/profile.py accepts a different set of names from the page: extra %s, '
+                       'missing %s' % (sorted(set(_prof_api.ALLOWED) - set(declared)),
+                                       sorted(set(declared) - set(_prof_api.ALLOWED))))
+        _hostile = {k: 123.45 for k in FIGURE_NAMES}
+        _hostile.update({k: 'we did 1.2m last year' for k in FREE_TEXT_NAMES})
+        _hostile.update({'stage': 'Seed', 'sector': 'Fintech', 'website': 'acme.com'})
+        _kept = _prof_api.filtered(_hostile)
+        for k in list(FIGURE_NAMES) + list(FREE_TEXT_NAMES):
+            if k in _kept:
+                bad.append('api/profile.py kept the figure field "%s" off a hostile body' % k)
+        _out = _prof_api.build(_hostile, ask=lambda _p: '', fetch=lambda _u: ('', 'check: no fetch'))
+        _blob = json.dumps(_out)
+        if '123.45' in _blob:
+            bad.append('a figure came back OUT of /api/profile, which returns questions only')
+        for _q in _out.get('questions', []):
+            for _f in ('basis', 'peer_field', 'maps_to'):
+                if _f in _q:
+                    bad.append('/api/profile sent "%s" to the page: how an answer is USED is the '
+                               'engine\'s business and does not belong in the browser' % _f)
+        notes.append(('FORKS', 'api/profile.py accepts the same %d names, refused all %d figure and '
+                               'free-text fields, and returns questions with no figure in either '
+                               'direction'
+                      % (len(_prof_api.ALLOWED), len(FIGURE_NAMES) + len(FREE_TEXT_NAMES))))
+
     if _api is not None:
         py_allow = set(_api.ALLOWED)
         if py_allow != set(declared):

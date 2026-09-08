@@ -83,6 +83,11 @@ function renderStep() {
   document.querySelectorAll('.q-block').forEach(b => {
     b.style.display = (parseInt(b.dataset.step) === currentStep ? 'block' : 'none');
   });
+  /* STEP 3 IS THE FORK, WHEN WE HAVE ONE. qfShowIfReady draws the founder's own questions and
+     hides the plain revenue block; with no fork it hides itself and the plain block stands, which
+     is the page exactly as it was before the forks were wired. */
+  if (currentStep === 3 && typeof qfShowIfReady === 'function') qfShowIfReady();
+  else { const qf = document.getElementById('qf-block'); if (qf) qf.style.display = 'none'; }
   document.getElementById('step-label').textContent = 'Step ' + currentStep + ' of ' + totalSteps;
   document.getElementById('progress-fill').style.width = (currentStep / totalSteps * 100) + '%';
   document.getElementById('back-link').textContent = currentStep === 1 ? '← Back to start' : '← Back';
@@ -158,6 +163,12 @@ function submitSector() {
     step: 2, key: 'sector', value: responses.sector,
     all: responses.sectors, detail: responses.sector_detail, has_website: !!responses.website
   });
+  /* ASK WHO THIS FOUNDER IS, NOW. The fork is chosen from their archetype, the archetype comes
+     from the profiler, and the profiler needs what they do and their website, which is exactly
+     what step 2 just collected. The call is started here and NOT waited on: the founder moves to
+     step 3 immediately, and if the answer lands in time they get their fork's questions instead of
+     the plain revenue one. Nothing about this holds a founder up. */
+  if (typeof qfAsk === 'function') qfAsk();
   currentStep = 3; renderStep();
 }
 

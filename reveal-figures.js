@@ -67,36 +67,98 @@ function unitOf(basis) {
   return COUNT_BASES.indexOf(basis) >= 0 ? 'per-user' : 'multiple';
 }
 
+/* A FORK ANSWER, IN US DOLLAR MILLIONS. The fork questions ask for a figure in the founder's own
+   currency, the one they picked at step 3, exactly like the revenue question does. This is the same
+   conversion figureArrMusd does, factored out so the two cannot drift. Returns null rather than
+   guessing when the ECB publishes no rate for the currency. */
+function figureForkMusd(responses, key) {
+  var r = responses || {};
+  var v = Number(r[key]);
+  if (!isFinite(v) || v <= 0) return null;
+  var cur = r.currency || 'USD';
+  if (cur === 'USD') return v / 1e6;
+  if (typeof fxConvert !== 'function') return null;
+  var usd = fxConvert(v, cur, 'USD');
+  return (typeof usd === 'number' && isFinite(usd)) ? usd / 1e6 : null;
+}
+
+/* A COUNT IS NOT AN AMOUNT. Subscribers, borrowers and merchants are numbers of things, so they
+   are never converted and never divided by a million: the engine's per-unit readings are dollars of
+   enterprise value per ONE of them. */
+function figureForkCount(responses, key) {
+  var v = Number((responses || {})[key]);
+  return (isFinite(v) && v > 0) ? v : null;
+}
+
+function forkMoney(key, label, note) {
+  return { label: label, from: key, note: note,
+           value: function (r) { return figureForkMusd(r, key); } };
+}
+function forkCount(key, label, note) {
+  return { label: label, from: key, note: note,
+           value: function (r) { return figureForkCount(r, key); } };
+}
+
 var FIGURE_SOURCES = {
   ARR: {
     label: 'run-rate revenue',
     from: 'revenue_exact',
     note: 'your monthly revenue times twelve, in US dollar millions',
-    value: figureArrMusd
-  }
+    /* THE FORK'S OWN ARR WINS WHERE THERE IS ONE. The software fork asks for ARR directly, which is
+       a better answer than twelve times a month, so it is used when the founder gave it and the
+       monthly figure stands in when they did not. */
+    value: function (r) {
+      var own = figureForkMusd(r, 'arr');
+      return own !== null ? own : figureArrMusd(r);
+    }
+  },
+
+  /* ---------------------------------------------------------------------------
+   * EVERY BASIS BELOW REACHED NOTHING UNTIL 7 SEPTEMBER, because the nine forks in
+   * selector/quiz_fork.py had never been rendered on the page. Check 15 printed
+   * "PRICEABLE 1 of 15 bases" on every run and it was right.
+   *
+   * The forks are on the page now (quiz-fork.js), so their answers arrive on `responses` under the
+   * keys quiz_fork.apply_answers reads, and each one prices the basis the engine matches it to.
+   * BASIS_FOUNDER_FIELD in selector/match_reference.py is the other half of this map, and check 15
+   * asserts the two agree, so a basis renamed on one side fails loudly.
+   *
+   * EVERY ONE OF THESE IS AN AMOUNT AND NONE OF THEM LEAVE (rule E9). They are multiplied here,
+   * beside the founder, and reveal-request.js has never carried one of these keys.
+   * ------------------------------------------------------------------------- */
+  REVENUE: forkMoney('net_revenue', 'net revenue',
+      'your net revenue over the last twelve months, in US dollar millions'),
+  REVENUE_GROSS: forkMoney('gross_revenue', 'gross revenue',
+      'your gross revenue over the same period, in US dollar millions'),
+  BOOK: forkMoney('book_value', 'book value',
+      'the book value of the business, in US dollar millions'),
+  ORIGINATIONS: forkMoney('originations', 'originations',
+      'what you lent over the last twelve months, in US dollar millions'),
+  THROUGHPUT: forkMoney('throughput_volume', 'throughput',
+      'what moved across your platform over the last twelve months'),
+  PAYING_SUBSCRIBERS: forkCount('paying_subscribers', 'paying subscribers',
+      'how many people pay you today'),
+  BORROWERS: forkCount('borrowers', 'borrowers',
+      'how many borrowers you have today')
 };
 
 /* WHY EVERY OTHER BASIS IS UNPRICED TODAY, said in the code so that nobody has to guess whether it
    is a bug. Printed by check 15 so the list stays honest as the forks reach the page. */
+/* WHAT IS STILL UNPRICED, AND WHY, said in the code so nobody has to guess whether it is a bug.
+   Printed by check 15 on every run. This list was fourteen entries long until 7 September, when the
+   forks reached the page; every one that came off did so because a fork now asks the question. */
 var BASIS_NOT_PRICED = {
-  REVENUE: 'the engine prices this on a trailing twelve-month figure and the live quiz asks for '
-         + 'current monthly revenue only. A run rate is a forward figure, so using it here would '
-         + 'overstate the founder against a trailing multiple. Needs a quiz question or a ruling.',
-  REVENUE_GROSS: 'the quiz asks for one revenue figure. The net and gross split ruled on 5-Sep is '
-         + 'in the engine and in quiz_fork.py, and it is not on the live page yet.',
-  BOOK: 'the lending fork asks for book value and is not on the live page yet.',
-  EARNINGS: 'this basis prices on net income. The page collects LTM EBITDA, which is a different '
-         + 'line, so it is not substituted for it.',
-  ORIGINATIONS: 'the lending fork asks for originations and is not on the live page yet.',
-  THROUGHPUT: 'the exchange fork asks for volume and is not on the live page yet.',
-  PAYING_SUBSCRIBERS: 'no count question on the live page yet.',
-  BORROWERS: 'no count question on the live page yet.',
-  MEMBERS: 'no count question on the live page yet.',
-  CUSTOMERS: 'no count question on the live page yet.',
-  BUSINESS_CUSTOMERS: 'no count question on the live page yet.',
-  MERCHANTS: 'no count question on the live page yet.',
-  ACTIVE_USERS: 'no count question on the live page yet.',
-  REGISTERED_USERS: 'no count question on the live page yet.'
+  EARNINGS: 'this basis prices on net income. The lending fork asks for net income and the engine '
+         + 'reads it, but EARNINGS is a LISTED-lane multiple on price to earnings, which needs a '
+         + 'share count we do not ask a private company for. Ruling, not a wiring job.',
+  MEMBERS: 'no fork asks for a member count. The consumer subscription fork asks for paying '
+         + 'subscribers, which is a different thing and is priced separately.',
+  CUSTOMERS: 'no fork asks a consumer business for a customer count distinct from subscribers.',
+  BUSINESS_CUSTOMERS: 'no fork asks for a business customer count. Worth adding to the software '
+         + 'fork, and it is a question rather than a wiring job.',
+  MERCHANTS: 'the payments fork does not ask how many merchants. Same shape as the above.',
+  ACTIVE_USERS: 'no fork asks for an active user count.',
+  REGISTERED_USERS: 'no fork asks for a registered user count.'
 };
 
 /* ---------------------------------------------------------------------------

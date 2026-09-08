@@ -407,6 +407,16 @@
         <button class="btn" style="width:100%; margin-top:6px;" id="sector-continue" onclick="submitSector()" disabled>Continue</button>
       </div>
 
+      <!-- THE FORK STEP. Drawn by quiz-fork.js from what /api/profile returns: the fork this
+           founder routes to and its own questions. Empty in the markup on purpose. The questions
+           live in selector/quiz_fork.py, which is where they have always lived and where check 10
+           walks them; putting them in the HTML would be a second copy to keep in step.
+
+           When the profile call is slow, refused or missing this stays hidden and the plain revenue
+           question below is what the founder sees, which is what every founder saw before
+           7 September. -->
+      <div class="q-block" data-step="3" id="qf-block" style="display:none;"></div>
+
       <div class="q-block" data-step="3">
         <h2 class="q-title">What is your current monthly revenue?</h2>
         <p class="q-help">Exact, not a band. A band of 50k to 150k is a three times spread in ARR before any multiple touches it, which makes the answer wider than the method it came from.</p>
@@ -874,6 +884,7 @@
 <script src="/data-content.js"></script>
 <script src="/app-growth.js"></script>
 <script src="/app.js"></script>
+<script src="/quiz-fork.js"></script><!-- the fork step: draws selector/quiz_fork.py, which the page has never rendered -->
 <script src="/data-public-comps.js"></script>
 <script src="/drivers.js"></script>
 <script src="/field.js"></script>

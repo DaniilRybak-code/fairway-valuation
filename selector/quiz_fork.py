@@ -505,7 +505,19 @@ def apply_answers(prof, answers):
          'gross_revenue': 'revenue_gross',
          'gmv': 'volume', 'tpv': 'volume', 'nrr_pct': 'nrr', 'paying_users_k': 'paying_users_k',
          'funding_model': 'funding_model', 'asset_intensity': 'asset_intensity',
-         'growth_3m_pct': 'growth_3m', 'country': 'country'}
+         'growth_3m_pct': 'growth_3m', 'country': 'country',
+         # THE EXCHANGE FORK'S TWO ANSWERS, WHICH NEVER LANDED. Added 7-Sep-2026, found by check 20
+         # walking every fork's answers onto the profile. The unit question declares
+         # `maps_to: profile.volume_unit` and this map, which is what actually does the mapping, did
+         # not carry it, so an exchange founder could answer "tonnes of CO2 equivalent" and the
+         # engine would never know which unit their volume was in. `throughput_volume` had the same
+         # hole: the fork asks for it and nothing read it.
+         'throughput_unit': 'volume_unit', 'throughput_volume': 'volume',
+         # The lending fork's own figures, same reason: asked, and never read.
+         'book_value': 'book_value', 'net_loan_book': 'net_loan_book',
+         'originations': 'originations', 'borrowers': 'borrowers',
+         'net_income': 'net_income', 'paying_subscribers': 'paying_subscribers',
+         'free_users': 'free_users'}
     for k, v in (answers or {}).items():
         if v in (None, ''): continue
         if k in m: p[m[k]] = v

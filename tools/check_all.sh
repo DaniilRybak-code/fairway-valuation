@@ -27,6 +27,8 @@
 #  14  one payload   does the whole reveal assemble in one pass
 #  15  the boundary  does a founder's figure ever leave their browser
 #  16  token weights is the word-weight file what the tag files say it is (added 6-Sep after it sat stale two weeks)
+#  20  the fork step  can the PAGE draw the nine forks (added 7-Sep, after six weeks in which
+#                     check 10 said the engine handled them and nothing asked whether the page did)
 #  17  the profiler   can the model, or a founder's own website, put anything in a profile that the
 #                     tag files did not already contain (added 7-Sep with the profiler itself)
 set -e
@@ -67,6 +69,7 @@ run "15 THE BOUNDARY     does a founder's figure leave the browser"     python3 
 run "16 TOKEN WEIGHTS   is the word-weight file fresh"                   python3 tools/check_token_weights.py
 run "17 THE PROFILER    can a website put anything into a profile"        python3 tools/check_profiler.py
 run "18 THE LANDING     do page 3 figures and investor rows come from the data" python3 tools/check_landing_page3.py
+run "20 THE FORK STEP   can a founder be asked their own questions"    python3 tools/check_fork_step.py
 printf '\n'
 if [ "$fail" = "1" ]; then
   echo 'ONE OR MORE CHECKS FAILED. The stage that failed is where the data stopped.'
