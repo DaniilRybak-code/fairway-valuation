@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -46,7 +46,7 @@
       {
        "company": "Clay",
        "mult": 357142.86,
-       "reason": "shares the language of agents, automation; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       }
@@ -55,7 +55,6 @@
      "shared_words": [
       "agent",
       "agents",
-      "automation",
       "web"
      ],
      "spread": 34.7,
@@ -151,21 +150,21 @@
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of agents, automation; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
       {
        "company": "Sierra",
        "mult": 105.3,
-       "reason": "shares the language of agents, automation; related type of business; same revenue model; same AI stance",
+       "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Decagon",
        "mult": 150.0,
-       "reason": "shares the language of agent, agents, automation; related type of business; same revenue model; same AI stance",
+       "reason": "shares the language of agent, agents; related type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
@@ -174,7 +173,6 @@
      "shared_words": [
       "agent",
       "agents",
-      "automation",
       "builder",
       "code",
       "no",
@@ -272,7 +270,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, cloud, infrastructure; same type of business; same revenue model; sold the same way",
+    "reason": "shares the language of agent, infrastructure; same type of business; same revenue model; sold the same way",
     "score": 8.9,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -288,7 +286,7 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+    "reason": "related type of business; same kind of customer; sold the same way",
     "score": 7.1,
     "ticker": "NYSE:HUBS"
    },
@@ -304,7 +302,7 @@
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cloud; same type of business; same revenue model",
+    "reason": "same type of business; same revenue model",
     "score": 6.6,
     "ticker": "NYSE:SNOW"
    },
@@ -372,7 +370,7 @@
     {
      "company": "HubSpot, Inc.",
      "mult": 2.8,
-     "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+     "reason": "related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -386,14 +384,14 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, cloud, infrastructure; same type of business; same revenue model; sold the same way",
+     "reason": "shares the language of agent, infrastructure; same type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Snowflake Inc.",
      "mult": 15.6,
-     "reason": "shares the language of cloud; same type of business; same revenue model",
+     "reason": "same type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -402,9 +400,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "automation",
     "builder",
-    "cloud",
     "code",
     "infrastructure",
     "no",
@@ -885,7 +881,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 105.3,
-    "reason": "shares the language of agents, automation; related type of business; same revenue model; same AI stance",
+    "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
     "score": 8.8,
     "type": "PRIMARY"
    },
@@ -896,7 +892,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of agents, automation; related type of business; same revenue model; sold the same way",
+    "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
     "score": 11.3,
     "type": "SECONDARY"
    },
@@ -918,7 +914,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 150.0,
-    "reason": "shares the language of agent, agents, automation; related type of business; same revenue model; same AI stance",
+    "reason": "shares the language of agent, agents; related type of business; same revenue model; same AI stance",
     "score": 8.9,
     "type": "PRIMARY"
    },
@@ -997,21 +993,21 @@
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of agents, automation; related type of business; same revenue model; sold the same way",
+     "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
     {
      "company": "Sierra",
      "mult": 105.3,
-     "reason": "shares the language of agents, automation; related type of business; same revenue model; same AI stance",
+     "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Decagon",
      "mult": 150.0,
-     "reason": "shares the language of agent, agents, automation; related type of business; same revenue model; same AI stance",
+     "reason": "shares the language of agent, agents; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
@@ -1020,7 +1016,6 @@
    "shared_words": [
     "agent",
     "agents",
-    "automation",
     "builder",
     "code",
     "no",
@@ -1109,7 +1104,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way",
     "score": 7.1,
     "ticker": "NYSE:KVYO"
    },
@@ -1180,7 +1175,7 @@
     {
      "company": "Klaviyo, Inc.",
      "mult": 3.0,
-     "reason": "shares the language of automation; same kind of customer; same revenue model; sold the same way",
+     "reason": "same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -1217,9 +1212,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "automation",
     "builder",
-    "cloud",
     "infrastructure",
     "web"
    ],

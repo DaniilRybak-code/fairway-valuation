@@ -54,8 +54,7 @@
      "positioning": [],
      "shared_words": [
       "energy",
-      "grid",
-      "software"
+      "grid"
      ],
      "spread": 62.7,
      "table": [
@@ -93,7 +92,7 @@
       "ARR": 3
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 1,
      "control_names": [
       "AuditBoard"
@@ -127,10 +126,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
-      "management",
-      "operations",
-      "software"
+      "operations"
      ],
      "spread": 2.3,
      "table": [
@@ -167,7 +163,7 @@
      ],
      "tag_evidence": 0.4,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE_GROSS": {
      "anchor_dropped": false,
@@ -221,8 +217,7 @@
      "positioning": [],
      "shared_words": [
       "energy",
-      "grid",
-      "software"
+      "grid"
      ],
      "spread": 9.6,
      "table": [
@@ -266,7 +261,7 @@
     "company": "Samsara Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of asset, management, operations; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of asset, operations; same type of business; same business function; same kind of customer",
     "score": 10.9,
     "ticker": "NYSE:IOT"
    },
@@ -282,7 +277,7 @@
     "company": "Roper Technologies, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of industrial, software; related type of business; same business function; sold the same way",
+    "reason": "shares the language of industrial; related type of business; same business function; sold the same way",
     "score": 6.0,
     "ticker": "NASDAQGS:ROP"
    }
@@ -326,9 +321,7 @@
     "energy",
     "grid",
     "industrial",
-    "management",
-    "operations",
-    "software"
+    "operations"
    ],
    "show_retention": true,
    "spread": 4.2,
@@ -699,7 +692,7 @@
     "date": "Aug-26",
     "in_medians": true,
     "mult": 23.0,
-    "reason": "shares the language of operations, software; same type of business; same revenue model; same AI stance",
+    "reason": "shares the language of operations; same type of business; same revenue model; same AI stance",
     "score": 9.8,
     "type": "PRIMARY"
    },
@@ -710,7 +703,7 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 15.0,
-    "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 13.6,
     "type": "CONTROL"
    },
@@ -721,7 +714,7 @@
     "date": "Apr-24",
     "in_medians": false,
     "mult": 9.0,
-    "reason": "shares the language of management, operations, software; same type of business; same business function",
+    "reason": "shares the language of operations; same type of business; same business function",
     "score": 8.8,
     "type": "PRIMARY"
    },
@@ -732,7 +725,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of automation, management, operations; same type of business; same business function; same revenue model",
+    "reason": "shares the language of operations; same type of business; same business function; same revenue model",
     "score": 12.4,
     "type": "PRIMARY"
    }
@@ -747,7 +740,7 @@
     "ARR": 3
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 1,
    "control_names": [
     "AuditBoard"
@@ -777,10 +770,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "automation",
-    "management",
-    "operations",
-    "software"
+    "operations"
    ],
    "spread": 2.3,
    "table": [
@@ -817,7 +807,7 @@
    ],
    "tag_evidence": 0.4,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 43,
   "secondary": [
@@ -825,7 +815,7 @@
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, management, software; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 10.6,
     "ticker": "NASDAQGS:INTA"
    },
@@ -833,7 +823,7 @@
     "company": "i3 Verticals, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of software, utility; same type of business; same business function; sold the same way",
+    "reason": "shares the language of utility; same type of business; same business function; sold the same way",
     "score": 8.6,
     "ticker": "NASDAQGS:IIIV"
    },
@@ -841,7 +831,7 @@
     "company": "Bentley Systems, Incorporated",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of asset, management, software; same kind of customer; same revenue model; sold the same way",
+    "reason": "shares the language of asset; same kind of customer; same revenue model; sold the same way",
     "score": 8.2,
     "ticker": "NASDAQGS:BSY"
    },
@@ -849,7 +839,7 @@
     "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way",
     "score": 8.1,
     "ticker": "NASDAQGS:BL"
    },
@@ -869,7 +859,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -897,24 +887,21 @@
     {
      "company": "BlackLine, Inc.",
      "mult": 2.5,
-     "reason": "shares the language of automation; same kind of customer; same revenue model; sold the same way",
+     "reason": "same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Bentley Systems, Incorporated",
      "mult": 6.7,
-     "reason": "shares the language of asset, management, software; same kind of customer; same revenue model; sold the same way",
+     "reason": "shares the language of asset; same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "control",
-    "management",
-    "software",
     "utility"
    ],
    "show_retention": true,

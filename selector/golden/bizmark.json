@@ -2,46 +2,40 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "REVENUE": {
-     "anchor_dropped": false,
-     "band": "DIRECT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
+    "BUSINESS_CUSTOMERS": {
+     "anchor_dropped": true,
+     "band": "ADJACENT",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "NET_REVENUE": 2
+      "BUSINESS_CUSTOMERS": 3
      },
-     "bounded": false,
-     "closeness": "SHARED_PRODUCT",
-     "control_n": 2,
-     "control_names": [
-      "E2open",
-      "Berkshire Grey"
-     ],
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
-     "founder_field": "revenue",
+     "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 5.69,
-     "listed_target_n": 2,
-     "listed_target_names": [
-      "E2open",
-      "Berkshire Grey"
-     ],
-     "low": 3.46,
-     "mid": 5.69,
-     "n": 2,
+     "high": 640000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 142857.14,
+     "mid": 615384.62,
+     "n": 3,
      "period_mix": {
-      "FY2022": 1,
-      "FY2025": 1
+      "NTM": 1,
+      "RUN_RATE": 2
      },
      "period_span": {
-      "FY2022": {
+      "NTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       },
-      "FY2025": {
+      "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
@@ -49,18 +43,164 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
+      "planning",
+      "procurement"
+     ],
+     "spread": 4.5,
+     "table": [
+      {
+       "company": "Factorial",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 142857.14,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "FloQast",
+       "date": "Apr-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 615384.62,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ramp",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 640000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.7,
+     "thin": false,
+     "triangulated": false
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "DIRECT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 4,
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 2
+     },
+     "bounded": true,
+     "closeness": "SHARED_PRODUCT",
+     "control_n": 2,
+     "control_names": [
+      "E2open",
+      "AuditBoard"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 72.0,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "E2open"
+     ],
+     "low": 3.46,
+     "mid": 16.0,
+     "n": 7,
+     "period_mix": {
+      "FY2025": 1,
+      "NOT STATED": 1,
+      "NTM": 1,
+      "RUN_RATE": 4
+     },
+     "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "E2open",
+       "mult": 3.46,
+       "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Restaurant365",
+       "mult": 10.0,
+       "reason": "related type of business; same business function; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "AuditBoard",
+       "mult": 15.0,
+       "reason": "related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "FloQast",
+       "mult": 16.0,
+       "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Ramp",
+       "mult": 32.0,
+       "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Factorial",
+       "mult": 33.3,
+       "reason": "shares the language of planning; related type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Glean",
+       "mult": 72.0,
+       "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
+      "agents",
       "chain",
       "demand",
-      "inventory",
-      "management",
       "optimisation",
       "planning",
       "procurement",
       "supplier",
       "supply"
      ],
-     "spread": 1.6,
+     "spread": 20.8,
      "table": [
       {
        "company": "E2open",
@@ -73,103 +213,145 @@
        "ticker": ""
       },
       {
-       "company": "Berkshire Grey",
-       "date": "Mar-23",
+       "company": "Restaurant365",
+       "date": "May-23",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 5.69,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "AuditBoard",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "FloQast",
+       "date": "Apr-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 16.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ramp",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Factorial",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Glean",
+       "date": "Jun-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 72.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
      "tag_evidence": 8.7,
-     "thin": true,
+     "thin": false,
      "triangulated": false
     }
    }
   },
   "core": [
    {
-    "company": "United Parcel Service",
-    "family": "consumer",
+    "company": "ATOSS Software SE",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-    "score": 7.3,
-    "ticker": "NYSE:UPS"
+    "reason": "shares the language of planning; related type of business; same kind of customer; same revenue model",
+    "score": 9.8,
+    "ticker": "XTRA:AOF"
    },
    {
-    "company": "S.F. Holding Co., Ltd.",
-    "family": "consumer",
+    "company": "Kinaxis Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-    "score": 7.3,
-    "ticker": "SZSE:002352"
+    "reason": "both do Supply Chain Planning, Demand Planning; same type of business; same kind of customer",
+    "score": 9.4,
+    "ticker": "TSX:KXS"
    },
    {
-    "company": "Delhivery Limited",
-    "family": "consumer",
+    "company": "BlackLine, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-    "score": 7.3,
-    "ticker": "NSEI:DELHIVERY"
+    "reason": "related type of business; same kind of customer; same revenue model",
+    "score": 7.6,
+    "ticker": "NASDAQGS:BL"
    },
    {
-    "company": "Expeditors International",
-    "family": "consumer",
+    "company": "Sidetrade SA",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of agents; related type of business; same kind of customer; same AI stance",
+    "score": 6.2,
+    "ticker": "ENXTPA:ALBFR"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
     "in_medians": true,
     "reason": "shares the language of chain, supply; same type of business; same kind of customer",
-    "score": 6.8,
-    "ticker": "NYSE:EXPD"
+    "score": 5.8,
+    "ticker": "TSX:TCS"
    },
    {
-    "company": "Sinotrans Limited",
-    "family": "consumer",
+    "company": "Workday, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of chain, supply; same type of business; same kind of customer",
-    "score": 6.8,
-    "ticker": "SEHK:598"
-   },
-   {
-    "company": "Radiant Logistics, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of agents; same type of business; same kind of customer",
-    "score": 6.7,
-    "ticker": "NYSEAM:RLGT"
-   },
-   {
-    "company": "STEF SA",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of chain; same type of business; same kind of customer",
-    "score": 5.6,
-    "ticker": "ENXTPA:STF"
+    "reason": "shares the language of planning; related type of business; same kind of customer",
+    "score": 5.3,
+    "ticker": "NASDAQGS:WDAY"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 1.8,
+   "high": 4.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.4,
-   "mid": 0.6,
-   "n": 7,
+   "low": 2.5,
+   "mid": 4.0,
+   "n": 6,
    "period_mix": {
-    "NTM": 7
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -177,269 +359,212 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Sinotrans Limited",
-     "mult": 0.4,
-     "reason": "shares the language of chain, supply; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Radiant Logistics, Inc.",
-     "mult": 0.4,
-     "reason": "shares the language of agents; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "S.F. Holding Co., Ltd.",
-     "mult": 0.5,
-     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "STEF SA",
-     "mult": 0.6,
-     "reason": "shares the language of chain; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "United Parcel Service",
-     "mult": 1.2,
-     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Expeditors International",
-     "mult": 1.8,
-     "reason": "shares the language of chain, supply; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Delhivery Limited",
-     "mult": 2.5,
-     "reason": "shares the language of chain, supply; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "agents",
     "chain",
+    "demand",
+    "planning",
     "supply"
    ],
-   "show_retention": false,
-   "spread": 6.2,
+   "show_retention": true,
+   "spread": 3.3,
    "table": [
     {
-     "company": "Sinotrans Limited",
+     "company": "Tecsys Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.6,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "SEHK:598"
+     "growth_pct": 7.2,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
     },
     {
-     "company": "Radiant Logistics, Inc.",
+     "company": "BlackLine, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.0,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSEAM:RLGT"
-    },
-    {
-     "company": "S.F. Holding Co., Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.1,
-     "multiple": 0.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "SZSE:002352"
-    },
-    {
-     "company": "STEF SA",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.0,
-     "multiple": 0.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTPA:STF"
-    },
-    {
-     "company": "United Parcel Service",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.5,
-     "multiple": 1.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:UPS"
-    },
-    {
-     "company": "Expeditors International",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 0.9,
-     "multiple": 1.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:EXPD"
-    },
-    {
-     "company": "Delhivery Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.6,
+     "growth_pct": 10.4,
      "multiple": 2.5,
-     "recurring_pct": null,
+     "recurring_pct": 95.0,
+     "retention_pct": 102.0,
+     "ticker": "NASDAQGS:BL"
+    },
+    {
+     "company": "Sidetrade SA",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
+     "multiple": 3.7,
+     "recurring_pct": 87.0,
      "retention_pct": null,
-     "ticker": "NSEI:DELHIVERY"
+     "ticker": "ENXTPA:ALBFR"
+    },
+    {
+     "company": "Workday, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.6,
+     "multiple": 4.3,
+     "recurring_pct": 93.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WDAY"
+    },
+    {
+     "company": "Kinaxis Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.4,
+     "multiple": 4.5,
+     "recurring_pct": 62.1,
+     "retention_pct": null,
+     "ticker": "TSX:KXS"
+    },
+    {
+     "company": "ATOSS Software SE",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.5,
+     "multiple": 6.3,
+     "recurring_pct": 69.0,
+     "retention_pct": 116.0,
+     "ticker": "XTRA:AOF"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 3.9,
    "thin": false,
    "triangulated": false
   },
   "investors_callable": [
    {
-    "cheque_figure_dated": "21 Nov 2022",
-    "cheque_high_m": null,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "Australia and New Zealand; Israel; Southeast Asia",
-    "house_type": "",
-    "investor": "Square Peg",
-    "not_published": null,
-    "recent_deal": "Airwallex",
-    "recent_deal_date": "2025-12",
-    "recent_deal_url": "https://www.airwallex.com/newsroom/airwallex-series-g",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Our sweet spot for new investments is Seed to Series A.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
     "cheque_figure_dated": null,
-    "cheque_high_m": 3.5,
-    "cheque_low_m": 0.1,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
     "deal_note": null,
-    "geographies": "Southern Europe and Latin America, especially Spain",
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
     "house_type": "Venture",
-    "investor": "Kfund",
+    "investor": "Seedcamp",
     "not_published": null,
-    "recent_deal": "Pollen",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
     "stage_bands": "Pre-seed; Seed",
-    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
+    "cheque_high_m": 15.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
-    "geographies": "Europe and US",
+    "geographies": "UK-based, invests across Europe and North America",
     "house_type": "Venture",
-    "investor": "Pale blue dot",
+    "investor": "Air Street Capital",
     "not_published": null,
-    "recent_deal": "Staer",
+    "recent_deal": "Alta Ares",
     "recent_deal_date": "2026-06",
-    "recent_deal_url": "https://paleblue.vc/portfolio/staer",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
     "stage_bands": "Seed; Series A",
-    "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 4.0,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "Pan-European, including Israel",
-    "house_type": "Venture",
-    "investor": "Planet A Ventures",
-    "not_published": null,
-    "recent_deal": "Gigaton",
-    "recent_deal_date": "2026-06",
-    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "US-based; global transportation opportunities, including Europe",
-    "house_type": "Venture",
-    "investor": "Trucks Venture Capital",
-    "not_published": null,
-    "recent_deal": "Providio AI",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://providio.ai/blog/from-human-to-superhuman",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Pre-seed and seed investor in transportation systems, freight, aviation and mobility infrastructure.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.5,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "North America and Europe, selectively global",
-    "house_type": "Venture",
-    "investor": "Dynamo Ventures",
-    "not_published": null,
-    "recent_deal": "UNIT AI",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.dynamo.vc/insights/unit-ai",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "Europe-focused (Berlin); invests internationally",
-    "house_type": "Venture",
-    "investor": "FoodLabs",
-    "not_published": null,
-    "recent_deal": "Reformed",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
    {
     "cheque_figure_dated": null,
     "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
     "cheque_low_m": 0.25,
     "deal_note": null,
-    "geographies": "Europe-focused; invests globally",
+    "geographies": "UK-focused",
     "house_type": "Venture",
-    "investor": "Speedinvest",
+    "investor": "Episode 1 Ventures",
     "not_published": null,
-    "recent_deal": "Kyrok?",
+    "recent_deal": "Osprey Security",
     "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
     "stage_bands": "Pre-seed; Seed",
-    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
@@ -458,11 +583,259 @@
    {
     "backed": [
      {
-      "company": "Berkshire Grey",
-      "date": "Mar-23"
+      "company": "Ramp",
+      "date": "Nov-25"
      }
     ],
-    "investor": "SoftBank Group (acquirer",
+    "investor": "Lightspeed",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Alpha Wave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Bessemer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Founders Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     },
+     {
+      "company": "Glean",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Thrive",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Glean",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Wellington",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Glean",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Khosla",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Glean",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Bicycle",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Glean",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Altimeter",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Glean",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AuditBoard",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Hg (buyer)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "FloQast",
+      "date": "Apr-24"
+     },
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "FloQast",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "BDT & MSD",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "FloQast",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "Meritech",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "FloQast",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "Sapphire",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "FloQast",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "Coupa Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "KKR",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "L Catterton (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Factorial",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Atomico",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Factorial",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Factorial",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Factorial",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "CRV",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Factorial",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "K-Fund",
     "n": 1
    }
   ],
@@ -480,15 +853,70 @@
     "type": "CONTROL"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Berkshire Grey",
-    "date": "Mar-23",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Ramp",
+    "date": "Nov-25",
     "in_medians": true,
-    "mult": 5.69,
-    "reason": "shares the language of automation; same type of business; same business function; same AI stance",
+    "mult": 32.0,
+    "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
+    "score": 10.2,
+    "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Glean",
+    "date": "Jun-25",
+    "in_medians": true,
+    "mult": 72.0,
+    "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
+    "score": 8.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "AuditBoard",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "related type of business; same kind of customer; same revenue model",
     "score": 10.1,
     "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "FloQast",
+    "date": "Apr-24",
+    "in_medians": true,
+    "mult": 16.0,
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 13.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Restaurant365",
+    "date": "May-23",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "related type of business; same business function; same revenue model; sold the same way",
+    "score": 11.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_FORECAST",
+    "bound": ">=",
+    "company": "Factorial",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of planning; related type of business; same revenue model; sold the same way",
+    "score": 9.8,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -498,55 +926,114 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR": 4,
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 2
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "SHARED_PRODUCT",
    "control_n": 2,
    "control_names": [
     "E2open",
-    "Berkshire Grey"
+    "AuditBoard"
    ],
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 5.69,
-   "listed_target_n": 2,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 72.0,
+   "listed_target_n": 1,
    "listed_target_names": [
-    "E2open",
-    "Berkshire Grey"
+    "E2open"
    ],
    "low": 3.46,
-   "mid": 5.69,
-   "n": 2,
+   "mid": 16.0,
+   "n": 7,
    "period_mix": {
-    "FY2022": 1,
-    "FY2025": 1
+    "FY2025": 1,
+    "NOT STATED": 1,
+    "NTM": 1,
+    "RUN_RATE": 4
    },
    "period_span": {
-    "FY2022": {
+    "FY2025": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
-    "FY2025": {
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "E2open",
+     "mult": 3.46,
+     "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Restaurant365",
+     "mult": 10.0,
+     "reason": "related type of business; same business function; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "AuditBoard",
+     "mult": 15.0,
+     "reason": "related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "FloQast",
+     "mult": 16.0,
+     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Ramp",
+     "mult": 32.0,
+     "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Factorial",
+     "mult": 33.3,
+     "reason": "shares the language of planning; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Glean",
+     "mult": 72.0,
+     "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
-    "automation",
+    "agents",
     "chain",
     "demand",
-    "inventory",
-    "management",
     "optimisation",
     "planning",
     "procurement",
     "supplier",
     "supply"
    ],
-   "spread": 1.6,
+   "spread": 20.8,
    "table": [
     {
      "company": "E2open",
@@ -559,70 +1046,136 @@
      "ticker": ""
     },
     {
-     "company": "Berkshire Grey",
-     "date": "Mar-23",
+     "company": "Restaurant365",
+     "date": "May-23",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 5.69,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "AuditBoard",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "FloQast",
+     "date": "Apr-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 16.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Ramp",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Factorial",
+     "date": "Oct-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Glean",
+     "date": "Jun-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 72.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     }
    ],
    "tag_evidence": 8.7,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
-  "private_window_months": 41,
+  "private_window_months": 46,
   "secondary": [
    {
-    "company": "Lindsay Australia Limited",
-    "family": "consumer",
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of chain; same type of business; same kind of customer",
-    "score": 5.6,
-    "ticker": "ASX:LAU"
+    "reason": "same kind of customer; same revenue model; sold the same way",
+    "score": 8.1,
+    "ticker": "NASDAQGS:GTM"
    },
    {
-    "company": "Lineage, Inc.",
-    "family": "consumer",
+    "company": "SAP SE",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same kind of customer",
-    "score": 5.6,
-    "ticker": "NASDAQGS:LINE"
+    "reason": "both do Supply Chain, Procurement; related type of business; same business function",
+    "score": 5.7,
+    "ticker": "XTRA:SAP"
    },
    {
-    "company": "Snowman Logistics Limited",
-    "family": "consumer",
+    "company": "UiPath, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of chain; same type of business; same kind of customer",
+    "reason": "related type of business; same business function; same AI stance",
     "score": 5.6,
-    "ticker": "NSEI:SNOWMAN"
+    "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of planning; related type of business; same revenue model",
+    "score": 5.3,
+    "ticker": "NASDAQGS:TEAM"
+   },
+   {
+    "company": "HubSpot, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same revenue model",
+    "score": 5.1,
+    "ticker": "NYSE:HUBS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 3.3,
+   "high": 6.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 1.9,
-   "n": 2,
+   "low": 2.8,
+   "mid": 4.6,
+   "n": 4,
    "period_mix": {
-    "NTM": 2
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -630,52 +1183,65 @@
      "founder_revenue": null
     }
    },
-   "points": [
+   "points": [],
+   "positioning": [
     {
-     "company": "Lindsay Australia Limited",
-     "mult": 0.5,
-     "reason": "shares the language of chain; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Lineage, Inc.",
-     "mult": 3.3,
-     "reason": "shares the language of automation; same type of business; same kind of customer",
-     "tier": "ADJACENT",
+     "company": "ZoomInfo Technologies Inc.",
+     "mult": 2.2,
+     "reason": "same kind of customer; same revenue model; sold the same way",
+     "tier": "BROAD",
      "transaction_type": ""
     }
    ],
-   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "chain"
+    "chain",
+    "planning",
+    "procurement",
+    "supply"
    ],
-   "show_retention": false,
-   "spread": 6.6,
+   "show_retention": true,
+   "spread": 2.2,
    "table": [
     {
-     "company": "Lindsay Australia Limited",
+     "company": "HubSpot, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.4,
-     "multiple": 0.5,
+     "growth_pct": 14.0,
+     "multiple": 2.8,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:LAU"
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
     },
     {
-     "company": "Lineage, Inc.",
+     "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.8,
-     "multiple": 3.3,
+     "growth_pct": 8.0,
+     "multiple": 4.3,
      "recurring_pct": null,
+     "retention_pct": 109.0,
+     "ticker": "NYSE:PATH"
+    },
+    {
+     "company": "SAP SE",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.9,
+     "multiple": 4.9,
+     "recurring_pct": 63.6,
      "retention_pct": null,
-     "ticker": "NASDAQGS:LINE"
+     "ticker": "XTRA:SAP"
+    },
+    {
+     "company": "Atlassian Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
+     "multiple": 6.1,
+     "recurring_pct": null,
+     "retention_pct": 120.0,
+     "ticker": "NASDAQGS:TEAM"
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": true,
+   "tag_evidence": 1.2,
+   "thin": false,
    "triangulated": false
   }
  },

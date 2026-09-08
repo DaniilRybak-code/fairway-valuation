@@ -38,7 +38,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
       "design",
       "document",
       "generation",
@@ -110,7 +109,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
       "builder",
       "design",
       "document",
@@ -634,7 +632,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
-    "reason": "shares the language of ai, builder, generation; related type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of builder, generation; related type of business; same kind of customer; sold the same way",
     "score": 13.5,
     "type": "PRIMARY"
    },
@@ -706,7 +704,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
     "builder",
     "design",
     "document",
@@ -786,7 +783,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, builder, design; related type of business; same business function; sold the same way",
+    "reason": "shares the language of builder, design; related type of business; same business function; sold the same way",
     "score": 7.0,
     "ticker": "NASDAQGS:WIX"
    },
@@ -806,7 +803,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -833,7 +830,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "builder",
     "design",
     "document"

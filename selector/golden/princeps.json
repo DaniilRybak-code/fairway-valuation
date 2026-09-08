@@ -2,48 +2,122 @@
  "expected": {
   "core": [
    {
-    "company": "HUB24 Limited",
+    "company": "Crawford & Company",
     "family": "fintech",
     "in_medians": true,
-    "reason": "same end market; same business function; same kind of customer",
-    "score": 8.5,
-    "ticker": "ASX:HUB"
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 12.6,
+    "ticker": "NYSE:CRD.B"
    },
    {
-    "company": "Netwealth Group Limited",
+    "company": "Trupanion, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "same end market; same business function; same kind of customer",
-    "score": 8.5,
-    "ticker": "ASX:NWL"
+    "reason": "both do Underwriting; same type of business; same end market",
+    "score": 6.3,
+    "ticker": "NASDAQGM:TRUP"
    },
    {
-    "company": "nCino, Inc.",
+    "company": "CCC Intelligent Solutions Holdings Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same end market; same business function; sold the same way",
-    "score": 8.0,
-    "ticker": "NASDAQGS:NCNO"
-   },
-   {
-    "company": "Temenos AG",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same end market; same business function; sold the same way",
-    "score": 8.0,
-    "ticker": "SWX:TEMN"
-   },
-   {
-    "company": "SS&C Technologies Holdings, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same business function; sold the same way",
-    "score": 8.0,
-    "ticker": "NASDAQ:SSNC"
+    "reason": "same end market; same business function; same kind of customer; sold the same way",
+    "score": 10.6,
+    "ticker": "NASDAQGS:CCCS"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 4.5,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.6,
+   "mid": 0.7,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Crawford & Company",
+     "mult": 0.6,
+     "reason": "same type of business; same end market; same business function; same kind of customer",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Trupanion, Inc.",
+     "mult": 0.7,
+     "reason": "both do Underwriting; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "CCC Intelligent Solutions Holdings Inc.",
+     "mult": 4.5,
+     "reason": "same end market; same business function; same kind of customer; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "underwriting"
+   ],
+   "show_retention": true,
+   "spread": 7.5,
+   "table": [
+    {
+     "company": "Crawford & Company",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.8,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:CRD.B"
+    },
+    {
+     "company": "Trupanion, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.4,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:TRUP"
+    },
+    {
+     "company": "CCC Intelligent Solutions Holdings Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": 106.0,
+     "ticker": "NASDAQGS:CCCS"
+    }
+   ],
+   "tag_evidence": 0.3,
+   "thin": false,
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -205,7 +279,7 @@
     "n": 1
    }
   ],
-  "listed_proximity": "BROAD",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -214,7 +288,7 @@
     "date": "Aug-25",
     "in_medians": true,
     "mult": 4.55,
-    "reason": "shares the language of insurance; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; sold the same way",
     "score": 13.6,
     "type": "CONTROL"
    },
@@ -225,7 +299,7 @@
     "date": "Jul-22",
     "in_medians": true,
     "mult": 14.06,
-    "reason": "shares the language of insurance, insurer; same type of business; same end market",
+    "reason": "shares the language of insurer; same type of business; same end market",
     "score": 8.7,
     "type": "PRIMARY"
    },
@@ -247,7 +321,7 @@
     "date": "Apr-21",
     "in_medians": true,
     "mult": 6.67,
-    "reason": "shares the language of insurance; same type of business; same end market",
+    "reason": "same type of business; same end market",
     "score": 8.1,
     "type": "PRIMARY"
    }
@@ -294,9 +368,7 @@
    },
    "points": [],
    "positioning": [],
-   "shared_words": [
-    "insurance"
-   ],
+   "shared_words": [],
    "spread": 1.5,
    "table": [
     {
@@ -327,30 +399,6 @@
   "private_window_months": 64,
   "secondary": [
    {
-    "company": "Clarkson PLC",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
-    "score": 10.0,
-    "ticker": "LSE:CKN"
-   },
-   {
-    "company": "Usio, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
-    "score": 10.0,
-    "ticker": "NASDAQGM:USIO"
-   },
-   {
-    "company": "Paysign, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
-    "score": 10.0,
-    "ticker": "NASDAQ:PAYS"
-   },
-   {
     "company": "Evolent Health, Inc.",
     "family": "fintech",
     "in_medians": true,
@@ -359,16 +407,115 @@
     "ticker": "NYSE:EVH"
    },
    {
-    "company": "Crawford & Company",
-    "family": "fintech",
+    "company": "Guidewire Software, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of insurance; same type of business; same business function; same kind of customer",
-    "score": 9.6,
-    "ticker": "NYSE:CRD.B"
+    "reason": "both do Underwriting; same end market; same business function; sold the same way",
+    "score": 8.3,
+    "ticker": "NYSE:GWRE"
+   },
+   {
+    "company": "FINEOS Corporation Holdings plc",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same business function; sold the same way",
+    "score": 8.1,
+    "ticker": "ASX:FCL"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 9.7,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.4,
+   "mid": 2.7,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "Evolent Health, Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of value; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FINEOS Corporation Holdings plc",
+     "mult": 2.7,
+     "reason": "same end market; same business function; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Guidewire Software, Inc.",
+     "mult": 9.7,
+     "reason": "both do Underwriting; same end market; same business function; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "underwriting",
+    "value"
+   ],
+   "show_retention": false,
+   "spread": 24.2,
+   "table": [
+    {
+     "company": "Evolent Health, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.0,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:EVH"
+    },
+    {
+     "company": "FINEOS Corporation Holdings plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
+     "multiple": 2.7,
+     "recurring_pct": 57.8,
+     "retention_pct": null,
+     "ticker": "ASX:FCL"
+    },
+    {
+     "company": "Guidewire Software, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
+     "multiple": 9.7,
+     "recurring_pct": 66.2,
+     "retention_pct": null,
+     "ticker": "NYSE:GWRE"
+    }
+   ],
+   "tag_evidence": 0.4,
+   "thin": false,
+   "triangulated": false
   }
  },
  "label": "AI-native insurance company for the compute economy"

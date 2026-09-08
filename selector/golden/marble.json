@@ -49,13 +49,10 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
       "back",
       "cost",
       "food",
-      "inventory",
       "invoice",
-      "management",
       "office",
       "operations",
       "ordering",
@@ -122,7 +119,7 @@
     "company": "Agilysys, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of management, restaurant; same type of business; same end market; same business function",
+    "reason": "shares the language of restaurant; same type of business; same end market; same business function",
     "score": 9.2,
     "ticker": "NASDAQGS:AGYS"
    },
@@ -130,7 +127,7 @@
     "company": "Samsara Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of management, operations; same type of business; same business function",
+    "reason": "shares the language of operations; same type of business; same business function",
     "score": 6.3,
     "ticker": "NYSE:IOT"
    }
@@ -170,7 +167,7 @@
     {
      "company": "Samsara Inc.",
      "mult": 9.6,
-     "reason": "shares the language of management, operations; same type of business; same business function",
+     "reason": "shares the language of operations; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -178,7 +175,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "back",
-    "management",
     "office",
     "ordering",
     "restaurant"
@@ -563,7 +559,7 @@
     "date": "Apr-24",
     "in_medians": false,
     "mult": 9.0,
-    "reason": "shares the language of management, operations; same type of business; same end market; same business function",
+    "reason": "shares the language of operations; same type of business; same end market; same business function",
     "score": 19.3,
     "type": "PRIMARY"
    },
@@ -623,13 +619,10 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "automation",
     "back",
     "cost",
     "food",
-    "inventory",
     "invoice",
-    "management",
     "office",
     "operations",
     "ordering",
@@ -687,7 +680,7 @@
     "company": "SPS Commerce, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of management, vendor; same type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of vendor; same type of business; same kind of customer; sold the same way",
     "score": 8.0,
     "ticker": "NASDAQGS:SPSC"
    },
@@ -703,7 +696,7 @@
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, management; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 6.1,
     "ticker": "NASDAQGS:INTA"
    },
@@ -711,7 +704,7 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model",
+    "reason": "same kind of customer; same revenue model",
     "score": 6.1,
     "ticker": "NYSE:HUBS"
    }
@@ -723,7 +716,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -764,14 +757,14 @@
     {
      "company": "SPS Commerce, Inc.",
      "mult": 3.4,
-     "reason": "shares the language of management, vendor; same type of business; same kind of customer; sold the same way",
+     "reason": "shares the language of vendor; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Intapp, Inc.",
      "mult": 4.6,
-     "reason": "shares the language of automation, management; same type of business; same business function",
+     "reason": "same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -780,16 +773,13 @@
     {
      "company": "HubSpot, Inc.",
      "mult": 2.8,
-     "reason": "shares the language of automation; same kind of customer; same revenue model",
+     "reason": "same kind of customer; same revenue model",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "inventory",
-    "management",
     "restaurant",
     "vendor"
    ],

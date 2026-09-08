@@ -39,7 +39,6 @@
      "positioning": [],
      "shared_words": [
       "house",
-      "in",
       "legal"
      ],
      "sole": "Legora",
@@ -56,7 +55,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 1.0,
      "thin": true,
      "triangulated": false
     },
@@ -66,10 +65,10 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 4
+      "REVENUE_GROSS": 3
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -83,16 +82,11 @@
      "listed_target_names": [],
      "low": 2.08,
      "mid": 10.0,
-     "n": 4,
+     "n": 3,
      "period_mix": {
-      "LTM": 1,
       "RUN_RATE": 3
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -102,14 +96,7 @@
       {
        "company": "Jobandtalent",
        "mult": 2.08,
-       "reason": "shares the language of management, marketplace, staffing; same type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Loadsmart",
-       "mult": 5.2,
-       "reason": "shares the language of management, marketplace; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of staffing; same type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -123,15 +110,13 @@
       {
        "company": "Mercor",
        "mult": 22.22,
-       "reason": "shares the language of marketplace, talent; same type of business; same revenue model; sold the same way",
+       "reason": "shares the language of talent; same type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
      "shared_words": [
-      "management",
-      "marketplace",
       "staffing",
       "talent"
      ],
@@ -143,16 +128,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 2.08,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Loadsmart",
-       "date": "Feb-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 5.2,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -189,7 +164,7 @@
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of legal, management; related type of business; same end market; same kind of customer",
+    "reason": "shares the language of legal; related type of business; same end market; same kind of customer",
     "score": 9.4,
     "ticker": "NASDAQGS:INTA"
    },
@@ -202,12 +177,12 @@
     "ticker": "NASDAQGS:UPWK"
    },
    {
-    "company": "Cars.com Inc.",
+    "company": "AMN Healthcare Services, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of in; related type of business; sold the same way; same cost structure",
-    "score": 11.2,
-    "ticker": "NYSE:CARS"
+    "reason": "shares the language of staffing; same type of business; same kind of customer; sold the same way",
+    "score": 9.1,
+    "ticker": "NYSE:AMN"
    }
   ],
   "core_range": {
@@ -217,19 +192,19 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
    "high": 4.6,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.2,
-   "mid": 1.4,
+   "low": 0.6,
+   "mid": 1.2,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -240,19 +215,48 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "AMN Healthcare Services, Inc.",
+     "mult": 0.6,
+     "reason": "shares the language of staffing; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Upwork Inc.",
+     "mult": 1.2,
+     "reason": "both do Talent Marketplace; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Intapp, Inc.",
+     "mult": 4.6,
+     "reason": "shares the language of legal; related type of business; same end market; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "in",
     "legal",
-    "management",
-    "marketplace",
+    "staffing",
     "talent"
    ],
    "show_retention": true,
-   "spread": 3.8,
+   "spread": 7.7,
    "table": [
+    {
+     "company": "AMN Healthcare Services, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -9.2,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:AMN"
+    },
     {
      "company": "Upwork Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -261,15 +265,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:UPWK"
-    },
-    {
-     "company": "Cars.com Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.4,
-     "multiple": 1.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:CARS"
     },
     {
      "company": "Intapp, Inc.",
@@ -281,7 +276,7 @@
      "ticker": "NASDAQGS:INTA"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -585,46 +580,6 @@
    {
     "backed": [
      {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "SoftBank Latin America Fund (lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "BlackRock",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "CSX",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Loadsmart",
-      "date": "Feb-22"
-     }
-    ],
-    "investor": "Janus Henderson",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Jobandtalent",
       "date": "Dec-21"
      }
@@ -703,7 +658,7 @@
     "in_medians": true,
     "mult": 56.0,
     "reason": "both do In-House Legal; related type of business; same end market; same kind of customer",
-    "score": 13.7,
+    "score": 13.5,
     "type": "PRIMARY"
    },
    {
@@ -713,7 +668,7 @@
     "date": "Oct-25",
     "in_medians": true,
     "mult": 22.22,
-    "reason": "shares the language of marketplace, talent; same type of business; same revenue model; sold the same way",
+    "reason": "shares the language of talent; same type of business; same revenue model; sold the same way",
     "score": 12.5,
     "type": "PRIMARY"
    },
@@ -735,19 +690,8 @@
     "date": "Jun-25",
     "in_medians": false,
     "mult": 66.7,
-    "reason": "shares the language of legal, management; related type of business; same end market; same kind of customer",
+    "reason": "shares the language of legal; related type of business; same end market; same kind of customer",
     "score": 12.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Disclosed at pricing; FY2021 closed",
-    "bound": "<=",
-    "company": "Loadsmart",
-    "date": "Feb-22",
-    "in_medians": true,
-    "mult": 5.2,
-    "reason": "shares the language of management, marketplace; related type of business; same revenue model; sold the same way",
-    "score": 10.1,
     "type": "PRIMARY"
    },
    {
@@ -757,7 +701,7 @@
     "date": "Dec-21",
     "in_medians": true,
     "mult": 2.08,
-    "reason": "shares the language of management, marketplace, staffing; same type of business; same revenue model; sold the same way",
+    "reason": "shares the language of staffing; same type of business; same revenue model; sold the same way",
     "score": 14.7,
     "type": "PRIMARY"
    }
@@ -796,7 +740,6 @@
    "positioning": [],
    "shared_words": [
     "house",
-    "in",
     "legal"
    ],
    "sole": "Legora",
@@ -813,20 +756,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.0,
    "thin": true,
    "triangulated": false
   },
   "private_window_months": 56,
   "secondary": [
-   {
-    "company": "AMN Healthcare Services, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of management, staffing; same type of business; same kind of customer; sold the same way",
-    "score": 9.1,
-    "ticker": "NYSE:AMN"
-   },
    {
     "company": "Robert Walters plc",
     "family": "consumer",
@@ -844,45 +779,53 @@
     "ticker": "LSE:HAS"
    },
    {
-    "company": "Roblox Corporation",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of in; same revenue model; same cost structure",
-    "score": 6.2,
-    "ticker": "NYSE:RBLX"
-   },
-   {
     "company": "Mitsubishi Logistics",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of house; same kind of customer; sold the same way; same AI stance",
     "score": 6.1,
     "ticker": "TSE:9301"
+   },
+   {
+    "company": "SEEK Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of talent; same cost structure; same purchase frequency",
+    "score": 6.0,
+    "ticker": "ASX:SEK"
+   },
+   {
+    "company": "Freightos Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same business function; same kind of customer",
+    "score": 5.6,
+    "ticker": "NASDAQGM:CRGO"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 0.6,
+   "high": 3.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.2,
-   "mid": 0.2,
-   "n": 3,
+   "mid": 1.4,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -890,8 +833,28 @@
      "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [
+   "points": [
+    {
+     "company": "Robert Walters plc",
+     "mult": 0.2,
+     "reason": "shares the language of staffing; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Hays plc",
+     "mult": 0.2,
+     "reason": "shares the language of staffing; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Freightos Limited",
+     "mult": 1.4,
+     "reason": "same business function; same kind of customer",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
     {
      "company": "Mitsubishi Logistics",
      "mult": 2.1,
@@ -900,20 +863,22 @@
      "transaction_type": ""
     },
     {
-     "company": "Roblox Corporation",
-     "mult": 3.7,
-     "reason": "shares the language of in; same revenue model; same cost structure",
+     "company": "SEEK Limited",
+     "mult": 3.5,
+     "reason": "shares the language of talent; same cost structure; same purchase frequency",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "management",
-    "staffing"
+    "house",
+    "staffing",
+    "talent"
    ],
    "show_retention": false,
-   "spread": 3.0,
+   "spread": 17.5,
    "table": [
     {
      "company": "Robert Walters plc",
@@ -934,13 +899,31 @@
      "ticker": "LSE:HAS"
     },
     {
-     "company": "AMN Healthcare Services, Inc.",
+     "company": "Freightos Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -9.2,
-     "multiple": 0.6,
+     "growth_pct": 13.4,
+     "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:AMN"
+     "ticker": "NASDAQGM:CRGO"
+    },
+    {
+     "company": "Mitsubishi Logistics",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.0,
+     "multiple": 2.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9301"
+    },
+    {
+     "company": "SEEK Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.7,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "ASX:SEK"
     }
    ],
    "tag_evidence": 0.6,

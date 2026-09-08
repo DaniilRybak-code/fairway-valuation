@@ -43,7 +43,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "app",
       "generation",
       "tracking"
      ],
@@ -83,7 +82,7 @@
       "ARR": 4
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -118,7 +117,7 @@
       {
        "company": "Suno",
        "mult": 18.0,
-       "reason": "shares the language of app, generation; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of generation; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -139,7 +138,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "app",
       "generation",
       "planning",
       "tracking"
@@ -254,7 +252,7 @@
     "company": "F-Secure Oyj",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; same kind of customer",
+    "reason": "same type of business; same kind of customer",
     "score": 6.6,
     "ticker": "HLSE:FSECURE"
    },
@@ -262,7 +260,7 @@
     "company": "Opera Limited",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; same kind of customer",
+    "reason": "same type of business; same kind of customer",
     "score": 6.6,
     "ticker": "NASDAQGS:OPRA"
    },
@@ -270,7 +268,7 @@
     "company": "Truecaller AB (publ)",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; same kind of customer",
+    "reason": "same type of business; same kind of customer",
     "score": 6.6,
     "ticker": "OM:TRUE B"
    },
@@ -278,7 +276,7 @@
     "company": "Life360, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app, tracking; same type of business; same kind of customer",
+    "reason": "shares the language of tracking; same type of business; same kind of customer",
     "score": 5.8,
     "ticker": "ASX:360"
    },
@@ -286,7 +284,7 @@
     "company": "Gen Digital Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; related type of business; same kind of customer",
+    "reason": "related type of business; same kind of customer",
     "score": 5.1,
     "ticker": "NASDAQGS:GEN"
    }
@@ -298,7 +296,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -325,7 +323,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app",
     "tracking"
    ],
    "show_retention": false,
@@ -379,7 +376,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -740,7 +737,7 @@
     "date": "Jun-26",
     "in_medians": true,
     "mult": 18.0,
-    "reason": "shares the language of app, generation; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of generation; same type of business; same kind of customer; same revenue model",
     "score": 14.8,
     "type": "PRIMARY"
    },
@@ -821,7 +818,7 @@
     "ARR": 4
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": true,
@@ -852,7 +849,7 @@
     {
      "company": "Suno",
      "mult": 18.0,
-     "reason": "shares the language of app, generation; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of generation; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -873,7 +870,6 @@
    ],
    "positioning": [],
    "shared_words": [
-    "app",
     "generation",
     "planning",
     "tracking"

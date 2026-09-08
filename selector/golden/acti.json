@@ -11,7 +11,7 @@
       "PAYING_SUBSCRIBERS": 1
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -37,10 +37,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "ai",
-      "app"
-     ],
+     "shared_words": [],
      "sole": "Suno",
      "spread": 1.0,
      "table": [
@@ -57,7 +54,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -68,7 +65,7 @@
       "ARR": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -95,8 +92,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "app",
       "builder"
      ],
      "spread": 2.2,
@@ -124,7 +119,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -141,7 +136,7 @@
     "company": "Truecaller AB (publ)",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 9.6,
     "ticker": "OM:TRUE B"
    },
@@ -157,7 +152,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, builder; same type of business; same business function; sold the same way",
+    "reason": "shares the language of builder; same type of business; same business function; sold the same way",
     "score": 8.3,
     "ticker": "NASDAQGS:WIX"
    },
@@ -193,7 +188,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -220,8 +215,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
-    "app",
     "builder",
     "mobile"
    ],
@@ -615,7 +608,7 @@
     "date": "Jun-26",
     "in_medians": true,
     "mult": 18.0,
-    "reason": "shares the language of ai, app; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way; same AI stance",
     "score": 14.1,
     "type": "PRIMARY"
    },
@@ -626,7 +619,7 @@
     "date": "Aug-25",
     "in_medians": true,
     "mult": 40.0,
-    "reason": "shares the language of ai, builder; same type of business; same business function; sold the same way",
+    "reason": "shares the language of builder; same type of business; same business function; sold the same way",
     "score": 12.8,
     "type": "PRIMARY"
    },
@@ -637,7 +630,7 @@
     "date": "Mar-25",
     "in_medians": false,
     "mult": 54.5,
-    "reason": "shares the language of ai, api; same type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of api; same type of business; same kind of customer; sold the same way",
     "score": 13.7,
     "type": "PRIMARY"
    }
@@ -652,7 +645,7 @@
     "ARR": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -675,8 +668,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "app",
     "builder"
    ],
    "spread": 2.2,
@@ -704,7 +695,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 17,
   "secondary": [],

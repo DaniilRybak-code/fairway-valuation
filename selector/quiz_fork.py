@@ -120,7 +120,10 @@ FORKS = {
  'software': dict(
     archetypes=('Business Applications', 'Vertical Software', 'Cybersecurity', 'Data, AI & Developer Tools',
                 'Cloud & Infrastructure', 'Design & Engineering', 'Communications & Collaboration',
-                'Consumer & Prosumer Software', 'Software Consolidator', 'Online Learning'),
+                'Consumer & Prosumer Software', 'Software Consolidator', 'Online Learning',
+                # Added 8-Sep-2026 (Route A): supply-chain and logistics SOFTWARE is software and is
+                # asked for ARR like the rest; the operators stay on the ecommerce fork.
+                'Supply Chain & Logistics Software'),
     asks_gross=True,
     questions=[
       dict(key='arr', label='What is your ARR?', kind='money', required=True,

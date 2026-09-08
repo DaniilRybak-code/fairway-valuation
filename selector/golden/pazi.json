@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -37,10 +37,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "ai",
-      "automation"
-     ],
+     "shared_words": [],
      "spread": 1.2,
      "table": [
       {
@@ -66,7 +63,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -79,7 +76,7 @@
       "NET_REVENUE": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Semrush"
@@ -116,35 +113,35 @@
       {
        "company": "Semrush",
        "mult": 4.3,
-       "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
+       "reason": "shares the language of content; related type of business; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "Vanta",
        "mult": 24.5,
-       "reason": "shares the language of automation; related type of business; same kind of customer",
+       "reason": "related type of business; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
+       "reason": "related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
       {
        "company": "Sierra",
        "mult": 105.3,
-       "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
+       "reason": "shares the language of based; related type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Decagon",
        "mult": 150.0,
-       "reason": "shares the language of agent, ai, automation; related type of business; same revenue model; same AI stance",
+       "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
@@ -152,8 +149,6 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "ai",
-      "automation",
       "based",
       "content"
      ],
@@ -293,7 +288,7 @@
     "company": "UiPath, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, automation; same type of business; same business function; same AI stance",
+    "reason": "shares the language of agent; same type of business; same business function; same AI stance",
     "score": 8.2,
     "ticker": "NYSE:PATH"
    },
@@ -301,7 +296,7 @@
     "company": "Pegasystems Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, business; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 7.1,
     "ticker": "NASDAQGS:PEGA"
    },
@@ -309,7 +304,7 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+    "reason": "related type of business; same kind of customer; sold the same way",
     "score": 7.1,
     "ticker": "NYSE:HUBS"
    },
@@ -317,7 +312,7 @@
     "company": "SAP SE",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of business; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 6.1,
     "ticker": "XTRA:SAP"
    }
@@ -329,7 +324,7 @@
     "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -357,8 +352,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "automation",
-    "business",
     "team"
    ],
    "show_retention": true,
@@ -816,7 +809,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 105.3,
-    "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
+    "reason": "shares the language of based; related type of business; same revenue model; same AI stance",
     "score": 8.7,
     "type": "PRIMARY"
    },
@@ -827,7 +820,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
+    "reason": "related type of business; same revenue model; sold the same way",
     "score": 9.6,
     "type": "SECONDARY"
    },
@@ -838,7 +831,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 150.0,
-    "reason": "shares the language of agent, ai, automation; related type of business; same revenue model; same AI stance",
+    "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
     "score": 8.7,
     "type": "PRIMARY"
    },
@@ -849,7 +842,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 4.3,
-    "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of content; related type of business; same kind of customer; sold the same way",
     "score": 9.7,
     "type": "CONTROL"
    },
@@ -860,7 +853,7 @@
     "date": "Nov-24",
     "in_medians": false,
     "mult": 40.4,
-    "reason": "shares the language of ai, content; related type of business; same AI stance",
+    "reason": "shares the language of content; related type of business; same AI stance",
     "score": 6.7,
     "type": "PRIMARY"
    },
@@ -871,7 +864,7 @@
     "date": "Jul-24",
     "in_medians": true,
     "mult": 24.5,
-    "reason": "shares the language of automation; related type of business; same kind of customer",
+    "reason": "related type of business; same kind of customer",
     "score": 6.6,
     "type": "PRIMARY"
    },
@@ -899,7 +892,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Semrush"
@@ -932,35 +925,35 @@
     {
      "company": "Semrush",
      "mult": 4.3,
-     "reason": "shares the language of ai, content; related type of business; same kind of customer; sold the same way",
+     "reason": "shares the language of content; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "Vanta",
      "mult": 24.5,
-     "reason": "shares the language of automation; related type of business; same kind of customer",
+     "reason": "related type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of ai, automation; related type of business; same revenue model; sold the same way",
+     "reason": "related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
     {
      "company": "Sierra",
      "mult": 105.3,
-     "reason": "shares the language of ai, automation, based; related type of business; same revenue model; same AI stance",
+     "reason": "shares the language of based; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Decagon",
      "mult": 150.0,
-     "reason": "shares the language of agent, ai, automation; related type of business; same revenue model; same AI stance",
+     "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
@@ -968,8 +961,6 @@
    "positioning": [],
    "shared_words": [
     "agent",
-    "ai",
-    "automation",
     "based",
     "content"
    ],
@@ -1036,7 +1027,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 8.6,
     "ticker": "NYSE:KVYO"
    },
@@ -1044,7 +1035,7 @@
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai; same revenue model; sold the same way",
+    "reason": "shares the language of agent; same revenue model; sold the same way",
     "score": 5.7,
     "ticker": "NYSE:NET"
    },
@@ -1052,7 +1043,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai; same revenue model; sold the same way",
+    "reason": "shares the language of agent; same revenue model; sold the same way",
     "score": 5.7,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -1060,7 +1051,7 @@
     "company": "Ooma, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of business; same kind of customer; sold the same way",
+    "reason": "same kind of customer; sold the same way",
     "score": 5.6,
     "ticker": "NYSE:OOMA"
    }
@@ -1072,7 +1063,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1099,28 +1090,28 @@
     {
      "company": "Ooma, Inc.",
      "mult": 1.9,
-     "reason": "shares the language of business; same kind of customer; sold the same way",
+     "reason": "same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Klaviyo, Inc.",
      "mult": 3.0,
-     "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, ai; same revenue model; sold the same way",
+     "reason": "shares the language of agent; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
      "mult": 29.5,
-     "reason": "shares the language of agent, ai; same revenue model; sold the same way",
+     "reason": "shares the language of agent; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
@@ -1128,10 +1119,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "agent",
-    "ai",
-    "automation",
-    "business"
+    "agent"
    ],
    "show_retention": true,
    "spread": 15.5,
@@ -1175,7 +1163,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Turns a business idea into an AI agent team that runs the operating work on credits"

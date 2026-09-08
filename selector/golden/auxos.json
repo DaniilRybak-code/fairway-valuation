@@ -13,7 +13,7 @@
       "NET_REVENUE": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Semrush"
@@ -50,7 +50,7 @@
       {
        "company": "Semrush",
        "mult": 4.3,
-       "reason": "shares the language of ai, research; same type of business; same business function; same revenue model",
+       "reason": "shares the language of research; same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
@@ -64,21 +64,21 @@
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of ai, research; same type of business; same kind of customer",
+       "reason": "shares the language of research; same type of business; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
       {
        "company": "Legora",
        "mult": 56.0,
-       "reason": "shares the language of ai, research; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of research; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Sierra",
        "mult": 105.3,
-       "reason": "shares the language of ai, customer, pricing; same type of business; same kind of customer; same AI stance",
+       "reason": "shares the language of customer, pricing; same type of business; same kind of customer; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -92,15 +92,13 @@
       {
        "company": "Decagon",
        "mult": 150.0,
-       "reason": "shares the language of ai, customer; same type of business; same kind of customer; same AI stance",
+       "reason": "shares the language of customer; same type of business; same kind of customer; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "consumer",
       "customer",
       "pricing",
       "research"
@@ -197,7 +195,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of market; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 9.6,
     "ticker": "NASDAQGS:GTM"
    },
@@ -249,7 +247,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -278,7 +276,6 @@
    "shared_words": [
     "audience",
     "customer",
-    "market",
     "research"
    ],
    "show_retention": true,
@@ -775,7 +772,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 105.3,
-    "reason": "shares the language of ai, customer, pricing; same type of business; same kind of customer; same AI stance",
+    "reason": "shares the language of customer, pricing; same type of business; same kind of customer; same AI stance",
     "score": 11.3,
     "type": "PRIMARY"
    },
@@ -786,7 +783,7 @@
     "date": "Apr-26",
     "in_medians": true,
     "mult": 56.0,
-    "reason": "shares the language of ai, research; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of research; related type of business; same kind of customer; same revenue model",
     "score": 11.3,
     "type": "PRIMARY"
    },
@@ -797,7 +794,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 150.0,
-    "reason": "shares the language of ai, customer; same type of business; same kind of customer; same AI stance",
+    "reason": "shares the language of customer; same type of business; same kind of customer; same AI stance",
     "score": 10.7,
     "type": "PRIMARY"
    },
@@ -808,7 +805,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of ai, research; same type of business; same kind of customer",
+    "reason": "shares the language of research; same type of business; same kind of customer",
     "score": 10.3,
     "type": "SECONDARY"
    },
@@ -819,7 +816,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 4.3,
-    "reason": "shares the language of ai, research; same type of business; same business function; same revenue model",
+    "reason": "shares the language of research; same type of business; same business function; same revenue model",
     "score": 13.3,
     "type": "CONTROL"
    },
@@ -858,7 +855,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Semrush"
@@ -891,7 +888,7 @@
     {
      "company": "Semrush",
      "mult": 4.3,
-     "reason": "shares the language of ai, research; same type of business; same business function; same revenue model",
+     "reason": "shares the language of research; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
@@ -905,21 +902,21 @@
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of ai, research; same type of business; same kind of customer",
+     "reason": "shares the language of research; same type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
     {
      "company": "Legora",
      "mult": 56.0,
-     "reason": "shares the language of ai, research; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of research; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Sierra",
      "mult": 105.3,
-     "reason": "shares the language of ai, customer, pricing; same type of business; same kind of customer; same AI stance",
+     "reason": "shares the language of customer, pricing; same type of business; same kind of customer; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -933,15 +930,13 @@
     {
      "company": "Decagon",
      "mult": 150.0,
-     "reason": "shares the language of ai, customer; same type of business; same kind of customer; same AI stance",
+     "reason": "shares the language of customer; same type of business; same kind of customer; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "consumer",
     "customer",
     "pricing",
     "research"

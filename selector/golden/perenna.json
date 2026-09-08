@@ -41,7 +41,6 @@
      "positioning": [],
      "post_stated_n": 0,
      "shared_words": [
-      "bank",
       "broker",
       "mortgage"
      ],
@@ -119,7 +118,6 @@
      "positioning": [],
      "post_stated_n": 0,
      "shared_words": [
-      "bank",
       "broker",
       "mortgage"
      ],
@@ -169,7 +167,7 @@
       "ARR": 1
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -196,7 +194,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "bank",
       "uk"
      ],
      "sole": "Zopa",
@@ -215,7 +212,7 @@
      ],
      "tag_evidence": 0.2,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "BOOK": {
      "anchor_dropped": false,
@@ -226,7 +223,7 @@
       "BOOK": 2
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -258,7 +255,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "bank",
       "uk"
      ],
      "spread": 1.8,
@@ -286,7 +282,7 @@
      ],
      "tag_evidence": 0.2,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "CUSTOMERS": {
      "anchor_dropped": false,
@@ -297,7 +293,7 @@
       "CUSTOMERS": 3
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -330,7 +326,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "bank",
       "uk"
      ],
      "spread": 3.6,
@@ -368,7 +363,7 @@
      ],
      "tag_evidence": 0.2,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -432,7 +427,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "bank",
     "broker",
     "mortgage"
    ],
@@ -613,6 +607,40 @@
    {
     "backed": [
      {
+      "company": "Better.com",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Aurora Acquisition Corp",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Better.com",
+      "date": "May-21"
+     },
+     {
+      "company": "Zopa",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Better.com",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Activant",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Atom Bank",
       "date": "Feb-22"
      }
@@ -675,20 +703,6 @@
      {
       "company": "Zopa",
       "date": "Oct-21"
-     },
-     {
-      "company": "Better.com",
-      "date": "May-21"
-     }
-    ],
-    "investor": "SoftBank Vision Fund 2",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Zopa",
-      "date": "Oct-21"
      }
     ],
     "investor": "Chimera",
@@ -702,26 +716,6 @@
      }
     ],
     "investor": "existing investors",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Better.com",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Aurora Acquisition Corp",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Better.com",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Activant",
     "n": 1
    },
    {
@@ -768,6 +762,17 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Better.com",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 8.79,
+    "reason": "shares the language of mortgage; same type of business; same end market; same kind of customer",
+    "score": 13.7,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "FY2024 revenue",
     "bound": "",
     "company": "Monzo",
@@ -785,7 +790,7 @@
     "date": "Feb-22",
     "in_medians": true,
     "mult": null,
-    "reason": "shares the language of bank, uk; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of uk; related type of business; same business function; same kind of customer",
     "score": 14.2,
     "type": "PRIMARY"
    },
@@ -807,19 +812,8 @@
     "date": "Oct-21",
     "in_medians": true,
     "mult": 8.9,
-    "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of uk; same type of business; same business function; same kind of customer",
     "score": 17.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Better.com",
-    "date": "May-21",
-    "in_medians": true,
-    "mult": 8.79,
-    "reason": "shares the language of mortgage; same type of business; same kind of customer; same AI stance",
-    "score": 9.7,
     "type": "PRIMARY"
    },
    {
@@ -829,7 +823,7 @@
     "date": "Mar-21",
     "in_medians": true,
     "mult": 7.59,
-    "reason": "shares the language of bank, uk; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of uk; related type of business; same business function; same kind of customer",
     "score": 14.2,
     "type": "PRIMARY"
    }
@@ -844,7 +838,7 @@
     "BOOK": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -872,7 +866,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "bank",
     "uk"
    ],
    "spread": 1.8,
@@ -900,7 +893,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 65,
   "secondary": [
@@ -908,7 +901,7 @@
     "company": "Pepper Money Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of bank, broker, funding; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of broker, funding; same type of business; same business function; same kind of customer",
     "score": 13.8,
     "ticker": "ASX:PPM"
    },
@@ -924,7 +917,7 @@
     "company": "S&U plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of bank, uk; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of uk; same type of business; same business function; same kind of customer",
     "score": 13.2,
     "ticker": "LSE:SUS"
    },
@@ -979,7 +972,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "bank",
     "broker",
     "funding",
     "mortgage",

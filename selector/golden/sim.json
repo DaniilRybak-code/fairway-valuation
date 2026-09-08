@@ -39,14 +39,14 @@
       {
        "company": "Oxylabs",
        "mult": 10285.71,
-       "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Clay",
        "mult": 357142.86,
-       "reason": "shares the language of agents, ai; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       }
@@ -54,8 +54,7 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "agents",
-      "ai"
+      "agents"
      ],
      "spread": 34.7,
      "table": [
@@ -122,7 +121,7 @@
       {
        "company": "Oxylabs",
        "mult": 10.3,
-       "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
@@ -136,21 +135,21 @@
       {
        "company": "Anthropic",
        "mult": 20.5,
-       "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Lovable",
        "mult": 33.0,
-       "reason": "shares the language of ai, builder; same type of business; same business function; same revenue model",
+       "reason": "shares the language of builder; same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of agents, ai; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
@@ -173,7 +172,6 @@
      "shared_words": [
       "agent",
       "agents",
-      "ai",
       "builder",
       "workspace"
      ],
@@ -269,7 +267,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
     "score": 11.2,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -277,7 +275,7 @@
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai; same kind of customer; same revenue model; sold the same way",
+    "reason": "shares the language of agent; same kind of customer; same revenue model; sold the same way",
     "score": 8.2,
     "ticker": "NYSE:NET"
    }
@@ -317,7 +315,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "source"
    ],
    "show_retention": true,
@@ -736,7 +733,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
     "score": 15.2,
     "type": "MIXED"
    },
@@ -747,7 +744,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 20.5,
-    "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
     "score": 14.2,
     "type": "PRIMARY"
    },
@@ -769,7 +766,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of agents, ai; related type of business; same revenue model; sold the same way",
+    "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
     "score": 9.8,
     "type": "SECONDARY"
    },
@@ -802,7 +799,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
-    "reason": "shares the language of ai, builder; same type of business; same business function; same revenue model",
+    "reason": "shares the language of builder; same type of business; same business function; same revenue model",
     "score": 16.8,
     "type": "PRIMARY"
    }
@@ -842,7 +839,7 @@
     {
      "company": "Oxylabs",
      "mult": 10.3,
-     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
     },
@@ -856,21 +853,21 @@
     {
      "company": "Anthropic",
      "mult": 20.5,
-     "reason": "shares the language of agent, ai; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Lovable",
      "mult": 33.0,
-     "reason": "shares the language of ai, builder; same type of business; same business function; same revenue model",
+     "reason": "shares the language of builder; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of agents, ai; related type of business; same revenue model; sold the same way",
+     "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
@@ -893,7 +890,6 @@
    "shared_words": [
     "agent",
     "agents",
-    "ai",
     "builder",
     "workspace"
    ],
@@ -988,7 +984,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, builder; related type of business; sold the same way",
+    "reason": "shares the language of builder; related type of business; sold the same way",
     "score": 5.8,
     "ticker": "NASDAQGS:WIX"
    }
@@ -1027,7 +1023,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "builder",
     "workflow"
    ],

@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 4
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Salesloft"
@@ -46,14 +46,14 @@
       {
        "company": "Klaviyo",
        "mult": 72846.15,
-       "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+       "reason": "same type of business; same business function; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
        "mult": 357142.86,
-       "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+       "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
@@ -74,7 +74,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "automation",
       "buyer",
       "engagement",
       "sales"
@@ -137,7 +136,7 @@
       "NET_REVENUE": 2
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 2,
      "control_names": [
       "Salesloft",
@@ -172,7 +171,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
       "buyer",
       "engagement",
       "sales"
@@ -249,7 +247,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 10.6,
     "ticker": "NYSE:KVYO"
    },
@@ -257,7 +255,7 @@
     "company": "Braze, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, engagement; same type of business; same business function; same AI stance",
+    "reason": "shares the language of engagement; same type of business; same business function; same AI stance",
     "score": 7.3,
     "ticker": "NASDAQGS:BRZE"
    },
@@ -265,7 +263,7 @@
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 7.1,
     "ticker": "NYSE:ZETA"
    },
@@ -320,7 +318,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "engagement",
     "sales"
    ],
@@ -859,7 +856,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+    "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
     "score": 11.7,
     "type": "SECONDARY"
    },
@@ -903,7 +900,7 @@
     "date": "Sep-21",
     "in_medians": true,
     "mult": 15.0,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 16.6,
     "type": "CONTROL"
    },
@@ -925,7 +922,7 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 32.6,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 15.6,
     "type": "PRIMARY"
    }
@@ -942,7 +939,7 @@
     "NET_REVENUE": 2
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 2,
    "control_names": [
     "Salesloft",
@@ -973,7 +970,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "automation",
     "buyer",
     "engagement",
     "sales"
@@ -1061,7 +1057,7 @@
     "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1088,7 +1084,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "buyer",
     "engagement",
     "sales"

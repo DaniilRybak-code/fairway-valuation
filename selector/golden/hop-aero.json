@@ -8,13 +8,12 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "NET_REVENUE": 5
+      "NET_REVENUE": 4
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 2,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 1,
      "control_names": [
-      "E2open",
       "Wolt"
      ],
      "dispersed": true,
@@ -24,22 +23,15 @@
      "founder_low": null,
      "founder_metric": null,
      "high": 44.12,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "E2open"
-     ],
-     "low": 3.46,
-     "mid": 8.94,
-     "n": 5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 5.97,
+     "mid": 23.5,
+     "n": 4,
      "period_mix": {
-      "FY2025": 1,
       "LTM": 4
      },
      "period_span": {
-      "FY2025": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -47,58 +39,38 @@
      },
      "points": [
       {
-       "company": "E2open",
-       "mult": 3.46,
-       "reason": "shares the language of logistics; related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
        "company": "Delhivery",
        "mult": 5.97,
-       "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+       "reason": "same type of business; same business function; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Xpressbees",
        "mult": 8.94,
-       "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+       "reason": "same type of business; same business function; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Wolt",
        "mult": 23.5,
-       "reason": "shares the language of delivery; same type of business; same business function",
+       "reason": "same type of business; same business function",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "Gopuff",
        "mult": 44.12,
-       "reason": "shares the language of delivery; same type of business; same business function",
+       "reason": "same type of business; same business function",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
-     "shared_words": [
-      "delivery",
-      "logistics"
-     ],
-     "spread": 12.8,
+     "shared_words": [],
+     "spread": 7.4,
      "table": [
-      {
-       "company": "E2open",
-       "date": "May-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 3.46,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Delhivery",
        "date": "May-21",
@@ -142,7 +114,7 @@
      ],
      "tag_evidence": 0.2,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -151,7 +123,7 @@
     "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of cargo, delivery; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of cargo; same type of business; same business function; same kind of customer",
     "score": 12.2,
     "ticker": "NYSE:FDX"
    },
@@ -159,7 +131,7 @@
     "company": "United Parcel Service",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 11.7,
     "ticker": "NYSE:UPS"
    },
@@ -167,7 +139,7 @@
     "company": "SG Holdings Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, logistics; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 11.7,
     "ticker": "TSE:9143"
    },
@@ -175,7 +147,7 @@
     "company": "PostNL N.V.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 11.6,
     "ticker": "ENXTAM:PNL"
    },
@@ -183,7 +155,7 @@
     "company": "S.F. Holding Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 11.6,
     "ticker": "SZSE:002352"
    },
@@ -191,7 +163,7 @@
     "company": "Blue Dart Express Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 11.6,
     "ticker": "NSEI:BLUEDART"
    },
@@ -199,7 +171,7 @@
     "company": "Deutsche Post AG",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 11.6,
     "ticker": "XTRA:DHL"
    }
@@ -211,7 +183,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -238,9 +210,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "cargo",
-    "delivery",
-    "logistics"
+    "cargo"
    ],
    "show_retention": false,
    "spread": 5.7,
@@ -311,7 +281,7 @@
    ],
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -452,16 +422,6 @@
    }
   ],
   "investors_evidence": [
-   {
-    "backed": [
-     {
-      "company": "E2open",
-      "date": "May-25"
-     }
-    ],
-    "investor": "WiseTech Global",
-    "n": 1
-   },
    {
     "backed": [
      {
@@ -700,24 +660,13 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "E2open",
-    "date": "May-25",
-    "in_medians": true,
-    "mult": 3.46,
-    "reason": "shares the language of logistics; related type of business; sold the same way",
-    "score": 6.1,
-    "type": "CONTROL"
-   },
-   {
     "basis": "NONE",
     "bound": "",
     "company": "Flink",
     "date": "Sep-24",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of delivery; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 7.1,
     "type": "MIXED"
    },
@@ -728,7 +677,7 @@
     "date": "Feb-22",
     "in_medians": true,
     "mult": 8.94,
-    "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+    "reason": "same type of business; same business function; sold the same way",
     "score": 11.7,
     "type": "PRIMARY"
    },
@@ -739,7 +688,7 @@
     "date": "Dec-21",
     "in_medians": true,
     "mult": null,
-    "reason": "shares the language of delivery; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 7.1,
     "type": "CONTROL"
    },
@@ -750,7 +699,7 @@
     "date": "Nov-21",
     "in_medians": true,
     "mult": 23.5,
-    "reason": "shares the language of delivery; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 7.1,
     "type": "CONTROL"
    },
@@ -761,7 +710,7 @@
     "date": "Jul-21",
     "in_medians": true,
     "mult": 44.12,
-    "reason": "shares the language of delivery; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 7.1,
     "type": "PRIMARY"
    },
@@ -772,7 +721,7 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 5.97,
-    "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+    "reason": "same type of business; same business function; sold the same way",
     "score": 11.7,
     "type": "PRIMARY"
    }
@@ -784,34 +733,26 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 5
+    "NET_REVENUE": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 2,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 1,
    "control_names": [
-    "E2open",
     "Wolt"
    ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 44.12,
-   "listed_target_n": 1,
-   "listed_target_names": [
-    "E2open"
-   ],
-   "low": 3.46,
-   "mid": 8.94,
-   "n": 5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 5.97,
+   "mid": 23.5,
+   "n": 4,
    "period_mix": {
-    "FY2025": 1,
     "LTM": 4
    },
    "period_span": {
-    "FY2025": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -819,58 +760,38 @@
    },
    "points": [
     {
-     "company": "E2open",
-     "mult": 3.46,
-     "reason": "shares the language of logistics; related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
      "company": "Delhivery",
      "mult": 5.97,
-     "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+     "reason": "same type of business; same business function; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Xpressbees",
      "mult": 8.94,
-     "reason": "shares the language of delivery, logistics; same type of business; same business function; sold the same way",
+     "reason": "same type of business; same business function; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Wolt",
      "mult": 23.5,
-     "reason": "shares the language of delivery; same type of business; same business function",
+     "reason": "same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "Gopuff",
      "mult": 44.12,
-     "reason": "shares the language of delivery; same type of business; same business function",
+     "reason": "same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
-   "shared_words": [
-    "delivery",
-    "logistics"
-   ],
-   "spread": 12.8,
+   "shared_words": [],
+   "spread": 7.4,
    "table": [
-    {
-     "company": "E2open",
-     "date": "May-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 3.46,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Delhivery",
      "date": "May-21",
@@ -914,7 +835,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 63,
   "secondary": [
@@ -922,7 +843,7 @@
     "company": "Delhivery Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 11.6,
     "ticker": "NSEI:DELHIVERY"
    },
@@ -930,7 +851,7 @@
     "company": "J&T Global Express Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer",
     "score": 9.6,
     "ticker": "SEHK:1519"
    },
@@ -954,7 +875,7 @@
     "company": "Mitsubishi Logistics",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics, transport; related type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
     "score": 8.4,
     "ticker": "TSE:9301"
    }
@@ -966,7 +887,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1007,21 +928,21 @@
     {
      "company": "J&T Global Express Limited",
      "mult": 0.7,
-     "reason": "shares the language of delivery; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Mitsubishi Logistics",
      "mult": 2.1,
-     "reason": "shares the language of logistics, transport; related type of business; same kind of customer; sold the same way",
+     "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Delhivery Limited",
      "mult": 2.5,
-     "reason": "shares the language of logistics; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -1030,8 +951,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "cargo",
-    "delivery",
-    "logistics",
     "transport"
    ],
    "show_retention": false,

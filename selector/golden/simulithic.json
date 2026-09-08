@@ -39,8 +39,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "analytics",
-      "data",
       "product",
       "session",
       "simulation"
@@ -120,14 +118,14 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Product Analytics, A/B Testing; same type of business; same business function; same kind of customer",
-    "score": 15.8,
+    "score": 15.6,
     "ticker": "NASDAQCM:AMPL"
    },
    {
     "company": "Similarweb Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 12.1,
     "ticker": "NYSE:SMWB"
    },
@@ -135,7 +133,7 @@
     "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics, data; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer",
     "score": 9.6,
     "ticker": "NASDAQCM:RDVT"
    },
@@ -151,7 +149,7 @@
     "company": "Sprout Social, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model",
     "score": 8.6,
     "ticker": "NASDAQCM:SPT"
    },
@@ -159,7 +157,7 @@
     "company": "Palantir Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics, data; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 7.1,
     "ticker": "NASDAQGS:PLTR"
    }
@@ -198,14 +196,14 @@
     {
      "company": "Sprout Social, Inc.",
      "mult": 1.2,
-     "reason": "shares the language of analytics; related type of business; same kind of customer; same revenue model",
+     "reason": "related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Similarweb Ltd.",
      "mult": 2.2,
-     "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -226,14 +224,14 @@
     {
      "company": "Red Violet, Inc.",
      "mult": 10.0,
-     "reason": "shares the language of analytics, data; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Palantir Technologies Inc.",
      "mult": 39.0,
-     "reason": "shares the language of analytics, data; same type of business; same business function; same AI stance",
+     "reason": "same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -241,10 +239,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "a",
-    "analytics",
     "b",
-    "data",
     "product",
     "session",
     "testing"
@@ -307,7 +302,7 @@
      "ticker": "NASDAQGS:PLTR"
     }
    ],
-   "tag_evidence": 5.3,
+   "tag_evidence": 5.1,
    "thin": false,
    "triangulated": false
   },
@@ -872,7 +867,7 @@
     "date": "Sep-23",
     "in_medians": true,
     "mult": 28.7,
-    "reason": "shares the language of analytics, data; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 8.1,
     "type": "PRIMARY"
    },
@@ -894,7 +889,7 @@
     "date": "Jan-22",
     "in_medians": true,
     "mult": 47.3,
-    "reason": "shares the language of analytics, data; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model",
     "score": 10.1,
     "type": "PRIMARY"
    },
@@ -905,7 +900,7 @@
     "date": "Jul-21",
     "in_medians": true,
     "mult": 22.5,
-    "reason": "shares the language of analytics, product; same type of business; sold the same way",
+    "reason": "shares the language of product; same type of business; sold the same way",
     "score": 8.3,
     "type": "PRIMARY"
    },
@@ -955,8 +950,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "analytics",
-    "data",
     "product",
     "session",
     "simulation"
@@ -1029,9 +1022,67 @@
    "triangulated": false
   },
   "private_window_months": 142,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same revenue model; sold the same way",
+    "score": 7.1,
+    "ticker": "NASDAQGS:ADBE"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 1
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "DIAMOND",
+   "founder_basis_trailing_on_forward": false,
+   "high": 4.1,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.1,
+   "mid": 4.1,
+   "n": 1,
+   "period_mix": {
+    "NTM": 1
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [],
+   "show_retention": false,
+   "sole": "Adobe Inc.",
+   "spread": 1.0,
+   "table": [
+    {
+     "company": "Adobe Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.9,
+     "multiple": 4.1,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ADBE"
+    }
+   ],
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Simulate how any product change will perform before shipping."

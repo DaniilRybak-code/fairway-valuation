@@ -12,7 +12,7 @@
       "NET_REVENUE": 3
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -64,7 +64,7 @@
       {
        "company": "Quince",
        "mult": 10.1,
-       "reason": "shares the language of home; related type of business; same business function; same kind of customer",
+       "reason": "related type of business; same business function; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -78,12 +78,8 @@
      ],
      "positioning": [],
      "shared_words": [
-      "delivery",
       "grocery",
-      "home",
-      "inventory",
-      "own",
-      "retail"
+      "own"
      ],
      "spread": 16.0,
      "table": [
@@ -201,7 +197,7 @@
     "company": "Oisix Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of grocery, inventory; same type of business; same end market; same business function",
+    "reason": "shares the language of grocery; same type of business; same end market; same business function",
     "score": 13.8,
     "ticker": "TSE:3182"
    },
@@ -209,7 +205,7 @@
     "company": "HelloFresh SE",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of inventory; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 13.6,
     "ticker": "XTRA:HFG"
    },
@@ -217,7 +213,7 @@
     "company": "Naked Wines plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of inventory; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 13.6,
     "ticker": "LSE:WINE"
    },
@@ -280,21 +276,21 @@
     {
      "company": "HelloFresh SE",
      "mult": 0.1,
-     "reason": "shares the language of inventory; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Naked Wines plc",
      "mult": 0.1,
-     "reason": "shares the language of inventory; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Oisix Inc.",
      "mult": 0.3,
-     "reason": "shares the language of grocery, inventory; same type of business; same end market; same business function",
+     "reason": "shares the language of grocery; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -333,9 +329,7 @@
    "shared_words": [
     "automated",
     "fulfilment",
-    "grocery",
-    "inventory",
-    "online"
+    "grocery"
    ],
    "show_retention": false,
    "spread": 14.0,
@@ -835,7 +829,7 @@
     "date": "Mar-26",
     "in_medians": true,
     "mult": 10.1,
-    "reason": "shares the language of home; related type of business; same business function; same kind of customer",
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
     "score": 16.1,
     "type": "PRIMARY"
    },
@@ -862,7 +856,7 @@
     "NET_REVENUE": 3
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": true,
@@ -910,7 +904,7 @@
     {
      "company": "Quince",
      "mult": 10.1,
-     "reason": "shares the language of home; related type of business; same business function; same kind of customer",
+     "reason": "related type of business; same business function; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -924,12 +918,8 @@
    ],
    "positioning": [],
    "shared_words": [
-    "delivery",
     "grocery",
-    "home",
-    "inventory",
-    "own",
-    "retail"
+    "own"
    ],
    "spread": 16.0,
    "table": [
@@ -1000,7 +990,7 @@
     "company": "ASOS Plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of inventory, online, own; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of own; same type of business; same business function; same kind of customer",
     "score": 19.8,
     "ticker": "LSE:ASC"
    },
@@ -1008,7 +998,7 @@
     "company": "Zalando SE",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of inventory, online; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 19.6,
     "ticker": "XTRA:ZAL"
    },
@@ -1016,7 +1006,7 @@
     "company": "Revolve Group, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of inventory, online; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 19.6,
     "ticker": "NYSE:RVLV"
    }
@@ -1028,7 +1018,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1056,11 +1046,8 @@
    "post_stated_n": 0,
    "shared_words": [
     "fulfilment",
-    "inventory",
-    "online",
     "own",
-    "price",
-    "retail"
+    "price"
    ],
    "show_retention": false,
    "spread": 4.5,

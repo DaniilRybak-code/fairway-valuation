@@ -9,15 +9,12 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 2,
-      "ARR_RUNRATE": 3,
-      "NET_REVENUE": 2
+      "ARR_RUNRATE": 4
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Scale AI"
-     ],
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
      "dispersed": true,
      "display": "SCATTER",
      "founder_field": "revenue",
@@ -27,23 +24,13 @@
      "high": 150.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 14.5,
+     "low": 20.0,
      "mid": 33.0,
-     "n": 7,
+     "n": 6,
      "period_mix": {
-      "LTM": 1,
-      "NTM": 1,
-      "RUN_RATE": 5
+      "RUN_RATE": 6
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -51,23 +38,23 @@
      },
      "points": [
       {
-       "company": "Scale AI",
-       "mult": 14.5,
-       "reason": "shares the language of ai, in; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Invisible Technologies",
-       "mult": 14.9,
-       "reason": "shares the language of ai, in; same type of business; same business function; same AI stance",
+       "company": "Replit",
+       "mult": 20.0,
+       "reason": "both do App Builder; same type of business; same kind of customer; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Replit",
-       "mult": 20.0,
-       "reason": "both do App Builder; same type of business; same kind of customer; same AI stance",
+       "company": "HiBob",
+       "mult": 27.0,
+       "reason": "related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Databricks",
+       "mult": 28.7,
+       "reason": "same type of business; same business function",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -79,57 +66,27 @@
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Legora",
-       "mult": 56.0,
-       "reason": "shares the language of ai, in; related type of business; same kind of customer; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
        "company": "Sierra",
        "mult": 105.3,
-       "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+       "reason": "shares the language of customer; related type of business; same kind of customer; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Decagon",
        "mult": 150.0,
-       "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+       "reason": "shares the language of customer; related type of business; same kind of customer; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "app",
       "builder",
-      "customer",
-      "in"
+      "customer"
      ],
-     "spread": 10.3,
+     "spread": 7.5,
      "table": [
-      {
-       "company": "Scale AI",
-       "date": "Jun-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 14.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Invisible Technologies",
-       "date": "Sep-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 14.9,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Replit",
        "date": "Sep-25",
@@ -141,21 +98,31 @@
        "ticker": ""
       },
       {
-       "company": "Lovable",
-       "date": "Dec-25",
+       "company": "HiBob",
+       "date": "Sep-23",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 33.0,
+       "multiple": 27.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       },
       {
-       "company": "Legora",
-       "date": "Apr-26",
+       "company": "Databricks",
+       "date": "Sep-23",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 56.0,
+       "multiple": 28.7,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 33.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -184,6 +151,60 @@
      "tag_evidence": 0.4,
      "thin": false,
      "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 7.37,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 7.37,
+     "mid": 7.37,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "sole": "Aledade",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 7.37,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.1,
+     "thin": true,
+     "triangulated": true
     }
    }
   },
@@ -208,7 +229,7 @@
     "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 10.6,
     "ticker": "NASDAQCM:RDVT"
    },
@@ -221,26 +242,26 @@
     "ticker": "NYSE:RAMP"
    },
    {
+    "company": "Palantir Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same revenue model; same AI stance",
+    "score": 9.6,
+    "ticker": "NASDAQGS:PLTR"
+   },
+   {
     "company": "Teradata Corporation",
     "family": "software",
     "in_medians": true,
     "reason": "both do Analytics; same type of business; same business function; same revenue model",
-    "score": 9.7,
-    "ticker": "NYSE:TDC"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai, analytics; same type of business; same business function; same revenue model",
     "score": 9.6,
-    "ticker": "NASDAQGS:PLTR"
+    "ticker": "NYSE:TDC"
    },
    {
     "company": "Rezolve AI PLC",
     "family": "software",
     "in_medians": false,
-    "reason": "shares the language of ai, customer, product; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of customer, product; same type of business; same kind of customer; same revenue model",
     "score": 9.5,
     "ticker": "NASDAQGM:RZLV"
    }
@@ -252,7 +273,7 @@
     "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -307,14 +328,14 @@
     {
      "company": "Red Violet, Inc.",
      "mult": 10.0,
-     "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Palantir Technologies Inc.",
      "mult": 39.0,
-     "reason": "shares the language of ai, analytics; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -322,11 +343,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
-    "analytics",
-    "app",
     "customer",
-    "in",
     "product"
    ],
    "show_retention": true,
@@ -545,14 +562,10 @@
      {
       "company": "Sierra",
       "date": "May-26"
-     },
-     {
-      "company": "Legora",
-      "date": "Apr-26"
      }
     ],
     "investor": "Benchmark",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -572,76 +585,6 @@
      }
     ],
     "investor": "Greenoaks",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Mar-2026)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Atlassian Ventures and NVentures (extension)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Bessemer",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "General Catalyst",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "ICONIQ",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Redpoint",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Y Combinator",
     "n": 1
    },
    {
@@ -741,66 +684,6 @@
    {
     "backed": [
      {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Vanara Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Princeville Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "HOF Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Freestyle VC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Greycroft",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Invisible Technologies",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Acrew Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Replit",
       "date": "Sep-25"
      }
@@ -831,11 +714,91 @@
    {
     "backed": [
      {
-      "company": "Scale AI",
-      "date": "Jun-25"
+      "company": "Databricks",
+      "date": "Sep-23"
      }
     ],
-    "investor": "Meta Platforms",
+    "investor": "T. Rowe Price",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Databricks",
+      "date": "Sep-23"
+     }
+    ],
+    "investor": "Baillie Gifford",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Databricks",
+      "date": "Sep-23"
+     }
+    ],
+    "investor": "ClearBridge",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Databricks",
+      "date": "Sep-23"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Databricks",
+      "date": "Sep-23"
+     }
+    ],
+    "investor": "NVIDIA",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "HiBob",
+      "date": "Sep-23"
+     }
+    ],
+    "investor": "Farallon Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "HiBob",
+      "date": "Sep-23"
+     }
+    ],
+    "investor": "Alpha Wave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "HiBob",
+      "date": "Sep-23"
+     }
+    ],
+    "investor": "existing investors",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Aledade",
+      "date": "Jun-23"
+     }
+    ],
+    "investor": "Lightspeed Venture Partners",
     "n": 1
    }
   ],
@@ -848,19 +811,8 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 105.3,
-    "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+    "reason": "shares the language of customer; related type of business; same kind of customer; same AI stance",
     "score": 8.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Legora",
-    "date": "Apr-26",
-    "in_medians": true,
-    "mult": 56.0,
-    "reason": "shares the language of ai, in; related type of business; same kind of customer; same AI stance",
-    "score": 7.7,
     "type": "PRIMARY"
    },
    {
@@ -870,7 +822,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 150.0,
-    "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+    "reason": "shares the language of customer; related type of business; same kind of customer; same AI stance",
     "score": 8.7,
     "type": "PRIMARY"
    },
@@ -887,17 +839,6 @@
    },
    {
     "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Invisible Technologies",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 14.9,
-    "reason": "shares the language of ai, in; same type of business; same business function; same AI stance",
-    "score": 11.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Replit",
     "date": "Sep-25",
@@ -908,15 +849,37 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "",
-    "company": "Scale AI",
-    "date": "Jun-25",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Databricks",
+    "date": "Sep-23",
     "in_medians": true,
-    "mult": 14.5,
-    "reason": "shares the language of ai, in; same type of business; same business function; same AI stance",
-    "score": 11.7,
-    "type": "CONTROL"
+    "mult": 28.7,
+    "reason": "same type of business; same business function",
+    "score": 9.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "HiBob",
+    "date": "Sep-23",
+    "in_medians": true,
+    "mult": 27.0,
+    "reason": "related type of business; same kind of customer; sold the same way",
+    "score": 9.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": ">=",
+    "company": "Aledade",
+    "date": "Jun-23",
+    "in_medians": true,
+    "mult": 7.37,
+    "reason": "both do Analytics; related type of business; same revenue model; sold the same way",
+    "score": 8.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -927,37 +890,24 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 3,
-    "NET_REVENUE": 2
+    "ARR_RUNRATE": 4
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Scale AI"
-   ],
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
    "dispersed": true,
    "display": "SCATTER",
    "high": 150.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 14.5,
+   "low": 20.0,
    "mid": 33.0,
-   "n": 7,
+   "n": 6,
    "period_mix": {
-    "LTM": 1,
-    "NTM": 1,
-    "RUN_RATE": 5
+    "RUN_RATE": 6
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -965,23 +915,23 @@
    },
    "points": [
     {
-     "company": "Scale AI",
-     "mult": 14.5,
-     "reason": "shares the language of ai, in; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Invisible Technologies",
-     "mult": 14.9,
-     "reason": "shares the language of ai, in; same type of business; same business function; same AI stance",
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "both do App Builder; same type of business; same kind of customer; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "both do App Builder; same type of business; same kind of customer; same AI stance",
+     "company": "HiBob",
+     "mult": 27.0,
+     "reason": "related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Databricks",
+     "mult": 28.7,
+     "reason": "same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -993,57 +943,27 @@
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Legora",
-     "mult": 56.0,
-     "reason": "shares the language of ai, in; related type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
      "company": "Sierra",
      "mult": 105.3,
-     "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+     "reason": "shares the language of customer; related type of business; same kind of customer; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Decagon",
      "mult": 150.0,
-     "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+     "reason": "shares the language of customer; related type of business; same kind of customer; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "app",
     "builder",
-    "customer",
-    "in"
+    "customer"
    ],
-   "spread": 10.3,
+   "spread": 7.5,
    "table": [
-    {
-     "company": "Scale AI",
-     "date": "Jun-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 14.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Invisible Technologies",
-     "date": "Sep-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 14.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Replit",
      "date": "Sep-25",
@@ -1055,21 +975,31 @@
      "ticker": ""
     },
     {
-     "company": "Lovable",
-     "date": "Dec-25",
+     "company": "HiBob",
+     "date": "Sep-23",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 33.0,
+     "multiple": 27.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     },
     {
-     "company": "Legora",
-     "date": "Apr-26",
+     "company": "Databricks",
+     "date": "Sep-23",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 56.0,
+     "multiple": 28.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 33.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1099,16 +1029,8 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 14,
+  "private_window_months": 38,
   "secondary": [
-   {
-    "company": "SoundHound AI, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of ai, in; same type of business; same kind of customer; same AI stance",
-    "score": 8.7,
-    "ticker": "NASDAQGM:SOUN"
-   },
    {
     "company": "Docebo Inc.",
     "family": "software",
@@ -1121,7 +1043,7 @@
     "company": "Coveo Solutions Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, product; same type of business; same revenue model; same AI stance",
+    "reason": "shares the language of product; same type of business; same revenue model; same AI stance",
     "score": 7.8,
     "ticker": "TSX:CVO"
    },
@@ -1137,19 +1059,27 @@
     "company": "Elastic N.V.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 7.1,
     "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Braze, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; same kind of customer; same revenue model",
+    "score": 6.2,
+    "ticker": "NASDAQGS:BRZE"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1160,11 +1090,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.3,
-   "mid": 4.2,
-   "n": 5,
+   "low": 1.1,
+   "mid": 3.25,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -1176,7 +1106,7 @@
     {
      "company": "Coveo Solutions Inc.",
      "mult": 1.1,
-     "reason": "shares the language of ai, product; same type of business; same revenue model; same AI stance",
+     "reason": "shares the language of product; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -1190,14 +1120,7 @@
     {
      "company": "Elastic N.V.",
      "mult": 4.2,
-     "reason": "shares the language of analytics; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "mult": 10.8,
-     "reason": "shares the language of ai, in; same type of business; same kind of customer; same AI stance",
+     "reason": "same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -1209,13 +1132,18 @@
      "transaction_type": ""
     }
    ],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "Braze, Inc.",
+     "mult": 3.4,
+     "reason": "shares the language of customer; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    }
+   ],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
-    "analytics",
     "customer",
-    "in",
     "product"
    ],
    "show_retention": true,
@@ -1247,15 +1175,6 @@
      "recurring_pct": null,
      "retention_pct": 112.0,
      "ticker": "NYSE:ESTC"
-    },
-    {
-     "company": "SoundHound AI, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.9,
-     "multiple": 10.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:SOUN"
     },
     {
      "company": "Snowflake Inc.",

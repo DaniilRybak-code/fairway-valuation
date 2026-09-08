@@ -64,7 +64,7 @@
       {
        "company": "Replit",
        "mult": 20.0,
-       "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agent, browser; same type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -93,7 +93,6 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "ai",
       "api",
       "browser",
       "code",
@@ -179,7 +178,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent, infrastructure; same type of business; same kind of customer; same revenue model",
     "score": 12.3,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -219,7 +218,7 @@
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
+    "reason": "shares the language of infrastructure; same type of business; same revenue model",
     "score": 7.7,
     "ticker": "NYSE:DT"
    },
@@ -294,14 +293,14 @@
     {
      "company": "Dynatrace, Inc.",
      "mult": 5.8,
-     "reason": "shares the language of ai, infrastructure; same type of business; same revenue model",
+     "reason": "shares the language of infrastructure; same type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent, infrastructure; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -317,7 +316,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "api",
     "infrastructure",
     "scraping",
@@ -792,7 +790,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
+    "reason": "shares the language of agent, browser; same type of business; same revenue model; sold the same way",
     "score": 14.3,
     "type": "PRIMARY"
    },
@@ -867,7 +865,7 @@
     {
      "company": "Replit",
      "mult": 20.0,
-     "reason": "shares the language of agent, ai, browser; same type of business; same revenue model; sold the same way",
+     "reason": "shares the language of agent, browser; same type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -896,7 +894,6 @@
    "positioning": [],
    "shared_words": [
     "agent",
-    "ai",
     "api",
     "browser",
     "code",

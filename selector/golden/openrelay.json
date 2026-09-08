@@ -11,7 +11,7 @@
       "REGISTERED_USERS": 2
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -39,7 +39,7 @@
       {
        "company": "Replit",
        "mult": 75.0,
-       "reason": "shares the language of ai, cloud; related type of business; same business function; same revenue model",
+       "reason": "related type of business; same business function; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -53,9 +53,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "cloud",
-      "network",
       "serverless"
      ],
      "spread": 43.3,
@@ -83,7 +80,7 @@
      ],
      "tag_evidence": 0.7,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -96,7 +93,7 @@
       "NET_REVENUE": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Confluent"
@@ -132,10 +129,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "cloud",
       "inference",
-      "network",
       "serverless"
      ],
      "spread": 3.3,
@@ -228,7 +222,7 @@
     "company": "Backblaze, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cloud; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 12.1,
     "ticker": "NASDAQGM:BLZE"
    },
@@ -236,7 +230,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, cloud; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 10.6,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -252,7 +246,7 @@
     "company": "IONOS Group SE",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cloud; same type of business; sold the same way",
+    "reason": "same type of business; sold the same way",
     "score": 7.1,
     "ticker": "XTRA:IOS"
    }
@@ -264,7 +258,7 @@
     "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -291,7 +285,7 @@
     {
      "company": "IONOS Group SE",
      "mult": 3.6,
-     "reason": "shares the language of cloud; same type of business; sold the same way",
+     "reason": "same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -305,7 +299,7 @@
     {
      "company": "Backblaze, Inc.",
      "mult": 4.3,
-     "reason": "shares the language of cloud; same type of business; same kind of customer; same revenue model",
+     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -319,7 +313,7 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of ai, cloud; related type of business; same kind of customer; same revenue model",
+     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -334,8 +328,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
-    "cloud",
     "compute",
     "gpu",
     "serverless"
@@ -801,7 +793,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of ai, network; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 14.6,
     "type": "MIXED"
    },
@@ -823,7 +815,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 9.88,
-    "reason": "shares the language of cloud; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 14.6,
     "type": "CONTROL"
    },
@@ -834,7 +826,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of ai, cloud; related type of business; same business function; same revenue model",
+    "reason": "related type of business; same business function; same revenue model; sold the same way",
     "score": 14.6,
     "type": "PRIMARY"
    },
@@ -845,7 +837,7 @@
     "date": "Mar-25",
     "in_medians": true,
     "mult": 13.2,
-    "reason": "shares the language of ai, cloud; related type of business; same business function; same AI stance",
+    "reason": "related type of business; same business function; same AI stance",
     "score": 9.6,
     "type": "PRIMARY"
    },
@@ -867,7 +859,7 @@
     "date": "Aug-17",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of ai, network; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 14.6,
     "type": "CONTROL"
    }
@@ -884,7 +876,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Confluent"
@@ -916,10 +908,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "cloud",
     "inference",
-    "network",
     "serverless"
    ],
    "spread": 3.3,
@@ -995,7 +984,7 @@
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, cloud; related type of business; same revenue model",
+    "reason": "related type of business; same revenue model",
     "score": 6.1,
     "ticker": "NYSE:SNOW"
    }
@@ -1007,7 +996,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1033,10 +1022,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "ai",
-    "cloud"
-   ],
+   "shared_words": [],
    "show_retention": true,
    "sole": "Snowflake Inc.",
    "spread": 1.0,
@@ -1053,7 +1039,7 @@
    ],
    "tag_evidence": 0.1,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Distributed, hardware-agnostic AI inference"

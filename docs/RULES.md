@@ -133,6 +133,65 @@ Owned-Inventory Retail, and on that label the archetype fallback offered it Moov
 June and Flink. It fails the gate anyway, so nothing wrong reaches a founder, but the rule is doing
 worse work here than it does elsewhere and the tagging review has it.
 
+**A13. A tag describes the company, never its customer.**
+*Added 8 Sep, from the evaluator's review of the 142 test companies
+(`docs/evaluator-verdicts-review-8sep.md`).* Six of the thirteen sets the evaluator flagged were
+caused by one tag that described who the company sells to instead of what it is: fundraisly (sells
+to founders raising money) carried the end market Financial Services and a financial-data archetype
+and was priced off S&P and Moody's; kita (sells credit software TO lenders) carried Lending & Credit
+first and was priced as a bank; alloovium (construction documents) carried Real Estate;
+lambda-robotics (robots FOR data centres) carried Cloud & Infrastructure. The rule, in the words the
+profiler's prompt now carries: the archetype is what the company IS and how it earns, never who it
+sells to; "for lenders" is Vertical Software with the end market Financial Services, not Lending &
+Credit; the end market is the customer's industry as spelled in the vocabulary (construction is
+Construction & Infrastructure, not Real Estate; insurers are Insurance, not Financial Services);
+hardware keeps a hardware or engineering archetype whatever industry it sells into. Check 17 asserts
+the four sentences are in every prompt. The near-duplicate end-market labels that made the second
+half of this possible were folded the same day (`tools/apply_industry_folds_8sep.py`).
+
+**A14. A generic word is not evidence of closeness.**
+*Added 8 Sep, Daniil: "generic words cannot be counted towards comparison analysis."* A word
+carried by 25 or more companies (weight 0.2 or less in `data/tag-token-weights.csv`; the line
+check 8 has used for kind 3 since 6 Sep) does not count towards the closeness label a founder reads
+(strong, partial, thin) and is not shown among the shared descriptors. The stopword list is
+eighteen words rather than four, so "to", "a" and "as" are no longer words at all (bond was shown
+BlackLine, Sidetrade and Zuora on "to", from Record to Report, Quote To Cash and Agentic To-Do
+List). Measured before the change: 116 of 284 lanes were labelled strong and 69 of them rested on
+under one point of product evidence. **What the rule does not do, deliberately:** a generic word
+still scores its small weight and still clears the relevance gate, because zeroing it was measured
+on 6 Sep (the "vocab25" variant) and cost real passes. The gate's own rule 4 ("every lane is thin")
+was narrowed the same day so that it fails a fixture only on a catch-all archetype with no DIRECT
+lane: a set anchored on a specific end market plus archetype (fyle, tienda-pago, wondering), or on
+a narrow archetype that IS the business (moov on Merchant Acquiring & PSP), does not rest on
+nothing.
+
+**A15. Supply-chain and logistics SOFTWARE is its own archetype, in the software family.**
+*Added 8 Sep, Daniil's "Route A" on the evaluator's verdicts for ekho-labs, bizmark, derya and
+manifold-robotics.* `Commerce Enablement & Fulfilment` holds 28 listed rows of which 26 are
+carriers, forwarders, 3PLs, cold-chain operators and warehouse REITs, so the family map filed it as
+consumer (asset-heavy) and every supply-chain software company tagged with it was walled off from
+Kinaxis, Manhattan, Tecsys and Samsara before a word was scored; Kinaxis shared 3.9 product points
+with bizmark and never reached it. `Supply Chain & Logistics Software` now carries the software rows
+first (Kinaxis, Manhattan, Tecsys, E2open) and the straddling platforms second (Samsara, Freightos,
+Full Truck Alliance, Loadsmart, Shiprocket, which stays with the operators first so the parcel
+networks keep it). The operators keep their archetype and nothing about them moved
+(`tools/apply_supply_chain_software_8sep.py`, count in and out on every file). The software fork
+asks it for ARR; the investor aliases offer the logistics funds to it. The same shape exists in
+`Design & Engineering` (CAD and EDA vendors beside design tools and robotics platforms) and is on
+the post-pilot list with the taxonomy rule.
+
+**A16. When a near-perfect comparable is found, its own neighbours are the next names to source.**
+*Added 8 Sep, Daniil: "when we find a near-perfect comparable for a company, we or the algorithm
+have to go online and check the companies similar to that perfect comp. For example, what I have
+done for Kita is I went online and checked companies similar to Mambu, and that way I also found
+Thought Machine. This has to be done throughout the fixtures."* So a sourcing pass does not stop at
+the name that fits; it looks up that name's own peers (the companies its press, its investors and
+its competitors' pages put beside it) and brings the ones with a priced round or a listing onto the
+list. It is a data pull, so under A12 part 3 it runs inside the bulk pass after the 18 September
+march, over every fixture whose set holds a DIRECT name, and its output is a list of names with
+sources, never a figure from anyone's head. `docs/sourcing-list-8sep.md` is where the names go
+until then.
+
 ---
 
 ## B. What a multiple actually means

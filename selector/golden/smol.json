@@ -12,7 +12,7 @@
       "NET_REVENUE": 4
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -53,13 +53,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "consumer",
-      "delivery",
-      "direct",
-      "subscription",
-      "to"
-     ],
+     "shared_words": [],
      "spread": 3.7,
      "table": [
       {
@@ -115,7 +109,7 @@
      ],
      "tag_evidence": 0.2,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -133,7 +127,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same end market; same business function",
-    "score": 16.5,
+    "score": 16.4,
     "ticker": "NYSE:YETI"
    },
    {
@@ -148,7 +142,7 @@
     "company": "Wayfair Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; same kind of customer",
     "score": 12.1,
     "ticker": "NYSE:W"
    }
@@ -160,7 +154,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -188,12 +182,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "consumables",
-    "consumer",
-    "delivery",
-    "direct",
-    "products",
-    "subscription",
-    "to"
+    "products"
    ],
    "show_retention": false,
    "spread": 5.0,
@@ -460,7 +449,7 @@
     "in_medians": true,
     "mult": 10.1,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 21.7,
+    "score": 21.6,
     "type": "PRIMARY"
    },
    {
@@ -471,7 +460,7 @@
     "in_medians": true,
     "mult": 5.0,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 18.7,
+    "score": 18.6,
     "type": "PRIMARY"
    },
    {
@@ -481,7 +470,7 @@
     "date": "Mar-25",
     "in_medians": true,
     "mult": 2.75,
-    "reason": "shares the language of delivery; related type of business; same business function; same kind of customer",
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
     "score": 13.6,
     "type": "MIXED"
    },
@@ -493,7 +482,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 18.7,
+    "score": 18.6,
     "type": "SECONDARY"
    },
    {
@@ -530,7 +519,7 @@
     "NET_REVENUE": 4
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -567,13 +556,7 @@
    },
    "points": [],
    "positioning": [],
-   "shared_words": [
-    "consumer",
-    "delivery",
-    "direct",
-    "subscription",
-    "to"
-   ],
+   "shared_words": [],
    "spread": 3.7,
    "table": [
     {
@@ -629,7 +612,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 58,
   "secondary": [
@@ -646,7 +629,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 15.8,
+    "score": 15.7,
     "ticker": "NYSE:FIGS"
    },
    {
@@ -654,7 +637,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 15.2,
+    "score": 15.1,
     "ticker": "NYSE:WRBY"
    },
    {
@@ -662,14 +645,14 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 13.2,
+    "score": 13.1,
     "ticker": "NYSE:ONON"
    },
    {
     "company": "LifeMD, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of consumer, direct, subscription; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 11.2,
     "ticker": "NASDAQGM:LFMD"
    }
@@ -681,7 +664,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -708,11 +691,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "consumer",
-    "direct",
-    "repeat",
-    "subscription",
-    "to"
+    "repeat"
    ],
    "show_retention": false,
    "spread": 4.8,
@@ -763,9 +742,9 @@
      "ticker": "NYSE:FIGS"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Subscription refills of own-brand laundry capsules and cleaning products by post"

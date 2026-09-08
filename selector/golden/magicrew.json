@@ -40,8 +40,6 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "ai",
-      "enterprise",
       "generation",
       "open",
       "source"
@@ -120,7 +118,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, platform; related type of business; same business function; same kind of customer",
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
     "score": 10.1,
     "ticker": "NASDAQGS:WIX"
    },
@@ -152,7 +150,7 @@
     "company": "ServiceNow, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of enterprise, platform; same type of business",
+    "reason": "same type of business",
     "score": 5.2,
     "ticker": "NYSE:NOW"
    }
@@ -164,7 +162,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -192,10 +190,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
-    "collaboration",
-    "enterprise",
-    "platform"
+    "collaboration"
    ],
    "show_retention": true,
    "spread": 4.1,
@@ -657,7 +652,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 18.3,
-    "reason": "shares the language of ai, enterprise; related type of business; same business function; same kind of customer",
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
     "score": 14.1,
     "type": "SECONDARY"
    },
@@ -668,7 +663,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
-    "reason": "shares the language of ai, generation; related type of business; sold the same way; same AI stance",
+    "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
     "score": 8.2,
     "type": "PRIMARY"
    },
@@ -679,7 +674,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 25.0,
-    "reason": "shares the language of agent, ai; related type of business; same business function; sold the same way",
+    "reason": "shares the language of agent; related type of business; same business function; sold the same way",
     "score": 11.2,
     "type": "PRIMARY"
    },
@@ -712,7 +707,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of agent, ai; related type of business; sold the same way; same AI stance",
+    "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
     "score": 9.7,
     "type": "PRIMARY"
    },
@@ -723,7 +718,7 @@
     "date": "Jun-25",
     "in_medians": true,
     "mult": 19.8,
-    "reason": "shares the language of ai, generation; related type of business; sold the same way; same AI stance",
+    "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
     "score": 8.2,
     "type": "PRIMARY"
    }
@@ -763,8 +758,6 @@
    "positioning": [],
    "shared_words": [
     "agent",
-    "ai",
-    "enterprise",
     "generation",
     "open",
     "source"
@@ -842,7 +835,7 @@
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform, source; related type of business; sold the same way",
+    "reason": "shares the language of source; related type of business; sold the same way",
     "score": 6.2,
     "ticker": "NASDAQGS:GTLB"
    }
@@ -854,7 +847,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -881,7 +874,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "platform",
     "source"
    ],
    "show_retention": true,
@@ -900,7 +892,7 @@
    ],
    "tag_evidence": 0.7,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Give everyone their own AI workforce in one platform"

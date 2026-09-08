@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -59,9 +59,7 @@
      "positioning": [],
      "shared_words": [
       "benefits",
-      "claims",
-      "digital",
-      "insurance"
+      "claims"
      ],
      "spread": 7.7,
      "table": [
@@ -100,7 +98,7 @@
       "ARR_RUNRATE": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -128,9 +126,7 @@
      "positioning": [],
      "shared_words": [
       "benefits",
-      "claims",
-      "digital",
-      "insurance"
+      "claims"
      ],
      "spread": 2.1,
      "table": [
@@ -660,7 +656,7 @@
     "date": "Jul-22",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of insurance; same type of business; same kind of customer",
+    "reason": "same type of business; same kind of customer",
     "score": 7.6,
     "type": "PRIMARY"
    },
@@ -709,7 +705,7 @@
     "ARR_RUNRATE": 2
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -733,9 +729,7 @@
    "positioning": [],
    "shared_words": [
     "benefits",
-    "claims",
-    "digital",
-    "insurance"
+    "claims"
    ],
    "spread": 2.1,
    "table": [
@@ -804,7 +798,7 @@
     "company": "Crawford & Company",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of administration, claims, insurance; same type of business; same business function",
+    "reason": "shares the language of administration, claims; same type of business; same business function",
     "score": 5.6,
     "ticker": "NYSE:CRD.B"
    },
@@ -861,9 +855,7 @@
    "shared_words": [
     "administration",
     "benefits",
-    "claims",
-    "digital",
-    "insurance"
+    "claims"
    ],
    "show_retention": true,
    "spread": 4.7,

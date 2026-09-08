@@ -238,7 +238,7 @@
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of api, data, platform; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
     "score": 9.8,
     "ticker": "NYSE:TWLO"
    },
@@ -290,7 +290,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -345,7 +345,7 @@
     {
      "company": "Twilio Inc.",
      "mult": 5.2,
-     "reason": "shares the language of api, data, platform; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -368,11 +368,8 @@
    "post_stated_n": 0,
    "shared_words": [
     "api",
-    "data",
-    "digital",
     "infrastructure",
-    "interoperability",
-    "platform"
+    "interoperability"
    ],
    "show_retention": true,
    "spread": 59.0,
@@ -855,7 +852,7 @@
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way; same AI stance",
     "score": 8.6,
     "ticker": "HLSE:QTCOM"
    },
@@ -863,17 +860,9 @@
     "company": "TomTom N.V.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of api, data, digital; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of api; related type of business; same business function; same kind of customer",
     "score": 8.2,
     "ticker": "ENXTAM:TOM2"
-   },
-   {
-    "company": "Tecsys Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same end market; same AI stance",
-    "score": 7.0,
-    "ticker": "TSX:TCS"
    },
    {
     "company": "Claritev Corporation",
@@ -887,9 +876,17 @@
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "Weave Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "NYSE:WEAV"
    }
   ],
   "secondary_range": {
@@ -899,7 +896,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -931,14 +928,14 @@
     {
      "company": "TomTom N.V.",
      "mult": 0.6,
-     "reason": "shares the language of api, data, digital; related type of business; same business function; same kind of customer",
+     "reason": "shares the language of api; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
-     "company": "Tecsys Inc.",
+     "company": "Weave Communications, Inc.",
      "mult": 1.9,
-     "reason": "same type of business; same end market; same AI stance",
+     "reason": "same type of business; same end market",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -954,23 +951,21 @@
     {
      "company": "Qt Group Oyj",
      "mult": 3.9,
-     "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+     "reason": "same business function; same kind of customer; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "GitLab Inc.",
      "mult": 5.2,
-     "reason": "shares the language of platform; same business function; same kind of customer; sold the same way",
+     "reason": "same business function; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "api",
-    "data",
-    "digital"
+    "api"
    ],
    "show_retention": true,
    "spread": 8.5,
@@ -985,13 +980,13 @@
      "ticker": "ENXTAM:TOM2"
     },
     {
-     "company": "Tecsys Inc.",
+     "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
+     "growth_pct": 13.8,
      "multiple": 1.9,
-     "recurring_pct": 58.0,
-     "retention_pct": 106.0,
-     "ticker": "TSX:TCS"
+     "recurring_pct": null,
+     "retention_pct": 92.0,
+     "ticker": "NYSE:WEAV"
     },
     {
      "company": "Claritev Corporation",
@@ -1005,7 +1000,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Open infrastructure for wearable-powered health products"

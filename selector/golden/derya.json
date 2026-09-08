@@ -2,39 +2,35 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "REVENUE": {
+    "BUSINESS_CUSTOMERS": {
      "anchor_dropped": false,
      "band": "ADJACENT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
+     "basis": "BUSINESS_CUSTOMERS",
+     "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "NET_REVENUE": 1
+      "BUSINESS_CUSTOMERS": 3
      },
-     "bounded": false,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "E2open"
-     ],
+     "bounded": true,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
-     "display": "DIAMOND",
-     "founder_field": "revenue",
+     "display": "RANGE",
+     "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 3.46,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "E2open"
-     ],
-     "low": 3.46,
-     "mid": 3.46,
-     "n": 1,
+     "high": 640000.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 306250.0,
+     "mid": 615384.62,
+     "n": 3,
      "period_mix": {
-      "FY2025": 1
+      "RUN_RATE": 3
      },
      "period_span": {
-      "FY2025": {
+      "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
@@ -42,13 +38,152 @@
      "points": [],
      "positioning": [],
      "shared_words": [
+      "procurement"
+     ],
+     "spread": 2.1,
+     "table": [
+      {
+       "company": "Vanta",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 306250.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "FloQast",
+       "date": "Apr-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 615384.62,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ramp",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 640000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.7,
+     "thin": false,
+     "triangulated": true
+    },
+    "REVENUE": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
+     "basis_mix": {
+      "ARR": 4,
+      "ARR_RUNRATE": 2,
+      "NET_REVENUE": 1
+     },
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "E2open"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
+     "founder_field": "revenue",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 39.42,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "E2open"
+     ],
+     "low": 3.46,
+     "mid": 22.8,
+     "n": 7,
+     "period_mix": {
+      "FY2025": 1,
+      "NOT STATED": 1,
+      "RUN_RATE": 5
+     },
+     "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [
+      {
+       "company": "E2open",
+       "mult": 3.46,
+       "reason": "both do Procurement; same type of business; same business function",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Restaurant365",
+       "mult": 10.0,
+       "reason": "related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "FloQast",
+       "mult": 16.0,
+       "reason": "related type of business; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Spendesk",
+       "mult": 22.8,
+       "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Vanta",
+       "mult": 24.5,
+       "reason": "related type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Ramp",
+       "mult": 32.0,
+       "reason": "both do Procurement; related type of business; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Brex",
+       "mult": 39.42,
+       "reason": "related type of business; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
+     "positioning": [],
+     "shared_words": [
       "chain",
-      "logistics",
       "procurement",
       "supply"
      ],
-     "sole": "E2open",
-     "spread": 1.0,
+     "spread": 11.4,
      "table": [
       {
        "company": "E2open",
@@ -59,102 +194,69 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Restaurant365",
+       "date": "May-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "FloQast",
+       "date": "Apr-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 16.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Spendesk",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 22.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Vanta",
+       "date": "Jul-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 24.5,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Ramp",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Brex",
+       "date": "Jan-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 39.42,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
      "tag_evidence": 1.0,
-     "thin": true,
-     "triangulated": false
-    },
-    "REVENUE_GROSS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "REVENUE_GROSS",
-     "basis_label": "enterprise value to gross revenue",
-     "basis_mix": {
-      "REVENUE_GROSS": 4
-     },
-     "bounded": false,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "revenue_gross",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 10.36,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 5.91,
-     "mid": 7.1,
-     "n": 4,
-     "period_mix": {
-      "FY ENDED 31-MAR-2023": 1,
-      "LTM": 3
-     },
-     "period_span": {
-      "FY ENDED 31-MAR-2023": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [
-      "chain",
-      "logistics",
-      "sourcing",
-      "supply"
-     ],
-     "spread": 1.8,
-     "table": [
-      {
-       "company": "WayCool Foods",
-       "date": "Jun-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 5.91,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Vegrow",
-       "date": "Dec-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 6.68,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Ninjacart",
-       "date": "Dec-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 7.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "ElasticRun",
-       "date": "Feb-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.36,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.9,
      "thin": false,
      "triangulated": false
     }
@@ -162,85 +264,53 @@
   },
   "core": [
    {
-    "company": "JSL S.A.",
-    "family": "consumer",
+    "company": "Kinaxis Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of freight, logistics, outsourcing; same type of business; same business function; same revenue model",
+    "reason": "shares the language of chain, supply; same type of business; same end market; same business function",
     "score": 8.3,
-    "ticker": "BOVESPA:JSLG3"
+    "ticker": "TSX:KXS"
    },
    {
-    "company": "ID Logistics Group SA",
-    "family": "consumer",
+    "company": "Manhattan Associates, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
-    "score": 8.2,
-    "ticker": "ENXTPA:IDL"
+    "reason": "shares the language of chain, supply; same type of business; same business function; same revenue model",
+    "score": 7.8,
+    "ticker": "NASDAQGS:MANH"
    },
    {
-    "company": "Grupo Traxion, S.A.B. de C.V.",
-    "family": "consumer",
+    "company": "SPS Commerce, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of freight, logistics; same type of business; same business function; same revenue model",
-    "score": 7.7,
-    "ticker": "BMV:TRAXION A"
-   },
-   {
-    "company": "Reysas Tasimacilik ve Lojistik",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of freight, logistics; same type of business; same business function; same revenue model",
-    "score": 7.7,
-    "ticker": "IBSE:RYSAS"
-   },
-   {
-    "company": "GXO Logistics, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
-    "score": 7.6,
-    "ticker": "NYSE:GXO"
-   },
-   {
-    "company": "Mitsubishi Logistics",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
-    "score": 7.6,
-    "ticker": "TSE:9301"
-   },
-   {
-    "company": "Expeditors International",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Customs Brokerage; same type of business; same business function",
-    "score": 7.2,
-    "ticker": "NYSE:EXPD"
+    "reason": "shares the language of chain, supply; same business function; same kind of customer; sold the same way",
+    "score": 6.8,
+    "ticker": "NASDAQGS:SPSC"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 1.8,
+   "high": 10.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 0.7,
-   "n": 6,
+   "low": 3.4,
+   "mid": 4.5,
+   "n": 3,
    "period_mix": {
-    "NTM": 6
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -248,262 +318,247 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Grupo Traxion, S.A.B. de C.V.",
-     "mult": 0.2,
-     "reason": "shares the language of freight, logistics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "ID Logistics Group SA",
-     "mult": 0.5,
-     "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "JSL S.A.",
-     "mult": 0.7,
-     "reason": "shares the language of freight, logistics, outsourcing; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "GXO Logistics, Inc.",
-     "mult": 0.7,
-     "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Expeditors International",
-     "mult": 1.8,
-     "reason": "both do Customs Brokerage; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Mitsubishi Logistics",
-     "mult": 2.1,
-     "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "brokerage",
     "chain",
-    "customs",
-    "freight",
-    "logistics",
-    "outsourcing",
     "supply"
    ],
    "show_retention": false,
-   "spread": 10.5,
+   "spread": 3.0,
    "table": [
     {
-     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "company": "SPS Commerce, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.1,
-     "multiple": 0.2,
-     "recurring_pct": null,
+     "growth_pct": 6.7,
+     "multiple": 3.4,
+     "recurring_pct": 96.0,
      "retention_pct": null,
-     "ticker": "BMV:TRAXION A"
+     "ticker": "NASDAQGS:SPSC"
     },
     {
-     "company": "ID Logistics Group SA",
+     "company": "Kinaxis Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.4,
-     "multiple": 0.5,
-     "recurring_pct": null,
+     "growth_pct": 13.4,
+     "multiple": 4.5,
+     "recurring_pct": 62.1,
      "retention_pct": null,
-     "ticker": "ENXTPA:IDL"
+     "ticker": "TSX:KXS"
     },
     {
-     "company": "JSL S.A.",
+     "company": "Manhattan Associates, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.4,
-     "multiple": 0.7,
-     "recurring_pct": null,
+     "growth_pct": 8.7,
+     "multiple": 10.1,
+     "recurring_pct": 37.7,
      "retention_pct": null,
-     "ticker": "BOVESPA:JSLG3"
-    },
-    {
-     "company": "GXO Logistics, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.3,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:GXO"
-    },
-    {
-     "company": "Expeditors International",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 0.9,
-     "multiple": 1.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:EXPD"
-    },
-    {
-     "company": "Mitsubishi Logistics",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.0,
-     "multiple": 2.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:9301"
+     "ticker": "NASDAQGS:MANH"
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
   "investors_callable": [
    {
-    "cheque_figure_dated": "21 Nov 2022",
-    "cheque_high_m": null,
-    "cheque_low_m": 1.0,
-    "deal_note": null,
-    "geographies": "Australia and New Zealand; Israel; Southeast Asia",
-    "house_type": "",
-    "investor": "Square Peg",
-    "not_published": null,
-    "recent_deal": "Airwallex",
-    "recent_deal_date": "2025-12",
-    "recent_deal_url": "https://www.airwallex.com/newsroom/airwallex-series-g",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Our sweet spot for new investments is Seed to Series A.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
     "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": 0.5,
+    "cheque_high_m": 1.25,
+    "cheque_low_m": 0.35,
     "deal_note": null,
-    "geographies": "US-based; global transportation opportunities, including Europe",
+    "geographies": "UK/Europe-based, Europe-first and selectively invests in the US",
     "house_type": "Venture",
-    "investor": "Trucks Venture Capital",
+    "investor": "Seedcamp",
     "not_published": null,
-    "recent_deal": "Providio AI",
-    "recent_deal_date": "2026-01",
-    "recent_deal_url": "https://providio.ai/blog/from-human-to-superhuman",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Pre-seed and seed investor in transportation systems, freight, aviation and mobility infrastructure.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.5,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "North America and Europe, selectively global",
-    "house_type": "Venture",
-    "investor": "Dynamo Ventures",
-    "not_published": null,
-    "recent_deal": "UNIT AI",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.dynamo.vc/insights/unit-ai",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Seed specialist in the physical economy, including freight, warehousing, transportation and commerce enablement.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 3.5,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "Southern Europe and Latin America, especially Spain",
-    "house_type": "Venture",
-    "investor": "Kfund",
-    "not_published": null,
-    "recent_deal": "Pollen",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://paleblue.vc/portfolio/pollen",
+    "recent_deal": "Embedd",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://seedcamp.com/views/embedd-raises-2-7m-to-cut-chip-integration-time-by-6x/",
     "stage_bands": "Pre-seed; Seed",
-    "thesis": "Pre-seed and seed investor backing Southern European software, including procurement, mobility and logistics infrastructure.",
+    "thesis": "Pre-seed and seed technology investor with strong B2B software, developer-tooling and applied-AI coverage; stated typical first cheque is $350k-$1.25m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
+    "cheque_high_m": 15.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
-    "geographies": "Europe and US",
+    "geographies": "UK-based, invests across Europe and North America",
     "house_type": "Venture",
-    "investor": "Pale blue dot",
+    "investor": "Air Street Capital",
     "not_published": null,
-    "recent_deal": "Staer",
+    "recent_deal": "Alta Ares",
     "recent_deal_date": "2026-06",
-    "recent_deal_url": "https://paleblue.vc/portfolio/staer",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
     "stage_bands": "Seed; Series A",
-    "thesis": "Pre-seed and seed climate investor covering low-carbon mobility, fleets, automation and supply-chain technology.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 4.0,
-    "cheque_low_m": 0.5,
-    "deal_note": null,
-    "geographies": "Pan-European, including Israel",
-    "house_type": "Venture",
-    "investor": "Planet A Ventures",
-    "not_published": null,
-    "recent_deal": "Gigaton",
-    "recent_deal_date": "2026-06",
-    "recent_deal_url": "https://www.soapbox.vc/feed/gigaton-series-a",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Climate-tech investor in industrial decarbonisation, resilient production and supply-chain intelligence.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": 0.1,
-    "deal_note": null,
-    "geographies": "Europe-focused (Berlin); invests internationally",
-    "house_type": "Venture",
-    "investor": "FoodLabs",
-    "not_published": null,
-    "recent_deal": "Reformed",
-    "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
    {
     "cheque_figure_dated": null,
     "cheque_high_m": 5.0,
+    "cheque_low_m": 0.5,
+    "deal_note": null,
+    "geographies": "UK/Europe-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Connect Ventures",
+    "not_published": null,
+    "recent_deal": "Zellify?",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Seed investor in product-led companies, including AI-native applications and software infrastructure; stated lead/co-lead investment range is $500k-$5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
     "cheque_low_m": 0.25,
     "deal_note": null,
-    "geographies": "Europe-focused; invests globally",
+    "geographies": "UK-focused",
     "house_type": "Venture",
-    "investor": "Speedinvest",
+    "investor": "Episode 1 Ventures",
     "not_published": null,
-    "recent_deal": "Kyrok?",
+    "recent_deal": "Osprey Security",
     "recent_deal_date": "2026-07",
-    "recent_deal_url": "https://www.speedinvest.com/portfolio/kyrok",
+    "recent_deal_url": "https://www.soapbox.vc/feed/osprey-pre-seed",
     "stage_bands": "Pre-seed; Seed",
-    "thesis": "Fintech investor spanning payment rails, B2B cards, embedded finance, stablecoins and regulated digital-asset infrastructure.",
+    "thesis": "Pre-seed and seed investor in UK software companies, especially B2B applications, infrastructure and applied AI; stated cheque range is GBP 250k-2m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 8.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK-based; Europe-focused",
+    "house_type": "Venture",
+    "investor": "Notion Capital",
+    "not_published": null,
+    "recent_deal": "Kraken",
+    "recent_deal_date": "2026-07",
+    "recent_deal_url": "https://www.notioncapital.com/resources/why-we-invested-in-kraken",
+    "stage_bands": "Seed; Series A",
+    "thesis": "Series A-focused investor in European B2B SaaS and cloud software; its published first-cheque range is EUR 1m-8m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.5,
+    "cheque_low_m": 0.1,
+    "deal_note": null,
+    "geographies": "UK-based, invests across the UK and Europe",
+    "house_type": "Venture",
+    "investor": "Playfair Capital",
+    "not_published": null,
+    "recent_deal": "Zerolook",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "https://www.playfair.vc/content.php?p=why-we-invested-in-zerolook",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed investor in technical founders across B2B software, AI and deep tech; stated initial range is GBP 100k-1.5m.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Andreessen Horowitz",
+    "not_published": null,
+    "recent_deal": "Whatnot",
+    "recent_deal_date": "2026-08",
+    "recent_deal_url": "blog.teamwhatnot.com/unitedstates/seriesg",
+    "stage_bands": "Seed; Series A; Series B; Series C",
+    "thesis": "We invest in seed to venture to growth-stage technology companies, across AI, bio and healthcare, consumer, crypto, enterprise, fintech, games, infrastructure, and companies building toward American dynamism.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lightspeed",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Alpha Wave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Bessemer",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Founders Fund",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Ramp",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Thrive",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -517,86 +572,141 @@
    {
     "backed": [
      {
-      "company": "Vegrow",
-      "date": "Dec-23"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
-    "investor": "GIC",
+    "investor": "Sequoia",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Shiprocket",
-      "date": "Aug-22"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
-    "investor": "Temasek",
+    "investor": "Goldman Sachs Alternatives",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Shiprocket",
-      "date": "Aug-22"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
-    "investor": "Lightrock India",
+    "investor": "J.P. Morgan",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Shiprocket",
-      "date": "Aug-22"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
-    "investor": "McKinley Capital",
+    "investor": "Atlassian Ventures",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Shiprocket",
-      "date": "Aug-22"
+      "company": "FloQast",
+      "date": "Apr-24"
+     },
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "March Capital",
+    "investor": "ICONIQ Growth",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "FloQast",
+      "date": "Apr-24"
+     }
+    ],
+    "investor": "BDT & MSD",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "WayCool Foods",
-      "date": "Jun-22"
+      "company": "FloQast",
+      "date": "Apr-24"
      }
     ],
-    "investor": "Lightrock and existing investors",
+    "investor": "Meritech",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Ninjacart",
-      "date": "Dec-21"
+      "company": "FloQast",
+      "date": "Apr-24"
      }
     ],
-    "investor": "Walmart",
+    "investor": "Sapphire",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Ninjacart",
-      "date": "Dec-21"
+      "company": "FloQast",
+      "date": "Apr-24"
      }
     ],
-    "investor": "Flipkart",
+    "investor": "Coupa Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "KKR",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "L Catterton (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
     "n": 1
    }
   ],
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Ramp",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "both do Procurement; related type of business; sold the same way",
+    "score": 5.7,
+    "type": "MIXED"
+   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -609,58 +719,58 @@
     "type": "CONTROL"
    },
    {
-    "basis": "INR 3,610m at 0.01201",
-    "bound": "",
-    "company": "Vegrow",
-    "date": "Dec-23",
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Vanta",
+    "date": "Jul-24",
     "in_medians": true,
-    "mult": 6.68,
-    "reason": "shares the language of sourcing; related type of business; same business function; same kind of customer",
-    "score": 13.6,
+    "mult": 24.5,
+    "reason": "related type of business; same kind of customer; sold the same way",
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_EXACT",
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
-    "company": "Shiprocket",
-    "date": "Aug-22",
-    "in_medians": false,
-    "mult": 16.03,
-    "reason": "shares the language of logistics; same type of business; same kind of customer",
-    "score": 9.1,
+    "company": "FloQast",
+    "date": "Apr-24",
+    "in_medians": true,
+    "mult": 16.0,
+    "reason": "related type of business; sold the same way",
+    "score": 5.1,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
-    "company": "WayCool Foods",
-    "date": "Jun-22",
+    "company": "Restaurant365",
+    "date": "May-23",
     "in_medians": true,
-    "mult": 5.91,
-    "reason": "both do Sourcing; related type of business; same business function; same kind of customer",
-    "score": 13.9,
+    "mult": 10.0,
+    "reason": "related type of business; same kind of customer; sold the same way",
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "ARR / revenue run-rate",
     "bound": "",
-    "company": "ElasticRun",
-    "date": "Feb-22",
+    "company": "Spendesk",
+    "date": "Jan-22",
     "in_medians": true,
-    "mult": 10.36,
-    "reason": "both do Logistics; related type of business; same business function; same kind of customer",
-    "score": 13.1,
+    "mult": 22.8,
+    "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
+    "score": 9.2,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "Annualized revenue",
     "bound": "",
-    "company": "Ninjacart",
-    "date": "Dec-21",
+    "company": "Brex",
+    "date": "Jan-22",
     "in_medians": true,
-    "mult": 7.1,
-    "reason": "both do Supply Chain; related type of business; same business function; same kind of customer",
-    "score": 13.3,
+    "mult": 39.42,
+    "reason": "related type of business; same kind of customer",
+    "score": 5.6,
     "type": "PRIMARY"
    }
   ],
@@ -671,43 +781,103 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR": 4,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
-   "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "E2open"
    ],
-   "dispersed": false,
-   "display": "DIAMOND",
-   "high": 3.46,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 39.42,
    "listed_target_n": 1,
    "listed_target_names": [
     "E2open"
    ],
    "low": 3.46,
-   "mid": 3.46,
-   "n": 1,
+   "mid": 22.8,
+   "n": 7,
    "period_mix": {
-    "FY2025": 1
+    "FY2025": 1,
+    "NOT STATED": 1,
+    "RUN_RATE": 5
    },
    "period_span": {
     "FY2025": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
+    },
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "E2open",
+     "mult": 3.46,
+     "reason": "both do Procurement; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Restaurant365",
+     "mult": 10.0,
+     "reason": "related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "FloQast",
+     "mult": 16.0,
+     "reason": "related type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Spendesk",
+     "mult": 22.8,
+     "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Vanta",
+     "mult": 24.5,
+     "reason": "related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Ramp",
+     "mult": 32.0,
+     "reason": "both do Procurement; related type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Brex",
+     "mult": 39.42,
+     "reason": "related type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "chain",
-    "logistics",
     "procurement",
     "supply"
    ],
-   "sole": "E2open",
-   "spread": 1.0,
+   "spread": 11.4,
    "table": [
     {
      "company": "E2open",
@@ -718,78 +888,122 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Restaurant365",
+     "date": "May-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "FloQast",
+     "date": "Apr-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 16.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Spendesk",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 22.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Vanta",
+     "date": "Jul-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 24.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Ramp",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 32.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Brex",
+     "date": "Jan-22",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 39.42,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
    "tag_evidence": 1.0,
-   "thin": true,
+   "thin": false,
    "triangulated": false
   },
-  "private_window_months": 56,
+  "private_window_months": 55,
   "secondary": [
    {
-    "company": "Tegma Gestao Logistica S.A.",
+    "company": "IndiaMART InterMESH Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
-    "score": 8.2,
-    "ticker": "BOVESPA:TGMA3"
+    "reason": "same end market; same kind of customer",
+    "score": 6.5,
+    "ticker": "NSEI:INDIAMART"
    },
    {
-    "company": "Etsy, Inc.",
+    "company": "MonotaRO Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of supply; same kind of customer; same cost structure; same purchase frequency",
-    "score": 8.1,
-    "ticker": "NASDAQGS:ETSY"
+    "reason": "same end market; same kind of customer",
+    "score": 5.5,
+    "ticker": "TSE:3064"
    },
    {
-    "company": "Lindsay Australia Limited",
-    "family": "consumer",
+    "company": "Tecsys Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "shares the language of chain, freight, logistics; same type of business; same business function; same revenue model",
-    "score": 7.8,
-    "ticker": "ASX:LAU"
-   },
-   {
-    "company": "STEF SA",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of chain, logistics; same type of business; same business function; same revenue model",
-    "score": 7.7,
-    "ticker": "ENXTPA:STF"
-   },
-   {
-    "company": "Americold Realty Trust",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
-    "score": 7.6,
-    "ticker": "NYSE:COLD"
+    "reason": "shares the language of chain, supply; same type of business; same business function",
+    "score": 5.3,
+    "ticker": "TSX:TCS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 3.5,
+   "high": 3.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 0.7,
-   "n": 4,
+   "low": 1.9,
+   "mid": 2.2,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -797,93 +1011,45 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Lindsay Australia Limited",
-     "mult": 0.5,
-     "reason": "shares the language of chain, freight, logistics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "STEF SA",
-     "mult": 0.6,
-     "reason": "shares the language of chain, logistics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Tegma Gestao Logistica S.A.",
-     "mult": 0.8,
-     "reason": "shares the language of logistics, outsourcing; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Americold Realty Trust",
-     "mult": 3.5,
-     "reason": "shares the language of logistics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [
-    {
-     "company": "Etsy, Inc.",
-     "mult": 3.2,
-     "reason": "shares the language of supply; same kind of customer; same cost structure; same purchase frequency",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "chain",
-    "freight",
-    "logistics",
-    "outsourcing"
+    "supply"
    ],
-   "show_retention": false,
-   "spread": 7.0,
+   "show_retention": true,
+   "spread": 2.1,
    "table": [
     {
-     "company": "Lindsay Australia Limited",
+     "company": "Tecsys Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.4,
-     "multiple": 0.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:LAU"
+     "growth_pct": 7.2,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
     },
     {
-     "company": "STEF SA",
+     "company": "MonotaRO Co., Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.0,
-     "multiple": 0.6,
+     "growth_pct": 10.8,
+     "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "ENXTPA:STF"
+     "ticker": "TSE:3064"
     },
     {
-     "company": "Tegma Gestao Logistica S.A.",
+     "company": "IndiaMART InterMESH Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.5,
-     "multiple": 0.8,
+     "growth_pct": 10.8,
+     "multiple": 3.9,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "BOVESPA:TGMA3"
-    },
-    {
-     "company": "Americold Realty Trust",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.7,
-     "multiple": 3.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:COLD"
+     "ticker": "NSEI:INDIAMART"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   }

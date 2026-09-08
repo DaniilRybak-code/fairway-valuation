@@ -2,6 +2,30 @@
  "expected": {
   "core": [
    {
+    "company": "Guidewire Software, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Policy Administration, Underwriting; same end market; same business function",
+    "score": 10.5,
+    "ticker": "NYSE:GWRE"
+   },
+   {
+    "company": "FINEOS Corporation Holdings plc",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Claims Administration, Policy Administration; same end market; same business function",
+    "score": 10.2,
+    "ticker": "ASX:FCL"
+   },
+   {
+    "company": "Crawford & Company",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of administration, claims; same type of business; same end market; same business function",
+    "score": 8.6,
+    "ticker": "NYSE:CRD.B"
+   },
+   {
     "company": "ZhongAn Online P&C Insurance Co., Ltd.",
     "family": "fintech",
     "in_medians": true,
@@ -10,27 +34,19 @@
     "ticker": "SEHK:6060"
    },
    {
-    "company": "PayPoint plc",
+    "company": "Trupanion, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "same end market; same kind of customer; same revenue model",
-    "score": 8.0,
-    "ticker": "LSE:PAY"
-   },
-   {
-    "company": "SS&C Technologies Holdings, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of administration, automation; same end market; same business function",
+    "reason": "both do Underwriting; same type of business; same end market",
     "score": 6.3,
-    "ticker": "NASDAQ:SSNC"
+    "ticker": "NASDAQGM:TRUP"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -40,15 +56,15 @@
    "dispersed": true,
    "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 3.8,
+   "high": 9.7,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.4,
-   "mid": 2.0,
-   "n": 3,
+   "low": 0.6,
+   "mid": 0.7,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -65,17 +81,31 @@
      "transaction_type": ""
     },
     {
-     "company": "PayPoint plc",
-     "mult": 2.0,
-     "reason": "same end market; same kind of customer; same revenue model",
-     "tier": "BROAD",
+     "company": "Crawford & Company",
+     "mult": 0.6,
+     "reason": "shares the language of administration, claims; same type of business; same end market; same business function",
+     "tier": "DIRECT",
      "transaction_type": ""
     },
     {
-     "company": "SS&C Technologies Holdings, Inc.",
-     "mult": 3.8,
-     "reason": "shares the language of administration, automation; same end market; same business function",
-     "tier": "BROAD",
+     "company": "Trupanion, Inc.",
+     "mult": 0.7,
+     "reason": "both do Underwriting; same type of business; same end market",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FINEOS Corporation Holdings plc",
+     "mult": 2.7,
+     "reason": "both do Claims Administration, Policy Administration; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Guidewire Software, Inc.",
+     "mult": 9.7,
+     "reason": "both do Policy Administration, Underwriting; same end market; same business function",
+     "tier": "DIRECT",
      "transaction_type": ""
     }
    ],
@@ -83,12 +113,12 @@
    "post_stated_n": 0,
    "shared_words": [
     "administration",
-    "automation",
-    "digital",
-    "insurance"
+    "claims",
+    "policy",
+    "underwriting"
    ],
    "show_retention": false,
-   "spread": 9.5,
+   "spread": 24.2,
    "table": [
     {
      "company": "ZhongAn Online P&C Insurance Co., Ltd.",
@@ -100,25 +130,43 @@
      "ticker": "SEHK:6060"
     },
     {
-     "company": "PayPoint plc",
+     "company": "Crawford & Company",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -4.2,
-     "multiple": 2.0,
+     "growth_pct": 2.8,
+     "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "LSE:PAY"
+     "ticker": "NYSE:CRD.B"
     },
     {
-     "company": "SS&C Technologies Holdings, Inc.",
+     "company": "Trupanion, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.6,
-     "multiple": 3.8,
+     "growth_pct": 8.4,
+     "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQ:SSNC"
+     "ticker": "NASDAQGM:TRUP"
+    },
+    {
+     "company": "FINEOS Corporation Holdings plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.5,
+     "multiple": 2.7,
+     "recurring_pct": 57.8,
+     "retention_pct": null,
+     "ticker": "ASX:FCL"
+    },
+    {
+     "company": "Guidewire Software, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 15.5,
+     "multiple": 9.7,
+     "recurring_pct": 66.2,
+     "retention_pct": null,
+     "ticker": "NYSE:GWRE"
     }
    ],
-   "tag_evidence": 3.1,
+   "tag_evidence": 4.5,
    "thin": false,
    "triangulated": false
   },
@@ -343,7 +391,7 @@
     "date": "Jul-22",
     "in_medians": true,
     "mult": 14.06,
-    "reason": "shares the language of digital, insurance; same type of business; same end market",
+    "reason": "same type of business; same end market",
     "score": 8.2,
     "type": "PRIMARY"
    },
@@ -354,7 +402,7 @@
     "date": "Apr-21",
     "in_medians": true,
     "mult": 6.67,
-    "reason": "shares the language of carrier, insurance; same type of business; same end market; sold the same way",
+    "reason": "shares the language of carrier; same type of business; same end market; sold the same way",
     "score": 11.4,
     "type": "PRIMARY"
    },
@@ -428,8 +476,6 @@
     "administration",
     "carrier",
     "claims",
-    "digital",
-    "insurance",
     "policy"
    ],
    "spread": 1.5,
@@ -472,69 +518,37 @@
   "private_window_months": 64,
   "secondary": [
    {
-    "company": "HUB24 Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of administration; same end market; same business function",
-    "score": 6.3,
-    "ticker": "ASX:HUB"
-   },
-   {
-    "company": "Netwealth Group Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of administration; same end market; same business function",
-    "score": 6.3,
-    "ticker": "ASX:NWL"
-   },
-   {
-    "company": "nCino, Inc.",
+    "company": "CCC Intelligent Solutions Holdings Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same end market; same business function",
-    "score": 6.0,
-    "ticker": "NASDAQGS:NCNO"
-   },
-   {
-    "company": "Temenos AG",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same end market; same business function",
-    "score": 6.0,
-    "ticker": "SWX:TEMN"
-   },
-   {
-    "company": "Broadridge Financial Solutions, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same business function",
-    "score": 6.0,
-    "ticker": "NYSE:BR"
+    "reason": "shares the language of claims; same end market; same business function",
+    "score": 6.4,
+    "ticker": "NASDAQGS:CCCS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
-   "high": 10.7,
+   "high": 4.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.9,
-   "mid": 5.5,
-   "n": 5,
+   "low": 4.5,
+   "mid": 4.5,
+   "n": 1,
    "period_mix": {
-    "NTM": 5
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -546,61 +560,25 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "administration",
-    "digital"
+    "claims"
    ],
    "show_retention": true,
-   "spread": 3.6,
+   "sole": "CCC Intelligent Solutions Holdings Inc.",
+   "spread": 1.0,
    "table": [
     {
-     "company": "Broadridge Financial Solutions, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.1,
-     "multiple": 3.0,
+     "company": "CCC Intelligent Solutions Holdings Inc.",
+     "growth_basis": "CAGR_CY0_CY2",
+     "growth_pct": 10.0,
+     "multiple": 4.5,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:BR"
-    },
-    {
-     "company": "nCino, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.6,
-     "multiple": 3.9,
-     "recurring_pct": 87.9,
-     "retention_pct": 112.0,
-     "ticker": "NASDAQGS:NCNO"
-    },
-    {
-     "company": "Temenos AG",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
-     "multiple": 5.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "SWX:TEMN"
-    },
-    {
-     "company": "HUB24 Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.6,
-     "multiple": 10.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:HUB"
-    },
-    {
-     "company": "Netwealth Group Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.8,
-     "multiple": 10.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ASX:NWL"
+     "retention_pct": 106.0,
+     "ticker": "NASDAQGS:CCCS"
     }
    ],
-   "tag_evidence": 0.3,
-   "thin": false,
-   "triangulated": false
+   "tag_evidence": 0.4,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "The insurance carrier with zero underwriters"

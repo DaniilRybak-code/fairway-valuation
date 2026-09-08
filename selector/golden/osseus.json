@@ -11,7 +11,7 @@
       "REGISTERED_USERS": 2
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -46,7 +46,7 @@
       {
        "company": "Vercel",
        "mult": 3250.0,
-       "reason": "shares the language of ci, platform; related type of business; same business function; same kind of customer",
+       "reason": "shares the language of ci; related type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
@@ -55,8 +55,7 @@
      "shared_words": [
       "ci",
       "deployment",
-      "development",
-      "platform"
+      "development"
      ],
      "spread": 43.3,
      "table": [
@@ -126,7 +125,6 @@
       "deployment",
       "development",
       "embedded",
-      "platform",
       "robotics",
       "simulation",
       "test",
@@ -217,7 +215,6 @@
      "shared_words": [
       "development",
       "fleet",
-      "platform",
       "robot",
       "robotics",
       "tooling"
@@ -247,7 +244,7 @@
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ci, development, platform; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of ci, development; related type of business; same business function; same kind of customer",
     "score": 13.4,
     "ticker": "NASDAQGS:GTLB"
    },
@@ -295,7 +292,7 @@
     "company": "PTC Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 7.6,
     "ticker": "NASDAQGS:PTC"
    }
@@ -337,7 +334,6 @@
     "ci",
     "development",
     "embedded",
-    "platform",
     "simulation"
    ],
    "show_retention": true,
@@ -853,7 +849,7 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 32.5,
-    "reason": "shares the language of ci, platform; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of ci; related type of business; same business function; same kind of customer",
     "score": 13.2,
     "type": "PRIMARY"
    },
@@ -907,7 +903,6 @@
     "deployment",
     "development",
     "embedded",
-    "platform",
     "robotics",
     "simulation",
     "test",
@@ -966,7 +961,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; related type of business; same revenue model",
+    "reason": "related type of business; same revenue model",
     "score": 6.1,
     "ticker": "NASDAQGS:GTM"
    }
@@ -1004,9 +999,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "platform"
-   ],
+   "shared_words": [],
    "show_retention": true,
    "sole": "ZoomInfo Technologies Inc.",
    "spread": 1.0,

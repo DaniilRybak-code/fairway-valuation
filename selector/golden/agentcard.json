@@ -40,14 +40,11 @@
      "positioning": [],
      "shared_words": [
       "api",
-      "card",
       "controls",
       "issuing",
       "machine",
-      "payments",
       "programmatic",
       "spend",
-      "to",
       "virtual"
      ],
      "spread": 3.3,
@@ -110,7 +107,7 @@
     "company": "PayPoint plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of card, machine; related type of business; same end market; same business function",
+    "reason": "shares the language of machine; related type of business; same end market; same business function",
     "score": 10.7,
     "ticker": "LSE:PAY"
    },
@@ -118,7 +115,7 @@
     "company": "WEX Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of card, payments, virtual; related type of business; same end market; same business function",
+    "reason": "shares the language of virtual; related type of business; same end market; same business function",
     "score": 10.3,
     "ticker": "NYSE:WEX"
    },
@@ -126,7 +123,7 @@
     "company": "Usio, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of card, issuing, payments; related type of business; same end market; same business function",
+    "reason": "shares the language of issuing; related type of business; same end market; same business function",
     "score": 10.3,
     "ticker": "NASDAQGM:USIO"
    },
@@ -142,7 +139,7 @@
     "company": "CPI Card Group Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of card; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function",
     "score": 9.1,
     "ticker": "NASDAQ:PMTS"
    }
@@ -182,7 +179,7 @@
     {
      "company": "Usio, Inc.",
      "mult": 0.7,
-     "reason": "shares the language of card, issuing, payments; related type of business; same end market; same business function",
+     "reason": "shares the language of issuing; related type of business; same end market; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -196,14 +193,14 @@
     {
      "company": "PayPoint plc",
      "mult": 2.0,
-     "reason": "shares the language of card, machine; related type of business; same end market; same business function",
+     "reason": "shares the language of machine; related type of business; same end market; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "WEX Inc.",
      "mult": 2.0,
-     "reason": "shares the language of card, payments, virtual; related type of business; same end market; same business function",
+     "reason": "shares the language of virtual; related type of business; same end market; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -211,7 +208,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "api",
-    "card",
     "issuing",
     "virtual"
    ],
@@ -522,7 +518,7 @@
     "in_medians": true,
     "mult": 18.75,
     "reason": "both do Virtual Card Issuing, Machine To Machine Payments, Payments API; same end market; same business function; same revenue model",
-    "score": 19.3,
+    "score": 19.2,
     "type": "PRIMARY"
    }
   ],
@@ -561,14 +557,11 @@
    "positioning": [],
    "shared_words": [
     "api",
-    "card",
     "controls",
     "issuing",
     "machine",
-    "payments",
     "programmatic",
     "spend",
-    "to",
     "virtual"
    ],
    "spread": 3.3,
@@ -622,7 +615,7 @@
     "company": "Worldline SA",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of card, issuing, payments; related type of business; same end market; same business function",
+    "reason": "shares the language of issuing; related type of business; same end market; same business function",
     "score": 7.8,
     "ticker": "ENXTPA:WLN"
    },
@@ -658,7 +651,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -693,9 +686,7 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "card",
-    "issuing",
-    "payments"
+    "issuing"
    ],
    "show_retention": false,
    "spread": 4.0,
@@ -730,7 +721,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Debit cards for AI agents"

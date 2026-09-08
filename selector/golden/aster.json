@@ -46,28 +46,28 @@
       {
        "company": "Oxylabs",
        "mult": 10.3,
-       "reason": "shares the language of agent, ai; same type of business; same business function",
+       "reason": "shares the language of agent; same type of business; same business function",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Invisible Technologies",
        "mult": 14.9,
-       "reason": "shares the language of ai, orchestration; same type of business; same business function; sold the same way",
+       "reason": "shares the language of orchestration; same type of business; same business function; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Anthropic",
        "mult": 20.5,
-       "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+       "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Legora",
        "mult": 56.0,
-       "reason": "shares the language of ai, research; related type of business; sold the same way; same AI stance",
+       "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -90,8 +90,6 @@
      "shared_words": [
       "agent",
       "agents",
-      "ai",
-      "automation",
       "orchestration",
       "research"
      ],
@@ -177,7 +175,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai; same type of business",
+    "reason": "shares the language of agent; same type of business",
     "score": 5.2,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -197,7 +195,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -238,7 +236,7 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, ai; same type of business",
+     "reason": "shares the language of agent; same type of business",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -247,8 +245,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
-    "automation",
     "orchestration",
     "research"
    ],
@@ -732,7 +728,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of agent, ai; same type of business; same business function",
+    "reason": "shares the language of agent; same type of business; same business function",
     "score": 9.7,
     "type": "MIXED"
    },
@@ -743,7 +739,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 20.5,
-    "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+    "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
     "score": 11.7,
     "type": "PRIMARY"
    },
@@ -765,7 +761,7 @@
     "date": "Apr-26",
     "in_medians": true,
     "mult": 56.0,
-    "reason": "shares the language of ai, research; related type of business; sold the same way; same AI stance",
+    "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
     "score": 7.3,
     "type": "PRIMARY"
    },
@@ -798,7 +794,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 14.9,
-    "reason": "shares the language of ai, orchestration; same type of business; same business function; sold the same way",
+    "reason": "shares the language of orchestration; same type of business; same business function; sold the same way",
     "score": 15.0,
     "type": "PRIMARY"
    }
@@ -844,28 +840,28 @@
     {
      "company": "Oxylabs",
      "mult": 10.3,
-     "reason": "shares the language of agent, ai; same type of business; same business function",
+     "reason": "shares the language of agent; same type of business; same business function",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
     },
     {
      "company": "Invisible Technologies",
      "mult": 14.9,
-     "reason": "shares the language of ai, orchestration; same type of business; same business function; sold the same way",
+     "reason": "shares the language of orchestration; same type of business; same business function; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Anthropic",
      "mult": 20.5,
-     "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+     "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Legora",
      "mult": 56.0,
-     "reason": "shares the language of ai, research; related type of business; sold the same way; same AI stance",
+     "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -888,8 +884,6 @@
    "shared_words": [
     "agent",
     "agents",
-    "ai",
-    "automation",
     "orchestration",
     "research"
    ],
@@ -978,7 +972,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1005,8 +999,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "agents",
-    "ai"
+    "agents"
    ],
    "show_retention": false,
    "sole": "Sidetrade SA",
@@ -1024,7 +1017,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Automating open-ended research."

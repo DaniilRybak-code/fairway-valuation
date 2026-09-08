@@ -39,7 +39,7 @@
       {
        "company": "Oxylabs",
        "mult": 10285.71,
-       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
@@ -54,7 +54,6 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "ai",
       "search",
       "vector"
      ],
@@ -123,7 +122,7 @@
       {
        "company": "Oxylabs",
        "mult": 10.3,
-       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
@@ -151,7 +150,7 @@
       {
        "company": "Lovable",
        "mult": 33.0,
-       "reason": "shares the language of ai, coding; related type of business; same business function; same revenue model",
+       "reason": "shares the language of coding; related type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -165,10 +164,7 @@
      ],
      "positioning": [],
      "shared_words": [
-      "a",
       "agent",
-      "ai",
-      "as",
       "backend",
       "coding",
       "database",
@@ -178,7 +174,6 @@
       "model",
       "postgres",
       "search",
-      "service",
       "storage",
       "vector"
      ],
@@ -245,7 +240,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 10.3,
+     "tag_evidence": 9.9,
      "thin": false,
      "triangulated": false
     }
@@ -264,7 +259,7 @@
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai, edge; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent, edge; same type of business; same kind of customer; same revenue model",
     "score": 12.8,
     "ticker": "NYSE:NET"
    },
@@ -288,7 +283,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai, llm; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent, llm; related type of business; same kind of customer; same revenue model",
     "score": 11.1,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -378,14 +373,14 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, ai, llm; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent, llm; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
      "mult": 29.5,
-     "reason": "shares the language of agent, ai, edge; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent, edge; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -394,7 +389,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "authentication",
     "database",
     "edge",
@@ -902,7 +896,7 @@
     "in_medians": true,
     "mult": 72.86,
     "reason": "both do Postgres, Backend as a Service, Edge Functions; same type of business; same business function; same kind of customer",
-    "score": 29.8,
+    "score": 29.4,
     "type": "PRIMARY"
    },
    {
@@ -923,7 +917,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 14.7,
     "type": "MIXED"
    },
@@ -945,7 +939,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
-    "reason": "shares the language of ai, coding; related type of business; same business function; same revenue model",
+    "reason": "shares the language of coding; related type of business; same business function; same revenue model",
     "score": 15.1,
     "type": "PRIMARY"
    },
@@ -1007,7 +1001,7 @@
     {
      "company": "Oxylabs",
      "mult": 10.3,
-     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
     },
@@ -1035,7 +1029,7 @@
     {
      "company": "Lovable",
      "mult": 33.0,
-     "reason": "shares the language of ai, coding; related type of business; same business function; same revenue model",
+     "reason": "shares the language of coding; related type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -1049,10 +1043,7 @@
    ],
    "positioning": [],
    "shared_words": [
-    "a",
     "agent",
-    "ai",
-    "as",
     "backend",
     "coding",
     "database",
@@ -1062,7 +1053,6 @@
     "model",
     "postgres",
     "search",
-    "service",
     "storage",
     "vector"
    ],
@@ -1129,7 +1119,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 10.3,
+   "tag_evidence": 9.9,
    "thin": false,
    "triangulated": false
   },
@@ -1139,7 +1129,7 @@
     "company": "Atlassian Corporation",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of service; related type of business; same business function; same kind of customer",
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
     "score": 9.1,
     "ticker": "NASDAQGS:TEAM"
    },
@@ -1159,7 +1149,7 @@
     "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1186,8 +1176,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "edge",
-    "service"
+    "edge"
    ],
    "show_retention": true,
    "spread": 1.5,
@@ -1213,7 +1202,7 @@
    ],
    "tag_evidence": 0.6,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Backend-as-a-service built so AI coding agents can operate every service end to end"

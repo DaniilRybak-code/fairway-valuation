@@ -59,8 +59,7 @@
      "positioning": [],
      "shared_words": [
       "claims",
-      "health",
-      "management"
+      "health"
      ],
      "spread": 7.7,
      "table": [
@@ -151,7 +150,7 @@
       {
        "company": "Cityblock Health",
        "mult": 14.25,
-       "reason": "shares the language of health, management; related type of business; same end market; same business function",
+       "reason": "shares the language of health; related type of business; same end market; same business function",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
@@ -161,7 +160,6 @@
       "claims",
       "decisioning",
       "health",
-      "management",
       "payer",
       "utilisation"
      ],
@@ -225,7 +223,7 @@
     "company": "Progyny, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of health, management; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of health; same type of business; same end market; same kind of customer",
     "score": 10.7,
     "ticker": "NASDAQ:PGNY"
    },
@@ -233,7 +231,7 @@
     "company": "Claritev Corporation",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of claims, management; related type of business; same end market; same kind of customer",
+    "reason": "shares the language of claims; related type of business; same end market; same kind of customer",
     "score": 10.3,
     "ticker": "NYSE:CTEV"
    },
@@ -307,14 +305,14 @@
     {
      "company": "Progyny, Inc.",
      "mult": 1.2,
-     "reason": "shares the language of health, management; same type of business; same end market; same kind of customer",
+     "reason": "shares the language of health; same type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Claritev Corporation",
      "mult": 5.1,
-     "reason": "shares the language of claims, management; related type of business; same end market; same kind of customer",
+     "reason": "shares the language of claims; related type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     }
@@ -339,7 +337,6 @@
    "shared_words": [
     "claims",
     "health",
-    "management",
     "plan",
     "utilisation"
    ],
@@ -692,7 +689,7 @@
     "date": "Sep-21",
     "in_medians": true,
     "mult": 14.25,
-    "reason": "shares the language of health, management; related type of business; same end market; same business function",
+    "reason": "shares the language of health; related type of business; same end market; same business function",
     "score": 12.2,
     "type": "PRIMARY"
    }
@@ -756,7 +753,7 @@
     {
      "company": "Cityblock Health",
      "mult": 14.25,
-     "reason": "shares the language of health, management; related type of business; same end market; same business function",
+     "reason": "shares the language of health; related type of business; same end market; same business function",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
@@ -766,7 +763,6 @@
     "claims",
     "decisioning",
     "health",
-    "management",
     "payer",
     "utilisation"
    ],
@@ -825,7 +821,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -852,8 +848,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "claims",
-    "management"
+    "claims"
    ],
    "show_retention": false,
    "sole": "Crawford & Company",
@@ -871,7 +866,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "The AI-native decision layer for health insurance"

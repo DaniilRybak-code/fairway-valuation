@@ -11,7 +11,7 @@
       "UNKNOWN": 5
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -41,9 +41,7 @@
      "positioning": [],
      "post_stated_n": 0,
      "shared_words": [
-      "credit",
-      "financing",
-      "lending"
+      "financing"
      ],
      "show_retention": false,
      "spread": 3.5,
@@ -96,7 +94,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     },
     "EARNINGS": {
      "anchor_dropped": false,
@@ -107,7 +105,7 @@
       "UNKNOWN": 4
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -138,30 +136,28 @@
       {
        "company": "LendingClub Corporation",
        "mult": 7.5,
-       "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+       "reason": "same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": ""
       },
       {
        "company": "Enova International, Inc.",
        "mult": 11.1,
-       "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+       "reason": "same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": ""
       },
       {
        "company": "Nu Holdings Ltd.",
        "mult": 13.6,
-       "reason": "shares the language of credit, lending; related type of business; same business function; same revenue model",
+       "reason": "related type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": ""
       }
      ],
      "post_stated_n": 0,
      "shared_words": [
-      "credit",
-      "financing",
-      "lending"
+      "financing"
      ],
      "show_retention": false,
      "spread": 1.8,
@@ -205,7 +201,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    },
    "private": {
@@ -218,7 +214,7 @@
       "ARR": 2
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -244,10 +240,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "credit",
-      "lending"
-     ],
+     "shared_words": [],
      "spread": 1.2,
      "table": [
       {
@@ -273,7 +266,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "BOOK": {
      "anchor_dropped": false,
@@ -284,7 +277,7 @@
       "BOOK": 1
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -310,10 +303,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "credit",
-      "lending"
-     ],
+     "shared_words": [],
      "sole": "Zopa",
      "spread": 1.0,
      "table": [
@@ -330,7 +320,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -339,7 +329,7 @@
     "company": "Avarda Bank AB (publ)",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, financing, lending; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of financing; same type of business; same end market; same kind of customer",
     "score": 10.8,
     "ticker": "OM:AVARDA"
    },
@@ -347,7 +337,7 @@
     "company": "Affirm Holdings, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
+    "reason": "same type of business; same end market; same revenue model",
     "score": 8.6,
     "ticker": "NASDAQ:AFRM"
    },
@@ -355,7 +345,7 @@
     "company": "Klarna Group plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same end market; same kind of customer",
+    "reason": "same type of business; same end market; same kind of customer",
     "score": 8.6,
     "ticker": "NYSE:KLAR"
    },
@@ -363,7 +353,7 @@
     "company": "Zip Co Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same end market; same revenue model",
+    "reason": "same type of business; same end market; same revenue model",
     "score": 8.6,
     "ticker": "ASX:ZIP"
    },
@@ -371,7 +361,7 @@
     "company": "LendingClub Corporation",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 8.6,
     "ticker": "NYSE:LC"
    },
@@ -379,7 +369,7 @@
     "company": "Enova International, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 8.6,
     "ticker": "NYSE:ENVA"
    },
@@ -387,7 +377,7 @@
     "company": "Nu Holdings Ltd.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; related type of business; same business function; same revenue model",
+    "reason": "related type of business; same business function; same revenue model",
     "score": 7.1,
     "ticker": "NYSE:NU"
    }
@@ -399,7 +389,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -426,9 +416,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "credit",
-    "financing",
-    "lending"
+    "financing"
    ],
    "show_retention": false,
    "spread": 3.5,
@@ -481,7 +469,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -757,7 +745,7 @@
     "date": "Jul-22",
     "in_medians": true,
     "mult": 5.16,
-    "reason": "shares the language of credit, financing; same type of business; same end market; sold the same way",
+    "reason": "shares the language of financing; same type of business; same end market; sold the same way",
     "score": 11.2,
     "type": "PRIMARY"
    },
@@ -779,7 +767,7 @@
     "date": "Jul-21",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of capital, inventory; same type of business; same end market; same business function",
+    "reason": "shares the language of capital; same type of business; same end market; same business function",
     "score": 14.8,
     "type": "PRIMARY"
    },
@@ -812,7 +800,7 @@
     "date": "Feb-22",
     "in_medians": true,
     "mult": 11.0,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 9.1,
     "type": "PRIMARY"
    },
@@ -823,7 +811,7 @@
     "date": "Oct-21",
     "in_medians": true,
     "mult": 8.9,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; same AI stance",
     "score": 14.1,
     "type": "PRIMARY"
    }
@@ -838,7 +826,7 @@
     "BOOK": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -860,10 +848,7 @@
    },
    "points": [],
    "positioning": [],
-   "shared_words": [
-    "credit",
-    "lending"
-   ],
+   "shared_words": [],
    "sole": "Zopa",
    "spread": 1.0,
    "table": [
@@ -880,7 +865,7 @@
    ],
    "tag_evidence": 0.1,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 61,
   "secondary": [
@@ -888,7 +873,7 @@
     "company": "Velocity Financial, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 13.1,
     "ticker": "NYSE:VEL"
    },
@@ -896,7 +881,7 @@
     "company": "S&U plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
     "score": 10.6,
     "ticker": "LSE:SUS"
    },
@@ -904,7 +889,7 @@
     "company": "Pepper Money Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
     "score": 10.6,
     "ticker": "ASX:PPM"
    },
@@ -912,7 +897,7 @@
     "company": "Regional Management Corp.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
     "score": 10.6,
     "ticker": "NYSE:RM"
    },
@@ -920,7 +905,7 @@
     "company": "Funding Circle Holdings plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 10.1,
     "ticker": "LSE:FCH"
    }
@@ -932,7 +917,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -958,10 +943,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "credit",
-    "lending"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "spread": 3.7,
    "table": [
@@ -1013,7 +995,7 @@
    ],
    "tag_evidence": 0.1,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Weekly working-capital credit letting Latin American shopkeepers pay distributors"

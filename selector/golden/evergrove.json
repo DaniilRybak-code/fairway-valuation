@@ -59,8 +59,7 @@
      "positioning": [],
      "shared_words": [
       "care",
-      "claims",
-      "management"
+      "claims"
      ],
      "spread": 7.7,
      "table": [
@@ -161,8 +160,7 @@
       "care",
       "claims",
       "communication",
-      "coordination",
-      "management"
+      "coordination"
      ],
      "spread": 10.3,
      "table": [
@@ -208,7 +206,7 @@
     "company": "Evolent Health, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of care, management; same type of business; same end market; same business function",
+    "reason": "shares the language of care; same type of business; same end market; same business function",
     "score": 12.7,
     "ticker": "NYSE:EVH"
    },
@@ -232,7 +230,7 @@
     "company": "Claritev Corporation",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of claims, management; related type of business; same end market; same kind of customer",
+    "reason": "shares the language of claims; related type of business; same end market; same kind of customer",
     "score": 9.3,
     "ticker": "NYSE:CTEV"
    },
@@ -256,7 +254,7 @@
     "company": "Waystar Holding Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of claims, management; related type of business; same end market; sold the same way",
+    "reason": "shares the language of claims; related type of business; same end market; sold the same way",
     "score": 6.8,
     "ticker": "NASDAQGS:WAY"
    }
@@ -300,7 +298,7 @@
     {
      "company": "Evolent Health, Inc.",
      "mult": 0.4,
-     "reason": "shares the language of care, management; same type of business; same end market; same business function",
+     "reason": "shares the language of care; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -321,7 +319,7 @@
     {
      "company": "Claritev Corporation",
      "mult": 5.1,
-     "reason": "shares the language of claims, management; related type of business; same end market; same kind of customer",
+     "reason": "shares the language of claims; related type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     }
@@ -337,7 +335,7 @@
     {
      "company": "Waystar Holding Corp.",
      "mult": 4.5,
-     "reason": "shares the language of claims, management; related type of business; same end market; sold the same way",
+     "reason": "shares the language of claims; related type of business; same end market; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -352,8 +350,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "care",
-    "claims",
-    "management"
+    "claims"
    ],
    "show_retention": false,
    "spread": 12.7,
@@ -778,8 +775,7 @@
     "care",
     "claims",
     "communication",
-    "coordination",
-    "management"
+    "coordination"
    ],
    "spread": 10.3,
    "table": [
@@ -852,7 +848,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -879,8 +875,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "claims",
-    "management"
+    "claims"
    ],
    "show_retention": false,
    "spread": 2.3,
@@ -915,7 +910,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Voice agents that accelerate care coordination in workers' comp"

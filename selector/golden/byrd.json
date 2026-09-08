@@ -12,7 +12,7 @@
       "NET_REVENUE": 2
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -44,13 +44,8 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "border",
-      "cross",
       "fulfilment",
-      "logistics",
-      "party",
-      "shipping",
-      "third"
+      "shipping"
      ],
      "spread": 1.7,
      "table": [
@@ -153,7 +148,7 @@
     "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of network, shipping; same type of business; same business function; same revenue model",
+    "reason": "shares the language of shipping; same type of business; same business function; same revenue model",
     "score": 9.1,
     "ticker": "NYSE:FDX"
    },
@@ -161,7 +156,7 @@
     "company": "Delhivery Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of border, cross, fulfilment; same type of business; same business function; same revenue model",
+    "reason": "shares the language of fulfilment; same type of business; same business function; same revenue model",
     "score": 8.9,
     "ticker": "NSEI:DELHIVERY"
    },
@@ -169,7 +164,7 @@
     "company": "Deutsche Post AG",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of border, cross, logistics; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 8.8,
     "ticker": "XTRA:DHL"
    },
@@ -177,7 +172,7 @@
     "company": "PostNL N.V.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 8.7,
     "ticker": "ENXTAM:PNL"
    },
@@ -185,7 +180,7 @@
     "company": "J&T Global Express Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 8.7,
     "ticker": "SEHK:1519"
    },
@@ -193,7 +188,7 @@
     "company": "InPost S.A.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
+    "reason": "shares the language of european; same type of business; same business function; same revenue model",
     "score": 8.7,
     "ticker": "ENXTAM:INPST"
    },
@@ -201,7 +196,7 @@
     "company": "United Parcel Service",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of logistics, network; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 8.6,
     "ticker": "NYSE:UPS"
    }
@@ -213,7 +208,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -240,49 +235,49 @@
     {
      "company": "PostNL N.V.",
      "mult": 0.3,
-     "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "J&T Global Express Limited",
      "mult": 0.7,
-     "reason": "shares the language of border, cross, network; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Deutsche Post AG",
      "mult": 0.9,
-     "reason": "shares the language of border, cross, logistics; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "FedEx Corporation",
      "mult": 1.1,
-     "reason": "shares the language of network, shipping; same type of business; same business function; same revenue model",
+     "reason": "shares the language of shipping; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "United Parcel Service",
      "mult": 1.2,
-     "reason": "shares the language of logistics, network; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "InPost S.A.",
      "mult": 2.3,
-     "reason": "shares the language of european, network; same type of business; same business function; same revenue model",
+     "reason": "shares the language of european; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Delhivery Limited",
      "mult": 2.5,
-     "reason": "shares the language of border, cross, fulfilment; same type of business; same business function; same revenue model",
+     "reason": "shares the language of fulfilment; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -290,12 +285,8 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "border",
-    "cross",
     "european",
     "fulfilment",
-    "logistics",
-    "network",
     "shipping"
    ],
    "show_retention": false,
@@ -511,46 +502,6 @@
    {
     "backed": [
      {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "Temasek",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "Lightrock India",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "McKinley Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "March Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Xpressbees",
       "date": "Feb-22"
      }
@@ -666,17 +617,6 @@
    {
     "basis": "DISCLOSED_EXACT",
     "bound": "",
-    "company": "Shiprocket",
-    "date": "Aug-22",
-    "in_medians": false,
-    "mult": 16.03,
-    "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
-    "score": 14.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
     "company": "Xpressbees",
     "date": "Feb-22",
     "in_medians": true,
@@ -692,7 +632,7 @@
     "date": "Aug-21",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of party, third; related type of business; same kind of customer; same cost structure",
+    "reason": "related type of business; same kind of customer; same cost structure; same purchase frequency",
     "score": 14.7,
     "type": "PRIMARY"
    },
@@ -719,7 +659,7 @@
     "NET_REVENUE": 2
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -747,13 +687,8 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "border",
-    "cross",
     "fulfilment",
-    "logistics",
-    "party",
-    "shipping",
-    "third"
+    "shipping"
    ],
    "spread": 1.7,
    "table": [
@@ -798,7 +733,7 @@
     "company": "Lightspeed Commerce Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of processing; same end market; same business function; same kind of customer",
+    "reason": "same end market; same business function; same kind of customer; sold the same way",
     "score": 10.6,
     "ticker": "TSX:LSPD"
    },
@@ -814,7 +749,7 @@
     "company": "Allegro.eu S.A.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of network, party, third; same kind of customer; same cost structure; same purchase frequency",
+    "reason": "same kind of customer; same cost structure; same purchase frequency; same AI stance",
     "score": 9.3,
     "ticker": "WSE:ALE"
    },
@@ -822,7 +757,7 @@
     "company": "Sea Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of party, third; same kind of customer; same cost structure; same purchase frequency",
+    "reason": "same kind of customer; same cost structure; same purchase frequency; same AI stance",
     "score": 9.2,
     "ticker": "NYSE:SE"
    },
@@ -842,7 +777,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -868,12 +803,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "network",
-    "party",
-    "processing",
-    "third"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "spread": 5.0,
    "table": [
@@ -925,7 +855,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "European third-party logistics running pick, pack and returns from its own warehouse network"

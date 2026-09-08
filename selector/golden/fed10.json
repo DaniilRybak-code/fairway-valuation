@@ -11,7 +11,7 @@
       "ARR": 4
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 1,
      "control_names": [
       "AuditBoard"
@@ -45,8 +45,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "automation",
       "regulatory"
      ],
      "spread": 5.6,
@@ -94,7 +92,7 @@
      ],
      "tag_evidence": 0.7,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -103,7 +101,7 @@
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same end market; same kind of customer",
+    "reason": "same type of business; same end market; same kind of customer",
     "score": 8.6,
     "ticker": "NASDAQGS:INTA"
    },
@@ -131,7 +129,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -165,7 +163,7 @@
     {
      "company": "Intapp, Inc.",
      "mult": 4.6,
-     "reason": "shares the language of automation; same type of business; same end market; same kind of customer",
+     "reason": "same type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -180,7 +178,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "tracking"
    ],
    "show_retention": true,
@@ -216,7 +213,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -630,7 +627,7 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 15.0,
-    "reason": "shares the language of automation, regulatory; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of regulatory; related type of business; same business function; same kind of customer",
     "score": 12.7,
     "type": "CONTROL"
    },
@@ -641,7 +638,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of automation; same type of business; same revenue model; sold the same way",
+    "reason": "same type of business; same revenue model; sold the same way",
     "score": 10.6,
     "type": "PRIMARY"
    }
@@ -656,7 +653,7 @@
     "ARR": 4
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 1,
    "control_names": [
     "AuditBoard"
@@ -686,8 +683,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "automation",
     "regulatory"
    ],
    "spread": 5.6,
@@ -735,7 +730,7 @@
    ],
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 39,
   "secondary": [
@@ -759,7 +754,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, intelligence; same kind of customer; same revenue model; sold the same way",
+    "reason": "shares the language of intelligence; same kind of customer; same revenue model; sold the same way",
     "score": 7.3,
     "ticker": "NASDAQGS:GTM"
    },
@@ -775,7 +770,7 @@
     "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model",
+    "reason": "same kind of customer; same revenue model",
     "score": 5.1,
     "ticker": "NASDAQGS:BL"
    }
@@ -828,14 +823,14 @@
     {
      "company": "ZoomInfo Technologies Inc.",
      "mult": 2.2,
-     "reason": "shares the language of automation, intelligence; same kind of customer; same revenue model; sold the same way",
+     "reason": "shares the language of intelligence; same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "BlackLine, Inc.",
      "mult": 2.5,
-     "reason": "shares the language of automation; same kind of customer; same revenue model",
+     "reason": "same kind of customer; same revenue model",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -850,7 +845,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "intelligence",
     "policy",
     "regulatory",

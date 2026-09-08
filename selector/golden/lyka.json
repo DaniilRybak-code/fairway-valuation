@@ -4,14 +4,15 @@
    "private": {
     "REVENUE": {
      "anchor_dropped": false,
-     "band": "DIRECT",
+     "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
+      "ARR_RUNRATE": 1,
       "NET_REVENUE": 3
      },
-     "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "bounded": true,
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -20,15 +21,16 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 5.4,
+     "high": 10.1,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 3.3,
-     "mid": 4.6,
-     "n": 3,
+     "mid": 8.8,
+     "n": 4,
      "period_mix": {
       "LTM": 2,
-      "NTM": 1
+      "NTM": 1,
+      "RUN_RATE": 1
      },
      "period_span": {
       "LTM": {
@@ -38,32 +40,19 @@
       "NTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
       }
      },
      "points": [],
-     "positioning": [
-      {
-       "company": "SKIMS",
-       "mult": 5.0,
-       "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Quince",
-       "mult": 10.1,
-       "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "positioning": [],
      "shared_words": [
-      "direct",
       "meal",
-      "nutrition",
-      "subscription"
+      "nutrition"
      ],
-     "spread": 1.6,
+     "spread": 3.1,
      "table": [
       {
        "company": "Huel",
@@ -76,21 +65,31 @@
        "ticker": ""
       },
       {
-       "company": "OLIPOP",
-       "date": "Feb-25",
+       "company": "SKIMS",
+       "date": "Nov-25",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 4.6,
+       "multiple": 5.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       },
       {
-       "company": "Liquid Death",
-       "date": "Oct-22",
+       "company": "AG1",
+       "date": "Jan-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 5.4,
+       "multiple": 8.8,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Quince",
+       "date": "Mar-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.1,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -104,40 +103,125 @@
   },
   "core": [
    {
-    "company": "Oisix Inc.",
+    "company": "BARK, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of direct, food, meal; same end market; same business function; same kind of customer",
-    "score": 12.9,
-    "ticker": "TSE:3182"
+    "reason": "both do Pet Products, Subscription Box; same type of business; same end market; same business function",
+    "score": 30.7,
+    "ticker": "NYSE:BARK"
    },
    {
-    "company": "HelloFresh SE",
+    "company": "YETI Holdings, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of direct, meal, subscription; same end market; same business function; same kind of customer",
-    "score": 12.7,
-    "ticker": "XTRA:HFG"
+    "reason": "shares the language of products; same type of business; same end market; same business function",
+    "score": 16.4,
+    "ticker": "NYSE:YETI"
    },
    {
-    "company": "Naked Wines plc",
+    "company": "Hims & Hers Health, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of direct; same end market; same business function; same kind of customer",
-    "score": 10.6,
-    "ticker": "LSE:WINE"
-   },
-   {
-    "company": "Ocado Group plc",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; same business function; same kind of customer; sold the same way",
-    "score": 9.5,
-    "ticker": "LSE:OCDO"
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
+    "score": 19.6,
+    "ticker": "NYSE:HIMS"
    }
   ],
   "core_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "DIRECT",
+   "basis_mix": {
+    "UNKNOWN": 3
+   },
+   "bounded": false,
+   "closeness": "SHARED_PRODUCT",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": true,
+   "display": "SCATTER",
+   "founder_basis_trailing_on_forward": false,
+   "high": 2.0,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.3,
+   "mid": 1.5,
+   "n": 3,
+   "period_mix": {
+    "NTM": 3
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [
+    {
+     "company": "BARK, Inc.",
+     "mult": 0.3,
+     "reason": "both do Pet Products, Subscription Box; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "YETI Holdings, Inc.",
+     "mult": 1.5,
+     "reason": "shares the language of products; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "mult": 2.0,
+     "reason": "same type of business; same business function; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "box",
+    "dog",
+    "pet",
+    "products"
+   ],
+   "show_retention": false,
+   "spread": 6.7,
+   "table": [
+    {
+     "company": "BARK, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.1,
+     "multiple": 0.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:BARK"
+    },
+    {
+     "company": "YETI Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.7,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:YETI"
+    },
+    {
+     "company": "Hims & Hers Health, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.1,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:HIMS"
+    }
+   ],
+   "tag_evidence": 8.2,
+   "thin": false,
+   "triangulated": false
   },
   "investors_callable": [
    {
@@ -154,6 +238,23 @@
     "recent_deal_url": "https://www.thecheckout.eu/articles/reformed-raises-series-a-led-by-eqt-ventures",
     "stage_bands": "Pre-seed; Seed",
     "thesis": "Food-system seed investor covering supply-chain infrastructure, production technology, agriculture and industrial food innovation.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 0.25,
+    "deal_note": null,
+    "geographies": "UK-based; invests in the UK and internationally",
+    "house_type": "Venture",
+    "investor": "True",
+    "not_published": null,
+    "recent_deal": "Pinpoint",
+    "recent_deal_date": "2025-10",
+    "recent_deal_url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/pinpoint-raises-2-5",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "Pre-seed and seed investor in consumer products, consumer platforms and retail technology; its venture page states a typical GBP 250k-1m cheque.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
@@ -227,23 +328,6 @@
    },
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": 1.0,
-    "cheque_low_m": 0.25,
-    "deal_note": null,
-    "geographies": "UK-based; invests in the UK and internationally",
-    "house_type": "Venture",
-    "investor": "True",
-    "not_published": null,
-    "recent_deal": "Pinpoint",
-    "recent_deal_date": "2025-10",
-    "recent_deal_url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/pinpoint-raises-2-5",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Pre-seed and seed investor in consumer products, consumer platforms and retail technology; its venture page states a typical GBP 250k-1m cheque.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
     "cheque_high_m": 1.5,
     "cheque_low_m": 0.25,
     "deal_note": null,
@@ -278,50 +362,17 @@
    }
   ],
   "investors_evidence": [],
-  "listed_proximity": "BROAD",
+  "listed_proximity": "DIRECT",
   "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "OLIPOP",
-    "date": "Feb-25",
-    "in_medians": true,
-    "mult": 4.6,
-    "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 22.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Huel",
-    "date": "Nov-22",
-    "in_medians": true,
-    "mult": 3.3,
-    "reason": "both do Nutrition; same type of business; same end market; same business function",
-    "score": 32.8,
-    "type": "PRIMARY"
-   },
    {
     "basis": "DISCLOSED_FORECAST",
     "bound": "",
-    "company": "Liquid Death",
-    "date": "Oct-22",
-    "in_medians": true,
-    "mult": 5.4,
-    "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 22.5,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "At announcement",
-    "bound": "",
-    "company": "AG1 (Athletic Greens)",
-    "date": "Jan-22",
+    "company": "Thrasio",
+    "date": "Oct-21",
     "in_medians": false,
-    "mult": 8.77,
-    "reason": "both do Nutrition; same type of business; same end market; same kind of customer",
-    "score": 22.2,
+    "mult": null,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 21.0,
     "type": "PRIMARY"
    },
    {
@@ -331,7 +382,7 @@
     "date": "Mar-26",
     "in_medians": true,
     "mult": 10.1,
-    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 21.6,
     "type": "PRIMARY"
    },
@@ -342,7 +393,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 5.0,
-    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same cost structure",
     "score": 18.6,
     "type": "PRIMARY"
    },
@@ -353,35 +404,70 @@
     "date": "Nov-24",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same cost structure",
     "score": 18.6,
     "type": "SECONDARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Huel",
+    "date": "Nov-22",
+    "in_medians": true,
+    "mult": 3.3,
+    "reason": "both do Nutrition; same type of business; same business function; same kind of customer",
+    "score": 28.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "CONTEMPORANEOUS_PRESS",
+    "bound": "",
+    "company": "AG1",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 8.8,
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
+    "score": 27.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "At announcement",
+    "bound": "",
+    "company": "AG1 (Athletic Greens)",
+    "date": "Jan-22",
+    "in_medians": false,
+    "mult": 8.77,
+    "reason": "both do Nutrition; same type of business; same kind of customer; same revenue model",
+    "score": 18.2,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "DIRECT",
+   "band": "ADJACENT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 3
    },
-   "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "bounded": true,
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 5.4,
+   "high": 10.1,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 4.6,
-   "n": 3,
+   "mid": 8.8,
+   "n": 4,
    "period_mix": {
     "LTM": 2,
-    "NTM": 1
+    "NTM": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
@@ -391,32 +477,19 @@
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
+    },
+    "RUN_RATE": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "SKIMS",
-     "mult": 5.0,
-     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Quince",
-     "mult": 10.1,
-     "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "positioning": [],
    "shared_words": [
-    "direct",
     "meal",
-    "nutrition",
-    "subscription"
+    "nutrition"
    ],
-   "spread": 1.6,
+   "spread": 3.1,
    "table": [
     {
      "company": "Huel",
@@ -429,21 +502,31 @@
      "ticker": ""
     },
     {
-     "company": "OLIPOP",
-     "date": "Feb-25",
+     "company": "SKIMS",
+     "date": "Nov-25",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 4.6,
+     "multiple": 5.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     },
     {
-     "company": "Liquid Death",
-     "date": "Oct-22",
+     "company": "AG1",
+     "date": "Jan-22",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 5.4,
+     "multiple": 8.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Quince",
+     "date": "Mar-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -453,29 +536,13 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 55,
+  "private_window_months": 58,
   "secondary": [
-   {
-    "company": "BARK, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of direct, dog, pet; same type of business; same business function; same kind of customer",
-    "score": 20.8,
-    "ticker": "NYSE:BARK"
-   },
-   {
-    "company": "Hims & Hers Health, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of direct, subscription; same type of business; same business function; same kind of customer",
-    "score": 19.6,
-    "ticker": "NYSE:HIMS"
-   },
    {
     "company": "Warby Parker Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 15.1,
     "ticker": "NYSE:WRBY"
    },
@@ -483,21 +550,70 @@
     "company": "FIGS, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 15.1,
     "ticker": "NYSE:FIGS"
-   },
-   {
-    "company": "On Holding AG",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of direct; same type of business; same business function; same kind of customer",
-    "score": 13.1,
-    "ticker": "NYSE:ONON"
    }
   ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 2.9,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 2.7,
+   "mid": 2.8,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [],
+   "show_retention": false,
+   "spread": 1.1,
+   "table": [
+    {
+     "company": "Warby Parker Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 24.4,
+     "multiple": 2.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:WRBY"
+    },
+    {
+     "company": "FIGS, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.1,
+     "multiple": 2.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:FIGS"
+    }
+   ],
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Personalised fresh dog food on a recurring plan, portioned and delivered frozen"

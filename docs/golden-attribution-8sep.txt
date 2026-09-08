@@ -1,0 +1,43 @@
+moved fixtures: 130
+  LABEL/WORDS  stopwords/closeness    96
+  NAMES        Route A row            10
+  NAMES        folded end market      3
+  NAMES        re-tagged fixture      11
+  NAMES        stopwords/closeness    10
+
+NAMES    Route A row          99minutos          core label STRONG_OVERLAP -> PARTIAL_OVERLAP | secondary label PARTIAL_OVERLAP -> THIN_OVERLAP | private names (+['Gopuff'] -['Shiprocket'])
+NAMES    Route A row          byrd               core label STRONG_OVERLAP -> PARTIAL_OVERLAP | secondary label STRONG_OVERLAP -> THIN_OVERLAP | private names (+[] -['Shiprocket'])
+NAMES    Route A row          care-gp            core names (+['Medley, Inc.'] -['Tecsys Inc.']) | secondary names (+['PAR Technology Corporation'] -['Medley, Inc.']) | private words only
+NAMES    Route A row          elentaria          core words only | secondary words only | private names (+['E2open'] -['Writer'])
+NAMES    Route A row          hived              core words only | secondary words only | private names (+['Delhivery'] -['Shiprocket'])
+NAMES    Route A row          hop-aero           core label PARTIAL_OVERLAP -> THIN_OVERLAP | secondary label STRONG_OVERLAP -> PARTIAL_OVERLAP | private names (+[] -['E2open'])
+NAMES    Route A row          open-wearables     core label STRONG_OVERLAP -> PARTIAL_OVERLAP | secondary names (+['Weave Communications, Inc.'] -['Tecsys Inc.'])
+NAMES    Route A row          priori-legal       core names (+['AMN Healthcare Services, Inc.'] -['Cars.com Inc.']) | secondary names (+['Freightos Limited', 'SEEK Limited'] -['AMN Healthcare Services, Inc.', 'Roblox Corporation']) | private names (+[] -['Loadsmart'])
+NAMES    Route A row          scheduling-wizard  core names (+[] -[]) | secondary names (+[] -['Kinaxis Inc.'])
+NAMES    Route A row          veriad             core words only | secondary words only | private names (+['E2open'] -['6sense'])
+NAMES    folded end market    levocred           core words only | secondary label STRONG_OVERLAP -> PARTIAL_OVERLAP | private names (+['AuditBoard'] -['Sapiens International'])
+NAMES    folded end market    sellerclaw         core label STRONG_OVERLAP -> PARTIAL_OVERLAP | private names (+['ElasticRun', 'Yotpo'] -['Berkshire Grey', 'Rokt', 'Vegrow', 'WayCool Foods'])
+NAMES    folded end market    tash               secondary words only | private names (+['Carta'] -['The Zebra'])
+NAMES    re-tagged fixture    alloovium          core names (+['Bentley Systems, Incorporated', 'Procore Technologies, Inc.', 'Trimble Inc.'] -['AppFolio, Inc.', 'Atlassian Corporation', 'Red Violet, Inc.', 'Similarweb Ltd.', 'Yext, Inc.', 'ZoomInfo Technologies Inc.']) | second
+NAMES    re-tagged fixture    bizmark            core names (+['ATOSS Software SE', 'BlackLine, Inc.', 'Kinaxis Inc.', 'Sidetrade SA', 'Tecsys Inc.', 'Workday, Inc.'] -['Delhivery Limited', 'Expeditors International', 'Radiant Logistics, Inc.', 'S.F. Holding Co., Ltd.', 'STEF SA
+NAMES    re-tagged fixture    derya              core names (+['Kinaxis Inc.', 'Manhattan Associates, Inc.', 'SPS Commerce, Inc.'] -['Expeditors International', 'GXO Logistics, Inc.', 'Grupo Traxion, S.A.B. de C.V.', 'ID Logistics Group SA', 'JSL S.A.', 'Mitsubishi Logistics', '
+NAMES    re-tagged fixture    ekho-labs          core names (+['Kinaxis Inc.', 'Manhattan Associates, Inc.', 'Samsara Inc.', 'Tecsys Inc.'] -['Delhivery Limited', 'Deutsche Post AG', 'FedEx Corporation', 'Pkp Cargo S.A.', 'S.F. Holding Co., Ltd.', 'SG Holdings Co., Ltd.', 'Unite
+NAMES    re-tagged fixture    florin             core names (+['Crawford & Company', 'FINEOS Corporation Holdings plc', 'Guidewire Software, Inc.', 'Trupanion, Inc.'] -['PayPoint plc', 'SS&C Technologies Holdings, Inc.']) | secondary names (+['CCC Intelligent Solutions Holdings 
+NAMES    re-tagged fixture    fundraisly         core names (+['Red Violet, Inc.', 'Similarweb Ltd.', 'ZoomInfo Technologies Inc.'] -['CRISIL Limited', 'FactSet Research Systems Inc.', 'HubSpot, Inc.', 'MSCI Inc.', "Moody's Corporation", 'Morningstar, Inc.', 'S&P Global Inc.']) 
+NAMES    re-tagged fixture    kita               core names (+['Blend Labs, Inc.', 'EVERTEC, Inc.', 'Fair Isaac Corporation', 'Fidelity National Information Services, Inc.', 'Jack Henry & Associates, Inc.', 'Q2 Holdings, Inc.', 'Qualco Group S.A.'] -['BFF Bank S.p.A.', 'Close Br
+NAMES    re-tagged fixture    lambda-robotics    secondary names (+[] -[]) | private names (+[] -['Cato Networks', 'Databricks', 'Supabase']) | investors
+NAMES    re-tagged fixture    lyka               core names (+['BARK, Inc.', 'Hims & Hers Health, Inc.', 'YETI Holdings, Inc.'] -['HelloFresh SE', 'Naked Wines plc', 'Ocado Group plc', 'Oisix Inc.']) | secondary names (+[] -['BARK, Inc.', 'Hims & Hers Health, Inc.', 'On Holding 
+NAMES    re-tagged fixture    princeps           core names (+['CCC Intelligent Solutions Holdings Inc.', 'Crawford & Company', 'Trupanion, Inc.'] -['HUB24 Limited', 'Netwealth Group Limited', 'SS&C Technologies Holdings, Inc.', 'Temenos AG', 'nCino, Inc.']) | secondary names (+
+NAMES    re-tagged fixture    supercritical      core names (+['CME Group Inc.', 'Indian Energy Exchange Limited', 'Multi Commodity Exchange of India Limited'] -['MercadoLibre, Inc.', 'Sea Limited', 'Xometry, Inc.']) | secondary names (+['CAB Payments Holdings plc', 'Hong Kong E
+NAMES    stopwords/closeness  bond               core names (+['ZoomInfo Technologies Inc.'] -['BlackLine, Inc.', 'Sidetrade SA']) | secondary names (+[] -['ZoomInfo Technologies Inc.']) | private names (+[] -['Verint Systems', 'Zuora'])
+NAMES    stopwords/closeness  finn               core label PARTIAL_OVERLAP -> THIN_OVERLAP | secondary names (+['Zalando SE'] -['Hims & Hers Health, Inc.']) | private words only
+NAMES    stopwords/closeness  gigacatalyst       core names (+[] -[]) | secondary names (+['Braze, Inc.'] -['SoundHound AI, Inc.']) | private names (+['Aledade', 'Databricks', 'HiBob'] -['Invisible Technologies', 'Legora', 'Scale AI'])
+NAMES    stopwords/closeness  lattice-health     core names (+[] -[])
+NAMES    stopwords/closeness  manifold-robotics  core names (+['Baozun Inc.'] -['S.F. Holding Co., Ltd.']) | secondary names (+[] -['Baozun Inc.', 'Sinotrans Limited']) | private words only
+NAMES    stopwords/closeness  moov               core label STRONG_OVERLAP -> THIN_OVERLAP | secondary label PARTIAL_OVERLAP -> THIN_OVERLAP | private names (+['Rapyd'] -['MoonPay'])
+NAMES    stopwords/closeness  nursa              secondary names (+['Consensus Cloud Solutions, Inc.'] -['trivago N.V.'])
+NAMES    stopwords/closeness  perenna            core words only | secondary words only | private names (+[] -[])
+NAMES    stopwords/closeness  simulithic         core words only | secondary names (+['Adobe Inc.'] -[]) | private words only
+NAMES    stopwords/closeness  zymbly             core names (+['Constellation Software Inc.', 'Roper Technologies, Inc.', 'Topicus.com Inc.', 'Vitec Software Group AB (publ)'] -['BlackLine, Inc.', 'Blackbaud, Inc.']) | secondary names (+['Agilysys, Inc.', 'CCC Intelligent Soluti
+
+label-only fixtures: goldfish, upstream, publora, bluerails, browseract, insforge, honen, agentx, skybridge, acti, pazi, openseo, context-dev, anysearch, fyle, inato, levelten, payabli, rainforest, trolley, dots, numida, tienda-pago, mondu, smol, bokksu, oda, magma, 6thsense, osseus, projectx, maritime, sim, rybbit, atlas-new, emergent, orchids, chronicle, caution, bylaw, nebula-security, plena-health, marble, osmaura, payna, edviro, agentcard, paymentkit, unifold, denta, insurf, evergrove, lato, blindspot, clarify, lightfield, guideflow, floqer, postiz, akkari, dograh, welltory, planeat, bloomy, wondering, befreed, standout, orca-aerospace, qokedas, quippy, herdr, vorelios, nodus-compute, openrelay, praxis-robotics, chromie, opentag, markov, panacea, raspire, playabl, aster, auxos, turnstone, constellation-space, foreman, fed10, remix, brandjet, myaicademy, airtop, world-labs, browzer, magicrew, twelvelabs, dif-sh

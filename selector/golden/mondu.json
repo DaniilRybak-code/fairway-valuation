@@ -43,13 +43,10 @@
      "shared_words": [
       "buy",
       "checkout",
-      "credit",
       "financing",
       "invoice",
       "later",
-      "merchant",
       "now",
-      "pay",
       "risk"
      ],
      "show_retention": false,
@@ -137,13 +134,10 @@
      "shared_words": [
       "buy",
       "checkout",
-      "credit",
       "financing",
       "invoice",
       "later",
-      "merchant",
       "now",
-      "pay",
       "risk"
      ],
      "show_retention": false,
@@ -201,7 +195,7 @@
       "ARR": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -228,7 +222,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "credit",
       "financing",
       "invoice",
       "terms"
@@ -266,7 +259,7 @@
     "company": "Time Finance plc",
     "family": "fintech",
     "in_medians": false,
-    "reason": "shares the language of credit, invoice; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of invoice; same type of business; same business function; same kind of customer",
     "score": 8.8,
     "ticker": "AIM:TIME"
    },
@@ -274,7 +267,7 @@
     "company": "Credit Acceptance Corporation",
     "family": "fintech",
     "in_medians": false,
-    "reason": "shares the language of credit, financing; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of financing; same type of business; same business function; same kind of customer",
     "score": 8.7,
     "ticker": "NASDAQ:CACC"
    },
@@ -298,7 +291,7 @@
     "company": "Upstart Holdings, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, risk; same type of business; same business function",
+    "reason": "shares the language of risk; same type of business; same business function",
     "score": 6.2,
     "ticker": "NASDAQ:UPST"
    },
@@ -306,7 +299,7 @@
     "company": "Regional Management Corp.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, merchant; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 6.1,
     "ticker": "NYSE:RM"
    }
@@ -347,13 +340,10 @@
    "shared_words": [
     "buy",
     "checkout",
-    "credit",
     "financing",
     "invoice",
     "later",
-    "merchant",
     "now",
-    "pay",
     "risk"
    ],
    "show_retention": false,
@@ -650,7 +640,7 @@
     "date": "Oct-25",
     "in_medians": false,
     "mult": 0.6,
-    "reason": "shares the language of b2b, credit, invoice; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of invoice, later; same type of business; same business function; same kind of customer",
     "score": 21.2,
     "type": "CONTROL_ACQUISITION"
    },
@@ -683,7 +673,7 @@
     "date": "Feb-22",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of merchant; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 15.6,
     "type": "PRIMARY"
    },
@@ -734,7 +724,7 @@
     "company": "Close Brothers Group plc",
     "family": "fintech",
     "in_medians": false,
-    "reason": "shares the language of invoice, merchant; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of invoice; related type of business; same business function; same kind of customer",
     "score": 7.3,
     "ticker": "LSE:CBG"
    },
@@ -750,7 +740,7 @@
     "company": "Humm Group Limited",
     "family": "fintech",
     "in_medians": false,
-    "reason": "shares the language of credit, merchant; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 5.1,
     "ticker": "ASX:HUM"
    }
@@ -762,7 +752,7 @@
     "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -790,10 +780,8 @@
    "post_stated_n": 0,
    "shared_words": [
     "buy",
-    "credit",
     "later",
-    "now",
-    "pay"
+    "now"
    ],
    "show_retention": false,
    "spread": 2.6,

@@ -230,7 +230,7 @@
     "company": "Evolent Health, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of based, services; related type of business; same end market; same kind of customer",
+    "reason": "shares the language of based; related type of business; same end market; same kind of customer",
     "score": 11.7,
     "ticker": "NYSE:EVH"
    },
@@ -262,8 +262,8 @@
     "company": "Tecsys Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same end market; same kind of customer; sold the same way",
-    "score": 10.5,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 9.0,
     "ticker": "TSX:TCS"
    },
    {
@@ -290,7 +290,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -322,7 +322,7 @@
     {
      "company": "Evolent Health, Inc.",
      "mult": 0.4,
-     "reason": "shares the language of based, services; related type of business; same end market; same kind of customer",
+     "reason": "shares the language of based; related type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -343,7 +343,7 @@
     {
      "company": "Tecsys Inc.",
      "mult": 1.9,
-     "reason": "same type of business; same end market; same kind of customer; sold the same way",
+     "reason": "related type of business; same end market; same kind of customer; sold the same way",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -374,8 +374,7 @@
    "shared_words": [
     "based",
     "pricing",
-    "regulatory",
-    "services"
+    "regulatory"
    ],
    "show_retention": true,
    "spread": 24.2,
@@ -866,7 +865,7 @@
     "company": "Cass Information Systems",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of services; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 8.6,
     "ticker": "NASDAQGS:CASS"
    },
@@ -874,7 +873,7 @@
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, services; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 7.6,
     "ticker": "NASDAQGS:INTA"
    },
@@ -882,7 +881,7 @@
     "company": "Amdocs Limited",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of services; same type of business; same revenue model; sold the same way",
+    "reason": "same type of business; same revenue model; sold the same way",
     "score": 7.6,
     "ticker": "NASDAQGS:DOX"
    },
@@ -902,7 +901,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -937,9 +936,7 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "regulatory",
-    "services"
+    "regulatory"
    ],
    "show_retention": true,
    "spread": 3.1,
@@ -983,7 +980,7 @@
    ],
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "AI-Native FDA Regulatory Services"

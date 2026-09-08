@@ -8,101 +8,60 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
-      "NET_REVENUE": 1
+      "ARR": 6
      },
-     "bounded": false,
+     "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
-      "Sapiens International"
+      "AuditBoard"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 49.33,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Sapiens International"
-     ],
-     "low": 4.55,
-     "mid": 22.0,
-     "n": 3,
+     "high": 56.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 15.0,
+     "mid": 23.0,
+     "n": 6,
      "period_mix": {
-      "LTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 6
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Sapiens International",
-       "mult": 4.55,
-       "reason": "same type of business; same end market; sold the same way",
-       "tier": "DIRECT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Mambu",
-       "mult": 22.0,
-       "reason": "both do Loan Servicing; related type of business; same end market; sold the same way",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Carta",
-       "mult": 49.33,
-       "reason": "same type of business; same end market; same revenue model",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [
-      {
-       "company": "Clio",
-       "mult": 15.0,
-       "reason": "shares the language of document; same type of business; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Owner",
-       "mult": 23.0,
-       "reason": "shares the language of operations; same type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Legora",
-       "mult": 56.0,
-       "reason": "shares the language of document; same type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
+     "positioning": [],
      "shared_words": [
-      "loan",
+      "document",
+      "operations",
       "servicing"
      ],
-     "spread": 10.8,
+     "spread": 3.7,
      "table": [
       {
-       "company": "Sapiens International",
-       "date": "Aug-25",
+       "company": "Clio",
+       "date": "Jul-24",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 4.55,
+       "multiple": 15.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "AuditBoard",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -118,11 +77,31 @@
        "ticker": ""
       },
       {
+       "company": "Owner",
+       "date": "Aug-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Carta",
        "date": "Aug-21",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 49.33,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Legora",
+       "date": "Apr-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 56.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -155,7 +134,7 @@
     "company": "Jack Henry & Associates, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of credit, lending; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; sold the same way",
     "score": 10.1,
     "ticker": "NASDAQ:JKHY"
    },
@@ -226,10 +205,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "credit",
     "document",
-    "lending",
-    "loan",
     "servicing",
     "verification"
    ],
@@ -446,16 +422,6 @@
    {
     "backed": [
      {
-      "company": "Sapiens International",
-      "date": "Aug-25"
-     }
-    ],
-    "investor": "Advent International",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Owner",
       "date": "Aug-26"
      }
@@ -656,21 +622,20 @@
     ],
     "investor": "Tidemark",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AuditBoard",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Hg (buyer)",
+    "n": 1
    }
   ],
   "listed_proximity": "DIRECT",
   "private": [
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Sapiens International",
-    "date": "Aug-25",
-    "in_medians": true,
-    "mult": 4.55,
-    "reason": "same type of business; same end market; sold the same way",
-    "score": 11.0,
-    "type": "CONTROL"
-   },
    {
     "basis": "ARR / revenue",
     "bound": "",
@@ -736,6 +701,17 @@
     "reason": "shares the language of document; same type of business; same revenue model",
     "score": 7.7,
     "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "AuditBoard",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 12.1,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -745,97 +721,56 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "NET_REVENUE": 1
+    "ARR": 6
    },
-   "bounded": false,
+   "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
-    "Sapiens International"
+    "AuditBoard"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 49.33,
-   "listed_target_n": 1,
-   "listed_target_names": [
-    "Sapiens International"
-   ],
-   "low": 4.55,
-   "mid": 22.0,
-   "n": 3,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 56.0,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 15.0,
+   "mid": 23.0,
+   "n": 6,
    "period_mix": {
-    "LTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 6
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Sapiens International",
-     "mult": 4.55,
-     "reason": "same type of business; same end market; sold the same way",
-     "tier": "DIRECT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Mambu",
-     "mult": 22.0,
-     "reason": "both do Loan Servicing; related type of business; same end market; sold the same way",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Carta",
-     "mult": 49.33,
-     "reason": "same type of business; same end market; same revenue model",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
-   "positioning": [
-    {
-     "company": "Clio",
-     "mult": 15.0,
-     "reason": "shares the language of document; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Owner",
-     "mult": 23.0,
-     "reason": "shares the language of operations; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Legora",
-     "mult": 56.0,
-     "reason": "shares the language of document; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
+   "positioning": [],
    "shared_words": [
-    "loan",
+    "document",
+    "operations",
     "servicing"
    ],
-   "spread": 10.8,
+   "spread": 3.7,
    "table": [
     {
-     "company": "Sapiens International",
-     "date": "Aug-25",
+     "company": "Clio",
+     "date": "Jul-24",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 4.55,
+     "multiple": 15.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "AuditBoard",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -851,11 +786,31 @@
      "ticker": ""
     },
     {
+     "company": "Owner",
+     "date": "Aug-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 23.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "Carta",
      "date": "Aug-21",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 49.33,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Legora",
+     "date": "Apr-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 56.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -915,7 +870,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -958,8 +913,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "back",
-    "lending",
-    "loan",
     "office",
     "origination"
    ],

@@ -60,7 +60,6 @@
      "shared_words": [
       "credentialing",
       "healthcare",
-      "marketplace",
       "shift",
       "staffing"
      ],
@@ -433,14 +432,6 @@
   "private_window_months": 56,
   "secondary": [
    {
-    "company": "trivago N.V.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of per; same kind of customer; same cost structure",
-    "score": 7.6,
-    "ticker": "NASDAQGS:TRVG"
-   },
-   {
     "company": "Weave Communications, Inc.",
     "family": "software",
     "in_medians": true,
@@ -471,6 +462,14 @@
     "reason": "shares the language of staffing; same type of business; same business function",
     "score": 6.6,
     "ticker": "LSE:HAS"
+   },
+   {
+    "company": "Consensus Cloud Solutions, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; same end market; sold the same way",
+    "score": 5.1,
+    "ticker": "NASDAQGS:CCSI"
    }
   ],
   "secondary_range": {
@@ -487,12 +486,12 @@
    "dispersed": true,
    "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 1.9,
+   "high": 3.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.2,
-   "mid": 0.3,
+   "mid": 1.2,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -519,13 +518,6 @@
      "transaction_type": ""
     },
     {
-     "company": "trivago N.V.",
-     "mult": 0.3,
-     "reason": "shares the language of per; same kind of customer; same cost structure",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
      "company": "Progyny, Inc.",
      "mult": 1.2,
      "reason": "same end market; same business function; same AI stance",
@@ -538,16 +530,23 @@
      "reason": "same end market; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "mult": 3.1,
+     "reason": "shares the language of healthcare; same end market; sold the same way",
+     "tier": "BROAD",
+     "transaction_type": ""
     }
    ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "per",
+    "healthcare",
     "staffing"
    ],
    "show_retention": true,
-   "spread": 9.5,
+   "spread": 15.5,
    "table": [
     {
      "company": "Robert Walters plc",
@@ -568,15 +567,6 @@
      "ticker": "LSE:HAS"
     },
     {
-     "company": "trivago N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.0,
-     "multiple": 0.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:TRVG"
-    },
-    {
      "company": "Progyny, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.1,
@@ -593,6 +583,15 @@
      "recurring_pct": null,
      "retention_pct": 92.0,
      "ticker": "NYSE:WEAV"
+    },
+    {
+     "company": "Consensus Cloud Solutions, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
+     "multiple": 3.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CCSI"
     }
    ],
    "tag_evidence": 0.6,

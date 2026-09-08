@@ -9,7 +9,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 3
+      "NET_REVENUE": 4
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -17,8 +17,8 @@
      "control_names": [
       "Wolt"
      ],
-     "dispersed": false,
-     "display": "RANGE",
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -26,11 +26,11 @@
      "high": 44.12,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 8.94,
-     "mid": 23.5,
-     "n": 4,
+     "low": 5.97,
+     "mid": 10.3,
+     "n": 5,
      "period_mix": {
-      "LTM": 3,
+      "LTM": 4,
       "RUN_RATE": 1
      },
      "period_span": {
@@ -43,19 +43,63 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Delhivery",
+       "mult": 5.97,
+       "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Xpressbees",
+       "mult": 8.94,
+       "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Gorillas",
+       "mult": 10.3,
+       "reason": "shares the language of own; same type of business; same end market; same AI stance",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Wolt",
+       "mult": 23.5,
+       "reason": "same type of business; same business function; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Gopuff",
+       "mult": 44.12,
+       "reason": "shares the language of own; same type of business; same business function; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
-      "delivery",
       "last",
       "mile",
-      "network",
       "own",
       "parcel",
       "shipping"
      ],
-     "spread": 4.9,
+     "spread": 7.4,
      "table": [
+      {
+       "company": "Delhivery",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.97,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
       {
        "company": "Xpressbees",
        "date": "Feb-22",
@@ -116,7 +160,7 @@
     "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
     "score": 14.2,
     "ticker": "NYSE:FDX"
    },
@@ -140,7 +184,7 @@
     "company": "S.F. Holding Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, fleet, network; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
     "score": 13.6,
     "ticker": "SZSE:002352"
    },
@@ -156,7 +200,7 @@
     "company": "Blue Dart Express Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, network, own; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of own, parcel; same type of business; same business function; same kind of customer",
     "score": 13.4,
     "ticker": "NSEI:BLUEDART"
    }
@@ -195,11 +239,9 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "delivery",
     "fleet",
     "last",
     "mile",
-    "network",
     "own",
     "parcel",
     "shipping"
@@ -457,46 +499,6 @@
    {
     "backed": [
      {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "Temasek",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "Lightrock India",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "McKinley Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Shiprocket",
-      "date": "Aug-22"
-     }
-    ],
-    "investor": "March Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Xpressbees",
       "date": "Feb-22"
      }
@@ -619,10 +621,14 @@
      {
       "company": "Gopuff",
       "date": "Jul-21"
+     },
+     {
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
     "investor": "Fidelity",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -653,6 +659,36 @@
     ],
     "investor": "Eldridge",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Baillie Gifford",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Chimera",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Delhivery",
+      "date": "May-21"
+     }
+    ],
+    "investor": "Steadview Capital",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -664,7 +700,7 @@
     "date": "Oct-21",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of delivery, own; same type of business; same end market; same AI stance",
+    "reason": "shares the language of own; same type of business; same end market; same AI stance",
     "score": 10.2,
     "type": "PRIMARY"
    },
@@ -675,20 +711,9 @@
     "date": "Sep-24",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
+    "reason": "shares the language of own; same type of business; same business function; same AI stance",
     "score": 9.2,
     "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Shiprocket",
-    "date": "Aug-22",
-    "in_medians": false,
-    "mult": 16.03,
-    "reason": "both do Last Mile; related type of business; same business function; same revenue model",
-    "score": 12.0,
-    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_EXACT",
@@ -708,7 +733,7 @@
     "date": "Dec-21",
     "in_medians": true,
     "mult": null,
-    "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 9.1,
     "type": "CONTROL"
    },
@@ -719,7 +744,7 @@
     "date": "Nov-21",
     "in_medians": true,
     "mult": 23.5,
-    "reason": "shares the language of delivery, network; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 9.1,
     "type": "CONTROL"
    },
@@ -730,8 +755,19 @@
     "date": "Jul-21",
     "in_medians": true,
     "mult": 44.12,
-    "reason": "shares the language of delivery, own; same type of business; same business function; same AI stance",
+    "reason": "shares the language of own; same type of business; same business function; same AI stance",
     "score": 9.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Delhivery",
+    "date": "May-21",
+    "in_medians": true,
+    "mult": 5.97,
+    "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
+    "score": 18.1,
     "type": "PRIMARY"
    }
   ],
@@ -743,7 +779,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 4
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -751,16 +787,16 @@
    "control_names": [
     "Wolt"
    ],
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 44.12,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 8.94,
-   "mid": 23.5,
-   "n": 4,
+   "low": 5.97,
+   "mid": 10.3,
+   "n": 5,
    "period_mix": {
-    "LTM": 3,
+    "LTM": 4,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -773,19 +809,63 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Delhivery",
+     "mult": 5.97,
+     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Xpressbees",
+     "mult": 8.94,
+     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Gorillas",
+     "mult": 10.3,
+     "reason": "shares the language of own; same type of business; same end market; same AI stance",
+     "tier": "DIRECT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Wolt",
+     "mult": 23.5,
+     "reason": "same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Gopuff",
+     "mult": 44.12,
+     "reason": "shares the language of own; same type of business; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
-    "delivery",
     "last",
     "mile",
-    "network",
     "own",
     "parcel",
     "shipping"
    ],
-   "spread": 4.9,
+   "spread": 7.4,
    "table": [
+    {
+     "company": "Delhivery",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.97,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
     {
      "company": "Xpressbees",
      "date": "Feb-22",
@@ -831,7 +911,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 61,
+  "private_window_months": 63,
   "secondary": [
    {
     "company": "Delhivery Limited",
@@ -845,7 +925,7 @@
     "company": "ZTO Express (Cayman) Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of last, mile, network; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of last, mile, parcel; same type of business; same business function; same kind of customer",
     "score": 12.1,
     "ticker": "NYSE:ZTO"
    },
@@ -861,7 +941,7 @@
     "company": "J&T Global Express Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of parcel; same type of business; same business function; same kind of customer",
     "score": 11.3,
     "ticker": "SEHK:1519"
    },
@@ -869,7 +949,7 @@
     "company": "Yamato Holdings Co.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, fleet, last; same type of business; same business function; same revenue model",
+    "reason": "shares the language of fleet, last, mile; same type of business; same business function; same revenue model",
     "score": 9.9,
     "ticker": "TSE:9064"
    }
@@ -908,21 +988,21 @@
     {
      "company": "Yamato Holdings Co.",
      "mult": 0.3,
-     "reason": "shares the language of delivery, fleet, last; same type of business; same business function; same revenue model",
+     "reason": "shares the language of fleet, last, mile; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "J&T Global Express Limited",
      "mult": 0.7,
-     "reason": "shares the language of delivery, network, parcel; same type of business; same business function; same kind of customer",
+     "reason": "shares the language of parcel; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "ZTO Express (Cayman) Inc.",
      "mult": 1.6,
-     "reason": "shares the language of last, mile, network; same type of business; same business function; same kind of customer",
+     "reason": "shares the language of last, mile, parcel; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -944,11 +1024,9 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "delivery",
     "fleet",
     "last",
     "mile",
-    "network",
     "own",
     "parcel"
    ],

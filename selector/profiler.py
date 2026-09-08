@@ -125,6 +125,34 @@ def sanitise(raw):
     return tags, dropped
 
 
+# FOUR RULES FOR THE MODEL, added 8-Sep-2026 after the evaluator's review of the 142 test companies.
+# Six of the thirteen flagged sets were caused by a tag that described the CUSTOMER instead of the
+# company, and the test companies were tagged by people reading the same pages this model reads:
+# fundraisly (sells to founders raising money) was given the end market Financial Services and a
+# financial-data archetype and priced off S&P and Moody's; kita (sells credit software TO lenders)
+# was tagged Lending & Credit first and priced as a bank; alloovium (construction documents) was
+# given Real Estate; lambda-robotics (robots FOR data centres) was given Cloud & Infrastructure.
+# Each rule below is one of those, written as an instruction. tools/check_profiler.py asserts the
+# four are in every prompt, so they cannot be dropped in a rewrite.
+RULES = (
+    'FOUR RULES ON HOW TO CLASSIFY\n'
+    '1. archetype and archetype_secondary describe what the company IS and how it earns its money, '
+    'never who it sells to. A company that sells software to lenders or banks is Vertical Software '
+    'with industry Financial Services; it is NOT Lending & Credit, which is for companies that lend. '
+    'A company that sells to investors or funds is not Financial Data & Index unless it sells data.\n'
+    '2. industry is the end market the customers are in, chosen from the list as spelled: a company '
+    'serving construction contractors is Construction & Infrastructure, not Real Estate; one serving '
+    'insurers is Insurance, not Financial Services; one serving hospitals is Healthcare & Life '
+    'Sciences. If customers are spread across industries, write Horizontal.\n'
+    '3. Hardware stays hardware. Robots for data centres, drones, reactors or dive gear keep a '
+    'hardware or engineering archetype; do not give them the archetype of the industry they sell '
+    'into (a robot for data centres is not Cloud & Infrastructure).\n'
+    '4. Supply-chain and logistics SOFTWARE (planning, visibility, freight matching, fleet telematics) '
+    'is Supply Chain & Logistics Software. Commerce Enablement & Fulfilment is for companies that '
+    'move, store or deliver goods themselves, or run a store on a brand\'s behalf.\n'
+)
+
+
 def prompt_for(answers, site_text=''):
     """The profiler prompt. Every closed field lists its permitted values, so the model is choosing
     from a menu rather than being asked to remember one, and the menu comes from the data."""
@@ -138,6 +166,7 @@ def prompt_for(answers, site_text=''):
         'product_tags: up to 12 short noun phrases describing what the company sells, specific '
         'enough to tell it apart from a neighbour (write "Restaurant Point of Sale", not '
         '"Software"). No numbers, no claims, no sentences.\n\n'
+        + RULES + '\n'
         'ALLOWED VALUES\n' + menu + '\n\n'
         'FOUNDER ANSWERS\n' + json.dumps(a, sort_keys=True) + '\n\n'
         # THE WEBSITE IS DATA, AND IS FENCED AS DATA. It is the strongest input the matcher has and

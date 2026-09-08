@@ -220,7 +220,7 @@
       {
        "company": "MasterClass",
        "mult": 27.5,
-       "reason": "shares the language of consumer, courses; related type of business; same end market; same kind of customer",
+       "reason": "shares the language of courses; related type of business; same end market; same kind of customer",
        "tier": "DIRECT",
        "transaction_type": "PRIMARY"
       },
@@ -234,7 +234,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "consumer",
       "courses",
       "learning",
       "paced",
@@ -284,7 +283,7 @@
     "company": "Duolingo, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, consumer, learning; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
     "score": 15.4,
     "ticker": "NASDAQGS:DUOL"
    },
@@ -292,7 +291,7 @@
     "company": "Coursera, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
     "score": 14.3,
     "ticker": "NYSE:COUR"
    },
@@ -308,7 +307,7 @@
     "company": "JustSystems Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
     "score": 11.3,
     "ticker": "TSE:4686"
    },
@@ -328,7 +327,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -369,14 +368,14 @@
     {
      "company": "Coursera, Inc.",
      "mult": 0.5,
-     "reason": "shares the language of consumer, learning; same type of business; same end market; same kind of customer",
+     "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Duolingo, Inc.",
      "mult": 4.7,
-     "reason": "shares the language of app, consumer, learning; same type of business; same end market; same kind of customer",
+     "reason": "shares the language of learning; same type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     }
@@ -384,8 +383,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app",
-    "consumer",
     "learning"
    ],
    "show_retention": false,
@@ -430,7 +427,7 @@
    ],
    "tag_evidence": 0.4,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -726,7 +723,7 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 27.5,
-    "reason": "shares the language of consumer, courses; related type of business; same end market; same kind of customer",
+    "reason": "shares the language of courses; related type of business; same end market; same kind of customer",
     "score": 15.1,
     "type": "PRIMARY"
    }
@@ -841,7 +838,7 @@
     "company": "Match Group, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
+    "reason": "same kind of customer; same revenue model; same purchase frequency",
     "score": 8.1,
     "ticker": "NASDAQGS:MTCH"
    },
@@ -849,7 +846,7 @@
     "company": "Bumble Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
+    "reason": "same kind of customer; same revenue model; same purchase frequency",
     "score": 8.1,
     "ticker": "NASDAQGS:BMBL"
    },
@@ -857,7 +854,7 @@
     "company": "Grindr Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, consumer; same kind of customer; same revenue model; same purchase frequency",
+    "reason": "same kind of customer; same revenue model; same purchase frequency",
     "score": 8.1,
     "ticker": "NYSE:GRND"
    }
@@ -869,7 +866,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -895,10 +892,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "app",
-    "consumer"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "spread": 5.7,
    "table": [
@@ -932,7 +926,7 @@
    ],
    "tag_evidence": 0.1,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Duolingo for learning anything"

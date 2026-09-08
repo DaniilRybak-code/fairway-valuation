@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -38,8 +38,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "automation",
       "intelligence",
       "sales"
      ],
@@ -81,7 +79,7 @@
       "NET_REVENUE": 1
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 2,
      "control_names": [
       "Semrush",
@@ -124,28 +122,28 @@
       {
        "company": "Semrush",
        "mult": 4.3,
-       "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of intelligence; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "Restaurant365",
        "mult": 10.0,
-       "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+       "reason": "related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "AuditBoard",
        "mult": 15.0,
-       "reason": "shares the language of automation, workflow; related type of business; same revenue model",
+       "reason": "shares the language of workflow; related type of business; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "Brex",
        "mult": 39.42,
-       "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+       "reason": "related type of business; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -159,8 +157,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "automation",
       "intelligence",
       "sales",
       "workflow"
@@ -253,7 +249,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 7.6,
     "ticker": "NYSE:KVYO"
    },
@@ -261,7 +257,7 @@
     "company": "BILL Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same kind of customer",
+    "reason": "related type of business; same kind of customer",
     "score": 6.1,
     "ticker": "NYSE:BILL"
    }
@@ -273,7 +269,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -300,7 +296,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "crm",
     "sales",
     "workflow"
@@ -678,7 +673,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 4.3,
-    "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of intelligence; same type of business; same kind of customer; same revenue model",
     "score": 15.2,
     "type": "CONTROL"
    },
@@ -700,7 +695,7 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 15.0,
-    "reason": "shares the language of automation, workflow; related type of business; same revenue model",
+    "reason": "shares the language of workflow; related type of business; same revenue model",
     "score": 8.6,
     "type": "CONTROL"
    },
@@ -722,7 +717,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model",
     "score": 10.6,
     "type": "PRIMARY"
    },
@@ -733,7 +728,7 @@
     "date": "Jan-22",
     "in_medians": true,
     "mult": 39.42,
-    "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+    "reason": "related type of business; same kind of customer; sold the same way",
     "score": 9.6,
     "type": "PRIMARY"
    }
@@ -750,7 +745,7 @@
     "NET_REVENUE": 1
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 2,
    "control_names": [
     "Semrush",
@@ -789,28 +784,28 @@
     {
      "company": "Semrush",
      "mult": 4.3,
-     "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of intelligence; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "Restaurant365",
      "mult": 10.0,
-     "reason": "shares the language of automation; related type of business; same kind of customer; same revenue model",
+     "reason": "related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "AuditBoard",
      "mult": 15.0,
-     "reason": "shares the language of automation, workflow; related type of business; same revenue model",
+     "reason": "shares the language of workflow; related type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "Brex",
      "mult": 39.42,
-     "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+     "reason": "related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -824,8 +819,6 @@
    ],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "automation",
     "intelligence",
     "sales",
     "workflow"
@@ -909,7 +902,7 @@
     "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same revenue model",
+    "reason": "related type of business; same revenue model",
     "score": 6.1,
     "ticker": "NASDAQGS:BL"
    }
@@ -921,7 +914,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -948,7 +941,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "crm",
     "intelligence",
     "sales"

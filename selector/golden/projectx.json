@@ -51,7 +51,6 @@
      "shared_words": [
       "agent",
       "browser",
-      "cloud",
       "environment",
       "execution"
      ],
@@ -127,7 +126,7 @@
     "company": "Backblaze, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cloud; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 12.1,
     "ticker": "NASDAQGM:BLZE"
    },
@@ -135,7 +134,7 @@
     "company": "DigitalOcean Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cloud; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 12.1,
     "ticker": "NYSE:DOCN"
    },
@@ -143,7 +142,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, cloud; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 10.7,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -159,7 +158,7 @@
     "company": "IONOS Group SE",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cloud; same type of business; sold the same way",
+    "reason": "same type of business; sold the same way",
     "score": 7.1,
     "ticker": "XTRA:IOS"
    }
@@ -198,7 +197,7 @@
     {
      "company": "IONOS Group SE",
      "mult": 3.6,
-     "reason": "shares the language of cloud; same type of business; sold the same way",
+     "reason": "same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -212,21 +211,21 @@
     {
      "company": "Backblaze, Inc.",
      "mult": 4.3,
-     "reason": "shares the language of cloud; same type of business; same kind of customer; same revenue model",
+     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "DigitalOcean Holdings, Inc.",
      "mult": 8.7,
-     "reason": "shares the language of cloud; same type of business; same kind of customer; same revenue model",
+     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, cloud; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -242,7 +241,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "cloud",
     "compute"
    ],
    "show_retention": true,
@@ -690,7 +688,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of agent, browser, cloud; related type of business; same business function; same revenue model",
+    "reason": "shares the language of agent, browser, environment; related type of business; same business function; same revenue model",
     "score": 15.9,
     "type": "PRIMARY"
    },
@@ -712,7 +710,7 @@
     "date": "Mar-25",
     "in_medians": true,
     "mult": 13.2,
-    "reason": "shares the language of cloud; related type of business; same business function; same AI stance",
+    "reason": "related type of business; same business function; same AI stance",
     "score": 9.6,
     "type": "PRIMARY"
    }
@@ -763,7 +761,6 @@
    "shared_words": [
     "agent",
     "browser",
-    "cloud",
     "environment",
     "execution"
    ],
@@ -830,7 +827,7 @@
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cloud; related type of business; same revenue model",
+    "reason": "related type of business; same revenue model",
     "score": 6.1,
     "ticker": "NYSE:SNOW"
    }
@@ -868,9 +865,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "cloud"
-   ],
+   "shared_words": [],
    "show_retention": true,
    "sole": "Snowflake Inc.",
    "spread": 1.0,

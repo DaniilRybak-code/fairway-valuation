@@ -238,14 +238,6 @@
     "ticker": "NYSE:VEEV"
    },
    {
-    "company": "Tecsys Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of healthcare, supply; same type of business; same end market; same kind of customer",
-    "score": 11.8,
-    "ticker": "TSX:TCS"
-   },
-   {
     "company": "Samsara Inc.",
     "family": "software",
     "in_medians": true,
@@ -276,6 +268,14 @@
     "reason": "shares the language of healthcare, hospital; same type of business; same end market; sold the same way",
     "score": 10.7,
     "ticker": "NASDAQGS:WAY"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare, supply; related type of business; same end market; same kind of customer",
+    "score": 10.3,
+    "ticker": "TSX:TCS"
    },
    {
     "company": "Phreesia, Inc.",
@@ -339,7 +339,7 @@
     {
      "company": "Tecsys Inc.",
      "mult": 1.9,
-     "reason": "shares the language of healthcare, supply; same type of business; same end market; same kind of customer",
+     "reason": "shares the language of healthcare, supply; related type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -878,14 +878,6 @@
     "ticker": "NASDAQ:PGNY"
    },
    {
-    "company": "Kinaxis Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of supply; same type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "TSX:KXS"
-   },
-   {
     "company": "AMN Healthcare Services, Inc.",
     "family": "consumer",
     "in_medians": true,
@@ -898,25 +890,25 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.5,
+   "high": 4.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
-   "mid": 2.65,
-   "n": 4,
+   "mid": 1.2,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -945,13 +937,6 @@
      "reason": "shares the language of clinical; same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
-    },
-    {
-     "company": "Kinaxis Inc.",
-     "mult": 4.5,
-     "reason": "shares the language of supply; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "positioning": [],
@@ -959,11 +944,10 @@
    "shared_words": [
     "clinical",
     "healthcare",
-    "hospital",
-    "supply"
+    "hospital"
    ],
    "show_retention": false,
-   "spread": 7.5,
+   "spread": 6.8,
    "table": [
     {
      "company": "AMN Healthcare Services, Inc.",
@@ -991,15 +975,6 @@
      "recurring_pct": 82.0,
      "retention_pct": null,
      "ticker": "ENXTPA:DSY"
-    },
-    {
-     "company": "Kinaxis Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.4,
-     "multiple": 4.5,
-     "recurring_pct": 62.1,
-     "retention_pct": null,
-     "ticker": "TSX:KXS"
     }
    ],
    "tag_evidence": 0.7,

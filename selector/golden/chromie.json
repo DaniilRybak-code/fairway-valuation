@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -37,11 +37,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "automation",
-      "management",
-      "software"
-     ],
+     "shared_words": [],
      "spread": 2.0,
      "table": [
       {
@@ -67,7 +63,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -78,7 +74,7 @@
       "ARR": 6
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
       "AuditBoard"
@@ -113,21 +109,21 @@
       {
        "company": "Restaurant365",
        "mult": 10.0,
-       "reason": "shares the language of automation, management; same type of business; same kind of customer; same revenue model",
+       "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "AuditBoard",
        "mult": 15.0,
-       "reason": "shares the language of automation, management; related type of business; same revenue model",
+       "reason": "related type of business; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "FloQast",
        "mult": 16.0,
-       "reason": "shares the language of automation, management, software; related type of business; same revenue model; sold the same way",
+       "reason": "related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -141,7 +137,7 @@
       {
        "company": "Vanta",
        "mult": 24.5,
-       "reason": "shares the language of automation, management; related type of business; same kind of customer; sold the same way",
+       "reason": "related type of business; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -155,11 +151,8 @@
      ],
      "positioning": [],
      "shared_words": [
-      "automation",
       "base",
-      "knowledge",
-      "management",
-      "software"
+      "knowledge"
      ],
      "spread": 7.2,
      "table": [
@@ -235,7 +228,7 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, software; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model",
     "score": 7.6,
     "ticker": "NYSE:HUBS"
    },
@@ -243,7 +236,7 @@
     "company": "Tyler Technologies, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of government, software; same type of business; same end market",
+    "reason": "shares the language of government; same type of business; same end market",
     "score": 7.3,
     "ticker": "NYSE:TYL"
    },
@@ -251,7 +244,7 @@
     "company": "Salesforce, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, software; related type of business; same business function; same revenue model",
+    "reason": "related type of business; same business function; same revenue model",
     "score": 7.1,
     "ticker": "NYSE:CRM"
    },
@@ -295,7 +288,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -323,14 +316,14 @@
     {
      "company": "HubSpot, Inc.",
      "mult": 2.8,
-     "reason": "shares the language of automation, software; related type of business; same kind of customer; same revenue model",
+     "reason": "related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Salesforce, Inc.",
      "mult": 5.0,
-     "reason": "shares the language of automation, software; related type of business; same business function; same revenue model",
+     "reason": "related type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -344,8 +337,7 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "government",
-    "software"
+    "government"
    ],
    "show_retention": true,
    "spread": 2.6,
@@ -389,7 +381,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -819,7 +811,7 @@
     "date": "Jul-24",
     "in_medians": true,
     "mult": 24.5,
-    "reason": "shares the language of automation, management; related type of business; same kind of customer; sold the same way",
+    "reason": "related type of business; same kind of customer; sold the same way",
     "score": 10.1,
     "type": "PRIMARY"
    },
@@ -830,7 +822,7 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 15.0,
-    "reason": "shares the language of automation, management; related type of business; same revenue model",
+    "reason": "related type of business; same revenue model",
     "score": 7.1,
     "type": "CONTROL"
    },
@@ -841,7 +833,7 @@
     "date": "Apr-24",
     "in_medians": true,
     "mult": 16.0,
-    "reason": "shares the language of automation, management, software; related type of business; same revenue model; sold the same way",
+    "reason": "related type of business; same revenue model; sold the same way",
     "score": 8.6,
     "type": "PRIMARY"
    },
@@ -852,7 +844,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of automation, management; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 15.6,
     "type": "PRIMARY"
    }
@@ -867,7 +859,7 @@
     "ARR": 6
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "AuditBoard"
@@ -898,21 +890,21 @@
     {
      "company": "Restaurant365",
      "mult": 10.0,
-     "reason": "shares the language of automation, management; same type of business; same kind of customer; same revenue model",
+     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "AuditBoard",
      "mult": 15.0,
-     "reason": "shares the language of automation, management; related type of business; same revenue model",
+     "reason": "related type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "FloQast",
      "mult": 16.0,
-     "reason": "shares the language of automation, management, software; related type of business; same revenue model; sold the same way",
+     "reason": "related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -926,7 +918,7 @@
     {
      "company": "Vanta",
      "mult": 24.5,
-     "reason": "shares the language of automation, management; related type of business; same kind of customer; sold the same way",
+     "reason": "related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -940,11 +932,8 @@
    ],
    "positioning": [],
    "shared_words": [
-    "automation",
     "base",
-    "knowledge",
-    "management",
-    "software"
+    "knowledge"
    ],
    "spread": 7.2,
    "table": [
@@ -1019,7 +1008,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, company, intelligence; same business function; same revenue model; sold the same way",
+    "reason": "shares the language of company, intelligence; same business function; same revenue model; sold the same way",
     "score": 7.2,
     "ticker": "NASDAQGS:GTM"
    },
@@ -1035,7 +1024,7 @@
     "company": "BILL Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, management; related type of business; same kind of customer",
+    "reason": "related type of business; same kind of customer",
     "score": 5.1,
     "ticker": "NYSE:BILL"
    },
@@ -1043,7 +1032,7 @@
     "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same revenue model",
+    "reason": "related type of business; same revenue model",
     "score": 5.1,
     "ticker": "NASDAQGS:BL"
    }
@@ -1082,13 +1071,10 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "base",
     "company",
     "intelligence",
-    "knowledge",
-    "management",
-    "software"
+    "knowledge"
    ],
    "show_retention": true,
    "spread": 1.3,

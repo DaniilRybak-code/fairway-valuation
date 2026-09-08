@@ -15,7 +15,7 @@ REPO='/home/claude/live'
 def loads(s):
     return list(csv.DictReader(io.StringIO('\n'.join(l for l in s.splitlines() if not l.lstrip('"').startswith('#')))))
 def gitshow(p): return subprocess.check_output(['git','show','origin/main:'+p],cwd=REPO).decode('utf-8')
-def toks(t): return set(re.findall(r'[a-z0-9]+',t.lower())) - {'and','of','the','for'}
+def toks(t): return set(re.findall(r'[a-z0-9]+',t.lower())) - {'and','of','the','for','to','a','an','as','in','on','at','by','with','from','per','vs','via','or'}  # matches match_reference.STOP, 8-Sep-2026
 
 SRC=[('data/peers-software-tags.csv',None),('data/peers-fintech-tags.csv',None),
      ('data/private-companies-tags.csv',None)]

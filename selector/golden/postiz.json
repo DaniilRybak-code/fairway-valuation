@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -43,8 +43,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "content",
-      "platform"
+      "content"
      ],
      "spread": 1.6,
      "table": [
@@ -71,7 +70,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "PAYING_SUBSCRIBERS": {
      "anchor_dropped": false,
@@ -131,7 +130,6 @@
      "shared_words": [
       "calendar",
       "content",
-      "media",
       "publishing",
       "scheduling",
       "social"
@@ -237,7 +235,7 @@
       {
        "company": "Klaviyo",
        "mult": 32.6,
-       "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+       "reason": "same type of business; same business function; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -251,7 +249,7 @@
       {
        "company": "6sense",
        "mult": 47.3,
-       "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+       "reason": "same type of business; same business function; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
@@ -260,8 +258,6 @@
      "shared_words": [
       "calendar",
       "content",
-      "media",
-      "platform",
       "publishing",
       "scheduling",
       "social"
@@ -340,7 +336,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 10.6,
     "ticker": "NYSE:KVYO"
    },
@@ -356,7 +352,7 @@
     "company": "Sprinklr, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of media, social; same type of business; same revenue model",
+    "reason": "shares the language of social; same type of business; same revenue model",
     "score": 6.8,
     "ticker": "NYSE:CXM"
    }
@@ -368,7 +364,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -395,8 +391,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "media",
-    "platform",
     "scheduling",
     "social"
    ],
@@ -797,7 +791,7 @@
     "date": "Jan-22",
     "in_medians": true,
     "mult": 47.3,
-    "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; same AI stance",
     "score": 13.6,
     "type": "PRIMARY"
    },
@@ -808,7 +802,7 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 32.6,
-    "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 15.6,
     "type": "PRIMARY"
    },
@@ -895,7 +889,7 @@
     {
      "company": "Klaviyo",
      "mult": 32.6,
-     "reason": "shares the language of platform; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -909,7 +903,7 @@
     {
      "company": "6sense",
      "mult": 47.3,
-     "reason": "shares the language of platform; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
@@ -918,8 +912,6 @@
    "shared_words": [
     "calendar",
     "content",
-    "media",
-    "platform",
     "publishing",
     "scheduling",
     "social"
@@ -997,7 +989,7 @@
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform, source; related type of business; same revenue model; sold the same way",
+    "reason": "shares the language of source; related type of business; same revenue model; sold the same way",
     "score": 8.7,
     "ticker": "NASDAQGS:GTLB"
    },
@@ -1013,7 +1005,7 @@
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform, tools; related type of business; same revenue model; sold the same way",
+    "reason": "shares the language of tools; related type of business; same revenue model; sold the same way",
     "score": 7.3,
     "ticker": "HLSE:QTCOM"
    },
@@ -1021,7 +1013,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same kind of customer; sold the same way; same AI stance",
+    "reason": "same kind of customer; sold the same way; same AI stance",
     "score": 6.6,
     "ticker": "NASDAQGS:WIX"
    },
@@ -1029,7 +1021,7 @@
     "company": "Salesforce, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; related type of business; same revenue model; same AI stance",
+    "reason": "related type of business; same revenue model; same AI stance",
     "score": 6.1,
     "ticker": "NYSE:CRM"
    }
@@ -1041,7 +1033,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1069,14 +1061,13 @@
     {
      "company": "Wix.com Ltd.",
      "mult": 2.0,
-     "reason": "shares the language of platform; same kind of customer; sold the same way; same AI stance",
+     "reason": "same kind of customer; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "platform",
     "scheduling",
     "source",
     "tools"

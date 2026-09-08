@@ -11,7 +11,7 @@
       "ARR": 3
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -43,10 +43,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "management",
-      "operations",
-      "software"
+      "operations"
      ],
      "spread": 5.6,
      "table": [
@@ -83,7 +80,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -108,7 +105,7 @@
     "company": "Samsara Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of management, operations; same type of business; same business function",
+    "reason": "shares the language of operations; same type of business; same business function",
     "score": 6.3,
     "ticker": "NYSE:IOT"
    }
@@ -149,10 +146,8 @@
    "shared_words": [
     "construction",
     "field",
-    "management",
     "operations",
-    "project",
-    "software"
+    "project"
    ],
    "show_retention": true,
    "spread": 2.7,
@@ -576,7 +571,7 @@
     "date": "Aug-26",
     "in_medians": true,
     "mult": 23.0,
-    "reason": "shares the language of ai, operations, software; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of operations; same type of business; same kind of customer; same revenue model",
     "score": 16.3,
     "type": "PRIMARY"
    },
@@ -587,7 +582,7 @@
     "date": "Apr-26",
     "in_medians": true,
     "mult": 56.0,
-    "reason": "shares the language of ai, software; same type of business; same revenue model; same AI stance",
+    "reason": "same type of business; same revenue model; same AI stance",
     "score": 9.6,
     "type": "PRIMARY"
    },
@@ -598,7 +593,7 @@
     "date": "Jun-25",
     "in_medians": false,
     "mult": 66.7,
-    "reason": "shares the language of ai, management; same type of business; same revenue model; same AI stance",
+    "reason": "same type of business; same revenue model; same AI stance",
     "score": 9.6,
     "type": "PRIMARY"
    },
@@ -609,7 +604,7 @@
     "date": "Apr-24",
     "in_medians": false,
     "mult": 9.0,
-    "reason": "shares the language of management, operations, software; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
     "score": 15.3,
     "type": "PRIMARY"
    },
@@ -620,7 +615,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of management, operations; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
     "score": 18.8,
     "type": "PRIMARY"
    }
@@ -635,7 +630,7 @@
     "ARR": 3
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -663,10 +658,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "management",
-    "operations",
-    "software"
+    "operations"
    ],
    "spread": 5.6,
    "table": [
@@ -703,7 +695,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 39,
   "secondary": [
@@ -755,7 +747,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -784,10 +776,7 @@
    "shared_words": [
     "construction",
     "field",
-    "management",
-    "project",
-    "service",
-    "software"
+    "project"
    ],
    "show_retention": true,
    "spread": 3.5,

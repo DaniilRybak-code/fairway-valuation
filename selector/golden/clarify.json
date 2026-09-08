@@ -38,8 +38,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "automation",
       "deal",
       "enrichment",
       "intelligence",
@@ -125,21 +123,21 @@
       {
        "company": "Semrush",
        "mult": 4.3,
-       "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of intelligence; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "Restaurant365",
        "mult": 10.0,
-       "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
+       "reason": "related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Notion",
        "mult": 18.3,
-       "reason": "shares the language of ai, management; related type of business; same kind of customer; same revenue model",
+       "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
@@ -160,12 +158,9 @@
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "automation",
       "contact",
       "enrichment",
       "intelligence",
-      "management",
       "sales"
      ],
      "spread": 11.6,
@@ -256,7 +251,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 7.6,
     "ticker": "NYSE:KVYO"
    }
@@ -295,9 +290,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "crm",
-    "management",
     "sales"
    ],
    "show_retention": true,
@@ -767,7 +760,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 18.3,
-    "reason": "shares the language of ai, management; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
     "score": 13.1,
     "type": "SECONDARY"
    },
@@ -789,7 +782,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 4.3,
-    "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of intelligence; same type of business; same kind of customer; same revenue model",
     "score": 15.2,
     "type": "CONTROL"
    },
@@ -822,7 +815,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model",
     "score": 10.6,
     "type": "PRIMARY"
    },
@@ -888,21 +881,21 @@
     {
      "company": "Semrush",
      "mult": 4.3,
-     "reason": "shares the language of ai, intelligence; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of intelligence; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "Restaurant365",
      "mult": 10.0,
-     "reason": "shares the language of automation, management; related type of business; same kind of customer; same revenue model",
+     "reason": "related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Notion",
      "mult": 18.3,
-     "reason": "shares the language of ai, management; related type of business; same kind of customer; same revenue model",
+     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
@@ -923,12 +916,9 @@
    ],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "automation",
     "contact",
     "enrichment",
     "intelligence",
-    "management",
     "sales"
    ],
    "spread": 11.6,
@@ -1041,7 +1031,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "contact",
     "enrichment",
     "intelligence",

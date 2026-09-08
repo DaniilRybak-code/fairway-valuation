@@ -40,7 +40,6 @@
      "positioning": [],
      "shared_words": [
       "care",
-      "management",
       "operations"
      ],
      "spread": 2.3,
@@ -146,7 +145,6 @@
      "positioning": [],
      "shared_words": [
       "care",
-      "management",
       "patient",
       "practice",
       "primary"
@@ -229,7 +227,7 @@
     "company": "Waystar Holding Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of healthcare, management, patient; same type of business; same end market",
+    "reason": "shares the language of healthcare, patient; same type of business; same end market",
     "score": 7.8,
     "ticker": "NASDAQGS:WAY"
    },
@@ -250,12 +248,12 @@
     "ticker": "NYSE:PHR"
    },
    {
-    "company": "Tecsys Inc.",
-    "family": "software",
+    "company": "Medley, Inc.",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of healthcare, management; same type of business; same end market",
-    "score": 7.2,
-    "ticker": "TSX:TCS"
+    "reason": "shares the language of healthcare; related type of business; same end market; same kind of customer",
+    "score": 7.1,
+    "ticker": "TSE:4480"
    }
   ],
   "core_range": {
@@ -276,7 +274,7 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
+   "low": 1.6,
    "mid": 2.6,
    "n": 7,
    "period_mix": {
@@ -297,16 +295,16 @@
      "transaction_type": ""
     },
     {
-     "company": "Weave Communications, Inc.",
-     "mult": 1.9,
-     "reason": "both do Practice Management; same type of business; same end market; same kind of customer",
+     "company": "Medley, Inc.",
+     "mult": 1.6,
+     "reason": "shares the language of healthcare; related type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
-     "company": "Tecsys Inc.",
+     "company": "Weave Communications, Inc.",
      "mult": 1.9,
-     "reason": "shares the language of healthcare, management; same type of business; same end market",
+     "reason": "both do Practice Management; same type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -327,7 +325,7 @@
     {
      "company": "Waystar Holding Corp.",
      "mult": 4.5,
-     "reason": "shares the language of healthcare, management, patient; same type of business; same end market",
+     "reason": "shares the language of healthcare, patient; same type of business; same end market",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -345,7 +343,6 @@
     "care",
     "healthcare",
     "intake",
-    "management",
     "patient",
     "practice"
    ],
@@ -362,6 +359,15 @@
      "ticker": "NYSE:PHR"
     },
     {
+     "company": "Medley, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.7,
+     "multiple": 1.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:4480"
+    },
+    {
      "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 13.8,
@@ -369,15 +375,6 @@
      "recurring_pct": null,
      "retention_pct": 92.0,
      "ticker": "NYSE:WEAV"
-    },
-    {
-     "company": "Tecsys Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
-     "multiple": 1.9,
-     "recurring_pct": 58.0,
-     "retention_pct": 106.0,
-     "ticker": "TSX:TCS"
     },
     {
      "company": "SMS Co., Ltd.",
@@ -795,7 +792,6 @@
    "positioning": [],
    "shared_words": [
     "care",
-    "management",
     "operations"
    ],
    "spread": 2.3,
@@ -846,14 +842,6 @@
     "ticker": "NASDAQGS:EVCM"
    },
    {
-    "company": "Medley, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of healthcare; related type of business; same end market; same kind of customer",
-    "score": 7.1,
-    "ticker": "TSE:4480"
-   },
-   {
     "company": "Vitec Software Group AB (publ)",
     "family": "software",
     "in_medians": true,
@@ -873,34 +861,42 @@
     "company": "Evolent Health, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of care, management; related type of business; same end market; same business function",
+    "reason": "shares the language of care; related type of business; same end market; same business function",
     "score": 6.7,
     "ticker": "NYSE:EVH"
+   },
+   {
+    "company": "PAR Technology Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of office; same type of business; same business function",
+    "score": 6.6,
+    "ticker": "NYSE:PAR"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 1.6,
+   "high": 3.7,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.4,
-   "mid": 0.5,
-   "n": 3,
+   "low": 0.5,
+   "mid": 2.0,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -908,8 +904,28 @@
      "founder_revenue": null
     }
    },
-   "points": [],
-   "positioning": [
+   "points": [
+    {
+     "company": "Evolent Health, Inc.",
+     "mult": 0.4,
+     "reason": "shares the language of care; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Alignment Healthcare, Inc.",
+     "mult": 0.5,
+     "reason": "shares the language of care, operations; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "PAR Technology Corporation",
+     "mult": 2.0,
+     "reason": "shares the language of office; same type of business; same business function",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "EverCommerce Inc.",
      "mult": 2.9,
@@ -925,15 +941,17 @@
      "transaction_type": ""
     }
    ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "care",
     "healthcare",
-    "management",
-    "operations"
+    "office",
+    "operations",
+    "practice"
    ],
-   "show_retention": false,
-   "spread": 4.0,
+   "show_retention": true,
+   "spread": 9.2,
    "table": [
     {
      "company": "Evolent Health, Inc.",
@@ -954,16 +972,34 @@
      "ticker": "NASDAQ:ALHC"
     },
     {
-     "company": "Medley, Inc.",
+     "company": "PAR Technology Corporation",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.7,
-     "multiple": 1.6,
-     "recurring_pct": null,
+     "growth_pct": 10.0,
+     "multiple": 2.0,
+     "recurring_pct": 63.3,
      "retention_pct": null,
-     "ticker": "TSE:4480"
+     "ticker": "NYSE:PAR"
+    },
+    {
+     "company": "EverCommerce Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.7,
+     "multiple": 2.9,
+     "recurring_pct": null,
+     "retention_pct": 94.0,
+     "ticker": "NASDAQGS:EVCM"
+    },
+    {
+     "company": "Vitec Software Group AB (publ)",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 5.3,
+     "multiple": 3.7,
+     "recurring_pct": 86.0,
+     "retention_pct": null,
+     "ticker": "OM:VIT B"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

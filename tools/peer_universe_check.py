@@ -49,6 +49,18 @@ import sys
 
 WEAK = 'THIN_OVERLAP'
 LANES = ('core', 'secondary', 'private')
+# RULE 4 NARROWED, 8-Sep-2026. On Daniil's ruling that generic words cannot count towards the
+# comparison, the closeness label stopped counting words carried by 25 or more companies, so
+# THIN_OVERLAP became more common and more honest. This rule read the label as "rests on nothing",
+# and on the new label it failed fyle (e.l.f., Olive & June, Harry's on a shared end market and
+# archetype), tienda-pago (Klarna, Affirm, Zip on the same), wondering (Duolingo, Coursera on the
+# same) and moov (24 merchant acquirers on the same narrow archetype). None of those sets rests on
+# nothing: a DIRECT band is anchored on a specific end market plus archetype, and a narrow archetype
+# (Merchant Acquiring & PSP holds acquirers and nothing else) is evidence on its own. So the rule now
+# fails a fixture only when every lane is THIN, no lane is DIRECT, and the founder's archetype is a
+# catch-all, the six labels the taxonomy rule names, where sharing the label means nothing.
+CATCH_ALL = ('Vertical Software', 'Data, AI & Developer Tools', 'Business Applications',
+             'Cloud & Infrastructure', 'Wealth & Capital Markets Platform', 'Commerce Enablement & Fulfilment')
 # WHICH LANES ACTUALLY PRICE A FOUNDER. Narrowed 3-Sep-2026 after this check failed goldfish and
 # honen on their SECONDARY lane while both had a healthy core.
 #
@@ -90,9 +102,10 @@ def best_n(e, lane):
     return max(ns) if ns else None
 
 
-def score(e):
+def score(e, archetype=''):
     """Returns (verdict, reasons, facts, warnings) for one fixture snapshot."""
     names, per_lane, closeness, priced, sole = set(), {}, [], {}, []
+    bands = []
     for lane in LANES:
         rows = e.get(lane) or []
         got = [r.get('company') for r in rows if r.get('company')]
@@ -102,6 +115,7 @@ def score(e):
         n = best_n(e, lane)
         if rng.get('closeness'):
             closeness.append(rng['closeness'])
+            bands.append(rng.get('band'))
         # The widest priced set this lane can offer, across every basis the fork supports. A lender
         # priced on book and an exchange priced on throughput both count here; judging on the
         # revenue range alone would fail companies for not holding a line they never had.
@@ -124,8 +138,9 @@ def score(e):
     if not private_ok:
         fails.append('no private lane: %d priced round(s), and a listed lane alone is one point '
                      'of view, not a range' % priced[PRIVATE_LANE])
-    if closeness and all(c == WEAK for c in closeness):
-        fails.append('every lane is %s; the set rests on nothing but a shared word' % WEAK)
+    if (closeness and all(c == WEAK for c in closeness) and 'DIRECT' not in bands
+            and archetype in CATCH_ALL):
+        fails.append('every lane is %s on a catch-all archetype; the set rests on nothing but a shared word' % WEAK)
     if not closeness:
         fails.append('no lane produced a range object to judge closeness on')
 
@@ -155,10 +170,11 @@ def main():
     sys.path.insert(0, os.path.join(here, 'selector'))
     from golden_profiles import PROFILES             # noqa: E402
     struck_of = {k: p['struck'] for k, _l, p in PROFILES if p.get('struck')}
+    arch_of = {k: (p.get('archetype') or '') for k, _l, p in PROFILES}
     rows, failed = [], 0
     for f in files:
         key = f[:-5]
-        verdict, fails, facts, warns = score(read(os.path.join(fixdir, f)))
+        verdict, fails, facts, warns = score(read(os.path.join(fixdir, f)), arch_of.get(key, ''))
         # RULE 5. A person read the set and struck it; the names it found no longer count.
         if key in struck_of:
             verdict = 'FAIL'

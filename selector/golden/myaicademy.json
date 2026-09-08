@@ -77,7 +77,7 @@
       "NET_REVENUE": 1
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Learning Technologies Group"
@@ -135,7 +135,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "corporate",
       "learning",
       "training",
       "upskilling"
@@ -239,7 +238,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "corporate",
       "courses",
       "learning",
       "skills",
@@ -305,7 +303,7 @@
     "company": "Duolingo, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of ai, learning; same type of business; same end market; same AI stance",
+    "reason": "shares the language of learning; same type of business; same end market; same AI stance",
     "score": 8.3,
     "ticker": "NASDAQGS:DUOL"
    },
@@ -337,7 +335,7 @@
     "company": "Nerdy Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of ai, learning; same type of business; same end market",
+    "reason": "shares the language of learning; same type of business; same end market",
     "score": 6.3,
     "ticker": "NYSE:NRDY"
    }
@@ -349,7 +347,7 @@
     "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -388,7 +386,7 @@
     {
      "company": "Nerdy Inc.",
      "mult": 0.4,
-     "reason": "shares the language of ai, learning; same type of business; same end market",
+     "reason": "shares the language of learning; same type of business; same end market",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -416,7 +414,7 @@
     {
      "company": "Duolingo, Inc.",
      "mult": 4.7,
-     "reason": "shares the language of ai, learning; same type of business; same end market; same AI stance",
+     "reason": "shares the language of learning; same type of business; same end market; same AI stance",
      "tier": "DIRECT",
      "transaction_type": ""
     }
@@ -432,8 +430,6 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
-    "corporate",
     "learning",
     "skills",
     "training"
@@ -810,7 +806,7 @@
     "NET_REVENUE": 1
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Learning Technologies Group"
@@ -864,7 +860,6 @@
    ],
    "positioning": [],
    "shared_words": [
-    "corporate",
     "learning",
     "training",
     "upskilling"

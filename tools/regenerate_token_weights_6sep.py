@@ -26,7 +26,8 @@ import sys
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STOP = {'and', 'of', 'the', 'for'}          # must match match_reference.toks exactly
+STOP = {'and', 'of', 'the', 'for',          # must match match_reference.toks exactly
+        'to', 'a', 'an', 'as', 'in', 'on', 'at', 'by', 'with', 'from', 'per', 'vs', 'via', 'or'}  # extended 8-Sep-2026
 
 
 def loads(p):

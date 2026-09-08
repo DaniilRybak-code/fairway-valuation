@@ -39,8 +39,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "app",
       "builder",
       "code",
       "coding",
@@ -48,7 +46,6 @@
       "full",
       "generation",
       "stack",
-      "to",
       "vibe"
      ],
      "spread": 1.7,
@@ -94,7 +91,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 9.3,
+     "tag_evidence": 9.2,
      "thin": false,
      "triangulated": false
     }
@@ -105,7 +102,7 @@
     "company": "Cadence Design Systems, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer",
     "score": 7.6,
     "ticker": "NASDAQGS:CDNS"
    },
@@ -113,7 +110,7 @@
     "company": "Synopsys, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer",
     "score": 7.6,
     "ticker": "NASDAQGS:SNPS"
    },
@@ -121,7 +118,7 @@
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, generation; related type of business; same revenue model",
+    "reason": "shares the language of generation; related type of business; same revenue model",
     "score": 5.3,
     "ticker": "NYSE:ZETA"
    }
@@ -133,7 +130,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -160,7 +157,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "generation"
    ],
    "show_retention": true,
@@ -196,7 +192,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -552,7 +548,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do AI App Builder, Vibe Coding, Full-Stack Generation; related type of business; same business function; same revenue model",
-    "score": 25.3,
+    "score": 25.2,
     "type": "PRIMARY"
    },
    {
@@ -573,7 +569,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 20.5,
-    "reason": "shares the language of ai, coding; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of coding; related type of business; same kind of customer; same revenue model",
     "score": 12.6,
     "type": "PRIMARY"
    },
@@ -606,8 +602,8 @@
     "date": "Jan-25",
     "in_medians": false,
     "mult": 36.7,
-    "reason": "shares the language of ai, generation, to; related type of business; same kind of customer; same revenue model",
-    "score": 15.3,
+    "reason": "shares the language of generation; related type of business; same kind of customer; same revenue model",
+    "score": 15.2,
     "type": "PRIMARY"
    }
   ],
@@ -645,8 +641,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "app",
     "builder",
     "code",
     "coding",
@@ -654,7 +648,6 @@
     "full",
     "generation",
     "stack",
-    "to",
     "vibe"
    ],
    "spread": 1.7,
@@ -700,7 +693,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 9.3,
+   "tag_evidence": 9.2,
    "thin": false,
    "triangulated": false
   },

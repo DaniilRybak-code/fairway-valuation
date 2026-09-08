@@ -122,6 +122,18 @@ def main():
           not any(v and len(v) > 12 and v in seen['prompt']
                   for k, v in os.environ.items() if 'KEY' in k or 'TOKEN' in k or 'SECRET' in k))
 
+    print('\nTHE FOUR CLASSIFICATION RULES OF 8-SEP-2026 ARE IN EVERY PROMPT')
+    # Each is the fix for a flagged test company (kita, fundraisly, alloovium, lambda-robotics): a
+    # tag that described the customer instead of the company. A rewrite of the prompt that drops
+    # one of them fails here.
+    prompt = P.prompt_for(req, site_text='')
+    for label, needle in (('rule 1, sells-to is not is (kita)', 'never who it sells to'),
+                          ('rule 2, end market as spelled (alloovium)', 'Construction & Infrastructure, not Real Estate'),
+                          ('rule 3, hardware stays hardware (lambda-robotics)', 'Hardware stays hardware'),
+                          ('rule 4, supply-chain software (ekho-labs)', 'Supply Chain & Logistics Software')):
+        check(label, needle in prompt)
+    check('the new archetype is on the menu', 'Supply Chain & Logistics Software' in P.VOCAB['archetype'])
+
     print('\nTHE PROFILE IT PRODUCES IS ONE THE ENGINE CAN ACTUALLY USE')
     p = P.profile_from(req, stub(good))
     core, sec, tier = M.peer_groups(p, M.listed)

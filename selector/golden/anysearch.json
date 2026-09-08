@@ -57,14 +57,14 @@
       {
        "company": "Oxylabs",
        "mult": 10.3,
-       "reason": "shares the language of agent, ai, api; same type of business; same business function; same kind of customer",
+       "reason": "shares the language of agent, api; same type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Replit",
        "mult": 20.0,
-       "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+       "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -93,7 +93,6 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "ai",
       "api",
       "infrastructure",
       "mcp",
@@ -174,7 +173,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of agent, infrastructure; same type of business; same kind of customer; sold the same way",
     "score": 9.8,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -222,7 +221,7 @@
     "company": "Palantir Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
+    "reason": "shares the language of integration; same type of business; same business function; same AI stance",
     "score": 7.4,
     "ticker": "NASDAQGS:PLTR"
    }
@@ -289,7 +288,7 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, ai, infrastructure; same type of business; same kind of customer; sold the same way",
+     "reason": "shares the language of agent, infrastructure; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -303,7 +302,7 @@
     {
      "company": "Palantir Technologies Inc.",
      "mult": 39.0,
-     "reason": "shares the language of ai, integration; same type of business; same business function; same AI stance",
+     "reason": "shares the language of integration; same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -312,7 +311,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "api",
     "infrastructure",
     "integration",
@@ -749,7 +747,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of agent, ai, api; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of agent, api; same type of business; same business function; same kind of customer",
     "score": 16.3,
     "type": "MIXED"
    },
@@ -815,7 +813,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+    "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
     "score": 10.2,
     "type": "PRIMARY"
    }
@@ -872,14 +870,14 @@
     {
      "company": "Oxylabs",
      "mult": 10.3,
-     "reason": "shares the language of agent, ai, api; same type of business; same business function; same kind of customer",
+     "reason": "shares the language of agent, api; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
     },
     {
      "company": "Replit",
      "mult": 20.0,
-     "reason": "shares the language of agent, ai; same type of business; sold the same way; same AI stance",
+     "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -908,7 +906,6 @@
    "positioning": [],
    "shared_words": [
     "agent",
-    "ai",
     "api",
     "infrastructure",
     "mcp",
@@ -1020,7 +1017,7 @@
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same type of business",
+    "reason": "shares the language of infrastructure; same type of business",
     "score": 5.2,
     "ticker": "NYSE:DT"
    }
@@ -1032,7 +1029,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1087,7 +1084,7 @@
     {
      "company": "Dynatrace, Inc.",
      "mult": 5.8,
-     "reason": "shares the language of ai, infrastructure; same type of business",
+     "reason": "shares the language of infrastructure; same type of business",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -1095,7 +1092,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "api",
     "infrastructure",
     "search"

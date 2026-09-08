@@ -42,15 +42,13 @@
       {
        "company": "Restaurant365",
        "mult": 10.0,
-       "reason": "shares the language of automation, management; same type of business; same business function; same revenue model",
+       "reason": "same type of business; same business function; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "shared_words": [
-      "automation",
       "compliance",
-      "management",
       "regulatory",
       "workflow"
      ],
@@ -98,7 +96,7 @@
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, management; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 11.6,
     "ticker": "NASDAQGS:INTA"
    },
@@ -114,7 +112,7 @@
     "company": "Veeva Systems Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of management, regulatory; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of regulatory; same type of business; same business function; same kind of customer",
     "score": 11.6,
     "ticker": "NYSE:VEEV"
    }
@@ -126,7 +124,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -160,14 +158,14 @@
     {
      "company": "Intapp, Inc.",
      "mult": 4.6,
-     "reason": "shares the language of automation, management; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Veeva Systems Inc.",
      "mult": 9.7,
-     "reason": "shares the language of management, regulatory; same type of business; same business function; same kind of customer",
+     "reason": "shares the language of regulatory; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -175,8 +173,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "management",
     "regulatory"
    ],
    "show_retention": true,
@@ -212,7 +208,7 @@
    ],
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -637,7 +633,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of automation, management; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
     "score": 15.1,
     "type": "PRIMARY"
    }
@@ -679,15 +675,13 @@
     {
      "company": "Restaurant365",
      "mult": 10.0,
-     "reason": "shares the language of automation, management; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
    ],
    "shared_words": [
-    "automation",
     "compliance",
-    "management",
     "regulatory",
     "workflow"
    ],
@@ -734,7 +728,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way",
     "score": 7.1,
     "ticker": "NASDAQGS:GTM"
    },
@@ -742,7 +736,7 @@
     "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model",
+    "reason": "same kind of customer; same revenue model",
     "score": 6.1,
     "ticker": "NASDAQGS:BL"
    }
@@ -780,9 +774,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "automation"
-   ],
+   "shared_words": [],
    "show_retention": true,
    "spread": 1.1,
    "table": [

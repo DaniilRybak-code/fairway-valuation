@@ -11,7 +11,7 @@
       "ARR": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -43,9 +43,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "management",
-      "operations",
-      "software"
+      "operations"
      ],
      "spread": 2.3,
      "table": [
@@ -72,7 +70,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -81,7 +79,7 @@
     "company": "Samsara Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of management, operations; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
     "score": 13.3,
     "ticker": "NYSE:IOT"
    },
@@ -89,7 +87,7 @@
     "company": "Constellation Software Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of mission, software; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of mission; related type of business; same business function; same kind of customer",
     "score": 9.6,
     "ticker": "TSX:CSU"
    },
@@ -133,7 +131,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -161,7 +159,7 @@
     {
      "company": "Constellation Software Inc.",
      "mult": 3.2,
-     "reason": "shares the language of mission, software; related type of business; same business function; same kind of customer",
+     "reason": "shares the language of mission; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -175,16 +173,13 @@
     {
      "company": "Samsara Inc.",
      "mult": 9.6,
-     "reason": "shares the language of management, operations; same type of business; same business function; same kind of customer",
+     "reason": "shares the language of operations; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
-   "shared_words": [
-    "management",
-    "software"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "spread": 3.0,
    "table": [
@@ -218,7 +213,7 @@
    ],
    "tag_evidence": 0.0,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -483,7 +478,7 @@
     "date": "Aug-26",
     "in_medians": true,
     "mult": 23.0,
-    "reason": "shares the language of operations, software; same type of business; same AI stance",
+    "reason": "shares the language of operations; same type of business; same AI stance",
     "score": 6.3,
     "type": "PRIMARY"
    },
@@ -494,7 +489,7 @@
     "date": "Apr-24",
     "in_medians": false,
     "mult": 9.0,
-    "reason": "shares the language of management, operations, software; same type of business; same business function; same revenue model",
+    "reason": "shares the language of operations; same type of business; same business function; same revenue model",
     "score": 12.3,
     "type": "PRIMARY"
    },
@@ -505,7 +500,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of management, operations; same type of business; same business function",
+    "reason": "shares the language of operations; same type of business; same business function",
     "score": 8.8,
     "type": "PRIMARY"
    }
@@ -520,7 +515,7 @@
     "ARR": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -548,9 +543,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "management",
-    "operations",
-    "software"
+    "operations"
    ],
    "spread": 2.3,
    "table": [
@@ -577,7 +570,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 39,
   "secondary": [],

@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -39,14 +39,14 @@
       {
        "company": "Oxylabs",
        "mult": 10285.71,
-       "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Clay",
        "mult": 357142.86,
-       "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       }
@@ -54,9 +54,7 @@
      "positioning": [],
      "shared_words": [
       "agents",
-      "ai",
-      "api",
-      "automation"
+      "api"
      ],
      "spread": 34.7,
      "table": [
@@ -140,21 +138,21 @@
       {
        "company": "Oxylabs",
        "mult": 10.3,
-       "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Anthropic",
        "mult": 20.5,
-       "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
@@ -183,9 +181,7 @@
      "positioning": [],
      "shared_words": [
       "agents",
-      "ai",
       "api",
-      "automation",
       "infrastructure",
       "open",
       "source",
@@ -291,7 +287,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
     "score": 10.7,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -389,7 +385,7 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of ai, infrastructure; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -397,7 +393,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "api",
     "call",
     "infrastructure",
@@ -789,7 +784,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
     "score": 14.7,
     "type": "MIXED"
    },
@@ -800,7 +795,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 20.5,
-    "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
     "score": 13.7,
     "type": "PRIMARY"
    },
@@ -822,7 +817,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
+    "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
     "score": 9.8,
     "type": "SECONDARY"
    },
@@ -912,21 +907,21 @@
     {
      "company": "Oxylabs",
      "mult": 10.3,
-     "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
     },
     {
      "company": "Anthropic",
      "mult": 20.5,
-     "reason": "shares the language of ai, api; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of agents, ai, automation; related type of business; same revenue model; sold the same way",
+     "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
@@ -955,9 +950,7 @@
    "positioning": [],
    "shared_words": [
     "agents",
-    "ai",
     "api",
-    "automation",
     "infrastructure",
     "open",
     "source",
@@ -1046,7 +1039,7 @@
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same kind of customer; same revenue model; sold the same way",
+    "reason": "shares the language of infrastructure; same kind of customer; same revenue model; sold the same way",
     "score": 9.2,
     "ticker": "NYSE:NET"
    },
@@ -1078,7 +1071,7 @@
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; related type of business; same revenue model",
+    "reason": "shares the language of infrastructure; related type of business; same revenue model",
     "score": 6.2,
     "ticker": "NYSE:DT"
    }
@@ -1131,7 +1124,7 @@
     {
      "company": "Dynatrace, Inc.",
      "mult": 5.8,
-     "reason": "shares the language of ai, infrastructure; related type of business; same revenue model",
+     "reason": "shares the language of infrastructure; related type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -1147,14 +1140,13 @@
     {
      "company": "Cloudflare, Inc.",
      "mult": 29.5,
-     "reason": "shares the language of ai, infrastructure; same kind of customer; same revenue model; sold the same way",
+     "reason": "shares the language of infrastructure; same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "api",
     "infrastructure",
     "speech",

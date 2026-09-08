@@ -58,13 +58,10 @@
      ],
      "shared_words": [
       "agent",
-      "ai",
       "booking",
       "channel",
-      "direct",
       "hotel",
-      "manager",
-      "payments"
+      "manager"
      ],
      "spread": 2.3,
      "table": [
@@ -138,7 +135,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -165,8 +162,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "hotel",
-    "payments"
+    "hotel"
    ],
    "show_retention": false,
    "spread": 3.9,
@@ -201,7 +197,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -526,7 +522,7 @@
     "date": "Aug-26",
     "in_medians": true,
     "mult": 23.0,
-    "reason": "shares the language of agent, ai, direct; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of agent; same type of business; same end market; same kind of customer",
     "score": 15.3,
     "type": "PRIMARY"
    },
@@ -628,13 +624,10 @@
    ],
    "shared_words": [
     "agent",
-    "ai",
     "booking",
     "channel",
-    "direct",
     "hotel",
-    "manager",
-    "payments"
+    "manager"
    ],
    "spread": 2.3,
    "table": [
@@ -679,7 +672,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, commerce; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way",
     "score": 8.1,
     "ticker": "NASDAQGS:WIX"
    },
@@ -752,11 +745,8 @@
    "shared_words": [
     "agent",
     "agentic",
-    "ai",
     "checkout",
-    "commerce",
-    "infrastructure",
-    "payments"
+    "infrastructure"
    ],
    "show_retention": true,
    "spread": 4.3,

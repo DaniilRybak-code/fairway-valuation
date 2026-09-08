@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Salesloft"
@@ -40,9 +40,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "agents",
-      "ai",
-      "automation"
+      "agents"
      ],
      "spread": 1.6,
      "table": [
@@ -69,7 +67,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -111,14 +109,14 @@
       {
        "company": "Salesloft",
        "mult": 23.0,
-       "reason": "shares the language of automation; same type of business; same kind of customer",
+       "reason": "same type of business; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of agents, ai, automation; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agents; same type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
@@ -140,11 +138,8 @@
      "positioning": [],
      "shared_words": [
       "agents",
-      "ai",
-      "automation",
       "customer",
       "deflection",
-      "service",
       "support"
      ],
      "spread": 6.5,
@@ -201,7 +196,7 @@
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model",
     "score": 9.1,
     "ticker": "NYSE:ZETA"
    },
@@ -209,7 +204,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same kind of customer; sold the same way",
+    "reason": "related type of business; same kind of customer; sold the same way",
     "score": 8.1,
     "ticker": "NASDAQGS:GTM"
    },
@@ -217,7 +212,7 @@
     "company": "Braze, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, customer; same type of business; same kind of customer",
+    "reason": "shares the language of customer; same type of business; same kind of customer",
     "score": 6.7,
     "ticker": "NASDAQGS:BRZE"
    },
@@ -233,7 +228,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, customer; same type of business; same revenue model",
+    "reason": "shares the language of customer; same type of business; same revenue model",
     "score": 5.7,
     "ticker": "NYSE:KVYO"
    },
@@ -253,7 +248,7 @@
     "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -280,7 +275,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "customer"
    ],
    "show_retention": true,
@@ -343,7 +337,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -666,7 +660,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of agents, ai, automation; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agents; same type of business; same kind of customer; same revenue model",
     "score": 12.3,
     "type": "SECONDARY"
    },
@@ -677,7 +671,7 @@
     "date": "Dec-21",
     "in_medians": true,
     "mult": 23.0,
-    "reason": "shares the language of automation; same type of business; same kind of customer",
+    "reason": "same type of business; same kind of customer",
     "score": 8.6,
     "type": "CONTROL"
    }
@@ -719,14 +713,14 @@
     {
      "company": "Salesloft",
      "mult": 23.0,
-     "reason": "shares the language of automation; same type of business; same kind of customer",
+     "reason": "same type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of agents, ai, automation; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agents; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
@@ -748,11 +742,8 @@
    "positioning": [],
    "shared_words": [
     "agents",
-    "ai",
-    "automation",
     "customer",
     "deflection",
-    "service",
     "support"
    ],
    "spread": 6.5,
@@ -808,7 +799,7 @@
     "company": "Pegasystems Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, customer, service; related type of business; same business function",
+    "reason": "shares the language of customer; related type of business; same business function",
     "score": 5.8,
     "ticker": "NASDAQGS:PEGA"
    },
@@ -832,7 +823,7 @@
     "company": "UiPath, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same business function; same AI stance",
+    "reason": "same business function; same AI stance",
     "score": 5.1,
     "ticker": "NYSE:PATH"
    },
@@ -840,7 +831,7 @@
     "company": "Rezolve AI PLC",
     "family": "software",
     "in_medians": false,
-    "reason": "shares the language of ai, customer; related type of business; same kind of customer; same AI stance",
+    "reason": "shares the language of customer; related type of business; same kind of customer; same AI stance",
     "score": 5.2,
     "ticker": "NASDAQGM:RZLV"
    }
@@ -852,7 +843,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -879,10 +870,8 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "customer",
-    "operations",
-    "service"
+    "operations"
    ],
    "show_retention": true,
    "spread": 3.3,

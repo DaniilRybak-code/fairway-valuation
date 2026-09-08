@@ -12,7 +12,7 @@
       "NET_REVENUE": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -44,10 +44,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "border",
-      "cross",
       "global",
-      "payments",
       "payouts",
       "tax"
      ],
@@ -97,7 +94,7 @@
       "REVENUE_GROSS": 3
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -129,7 +126,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "payments",
       "payouts"
      ],
      "spread": 5.7,
@@ -167,7 +163,7 @@
      ],
      "tag_evidence": 0.4,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -236,7 +232,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -313,9 +309,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "border",
-    "cross",
-    "payments",
     "payouts"
    ],
    "show_retention": false,
@@ -387,7 +380,7 @@
    ],
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -721,7 +714,7 @@
     "date": "Dec-24",
     "in_medians": true,
     "mult": 18.75,
-    "reason": "shares the language of border, cross, payments; related type of business; same business function; same revenue model",
+    "reason": "related type of business; same business function; same revenue model; same AI stance",
     "score": 12.2,
     "type": "PRIMARY"
    },
@@ -770,7 +763,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -798,10 +791,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "border",
-    "cross",
     "global",
-    "payments",
     "payouts",
     "tax"
    ],
@@ -864,7 +854,7 @@
     "company": "Nayax Ltd.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of global, payments; related type of business; same revenue model; same AI stance",
+    "reason": "shares the language of global; related type of business; same revenue model; same AI stance",
     "score": 5.2,
     "ticker": "NASDAQ:NYAX"
    }
@@ -876,7 +866,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -903,10 +893,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "border",
-    "cross",
-    "global",
-    "payments"
+    "global"
    ],
    "show_retention": false,
    "spread": 5.0,
@@ -941,7 +928,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Global payouts platform for businesses paying creators, artists and freelancers at scale"

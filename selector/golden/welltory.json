@@ -11,7 +11,7 @@
       "PAYING_SUBSCRIBERS": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -44,7 +44,6 @@
      "positioning": [],
      "shared_words": [
       "health",
-      "subscription",
       "tracking",
       "wellness"
      ],
@@ -84,7 +83,7 @@
       "ARR_RUNRATE": 3
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -111,7 +110,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "subscription",
       "tracking",
       "wearable",
       "wellness"
@@ -162,7 +160,7 @@
       "REVENUE_GROSS": 3
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -190,7 +188,6 @@
      "positioning": [],
      "shared_words": [
       "health",
-      "subscription",
       "tracking",
       "wearable"
      ],
@@ -238,7 +235,7 @@
     "company": "Opera Limited",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; same kind of customer; same AI stance",
+    "reason": "same type of business; same kind of customer; same AI stance",
     "score": 6.6,
     "ticker": "NASDAQGS:OPRA"
    },
@@ -246,7 +243,7 @@
     "company": "Truecaller AB (publ)",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; same kind of customer; same AI stance",
+    "reason": "same type of business; same kind of customer; same AI stance",
     "score": 6.6,
     "ticker": "OM:TRUE B"
    },
@@ -254,7 +251,7 @@
     "company": "Life360, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app, personal, subscription; same type of business; same kind of customer",
+    "reason": "shares the language of tracking; same type of business; same kind of customer",
     "score": 6.0,
     "ticker": "ASX:360"
    },
@@ -262,7 +259,7 @@
     "company": "F-Secure Oyj",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; same kind of customer",
+    "reason": "same type of business; same kind of customer",
     "score": 5.6,
     "ticker": "HLSE:FSECURE"
    },
@@ -270,7 +267,7 @@
     "company": "Gen Digital Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app, personal, subscription; related type of business; same kind of customer; same AI stance",
+    "reason": "related type of business; same kind of customer; same AI stance",
     "score": 5.3,
     "ticker": "NASDAQGS:GEN"
    }
@@ -282,7 +279,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -309,9 +306,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app",
-    "personal",
-    "subscription",
     "tracking"
    ],
    "show_retention": false,
@@ -365,7 +359,7 @@
    ],
    "tag_evidence": 0.5,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -598,7 +592,7 @@
     "date": "Sep-21",
     "in_medians": true,
     "mult": null,
-    "reason": "shares the language of health, subscription, tracking; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of health, tracking; same type of business; same end market; same kind of customer",
     "score": 19.0,
     "type": "PRIMARY"
    },
@@ -620,7 +614,7 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 9.25,
-    "reason": "shares the language of health, subscription; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of health; same type of business; same end market; same kind of customer",
     "score": 21.7,
     "type": "PRIMARY"
    },
@@ -642,7 +636,7 @@
     "date": "Jul-19",
     "in_medians": true,
     "mult": 6.67,
-    "reason": "shares the language of subscription, wellness; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of wellness; same type of business; same end market; same kind of customer",
     "score": 20.0,
     "type": "PRIMARY"
    }
@@ -657,7 +651,7 @@
     "ARR_RUNRATE": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -680,7 +674,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "subscription",
     "tracking",
     "wearable",
     "wellness"
@@ -728,7 +721,7 @@
     "company": "Hims & Hers Health, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of health, subscription; same end market; same kind of customer; same revenue model",
+    "reason": "shares the language of health; same end market; same kind of customer; same revenue model",
     "score": 12.2,
     "ticker": "NYSE:HIMS"
    },
@@ -736,7 +729,7 @@
     "company": "WW International, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, subscription; same end market; same kind of customer; same revenue model",
+    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
     "score": 10.1,
     "ticker": "NASDAQGM:WW"
    },
@@ -772,7 +765,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -799,9 +792,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app",
-    "health",
-    "subscription"
+    "health"
    ],
    "show_retention": false,
    "spread": 4.0,
@@ -854,7 +845,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "The one app for your health"

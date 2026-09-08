@@ -4,11 +4,11 @@
    "private": {
     "REVENUE": {
      "anchor_dropped": false,
-     "band": "ADJACENT",
+     "band": "DIRECT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 1
+      "ARR": 1
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
@@ -20,11 +20,11 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 6.67,
+     "high": 49.33,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 6.67,
-     "mid": 6.67,
+     "low": 49.33,
+     "mid": 49.33,
      "n": 1,
      "period_mix": {
       "RUN_RATE": 1
@@ -37,18 +37,16 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "marketplace"
-     ],
-     "sole": "The Zebra",
+     "shared_words": [],
+     "sole": "Carta",
      "spread": 1.0,
      "table": [
       {
-       "company": "The Zebra",
-       "date": "Apr-21",
+       "company": "Carta",
+       "date": "Aug-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 6.67,
+       "multiple": 49.33,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -67,7 +65,7 @@
       "REVENUE_GROSS": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -94,8 +92,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "collectibles",
-      "marketplace"
+      "collectibles"
      ],
      "spread": 1.5,
      "table": [
@@ -122,7 +119,7 @@
      ],
      "tag_evidence": 0.6,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -378,18 +375,7 @@
     "why": "sector and stage; your location was not resolved"
    }
   ],
-  "investors_evidence": [
-   {
-    "backed": [
-     {
-      "company": "The Zebra",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Hedosophia (reported",
-    "n": 1
-   }
-  ],
+  "investors_evidence": [],
   "listed_proximity": "ADJACENT",
   "private": [
    {
@@ -404,6 +390,17 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "ARR / annual revenue",
+    "bound": "",
+    "company": "Carta",
+    "date": "Aug-21",
+    "in_medians": true,
+    "mult": 49.33,
+    "reason": "related type of business; same end market; same AI stance",
+    "score": 8.0,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "GMV_ONLY",
     "bound": "",
     "company": "Whatnot",
@@ -412,17 +409,6 @@
     "mult": null,
     "reason": "both do Collectibles; related type of business; same business function; same revenue model",
     "score": 13.3,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "The Zebra",
-    "date": "Apr-21",
-    "in_medians": true,
-    "mult": 6.67,
-    "reason": "related type of business; same end market; same kind of customer; same revenue model",
-    "score": 18.0,
     "type": "PRIMARY"
    },
    {
@@ -440,11 +426,11 @@
   "private_proximity": "ADJACENT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1
+    "ARR": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -452,11 +438,11 @@
    "control_names": [],
    "dispersed": false,
    "display": "DIAMOND",
-   "high": 6.67,
+   "high": 49.33,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 6.67,
-   "mid": 6.67,
+   "low": 49.33,
+   "mid": 49.33,
    "n": 1,
    "period_mix": {
     "RUN_RATE": 1
@@ -469,18 +455,16 @@
    },
    "points": [],
    "positioning": [],
-   "shared_words": [
-    "marketplace"
-   ],
-   "sole": "The Zebra",
+   "shared_words": [],
+   "sole": "Carta",
    "spread": 1.0,
    "table": [
     {
-     "company": "The Zebra",
-     "date": "Apr-21",
+     "company": "Carta",
+     "date": "Aug-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 6.67,
+     "multiple": 49.33,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -504,7 +488,7 @@
     "company": "Marqeta, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of card; same end market; same revenue model; same AI stance",
+    "reason": "same end market; same revenue model; same AI stance",
     "score": 6.6,
     "ticker": "NASDAQ:MQ"
    },
@@ -512,7 +496,7 @@
     "company": "Worldline SA",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of card; same end market; same revenue model; same AI stance",
+    "reason": "same end market; same revenue model; same AI stance",
     "score": 6.6,
     "ticker": "ENXTPA:WLN"
    },
@@ -566,9 +550,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "card"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "spread": 3.3,
    "table": [

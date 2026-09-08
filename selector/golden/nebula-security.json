@@ -11,7 +11,7 @@
       "ARR": 3
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -38,9 +38,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "attack",
-      "security"
+      "attack"
      ],
      "spread": 1.8,
      "table": [
@@ -77,7 +75,7 @@
      ],
      "tag_evidence": 0.7,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     }
    }
   },
@@ -86,7 +84,7 @@
     "company": "CrowdStrike Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+    "reason": "shares the language of detection, response, threat; same type of business; sold the same way",
     "score": 8.4,
     "ticker": "NASDAQGS:CRWD"
    },
@@ -94,7 +92,7 @@
     "company": "Varonis Systems, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+    "reason": "shares the language of detection, response, threat; same type of business; sold the same way",
     "score": 8.4,
     "ticker": "NASDAQGS:VRNS"
    },
@@ -110,7 +108,7 @@
     "company": "Qualys, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of attack, security; same type of business; sold the same way",
+    "reason": "shares the language of attack; same type of business; sold the same way",
     "score": 7.7,
     "ticker": "NASDAQGS:QLYS"
    },
@@ -126,7 +124,7 @@
     "company": "Netskope, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of security; same type of business; sold the same way",
+    "reason": "same type of business; sold the same way",
     "score": 6.1,
     "ticker": "NASDAQGS:NTSK"
    },
@@ -134,7 +132,7 @@
     "company": "Rubrik, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of security; same type of business; sold the same way",
+    "reason": "same type of business; sold the same way",
     "score": 6.1,
     "ticker": "NYSE:RBRK"
    }
@@ -180,28 +178,28 @@
     {
      "company": "Varonis Systems, Inc.",
      "mult": 5.4,
-     "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+     "reason": "shares the language of detection, response, threat; same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Netskope, Inc.",
      "mult": 5.4,
-     "reason": "shares the language of security; same type of business; sold the same way",
+     "reason": "same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Qualys, Inc.",
      "mult": 7.1,
-     "reason": "shares the language of attack, security; same type of business; sold the same way",
+     "reason": "shares the language of attack; same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Rubrik, Inc.",
      "mult": 9.3,
-     "reason": "shares the language of security; same type of business; sold the same way",
+     "reason": "same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -215,7 +213,7 @@
     {
      "company": "CrowdStrike Holdings, Inc.",
      "mult": 31.9,
-     "reason": "shares the language of detection, response, security; same type of business; sold the same way",
+     "reason": "shares the language of detection, response, threat; same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -223,12 +221,9 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "attack",
-    "automation",
     "detection",
     "response",
-    "security",
     "soc",
     "threat"
    ],
@@ -669,7 +664,7 @@
     "date": "Aug-24",
     "in_medians": true,
     "mult": 25.5,
-    "reason": "shares the language of ai, security; same type of business; same revenue model; sold the same way",
+    "reason": "same type of business; same revenue model; sold the same way; same AI stance",
     "score": 13.7,
     "type": "PRIMARY"
    },
@@ -680,7 +675,7 @@
     "date": "Jun-24",
     "in_medians": false,
     "mult": 15.5,
-    "reason": "shares the language of detection, response, security; same type of business; same revenue model",
+    "reason": "shares the language of detection, response, soc; same type of business; same revenue model",
     "score": 12.0,
     "type": "PRIMARY"
    },
@@ -691,7 +686,7 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 34.3,
-    "reason": "shares the language of attack, security; same type of business; sold the same way",
+    "reason": "shares the language of attack; same type of business; sold the same way",
     "score": 10.2,
     "type": "MIXED"
    },
@@ -702,7 +697,7 @@
     "date": "Apr-24",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of security; same type of business; sold the same way; same AI stance",
+    "reason": "same type of business; sold the same way; same AI stance",
     "score": 10.1,
     "type": "PRIMARY"
    },
@@ -713,7 +708,7 @@
     "date": "Dec-22",
     "in_medians": false,
     "mult": 41.1,
-    "reason": "shares the language of security; same type of business; same revenue model",
+    "reason": "same type of business; same revenue model",
     "score": 10.1,
     "type": "PRIMARY"
    },
@@ -724,7 +719,7 @@
     "date": "Jan-22",
     "in_medians": true,
     "mult": 45.3,
-    "reason": "shares the language of security; same type of business; same revenue model",
+    "reason": "same type of business; same revenue model",
     "score": 8.6,
     "type": "PRIMARY"
    }
@@ -739,7 +734,7 @@
     "ARR": 3
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -762,9 +757,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "attack",
-    "security"
+    "attack"
    ],
    "spread": 1.8,
    "table": [
@@ -801,7 +794,7 @@
    ],
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 55,
   "secondary": [
@@ -809,7 +802,7 @@
     "company": "BlackLine, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way",
     "score": 8.1,
     "ticker": "NASDAQGS:BL"
    },
@@ -825,7 +818,7 @@
     "company": "UiPath, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same business function; sold the same way; same AI stance",
+    "reason": "same business function; sold the same way; same AI stance",
     "score": 7.1,
     "ticker": "NYSE:PATH"
    },
@@ -833,7 +826,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same kind of customer; same revenue model",
+    "reason": "same kind of customer; same revenue model",
     "score": 7.1,
     "ticker": "NASDAQGS:GTM"
    },
@@ -841,7 +834,7 @@
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "NASDAQGS:INTA"
    }
@@ -853,7 +846,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -880,7 +873,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "simulation"
    ],
    "show_retention": true,
@@ -934,7 +926,7 @@
    ],
    "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Autonomous AI defense system for cyber attack"

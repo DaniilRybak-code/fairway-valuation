@@ -39,7 +39,7 @@
       {
        "company": "Jobandtalent",
        "mult": 2.08,
-       "reason": "shares the language of hiring, marketplace; same type of business; same business function; same revenue model",
+       "reason": "shares the language of hiring; same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -61,10 +61,8 @@
      "positioning": [],
      "shared_words": [
       "agents",
-      "automation",
       "candidate",
       "hiring",
-      "marketplace",
       "matching",
       "recruiter",
       "screening",
@@ -130,7 +128,7 @@
     "company": "SEEK Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of candidate, marketplace, talent; same kind of customer; same purchase frequency",
+    "reason": "shares the language of candidate, talent; same kind of customer; same purchase frequency",
     "score": 5.6,
     "ticker": "ASX:SEK"
    }
@@ -142,7 +140,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -170,7 +168,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "candidate",
-    "marketplace",
     "matching",
     "talent"
    ],
@@ -490,7 +487,7 @@
     "date": "Dec-21",
     "in_medians": true,
     "mult": 2.08,
-    "reason": "shares the language of hiring, marketplace; same type of business; same business function; same revenue model",
+    "reason": "shares the language of hiring; same type of business; same business function; same revenue model",
     "score": 13.6,
     "type": "PRIMARY"
    }

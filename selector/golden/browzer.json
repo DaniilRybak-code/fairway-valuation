@@ -159,7 +159,7 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 13.1,
     "ticker": "NYSE:HUBS"
    },
@@ -167,7 +167,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 9.6,
     "ticker": "NYSE:KVYO"
    },
@@ -183,7 +183,7 @@
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, generation; same type of business; same business function",
+    "reason": "shares the language of generation; same type of business; same business function",
     "score": 6.3,
     "ticker": "NYSE:ZETA"
    },
@@ -191,7 +191,7 @@
     "company": "Braze, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 6.1,
     "ticker": "NASDAQGS:BRZE"
    }
@@ -230,7 +230,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "generation",
     "seo"
    ],

@@ -39,14 +39,14 @@
       {
        "company": "Oxylabs",
        "mult": 10285.71,
-       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Clay",
        "mult": 357142.86,
-       "reason": "shares the language of agents, ai; related type of business; same revenue model",
+       "reason": "shares the language of agents; related type of business; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       }
@@ -54,8 +54,7 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "agents",
-      "ai"
+      "agents"
      ],
      "spread": 34.7,
      "table": [
@@ -122,28 +121,28 @@
       {
        "company": "Oxylabs",
        "mult": 10.3,
-       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Replit",
        "mult": 20.0,
-       "reason": "shares the language of agent, ai; related type of business; same business function; same revenue model",
+       "reason": "shares the language of agent; related type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Anthropic",
        "mult": 20.5,
-       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of agents, ai; related type of business; same revenue model",
+       "reason": "shares the language of agents; related type of business; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       },
@@ -165,8 +164,7 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "agents",
-      "ai"
+      "agents"
      ],
      "spread": 14.6,
      "table": [
@@ -242,7 +240,7 @@
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 8.7,
     "ticker": "NYSE:NET"
    },
@@ -250,7 +248,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 8.7,
     "ticker": "NASDAQGS:DDOG"
    }
@@ -262,7 +260,7 @@
     "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -289,8 +287,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "agent",
-    "ai"
+    "agent"
    ],
    "show_retention": true,
    "spread": 2.0,
@@ -316,7 +313,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -713,7 +710,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 11.7,
     "type": "MIXED"
    },
@@ -724,7 +721,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 20.5,
-    "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 13.7,
     "type": "PRIMARY"
    },
@@ -757,7 +754,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of agents, ai; related type of business; same revenue model",
+    "reason": "shares the language of agents; related type of business; same revenue model",
     "score": 6.8,
     "type": "SECONDARY"
    },
@@ -779,7 +776,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of agent, ai; related type of business; same business function; same revenue model",
+    "reason": "shares the language of agent; related type of business; same business function; same revenue model",
     "score": 11.7,
     "type": "PRIMARY"
    }
@@ -819,28 +816,28 @@
     {
      "company": "Oxylabs",
      "mult": 10.3,
-     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
     },
     {
      "company": "Replit",
      "mult": 20.0,
-     "reason": "shares the language of agent, ai; related type of business; same business function; same revenue model",
+     "reason": "shares the language of agent; related type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Anthropic",
      "mult": 20.5,
-     "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of agents, ai; related type of business; same revenue model",
+     "reason": "shares the language of agents; related type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     },
@@ -862,8 +859,7 @@
    "positioning": [],
    "shared_words": [
     "agent",
-    "agents",
-    "ai"
+    "agents"
    ],
    "spread": 14.6,
    "table": [

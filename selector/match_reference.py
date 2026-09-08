@@ -47,10 +47,36 @@ D = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'd
 # to twenty-nine, and its token weight from 0.83 to 0.17, without anyone editing
 # a list.
 # ---------------------------------------------------------------------------
-STOP = {'and','of','the','for'}
+# STOPWORDS, EXTENDED 8-Sep-2026 on Daniil's ruling that generic words cannot count towards the
+# comparison. With four stopwords, "Record to Report", "Quote To Cash" and "Agentic To-Do List"
+# handed bond BlackLine, Sidetrade and Zuora on the word "to", and "Robots As A Service" put "a"
+# and "as" among the shared descriptors a founder is shown. The longer list was measured on
+# 6-Sep (docs/matching-refinement-6sep.md, task 3c, "stopwords": no fixture moved beyond what
+# the weight regeneration had already moved). It has to match tools/regenerate_token_weights_6sep.py
+# exactly, and check 16 fails the suite if the weight file drifts from it.
+STOP = {'and', 'of', 'the', 'for',
+        'to', 'a', 'an', 'as', 'in', 'on', 'at', 'by', 'with', 'from', 'per', 'vs', 'via', 'or'}
 def toks(t): return set(re.findall(r'[a-z0-9]+', t.lower())) - STOP
 
 TOKW = {r['token']: float(r['weight_factor']) for r in load(D+'tag-token-weights.csv')}
+
+# A GENERIC WORD IS NOT EVIDENCE OF CLOSENESS, 8-Sep-2026. The weight file says how many companies
+# carry each word (weight = 5 / carriers, listed for words carried by more than five). A word
+# carried by 25 or more companies weighs 0.2 or less, and that is the line check 8 has used since
+# 6-Sep for "served on a generic word" (kind 3 of the No-comps list). The same line is used here
+# for the closeness label and the shared-words sentence a founder reads, so a lane is no longer
+# called "strong" on "ai", "data", "platform" and "service". Measured before the change: 116 of 284
+# lanes read STRONG_OVERLAP and 69 of them rested on under one point of product evidence.
+#
+# WHAT THIS DOES NOT DO, deliberately, and Daniil can widen it: a generic word still scores its
+# small weight (0.6 times 0.2 at most) and still clears the relevance gate, because zeroing it
+# was measured on 6-Sep as the "vocab25" variant and cost real passes (acti, rainforest,
+# tienda-pago, mondu). The label and the sentence stop overstating; the selection does not move.
+GENERIC_WORD_WEIGHT = 0.2
+
+
+def is_generic(t):
+    return TOKW.get(t, 1.0) <= GENERIC_WORD_WEIGHT
 
 def tag_overlap(a, b):
     A = [x.strip() for x in (a or '').split('|') if x.strip()]
@@ -1224,7 +1250,8 @@ def why_text(prof, rec, why):
     """A short, honest reason this company is in the set. Shared product vocabulary is named
     explicitly, because it is the strongest thing we can say and the easiest to check."""
     parts = []
-    shared = sorted(toks(prof.get('product_tags') or '') & toks(rec.get('product_tags') or ''))
+    shared = sorted(t for t in (toks(prof.get('product_tags') or '') & toks(rec.get('product_tags') or ''))
+                    if not is_generic(t))
     tp = _tag_points(why)
     if tp > 0:
         named = [t for t in (rec.get('product_tags') or '').split('|')
@@ -2433,11 +2460,13 @@ RANGE_TIERS = ('DIRECT', 'ADJACENT')
 CLOSENESS = ('SHARED_PRODUCT', 'STRONG_OVERLAP', 'PARTIAL_OVERLAP', 'THIN_OVERLAP')
 
 def _shared_tokens(prof, rows):
+    """The words the founder shares with the lane, GENERIC WORDS LEFT OUT (8-Sep-2026): they are
+    what the closeness label counts and what the founder is shown as shared descriptors."""
     mine = toks(prof.get('product_tags') or '')
     out = set()
     for (_sw, r) in rows:
         out |= (mine & toks(r.get('product_tags') or ''))
-    return out
+    return {t for t in out if not is_generic(t)}
 
 def _closeness(points, shared_n):
     if points >= FLOOR_TAG_EVIDENCE: return 'SHARED_PRODUCT'

@@ -46,7 +46,6 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "ai",
       "builder",
       "code",
       "deployment",
@@ -184,7 +183,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "cd",
     "ci",
     "framework",
@@ -648,7 +646,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of agent, ai; same type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
     "score": 11.7,
     "type": "MIXED"
    },
@@ -659,7 +657,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 20.5,
-    "reason": "shares the language of agent, ai; same type of business; same kind of customer; same AI stance",
+    "reason": "shares the language of agent; same type of business; same kind of customer; same AI stance",
     "score": 10.7,
     "type": "PRIMARY"
    },
@@ -692,7 +690,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of agent, ai, builder; same type of business; same business function; sold the same way",
+    "reason": "shares the language of agent, builder, deployment; same type of business; same business function; sold the same way",
     "score": 15.5,
     "type": "PRIMARY"
    },
@@ -703,7 +701,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 14.9,
-    "reason": "shares the language of ai, deployment, evaluation; same type of business; same AI stance",
+    "reason": "shares the language of deployment, evaluation, orchestration; same type of business; same AI stance",
     "score": 8.7,
     "type": "PRIMARY"
    },
@@ -714,7 +712,7 @@
     "date": "Jun-25",
     "in_medians": true,
     "mult": 19.8,
-    "reason": "shares the language of ai, code; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of code; same type of business; same business function; same kind of customer",
     "score": 16.8,
     "type": "PRIMARY"
    }
@@ -760,7 +758,6 @@
    "positioning": [],
    "shared_words": [
     "agent",
-    "ai",
     "builder",
     "code",
     "deployment",
@@ -913,7 +910,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "builder",
     "code",
     "no",

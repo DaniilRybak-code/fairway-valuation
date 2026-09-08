@@ -137,7 +137,7 @@
       "REVENUE_GROSS": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Udemy"
@@ -183,10 +183,8 @@
      ],
      "positioning": [],
      "shared_words": [
-      "consumer",
       "education",
-      "learning",
-      "subscription"
+      "learning"
      ],
      "spread": 21.3,
      "table": [
@@ -246,7 +244,7 @@
     "company": "JustSystems Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of consumer, learning, subscription; same type of business; same end market; same business function",
+    "reason": "shares the language of learning; same type of business; same end market; same business function",
     "score": 15.4,
     "ticker": "TSE:4686"
    },
@@ -266,7 +264,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -322,9 +320,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "consumer",
     "learning",
-    "subscription",
     "tutor"
    ],
    "show_retention": false,
@@ -738,7 +734,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -766,9 +762,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "audio",
-    "consumer",
-    "podcasts",
-    "subscription"
+    "podcasts"
    ],
    "show_retention": false,
    "spread": 5.7,

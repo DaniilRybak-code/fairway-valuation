@@ -11,7 +11,7 @@
       "NET_REVENUE": 2
      },
      "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -38,9 +38,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "api",
-      "payment",
-      "payments"
+      "api"
      ],
      "spread": 2.9,
      "table": [
@@ -67,7 +65,7 @@
      ],
      "tag_evidence": 0.2,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE_GROSS": {
      "anchor_dropped": false,
@@ -78,7 +76,7 @@
       "REVENUE_GROSS": 5
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -112,9 +110,7 @@
      "shared_words": [
       "api",
       "embedded",
-      "infrastructure",
-      "payment",
-      "payments"
+      "infrastructure"
      ],
      "spread": 5.7,
      "table": [
@@ -180,7 +176,7 @@
     "company": "Repay Holdings Corporation",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of embedded, payments, vertical; same type of business; same business function; same revenue model",
+    "reason": "shares the language of embedded, vertical; same type of business; same business function; same revenue model",
     "score": 10.1,
     "ticker": "NASDAQCM:RPAY"
    },
@@ -188,7 +184,7 @@
     "company": "Usio, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; same AI stance",
     "score": 9.6,
     "ticker": "NASDAQGM:USIO"
    },
@@ -196,7 +192,7 @@
     "company": "PayPoint plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; same AI stance",
     "score": 9.6,
     "ticker": "LSE:PAY"
    },
@@ -204,7 +200,7 @@
     "company": "Fawry for Banking Technology",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; same AI stance",
     "score": 9.6,
     "ticker": "CASE:FWRY"
    },
@@ -212,7 +208,7 @@
     "company": "DLocal Limited",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 8.1,
     "ticker": "NASDAQ:DLO"
    },
@@ -220,7 +216,7 @@
     "company": "Nexi S.p.A.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 8.1,
     "ticker": "BIT:NEXI"
    },
@@ -228,7 +224,7 @@
     "company": "GMO Payment Gateway, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+    "reason": "same type of business; same business function; same AI stance",
     "score": 8.1,
     "ticker": "TSE:3769"
    }
@@ -240,7 +236,7 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -267,49 +263,49 @@
     {
      "company": "Usio, Inc.",
      "mult": 0.7,
-     "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Repay Holdings Corporation",
      "mult": 1.7,
-     "reason": "shares the language of embedded, payments, vertical; same type of business; same business function; same revenue model",
+     "reason": "shares the language of embedded, vertical; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "DLocal Limited",
      "mult": 1.9,
-     "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+     "reason": "same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "PayPoint plc",
      "mult": 2.0,
-     "reason": "shares the language of payment; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Nexi S.p.A.",
      "mult": 2.4,
-     "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+     "reason": "same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Fawry for Banking Technology",
      "mult": 4.0,
-     "reason": "shares the language of payment; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "GMO Payment Gateway, Inc.",
      "mult": 5.0,
-     "reason": "shares the language of payment, payments; same type of business; same business function; same AI stance",
+     "reason": "same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -318,8 +314,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "embedded",
-    "payment",
-    "payments",
     "vertical"
    ],
    "show_retention": false,
@@ -602,7 +596,7 @@
     "date": "Feb-25",
     "in_medians": true,
     "mult": 16.34,
-    "reason": "shares the language of api, payment, payments; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of api; same type of business; same business function; same kind of customer",
     "score": 16.7,
     "type": "PRIMARY"
    },
@@ -624,7 +618,7 @@
     "date": "Dec-23",
     "in_medians": true,
     "mult": 44.34,
-    "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 13.1,
     "type": "PRIMARY"
    },
@@ -646,7 +640,7 @@
     "date": "Jun-21",
     "in_medians": true,
     "mult": 54.17,
-    "reason": "shares the language of payment, payments; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; same AI stance",
     "score": 15.1,
     "type": "PRIMARY"
    },
@@ -657,7 +651,7 @@
     "date": "Apr-21",
     "in_medians": true,
     "mult": 48.0,
-    "reason": "shares the language of payment, payments; related type of business; same business function; same AI stance",
+    "reason": "related type of business; same business function; same AI stance",
     "score": 9.6,
     "type": "PRIMARY"
    },
@@ -668,7 +662,7 @@
     "date": "Jan-21",
     "in_medians": true,
     "mult": 25.0,
-    "reason": "shares the language of embedded, payment, payments; same type of business; same business function; same revenue model",
+    "reason": "shares the language of embedded; same type of business; same business function; same revenue model",
     "score": 15.3,
     "type": "PRIMARY"
    }
@@ -683,7 +677,7 @@
     "NET_REVENUE": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -706,9 +700,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "api",
-    "payment",
-    "payments"
+    "api"
    ],
    "spread": 2.9,
    "table": [
@@ -735,7 +727,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 67,
   "secondary": [
@@ -743,7 +735,7 @@
     "company": "WEX Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payments, vertical; related type of business; same business function; same revenue model",
+    "reason": "shares the language of vertical; related type of business; same business function; same revenue model",
     "score": 8.4,
     "ticker": "NYSE:WEX"
    },
@@ -759,7 +751,7 @@
     "company": "Paysign, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment; related type of business; same business function; same revenue model",
+    "reason": "related type of business; same business function; same revenue model; same AI stance",
     "score": 8.1,
     "ticker": "NASDAQ:PAYS"
    },
@@ -767,7 +759,7 @@
     "company": "Adyen N.V.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments, unified; same type of business; same business function",
+    "reason": "shares the language of unified; same type of business; same business function",
     "score": 7.7,
     "ticker": "ENXTAM:ADYEN"
    },
@@ -775,7 +767,7 @@
     "company": "Global Payments Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; same type of business; same business function",
+    "reason": "same type of business; same business function",
     "score": 7.1,
     "ticker": "NYSE:GPN"
    }
@@ -816,8 +808,6 @@
    "shared_words": [
     "api",
     "embedded",
-    "payment",
-    "payments",
     "unified",
     "vertical"
    ],

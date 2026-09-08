@@ -171,11 +171,20 @@ RETIRED_INVENTED = [
 # answer to each.
 REAL = [
  ('fundraisly', 'Investor matching and outreach run as a productized agency for founders raising',
-  dict(archetype='Marketing & Customer Engagement', archetype_secondary='Financial Data & Index',
-   industry='Financial Services', function='Sales', buyer='SMB', gtm_motion='MIDMARKET',
+  # RE-TAGGED 8-Sep-2026 on Daniil's ruling after the evaluator's verdict. It carried secondary
+  # Financial Data & Index and end market Financial Services, which is what handed it S&P,
+  # Moody's, MSCI, FactSet, Morningstar, CRISIL and Plaid on "related type of business, same end
+  # market". Daniil: "positioning itself as a platform to find investors to grow business, so
+  # this should be the angle"; HubSpot somewhat, Freshworks and Salesforce not. So: an investor
+  # database plus outreach platform, Horizontal, sales-intelligence words. Measured: listed
+  # ZoomInfo, Red Violet, Similarweb with HubSpot in the wider ring; private Clay, Apollo.io,
+  # 6sense; gate FAIL to PASS. Its own site names PitchBook, Dealroom, Boardy, Metal and OpenVC
+  # as competitors (PitchBook is Morningstar's), a pin Daniil can add by name.
+  dict(archetype='Marketing & Customer Engagement', archetype_secondary='Data, AI & Developer Tools',
+   industry='Horizontal', function='Sales', buyer='SMB', gtm_motion='MIDMARKET',
    revenue_model='SERVICES_LED', product_role='AGGREGATOR', asset_intensity='', purchase_frequency='',
    ai_stance='AI_EMBEDDED', growth=None, gm=None,
-   product_tags='Investor Outreach|Investor Database|AI Investor Matching|Warm Intro Mapping|Done-For-You Fundraising|Investor Meeting Booking|Fundraising CRM')),
+   product_tags='Investor Database|Investor Discovery Platform|Investor Search|Sales Intelligence|Contact Database|Data Enrichment|Warm Introductions|Outreach Automation|Fundraising Platform|AI Investor Matching|Done-For-You Fundraising')),
  ('goldfish', 'Local-first AI memory layer for Mac and Windows that drafts in your own tone',
   dict(archetype='Consumer & Prosumer Software', archetype_secondary='',
    industry='Horizontal', function='Productivity', buyer='PROSUMER', gtm_motion='PLG',
@@ -317,12 +326,19 @@ REAL_2 = [
    growth=None, gm=None,
    product_tags='Clinical Trial Marketplace|Research Site Network|Patient Recruitment|Trial Sponsor Platform|Site Selection|Decentralised Trials')),
  ('supercritical', 'Marketplace and procurement layer for durable carbon removal credits',
-  dict(archetype='Third-Party Marketplace', archetype_secondary='',
+  # RE-TAGGED 8-Sep-2026 on Daniil's ruling: tagged Third-Party Marketplace alone it sat in the
+  # consumer family and was shown Sea, MercadoLibre, Meesho and Faire ("consumer marketplaces,
+  # different business models and economics"). Filed the way levelten is, which Daniil called
+  # "very similar": exchange first, marketplace second, energy end market. Measured: listed
+  # Indian Energy Exchange, PSI Software, Tradeweb (3 priced); private Xpansiv (tonnes only,
+  # no revenue multiple) and The Zebra, 1 priced, so it FAILS the gate the way levelten does and
+  # sits on the No-comps list until the bulk pass finds a priced environmental-markets round.
+  dict(archetype='Market Infrastructure & Exchange', archetype_secondary='Third-Party Marketplace',
    industry='Energy & Utilities', function='Marketplace Operations', buyer='LOB',
    gtm_motion='ENT_SALES', revenue_model='TAKE_RATE', product_role='AGGREGATOR',
    asset_intensity='NONE', purchase_frequency='EPISODIC', ai_stance='AI_NEUTRAL',
    growth=None, gm=None,
-   product_tags='Carbon Removal Marketplace|CDR Procurement|Net Zero Purchasing|Carbon Credit Sourcing|Supplier Diligence|Offtake Contracting')),
+   product_tags='Carbon Removal Marketplace|CDR Procurement|Net Zero Purchasing|Carbon Credit Sourcing|Supplier Diligence|Offtake Contracting|Environmental Commodities|Carbon Markets')),
  ('priori-legal', 'Marketplace of flexible legal talent plus panel and RFP management for in-house teams',
   dict(archetype='Freelance & Services Marketplace', archetype_secondary='Vertical Software',
    industry='Legal & Professional Services', function='Marketplace Operations', buyer='LOB',
@@ -435,12 +451,19 @@ REAL_2 = [
    growth=None, gm=None,
    product_tags='Car Subscription|All Inclusive Monthly Car|Owned Vehicle Fleet|Ownership Alternative|EV Fleet|Delivered To Door')),
  ('lyka', 'Personalised fresh dog food on a recurring plan, portioned and delivered frozen',
+  # RE-TAGGED 8-Sep-2026 on Daniil's ruling: "BARK must be in the comps set". It carried end
+  # market Food & Grocery; BARK and Chewy, the pool's pet names, carry Retail & E-commerce, so
+  # BARK scored highest of anything (20.8) and still failed the who-it-sells-to test, and the
+  # pricing set was grocery deliverers in a non-pricing tier (no listed range, gate FAIL).
+  # Measured: listed BARK 23.8, YETI, Hims & Hers, DIRECT, 3 priced, Chewy in the wider ring;
+  # private keeps Huel and AG1, gains Thrasio, Quince, SKIMS, loses OLIPOP and Liquid Death.
+  # Gate FAIL to PASS. A Pet Care end market would be cleaner and is noted for the taxonomy build.
   dict(archetype='Consumer Brand', archetype_secondary='',
-   industry='Food & Grocery', function='Commerce Operations', buyer='CONSUMER',
+   industry='Retail & E-commerce', function='Commerce Operations', buyer='CONSUMER',
    gtm_motion='PAID_ACQUISITION', revenue_model='SUBSCRIPTION_CONSUMER', product_role='BRAND',
    asset_intensity='OWN_PRODUCT', purchase_frequency='SUBSCRIPTION', ai_stance='AI_NEUTRAL',
    growth=None, gm=None,
-   product_tags='Fresh Pet Food|Personalised Meal Plan|Dog Food Subscription|Vet Formulated Nutrition|Frozen Direct Delivery|Portioned Meals')),
+   product_tags='Fresh Pet Food|Personalised Meal Plan|Dog Food Subscription|Vet Formulated Nutrition|Frozen Direct Delivery|Portioned Meals|Pet Products|Subscription Box')),
 
  # --- delivery and fulfilment operations ---------------------------------
  ('hived', 'All-electric parcel delivery network operating its own couriers for ecommerce brands',
@@ -629,8 +652,14 @@ OUT_OF_MARKET = ('hop-aero', 'ultrasonium', 'apollo-atomics')
 
 REAL_3 = [
  ('alloovium', 'The document intelligence layer for construction',
-  dict(archetype='Vertical Software', archetype_secondary='Data, AI & Developer Tools',
-   industry='Real Estate', function='Operations', buyer='LOB', gtm_motion='MIDMARKET',
+  # RE-TAGGED 8-Sep-2026 on Daniil's ruling. It carried end market Real Estate while Procore,
+  # Trimble, Bentley and Nemetschek carry Construction & Infrastructure, so the construction
+  # names failed the who-it-sells-to test and sat in the wider ring while AppFolio (property
+  # management) and sales-data names came in on Real Estate plus the Data & AI secondary.
+  # Measured: listed Procore 12.5, Trimble 10.1, Bentley 9.0, DIRECT, 3 priced. The private
+  # lane stays legal and hospitality software (the Vertical Software catch-all, taxonomy rule).
+  dict(archetype='Vertical Software', archetype_secondary='',
+   industry='Construction & Infrastructure', function='Operations', buyer='LOB', gtm_motion='MIDMARKET',
    revenue_model='SEATS', product_role='SOR', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='Construction Document Intelligence|Drawing And Spec Extraction|Submittal Review|RFI Automation|Construction Project Records')),
@@ -785,11 +814,19 @@ REAL_3 += [
    ai_stance='AI_NEUTRAL', growth=None, gm=None,
    product_tags='Wearable Data API|Health Data Integration|Biometric Infrastructure|Device Interoperability|Digital Health Platform')),
  ('kita', 'Automate credit assessment for lenders in emerging markets',
-  dict(archetype='Lending & Credit', archetype_secondary='Vertical Software',
+  # RE-TAGGED 8-Sep-2026 on Daniil's ruling: "agree should not be a lender". Lending & Credit
+  # first put it behind the lender fence (rule B3, 28 Aug: lenders and non-lenders never price
+  # each other), which walled off Q2, Jack Henry, Alkami, Mitek and Mambu and let in Merchants
+  # Bancorp, Close Brothers, NewtekOne and BFF Bank. Software first. Measured: listed Fair Isaac,
+  # Blend Labs, Qualco, Q2, FIS, Jack Henry, EVERTEC (7 priced); private Sapiens, Mambu, Carta,
+  # Accolade, AuditBoard, Cityblock. Upstart and Pagaya leave, by the same fence. Daniil wants
+  # it closer to Mambu, Tuum and Thought Machine: Mambu is held, the other two are on the
+  # sourcing list.
+  dict(archetype='Vertical Software', archetype_secondary='Lending & Credit',
    industry='Financial Services', function='Banking & Lending', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='CONSUMPTION', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
-   product_tags='Credit Scoring|Alternative Data Underwriting|Emerging Market Lending|Loan Decisioning|Risk Assessment API')),
+   product_tags='Credit Scoring|Alternative Data Underwriting|Emerging Market Lending|Loan Decisioning|Risk Assessment API|Credit Decisioning Software')),
  ('agentcard', 'Debit cards for AI agents',
   dict(archetype='Card Issuing & BaaS', archetype_secondary='Commerce & Payments Software',
    industry='Financial Services', function='Finance & Payments', buyer='DEV', gtm_motion='PLG',
@@ -812,8 +849,9 @@ REAL_3 += [
 
 REAL_3 += [
  ('florin', 'The insurance carrier with zero underwriters',
+  # END MARKET FOLDED 8-Sep-2026 (TAKEOVER 7): Insurance, the label the pool's insurers and insurance-software rows carry; was Financial Services, which reached wealth platforms and bill-payment networks.
   dict(archetype='Insurance Technology', archetype_secondary='',
-   industry='Financial Services', function='Operations', buyer='SMB', gtm_motion='PAID_ACQUISITION',
+   industry='Insurance', function='Operations', buyer='SMB', gtm_motion='PAID_ACQUISITION',
    revenue_model='TRANSACTION_FEE', product_role='SOR', asset_intensity='', purchase_frequency='SUBSCRIPTION',
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='Full Stack Insurance Carrier|Automated Underwriting|Policy Administration|Claims Automation|Digital Insurance')),
@@ -852,11 +890,21 @@ REAL_3 += [
    also_compare={'Whatnot': 'Daniil, 6 Sep 2026: collectibles and trading-card marketplace, good enough',
                  'StockX': 'Daniil, 6 Sep 2026: collectibles resale marketplace, good enough'})),
  ('ekho-labs', 'World model for freight',
-  dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Data, AI & Developer Tools',
+  # RE-TAGGED 8-Sep-2026 (Route A, Daniil's ruling on the evaluator's verdict): it carried the
+  # operators' archetype and was priced off seven parcel carriers. Supply-chain software first.
+  # Daniil: Samsara agreed; Kinaxis, Manhattan and Tecsys "less perfect" (planning and stock, not
+  # vehicles); Eurowag on the sourcing list. Samsara shares no product word with it, so it is
+  # PINNED on his word. The Data & AI secondary is dropped: measured, it handed the listed set GB
+  # Group, Similarweb, ZoomInfo and Amplitude and the private set Gong, AlphaSense and Databricks.
+  # Measured after: listed Kinaxis, Tecsys, Manhattan, Samsara (4 priced); private E2open and
+  # Shiprocket, 1 priced, so it FAILS the gate until the bulk pass finds a second priced
+  # supply-chain software round (project44, FourKites, Flexport are the names to look for).
+  dict(archetype='Supply Chain & Logistics Software', archetype_secondary='',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='SEATS', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
-   product_tags='Freight Intelligence|Supply Chain Modelling|Logistics Forecasting|Shipment Visibility|Carrier Analytics')),
+   product_tags='Freight Intelligence|Supply Chain Modelling|Logistics Forecasting|Shipment Visibility|Carrier Analytics',
+   also_compare={'Samsara Inc.': 'Daniil, 8 Sep 2026: agree on Samsara (fleet telematics is the software side of freight)'})),
  ('manifold-robotics', 'Deployment-ready robotic labor for the supply chain industry',
   dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Design & Engineering',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
@@ -869,7 +917,9 @@ REAL_3 += [
    also_compare={'Vention': 'Daniil, 6 Sep 2026: industrial automation cells and robots, good enough',
                  'Applied Intuition': 'Daniil, 6 Sep 2026: robotics development platform, good enough'})),
  ('bizmark', 'Agentic supply chain optimization',
-  dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Business Applications',
+  # RE-TAGGED 8-Sep-2026 (Route A): same fault as ekho-labs; Kinaxis shared 3.9 product points
+  # with it and sat behind the family gate. Supply-chain software first.
+  dict(archetype='Supply Chain & Logistics Software', archetype_secondary='Business Applications',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='MIDMARKET',
    revenue_model='SEATS', product_role='TOOL', asset_intensity='', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1088,7 +1138,11 @@ REAL_4 = [
  ('lambda-robotics', 'Robotics for AI Infrastructure',
   # Robots built and deployed into the data centres that run frontier AI. Filed under what it
   # sells (rule A11), beside manifold-robotics, which sells robotic labour to warehouses.
-  dict(archetype='Design & Engineering', archetype_secondary='Cloud & Infrastructure',
+  # RE-TAGGED 8-Sep-2026 on Daniil's ruling: the Cloud & Infrastructure secondary described the
+  # CUSTOMERS (data centres) and handed it Supabase, Cato Networks and Databricks. Dropped.
+  # Measured: private Vention and Applied Intuition (Daniil: both make sense), 1 priced, so it
+  # FAILS the gate until the bulk pass adds a listed robotics maker; listed lane unchanged.
+  dict(archetype='Design & Engineering', archetype_secondary='',
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='OWN_PRODUCT', purchase_frequency='',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1145,7 +1199,13 @@ REAL_4 = [
    ai_stance='AI_EMBEDDED', growth=None, gm=None,
    product_tags='Underground Utility Mapping|Ground Penetrating Radar|Autonomous Survey Rovers|Construction Site Mapping|Utility Strike Prevention|3D Subsurface Maps')),
  ('derya', 'AI Brokers for Industrial Trade',
-  dict(archetype='Commerce Enablement & Fulfilment', archetype_secondary='Business Applications',
+  # RE-TAGGED 8-Sep-2026 (Route A) on Daniil's reading: "close to Salesforce, the only difference
+  # this one is vertical", plus the supply-chain software peers. Recorded beside it: the company's
+  # own page says it executes procurement, shipping and customs for the customer and has handled
+  # more than $15m of freight, and the profile is services-led, so the freight forwarders
+  # (Expeditors, C.H. Robinson) it was shown are not wrong in kind. His ruling stands; reverse
+  # the two archetypes if a re-read of the site says broker rather than software.
+  dict(archetype='Supply Chain & Logistics Software', archetype_secondary='Business Applications',
    industry='Manufacturing', function='Supply Chain', buyer='SMB', gtm_motion='MIDMARKET',
    revenue_model='SERVICES_LED', product_role='AGGREGATOR', asset_intensity='NONE', purchase_frequency='REPEAT_TRANSACTION',
    ai_stance='AI_NATIVE', growth=None, gm=None,
@@ -1163,8 +1223,9 @@ REAL_4 = [
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='AI Coworker In Slack|Slack Native Agent|Company Wiki Automation|Workflow Automation Suggestions|Model Agnostic Agent|Team Knowledge Base')),
  ('princeps', 'AI-native insurance company for the compute economy',
+  # END MARKET FOLDED 8-Sep-2026 (TAKEOVER 7): Insurance, the label the pool's insurers and insurance-software rows carry; was Financial Services, which reached wealth platforms and bill-payment networks.
   dict(archetype='Insurance Technology', archetype_secondary='',
-   industry='Financial Services', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
+   industry='Insurance', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='TRANSACTION_FEE', product_role='SOR', asset_intensity='', purchase_frequency='SUBSCRIPTION',
    ai_stance='AI_NATIVE', growth=None, gm=None,
    product_tags='Compute Infrastructure Insurance|Data Centre Insurance|GPU Residual Value Cover|SLA And Outage Underwriting|AI Native Insurer|Project Finance Enablement')),

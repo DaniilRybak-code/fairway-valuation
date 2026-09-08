@@ -92,7 +92,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "a",
       "agent",
       "coding",
       "developer",
@@ -162,7 +161,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
@@ -174,14 +173,14 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do A/B Testing, Feature Flags; same type of business; sold the same way; same AI stance",
-    "score": 15.6,
+    "score": 15.4,
     "ticker": "NASDAQCM:AMPL"
    },
    {
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform, source; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of source; same type of business; same business function; same kind of customer",
     "score": 12.2,
     "ticker": "NASDAQGS:GTLB"
    },
@@ -205,7 +204,7 @@
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same type of business; same revenue model; same AI stance",
+    "reason": "same type of business; same revenue model; same AI stance",
     "score": 7.6,
     "ticker": "NYSE:SNOW"
    }
@@ -244,13 +243,11 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "a",
     "agent",
     "b",
     "developer",
     "feature",
     "flags",
-    "platform",
     "source",
     "testing",
     "tools"
@@ -304,7 +301,7 @@
      "ticker": "NYSE:SNOW"
     }
    ],
-   "tag_evidence": 8.6,
+   "tag_evidence": 8.4,
    "thin": false,
    "triangulated": false
   },
@@ -696,7 +693,7 @@
     "in_medians": true,
     "mult": 72.86,
     "reason": "both do Open Source; related type of business; same business function; same kind of customer",
-    "score": 19.2,
+    "score": 19.0,
     "type": "PRIMARY"
    },
    {
@@ -809,7 +806,6 @@
    ],
    "positioning": [],
    "shared_words": [
-    "a",
     "agent",
     "coding",
     "developer",
@@ -879,7 +875,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -905,7 +901,7 @@
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way; same AI stance",
     "score": 9.1,
     "ticker": "NYSE:TWLO"
    }
@@ -945,8 +941,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "developer",
-    "platform"
+    "developer"
    ],
    "show_retention": true,
    "spread": 5.7,

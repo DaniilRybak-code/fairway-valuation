@@ -54,14 +54,14 @@
       {
        "company": "Semrush",
        "mult": 4.3,
-       "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+       "reason": "related type of business; same business function; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
       {
        "company": "Restaurant365",
        "mult": 10.0,
-       "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
+       "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -75,7 +75,7 @@
       {
        "company": "Owner",
        "mult": 23.0,
-       "reason": "shares the language of business, marketing; same type of business; same business function; same kind of customer",
+       "reason": "same type of business; same business function; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -89,13 +89,10 @@
      ],
      "positioning": [],
      "shared_words": [
-      "automation",
-      "business",
       "client",
       "firm",
       "law",
-      "legal",
-      "marketing"
+      "legal"
      ],
      "spread": 13.0,
      "table": [
@@ -177,7 +174,7 @@
     "company": "LegalZoom.com, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of business, legal, services; same type of business; same end market",
+    "reason": "shares the language of legal; same type of business; same end market",
     "score": 6.6,
     "ticker": "NASDAQGS:LZ"
    },
@@ -197,7 +194,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -224,13 +221,9 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "business",
     "client",
     "legal",
-    "marketing",
-    "professional",
-    "services"
+    "professional"
    ],
    "show_retention": true,
    "spread": 4.2,
@@ -720,7 +713,7 @@
     "date": "Jun-25",
     "in_medians": false,
     "mult": 66.7,
-    "reason": "shares the language of legal, professional, services; same type of business; same end market; same revenue model",
+    "reason": "shares the language of legal, professional; same type of business; same end market; same revenue model",
     "score": 14.4,
     "type": "PRIMARY"
    },
@@ -742,7 +735,7 @@
     "date": "Aug-26",
     "in_medians": true,
     "mult": 23.0,
-    "reason": "shares the language of business, marketing; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 19.2,
     "type": "PRIMARY"
    },
@@ -753,7 +746,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 4.3,
-    "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+    "reason": "related type of business; same business function; same kind of customer; same revenue model",
     "score": 13.6,
     "type": "CONTROL"
    },
@@ -764,7 +757,7 @@
     "date": "Jan-24",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of business; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 10.6,
     "type": "PRIMARY"
    },
@@ -775,7 +768,7 @@
     "date": "May-23",
     "in_medians": true,
     "mult": 10.0,
-    "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 14.1,
     "type": "PRIMARY"
    }
@@ -829,14 +822,14 @@
     {
      "company": "Semrush",
      "mult": 4.3,
-     "reason": "shares the language of marketing; related type of business; same business function; same kind of customer",
+     "reason": "related type of business; same business function; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
     {
      "company": "Restaurant365",
      "mult": 10.0,
-     "reason": "shares the language of automation; same type of business; same kind of customer; same revenue model",
+     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -850,7 +843,7 @@
     {
      "company": "Owner",
      "mult": 23.0,
-     "reason": "shares the language of business, marketing; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -864,13 +857,10 @@
    ],
    "positioning": [],
    "shared_words": [
-    "automation",
-    "business",
     "client",
     "firm",
     "law",
-    "legal",
-    "marketing"
+    "legal"
    ],
    "spread": 13.0,
    "table": [
@@ -935,7 +925,7 @@
     "company": "EverCommerce Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of services; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 7.6,
     "ticker": "NASDAQGS:EVCM"
    },
@@ -951,7 +941,7 @@
     "company": "Ooma, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of business; same kind of customer; same revenue model",
+    "reason": "same kind of customer; same revenue model",
     "score": 5.1,
     "ticker": "NYSE:OOMA"
    }
@@ -963,7 +953,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -989,12 +979,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "automation",
-    "business",
-    "marketing",
-    "services"
-   ],
+   "shared_words": [],
    "show_retention": true,
    "spread": 1.6,
    "table": [
@@ -1028,7 +1013,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "AI growth engine for corporate law firms"

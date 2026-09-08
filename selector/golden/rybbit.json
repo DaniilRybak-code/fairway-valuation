@@ -75,7 +75,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "analytics",
       "open",
       "product",
       "replay",
@@ -155,7 +154,7 @@
     "company": "Elastic N.V.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 11.1,
     "ticker": "NYSE:ESTC"
    },
@@ -171,7 +170,7 @@
     "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of analytics; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model",
     "score": 9.6,
     "ticker": "NASDAQCM:RDVT"
    },
@@ -248,7 +247,7 @@
     {
      "company": "Elastic N.V.",
      "mult": 4.2,
-     "reason": "shares the language of analytics; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -269,7 +268,7 @@
     {
      "company": "Red Violet, Inc.",
      "mult": 10.0,
-     "reason": "shares the language of analytics; same type of business; same business function; same revenue model",
+     "reason": "same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -284,7 +283,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "analytics",
     "product",
     "replay",
     "session",
@@ -827,7 +825,6 @@
    ],
    "positioning": [],
    "shared_words": [
-    "analytics",
     "open",
     "product",
     "replay",
@@ -960,7 +957,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "analytics",
     "web"
    ],
    "show_retention": true,

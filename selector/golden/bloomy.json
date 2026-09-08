@@ -230,7 +230,6 @@
       "curriculum",
       "learning",
       "school",
-      "software",
       "teacher"
      ],
      "spread": 110.2,
@@ -275,7 +274,7 @@
     "company": "D2L Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery, learning, platform; same type of business; same end market; same business function",
+    "reason": "shares the language of learning; same type of business; same end market; same business function",
     "score": 13.0,
     "ticker": "TSX:DTOL"
    },
@@ -342,7 +341,7 @@
     {
      "company": "D2L Inc.",
      "mult": 1.2,
-     "reason": "shares the language of delivery, learning, platform; same type of business; same end market; same business function",
+     "reason": "shares the language of learning; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -365,11 +364,8 @@
    "post_stated_n": 0,
    "shared_words": [
     "adaptive",
-    "delivery",
     "learning",
-    "platform",
-    "school",
-    "software"
+    "school"
    ],
    "show_retention": false,
    "spread": 11.8,
@@ -803,7 +799,7 @@
     "company": "United Parcel Service",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "NYSE:UPS"
    },
@@ -811,7 +807,7 @@
     "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "NYSE:FDX"
    },
@@ -819,7 +815,7 @@
     "company": "PostNL N.V.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "ENXTAM:PNL"
    },
@@ -827,7 +823,7 @@
     "company": "SG Holdings Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "TSE:9143"
    },
@@ -835,7 +831,7 @@
     "company": "S.F. Holding Co., Ltd.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of delivery; same business function; same kind of customer; sold the same way",
+    "reason": "same business function; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "SZSE:002352"
    }
@@ -873,9 +869,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "delivery"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "spread": 4.0,
    "table": [

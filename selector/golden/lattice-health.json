@@ -236,7 +236,7 @@
     "company": "Waystar Holding Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, healthcare, it; same type of business; same end market; same kind of customer",
+    "reason": "shares the language of healthcare, it; same type of business; same end market; same kind of customer",
     "score": 12.1,
     "ticker": "NASDAQGS:WAY"
    },
@@ -247,14 +247,6 @@
     "reason": "shares the language of healthcare; same type of business; same end market; same kind of customer",
     "score": 11.6,
     "ticker": "NYSE:PHR"
-   },
-   {
-    "company": "Tecsys Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of healthcare; same type of business; same end market; same revenue model",
-    "score": 10.6,
-    "ticker": "TSX:TCS"
    },
    {
     "company": "Consensus Cloud Solutions, Inc.",
@@ -271,6 +263,14 @@
     "reason": "same type of business; same end market; same revenue model; same AI stance",
     "score": 9.5,
     "ticker": "NYSE:WEAV"
+   },
+   {
+    "company": "Tecsys Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of healthcare; related type of business; same end market; same revenue model",
+    "score": 9.1,
+    "ticker": "TSX:TCS"
    },
    {
     "company": "Veeva Systems Inc.",
@@ -325,16 +325,16 @@
      "transaction_type": ""
     },
     {
-     "company": "Tecsys Inc.",
+     "company": "Weave Communications, Inc.",
      "mult": 1.9,
-     "reason": "shares the language of healthcare; same type of business; same end market; same revenue model",
+     "reason": "same type of business; same end market; same revenue model; same AI stance",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
-     "company": "Weave Communications, Inc.",
+     "company": "Tecsys Inc.",
      "mult": 1.9,
-     "reason": "same type of business; same end market; same revenue model; same AI stance",
+     "reason": "shares the language of healthcare; related type of business; same end market; same revenue model",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -348,7 +348,7 @@
     {
      "company": "Waystar Holding Corp.",
      "mult": 4.5,
-     "reason": "shares the language of ai, healthcare, it; same type of business; same end market; same kind of customer",
+     "reason": "shares the language of healthcare, it; same type of business; same end market; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -370,7 +370,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "healthcare",
     "it"
    ],
@@ -387,15 +386,6 @@
      "ticker": "NYSE:PHR"
     },
     {
-     "company": "Tecsys Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
-     "multiple": 1.9,
-     "recurring_pct": 58.0,
-     "retention_pct": 106.0,
-     "ticker": "TSX:TCS"
-    },
-    {
      "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 13.8,
@@ -403,6 +393,15 @@
      "recurring_pct": null,
      "retention_pct": 92.0,
      "ticker": "NYSE:WEAV"
+    },
+    {
+     "company": "Tecsys Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.2,
+     "multiple": 1.9,
+     "recurring_pct": 58.0,
+     "retention_pct": 106.0,
+     "ticker": "TSX:TCS"
     },
     {
      "company": "Consensus Cloud Solutions, Inc.",

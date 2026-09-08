@@ -11,7 +11,7 @@
       "NET_REVENUE": 4
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -43,9 +43,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "brand",
-      "care",
-      "home"
+      "care"
      ],
      "spread": 2.2,
      "table": [
@@ -92,7 +90,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE_GROSS": {
      "anchor_dropped": false,
@@ -130,10 +128,8 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "at",
       "beauty",
       "care",
-      "home",
       "manicure",
       "nail"
      ],
@@ -151,7 +147,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 2.7,
+     "tag_evidence": 2.1,
      "thin": true,
      "triangulated": false
     }
@@ -162,7 +158,7 @@
     "company": "FIGS, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 22.6,
     "ticker": "NYSE:FIGS"
    },
@@ -170,7 +166,7 @@
     "company": "e.l.f. Beauty, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of beauty, brand; same type of business; same end market; same business function",
+    "reason": "shares the language of beauty; same type of business; same end market; same business function",
     "score": 21.2,
     "ticker": "NYSE:ELF"
    },
@@ -178,7 +174,7 @@
     "company": "Warby Parker Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of brand, home; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 20.7,
     "ticker": "NYSE:WRBY"
    },
@@ -186,7 +182,7 @@
     "company": "On Holding AG",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 18.6,
     "ticker": "NYSE:ONON"
    },
@@ -194,7 +190,7 @@
     "company": "ASOS Plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of brand; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; same kind of customer",
     "score": 14.1,
     "ticker": "LSE:ASC"
    },
@@ -222,7 +218,7 @@
     "UNKNOWN": 6
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -249,7 +245,7 @@
     {
      "company": "ASOS Plc",
      "mult": 0.4,
-     "reason": "shares the language of brand; related type of business; same end market; same business function",
+     "reason": "related type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -263,28 +259,28 @@
     {
      "company": "On Holding AG",
      "mult": 1.7,
-     "reason": "shares the language of brand; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Warby Parker Inc.",
      "mult": 2.7,
-     "reason": "shares the language of brand, home; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "FIGS, Inc.",
      "mult": 2.9,
-     "reason": "shares the language of brand; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; same kind of customer",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "e.l.f. Beauty, Inc.",
      "mult": 3.4,
-     "reason": "shares the language of beauty, brand; same type of business; same end market; same business function",
+     "reason": "shares the language of beauty; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     }
@@ -300,9 +296,7 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "beauty",
-    "brand",
-    "home"
+    "beauty"
    ],
    "show_retention": false,
    "spread": 8.5,
@@ -364,7 +358,7 @@
    ],
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -514,7 +508,7 @@
     "date": "Mar-26",
     "in_medians": true,
     "mult": 10.1,
-    "reason": "shares the language of brand, home; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 31.7,
     "type": "PRIMARY"
    },
@@ -525,7 +519,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 5.0,
-    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 28.6,
     "type": "PRIMARY"
    },
@@ -537,7 +531,7 @@
     "in_medians": true,
     "mult": 2.61,
     "reason": "both do Nail Care, Beauty, At-Home Manicure; same type of business; same end market; same kind of customer",
-    "score": 21.2,
+    "score": 20.6,
     "type": "PRIMARY"
    },
    {
@@ -547,7 +541,7 @@
     "date": "Nov-24",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 26.1,
     "type": "SECONDARY"
    },
@@ -558,7 +552,7 @@
     "date": "Mar-21",
     "in_medians": true,
     "mult": 4.6,
-    "reason": "shares the language of brand, care; same type of business; same end market; same business function",
+    "reason": "shares the language of care; same type of business; same end market; same business function",
     "score": 22.8,
     "type": "PRIMARY"
    },
@@ -569,7 +563,7 @@
     "date": "Feb-21",
     "in_medians": false,
     "mult": 6.7,
-    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 25.6,
     "type": "PRIMARY"
    },
@@ -580,7 +574,7 @@
     "date": "May-19",
     "in_medians": true,
     "mult": 9.3,
-    "reason": "shares the language of brand; same type of business; same end market; same business function",
+    "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 26.1,
     "type": "PRIMARY"
    }
@@ -595,7 +589,7 @@
     "NET_REVENUE": 4
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -623,9 +617,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "brand",
-    "care",
-    "home"
+    "care"
    ],
    "spread": 2.2,
    "table": [
@@ -672,7 +664,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 87,
   "secondary": [
@@ -680,7 +672,7 @@
     "company": "YETI Holdings, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 15.6,
     "ticker": "NYSE:YETI"
    },
@@ -688,7 +680,7 @@
     "company": "BARK, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 15.1,
     "ticker": "NYSE:BARK"
    },
@@ -758,14 +750,14 @@
     {
      "company": "BARK, Inc.",
      "mult": 0.3,
-     "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "YETI Holdings, Inc.",
      "mult": 1.5,
-     "reason": "shares the language of brand; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -779,9 +771,7 @@
    ],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "brand"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "spread": 9.0,
    "table": [

@@ -90,6 +90,15 @@ SECTOR_ALIASES = {
     # Shopify is Commerce & Payments Software here and BASE is Commerce Enablement & Fulfilment;
     # a fund that calls itself e-commerce enablement backs both, so it is offered to both.
     'E-commerce Enablement': ('Commerce Enablement & Fulfilment', 'Commerce & Payments Software'),
+    # Added 8-Sep-2026 (Route A). The supply-chain software archetype was split out of the
+    # operators; a fund that names logistics or supply chain backs both kinds, so it is offered
+    # to both, and the E2open row's own category ("Connected supply chain software network")
+    # lands on the software side.
+    'Logistics / Supply chain': ('Commerce Enablement & Fulfilment', 'Local Delivery & On-Demand',
+                                 'Supply Chain & Logistics Software'),
+    'Delivery logistics and supply chain': ('Local Delivery & On-Demand', 'Commerce Enablement & Fulfilment',
+                                            'Supply Chain & Logistics Software'),
+    'Connected supply chain software network': ('Supply Chain & Logistics Software',),
     'D2C / Consumer Brand': ('Consumer Brand',),
     'D2C': ('Consumer Brand',),
     'Consumer Marketplace': ('Third-Party Marketplace',),

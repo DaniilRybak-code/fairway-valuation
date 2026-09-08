@@ -55,10 +55,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
       "collection",
-      "data",
-      "real",
       "training"
      ],
      "spread": 2.9,
@@ -135,7 +132,7 @@
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, data; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
     "score": 11.6,
     "ticker": "NYSE:SNOW"
    },
@@ -143,7 +140,7 @@
     "company": "Palantir Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, data; same type of business; same business function; sold the same way",
+    "reason": "same type of business; same business function; sold the same way; same AI stance",
     "score": 9.1,
     "ticker": "NASDAQGS:PLTR"
    }
@@ -155,7 +152,7 @@
     "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -181,10 +178,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "ai",
-    "data"
-   ],
+   "shared_words": [],
    "show_retention": true,
    "spread": 2.5,
    "table": [
@@ -209,7 +203,7 @@
    ],
    "tag_evidence": 0.1,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
   "investors_callable": [
    {
@@ -601,7 +595,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of ai, collection, data; same type of business; same business function; same revenue model",
+    "reason": "shares the language of collection; same type of business; same business function; same revenue model",
     "score": 13.4,
     "type": "MIXED"
    },
@@ -612,7 +606,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 9.88,
-    "reason": "shares the language of data, real; same type of business; same revenue model",
+    "reason": "same type of business; same revenue model",
     "score": 10.2,
     "type": "CONTROL"
    },
@@ -645,7 +639,7 @@
     "date": "Sep-23",
     "in_medians": true,
     "mult": 28.7,
-    "reason": "shares the language of ai, data; same type of business; same business function; same revenue model",
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
     "score": 16.1,
     "type": "PRIMARY"
    },
@@ -656,7 +650,7 @@
     "date": "Aug-17",
     "in_medians": false,
     "mult": null,
-    "reason": "shares the language of ai, collection, data; same type of business; same business function; same revenue model",
+    "reason": "shares the language of collection; same type of business; same business function; same revenue model",
     "score": 13.4,
     "type": "CONTROL"
    }
@@ -711,10 +705,7 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
     "collection",
-    "data",
-    "real",
     "training"
    ],
    "spread": 2.9,

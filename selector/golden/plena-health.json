@@ -53,7 +53,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "management",
       "patient",
       "practice",
       "records",
@@ -96,7 +95,7 @@
       "NET_REVENUE": 1
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -128,7 +127,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "management",
       "revenue"
      ],
      "spread": 1.4,
@@ -166,7 +164,7 @@
      ],
      "tag_evidence": 0.2,
      "thin": false,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE_GROSS": {
      "anchor_dropped": false,
@@ -177,7 +175,7 @@
       "REVENUE_GROSS": 4
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -233,7 +231,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "management",
       "patient",
       "practice",
       "records"
@@ -300,7 +297,7 @@
     "company": "Veeva Systems Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of clinical, management; same type of business; same end market; same business function",
+    "reason": "shares the language of clinical; same type of business; same end market; same business function",
     "score": 11.1,
     "ticker": "NYSE:VEEV"
    },
@@ -308,7 +305,7 @@
     "company": "Evolent Health, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of management, specialty; related type of business; same end market; same business function",
+    "reason": "shares the language of specialty; related type of business; same end market; same business function",
     "score": 8.1,
     "ticker": "NYSE:EVH"
    },
@@ -324,7 +321,7 @@
     "company": "Waystar Holding Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of cycle, management, patient; same type of business; same end market",
+    "reason": "shares the language of cycle, patient, revenue; same type of business; same end market",
     "score": 7.4,
     "ticker": "NASDAQGS:WAY"
    },
@@ -379,7 +376,7 @@
     {
      "company": "Evolent Health, Inc.",
      "mult": 0.4,
-     "reason": "shares the language of management, specialty; related type of business; same end market; same business function",
+     "reason": "shares the language of specialty; related type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -414,14 +411,14 @@
     {
      "company": "Waystar Holding Corp.",
      "mult": 4.5,
-     "reason": "shares the language of cycle, management, patient; same type of business; same end market",
+     "reason": "shares the language of cycle, patient, revenue; same type of business; same end market",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Veeva Systems Inc.",
      "mult": 9.7,
-     "reason": "shares the language of clinical, management; same type of business; same end market; same business function",
+     "reason": "shares the language of clinical; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     }
@@ -431,7 +428,6 @@
    "shared_words": [
     "clinical",
     "cycle",
-    "management",
     "patient",
     "practice",
     "revenue",
@@ -889,7 +885,7 @@
     "NET_REVENUE": 1
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
@@ -917,7 +913,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "management",
     "revenue"
    ],
    "spread": 1.4,
@@ -955,7 +950,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   },
   "private_window_months": 65,
   "secondary": [
@@ -971,7 +966,7 @@
     "company": "monday.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of management, workflow; same business function; same kind of customer; same revenue model",
+    "reason": "shares the language of workflow; same business function; same kind of customer; same revenue model",
     "score": 8.5,
     "ticker": "NASDAQ:MNDY"
    },
@@ -1007,7 +1002,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1035,14 +1030,13 @@
     {
      "company": "monday.com Ltd.",
      "mult": 2.0,
-     "reason": "shares the language of management, workflow; same business function; same kind of customer; same revenue model",
+     "reason": "shares the language of workflow; same business function; same kind of customer; same revenue model",
      "tier": "BROAD",
      "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "management",
     "patient",
     "practice",
     "scheduling"

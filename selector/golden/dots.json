@@ -46,7 +46,6 @@
      "shared_words": [
       "api",
       "multi",
-      "payments",
       "payouts",
       "tax"
      ],
@@ -106,7 +105,7 @@
       "REVENUE_GROSS": 3
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -140,7 +139,6 @@
      "shared_words": [
       "api",
       "multi",
-      "payments",
       "payouts"
      ],
      "spread": 5.7,
@@ -195,7 +193,7 @@
     "company": "Wise plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of multi, payments; same type of business; same business function; sold the same way",
+    "reason": "shares the language of multi; same type of business; same business function; sold the same way",
     "score": 8.2,
     "ticker": "LSE:WISE"
    },
@@ -243,9 +241,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "api",
-    "marketplace",
     "multi",
-    "payments",
     "payouts"
    ],
    "show_retention": false,
@@ -632,7 +628,7 @@
     "date": "Apr-21",
     "in_medians": true,
     "mult": 48.0,
-    "reason": "shares the language of payments, payouts; same type of business; same business function; same AI stance",
+    "reason": "shares the language of payouts; same type of business; same business function; same AI stance",
     "score": 11.9,
     "type": "PRIMARY"
    }
@@ -678,7 +674,6 @@
    "shared_words": [
     "api",
     "multi",
-    "payments",
     "payouts",
     "tax"
    ],
@@ -735,7 +730,7 @@
     "company": "WEX Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of multi, payments; same business function; same revenue model; same AI stance",
+    "reason": "shares the language of multi; same business function; same revenue model; same AI stance",
     "score": 6.7,
     "ticker": "NYSE:WEX"
    }
@@ -747,7 +742,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -774,8 +769,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "multi",
-    "payments"
+    "multi"
    ],
    "show_retention": false,
    "sole": "WEX Inc.",
@@ -793,7 +787,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Payouts API sending money by any method to marketplace sellers and gig workers"

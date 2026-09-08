@@ -11,7 +11,7 @@
       "PAYING_SUBSCRIBERS": 1
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -37,10 +37,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "ai",
-      "app"
-     ],
+     "shared_words": [],
      "sole": "Suno",
      "spread": 1.0,
      "table": [
@@ -57,7 +54,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -69,7 +66,7 @@
       "ARR_RUNRATE": 1
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -97,29 +94,27 @@
       {
        "company": "Suno",
        "mult": 18.0,
-       "reason": "shares the language of ai, app; same type of business; sold the same way; same AI stance",
+       "reason": "same type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Framer",
        "mult": 40.0,
-       "reason": "shares the language of ai, desktop; same type of business; same business function; same kind of customer",
+       "reason": "shares the language of desktop; same type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Perplexity",
        "mult": 120.0,
-       "reason": "shares the language of ai, assistant; same type of business; sold the same way; same AI stance",
+       "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "app",
       "assistant",
       "desktop"
      ],
@@ -183,7 +178,7 @@
     "company": "Truecaller AB (publ)",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; sold the same way",
+    "reason": "same type of business; sold the same way",
     "score": 7.1,
     "ticker": "OM:TRUE B"
    },
@@ -191,7 +186,7 @@
     "company": "Life360, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of app; same type of business; sold the same way",
+    "reason": "same type of business; sold the same way",
     "score": 6.1,
     "ticker": "ASX:360"
    },
@@ -238,7 +233,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app",
     "desktop",
     "local"
    ],
@@ -614,7 +608,7 @@
     "date": "Jun-26",
     "in_medians": true,
     "mult": 18.0,
-    "reason": "shares the language of ai, app; same type of business; sold the same way; same AI stance",
+    "reason": "same type of business; sold the same way; same AI stance",
     "score": 10.6,
     "type": "PRIMARY"
    },
@@ -625,7 +619,7 @@
     "date": "Aug-25",
     "in_medians": true,
     "mult": 40.0,
-    "reason": "shares the language of ai, desktop; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of desktop; same type of business; same business function; same kind of customer",
     "score": 16.5,
     "type": "PRIMARY"
    },
@@ -636,7 +630,7 @@
     "date": "Jul-25",
     "in_medians": true,
     "mult": 120.0,
-    "reason": "shares the language of ai, assistant; same type of business; sold the same way; same AI stance",
+    "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
     "score": 11.9,
     "type": "PRIMARY"
    },
@@ -663,7 +657,7 @@
     "ARR_RUNRATE": 1
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": true,
@@ -687,29 +681,27 @@
     {
      "company": "Suno",
      "mult": 18.0,
-     "reason": "shares the language of ai, app; same type of business; sold the same way; same AI stance",
+     "reason": "same type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Framer",
      "mult": 40.0,
-     "reason": "shares the language of ai, desktop; same type of business; same business function; same kind of customer",
+     "reason": "shares the language of desktop; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Perplexity",
      "mult": 120.0,
-     "reason": "shares the language of ai, assistant; same type of business; sold the same way; same AI stance",
+     "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
    "shared_words": [
-    "ai",
-    "app",
     "assistant",
     "desktop"
    ],
@@ -768,7 +760,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -795,7 +787,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app",
     "desktop"
    ],
    "show_retention": false,
@@ -814,7 +805,7 @@
    ],
    "tag_evidence": 0.5,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Local-first AI memory layer for Mac and Windows that drafts in your own tone"

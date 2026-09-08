@@ -44,8 +44,7 @@
      "positioning": [],
      "shared_words": [
       "autonomy",
-      "operations",
-      "software"
+      "operations"
      ],
      "spread": 3.8,
      "table": [
@@ -99,7 +98,7 @@
     "company": "Constellation Software Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of mission, software; related type of business; same business function; same kind of customer",
+    "reason": "shares the language of mission; related type of business; same business function; same kind of customer",
     "score": 9.6,
     "ticker": "TSX:CSU"
    },
@@ -119,7 +118,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -148,8 +147,7 @@
    "shared_words": [
     "mission",
     "operations",
-    "recovery",
-    "software"
+    "recovery"
    ],
    "show_retention": true,
    "spread": 3.0,
@@ -529,7 +527,7 @@
     "date": "Aug-26",
     "in_medians": true,
     "mult": 23.0,
-    "reason": "shares the language of operations, software; same type of business; same AI stance",
+    "reason": "shares the language of operations; same type of business; same AI stance",
     "score": 6.3,
     "type": "PRIMARY"
    },
@@ -551,7 +549,7 @@
     "date": "Apr-24",
     "in_medians": false,
     "mult": 9.0,
-    "reason": "shares the language of operations, software; same type of business; same business function; same revenue model",
+    "reason": "shares the language of operations; same type of business; same business function; same revenue model",
     "score": 10.8,
     "type": "PRIMARY"
    },
@@ -606,8 +604,7 @@
    "positioning": [],
    "shared_words": [
     "autonomy",
-    "operations",
-    "software"
+    "operations"
    ],
    "spread": 3.8,
    "table": [

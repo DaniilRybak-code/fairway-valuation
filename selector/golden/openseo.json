@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -43,9 +43,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
-      "data",
-      "platform",
       "research"
      ],
      "spread": 4.9,
@@ -73,7 +70,7 @@
      ],
      "tag_evidence": 0.3,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -134,26 +131,23 @@
       {
        "company": "Klaviyo",
        "mult": 32.6,
-       "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+       "reason": "same type of business; same business function; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
+       "reason": "shares the language of research; same type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       }
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
       "analysis",
       "backlink",
-      "data",
       "keyword",
-      "platform",
       "rank",
       "research",
       "seo",
@@ -212,7 +206,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 13.1,
     "ticker": "NYSE:KVYO"
    },
@@ -260,9 +254,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "analysis",
-    "data",
     "keyword",
-    "platform",
     "rank",
     "research",
     "seo",
@@ -523,7 +515,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
+    "reason": "shares the language of research; same type of business; same revenue model; sold the same way",
     "score": 15.3,
     "type": "SECONDARY"
    },
@@ -534,7 +526,7 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 32.6,
-    "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
     "score": 15.6,
     "type": "PRIMARY"
    }
@@ -595,26 +587,23 @@
     {
      "company": "Klaviyo",
      "mult": 32.6,
-     "reason": "shares the language of data, platform; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of ai, data, research; same type of business; same revenue model; sold the same way",
+     "reason": "shares the language of research; same type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     }
    ],
    "positioning": [],
    "shared_words": [
-    "ai",
     "analysis",
     "backlink",
-    "data",
     "keyword",
-    "platform",
     "rank",
     "research",
     "seo",
@@ -664,7 +653,7 @@
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
+    "reason": "same revenue model; sold the same way; same AI stance",
     "score": 6.6,
     "ticker": "NYSE:TWLO"
    },
@@ -672,7 +661,7 @@
     "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, platform; same kind of customer; sold the same way; same AI stance",
+    "reason": "same kind of customer; sold the same way; same AI stance",
     "score": 6.6,
     "ticker": "NASDAQGS:WIX"
    },
@@ -680,7 +669,7 @@
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform, source; related type of business; sold the same way; same AI stance",
+    "reason": "shares the language of source; related type of business; sold the same way; same AI stance",
     "score": 6.2,
     "ticker": "NASDAQGS:GTLB"
    },
@@ -688,7 +677,7 @@
     "company": "Snowflake Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, data, platform; related type of business; same revenue model; same AI stance",
+    "reason": "related type of business; same revenue model; same AI stance",
     "score": 6.1,
     "ticker": "NYSE:SNOW"
    }
@@ -700,7 +689,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -727,28 +716,28 @@
     {
      "company": "Wix.com Ltd.",
      "mult": 2.0,
-     "reason": "shares the language of ai, platform; same kind of customer; sold the same way; same AI stance",
+     "reason": "same kind of customer; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "GitLab Inc.",
      "mult": 5.2,
-     "reason": "shares the language of platform, source; related type of business; sold the same way; same AI stance",
+     "reason": "shares the language of source; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Twilio Inc.",
      "mult": 5.2,
-     "reason": "shares the language of data, platform; same revenue model; sold the same way; same AI stance",
+     "reason": "same revenue model; sold the same way; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Snowflake Inc.",
      "mult": 15.6,
-     "reason": "shares the language of ai, data, platform; related type of business; same revenue model; same AI stance",
+     "reason": "related type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -756,9 +745,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
-    "data",
-    "platform",
     "source"
    ],
    "show_retention": true,
@@ -803,7 +789,7 @@
    ],
    "tag_evidence": 0.7,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Open-source alternative to Ahrefs and Semrush, billed by usage and exposed over MCP"

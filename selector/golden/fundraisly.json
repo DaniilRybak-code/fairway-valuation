@@ -4,30 +4,31 @@
    "private": {
     "REVENUE": {
      "anchor_dropped": false,
-     "band": "ADJACENT",
+     "band": "DIRECT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 1
+      "ARR": 1,
+      "ARR_RUNRATE": 1
      },
      "bounded": true,
-     "closeness": "THIN_OVERLAP",
+     "closeness": "SHARED_PRODUCT",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "DIAMOND",
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 12.2,
+     "high": 50.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 12.2,
-     "mid": 12.2,
-     "n": 1,
+     "low": 47.3,
+     "mid": 50.0,
+     "n": 2,
      "period_mix": {
-      "RUN_RATE": 1
+      "RUN_RATE": 2
      },
      "period_span": {
       "RUN_RATE": {
@@ -37,108 +38,90 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [],
-     "sole": "Plaid",
-     "spread": 1.0,
+     "shared_words": [
+      "contact",
+      "enrichment",
+      "intelligence",
+      "sales"
+     ],
+     "spread": 1.1,
      "table": [
       {
-       "company": "Plaid",
-       "date": "Apr-25",
+       "company": "6sense",
+       "date": "Jan-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 12.2,
+       "multiple": 47.3,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 50.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.0,
+     "tag_evidence": 7.3,
      "thin": true,
-     "triangulated": true
+     "triangulated": false
     }
    }
   },
   "core": [
    {
-    "company": "CRISIL Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same revenue model; same AI stance",
-    "score": 8.0,
-    "ticker": "NSEI:CRISIL"
-   },
-   {
-    "company": "HubSpot, Inc.",
+    "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "both do CRM; same type of business; same kind of customer; same AI stance",
-    "score": 6.9,
-    "ticker": "NYSE:HUBS"
+    "reason": "both do Sales Intelligence, Data Enrichment; related type of business; same business function; sold the same way",
+    "score": 14.8,
+    "ticker": "NASDAQGS:GTM"
    },
    {
-    "company": "S&P Global Inc.",
-    "family": "fintech",
+    "company": "Red Violet, Inc.",
+    "family": "software",
     "in_medians": true,
-    "reason": "related type of business; same end market; same AI stance",
-    "score": 5.5,
-    "ticker": "NYSE:SPGI"
+    "reason": "both do Data Enrichment; related type of business; sold the same way; same AI stance",
+    "score": 9.1,
+    "ticker": "NASDAQCM:RDVT"
    },
    {
-    "company": "Moody's Corporation",
-    "family": "fintech",
+    "company": "Similarweb Ltd.",
+    "family": "software",
     "in_medians": true,
-    "reason": "related type of business; same end market; same AI stance",
-    "score": 5.5,
-    "ticker": "NYSE:MCO"
-   },
-   {
-    "company": "MSCI Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same AI stance",
-    "score": 5.5,
-    "ticker": "NYSE:MSCI"
-   },
-   {
-    "company": "FactSet Research Systems Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same AI stance",
-    "score": 5.5,
-    "ticker": "NYSE:FDS"
-   },
-   {
-    "company": "Morningstar, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same AI stance",
-    "score": 5.5,
-    "ticker": "NASDAQ:MORN"
+    "reason": "both do Sales Intelligence; related type of business; sold the same way; same AI stance",
+    "score": 8.8,
+    "ticker": "NYSE:SMWB"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 10.5,
+   "high": 10.0,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.4,
-   "mid": 7.2,
-   "n": 7,
+   "low": 2.2,
+   "mid": 2.2,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -150,80 +133,64 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "crm"
+    "contact",
+    "enrichment",
+    "intelligence",
+    "sales"
    ],
    "show_retention": true,
    "spread": 4.5,
    "table": [
     {
-     "company": "HubSpot, Inc.",
+     "company": "ZoomInfo Technologies Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
-     "multiple": 2.8,
+     "growth_pct": -0.3,
+     "multiple": 2.2,
      "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:HUBS"
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
     },
     {
-     "company": "Morningstar, Inc.",
+     "company": "Similarweb Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.9,
-     "multiple": 3.4,
+     "growth_pct": 11.7,
+     "multiple": 2.2,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:MORN"
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
     },
     {
-     "company": "FactSet Research Systems Inc.",
+     "company": "Red Violet, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.8,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:FDS"
-    },
-    {
-     "company": "CRISIL Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.1,
-     "multiple": 7.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NSEI:CRISIL"
-    },
-    {
-     "company": "S&P Global Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.0,
-     "multiple": 9.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:SPGI"
-    },
-    {
-     "company": "Moody's Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.5,
-     "multiple": 10.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:MCO"
-    },
-    {
-     "company": "MSCI Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.5,
-     "multiple": 12.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:MSCI"
+     "growth_pct": 13.3,
+     "multiple": 10.0,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 7.3,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "investors_callable": [
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 2.0,
+    "cheque_low_m": null,
+    "deal_note": null,
+    "geographies": "Global",
+    "house_type": "",
+    "investor": "Google AI Futures Fund",
+    "not_published": null,
+    "recent_deal": "Replit",
+    "recent_deal_date": "2025-09",
+    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
+    "stage_bands": "Pre-seed; Seed",
+    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
    {
     "cheque_figure_dated": null,
     "cheque_high_m": 2.0,
@@ -311,57 +278,90 @@
    },
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": 5.0,
+    "cheque_high_m": 15.0,
     "cheque_low_m": 0.5,
     "deal_note": null,
-    "geographies": "Pan-European",
+    "geographies": "UK-based, invests across Europe and North America",
     "house_type": "Venture",
-    "investor": "MiddleGame Ventures",
+    "investor": "Air Street Capital",
     "not_published": null,
-    "recent_deal": "Theia Insights",
-    "recent_deal_date": "2026-03",
-    "recent_deal_url": "https://www.middlegamevc.com/articles/our-investment-in-theia-insights/",
+    "recent_deal": "Alta Ares",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://press.airstreet.com/p/alta-ares-series-a",
     "stage_bands": "Seed; Series A",
-    "thesis": "Specialist early-stage investor in financial-services infrastructure, payments, capital-markets data and regtech.",
+    "thesis": "AI-first specialist investing in software, developer infrastructure, security and science; stated early-stage range is $500k-$15m.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    },
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": 7.0,
-    "cheque_low_m": 1.0,
+    "cheque_high_m": null,
+    "cheque_low_m": 0.1,
     "deal_note": null,
-    "geographies": "Global; US, Africa, India, Southeast Asia and Latin America",
-    "house_type": "Venture",
-    "investor": "Flourish Ventures",
+    "geographies": "US; Global",
+    "house_type": "",
+    "investor": "Menlo Anthology",
     "not_published": null,
-    "recent_deal": "Stream",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://app.dealroom.co/news/feed/stream-raises-5-2m-seed-extension-to-expand-financial-infrastructure",
-    "stage_bands": "Seed; Series A",
-    "thesis": "Global fintech investor in payment rails, merchant infrastructure, embedded finance, compliance and financial health.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.5,
-    "cheque_low_m": 0.25,
-    "deal_note": null,
-    "geographies": "Primarily UK, broader Europe",
-    "house_type": "Venture",
-    "investor": "Outward VC",
-    "not_published": null,
-    "recent_deal": "Infrawatch",
-    "recent_deal_date": "2026-05",
-    "recent_deal_url": "https://outwardvc.com/articles/why-we-invested-in-infrawatch/",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "Early-stage investor in technology for regulated industries, including payments, fintech operations and compliance infrastructure.",
+    "recent_deal": "Lovable",
+    "recent_deal_date": "2025-12",
+    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Conviction",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Avra",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Operator Collective",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Clay",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Frontline",
+    "n": 1
+   },
    {
     "backed": [
      {
@@ -401,20 +401,120 @@
     ],
     "investor": "Nexus Venture Partners",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Blue Owl Capital (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "MSD Partners (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "B Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Franklin Templeton",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Harmony Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Insight Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "D1 Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "6sense",
+      "date": "Jan-22"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
    }
   ],
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
-    "basis": "ARR (> threshold)",
-    "bound": "<=",
-    "company": "Plaid",
-    "date": "Apr-25",
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Clay",
+    "date": "Jan-26",
     "in_medians": true,
-    "mult": 12.2,
-    "reason": "related type of business; same end market",
-    "score": 6.0,
-    "type": "PRIMARY"
+    "mult": 50.0,
+    "reason": "both do Data Enrichment, Sales Intelligence; same type of business; same business function; same AI stance",
+    "score": 17.1,
+    "type": "SECONDARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -423,34 +523,46 @@
     "date": "Aug-23",
     "in_medians": false,
     "mult": 16.7,
-    "reason": "shares the language of database; same type of business; same business function; same kind of customer",
-    "score": 12.8,
+    "reason": "both do Sales Intelligence, Data Enrichment; same type of business; same business function; same kind of customer",
+    "score": 21.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "6sense",
+    "date": "Jan-22",
+    "in_medians": true,
+    "mult": 47.3,
+    "reason": "both do Data Enrichment, Sales Intelligence; same type of business; same AI stance",
+    "score": 14.3,
     "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
+  "private_proximity": "DIRECT",
   "private_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1
+    "ARR": 1,
+    "ARR_RUNRATE": 1
    },
    "bounded": true,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "DIAMOND",
-   "high": 12.2,
+   "display": "RANGE",
+   "high": 50.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 12.2,
-   "mid": 12.2,
-   "n": 1,
+   "low": 47.3,
+   "mid": 50.0,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 1
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -460,73 +572,55 @@
    },
    "points": [],
    "positioning": [],
-   "shared_words": [],
-   "sole": "Plaid",
-   "spread": 1.0,
+   "shared_words": [
+    "contact",
+    "enrichment",
+    "intelligence",
+    "sales"
+   ],
+   "spread": 1.1,
    "table": [
     {
-     "company": "Plaid",
-     "date": "Apr-25",
+     "company": "6sense",
+     "date": "Jan-22",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 12.2,
+     "multiple": 47.3,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 50.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.0,
+   "tag_evidence": 7.3,
    "thin": true,
-   "triangulated": true
+   "triangulated": false
   },
-  "private_window_months": 36,
+  "private_window_months": 55,
   "secondary": [
    {
-    "company": "Qualco Group S.A.",
+    "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same end market; same revenue model; same AI stance",
-    "score": 6.5,
-    "ticker": "ATSE:QLCO"
-   },
-   {
-    "company": "Alkami Technology, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same end market; sold the same way; same AI stance",
-    "score": 6.0,
-    "ticker": "NASDAQGS:ALKT"
-   },
-   {
-    "company": "London Stock Exchange Group plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same AI stance",
-    "score": 5.5,
-    "ticker": "LSE:LSEG"
-   },
-   {
-    "company": "Deutsche Boerse AG",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same AI stance",
-    "score": 5.5,
-    "ticker": "XTRA:DB1"
-   },
-   {
-    "company": "Clarkson PLC",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market",
-    "score": 5.5,
-    "ticker": "LSE:CKN"
+    "reason": "both do Sales Automation; same type of business; same kind of customer; same AI stance",
+    "score": 7.7,
+    "ticker": "NYSE:HUBS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -534,17 +628,17 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
-   "high": 8.3,
+   "high": 2.8,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.6,
-   "mid": 5.3,
-   "n": 3,
+   "low": 2.8,
+   "mid": 2.8,
+   "n": 1,
    "period_mix": {
-    "NTM": 3
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -553,57 +647,27 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Qualco Group S.A.",
-     "mult": 1.6,
-     "reason": "same end market; same revenue model; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Alkami Technology, Inc.",
-     "mult": 4.0,
-     "reason": "same end market; sold the same way; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": false,
-   "spread": 5.2,
+   "shared_words": [
+    "sales"
+   ],
+   "show_retention": true,
+   "sole": "HubSpot, Inc.",
+   "spread": 1.0,
    "table": [
     {
-     "company": "Clarkson PLC",
+     "company": "HubSpot, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.5,
-     "multiple": 1.6,
+     "growth_pct": 14.0,
+     "multiple": 2.8,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:CKN"
-    },
-    {
-     "company": "London Stock Exchange Group plc",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.9,
-     "multiple": 5.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:LSEG"
-    },
-    {
-     "company": "Deutsche Boerse AG",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.4,
-     "multiple": 8.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:DB1"
+     "retention_pct": 102.0,
+     "ticker": "NYSE:HUBS"
     }
    ],
-   "tag_evidence": 0.0,
-   "thin": false,
+   "tag_evidence": 0.2,
+   "thin": true,
    "triangulated": true
   }
  },

@@ -8,80 +8,58 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4,
-      "ARR_RUNRATE": 1
+      "ARR": 4
      },
      "bounded": true,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "closeness": "PARTIAL_OVERLAP",
+     "control_n": 1,
+     "control_names": [
+      "AuditBoard"
+     ],
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 150.0,
+     "high": 56.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 15.0,
-     "mid": 56.0,
-     "n": 5,
+     "low": 10.0,
+     "mid": 15.0,
+     "n": 4,
      "period_mix": {
-      "RUN_RATE": 5
+      "NOT STATED": 1,
+      "RUN_RATE": 3
      },
      "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Clio",
-       "mult": 15.0,
-       "reason": "shares the language of document; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Applied Intuition",
-       "mult": 37.5,
-       "reason": "shares the language of intelligence; related type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Legora",
-       "mult": 56.0,
-       "reason": "both do Document Review; same type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Sierra",
-       "mult": 105.3,
-       "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Decagon",
-       "mult": 150.0,
-       "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
       "document",
-      "intelligence",
       "review"
      ],
-     "spread": 10.0,
+     "spread": 5.6,
      "table": [
+      {
+       "company": "Restaurant365",
+       "date": "May-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 10.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
       {
        "company": "Clio",
        "date": "Jul-24",
@@ -93,11 +71,11 @@
        "ticker": ""
       },
       {
-       "company": "Applied Intuition",
-       "date": "Jun-25",
+       "company": "AuditBoard",
+       "date": "May-24",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 37.5,
+       "multiple": 15.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -111,107 +89,119 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Sierra",
-       "date": "May-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 105.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Decagon",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 150.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
      "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 32.0,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 32.0,
+     "mid": 32.0,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [
+      "records"
+     ],
+     "sole": "Doctolib",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Doctolib",
+       "date": "Mar-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 32.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": true
     }
    }
   },
   "core": [
    {
-    "company": "AppFolio, Inc.",
+    "company": "Procore Technologies, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same end market; same business function; sold the same way",
-    "score": 11.0,
-    "ticker": "NASDAQGM:APPF"
+    "reason": "shares the language of construction, project; same type of business; same end market; same business function",
+    "score": 12.5,
+    "ticker": "NYSE:PCOR"
    },
    {
-    "company": "ZoomInfo Technologies Inc.",
+    "company": "Trimble Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation, intelligence; related type of business; same kind of customer; same revenue model",
-    "score": 8.8,
-    "ticker": "NASDAQGS:GTM"
+    "reason": "shares the language of construction; same type of business; same end market; same kind of customer",
+    "score": 10.1,
+    "ticker": "NASDAQGS:TRMB"
    },
    {
-    "company": "Similarweb Ltd.",
+    "company": "Bentley Systems, Incorporated",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of intelligence; related type of business; same kind of customer; same revenue model",
-    "score": 8.7,
-    "ticker": "NYSE:SMWB"
-   },
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of records; related type of business; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NASDAQCM:RDVT"
-   },
-   {
-    "company": "Yext, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of review; related type of business; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NYSE:YEXT"
-   },
-   {
-    "company": "Atlassian Corporation",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of project; related type of business; same revenue model",
-    "score": 5.4,
-    "ticker": "NASDAQGS:TEAM"
+    "reason": "same end market; same kind of customer; same revenue model",
+    "score": 9.0,
+    "ticker": "NASDAQGS:BSY"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 6.2,
+   "high": 6.7,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.2,
-   "mid": 4.15,
-   "n": 6,
+   "low": 3.5,
+   "mid": 5.2,
+   "n": 3,
    "period_mix": {
-    "NTM": 6
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -223,92 +213,45 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "intelligence",
-    "project",
-    "records",
-    "review"
+    "construction",
+    "project"
    ],
    "show_retention": true,
-   "spread": 5.6,
+   "spread": 1.9,
    "table": [
     {
-     "company": "Yext, Inc.",
+     "company": "Trimble Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 0.9,
-     "multiple": 1.8,
-     "recurring_pct": null,
-     "retention_pct": 95.0,
-     "ticker": "NYSE:YEXT"
-    },
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
-     "company": "Similarweb Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.7,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 100.0,
-     "ticker": "NYSE:SMWB"
-    },
-    {
-     "company": "Atlassian Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.7,
-     "multiple": 6.1,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NASDAQGS:TEAM"
-    },
-    {
-     "company": "AppFolio, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.4,
-     "multiple": 6.2,
+     "growth_pct": 8.2,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGM:APPF"
+     "ticker": "NASDAQGS:TRMB"
     },
     {
-     "company": "Red Violet, Inc.",
+     "company": "Procore Technologies, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
-     "multiple": 10.0,
-     "recurring_pct": 77.0,
-     "retention_pct": 95.0,
-     "ticker": "NASDAQCM:RDVT"
+     "growth_pct": 13.5,
+     "multiple": 5.2,
+     "recurring_pct": null,
+     "retention_pct": 106.0,
+     "ticker": "NYSE:PCOR"
+    },
+    {
+     "company": "Bentley Systems, Incorporated",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.5,
+     "multiple": 6.7,
+     "recurring_pct": 92.0,
+     "retention_pct": 109.0,
+     "ticker": "NASDAQGS:BSY"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
   "investors_callable": [
-   {
-    "cheque_figure_dated": null,
-    "cheque_high_m": 2.0,
-    "cheque_low_m": null,
-    "deal_note": null,
-    "geographies": "Global",
-    "house_type": "",
-    "investor": "Google AI Futures Fund",
-    "not_published": null,
-    "recent_deal": "Replit",
-    "recent_deal_date": "2025-09",
-    "recent_deal_url": "https://replit.com/news/funding-announcement-series-c",
-    "stage_bands": "Pre-seed; Seed",
-    "thesis": "The AI Futures Fund invests in and works with startups to accelerate their AI ideas, with early access to Google DeepMind models and Cloud credits.",
-    "tier": 1,
-    "why": "sector and stage; your location was not resolved"
-   },
    {
     "cheque_figure_dated": null,
     "cheque_high_m": 15.0,
@@ -413,71 +356,40 @@
    },
    {
     "cheque_figure_dated": null,
-    "cheque_high_m": null,
+    "cheque_high_m": 1.0,
+    "cheque_low_m": 1.0,
+    "deal_note": null,
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Concept Ventures",
+    "not_published": null,
+    "recent_deal": "Archestra.AI",
+    "recent_deal_date": "2026-06",
+    "recent_deal_url": "https://archestra.ai/blog/archestra-announces-10m-seed",
+    "stage_bands": "Pre-seed; Seed; Series A",
+    "thesis": "Deep tech, AI and infrastructure software. Around \u00a31M average first cheque.",
+    "tier": 1,
+    "why": "sector and stage; your location was not resolved"
+   },
+   {
+    "cheque_figure_dated": null,
+    "cheque_high_m": 1.0,
     "cheque_low_m": 0.1,
     "deal_note": null,
-    "geographies": "US; Global",
-    "house_type": "",
-    "investor": "Menlo Anthology",
+    "geographies": "UK",
+    "house_type": "Venture",
+    "investor": "Fuel Ventures",
     "not_published": null,
-    "recent_deal": "Lovable",
-    "recent_deal_date": "2025-12",
-    "recent_deal_url": "https://lovable.dev/blog/series-b",
+    "recent_deal": "PANTA",
+    "recent_deal_date": "2026-05",
+    "recent_deal_url": "https://www.uktechnews.info/2026/05/14/panta-secures-3-million-seed-investment-led-by-fuel-ventures/",
     "stage_bands": "Pre-seed; Seed; Series A",
-    "thesis": "We will make Pre-Seed, Seed and Series A investments from the Anthology Fund as lead or participating investors.",
+    "thesis": "B2C and B2B via SEIS/EIS. High early-stage deal volume. \u00a3100k to \u00a31M.",
     "tier": 1,
     "why": "sector and stage; your location was not resolved"
    }
   ],
   "investors_evidence": [
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     },
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Benchmark",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     },
-     {
-      "company": "Harvey",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Greenoaks",
-    "n": 1
-   },
    {
     "backed": [
      {
@@ -505,6 +417,16 @@
       "date": "Apr-26"
      }
     ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Legora",
+      "date": "Apr-26"
+     }
+    ],
     "investor": "Bessemer",
     "n": 1
    },
@@ -513,14 +435,10 @@
      {
       "company": "Legora",
       "date": "Apr-26"
-     },
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
      }
     ],
     "investor": "General Catalyst",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -555,55 +473,21 @@
    {
     "backed": [
      {
-      "company": "Decagon",
-      "date": "Jan-26"
-     },
+      "company": "Harvey",
+      "date": "Jun-25"
+     }
+    ],
+    "investor": "Kleiner Perkins",
+    "n": 1
+   },
+   {
+    "backed": [
      {
       "company": "Harvey",
       "date": "Jun-25"
      }
     ],
     "investor": "Coatue",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Index Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Bain Capital Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gong",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Undisclosed (Nasdaq Private Market secondary)",
     "n": 1
    },
    {
@@ -613,7 +497,7 @@
       "date": "Jun-25"
      }
     ],
-    "investor": "Kleiner Perkins",
+    "investor": "Sequoia",
     "n": 1
    },
    {
@@ -634,76 +518,6 @@
      }
     ],
     "investor": "OpenAI Startup Fund",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "BlackRock-managed funds and accounts",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Kleiner Perkins (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Qatar Investment Authority",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Abu Dhabi Investment Council",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Greycroft",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Lux Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Applied Intuition",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Bond",
     "n": 1
    },
    {
@@ -755,21 +569,90 @@
     ],
     "investor": "Tidemark",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AuditBoard",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Hg (buyer)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "KKR",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "L Catterton (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Eurazeo",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "Bpifrance",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Doctolib",
+      "date": "Mar-22"
+     }
+    ],
+    "investor": "General Atlantic",
+    "n": 1
    }
   ],
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "Sierra",
-    "date": "May-26",
-    "in_medians": true,
-    "mult": 105.3,
-    "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
-    "score": 7.6,
-    "type": "PRIMARY"
-   },
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
@@ -780,28 +663,6 @@
     "reason": "both do Document Review; same type of business; same kind of customer; same revenue model",
     "score": 13.8,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Decagon",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 150.0,
-    "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
-    "score": 7.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Gong",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": null,
-    "reason": "shares the language of intelligence; related type of business; same kind of customer; same revenue model",
-    "score": 11.2,
-    "type": "SECONDARY"
    },
    {
     "basis": "PRESS_REPORTED",
@@ -815,17 +676,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "Applied Intuition",
-    "date": "Jun-25",
-    "in_medians": true,
-    "mult": 37.5,
-    "reason": "shares the language of intelligence; related type of business; same revenue model; same AI stance",
-    "score": 7.7,
-    "type": "MIXED"
-   },
-   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Clio",
@@ -835,6 +685,39 @@
     "reason": "shares the language of document; same type of business; same business function; same revenue model",
     "score": 15.2,
     "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "AuditBoard",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "related type of business; same kind of customer; same revenue model",
+    "score": 10.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Restaurant365",
+    "date": "May-23",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
+    "score": 15.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Doctolib",
+    "date": "Mar-22",
+    "in_medians": true,
+    "mult": 32.0,
+    "reason": "shares the language of records; same type of business; same business function; same revenue model",
+    "score": 15.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -844,76 +727,54 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4,
-    "ARR_RUNRATE": 1
+    "ARR": 4
    },
    "bounded": true,
-   "closeness": "STRONG_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 150.0,
+   "closeness": "PARTIAL_OVERLAP",
+   "control_n": 1,
+   "control_names": [
+    "AuditBoard"
+   ],
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 56.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 15.0,
-   "mid": 56.0,
-   "n": 5,
+   "low": 10.0,
+   "mid": 15.0,
+   "n": 4,
    "period_mix": {
-    "RUN_RATE": 5
+    "NOT STATED": 1,
+    "RUN_RATE": 3
    },
    "period_span": {
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Clio",
-     "mult": 15.0,
-     "reason": "shares the language of document; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Applied Intuition",
-     "mult": 37.5,
-     "reason": "shares the language of intelligence; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Legora",
-     "mult": 56.0,
-     "reason": "both do Document Review; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Sierra",
-     "mult": 105.3,
-     "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Decagon",
-     "mult": 150.0,
-     "reason": "shares the language of automation; related type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
-    "automation",
     "document",
-    "intelligence",
     "review"
    ],
-   "spread": 10.0,
+   "spread": 5.6,
    "table": [
+    {
+     "company": "Restaurant365",
+     "date": "May-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 10.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
     {
      "company": "Clio",
      "date": "Jul-24",
@@ -925,11 +786,11 @@
      "ticker": ""
     },
     {
-     "company": "Applied Intuition",
-     "date": "Jun-25",
+     "company": "AuditBoard",
+     "date": "May-24",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 37.5,
+     "multiple": 15.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -943,47 +804,27 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Sierra",
-     "date": "May-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 105.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Decagon",
-     "date": "Jan-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 150.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
    "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 25,
+  "private_window_months": 53,
   "secondary": [
    {
-    "company": "Procore Technologies, Inc.",
+    "company": "Nemetschek SE",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of construction, project; same type of business; same business function; same kind of customer",
-    "score": 9.5,
-    "ticker": "NYSE:PCOR"
+    "reason": "shares the language of construction; same end market; same kind of customer; same revenue model",
+    "score": 8.6,
+    "ticker": "XTRA:NEM"
    },
    {
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer",
     "score": 8.6,
     "ticker": "NASDAQGS:INTA"
    },
@@ -1004,19 +845,19 @@
     "ticker": "NYSE:ASAN"
    },
    {
-    "company": "Trimble Inc.",
+    "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of construction; same type of business; same kind of customer",
-    "score": 7.1,
-    "ticker": "NASDAQGS:TRMB"
+    "reason": "shares the language of intelligence; same kind of customer; same revenue model; sold the same way",
+    "score": 7.3,
+    "ticker": "NASDAQGS:GTM"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -1026,15 +867,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 5.2,
+   "high": 6.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.5,
+   "low": 2.3,
    "mid": 4.6,
-   "n": 3,
+   "n": 5,
    "period_mix": {
-    "NTM": 3
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -1043,39 +884,33 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Asana, Inc.",
-     "mult": 2.3,
-     "reason": "shares the language of project; same business function; same kind of customer; same revenue model",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Planisware SAS",
-     "mult": 6.4,
-     "reason": "shares the language of project; same business function; same kind of customer; same revenue model",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "construction",
+    "intelligence",
     "project"
    ],
    "show_retention": true,
-   "spread": 1.5,
+   "spread": 2.9,
    "table": [
     {
-     "company": "Trimble Inc.",
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
+    {
+     "company": "Asana, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.2,
-     "multiple": 3.5,
+     "multiple": 2.3,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:TRMB"
+     "retention_pct": 96.0,
+     "ticker": "NYSE:ASAN"
     },
     {
      "company": "Intapp, Inc.",
@@ -1087,16 +922,25 @@
      "ticker": "NASDAQGS:INTA"
     },
     {
-     "company": "Procore Technologies, Inc.",
+     "company": "Nemetschek SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.5,
-     "multiple": 5.2,
-     "recurring_pct": null,
-     "retention_pct": 106.0,
-     "ticker": "NYSE:PCOR"
+     "growth_pct": 17.2,
+     "multiple": 4.9,
+     "recurring_pct": 92.2,
+     "retention_pct": null,
+     "ticker": "XTRA:NEM"
+    },
+    {
+     "company": "Planisware SAS",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.0,
+     "multiple": 6.4,
+     "recurring_pct": 91.0,
+     "retention_pct": 110.0,
+     "ticker": "ENXTPA:PLNW"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

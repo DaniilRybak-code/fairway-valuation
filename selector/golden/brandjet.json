@@ -43,8 +43,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
-      "marketing",
       "sales"
      ],
      "spread": 4.9,
@@ -111,11 +109,7 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [
-      "automation",
-      "brand",
-      "marketing"
-     ],
+     "shared_words": [],
      "spread": 1.4,
      "table": [
       {
@@ -197,7 +191,7 @@
       {
        "company": "Semrush",
        "mult": 4.3,
-       "reason": "shares the language of analysis, marketing, tracking; same type of business; same business function; same kind of customer",
+       "reason": "shares the language of analysis, tracking; same type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
       },
@@ -218,21 +212,21 @@
       {
        "company": "Jasper",
        "mult": 33.3,
-       "reason": "shares the language of brand, marketing; same type of business; same business function; same kind of customer",
+       "reason": "same type of business; same business function; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "6sense",
        "mult": 47.3,
-       "reason": "shares the language of marketing, sales; same type of business; same business function; same revenue model",
+       "reason": "shares the language of sales; same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
        "mult": 50.0,
-       "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+       "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       }
@@ -240,9 +234,6 @@
      "positioning": [],
      "shared_words": [
       "analysis",
-      "automation",
-      "brand",
-      "marketing",
       "sales",
       "tracking"
      ],
@@ -391,8 +382,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
-    "marketing",
     "sales"
    ],
    "show_retention": true,
@@ -899,7 +888,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+    "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
     "score": 11.7,
     "type": "SECONDARY"
    },
@@ -910,7 +899,7 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 4.3,
-    "reason": "shares the language of analysis, marketing, tracking; same type of business; same business function; same kind of customer",
+    "reason": "shares the language of analysis, tracking; same type of business; same business function; same kind of customer",
     "score": 20.4,
     "type": "CONTROL"
    },
@@ -932,7 +921,7 @@
     "date": "Oct-22",
     "in_medians": true,
     "mult": 33.3,
-    "reason": "shares the language of brand, marketing; same type of business; same business function; same kind of customer",
+    "reason": "same type of business; same business function; same kind of customer; same revenue model",
     "score": 19.7,
     "type": "PRIMARY"
    },
@@ -943,7 +932,7 @@
     "date": "Jan-22",
     "in_medians": true,
     "mult": 47.3,
-    "reason": "shares the language of marketing, sales; same type of business; same business function; same revenue model",
+    "reason": "shares the language of sales; same type of business; same business function; same revenue model",
     "score": 13.7,
     "type": "PRIMARY"
    }
@@ -999,7 +988,7 @@
     {
      "company": "Semrush",
      "mult": 4.3,
-     "reason": "shares the language of analysis, marketing, tracking; same type of business; same business function; same kind of customer",
+     "reason": "shares the language of analysis, tracking; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
     },
@@ -1020,21 +1009,21 @@
     {
      "company": "Jasper",
      "mult": 33.3,
-     "reason": "shares the language of brand, marketing; same type of business; same business function; same kind of customer",
+     "reason": "same type of business; same business function; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "6sense",
      "mult": 47.3,
-     "reason": "shares the language of marketing, sales; same type of business; same business function; same revenue model",
+     "reason": "shares the language of sales; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
      "mult": 50.0,
-     "reason": "shares the language of automation, sales; same type of business; sold the same way; same AI stance",
+     "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
     }
@@ -1042,9 +1031,6 @@
    "positioning": [],
    "shared_words": [
     "analysis",
-    "automation",
-    "brand",
-    "marketing",
     "sales",
     "tracking"
    ],
@@ -1169,8 +1155,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "analysis",
-    "automation",
-    "marketing",
     "sales",
     "tracking"
    ],

@@ -10,12 +10,12 @@
      "basis_mix": {
       "BUSINESS_CUSTOMERS": 2
      },
-     "bounded": false,
-     "closeness": "PARTIAL_OVERLAP",
+     "bounded": true,
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
@@ -23,48 +23,36 @@
      "high": 72846.15,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 7000.0,
+     "low": 46666.67,
      "mid": 72846.15,
      "n": 2,
      "period_mix": {
-      "LTM": 2
+      "LTM": 1,
+      "RUN_RATE": 1
      },
      "period_span": {
       "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
+      },
+      "RUN_RATE": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "WayCool Foods",
-       "mult": 7000.0,
-       "reason": "both do Sourcing; related type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Klaviyo",
-       "mult": 72846.15,
-       "reason": "shares the language of automation, shopify; related type of business; same end market; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
-      "shopify",
-      "sourcing"
+      "shopify"
      ],
-     "spread": 10.4,
+     "spread": 1.6,
      "table": [
       {
-       "company": "WayCool Foods",
-       "date": "Jun-22",
+       "company": "Yotpo",
+       "date": "Mar-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 7000.0,
+       "multiple": 46666.67,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -82,7 +70,7 @@
      ],
      "tag_evidence": 0.7,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -90,14 +78,13 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "NET_REVENUE": 2
+      "ARR": 1,
+      "NET_REVENUE": 1
      },
-     "bounded": false,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Berkshire Grey"
-     ],
+     "bounded": true,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "revenue",
@@ -105,23 +92,21 @@
      "founder_low": null,
      "founder_metric": null,
      "high": 32.6,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Berkshire Grey"
-     ],
-     "low": 5.69,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 14.0,
      "mid": 32.6,
      "n": 2,
      "period_mix": {
-      "FY2022": 1,
-      "LTM": 1
+      "LTM": 1,
+      "RUN_RATE": 1
      },
      "period_span": {
-      "FY2022": {
+      "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       },
-      "LTM": {
+      "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
@@ -129,19 +114,16 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "automation",
-      "fulfilment",
-      "order",
       "shopify"
      ],
-     "spread": 5.7,
+     "spread": 2.3,
      "table": [
       {
-       "company": "Berkshire Grey",
-       "date": "Mar-23",
+       "company": "Yotpo",
+       "date": "Mar-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 5.69,
+       "multiple": 14.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -159,7 +141,7 @@
      ],
      "tag_evidence": 0.7,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE_GROSS": {
      "anchor_dropped": false,
@@ -167,7 +149,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 3
+      "REVENUE_GROSS": 2
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -179,21 +161,16 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 6.68,
+     "high": 10.36,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 4.15,
-     "mid": 5.91,
-     "n": 3,
+     "mid": 10.36,
+     "n": 2,
      "period_mix": {
-      "FY ENDED 31-MAR-2023": 1,
       "LTM": 2
      },
      "period_span": {
-      "FY ENDED 31-MAR-2023": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -205,10 +182,9 @@
       "amazon",
       "ecommerce",
       "fulfilment",
-      "seller",
-      "sourcing"
+      "seller"
      ],
-     "spread": 1.6,
+     "spread": 2.5,
      "table": [
       {
        "company": "Packable",
@@ -221,28 +197,18 @@
        "ticker": ""
       },
       {
-       "company": "WayCool Foods",
-       "date": "Jun-22",
+       "company": "ElasticRun",
+       "date": "Feb-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 5.91,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Vegrow",
-       "date": "Dec-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 6.68,
+       "multiple": 10.36,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
      "tag_evidence": 1.6,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -260,7 +226,7 @@
     "company": "Klaviyo, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of automation; related type of business; same end market; same kind of customer",
+    "reason": "related type of business; same end market; same kind of customer; same revenue model",
     "score": 11.6,
     "ticker": "NYSE:KVYO"
    },
@@ -268,7 +234,7 @@
     "company": "Baozun Inc.",
     "family": "consumer",
     "in_medians": false,
-    "reason": "shares the language of ecommerce, fulfilment, management; same type of business; same end market; same business function",
+    "reason": "shares the language of ecommerce, fulfilment, store; same type of business; same end market; same business function",
     "score": 9.9,
     "ticker": "NASDAQGS:BZUN"
    },
@@ -288,7 +254,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -315,9 +281,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "automation",
     "ecommerce",
-    "management",
     "shopify"
    ],
    "show_retention": true,
@@ -497,26 +461,6 @@
    {
     "backed": [
      {
-      "company": "Vegrow",
-      "date": "Dec-23"
-     }
-    ],
-    "investor": "GIC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Berkshire Grey",
-      "date": "Mar-23"
-     }
-    ],
-    "investor": "SoftBank Group (acquirer",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Shiprocket",
       "date": "Aug-22"
      }
@@ -553,20 +497,32 @@
     ],
     "investor": "March Capital",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "WayCool Foods",
-      "date": "Jun-22"
-     }
-    ],
-    "investor": "Lightrock and existing investors",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "Shiprocket",
+    "date": "Aug-22",
+    "in_medians": false,
+    "mult": 16.03,
+    "reason": "both do Fulfilment, Seller Tools; same type of business; same end market; same kind of customer",
+    "score": 15.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "ElasticRun",
+    "date": "Feb-22",
+    "in_medians": true,
+    "mult": 10.36,
+    "reason": "shares the language of ecommerce; related type of business; same end market; same kind of customer",
+    "score": 9.9,
+    "type": "PRIMARY"
+   },
    {
     "basis": "FY2020",
     "bound": "",
@@ -579,69 +535,25 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_UNDEFINED_BASIS",
-    "bound": "",
-    "company": "Rokt",
-    "date": "Jan-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "related type of business; same end market",
-    "score": 6.0,
-    "type": "SECONDARY"
-   },
-   {
-    "basis": "INR 3,610m at 0.01201",
-    "bound": "",
-    "company": "Vegrow",
-    "date": "Dec-23",
-    "in_medians": true,
-    "mult": 6.68,
-    "reason": "shares the language of sourcing; related type of business; same kind of customer",
-    "score": 6.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Berkshire Grey",
-    "date": "Mar-23",
-    "in_medians": true,
-    "mult": 5.69,
-    "reason": "both do Fulfilment Automation, Order Fulfilment; same type of business; same AI stance",
-    "score": 6.7,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Shiprocket",
-    "date": "Aug-22",
-    "in_medians": false,
-    "mult": 16.03,
-    "reason": "both do Fulfilment, Seller Tools; same type of business; same kind of customer; sold the same way",
-    "score": 11.3,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "WayCool Foods",
-    "date": "Jun-22",
-    "in_medians": true,
-    "mult": 5.91,
-    "reason": "both do Sourcing; related type of business; same kind of customer",
-    "score": 6.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Klaviyo",
     "date": "May-21",
     "in_medians": true,
     "mult": 32.6,
-    "reason": "shares the language of automation, shopify; related type of business; same end market; same kind of customer",
+    "reason": "shares the language of shopify; related type of business; same end market; same kind of customer",
     "score": 13.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Yotpo",
+    "date": "Mar-21",
+    "in_medians": true,
+    "mult": 14.0,
+    "reason": "related type of business; same end market; same kind of customer; sold the same way",
+    "score": 12.5,
     "type": "PRIMARY"
    }
   ],
@@ -652,34 +564,31 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "ARR": 1,
+    "NET_REVENUE": 1
    },
-   "bounded": false,
-   "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Berkshire Grey"
-   ],
+   "bounded": true,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
    "dispersed": false,
    "display": "RANGE",
    "high": 32.6,
-   "listed_target_n": 1,
-   "listed_target_names": [
-    "Berkshire Grey"
-   ],
-   "low": 5.69,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 14.0,
    "mid": 32.6,
    "n": 2,
    "period_mix": {
-    "FY2022": 1,
-    "LTM": 1
+    "LTM": 1,
+    "RUN_RATE": 1
    },
    "period_span": {
-    "FY2022": {
+    "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
-    "LTM": {
+    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -687,19 +596,16 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "automation",
-    "fulfilment",
-    "order",
     "shopify"
    ],
-   "spread": 5.7,
+   "spread": 2.3,
    "table": [
     {
-     "company": "Berkshire Grey",
-     "date": "Mar-23",
+     "company": "Yotpo",
+     "date": "Mar-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 5.69,
+     "multiple": 14.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -717,9 +623,9 @@
    ],
    "tag_evidence": 0.7,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   },
-  "private_window_months": 63,
+  "private_window_months": 65,
   "secondary": [
    {
     "company": "Shoper S.A.",

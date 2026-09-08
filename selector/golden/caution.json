@@ -39,7 +39,6 @@
      "positioning": [],
      "shared_words": [
       "runtime",
-      "security",
       "trust"
      ],
      "spread": 1.8,
@@ -190,7 +189,6 @@
       "deployment",
       "hosting",
       "runtime",
-      "security",
       "trust"
      ],
      "spread": 2.3,
@@ -295,7 +293,7 @@
     "company": "Netskope, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of secure, security, trust; same type of business",
+    "reason": "shares the language of secure, trust, zero; same type of business",
     "score": 6.2,
     "ticker": "NASDAQGS:NTSK"
    }
@@ -348,7 +346,7 @@
     {
      "company": "Netskope, Inc.",
      "mult": 5.4,
-     "reason": "shares the language of secure, security, trust; same type of business",
+     "reason": "shares the language of secure, trust, zero; same type of business",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -388,7 +386,6 @@
     "hosting",
     "managed",
     "secure",
-    "security",
     "trust",
     "zero"
    ],
@@ -878,7 +875,7 @@
     "date": "Jan-22",
     "in_medians": true,
     "mult": 45.3,
-    "reason": "shares the language of security, trust; same type of business; sold the same way; same AI stance",
+    "reason": "shares the language of trust; same type of business; sold the same way; same AI stance",
     "score": 10.4,
     "type": "PRIMARY"
    }
@@ -920,7 +917,6 @@
     "deployment",
     "hosting",
     "runtime",
-    "security",
     "trust"
    ],
    "spread": 2.3,
@@ -1008,7 +1004,7 @@
     "company": "Fortinet, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of secure, security; same type of business",
+    "reason": "shares the language of secure; same type of business",
     "score": 5.5,
     "ticker": "NASDAQGS:FTNT"
    }
@@ -1050,7 +1046,6 @@
     "application",
     "hosting",
     "secure",
-    "security",
     "trust",
     "zero"
    ],

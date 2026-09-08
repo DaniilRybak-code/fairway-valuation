@@ -54,7 +54,6 @@
      "positioning": [],
      "shared_words": [
       "api",
-      "data",
       "enrichment",
       "scraping",
       "web"
@@ -124,7 +123,6 @@
      "positioning": [],
      "shared_words": [
       "api",
-      "data",
       "enrichment",
       "llm",
       "scraping",
@@ -203,7 +201,7 @@
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of api, data; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
     "score": 11.7,
     "ticker": "NYSE:TWLO"
    },
@@ -303,7 +301,7 @@
     {
      "company": "Twilio Inc.",
      "mult": 5.2,
-     "reason": "shares the language of api, data; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -333,7 +331,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "api",
-    "data",
     "enrichment",
     "llm",
     "scraping",
@@ -929,7 +926,6 @@
    "positioning": [],
    "shared_words": [
     "api",
-    "data",
     "enrichment",
     "llm",
     "scraping",
@@ -1015,7 +1011,7 @@
     "company": "TomTom N.V.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of api, data; same type of business; same kind of customer",
+    "reason": "shares the language of api; same type of business; same kind of customer",
     "score": 6.7,
     "ticker": "ENXTAM:TOM2"
    },
@@ -1035,7 +1031,7 @@
     "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1062,7 +1058,7 @@
     {
      "company": "TomTom N.V.",
      "mult": 0.6,
-     "reason": "shares the language of api, data; same type of business; same kind of customer",
+     "reason": "shares the language of api; same type of business; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -1092,7 +1088,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "api",
-    "data",
     "web",
     "website"
    ],

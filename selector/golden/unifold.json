@@ -39,8 +39,7 @@
      "positioning": [],
      "shared_words": [
       "crypto",
-      "custody",
-      "digital"
+      "custody"
      ],
      "spread": 1.6,
      "table": [
@@ -131,11 +130,7 @@
       "asset",
       "crypto",
       "custody",
-      "digital",
       "off",
-      "on",
-      "payment",
-      "payments",
       "rails",
       "ramp",
       "stablecoin"
@@ -173,7 +168,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.6,
+     "tag_evidence": 8.4,
      "thin": false,
      "triangulated": false
     },
@@ -186,7 +181,7 @@
       "REVENUE_GROSS": 3
      },
      "bounded": false,
-     "closeness": "STRONG_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -237,7 +232,7 @@
       {
        "company": "Juspay",
        "mult": 20.41,
-       "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+       "reason": "related type of business; same end market; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       }
@@ -245,9 +240,6 @@
      "shared_words": [
       "crypto",
       "custody",
-      "digital",
-      "on",
-      "payments",
       "ramp"
      ],
      "spread": 7.5,
@@ -283,7 +275,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.1,
+     "tag_evidence": 0.9,
      "thin": false,
      "triangulated": false
     }
@@ -294,7 +286,7 @@
     "company": "WEX Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of multi, payments; related type of business; same end market; same business function",
+    "reason": "shares the language of multi; related type of business; same end market; same business function",
     "score": 11.2,
     "ticker": "NYSE:WEX"
    },
@@ -302,7 +294,7 @@
     "company": "Usio, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; same revenue model",
     "score": 11.1,
     "ticker": "NASDAQGM:USIO"
    },
@@ -310,7 +302,7 @@
     "company": "PayPoint plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; same revenue model",
     "score": 11.1,
     "ticker": "LSE:PAY"
    },
@@ -318,7 +310,7 @@
     "company": "Paysign, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; same revenue model",
     "score": 11.1,
     "ticker": "NASDAQ:PAYS"
    },
@@ -381,7 +373,7 @@
     {
      "company": "Usio, Inc.",
      "mult": 0.7,
-     "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+     "reason": "related type of business; same end market; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -395,21 +387,21 @@
     {
      "company": "WEX Inc.",
      "mult": 2.0,
-     "reason": "shares the language of multi, payments; related type of business; same end market; same business function",
+     "reason": "shares the language of multi; related type of business; same end market; same business function",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "PayPoint plc",
      "mult": 2.0,
-     "reason": "shares the language of payment; related type of business; same end market; same business function",
+     "reason": "related type of business; same end market; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Paysign, Inc.",
      "mult": 5.3,
-     "reason": "shares the language of payment; related type of business; same end market; same business function",
+     "reason": "related type of business; same end market; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -434,10 +426,7 @@
     "asset",
     "crypto",
     "custody",
-    "digital",
     "multi",
-    "payment",
-    "payments",
     "stablecoin"
    ],
    "show_retention": false,
@@ -772,7 +761,7 @@
     "in_medians": true,
     "mult": 18.75,
     "reason": "both do Stablecoin Payments, Payment Rails, On Ramp Off Ramp; same type of business; same end market; same business function",
-    "score": 26.6,
+    "score": 26.4,
     "type": "PRIMARY"
    },
    {
@@ -816,7 +805,7 @@
     "in_medians": true,
     "mult": 22.67,
     "reason": "both do Crypto On-Ramp; same type of business; same end market; same business function",
-    "score": 19.1,
+    "score": 18.9,
     "type": "PRIMARY"
    },
    {
@@ -826,7 +815,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 20.41,
-    "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; same revenue model",
     "score": 16.1,
     "type": "MIXED"
    }
@@ -890,11 +879,7 @@
     "asset",
     "crypto",
     "custody",
-    "digital",
     "off",
-    "on",
-    "payment",
-    "payments",
     "rails",
     "ramp",
     "stablecoin"
@@ -932,7 +917,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 8.6,
+   "tag_evidence": 8.4,
    "thin": false,
    "triangulated": false
   },
@@ -942,7 +927,7 @@
     "company": "Fawry for Banking Technology",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment; same end market; same business function; same revenue model",
+    "reason": "same end market; same business function; same revenue model; same AI stance",
     "score": 9.6,
     "ticker": "CASE:FWRY"
    },
@@ -958,7 +943,7 @@
     "company": "Digital Garage, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
+    "reason": "shares the language of crypto; related type of business; same end market; same business function",
     "score": 8.8,
     "ticker": "TSE:4819"
    },
@@ -966,7 +951,7 @@
     "company": "Worldline SA",
     "family": "fintech",
     "in_medians": true,
-    "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+    "reason": "related type of business; same end market; same business function; same AI stance",
     "score": 8.6,
     "ticker": "ENXTPA:WLN"
    },
@@ -986,7 +971,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1013,14 +998,14 @@
     {
      "company": "Worldline SA",
      "mult": 0.7,
-     "reason": "shares the language of payment, payments; related type of business; same end market; same business function",
+     "reason": "related type of business; same end market; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Digital Garage, Inc.",
      "mult": 0.8,
-     "reason": "shares the language of crypto, payment; related type of business; same end market; same business function",
+     "reason": "shares the language of crypto; related type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -1034,7 +1019,7 @@
     {
      "company": "Fawry for Banking Technology",
      "mult": 4.0,
-     "reason": "shares the language of payment; same end market; same business function; same revenue model",
+     "reason": "same end market; same business function; same revenue model; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -1050,9 +1035,7 @@
    "post_stated_n": 0,
    "shared_words": [
     "crypto",
-    "custody",
-    "payment",
-    "payments"
+    "custody"
    ],
    "show_retention": false,
    "spread": 12.1,

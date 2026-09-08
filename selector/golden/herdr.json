@@ -258,7 +258,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, management; same type of business; same kind of customer; sold the same way",
+    "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
     "score": 9.7,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -349,7 +349,7 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, management; same type of business; same kind of customer; sold the same way",
+     "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -366,7 +366,6 @@
    "shared_words": [
     "agent",
     "developer",
-    "management",
     "source",
     "tools"
    ],

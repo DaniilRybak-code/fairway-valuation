@@ -135,7 +135,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "corporate",
       "development",
       "lms",
       "prep",
@@ -220,7 +219,7 @@
       {
        "company": "Udemy",
        "mult": 1.29,
-       "reason": "shares the language of corporate, course; same type of business; same end market; sold the same way",
+       "reason": "shares the language of course; same type of business; same end market; sold the same way",
        "tier": "DIRECT",
        "transaction_type": "CONTROL"
       },
@@ -234,7 +233,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "corporate",
       "course",
       "training"
      ],
@@ -272,7 +270,7 @@
     "company": "Skillsoft Corp.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of corporate, course, development; same type of business; same end market; same business function",
+    "reason": "shares the language of course, development, training; same type of business; same end market; same business function",
     "score": 12.7,
     "ticker": "NYSE:SKIL"
    },
@@ -288,7 +286,7 @@
     "company": "D2L Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of course, platform; same type of business; same end market; same revenue model",
+    "reason": "shares the language of course; same type of business; same end market; same revenue model",
     "score": 9.2,
     "ticker": "TSX:DTOL"
    },
@@ -385,14 +383,14 @@
     {
      "company": "D2L Inc.",
      "mult": 1.2,
-     "reason": "shares the language of course, platform; same type of business; same end market; same revenue model",
+     "reason": "shares the language of course; same type of business; same end market; same revenue model",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Skillsoft Corp.",
      "mult": 1.5,
-     "reason": "shares the language of corporate, course, development; same type of business; same end market; same business function",
+     "reason": "shares the language of course, development, training; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -415,11 +413,8 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
-    "corporate",
     "course",
     "development",
-    "platform",
     "training",
     "tutor"
    ],
@@ -714,7 +709,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 1.29,
-    "reason": "shares the language of corporate, course; same type of business; same end market; sold the same way",
+    "reason": "shares the language of course; same type of business; same end market; sold the same way",
     "score": 11.7,
     "type": "CONTROL"
    },
@@ -828,7 +823,6 @@
    ],
    "positioning": [],
    "shared_words": [
-    "corporate",
     "development",
     "lms",
     "prep",
@@ -878,7 +872,7 @@
     "company": "Infomart Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of platform; related type of business; same kind of customer; sold the same way",
+    "reason": "related type of business; same kind of customer; sold the same way",
     "score": 6.1,
     "ticker": "TSE:2492"
    },
@@ -924,9 +918,7 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "platform"
-   ],
+   "shared_words": [],
    "show_retention": false,
    "sole": "Infomart Corporation",
    "spread": 1.0,

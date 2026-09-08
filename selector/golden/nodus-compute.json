@@ -52,9 +52,7 @@
       }
      ],
      "positioning": [],
-     "shared_words": [
-      "ai"
-     ],
+     "shared_words": [],
      "spread": 34.7,
      "table": [
       {
@@ -172,7 +170,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "ai",
       "execution",
       "infrastructure"
      ],
@@ -258,7 +255,7 @@
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
     "score": 12.2,
     "ticker": "NYSE:NET"
    },
@@ -266,7 +263,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
     "score": 10.7,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -294,7 +291,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -342,14 +339,14 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of ai, infrastructure; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Cloudflare, Inc.",
      "mult": 29.5,
-     "reason": "shares the language of ai, infrastructure; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -357,7 +354,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "compute",
     "gpu",
     "infrastructure"
@@ -926,7 +922,6 @@
    ],
    "positioning": [],
    "shared_words": [
-    "ai",
     "execution",
     "infrastructure"
    ],
@@ -1003,7 +998,7 @@
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; related type of business; same revenue model",
+    "reason": "shares the language of infrastructure; related type of business; same revenue model",
     "score": 6.2,
     "ticker": "NYSE:DT"
    }
@@ -1015,7 +1010,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1042,7 +1037,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "infrastructure"
    ],
    "show_retention": true,
@@ -1061,7 +1055,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Intelligent execution layer for AI workloads"

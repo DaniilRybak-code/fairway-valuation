@@ -39,14 +39,14 @@
       {
        "company": "Oxylabs",
        "mult": 10285.71,
-       "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
       },
       {
        "company": "Clay",
        "mult": 357142.86,
-       "reason": "shares the language of agents, ai; related type of business; same revenue model; sold the same way",
+       "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
       }
@@ -54,8 +54,7 @@
      "positioning": [],
      "shared_words": [
       "agent",
-      "agents",
-      "ai"
+      "agents"
      ],
      "spread": 34.7,
      "table": [
@@ -133,7 +132,6 @@
      "shared_words": [
       "agent",
       "agents",
-      "ai",
       "hosting",
       "infrastructure"
      ],
@@ -217,7 +215,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of agent, ai, infrastructure; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent, infrastructure; related type of business; same kind of customer; same revenue model",
     "score": 10.8,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -323,7 +321,7 @@
     {
      "company": "Datadog, Inc.",
      "mult": 14.9,
-     "reason": "shares the language of agent, ai, infrastructure; related type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of agent, infrastructure; related type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -339,7 +337,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "agent",
-    "ai",
     "compute",
     "hosting",
     "infrastructure",
@@ -776,7 +773,7 @@
     "date": "Jul-26",
     "in_medians": true,
     "mult": 10.3,
-    "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 14.7,
     "type": "MIXED"
    },
@@ -787,7 +784,7 @@
     "date": "May-26",
     "in_medians": true,
     "mult": 20.5,
-    "reason": "shares the language of agent, ai; related type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
     "score": 13.7,
     "type": "PRIMARY"
    },
@@ -798,7 +795,7 @@
     "date": "Jan-26",
     "in_medians": true,
     "mult": 50.0,
-    "reason": "shares the language of agents, ai; related type of business; same revenue model; sold the same way",
+    "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
     "score": 9.8,
     "type": "SECONDARY"
    },
@@ -831,7 +828,7 @@
     "date": "Sep-25",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of agent, ai, hosting; related type of business; same business function; same revenue model",
+    "reason": "shares the language of agent, hosting; related type of business; same business function; same revenue model",
     "score": 15.1,
     "type": "PRIMARY"
    },
@@ -893,7 +890,6 @@
    "shared_words": [
     "agent",
     "agents",
-    "ai",
     "hosting",
     "infrastructure"
    ],
@@ -960,7 +956,7 @@
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; related type of business; same revenue model",
+    "reason": "shares the language of infrastructure; related type of business; same revenue model",
     "score": 6.2,
     "ticker": "NYSE:DT"
    }
@@ -972,7 +968,7 @@
     "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -999,7 +995,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "infrastructure"
    ],
    "show_retention": true,
@@ -1018,7 +1013,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "The managed cloud for AI agents"

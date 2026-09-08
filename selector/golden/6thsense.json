@@ -49,7 +49,6 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "ai",
       "infrastructure",
       "robotics",
       "runtime",
@@ -167,7 +166,7 @@
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of infrastructure; same type of business; same kind of customer; same revenue model",
     "score": 10.2,
     "ticker": "NASDAQGS:DDOG"
    },
@@ -175,7 +174,7 @@
     "company": "Dynatrace, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same type of business; same revenue model; sold the same way",
+    "reason": "shares the language of infrastructure; same type of business; same revenue model; sold the same way",
     "score": 9.7,
     "ticker": "NYSE:DT"
    },
@@ -222,7 +221,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "control",
     "infrastructure"
    ],
@@ -695,7 +693,7 @@
     "date": "Dec-25",
     "in_medians": true,
     "mult": 33.0,
-    "reason": "shares the language of ai, stack; same type of business; same business function; same revenue model",
+    "reason": "shares the language of stack; same type of business; same business function; same revenue model",
     "score": 14.1,
     "type": "PRIMARY"
    },
@@ -788,7 +786,6 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "ai",
     "infrastructure",
     "robotics",
     "runtime",
@@ -848,7 +845,7 @@
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of ai, infrastructure; same kind of customer; same revenue model",
+    "reason": "shares the language of infrastructure; same kind of customer; same revenue model",
     "score": 7.2,
     "ticker": "NYSE:NET"
    },
@@ -868,7 +865,7 @@
     "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -895,7 +892,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "ai",
     "infrastructure"
    ],
    "show_retention": true,
@@ -922,7 +918,7 @@
    ],
    "tag_evidence": 0.2,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Nervous system for physical AI"

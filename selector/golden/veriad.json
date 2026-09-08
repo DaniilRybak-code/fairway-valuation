@@ -76,14 +76,14 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 3,
-      "ARR_RUNRATE": 1,
-      "NET_REVENUE": 2
+      "NET_REVENUE": 3
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 2,
+     "control_n": 3,
      "control_names": [
       "Semrush",
+      "E2open",
       "AuditBoard"
      ],
      "dispersed": true,
@@ -92,20 +92,26 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 47.3,
-     "listed_target_n": 1,
+     "high": 33.3,
+     "listed_target_n": 2,
      "listed_target_names": [
-      "Semrush"
+      "Semrush",
+      "E2open"
      ],
-     "low": 4.3,
-     "mid": 16.0,
+     "low": 3.46,
+     "mid": 15.0,
      "n": 6,
      "period_mix": {
+      "FY2025": 1,
       "LTM": 1,
       "NTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 3
      },
      "period_span": {
+      "FY2025": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -120,6 +126,13 @@
       }
      },
      "points": [
+      {
+       "company": "E2open",
+       "mult": 3.46,
+       "reason": "shares the language of compliance; related type of business; same revenue model; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
       {
        "company": "Semrush",
        "mult": 4.3,
@@ -151,14 +164,7 @@
       {
        "company": "Jasper",
        "mult": 33.3,
-       "reason": "shares the language of ad, brand, content; same type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "6sense",
-       "mult": 47.3,
-       "reason": "shares the language of advertising, marketing; same type of business; same kind of customer; same revenue model",
+       "reason": "shares the language of ad, content; same type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
@@ -166,16 +172,23 @@
      "positioning": [],
      "shared_words": [
       "ad",
-      "advertising",
-      "brand",
       "compliance",
       "content",
       "governance",
-      "marketing",
       "workflow"
      ],
-     "spread": 11.0,
+     "spread": 9.6,
      "table": [
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 3.46,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
       {
        "company": "Semrush",
        "date": "Nov-25",
@@ -225,16 +238,6 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "6sense",
-       "date": "Jan-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 47.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
      "tag_evidence": 0.7,
@@ -248,7 +251,7 @@
     "company": "Sprinklr, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketing; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 11.1,
     "ticker": "NYSE:CXM"
    },
@@ -256,7 +259,7 @@
     "company": "Braze, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketing; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 8.6,
     "ticker": "NASDAQGS:BRZE"
    },
@@ -264,7 +267,7 @@
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketing; same type of business; same kind of customer; sold the same way",
+    "reason": "same type of business; same kind of customer; sold the same way",
     "score": 8.6,
     "ticker": "NYSE:ZETA"
    },
@@ -272,7 +275,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketing; related type of business; same kind of customer; same revenue model",
+    "reason": "related type of business; same kind of customer; same revenue model",
     "score": 7.6,
     "ticker": "NASDAQGS:GTM"
    },
@@ -296,7 +299,7 @@
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketing; same type of business; same revenue model",
+    "reason": "same type of business; same revenue model",
     "score": 6.6,
     "ticker": "NYSE:HUBS"
    }
@@ -336,7 +339,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "compliance",
-    "marketing",
     "review"
    ],
    "show_retention": true,
@@ -562,6 +564,16 @@
    {
     "backed": [
      {
+      "company": "E2open",
+      "date": "May-25"
+     }
+    ],
+    "investor": "WiseTech Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Writer",
       "date": "Nov-24"
      }
@@ -604,14 +616,10 @@
      {
       "company": "Writer",
       "date": "Nov-24"
-     },
-     {
-      "company": "6sense",
-      "date": "Jan-22"
      }
     ],
     "investor": "B Capital",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -708,14 +716,10 @@
      {
       "company": "OneTrust",
       "date": "Jul-23"
-     },
-     {
-      "company": "6sense",
-      "date": "Jan-22"
      }
     ],
     "investor": "SoftBank Vision Fund 2",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -786,86 +790,6 @@
     ],
     "investor": "HubSpot Ventures",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Blue Owl Capital (co-lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "MSD Partners (co-lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Franklin Templeton",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Harmony Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Insight Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "D1 Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Sapphire Ventures",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -879,6 +803,17 @@
     "mult": 4.3,
     "reason": "both do Content Marketing; same type of business; same revenue model",
     "score": 10.2,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "E2open",
+    "date": "May-25",
+    "in_medians": true,
+    "mult": 3.46,
+    "reason": "shares the language of compliance; related type of business; same revenue model; sold the same way",
+    "score": 9.7,
     "type": "CONTROL"
    },
    {
@@ -932,19 +867,8 @@
     "date": "Oct-22",
     "in_medians": true,
     "mult": 33.3,
-    "reason": "shares the language of ad, brand, content; same type of business; same revenue model; same AI stance",
+    "reason": "shares the language of ad, content; same type of business; same revenue model; same AI stance",
     "score": 12.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "6sense",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 47.3,
-    "reason": "shares the language of advertising, marketing; same type of business; same kind of customer; same revenue model",
-    "score": 15.3,
     "type": "PRIMARY"
    }
   ],
@@ -956,32 +880,38 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 3
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 2,
+   "control_n": 3,
    "control_names": [
     "Semrush",
+    "E2open",
     "AuditBoard"
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 47.3,
-   "listed_target_n": 1,
+   "high": 33.3,
+   "listed_target_n": 2,
    "listed_target_names": [
-    "Semrush"
+    "Semrush",
+    "E2open"
    ],
-   "low": 4.3,
-   "mid": 16.0,
+   "low": 3.46,
+   "mid": 15.0,
    "n": 6,
    "period_mix": {
+    "FY2025": 1,
     "LTM": 1,
     "NTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 3
    },
    "period_span": {
+    "FY2025": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -996,6 +926,13 @@
     }
    },
    "points": [
+    {
+     "company": "E2open",
+     "mult": 3.46,
+     "reason": "shares the language of compliance; related type of business; same revenue model; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
     {
      "company": "Semrush",
      "mult": 4.3,
@@ -1027,14 +964,7 @@
     {
      "company": "Jasper",
      "mult": 33.3,
-     "reason": "shares the language of ad, brand, content; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "6sense",
-     "mult": 47.3,
-     "reason": "shares the language of advertising, marketing; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of ad, content; same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
@@ -1042,16 +972,23 @@
    "positioning": [],
    "shared_words": [
     "ad",
-    "advertising",
-    "brand",
     "compliance",
     "content",
     "governance",
-    "marketing",
     "workflow"
    ],
-   "spread": 11.0,
+   "spread": 9.6,
    "table": [
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 3.46,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
     {
      "company": "Semrush",
      "date": "Nov-25",
@@ -1101,23 +1038,13 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "6sense",
-     "date": "Jan-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 47.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
    "tag_evidence": 0.7,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 55,
+  "private_window_months": 46,
   "secondary": [
    {
     "company": "Box, Inc.",
@@ -1131,7 +1058,7 @@
     "company": "Salesforce, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketing; related type of business; same revenue model; sold the same way",
+    "reason": "related type of business; same revenue model; sold the same way",
     "score": 7.1,
     "ticker": "NYSE:CRM"
    },
@@ -1147,7 +1074,7 @@
     "company": "Adobe Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of marketing; related type of business; same revenue model",
+    "reason": "related type of business; same revenue model",
     "score": 5.1,
     "ticker": "NASDAQGS:ADBE"
    }
@@ -1187,7 +1114,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "content",
-    "marketing",
     "workflow"
    ],
    "show_retention": true,

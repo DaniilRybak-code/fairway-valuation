@@ -11,7 +11,7 @@
       "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": true,
@@ -46,15 +46,14 @@
       {
        "company": "AlphaSense",
        "mult": 1000000.0,
-       "reason": "shares the language of platform; same type of business; same revenue model",
+       "reason": "same type of business; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
      "shared_words": [
-      "api",
-      "platform"
+      "api"
      ],
      "spread": 97.2,
      "table": [
@@ -81,7 +80,7 @@
      ],
      "tag_evidence": 0.1,
      "thin": true,
-     "triangulated": false
+     "triangulated": true
     },
     "REVENUE": {
      "anchor_dropped": false,
@@ -121,8 +120,7 @@
      "positioning": [],
      "shared_words": [
       "api",
-      "mcp",
-      "platform"
+      "mcp"
      ],
      "spread": 3.2,
      "table": [
@@ -178,7 +176,7 @@
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 12.1,
     "ticker": "HLSE:QTCOM"
    },
@@ -186,7 +184,7 @@
     "company": "GitLab Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
     "score": 11.1,
     "ticker": "NASDAQGS:GTLB"
    },
@@ -202,7 +200,7 @@
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of engagement, platform; same type of business; same revenue model",
+    "reason": "shares the language of engagement; same type of business; same revenue model",
     "score": 6.8,
     "ticker": "NASDAQGS:GTM"
    },
@@ -222,7 +220,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -263,21 +261,21 @@
     {
      "company": "ZoomInfo Technologies Inc.",
      "mult": 2.2,
-     "reason": "shares the language of engagement, platform; same type of business; same revenue model",
+     "reason": "shares the language of engagement; same type of business; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "Qt Group Oyj",
      "mult": 3.9,
-     "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
+     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
      "company": "GitLab Inc.",
      "mult": 5.2,
-     "reason": "shares the language of platform; same type of business; same kind of customer; same revenue model",
+     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -287,7 +285,6 @@
    "shared_words": [
     "api",
     "engagement",
-    "platform",
     "scheduling"
    ],
    "show_retention": true,
@@ -855,7 +852,7 @@
     "date": "Nov-24",
     "in_medians": false,
     "mult": 40.4,
-    "reason": "shares the language of platform; same type of business; same revenue model",
+    "reason": "same type of business; same revenue model",
     "score": 8.6,
     "type": "PRIMARY"
    },
@@ -866,7 +863,7 @@
     "date": "Jun-24",
     "in_medians": true,
     "mult": 20.0,
-    "reason": "shares the language of platform; same type of business; same revenue model",
+    "reason": "same type of business; same revenue model",
     "score": 7.6,
     "type": "PRIMARY"
    },
@@ -877,7 +874,7 @@
     "date": "May-24",
     "in_medians": true,
     "mult": 32.5,
-    "reason": "shares the language of platform; related type of business; same kind of customer; sold the same way",
+    "reason": "related type of business; same kind of customer; sold the same way",
     "score": 11.1,
     "type": "PRIMARY"
    },
@@ -928,8 +925,7 @@
    "positioning": [],
    "shared_words": [
     "api",
-    "mcp",
-    "platform"
+    "mcp"
    ],
    "spread": 3.2,
    "table": [
@@ -992,7 +988,7 @@
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of api, platform; same kind of customer; sold the same way",
+    "reason": "shares the language of api; same kind of customer; sold the same way",
     "score": 6.7,
     "ticker": "NYSE:TWLO"
    },
@@ -1008,7 +1004,7 @@
     "company": "Sprinklr, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of media, social; related type of business; same revenue model; same AI stance",
+    "reason": "shares the language of social; related type of business; same revenue model; same AI stance",
     "score": 6.3,
     "ticker": "NYSE:CXM"
    },
@@ -1028,7 +1024,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -1063,7 +1059,7 @@
     {
      "company": "Twilio Inc.",
      "mult": 5.2,
-     "reason": "shares the language of api, platform; same kind of customer; sold the same way",
+     "reason": "shares the language of api; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     }
@@ -1071,7 +1067,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "engagement",
-    "media",
     "scheduling",
     "social"
    ],

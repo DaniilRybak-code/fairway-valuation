@@ -200,7 +200,6 @@
      ],
      "positioning": [],
      "shared_words": [
-      "consumer",
       "learning",
       "skills"
      ],
@@ -256,7 +255,7 @@
     "company": "Coursera, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of consumer, learning; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
     "score": 11.3,
     "ticker": "NYSE:COUR"
    },
@@ -264,7 +263,7 @@
     "company": "JustSystems Corporation",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of consumer, learning; same type of business; same kind of customer; same revenue model",
+    "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
     "score": 10.3,
     "ticker": "TSE:4686"
    },
@@ -284,7 +283,7 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -318,7 +317,7 @@
     {
      "company": "Coursera, Inc.",
      "mult": 0.5,
-     "reason": "shares the language of consumer, learning; same type of business; same kind of customer; same revenue model",
+     "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -334,8 +333,6 @@
    "post_stated_n": 0,
    "shared_words": [
     "adaptive",
-    "app",
-    "consumer",
     "learning"
    ],
    "show_retention": false,
@@ -742,7 +739,7 @@
     "company": "Match Group, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+    "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
     "score": 10.3,
     "ticker": "NASDAQGS:MTCH"
    },
@@ -750,7 +747,7 @@
     "company": "Bumble Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+    "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
     "score": 10.3,
     "ticker": "NASDAQGS:BMBL"
    },
@@ -758,7 +755,7 @@
     "company": "Grindr Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; same purchase frequency",
+    "reason": "shares the language of social; same kind of customer; same revenue model; same purchase frequency",
     "score": 8.3,
     "ticker": "NYSE:GRND"
    },
@@ -766,7 +763,7 @@
     "company": "WW International, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way",
     "score": 7.1,
     "ticker": "NASDAQGM:WW"
    },
@@ -774,7 +771,7 @@
     "company": "Peloton Interactive, Inc.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+    "reason": "same kind of customer; same revenue model; sold the same way",
     "score": 7.1,
     "ticker": "NASDAQGS:PTON"
    }
@@ -786,7 +783,7 @@
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -813,35 +810,35 @@
     {
      "company": "WW International, Inc.",
      "mult": 0.8,
-     "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+     "reason": "same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Bumble Inc.",
      "mult": 0.9,
-     "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+     "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Peloton Interactive, Inc.",
      "mult": 1.1,
-     "reason": "shares the language of app; same kind of customer; same revenue model; sold the same way",
+     "reason": "same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Match Group, Inc.",
      "mult": 3.6,
-     "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; sold the same way",
+     "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
     {
      "company": "Grindr Inc.",
      "mult": 5.1,
-     "reason": "shares the language of app, consumer, social; same kind of customer; same revenue model; same purchase frequency",
+     "reason": "shares the language of social; same kind of customer; same revenue model; same purchase frequency",
      "tier": "BROAD",
      "transaction_type": ""
     }
@@ -849,8 +846,6 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "app",
-    "consumer",
     "social"
    ],
    "show_retention": false,
@@ -904,7 +899,7 @@
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Helps build social skills through daily practice"
