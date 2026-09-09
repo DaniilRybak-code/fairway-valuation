@@ -176,7 +176,7 @@
       {
        "company": "MasterClass",
        "mult": 27.5,
-       "reason": "both do Consumer Subscription; related type of business; same end market; same business function",
+       "reason": "related type of business; same end market; same business function; same kind of customer",
        "tier": "DIRECT",
        "transaction_type": "PRIMARY"
       }
@@ -209,7 +209,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.8,
+     "tag_evidence": 0.7,
      "thin": true,
      "triangulated": false
     }
@@ -221,7 +221,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same type of business; same end market; same business function",
-    "score": 18.0,
+    "score": 17.9,
     "ticker": "NASDAQGS:DUOL"
    },
    {
@@ -229,7 +229,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Consumer Subscription; same type of business; same end market; same business function",
-    "score": 16.4,
+    "score": 16.3,
     "ticker": "NYSE:COUR"
    },
    {
@@ -241,20 +241,20 @@
     "ticker": "NYSE:CHGG"
    },
    {
-    "company": "JustSystems Corporation",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of learning; same type of business; same end market; same business function",
-    "score": 15.4,
-    "ticker": "TSE:4686"
-   },
-   {
     "company": "Nerdy Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning; same type of business; same end market; same business function",
     "score": 15.3,
     "ticker": "NYSE:NRDY"
+   },
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same end market; same business function",
+    "score": 15.3,
+    "ticker": "TSE:4686"
    }
   ],
   "core_range": {
@@ -363,7 +363,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
@@ -619,8 +619,8 @@
     "date": "May-21",
     "in_medians": true,
     "mult": 27.5,
-    "reason": "both do Consumer Subscription; related type of business; same end market; same business function",
-    "score": 20.6,
+    "reason": "related type of business; same end market; same business function; same kind of customer",
+    "score": 20.5,
     "type": "PRIMARY"
    }
   ],
@@ -687,51 +687,19 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Match Group, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGS:MTCH"
-   },
-   {
-    "company": "Bumble Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGS:BMBL"
-   },
-   {
     "company": "Spotify Technology S.A.",
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Subscription Audio, Podcasts; same business function; same kind of customer; same revenue model",
     "score": 11.1,
     "ticker": "NYSE:SPOT"
-   },
-   {
-    "company": "Grindr Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 10.1,
-    "ticker": "NYSE:GRND"
-   },
-   {
-    "company": "The New York Times Company",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Consumer Subscription; same business function; same kind of customer; same revenue model",
-    "score": 10.1,
-    "ticker": "NYSE:NYT"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -739,17 +707,17 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
-   "high": 5.1,
+   "high": 4.2,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.0,
-   "mid": 3.6,
-   "n": 5,
+   "low": 4.2,
+   "mid": 4.2,
+   "n": 1,
    "period_mix": {
-    "NTM": 5
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -765,35 +733,9 @@
     "podcasts"
    ],
    "show_retention": false,
-   "spread": 5.7,
+   "sole": "Spotify Technology S.A.",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "Bumble Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -1.6,
-     "multiple": 0.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:BMBL"
-    },
-    {
-     "company": "The New York Times Company",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.4,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:NYT"
-    },
-    {
-     "company": "Match Group, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.8,
-     "multiple": 3.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:MTCH"
-    },
     {
      "company": "Spotify Technology S.A.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -802,19 +744,10 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:SPOT"
-    },
-    {
-     "company": "Grindr Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.0,
-     "multiple": 5.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:GRND"
     }
    ],
    "tag_evidence": 1.1,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   }
  },

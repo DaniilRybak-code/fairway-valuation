@@ -2,34 +2,33 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
+    "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
+      "ARR": 2,
+      "ARR_RUNRATE": 1
      },
      "bounded": true,
-     "closeness": "THIN_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Salesloft"
-     ],
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
-     "founder_field": "business_customers",
+     "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 575000.0,
+     "high": 150.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 357142.86,
-     "mid": 575000.0,
-     "n": 2,
+     "low": 50.0,
+     "mid": 105.3,
+     "n": 3,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
       "RUN_RATE": {
@@ -40,120 +39,13 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "agents"
-     ],
-     "spread": 1.6,
-     "table": [
-      {
-       "company": "Clay",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 357142.86,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Salesloft",
-       "date": "Dec-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 575000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.3,
-     "thin": true,
-     "triangulated": true
-    },
-    "REVENUE": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
-     "basis_mix": {
-      "ARR": 3,
-      "ARR_RUNRATE": 1
-     },
-     "bounded": true,
-     "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Salesloft"
-     ],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "revenue",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 150.0,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 23.0,
-     "mid": 105.3,
-     "n": 4,
-     "period_mix": {
-      "RUN_RATE": 4
-     },
-     "period_span": {
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Salesloft",
-       "mult": 23.0,
-       "reason": "same type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "shares the language of agents; same type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Sierra",
-       "mult": 105.3,
-       "reason": "both do AI Agents, Customer Service Automation, Deflection; same type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Decagon",
-       "mult": 150.0,
-       "reason": "both do AI Agents, Customer Support Automation; same type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [],
-     "shared_words": [
       "agents",
       "customer",
       "deflection",
       "support"
      ],
-     "spread": 6.5,
+     "spread": 3.0,
      "table": [
-      {
-       "company": "Salesloft",
-       "date": "Dec-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Clay",
        "date": "Jan-26",
@@ -185,29 +77,13 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.2,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
    }
   },
   "core": [
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same revenue model",
-    "score": 9.1,
-    "ticker": "NYSE:ZETA"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:GTM"
-   },
    {
     "company": "Braze, Inc.",
     "family": "software",
@@ -245,7 +121,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -259,11 +135,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 2.6,
-   "n": 6,
+   "low": 1.6,
+   "mid": 2.55,
+   "n": 4,
    "period_mix": {
-    "NTM": 6
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -278,7 +154,7 @@
     "customer"
    ],
    "show_retention": true,
-   "spread": 2.4,
+   "spread": 2.1,
    "table": [
     {
      "company": "Sprinklr, Inc.",
@@ -299,15 +175,6 @@
      "ticker": "NYSE:RAMP"
     },
     {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
      "company": "Klaviyo, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 19.5,
@@ -324,15 +191,6 @@
      "recurring_pct": null,
      "retention_pct": 110.0,
      "ticker": "NASDAQGS:BRZE"
-    },
-    {
-     "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.3,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:ZETA"
     }
    ],
    "tag_evidence": 0.2,
@@ -607,26 +465,6 @@
     ],
     "investor": "Frontline",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Salesloft",
-      "date": "Dec-21"
-     }
-    ],
-    "investor": "Vista Equity Partners (majority)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Salesloft",
-      "date": "Dec-21"
-     }
-    ],
-    "investor": "Mubadala (co-investor)",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -639,7 +477,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do AI Agents, Customer Service Automation, Deflection; same type of business; same kind of customer; same revenue model",
-    "score": 15.2,
+    "score": 15.0,
     "type": "PRIMARY"
    },
    {
@@ -650,7 +488,7 @@
     "in_medians": true,
     "mult": 150.0,
     "reason": "both do AI Agents, Customer Support Automation; same type of business; same kind of customer; same revenue model",
-    "score": 14.9,
+    "score": 14.8,
     "type": "PRIMARY"
    },
    {
@@ -661,19 +499,8 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of agents; same type of business; same kind of customer; same revenue model",
-    "score": 12.3,
+    "score": 12.2,
     "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Salesloft",
-    "date": "Dec-21",
-    "in_medians": true,
-    "mult": 23.0,
-    "reason": "same type of business; same kind of customer",
-    "score": 8.6,
-    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -683,25 +510,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 2,
     "ARR_RUNRATE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Salesloft"
-   ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
    "high": 150.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 23.0,
+   "low": 50.0,
    "mid": 105.3,
-   "n": 4,
+   "n": 3,
    "period_mix": {
-    "RUN_RATE": 4
+    "RUN_RATE": 3
    },
    "period_span": {
     "RUN_RATE": {
@@ -709,36 +534,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Salesloft",
-     "mult": 23.0,
-     "reason": "same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "shares the language of agents; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Sierra",
-     "mult": 105.3,
-     "reason": "both do AI Agents, Customer Service Automation, Deflection; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Decagon",
-     "mult": 150.0,
-     "reason": "both do AI Agents, Customer Support Automation; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "agents",
@@ -746,18 +542,8 @@
     "deflection",
     "support"
    ],
-   "spread": 6.5,
+   "spread": 3.0,
    "table": [
-    {
-     "company": "Salesloft",
-     "date": "Dec-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Clay",
      "date": "Jan-26",
@@ -789,20 +575,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 56,
+  "private_window_months": 7,
   "secondary": [
-   {
-    "company": "Pegasystems Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of customer; related type of business; same business function",
-    "score": 5.8,
-    "ticker": "NASDAQGS:PEGA"
-   },
    {
     "company": "Samsara Inc.",
     "family": "software",
@@ -812,20 +590,20 @@
     "ticker": "NYSE:IOT"
    },
    {
+    "company": "Pegasystems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; related type of business; same business function",
+    "score": 5.7,
+    "ticker": "NASDAQGS:PEGA"
+   },
+   {
     "company": "Twilio Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of customer; related type of business; same revenue model",
     "score": 5.2,
     "ticker": "NYSE:TWLO"
-   },
-   {
-    "company": "UiPath, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same business function; same AI stance",
-    "score": 5.1,
-    "ticker": "NYSE:PATH"
    },
    {
     "company": "Rezolve AI PLC",
@@ -840,7 +618,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -855,10 +633,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.9,
-   "mid": 4.75,
-   "n": 4,
+   "mid": 5.2,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -884,15 +662,6 @@
      "recurring_pct": 57.9,
      "retention_pct": null,
      "ticker": "NASDAQGS:PEGA"
-    },
-    {
-     "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.0,
-     "multiple": 4.3,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:PATH"
     },
     {
      "company": "Twilio Inc.",

@@ -8,12 +8,14 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
+      "BUSINESS_CUSTOMERS": 4
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
+     "control_n": 1,
+     "control_names": [
+      "Salesloft"
+     ],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "business_customers",
@@ -24,10 +26,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 357142.86,
-     "mid": 1000000.0,
-     "n": 2,
+     "mid": 916666.67,
+     "n": 4,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 4
      },
      "period_span": {
       "RUN_RATE": {
@@ -56,6 +58,26 @@
        "ticker": ""
       },
       {
+       "company": "Salesloft",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 575000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Outreach",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 916666.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Gong",
        "date": "Nov-25",
        "growth_basis": "",
@@ -66,8 +88,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
-     "thin": true,
+     "tag_evidence": 0.9,
+     "thin": false,
      "triangulated": false
     },
     "REVENUE": {
@@ -76,15 +98,16 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
+      "ARR": 2,
       "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
+     "control_n": 2,
      "control_names": [
-      "Semrush"
+      "Semrush",
+      "Salesloft"
      ],
      "dispersed": true,
      "display": "SCATTER",
@@ -98,18 +121,13 @@
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 18.3,
-     "n": 5,
+     "mid": 47.3,
+     "n": 4,
      "period_mix": {
-      "NOT STATED": 1,
       "NTM": 1,
       "RUN_RATE": 3
      },
      "period_span": {
-      "NOT STATED": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "NTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -128,18 +146,11 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Restaurant365",
-       "mult": 10.0,
-       "reason": "related type of business; same kind of customer; same revenue model",
+       "company": "Salesloft",
+       "mult": 23.0,
+       "reason": "both do Deal Management; same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Notion",
-       "mult": 18.3,
-       "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
+       "transaction_type": "CONTROL"
       },
       {
        "company": "6sense",
@@ -159,6 +170,7 @@
      "positioning": [],
      "shared_words": [
       "contact",
+      "deal",
       "enrichment",
       "intelligence",
       "sales"
@@ -176,21 +188,11 @@
        "ticker": ""
       },
       {
-       "company": "Restaurant365",
-       "date": "May-23",
+       "company": "Salesloft",
+       "date": "Dec-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Notion",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 18.3,
+       "multiple": 23.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -228,7 +230,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do CRM, Sales Automation; same type of business; same kind of customer; same revenue model",
-    "score": 15.6,
+    "score": 15.5,
     "ticker": "NYSE:HUBS"
    },
    {
@@ -236,7 +238,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do CRM, Sales Automation; related type of business; same business function; same revenue model",
-    "score": 11.6,
+    "score": 11.5,
     "ticker": "NYSE:CRM"
    },
    {
@@ -246,21 +248,13 @@
     "reason": "both do CRM; related type of business; same kind of customer; same revenue model",
     "score": 9.9,
     "ticker": "NASDAQGS:FRSH"
-   },
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 7.6,
-    "ticker": "NYSE:KVYO"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -275,10 +269,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.7,
-   "mid": 2.9,
-   "n": 4,
+   "mid": 2.8,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -315,15 +309,6 @@
      "ticker": "NYSE:HUBS"
     },
     {
-     "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
-    },
-    {
      "company": "Salesforce, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 9.7,
@@ -333,7 +318,7 @@
      "ticker": "NYSE:CRM"
     }
    ],
-   "tag_evidence": 3.6,
+   "tag_evidence": 3.5,
    "thin": false,
    "triangulated": false
   },
@@ -479,40 +464,6 @@
    {
     "backed": [
      {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "GIC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     },
-     {
-      "company": "Apollo.io",
-      "date": "Aug-23"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Index Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Clay",
       "date": "Jan-26"
      }
@@ -597,6 +548,16 @@
       "date": "Aug-23"
      }
     ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Apollo.io",
+      "date": "Aug-23"
+     }
+    ],
     "investor": "Tribe Capital",
     "n": 1
    },
@@ -608,46 +569,6 @@
      }
     ],
     "investor": "Nexus Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
     "n": 1
    },
    {
@@ -725,10 +646,14 @@
      {
       "company": "6sense",
       "date": "Jan-22"
+     },
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
      }
     ],
     "investor": "Tiger Global",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -749,21 +674,130 @@
     ],
     "investor": "Sapphire Ventures",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Salesloft",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Vista Equity Partners (majority)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Salesloft",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Mubadala (co-investor)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Premji Invest (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "STEADFAST Capital Ventures (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Sequoia Capital Global Equities",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Vista Public Strategies",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Lone Pine",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Sands Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Mayfield",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "DFJ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Trinity",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Notion",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 18.3,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 13.1,
-    "type": "SECONDARY"
-   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -772,7 +806,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "both do Sales Intelligence; same type of business; same business function; sold the same way",
-    "score": 12.0,
+    "score": 11.9,
     "type": "SECONDARY"
    },
    {
@@ -810,17 +844,6 @@
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 10.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "6sense",
     "date": "Jan-22",
@@ -828,6 +851,28 @@
     "mult": 47.3,
     "reason": "both do Sales Intelligence; same type of business; same revenue model",
     "score": 9.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Salesloft",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "both do Deal Management; same type of business; same business function; same revenue model",
+    "score": 12.4,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Outreach",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of intelligence, sales; same type of business; same business function; same revenue model",
+    "score": 11.8,
     "type": "PRIMARY"
    }
   ],
@@ -838,15 +883,16 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 2,
     "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
+   "control_n": 2,
    "control_names": [
-    "Semrush"
+    "Semrush",
+    "Salesloft"
    ],
    "dispersed": true,
    "display": "SCATTER",
@@ -856,18 +902,13 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 18.3,
-   "n": 5,
+   "mid": 47.3,
+   "n": 4,
    "period_mix": {
-    "NOT STATED": 1,
     "NTM": 1,
     "RUN_RATE": 3
    },
    "period_span": {
-    "NOT STATED": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -886,18 +927,11 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Restaurant365",
-     "mult": 10.0,
-     "reason": "related type of business; same kind of customer; same revenue model",
+     "company": "Salesloft",
+     "mult": 23.0,
+     "reason": "both do Deal Management; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Notion",
-     "mult": 18.3,
-     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
+     "transaction_type": "CONTROL"
     },
     {
      "company": "6sense",
@@ -917,6 +951,7 @@
    "positioning": [],
    "shared_words": [
     "contact",
+    "deal",
     "enrichment",
     "intelligence",
     "sales"
@@ -934,21 +969,11 @@
      "ticker": ""
     },
     {
-     "company": "Restaurant365",
-     "date": "May-23",
+     "company": "Salesloft",
+     "date": "Dec-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 10.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Notion",
-     "date": "Jan-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 18.3,
+     "multiple": 23.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -978,7 +1003,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 55,
+  "private_window_months": 62,
   "secondary": [
    {
     "company": "ZoomInfo Technologies Inc.",

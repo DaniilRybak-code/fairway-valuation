@@ -97,7 +97,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
     }
@@ -105,20 +105,20 @@
   },
   "core": [
    {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model; sold the same way",
-    "score": 11.5,
-    "ticker": "NYSE:SNOW"
-   },
-   {
     "company": "Elastic N.V.",
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same business function; same revenue model; sold the same way",
     "score": 11.5,
     "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same revenue model; sold the same way",
+    "score": 11.5,
+    "ticker": "NYSE:SNOW"
    },
    {
     "company": "Dynatrace, Inc.",
@@ -726,7 +726,7 @@
     "in_medians": true,
     "mult": 14.9,
     "reason": "shares the language of expert, training; same type of business; same business function; sold the same way",
-    "score": 15.4,
+    "score": 15.3,
     "type": "PRIMARY"
    },
    {
@@ -737,7 +737,7 @@
     "in_medians": true,
     "mult": 14.5,
     "reason": "both do Training Data; same type of business; same business function; sold the same way",
-    "score": 14.8,
+    "score": 14.7,
     "type": "CONTROL"
    },
    {
@@ -748,7 +748,7 @@
     "in_medians": true,
     "mult": 13.2,
     "reason": "both do Training Data; same type of business; sold the same way; same AI stance",
-    "score": 11.8,
+    "score": 11.7,
     "type": "PRIMARY"
    },
    {
@@ -877,7 +877,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -900,20 +900,20 @@
     "ticker": "NASDAQGM:SOUN"
    },
    {
-    "company": "ExlService Holdings, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; sold the same way",
-    "score": 8.0,
-    "ticker": "NASDAQ:EXLS"
-   },
-   {
     "company": "Fair Isaac Corporation",
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same business function; sold the same way",
     "score": 8.0,
     "ticker": "NYSE:FICO"
+   },
+   {
+    "company": "ExlService Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "NASDAQ:EXLS"
    },
    {
     "company": "Datadog, Inc.",

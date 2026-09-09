@@ -9,28 +9,26 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 3
+      "NET_REVENUE": 2
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
-     "control_n": 1,
-     "control_names": [
-      "Wolt"
-     ],
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 44.12,
+     "high": 10.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 8.94,
-     "mid": 23.5,
-     "n": 4,
+     "low": 5.97,
+     "mid": 8.94,
+     "n": 3,
      "period_mix": {
-      "LTM": 3,
+      "LTM": 2,
       "RUN_RATE": 1
      },
      "period_span": {
@@ -51,8 +49,18 @@
       "parcel",
       "reverse"
      ],
-     "spread": 4.9,
+     "spread": 1.7,
      "table": [
+      {
+       "company": "Delhivery",
+       "date": "May-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.97,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
       {
        "company": "Xpressbees",
        "date": "Feb-22",
@@ -72,29 +80,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Wolt",
-       "date": "Nov-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Gopuff",
-       "date": "Jul-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 44.12,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 4.7,
+     "tag_evidence": 4.5,
      "thin": false,
      "triangulated": false
     }
@@ -106,7 +94,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
-    "score": 9.6,
+    "score": 9.5,
     "ticker": "ENXTAM:PNL"
    },
    {
@@ -114,7 +102,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of last, mile, parcel; same type of business; same business function; same revenue model",
-    "score": 9.6,
+    "score": 9.5,
     "ticker": "TSE:9064"
    },
    {
@@ -122,7 +110,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of last, mile, parcel; same type of business; same business function; same revenue model",
-    "score": 9.6,
+    "score": 9.5,
     "ticker": "NYSE:ZTO"
    },
    {
@@ -130,31 +118,31 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery; same type of business; same business function; same revenue model",
-    "score": 8.9,
+    "score": 8.7,
     "ticker": "NYSE:UPS"
-   },
-   {
-    "company": "SG Holdings Co., Ltd.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
-    "score": 8.9,
-    "ticker": "TSE:9143"
    },
    {
     "company": "FedEx Corporation",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of parcel; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NYSE:FDX"
+   },
+   {
+    "company": "Deutsche Post AG",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of parcel; same type of business; same business function; same revenue model",
+    "score": 8.7,
+    "ticker": "XTRA:DHL"
    },
    {
     "company": "InPost S.A.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of parcel; same type of business; same business function; same revenue model",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "ENXTAM:INPST"
    }
   ],
@@ -204,9 +192,9 @@
      "transaction_type": ""
     },
     {
-     "company": "SG Holdings Co., Ltd.",
-     "mult": 0.7,
-     "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
+     "company": "Deutsche Post AG",
+     "mult": 0.9,
+     "reason": "shares the language of parcel; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -268,13 +256,13 @@
      "ticker": "TSE:9064"
     },
     {
-     "company": "SG Holdings Co., Ltd.",
+     "company": "Deutsche Post AG",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.0,
-     "multiple": 0.7,
+     "growth_pct": 3.2,
+     "multiple": 0.9,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "TSE:9143"
+     "ticker": "XTRA:DHL"
     },
     {
      "company": "FedEx Corporation",
@@ -313,7 +301,7 @@
      "ticker": "ENXTAM:INPST"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -509,46 +497,6 @@
    {
     "backed": [
      {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "BOND",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "Mubadala Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "Northzone",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Flink",
-      "date": "Sep-24"
-     }
-    ],
-    "investor": "REWE",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Glovo",
       "date": "Dec-21"
      }
@@ -569,58 +517,8 @@
    {
     "backed": [
      {
-      "company": "Wolt",
-      "date": "Nov-21"
-     }
-    ],
-    "investor": "DoorDash",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gopuff",
-      "date": "Jul-21"
-     }
-    ],
-    "investor": "Blackstone Horizons",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gopuff",
-      "date": "Jul-21"
-     }
-    ],
-    "investor": "Guggenheim Investments",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gopuff",
-      "date": "Jul-21"
-     }
-    ],
-    "investor": "Hedosophia",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gopuff",
-      "date": "Jul-21"
-     }
-    ],
-    "investor": "Adage Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Gopuff",
-      "date": "Jul-21"
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
     "investor": "Fidelity",
@@ -629,31 +527,31 @@
    {
     "backed": [
      {
-      "company": "Gopuff",
-      "date": "Jul-21"
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
-    "investor": "SoftBank Vision Fund 1",
+    "investor": "Baillie Gifford",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Gopuff",
-      "date": "Jul-21"
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
-    "investor": "Atreides",
+    "investor": "Chimera",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Gopuff",
-      "date": "Jul-21"
+      "company": "Delhivery",
+      "date": "May-21"
      }
     ],
-    "investor": "Eldridge",
+    "investor": "Steadview Capital",
     "n": 1
    }
   ],
@@ -667,7 +565,7 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "both do Parcel Delivery, Last Mile, Reverse Logistics; same type of business; same business function; same revenue model",
-    "score": 18.7,
+    "score": 18.5,
     "type": "PRIMARY"
    },
    {
@@ -678,7 +576,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "same type of business; same end market; same AI stance",
-    "score": 10.1,
+    "score": 10.0,
     "type": "PRIMARY"
    },
    {
@@ -689,19 +587,8 @@
     "in_medians": true,
     "mult": null,
     "reason": "both do Reverse Logistics; same end market; same business function; same kind of customer",
-    "score": 16.1,
+    "score": 16.0,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Flink",
-    "date": "Sep-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "MIXED"
    },
    {
     "basis": "NONE",
@@ -711,29 +598,18 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of multi; same type of business; same business function; same AI stance",
-    "score": 9.3,
+    "score": 9.2,
     "type": "CONTROL"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "DISCLOSED_EXACT",
     "bound": "",
-    "company": "Wolt",
-    "date": "Nov-21",
+    "company": "Delhivery",
+    "date": "May-21",
     "in_medians": true,
-    "mult": 23.5,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "CONTEMPORANEOUS_PRESS",
-    "bound": "",
-    "company": "Gopuff",
-    "date": "Jul-21",
-    "in_medians": true,
-    "mult": 44.12,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 9.1,
+    "mult": 5.97,
+    "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
+    "score": 15.0,
     "type": "PRIMARY"
    }
   ],
@@ -745,24 +621,22 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
-   "control_n": 1,
-   "control_names": [
-    "Wolt"
-   ],
+   "control_n": 0,
+   "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 44.12,
+   "high": 10.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 8.94,
-   "mid": 23.5,
-   "n": 4,
+   "low": 5.97,
+   "mid": 8.94,
+   "n": 3,
    "period_mix": {
-    "LTM": 3,
+    "LTM": 2,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -783,8 +657,18 @@
     "parcel",
     "reverse"
    ],
-   "spread": 4.9,
+   "spread": 1.7,
    "table": [
+    {
+     "company": "Delhivery",
+     "date": "May-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.97,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
     {
      "company": "Xpressbees",
      "date": "Feb-22",
@@ -804,50 +688,14 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Wolt",
-     "date": "Nov-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Gopuff",
-     "date": "Jul-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 44.12,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 4.7,
+   "tag_evidence": 4.5,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 61,
+  "private_window_months": 63,
   "secondary": [
-   {
-    "company": "Delivery Hero SE",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same cost structure; same purchase frequency",
-    "score": 12.1,
-    "ticker": "XTRA:DHER"
-   },
-   {
-    "company": "DoorDash, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same cost structure; same purchase frequency",
-    "score": 11.1,
-    "ticker": "NASDAQGS:DASH"
-   },
    {
     "company": "Lightspeed Commerce Inc.",
     "family": "software",
@@ -871,6 +719,22 @@
     "reason": "same end market; same kind of customer; same revenue model; same AI stance",
     "score": 9.0,
     "ticker": "NASDAQ:NYAX"
+   },
+   {
+    "company": "SG Holdings Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
+    "score": 8.7,
+    "ticker": "TSE:9143"
+   },
+   {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of parcel; same type of business; same business function; same revenue model",
+    "score": 8.7,
+    "ticker": "SZSE:002352"
    }
   ],
   "secondary_range": {
@@ -887,12 +751,12 @@
    "dispersed": true,
    "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.7,
+   "high": 3.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
-   "mid": 3.4,
+   "low": 0.7,
+   "mid": 0.7,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -905,17 +769,24 @@
    },
    "points": [
     {
+     "company": "S.F. Holding Co., Ltd.",
+     "mult": 0.5,
+     "reason": "shares the language of parcel; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "mult": 0.7,
+     "reason": "both do Parcel Delivery Network; same type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
      "company": "Lightspeed Commerce Inc.",
      "mult": 0.7,
      "reason": "same end market; same business function; same kind of customer; sold the same way",
      "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Delivery Hero SE",
-     "mult": 0.8,
-     "reason": "same type of business; same kind of customer; same cost structure; same purchase frequency",
-     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
@@ -931,21 +802,34 @@
      "reason": "same end market; same kind of customer; same revenue model; same AI stance",
      "tier": "BROAD",
      "transaction_type": ""
-    },
-    {
-     "company": "DoorDash, Inc.",
-     "mult": 4.7,
-     "reason": "same type of business; same kind of customer; same cost structure; same purchase frequency",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [],
+   "shared_words": [
+    "parcel"
+   ],
    "show_retention": false,
-   "spread": 6.7,
+   "spread": 7.0,
    "table": [
+    {
+     "company": "S.F. Holding Co., Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.1,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "SZSE:002352"
+    },
+    {
+     "company": "SG Holdings Co., Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 4.0,
+     "multiple": 0.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:9143"
+    },
     {
      "company": "Lightspeed Commerce Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -954,15 +838,6 @@
      "recurring_pct": 30.2,
      "retention_pct": null,
      "ticker": "TSX:LSPD"
-    },
-    {
-     "company": "Delivery Hero SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.5,
-     "multiple": 0.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:DHER"
     },
     {
      "company": "SPS Commerce, Inc.",
@@ -981,18 +856,9 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:NYAX"
-    },
-    {
-     "company": "DoorDash, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 4.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:DASH"
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true
   }

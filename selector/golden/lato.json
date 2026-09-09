@@ -64,7 +64,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 3.5,
+     "tag_evidence": 3.4,
      "thin": true,
      "triangulated": false
     }
@@ -76,7 +76,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Investment Research, Private Market Data; same type of business; same end market; same business function",
-    "score": 16.4,
+    "score": 16.3,
     "ticker": "NASDAQ:MORN"
    },
    {
@@ -84,7 +84,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Market Data; same type of business; same end market; same business function",
-    "score": 15.3,
+    "score": 15.2,
     "ticker": "NYSE:FDS"
    },
    {
@@ -100,23 +100,15 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Market Data, Research; same type of business; same end market; same business function",
-    "score": 10.3,
+    "score": 10.2,
     "ticker": "NYSE:SPGI"
-   },
-   {
-    "company": "London Stock Exchange Group plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Market Data; same type of business; same end market; same business function",
-    "score": 10.3,
-    "ticker": "LSE:LSEG"
    },
    {
     "company": "MSCI Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of private; same type of business; same end market; same business function",
-    "score": 10.3,
+    "score": 10.2,
     "ticker": "NYSE:MSCI"
    },
    {
@@ -126,6 +118,14 @@
     "reason": "shares the language of research; related type of business; same end market; same kind of customer",
     "score": 10.2,
     "ticker": "LSE:CKN"
+   },
+   {
+    "company": "London Stock Exchange Group plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "both do Market Data; same type of business; same end market; same business function",
+    "score": 10.2,
+    "ticker": "LSE:LSEG"
    }
   ],
   "core_range": {
@@ -284,7 +284,7 @@
      "ticker": "NYSE:MSCI"
     }
    ],
-   "tag_evidence": 3.9,
+   "tag_evidence": 3.8,
    "thin": false,
    "triangulated": false
   },
@@ -518,7 +518,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "both do Market Intelligence; related type of business; same end market; same business function",
-    "score": 22.5,
+    "score": 22.4,
     "type": "PRIMARY"
    },
    {
@@ -592,7 +592,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 3.5,
+   "tag_evidence": 3.4,
    "thin": true,
    "triangulated": false
   },

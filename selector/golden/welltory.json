@@ -224,7 +224,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.1,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
@@ -232,69 +232,53 @@
   },
   "core": [
    {
-    "company": "Opera Limited",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same AI stance",
-    "score": 6.6,
-    "ticker": "NASDAQGS:OPRA"
-   },
-   {
-    "company": "Truecaller AB (publ)",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same AI stance",
-    "score": 6.6,
-    "ticker": "OM:TRUE B"
-   },
-   {
     "company": "Life360, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of tracking; same type of business; same kind of customer",
-    "score": 6.0,
+    "score": 5.8,
     "ticker": "ASX:360"
    },
    {
-    "company": "F-Secure Oyj",
-    "family": "software",
+    "company": "Hims & Hers Health, Inc.",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same kind of customer",
-    "score": 5.6,
-    "ticker": "HLSE:FSECURE"
+    "reason": "shares the language of health; same end market; same kind of customer; same revenue model",
+    "score": 12.2,
+    "ticker": "NYSE:HIMS"
    },
    {
-    "company": "Gen Digital Inc.",
-    "family": "software",
+    "company": "WW International, Inc.",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "related type of business; same kind of customer; same AI stance",
-    "score": 5.3,
-    "ticker": "NASDAQGS:GEN"
+    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQGM:WW"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.6,
+   "high": 4.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.0,
-   "mid": 3.7,
-   "n": 5,
+   "low": 0.8,
+   "mid": 2.0,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -306,37 +290,29 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "health",
     "tracking"
    ],
    "show_retention": false,
-   "spread": 2.4,
+   "spread": 5.5,
    "table": [
     {
-     "company": "Opera Limited",
+     "company": "WW International, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.7,
-     "multiple": 1.9,
+     "growth_pct": -0.3,
+     "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:OPRA"
+     "ticker": "NASDAQGM:WW"
     },
     {
-     "company": "F-Secure Oyj",
+     "company": "Hims & Hers Health, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.5,
-     "multiple": 3.0,
+     "growth_pct": 18.1,
+     "multiple": 2.0,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "HLSE:FSECURE"
-    },
-    {
-     "company": "Truecaller AB (publ)",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.4,
-     "multiple": 3.7,
-     "recurring_pct": 45.0,
-     "retention_pct": null,
-     "ticker": "OM:TRUE B"
+     "ticker": "NYSE:HIMS"
     },
     {
      "company": "Life360, Inc.",
@@ -346,20 +322,11 @@
      "recurring_pct": 75.4,
      "retention_pct": null,
      "ticker": "ASX:360"
-    },
-    {
-     "company": "Gen Digital Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.3,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "investors_callable": [
    {
@@ -582,7 +549,7 @@
     "in_medians": true,
     "mult": 23.1,
     "reason": "both do Wearable, Health Subscription; related type of business; same end market; same kind of customer",
-    "score": 19.1,
+    "score": 19.0,
     "type": "PRIMARY"
    },
    {
@@ -593,7 +560,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "shares the language of health, tracking; same type of business; same end market; same kind of customer",
-    "score": 19.0,
+    "score": 18.9,
     "type": "PRIMARY"
    },
    {
@@ -718,22 +685,6 @@
   "private_window_months": 85,
   "secondary": [
    {
-    "company": "Hims & Hers Health, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of health; same end market; same kind of customer; same revenue model",
-    "score": 12.2,
-    "ticker": "NYSE:HIMS"
-   },
-   {
-    "company": "WW International, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same end market; same kind of customer; same revenue model; sold the same way",
-    "score": 10.1,
-    "ticker": "NASDAQGM:WW"
-   },
-   {
     "company": "LifeMD, Inc.",
     "family": "consumer",
     "in_medians": true,
@@ -762,7 +713,7 @@
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -772,15 +723,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 2.0,
+   "high": 1.6,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.6,
-   "mid": 0.8,
-   "n": 5,
+   "low": 0.5,
+   "mid": 0.6,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -795,7 +746,7 @@
     "health"
    ],
    "show_retention": false,
-   "spread": 4.0,
+   "spread": 3.2,
    "table": [
     {
      "company": "Alignment Healthcare, Inc.",
@@ -816,15 +767,6 @@
      "ticker": "NASDAQGM:LFMD"
     },
     {
-     "company": "WW International, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 0.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:WW"
-    },
-    {
      "company": "Medley, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 17.7,
@@ -832,15 +774,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "TSE:4480"
-    },
-    {
-     "company": "Hims & Hers Health, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.1,
-     "multiple": 2.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:HIMS"
     }
    ],
    "tag_evidence": 0.2,

@@ -673,7 +673,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Inventory Management; related type of business; same business function; same kind of customer",
-    "score": 9.3,
+    "score": 9.2,
     "ticker": "TSX:LSPD"
    },
    {
@@ -691,47 +691,31 @@
     "reason": "shares the language of restaurant; same type of business; same business function",
     "score": 6.2,
     "ticker": "NYSE:VYX"
-   },
-   {
-    "company": "Intapp, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function",
-    "score": 6.1,
-    "ticker": "NASDAQGS:INTA"
-   },
-   {
-    "company": "HubSpot, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model",
-    "score": 6.1,
-    "ticker": "NYSE:HUBS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.6,
+   "high": 3.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.7,
-   "mid": 2.2,
-   "n": 4,
+   "mid": 1.0,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -739,52 +723,15 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Lightspeed Commerce Inc.",
-     "mult": 0.7,
-     "reason": "both do Inventory Management; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "NCR Voyix Corporation",
-     "mult": 1.0,
-     "reason": "shares the language of restaurant; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "SPS Commerce, Inc.",
-     "mult": 3.4,
-     "reason": "shares the language of vendor; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Intapp, Inc.",
-     "mult": 4.6,
-     "reason": "same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [
-    {
-     "company": "HubSpot, Inc.",
-     "mult": 2.8,
-     "reason": "same kind of customer; same revenue model",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "restaurant",
     "vendor"
    ],
-   "show_retention": true,
-   "spread": 6.6,
+   "show_retention": false,
+   "spread": 4.9,
    "table": [
     {
      "company": "Lightspeed Commerce Inc.",
@@ -812,15 +759,6 @@
      "recurring_pct": 96.0,
      "retention_pct": null,
      "ticker": "NASDAQGS:SPSC"
-    },
-    {
-     "company": "Intapp, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.4,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": 123.0,
-     "ticker": "NASDAQGS:INTA"
     }
    ],
    "tag_evidence": 0.5,

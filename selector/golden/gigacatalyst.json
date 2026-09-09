@@ -8,8 +8,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
-      "ARR_RUNRATE": 4
+      "ARR": 3,
+      "ARR_RUNRATE": 3
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -45,16 +45,16 @@
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "HiBob",
-       "mult": 27.0,
-       "reason": "related type of business; same kind of customer; sold the same way",
+       "company": "Algolia",
+       "mult": 22.5,
+       "reason": "shares the language of product; same type of business",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Databricks",
-       "mult": 28.7,
-       "reason": "same type of business; same business function",
+       "company": "Contentsquare",
+       "mult": 28.0,
+       "reason": "both do Product Analytics; related type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -83,7 +83,8 @@
      "positioning": [],
      "shared_words": [
       "builder",
-      "customer"
+      "customer",
+      "product"
      ],
      "spread": 7.5,
      "table": [
@@ -98,21 +99,21 @@
        "ticker": ""
       },
       {
-       "company": "HiBob",
-       "date": "Sep-23",
+       "company": "Algolia",
+       "date": "Jul-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 27.0,
+       "multiple": 22.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       },
       {
-       "company": "Databricks",
-       "date": "Sep-23",
+       "company": "Contentsquare",
+       "date": "Jul-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 28.7,
+       "multiple": 28.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -148,63 +149,9 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
-    },
-    "REVENUE_GROSS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "REVENUE_GROSS",
-     "basis_label": "enterprise value to gross revenue",
-     "basis_mix": {
-      "REVENUE_GROSS": 1
-     },
-     "bounded": false,
-     "closeness": "THIN_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "DIAMOND",
-     "founder_field": "revenue_gross",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 7.37,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 7.37,
-     "mid": 7.37,
-     "n": 1,
-     "period_mix": {
-      "LTM": 1
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [],
-     "sole": "Aledade",
-     "spread": 1.0,
-     "table": [
-      {
-       "company": "Aledade",
-       "date": "Jun-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 7.37,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.1,
-     "thin": true,
-     "triangulated": true
     }
    }
   },
@@ -218,22 +165,6 @@
     "ticker": "NASDAQCM:AMPL"
    },
    {
-    "company": "Similarweb Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do App Analytics; same type of business; same business function; same kind of customer",
-    "score": 10.7,
-    "ticker": "NYSE:SMWB"
-   },
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 10.6,
-    "ticker": "NASDAQCM:RDVT"
-   },
-   {
     "company": "LiveRamp Holdings, Inc.",
     "family": "software",
     "in_medians": true,
@@ -242,53 +173,61 @@
     "ticker": "NYSE:RAMP"
    },
    {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model; same AI stance",
-    "score": 9.6,
-    "ticker": "NASDAQGS:PLTR"
-   },
-   {
-    "company": "Teradata Corporation",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Analytics; same type of business; same business function; same revenue model",
-    "score": 9.6,
-    "ticker": "NYSE:TDC"
-   },
-   {
     "company": "Rezolve AI PLC",
     "family": "software",
     "in_medians": false,
     "reason": "shares the language of customer, product; same type of business; same kind of customer; same revenue model",
-    "score": 9.5,
+    "score": 9.4,
     "ticker": "NASDAQGM:RZLV"
+   },
+   {
+    "company": "Coveo Solutions Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of product; same type of business; same revenue model; same AI stance",
+    "score": 7.8,
+    "ticker": "TSX:CVO"
+   },
+   {
+    "company": "Planisware SAS",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of product; related type of business; same kind of customer",
+    "score": 5.3,
+    "ticker": "ENXTPA:PLNW"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of embedded; same type of business",
+    "score": 5.2,
+    "ticker": "HLSE:QTCOM"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 10.0,
+   "high": 6.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.1,
-   "mid": 2.85,
-   "n": 6,
+   "mid": 3.5,
+   "n": 5,
    "period_mix": {
-    "NTM": 6
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -296,67 +235,25 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Teradata Corporation",
-     "mult": 1.4,
-     "reason": "both do Analytics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "LiveRamp Holdings, Inc.",
-     "mult": 2.1,
-     "reason": "shares the language of customer; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Similarweb Ltd.",
-     "mult": 2.2,
-     "reason": "both do App Analytics; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Amplitude, Inc.",
-     "mult": 3.5,
-     "reason": "both do Product Analytics; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "mult": 10.0,
-     "reason": "same type of business; same business function; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 39.0,
-     "reason": "same type of business; same business function; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "customer",
+    "embedded",
     "product"
    ],
    "show_retention": true,
-   "spread": 27.9,
+   "spread": 5.8,
    "table": [
     {
-     "company": "Teradata Corporation",
+     "company": "Coveo Solutions Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 1.7,
-     "multiple": 1.4,
+     "growth_pct": 11.5,
+     "multiple": 1.1,
      "recurring_pct": null,
-     "retention_pct": 108.0,
-     "ticker": "NYSE:TDC"
+     "retention_pct": 99.0,
+     "ticker": "TSX:CVO"
     },
     {
      "company": "LiveRamp Holdings, Inc.",
@@ -368,15 +265,6 @@
      "ticker": "NYSE:RAMP"
     },
     {
-     "company": "Similarweb Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.7,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 100.0,
-     "ticker": "NYSE:SMWB"
-    },
-    {
      "company": "Amplitude, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 17.7,
@@ -386,22 +274,22 @@
      "ticker": "NASDAQCM:AMPL"
     },
     {
-     "company": "Red Violet, Inc.",
+     "company": "Qt Group Oyj",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
-     "multiple": 10.0,
-     "recurring_pct": 77.0,
-     "retention_pct": 95.0,
-     "ticker": "NASDAQCM:RDVT"
+     "growth_pct": 7.7,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
     },
     {
-     "company": "Palantir Technologies Inc.",
+     "company": "Planisware SAS",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 47.0,
-     "multiple": 39.0,
-     "recurring_pct": null,
-     "retention_pct": 157.0,
-     "ticker": "NASDAQGS:PLTR"
+     "growth_pct": 13.0,
+     "multiple": 6.4,
+     "recurring_pct": 91.0,
+     "retention_pct": 110.0,
+     "ticker": "ENXTPA:PLNW"
     }
    ],
    "tag_evidence": 0.3,
@@ -572,10 +460,14 @@
      {
       "company": "Sierra",
       "date": "May-26"
+     },
+     {
+      "company": "dbt Labs",
+      "date": "Feb-22"
      }
     ],
     "investor": "Sequoia",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -596,10 +488,14 @@
      {
       "company": "Replit",
       "date": "Sep-25"
+     },
+     {
+      "company": "dbt Labs",
+      "date": "Feb-22"
      }
     ],
     "investor": "Coatue",
-    "n": 2
+    "n": 3
    },
    {
     "backed": [
@@ -616,10 +512,14 @@
      {
       "company": "Decagon",
       "date": "Jan-26"
+     },
+     {
+      "company": "Algolia",
+      "date": "Jul-21"
      }
     ],
     "investor": "Accel",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -666,10 +566,14 @@
      {
       "company": "Lovable",
       "date": "Dec-25"
+     },
+     {
+      "company": "Algolia",
+      "date": "Jul-21"
      }
     ],
     "investor": "Salesforce Ventures",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -714,91 +618,121 @@
    {
     "backed": [
      {
-      "company": "Databricks",
-      "date": "Sep-23"
+      "company": "dbt Labs",
+      "date": "Feb-22"
      }
     ],
-    "investor": "T. Rowe Price",
+    "investor": "Altimeter",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Databricks",
-      "date": "Sep-23"
+      "company": "dbt Labs",
+      "date": "Feb-22"
      }
     ],
-    "investor": "Baillie Gifford",
+    "investor": "Amplify",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Databricks",
-      "date": "Sep-23"
+      "company": "dbt Labs",
+      "date": "Feb-22"
      }
     ],
-    "investor": "ClearBridge",
+    "investor": "ICONIQ",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Databricks",
-      "date": "Sep-23"
+      "company": "dbt Labs",
+      "date": "Feb-22"
      }
     ],
-    "investor": "GIC",
+    "investor": "Snowflake Ventures",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Databricks",
-      "date": "Sep-23"
+      "company": "Algolia",
+      "date": "Jul-21"
      }
     ],
-    "investor": "NVIDIA",
+    "investor": "Lone Pine Capital (lead)",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "HiBob",
-      "date": "Sep-23"
+      "company": "Algolia",
+      "date": "Jul-21"
      }
     ],
-    "investor": "Farallon Capital",
+    "investor": "Fidelity",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "HiBob",
-      "date": "Sep-23"
+      "company": "Algolia",
+      "date": "Jul-21"
      }
     ],
-    "investor": "Alpha Wave",
+    "investor": "STEADFAST Capital Ventures",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "HiBob",
-      "date": "Sep-23"
+      "company": "Algolia",
+      "date": "Jul-21"
      }
     ],
-    "investor": "existing investors",
+    "investor": "Glynn Capital",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Aledade",
-      "date": "Jun-23"
+      "company": "Algolia",
+      "date": "Jul-21"
      }
     ],
-    "investor": "Lightspeed Venture Partners",
+    "investor": "Twilio Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Algolia",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "DAG Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Algolia",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "Owl Rock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Algolia",
+      "date": "Jul-21"
+     }
+    ],
+    "investor": "World Innovation Lab",
     "n": 1
    }
   ],
@@ -834,7 +768,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do AI App Builder; same type of business; same AI stance",
-    "score": 7.4,
+    "score": 7.2,
     "type": "PRIMARY"
    },
    {
@@ -845,40 +779,40 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "both do App Builder; same type of business; same kind of customer; same AI stance",
-    "score": 10.9,
+    "score": 10.7,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Databricks",
-    "date": "Sep-23",
+    "basis": "ARR / annual revenue",
+    "bound": "",
+    "company": "Contentsquare",
+    "date": "Jul-22",
     "in_medians": true,
-    "mult": 28.7,
-    "reason": "same type of business; same business function",
-    "score": 9.6,
+    "mult": 28.0,
+    "reason": "both do Product Analytics; related type of business; same business function; same kind of customer",
+    "score": 13.3,
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "HiBob",
-    "date": "Sep-23",
+    "basis": "NONE",
+    "bound": "",
+    "company": "dbt Labs",
+    "date": "Feb-22",
     "in_medians": true,
-    "mult": 27.0,
-    "reason": "related type of business; same kind of customer; sold the same way",
-    "score": 9.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": ">=",
-    "company": "Aledade",
-    "date": "Jun-23",
-    "in_medians": true,
-    "mult": 7.37,
-    "reason": "both do Analytics; related type of business; same revenue model; sold the same way",
+    "mult": null,
+    "reason": "shares the language of layer; same type of business; same business function",
     "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Algolia",
+    "date": "Jul-21",
+    "in_medians": true,
+    "mult": 22.5,
+    "reason": "shares the language of product; same type of business",
+    "score": 6.8,
     "type": "PRIMARY"
    }
   ],
@@ -889,8 +823,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 4
+    "ARR": 3,
+    "ARR_RUNRATE": 3
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -922,16 +856,16 @@
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "HiBob",
-     "mult": 27.0,
-     "reason": "related type of business; same kind of customer; sold the same way",
+     "company": "Algolia",
+     "mult": 22.5,
+     "reason": "shares the language of product; same type of business",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Databricks",
-     "mult": 28.7,
-     "reason": "same type of business; same business function",
+     "company": "Contentsquare",
+     "mult": 28.0,
+     "reason": "both do Product Analytics; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -960,7 +894,8 @@
    "positioning": [],
    "shared_words": [
     "builder",
-    "customer"
+    "customer",
+    "product"
    ],
    "spread": 7.5,
    "table": [
@@ -975,21 +910,21 @@
      "ticker": ""
     },
     {
-     "company": "HiBob",
-     "date": "Sep-23",
+     "company": "Algolia",
+     "date": "Jul-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 27.0,
+     "multiple": 22.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     },
     {
-     "company": "Databricks",
-     "date": "Sep-23",
+     "company": "Contentsquare",
+     "date": "Jul-22",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 28.7,
+     "multiple": 28.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1025,11 +960,11 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 38,
+  "private_window_months": 61,
   "secondary": [
    {
     "company": "Docebo Inc.",
@@ -1040,61 +975,53 @@
     "ticker": "TSX:DCBO"
    },
    {
-    "company": "Coveo Solutions Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of product; same type of business; same revenue model; same AI stance",
-    "score": 7.8,
-    "ticker": "TSX:CVO"
-   },
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Analytics; same type of business; same business function",
-    "score": 7.1,
-    "ticker": "NYSE:SNOW"
-   },
-   {
-    "company": "Elastic N.V.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function",
-    "score": 7.1,
-    "ticker": "NYSE:ESTC"
-   },
-   {
     "company": "Braze, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of customer; same kind of customer; same revenue model",
     "score": 6.2,
     "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "Wix.com Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of builder; related type of business; same revenue model",
+    "score": 5.2,
+    "ticker": "NASDAQGS:WIX"
+   },
+   {
+    "company": "Pegasystems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; related type of business; same revenue model",
+    "score": 5.2,
+    "ticker": "NASDAQGS:PEGA"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 15.6,
+   "high": 2.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.1,
-   "mid": 3.25,
-   "n": 4,
+   "low": 2.0,
+   "mid": 2.3,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -1102,36 +1029,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Coveo Solutions Inc.",
-     "mult": 1.1,
-     "reason": "shares the language of product; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Docebo Inc.",
-     "mult": 2.3,
-     "reason": "shares the language of customer; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Elastic N.V.",
-     "mult": 4.2,
-     "reason": "same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "both do Analytics; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [
     {
      "company": "Braze, Inc.",
@@ -1143,20 +1041,20 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
-    "customer",
-    "product"
+    "builder",
+    "customer"
    ],
    "show_retention": true,
-   "spread": 14.2,
+   "spread": 1.4,
    "table": [
     {
-     "company": "Coveo Solutions Inc.",
+     "company": "Wix.com Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.5,
-     "multiple": 1.1,
-     "recurring_pct": null,
-     "retention_pct": 99.0,
-     "ticker": "TSX:CVO"
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
     },
     {
      "company": "Docebo Inc.",
@@ -1168,25 +1066,16 @@
      "ticker": "TSX:DCBO"
     },
     {
-     "company": "Elastic N.V.",
+     "company": "Pegasystems Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.7,
-     "multiple": 4.2,
-     "recurring_pct": null,
-     "retention_pct": 112.0,
-     "ticker": "NYSE:ESTC"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
+     "growth_pct": 9.3,
+     "multiple": 2.9,
+     "recurring_pct": 57.9,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:PEGA"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

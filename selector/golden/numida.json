@@ -188,7 +188,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
+     "tag_evidence": 0.0,
      "thin": true,
      "triangulated": true
     },
@@ -256,7 +256,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.1,
+     "tag_evidence": 0.0,
      "thin": true,
      "triangulated": true
     },
@@ -322,24 +322,8 @@
     "family": "fintech",
     "in_medians": false,
     "reason": "shares the language of micro; same type of business; same end market; same business function",
-    "score": 14.7,
+    "score": 14.6,
     "ticker": "NSEI:FIVESTAR"
-   },
-   {
-    "company": "Time Finance plc",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "shares the language of sme; same type of business; same end market; same business function",
-    "score": 14.4,
-    "ticker": "AIM:TIME"
-   },
-   {
-    "company": "Cholamandalam Investment and Finance Company Limited",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "both do SME Lending; same type of business; same end market; same business function",
-    "score": 14.3,
-    "ticker": "NSEI:CHOLAFIN"
    },
    {
     "company": "Grenke AG",
@@ -350,20 +334,20 @@
     "ticker": "XTRA:GLJ"
    },
    {
-    "company": "Credit Acceptance Corporation",
+    "company": "Time Finance plc",
     "family": "fintech",
     "in_medians": false,
-    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "reason": "shares the language of sme; same type of business; same end market; same business function",
     "score": 14.2,
-    "ticker": "NASDAQ:CACC"
+    "ticker": "AIM:TIME"
    },
    {
-    "company": "Shriram Finance Limited",
+    "company": "Cholamandalam Investment and Finance Company Limited",
     "family": "fintech",
     "in_medians": false,
-    "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 14.1,
-    "ticker": "NSEI:SHRIRAMFIN"
+    "reason": "both do SME Lending; same type of business; same end market; same business function",
+    "score": 14.2,
+    "ticker": "NSEI:CHOLAFIN"
    },
    {
     "company": "Far East Horizon Limited",
@@ -372,6 +356,22 @@
     "reason": "same type of business; same end market; same business function; same kind of customer",
     "score": 14.0,
     "ticker": "SEHK:3360"
+   },
+   {
+    "company": "Credit Acceptance Corporation",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 14.0,
+    "ticker": "NASDAQ:CACC"
+   },
+   {
+    "company": "Shriram Finance Limited",
+    "family": "fintech",
+    "in_medians": false,
+    "reason": "same type of business; same end market; same business function; same kind of customer",
+    "score": 14.0,
+    "ticker": "NSEI:SHRIRAMFIN"
    }
   ],
   "core_range": {
@@ -702,7 +702,7 @@
     "in_medians": false,
     "mult": 0.6,
     "reason": "both do Working Capital; same type of business; same end market; same business function",
-    "score": 17.3,
+    "score": 17.1,
     "type": "CONTROL_ACQUISITION"
    },
    {
@@ -745,8 +745,8 @@
     "date": "Feb-22",
     "in_medians": true,
     "mult": null,
-    "reason": "both do Business Lending; related type of business; same end market; same business function",
-    "score": 17.6,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 17.5,
     "type": "PRIMARY"
    },
    {
@@ -757,7 +757,7 @@
     "in_medians": true,
     "mult": 8.9,
     "reason": "same type of business; same end market; same business function; same revenue model",
-    "score": 21.1,
+    "score": 21.0,
     "type": "PRIMARY"
    }
   ],
@@ -822,7 +822,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.0,
    "thin": true,
    "triangulated": true
   },
@@ -833,7 +833,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same kind of customer",
-    "score": 13.6,
+    "score": 13.5,
     "ticker": "NYSE:LOB"
    },
    {
@@ -841,7 +841,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of sme; same type of business; same end market; same business function",
-    "score": 13.5,
+    "score": 13.2,
     "ticker": "LSE:FCH"
    },
    {
@@ -853,20 +853,20 @@
     "ticker": "NYSE:UWMC"
    },
    {
-    "company": "Merchants Bancorp",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of origination; related type of business; same end market; same business function",
-    "score": 12.9,
-    "ticker": "NASDAQ:MBIN"
-   },
-   {
     "company": "Banca IFIS S.p.A.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of sme; related type of business; same end market; same business function",
-    "score": 12.8,
+    "score": 12.7,
     "ticker": "BIT:IF"
+   },
+   {
+    "company": "Rocket Companies, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "shares the language of origination; same type of business; same end market; same business function",
+    "score": 12.7,
+    "ticker": "NYSE:RKT"
    }
   ],
   "secondary_range": {
@@ -887,8 +887,8 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.0,
-   "mid": 1.3,
+   "low": 1.3,
+   "mid": 1.5,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -908,13 +908,6 @@
      "transaction_type": ""
     },
     {
-     "company": "Merchants Bancorp",
-     "mult": 1.0,
-     "reason": "shares the language of origination; related type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
      "company": "Live Oak Bancshares, Inc.",
      "mult": 1.3,
      "reason": "related type of business; same end market; same business function; same kind of customer",
@@ -923,6 +916,13 @@
     },
     {
      "company": "UWM Holdings Corporation",
+     "mult": 1.5,
+     "reason": "shares the language of origination; same type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Rocket Companies, Inc.",
      "mult": 1.5,
      "reason": "shares the language of origination; same type of business; same end market; same business function",
      "tier": "DIRECT",
@@ -955,15 +955,6 @@
      "ticker": "BIT:IF"
     },
     {
-     "company": "Merchants Bancorp",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.8,
-     "multiple": 1.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:MBIN"
-    },
-    {
      "company": "Live Oak Bancshares, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 15.2,
@@ -982,6 +973,15 @@
      "ticker": "NYSE:UWMC"
     },
     {
+     "company": "Rocket Companies, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.0,
+     "multiple": 1.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:RKT"
+    },
+    {
      "company": "Funding Circle Holdings plc",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 10.7,
@@ -991,7 +991,7 @@
      "ticker": "LSE:FCH"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   }

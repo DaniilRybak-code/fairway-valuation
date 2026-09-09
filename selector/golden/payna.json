@@ -38,15 +38,7 @@
       }
      },
      "points": [],
-     "positioning": [
-      {
-       "company": "Restaurant365",
-       "mult": 10.0,
-       "reason": "same type of business; same business function; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "positioning": [],
      "shared_words": [
       "compliance",
       "regulatory",
@@ -85,7 +77,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.4,
+     "tag_evidence": 4.3,
      "thin": false,
      "triangulated": false
     }
@@ -97,7 +89,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 11.6,
+    "score": 11.5,
     "ticker": "NASDAQGS:INTA"
    },
    {
@@ -538,46 +530,6 @@
     ],
     "investor": "Hg (buyer)",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
    }
   ],
   "listed_proximity": "DIRECT",
@@ -623,22 +575,11 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "both do Compliance Workflow, Regulatory Compliance, Compliance Automation; related type of business; same kind of customer; same revenue model",
-    "score": 14.9,
+    "score": 14.8,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "same type of business; same business function; same revenue model; sold the same way",
-    "score": 15.1,
-    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
+  "private_proximity": "DIRECT",
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
@@ -671,15 +612,7 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Restaurant365",
-     "mult": 10.0,
-     "reason": "same type of business; same business function; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "positioning": [],
    "shared_words": [
     "compliance",
     "regulatory",
@@ -718,88 +651,14 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.4,
+   "tag_evidence": 4.3,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 39,
-  "secondary": [
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way",
-    "score": 7.1,
-    "ticker": "NASDAQGS:GTM"
-   },
-   {
-    "company": "BlackLine, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model",
-    "score": 6.1,
-    "ticker": "NASDAQGS:BL"
-   }
-  ],
+  "private_window_months": 27,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "BROAD",
-   "basis_mix": {
-    "UNKNOWN": 2
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "founder_basis_trailing_on_forward": false,
-   "high": 2.5,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 2.2,
-   "mid": 2.35,
-   "n": 2,
-   "period_mix": {
-    "NTM": 2
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": true,
-   "spread": 1.1,
-   "table": [
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
-     "company": "BlackLine, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.4,
-     "multiple": 2.5,
-     "recurring_pct": 95.0,
-     "retention_pct": 102.0,
-     "ticker": "NASDAQGS:BL"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "AI licensing agent for regulated industries"

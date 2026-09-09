@@ -129,14 +129,6 @@
     "ticker": "NYSE:DT"
    },
    {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same revenue model; sold the same way",
-    "score": 9.5,
-    "ticker": "NYSE:SNOW"
-   },
-   {
     "company": "Elastic N.V.",
     "family": "software",
     "in_medians": true,
@@ -151,6 +143,14 @@
     "reason": "same type of business; same kind of customer; sold the same way",
     "score": 9.5,
     "ticker": "NYSE:RAMP"
+   },
+   {
+    "company": "Snowflake Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same revenue model; sold the same way",
+    "score": 9.5,
+    "ticker": "NYSE:SNOW"
    },
    {
     "company": "Zeta Global Holdings Corp.",
@@ -857,20 +857,20 @@
     "ticker": "NASDAQGS:BSY"
    },
    {
-    "company": "Sidetrade SA",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; sold the same way; same AI stance",
-    "score": 8.0,
-    "ticker": "ENXTPA:ALBFR"
-   },
-   {
     "company": "PTC Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "related type of business; same business function; same kind of customer; sold the same way",
     "score": 8.0,
     "ticker": "NASDAQGS:PTC"
+   },
+   {
+    "company": "Sidetrade SA",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same kind of customer; sold the same way; same AI stance",
+    "score": 8.0,
+    "ticker": "ENXTPA:ALBFR"
    }
   ],
   "secondary_range": {

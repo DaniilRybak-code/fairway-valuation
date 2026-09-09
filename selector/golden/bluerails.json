@@ -523,7 +523,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "shares the language of agent; same type of business; same end market; same kind of customer",
-    "score": 15.3,
+    "score": 15.1,
     "type": "PRIMARY"
    },
    {
@@ -669,28 +669,12 @@
   "private_window_months": 55,
   "secondary": [
    {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:WIX"
-   },
-   {
     "company": "IONOS Group SE",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of infrastructure; same kind of customer; same revenue model; sold the same way",
     "score": 7.2,
     "ticker": "XTRA:IOS"
-   },
-   {
-    "company": "Shoper S.A.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Payments; related type of business; same kind of customer; sold the same way",
-    "score": 6.1,
-    "ticker": "WSE:SHO"
    },
    {
     "company": "NCR Voyix Corporation",
@@ -707,13 +691,21 @@
     "reason": "shares the language of agent, agentic; same revenue model; same AI stance",
     "score": 5.2,
     "ticker": "NYSE:PATH"
+   },
+   {
+    "company": "Gen Digital Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of manager; same revenue model; sold the same way",
+    "score": 5.1,
+    "ticker": "NASDAQGS:GEN"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -723,15 +715,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.3,
+   "high": 4.6,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 3.6,
-   "n": 5,
+   "low": 1.0,
+   "mid": 3.95,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -746,10 +738,11 @@
     "agent",
     "agentic",
     "checkout",
-    "infrastructure"
+    "infrastructure",
+    "manager"
    ],
    "show_retention": true,
-   "spread": 4.3,
+   "spread": 4.6,
    "table": [
     {
      "company": "NCR Voyix Corporation",
@@ -761,15 +754,6 @@
      "ticker": "NYSE:VYX"
     },
     {
-     "company": "Wix.com Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.4,
-     "multiple": 2.0,
-     "recurring_pct": 71.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:WIX"
-    },
-    {
      "company": "IONOS Group SE",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 9.0,
@@ -779,15 +763,6 @@
      "ticker": "XTRA:IOS"
     },
     {
-     "company": "Shoper S.A.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 16.4,
-     "multiple": 4.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "WSE:SHO"
-    },
-    {
      "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.0,
@@ -795,6 +770,15 @@
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
+    },
+    {
+     "company": "Gen Digital Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.3,
+     "multiple": 4.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:GEN"
     }
    ],
    "tag_evidence": 0.7,

@@ -198,14 +198,6 @@
     "ticker": "NASDAQGS:DDOG"
    },
    {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 11.7,
-    "ticker": "NYSE:TWLO"
-   },
-   {
     "company": "Agora, Inc.",
     "family": "software",
     "in_medians": true,
@@ -220,6 +212,14 @@
     "reason": "shares the language of web; related type of business; same kind of customer; same revenue model",
     "score": 11.7,
     "ticker": "NYSE:NET"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 11.7,
+    "ticker": "NYSE:TWLO"
    },
    {
     "company": "Red Violet, Inc.",

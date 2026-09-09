@@ -9,7 +9,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 2
+      "NET_REVENUE": 1
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -24,11 +24,11 @@
      "high": 10.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 5.97,
-     "mid": 8.94,
-     "n": 3,
+     "low": 8.94,
+     "mid": 10.3,
+     "n": 2,
      "period_mix": {
-      "LTM": 2,
+      "LTM": 1,
       "RUN_RATE": 1
      },
      "period_span": {
@@ -47,18 +47,8 @@
       "fulfilment",
       "shipping"
      ],
-     "spread": 1.7,
+     "spread": 1.2,
      "table": [
-      {
-       "company": "Delhivery",
-       "date": "May-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 5.97,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Xpressbees",
        "date": "Feb-22",
@@ -80,8 +70,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.1,
-     "thin": false,
+     "tag_evidence": 0.6,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -157,32 +147,8 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of fulfilment; same type of business; same business function; same revenue model",
-    "score": 8.9,
+    "score": 8.7,
     "ticker": "NSEI:DELHIVERY"
-   },
-   {
-    "company": "Deutsche Post AG",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model",
-    "score": 8.8,
-    "ticker": "XTRA:DHL"
-   },
-   {
-    "company": "PostNL N.V.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model",
-    "score": 8.7,
-    "ticker": "ENXTAM:PNL"
-   },
-   {
-    "company": "J&T Global Express Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model",
-    "score": 8.7,
-    "ticker": "SEHK:1519"
    },
    {
     "company": "InPost S.A.",
@@ -191,39 +157,31 @@
     "reason": "shares the language of european; same type of business; same business function; same revenue model",
     "score": 8.7,
     "ticker": "ENXTAM:INPST"
-   },
-   {
-    "company": "United Parcel Service",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "NYSE:UPS"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 2.3,
+   "high": 2.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 1.1,
-   "n": 7,
+   "low": 1.1,
+   "mid": 2.3,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -231,57 +189,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "PostNL N.V.",
-     "mult": 0.3,
-     "reason": "same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "J&T Global Express Limited",
-     "mult": 0.7,
-     "reason": "same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Deutsche Post AG",
-     "mult": 0.9,
-     "reason": "same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "FedEx Corporation",
-     "mult": 1.1,
-     "reason": "shares the language of shipping; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "United Parcel Service",
-     "mult": 1.2,
-     "reason": "same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "InPost S.A.",
-     "mult": 2.3,
-     "reason": "shares the language of european; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Delhivery Limited",
-     "mult": 2.5,
-     "reason": "shares the language of fulfilment; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -290,35 +198,8 @@
     "shipping"
    ],
    "show_retention": false,
-   "spread": 8.3,
+   "spread": 2.3,
    "table": [
-    {
-     "company": "PostNL N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTAM:PNL"
-    },
-    {
-     "company": "J&T Global Express Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.5,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "SEHK:1519"
-    },
-    {
-     "company": "Deutsche Post AG",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:DHL"
-    },
     {
      "company": "FedEx Corporation",
      "growth_basis": "CAGR_CY1_CY3",
@@ -327,15 +208,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:FDX"
-    },
-    {
-     "company": "United Parcel Service",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.5,
-     "multiple": 1.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:UPS"
     },
     {
      "company": "InPost S.A.",
@@ -548,46 +420,6 @@
     ],
     "investor": "Norwest",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Delhivery",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Fidelity",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Delhivery",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Baillie Gifford",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Delhivery",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Chimera",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Delhivery",
-      "date": "May-21"
-     }
-    ],
-    "investor": "Steadview Capital",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -622,29 +454,7 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "both do Third-Party Logistics, Cross-Border Shipping; same type of business; same business function; same revenue model",
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "GMV_ONLY",
-    "bound": "",
-    "company": "Trendyol",
-    "date": "Aug-21",
-    "in_medians": false,
-    "mult": null,
-    "reason": "related type of business; same kind of customer; same cost structure; same purchase frequency",
-    "score": 14.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "Delhivery",
-    "date": "May-21",
-    "in_medians": true,
-    "mult": 5.97,
-    "reason": "both do Third-Party Logistics; same type of business; same business function; same revenue model",
-    "score": 14.3,
+    "score": 14.6,
     "type": "PRIMARY"
    }
   ],
@@ -656,7 +466,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -667,11 +477,11 @@
    "high": 10.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.97,
-   "mid": 8.94,
-   "n": 3,
+   "low": 8.94,
+   "mid": 10.3,
+   "n": 2,
    "period_mix": {
-    "LTM": 2,
+    "LTM": 1,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -690,18 +500,8 @@
     "fulfilment",
     "shipping"
    ],
-   "spread": 1.7,
+   "spread": 1.2,
    "table": [
-    {
-     "company": "Delhivery",
-     "date": "May-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 5.97,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Xpressbees",
      "date": "Feb-22",
@@ -723,18 +523,18 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.1,
-   "thin": false,
+   "tag_evidence": 0.6,
+   "thin": true,
    "triangulated": false
   },
-  "private_window_months": 63,
+  "private_window_months": 59,
   "secondary": [
    {
     "company": "Lightspeed Commerce Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "same end market; same business function; same kind of customer; sold the same way",
-    "score": 10.6,
+    "score": 10.5,
     "ticker": "TSX:LSPD"
    },
    {
@@ -746,28 +546,28 @@
     "ticker": "NASDAQGS:SPSC"
    },
    {
-    "company": "Allegro.eu S.A.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same kind of customer; same cost structure; same purchase frequency; same AI stance",
-    "score": 9.3,
-    "ticker": "WSE:ALE"
-   },
-   {
-    "company": "Sea Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same kind of customer; same cost structure; same purchase frequency; same AI stance",
-    "score": 9.2,
-    "ticker": "NYSE:SE"
-   },
-   {
     "company": "Nayax Ltd.",
     "family": "fintech",
     "in_medians": true,
     "reason": "same end market; same kind of customer; same revenue model; same AI stance",
     "score": 9.0,
     "ticker": "NASDAQ:NYAX"
+   },
+   {
+    "company": "Shoper S.A.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same end market; same business function; same kind of customer; same AI stance",
+    "score": 8.5,
+    "ticker": "WSE:SHO"
+   },
+   {
+    "company": "MercadoLibre, Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Fulfilment; same kind of customer; same cost structure; same purchase frequency",
+    "score": 8.2,
+    "ticker": "NASDAQGS:MELI"
    }
   ],
   "secondary_range": {
@@ -784,12 +584,12 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 3.5,
+   "high": 4.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.8,
-   "mid": 3.3,
+   "low": 2.2,
+   "mid": 3.4,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -803,9 +603,11 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [],
+   "shared_words": [
+    "fulfilment"
+   ],
    "show_retention": false,
-   "spread": 5.0,
+   "spread": 5.9,
    "table": [
     {
      "company": "Lightspeed Commerce Inc.",
@@ -817,22 +619,13 @@
      "ticker": "TSX:LSPD"
     },
     {
-     "company": "Sea Limited",
+     "company": "MercadoLibre, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 20.0,
-     "multiple": 1.8,
+     "growth_pct": 26.3,
+     "multiple": 2.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:SE"
-    },
-    {
-     "company": "Allegro.eu S.A.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.6,
-     "multiple": 3.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "WSE:ALE"
+     "ticker": "NASDAQGS:MELI"
     },
     {
      "company": "SPS Commerce, Inc.",
@@ -851,9 +644,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:NYAX"
+    },
+    {
+     "company": "Shoper S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 16.4,
+     "multiple": 4.1,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:SHO"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true
   }

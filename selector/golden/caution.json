@@ -246,7 +246,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Zero Trust; related type of business; same kind of customer; same revenue model",
-    "score": 11.3,
+    "score": 11.2,
     "ticker": "NYSE:NET"
    },
    {
@@ -286,7 +286,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Zero Trust; same type of business; same AI stance",
-    "score": 7.2,
+    "score": 7.1,
     "ticker": "NYSE:ATEN"
    },
    {
@@ -294,7 +294,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of secure, trust, zero; same type of business",
-    "score": 6.2,
+    "score": 6.1,
     "ticker": "NASDAQGS:NTSK"
    }
   ],
@@ -456,7 +456,7 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -854,7 +854,7 @@
     "in_medians": false,
     "mult": 41.1,
     "reason": "both do Application Security; same type of business; same kind of customer; sold the same way",
-    "score": 12.0,
+    "score": 11.9,
     "type": "PRIMARY"
    },
    {
@@ -876,7 +876,7 @@
     "in_medians": true,
     "mult": 45.3,
     "reason": "shares the language of trust; same type of business; sold the same way; same AI stance",
-    "score": 10.4,
+    "score": 10.3,
     "type": "PRIMARY"
    }
   ],
@@ -989,7 +989,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Zero Trust; same type of business",
-    "score": 6.2,
+    "score": 6.1,
     "ticker": "NASDAQGS:ZS"
    },
    {
@@ -1001,12 +1001,12 @@
     "ticker": "NYSE:GDDY"
    },
    {
-    "company": "Fortinet, Inc.",
+    "company": "BlackBerry Limited",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of secure; same type of business",
-    "score": 5.5,
-    "ticker": "NASDAQGS:FTNT"
+    "reason": "shares the language of secure; same type of business; same AI stance",
+    "score": 5.4,
+    "ticker": "TSX:BB"
    }
   ],
   "secondary_range": {
@@ -1023,7 +1023,7 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 13.2,
+   "high": 6.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
@@ -1050,7 +1050,7 @@
     "zero"
    ],
    "show_retention": true,
-   "spread": 4.7,
+   "spread": 2.5,
    "table": [
     {
      "company": "GoDaddy Inc.",
@@ -1089,16 +1089,16 @@
      "ticker": "NASDAQGS:ZS"
     },
     {
-     "company": "Fortinet, Inc.",
+     "company": "BlackBerry Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.3,
-     "multiple": 13.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:FTNT"
+     "growth_pct": 11.2,
+     "multiple": 6.9,
+     "recurring_pct": 80.0,
+     "retention_pct": 94.0,
+     "ticker": "TSX:BB"
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   }

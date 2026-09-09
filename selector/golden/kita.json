@@ -182,24 +182,24 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same end market; same revenue model; sold the same way",
-    "score": 10.7,
+    "score": 10.5,
     "ticker": "NYSE:BLND"
+   },
+   {
+    "company": "Q2 Holdings, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same kind of customer; sold the same way",
+    "score": 10.5,
+    "ticker": "NYSE:QTWO"
    },
    {
     "company": "Qualco Group S.A.",
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same end market; same kind of customer; sold the same way",
-    "score": 10.7,
+    "score": 10.5,
     "ticker": "ATSE:QLCO"
-   },
-   {
-    "company": "Q2 Holdings, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Lending Software; same type of business; same end market; same kind of customer",
-    "score": 10.6,
-    "ticker": "NYSE:QTWO"
    },
    {
     "company": "Fidelity National Information Services, Inc.",
@@ -213,8 +213,8 @@
     "company": "Jack Henry & Associates, Inc.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "both do Lending Software; same type of business; same end market; same business function",
-    "score": 10.1,
+    "reason": "same type of business; same end market; same business function; sold the same way",
+    "score": 10.0,
     "ticker": "NASDAQ:JKHY"
    },
    {
@@ -288,14 +288,14 @@
     {
      "company": "Q2 Holdings, Inc.",
      "mult": 4.1,
-     "reason": "both do Lending Software; same type of business; same end market; same kind of customer",
+     "reason": "same type of business; same end market; same kind of customer; sold the same way",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
      "company": "Jack Henry & Associates, Inc.",
      "mult": 4.3,
-     "reason": "both do Lending Software; same type of business; same end market; same business function",
+     "reason": "same type of business; same end market; same business function; sold the same way",
      "tier": "DIRECT",
      "transaction_type": ""
     },
@@ -574,7 +574,7 @@
     "in_medians": true,
     "mult": 22.0,
     "reason": "shares the language of api; related type of business; same end market; sold the same way",
-    "score": 10.8,
+    "score": 10.7,
     "type": "PRIMARY"
    },
    {

@@ -8,7 +8,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3
+      "ARR": 2
      },
      "bounded": true,
      "closeness": "THIN_OVERLAP",
@@ -20,15 +20,15 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 56.0,
+     "high": 23.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.0,
      "mid": 23.0,
-     "n": 3,
+     "n": 2,
      "period_mix": {
       "NOT STATED": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 1
      },
      "period_span": {
       "NOT STATED": {
@@ -45,7 +45,7 @@
      "shared_words": [
       "operations"
      ],
-     "spread": 5.6,
+     "spread": 2.3,
      "table": [
       {
        "company": "Restaurant365",
@@ -66,20 +66,10 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Legora",
-       "date": "Apr-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 56.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
      "tag_evidence": 0.3,
-     "thin": false,
+     "thin": true,
      "triangulated": true
     }
    }
@@ -338,14 +328,10 @@
      {
       "company": "Owner",
       "date": "Aug-26"
-     },
-     {
-      "company": "Legora",
-      "date": "Apr-26"
      }
     ],
     "investor": "Redpoint",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -355,126 +341,6 @@
      }
     ],
     "investor": "Headline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Mar-2026)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Atlassian Ventures and NVentures (extension)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Benchmark",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Bessemer",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "General Catalyst",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "ICONIQ",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Legora",
-      "date": "Apr-26"
-     }
-    ],
-    "investor": "Y Combinator",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Harvey",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Kleiner Perkins",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Harvey",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Harvey",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Harvey",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "DST",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Harvey",
-      "date": "Jun-25"
-     }
-    ],
-    "investor": "OpenAI Startup Fund",
     "n": 1
    },
    {
@@ -576,28 +442,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Legora",
-    "date": "Apr-26",
-    "in_medians": true,
-    "mult": 56.0,
-    "reason": "same type of business; same revenue model; same AI stance",
-    "score": 9.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "PRESS_REPORTED",
-    "bound": "",
-    "company": "Harvey",
-    "date": "Jun-25",
-    "in_medians": false,
-    "mult": 66.7,
-    "reason": "same type of business; same revenue model; same AI stance",
-    "score": 9.6,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "Guesty",
@@ -627,7 +471,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3
+    "ARR": 2
    },
    "bounded": true,
    "closeness": "THIN_OVERLAP",
@@ -635,15 +479,15 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 56.0,
+   "high": 23.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.0,
    "mid": 23.0,
-   "n": 3,
+   "n": 2,
    "period_mix": {
     "NOT STATED": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 1
    },
    "period_span": {
     "NOT STATED": {
@@ -660,7 +504,7 @@
    "shared_words": [
     "operations"
    ],
-   "spread": 5.6,
+   "spread": 2.3,
    "table": [
     {
      "company": "Restaurant365",
@@ -681,20 +525,10 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Legora",
-     "date": "Apr-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 56.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
    "tag_evidence": 0.3,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
   "private_window_months": 39,
@@ -704,7 +538,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Field Service Management; same type of business; same business function; same kind of customer",
-    "score": 11.2,
+    "score": 11.1,
     "ticker": "NASDAQGS:EVCM"
    },
    {
@@ -712,7 +546,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Field Service Management; same type of business; same business function; same kind of customer",
-    "score": 11.2,
+    "score": 11.1,
     "ticker": "NASDAQGS:TTAN"
    },
    {
@@ -827,7 +661,7 @@
      "ticker": "NASDAQGS:TTAN"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

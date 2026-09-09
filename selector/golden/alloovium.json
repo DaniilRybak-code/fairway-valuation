@@ -8,14 +8,12 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4
+      "ARR": 2
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "AuditBoard"
-     ],
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "revenue",
@@ -25,18 +23,13 @@
      "high": 56.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.0,
-     "mid": 15.0,
-     "n": 4,
+     "low": 15.0,
+     "mid": 56.0,
+     "n": 2,
      "period_mix": {
-      "NOT STATED": 1,
-      "RUN_RATE": 3
+      "RUN_RATE": 2
      },
      "period_span": {
-      "NOT STATED": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -48,31 +41,11 @@
       "document",
       "review"
      ],
-     "spread": 5.6,
+     "spread": 3.7,
      "table": [
-      {
-       "company": "Restaurant365",
-       "date": "May-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Clio",
        "date": "Jul-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 15.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "AuditBoard",
-       "date": "May-24",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 15.0,
@@ -92,7 +65,7 @@
       }
      ],
      "tag_evidence": 0.8,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -573,56 +546,6 @@
    {
     "backed": [
      {
-      "company": "AuditBoard",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Hg (buyer)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Doctolib",
       "date": "Mar-22"
      }
@@ -687,28 +610,6 @@
     "type": "MIXED"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "AuditBoard",
-    "date": "May-24",
-    "in_medians": true,
-    "mult": 15.0,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 10.6,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "same type of business; same business function; same revenue model; sold the same way",
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Doctolib",
@@ -727,31 +628,24 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4
+    "ARR": 2
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "AuditBoard"
-   ],
+   "control_n": 0,
+   "control_names": [],
    "dispersed": false,
    "display": "RANGE",
    "high": 56.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.0,
-   "mid": 15.0,
-   "n": 4,
+   "low": 15.0,
+   "mid": 56.0,
+   "n": 2,
    "period_mix": {
-    "NOT STATED": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 2
    },
    "period_span": {
-    "NOT STATED": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -763,31 +657,11 @@
     "document",
     "review"
    ],
-   "spread": 5.6,
+   "spread": 3.7,
    "table": [
-    {
-     "company": "Restaurant365",
-     "date": "May-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Clio",
      "date": "Jul-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 15.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "AuditBoard",
-     "date": "May-24",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 15.0,
@@ -807,7 +681,7 @@
     }
    ],
    "tag_evidence": 0.8,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 53,
@@ -819,14 +693,6 @@
     "reason": "shares the language of construction; same end market; same kind of customer; same revenue model",
     "score": 8.6,
     "ticker": "XTRA:NEM"
-   },
-   {
-    "company": "Intapp, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer",
-    "score": 8.6,
-    "ticker": "NASDAQGS:INTA"
    },
    {
     "company": "Planisware SAS",
@@ -845,17 +711,25 @@
     "ticker": "NYSE:ASAN"
    },
    {
+    "company": "Similarweb Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of intelligence; same kind of customer; same revenue model; sold the same way",
+    "score": 7.2,
+    "ticker": "NYSE:SMWB"
+   },
+   {
     "company": "ZoomInfo Technologies Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of intelligence; same kind of customer; same revenue model; sold the same way",
-    "score": 7.3,
+    "score": 7.2,
     "ticker": "NASDAQGS:GTM"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "BROAD",
    "basis_mix": {
     "UNKNOWN": 5
    },
@@ -871,8 +745,8 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.3,
-   "mid": 4.6,
+   "low": 2.2,
+   "mid": 2.3,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -895,6 +769,15 @@
    "spread": 2.9,
    "table": [
     {
+     "company": "Similarweb Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.7,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 100.0,
+     "ticker": "NYSE:SMWB"
+    },
+    {
      "company": "ZoomInfo Technologies Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": -0.3,
@@ -911,15 +794,6 @@
      "recurring_pct": null,
      "retention_pct": 96.0,
      "ticker": "NYSE:ASAN"
-    },
-    {
-     "company": "Intapp, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.4,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": 123.0,
-     "ticker": "NASDAQGS:INTA"
     },
     {
      "company": "Nemetschek SE",

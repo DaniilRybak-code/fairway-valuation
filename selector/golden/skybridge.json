@@ -8,8 +8,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 1,
-      "ARR_RUNRATE": 4,
+      "ARR": 2,
+      "ARR_RUNRATE": 2,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -30,11 +30,11 @@
       "Confluent"
      ],
      "low": 9.88,
-     "mid": 20.5,
-     "n": 6,
+     "mid": 19.8,
+     "n": 5,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 5
+      "RUN_RATE": 4
      },
      "period_span": {
       "LTM": {
@@ -55,16 +55,16 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Anysphere / Cursor",
-       "mult": 19.8,
-       "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
+       "company": "Turing",
+       "mult": 13.2,
+       "reason": "shares the language of model; same type of business; same business function; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Replit",
-       "mult": 20.0,
-       "reason": "same type of business; same business function; sold the same way; same AI stance",
+       "company": "Anysphere / Cursor",
+       "mult": 19.8,
+       "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -73,13 +73,6 @@
        "mult": 20.5,
        "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
        "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Lovable",
-       "mult": 33.0,
-       "reason": "same type of business; same business function; sold the same way; same AI stance",
-       "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
@@ -113,6 +106,16 @@
        "ticker": ""
       },
       {
+       "company": "Turing",
+       "date": "Mar-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 13.2,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Anysphere / Cursor",
        "date": "Jun-25",
        "growth_basis": "",
@@ -123,31 +126,11 @@
        "ticker": ""
       },
       {
-       "company": "Replit",
-       "date": "Sep-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 20.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Anthropic",
        "date": "May-26",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 20.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Lovable",
-       "date": "Dec-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 33.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -483,65 +466,21 @@
    {
     "backed": [
      {
-      "company": "Lovable",
-      "date": "Dec-25"
-     },
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
      {
       "company": "LangChain",
       "date": "Oct-25"
      }
     ],
     "investor": "CapitalG",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Menlo Anthology",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "NVentures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Salesforce Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Lovable",
-      "date": "Dec-25"
-     }
-    ],
-    "investor": "Databricks Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "IVP",
     "n": 1
    },
    {
@@ -587,46 +526,6 @@
    {
     "backed": [
      {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Prysm",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Google AI Futures Fund",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Amex Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Anysphere / Cursor",
       "date": "Jun-25"
      }
@@ -652,6 +551,46 @@
      }
     ],
     "investor": "DST Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Weights & Biases",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "CoreWeave",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Khazanah Nasional",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "WestBridge Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Turing",
+      "date": "Mar-25"
+     }
+    ],
+    "investor": "Sozo Ventures",
     "n": 1
    }
   ],
@@ -680,17 +619,6 @@
     "type": "CONTROL"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Lovable",
-    "date": "Dec-25",
-    "in_medians": true,
-    "mult": 33.0,
-    "reason": "same type of business; same business function; sold the same way; same AI stance",
-    "score": 13.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
@@ -713,17 +641,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Replit",
-    "date": "Sep-25",
-    "in_medians": true,
-    "mult": 20.0,
-    "reason": "same type of business; same business function; sold the same way; same AI stance",
-    "score": 13.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "Anysphere / Cursor",
@@ -732,6 +649,28 @@
     "mult": 19.8,
     "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
     "score": 16.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "NONE",
+    "bound": "",
+    "company": "Weights & Biases",
+    "date": "Mar-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of model; same type of business; same business function; same kind of customer",
+    "score": 16.6,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Turing",
+    "date": "Mar-25",
+    "in_medians": true,
+    "mult": 13.2,
+    "reason": "shares the language of model; same type of business; same business function; same AI stance",
+    "score": 11.6,
     "type": "PRIMARY"
    }
   ],
@@ -742,8 +681,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
-    "ARR_RUNRATE": 4,
+    "ARR": 2,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -760,11 +699,11 @@
     "Confluent"
    ],
    "low": 9.88,
-   "mid": 20.5,
-   "n": 6,
+   "mid": 19.8,
+   "n": 5,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 5
+    "RUN_RATE": 4
    },
    "period_span": {
     "LTM": {
@@ -785,16 +724,16 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Anysphere / Cursor",
-     "mult": 19.8,
-     "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
+     "company": "Turing",
+     "mult": 13.2,
+     "reason": "shares the language of model; same type of business; same business function; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "same type of business; same business function; sold the same way; same AI stance",
+     "company": "Anysphere / Cursor",
+     "mult": 19.8,
+     "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -803,13 +742,6 @@
      "mult": 20.5,
      "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
      "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "same type of business; same business function; sold the same way; same AI stance",
-     "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
@@ -843,6 +775,16 @@
      "ticker": ""
     },
     {
+     "company": "Turing",
+     "date": "Mar-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 13.2,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
      "company": "Anysphere / Cursor",
      "date": "Jun-25",
      "growth_basis": "",
@@ -853,31 +795,11 @@
      "ticker": ""
     },
     {
-     "company": "Replit",
-     "date": "Sep-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 20.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Anthropic",
      "date": "May-26",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 20.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Lovable",
-     "date": "Dec-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 33.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -897,7 +819,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 14,
+  "private_window_months": 17,
   "secondary": [
    {
     "company": "Agora, Inc.",

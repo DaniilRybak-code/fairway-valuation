@@ -113,7 +113,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Talent Marketplace; same type of business; same kind of customer; same revenue model",
-    "score": 8.5,
+    "score": 8.4,
     "ticker": "NASDAQGS:UPWK"
    },
    {
@@ -129,7 +129,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of candidate, talent; same kind of customer; same purchase frequency",
-    "score": 5.6,
+    "score": 5.5,
     "ticker": "ASX:SEK"
    }
   ],
@@ -202,7 +202,7 @@
      "ticker": "ASX:SEK"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
@@ -477,7 +477,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "both do Candidate Matching, Talent Marketplace; same type of business; same business function; same revenue model",
-    "score": 17.6,
+    "score": 17.5,
     "type": "PRIMARY"
    },
    {

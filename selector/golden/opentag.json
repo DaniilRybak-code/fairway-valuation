@@ -8,7 +8,7 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
+      "BUSINESS_CUSTOMERS": 3
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -24,10 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 134615.38,
-     "mid": 615384.62,
-     "n": 2,
+     "mid": 188000.0,
+     "n": 3,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
       "RUN_RATE": {
@@ -38,6 +38,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
+      "company",
       "team",
       "workflow"
      ],
@@ -54,6 +55,16 @@
        "ticker": ""
       },
       {
+       "company": "Pleo",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 188000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "FloQast",
        "date": "Apr-24",
        "growth_basis": "",
@@ -64,8 +75,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
-     "thin": true,
+     "tag_evidence": 0.5,
+     "thin": false,
      "triangulated": false
     },
     "REVENUE": {
@@ -75,7 +86,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 6,
-      "ARR_RUNRATE": 1
+      "NET_REVENUE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -83,8 +94,8 @@
      "control_names": [
       "AuditBoard"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -92,15 +103,15 @@
      "high": 72.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.0,
-     "mid": 18.3,
+     "low": 15.0,
+     "mid": 42.9,
      "n": 7,
      "period_mix": {
-      "NOT STATED": 1,
+      "LTM": 1,
       "RUN_RATE": 6
      },
      "period_span": {
-      "NOT STATED": {
+      "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       },
@@ -109,76 +120,17 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Restaurant365",
-       "mult": 10.0,
-       "reason": "related type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "AuditBoard",
-       "mult": 15.0,
-       "reason": "shares the language of workflow; same type of business; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "FloQast",
-       "mult": 16.0,
-       "reason": "shares the language of workflow; same type of business; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Notion",
-       "mult": 18.3,
-       "reason": "both do Knowledge Base; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Brex",
-       "mult": 39.42,
-       "reason": "same type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Miro",
-       "mult": 58.3,
-       "reason": "shares the language of team; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Glean",
-       "mult": 72.0,
-       "reason": "shares the language of knowledge; related type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "base",
+      "company",
       "knowledge",
       "team",
       "workflow"
      ],
-     "spread": 7.2,
+     "spread": 4.8,
      "table": [
-      {
-       "company": "Restaurant365",
-       "date": "May-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "AuditBoard",
        "date": "May-24",
@@ -210,11 +162,21 @@
        "ticker": ""
       },
       {
-       "company": "Brex",
-       "date": "Jan-22",
+       "company": "Calendly",
+       "date": "Jan-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 39.42,
+       "multiple": 42.9,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Pleo",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 47.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -240,7 +202,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.1,
+     "tag_evidence": 1.0,
      "thin": false,
      "triangulated": false
     }
@@ -264,53 +226,37 @@
     "ticker": "NYSE:ASAN"
    },
    {
-    "company": "HubSpot, Inc.",
+    "company": "Text S.A.",
     "family": "software",
     "in_medians": true,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 9.6,
-    "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "BlackLine, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NASDAQGS:BL"
-   },
-   {
-    "company": "Salesforce, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NYSE:CRM"
+    "reason": "both do Knowledge Base; same kind of customer; same revenue model; sold the same way",
+    "score": 9.0,
+    "ticker": "WSE:TXT"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 5.0,
+   "high": 2.8,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.3,
-   "mid": 2.5,
-   "n": 5,
+   "low": 2.0,
+   "mid": 2.3,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -322,11 +268,13 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "base",
+    "knowledge",
     "team",
     "workflow"
    ],
    "show_retention": true,
-   "spread": 2.5,
+   "spread": 1.4,
    "table": [
     {
      "company": "monday.com Ltd.",
@@ -347,31 +295,13 @@
      "ticker": "NYSE:ASAN"
     },
     {
-     "company": "BlackLine, Inc.",
+     "company": "Text S.A.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.4,
-     "multiple": 2.5,
-     "recurring_pct": 95.0,
-     "retention_pct": 102.0,
-     "ticker": "NASDAQGS:BL"
-    },
-    {
-     "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
+     "growth_pct": 3.2,
      "multiple": 2.8,
      "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:HUBS"
-    },
-    {
-     "company": "Salesforce, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.7,
-     "multiple": 5.0,
-     "recurring_pct": 95.0,
      "retention_pct": null,
-     "ticker": "NYSE:CRM"
+     "ticker": "WSE:TXT"
     }
    ],
    "tag_evidence": 1.0,
@@ -622,12 +552,12 @@
       "date": "Apr-24"
      },
      {
-      "company": "Restaurant365",
-      "date": "May-23"
-     },
-     {
       "company": "Miro",
       "date": "Jan-22"
+     },
+     {
+      "company": "Calendly",
+      "date": "Jan-21"
      }
     ],
     "investor": "ICONIQ Growth",
@@ -676,36 +606,6 @@
    {
     "backed": [
      {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Miro",
       "date": "Jan-22"
      }
@@ -742,6 +642,16 @@
     ],
     "investor": "Salesforce Ventures",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Calendly",
+      "date": "Jan-21"
+     }
+    ],
+    "investor": "OpenView",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -754,7 +664,7 @@
     "in_medians": true,
     "mult": 18.3,
     "reason": "both do Knowledge Base; related type of business; same business function; same kind of customer",
-    "score": 17.1,
+    "score": 17.0,
     "type": "SECONDARY"
    },
    {
@@ -765,7 +675,7 @@
     "in_medians": true,
     "mult": 72.0,
     "reason": "shares the language of knowledge; related type of business; same revenue model; same AI stance",
-    "score": 10.5,
+    "score": 10.4,
     "type": "PRIMARY"
    },
    {
@@ -776,7 +686,7 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "shares the language of workflow; same type of business; same revenue model",
-    "score": 9.1,
+    "score": 9.0,
     "type": "CONTROL"
    },
    {
@@ -787,29 +697,7 @@
     "in_medians": true,
     "mult": 16.0,
     "reason": "shares the language of workflow; same type of business; same revenue model",
-    "score": 10.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 9.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Annualized revenue",
-    "bound": "",
-    "company": "Brex",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 39.42,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 11.6,
+    "score": 10.5,
     "type": "PRIMARY"
    },
    {
@@ -822,6 +710,28 @@
     "reason": "shares the language of team; related type of business; same revenue model; sold the same way",
     "score": 10.0,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "ARR",
+    "bound": "",
+    "company": "Pleo",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 47.0,
+    "reason": "shares the language of company; same type of business; same kind of customer; same revenue model",
+    "score": 15.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Calendly",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 42.9,
+    "reason": "shares the language of team; related type of business; same business function; same revenue model",
+    "score": 13.0,
+    "type": "MIXED"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -832,7 +742,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 6,
-    "ARR_RUNRATE": 1
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -840,20 +750,20 @@
    "control_names": [
     "AuditBoard"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 72.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.0,
-   "mid": 18.3,
+   "low": 15.0,
+   "mid": 42.9,
    "n": 7,
    "period_mix": {
-    "NOT STATED": 1,
+    "LTM": 1,
     "RUN_RATE": 6
    },
    "period_span": {
-    "NOT STATED": {
+    "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -862,76 +772,17 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Restaurant365",
-     "mult": 10.0,
-     "reason": "related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "AuditBoard",
-     "mult": 15.0,
-     "reason": "shares the language of workflow; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "FloQast",
-     "mult": 16.0,
-     "reason": "shares the language of workflow; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Notion",
-     "mult": 18.3,
-     "reason": "both do Knowledge Base; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Brex",
-     "mult": 39.42,
-     "reason": "same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Miro",
-     "mult": 58.3,
-     "reason": "shares the language of team; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Glean",
-     "mult": 72.0,
-     "reason": "shares the language of knowledge; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "base",
+    "company",
     "knowledge",
     "team",
     "workflow"
    ],
-   "spread": 7.2,
+   "spread": 4.8,
    "table": [
-    {
-     "company": "Restaurant365",
-     "date": "May-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "AuditBoard",
      "date": "May-24",
@@ -963,11 +814,21 @@
      "ticker": ""
     },
     {
-     "company": "Brex",
-     "date": "Jan-22",
+     "company": "Calendly",
+     "date": "Jan-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 39.42,
+     "multiple": 42.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Pleo",
+     "date": "Dec-21",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 47.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -993,20 +854,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 1.0,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 55,
+  "private_window_months": 67,
   "secondary": [
-   {
-    "company": "Text S.A.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Knowledge Base; same kind of customer; same revenue model; sold the same way",
-    "score": 9.0,
-    "ticker": "WSE:TXT"
-   },
    {
     "company": "Atlassian Corporation",
     "family": "software",
@@ -1030,14 +883,6 @@
     "reason": "shares the language of team; related type of business; same revenue model",
     "score": 6.5,
     "ticker": "NYSE:RNG"
-   },
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; sold the same way",
-    "score": 5.6,
-    "ticker": "NYSE:KVYO"
    }
   ],
   "secondary_range": {
@@ -1071,22 +916,7 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "Text S.A.",
-     "mult": 2.8,
-     "reason": "both do Knowledge Base; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "mult": 3.0,
-     "reason": "same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "base",

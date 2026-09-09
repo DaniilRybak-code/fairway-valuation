@@ -8,7 +8,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4
+      "ARR": 2
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -23,11 +23,11 @@
      "high": 34.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 24.5,
-     "mid": 30.0,
-     "n": 4,
+     "low": 25.5,
+     "mid": 34.3,
+     "n": 2,
      "period_mix": {
-      "RUN_RATE": 4
+      "RUN_RATE": 2
      },
      "period_span": {
       "RUN_RATE": {
@@ -41,34 +41,14 @@
       "fraud",
       "protection"
      ],
-     "spread": 1.4,
+     "spread": 1.3,
      "table": [
-      {
-       "company": "Vanta",
-       "date": "Jul-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 24.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Abnormal Security",
        "date": "Aug-24",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 25.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Cato Networks",
-       "date": "Sep-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 30.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -84,27 +64,19 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
-     "thin": false,
+     "tag_evidence": 0.5,
+     "thin": true,
      "triangulated": false
     }
    }
   },
   "core": [
    {
-    "company": "Rapid7, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 13.1,
-    "ticker": "NASDAQGM:RPD"
-   },
-   {
     "company": "SentinelOne, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of protection, threat; same type of business; same business function; same kind of customer",
-    "score": 13.0,
+    "score": 12.9,
     "ticker": "NYSE:S"
    },
    {
@@ -112,7 +84,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of application, protection; same type of business; same business function; same kind of customer",
-    "score": 12.7,
+    "score": 12.6,
     "ticker": "NYSE:ATEN"
    },
    {
@@ -120,32 +92,40 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of protection; same type of business; same business function; same kind of customer",
-    "score": 12.4,
+    "score": 12.3,
     "ticker": "NASDAQGS:ZS"
    },
    {
-    "company": "Fortinet, Inc.",
+    "company": "CrowdStrike Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGS:FTNT"
+    "reason": "shares the language of threat; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NASDAQGS:CRWD"
    },
    {
-    "company": "Netskope, Inc.",
+    "company": "Varonis Systems, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 12.1,
-    "ticker": "NASDAQGS:NTSK"
+    "reason": "shares the language of threat; same type of business; same business function; same kind of customer",
+    "score": 11.6,
+    "ticker": "NASDAQGS:VRNS"
    },
    {
-    "company": "Rubrik, Inc.",
+    "company": "OneSpan Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 12.1,
-    "ticker": "NYSE:RBRK"
+    "reason": "both do Anti-Fraud; same type of business; same business function; same kind of customer",
+    "score": 10.9,
+    "ticker": "NASDAQCM:OSPN"
+   },
+   {
+    "company": "Akamai Technologies, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of application, protection; same type of business; same business function; same kind of customer",
+    "score": 10.1,
+    "ticker": "NASDAQGS:AKAM"
    }
   ],
   "core_range": {
@@ -155,19 +135,19 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": true,
    "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 9.3,
+   "high": 6.8,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.7,
-   "mid": 5.4,
+   "low": 4.1,
+   "mid": 4.9,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -180,9 +160,16 @@
    },
    "points": [
     {
-     "company": "Rapid7, Inc.",
-     "mult": 1.3,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
+     "company": "OneSpan Inc.",
+     "mult": 2.2,
+     "reason": "both do Anti-Fraud; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Akamai Technologies, Inc.",
+     "mult": 4.1,
+     "reason": "shares the language of application, protection; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -201,9 +188,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Netskope, Inc.",
+     "company": "Varonis Systems, Inc.",
      "mult": 5.4,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
+     "reason": "shares the language of threat; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -215,16 +202,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Rubrik, Inc.",
-     "mult": 9.3,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Fortinet, Inc.",
-     "mult": 13.2,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
+     "company": "CrowdStrike Holdings, Inc.",
+     "mult": 31.9,
+     "reason": "shares the language of threat; same type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
     }
@@ -232,21 +212,32 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "anti",
     "application",
+    "fraud",
     "protection",
     "threat"
    ],
    "show_retention": true,
-   "spread": 10.2,
+   "spread": 14.5,
    "table": [
     {
-     "company": "Rapid7, Inc.",
+     "company": "OneSpan Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 0.0,
-     "multiple": 1.3,
-     "recurring_pct": 96.0,
+     "growth_pct": 2.6,
+     "multiple": 2.2,
+     "recurring_pct": 64.0,
+     "retention_pct": 104.0,
+     "ticker": "NASDAQCM:OSPN"
+    },
+    {
+     "company": "Akamai Technologies, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.0,
+     "multiple": 4.1,
+     "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGM:RPD"
+     "ticker": "NASDAQGS:AKAM"
     },
     {
      "company": "A10 Networks, Inc.",
@@ -267,13 +258,13 @@
      "ticker": "NYSE:S"
     },
     {
-     "company": "Netskope, Inc.",
+     "company": "Varonis Systems, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 21.0,
+     "growth_pct": 17.8,
      "multiple": 5.4,
-     "recurring_pct": null,
-     "retention_pct": 118.0,
-     "ticker": "NASDAQGS:NTSK"
+     "recurring_pct": 91.8,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:VRNS"
     },
     {
      "company": "Zscaler, Inc.",
@@ -285,25 +276,16 @@
      "ticker": "NASDAQGS:ZS"
     },
     {
-     "company": "Rubrik, Inc.",
+     "company": "CrowdStrike Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 21.3,
-     "multiple": 9.3,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:RBRK"
-    },
-    {
-     "company": "Fortinet, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.3,
-     "multiple": 13.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:FTNT"
+     "growth_pct": 22.1,
+     "multiple": 31.9,
+     "recurring_pct": 95.2,
+     "retention_pct": 115.0,
+     "ticker": "NASDAQGS:CRWD"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
@@ -444,50 +426,6 @@
    {
     "backed": [
      {
-      "company": "Vanta",
-      "date": "Jul-24"
-     },
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Goldman Sachs Alternatives",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "J.P. Morgan",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Atlassian Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Huntress",
       "date": "Jun-24"
      }
@@ -568,100 +506,6 @@
    {
     "backed": [
      {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Spark Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Georgian",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "AT&T Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     },
-     {
-      "company": "Snyk",
-      "date": "Dec-22"
-     }
-    ],
-    "investor": "Accel",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Cato Networks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "LightSpeed",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cato Networks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "Adams Street",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cato Networks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "SoftBank Vision Fund 2",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cato Networks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "Sixty Degree Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Snyk",
       "date": "Dec-22"
      }
@@ -677,6 +521,16 @@
      }
     ],
     "investor": "Evolution Equity",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Snyk",
+      "date": "Dec-22"
+     }
+    ],
+    "investor": "Accel",
     "n": 1
    },
    {
@@ -710,18 +564,7 @@
     "in_medians": true,
     "mult": 25.5,
     "reason": "shares the language of fraud, protection; same type of business; same business function; same kind of customer",
-    "score": 14.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Vanta",
-    "date": "Jul-24",
-    "in_medians": true,
-    "mult": 24.5,
-    "reason": "same type of business; same revenue model; sold the same way",
-    "score": 11.6,
+    "score": 14.0,
     "type": "PRIMARY"
    },
    {
@@ -732,7 +575,7 @@
     "in_medians": false,
     "mult": 15.5,
     "reason": "shares the language of threat; same type of business; same business function",
-    "score": 8.7,
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
@@ -743,30 +586,8 @@
     "in_medians": true,
     "mult": 34.3,
     "reason": "shares the language of protection; same type of business; same business function; same kind of customer",
-    "score": 15.4,
+    "score": 15.3,
     "type": "MIXED"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Cyera",
-    "date": "Apr-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 17.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Cato Networks",
-    "date": "Sep-23",
-    "in_medians": true,
-    "mult": 30.0,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 16.6,
-    "type": "PRIMARY"
    },
    {
     "basis": "THIRD_PARTY_ESTIMATE",
@@ -776,7 +597,7 @@
     "in_medians": false,
     "mult": 41.1,
     "reason": "both do Application Security; same type of business; same business function",
-    "score": 8.5,
+    "score": 8.4,
     "type": "PRIMARY"
    }
   ],
@@ -787,7 +608,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4
+    "ARR": 2
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -798,11 +619,11 @@
    "high": 34.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 24.5,
-   "mid": 30.0,
-   "n": 4,
+   "low": 25.5,
+   "mid": 34.3,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 4
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -816,34 +637,14 @@
     "fraud",
     "protection"
    ],
-   "spread": 1.4,
+   "spread": 1.3,
    "table": [
-    {
-     "company": "Vanta",
-     "date": "Jul-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 24.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Abnormal Security",
      "date": "Aug-24",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 25.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Cato Networks",
-     "date": "Sep-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 30.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -859,76 +660,68 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
-   "thin": false,
+   "tag_evidence": 0.5,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 44,
   "secondary": [
    {
-    "company": "CrowdStrike Holdings, Inc.",
+    "company": "Check Point Software Technologies Ltd.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of threat; same type of business; same business function; same kind of customer",
-    "score": 11.7,
-    "ticker": "NASDAQGS:CRWD"
+    "score": 10.1,
+    "ticker": "NASDAQGS:CHKP"
    },
    {
-    "company": "Varonis Systems, Inc.",
+    "company": "Gen Digital Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of threat; same type of business; same business function; same kind of customer",
-    "score": 11.7,
-    "ticker": "NASDAQGS:VRNS"
+    "reason": "both do Mobile App; same type of business; same business function; same revenue model",
+    "score": 8.9,
+    "ticker": "NASDAQGS:GEN"
    },
    {
-    "company": "Palo Alto Networks, Inc.",
+    "company": "Commvault Systems, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQGS:PANW"
+    "reason": "shares the language of protection; related type of business; same kind of customer; same revenue model",
+    "score": 8.8,
+    "ticker": "NASDAQGS:CVLT"
    },
    {
-    "company": "Qualys, Inc.",
+    "company": "Mitek Systems, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQGS:QLYS"
-   },
-   {
-    "company": "SailPoint, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQGS:SAIL"
+    "reason": "shares the language of fraud, mobile; same type of business; same kind of customer; same AI stance",
+    "score": 7.9,
+    "ticker": "NASDAQCM:MITK"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 31.9,
+   "high": 4.6,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 7.1,
-   "mid": 7.5,
-   "n": 5,
+   "low": 3.6,
+   "mid": 3.9,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -940,60 +733,54 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "fraud",
+    "mobile",
+    "protection",
     "threat"
    ],
    "show_retention": true,
-   "spread": 5.9,
+   "spread": 1.3,
    "table": [
     {
-     "company": "Varonis Systems, Inc.",
+     "company": "Mitek Systems, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.8,
-     "multiple": 5.4,
-     "recurring_pct": 91.8,
+     "growth_pct": 8.2,
+     "multiple": 3.6,
+     "recurring_pct": 48.5,
      "retention_pct": null,
-     "ticker": "NASDAQGS:VRNS"
+     "ticker": "NASDAQCM:MITK"
     },
     {
-     "company": "Qualys, Inc.",
+     "company": "Check Point Software Technologies Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.8,
-     "multiple": 7.1,
+     "growth_pct": 5.9,
+     "multiple": 3.9,
+     "recurring_pct": 48.4,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CHKP"
+    },
+    {
+     "company": "Commvault Systems, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
+     "multiple": 3.9,
+     "recurring_pct": 64.9,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:CVLT"
+    },
+    {
+     "company": "Gen Digital Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.3,
+     "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:QLYS"
-    },
-    {
-     "company": "SailPoint, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.1,
-     "multiple": 7.5,
-     "recurring_pct": 94.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:SAIL"
-    },
-    {
-     "company": "Palo Alto Networks, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.3,
-     "multiple": 18.2,
-     "recurring_pct": 80.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:PANW"
-    },
-    {
-     "company": "CrowdStrike Holdings, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 22.1,
-     "multiple": 31.9,
-     "recurring_pct": 95.2,
-     "retention_pct": 115.0,
-     "ticker": "NASDAQGS:CRWD"
+     "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "Autonomous Runtime Security"

@@ -59,7 +59,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 6.5,
+     "tag_evidence": 6.4,
      "thin": true,
      "triangulated": false
     },
@@ -134,7 +134,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 11.5,
+     "tag_evidence": 11.4,
      "thin": true,
      "triangulated": false
     }
@@ -146,32 +146,8 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of billing; related type of business; same end market; same business function",
-    "score": 11.3,
+    "score": 11.2,
     "ticker": "NASDAQGM:USIO"
-   },
-   {
-    "company": "PayPoint plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same business function; same revenue model",
-    "score": 11.1,
-    "ticker": "LSE:PAY"
-   },
-   {
-    "company": "Paysign, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same business function; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQ:PAYS"
-   },
-   {
-    "company": "Fawry for Banking Technology",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same business function; same revenue model",
-    "score": 11.1,
-    "ticker": "CASE:FWRY"
    },
    {
     "company": "Repay Holdings Corporation",
@@ -190,12 +166,36 @@
     "ticker": "NYSE:WEX"
    },
    {
+    "company": "PayPoint plc",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 11.0,
+    "ticker": "LSE:PAY"
+   },
+   {
+    "company": "Paysign, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 11.0,
+    "ticker": "NASDAQ:PAYS"
+   },
+   {
     "company": "Marqeta, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same kind of customer",
     "score": 11.0,
     "ticker": "NASDAQ:MQ"
+   },
+   {
+    "company": "Fawry for Banking Technology",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 11.0,
+    "ticker": "CASE:FWRY"
    }
   ],
   "core_range": {
@@ -244,14 +244,14 @@
      "transaction_type": ""
     },
     {
-     "company": "PayPoint plc",
+     "company": "WEX Inc.",
      "mult": 2.0,
      "reason": "related type of business; same end market; same business function; same revenue model",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
-     "company": "WEX Inc.",
+     "company": "PayPoint plc",
      "mult": 2.0,
      "reason": "related type of business; same end market; same business function; same revenue model",
      "tier": "DIRECT",
@@ -307,15 +307,6 @@
      "ticker": "NASDAQCM:RPAY"
     },
     {
-     "company": "PayPoint plc",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -4.2,
-     "multiple": 2.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:PAY"
-    },
-    {
      "company": "WEX Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 2.6,
@@ -323,6 +314,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:WEX"
+    },
+    {
+     "company": "PayPoint plc",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -4.2,
+     "multiple": 2.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "LSE:PAY"
     },
     {
      "company": "Paysign, Inc.",
@@ -334,7 +334,7 @@
      "ticker": "NASDAQ:PAYS"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true
   },
@@ -538,7 +538,7 @@
     "in_medians": true,
     "mult": 20.41,
     "reason": "both do Payment Orchestration, Payments Failover, Processor Redundancy; same type of business; same end market; same business function",
-    "score": 29.5,
+    "score": 29.4,
     "type": "MIXED"
    },
    {
@@ -549,7 +549,7 @@
     "in_medians": true,
     "mult": 9.52,
     "reason": "both do Subscription Billing; related type of business; same end market; same business function",
-    "score": 22.4,
+    "score": 22.2,
     "type": "PRIMARY"
    },
    {
@@ -618,26 +618,18 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 6.5,
+   "tag_evidence": 6.4,
    "thin": true,
    "triangulated": false
   },
   "private_window_months": 22,
   "secondary": [
    {
-    "company": "Paymentus Holdings",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model; same AI stance",
-    "score": 9.6,
-    "ticker": "NYSE:PAY"
-   },
-   {
     "company": "Worldline SA",
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same AI stance",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "ENXTPA:WLN"
    },
    {
@@ -645,7 +637,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same AI stance",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "NYSE:EVTC"
    },
    {
@@ -653,7 +645,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same AI stance",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "TSE:4819"
    },
    {
@@ -661,15 +653,23 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same end market; same business function",
-    "score": 8.1,
+    "score": 8.0,
     "ticker": "NASDAQGS:ACIW"
+   },
+   {
+    "company": "NCR Atleos Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same AI stance",
+    "score": 8.0,
+    "ticker": "NYSE:NATL"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -683,11 +683,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.8,
-   "mid": 2.5,
-   "n": 5,
+   "low": 0.7,
+   "mid": 1.3,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -696,7 +696,22 @@
     }
    },
    "points": [],
-   "positioning": [],
+   "positioning": [
+    {
+     "company": "Digital Garage, Inc.",
+     "mult": 0.8,
+     "reason": "related type of business; same end market; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "EVERTEC, Inc.",
+     "mult": 2.5,
+     "reason": "related type of business; same end market; same business function; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "post_stated_n": 0,
    "shared_words": [],
    "show_retention": false,
@@ -712,31 +727,13 @@
      "ticker": "ENXTPA:WLN"
     },
     {
-     "company": "Digital Garage, Inc.",
+     "company": "NCR Atleos Corporation",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.2,
-     "multiple": 0.8,
+     "growth_pct": 4.7,
+     "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "TSE:4819"
-    },
-    {
-     "company": "Paymentus Holdings",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -4.2,
-     "multiple": 2.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:PAY"
-    },
-    {
-     "company": "EVERTEC, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.7,
-     "multiple": 2.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:EVTC"
+     "ticker": "NYSE:NATL"
     },
     {
      "company": "ACI Worldwide, Inc.",
@@ -748,7 +745,7 @@
      "ticker": "NASDAQGS:ACIW"
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   }

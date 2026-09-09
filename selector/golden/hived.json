@@ -9,14 +9,12 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 4
+      "NET_REVENUE": 3
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Wolt"
-     ],
+     "control_n": 0,
+     "control_names": [],
      "dispersed": true,
      "display": "SCATTER",
      "founder_field": "revenue",
@@ -28,9 +26,9 @@
      "listed_target_names": [],
      "low": 5.97,
      "mid": 10.3,
-     "n": 5,
+     "n": 4,
      "period_mix": {
-      "LTM": 4,
+      "LTM": 3,
       "RUN_RATE": 1
      },
      "period_span": {
@@ -64,13 +62,6 @@
        "reason": "shares the language of own; same type of business; same end market; same AI stance",
        "tier": "DIRECT",
        "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Wolt",
-       "mult": 23.5,
-       "reason": "same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
       },
       {
        "company": "Gopuff",
@@ -121,16 +112,6 @@
        "ticker": ""
       },
       {
-       "company": "Wolt",
-       "date": "Nov-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Gopuff",
        "date": "Jul-21",
        "growth_basis": "",
@@ -141,7 +122,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.7,
+     "tag_evidence": 1.6,
      "thin": false,
      "triangulated": false
     }
@@ -153,7 +134,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery Network; same type of business; same business function; same kind of customer",
-    "score": 16.6,
+    "score": 16.5,
     "ticker": "TSE:9143"
    },
    {
@@ -161,7 +142,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
-    "score": 14.2,
+    "score": 14.1,
     "ticker": "NYSE:FDX"
    },
    {
@@ -169,7 +150,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery; same type of business; same business function; same kind of customer",
-    "score": 14.1,
+    "score": 14.0,
     "ticker": "ENXTAM:PNL"
    },
    {
@@ -177,16 +158,8 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Parcel Delivery, Own Fleet; same type of business; same business function; same kind of customer",
-    "score": 13.6,
+    "score": 13.5,
     "ticker": "NYSE:UPS"
-   },
-   {
-    "company": "S.F. Holding Co., Ltd.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
-    "score": 13.6,
-    "ticker": "SZSE:002352"
    },
    {
     "company": "Deutsche Post AG",
@@ -197,11 +170,19 @@
     "ticker": "XTRA:DHL"
    },
    {
+    "company": "S.F. Holding Co., Ltd.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of fleet, own, parcel; same type of business; same business function; same kind of customer",
+    "score": 13.5,
+    "ticker": "SZSE:002352"
+   },
+   {
     "company": "Blue Dart Express Limited",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of own, parcel; same type of business; same business function; same kind of customer",
-    "score": 13.4,
+    "score": 13.3,
     "ticker": "NSEI:BLUEDART"
    }
   ],
@@ -313,7 +294,7 @@
      "ticker": "NSEI:BLUEDART"
     }
    ],
-   "tag_evidence": 3.6,
+   "tag_evidence": 3.5,
    "thin": false,
    "triangulated": false
   },
@@ -549,36 +530,6 @@
    {
     "backed": [
      {
-      "company": "Glovo",
-      "date": "Dec-21"
-     }
-    ],
-    "investor": "Delivery Hero (acquirer",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Glovo",
-      "date": "Dec-21"
-     }
-    ],
-    "investor": "all-stock)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Wolt",
-      "date": "Nov-21"
-     }
-    ],
-    "investor": "DoorDash",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Gopuff",
       "date": "Jul-21"
      }
@@ -701,7 +652,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of own; same type of business; same end market; same AI stance",
-    "score": 10.2,
+    "score": 10.1,
     "type": "PRIMARY"
    },
    {
@@ -712,7 +663,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "shares the language of own; same type of business; same business function; same AI stance",
-    "score": 9.2,
+    "score": 9.1,
     "type": "MIXED"
    },
    {
@@ -723,30 +674,8 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
-    "score": 18.7,
+    "score": 18.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Glovo",
-    "date": "Dec-21",
-    "in_medians": true,
-    "mult": null,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Wolt",
-    "date": "Nov-21",
-    "in_medians": true,
-    "mult": 23.5,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 9.1,
-    "type": "CONTROL"
    },
    {
     "basis": "CONTEMPORANEOUS_PRESS",
@@ -756,7 +685,7 @@
     "in_medians": true,
     "mult": 44.12,
     "reason": "shares the language of own; same type of business; same business function; same AI stance",
-    "score": 9.2,
+    "score": 9.1,
     "type": "PRIMARY"
    },
    {
@@ -767,7 +696,7 @@
     "in_medians": true,
     "mult": 5.97,
     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
-    "score": 18.1,
+    "score": 18.0,
     "type": "PRIMARY"
    }
   ],
@@ -779,14 +708,12 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 4
+    "NET_REVENUE": 3
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Wolt"
-   ],
+   "control_n": 0,
+   "control_names": [],
    "dispersed": true,
    "display": "SCATTER",
    "high": 44.12,
@@ -794,9 +721,9 @@
    "listed_target_names": [],
    "low": 5.97,
    "mid": 10.3,
-   "n": 5,
+   "n": 4,
    "period_mix": {
-    "LTM": 4,
+    "LTM": 3,
     "RUN_RATE": 1
    },
    "period_span": {
@@ -830,13 +757,6 @@
      "reason": "shares the language of own; same type of business; same end market; same AI stance",
      "tier": "DIRECT",
      "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Wolt",
-     "mult": 23.5,
-     "reason": "same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
     },
     {
      "company": "Gopuff",
@@ -887,16 +807,6 @@
      "ticker": ""
     },
     {
-     "company": "Wolt",
-     "date": "Nov-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Gopuff",
      "date": "Jul-21",
      "growth_basis": "",
@@ -907,7 +817,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.7,
+   "tag_evidence": 1.6,
    "thin": false,
    "triangulated": false
   },
@@ -926,7 +836,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of last, mile, parcel; same type of business; same business function; same kind of customer",
-    "score": 12.1,
+    "score": 12.0,
     "ticker": "NYSE:ZTO"
    },
    {
@@ -942,7 +852,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of parcel; same type of business; same business function; same kind of customer",
-    "score": 11.3,
+    "score": 11.2,
     "ticker": "SEHK:1519"
    },
    {
@@ -950,7 +860,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of fleet, last, mile; same type of business; same business function; same revenue model",
-    "score": 9.9,
+    "score": 9.8,
     "ticker": "TSE:9064"
    }
   ],
@@ -1079,7 +989,7 @@
      "ticker": "NSEI:CONCOR"
     }
    ],
-   "tag_evidence": 1.4,
+   "tag_evidence": 1.3,
    "thin": false,
    "triangulated": false
   }

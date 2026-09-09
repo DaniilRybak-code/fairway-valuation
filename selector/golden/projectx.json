@@ -8,8 +8,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
-      "ARR_RUNRATE": 2,
+      "ARR": 1,
+      "ARR_RUNRATE": 4,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -18,23 +18,23 @@
      "control_names": [
       "Confluent"
      ],
-     "dispersed": false,
-     "display": "RANGE",
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 20.5,
+     "high": 150.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
      "low": 9.88,
-     "mid": 13.2,
-     "n": 5,
+     "mid": 20.5,
+     "n": 6,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 5
      },
      "period_span": {
       "LTM": {
@@ -46,15 +46,59 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Confluent",
+       "mult": 9.88,
+       "reason": "both do Cloud Execution Environment; related type of business; same kind of customer; same revenue model",
+       "tier": "DIRECT",
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "Oxylabs",
+       "mult": 10.3,
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Replit",
+       "mult": 20.0,
+       "reason": "shares the language of agent, browser, environment; related type of business; same business function; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Anthropic",
+       "mult": 20.5,
+       "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Genspark",
+       "mult": 25.0,
+       "reason": "shares the language of agent, workspace; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Decagon",
+       "mult": 150.0,
+       "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
       "agent",
       "browser",
       "environment",
-      "execution"
+      "execution",
+      "workspace"
      ],
-     "spread": 2.1,
+     "spread": 15.2,
      "table": [
       {
        "company": "Confluent",
@@ -72,16 +116,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 10.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Turing",
-       "date": "Mar-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 13.2,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -105,9 +139,29 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Genspark",
+       "date": "Nov-25",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 25.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 150.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 4.3,
+     "tag_evidence": 4.2,
      "thin": false,
      "triangulated": false
     }
@@ -123,27 +177,11 @@
     "ticker": "NYSE:NET"
    },
    {
-    "company": "Backblaze, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 12.1,
-    "ticker": "NASDAQGM:BLZE"
-   },
-   {
-    "company": "DigitalOcean Holdings, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 12.1,
-    "ticker": "NYSE:DOCN"
-   },
-   {
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
-    "score": 10.7,
+    "score": 10.6,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -153,21 +191,13 @@
     "reason": "shares the language of compute; same type of business; same kind of customer; same revenue model",
     "score": 10.6,
     "ticker": "NASDAQGS:FSLY"
-   },
-   {
-    "company": "IONOS Group SE",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; sold the same way",
-    "score": 7.1,
-    "ticker": "XTRA:IOS"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -177,15 +207,15 @@
    "dispersed": true,
    "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 14.9,
+   "high": 29.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 4.2,
-   "mid": 6.5,
-   "n": 6,
+   "mid": 14.9,
+   "n": 3,
    "period_mix": {
-    "NTM": 6
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -195,30 +225,9 @@
    },
    "points": [
     {
-     "company": "IONOS Group SE",
-     "mult": 3.6,
-     "reason": "same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Fastly, Inc.",
      "mult": 4.2,
      "reason": "shares the language of compute; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Backblaze, Inc.",
-     "mult": 4.3,
-     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "DigitalOcean Holdings, Inc.",
-     "mult": 8.7,
-     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -244,17 +253,8 @@
     "compute"
    ],
    "show_retention": true,
-   "spread": 8.2,
+   "spread": 7.0,
    "table": [
-    {
-     "company": "IONOS Group SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.0,
-     "multiple": 3.6,
-     "recurring_pct": 80.0,
-     "retention_pct": null,
-     "ticker": "XTRA:IOS"
-    },
     {
      "company": "Fastly, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -263,24 +263,6 @@
      "recurring_pct": null,
      "retention_pct": 117.0,
      "ticker": "NASDAQGS:FSLY"
-    },
-    {
-     "company": "Backblaze, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 23.7,
-     "multiple": 4.3,
-     "recurring_pct": null,
-     "retention_pct": 103.0,
-     "ticker": "NASDAQGM:BLZE"
-    },
-    {
-     "company": "DigitalOcean Holdings, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 51.1,
-     "multiple": 8.7,
-     "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:DOCN"
     },
     {
      "company": "Datadog, Inc.",
@@ -497,6 +479,110 @@
    {
     "backed": [
      {
+      "company": "Decagon",
+      "date": "Jan-26"
+     },
+     {
+      "company": "Replit",
+      "date": "Sep-25"
+     }
+    ],
+    "investor": "Coatue",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Index Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Accel",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Decagon",
+      "date": "Jan-26"
+     }
+    ],
+    "investor": "Bain Capital Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Emergence Capital Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "SBI Investment",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "LG Technology Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Pavilion Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Uphonest Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Genspark",
+      "date": "Nov-25"
+     }
+    ],
+    "investor": "Lanchi Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "LangChain",
       "date": "Oct-25"
      }
@@ -583,56 +669,6 @@
     ],
     "investor": "Amex Ventures",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Replit",
-      "date": "Sep-25"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Weights & Biases",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "CoreWeave",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Turing",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Khazanah Nasional",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Turing",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "WestBridge Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Turing",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Sozo Ventures",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -645,7 +681,7 @@
     "in_medians": true,
     "mult": 9.88,
     "reason": "both do Cloud Execution Environment; related type of business; same kind of customer; same revenue model",
-    "score": 18.8,
+    "score": 18.7,
     "type": "CONTROL"
    },
    {
@@ -671,6 +707,28 @@
     "type": "PRIMARY"
    },
    {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Decagon",
+    "date": "Jan-26",
+    "in_medians": true,
+    "mult": 150.0,
+    "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
+    "score": 8.6,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Genspark",
+    "date": "Nov-25",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "shares the language of agent, workspace; related type of business; sold the same way; same AI stance",
+    "score": 8.7,
+    "type": "PRIMARY"
+   },
+   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "LangChain",
@@ -689,29 +747,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of agent, browser, environment; related type of business; same business function; same revenue model",
-    "score": 15.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Weights & Biases",
-    "date": "Mar-25",
-    "in_medians": false,
-    "mult": null,
-    "reason": "shares the language of agent; related type of business; same business function; same kind of customer",
-    "score": 14.6,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Turing",
-    "date": "Mar-25",
-    "in_medians": true,
-    "mult": 13.2,
-    "reason": "related type of business; same business function; same AI stance",
-    "score": 9.6,
+    "score": 15.8,
     "type": "PRIMARY"
    }
   ],
@@ -722,8 +758,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 2,
+    "ARR": 1,
+    "ARR_RUNRATE": 4,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -732,19 +768,19 @@
    "control_names": [
     "Confluent"
    ],
-   "dispersed": false,
-   "display": "RANGE",
-   "high": 20.5,
+   "dispersed": true,
+   "display": "SCATTER",
+   "high": 150.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
    "low": 9.88,
-   "mid": 13.2,
-   "n": 5,
+   "mid": 20.5,
+   "n": 6,
    "period_mix": {
     "LTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 5
    },
    "period_span": {
     "LTM": {
@@ -756,15 +792,59 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Confluent",
+     "mult": 9.88,
+     "reason": "both do Cloud Execution Environment; related type of business; same kind of customer; same revenue model",
+     "tier": "DIRECT",
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "Oxylabs",
+     "mult": 10.3,
+     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "shares the language of agent, browser, environment; related type of business; same business function; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Anthropic",
+     "mult": 20.5,
+     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "shares the language of agent, workspace; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Decagon",
+     "mult": 150.0,
+     "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "agent",
     "browser",
     "environment",
-    "execution"
+    "execution",
+    "workspace"
    ],
-   "spread": 2.1,
+   "spread": 15.2,
    "table": [
     {
      "company": "Confluent",
@@ -782,16 +862,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 10.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Turing",
-     "date": "Mar-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 13.2,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -815,74 +885,36 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
+    },
+    {
+     "company": "Genspark",
+     "date": "Nov-25",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 25.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 150.0,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
     }
    ],
-   "tag_evidence": 4.3,
+   "tag_evidence": 4.2,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 17,
-  "secondary": [
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same revenue model",
-    "score": 6.1,
-    "ticker": "NYSE:SNOW"
-   }
-  ],
+  "private_window_months": 11,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 1
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "founder_basis_trailing_on_forward": false,
-   "high": 15.6,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 15.6,
-   "mid": 15.6,
-   "n": 1,
-   "period_mix": {
-    "NTM": 1
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": true,
-   "sole": "Snowflake Inc.",
-   "spread": 1.0,
-   "table": [
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Agent native workspace for heavy parallel workflows on the web"

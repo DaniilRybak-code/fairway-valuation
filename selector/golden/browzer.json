@@ -156,22 +156,6 @@
   },
   "core": [
    {
-    "company": "HubSpot, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 13.1,
-    "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 9.6,
-    "ticker": "NYSE:KVYO"
-   },
-   {
     "company": "Yext, Inc.",
     "family": "software",
     "in_medians": true,
@@ -184,23 +168,23 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of generation; same type of business; same business function",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "NYSE:ZETA"
    },
    {
-    "company": "Braze, Inc.",
+    "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function",
-    "score": 6.1,
-    "ticker": "NASDAQGS:BRZE"
+    "reason": "shares the language of developer; related type of business; same revenue model; sold the same way",
+    "score": 7.2,
+    "ticker": "HLSE:QTCOM"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -214,11 +198,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.8,
-   "mid": 3.0,
-   "n": 5,
+   "low": 1.8,
+   "mid": 3.9,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -230,6 +214,7 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "developer",
     "generation",
     "seo"
    ],
@@ -246,33 +231,6 @@
      "ticker": "NYSE:YEXT"
     },
     {
-     "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
-     "multiple": 2.8,
-     "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:HUBS"
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
-    },
-    {
-     "company": "Braze, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.5,
-     "multiple": 3.4,
-     "recurring_pct": null,
-     "retention_pct": 110.0,
-     "ticker": "NASDAQGS:BRZE"
-    },
-    {
      "company": "Zeta Global Holdings Corp.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 15.3,
@@ -280,6 +238,15 @@
      "recurring_pct": null,
      "retention_pct": 120.0,
      "ticker": "NYSE:ZETA"
+    },
+    {
+     "company": "Qt Group Oyj",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 7.7,
+     "multiple": 3.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "HLSE:QTCOM"
     }
    ],
    "tag_evidence": 0.6,
@@ -992,14 +959,6 @@
   "private_window_months": 55,
   "secondary": [
    {
-    "company": "Qt Group Oyj",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of developer; related type of business; same revenue model; sold the same way",
-    "score": 7.2,
-    "ticker": "HLSE:QTCOM"
-   },
-   {
     "company": "Similarweb Ltd.",
     "family": "software",
     "in_medians": true,
@@ -1012,25 +971,25 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
-   "high": 3.9,
+   "high": 2.2,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.2,
-   "mid": 3.05,
-   "n": 2,
+   "mid": 2.2,
+   "n": 1,
    "period_mix": {
-    "NTM": 2
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -1042,11 +1001,11 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "developer",
     "seo"
    ],
    "show_retention": true,
-   "spread": 1.8,
+   "sole": "Similarweb Ltd.",
+   "spread": 1.0,
    "table": [
     {
      "company": "Similarweb Ltd.",
@@ -1056,20 +1015,11 @@
      "recurring_pct": null,
      "retention_pct": 100.0,
      "ticker": "NYSE:SMWB"
-    },
-    {
-     "company": "Qt Group Oyj",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.7,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "HLSE:QTCOM"
     }
    ],
    "tag_evidence": 0.6,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "Put your technical content on autopilot"

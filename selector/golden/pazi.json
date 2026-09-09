@@ -2,81 +2,18 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
-     "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
-     },
-     "bounded": true,
-     "closeness": "THIN_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "business_customers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 357142.86,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 306250.0,
-     "mid": 357142.86,
-     "n": 2,
-     "period_mix": {
-      "RUN_RATE": 2
-     },
-     "period_span": {
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [],
-     "spread": 1.2,
-     "table": [
-      {
-       "company": "Vanta",
-       "date": "Jul-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 306250.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Clay",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 357142.86,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.1,
-     "thin": true,
-     "triangulated": true
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
+      "ARR": 2,
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 1
+      "NET_REVENUE": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "STRONG_OVERLAP",
      "control_n": 1,
      "control_names": [
       "Semrush"
@@ -93,13 +30,23 @@
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 50.0,
+     "mid": 33.3,
      "n": 5,
      "period_mix": {
+      "LTM": 1,
+      "NOT STATED": 1,
       "NTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 2
      },
      "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "NTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -118,18 +65,18 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Vanta",
-       "mult": 24.5,
-       "reason": "related type of business; same kind of customer",
+       "company": "Restaurant365",
+       "mult": 10.0,
+       "reason": "shares the language of operations; related type of business; same business function; same kind of customer",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "related type of business; same revenue model; sold the same way",
+       "company": "Jasper",
+       "mult": 33.3,
+       "reason": "shares the language of content; related type of business; same kind of customer; sold the same way",
        "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
+       "transaction_type": "PRIMARY"
       },
       {
        "company": "Sierra",
@@ -150,7 +97,8 @@
      "shared_words": [
       "agent",
       "based",
-      "content"
+      "content",
+      "operations"
      ],
      "spread": 34.9,
      "table": [
@@ -165,21 +113,21 @@
        "ticker": ""
       },
       {
-       "company": "Vanta",
-       "date": "Jul-24",
+       "company": "Restaurant365",
+       "date": "May-23",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 24.5,
+       "multiple": 10.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       },
       {
-       "company": "Clay",
-       "date": "Jan-26",
+       "company": "Jasper",
+       "date": "Oct-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 50.0,
+       "multiple": 33.3,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -205,7 +153,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
+     "tag_evidence": 0.3,
      "thin": false,
      "triangulated": false
     },
@@ -289,39 +237,15 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; same type of business; same business function; same AI stance",
-    "score": 8.2,
+    "score": 8.1,
     "ticker": "NYSE:PATH"
-   },
-   {
-    "company": "Pegasystems Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function",
-    "score": 7.1,
-    "ticker": "NASDAQGS:PEGA"
-   },
-   {
-    "company": "HubSpot, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; sold the same way",
-    "score": 7.1,
-    "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "SAP SE",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function",
-    "score": 6.1,
-    "ticker": "XTRA:SAP"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -335,11 +259,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.3,
-   "mid": 2.85,
-   "n": 6,
+   "low": 2.0,
+   "mid": 2.3,
+   "n": 3,
    "period_mix": {
-    "NTM": 6
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -355,7 +279,7 @@
     "team"
    ],
    "show_retention": true,
-   "spread": 2.5,
+   "spread": 2.1,
    "table": [
     {
      "company": "monday.com Ltd.",
@@ -376,24 +300,6 @@
      "ticker": "NYSE:ASAN"
     },
     {
-     "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
-     "multiple": 2.8,
-     "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:HUBS"
-    },
-    {
-     "company": "Pegasystems Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.3,
-     "multiple": 2.9,
-     "recurring_pct": 57.9,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:PEGA"
-    },
-    {
      "company": "UiPath, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.0,
@@ -401,15 +307,6 @@
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
-    },
-    {
-     "company": "SAP SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.9,
-     "multiple": 4.9,
-     "recurring_pct": 63.6,
-     "retention_pct": null,
-     "ticker": "XTRA:SAP"
     }
    ],
    "tag_evidence": 0.5,
@@ -580,14 +477,10 @@
      {
       "company": "Sierra",
       "date": "May-26"
-     },
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
      }
     ],
     "investor": "Sequoia",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -602,62 +495,16 @@
    {
     "backed": [
      {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "DST Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Conviction",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Avra",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Operator Collective",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Clay",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Frontline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Decagon",
       "date": "Jan-26"
+     },
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
      }
     ],
     "investor": "Coatue",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -762,41 +609,105 @@
    {
     "backed": [
      {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Goldman Sachs Alternatives",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "J.P. Morgan",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Atlassian Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Aledade",
       "date": "Jun-23"
      }
     ],
     "investor": "Lightspeed Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "KKR",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "L Catterton (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     },
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 2
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Insight Partners (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Foundation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Founders Circle Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "HubSpot Ventures",
     "n": 1
    }
   ],
@@ -810,19 +721,8 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "shares the language of based; related type of business; same revenue model; same AI stance",
-    "score": 8.7,
+    "score": 8.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Clay",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 50.0,
-    "reason": "related type of business; same revenue model; sold the same way",
-    "score": 9.6,
-    "type": "SECONDARY"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -832,7 +732,7 @@
     "in_medians": true,
     "mult": 150.0,
     "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
-    "score": 8.7,
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
@@ -843,7 +743,7 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "shares the language of content; related type of business; same kind of customer; sold the same way",
-    "score": 9.7,
+    "score": 9.6,
     "type": "CONTROL"
    },
    {
@@ -854,17 +754,6 @@
     "in_medians": false,
     "mult": 40.4,
     "reason": "shares the language of content; related type of business; same AI stance",
-    "score": 6.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Vanta",
-    "date": "Jul-24",
-    "in_medians": true,
-    "mult": 24.5,
-    "reason": "related type of business; same kind of customer",
     "score": 6.6,
     "type": "PRIMARY"
    },
@@ -878,6 +767,28 @@
     "reason": "shares the language of based; related type of business; same business function; same kind of customer",
     "score": 10.1,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Restaurant365",
+    "date": "May-23",
+    "in_medians": true,
+    "mult": 10.0,
+    "reason": "shares the language of operations; related type of business; same business function; same kind of customer",
+    "score": 8.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "shares the language of content; related type of business; same kind of customer; sold the same way",
+    "score": 11.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -887,12 +798,12 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 2,
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 1
+    "NET_REVENUE": 2
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
     "Semrush"
@@ -905,13 +816,23 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 50.0,
+   "mid": 33.3,
    "n": 5,
    "period_mix": {
+    "LTM": 1,
+    "NOT STATED": 1,
     "NTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 2
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "NTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -930,18 +851,18 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Vanta",
-     "mult": 24.5,
-     "reason": "related type of business; same kind of customer",
+     "company": "Restaurant365",
+     "mult": 10.0,
+     "reason": "shares the language of operations; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "related type of business; same revenue model; sold the same way",
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "shares the language of content; related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
+     "transaction_type": "PRIMARY"
     },
     {
      "company": "Sierra",
@@ -962,7 +883,8 @@
    "shared_words": [
     "agent",
     "based",
-    "content"
+    "content",
+    "operations"
    ],
    "spread": 34.9,
    "table": [
@@ -977,21 +899,21 @@
      "ticker": ""
     },
     {
-     "company": "Vanta",
-     "date": "Jul-24",
+     "company": "Restaurant365",
+     "date": "May-23",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 24.5,
+     "multiple": 10.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     },
     {
-     "company": "Clay",
-     "date": "Jan-26",
+     "company": "Jasper",
+     "date": "Oct-22",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 50.0,
+     "multiple": 33.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1017,26 +939,18 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.3,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 38,
+  "private_window_months": 46,
   "secondary": [
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 8.6,
-    "ticker": "NYSE:KVYO"
-   },
    {
     "company": "Cloudflare, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; same revenue model; sold the same way",
-    "score": 5.7,
+    "score": 5.6,
     "ticker": "NYSE:NET"
    },
    {
@@ -1044,41 +958,33 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; same revenue model; sold the same way",
-    "score": 5.7,
-    "ticker": "NASDAQGS:DDOG"
-   },
-   {
-    "company": "Ooma, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; sold the same way",
     "score": 5.6,
-    "ticker": "NYSE:OOMA"
+    "ticker": "NASDAQGS:DDOG"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
    "high": 29.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
-   "mid": 8.95,
-   "n": 4,
+   "low": 14.9,
+   "mid": 22.2,
+   "n": 2,
    "period_mix": {
-    "NTM": 4
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -1086,62 +992,15 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Ooma, Inc.",
-     "mult": 1.9,
-     "reason": "same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "mult": 3.0,
-     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Datadog, Inc.",
-     "mult": 14.9,
-     "reason": "shares the language of agent; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "mult": 29.5,
-     "reason": "shares the language of agent; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "agent"
    ],
    "show_retention": true,
-   "spread": 15.5,
+   "spread": 2.0,
    "table": [
-    {
-     "company": "Ooma, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.6,
-     "multiple": 1.9,
-     "recurring_pct": 92.0,
-     "retention_pct": null,
-     "ticker": "NYSE:OOMA"
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
-    },
     {
      "company": "Datadog, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1161,8 +1020,8 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.2,
-   "thin": false,
+   "tag_evidence": 0.1,
+   "thin": true,
    "triangulated": true
   }
  },

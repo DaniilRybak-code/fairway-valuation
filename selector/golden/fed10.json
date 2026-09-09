@@ -8,7 +8,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4
+      "ARR": 3
      },
      "bounded": true,
      "closeness": "THIN_OVERLAP",
@@ -25,18 +25,13 @@
      "high": 56.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.0,
+     "low": 15.0,
      "mid": 15.0,
-     "n": 4,
+     "n": 3,
      "period_mix": {
-      "NOT STATED": 1,
       "RUN_RATE": 3
      },
      "period_span": {
-      "NOT STATED": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -47,18 +42,8 @@
      "shared_words": [
       "regulatory"
      ],
-     "spread": 5.6,
+     "spread": 3.7,
      "table": [
-      {
-       "company": "Restaurant365",
-       "date": "May-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Clio",
        "date": "Jul-24",
@@ -90,7 +75,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": false,
      "triangulated": true
     }
@@ -102,7 +87,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same end market; same kind of customer",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "NASDAQGS:INTA"
    },
    {
@@ -543,46 +528,6 @@
     ],
     "investor": "Hg (buyer)",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -628,19 +573,8 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "shares the language of regulatory; related type of business; same business function; same kind of customer",
-    "score": 12.7,
+    "score": 12.6,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "same type of business; same revenue model; sold the same way",
-    "score": 10.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -650,7 +584,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4
+    "ARR": 3
    },
    "bounded": true,
    "closeness": "THIN_OVERLAP",
@@ -663,18 +597,13 @@
    "high": 56.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.0,
+   "low": 15.0,
    "mid": 15.0,
-   "n": 4,
+   "n": 3,
    "period_mix": {
-    "NOT STATED": 1,
     "RUN_RATE": 3
    },
    "period_span": {
-    "NOT STATED": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -685,18 +614,8 @@
    "shared_words": [
     "regulatory"
    ],
-   "spread": 5.6,
+   "spread": 3.7,
    "table": [
-    {
-     "company": "Restaurant365",
-     "date": "May-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Clio",
      "date": "Jul-24",
@@ -728,11 +647,11 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": true
   },
-  "private_window_months": 39,
+  "private_window_months": 27,
   "secondary": [
    {
     "company": "Veeva Systems Inc.",
@@ -755,7 +674,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of intelligence; same kind of customer; same revenue model; sold the same way",
-    "score": 7.3,
+    "score": 7.2,
     "ticker": "NASDAQGS:GTM"
    },
    {
@@ -767,12 +686,12 @@
     "ticker": "NYSE:RSKD"
    },
    {
-    "company": "BlackLine, Inc.",
-    "family": "software",
+    "company": "Bengo4.com, Inc.",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "same kind of customer; same revenue model",
-    "score": 5.1,
-    "ticker": "NASDAQGS:BL"
+    "reason": "same end market; same business function",
+    "score": 5.0,
+    "ticker": "TSE:6027"
    }
   ],
   "secondary_range": {
@@ -828,9 +747,9 @@
      "transaction_type": ""
     },
     {
-     "company": "BlackLine, Inc.",
-     "mult": 2.5,
-     "reason": "same kind of customer; same revenue model",
+     "company": "Bengo4.com, Inc.",
+     "mult": 5.5,
+     "reason": "same end market; same business function",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -881,13 +800,13 @@
      "ticker": "NASDAQGS:GTM"
     },
     {
-     "company": "BlackLine, Inc.",
+     "company": "Bengo4.com, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.4,
-     "multiple": 2.5,
-     "recurring_pct": 95.0,
-     "retention_pct": 102.0,
-     "ticker": "NASDAQGS:BL"
+     "growth_pct": 19.1,
+     "multiple": 5.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "TSE:6027"
     },
     {
      "company": "Veeva Systems Inc.",

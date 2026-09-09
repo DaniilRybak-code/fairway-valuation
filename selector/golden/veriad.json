@@ -248,38 +248,6 @@
   },
   "core": [
    {
-    "company": "Sprinklr, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 11.1,
-    "ticker": "NYSE:CXM"
-   },
-   {
-    "company": "Braze, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "NASDAQGS:BRZE"
-   },
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "NYSE:ZETA"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 7.6,
-    "ticker": "NASDAQGS:GTM"
-   },
-   {
     "company": "Workiva Inc.",
     "family": "software",
     "in_medians": true,
@@ -296,19 +264,19 @@
     "ticker": "NYSE:YEXT"
    },
    {
-    "company": "HubSpot, Inc.",
+    "company": "Box, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NYSE:HUBS"
+    "reason": "shares the language of content; related type of business; same revenue model; sold the same way",
+    "score": 7.1,
+    "ticker": "NYSE:BOX"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -323,10 +291,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.8,
-   "mid": 2.8,
-   "n": 7,
+   "mid": 3.6,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -339,20 +307,12 @@
    "post_stated_n": 0,
    "shared_words": [
     "compliance",
+    "content",
     "review"
    ],
    "show_retention": true,
-   "spread": 2.4,
+   "spread": 2.0,
    "table": [
-    {
-     "company": "Sprinklr, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.3,
-     "multiple": 1.6,
-     "recurring_pct": 89.0,
-     "retention_pct": 104.0,
-     "ticker": "NYSE:CXM"
-    },
     {
      "company": "Yext, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -361,33 +321,6 @@
      "recurring_pct": null,
      "retention_pct": 95.0,
      "ticker": "NYSE:YEXT"
-    },
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
-     "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
-     "multiple": 2.8,
-     "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:HUBS"
-    },
-    {
-     "company": "Braze, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.5,
-     "multiple": 3.4,
-     "recurring_pct": null,
-     "retention_pct": 110.0,
-     "ticker": "NASDAQGS:BRZE"
     },
     {
      "company": "Workiva Inc.",
@@ -399,13 +332,13 @@
      "ticker": "NYSE:WK"
     },
     {
-     "company": "Zeta Global Holdings Corp.",
+     "company": "Box, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.3,
-     "multiple": 3.9,
+     "growth_pct": 9.0,
+     "multiple": 3.6,
      "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:ZETA"
+     "retention_pct": 102.0,
+     "ticker": "NYSE:BOX"
     }
    ],
    "tag_evidence": 0.6,
@@ -802,7 +735,7 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "both do Content Marketing; same type of business; same revenue model",
-    "score": 10.2,
+    "score": 10.1,
     "type": "CONTROL"
    },
    {
@@ -824,7 +757,7 @@
     "in_medians": false,
     "mult": 40.4,
     "reason": "both do Brand Governance; related type of business; same revenue model; sold the same way",
-    "score": 12.2,
+    "score": 12.1,
     "type": "PRIMARY"
    },
    {
@@ -868,7 +801,7 @@
     "in_medians": true,
     "mult": 33.3,
     "reason": "shares the language of ad, content; same type of business; same revenue model; same AI stance",
-    "score": 12.6,
+    "score": 12.4,
     "type": "PRIMARY"
    }
   ],
@@ -1047,61 +980,37 @@
   "private_window_months": 46,
   "secondary": [
    {
-    "company": "Box, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of content; related type of business; same revenue model; sold the same way",
-    "score": 7.1,
-    "ticker": "NYSE:BOX"
-   },
-   {
-    "company": "Salesforce, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same revenue model; sold the same way",
-    "score": 7.1,
-    "ticker": "NYSE:CRM"
-   },
-   {
     "company": "monday.com Ltd.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of workflow; related type of business; same revenue model",
     "score": 5.5,
     "ticker": "NASDAQ:MNDY"
-   },
-   {
-    "company": "Adobe Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same revenue model",
-    "score": 5.1,
-    "ticker": "NASDAQGS:ADBE"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
-   "high": 5.0,
+   "high": 2.0,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.0,
-   "mid": 3.85,
-   "n": 4,
+   "mid": 2.0,
+   "n": 1,
    "period_mix": {
-    "NTM": 4
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -1113,11 +1022,11 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "content",
     "workflow"
    ],
-   "show_retention": true,
-   "spread": 2.5,
+   "show_retention": false,
+   "sole": "monday.com Ltd.",
+   "spread": 1.0,
    "table": [
     {
      "company": "monday.com Ltd.",
@@ -1127,38 +1036,11 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQ:MNDY"
-    },
-    {
-     "company": "Box, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.0,
-     "multiple": 3.6,
-     "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:BOX"
-    },
-    {
-     "company": "Adobe Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.9,
-     "multiple": 4.1,
-     "recurring_pct": 96.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:ADBE"
-    },
-    {
-     "company": "Salesforce, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.7,
-     "multiple": 5.0,
-     "recurring_pct": 95.0,
-     "retention_pct": null,
-     "ticker": "NYSE:CRM"
     }
    ],
    "tag_evidence": 0.5,
-   "thin": false,
-   "triangulated": false
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Enterprise marketing agents"

@@ -11,11 +11,9 @@
       "ARR": 6
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "AuditBoard"
-     ],
+     "closeness": "STRONG_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "revenue",
@@ -25,13 +23,18 @@
      "high": 56.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 15.0,
+     "low": 10.0,
      "mid": 23.0,
      "n": 6,
      "period_mix": {
-      "RUN_RATE": 6
+      "NOT STATED": 1,
+      "RUN_RATE": 5
      },
      "period_span": {
+      "NOT STATED": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -40,25 +43,27 @@
      "points": [],
      "positioning": [],
      "shared_words": [
+      "back",
       "document",
+      "office",
       "operations",
       "servicing"
      ],
-     "spread": 3.7,
+     "spread": 5.6,
      "table": [
       {
-       "company": "Clio",
-       "date": "Jul-24",
+       "company": "Restaurant365",
+       "date": "May-23",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 15.0,
+       "multiple": 10.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       },
       {
-       "company": "AuditBoard",
-       "date": "May-24",
+       "company": "Clio",
+       "date": "Jul-24",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 15.0,
@@ -107,7 +112,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 1.5,
      "thin": false,
      "triangulated": false
     }
@@ -119,7 +124,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Loan Servicing; same type of business; same end market; same kind of customer",
-    "score": 10.9,
+    "score": 10.8,
     "ticker": "ATSE:QLCO"
    },
    {
@@ -131,20 +136,20 @@
     "ticker": "NYSE:QTWO"
    },
    {
-    "company": "Jack Henry & Associates, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same type of business; same end market; same business function; sold the same way",
-    "score": 10.1,
-    "ticker": "NASDAQ:JKHY"
-   },
-   {
     "company": "Fidelity National Information Services, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "same type of business; same end market; same business function; sold the same way",
     "score": 10.0,
     "ticker": "NYSE:FIS"
+   },
+   {
+    "company": "Jack Henry & Associates, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same type of business; same end market; same business function; sold the same way",
+    "score": 10.0,
+    "ticker": "NASDAQ:JKHY"
    },
    {
     "company": "Mitek Systems, Inc.",
@@ -167,7 +172,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Loan Servicing; same type of business; same end market; sold the same way",
-    "score": 8.4,
+    "score": 8.3,
     "ticker": "LSE:ALFA"
    }
   ],
@@ -626,11 +631,41 @@
    {
     "backed": [
      {
-      "company": "AuditBoard",
-      "date": "May-24"
+      "company": "Restaurant365",
+      "date": "May-23"
      }
     ],
-    "investor": "Hg (buyer)",
+    "investor": "KKR",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "L Catterton (co-led)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "ICONIQ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Restaurant365",
+      "date": "May-23"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
     "n": 1
    }
   ],
@@ -644,7 +679,7 @@
     "in_medians": true,
     "mult": 22.0,
     "reason": "both do Loan Servicing; related type of business; same end market; sold the same way",
-    "score": 9.4,
+    "score": 9.3,
     "type": "PRIMARY"
    },
    {
@@ -705,13 +740,13 @@
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
-    "company": "AuditBoard",
-    "date": "May-24",
+    "company": "Restaurant365",
+    "date": "May-23",
     "in_medians": true,
-    "mult": 15.0,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 12.1,
-    "type": "CONTROL"
+    "mult": 10.0,
+    "reason": "shares the language of back, office, operations; same type of business; same revenue model",
+    "score": 9.0,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -724,23 +759,26 @@
     "ARR": 6
    },
    "bounded": true,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "AuditBoard"
-   ],
+   "closeness": "STRONG_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
    "dispersed": false,
    "display": "RANGE",
    "high": 56.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 15.0,
+   "low": 10.0,
    "mid": 23.0,
    "n": 6,
    "period_mix": {
-    "RUN_RATE": 6
+    "NOT STATED": 1,
+    "RUN_RATE": 5
    },
    "period_span": {
+    "NOT STATED": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -749,25 +787,27 @@
    "points": [],
    "positioning": [],
    "shared_words": [
+    "back",
     "document",
+    "office",
     "operations",
     "servicing"
    ],
-   "spread": 3.7,
+   "spread": 5.6,
    "table": [
     {
-     "company": "Clio",
-     "date": "Jul-24",
+     "company": "Restaurant365",
+     "date": "May-23",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 15.0,
+     "multiple": 10.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     },
     {
-     "company": "AuditBoard",
-     "date": "May-24",
+     "company": "Clio",
+     "date": "Jul-24",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 15.0,
@@ -816,7 +856,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 1.5,
    "thin": false,
    "triangulated": false
   },
@@ -851,7 +891,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Loan Origination; same type of business; same end market; sold the same way",
-    "score": 8.4,
+    "score": 8.2,
     "ticker": "NYSE:BLND"
    },
    {
@@ -859,7 +899,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Loan Origination; same type of business; same end market; sold the same way",
-    "score": 8.4,
+    "score": 8.2,
     "ticker": "NASDAQGS:NCNO"
    }
   ],

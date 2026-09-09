@@ -8,26 +8,26 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "NET_REVENUE": 2
+      "NET_REVENUE": 1
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "RANGE",
+     "display": "DIAMOND",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 48.0,
+     "high": 16.34,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 16.34,
-     "mid": 48.0,
-     "n": 2,
+     "mid": 16.34,
+     "n": 1,
      "period_mix": {
-      "LTM": 2
+      "LTM": 1
      },
      "period_span": {
       "LTM": {
@@ -40,7 +40,8 @@
      "shared_words": [
       "api"
      ],
-     "spread": 2.9,
+     "sole": "Stripe",
+     "spread": 1.0,
      "table": [
       {
        "company": "Stripe",
@@ -51,19 +52,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "dLocal",
-       "date": "Apr-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 48.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
+     "tag_evidence": 0.1,
      "thin": true,
      "triangulated": true
     },
@@ -73,7 +64,7 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 5
+      "REVENUE_GROSS": 3
      },
      "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
@@ -85,15 +76,15 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 54.17,
+     "high": 25.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 9.52,
-     "mid": 25.0,
-     "n": 5,
+     "mid": 22.67,
+     "n": 3,
      "period_mix": {
       "FY2024": 1,
-      "LTM": 4
+      "LTM": 2
      },
      "period_span": {
       "FY2024": {
@@ -112,7 +103,7 @@
       "embedded",
       "infrastructure"
      ],
-     "spread": 5.7,
+     "spread": 2.6,
      "table": [
       {
        "company": "Cashfree Payments",
@@ -143,29 +134,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Checkout.com",
-       "date": "Dec-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 44.34,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Mollie",
-       "date": "Jun-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 54.17,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.2,
      "thin": false,
      "triangulated": false
     }
@@ -177,81 +148,57 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of embedded, vertical; same type of business; same business function; same revenue model",
-    "score": 10.1,
+    "score": 10.0,
     "ticker": "NASDAQCM:RPAY"
    },
    {
-    "company": "Usio, Inc.",
+    "company": "Adyen N.V.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model; same AI stance",
-    "score": 9.6,
-    "ticker": "NASDAQGM:USIO"
+    "reason": "shares the language of unified; same type of business; same business function",
+    "score": 7.6,
+    "ticker": "ENXTAM:ADYEN"
    },
    {
-    "company": "PayPoint plc",
+    "company": "Priority Technology Holdings",
     "family": "fintech",
     "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model; same AI stance",
-    "score": 9.6,
-    "ticker": "LSE:PAY"
+    "reason": "shares the language of embedded, unified; same type of business; same business function; same AI stance",
+    "score": 6.8,
+    "ticker": "NASDAQCM:PRTH"
    },
    {
-    "company": "Fawry for Banking Technology",
+    "company": "Nayax Ltd.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model; same AI stance",
-    "score": 9.6,
-    "ticker": "CASE:FWRY"
-   },
-   {
-    "company": "DLocal Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 8.1,
-    "ticker": "NASDAQ:DLO"
-   },
-   {
-    "company": "Nexi S.p.A.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 8.1,
-    "ticker": "BIT:NEXI"
-   },
-   {
-    "company": "GMO Payment Gateway, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 8.1,
-    "ticker": "TSE:3769"
+    "reason": "shares the language of saas; same type of business; same revenue model; same AI stance",
+    "score": 6.7,
+    "ticker": "NASDAQ:NYAX"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.0,
+   "high": 6.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.7,
-   "mid": 2.0,
-   "n": 7,
+   "low": 1.3,
+   "mid": 2.6,
+   "n": 4,
    "period_mix": {
-    "NTM": 7
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -259,74 +206,26 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Usio, Inc.",
-     "mult": 0.7,
-     "reason": "same type of business; same business function; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Repay Holdings Corporation",
-     "mult": 1.7,
-     "reason": "shares the language of embedded, vertical; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "DLocal Limited",
-     "mult": 1.9,
-     "reason": "same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "PayPoint plc",
-     "mult": 2.0,
-     "reason": "same type of business; same business function; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Nexi S.p.A.",
-     "mult": 2.4,
-     "reason": "same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Fawry for Banking Technology",
-     "mult": 4.0,
-     "reason": "same type of business; same business function; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "GMO Payment Gateway, Inc.",
-     "mult": 5.0,
-     "reason": "same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "embedded",
+    "saas",
+    "unified",
     "vertical"
    ],
    "show_retention": false,
-   "spread": 7.1,
+   "spread": 4.7,
    "table": [
     {
-     "company": "Usio, Inc.",
+     "company": "Priority Technology Holdings",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.5,
-     "multiple": 0.7,
+     "growth_pct": 7.1,
+     "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGM:USIO"
+     "ticker": "NASDAQCM:PRTH"
     },
     {
      "company": "Repay Holdings Corporation",
@@ -338,52 +237,25 @@
      "ticker": "NASDAQCM:RPAY"
     },
     {
-     "company": "DLocal Limited",
+     "company": "Nayax Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 26.2,
-     "multiple": 1.9,
+     "growth_pct": 22.9,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQ:DLO"
+     "ticker": "NASDAQ:NYAX"
     },
     {
-     "company": "PayPoint plc",
+     "company": "Adyen N.V.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -4.2,
-     "multiple": 2.0,
+     "growth_pct": 20.5,
+     "multiple": 6.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "LSE:PAY"
-    },
-    {
-     "company": "Nexi S.p.A.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 2.7,
-     "multiple": 2.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "BIT:NEXI"
-    },
-    {
-     "company": "Fawry for Banking Technology",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 31.5,
-     "multiple": 4.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "CASE:FWRY"
-    },
-    {
-     "company": "GMO Payment Gateway, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 16.8,
-     "multiple": 5.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:3769"
+     "ticker": "ENXTAM:ADYEN"
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -549,41 +421,11 @@
    {
     "backed": [
      {
-      "company": "dLocal",
-      "date": "Apr-21"
+      "company": "Marqeta",
+      "date": "May-20"
      }
     ],
-    "investor": "Alkeon Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "BOND",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "D1 Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "dLocal",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Tiger Global",
+    "investor": "Undisclosed",
     "n": 1
    }
   ],
@@ -597,7 +439,7 @@
     "in_medians": true,
     "mult": 16.34,
     "reason": "shares the language of api; same type of business; same business function; same kind of customer",
-    "score": 16.7,
+    "score": 16.6,
     "type": "PRIMARY"
    },
    {
@@ -612,17 +454,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "UK entity revenue",
-    "bound": "",
-    "company": "Checkout.com",
-    "date": "Dec-23",
-    "in_medians": true,
-    "mult": 44.34,
-    "reason": "same type of business; same business function; same revenue model",
-    "score": 13.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "Annual revenue",
     "bound": "",
     "company": "MoonPay",
@@ -634,28 +465,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "Annual revenue",
-    "bound": "",
-    "company": "Mollie",
-    "date": "Jun-21",
-    "in_medians": true,
-    "mult": 54.17,
-    "reason": "same type of business; same business function; same revenue model; same AI stance",
-    "score": 15.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_EXACT",
-    "bound": "",
-    "company": "dLocal",
-    "date": "Apr-21",
-    "in_medians": true,
-    "mult": 48.0,
-    "reason": "related type of business; same business function; same AI stance",
-    "score": 9.6,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "FY2020 unclear whether closed",
     "bound": "",
     "company": "Rapyd",
@@ -663,7 +472,18 @@
     "in_medians": true,
     "mult": 25.0,
     "reason": "shares the language of embedded; same type of business; same business function; same revenue model",
-    "score": 15.3,
+    "score": 15.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "CONTEMPORANEOUS_PRESS_THRESHOLD",
+    "bound": "<=",
+    "company": "Marqeta",
+    "date": "May-20",
+    "in_medians": false,
+    "mult": 14.3,
+    "reason": "shares the language of embedded; related type of business; same business function; same AI stance",
+    "score": 9.7,
     "type": "PRIMARY"
    }
   ],
@@ -674,22 +494,22 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 2
+    "NET_REVENUE": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "RANGE",
-   "high": 48.0,
+   "display": "DIAMOND",
+   "high": 16.34,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 16.34,
-   "mid": 48.0,
-   "n": 2,
+   "mid": 16.34,
+   "n": 1,
    "period_mix": {
-    "LTM": 2
+    "LTM": 1
    },
    "period_span": {
     "LTM": {
@@ -702,7 +522,8 @@
    "shared_words": [
     "api"
    ],
-   "spread": 2.9,
+   "sole": "Stripe",
+   "spread": 1.0,
    "table": [
     {
      "company": "Stripe",
@@ -713,23 +534,13 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "dLocal",
-     "date": "Apr-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 48.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
   },
-  "private_window_months": 67,
+  "private_window_months": 75,
   "secondary": [
    {
     "company": "WEX Inc.",
@@ -746,55 +557,31 @@
     "reason": "shares the language of api, embedded; related type of business; same business function; same kind of customer",
     "score": 8.3,
     "ticker": "NASDAQ:MQ"
-   },
-   {
-    "company": "Paysign, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same business function; same revenue model; same AI stance",
-    "score": 8.1,
-    "ticker": "NASDAQ:PAYS"
-   },
-   {
-    "company": "Adyen N.V.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of unified; same type of business; same business function",
-    "score": 7.7,
-    "ticker": "ENXTAM:ADYEN"
-   },
-   {
-    "company": "Global Payments Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same type of business; same business function",
-    "score": 7.1,
-    "ticker": "NYSE:GPN"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "STRONG_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 6.1,
+   "high": 2.0,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 3.4,
-   "n": 5,
+   "low": 1.3,
+   "mid": 1.65,
+   "n": 2,
    "period_mix": {
-    "NTM": 5
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -808,11 +595,10 @@
    "shared_words": [
     "api",
     "embedded",
-    "unified",
     "vertical"
    ],
    "show_retention": false,
-   "spread": 4.7,
+   "spread": 1.5,
    "table": [
     {
      "company": "Marqeta, Inc.",
@@ -831,37 +617,10 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:WEX"
-    },
-    {
-     "company": "Global Payments Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.1,
-     "multiple": 3.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:GPN"
-    },
-    {
-     "company": "Paysign, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 16.2,
-     "multiple": 5.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:PAYS"
-    },
-    {
-     "company": "Adyen N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 20.5,
-     "multiple": 6.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTAM:ADYEN"
     }
    ],
-   "tag_evidence": 0.7,
-   "thin": false,
+   "tag_evidence": 0.4,
+   "thin": true,
    "triangulated": false
   }
  },

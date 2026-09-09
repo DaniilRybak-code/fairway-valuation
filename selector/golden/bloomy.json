@@ -275,7 +275,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning; same type of business; same end market; same business function",
-    "score": 13.0,
+    "score": 12.8,
     "ticker": "TSX:DTOL"
    },
    {
@@ -794,134 +794,9 @@
    "triangulated": true
   },
   "private_window_months": 60,
-  "secondary": [
-   {
-    "company": "United Parcel Service",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NYSE:UPS"
-   },
-   {
-    "company": "FedEx Corporation",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NYSE:FDX"
-   },
-   {
-    "company": "PostNL N.V.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "ENXTAM:PNL"
-   },
-   {
-    "company": "SG Holdings Co., Ltd.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "TSE:9143"
-   },
-   {
-    "company": "S.F. Holding Co., Ltd.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "SZSE:002352"
-   }
-  ],
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "BROAD",
-   "basis_mix": {
-    "UNKNOWN": 5
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "founder_basis_trailing_on_forward": false,
-   "high": 1.2,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 0.5,
-   "mid": 0.7,
-   "n": 5,
-   "period_mix": {
-    "NTM": 5
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": false,
-   "spread": 4.0,
-   "table": [
-    {
-     "company": "PostNL N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTAM:PNL"
-    },
-    {
-     "company": "S.F. Holding Co., Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.1,
-     "multiple": 0.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "SZSE:002352"
-    },
-    {
-     "company": "SG Holdings Co., Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.0,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:9143"
-    },
-    {
-     "company": "FedEx Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 1.8,
-     "multiple": 1.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:FDX"
-    },
-    {
-     "company": "United Parcel Service",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.5,
-     "multiple": 1.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:UPS"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": false,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "AI-native learning for every school"

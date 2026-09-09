@@ -91,7 +91,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 9.2,
+     "tag_evidence": 9.1,
      "thin": false,
      "triangulated": false
     }
@@ -99,35 +99,67 @@
   },
   "core": [
    {
-    "company": "Cadence Design Systems, Inc.",
+    "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer",
-    "score": 7.6,
-    "ticker": "NASDAQGS:CDNS"
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 9.5,
+    "ticker": "NASDAQGS:DDOG"
    },
    {
-    "company": "Synopsys, Inc.",
+    "company": "MongoDB, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer",
-    "score": 7.6,
-    "ticker": "NASDAQGS:SNPS"
+    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 9.5,
+    "ticker": "NASDAQGM:MDB"
    },
    {
-    "company": "Zeta Global Holdings Corp.",
+    "company": "Unity Software Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of generation; related type of business; same revenue model",
-    "score": 5.3,
-    "ticker": "NYSE:ZETA"
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
+    "score": 9.5,
+    "ticker": "NYSE:U"
+   },
+   {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
+    "company": "JFrog Ltd.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "NASDAQGS:FROG"
+   },
+   {
+    "company": "Qt Group Oyj",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "HLSE:QTCOM"
+   },
+   {
+    "company": "Atlassian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same business function; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "NASDAQGS:TEAM"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 7
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -137,15 +169,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 12.7,
+   "high": 14.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.9,
-   "mid": 8.2,
-   "n": 3,
+   "low": 5.2,
+   "mid": 7.2,
+   "n": 7,
    "period_mix": {
-    "NTM": 3
+    "NTM": 7
    },
    "period_span": {
     "NTM": {
@@ -156,41 +188,75 @@
    "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "generation"
-   ],
+   "shared_words": [],
    "show_retention": true,
-   "spread": 3.3,
+   "spread": 3.8,
    "table": [
     {
-     "company": "Zeta Global Holdings Corp.",
+     "company": "Qt Group Oyj",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.3,
+     "growth_pct": 7.7,
      "multiple": 3.9,
      "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:ZETA"
-    },
-    {
-     "company": "Synopsys, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.9,
-     "multiple": 8.2,
-     "recurring_pct": 78.0,
      "retention_pct": null,
-     "ticker": "NASDAQGS:SNPS"
+     "ticker": "HLSE:QTCOM"
     },
     {
-     "company": "Cadence Design Systems, Inc.",
+     "company": "GitLab Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.2,
-     "multiple": 12.7,
+     "growth_pct": 15.6,
+     "multiple": 5.2,
+     "recurring_pct": 90.0,
+     "retention_pct": 118.0,
+     "ticker": "NASDAQGS:GTLB"
+    },
+    {
+     "company": "Atlassian Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
+     "multiple": 6.1,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:CDNS"
+     "retention_pct": 120.0,
+     "ticker": "NASDAQGS:TEAM"
+    },
+    {
+     "company": "Unity Software Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 19.2,
+     "multiple": 7.2,
+     "recurring_pct": null,
+     "retention_pct": 106.0,
+     "ticker": "NYSE:U"
+    },
+    {
+     "company": "MongoDB, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.6,
+     "multiple": 10.0,
+     "recurring_pct": 97.0,
+     "retention_pct": 121.0,
+     "ticker": "NASDAQGM:MDB"
+    },
+    {
+     "company": "JFrog Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 18.6,
+     "multiple": 14.4,
+     "recurring_pct": null,
+     "retention_pct": 121.0,
+     "ticker": "NASDAQGS:FROG"
+    },
+    {
+     "company": "Datadog, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 22.9,
+     "multiple": 14.9,
+     "recurring_pct": null,
+     "retention_pct": 122.0,
+     "ticker": "NASDAQGS:DDOG"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   },
@@ -548,7 +614,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "both do AI App Builder, Vibe Coding, Full-Stack Generation; related type of business; same business function; same revenue model",
-    "score": 25.2,
+    "score": 25.1,
     "type": "PRIMARY"
    },
    {
@@ -559,7 +625,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "both do App Builder, Vibe Coding; related type of business; same business function; same revenue model",
-    "score": 19.7,
+    "score": 19.5,
     "type": "PRIMARY"
    },
    {
@@ -693,14 +759,139 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 9.2,
+   "tag_evidence": 9.1,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 19,
-  "secondary": [],
+  "secondary": [
+   {
+    "company": "Adobe Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "NASDAQGS:ADBE"
+   },
+   {
+    "company": "Figma, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; sold the same way",
+    "score": 8.0,
+    "ticker": "NYSE:FIG"
+   },
+   {
+    "company": "Cadence Design Systems, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same kind of customer",
+    "score": 7.5,
+    "ticker": "NASDAQGS:CDNS"
+   },
+   {
+    "company": "Elastic N.V.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; same kind of customer; same revenue model",
+    "score": 7.5,
+    "ticker": "NYSE:ESTC"
+   },
+   {
+    "company": "Synopsys, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same business function; same kind of customer",
+    "score": 7.5,
+    "ticker": "NASDAQGS:SNPS"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 5
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 12.7,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 4.2,
+   "mid": 7.6,
+   "n": 5,
+   "period_mix": {
+    "NTM": 5
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [],
+   "show_retention": true,
+   "spread": 3.1,
+   "table": [
+    {
+     "company": "Adobe Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 8.9,
+     "multiple": 4.1,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ADBE"
+    },
+    {
+     "company": "Elastic N.V.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 14.7,
+     "multiple": 4.2,
+     "recurring_pct": null,
+     "retention_pct": 112.0,
+     "ticker": "NYSE:ESTC"
+    },
+    {
+     "company": "Figma, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.8,
+     "multiple": 7.6,
+     "recurring_pct": null,
+     "retention_pct": 136.0,
+     "ticker": "NYSE:FIG"
+    },
+    {
+     "company": "Synopsys, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 10.9,
+     "multiple": 8.2,
+     "recurring_pct": 78.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:SNPS"
+    },
+    {
+     "company": "Cadence Design Systems, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 13.2,
+     "multiple": 12.7,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:CDNS"
+    }
+   ],
+   "tag_evidence": 0.0,
+   "thin": false,
+   "triangulated": true
   }
  },
  "label": "Advanced AI app builder that ships full-stack apps"

@@ -248,7 +248,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Adaptive Learning; same type of business; same kind of customer; same revenue model",
-    "score": 13.0,
+    "score": 12.9,
     "ticker": "NASDAQGS:DUOL"
    },
    {
@@ -260,20 +260,20 @@
     "ticker": "NYSE:COUR"
    },
    {
-    "company": "JustSystems Corporation",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
-    "score": 10.3,
-    "ticker": "TSE:4686"
-   },
-   {
     "company": "Nerdy Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
     "score": 10.3,
     "ticker": "NYSE:NRDY"
+   },
+   {
+    "company": "JustSystems Corporation",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of learning; same type of business; same kind of customer; same revenue model",
+    "score": 10.3,
+    "ticker": "TSE:4686"
    }
   ],
   "core_range": {
@@ -366,7 +366,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
@@ -740,7 +740,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
-    "score": 10.3,
+    "score": 10.2,
     "ticker": "NASDAQGS:MTCH"
    },
    {
@@ -748,7 +748,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
-    "score": 10.3,
+    "score": 10.2,
     "ticker": "NASDAQGS:BMBL"
    },
    {
@@ -756,49 +756,33 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of social; same kind of customer; same revenue model; same purchase frequency",
-    "score": 8.3,
+    "score": 8.2,
     "ticker": "NYSE:GRND"
-   },
-   {
-    "company": "WW International, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way",
-    "score": 7.1,
-    "ticker": "NASDAQGM:WW"
-   },
-   {
-    "company": "Peloton Interactive, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way",
-    "score": 7.1,
-    "ticker": "NASDAQGS:PTON"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
    "high": 5.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.9,
-   "mid": 1.1,
-   "n": 5,
+   "mid": 3.6,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -806,60 +790,15 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "WW International, Inc.",
-     "mult": 0.8,
-     "reason": "same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Bumble Inc.",
-     "mult": 0.9,
-     "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Peloton Interactive, Inc.",
-     "mult": 1.1,
-     "reason": "same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Match Group, Inc.",
-     "mult": 3.6,
-     "reason": "shares the language of social; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Grindr Inc.",
-     "mult": 5.1,
-     "reason": "shares the language of social; same kind of customer; same revenue model; same purchase frequency",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "social"
    ],
    "show_retention": false,
-   "spread": 6.4,
+   "spread": 5.7,
    "table": [
-    {
-     "company": "WW International, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 0.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:WW"
-    },
     {
      "company": "Bumble Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -868,15 +807,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:BMBL"
-    },
-    {
-     "company": "Peloton Interactive, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.7,
-     "multiple": 1.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:PTON"
     },
     {
      "company": "Match Group, Inc.",
@@ -897,7 +827,7 @@
      "ticker": "NYSE:GRND"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true
   }

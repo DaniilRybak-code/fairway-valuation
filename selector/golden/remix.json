@@ -8,42 +8,62 @@
      "basis": "PAYING_SUBSCRIBERS",
      "basis_label": "dollars of enterprise value per paying subscriber",
      "basis_mix": {
-      "PAYING_SUBSCRIBERS": 1
+      "PAYING_SUBSCRIBERS": 2
      },
      "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
+     "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": false,
-     "display": "DIAMOND",
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "subscribers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 2700.0,
+     "high": 21428.57,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2700.0,
-     "mid": 2700.0,
-     "n": 1,
+     "mid": 21428.57,
+     "n": 2,
      "period_mix": {
+      "LTM": 1,
       "RUN_RATE": 1
      },
      "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Suno",
+       "mult": 2700.0,
+       "reason": "shares the language of creator, generation, tools; same type of business; same business function; same kind of customer",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Jasper",
+       "mult": 21428.57,
+       "reason": "both do Content Generation; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
+      "content",
       "creator",
       "generation",
       "tools"
      ],
-     "sole": "Suno",
-     "spread": 1.0,
+     "spread": 7.9,
      "table": [
       {
        "company": "Suno",
@@ -54,9 +74,19 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 21428.57,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.8,
      "thin": true,
      "triangulated": false
     },
@@ -67,7 +97,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 4,
-      "ARR_RUNRATE": 1
+      "NET_REVENUE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -86,9 +116,14 @@
      "mid": 21.0,
      "n": 5,
      "period_mix": {
-      "RUN_RATE": 5
+      "LTM": 1,
+      "RUN_RATE": 4
      },
      "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -117,9 +152,9 @@
        "transaction_type": "MIXED"
       },
       {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "same type of business; sold the same way; same AI stance",
+       "company": "Jasper",
+       "mult": 33.3,
+       "reason": "both do Content Generation; related type of business; sold the same way; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -172,11 +207,11 @@
        "ticker": ""
       },
       {
-       "company": "Genspark",
-       "date": "Nov-25",
+       "company": "Jasper",
+       "date": "Oct-22",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 25.0,
+       "multiple": 33.3,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -192,7 +227,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
     }
@@ -204,7 +239,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 9.6,
+    "score": 9.5,
     "ticker": "NASDAQGS:OPRA"
    },
    {
@@ -212,7 +247,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 9.6,
+    "score": 9.5,
     "ticker": "OM:TRUE B"
    },
    {
@@ -220,7 +255,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 8.7,
+    "score": 8.5,
     "ticker": "ASX:360"
    },
    {
@@ -228,7 +263,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "related type of business; same kind of customer; sold the same way",
-    "score": 8.2,
+    "score": 8.0,
     "ticker": "NASDAQGS:GEN"
    },
    {
@@ -236,7 +271,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same kind of customer",
-    "score": 7.6,
+    "score": 7.5,
     "ticker": "HLSE:FSECURE"
    },
    {
@@ -244,16 +279,16 @@
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; sold the same way",
-    "score": 6.1,
+    "score": 6.0,
     "ticker": "NASDAQGS:DBX"
    },
    {
-    "company": "Xperi Inc.",
+    "company": "Wix.com Ltd.",
     "family": "software",
     "in_medians": true,
-    "reason": "shares the language of content; same type of business; same business function",
-    "score": 5.2,
-    "ticker": "NYSE:XPER"
+    "reason": "same type of business; sold the same way",
+    "score": 6.0,
+    "ticker": "NASDAQGS:WIX"
    }
   ],
   "core_range": {
@@ -267,14 +302,14 @@
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
    "high": 4.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.9,
+   "low": 2.0,
    "mid": 3.7,
    "n": 7,
    "period_mix": {
@@ -286,74 +321,13 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Xperi Inc.",
-     "mult": 0.5,
-     "reason": "shares the language of content; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Opera Limited",
-     "mult": 1.9,
-     "reason": "same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "F-Secure Oyj",
-     "mult": 3.0,
-     "reason": "same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Truecaller AB (publ)",
-     "mult": 3.7,
-     "reason": "same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Dropbox, Inc.",
-     "mult": 4.1,
-     "reason": "same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Life360, Inc.",
-     "mult": 4.4,
-     "reason": "same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Gen Digital Inc.",
-     "mult": 4.6,
-     "reason": "related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [
-    "content"
-   ],
+   "shared_words": [],
    "show_retention": false,
-   "spread": 9.2,
+   "spread": 2.4,
    "table": [
-    {
-     "company": "Xperi Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.7,
-     "multiple": 0.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:XPER"
-    },
     {
      "company": "Opera Limited",
      "growth_basis": "CAGR_CY1_CY3",
@@ -362,6 +336,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:OPRA"
+    },
+    {
+     "company": "Wix.com Ltd.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.4,
+     "multiple": 2.0,
+     "recurring_pct": 71.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WIX"
     },
     {
      "company": "F-Secure Oyj",
@@ -409,7 +392,7 @@
      "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   },
@@ -567,10 +550,14 @@
      {
       "company": "Suno",
       "date": "Jun-26"
+     },
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
      }
     ],
     "investor": "IVP",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -685,66 +672,6 @@
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Emergence Capital Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "SBI Investment",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "LG Technology Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Pavilion Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Uphonest Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Lanchi Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Framer",
       "date": "Aug-25"
      }
@@ -787,10 +714,14 @@
      {
       "company": "OpenAI",
       "date": "Mar-25"
+     },
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
      }
     ],
     "investor": "Coatue",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -851,6 +782,56 @@
     ],
     "investor": "Salesforce Ventures",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Insight Partners (lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Bessemer Venture Partners",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Foundation Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "Founders Circle Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Jasper",
+      "date": "Oct-22"
+     }
+    ],
+    "investor": "HubSpot Ventures",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -863,7 +844,7 @@
     "in_medians": true,
     "mult": 18.0,
     "reason": "shares the language of creator, generation, tools; same type of business; same business function; same kind of customer",
-    "score": 18.0,
+    "score": 17.8,
     "type": "PRIMARY"
    },
    {
@@ -874,19 +855,8 @@
     "in_medians": true,
     "mult": 21.0,
     "reason": "both do Social Content; same type of business; sold the same way; same AI stance",
-    "score": 12.1,
+    "score": 12.0,
     "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Genspark",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "same type of business; sold the same way; same AI stance",
-    "score": 11.7,
-    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -929,7 +899,18 @@
     "in_medians": false,
     "mult": 36.7,
     "reason": "shares the language of agents, generation; related type of business; sold the same way; same AI stance",
-    "score": 8.5,
+    "score": 8.4,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "REPORTED_CONTEMPORANEOUS",
+    "bound": "",
+    "company": "Jasper",
+    "date": "Oct-22",
+    "in_medians": true,
+    "mult": 33.3,
+    "reason": "both do Content Generation; related type of business; sold the same way; same AI stance",
+    "score": 9.8,
     "type": "PRIMARY"
    }
   ],
@@ -941,7 +922,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 4,
-    "ARR_RUNRATE": 1
+    "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
@@ -956,9 +937,14 @@
    "mid": 21.0,
    "n": 5,
    "period_mix": {
-    "RUN_RATE": 5
+    "LTM": 1,
+    "RUN_RATE": 4
    },
    "period_span": {
+    "LTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -987,9 +973,9 @@
      "transaction_type": "MIXED"
     },
     {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "same type of business; sold the same way; same AI stance",
+     "company": "Jasper",
+     "mult": 33.3,
+     "reason": "both do Content Generation; related type of business; sold the same way; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -1042,11 +1028,11 @@
      "ticker": ""
     },
     {
-     "company": "Genspark",
-     "date": "Nov-25",
+     "company": "Jasper",
+     "date": "Oct-22",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 25.0,
+     "multiple": 33.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1062,14 +1048,90 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 19,
-  "secondary": [],
+  "private_window_months": 46,
+  "secondary": [
+   {
+    "company": "Text S.A.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "related type of business; sold the same way",
+    "score": 5.5,
+    "ticker": "WSE:TXT"
+   },
+   {
+    "company": "Xperi Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of content; same type of business; same business function",
+    "score": 5.1,
+    "ticker": "NYSE:XPER"
+   }
+  ],
   "secondary_range": {
-   "denominator": "rev"
+   "anchor_dropped": false,
+   "band": "ADJACENT",
+   "basis_mix": {
+    "UNKNOWN": 2
+   },
+   "bounded": false,
+   "closeness": "THIN_OVERLAP",
+   "control_n": 0,
+   "control_names": [],
+   "denominator": "rev",
+   "dispersed": false,
+   "display": "RANGE",
+   "founder_basis_trailing_on_forward": false,
+   "high": 2.8,
+   "levered_names": [],
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 0.5,
+   "mid": 1.65,
+   "n": 2,
+   "period_mix": {
+    "NTM": 2
+   },
+   "period_span": {
+    "NTM": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    }
+   },
+   "points": [],
+   "positioning": [],
+   "post_stated_n": 0,
+   "shared_words": [
+    "content"
+   ],
+   "show_retention": false,
+   "spread": 5.6,
+   "table": [
+    {
+     "company": "Xperi Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.7,
+     "multiple": 0.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:XPER"
+    },
+    {
+     "company": "Text S.A.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.2,
+     "multiple": 2.8,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:TXT"
+    }
+   ],
+   "tag_evidence": 0.1,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Social media content auto-generated with your existing data"

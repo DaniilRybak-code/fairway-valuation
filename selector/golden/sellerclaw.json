@@ -68,7 +68,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": true,
      "triangulated": true
     },
@@ -139,7 +139,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": true,
      "triangulated": true
     },
@@ -227,7 +227,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "related type of business; same end market; same kind of customer; same revenue model",
-    "score": 11.6,
+    "score": 11.5,
     "ticker": "NYSE:KVYO"
    },
    {
@@ -542,7 +542,7 @@
     "in_medians": true,
     "mult": 32.6,
     "reason": "shares the language of shopify; related type of business; same end market; same kind of customer",
-    "score": 13.2,
+    "score": 13.1,
     "type": "PRIMARY"
    },
    {
@@ -621,7 +621,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": true,
    "triangulated": true
   },

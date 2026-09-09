@@ -8,7 +8,7 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 4
+      "BUSINESS_CUSTOMERS": 3
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -16,8 +16,8 @@
      "control_names": [
       "Salesloft"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
@@ -25,71 +25,27 @@
      "high": 916666.67,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 72846.15,
+     "low": 357142.86,
      "mid": 575000.0,
-     "n": 4,
+     "n": 3,
      "period_mix": {
-      "LTM": 1,
       "RUN_RATE": 3
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Klaviyo",
-       "mult": 72846.15,
-       "reason": "same type of business; same business function; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Clay",
-       "mult": 357142.86,
-       "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Salesloft",
-       "mult": 575000.0,
-       "reason": "both do Sales Engagement; same type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Outreach",
-       "mult": 916666.67,
-       "reason": "both do Sales Engagement; same type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "buyer",
       "engagement",
       "sales"
      ],
-     "spread": 12.6,
+     "spread": 2.6,
      "table": [
-      {
-       "company": "Klaviyo",
-       "date": "May-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 72846.15,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Clay",
        "date": "Jan-26",
@@ -131,16 +87,14 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
-      "ARR_RUNRATE": 1,
-      "NET_REVENUE": 2
+      "ARR": 3,
+      "ARR_RUNRATE": 1
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
-     "control_n": 2,
+     "control_n": 1,
      "control_names": [
-      "Salesloft",
-      "Mailchimp"
+      "Salesloft"
      ],
      "dispersed": false,
      "display": "RANGE",
@@ -151,18 +105,13 @@
      "high": 50.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 15.0,
-     "mid": 32.6,
-     "n": 5,
+     "low": 12.8,
+     "mid": 47.3,
+     "n": 4,
      "period_mix": {
-      "LTM": 2,
-      "RUN_RATE": 3
+      "RUN_RATE": 4
      },
      "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -175,14 +124,14 @@
       "engagement",
       "sales"
      ],
-     "spread": 3.3,
+     "spread": 3.9,
      "table": [
       {
-       "company": "Mailchimp",
-       "date": "Sep-21",
+       "company": "Buffer",
+       "date": "Oct-14",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 15.0,
+       "multiple": 12.8,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -193,16 +142,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 23.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Klaviyo",
-       "date": "May-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 32.6,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -240,32 +179,16 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Automation; same type of business; same business function; same kind of customer",
-    "score": 14.2,
+    "score": 14.1,
     "ticker": "NYSE:HUBS"
-   },
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 10.6,
-    "ticker": "NYSE:KVYO"
    },
    {
     "company": "Braze, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of engagement; same type of business; same business function; same AI stance",
-    "score": 7.3,
+    "score": 7.2,
     "ticker": "NASDAQGS:BRZE"
-   },
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 7.1,
-    "ticker": "NYSE:ZETA"
    },
    {
     "company": "Five9, Inc.",
@@ -288,7 +211,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -302,11 +225,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.0,
-   "mid": 2.9,
-   "n": 6,
+   "low": 1.8,
+   "mid": 2.4,
+   "n": 4,
    "period_mix": {
-    "NTM": 6
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -322,7 +245,7 @@
     "sales"
    ],
    "show_retention": true,
-   "spread": 2.2,
+   "spread": 1.9,
    "table": [
     {
      "company": "NICE Ltd.",
@@ -352,15 +275,6 @@
      "ticker": "NYSE:HUBS"
     },
     {
-     "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
-    },
-    {
      "company": "Braze, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 15.5,
@@ -368,18 +282,9 @@
      "recurring_pct": null,
      "retention_pct": 110.0,
      "ticker": "NASDAQGS:BRZE"
-    },
-    {
-     "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.3,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:ZETA"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": false
   },
@@ -739,16 +644,6 @@
    {
     "backed": [
      {
-      "company": "Mailchimp",
-      "date": "Sep-21"
-     }
-    ],
-    "investor": "Intuit",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Outreach",
       "date": "Jun-21"
      }
@@ -857,7 +752,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
-    "score": 11.7,
+    "score": 11.6,
     "type": "SECONDARY"
    },
    {
@@ -890,18 +785,7 @@
     "in_medians": true,
     "mult": 23.0,
     "reason": "both do Sales Engagement; same type of business; same revenue model; same AI stance",
-    "score": 10.9,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Mailchimp",
-    "date": "Sep-21",
-    "in_medians": true,
-    "mult": 15.0,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 16.6,
+    "score": 10.8,
     "type": "CONTROL"
    },
    {
@@ -916,14 +800,14 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "October 2014 run-rate",
     "bound": "",
-    "company": "Klaviyo",
-    "date": "May-21",
+    "company": "Buffer",
+    "date": "Oct-14",
     "in_medians": true,
-    "mult": 32.6,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 15.6,
+    "mult": 12.8,
+    "reason": "both do Engagement; same type of business; same business function; same kind of customer",
+    "score": 21.7,
     "type": "PRIMARY"
    }
   ],
@@ -934,34 +818,27 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "ARR": 3,
+    "ARR_RUNRATE": 1
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
-   "control_n": 2,
+   "control_n": 1,
    "control_names": [
-    "Salesloft",
-    "Mailchimp"
+    "Salesloft"
    ],
    "dispersed": false,
    "display": "RANGE",
    "high": 50.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 15.0,
-   "mid": 32.6,
-   "n": 5,
+   "low": 12.8,
+   "mid": 47.3,
+   "n": 4,
    "period_mix": {
-    "LTM": 2,
-    "RUN_RATE": 3
+    "RUN_RATE": 4
    },
    "period_span": {
-    "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -974,14 +851,14 @@
     "engagement",
     "sales"
    ],
-   "spread": 3.3,
+   "spread": 3.9,
    "table": [
     {
-     "company": "Mailchimp",
-     "date": "Sep-21",
+     "company": "Buffer",
+     "date": "Oct-14",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 15.0,
+     "multiple": 12.8,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -992,16 +869,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 23.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Klaviyo",
-     "date": "May-21",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 32.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1031,7 +898,7 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 63,
+  "private_window_months": 142,
   "secondary": [
    {
     "company": "Similarweb Ltd.",
@@ -1046,7 +913,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Engagement; related type of business; same revenue model; same AI stance",
-    "score": 6.9,
+    "score": 6.8,
     "ticker": "NASDAQGS:GTM"
    }
   ],
@@ -1110,7 +977,7 @@
      "ticker": "NASDAQGS:GTM"
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.8,
    "thin": true,
    "triangulated": false
   }

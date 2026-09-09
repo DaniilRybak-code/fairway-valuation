@@ -8,10 +8,10 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3
+      "ARR": 2
      },
      "bounded": true,
-     "closeness": "THIN_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -20,14 +20,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 45.3,
+     "high": 34.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 25.5,
+     "low": 24.5,
      "mid": 34.3,
-     "n": 3,
+     "n": 2,
      "period_mix": {
-      "RUN_RATE": 3
+      "RUN_RATE": 2
      },
      "period_span": {
       "RUN_RATE": {
@@ -38,16 +38,17 @@
      "points": [],
      "positioning": [],
      "shared_words": [
-      "attack"
+      "attack",
+      "soc"
      ],
-     "spread": 1.8,
+     "spread": 1.4,
      "table": [
       {
-       "company": "Abnormal Security",
-       "date": "Aug-24",
+       "company": "Vanta",
+       "date": "Jul-24",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 25.5,
+       "multiple": 24.5,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -61,21 +62,11 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "1Password",
-       "date": "Jan-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 45.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
-     "thin": false,
-     "triangulated": true
+     "tag_evidence": 0.6,
+     "thin": true,
+     "triangulated": false
     }
    }
   },
@@ -85,7 +76,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of detection, response, threat; same type of business; sold the same way",
-    "score": 8.4,
+    "score": 8.3,
     "ticker": "NASDAQGS:CRWD"
    },
    {
@@ -93,7 +84,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of detection, response, threat; same type of business; sold the same way",
-    "score": 8.4,
+    "score": 8.3,
     "ticker": "NASDAQGS:VRNS"
    },
    {
@@ -101,7 +92,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do SOC Automation; same type of business; sold the same way",
-    "score": 7.8,
+    "score": 7.6,
     "ticker": "NASDAQGS:PANW"
    },
    {
@@ -109,7 +100,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of attack; same type of business; sold the same way",
-    "score": 7.7,
+    "score": 7.6,
     "ticker": "NASDAQGS:QLYS"
    },
    {
@@ -117,24 +108,24 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Threat Detection; same type of business; same AI stance",
-    "score": 7.0,
+    "score": 6.9,
     "ticker": "NYSE:S"
    },
    {
-    "company": "Netskope, Inc.",
+    "company": "Rapid7, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; sold the same way",
-    "score": 6.1,
-    "ticker": "NASDAQGS:NTSK"
+    "reason": "both do Detection & Response; same type of business",
+    "score": 5.7,
+    "ticker": "NASDAQGM:RPD"
    },
    {
-    "company": "Rubrik, Inc.",
+    "company": "Tenable Holdings, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; sold the same way",
-    "score": 6.1,
-    "ticker": "NYSE:RBRK"
+    "reason": "shares the language of attack; same type of business",
+    "score": 5.6,
+    "ticker": "NASDAQGS:TENB"
    }
   ],
   "core_range": {
@@ -155,8 +146,8 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.4,
-   "mid": 7.1,
+   "low": 3.6,
+   "mid": 5.4,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -168,6 +159,20 @@
     }
    },
    "points": [
+    {
+     "company": "Rapid7, Inc.",
+     "mult": 1.3,
+     "reason": "both do Detection & Response; same type of business",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Tenable Holdings, Inc.",
+     "mult": 3.6,
+     "reason": "shares the language of attack; same type of business",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
     {
      "company": "SentinelOne, Inc.",
      "mult": 4.9,
@@ -183,23 +188,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Netskope, Inc.",
-     "mult": 5.4,
-     "reason": "same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
      "company": "Qualys, Inc.",
      "mult": 7.1,
      "reason": "shares the language of attack; same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Rubrik, Inc.",
-     "mult": 9.3,
-     "reason": "same type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -228,8 +219,26 @@
     "threat"
    ],
    "show_retention": true,
-   "spread": 6.5,
+   "spread": 24.5,
    "table": [
+    {
+     "company": "Rapid7, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 0.0,
+     "multiple": 1.3,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGM:RPD"
+    },
+    {
+     "company": "Tenable Holdings, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 6.8,
+     "multiple": 3.6,
+     "recurring_pct": null,
+     "retention_pct": 106.0,
+     "ticker": "NASDAQGS:TENB"
+    },
     {
      "company": "SentinelOne, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -249,15 +258,6 @@
      "ticker": "NASDAQGS:VRNS"
     },
     {
-     "company": "Netskope, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 21.0,
-     "multiple": 5.4,
-     "recurring_pct": null,
-     "retention_pct": 118.0,
-     "ticker": "NASDAQGS:NTSK"
-    },
-    {
      "company": "Qualys, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 7.8,
@@ -265,15 +265,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:QLYS"
-    },
-    {
-     "company": "Rubrik, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 21.3,
-     "multiple": 9.3,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:RBRK"
     },
     {
      "company": "Palo Alto Networks, Inc.",
@@ -294,7 +285,7 @@
      "ticker": "NASDAQGS:CRWD"
     }
    ],
-   "tag_evidence": 1.4,
+   "tag_evidence": 1.3,
    "thin": false,
    "triangulated": false
   },
@@ -377,59 +368,41 @@
    {
     "backed": [
      {
-      "company": "Abnormal Security",
-      "date": "Aug-24"
-     },
-     {
-      "company": "Wiz",
-      "date": "May-24"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
-    "investor": "Wellington",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Abnormal Security",
-      "date": "Aug-24"
-     },
-     {
-      "company": "Wiz",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Greylock",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Abnormal Security",
-      "date": "Aug-24"
-     }
-    ],
-    "investor": "Menlo",
+    "investor": "Sequoia",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Abnormal Security",
-      "date": "Aug-24"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
-    "investor": "Insight",
+    "investor": "Goldman Sachs Alternatives",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Abnormal Security",
-      "date": "Aug-24"
+      "company": "Vanta",
+      "date": "Jul-24"
      }
     ],
-    "investor": "CrowdStrike Falcon Fund",
+    "investor": "J.P. Morgan",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Vanta",
+      "date": "Jul-24"
+     }
+    ],
+    "investor": "Atlassian Ventures",
     "n": 1
    },
    {
@@ -477,14 +450,10 @@
      {
       "company": "Wiz",
       "date": "May-24"
-     },
-     {
-      "company": "1Password",
-      "date": "Jan-22"
      }
     ],
     "investor": "Lightspeed",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -494,6 +463,26 @@
      }
     ],
     "investor": "Thrive",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Greylock",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Wiz",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Wellington",
     "n": 1
    },
    {
@@ -515,144 +504,6 @@
     ],
     "investor": "Greenoaks",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Spark Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Georgian",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "AT&T Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     },
-     {
-      "company": "Snyk",
-      "date": "Dec-22"
-     },
-     {
-      "company": "1Password",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Accel",
-    "n": 3
-   },
-   {
-    "backed": [
-     {
-      "company": "Cyera",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Snyk",
-      "date": "Dec-22"
-     }
-    ],
-    "investor": "Qatar Investment Authority",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Snyk",
-      "date": "Dec-22"
-     }
-    ],
-    "investor": "Evolution Equity",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Snyk",
-      "date": "Dec-22"
-     }
-    ],
-    "investor": "boldstart",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Snyk",
-      "date": "Dec-22"
-     }
-    ],
-    "investor": "Sands Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "1Password",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "1Password",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "1Password",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Slack Fund",
-    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -660,12 +511,12 @@
    {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
-    "company": "Abnormal Security",
-    "date": "Aug-24",
+    "company": "Vanta",
+    "date": "Jul-24",
     "in_medians": true,
-    "mult": 25.5,
-    "reason": "same type of business; same revenue model; sold the same way; same AI stance",
-    "score": 13.7,
+    "mult": 24.5,
+    "reason": "shares the language of soc; same type of business",
+    "score": 5.6,
     "type": "PRIMARY"
    },
    {
@@ -676,7 +527,7 @@
     "in_medians": false,
     "mult": 15.5,
     "reason": "shares the language of detection, response, soc; same type of business; same revenue model",
-    "score": 12.0,
+    "score": 11.9,
     "type": "PRIMARY"
    },
    {
@@ -687,41 +538,8 @@
     "in_medians": true,
     "mult": 34.3,
     "reason": "shares the language of attack; same type of business; sold the same way",
-    "score": 10.2,
+    "score": 10.1,
     "type": "MIXED"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "Cyera",
-    "date": "Apr-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; sold the same way; same AI stance",
-    "score": 10.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Snyk",
-    "date": "Dec-22",
-    "in_medians": false,
-    "mult": 41.1,
-    "reason": "same type of business; same revenue model",
-    "score": 10.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "1Password",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 45.3,
-    "reason": "same type of business; same revenue model",
-    "score": 8.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -731,22 +549,22 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3
+    "ARR": 2
    },
    "bounded": true,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 45.3,
+   "high": 34.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 25.5,
+   "low": 24.5,
    "mid": 34.3,
-   "n": 3,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -757,16 +575,17 @@
    "points": [],
    "positioning": [],
    "shared_words": [
-    "attack"
+    "attack",
+    "soc"
    ],
-   "spread": 1.8,
+   "spread": 1.4,
    "table": [
     {
-     "company": "Abnormal Security",
-     "date": "Aug-24",
+     "company": "Vanta",
+     "date": "Jul-24",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 25.5,
+     "multiple": 24.5,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -780,32 +599,14 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "1Password",
-     "date": "Jan-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 45.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 0.7,
-   "thin": false,
-   "triangulated": true
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": false
   },
-  "private_window_months": 55,
+  "private_window_months": 27,
   "secondary": [
-   {
-    "company": "BlackLine, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:BL"
-   },
    {
     "company": "Dassault Systemes SE",
     "family": "software",
@@ -813,37 +614,13 @@
     "reason": "both do Simulation; same kind of customer; same revenue model; sold the same way",
     "score": 7.6,
     "ticker": "ENXTPA:DSY"
-   },
-   {
-    "company": "UiPath, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same business function; sold the same way; same AI stance",
-    "score": 7.1,
-    "ticker": "NYSE:PATH"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model",
-    "score": 7.1,
-    "ticker": "NASDAQGS:GTM"
-   },
-   {
-    "company": "Intapp, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NASDAQGS:INTA"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -851,17 +628,17 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.6,
+   "high": 4.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.5,
+   "low": 4.1,
    "mid": 4.1,
-   "n": 5,
+   "n": 1,
    "period_mix": {
-    "NTM": 5
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -875,27 +652,10 @@
    "shared_words": [
     "simulation"
    ],
-   "show_retention": true,
-   "spread": 2.1,
+   "show_retention": false,
+   "sole": "Dassault Systemes SE",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
-     "company": "BlackLine, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.4,
-     "multiple": 2.5,
-     "recurring_pct": 95.0,
-     "retention_pct": 102.0,
-     "ticker": "NASDAQGS:BL"
-    },
     {
      "company": "Dassault Systemes SE",
      "growth_basis": "CAGR_CY1_CY3",
@@ -904,28 +664,10 @@
      "recurring_pct": 82.0,
      "retention_pct": null,
      "ticker": "ENXTPA:DSY"
-    },
-    {
-     "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.0,
-     "multiple": 4.3,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:PATH"
-    },
-    {
-     "company": "Intapp, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.4,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": 123.0,
-     "ticker": "NASDAQGS:INTA"
     }
    ],
    "tag_evidence": 0.6,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   }
  },

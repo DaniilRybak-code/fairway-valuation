@@ -8,27 +8,29 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
+      "BUSINESS_CUSTOMERS": 3
      },
-     "bounded": false,
+     "bounded": true,
      "closeness": "SHARED_PRODUCT",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
+     "control_n": 1,
+     "control_names": [
+      "Salesloft"
+     ],
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "business_customers",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 357142.86,
+     "high": 575000.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 72846.15,
      "mid": 357142.86,
-     "n": 2,
+     "n": 3,
      "period_mix": {
       "LTM": 1,
-      "RUN_RATE": 1
+      "RUN_RATE": 2
      },
      "period_span": {
       "LTM": {
@@ -40,12 +42,34 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Klaviyo",
+       "mult": 72846.15,
+       "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
+       "tier": "DIRECT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Clay",
+       "mult": 357142.86,
+       "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "SECONDARY"
+      },
+      {
+       "company": "Salesloft",
+       "mult": 575000.0,
+       "reason": "shares the language of sales; same type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      }
+     ],
      "positioning": [],
      "shared_words": [
       "sales"
      ],
-     "spread": 4.9,
+     "spread": 7.9,
      "table": [
       {
        "company": "Klaviyo",
@@ -66,75 +90,20 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      }
-     ],
-     "tag_evidence": 3.2,
-     "thin": true,
-     "triangulated": false
-    },
-    "PAYING_SUBSCRIBERS": {
-     "anchor_dropped": false,
-     "band": "DIRECT",
-     "basis": "PAYING_SUBSCRIBERS",
-     "basis_label": "dollars of enterprise value per paying subscriber",
-     "basis_mix": {
-      "PAYING_SUBSCRIBERS": 2
-     },
-     "bounded": false,
-     "closeness": "SHARED_PRODUCT",
-     "control_n": 1,
-     "control_names": [
-      "Mailchimp"
-     ],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "subscribers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 21428.57,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 15000.0,
-     "mid": 21428.57,
-     "n": 2,
-     "period_mix": {
-      "LTM": 2
-     },
-     "period_span": {
-      "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [],
-     "spread": 1.4,
-     "table": [
-      {
-       "company": "Mailchimp",
-       "date": "Sep-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 15000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       },
       {
-       "company": "Jasper",
-       "date": "Oct-22",
+       "company": "Salesloft",
+       "date": "Dec-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 21428.57,
+       "multiple": 575000.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
-     "tag_evidence": 3.2,
-     "thin": true,
+     "tag_evidence": 3.0,
+     "thin": false,
      "triangulated": false
     },
     "REVENUE": {
@@ -143,16 +112,17 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 1,
+      "ARR": 2,
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 4
+      "NET_REVENUE": 3
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
-     "control_n": 2,
+     "control_n": 3,
      "control_names": [
       "Mailchimp",
-      "Semrush"
+      "Semrush",
+      "Salesloft"
      ],
      "dispersed": true,
      "display": "SCATTER",
@@ -166,12 +136,12 @@
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 33.3,
+     "mid": 32.6,
      "n": 6,
      "period_mix": {
-      "LTM": 3,
+      "LTM": 2,
       "NTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 3
      },
      "period_span": {
       "LTM": {
@@ -203,17 +173,17 @@
        "transaction_type": "CONTROL"
       },
       {
+       "company": "Salesloft",
+       "mult": 23.0,
+       "reason": "shares the language of sales; same type of business; same revenue model; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
+      {
        "company": "Klaviyo",
        "mult": 32.6,
        "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
        "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Jasper",
-       "mult": 33.3,
-       "reason": "same type of business; same business function; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
       {
@@ -260,21 +230,21 @@
        "ticker": ""
       },
       {
-       "company": "Klaviyo",
-       "date": "May-21",
+       "company": "Salesloft",
+       "date": "Dec-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 32.6,
+       "multiple": 23.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       },
       {
-       "company": "Jasper",
-       "date": "Oct-22",
+       "company": "Klaviyo",
+       "date": "May-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 33.3,
+       "multiple": 32.6,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -300,7 +270,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 3.2,
+     "tag_evidence": 3.0,
      "thin": false,
      "triangulated": false
     }
@@ -312,7 +282,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Marketing Automation, Sales Automation; same type of business; same business function; same kind of customer",
-    "score": 17.3,
+    "score": 17.1,
     "ticker": "NYSE:HUBS"
    },
    {
@@ -320,7 +290,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
-    "score": 13.7,
+    "score": 13.5,
     "ticker": "NYSE:KVYO"
    },
    {
@@ -328,7 +298,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Marketing Automation; same type of business; same business function; same AI stance",
-    "score": 10.2,
+    "score": 10.0,
     "ticker": "NASDAQGS:BRZE"
    },
    {
@@ -336,7 +306,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Marketing Automation; same type of business; same business function; same AI stance",
-    "score": 10.2,
+    "score": 10.0,
     "ticker": "NYSE:ZETA"
    },
    {
@@ -344,7 +314,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Automation, Marketing Automation; related type of business; same revenue model; same AI stance",
-    "score": 9.3,
+    "score": 9.1,
     "ticker": "NYSE:CRM"
    }
   ],
@@ -433,7 +403,7 @@
      "ticker": "NYSE:CRM"
     }
    ],
-   "tag_evidence": 3.3,
+   "tag_evidence": 3.1,
    "thin": false,
    "triangulated": false
   },
@@ -689,76 +659,6 @@
    {
     "backed": [
      {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Insight Partners (lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "IVP",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Foundation Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "Founders Circle Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Jasper",
-      "date": "Oct-22"
-     }
-    ],
-    "investor": "HubSpot Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "6sense",
       "date": "Jan-22"
      }
@@ -855,6 +755,26 @@
     ],
     "investor": "Sapphire Ventures",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Salesloft",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Vista Equity Partners (majority)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Salesloft",
+      "date": "Dec-21"
+     }
+    ],
+    "investor": "Mubadala (co-investor)",
+    "n": 1
    }
   ],
   "listed_proximity": "DIRECT",
@@ -867,7 +787,7 @@
     "in_medians": true,
     "mult": 15.0,
     "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
-    "score": 19.7,
+    "score": 19.5,
     "type": "CONTROL"
    },
    {
@@ -878,7 +798,7 @@
     "in_medians": true,
     "mult": 32.6,
     "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
-    "score": 18.7,
+    "score": 18.5,
     "type": "PRIMARY"
    },
    {
@@ -889,7 +809,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of sales; same type of business; sold the same way; same AI stance",
-    "score": 11.7,
+    "score": 11.6,
     "type": "SECONDARY"
    },
    {
@@ -915,17 +835,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "Jasper",
-    "date": "Oct-22",
-    "in_medians": true,
-    "mult": 33.3,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 19.7,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_THRESHOLD",
     "bound": "<=",
     "company": "6sense",
@@ -933,8 +842,19 @@
     "in_medians": true,
     "mult": 47.3,
     "reason": "shares the language of sales; same type of business; same business function; same revenue model",
-    "score": 13.7,
+    "score": 13.6,
     "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Salesloft",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "shares the language of sales; same type of business; same revenue model; same AI stance",
+    "score": 10.6,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -944,16 +864,17 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 1,
+    "ARR": 2,
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 4
+    "NET_REVENUE": 3
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
-   "control_n": 2,
+   "control_n": 3,
    "control_names": [
     "Mailchimp",
-    "Semrush"
+    "Semrush",
+    "Salesloft"
    ],
    "dispersed": true,
    "display": "SCATTER",
@@ -963,12 +884,12 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 33.3,
+   "mid": 32.6,
    "n": 6,
    "period_mix": {
-    "LTM": 3,
+    "LTM": 2,
     "NTM": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 3
    },
    "period_span": {
     "LTM": {
@@ -1000,17 +921,17 @@
      "transaction_type": "CONTROL"
     },
     {
+     "company": "Salesloft",
+     "mult": 23.0,
+     "reason": "shares the language of sales; same type of business; same revenue model; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
+    {
      "company": "Klaviyo",
      "mult": 32.6,
      "reason": "both do Marketing Automation; same type of business; same business function; same kind of customer",
      "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
     {
@@ -1057,21 +978,21 @@
      "ticker": ""
     },
     {
-     "company": "Klaviyo",
-     "date": "May-21",
+     "company": "Salesloft",
+     "date": "Dec-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 32.6,
+     "multiple": 23.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     },
     {
-     "company": "Jasper",
-     "date": "Oct-22",
+     "company": "Klaviyo",
+     "date": "May-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 33.3,
+     "multiple": 32.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1097,7 +1018,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 3.2,
+   "tag_evidence": 3.0,
    "thin": false,
    "triangulated": false
   },
@@ -1108,7 +1029,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Marketing Automation; related type of business; same revenue model; same AI stance",
-    "score": 9.3,
+    "score": 9.1,
     "ticker": "NASDAQGS:GTM"
    },
    {
@@ -1180,7 +1101,7 @@
      "ticker": "NYSE:SMWB"
     }
    ],
-   "tag_evidence": 3.3,
+   "tag_evidence": 3.1,
    "thin": true,
    "triangulated": false
   }

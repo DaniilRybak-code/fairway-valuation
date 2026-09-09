@@ -276,7 +276,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.6,
+     "tag_evidence": 1.5,
      "thin": false,
      "triangulated": false
     }
@@ -288,7 +288,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Corporate Learning; same type of business; same end market; same business function",
-    "score": 11.7,
+    "score": 11.6,
     "ticker": "NYSE:SKIL"
    },
    {
@@ -320,7 +320,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Corporate Training; related type of business; same end market; same business function",
-    "score": 7.1,
+    "score": 7.0,
     "ticker": "TSX:DCBO"
    },
    {
@@ -492,7 +492,7 @@
      "ticker": "NASDAQGS:DUOL"
     }
    ],
-   "tag_evidence": 1.2,
+   "tag_evidence": 1.1,
    "thin": false,
    "triangulated": false
   },
@@ -736,7 +736,7 @@
     "in_medians": true,
     "mult": 1.29,
     "reason": "both do Skills Learning, Corporate Learning; same type of business; same end market; sold the same way",
-    "score": 12.6,
+    "score": 12.5,
     "type": "CONTROL"
    },
    {
@@ -747,7 +747,7 @@
     "in_medians": true,
     "mult": 1.52,
     "reason": "both do Corporate Learning; same type of business; same end market; same business function",
-    "score": 11.6,
+    "score": 11.5,
     "type": "CONTROL"
    },
    {

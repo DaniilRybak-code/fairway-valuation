@@ -8,12 +8,13 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "NET_REVENUE": 4
+      "NET_REVENUE": 5
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
-     "control_n": 1,
+     "control_n": 2,
      "control_names": [
+      "Berkshire Grey",
       "Wolt"
      ],
      "dispersed": true,
@@ -23,21 +24,35 @@
      "founder_low": null,
      "founder_metric": null,
      "high": 44.12,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 5.97,
-     "mid": 23.5,
-     "n": 4,
+     "listed_target_n": 1,
+     "listed_target_names": [
+      "Berkshire Grey"
+     ],
+     "low": 5.69,
+     "mid": 8.94,
+     "n": 5,
      "period_mix": {
+      "FY2022": 1,
       "LTM": 4
      },
      "period_span": {
+      "FY2022": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      },
       "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
      "points": [
+      {
+       "company": "Berkshire Grey",
+       "mult": 5.69,
+       "reason": "related type of business; same business function; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
+      },
       {
        "company": "Delhivery",
        "mult": 5.97,
@@ -69,8 +84,18 @@
      ],
      "positioning": [],
      "shared_words": [],
-     "spread": 7.4,
+     "spread": 7.8,
      "table": [
+      {
+       "company": "Berkshire Grey",
+       "date": "Mar-23",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 5.69,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
       {
        "company": "Delhivery",
        "date": "May-21",
@@ -112,7 +137,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
+     "tag_evidence": 0.0,
      "thin": false,
      "triangulated": true
     }
@@ -124,81 +149,65 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of cargo; same type of business; same business function; same kind of customer",
-    "score": 12.2,
+    "score": 12.1,
     "ticker": "NYSE:FDX"
    },
    {
-    "company": "United Parcel Service",
+    "company": "Pkp Cargo S.A.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.7,
-    "ticker": "NYSE:UPS"
+    "reason": "shares the language of cargo, transport; related type of business; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "WSE:PKP"
    },
    {
-    "company": "SG Holdings Co., Ltd.",
+    "company": "Grupo Traxion, S.A.B. de C.V.",
     "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.7,
-    "ticker": "TSE:9143"
+    "reason": "both do Cargo Transport; related type of business; same kind of customer; sold the same way",
+    "score": 9.0,
+    "ticker": "BMV:TRAXION A"
    },
    {
-    "company": "PostNL N.V.",
+    "company": "Mitsubishi Logistics",
     "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.6,
-    "ticker": "ENXTAM:PNL"
+    "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
+    "score": 8.4,
+    "ticker": "TSE:9301"
    },
    {
-    "company": "S.F. Holding Co., Ltd.",
+    "company": "Nippon Express Holdings",
     "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.6,
-    "ticker": "SZSE:002352"
-   },
-   {
-    "company": "Blue Dart Express Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.6,
-    "ticker": "NSEI:BLUEDART"
-   },
-   {
-    "company": "Deutsche Post AG",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.6,
-    "ticker": "XTRA:DHL"
+    "reason": "shares the language of cargo; related type of business; same kind of customer; sold the same way",
+    "score": 7.6,
+    "ticker": "TSE:9147"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 1.2,
+   "high": 2.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.5,
-   "mid": 0.9,
-   "n": 7,
+   "low": 0.6,
+   "mid": 0.7,
+   "n": 5,
    "period_mix": {
-    "NTM": 7
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -206,50 +215,78 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "mult": 0.2,
+     "reason": "both do Cargo Transport; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Pkp Cargo S.A.",
+     "mult": 0.6,
+     "reason": "shares the language of cargo, transport; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Nippon Express Holdings",
+     "mult": 0.7,
+     "reason": "shares the language of cargo; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "FedEx Corporation",
+     "mult": 1.1,
+     "reason": "shares the language of cargo; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Mitsubishi Logistics",
+     "mult": 2.1,
+     "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "cargo"
+    "cargo",
+    "transport"
    ],
    "show_retention": false,
-   "spread": 5.7,
+   "spread": 10.5,
    "table": [
     {
-     "company": "PostNL N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTAM:PNL"
-    },
-    {
-     "company": "S.F. Holding Co., Ltd.",
+     "company": "Grupo Traxion, S.A.B. de C.V.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 8.1,
-     "multiple": 0.5,
+     "multiple": 0.2,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "SZSE:002352"
+     "ticker": "BMV:TRAXION A"
     },
     {
-     "company": "SG Holdings Co., Ltd.",
+     "company": "Pkp Cargo S.A.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.0,
+     "growth_pct": 8.3,
+     "multiple": 0.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "WSE:PKP"
+    },
+    {
+     "company": "Nippon Express Holdings",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 2.4,
      "multiple": 0.7,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "TSE:9143"
-    },
-    {
-     "company": "Deutsche Post AG",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:DHL"
+     "ticker": "TSE:9147"
     },
     {
      "company": "FedEx Corporation",
@@ -261,27 +298,18 @@
      "ticker": "NYSE:FDX"
     },
     {
-     "company": "United Parcel Service",
+     "company": "Mitsubishi Logistics",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.5,
-     "multiple": 1.2,
+     "growth_pct": 4.0,
+     "multiple": 2.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:UPS"
-    },
-    {
-     "company": "Blue Dart Express Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.0,
-     "multiple": 1.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NSEI:BLUEDART"
+     "ticker": "TSE:9301"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 1.0,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "investors_callable": [
    {
@@ -460,6 +488,16 @@
      }
     ],
     "investor": "REWE",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Berkshire Grey",
+      "date": "Mar-23"
+     }
+    ],
+    "investor": "SoftBank Group (acquirer",
     "n": 1
    },
    {
@@ -667,8 +705,19 @@
     "in_medians": false,
     "mult": null,
     "reason": "same type of business; same business function",
-    "score": 7.1,
+    "score": 7.0,
     "type": "MIXED"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Berkshire Grey",
+    "date": "Mar-23",
+    "in_medians": true,
+    "mult": 5.69,
+    "reason": "related type of business; same business function; sold the same way; same AI stance",
+    "score": 12.5,
+    "type": "CONTROL"
    },
    {
     "basis": "DISCLOSED_EXACT",
@@ -678,7 +727,7 @@
     "in_medians": true,
     "mult": 8.94,
     "reason": "same type of business; same business function; sold the same way",
-    "score": 11.7,
+    "score": 11.5,
     "type": "PRIMARY"
    },
    {
@@ -689,7 +738,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "same type of business; same business function",
-    "score": 7.1,
+    "score": 7.0,
     "type": "CONTROL"
    },
    {
@@ -700,7 +749,7 @@
     "in_medians": true,
     "mult": 23.5,
     "reason": "same type of business; same business function",
-    "score": 7.1,
+    "score": 7.0,
     "type": "CONTROL"
    },
    {
@@ -711,7 +760,7 @@
     "in_medians": true,
     "mult": 44.12,
     "reason": "same type of business; same business function",
-    "score": 7.1,
+    "score": 7.0,
     "type": "PRIMARY"
    },
    {
@@ -722,7 +771,7 @@
     "in_medians": true,
     "mult": 5.97,
     "reason": "same type of business; same business function; sold the same way",
-    "score": 11.7,
+    "score": 11.5,
     "type": "PRIMARY"
    }
   ],
@@ -733,32 +782,47 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "NET_REVENUE": 4
+    "NET_REVENUE": 5
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
-   "control_n": 1,
+   "control_n": 2,
    "control_names": [
+    "Berkshire Grey",
     "Wolt"
    ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 44.12,
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 5.97,
-   "mid": 23.5,
-   "n": 4,
+   "listed_target_n": 1,
+   "listed_target_names": [
+    "Berkshire Grey"
+   ],
+   "low": 5.69,
+   "mid": 8.94,
+   "n": 5,
    "period_mix": {
+    "FY2022": 1,
     "LTM": 4
    },
    "period_span": {
+    "FY2022": {
+     "basis": "NO_REVENUE_GIVEN",
+     "founder_revenue": null
+    },
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
    "points": [
+    {
+     "company": "Berkshire Grey",
+     "mult": 5.69,
+     "reason": "related type of business; same business function; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
+    },
     {
      "company": "Delhivery",
      "mult": 5.97,
@@ -790,8 +854,18 @@
    ],
    "positioning": [],
    "shared_words": [],
-   "spread": 7.4,
+   "spread": 7.8,
    "table": [
+    {
+     "company": "Berkshire Grey",
+     "date": "Mar-23",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 5.69,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
     {
      "company": "Delhivery",
      "date": "May-21",
@@ -833,76 +907,60 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   },
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "Delhivery Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.6,
-    "ticker": "NSEI:DELHIVERY"
-   },
-   {
-    "company": "J&T Global Express Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer",
-    "score": 9.6,
-    "ticker": "SEHK:1519"
-   },
-   {
-    "company": "Grupo Traxion, S.A.B. de C.V.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Cargo Transport; related type of business; same kind of customer; sold the same way",
-    "score": 9.1,
-    "ticker": "BMV:TRAXION A"
-   },
-   {
-    "company": "Pkp Cargo S.A.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of cargo, transport; related type of business; same kind of customer; sold the same way",
-    "score": 9.0,
-    "ticker": "WSE:PKP"
-   },
-   {
-    "company": "Mitsubishi Logistics",
+    "company": "STEF SA",
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
-    "score": 8.4,
-    "ticker": "TSE:9301"
+    "score": 7.4,
+    "ticker": "ENXTPA:STF"
+   },
+   {
+    "company": "Lindsay Australia Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
+    "score": 7.4,
+    "ticker": "ASX:LAU"
+   },
+   {
+    "company": "Snowman Logistics Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
+    "score": 7.4,
+    "ticker": "NSEI:SNOWMAN"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 2.5,
+   "high": 0.6,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.6,
-   "mid": 0.7,
-   "n": 5,
+   "low": 0.5,
+   "mid": 0.55,
+   "n": 2,
    "period_mix": {
-    "NTM": 5
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -910,101 +968,37 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Grupo Traxion, S.A.B. de C.V.",
-     "mult": 0.2,
-     "reason": "both do Cargo Transport; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Pkp Cargo S.A.",
-     "mult": 0.6,
-     "reason": "shares the language of cargo, transport; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "J&T Global Express Limited",
-     "mult": 0.7,
-     "reason": "same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Mitsubishi Logistics",
-     "mult": 2.1,
-     "reason": "shares the language of transport; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Delhivery Limited",
-     "mult": 2.5,
-     "reason": "same type of business; same business function; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "cargo",
     "transport"
    ],
    "show_retention": false,
-   "spread": 12.5,
+   "spread": 1.2,
    "table": [
     {
-     "company": "Grupo Traxion, S.A.B. de C.V.",
+     "company": "Lindsay Australia Limited",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.1,
-     "multiple": 0.2,
+     "growth_pct": 3.4,
+     "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "BMV:TRAXION A"
+     "ticker": "ASX:LAU"
     },
     {
-     "company": "Pkp Cargo S.A.",
+     "company": "STEF SA",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.3,
+     "growth_pct": 3.0,
      "multiple": 0.6,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "WSE:PKP"
-    },
-    {
-     "company": "J&T Global Express Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.5,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "SEHK:1519"
-    },
-    {
-     "company": "Mitsubishi Logistics",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.0,
-     "multiple": 2.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:9301"
-    },
-    {
-     "company": "Delhivery Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.6,
-     "multiple": 2.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NSEI:DELHIVERY"
+     "ticker": "ENXTPA:STF"
     }
    ],
-   "tag_evidence": 1.1,
-   "thin": false,
-   "triangulated": false
+   "tag_evidence": 0.4,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "Autonomous rocket cargo delivery to contested environments in minutes"

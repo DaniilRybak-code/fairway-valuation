@@ -245,7 +245,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of ci, development; related type of business; same business function; same kind of customer",
-    "score": 13.4,
+    "score": 13.3,
     "ticker": "NASDAQGS:GTLB"
    },
    {
@@ -287,21 +287,13 @@
     "reason": "both do Simulation; same type of business; same business function; same revenue model",
     "score": 8.1,
     "ticker": "ENXTPA:DSY"
-   },
-   {
-    "company": "PTC Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model",
-    "score": 7.6,
-    "ticker": "NASDAQGS:PTC"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 6
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -317,9 +309,9 @@
    "listed_target_names": [],
    "low": 4.1,
    "mid": 6.2,
-   "n": 7,
+   "n": 6,
    "period_mix": {
-    "NTM": 7
+    "NTM": 6
    },
    "period_span": {
     "NTM": {
@@ -367,15 +359,6 @@
      "ticker": "NASDAQGS:GTLB"
     },
     {
-     "company": "PTC Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.5,
-     "multiple": 6.2,
-     "recurring_pct": 95.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:PTC"
-    },
-    {
      "company": "Unity Software Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 19.2,
@@ -403,7 +386,7 @@
      "ticker": "NASDAQGS:CDNS"
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -850,7 +833,7 @@
     "in_medians": true,
     "mult": 32.5,
     "reason": "shares the language of ci; related type of business; same business function; same kind of customer",
-    "score": 13.2,
+    "score": 13.1,
     "type": "PRIMARY"
    },
    {
@@ -956,67 +939,9 @@
    "triangulated": false
   },
   "private_window_months": 53,
-  "secondary": [
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same revenue model",
-    "score": 6.1,
-    "ticker": "NASDAQGS:GTM"
-   }
-  ],
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 1
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "founder_basis_trailing_on_forward": false,
-   "high": 2.2,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 2.2,
-   "mid": 2.2,
-   "n": 1,
-   "period_mix": {
-    "NTM": 1
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": true,
-   "sole": "ZoomInfo Technologies Inc.",
-   "spread": 1.0,
-   "table": [
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "The intelligent development platform for robotics"

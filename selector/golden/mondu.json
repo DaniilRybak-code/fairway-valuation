@@ -8,7 +8,7 @@
      "basis": "BOOK",
      "basis_label": "price to book",
      "basis_mix": {
-      "UNKNOWN": 4
+      "UNKNOWN": 3
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -25,11 +25,11 @@
      "levered_names": [],
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 0.7,
-     "mid": 2.3499999999999996,
-     "n": 4,
+     "low": 1.9,
+     "mid": 2.8,
+     "n": 3,
      "period_mix": {
-      "NTM": 4
+      "NTM": 3
      },
      "period_span": {
       "NTM": {
@@ -50,17 +50,8 @@
       "risk"
      ],
      "show_retention": false,
-     "spread": 4.9,
+     "spread": 1.8,
      "table": [
-      {
-       "company": "Regional Management Corp.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 6.4,
-       "multiple": 0.7,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:RM"
-      },
       {
        "company": "Klarna Group plc",
        "growth_basis": "CAGR_CY1_CY3",
@@ -89,7 +80,7 @@
        "ticker": "OM:AVARDA"
       }
      ],
-     "tag_evidence": 0.8,
+     "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
     },
@@ -99,7 +90,7 @@
      "basis": "EARNINGS",
      "basis_label": "price to earnings",
      "basis_mix": {
-      "UNKNOWN": 4
+      "UNKNOWN": 3
      },
      "bounded": false,
      "closeness": "STRONG_OVERLAP",
@@ -116,11 +107,11 @@
      "levered_names": [],
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 5.6,
-     "mid": 11.05,
-     "n": 4,
+     "low": 7.9,
+     "mid": 14.2,
+     "n": 3,
      "period_mix": {
-      "NTM": 4
+      "NTM": 3
      },
      "period_span": {
       "NTM": {
@@ -141,17 +132,8 @@
       "risk"
      ],
      "show_retention": false,
-     "spread": 4.4,
+     "spread": 3.1,
      "table": [
-      {
-       "company": "Regional Management Corp.",
-       "growth_basis": "CAGR_CY1_CY3",
-       "growth_pct": 6.4,
-       "multiple": 5.6,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": "NYSE:RM"
-      },
       {
        "company": "Upstart Holdings, Inc.",
        "growth_basis": "CAGR_CY1_CY3",
@@ -180,7 +162,7 @@
        "ticker": "NYSE:KLAR"
       }
      ],
-     "tag_evidence": 0.8,
+     "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
     }
@@ -260,7 +242,7 @@
     "family": "fintech",
     "in_medians": false,
     "reason": "shares the language of invoice; same type of business; same business function; same kind of customer",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "AIM:TIME"
    },
    {
@@ -276,16 +258,8 @@
     "family": "fintech",
     "in_medians": false,
     "reason": "both do Buy Now Pay Later, Checkout Financing; same type of business; same revenue model",
-    "score": 6.6,
+    "score": 6.4,
     "ticker": "NASDAQ:SEZL"
-   },
-   {
-    "company": "Klarna Group plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Buy Now Pay Later; same type of business; same kind of customer",
-    "score": 6.3,
-    "ticker": "NYSE:KLAR"
    },
    {
     "company": "Upstart Holdings, Inc.",
@@ -296,19 +270,19 @@
     "ticker": "NASDAQ:UPST"
    },
    {
-    "company": "Regional Management Corp.",
+    "company": "Klarna Group plc",
     "family": "fintech",
     "in_medians": true,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 6.1,
-    "ticker": "NYSE:RM"
+    "reason": "both do Buy Now Pay Later; same type of business; same kind of customer",
+    "score": 6.0,
+    "ticker": "NYSE:KLAR"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -322,11 +296,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 2.35,
-   "n": 4,
+   "low": 1.9,
+   "mid": 2.8,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -347,17 +321,8 @@
     "risk"
    ],
    "show_retention": false,
-   "spread": 4.9,
+   "spread": 1.8,
    "table": [
-    {
-     "company": "Regional Management Corp.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.4,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:RM"
-    },
     {
      "company": "Klarna Group plc",
      "growth_basis": "CAGR_CY1_CY3",
@@ -386,7 +351,7 @@
      "ticker": "OM:AVARDA"
     }
    ],
-   "tag_evidence": 0.8,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -630,7 +595,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "both do B2B Buy Now Pay Later, Checkout Financing; same type of business; same business function; same kind of customer",
-    "score": 21.9,
+    "score": 21.6,
     "type": "PRIMARY"
    },
    {
@@ -641,7 +606,7 @@
     "in_medians": false,
     "mult": 0.6,
     "reason": "shares the language of invoice, later; same type of business; same business function; same kind of customer",
-    "score": 21.2,
+    "score": 20.9,
     "type": "CONTROL_ACQUISITION"
    },
    {
@@ -652,7 +617,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Buy Now Pay Later; same type of business; same business function; same revenue model",
-    "score": 12.8,
+    "score": 12.5,
     "type": "PRIMARY"
    },
    {
@@ -664,17 +629,6 @@
     "mult": null,
     "reason": "both do Invoice Financing; same type of business; same business function; same kind of customer",
     "score": 20.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "FY2021",
-    "bound": "",
-    "company": "Wayflyer",
-    "date": "Feb-22",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 15.6,
     "type": "PRIMARY"
    },
    {
@@ -717,7 +671,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Buy Now Pay Later; related type of business; same business function; same AI stance",
-    "score": 5.2,
+    "score": 5.0,
     "ticker": "SWX:CMBN"
    },
    {
@@ -725,7 +679,7 @@
     "family": "fintech",
     "in_medians": false,
     "reason": "shares the language of invoice; related type of business; same business function; same kind of customer",
-    "score": 7.3,
+    "score": 7.2,
     "ticker": "LSE:CBG"
    },
    {
@@ -735,14 +689,6 @@
     "reason": "shares the language of buy; related type of business; same business function; same kind of customer",
     "score": 7.2,
     "ticker": "LSE:PAG"
-   },
-   {
-    "company": "Humm Group Limited",
-    "family": "fintech",
-    "in_medians": false,
-    "reason": "same type of business; same business function",
-    "score": 5.1,
-    "ticker": "ASX:HUM"
    }
   ],
   "secondary_range": {
@@ -805,7 +751,7 @@
      "ticker": "SWX:CMBN"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.5,
    "thin": true,
    "triangulated": false
   }

@@ -9,7 +9,7 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 3,
-      "ARR_RUNRATE": 3,
+      "ARR_RUNRATE": 2,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -30,11 +30,11 @@
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 56.0,
-     "n": 7,
+     "mid": 105.3,
+     "n": 6,
      "period_mix": {
       "NTM": 1,
-      "RUN_RATE": 6
+      "RUN_RATE": 5
      },
      "period_span": {
       "NTM": {
@@ -53,13 +53,6 @@
        "reason": "shares the language of research; same type of business; same business function; same revenue model",
        "tier": "ADJACENT",
        "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "both do Consumer AI; related type of business; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       },
       {
        "company": "Clay",
@@ -111,16 +104,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 4.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Genspark",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 25.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -188,16 +171,8 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Market Research; related type of business; same kind of customer; same revenue model",
-    "score": 11.4,
+    "score": 11.3,
     "ticker": "NYSE:SMWB"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 9.6,
-    "ticker": "NASDAQGS:GTM"
    },
    {
     "company": "Sprinklr, Inc.",
@@ -238,6 +213,14 @@
     "reason": "shares the language of customer; same type of business; same revenue model",
     "score": 7.7,
     "ticker": "WSE:TXT"
+   },
+   {
+    "company": "Amplitude, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of testing; related type of business; same kind of customer",
+    "score": 5.6,
+    "ticker": "NASDAQCM:AMPL"
    }
   ],
   "core_range": {
@@ -247,19 +230,19 @@
     "UNKNOWN": 7
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 2.8,
+   "high": 3.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.1,
-   "mid": 2.2,
+   "mid": 2.8,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -276,10 +259,11 @@
    "shared_words": [
     "audience",
     "customer",
-    "research"
+    "research",
+    "testing"
    ],
    "show_retention": true,
-   "spread": 2.1,
+   "spread": 2.2,
    "table": [
     {
      "company": "Sprinklr, Inc.",
@@ -309,15 +293,6 @@
      "ticker": "NYSE:SMWB"
     },
     {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
      "company": "HubSpot, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 14.0,
@@ -343,9 +318,18 @@
      "recurring_pct": null,
      "retention_pct": 110.0,
      "ticker": "NASDAQGS:BRZE"
+    },
+    {
+     "company": "Amplitude, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 17.7,
+     "multiple": 3.5,
+     "recurring_pct": null,
+     "retention_pct": 105.0,
+     "ticker": "NASDAQCM:AMPL"
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -517,10 +501,14 @@
      {
       "company": "Sierra",
       "date": "May-26"
+     },
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
      }
     ],
     "investor": "Sequoia",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -607,10 +595,14 @@
      {
       "company": "Decagon",
       "date": "Jan-26"
+     },
+     {
+      "company": "Harvey",
+      "date": "Jun-25"
      }
     ],
     "investor": "Coatue",
-    "n": 1
+    "n": 2
    },
    {
     "backed": [
@@ -705,61 +697,31 @@
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Harvey",
+      "date": "Jun-25"
      }
     ],
-    "investor": "Emergence Capital Partners",
+    "investor": "Kleiner Perkins",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Harvey",
+      "date": "Jun-25"
      }
     ],
-    "investor": "SBI Investment",
+    "investor": "DST",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Harvey",
+      "date": "Jun-25"
      }
     ],
-    "investor": "LG Technology Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Pavilion Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Uphonest Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Genspark",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Lanchi Ventures",
+    "investor": "OpenAI Startup Fund",
     "n": 1
    }
   ],
@@ -784,7 +746,7 @@
     "in_medians": true,
     "mult": 56.0,
     "reason": "shares the language of research; related type of business; same kind of customer; same revenue model",
-    "score": 11.3,
+    "score": 11.2,
     "type": "PRIMARY"
    },
    {
@@ -806,7 +768,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of research; same type of business; same kind of customer",
-    "score": 10.3,
+    "score": 10.2,
     "type": "SECONDARY"
    },
    {
@@ -817,19 +779,8 @@
     "in_medians": true,
     "mult": 4.3,
     "reason": "shares the language of research; same type of business; same business function; same revenue model",
-    "score": 13.3,
+    "score": 13.2,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Genspark",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "both do Consumer AI; related type of business; same AI stance",
-    "score": 6.6,
-    "type": "PRIMARY"
    },
    {
     "basis": "Jul-2025",
@@ -839,7 +790,18 @@
     "in_medians": true,
     "mult": 120.0,
     "reason": "both do Consumer AI; related type of business; same revenue model; same AI stance",
-    "score": 10.3,
+    "score": 10.2,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "Harvey",
+    "date": "Jun-25",
+    "in_medians": false,
+    "mult": 66.7,
+    "reason": "shares the language of research; related type of business; same kind of customer; same revenue model",
+    "score": 11.2,
     "type": "PRIMARY"
    }
   ],
@@ -851,7 +813,7 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 3,
-    "ARR_RUNRATE": 3,
+    "ARR_RUNRATE": 2,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -868,11 +830,11 @@
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 56.0,
-   "n": 7,
+   "mid": 105.3,
+   "n": 6,
    "period_mix": {
     "NTM": 1,
-    "RUN_RATE": 6
+    "RUN_RATE": 5
    },
    "period_span": {
     "NTM": {
@@ -891,13 +853,6 @@
      "reason": "shares the language of research; same type of business; same business function; same revenue model",
      "tier": "ADJACENT",
      "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "both do Consumer AI; related type of business; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     },
     {
      "company": "Clay",
@@ -949,16 +904,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 4.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Genspark",
-     "date": "Nov-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 25.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1018,16 +963,8 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 13,
+  "private_window_months": 14,
   "secondary": [
-   {
-    "company": "Amplitude, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of testing; related type of business; same kind of customer",
-    "score": 5.6,
-    "ticker": "NASDAQCM:AMPL"
-   },
    {
     "company": "Qt Group Oyj",
     "family": "software",
@@ -1059,6 +996,14 @@
     "reason": "shares the language of customer; same type of business; same business function",
     "score": 5.2,
     "ticker": "NYSE:KVYO"
+   },
+   {
+    "company": "Salesforce, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of customer; related type of business; same revenue model",
+    "score": 5.2,
+    "ticker": "NYSE:CRM"
    }
   ],
   "secondary_range": {
@@ -1075,12 +1020,12 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 3.9,
+   "high": 5.0,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.7,
-   "mid": 3.25,
+   "mid": 3.45,
    "n": 4,
    "period_mix": {
     "NTM": 4
@@ -1107,7 +1052,7 @@
     "testing"
    ],
    "show_retention": true,
-   "spread": 1.4,
+   "spread": 1.9,
    "table": [
     {
      "company": "Freshworks Inc.",
@@ -1128,15 +1073,6 @@
      "ticker": "NYSE:KVYO"
     },
     {
-     "company": "Amplitude, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 17.7,
-     "multiple": 3.5,
-     "recurring_pct": null,
-     "retention_pct": 105.0,
-     "ticker": "NASDAQCM:AMPL"
-    },
-    {
      "company": "Qt Group Oyj",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 7.7,
@@ -1144,6 +1080,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "HLSE:QTCOM"
+    },
+    {
+     "company": "Salesforce, Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.7,
+     "multiple": 5.0,
+     "recurring_pct": 95.0,
+     "retention_pct": null,
+     "ticker": "NYSE:CRM"
     }
    ],
    "tag_evidence": 0.6,

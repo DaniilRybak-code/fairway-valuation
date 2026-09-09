@@ -8,40 +8,29 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 1,
-      "NET_REVENUE": 3
+      "NET_REVENUE": 1
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "RANGE",
+     "display": "DIAMOND",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 10.1,
+     "high": 3.3,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 3.3,
-     "mid": 8.8,
-     "n": 4,
+     "mid": 3.3,
+     "n": 1,
      "period_mix": {
-      "LTM": 2,
-      "NTM": 1,
-      "RUN_RATE": 1
+      "LTM": 1
      },
      "period_span": {
       "LTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
@@ -52,7 +41,8 @@
       "meal",
       "nutrition"
      ],
-     "spread": 3.1,
+     "sole": "Huel",
+     "spread": 1.0,
      "table": [
       {
        "company": "Huel",
@@ -63,40 +53,10 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "SKIMS",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 5.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "AG1",
-       "date": "Jan-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 8.8,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Quince",
-       "date": "Mar-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 1.3,
-     "thin": false,
+     "tag_evidence": 1.2,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -107,7 +67,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Pet Products, Subscription Box; same type of business; same end market; same business function",
-    "score": 30.7,
+    "score": 30.6,
     "ticker": "NYSE:BARK"
    },
    {
@@ -115,41 +75,33 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of products; same type of business; same end market; same business function",
-    "score": 16.4,
+    "score": 16.3,
     "ticker": "NYSE:YETI"
-   },
-   {
-    "company": "Hims & Hers Health, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 19.6,
-    "ticker": "NYSE:HIMS"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 2.0,
+   "high": 1.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.3,
-   "mid": 1.5,
-   "n": 3,
+   "mid": 0.9,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -157,29 +109,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "BARK, Inc.",
-     "mult": 0.3,
-     "reason": "both do Pet Products, Subscription Box; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "YETI Holdings, Inc.",
-     "mult": 1.5,
-     "reason": "shares the language of products; same type of business; same end market; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Hims & Hers Health, Inc.",
-     "mult": 2.0,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -189,7 +119,7 @@
     "products"
    ],
    "show_retention": false,
-   "spread": 6.7,
+   "spread": 5.0,
    "table": [
     {
      "company": "BARK, Inc.",
@@ -208,19 +138,10 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:YETI"
-    },
-    {
-     "company": "Hims & Hers Health, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.1,
-     "multiple": 2.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:HIMS"
     }
    ],
-   "tag_evidence": 8.2,
-   "thin": false,
+   "tag_evidence": 8.1,
+   "thin": true,
    "triangulated": false
   },
   "investors_callable": [
@@ -376,39 +297,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Quince",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 10.1,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 21.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "<=",
-    "company": "SKIMS",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 5.0,
-    "reason": "same type of business; same business function; same kind of customer; same cost structure",
-    "score": 18.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "THIRD_PARTY_ESTIMATE",
-    "bound": "",
-    "company": "Vuori",
-    "date": "Nov-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; same business function; same kind of customer; same cost structure",
-    "score": 18.6,
-    "type": "SECONDARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Huel",
@@ -416,18 +304,7 @@
     "in_medians": true,
     "mult": 3.3,
     "reason": "both do Nutrition; same type of business; same business function; same kind of customer",
-    "score": 28.8,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "CONTEMPORANEOUS_PRESS",
-    "bound": "",
-    "company": "AG1",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 8.8,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 27.6,
+    "score": 28.7,
     "type": "PRIMARY"
    },
    {
@@ -438,7 +315,7 @@
     "in_medians": false,
     "mult": 8.77,
     "reason": "both do Nutrition; same type of business; same kind of customer; same revenue model",
-    "score": 18.2,
+    "score": 18.1,
     "type": "PRIMARY"
    }
   ],
@@ -449,36 +326,25 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 1,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
-   "display": "RANGE",
-   "high": 10.1,
+   "display": "DIAMOND",
+   "high": 3.3,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 8.8,
-   "n": 4,
+   "mid": 3.3,
+   "n": 1,
    "period_mix": {
-    "LTM": 2,
-    "NTM": 1,
-    "RUN_RATE": 1
+    "LTM": 1
    },
    "period_span": {
     "LTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
@@ -489,7 +355,8 @@
     "meal",
     "nutrition"
    ],
-   "spread": 3.1,
+   "sole": "Huel",
+   "spread": 1.0,
    "table": [
     {
      "company": "Huel",
@@ -500,120 +367,16 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "SKIMS",
-     "date": "Nov-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 5.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "AG1",
-     "date": "Jan-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 8.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Quince",
-     "date": "Mar-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 1.3,
-   "thin": false,
+   "tag_evidence": 1.2,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 58,
-  "secondary": [
-   {
-    "company": "Warby Parker Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 15.1,
-    "ticker": "NYSE:WRBY"
-   },
-   {
-    "company": "FIGS, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 15.1,
-    "ticker": "NYSE:FIGS"
-   }
-  ],
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 2
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "founder_basis_trailing_on_forward": false,
-   "high": 2.9,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 2.7,
-   "mid": 2.8,
-   "n": 2,
-   "period_mix": {
-    "NTM": 2
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": false,
-   "spread": 1.1,
-   "table": [
-    {
-     "company": "Warby Parker Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 24.4,
-     "multiple": 2.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:WRBY"
-    },
-    {
-     "company": "FIGS, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.1,
-     "multiple": 2.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:FIGS"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Personalised fresh dog food on a recurring plan, portioned and delivered frozen"

@@ -177,14 +177,6 @@
     "ticker": "NASDAQCM:AMPL"
    },
    {
-    "company": "GitLab Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of source; same type of business; same business function; same kind of customer",
-    "score": 12.2,
-    "ticker": "NASDAQGS:GTLB"
-   },
-   {
     "company": "Datadog, Inc.",
     "family": "software",
     "in_medians": true,
@@ -193,27 +185,27 @@
     "ticker": "NASDAQGS:DDOG"
    },
    {
+    "company": "GitLab Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of source; same type of business; same business function; same kind of customer",
+    "score": 12.1,
+    "ticker": "NASDAQGS:GTLB"
+   },
+   {
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
     "reason": "both do Developer Tools; same type of business; same business function; same kind of customer",
-    "score": 11.6,
+    "score": 11.5,
     "ticker": "HLSE:QTCOM"
-   },
-   {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same revenue model; same AI stance",
-    "score": 7.6,
-    "ticker": "NYSE:SNOW"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -223,15 +215,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 15.6,
+   "high": 14.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.9,
-   "mid": 5.2,
-   "n": 5,
+   "low": 3.5,
+   "mid": 4.55,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -253,7 +245,7 @@
     "tools"
    ],
    "show_retention": true,
-   "spread": 4.5,
+   "spread": 4.3,
    "table": [
     {
      "company": "Amplitude, Inc.",
@@ -290,15 +282,6 @@
      "recurring_pct": null,
      "retention_pct": 122.0,
      "ticker": "NASDAQGS:DDOG"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
     }
    ],
    "tag_evidence": 8.4,
@@ -896,21 +879,13 @@
     "reason": "shares the language of agent; same kind of customer; same revenue model; sold the same way",
     "score": 9.1,
     "ticker": "NYSE:NET"
-   },
-   {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way; same AI stance",
-    "score": 9.1,
-    "ticker": "NYSE:TWLO"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -924,11 +899,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.2,
-   "mid": 8.7,
-   "n": 3,
+   "low": 8.7,
+   "mid": 19.1,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -944,17 +919,8 @@
     "developer"
    ],
    "show_retention": true,
-   "spread": 5.7,
+   "spread": 3.4,
    "table": [
-    {
-     "company": "Twilio Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.6,
-     "multiple": 5.2,
-     "recurring_pct": null,
-     "retention_pct": 116.0,
-     "ticker": "NYSE:TWLO"
-    },
     {
      "company": "DigitalOcean Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -975,7 +941,7 @@
     }
    ],
    "tag_evidence": 0.2,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   }
  },

@@ -8,7 +8,7 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 3
+      "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
@@ -24,10 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 357142.86,
-     "mid": 640000.0,
-     "n": 3,
+     "mid": 1000000.0,
+     "n": 2,
      "period_mix": {
-      "RUN_RATE": 3
+      "RUN_RATE": 2
      },
      "period_span": {
       "RUN_RATE": {
@@ -56,16 +56,6 @@
        "ticker": ""
       },
       {
-       "company": "Ramp",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 640000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Gong",
        "date": "Nov-25",
        "growth_basis": "",
@@ -77,7 +67,7 @@
       }
      ],
      "tag_evidence": 1.4,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -86,16 +76,17 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 2,
-      "ARR_RUNRATE": 2,
+      "ARR": 3,
+      "ARR_RUNRATE": 1,
       "NET_REVENUE": 2
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 2,
+     "control_n": 3,
      "control_names": [
-      "Verint Systems",
-      "E2open"
+      "E2open",
+      "Zuora",
+      "AuditBoard"
      ],
      "dispersed": true,
      "display": "SCATTER",
@@ -106,10 +97,10 @@
      "high": 150.0,
      "listed_target_n": 2,
      "listed_target_names": [
-      "Verint Systems",
-      "E2open"
+      "E2open",
+      "Zuora"
      ],
-     "low": 2.24,
+     "low": 3.46,
      "mid": 50.0,
      "n": 6,
      "period_mix": {
@@ -133,13 +124,6 @@
      },
      "points": [
       {
-       "company": "Verint Systems",
-       "mult": 2.24,
-       "reason": "related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
        "company": "E2open",
        "mult": 3.46,
        "reason": "shares the language of planning; related type of business; sold the same way",
@@ -147,11 +131,18 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Ramp",
-       "mult": 32.0,
-       "reason": "related type of business; same kind of customer",
+       "company": "Zuora",
+       "mult": 3.81,
+       "reason": "shares the language of revenue; related type of business; sold the same way",
        "tier": "ADJACENT",
-       "transaction_type": "MIXED"
+       "transaction_type": "CONTROL"
+      },
+      {
+       "company": "AuditBoard",
+       "mult": 15.0,
+       "reason": "shares the language of workflow; same type of business; same kind of customer; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "CONTROL"
       },
       {
        "company": "Clay",
@@ -180,20 +171,12 @@
       "agentic",
       "customer",
       "gtm",
-      "planning"
+      "planning",
+      "revenue",
+      "workflow"
      ],
-     "spread": 67.0,
+     "spread": 43.4,
      "table": [
-      {
-       "company": "Verint Systems",
-       "date": "Aug-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2.24,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "E2open",
        "date": "May-25",
@@ -205,11 +188,21 @@
        "ticker": ""
       },
       {
-       "company": "Ramp",
-       "date": "Nov-25",
+       "company": "Zuora",
+       "date": "Oct-24",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 32.0,
+       "multiple": 3.81,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "AuditBoard",
+       "date": "May-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 15.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -245,7 +238,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
     }
@@ -257,7 +250,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Agentic Automation; same type of business; same business function; sold the same way",
-    "score": 10.7,
+    "score": 10.6,
     "ticker": "NYSE:PATH"
    },
    {
@@ -265,7 +258,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of order; same type of business; same kind of customer; sold the same way",
-    "score": 10.0,
+    "score": 9.9,
     "ticker": "ENXTPA:ALBFR"
    },
    {
@@ -301,12 +294,12 @@
     "ticker": "NSEI:ZAGGLE"
    },
    {
-    "company": "BlackLine, Inc.",
+    "company": "SAP SE",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "NASDAQGS:BL"
+    "reason": "shares the language of planning; same type of business; same business function; sold the same way",
+    "score": 8.3,
+    "ticker": "XTRA:SAP"
    }
   ],
   "core_range": {
@@ -327,8 +320,8 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.5,
-   "mid": 3.2,
+   "low": 2.9,
+   "mid": 3.7,
    "n": 7,
    "period_mix": {
     "NTM": 7
@@ -344,13 +337,6 @@
      "company": "Zaggle Prepaid Ocean Services",
      "mult": 0.7,
      "reason": "shares the language of revenue; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "BlackLine, Inc.",
-     "mult": 2.5,
-     "reason": "same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
     },
@@ -388,6 +374,13 @@
      "reason": "shares the language of planning; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
+    },
+    {
+     "company": "SAP SE",
+     "mult": 4.9,
+     "reason": "shares the language of planning; same type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": ""
     }
    ],
    "positioning": [],
@@ -402,7 +395,7 @@
     "workflow"
    ],
    "show_retention": true,
-   "spread": 6.1,
+   "spread": 7.0,
    "table": [
     {
      "company": "Zaggle Prepaid Ocean Services",
@@ -412,15 +405,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NSEI:ZAGGLE"
-    },
-    {
-     "company": "BlackLine, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.4,
-     "multiple": 2.5,
-     "recurring_pct": 95.0,
-     "retention_pct": 102.0,
-     "ticker": "NASDAQGS:BL"
     },
     {
      "company": "Pegasystems Inc.",
@@ -466,6 +450,15 @@
      "recurring_pct": 93.0,
      "retention_pct": null,
      "ticker": "NASDAQGS:WDAY"
+    },
+    {
+     "company": "SAP SE",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.9,
+     "multiple": 4.9,
+     "recurring_pct": 63.6,
+     "retention_pct": null,
+     "ticker": "XTRA:SAP"
     }
    ],
    "tag_evidence": 0.7,
@@ -656,14 +649,10 @@
      {
       "company": "Decagon",
       "date": "Jan-26"
-     },
-     {
-      "company": "Ramp",
-      "date": "Nov-25"
      }
     ],
     "investor": "Coatue",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -758,81 +747,41 @@
    {
     "backed": [
      {
-      "company": "Ramp",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Lightspeed",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Ramp",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Alpha Wave",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Ramp",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Bessemer",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Ramp",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Founders Fund",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Ramp",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Thrive",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Verint Systems",
-      "date": "Aug-25"
-     }
-    ],
-    "investor": "Thoma Bravo (acquirer",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Verint Systems",
-      "date": "Aug-25"
-     }
-    ],
-    "investor": "via portfolio company Calabrio)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "E2open",
       "date": "May-25"
      }
     ],
     "investor": "WiseTech Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zuora",
+      "date": "Oct-24"
+     }
+    ],
+    "investor": "Silver Lake",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Zuora",
+      "date": "Oct-24"
+     }
+    ],
+    "investor": "GIC",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "AuditBoard",
+      "date": "May-24"
+     }
+    ],
+    "investor": "Hg (buyer)",
     "n": 1
    }
   ],
@@ -846,7 +795,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do Agentic AI; related type of business; same kind of customer; sold the same way",
-    "score": 12.4,
+    "score": 12.3,
     "type": "PRIMARY"
    },
    {
@@ -857,7 +806,7 @@
     "in_medians": true,
     "mult": 150.0,
     "reason": "shares the language of customer; related type of business; same kind of customer; sold the same way",
-    "score": 11.8,
+    "score": 11.7,
     "type": "PRIMARY"
    },
    {
@@ -868,7 +817,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of gtm; related type of business; same kind of customer",
-    "score": 7.2,
+    "score": 7.1,
     "type": "SECONDARY"
    },
    {
@@ -883,28 +832,6 @@
     "type": "SECONDARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Ramp",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 32.0,
-    "reason": "related type of business; same kind of customer",
-    "score": 6.6,
-    "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Verint Systems",
-    "date": "Aug-25",
-    "in_medians": true,
-    "mult": 2.24,
-    "reason": "related type of business; sold the same way",
-    "score": 7.6,
-    "type": "CONTROL"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "E2open",
@@ -913,6 +840,28 @@
     "mult": 3.46,
     "reason": "shares the language of planning; related type of business; sold the same way",
     "score": 6.3,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Zuora",
+    "date": "Oct-24",
+    "in_medians": true,
+    "mult": 3.81,
+    "reason": "shares the language of revenue; related type of business; sold the same way",
+    "score": 6.2,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "AuditBoard",
+    "date": "May-24",
+    "in_medians": true,
+    "mult": 15.0,
+    "reason": "shares the language of workflow; same type of business; same kind of customer; sold the same way",
+    "score": 12.0,
     "type": "CONTROL"
    }
   ],
@@ -923,26 +872,27 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
-    "ARR_RUNRATE": 2,
+    "ARR": 3,
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 2,
+   "control_n": 3,
    "control_names": [
-    "Verint Systems",
-    "E2open"
+    "E2open",
+    "Zuora",
+    "AuditBoard"
    ],
    "dispersed": true,
    "display": "SCATTER",
    "high": 150.0,
    "listed_target_n": 2,
    "listed_target_names": [
-    "Verint Systems",
-    "E2open"
+    "E2open",
+    "Zuora"
    ],
-   "low": 2.24,
+   "low": 3.46,
    "mid": 50.0,
    "n": 6,
    "period_mix": {
@@ -966,13 +916,6 @@
    },
    "points": [
     {
-     "company": "Verint Systems",
-     "mult": 2.24,
-     "reason": "related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
      "company": "E2open",
      "mult": 3.46,
      "reason": "shares the language of planning; related type of business; sold the same way",
@@ -980,11 +923,18 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Ramp",
-     "mult": 32.0,
-     "reason": "related type of business; same kind of customer",
+     "company": "Zuora",
+     "mult": 3.81,
+     "reason": "shares the language of revenue; related type of business; sold the same way",
      "tier": "ADJACENT",
-     "transaction_type": "MIXED"
+     "transaction_type": "CONTROL"
+    },
+    {
+     "company": "AuditBoard",
+     "mult": 15.0,
+     "reason": "shares the language of workflow; same type of business; same kind of customer; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "CONTROL"
     },
     {
      "company": "Clay",
@@ -1013,20 +963,12 @@
     "agentic",
     "customer",
     "gtm",
-    "planning"
+    "planning",
+    "revenue",
+    "workflow"
    ],
-   "spread": 67.0,
+   "spread": 43.4,
    "table": [
-    {
-     "company": "Verint Systems",
-     "date": "Aug-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 2.24,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "E2open",
      "date": "May-25",
@@ -1038,11 +980,21 @@
      "ticker": ""
     },
     {
-     "company": "Ramp",
-     "date": "Nov-25",
+     "company": "Zuora",
+     "date": "Oct-24",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 32.0,
+     "multiple": 3.81,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": ""
+    },
+    {
+     "company": "AuditBoard",
+     "date": "May-24",
+     "growth_basis": "",
+     "growth_pct": null,
+     "multiple": 15.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1078,20 +1030,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 15,
+  "private_window_months": 27,
   "secondary": [
-   {
-    "company": "SAP SE",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of planning; same type of business; same business function; sold the same way",
-    "score": 8.4,
-    "ticker": "XTRA:SAP"
-   },
    {
     "company": "Samsara Inc.",
     "family": "software",
@@ -1105,7 +1049,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of deal, lifecycle; same business function; same kind of customer; sold the same way",
-    "score": 7.8,
+    "score": 7.7,
     "ticker": "NASDAQGS:INTA"
    },
    {
@@ -1113,7 +1057,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of commercial; same type of business; same kind of customer; sold the same way",
-    "score": 7.8,
+    "score": 7.7,
     "ticker": "NASDAQGS:CASS"
    },
    {
@@ -1121,8 +1065,16 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of channel, customer; related type of business; same kind of customer; sold the same way",
-    "score": 7.7,
+    "score": 7.6,
     "ticker": "NASDAQGS:BRZE"
+   },
+   {
+    "company": "Appian Corporation",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Workflow Automation; same type of business; sold the same way",
+    "score": 7.5,
+    "ticker": "NASDAQGM:APPN"
    }
   ],
   "secondary_range": {
@@ -1139,12 +1091,12 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.9,
+   "high": 3.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 3.3,
-   "mid": 3.4,
+   "mid": 3.3,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -1177,10 +1129,10 @@
     "channel",
     "commercial",
     "customer",
-    "planning"
+    "workflow"
    ],
    "show_retention": true,
-   "spread": 1.5,
+   "spread": 1.0,
    "table": [
     {
      "company": "Cass Information Systems",
@@ -1192,6 +1144,15 @@
      "ticker": "NASDAQGS:CASS"
     },
     {
+     "company": "Appian Corporation",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 9.1,
+     "multiple": 3.3,
+     "recurring_pct": 79.5,
+     "retention_pct": 116.0,
+     "ticker": "NASDAQGM:APPN"
+    },
+    {
      "company": "Braze, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 15.5,
@@ -1199,18 +1160,9 @@
      "recurring_pct": null,
      "retention_pct": 110.0,
      "ticker": "NASDAQGS:BRZE"
-    },
-    {
-     "company": "SAP SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.9,
-     "multiple": 4.9,
-     "recurring_pct": 63.6,
-     "retention_pct": null,
-     "ticker": "XTRA:SAP"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   }

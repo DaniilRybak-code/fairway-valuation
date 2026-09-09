@@ -131,7 +131,7 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 7.37,
-     "mid": 57.1,
+     "mid": 51.4,
      "n": 4,
      "period_mix": {
       "LTM": 4
@@ -158,9 +158,9 @@
        "transaction_type": "PRIMARY"
       },
       {
-       "company": "Virta Health",
-       "mult": 57.1,
-       "reason": "shares the language of based; same type of business; same end market; sold the same way",
+       "company": "Devoted Health",
+       "mult": 51.4,
+       "reason": "shares the language of based; related type of business; same end market",
        "tier": "DIRECT",
        "transaction_type": "PRIMARY"
       },
@@ -199,11 +199,11 @@
        "ticker": ""
       },
       {
-       "company": "Virta Health",
-       "date": "Apr-21",
+       "company": "Devoted Health",
+       "date": "Oct-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 57.1,
+       "multiple": 51.4,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -231,7 +231,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of based; related type of business; same end market; same kind of customer",
-    "score": 11.7,
+    "score": 11.6,
     "ticker": "NYSE:EVH"
    },
    {
@@ -639,6 +639,26 @@
    {
     "backed": [
      {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "Uprising",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Devoted Health",
+      "date": "Oct-21"
+     }
+    ],
+    "investor": "SoftBank Vision Fund 2",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
       "company": "Cityblock Health",
       "date": "Sep-21"
      }
@@ -654,16 +674,6 @@
      }
     ],
     "investor": "HealthQuest Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Virta Health",
-      "date": "Apr-21"
-     }
-    ],
-    "investor": "Tiger Global Management",
     "n": 1
    }
   ],
@@ -716,6 +726,17 @@
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
+    "company": "Devoted Health",
+    "date": "Oct-21",
+    "in_medians": true,
+    "mult": 51.4,
+    "reason": "shares the language of based; related type of business; same end market",
+    "score": 6.1,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
     "company": "Cityblock Health",
     "date": "Sep-21",
     "in_medians": true,
@@ -733,17 +754,6 @@
     "mult": 10.0,
     "reason": "same type of business; same end market",
     "score": 8.0,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Virta Health",
-    "date": "Apr-21",
-    "in_medians": true,
-    "mult": 57.1,
-    "reason": "shares the language of based; same type of business; same end market; sold the same way",
-    "score": 11.1,
     "type": "PRIMARY"
    }
   ],
@@ -851,7 +861,7 @@
    "thin": false,
    "triangulated": true
   },
-  "private_window_months": 64,
+  "private_window_months": 62,
   "secondary": [
    {
     "company": "AMN Healthcare Services, Inc.",
@@ -862,43 +872,35 @@
     "ticker": "NYSE:AMN"
    },
    {
-    "company": "Cass Information Systems",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 8.6,
-    "ticker": "NASDAQGS:CASS"
-   },
-   {
-    "company": "Intapp, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 7.6,
-    "ticker": "NASDAQGS:INTA"
-   },
-   {
-    "company": "Amdocs Limited",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same revenue model; sold the same way",
-    "score": 7.6,
-    "ticker": "NASDAQGS:DOX"
-   },
-   {
     "company": "Workiva Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of regulatory; related type of business; same kind of customer; sold the same way",
     "score": 6.6,
     "ticker": "NYSE:WK"
+   },
+   {
+    "company": "Consensus Cloud Solutions, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "NASDAQGS:CCSI"
+   },
+   {
+    "company": "Weave Communications, Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "NYSE:WEAV"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -908,15 +910,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.6,
+   "high": 3.6,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.5,
-   "mid": 3.45,
-   "n": 4,
+   "low": 1.9,
+   "mid": 3.1,
+   "n": 3,
    "period_mix": {
-    "NTM": 4
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -939,25 +941,25 @@
     "regulatory"
    ],
    "show_retention": true,
-   "spread": 3.1,
+   "spread": 1.9,
    "table": [
     {
-     "company": "Amdocs Limited",
+     "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.6,
-     "multiple": 1.5,
+     "growth_pct": 13.8,
+     "multiple": 1.9,
      "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:DOX"
+     "retention_pct": 92.0,
+     "ticker": "NYSE:WEAV"
     },
     {
-     "company": "Cass Information Systems",
+     "company": "Consensus Cloud Solutions, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.5,
-     "multiple": 3.3,
+     "growth_pct": 5.3,
+     "multiple": 3.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:CASS"
+     "ticker": "NASDAQGS:CCSI"
     },
     {
      "company": "Workiva Inc.",
@@ -967,15 +969,6 @@
      "recurring_pct": null,
      "retention_pct": 110.5,
      "ticker": "NYSE:WK"
-    },
-    {
-     "company": "Intapp, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.4,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": 123.0,
-     "ticker": "NASDAQGS:INTA"
     }
    ],
    "tag_evidence": 0.6,

@@ -8,12 +8,14 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 2
+      "BUSINESS_CUSTOMERS": 4
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
+     "control_n": 1,
+     "control_names": [
+      "Salesloft"
+     ],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "business_customers",
@@ -24,10 +26,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 357142.86,
-     "mid": 1000000.0,
-     "n": 2,
+     "mid": 916666.67,
+     "n": 4,
      "period_mix": {
-      "RUN_RATE": 2
+      "RUN_RATE": 4
      },
      "period_span": {
       "RUN_RATE": {
@@ -57,6 +59,26 @@
        "ticker": ""
       },
       {
+       "company": "Salesloft",
+       "date": "Dec-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 575000.0,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Outreach",
+       "date": "Jun-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 916666.67,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
        "company": "Gong",
        "date": "Nov-25",
        "growth_basis": "",
@@ -67,8 +89,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 2.3,
-     "thin": true,
+     "tag_evidence": 2.2,
+     "thin": false,
      "triangulated": false
     },
     "REVENUE": {
@@ -78,14 +100,15 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR": 2,
-      "ARR_RUNRATE": 3,
+      "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
+     "control_n": 2,
      "control_names": [
-      "Semrush"
+      "Semrush",
+      "Salesloft"
      ],
      "dispersed": true,
      "display": "SCATTER",
@@ -93,17 +116,17 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 150.0,
+     "high": 120.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
      "low": 4.3,
-     "mid": 105.3,
-     "n": 6,
+     "mid": 50.0,
+     "n": 4,
      "period_mix": {
       "NTM": 1,
-      "RUN_RATE": 5
+      "RUN_RATE": 3
      },
      "period_span": {
       "NTM": {
@@ -124,11 +147,11 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "related type of business; sold the same way; same AI stance",
+       "company": "Salesloft",
+       "mult": 23.0,
+       "reason": "both do Outbound Automation; same type of business; same business function",
        "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
+       "transaction_type": "CONTROL"
       },
       {
        "company": "Clay",
@@ -138,23 +161,9 @@
        "transaction_type": "SECONDARY"
       },
       {
-       "company": "Sierra",
-       "mult": 105.3,
-       "reason": "same type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
        "company": "Perplexity",
        "mult": 120.0,
        "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Decagon",
-       "mult": 150.0,
-       "reason": "same type of business; same revenue model; same AI stance",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       }
@@ -167,7 +176,7 @@
       "research",
       "sales"
      ],
-     "spread": 34.9,
+     "spread": 27.9,
      "table": [
       {
        "company": "Semrush",
@@ -180,11 +189,11 @@
        "ticker": ""
       },
       {
-       "company": "Genspark",
-       "date": "Nov-25",
+       "company": "Salesloft",
+       "date": "Dec-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 25.0,
+       "multiple": 23.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -200,16 +209,6 @@
        "ticker": ""
       },
       {
-       "company": "Sierra",
-       "date": "May-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 105.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Perplexity",
        "date": "Jul-25",
        "growth_basis": "",
@@ -218,19 +217,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Decagon",
-       "date": "Jan-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 150.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 2.3,
+     "tag_evidence": 2.2,
      "thin": false,
      "triangulated": false
     }
@@ -238,28 +227,28 @@
   },
   "core": [
    {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 10.1,
-    "ticker": "NYSE:KVYO"
-   },
-   {
     "company": "HubSpot, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Automation; same type of business; same kind of customer; sold the same way",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "NYSE:HUBS"
    },
    {
-    "company": "Zeta Global Holdings Corp.",
+    "company": "Red Violet, Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "same type of business; same revenue model",
+    "reason": "both do Data Enrichment; related type of business; same revenue model",
     "score": 6.6,
-    "ticker": "NYSE:ZETA"
+    "ticker": "NASDAQCM:RDVT"
+   },
+   {
+    "company": "ZoomInfo Technologies Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "both do Data Enrichment, Lead Enrichment; related type of business; same business function",
+    "score": 5.7,
+    "ticker": "NASDAQGS:GTM"
    }
   ],
   "core_range": {
@@ -269,19 +258,19 @@
     "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 3.9,
+   "high": 10.0,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.8,
-   "mid": 3.0,
+   "low": 2.2,
+   "mid": 2.8,
    "n": 3,
    "period_mix": {
     "NTM": 3
@@ -296,11 +285,22 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "enrichment",
+    "lead",
     "sales"
    ],
    "show_retention": true,
-   "spread": 1.4,
+   "spread": 4.5,
    "table": [
+    {
+     "company": "ZoomInfo Technologies Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": -0.3,
+     "multiple": 2.2,
+     "recurring_pct": null,
+     "retention_pct": 89.0,
+     "ticker": "NASDAQGS:GTM"
+    },
     {
      "company": "HubSpot, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -311,27 +311,18 @@
      "ticker": "NYSE:HUBS"
     },
     {
-     "company": "Klaviyo, Inc.",
+     "company": "Red Violet, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
-    },
-    {
-     "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.3,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:ZETA"
+     "growth_pct": 13.3,
+     "multiple": 10.0,
+     "recurring_pct": 77.0,
+     "retention_pct": 95.0,
+     "ticker": "NASDAQCM:RDVT"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 1.2,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "investors_callable": [
    {
@@ -475,46 +466,6 @@
    {
     "backed": [
      {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Benchmark",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Greenoaks",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Clay",
       "date": "Jan-26"
      }
@@ -565,46 +516,6 @@
    {
     "backed": [
      {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Coatue",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Index Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Decagon",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Bain Capital Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Semrush",
       "date": "Nov-25"
      }
@@ -625,77 +536,176 @@
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "Emergence Capital Partners",
+    "investor": "Bain Capital Ventures",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "SBI Investment",
+    "investor": "Sequoia",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "LG Technology Ventures",
+    "investor": "Tribe Capital",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Apollo.io",
+      "date": "Aug-23"
      }
     ],
-    "investor": "Pavilion Capital",
+    "investor": "Nexus Venture Partners",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Salesloft",
+      "date": "Dec-21"
      }
     ],
-    "investor": "Uphonest Capital",
+    "investor": "Vista Equity Partners (majority)",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Genspark",
-      "date": "Nov-25"
+      "company": "Salesloft",
+      "date": "Dec-21"
      }
     ],
-    "investor": "Lanchi Ventures",
+    "investor": "Mubadala (co-investor)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Premji Invest (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "STEADFAST Capital Ventures (co-lead)",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Tiger Global",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Sequoia Capital Global Equities",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Vista Public Strategies",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Salesforce Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Lone Pine",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Sands Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Mayfield",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "DFJ Growth",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Outreach",
+      "date": "Jun-21"
+     }
+    ],
+    "investor": "Trinity",
     "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
   "private": [
-   {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "Sierra",
-    "date": "May-26",
-    "in_medians": true,
-    "mult": 105.3,
-    "reason": "same type of business; same revenue model; same AI stance",
-    "score": 10.6,
-    "type": "PRIMARY"
-   },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
@@ -704,19 +714,8 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "both do Data Enrichment, Outbound Automation; same type of business; same business function; same revenue model",
-    "score": 18.3,
+    "score": 18.2,
     "type": "SECONDARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Decagon",
-    "date": "Jan-26",
-    "in_medians": true,
-    "mult": 150.0,
-    "reason": "same type of business; same revenue model; same AI stance",
-    "score": 10.6,
-    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_FORECAST",
@@ -741,17 +740,6 @@
     "type": "SECONDARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Genspark",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 25.0,
-    "reason": "related type of business; sold the same way; same AI stance",
-    "score": 9.6,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "Jul-2025",
     "bound": "",
     "company": "Perplexity",
@@ -760,6 +748,39 @@
     "mult": 120.0,
     "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
     "score": 9.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "THIRD_PARTY_ESTIMATE",
+    "bound": "",
+    "company": "Apollo.io",
+    "date": "Aug-23",
+    "in_medians": false,
+    "mult": 16.7,
+    "reason": "both do Data Enrichment; same type of business; same business function; same kind of customer",
+    "score": 16.7,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "<=",
+    "company": "Salesloft",
+    "date": "Dec-21",
+    "in_medians": true,
+    "mult": 23.0,
+    "reason": "both do Outbound Automation; same type of business; same business function",
+    "score": 8.7,
+    "type": "CONTROL"
+   },
+   {
+    "basis": "DISCLOSED_THRESHOLD",
+    "bound": "",
+    "company": "Outreach",
+    "date": "Jun-21",
+    "in_medians": true,
+    "mult": null,
+    "reason": "shares the language of outbound, sales; same type of business; same business function",
+    "score": 8.7,
     "type": "PRIMARY"
    }
   ],
@@ -771,28 +792,29 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR": 2,
-    "ARR_RUNRATE": 3,
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
+   "control_n": 2,
    "control_names": [
-    "Semrush"
+    "Semrush",
+    "Salesloft"
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 150.0,
+   "high": 120.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
    "low": 4.3,
-   "mid": 105.3,
-   "n": 6,
+   "mid": 50.0,
+   "n": 4,
    "period_mix": {
     "NTM": 1,
-    "RUN_RATE": 5
+    "RUN_RATE": 3
    },
    "period_span": {
     "NTM": {
@@ -813,11 +835,11 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "related type of business; sold the same way; same AI stance",
+     "company": "Salesloft",
+     "mult": 23.0,
+     "reason": "both do Outbound Automation; same type of business; same business function",
      "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
+     "transaction_type": "CONTROL"
     },
     {
      "company": "Clay",
@@ -827,23 +849,9 @@
      "transaction_type": "SECONDARY"
     },
     {
-     "company": "Sierra",
-     "mult": 105.3,
-     "reason": "same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
      "company": "Perplexity",
      "mult": 120.0,
      "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Decagon",
-     "mult": 150.0,
-     "reason": "same type of business; same revenue model; same AI stance",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     }
@@ -856,7 +864,7 @@
     "research",
     "sales"
    ],
-   "spread": 34.9,
+   "spread": 27.9,
    "table": [
     {
      "company": "Semrush",
@@ -869,11 +877,11 @@
      "ticker": ""
     },
     {
-     "company": "Genspark",
-     "date": "Nov-25",
+     "company": "Salesloft",
+     "date": "Dec-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 25.0,
+     "multiple": 23.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -889,16 +897,6 @@
      "ticker": ""
     },
     {
-     "company": "Sierra",
-     "date": "May-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 105.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Perplexity",
      "date": "Jul-25",
      "growth_basis": "",
@@ -907,104 +905,16 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Decagon",
-     "date": "Jan-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 150.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 2.3,
+   "tag_evidence": 2.2,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 13,
-  "secondary": [
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Data Enrichment; related type of business; same revenue model",
-    "score": 6.6,
-    "ticker": "NASDAQCM:RDVT"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Data Enrichment, Lead Enrichment; related type of business; same business function",
-    "score": 5.8,
-    "ticker": "NASDAQGS:GTM"
-   }
-  ],
+  "private_window_months": 62,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 2
-   },
-   "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "founder_basis_trailing_on_forward": false,
-   "high": 10.0,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 2.2,
-   "mid": 6.1,
-   "n": 2,
-   "period_mix": {
-    "NTM": 2
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [
-    "enrichment",
-    "lead",
-    "sales"
-   ],
-   "show_retention": true,
-   "spread": 4.5,
-   "table": [
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
-     "multiple": 10.0,
-     "recurring_pct": 77.0,
-     "retention_pct": 95.0,
-     "ticker": "NASDAQCM:RDVT"
-    }
-   ],
-   "tag_evidence": 1.3,
-   "thin": true,
-   "triangulated": false
+   "denominator": "rev"
   }
  },
  "label": "The AI copilot for GTM data automation"

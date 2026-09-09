@@ -66,7 +66,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.4,
+     "tag_evidence": 4.3,
      "thin": true,
      "triangulated": false
     }
@@ -82,77 +82,45 @@
     "ticker": "NYSE:ESTC"
    },
    {
-    "company": "Snowflake Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model; sold the same way",
-    "score": 10.6,
-    "ticker": "NYSE:SNOW"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do AI Platform; same type of business; same business function; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:PLTR"
-   },
-   {
-    "company": "Qt Group Oyj",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "HLSE:QTCOM"
-   },
-   {
     "company": "Coveo Solutions Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do AI Search; same type of business; sold the same way; same AI stance",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "TSX:CVO"
    },
    {
-    "company": "C3.ai, Inc.",
+    "company": "Sinch AB (publ)",
     "family": "software",
     "in_medians": true,
-    "reason": "both do AI Platform; same type of business; same business function; same AI stance",
-    "score": 6.1,
-    "ticker": "NYSE:AI"
-   },
-   {
-    "company": "LiveRamp Holdings, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; sold the same way",
-    "score": 6.1,
-    "ticker": "NYSE:RAMP"
+    "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
+    "score": 8.2,
+    "ticker": "OM:SINCH"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 15.6,
+   "high": 4.2,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.1,
-   "mid": 4.2,
-   "n": 7,
+   "low": 1.1,
+   "mid": 1.4,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -160,64 +128,15 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Coveo Solutions Inc.",
-     "mult": 1.1,
-     "reason": "both do AI Search; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "LiveRamp Holdings, Inc.",
-     "mult": 2.1,
-     "reason": "same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Qt Group Oyj",
-     "mult": 3.9,
-     "reason": "same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Elastic N.V.",
-     "mult": 4.2,
-     "reason": "shares the language of search; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "C3.ai, Inc.",
-     "mult": 4.6,
-     "reason": "both do AI Platform; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "same type of business; same business function; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 39.0,
-     "reason": "both do AI Platform; same type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "api",
     "search"
    ],
    "show_retention": true,
-   "spread": 35.5,
+   "spread": 3.8,
    "table": [
     {
      "company": "Coveo Solutions Inc.",
@@ -229,22 +148,13 @@
      "ticker": "TSX:CVO"
     },
     {
-     "company": "LiveRamp Holdings, Inc.",
+     "company": "Sinch AB (publ)",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.7,
-     "multiple": 2.1,
-     "recurring_pct": 75.5,
-     "retention_pct": 107.0,
-     "ticker": "NYSE:RAMP"
-    },
-    {
-     "company": "Qt Group Oyj",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 7.7,
-     "multiple": 3.9,
+     "growth_pct": 5.1,
+     "multiple": 1.4,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "HLSE:QTCOM"
+     "ticker": "OM:SINCH"
     },
     {
      "company": "Elastic N.V.",
@@ -254,38 +164,11 @@
      "recurring_pct": null,
      "retention_pct": 112.0,
      "ticker": "NYSE:ESTC"
-    },
-    {
-     "company": "C3.ai, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.1,
-     "multiple": 4.6,
-     "recurring_pct": 91.0,
-     "retention_pct": null,
-     "ticker": "NYSE:AI"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 47.0,
-     "multiple": 39.0,
-     "recurring_pct": null,
-     "retention_pct": 157.0,
-     "ticker": "NASDAQGS:PLTR"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "investors_callable": [
    {
@@ -548,7 +431,7 @@
     "in_medians": false,
     "mult": 54.5,
     "reason": "both do Foundation Models; related type of business; same business function; same AI stance",
-    "score": 11.4,
+    "score": 11.3,
     "type": "PRIMARY"
    },
    {
@@ -559,7 +442,7 @@
     "in_medians": true,
     "mult": 95.45,
     "reason": "both do Foundation Models; same type of business; sold the same way; same AI stance",
-    "score": 14.9,
+    "score": 14.8,
     "type": "PRIMARY"
    }
   ],
@@ -624,20 +507,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.4,
+   "tag_evidence": 4.3,
    "thin": true,
    "triangulated": false
   },
   "private_window_months": 38,
   "secondary": [
-   {
-    "company": "Sinch AB (publ)",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
-    "score": 8.2,
-    "ticker": "OM:SINCH"
-   },
    {
     "company": "TomTom N.V.",
     "family": "software",
@@ -669,6 +544,14 @@
     "reason": "same end market; sold the same way",
     "score": 6.0,
     "ticker": "NYSE:PSFE"
+   },
+   {
+    "company": "Boku, Inc.",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; sold the same way",
+    "score": 6.0,
+    "ticker": "AIM:BOKU"
    }
   ],
   "secondary_range": {
@@ -690,7 +573,7 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.6,
-   "mid": 1.4,
+   "mid": 1.3,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -717,9 +600,9 @@
      "transaction_type": ""
     },
     {
-     "company": "Sinch AB (publ)",
-     "mult": 1.4,
-     "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
+     "company": "Boku, Inc.",
+     "mult": 1.3,
+     "reason": "same end market; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -766,13 +649,13 @@
      "ticker": "ENXTAM:TOM2"
     },
     {
-     "company": "Sinch AB (publ)",
+     "company": "Boku, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.1,
-     "multiple": 1.4,
+     "growth_pct": 14.0,
+     "multiple": 1.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "OM:SINCH"
+     "ticker": "AIM:BOKU"
     },
     {
      "company": "Paysafe Limited",

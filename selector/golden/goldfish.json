@@ -2,32 +2,33 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "PAYING_SUBSCRIBERS": {
+    "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
-     "basis": "PAYING_SUBSCRIBERS",
-     "basis_label": "dollars of enterprise value per paying subscriber",
+     "basis": "REVENUE",
+     "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "PAYING_SUBSCRIBERS": 1
+      "ARR": 1,
+      "ARR_RUNRATE": 1
      },
-     "bounded": true,
-     "closeness": "THIN_OVERLAP",
+     "bounded": false,
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "DIAMOND",
-     "founder_field": "subscribers",
+     "display": "RANGE",
+     "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 2700.0,
+     "high": 120.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 2700.0,
-     "mid": 2700.0,
-     "n": 1,
+     "low": 40.0,
+     "mid": 120.0,
+     "n": 2,
      "period_mix": {
-      "RUN_RATE": 1
+      "RUN_RATE": 2
      },
      "period_span": {
       "RUN_RATE": {
@@ -37,99 +38,12 @@
      },
      "points": [],
      "positioning": [],
-     "shared_words": [],
-     "sole": "Suno",
-     "spread": 1.0,
-     "table": [
-      {
-       "company": "Suno",
-       "date": "Jun-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2700.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.1,
-     "thin": true,
-     "triangulated": true
-    },
-    "REVENUE": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "REVENUE",
-     "basis_label": "enterprise value to revenue",
-     "basis_mix": {
-      "ARR": 2,
-      "ARR_RUNRATE": 1
-     },
-     "bounded": true,
-     "closeness": "PARTIAL_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
-     "founder_field": "revenue",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 120.0,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 18.0,
-     "mid": 40.0,
-     "n": 3,
-     "period_mix": {
-      "RUN_RATE": 3
-     },
-     "period_span": {
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [
-      {
-       "company": "Suno",
-       "mult": 18.0,
-       "reason": "same type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Framer",
-       "mult": 40.0,
-       "reason": "shares the language of desktop; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Perplexity",
-       "mult": 120.0,
-       "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
-     "positioning": [],
      "shared_words": [
       "assistant",
       "desktop"
      ],
-     "spread": 6.7,
+     "spread": 3.0,
      "table": [
-      {
-       "company": "Suno",
-       "date": "Jun-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 18.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Framer",
        "date": "Aug-25",
@@ -151,8 +65,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
-     "thin": false,
+     "tag_evidence": 0.4,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -163,7 +77,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; same type of business; same kind of customer; sold the same way",
-    "score": 9.2,
+    "score": 9.1,
     "ticker": "NASDAQGS:DBX"
    },
    {
@@ -171,31 +85,15 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; same type of business; sold the same way",
-    "score": 7.5,
+    "score": 7.4,
     "ticker": "NASDAQGS:OPRA"
-   },
-   {
-    "company": "Truecaller AB (publ)",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; sold the same way",
-    "score": 7.1,
-    "ticker": "OM:TRUE B"
-   },
-   {
-    "company": "Life360, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; sold the same way",
-    "score": 6.1,
-    "ticker": "ASX:360"
    },
    {
     "company": "F-Secure Oyj",
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; same type of business",
-    "score": 5.5,
+    "score": 5.4,
     "ticker": "HLSE:FSECURE"
    }
   ],
@@ -203,7 +101,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -213,15 +111,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.4,
+   "high": 4.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.0,
-   "mid": 3.7,
-   "n": 5,
+   "low": 1.9,
+   "mid": 3.0,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -237,7 +135,7 @@
     "local"
    ],
    "show_retention": false,
-   "spread": 2.3,
+   "spread": 2.2,
    "table": [
     {
      "company": "Opera Limited",
@@ -258,15 +156,6 @@
      "ticker": "HLSE:FSECURE"
     },
     {
-     "company": "Truecaller AB (publ)",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.4,
-     "multiple": 3.7,
-     "recurring_pct": 45.0,
-     "retention_pct": null,
-     "ticker": "OM:TRUE B"
-    },
-    {
      "company": "Dropbox, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": -0.2,
@@ -274,18 +163,9 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NASDAQGS:DBX"
-    },
-    {
-     "company": "Life360, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.9,
-     "multiple": 4.4,
-     "recurring_pct": 75.4,
-     "retention_pct": null,
-     "ticker": "ASX:360"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": false,
    "triangulated": false
   },
@@ -431,106 +311,6 @@
    {
     "backed": [
      {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Bond Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "IVP",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Forerunner",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Union Square Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Alkeon",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Quiet",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Matrix",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Lightspeed",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Menlo",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Suno",
-      "date": "Jun-26"
-     }
-    ],
-    "investor": "Schroders Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Framer",
       "date": "Aug-25"
      }
@@ -603,24 +383,13 @@
   "private": [
    {
     "basis": "DISCLOSED_ACTUAL",
-    "bound": "<=",
-    "company": "Suno",
-    "date": "Jun-26",
-    "in_medians": true,
-    "mult": 18.0,
-    "reason": "same type of business; sold the same way; same AI stance",
-    "score": 10.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Framer",
     "date": "Aug-25",
     "in_medians": true,
     "mult": 40.0,
     "reason": "shares the language of desktop; same type of business; same business function; same kind of customer",
-    "score": 16.5,
+    "score": 16.4,
     "type": "PRIMARY"
    },
    {
@@ -631,7 +400,7 @@
     "in_medians": true,
     "mult": 120.0,
     "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
-    "score": 11.9,
+    "score": 11.8,
     "type": "PRIMARY"
    },
    {
@@ -642,7 +411,7 @@
     "in_medians": false,
     "mult": 54.5,
     "reason": "both do AI Assistant; same type of business; sold the same way; same AI stance",
-    "score": 10.4,
+    "score": 10.3,
     "type": "PRIMARY"
    }
   ],
@@ -653,23 +422,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 2,
+    "ARR": 1,
     "ARR_RUNRATE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 120.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 18.0,
-   "mid": 40.0,
-   "n": 3,
+   "low": 40.0,
+   "mid": 120.0,
+   "n": 2,
    "period_mix": {
-    "RUN_RATE": 3
+    "RUN_RATE": 2
    },
    "period_span": {
     "RUN_RATE": {
@@ -677,46 +446,14 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Suno",
-     "mult": 18.0,
-     "reason": "same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Framer",
-     "mult": 40.0,
-     "reason": "shares the language of desktop; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Perplexity",
-     "mult": 120.0,
-     "reason": "shares the language of assistant; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "assistant",
     "desktop"
    ],
-   "spread": 6.7,
+   "spread": 3.0,
    "table": [
-    {
-     "company": "Suno",
-     "date": "Jun-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 18.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Framer",
      "date": "Aug-25",
@@ -738,8 +475,8 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.5,
-   "thin": false,
+   "tag_evidence": 0.4,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 17,
@@ -749,7 +486,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Desktop App; related type of business; sold the same way",
-    "score": 6.0,
+    "score": 5.9,
     "ticker": "NASDAQGS:GEN"
    }
   ],
@@ -803,7 +540,7 @@
      "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.5,
+   "tag_evidence": 0.4,
    "thin": true,
    "triangulated": true
   }

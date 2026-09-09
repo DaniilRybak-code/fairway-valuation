@@ -67,7 +67,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 7.3,
+     "tag_evidence": 7.2,
      "thin": true,
      "triangulated": false
     }
@@ -79,7 +79,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Intelligence, Data Enrichment; related type of business; same business function; sold the same way",
-    "score": 14.8,
+    "score": 14.7,
     "ticker": "NASDAQGS:GTM"
    },
    {
@@ -169,7 +169,7 @@
      "ticker": "NASDAQCM:RDVT"
     }
    ],
-   "tag_evidence": 7.3,
+   "tag_evidence": 7.2,
    "thin": false,
    "triangulated": false
   },
@@ -513,7 +513,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "both do Data Enrichment, Sales Intelligence; same type of business; same business function; same AI stance",
-    "score": 17.1,
+    "score": 16.9,
     "type": "SECONDARY"
    },
    {
@@ -524,7 +524,7 @@
     "in_medians": false,
     "mult": 16.7,
     "reason": "both do Sales Intelligence, Data Enrichment; same type of business; same business function; same kind of customer",
-    "score": 21.1,
+    "score": 21.0,
     "type": "PRIMARY"
    },
    {
@@ -535,7 +535,7 @@
     "in_medians": true,
     "mult": 47.3,
     "reason": "both do Data Enrichment, Sales Intelligence; same type of business; same AI stance",
-    "score": 14.3,
+    "score": 14.2,
     "type": "PRIMARY"
    }
   ],
@@ -601,7 +601,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 7.3,
+   "tag_evidence": 7.2,
    "thin": true,
    "triangulated": false
   },
@@ -612,7 +612,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Sales Automation; same type of business; same kind of customer; same AI stance",
-    "score": 7.7,
+    "score": 7.6,
     "ticker": "NYSE:HUBS"
    }
   ],
@@ -666,7 +666,7 @@
      "ticker": "NYSE:HUBS"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
   }

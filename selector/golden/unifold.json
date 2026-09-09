@@ -64,7 +64,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.5,
      "thin": true,
      "triangulated": false
     },
@@ -168,7 +168,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.4,
+     "tag_evidence": 8.3,
      "thin": false,
      "triangulated": false
     },
@@ -275,7 +275,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
     }
@@ -291,11 +291,19 @@
     "ticker": "NYSE:WEX"
    },
    {
+    "company": "Repay Holdings Corporation",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "related type of business; same end market; same business function; same revenue model",
+    "score": 11.0,
+    "ticker": "NASDAQCM:RPAY"
+   },
+   {
     "company": "Usio, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same revenue model",
-    "score": 11.1,
+    "score": 11.0,
     "ticker": "NASDAQGM:USIO"
    },
    {
@@ -303,7 +311,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same revenue model",
-    "score": 11.1,
+    "score": 11.0,
     "ticker": "LSE:PAY"
    },
    {
@@ -311,16 +319,8 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same revenue model",
-    "score": 11.1,
-    "ticker": "NASDAQ:PAYS"
-   },
-   {
-    "company": "Repay Holdings Corporation",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "related type of business; same end market; same business function; same revenue model",
     "score": 11.0,
-    "ticker": "NASDAQCM:RPAY"
+    "ticker": "NASDAQ:PAYS"
    },
    {
     "company": "Coinbase Global, Inc.",
@@ -761,7 +761,7 @@
     "in_medians": true,
     "mult": 18.75,
     "reason": "both do Stablecoin Payments, Payment Rails, On Ramp Off Ramp; same type of business; same end market; same business function",
-    "score": 26.4,
+    "score": 26.3,
     "type": "PRIMARY"
    },
    {
@@ -783,7 +783,7 @@
     "in_medians": true,
     "mult": 9.33,
     "reason": "both do Custody; same type of business; same end market; same revenue model",
-    "score": 14.1,
+    "score": 14.0,
     "type": "PRIMARY"
    },
    {
@@ -805,7 +805,7 @@
     "in_medians": true,
     "mult": 22.67,
     "reason": "both do Crypto On-Ramp; same type of business; same end market; same business function",
-    "score": 18.9,
+    "score": 18.8,
     "type": "PRIMARY"
    },
    {
@@ -816,7 +816,7 @@
     "in_medians": true,
     "mult": 20.41,
     "reason": "related type of business; same end market; same business function; same revenue model",
-    "score": 16.1,
+    "score": 16.0,
     "type": "MIXED"
    }
   ],
@@ -917,20 +917,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 8.4,
+   "tag_evidence": 8.3,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 57,
   "secondary": [
-   {
-    "company": "Fawry for Banking Technology",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same business function; same revenue model; same AI stance",
-    "score": 9.6,
-    "ticker": "CASE:FWRY"
-   },
    {
     "company": "Marqeta, Inc.",
     "family": "fintech",
@@ -940,11 +932,19 @@
     "ticker": "NASDAQ:MQ"
    },
    {
+    "company": "Fawry for Banking Technology",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same business function; same revenue model; same AI stance",
+    "score": 9.5,
+    "ticker": "CASE:FWRY"
+   },
+   {
     "company": "Digital Garage, Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of crypto; related type of business; same end market; same business function",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "TSE:4819"
    },
    {
@@ -952,7 +952,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same AI stance",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "ENXTPA:WLN"
    },
    {

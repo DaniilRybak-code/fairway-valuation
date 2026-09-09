@@ -9,9 +9,9 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 3
+      "NET_REVENUE": 1
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
@@ -24,19 +24,14 @@
      "high": 44.12,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 2.75,
-     "mid": 10.1,
-     "n": 4,
+     "low": 5.0,
+     "mid": 44.12,
+     "n": 2,
      "period_mix": {
-      "FY2025": 1,
-      "LTM": 2,
+      "LTM": 1,
       "RUN_RATE": 1
      },
      "period_span": {
-      "FY2025": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
@@ -48,23 +43,9 @@
      },
      "points": [
       {
-       "company": "Spinny",
-       "mult": 2.75,
-       "reason": "both do Home Delivery; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
        "company": "Moove",
        "mult": 5.0,
        "reason": "shares the language of own; same type of business; same kind of customer; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Quince",
-       "mult": 10.1,
-       "reason": "related type of business; same business function; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -81,34 +62,14 @@
       "grocery",
       "own"
      ],
-     "spread": 16.0,
+     "spread": 8.8,
      "table": [
-      {
-       "company": "Spinny",
-       "date": "Mar-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 2.75,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Moove",
        "date": "Aug-26",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 5.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Quince",
-       "date": "Mar-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.1,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -124,8 +85,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.5,
-     "thin": false,
+     "tag_evidence": 0.3,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -190,7 +151,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Online Grocery; same type of business; same end market; same business function",
-    "score": 20.1,
+    "score": 20.0,
     "ticker": "LSE:OCDO"
    },
    {
@@ -198,7 +159,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of grocery; same type of business; same end market; same business function",
-    "score": 13.8,
+    "score": 13.7,
     "ticker": "TSE:3182"
    },
    {
@@ -206,7 +167,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 13.6,
+    "score": 13.5,
     "ticker": "XTRA:HFG"
    },
    {
@@ -214,7 +175,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 13.6,
+    "score": 13.5,
     "ticker": "LSE:WINE"
    },
    {
@@ -222,31 +183,31 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Online Retail, Grocery; same type of business; same business function; same kind of customer",
-    "score": 17.8,
+    "score": 17.7,
     "ticker": "NYSE:CPNG"
-   },
-   {
-    "company": "JD.com, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
-    "score": 16.7,
-    "ticker": "NASDAQGS:JD"
    },
    {
     "company": "Amazon.com, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Fulfilment; related type of business; same business function; same kind of customer",
-    "score": 11.9,
+    "score": 11.7,
     "ticker": "NASDAQGS:AMZN"
+   },
+   {
+    "company": "Eternal Limited",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
+    "score": 10.7,
+    "ticker": "NSEI:ETERNAL"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -256,15 +217,15 @@
    "dispersed": true,
    "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 1.4,
+   "high": 2.6,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.1,
-   "mid": 0.2,
-   "n": 4,
+   "mid": 0.3,
+   "n": 5,
    "period_mix": {
-    "NTM": 4
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -300,16 +261,16 @@
      "reason": "both do Online Grocery; same type of business; same end market; same business function",
      "tier": "DIRECT",
      "transaction_type": ""
+    },
+    {
+     "company": "Eternal Limited",
+     "mult": 2.6,
+     "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
     }
    ],
    "positioning": [
-    {
-     "company": "JD.com, Inc.",
-     "mult": 0.1,
-     "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
     {
      "company": "Coupang, Inc.",
      "mult": 0.7,
@@ -332,7 +293,7 @@
     "grocery"
    ],
    "show_retention": false,
-   "spread": 14.0,
+   "spread": 26.0,
    "table": [
     {
      "company": "HelloFresh SE",
@@ -369,9 +330,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "LSE:OCDO"
+    },
+    {
+     "company": "Eternal Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 40.7,
+     "multiple": 2.6,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:ETERNAL"
     }
    ],
-   "tag_evidence": 4.1,
+   "tag_evidence": 4.0,
    "thin": false,
    "triangulated": false
   },
@@ -707,61 +677,21 @@
    {
     "backed": [
      {
-      "company": "Spinny",
-      "date": "Mar-25"
+      "company": "Glovo",
+      "date": "Dec-21"
      }
     ],
-    "investor": "Accel Leaders Fund",
+    "investor": "Delivery Hero (acquirer",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "Spinny",
-      "date": "Mar-25"
+      "company": "Glovo",
+      "date": "Dec-21"
      }
     ],
-    "investor": "Elevation Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Spinny",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Spinny",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Fundamentum",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Spinny",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "WestBridge Capital (extension",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Spinny",
-      "date": "Mar-25"
-     }
-    ],
-    "investor": "Jun-2025)",
+    "investor": "all-stock)",
     "n": 1
    }
   ],
@@ -775,7 +705,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Grocery Delivery, Own Inventory; related type of business; same end market; same kind of customer",
-    "score": 12.0,
+    "score": 11.8,
     "type": "MIXED"
    },
    {
@@ -808,7 +738,7 @@
     "in_medians": true,
     "mult": 44.12,
     "reason": "both do Own Inventory; related type of business; same end market; same kind of customer",
-    "score": 12.0,
+    "score": 11.8,
     "type": "PRIMARY"
    },
    {
@@ -823,26 +753,26 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Quince",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 10.1,
-    "reason": "related type of business; same business function; same kind of customer; sold the same way",
-    "score": 16.1,
-    "type": "PRIMARY"
+    "basis": "FILED_ACCOUNTS",
+    "bound": "",
+    "company": "Flipkart",
+    "date": "Jul-23",
+    "in_medians": false,
+    "mult": 5.2,
+    "reason": "both do Fulfilment, Grocery; related type of business; same purchase frequency; same AI stance",
+    "score": 8.4,
+    "type": "SECONDARY"
    },
    {
-    "basis": "DISCLOSED_ACTUAL",
+    "basis": "NONE",
     "bound": "",
-    "company": "Spinny",
-    "date": "Mar-25",
+    "company": "Glovo",
+    "date": "Dec-21",
     "in_medians": true,
-    "mult": 2.75,
-    "reason": "both do Home Delivery; same type of business; same business function; same kind of customer",
-    "score": 17.3,
-    "type": "MIXED"
+    "mult": null,
+    "reason": "related type of business; same end market; same kind of customer; same AI stance",
+    "score": 11.5,
+    "type": "CONTROL"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -853,9 +783,9 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 3
+    "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
@@ -864,19 +794,14 @@
    "high": 44.12,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.75,
-   "mid": 10.1,
-   "n": 4,
+   "low": 5.0,
+   "mid": 44.12,
+   "n": 2,
    "period_mix": {
-    "FY2025": 1,
-    "LTM": 2,
+    "LTM": 1,
     "RUN_RATE": 1
    },
    "period_span": {
-    "FY2025": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
@@ -888,23 +813,9 @@
    },
    "points": [
     {
-     "company": "Spinny",
-     "mult": 2.75,
-     "reason": "both do Home Delivery; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
      "company": "Moove",
      "mult": 5.0,
      "reason": "shares the language of own; same type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Quince",
-     "mult": 10.1,
-     "reason": "related type of business; same business function; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -921,34 +832,14 @@
     "grocery",
     "own"
    ],
-   "spread": 16.0,
+   "spread": 8.8,
    "table": [
-    {
-     "company": "Spinny",
-     "date": "Mar-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 2.75,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Moove",
      "date": "Aug-26",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 5.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Quince",
-     "date": "Mar-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.1,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -964,8 +855,8 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.5,
-   "thin": false,
+   "tag_evidence": 0.3,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 61,
@@ -975,7 +866,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
-    "score": 20.2,
+    "score": 20.0,
     "ticker": "NYSE:VIPS"
    },
    {
@@ -983,7 +874,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Fulfilment; same type of business; same business function; same kind of customer",
-    "score": 19.9,
+    "score": 19.7,
     "ticker": "NYSE:CHWY"
    },
    {
@@ -991,46 +882,46 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of own; same type of business; same business function; same kind of customer",
-    "score": 19.8,
+    "score": 19.6,
     "ticker": "LSE:ASC"
    },
    {
-    "company": "Zalando SE",
+    "company": "Swiggy Limited",
     "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 19.6,
-    "ticker": "XTRA:ZAL"
+    "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
+    "score": 10.7,
+    "ticker": "NSEI:SWIGGY"
    },
    {
-    "company": "Revolve Group, Inc.",
+    "company": "Delivery Hero SE",
     "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 19.6,
-    "ticker": "NYSE:RVLV"
+    "reason": "related type of business; same end market; same business function; same purchase frequency",
+    "score": 10.5,
+    "ticker": "XTRA:DHER"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "DIRECT",
    "basis_mix": {
     "UNKNOWN": 5
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 0.9,
+   "high": 1.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.4,
-   "mid": 0.4,
+   "mid": 0.7,
    "n": 5,
    "period_mix": {
     "NTM": 5
@@ -1041,16 +932,53 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Vipshop Holdings Limited",
+     "mult": 0.2,
+     "reason": "both do Online Retail; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "ASOS Plc",
+     "mult": 0.4,
+     "reason": "shares the language of own; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Chewy, Inc.",
+     "mult": 0.7,
+     "reason": "both do Fulfilment; same type of business; same business function; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Delivery Hero SE",
+     "mult": 0.8,
+     "reason": "related type of business; same end market; same business function; same purchase frequency",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    },
+    {
+     "company": "Swiggy Limited",
+     "mult": 1.9,
+     "reason": "both do Grocery Delivery; related type of business; same end market; same business function",
+     "tier": "DIRECT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "fulfilment",
+    "grocery",
     "own",
     "price"
    ],
    "show_retention": false,
-   "spread": 4.5,
+   "spread": 9.5,
    "table": [
     {
      "company": "Vipshop Holdings Limited",
@@ -1071,15 +999,6 @@
      "ticker": "LSE:ASC"
     },
     {
-     "company": "Zalando SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.4,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:ZAL"
-    },
-    {
      "company": "Chewy, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 6.7,
@@ -1089,16 +1008,25 @@
      "ticker": "NYSE:CHWY"
     },
     {
-     "company": "Revolve Group, Inc.",
+     "company": "Delivery Hero SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.1,
-     "multiple": 0.9,
+     "growth_pct": 9.5,
+     "multiple": 0.8,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:RVLV"
+     "ticker": "XTRA:DHER"
+    },
+    {
+     "company": "Swiggy Limited",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 23.3,
+     "multiple": 1.9,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NSEI:SWIGGY"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   }

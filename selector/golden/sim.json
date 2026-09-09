@@ -79,7 +79,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.2,
      "thin": true,
      "triangulated": false
     },
@@ -248,7 +248,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.9,
+     "tag_evidence": 0.8,
      "thin": false,
      "triangulated": false
     }
@@ -268,7 +268,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
-    "score": 11.2,
+    "score": 11.1,
     "ticker": "NASDAQGS:DDOG"
    },
    {
@@ -276,7 +276,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; same kind of customer; same revenue model; sold the same way",
-    "score": 8.2,
+    "score": 8.1,
     "ticker": "NYSE:NET"
    }
   ],
@@ -734,7 +734,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
-    "score": 15.2,
+    "score": 15.1,
     "type": "MIXED"
    },
    {
@@ -745,7 +745,7 @@
     "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of agent; same type of business; same kind of customer; same revenue model",
-    "score": 14.2,
+    "score": 14.1,
     "type": "PRIMARY"
    },
    {
@@ -756,7 +756,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-    "score": 8.8,
+    "score": 8.7,
     "type": "PRIMARY"
    },
    {
@@ -767,7 +767,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of agents; related type of business; same revenue model; sold the same way",
-    "score": 9.8,
+    "score": 9.7,
     "type": "SECONDARY"
    },
    {
@@ -789,7 +789,7 @@
     "in_medians": true,
     "mult": 18.3,
     "reason": "both do AI Agents; related type of business; sold the same way",
-    "score": 8.4,
+    "score": 8.3,
     "type": "SECONDARY"
    },
    {
@@ -800,7 +800,7 @@
     "in_medians": true,
     "mult": 33.0,
     "reason": "shares the language of builder; same type of business; same business function; same revenue model",
-    "score": 16.8,
+    "score": 16.7,
     "type": "PRIMARY"
    }
   ],
@@ -966,7 +966,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.9,
+   "tag_evidence": 0.8,
    "thin": false,
    "triangulated": false
   },
@@ -985,7 +985,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of builder; related type of business; sold the same way",
-    "score": 5.8,
+    "score": 5.7,
     "ticker": "NASDAQGS:WIX"
    }
   ],

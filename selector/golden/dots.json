@@ -92,7 +92,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.6,
+     "tag_evidence": 0.5,
      "thin": false,
      "triangulated": false
     },
@@ -186,7 +186,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Marketplace Payouts; same type of business; same business function; sold the same way",
-    "score": 11.6,
+    "score": 11.5,
     "ticker": "NASDAQ:PAYO"
    },
    {
@@ -275,7 +275,7 @@
      "ticker": "LSE:WISE"
     }
    ],
-   "tag_evidence": 3.6,
+   "tag_evidence": 3.5,
    "thin": false,
    "triangulated": false
   },
@@ -574,7 +574,7 @@
     "in_medians": true,
     "mult": 16.34,
     "reason": "both do Tax; related type of business; same business function; same kind of customer",
-    "score": 18.1,
+    "score": 18.0,
     "type": "PRIMARY"
    },
    {
@@ -618,7 +618,7 @@
     "in_medians": true,
     "mult": 54.17,
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 16.4,
+    "score": 16.3,
     "type": "PRIMARY"
    },
    {
@@ -629,7 +629,7 @@
     "in_medians": true,
     "mult": 48.0,
     "reason": "shares the language of payouts; same type of business; same business function; same AI stance",
-    "score": 11.9,
+    "score": 11.8,
     "type": "PRIMARY"
    }
   ],
@@ -720,7 +720,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.6,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
@@ -785,7 +785,7 @@
      "ticker": "NYSE:WEX"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
   }

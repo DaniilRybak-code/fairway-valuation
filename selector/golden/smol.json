@@ -67,11 +67,11 @@
        "ticker": ""
       },
       {
-       "company": "Huel",
-       "date": "Nov-22",
+       "company": "OLIPOP",
+       "date": "Feb-25",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 3.3,
+       "multiple": 4.6,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -87,11 +87,11 @@
        "ticker": ""
       },
       {
-       "company": "AG1",
-       "date": "Jan-22",
+       "company": "WHOOP",
+       "date": "Mar-26",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 8.8,
+       "multiple": 9.18,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -107,8 +107,62 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.2,
+     "tag_evidence": 0.0,
      "thin": false,
+     "triangulated": true
+    },
+    "REVENUE_GROSS": {
+     "anchor_dropped": false,
+     "band": "ADJACENT",
+     "basis": "REVENUE_GROSS",
+     "basis_label": "enterprise value to gross revenue",
+     "basis_mix": {
+      "REVENUE_GROSS": 1
+     },
+     "bounded": false,
+     "closeness": "THIN_OVERLAP",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "DIAMOND",
+     "founder_field": "revenue_gross",
+     "founder_high": null,
+     "founder_low": null,
+     "founder_metric": null,
+     "high": 23.1,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 23.1,
+     "mid": 23.1,
+     "n": 1,
+     "period_mix": {
+      "LTM": 1
+     },
+     "period_span": {
+      "LTM": {
+       "basis": "NO_REVENUE_GIVEN",
+       "founder_revenue": null
+      }
+     },
+     "points": [],
+     "positioning": [],
+     "shared_words": [],
+     "sole": "Oura",
+     "spread": 1.0,
+     "table": [
+      {
+       "company": "Oura",
+       "date": "Dec-24",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 23.1,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      }
+     ],
+     "tag_evidence": 0.0,
+     "thin": true,
      "triangulated": true
     }
    }
@@ -119,7 +173,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer, Consumables; same type of business; same end market; same business function",
-    "score": 23.6,
+    "score": 23.4,
     "ticker": "NYSE:BARK"
    },
    {
@@ -127,7 +181,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same end market; same business function",
-    "score": 16.4,
+    "score": 16.3,
     "ticker": "NYSE:YETI"
    },
    {
@@ -143,7 +197,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "related type of business; same end market; same business function; same kind of customer",
-    "score": 12.1,
+    "score": 12.0,
     "ticker": "NYSE:W"
    }
   ],
@@ -224,7 +278,7 @@
      "ticker": "NYSE:YETI"
     }
    ],
-   "tag_evidence": 1.1,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
@@ -426,6 +480,26 @@
     ],
     "investor": "Jun-2025)",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Oura",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Fidelity Management & Research Company",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "Oura",
+      "date": "Dec-24"
+     }
+    ],
+    "investor": "Dexcom",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -448,8 +522,19 @@
     "date": "Mar-26",
     "in_medians": true,
     "mult": 10.1,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 21.6,
+    "reason": "same type of business; same business function; same kind of customer; sold the same way",
+    "score": 21.5,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Exiting CY2025",
+    "bound": "",
+    "company": "WHOOP",
+    "date": "Mar-26",
+    "in_medians": true,
+    "mult": 9.18,
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 15.5,
     "type": "PRIMARY"
    },
    {
@@ -459,8 +544,8 @@
     "date": "Nov-25",
     "in_medians": true,
     "mult": 5.0,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 18.6,
+    "reason": "same type of business; same business function; same kind of customer; same cost structure",
+    "score": 18.5,
     "type": "PRIMARY"
    },
    {
@@ -471,40 +556,29 @@
     "in_medians": true,
     "mult": 2.75,
     "reason": "related type of business; same business function; same kind of customer; sold the same way",
-    "score": 13.6,
+    "score": 13.5,
     "type": "MIXED"
    },
    {
-    "basis": "THIRD_PARTY_ESTIMATE",
+    "basis": "DISCLOSED_THRESHOLD",
     "bound": "",
-    "company": "Vuori",
-    "date": "Nov-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 18.6,
-    "type": "SECONDARY"
+    "company": "OLIPOP",
+    "date": "Feb-25",
+    "in_medians": true,
+    "mult": 4.6,
+    "reason": "same type of business; same business function; same kind of customer; same cost structure",
+    "score": 18.5,
+    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
-    "company": "Huel",
-    "date": "Nov-22",
+    "company": "Oura",
+    "date": "Dec-24",
     "in_medians": true,
-    "mult": 3.3,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 27.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "CONTEMPORANEOUS_PRESS",
-    "bound": "",
-    "company": "AG1",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 8.8,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 27.7,
+    "mult": 23.1,
+    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
+    "score": 15.5,
     "type": "PRIMARY"
    }
   ],
@@ -570,11 +644,11 @@
      "ticker": ""
     },
     {
-     "company": "Huel",
-     "date": "Nov-22",
+     "company": "OLIPOP",
+     "date": "Feb-25",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 3.3,
+     "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -590,11 +664,11 @@
      "ticker": ""
     },
     {
-     "company": "AG1",
-     "date": "Jan-22",
+     "company": "WHOOP",
+     "date": "Mar-26",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 8.8,
+     "multiple": 9.18,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -610,58 +684,26 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   },
   "private_window_months": 58,
   "secondary": [
    {
-    "company": "Hims & Hers Health, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Consumer Subscription; same type of business; same business function; same kind of customer",
-    "score": 19.7,
-    "ticker": "NYSE:HIMS"
-   },
-   {
     "company": "FIGS, Inc.",
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 15.7,
+    "score": 15.6,
     "ticker": "NYSE:FIGS"
-   },
-   {
-    "company": "Warby Parker Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 15.1,
-    "ticker": "NYSE:WRBY"
-   },
-   {
-    "company": "On Holding AG",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "both do Direct-to-Consumer; same type of business; same business function; same kind of customer",
-    "score": 13.1,
-    "ticker": "NYSE:ONON"
-   },
-   {
-    "company": "LifeMD, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 11.2,
-    "ticker": "NASDAQGM:LFMD"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 1
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -669,17 +711,17 @@
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
-   "display": "RANGE",
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
    "high": 2.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.7,
-   "mid": 2.0,
-   "n": 5,
+   "low": 2.9,
+   "mid": 2.9,
+   "n": 1,
    "period_mix": {
-    "NTM": 5
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -694,44 +736,9 @@
     "repeat"
    ],
    "show_retention": false,
-   "spread": 4.8,
+   "sole": "FIGS, Inc.",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "LifeMD, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 16.2,
-     "multiple": 0.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:LFMD"
-    },
-    {
-     "company": "On Holding AG",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 1.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:ONON"
-    },
-    {
-     "company": "Hims & Hers Health, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.1,
-     "multiple": 2.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:HIMS"
-    },
-    {
-     "company": "Warby Parker Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 24.4,
-     "multiple": 2.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:WRBY"
-    },
     {
      "company": "FIGS, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -742,8 +749,8 @@
      "ticker": "NYSE:FIGS"
     }
    ],
-   "tag_evidence": 0.7,
-   "thin": false,
+   "tag_evidence": 0.6,
+   "thin": true,
    "triangulated": true
   }
  },

@@ -151,7 +151,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": true,
      "triangulated": true
     }
@@ -195,7 +195,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Warehouse Automation; same type of business; same kind of customer; sold the same way",
-    "score": 8.8,
+    "score": 8.7,
     "ticker": "NASDAQGS:LINE"
    },
    {
@@ -661,7 +661,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of robotics; related type of business; same kind of customer",
-    "score": 7.2,
+    "score": 7.1,
     "type": "PRIMARY"
    }
   ],
@@ -760,83 +760,9 @@
    "triangulated": false
   },
   "private_window_months": 41,
-  "secondary": [
-   {
-    "company": "PostNL N.V.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "ENXTAM:PNL"
-   },
-   {
-    "company": "Blue Dart Express Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 8.6,
-    "ticker": "NSEI:BLUEDART"
-   }
-  ],
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "BROAD",
-   "basis_mix": {
-    "UNKNOWN": 2
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "founder_basis_trailing_on_forward": false,
-   "high": 1.7,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 0.3,
-   "mid": 1.0,
-   "n": 2,
-   "period_mix": {
-    "NTM": 2
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": false,
-   "spread": 5.7,
-   "table": [
-    {
-     "company": "PostNL N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.2,
-     "multiple": 0.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTAM:PNL"
-    },
-    {
-     "company": "Blue Dart Express Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.0,
-     "multiple": 1.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NSEI:BLUEDART"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Deployment-ready robotic labor for the supply chain industry"

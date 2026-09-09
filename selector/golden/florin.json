@@ -6,7 +6,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Policy Administration, Underwriting; same end market; same business function",
-    "score": 10.5,
+    "score": 10.3,
     "ticker": "NYSE:GWRE"
    },
    {
@@ -14,7 +14,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Claims Administration, Policy Administration; same end market; same business function",
-    "score": 10.2,
+    "score": 10.1,
     "ticker": "ASX:FCL"
    },
    {
@@ -22,7 +22,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "shares the language of administration, claims; same type of business; same end market; same business function",
-    "score": 8.6,
+    "score": 8.5,
     "ticker": "NYSE:CRD.B"
    },
    {
@@ -30,7 +30,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Digital Insurance; same type of business",
-    "score": 7.2,
+    "score": 7.0,
     "ticker": "SEHK:6060"
    },
    {
@@ -38,7 +38,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Underwriting; same type of business; same end market",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "NASDAQGM:TRUP"
    }
   ],
@@ -166,7 +166,7 @@
      "ticker": "NYSE:GWRE"
     }
    ],
-   "tag_evidence": 4.5,
+   "tag_evidence": 4.3,
    "thin": false,
    "triangulated": false
   },
@@ -338,26 +338,6 @@
     ],
     "investor": "Prosus",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Devoted Health",
-      "date": "Oct-21"
-     }
-    ],
-    "investor": "Uprising",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Devoted Health",
-      "date": "Oct-21"
-     }
-    ],
-    "investor": "SoftBank Vision Fund 2",
-    "n": 1
    }
   ],
   "listed_proximity": "DIRECT",
@@ -370,7 +350,7 @@
     "in_medians": true,
     "mult": 4.55,
     "reason": "both do Policy Administration; related type of business; same end market; same business function",
-    "score": 14.7,
+    "score": 14.6,
     "type": "CONTROL"
    },
    {
@@ -381,7 +361,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Underwriting; same type of business; same end market; same kind of customer",
-    "score": 11.8,
+    "score": 11.7,
     "type": "PRIMARY"
    },
    {
@@ -392,7 +372,7 @@
     "in_medians": true,
     "mult": 14.06,
     "reason": "same type of business; same end market",
-    "score": 8.2,
+    "score": 8.0,
     "type": "PRIMARY"
    },
    {
@@ -403,7 +383,7 @@
     "in_medians": true,
     "mult": 6.67,
     "reason": "shares the language of carrier; same type of business; same end market; sold the same way",
-    "score": 11.4,
+    "score": 11.3,
     "type": "PRIMARY"
    },
    {
@@ -414,18 +394,7 @@
     "in_medians": true,
     "mult": 6.88,
     "reason": "both do Claims; same type of business; same kind of customer",
-    "score": 7.9,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_ACTUAL",
-    "bound": "",
-    "company": "Devoted Health",
-    "date": "Oct-21",
-    "in_medians": true,
-    "mult": 51.4,
-    "reason": "both do Insurance; same type of business; sold the same way",
-    "score": 7.1,
+    "score": 7.8,
     "type": "PRIMARY"
    }
   ],
@@ -511,7 +480,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.2,
+   "tag_evidence": 4.1,
    "thin": false,
    "triangulated": false
   },
@@ -522,7 +491,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of claims; same end market; same business function",
-    "score": 6.4,
+    "score": 6.3,
     "ticker": "NASDAQGS:CCCS"
    }
   ],
@@ -576,7 +545,7 @@
      "ticker": "NASDAQGS:CCCS"
     }
    ],
-   "tag_evidence": 0.4,
+   "tag_evidence": 0.3,
    "thin": true,
    "triangulated": true
   }

@@ -8,8 +8,8 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR_RUNRATE": 2,
-      "NET_REVENUE": 1
+      "ARR_RUNRATE": 1,
+      "NET_REVENUE": 2
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -21,15 +21,15 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 18.75,
+     "high": 48.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 8.0,
      "mid": 16.34,
      "n": 3,
      "period_mix": {
-      "LTM": 1,
-      "RUN_RATE": 2
+      "LTM": 2,
+      "RUN_RATE": 1
      },
      "period_span": {
       "LTM": {
@@ -48,7 +48,7 @@
       "payouts",
       "tax"
      ],
-     "spread": 2.3,
+     "spread": 6.0,
      "table": [
       {
        "company": "Airwallex",
@@ -71,17 +71,17 @@
        "ticker": ""
       },
       {
-       "company": "BVNK",
-       "date": "Dec-24",
+       "company": "dLocal",
+       "date": "Apr-21",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 18.75,
+       "multiple": 48.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.5,
      "thin": false,
      "triangulated": false
     },
@@ -91,10 +91,10 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 3
+      "REVENUE_GROSS": 4
      },
      "bounded": false,
-     "closeness": "THIN_OVERLAP",
+     "closeness": "PARTIAL_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
@@ -108,10 +108,10 @@
      "listed_target_names": [],
      "low": 9.52,
      "mid": 44.34,
-     "n": 3,
+     "n": 4,
      "period_mix": {
       "FY2024": 1,
-      "LTM": 2
+      "LTM": 3
      },
      "period_span": {
       "FY2024": {
@@ -126,6 +126,7 @@
      "points": [],
      "positioning": [],
      "shared_words": [
+      "global",
       "payouts"
      ],
      "spread": 5.7,
@@ -136,6 +137,16 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 9.52,
+       "recurring_pct": null,
+       "retention_pct": null,
+       "ticker": ""
+      },
+      {
+       "company": "Rapyd",
+       "date": "Jan-21",
+       "growth_basis": "",
+       "growth_pct": null,
+       "multiple": 25.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -161,93 +172,53 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
+     "tag_evidence": 0.5,
      "thin": false,
-     "triangulated": true
+     "triangulated": false
     }
    }
   },
   "core": [
    {
-    "company": "The Western Union Company",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 8.2,
-    "ticker": "NYSE:WU"
-   },
-   {
-    "company": "Corpay, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
-    "score": 8.2,
-    "ticker": "NYSE:CPAY"
-   },
-   {
-    "company": "CAB Payments Holdings plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-    "score": 7.2,
-    "ticker": "LSE:CABP"
-   },
-   {
     "company": "Payoneer Global Inc.",
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Cross-Border Payments; same type of business; same business function",
-    "score": 6.6,
+    "score": 6.3,
     "ticker": "NASDAQ:PAYO"
    },
    {
-    "company": "Flywire Corporation",
+    "company": "Nayax Ltd.",
     "family": "fintech",
     "in_medians": true,
-    "reason": "both do Cross-Border Payments; same type of business; same business function",
-    "score": 6.2,
-    "ticker": "NASDAQ:FLYW"
-   },
-   {
-    "company": "Remitly Global, Inc.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; same type of business; same business function",
-    "score": 6.2,
-    "ticker": "NASDAQ:RELY"
-   },
-   {
-    "company": "Wise plc",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; same type of business; same business function",
-    "score": 6.2,
-    "ticker": "LSE:WISE"
+    "reason": "shares the language of global; related type of business; same revenue model; same AI stance",
+    "score": 5.1,
+    "ticker": "NASDAQ:NYAX"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 2.6,
+   "high": 3.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.6,
-   "mid": 2.1,
-   "n": 7,
+   "low": 1.8,
+   "mid": 2.65,
+   "n": 2,
    "period_mix": {
-    "NTM": 7
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -255,83 +226,16 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "The Western Union Company",
-     "mult": 0.9,
-     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "CAB Payments Holdings plc",
-     "mult": 1.6,
-     "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Payoneer Global Inc.",
-     "mult": 1.8,
-     "reason": "both do Cross-Border Payments; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Remitly Global, Inc.",
-     "mult": 2.1,
-     "reason": "both do Cross-Border Payments; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Flywire Corporation",
-     "mult": 2.3,
-     "reason": "both do Cross-Border Payments; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Wise plc",
-     "mult": 2.6,
-     "reason": "both do Cross-Border Payments; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Corpay, Inc.",
-     "mult": 6.1,
-     "reason": "both do Cross-Border Payments; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "global",
     "payouts"
    ],
    "show_retention": false,
-   "spread": 6.8,
+   "spread": 1.9,
    "table": [
-    {
-     "company": "The Western Union Company",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.2,
-     "multiple": 0.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:WU"
-    },
-    {
-     "company": "CAB Payments Holdings plc",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.8,
-     "multiple": 1.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:CABP"
-    },
     {
      "company": "Payoneer Global Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -342,45 +246,18 @@
      "ticker": "NASDAQ:PAYO"
     },
     {
-     "company": "Remitly Global, Inc.",
+     "company": "Nayax Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.2,
-     "multiple": 2.1,
+     "growth_pct": 22.9,
+     "multiple": 3.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQ:RELY"
-    },
-    {
-     "company": "Flywire Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.5,
-     "multiple": 2.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:FLYW"
-    },
-    {
-     "company": "Wise plc",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.0,
-     "multiple": 2.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "LSE:WISE"
-    },
-    {
-     "company": "Corpay, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.7,
-     "multiple": 6.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:CPAY"
+     "ticker": "NASDAQ:NYAX"
     }
    ],
-   "tag_evidence": 0.6,
-   "thin": false,
-   "triangulated": true
+   "tag_evidence": 0.3,
+   "thin": true,
+   "triangulated": false
   },
   "investors_callable": [
    {
@@ -594,81 +471,41 @@
    {
     "backed": [
      {
-      "company": "BVNK",
-      "date": "Dec-24"
+      "company": "dLocal",
+      "date": "Apr-21"
      }
     ],
-    "investor": "Haun Ventures",
+    "investor": "Alkeon Capital",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "BVNK",
-      "date": "Dec-24"
+      "company": "dLocal",
+      "date": "Apr-21"
      }
     ],
-    "investor": "Coinbase Ventures",
+    "investor": "BOND",
     "n": 1
    },
    {
     "backed": [
      {
-      "company": "BVNK",
-      "date": "Dec-24"
+      "company": "dLocal",
+      "date": "Apr-21"
+     }
+    ],
+    "investor": "D1 Capital",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "dLocal",
+      "date": "Apr-21"
      }
     ],
     "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Zepz",
-      "date": "Oct-24"
-     }
-    ],
-    "investor": "Accel",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Zepz",
-      "date": "Oct-24"
-     }
-    ],
-    "investor": "TCV",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Zepz",
-      "date": "Oct-24"
-     }
-    ],
-    "investor": "IFC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Zepz",
-      "date": "Oct-24"
-     }
-    ],
-    "investor": "Leapfrog",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Zepz",
-      "date": "Oct-24"
-     }
-    ],
-    "investor": "Coller Capital",
     "n": 1
    }
   ],
@@ -682,7 +519,7 @@
     "in_medians": true,
     "mult": 8.0,
     "reason": "both do Cross-Border Payments, Payouts; same type of business; same business function; sold the same way",
-    "score": 15.2,
+    "score": 15.0,
     "type": "PRIMARY"
    },
    {
@@ -693,7 +530,7 @@
     "in_medians": true,
     "mult": 9.52,
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 12.4,
+    "score": 12.3,
     "type": "PRIMARY"
    },
    {
@@ -708,28 +545,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "",
-    "company": "BVNK",
-    "date": "Dec-24",
-    "in_medians": true,
-    "mult": 18.75,
-    "reason": "related type of business; same business function; same revenue model; same AI stance",
-    "score": 12.2,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "Reported around round",
-    "bound": "",
-    "company": "Zepz",
-    "date": "Oct-24",
-    "in_medians": false,
-    "mult": 6.3,
-    "reason": "both do Cross-Border Payments; same type of business; same business function; same revenue model",
-    "score": 13.7,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "UK entity revenue",
     "bound": "",
     "company": "Checkout.com",
@@ -737,7 +552,7 @@
     "in_medians": true,
     "mult": 44.34,
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 11.4,
+    "score": 11.3,
     "type": "PRIMARY"
    },
    {
@@ -748,7 +563,29 @@
     "in_medians": true,
     "mult": 54.17,
     "reason": "both do Payouts; related type of business; same business function; same revenue model",
-    "score": 13.4,
+    "score": 13.3,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "DISCLOSED_EXACT",
+    "bound": "",
+    "company": "dLocal",
+    "date": "Apr-21",
+    "in_medians": true,
+    "mult": 48.0,
+    "reason": "both do Cross-Border Payments; same type of business; same business function; same AI stance",
+    "score": 11.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "FY2020 unclear whether closed",
+    "bound": "",
+    "company": "Rapyd",
+    "date": "Jan-21",
+    "in_medians": true,
+    "mult": 25.0,
+    "reason": "both do Global Payments, Payouts; related type of business; same business function; same revenue model",
+    "score": 13.5,
     "type": "PRIMARY"
    }
   ],
@@ -759,8 +596,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR_RUNRATE": 2,
-    "NET_REVENUE": 1
+    "ARR_RUNRATE": 1,
+    "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "PARTIAL_OVERLAP",
@@ -768,15 +605,15 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 18.75,
+   "high": 48.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.0,
    "mid": 16.34,
    "n": 3,
    "period_mix": {
-    "LTM": 1,
-    "RUN_RATE": 2
+    "LTM": 2,
+    "RUN_RATE": 1
    },
    "period_span": {
     "LTM": {
@@ -795,7 +632,7 @@
     "payouts",
     "tax"
    ],
-   "spread": 2.3,
+   "spread": 6.0,
    "table": [
     {
      "company": "Airwallex",
@@ -818,117 +655,24 @@
      "ticker": ""
     },
     {
-     "company": "BVNK",
-     "date": "Dec-24",
+     "company": "dLocal",
+     "date": "Apr-21",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 18.75,
+     "multiple": 48.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.5,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 62,
-  "secondary": [
-   {
-    "company": "DLocal Limited",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; related type of business; same business function; same AI stance",
-    "score": 6.7,
-    "ticker": "NASDAQ:DLO"
-   },
-   {
-    "company": "Worldline SA",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "both do Cross-Border Payments; related type of business; same business function; same AI stance",
-    "score": 5.7,
-    "ticker": "ENXTPA:WLN"
-   },
-   {
-    "company": "Nayax Ltd.",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "shares the language of global; related type of business; same revenue model; same AI stance",
-    "score": 5.2,
-    "ticker": "NASDAQ:NYAX"
-   }
-  ],
+  "private_window_months": 67,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 3
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "founder_basis_trailing_on_forward": false,
-   "high": 3.5,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 0.7,
-   "mid": 1.9,
-   "n": 3,
-   "period_mix": {
-    "NTM": 3
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [
-    "global"
-   ],
-   "show_retention": false,
-   "spread": 5.0,
-   "table": [
-    {
-     "company": "Worldline SA",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 0.5,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTPA:WLN"
-    },
-    {
-     "company": "DLocal Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 26.2,
-     "multiple": 1.9,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:DLO"
-    },
-    {
-     "company": "Nayax Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 22.9,
-     "multiple": 3.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQ:NYAX"
-    }
-   ],
-   "tag_evidence": 0.2,
-   "thin": false,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Global payouts platform for businesses paying creators, artists and freelancers at scale"

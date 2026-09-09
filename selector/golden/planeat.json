@@ -249,30 +249,6 @@
   },
   "core": [
    {
-    "company": "F-Secure Oyj",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "HLSE:FSECURE"
-   },
-   {
-    "company": "Opera Limited",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "NASDAQGS:OPRA"
-   },
-   {
-    "company": "Truecaller AB (publ)",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer",
-    "score": 6.6,
-    "ticker": "OM:TRUE B"
-   },
-   {
     "company": "Life360, Inc.",
     "family": "software",
     "in_medians": true,
@@ -281,37 +257,45 @@
     "ticker": "ASX:360"
    },
    {
-    "company": "Gen Digital Inc.",
-    "family": "software",
+    "company": "HelloFresh SE",
+    "family": "consumer",
     "in_medians": true,
-    "reason": "related type of business; same kind of customer",
-    "score": 5.1,
-    "ticker": "NASDAQGS:GEN"
+    "reason": "shares the language of meal, recipe; same end market; same kind of customer; same revenue model",
+    "score": 11.2,
+    "ticker": "XTRA:HFG"
+   },
+   {
+    "company": "Oisix Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "shares the language of grocery, meal; same end market; same kind of customer; same revenue model",
+    "score": 10.8,
+    "ticker": "TSE:3182"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.6,
+   "high": 4.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.0,
-   "mid": 3.7,
-   "n": 5,
+   "low": 0.1,
+   "mid": 0.3,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -319,41 +303,57 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "HelloFresh SE",
+     "mult": 0.1,
+     "reason": "shares the language of meal, recipe; same end market; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Oisix Inc.",
+     "mult": 0.3,
+     "reason": "shares the language of grocery, meal; same end market; same kind of customer; same revenue model",
+     "tier": "BROAD",
+     "transaction_type": ""
+    },
+    {
+     "company": "Life360, Inc.",
+     "mult": 4.4,
+     "reason": "shares the language of tracking; same type of business; same kind of customer",
+     "tier": "ADJACENT",
+     "transaction_type": ""
+    }
+   ],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
+    "grocery",
+    "meal",
+    "recipe",
     "tracking"
    ],
    "show_retention": false,
-   "spread": 2.4,
+   "spread": 44.0,
    "table": [
     {
-     "company": "Opera Limited",
+     "company": "HelloFresh SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.7,
-     "multiple": 1.9,
+     "growth_pct": 0.7,
+     "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NASDAQGS:OPRA"
+     "ticker": "XTRA:HFG"
     },
     {
-     "company": "F-Secure Oyj",
+     "company": "Oisix Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.5,
-     "multiple": 3.0,
+     "growth_pct": 4.2,
+     "multiple": 0.3,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "HLSE:FSECURE"
-    },
-    {
-     "company": "Truecaller AB (publ)",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.4,
-     "multiple": 3.7,
-     "recurring_pct": 45.0,
-     "retention_pct": null,
-     "ticker": "OM:TRUE B"
+     "ticker": "TSE:3182"
     },
     {
      "company": "Life360, Inc.",
@@ -363,20 +363,11 @@
      "recurring_pct": 75.4,
      "retention_pct": null,
      "ticker": "ASX:360"
-    },
-    {
-     "company": "Gen Digital Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.3,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:GEN"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 1.2,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   },
   "investors_callable": [
    {
@@ -738,7 +729,7 @@
     "in_medians": true,
     "mult": 18.0,
     "reason": "shares the language of generation; same type of business; same kind of customer; same revenue model",
-    "score": 14.8,
+    "score": 14.7,
     "type": "PRIMARY"
    },
    {
@@ -924,22 +915,6 @@
   "private_window_months": 63,
   "secondary": [
    {
-    "company": "HelloFresh SE",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of meal, recipe; same end market; same kind of customer; same revenue model",
-    "score": 11.2,
-    "ticker": "XTRA:HFG"
-   },
-   {
-    "company": "Oisix Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "shares the language of grocery, meal; same end market; same kind of customer; same revenue model",
-    "score": 10.8,
-    "ticker": "TSE:3182"
-   },
-   {
     "company": "Ocado Group plc",
     "family": "consumer",
     "in_medians": true,
@@ -968,10 +943,10 @@
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "PARTIAL_OVERLAP",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
@@ -983,10 +958,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.1,
-   "mid": 0.2,
-   "n": 4,
+   "mid": 0.75,
+   "n": 2,
    "period_mix": {
-    "NTM": 4
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -996,23 +971,9 @@
    },
    "points": [
     {
-     "company": "HelloFresh SE",
-     "mult": 0.1,
-     "reason": "shares the language of meal, recipe; same end market; same kind of customer; same revenue model",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
      "company": "Naked Wines plc",
      "mult": 0.1,
      "reason": "same end market; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Oisix Inc.",
-     "mult": 0.3,
-     "reason": "shares the language of grocery, meal; same end market; same kind of customer; same revenue model",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -1027,22 +988,11 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "grocery",
-    "meal",
-    "recipe"
+    "grocery"
    ],
    "show_retention": false,
    "spread": 14.0,
    "table": [
-    {
-     "company": "HelloFresh SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 0.7,
-     "multiple": 0.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:HFG"
-    },
     {
      "company": "Naked Wines plc",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1051,15 +1001,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "LSE:WINE"
-    },
-    {
-     "company": "Oisix Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.2,
-     "multiple": 0.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:3182"
     },
     {
      "company": "Ocado Group plc",
@@ -1071,9 +1012,9 @@
      "ticker": "LSE:OCDO"
     }
    ],
-   "tag_evidence": 1.2,
-   "thin": false,
-   "triangulated": false
+   "tag_evidence": 0.2,
+   "thin": true,
+   "triangulated": true
   }
  },
  "label": "AI turns your health goals into a seven-day menu and grocery list"

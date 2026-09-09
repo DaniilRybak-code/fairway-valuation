@@ -68,11 +68,21 @@ TOKW = {r['token']: float(r['weight_factor']) for r in load(D+'tag-token-weights
 # called "strong" on "ai", "data", "platform" and "service". Measured before the change: 116 of 284
 # lanes read STRONG_OVERLAP and 69 of them rested on under one point of product evidence.
 #
-# WHAT THIS DOES NOT DO, deliberately, and Daniil can widen it: a generic word still scores its
-# small weight (0.6 times 0.2 at most) and still clears the relevance gate, because zeroing it
-# was measured on 6-Sep as the "vocab25" variant and cost real passes (acti, rainforest,
-# tienda-pago, mondu). The label and the sentence stop overstating; the selection does not move.
+# AND SINCE 9-Sep-2026 THEY SCORE NOTHING IN THE SELECTION EITHER. Daniil's rule read at its
+# width: "generic words cannot be counted towards comparison analysis." The first cut of this
+# rule (8-Sep) took generic words out of the label and the sentence only, because the 6-Sep
+# measurement of the same idea on the 102 (the "vocab25" variant, stale weights) had cost real
+# passes. Re-measured on 9-Sep on the 142 and the current weights: 108 lanes across 67 fixtures
+# change, most of them for the better (osmaura loses Owner, Restaurant365 and TravelPerk; welltory
+# gets Hims & Hers and WW instead of antivirus vendors; emergent gets Atlassian, GitLab and Datadog
+# instead of Cadence and Synopsys; inato gets Phreesia and Waystar instead of freight platforms),
+# and exactly three private lanes drop below two priced names (acti, payabli, lyka), which the
+# recorded fallback then serves. So a word carried by 25 or more companies now adds NOTHING to
+# tag_overlap, and a name that shares only generic words with the founder is not relevant on the
+# vocabulary route (it can still arrive on a shared specific end market, or through the recorded
+# fallback). One constant flips it back.
 GENERIC_WORD_WEIGHT = 0.2
+GENERIC_WORDS_SCORE = False        # True restores the 8-Sep behaviour (generic words score 0.12 at most)
 
 
 def is_generic(t):
@@ -90,7 +100,8 @@ def tag_overlap(a, b):
     # every Python process, and floating-point addition is not associative, so the same overlap
     # summed two ways landed either side of a rounding boundary: ZoomInfo scored 5.8 for floqer in
     # one run and 5.9 in the next, and golden reported a move that was not one.
-    shared = 0.6 * sum(TOKW.get(t, 1.0) for t in sorted(ta & tb))
+    shared = 0.6 * sum(TOKW.get(t, 1.0) for t in sorted(ta & tb)
+                       if GENERIC_WORDS_SCORE or not is_generic(t))
     return 3.0*exact + shared
 
 def norm(t):

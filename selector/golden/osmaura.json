@@ -8,85 +8,34 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4,
-      "NET_REVENUE": 1
+      "ARR": 2
      },
      "bounded": true,
      "closeness": "STRONG_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "Semrush"
-     ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "control_n": 0,
+     "control_names": [],
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
      "high": 56.0,
-     "listed_target_n": 1,
-     "listed_target_names": [
-      "Semrush"
-     ],
-     "low": 4.3,
-     "mid": 15.0,
-     "n": 5,
+     "listed_target_n": 0,
+     "listed_target_names": [],
+     "low": 15.0,
+     "mid": 56.0,
+     "n": 2,
      "period_mix": {
-      "NOT STATED": 1,
-      "NTM": 1,
-      "RUN_RATE": 3
+      "RUN_RATE": 2
      },
      "period_span": {
-      "NOT STATED": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "NTM": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
       "RUN_RATE": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "related type of business; same business function; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Restaurant365",
-       "mult": 10.0,
-       "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Clio",
-       "mult": 15.0,
-       "reason": "shares the language of client, firm, law; same type of business; same end market; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Owner",
-       "mult": 23.0,
-       "reason": "same type of business; same business function; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Legora",
-       "mult": 56.0,
-       "reason": "shares the language of firm, law, legal; same type of business; same end market; same revenue model",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "client",
@@ -94,44 +43,14 @@
       "law",
       "legal"
      ],
-     "spread": 13.0,
+     "spread": 3.7,
      "table": [
-      {
-       "company": "Semrush",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 4.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Restaurant365",
-       "date": "May-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Clio",
        "date": "Jul-24",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 15.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Owner",
-       "date": "Aug-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 23.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -148,26 +67,18 @@
       }
      ],
      "tag_evidence": 2.2,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
   },
   "core": [
    {
-    "company": "HubSpot, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Marketing Automation; related type of business; same business function; same kind of customer",
-    "score": 8.7,
-    "ticker": "NYSE:HUBS"
-   },
-   {
     "company": "Intapp, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Professional Services Automation; same type of business; same end market",
-    "score": 7.5,
+    "score": 7.4,
     "ticker": "NASDAQGS:INTA"
    },
    {
@@ -175,23 +86,15 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of legal; same type of business; same end market",
-    "score": 6.6,
+    "score": 6.4,
     "ticker": "NASDAQGS:LZ"
-   },
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Marketing Automation; related type of business; same revenue model; sold the same way",
-    "score": 6.2,
-    "ticker": "NASDAQGS:GTM"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -206,10 +109,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.1,
-   "mid": 2.5,
-   "n": 4,
+   "mid": 2.85,
+   "n": 2,
    "period_mix": {
-    "NTM": 4
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -238,24 +141,6 @@
      "ticker": "NASDAQGS:LZ"
     },
     {
-     "company": "ZoomInfo Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": -0.3,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 89.0,
-     "ticker": "NASDAQGS:GTM"
-    },
-    {
-     "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
-     "multiple": 2.8,
-     "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:HUBS"
-    },
-    {
      "company": "Intapp, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 15.4,
@@ -265,8 +150,8 @@
      "ticker": "NASDAQGS:INTA"
     }
    ],
-   "tag_evidence": 1.5,
-   "thin": false,
+   "tag_evidence": 1.4,
+   "thin": true,
    "triangulated": false
   },
   "investors_callable": [
@@ -473,14 +358,10 @@
      {
       "company": "Legora",
       "date": "Apr-26"
-     },
-     {
-      "company": "Owner",
-      "date": "Aug-26"
      }
     ],
     "investor": "Redpoint",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -591,109 +472,9 @@
     ],
     "investor": "Tidemark",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Owner",
-      "date": "Aug-26"
-     }
-    ],
-    "investor": "Headline",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Semrush",
-      "date": "Nov-25"
-     }
-    ],
-    "investor": "Adobe",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "TravelPerk",
-      "date": "Jan-24"
-     }
-    ],
-    "investor": "SoftBank Vision Fund 2 (lead",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "TravelPerk",
-      "date": "Jan-24"
-     }
-    ],
-    "investor": "Kinnevik",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "TravelPerk",
-      "date": "Jan-24"
-     }
-    ],
-    "investor": "Felix Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
    }
   ],
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -714,7 +495,7 @@
     "in_medians": false,
     "mult": 66.7,
     "reason": "shares the language of legal, professional; same type of business; same end market; same revenue model",
-    "score": 14.4,
+    "score": 14.3,
     "type": "PRIMARY"
    },
    {
@@ -727,134 +508,39 @@
     "reason": "shares the language of client, firm, law; same type of business; same end market; same kind of customer",
     "score": 20.2,
     "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Owner",
-    "date": "Aug-26",
-    "in_medians": true,
-    "mult": 23.0,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 19.2,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_FORECAST",
-    "bound": "",
-    "company": "Semrush",
-    "date": "Nov-25",
-    "in_medians": true,
-    "mult": 4.3,
-    "reason": "related type of business; same business function; same kind of customer; same revenue model",
-    "score": 13.6,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "NONE",
-    "bound": "",
-    "company": "TravelPerk",
-    "date": "Jan-24",
-    "in_medians": false,
-    "mult": null,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 10.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 14.1,
-    "type": "PRIMARY"
    }
   ],
-  "private_proximity": "ADJACENT",
+  "private_proximity": "DIRECT",
   "private_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4,
-    "NET_REVENUE": 1
+    "ARR": 2
    },
    "bounded": true,
    "closeness": "STRONG_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "Semrush"
-   ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "control_n": 0,
+   "control_names": [],
+   "dispersed": false,
+   "display": "RANGE",
    "high": 56.0,
-   "listed_target_n": 1,
-   "listed_target_names": [
-    "Semrush"
-   ],
-   "low": 4.3,
-   "mid": 15.0,
-   "n": 5,
+   "listed_target_n": 0,
+   "listed_target_names": [],
+   "low": 15.0,
+   "mid": 56.0,
+   "n": 2,
    "period_mix": {
-    "NOT STATED": 1,
-    "NTM": 1,
-    "RUN_RATE": 3
+    "RUN_RATE": 2
    },
    "period_span": {
-    "NOT STATED": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
     "RUN_RATE": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "related type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Restaurant365",
-     "mult": 10.0,
-     "reason": "same type of business; same kind of customer; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Clio",
-     "mult": 15.0,
-     "reason": "shares the language of client, firm, law; same type of business; same end market; same kind of customer",
-     "tier": "DIRECT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Owner",
-     "mult": 23.0,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Legora",
-     "mult": 56.0,
-     "reason": "shares the language of firm, law, legal; same type of business; same end market; same revenue model",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "client",
@@ -862,44 +548,14 @@
     "law",
     "legal"
    ],
-   "spread": 13.0,
+   "spread": 3.7,
    "table": [
-    {
-     "company": "Semrush",
-     "date": "Nov-25",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 4.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Restaurant365",
-     "date": "May-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Clio",
      "date": "Jul-24",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 15.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Owner",
-     "date": "Aug-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 23.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -916,104 +572,13 @@
     }
    ],
    "tag_evidence": 2.2,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
-  "private_window_months": 39,
-  "secondary": [
-   {
-    "company": "EverCommerce Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same kind of customer; sold the same way",
-    "score": 7.6,
-    "ticker": "NASDAQGS:EVCM"
-   },
-   {
-    "company": "Klaviyo, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Marketing Automation; related type of business; same business function; same kind of customer",
-    "score": 6.2,
-    "ticker": "NYSE:KVYO"
-   },
-   {
-    "company": "Ooma, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model",
-    "score": 5.1,
-    "ticker": "NYSE:OOMA"
-   }
-  ],
+  "private_window_months": 25,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 3
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "RANGE",
-   "founder_basis_trailing_on_forward": false,
-   "high": 3.0,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 1.9,
-   "mid": 2.9,
-   "n": 3,
-   "period_mix": {
-    "NTM": 3
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": true,
-   "spread": 1.6,
-   "table": [
-    {
-     "company": "Ooma, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.6,
-     "multiple": 1.9,
-     "recurring_pct": 92.0,
-     "retention_pct": null,
-     "ticker": "NYSE:OOMA"
-    },
-    {
-     "company": "EverCommerce Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.7,
-     "multiple": 2.9,
-     "recurring_pct": null,
-     "retention_pct": 94.0,
-     "ticker": "NASDAQGS:EVCM"
-    },
-    {
-     "company": "Klaviyo, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 19.5,
-     "multiple": 3.0,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:KVYO"
-    }
-   ],
-   "tag_evidence": 0.2,
-   "thin": false,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "AI growth engine for corporate law firms"

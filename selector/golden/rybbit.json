@@ -135,7 +135,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 10.7,
+     "tag_evidence": 10.6,
      "thin": false,
      "triangulated": false
     }
@@ -151,28 +151,12 @@
     "ticker": "NASDAQCM:AMPL"
    },
    {
-    "company": "Elastic N.V.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 11.1,
-    "ticker": "NYSE:ESTC"
-   },
-   {
     "company": "Similarweb Ltd.",
     "family": "software",
     "in_medians": true,
     "reason": "both do Web Analytics; same type of business; same business function",
-    "score": 10.5,
+    "score": 10.4,
     "ticker": "NYSE:SMWB"
-   },
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same revenue model",
-    "score": 9.6,
-    "ticker": "NASDAQCM:RDVT"
    },
    {
     "company": "GitLab Inc.",
@@ -191,37 +175,37 @@
     "ticker": "NASDAQGS:TEAM"
    },
    {
-    "company": "Snowflake Inc.",
+    "company": "Adobe Inc.",
     "family": "software",
     "in_medians": true,
-    "reason": "both do Analytics; same type of business; same business function; same revenue model",
-    "score": 8.6,
-    "ticker": "NYSE:SNOW"
+    "reason": "both do Web Analytics; related type of business; sold the same way",
+    "score": 7.7,
+    "ticker": "NASDAQGS:ADBE"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 7
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 10.0,
+   "high": 4.1,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 3.5,
-   "mid": 5.2,
-   "n": 7,
+   "low": 2.2,
+   "mid": 3.5,
+   "n": 3,
    "period_mix": {
-    "NTM": 7
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -229,28 +213,8 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Similarweb Ltd.",
-     "mult": 2.2,
-     "reason": "both do Web Analytics; same type of business; same business function",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Amplitude, Inc.",
-     "mult": 3.5,
-     "reason": "both do Product Analytics, Session Replay; same type of business; same business function; sold the same way",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Elastic N.V.",
-     "mult": 4.2,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
+   "points": [],
+   "positioning": [
     {
      "company": "GitLab Inc.",
      "mult": 5.2,
@@ -264,34 +228,18 @@
      "reason": "shares the language of tracking; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": ""
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "mult": 10.0,
-     "reason": "same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Snowflake Inc.",
-     "mult": 15.6,
-     "reason": "both do Analytics; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
     }
    ],
-   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "product",
     "replay",
     "session",
-    "source",
     "tracking",
     "web"
    ],
    "show_retention": true,
-   "spread": 7.1,
+   "spread": 1.9,
    "table": [
     {
      "company": "Similarweb Ltd.",
@@ -312,49 +260,13 @@
      "ticker": "NASDAQCM:AMPL"
     },
     {
-     "company": "Elastic N.V.",
+     "company": "Adobe Inc.",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.7,
-     "multiple": 4.2,
-     "recurring_pct": null,
-     "retention_pct": 112.0,
-     "ticker": "NYSE:ESTC"
-    },
-    {
-     "company": "GitLab Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.6,
-     "multiple": 5.2,
-     "recurring_pct": 90.0,
-     "retention_pct": 118.0,
-     "ticker": "NASDAQGS:GTLB"
-    },
-    {
-     "company": "Atlassian Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.7,
-     "multiple": 6.1,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NASDAQGS:TEAM"
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
-     "multiple": 10.0,
-     "recurring_pct": 77.0,
-     "retention_pct": 95.0,
-     "ticker": "NASDAQCM:RDVT"
-    },
-    {
-     "company": "Snowflake Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 25.8,
-     "multiple": 15.6,
-     "recurring_pct": null,
-     "retention_pct": 126.0,
-     "ticker": "NYSE:SNOW"
+     "growth_pct": 8.9,
+     "multiple": 4.1,
+     "recurring_pct": 96.0,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:ADBE"
     }
    ],
    "tag_evidence": 7.5,
@@ -685,7 +597,7 @@
     "in_medians": true,
     "mult": 28.0,
     "reason": "both do Session Replay, Product Analytics, Web Analytics; related type of business; same business function",
-    "score": 16.7,
+    "score": 16.6,
     "type": "PRIMARY"
    },
    {
@@ -885,7 +797,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 10.7,
+   "tag_evidence": 10.6,
    "thin": false,
    "triangulated": false
   },
@@ -898,39 +810,31 @@
     "reason": "shares the language of web; same kind of customer; same revenue model; sold the same way",
     "score": 8.2,
     "ticker": "NYSE:NET"
-   },
-   {
-    "company": "Adobe Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Web Analytics; related type of business; sold the same way",
-    "score": 7.7,
-    "ticker": "NASDAQGS:ADBE"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "DIRECT",
+   "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 2
+    "UNKNOWN": 1
    },
    "bounded": false,
-   "closeness": "SHARED_PRODUCT",
+   "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "DIAMOND",
    "founder_basis_trailing_on_forward": false,
    "high": 29.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.1,
-   "mid": 16.8,
-   "n": 2,
+   "low": 29.5,
+   "mid": 29.5,
+   "n": 1,
    "period_mix": {
-    "NTM": 2
+    "NTM": 1
    },
    "period_span": {
     "NTM": {
@@ -938,39 +842,16 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Adobe Inc.",
-     "mult": 4.1,
-     "reason": "both do Web Analytics; related type of business; sold the same way",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Cloudflare, Inc.",
-     "mult": 29.5,
-     "reason": "shares the language of web; same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "web"
    ],
    "show_retention": true,
-   "spread": 7.2,
+   "sole": "Cloudflare, Inc.",
+   "spread": 1.0,
    "table": [
-    {
-     "company": "Adobe Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.9,
-     "multiple": 4.1,
-     "recurring_pct": 96.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:ADBE"
-    },
     {
      "company": "Cloudflare, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -981,9 +862,9 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 3.2,
+   "tag_evidence": 0.1,
    "thin": true,
-   "triangulated": false
+   "triangulated": true
   }
  },
  "label": "The open source Google Analytics replacement"

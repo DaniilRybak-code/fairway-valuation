@@ -376,12 +376,33 @@ rest are one name at the edge of a lane).
 | **6: resolved by re-tagging?** | Partly. The three fixtures (orchids, 21st, chronicle) are correctly tagged; the Design & Engineering archetype itself mixes CAD and EDA vendors with design tools. Only a split like Route A fixes it; post-pilot, with the taxonomy rule. | status document |
 | **7: sourcing list; he will provide comps later** | `docs/sourcing-list-8sep.md`: every name above with what it fixes and the caveats, plus the A16 procedure and one that touches his 8 Sep reading (Appen, Innodata and TELUS Digital are listed training-data vendors; put to him before they are pulled). | `docs/sourcing-list-8sep.md` |
 
-## Still open for him
+## Still open for him, as of 00:25 UK, and what he answered by 10:10 UK the same morning
 
-1. **Hop-aero and ultrasonium strikes**: not answered; both untouched.
-2. **Publora**: pin Buffer (October 2014 round, twelve years old) or leave as is.
-3. **The label-only fallback lane** (cause 3): parked on his word until after the bulk pass.
-4. **Whether A14 should also zero generic words in the score** (measured on 6 Sep as costing real
-   passes; not done).
-5. **Derya**: his reading or the company's page; the profile carries both.
-6. **The three listed training-data vendors** on the sourcing list, against his reading of 8 Sep.
+1. **Hop-aero and ultrasonium strikes**: ~~not answered; both untouched.~~ **Hop-aero struck, 9 Sep**
+   ("definitely should not be compared to FedEx and UPS. This is a US military contractor. Should be
+   compared to such."); fails the gate as kind 4; defence contractors and launch companies put on the
+   sourcing list. **Ultrasonium not ruled on, untouched.**
+2. **Publora**: ~~pin Buffer or leave as is.~~ **Pinned, 9 Sep** ("indeed seem to match with Buffer").
+3. **The label-only fallback lane** (cause 3): parked on his word until after the bulk pass. Unchanged.
+4. **Whether A14 should also zero generic words in the score**: ~~not done.~~ **Done, 9 Sep.** His
+   question was why it had been zeroed in one place and not the other; the answer is that the 8-Sep
+   change reached the label and the shared-words sentence (what a founder reads) and not the score
+   and the relevance gate (what the engine decides), on the strength of the 6-Sep measurement. His
+   ruling covers both. `GENERIC_WORDS_SCORE = False`; measured first (108 lanes across 67 fixtures),
+   applied, 92 golden files moved and attributed (`docs/golden-attribution-9sep.txt`), gate 130 to
+   125: acti, lyka, rainforest and tienda-pago now rest on one priced private round each.
+5. **Derya**: ~~his reading or the company's page.~~ **Answered, 9 Sep**, to his "do you not agree
+   with my reading?": half. His reading fits what Derya sells; its YC page (read again 9 Sep) says it
+   executes procurement, shipping and customs for hardware companies and counts "more than $15M in
+   freight" handled, which is how a forwarder measures itself. His tagging stands (Kinaxis,
+   Manhattan, SPS Commerce listed), the page's reading stays on the profile, and the point that will
+   matter when it is priced is the basis: a broker's turnover is the freight, its margin is the
+   revenue.
+6. **The three listed training-data vendors**: ~~against his reading of 8 Sep.~~ **Kept, 9 Sep**
+   ("noted, keep it").
+7. **The comp-of-a-comp rule (A16)**, scheduled for the bulk pass: **run now, 9 Sep** ("pass it
+   now"). 91 DIRECT names, 55 fixtures, 240 rows in, 39 merged, OFX Group dropped by name, 200
+   candidates out with a source each (46 listed, 154 private), none loaded:
+   `docs/a16-neighbour-pass-9sep.md`.
+8. **The sourcing list** is now carried in full inside `docs/STATUS-2026-09.md` on his word ("otherwise
+   it will get lost"); the file stays as the copy to edit first.

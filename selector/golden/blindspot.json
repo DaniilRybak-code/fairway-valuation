@@ -783,14 +783,6 @@
   "private_window_months": 59,
   "secondary": [
    {
-    "company": "Lightspeed Commerce Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; same AI stance",
-    "score": 6.1,
-    "ticker": "TSX:LSPD"
-   },
-   {
     "company": "Zeta Global Holdings Corp.",
     "family": "software",
     "in_medians": true,
@@ -811,7 +803,7 @@
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
@@ -825,11 +817,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.7,
-   "mid": 2.1,
-   "n": 3,
+   "low": 2.1,
+   "mid": 3.0,
+   "n": 2,
    "period_mix": {
-    "NTM": 3
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -842,17 +834,8 @@
    "post_stated_n": 0,
    "shared_words": [],
    "show_retention": true,
-   "spread": 5.6,
+   "spread": 1.9,
    "table": [
-    {
-     "company": "Lightspeed Commerce Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.8,
-     "multiple": 0.7,
-     "recurring_pct": 30.2,
-     "retention_pct": null,
-     "ticker": "TSX:LSPD"
-    },
     {
      "company": "LiveRamp Holdings, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -872,8 +855,8 @@
      "ticker": "NYSE:ZETA"
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": false,
+   "tag_evidence": 0.0,
+   "thin": true,
    "triangulated": true
   }
  },

@@ -489,16 +489,8 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "same end market; same revenue model; same AI stance",
-    "score": 6.6,
+    "score": 6.5,
     "ticker": "NASDAQ:MQ"
-   },
-   {
-    "company": "Worldline SA",
-    "family": "fintech",
-    "in_medians": true,
-    "reason": "same end market; same revenue model; same AI stance",
-    "score": 6.6,
-    "ticker": "ENXTPA:WLN"
    },
    {
     "company": "CAB Payments Holdings plc",
@@ -515,6 +507,14 @@
     "reason": "same end market; same revenue model; same AI stance",
     "score": 6.5,
     "ticker": "NASDAQCM:PRTH"
+   },
+   {
+    "company": "Worldline SA",
+    "family": "fintech",
+    "in_medians": true,
+    "reason": "same end market; same revenue model; same AI stance",
+    "score": 6.5,
+    "ticker": "ENXTPA:WLN"
    }
   ],
   "secondary_range": {
@@ -600,7 +600,7 @@
      "ticker": "LSE:MONY"
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   }

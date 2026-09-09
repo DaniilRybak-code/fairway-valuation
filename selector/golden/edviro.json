@@ -79,7 +79,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.9,
      "thin": true,
      "triangulated": false
     },
@@ -89,14 +89,12 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3
+      "ARR": 2
      },
      "bounded": true,
      "closeness": "THIN_OVERLAP",
-     "control_n": 1,
-     "control_names": [
-      "AuditBoard"
-     ],
+     "control_n": 0,
+     "control_names": [],
      "dispersed": false,
      "display": "RANGE",
      "founder_field": "revenue",
@@ -107,11 +105,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.0,
-     "mid": 15.0,
-     "n": 3,
+     "mid": 23.0,
+     "n": 2,
      "period_mix": {
       "NOT STATED": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 1
      },
      "period_span": {
       "NOT STATED": {
@@ -141,16 +139,6 @@
        "ticker": ""
       },
       {
-       "company": "AuditBoard",
-       "date": "May-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 15.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Owner",
        "date": "Aug-26",
        "growth_basis": "",
@@ -161,8 +149,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.4,
-     "thin": false,
+     "tag_evidence": 0.3,
+     "thin": true,
      "triangulated": true
     },
     "REVENUE_GROSS": {
@@ -242,7 +230,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.9,
      "thin": true,
      "triangulated": false
     }
@@ -254,7 +242,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Energy Management, Grid Control; same type of business; same end market; same business function",
-    "score": 12.5,
+    "score": 12.4,
     "ticker": "XTRA:PSAN"
    },
    {
@@ -270,7 +258,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Energy Software; related type of business; same business function; sold the same way",
-    "score": 6.9,
+    "score": 6.8,
     "ticker": "OM:VIT B"
    },
    {
@@ -278,7 +266,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of industrial; related type of business; same business function; sold the same way",
-    "score": 6.0,
+    "score": 5.9,
     "ticker": "NASDAQGS:ROP"
    }
   ],
@@ -363,7 +351,7 @@
      "ticker": "NYSE:IOT"
     }
    ],
-   "tag_evidence": 1.5,
+   "tag_evidence": 1.4,
    "thin": false,
    "triangulated": false
   },
@@ -569,16 +557,6 @@
    {
     "backed": [
      {
-      "company": "AuditBoard",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Hg (buyer)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Guesty",
       "date": "Apr-24"
      },
@@ -671,7 +649,7 @@
     "in_medians": true,
     "mult": 0.57,
     "reason": "both do Grid Software; related type of business; same end market; same business function",
-    "score": 10.0,
+    "score": 9.9,
     "type": "PRIMARY"
    },
    {
@@ -697,17 +675,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "AuditBoard",
-    "date": "May-24",
-    "in_medians": true,
-    "mult": 15.0,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 13.6,
-    "type": "CONTROL"
-   },
-   {
     "basis": "PRESS_REPORTED",
     "bound": "",
     "company": "Guesty",
@@ -726,7 +693,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "shares the language of operations; same type of business; same business function; same revenue model",
-    "score": 12.4,
+    "score": 12.3,
     "type": "PRIMARY"
    }
   ],
@@ -737,25 +704,23 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3
+    "ARR": 2
    },
    "bounded": true,
    "closeness": "THIN_OVERLAP",
-   "control_n": 1,
-   "control_names": [
-    "AuditBoard"
-   ],
+   "control_n": 0,
+   "control_names": [],
    "dispersed": false,
    "display": "RANGE",
    "high": 23.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 10.0,
-   "mid": 15.0,
-   "n": 3,
+   "mid": 23.0,
+   "n": 2,
    "period_mix": {
     "NOT STATED": 1,
-    "RUN_RATE": 2
+    "RUN_RATE": 1
    },
    "period_span": {
     "NOT STATED": {
@@ -785,16 +750,6 @@
      "ticker": ""
     },
     {
-     "company": "AuditBoard",
-     "date": "May-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 15.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Owner",
      "date": "Aug-26",
      "growth_basis": "",
@@ -805,20 +760,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.4,
-   "thin": false,
+   "tag_evidence": 0.3,
+   "thin": true,
    "triangulated": true
   },
   "private_window_months": 43,
   "secondary": [
-   {
-    "company": "Intapp, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 10.6,
-    "ticker": "NASDAQGS:INTA"
-   },
    {
     "company": "i3 Verticals, Inc.",
     "family": "software",
@@ -836,20 +783,28 @@
     "ticker": "NASDAQGS:BSY"
    },
    {
-    "company": "BlackLine, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:BL"
-   },
-   {
     "company": "Alarm.com Holdings, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of control; same type of business; same business function",
     "score": 6.5,
     "ticker": "NASDAQGS:ALRM"
+   },
+   {
+    "company": "Alfa Financial Software Holdings PLC",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of asset; same type of business; sold the same way",
+    "score": 6.2,
+    "ticker": "LSE:ALFA"
+   },
+   {
+    "company": "Cass Information Systems",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of utility; same kind of customer; sold the same way",
+    "score": 6.1,
+    "ticker": "NASDAQGS:CASS"
    }
   ],
   "secondary_range": {
@@ -866,7 +821,7 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.6,
+   "high": 3.4,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
@@ -885,9 +840,9 @@
    "points": [],
    "positioning": [
     {
-     "company": "BlackLine, Inc.",
-     "mult": 2.5,
-     "reason": "same kind of customer; same revenue model; sold the same way",
+     "company": "Cass Information Systems",
+     "mult": 3.3,
+     "reason": "shares the language of utility; same kind of customer; sold the same way",
      "tier": "BROAD",
      "transaction_type": ""
     },
@@ -901,11 +856,12 @@
    ],
    "post_stated_n": 0,
    "shared_words": [
+    "asset",
     "control",
     "utility"
    ],
    "show_retention": true,
-   "spread": 2.0,
+   "spread": 1.5,
    "table": [
     {
      "company": "i3 Verticals, Inc.",
@@ -926,13 +882,13 @@
      "ticker": "NASDAQGS:ALRM"
     },
     {
-     "company": "Intapp, Inc.",
+     "company": "Alfa Financial Software Holdings PLC",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.4,
-     "multiple": 4.6,
-     "recurring_pct": null,
-     "retention_pct": 123.0,
-     "ticker": "NASDAQGS:INTA"
+     "growth_pct": 7.4,
+     "multiple": 3.4,
+     "recurring_pct": 33.9,
+     "retention_pct": 112.0,
+     "ticker": "LSE:ALFA"
     }
    ],
    "tag_evidence": 0.6,

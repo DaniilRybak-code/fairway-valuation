@@ -153,7 +153,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": false,
      "triangulated": false
     }
@@ -173,7 +173,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "both do Talent Marketplace; same type of business; same business function; same revenue model",
-    "score": 11.5,
+    "score": 11.4,
     "ticker": "NASDAQGS:UPWK"
    },
    {
@@ -669,7 +669,7 @@
     "in_medians": true,
     "mult": 22.22,
     "reason": "shares the language of talent; same type of business; same revenue model; sold the same way",
-    "score": 12.5,
+    "score": 12.4,
     "type": "PRIMARY"
    },
    {
@@ -680,7 +680,7 @@
     "in_medians": true,
     "mult": 10.0,
     "reason": "both do Talent Marketplace; same type of business; same revenue model; sold the same way",
-    "score": 12.5,
+    "score": 12.4,
     "type": "PRIMARY"
    },
    {
@@ -702,7 +702,7 @@
     "in_medians": true,
     "mult": 2.08,
     "reason": "shares the language of staffing; same type of business; same revenue model; sold the same way",
-    "score": 14.7,
+    "score": 14.6,
     "type": "PRIMARY"
    }
   ],
@@ -791,23 +791,15 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of talent; same cost structure; same purchase frequency",
-    "score": 6.0,
+    "score": 5.9,
     "ticker": "ASX:SEK"
-   },
-   {
-    "company": "Freightos Limited",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer",
-    "score": 5.6,
-    "ticker": "NASDAQGM:CRGO"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -822,10 +814,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 0.2,
-   "mid": 1.4,
-   "n": 5,
+   "mid": 1.15,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -846,13 +838,6 @@
      "mult": 0.2,
      "reason": "shares the language of staffing; same type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Freightos Limited",
-     "mult": 1.4,
-     "reason": "same business function; same kind of customer",
-     "tier": "BROAD",
      "transaction_type": ""
     },
     {
@@ -897,15 +882,6 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "LSE:HAS"
-    },
-    {
-     "company": "Freightos Limited",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.4,
-     "multiple": 1.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NASDAQGM:CRGO"
     },
     {
      "company": "Mitsubishi Logistics",

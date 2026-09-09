@@ -157,9 +157,18 @@ check 8 has used for kind 3 since 6 Sep) does not count towards the closeness la
 eighteen words rather than four, so "to", "a" and "as" are no longer words at all (bond was shown
 BlackLine, Sidetrade and Zuora on "to", from Record to Report, Quote To Cash and Agentic To-Do
 List). Measured before the change: 116 of 284 lanes were labelled strong and 69 of them rested on
-under one point of product evidence. **What the rule does not do, deliberately:** a generic word
-still scores its small weight and still clears the relevance gate, because zeroing it was measured
-on 6 Sep (the "vocab25" variant) and cost real passes. The gate's own rule 4 ("every lane is thin")
+under one point of product evidence. **Widened on 9 Sep, on Daniil's reading of his own rule:** a
+generic word now scores nothing in the selection either, so a name that shares only generic words
+with the founder is not relevant on the vocabulary route (it can still arrive on a shared specific
+end market, or through the recorded fallback). Measured on the 142 before applying: 108 lanes
+across 67 fixtures change, most for the better (osmaura loses Owner, Restaurant365 and TravelPerk;
+welltory gets Hims & Hers and WW instead of antivirus vendors; emergent gets Atlassian, GitLab and
+Datadog instead of Cadence and Synopsys). Applied the same morning: 92 golden files moved
+(`docs/golden-attribution-9sep.txt`), and four private lanes that a shared generic word had been
+holding at two priced names fell to one and fail the gate (acti, lyka, rainforest, tienda-pago;
+the pre-measurement had named acti, payabli and lyka, and payabli held). That is the true state of
+the pool for those four, not a fault in the rule. Gate 130 to 125 of 142 with hop-aero struck the
+same day. `GENERIC_WORDS_SCORE` in `selector/match_reference.py` flips it back in one line. The gate's own rule 4 ("every lane is thin")
 was narrowed the same day so that it fails a fixture only on a catch-all archetype with no DIRECT
 lane: a set anchored on a specific end market plus archetype (fyle, tienda-pago, wondering), or on
 a narrow archetype that IS the business (moov on Merchant Acquiring & PSP), does not rest on
@@ -189,8 +198,11 @@ the name that fits; it looks up that name's own peers (the companies its press, 
 its competitors' pages put beside it) and brings the ones with a priced round or a listing onto the
 list. It is a data pull, so under A12 part 3 it runs inside the bulk pass after the 18 September
 march, over every fixture whose set holds a DIRECT name, and its output is a list of names with
-sources, never a figure from anyone's head. `docs/sourcing-list-8sep.md` is where the names go
-until then.
+sources, never a figure from anyone's head. *The lookup half ran on 9 Sep on Daniil's word ("pass it
+now"): 91 DIRECT names, 55 fixtures, 200 candidates with a source each, none loaded,
+`docs/a16-neighbour-pass-9sep.md`. The load half (reading each source for the figure) stays under
+A12 part 3 unless he says otherwise.* `docs/sourcing-list-8sep.md`, carried in full inside the status
+document, is where the other names go until then.
 
 ---
 

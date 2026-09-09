@@ -90,7 +90,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 3,
+      "ARR": 2,
       "ARR_RUNRATE": 3,
       "NET_REVENUE": 1
      },
@@ -113,10 +113,10 @@
      ],
      "low": 4.3,
      "mid": 25.0,
-     "n": 7,
+     "n": 6,
      "period_mix": {
       "NTM": 1,
-      "RUN_RATE": 6
+      "RUN_RATE": 5
      },
      "period_span": {
       "NTM": {
@@ -163,13 +163,6 @@
        "reason": "shares the language of intelligence; related type of business; same revenue model; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Sierra",
-       "mult": 105.3,
-       "reason": "related type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       },
       {
        "company": "Decagon",
@@ -239,16 +232,6 @@
        "ticker": ""
       },
       {
-       "company": "Sierra",
-       "date": "May-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 105.3,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Decagon",
        "date": "Jan-26",
        "growth_basis": "",
@@ -303,7 +286,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Location API; same type of business; same kind of customer",
-    "score": 6.9,
+    "score": 6.8,
     "ticker": "ENXTAM:TOM2"
    }
   ],
@@ -601,14 +584,10 @@
      {
       "company": "Anthropic",
       "date": "May-26"
-     },
-     {
-      "company": "Sierra",
-      "date": "May-26"
      }
     ],
     "investor": "Greenoaks",
-    "n": 2
+    "n": 1
    },
    {
     "backed": [
@@ -618,36 +597,6 @@
      }
     ],
     "investor": "Sequoia Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Benchmark",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Sierra",
-      "date": "May-26"
-     }
-    ],
-    "investor": "Sequoia",
     "n": 1
    },
    {
@@ -809,6 +758,66 @@
     ],
     "investor": "Adobe",
     "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "IVP",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "CapitalG",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sapphire Ventures",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Benchmark",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
+    "investor": "Amplify",
+    "n": 1
    }
   ],
   "listed_proximity": "ADJACENT",
@@ -836,17 +845,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "REPORTED_CONTEMPORANEOUS",
-    "bound": "<=",
-    "company": "Sierra",
-    "date": "May-26",
-    "in_medians": true,
-    "mult": 105.3,
-    "reason": "related type of business; same revenue model; same AI stance",
-    "score": 8.6,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_ACTUAL",
     "bound": "",
     "company": "Clay",
@@ -854,7 +852,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of intelligence; related type of business; same revenue model; sold the same way",
-    "score": 11.3,
+    "score": 11.2,
     "type": "SECONDARY"
    },
    {
@@ -865,7 +863,7 @@
     "in_medians": true,
     "mult": 150.0,
     "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
-    "score": 8.7,
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
@@ -876,7 +874,7 @@
     "in_medians": true,
     "mult": 25.0,
     "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
-    "score": 9.7,
+    "score": 9.6,
     "type": "PRIMARY"
    },
    {
@@ -889,6 +887,17 @@
     "reason": "shares the language of analysis, intelligence; related type of business; sold the same way",
     "score": 8.3,
     "type": "CONTROL"
+   },
+   {
+    "basis": "PRESS_REPORTED",
+    "bound": "",
+    "company": "LangChain",
+    "date": "Oct-25",
+    "in_medians": false,
+    "mult": null,
+    "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
+    "score": 13.6,
+    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -898,7 +907,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 3,
+    "ARR": 2,
     "ARR_RUNRATE": 3,
     "NET_REVENUE": 1
    },
@@ -917,10 +926,10 @@
    ],
    "low": 4.3,
    "mid": 25.0,
-   "n": 7,
+   "n": 6,
    "period_mix": {
     "NTM": 1,
-    "RUN_RATE": 6
+    "RUN_RATE": 5
    },
    "period_span": {
     "NTM": {
@@ -967,13 +976,6 @@
      "reason": "shares the language of intelligence; related type of business; same revenue model; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Sierra",
-     "mult": 105.3,
-     "reason": "related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     },
     {
      "company": "Decagon",
@@ -1043,16 +1045,6 @@
      "ticker": ""
     },
     {
-     "company": "Sierra",
-     "date": "May-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 105.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Decagon",
      "date": "Jan-26",
      "growth_basis": "",
@@ -1067,16 +1059,8 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 9,
+  "private_window_months": 10,
   "secondary": [
-   {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
-    "score": 8.2,
-    "ticker": "NYSE:TWLO"
-   },
    {
     "company": "Agora, Inc.",
     "family": "software",
@@ -1084,6 +1068,14 @@
     "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
     "score": 8.2,
     "ticker": "NASDAQGS:API"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; same kind of customer; same revenue model; sold the same way",
+    "score": 8.2,
+    "ticker": "NYSE:TWLO"
    },
    {
     "company": "Cloudflare, Inc.",
@@ -1100,21 +1092,13 @@
     "reason": "shares the language of api; same kind of customer; same revenue model",
     "score": 6.2,
     "ticker": "OM:SINCH"
-   },
-   {
-    "company": "Zeta Global Holdings Corp.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same revenue model",
-    "score": 5.1,
-    "ticker": "NYSE:ZETA"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
-   "band": "ADJACENT",
+   "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -1128,11 +1112,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 1.4,
-   "mid": 3.9,
-   "n": 5,
+   "low": 0.5,
+   "mid": 3.3,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -1153,13 +1137,6 @@
      "mult": 1.4,
      "reason": "shares the language of api; same kind of customer; same revenue model",
      "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "Zeta Global Holdings Corp.",
-     "mult": 3.9,
-     "reason": "related type of business; same revenue model",
-     "tier": "ADJACENT",
      "transaction_type": ""
     },
     {
@@ -1205,15 +1182,6 @@
      "ticker": "OM:SINCH"
     },
     {
-     "company": "Zeta Global Holdings Corp.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 15.3,
-     "multiple": 3.9,
-     "recurring_pct": null,
-     "retention_pct": 120.0,
-     "ticker": "NYSE:ZETA"
-    },
-    {
      "company": "Twilio Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 10.6,
@@ -1232,7 +1200,7 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": false,
    "triangulated": false
   }

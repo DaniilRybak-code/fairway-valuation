@@ -6,7 +6,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "same type of business; same end market; same business function; same kind of customer",
-    "score": 12.6,
+    "score": 12.5,
     "ticker": "NYSE:CRD.B"
    },
    {
@@ -14,7 +14,7 @@
     "family": "fintech",
     "in_medians": true,
     "reason": "both do Underwriting; same type of business; same end market",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "NASDAQGM:TRUP"
    },
    {
@@ -22,7 +22,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same end market; same business function; same kind of customer; sold the same way",
-    "score": 10.6,
+    "score": 10.5,
     "ticker": "NASDAQGS:CCCS"
    }
   ],
@@ -115,7 +115,7 @@
      "ticker": "NASDAQGS:CCCS"
     }
    ],
-   "tag_evidence": 0.3,
+   "tag_evidence": 0.2,
    "thin": false,
    "triangulated": true
   },
@@ -289,7 +289,7 @@
     "in_medians": true,
     "mult": 4.55,
     "reason": "related type of business; same end market; same business function; sold the same way",
-    "score": 13.6,
+    "score": 13.5,
     "type": "CONTROL"
    },
    {
@@ -300,7 +300,7 @@
     "in_medians": true,
     "mult": 14.06,
     "reason": "shares the language of insurer; same type of business; same end market",
-    "score": 8.7,
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
@@ -311,7 +311,7 @@
     "in_medians": false,
     "mult": null,
     "reason": "both do Underwriting; same type of business; same end market",
-    "score": 8.3,
+    "score": 8.2,
     "type": "PRIMARY"
    },
    {
@@ -322,7 +322,7 @@
     "in_medians": true,
     "mult": 6.67,
     "reason": "same type of business; same end market",
-    "score": 8.1,
+    "score": 8.0,
     "type": "PRIMARY"
    }
   ],
@@ -392,7 +392,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 0.1,
+   "tag_evidence": 0.0,
    "thin": true,
    "triangulated": true
   },
@@ -411,7 +411,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Underwriting; same end market; same business function; sold the same way",
-    "score": 8.3,
+    "score": 8.2,
     "ticker": "NYSE:GWRE"
    },
    {
@@ -419,7 +419,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "same end market; same business function; sold the same way",
-    "score": 8.1,
+    "score": 8.0,
     "ticker": "ASX:FCL"
    }
   ],

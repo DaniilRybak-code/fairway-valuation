@@ -235,14 +235,6 @@
     "ticker": "NASDAQGS:CCSI"
    },
    {
-    "company": "Twilio Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
-    "score": 9.8,
-    "ticker": "NYSE:TWLO"
-   },
-   {
     "company": "Agora, Inc.",
     "family": "software",
     "in_medians": true,
@@ -265,6 +257,14 @@
     "reason": "shares the language of infrastructure; related type of business; same kind of customer; same revenue model",
     "score": 9.7,
     "ticker": "NASDAQGS:DDOG"
+   },
+   {
+    "company": "Twilio Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "shares the language of api; related type of business; same kind of customer; same revenue model",
+    "score": 9.7,
+    "ticker": "NYSE:TWLO"
    },
    {
     "company": "Sinch AB (publ)",
@@ -849,14 +849,6 @@
   "private_window_months": 64,
   "secondary": [
    {
-    "company": "Qt Group Oyj",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way; same AI stance",
-    "score": 8.6,
-    "ticker": "HLSE:QTCOM"
-   },
-   {
     "company": "TomTom N.V.",
     "family": "software",
     "in_medians": true,
@@ -873,37 +865,45 @@
     "ticker": "NYSE:CTEV"
    },
    {
-    "company": "GitLab Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same business function; same kind of customer; sold the same way",
-    "score": 6.6,
-    "ticker": "NASDAQGS:GTLB"
-   },
-   {
     "company": "Weave Communications, Inc.",
     "family": "software",
     "in_medians": true,
     "reason": "same type of business; same end market",
     "score": 6.0,
     "ticker": "NYSE:WEAV"
+   },
+   {
+    "company": "Veeva Systems Inc.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "NYSE:VEEV"
+   },
+   {
+    "company": "Waystar Holding Corp.",
+    "family": "software",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "NASDAQGS:WAY"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 3
+    "UNKNOWN": 4
    },
    "bounded": false,
    "closeness": "THIN_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 5.1,
+   "high": 9.7,
    "levered_names": [
     {
      "company": "Claritev Corporation",
@@ -912,11 +912,11 @@
    ],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.6,
-   "mid": 1.9,
-   "n": 3,
+   "low": 1.9,
+   "mid": 4.8,
+   "n": 4,
    "period_mix": {
-    "NTM": 3
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -924,61 +924,21 @@
      "founder_revenue": null
     }
    },
-   "points": [
+   "points": [],
+   "positioning": [
     {
      "company": "TomTom N.V.",
      "mult": 0.6,
      "reason": "shares the language of api; related type of business; same business function; same kind of customer",
      "tier": "ADJACENT",
      "transaction_type": ""
-    },
-    {
-     "company": "Weave Communications, Inc.",
-     "mult": 1.9,
-     "reason": "same type of business; same end market",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Claritev Corporation",
-     "mult": 5.1,
-     "reason": "same type of business; same end market",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    }
-   ],
-   "positioning": [
-    {
-     "company": "Qt Group Oyj",
-     "mult": 3.9,
-     "reason": "same business function; same kind of customer; sold the same way; same AI stance",
-     "tier": "BROAD",
-     "transaction_type": ""
-    },
-    {
-     "company": "GitLab Inc.",
-     "mult": 5.2,
-     "reason": "same business function; same kind of customer; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
     }
    ],
    "post_stated_n": 0,
-   "shared_words": [
-    "api"
-   ],
+   "shared_words": [],
    "show_retention": true,
-   "spread": 8.5,
+   "spread": 5.1,
    "table": [
-    {
-     "company": "TomTom N.V.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.9,
-     "multiple": 0.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "ENXTAM:TOM2"
-    },
     {
      "company": "Weave Communications, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -989,6 +949,15 @@
      "ticker": "NYSE:WEAV"
     },
     {
+     "company": "Waystar Holding Corp.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 11.3,
+     "multiple": 4.5,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NASDAQGS:WAY"
+    },
+    {
      "company": "Claritev Corporation",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": 5.2,
@@ -996,9 +965,18 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:CTEV"
+    },
+    {
+     "company": "Veeva Systems Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 12.3,
+     "multiple": 9.7,
+     "recurring_pct": 84.0,
+     "retention_pct": null,
+     "ticker": "NYSE:VEEV"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.0,
    "thin": false,
    "triangulated": true
   }

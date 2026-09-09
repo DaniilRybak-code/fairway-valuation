@@ -8,8 +8,7 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4,
-      "ARR_RUNRATE": 2
+      "ARR": 3
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
@@ -21,14 +20,14 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 47.3,
+     "high": 37.5,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 12.8,
-     "mid": 28.7,
-     "n": 6,
+     "low": 22.5,
+     "mid": 28.0,
+     "n": 3,
      "period_mix": {
-      "RUN_RATE": 6
+      "RUN_RATE": 3
      },
      "period_span": {
       "RUN_RATE": {
@@ -43,18 +42,8 @@
       "session",
       "simulation"
      ],
-     "spread": 3.7,
+     "spread": 1.7,
      "table": [
-      {
-       "company": "Buffer",
-       "date": "Oct-14",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 12.8,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Algolia",
        "date": "Jul-21",
@@ -76,31 +65,11 @@
        "ticker": ""
       },
       {
-       "company": "Databricks",
-       "date": "Sep-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 28.7,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Applied Intuition",
        "date": "Jun-25",
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 37.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "6sense",
-       "date": "Jan-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 47.3,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -122,69 +91,37 @@
     "ticker": "NASDAQCM:AMPL"
    },
    {
-    "company": "Similarweb Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 12.1,
-    "ticker": "NYSE:SMWB"
-   },
-   {
-    "company": "Red Violet, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer",
-    "score": 9.6,
-    "ticker": "NASDAQCM:RDVT"
-   },
-   {
     "company": "Qt Group Oyj",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of testing; same type of business; same revenue model; sold the same way",
     "score": 9.1,
     "ticker": "HLSE:QTCOM"
-   },
-   {
-    "company": "Sprout Social, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 8.6,
-    "ticker": "NASDAQCM:SPT"
-   },
-   {
-    "company": "Palantir Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same AI stance",
-    "score": 7.1,
-    "ticker": "NASDAQGS:PLTR"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 10.0,
+   "high": 3.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.2,
+   "low": 3.5,
    "mid": 3.7,
-   "n": 6,
+   "n": 2,
    "period_mix": {
-    "NTM": 6
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -192,50 +129,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Sprout Social, Inc.",
-     "mult": 1.2,
-     "reason": "related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Similarweb Ltd.",
-     "mult": 2.2,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Amplitude, Inc.",
-     "mult": 3.5,
-     "reason": "both do Product Analytics, A/B Testing; same type of business; same business function; same kind of customer",
-     "tier": "DIRECT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Qt Group Oyj",
-     "mult": 3.9,
-     "reason": "shares the language of testing; same type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "mult": 10.0,
-     "reason": "same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "mult": 39.0,
-     "reason": "same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
@@ -245,26 +139,8 @@
     "testing"
    ],
    "show_retention": true,
-   "spread": 32.5,
+   "spread": 1.1,
    "table": [
-    {
-     "company": "Sprout Social, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.2,
-     "multiple": 1.2,
-     "recurring_pct": null,
-     "retention_pct": 100.0,
-     "ticker": "NASDAQCM:SPT"
-    },
-    {
-     "company": "Similarweb Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.7,
-     "multiple": 2.2,
-     "recurring_pct": null,
-     "retention_pct": 100.0,
-     "ticker": "NYSE:SMWB"
-    },
     {
      "company": "Amplitude, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -282,28 +158,10 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "HLSE:QTCOM"
-    },
-    {
-     "company": "Red Violet, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 13.3,
-     "multiple": 10.0,
-     "recurring_pct": 77.0,
-     "retention_pct": 95.0,
-     "ticker": "NASDAQCM:RDVT"
-    },
-    {
-     "company": "Palantir Technologies Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 47.0,
-     "multiple": 39.0,
-     "recurring_pct": null,
-     "retention_pct": 157.0,
-     "ticker": "NASDAQGS:PLTR"
     }
    ],
    "tag_evidence": 5.1,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "investors_callable": [
@@ -528,56 +386,6 @@
    {
     "backed": [
      {
-      "company": "Databricks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "T. Rowe Price",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Databricks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "Baillie Gifford",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Databricks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "ClearBridge",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Databricks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "GIC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Databricks",
-      "date": "Sep-23"
-     }
-    ],
-    "investor": "NVIDIA",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "dbt Labs",
       "date": "Feb-22"
      }
@@ -633,106 +441,6 @@
      }
     ],
     "investor": "Snowflake Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Blue Owl Capital (co-lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "MSD Partners (co-lead)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "SoftBank Vision Fund 2",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "B Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Franklin Templeton",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Harmony Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Insight Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Tiger Global",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "D1 Capital",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "6sense",
-      "date": "Jan-22"
-     }
-    ],
-    "investor": "Sapphire Ventures",
     "n": 1
    },
    {
@@ -861,17 +569,6 @@
     "type": "MIXED"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Databricks",
-    "date": "Sep-23",
-    "in_medians": true,
-    "mult": 28.7,
-    "reason": "same type of business; same business function",
-    "score": 8.1,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "NONE",
     "bound": "",
     "company": "dbt Labs",
@@ -879,18 +576,7 @@
     "in_medians": true,
     "mult": null,
     "reason": "both do Data Testing; same type of business; same business function; same revenue model",
-    "score": 16.7,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "6sense",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 47.3,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 10.1,
+    "score": 16.6,
     "type": "PRIMARY"
    },
    {
@@ -903,17 +589,6 @@
     "reason": "shares the language of product; same type of business; sold the same way",
     "score": 8.3,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "October 2014 run-rate",
-    "bound": "",
-    "company": "Buffer",
-    "date": "Oct-14",
-    "in_medians": true,
-    "mult": 12.8,
-    "reason": "both do Analytics; related type of business; same revenue model; sold the same way",
-    "score": 11.1,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -923,8 +598,7 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4,
-    "ARR_RUNRATE": 2
+    "ARR": 3
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
@@ -932,14 +606,14 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 47.3,
+   "high": 37.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 12.8,
-   "mid": 28.7,
-   "n": 6,
+   "low": 22.5,
+   "mid": 28.0,
+   "n": 3,
    "period_mix": {
-    "RUN_RATE": 6
+    "RUN_RATE": 3
    },
    "period_span": {
     "RUN_RATE": {
@@ -954,18 +628,8 @@
     "session",
     "simulation"
    ],
-   "spread": 3.7,
+   "spread": 1.7,
    "table": [
-    {
-     "company": "Buffer",
-     "date": "Oct-14",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 12.8,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
     {
      "company": "Algolia",
      "date": "Jul-21",
@@ -987,31 +651,11 @@
      "ticker": ""
     },
     {
-     "company": "Databricks",
-     "date": "Sep-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 28.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Applied Intuition",
      "date": "Jun-25",
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 37.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "6sense",
-     "date": "Jan-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 47.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -1021,68 +665,10 @@
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 142,
-  "secondary": [
-   {
-    "company": "Adobe Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same revenue model; sold the same way",
-    "score": 7.1,
-    "ticker": "NASDAQGS:ADBE"
-   }
-  ],
+  "private_window_months": 61,
+  "secondary": [],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 1
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "founder_basis_trailing_on_forward": false,
-   "high": 4.1,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 4.1,
-   "mid": 4.1,
-   "n": 1,
-   "period_mix": {
-    "NTM": 1
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": false,
-   "sole": "Adobe Inc.",
-   "spread": 1.0,
-   "table": [
-    {
-     "company": "Adobe Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.9,
-     "multiple": 4.1,
-     "recurring_pct": 96.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:ADBE"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Simulate how any product change will perform before shipping."

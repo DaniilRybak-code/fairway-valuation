@@ -60,7 +60,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.9,
      "thin": true,
      "triangulated": false
     }
@@ -204,7 +204,7 @@
     "in_medians": true,
     "mult": 3.46,
     "reason": "both do Logistics Visibility; same type of business; same revenue model; sold the same way",
-    "score": 12.5,
+    "score": 12.4,
     "type": "CONTROL"
    }
   ],
@@ -263,7 +263,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.9,
    "thin": true,
    "triangulated": false
   },
@@ -282,7 +282,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of intelligence; same kind of customer; same revenue model",
-    "score": 6.3,
+    "score": 6.2,
     "ticker": "NYSE:SMWB"
    },
    {
@@ -294,45 +294,37 @@
     "ticker": "NASDAQGS:GTM"
    },
    {
-    "company": "Sprout Social, Inc.",
+    "company": "SAP SE",
     "family": "software",
     "in_medians": true,
-    "reason": "same kind of customer; same revenue model",
-    "score": 6.1,
-    "ticker": "NASDAQCM:SPT"
-   },
-   {
-    "company": "Salesforce, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "both do Analytics; same revenue model; sold the same way",
-    "score": 5.6,
-    "ticker": "NYSE:CRM"
+    "reason": "both do Supply Chain; same business function; sold the same way",
+    "score": 5.3,
+    "ticker": "XTRA:SAP"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "BROAD",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 4
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 5.0,
+   "high": 4.9,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 1.5,
    "mid": 2.2,
-   "n": 5,
+   "n": 4,
    "period_mix": {
-    "NTM": 5
+    "NTM": 4
    },
    "period_span": {
     "NTM": {
@@ -344,20 +336,13 @@
    "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
-    "intelligence"
+    "chain",
+    "intelligence",
+    "supply"
    ],
    "show_retention": true,
-   "spread": 4.2,
+   "spread": 3.3,
    "table": [
-    {
-     "company": "Sprout Social, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.2,
-     "multiple": 1.2,
-     "recurring_pct": null,
-     "retention_pct": 100.0,
-     "ticker": "NASDAQCM:SPT"
-    },
     {
      "company": "GB Group plc",
      "growth_basis": "CAGR_CY1_CY3",
@@ -386,18 +371,18 @@
      "ticker": "NASDAQGS:GTM"
     },
     {
-     "company": "Salesforce, Inc.",
+     "company": "SAP SE",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 9.7,
-     "multiple": 5.0,
-     "recurring_pct": 95.0,
+     "growth_pct": 11.9,
+     "multiple": 4.9,
+     "recurring_pct": 63.6,
      "retention_pct": null,
-     "ticker": "NYSE:CRM"
+     "ticker": "XTRA:SAP"
     }
    ],
    "tag_evidence": 0.3,
    "thin": false,
-   "triangulated": true
+   "triangulated": false
   }
  },
  "label": "World model for freight"

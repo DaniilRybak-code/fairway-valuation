@@ -8,7 +8,7 @@
      "basis": "BUSINESS_CUSTOMERS",
      "basis_label": "dollars of enterprise value per business customer",
      "basis_mix": {
-      "BUSINESS_CUSTOMERS": 3
+      "BUSINESS_CUSTOMERS": 2
      },
      "bounded": true,
      "closeness": "PARTIAL_OVERLAP",
@@ -24,11 +24,11 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 142857.14,
-     "mid": 615384.62,
-     "n": 3,
+     "mid": 640000.0,
+     "n": 2,
      "period_mix": {
       "NTM": 1,
-      "RUN_RATE": 2
+      "RUN_RATE": 1
      },
      "period_span": {
       "NTM": {
@@ -59,16 +59,6 @@
        "ticker": ""
       },
       {
-       "company": "FloQast",
-       "date": "Apr-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 615384.62,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Ramp",
        "date": "Nov-25",
        "growth_basis": "",
@@ -79,8 +69,8 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
-     "thin": false,
+     "tag_evidence": 0.6,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -89,16 +79,15 @@
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4,
+      "ARR": 1,
       "ARR_RUNRATE": 1,
       "NET_REVENUE": 2
      },
      "bounded": true,
      "closeness": "SHARED_PRODUCT",
-     "control_n": 2,
+     "control_n": 1,
      "control_names": [
-      "E2open",
-      "AuditBoard"
+      "E2open"
      ],
      "dispersed": true,
      "display": "SCATTER",
@@ -112,20 +101,15 @@
       "E2open"
      ],
      "low": 3.46,
-     "mid": 16.0,
-     "n": 7,
+     "mid": 33.3,
+     "n": 4,
      "period_mix": {
       "FY2025": 1,
-      "NOT STATED": 1,
       "NTM": 1,
-      "RUN_RATE": 4
+      "RUN_RATE": 2
      },
      "period_span": {
       "FY2025": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "NOT STATED": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       },
@@ -145,27 +129,6 @@
        "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
        "tier": "DIRECT",
        "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Restaurant365",
-       "mult": 10.0,
-       "reason": "related type of business; same business function; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "AuditBoard",
-       "mult": 15.0,
-       "reason": "related type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "FloQast",
-       "mult": 16.0,
-       "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       },
       {
        "company": "Ramp",
@@ -213,36 +176,6 @@
        "ticker": ""
       },
       {
-       "company": "Restaurant365",
-       "date": "May-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "AuditBoard",
-       "date": "May-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 15.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "FloQast",
-       "date": "Apr-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 16.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Ramp",
        "date": "Nov-25",
        "growth_basis": "",
@@ -273,7 +206,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 8.7,
+     "tag_evidence": 8.6,
      "thin": false,
      "triangulated": false
     }
@@ -293,16 +226,8 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do Supply Chain Planning, Demand Planning; same type of business; same kind of customer",
-    "score": 9.4,
+    "score": 9.3,
     "ticker": "TSX:KXS"
-   },
-   {
-    "company": "BlackLine, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 7.6,
-    "ticker": "NASDAQGS:BL"
    },
    {
     "company": "Sidetrade SA",
@@ -333,7 +258,7 @@
    "anchor_dropped": false,
    "band": "DIRECT",
    "basis_mix": {
-    "UNKNOWN": 6
+    "UNKNOWN": 5
    },
    "bounded": false,
    "closeness": "SHARED_PRODUCT",
@@ -343,15 +268,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 4.5,
+   "high": 6.3,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.5,
-   "mid": 4.0,
-   "n": 6,
+   "low": 3.7,
+   "mid": 4.3,
+   "n": 5,
    "period_mix": {
-    "NTM": 6
+    "NTM": 5
    },
    "period_span": {
     "NTM": {
@@ -380,15 +305,6 @@
      "recurring_pct": 58.0,
      "retention_pct": 106.0,
      "ticker": "TSX:TCS"
-    },
-    {
-     "company": "BlackLine, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 10.4,
-     "multiple": 2.5,
-     "recurring_pct": 95.0,
-     "retention_pct": 102.0,
-     "ticker": "NASDAQGS:BL"
     },
     {
      "company": "Sidetrade SA",
@@ -427,7 +343,7 @@
      "ticker": "XTRA:AOF"
     }
    ],
-   "tag_evidence": 3.9,
+   "tag_evidence": 3.8,
    "thin": false,
    "triangulated": false
   },
@@ -697,100 +613,6 @@
    {
     "backed": [
      {
-      "company": "AuditBoard",
-      "date": "May-24"
-     }
-    ],
-    "investor": "Hg (buyer)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     },
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "BDT & MSD",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Sapphire",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Coupa Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Factorial",
       "date": "Oct-22"
      }
@@ -849,7 +671,7 @@
     "in_medians": true,
     "mult": 3.46,
     "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
-    "score": 17.2,
+    "score": 17.1,
     "type": "CONTROL"
    },
    {
@@ -860,7 +682,7 @@
     "in_medians": true,
     "mult": 32.0,
     "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
-    "score": 10.2,
+    "score": 10.1,
     "type": "MIXED"
    },
    {
@@ -875,39 +697,6 @@
     "type": "PRIMARY"
    },
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "AuditBoard",
-    "date": "May-24",
-    "in_medians": true,
-    "mult": 15.0,
-    "reason": "related type of business; same kind of customer; same revenue model",
-    "score": 10.1,
-    "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "FloQast",
-    "date": "Apr-24",
-    "in_medians": true,
-    "mult": 16.0,
-    "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-    "score": 13.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "related type of business; same business function; same revenue model; sold the same way",
-    "score": 11.7,
-    "type": "PRIMARY"
-   },
-   {
     "basis": "DISCLOSED_FORECAST",
     "bound": ">=",
     "company": "Factorial",
@@ -916,6 +705,17 @@
     "mult": 33.3,
     "reason": "shares the language of planning; related type of business; same revenue model; sold the same way",
     "score": 9.8,
+    "type": "PRIMARY"
+   },
+   {
+    "basis": "Annual period not specified",
+    "bound": "",
+    "company": "Tipalti",
+    "date": "Dec-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
+    "score": 10.7,
     "type": "PRIMARY"
    }
   ],
@@ -926,16 +726,15 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4,
+    "ARR": 1,
     "ARR_RUNRATE": 1,
     "NET_REVENUE": 2
    },
    "bounded": true,
    "closeness": "SHARED_PRODUCT",
-   "control_n": 2,
+   "control_n": 1,
    "control_names": [
-    "E2open",
-    "AuditBoard"
+    "E2open"
    ],
    "dispersed": true,
    "display": "SCATTER",
@@ -945,20 +744,15 @@
     "E2open"
    ],
    "low": 3.46,
-   "mid": 16.0,
-   "n": 7,
+   "mid": 33.3,
+   "n": 4,
    "period_mix": {
     "FY2025": 1,
-    "NOT STATED": 1,
     "NTM": 1,
-    "RUN_RATE": 4
+    "RUN_RATE": 2
    },
    "period_span": {
     "FY2025": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "NOT STATED": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -978,27 +772,6 @@
      "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
      "tier": "DIRECT",
      "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Restaurant365",
-     "mult": 10.0,
-     "reason": "related type of business; same business function; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "AuditBoard",
-     "mult": 15.0,
-     "reason": "related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "FloQast",
-     "mult": 16.0,
-     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     },
     {
      "company": "Ramp",
@@ -1046,36 +819,6 @@
      "ticker": ""
     },
     {
-     "company": "Restaurant365",
-     "date": "May-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "AuditBoard",
-     "date": "May-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 15.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "FloQast",
-     "date": "Apr-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 16.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Ramp",
      "date": "Nov-25",
      "growth_basis": "",
@@ -1106,20 +849,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 8.7,
+   "tag_evidence": 8.6,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 46,
+  "private_window_months": 56,
   "secondary": [
-   {
-    "company": "ZoomInfo Technologies Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same kind of customer; same revenue model; sold the same way",
-    "score": 8.1,
-    "ticker": "NASDAQGS:GTM"
-   },
    {
     "company": "SAP SE",
     "family": "software",
@@ -1129,35 +864,19 @@
     "ticker": "XTRA:SAP"
    },
    {
-    "company": "UiPath, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same business function; same AI stance",
-    "score": 5.6,
-    "ticker": "NYSE:PATH"
-   },
-   {
     "company": "Atlassian Corporation",
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of planning; related type of business; same revenue model",
     "score": 5.3,
     "ticker": "NASDAQGS:TEAM"
-   },
-   {
-    "company": "HubSpot, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same revenue model",
-    "score": 5.1,
-    "ticker": "NYSE:HUBS"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 4
+    "UNKNOWN": 2
    },
    "bounded": false,
    "closeness": "STRONG_OVERLAP",
@@ -1171,11 +890,11 @@
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 2.8,
-   "mid": 4.6,
-   "n": 4,
+   "low": 4.9,
+   "mid": 5.5,
+   "n": 2,
    "period_mix": {
-    "NTM": 4
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -1184,15 +903,7 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "ZoomInfo Technologies Inc.",
-     "mult": 2.2,
-     "reason": "same kind of customer; same revenue model; sold the same way",
-     "tier": "BROAD",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "chain",
@@ -1201,26 +912,8 @@
     "supply"
    ],
    "show_retention": true,
-   "spread": 2.2,
+   "spread": 1.2,
    "table": [
-    {
-     "company": "HubSpot, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 14.0,
-     "multiple": 2.8,
-     "recurring_pct": null,
-     "retention_pct": 102.0,
-     "ticker": "NYSE:HUBS"
-    },
-    {
-     "company": "UiPath, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 8.0,
-     "multiple": 4.3,
-     "recurring_pct": null,
-     "retention_pct": 109.0,
-     "ticker": "NYSE:PATH"
-    },
     {
      "company": "SAP SE",
      "growth_basis": "CAGR_CY1_CY3",
@@ -1241,7 +934,7 @@
     }
    ],
    "tag_evidence": 1.2,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   }
  },

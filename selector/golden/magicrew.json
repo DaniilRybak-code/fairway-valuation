@@ -15,8 +15,8 @@
      "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
+     "dispersed": true,
+     "display": "SCATTER",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -24,7 +24,7 @@
      "high": 72.86,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 18.3,
+     "low": 10.3,
      "mid": 25.0,
      "n": 6,
      "period_mix": {
@@ -36,7 +36,50 @@
        "founder_revenue": null
       }
      },
-     "points": [],
+     "points": [
+      {
+       "company": "Oxylabs",
+       "mult": 10.3,
+       "reason": "shares the language of agent; related type of business; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "MIXED"
+      },
+      {
+       "company": "Anysphere / Cursor",
+       "mult": 19.8,
+       "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Replit",
+       "mult": 20.0,
+       "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Genspark",
+       "mult": 25.0,
+       "reason": "shares the language of agent; related type of business; same business function; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Lovable",
+       "mult": 33.0,
+       "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      },
+      {
+       "company": "Supabase",
+       "mult": 72.86,
+       "reason": "both do Open Source; related type of business; sold the same way",
+       "tier": "ADJACENT",
+       "transaction_type": "PRIMARY"
+      }
+     ],
      "positioning": [],
      "shared_words": [
       "agent",
@@ -44,14 +87,14 @@
       "open",
       "source"
      ],
-     "spread": 4.0,
+     "spread": 7.1,
      "table": [
       {
-       "company": "Notion",
-       "date": "Jan-26",
+       "company": "Oxylabs",
+       "date": "Jul-26",
        "growth_basis": "",
        "growth_pct": null,
-       "multiple": 18.3,
+       "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -115,14 +158,6 @@
   },
   "core": [
    {
-    "company": "Wix.com Ltd.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "related type of business; same business function; same kind of customer; sold the same way",
-    "score": 10.1,
-    "ticker": "NASDAQGS:WIX"
-   },
-   {
     "company": "monday.com Ltd.",
     "family": "software",
     "in_medians": true,
@@ -145,21 +180,13 @@
     "reason": "shares the language of agent; same type of business; same AI stance",
     "score": 6.1,
     "ticker": "NYSE:PATH"
-   },
-   {
-    "company": "ServiceNow, Inc.",
-    "family": "software",
-    "in_medians": true,
-    "reason": "same type of business",
-    "score": 5.2,
-    "ticker": "NYSE:NOW"
    }
   ],
   "core_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 3
    },
    "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
@@ -169,15 +196,15 @@
    "dispersed": false,
    "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 8.2,
+   "high": 4.3,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.0,
    "mid": 2.3,
-   "n": 5,
+   "n": 3,
    "period_mix": {
-    "NTM": 5
+    "NTM": 3
    },
    "period_span": {
     "NTM": {
@@ -193,17 +220,8 @@
     "collaboration"
    ],
    "show_retention": true,
-   "spread": 4.1,
+   "spread": 2.1,
    "table": [
-    {
-     "company": "Wix.com Ltd.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 11.4,
-     "multiple": 2.0,
-     "recurring_pct": 71.0,
-     "retention_pct": null,
-     "ticker": "NASDAQGS:WIX"
-    },
     {
      "company": "monday.com Ltd.",
      "growth_basis": "CAGR_CY1_CY3",
@@ -230,15 +248,6 @@
      "recurring_pct": null,
      "retention_pct": 109.0,
      "ticker": "NYSE:PATH"
-    },
-    {
-     "company": "ServiceNow, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 18.8,
-     "multiple": 8.2,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:NOW"
     }
    ],
    "tag_evidence": 0.3,
@@ -387,40 +396,6 @@
    {
     "backed": [
      {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "GIC",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     },
-     {
-      "company": "LangChain",
-      "date": "Oct-25"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "Notion",
-      "date": "Jan-26"
-     }
-    ],
-    "investor": "Index Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
       "company": "Lovable",
       "date": "Dec-25"
      },
@@ -559,6 +534,16 @@
       "date": "Oct-25"
      }
     ],
+    "investor": "Sequoia",
+    "n": 1
+   },
+   {
+    "backed": [
+     {
+      "company": "LangChain",
+      "date": "Oct-25"
+     }
+    ],
     "investor": "Benchmark",
     "n": 1
    },
@@ -646,15 +631,15 @@
   "listed_proximity": "ADJACENT",
   "private": [
    {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Notion",
-    "date": "Jan-26",
+    "basis": "DISCLOSED_ACTUAL",
+    "bound": "",
+    "company": "Oxylabs",
+    "date": "Jul-26",
     "in_medians": true,
-    "mult": 18.3,
-    "reason": "related type of business; same business function; same kind of customer; sold the same way",
-    "score": 14.1,
-    "type": "SECONDARY"
+    "mult": 10.3,
+    "reason": "shares the language of agent; related type of business; sold the same way",
+    "score": 6.1,
+    "type": "MIXED"
    },
    {
     "basis": "DISCLOSED_THRESHOLD",
@@ -675,7 +660,7 @@
     "in_medians": true,
     "mult": 25.0,
     "reason": "shares the language of agent; related type of business; same business function; sold the same way",
-    "score": 11.2,
+    "score": 11.1,
     "type": "PRIMARY"
    },
    {
@@ -708,7 +693,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
-    "score": 9.7,
+    "score": 9.6,
     "type": "PRIMARY"
    },
    {
@@ -737,12 +722,12 @@
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": false,
-   "display": "RANGE",
+   "dispersed": true,
+   "display": "SCATTER",
    "high": 72.86,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 18.3,
+   "low": 10.3,
    "mid": 25.0,
    "n": 6,
    "period_mix": {
@@ -754,7 +739,50 @@
      "founder_revenue": null
     }
    },
-   "points": [],
+   "points": [
+    {
+     "company": "Oxylabs",
+     "mult": 10.3,
+     "reason": "shares the language of agent; related type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "MIXED"
+    },
+    {
+     "company": "Anysphere / Cursor",
+     "mult": 19.8,
+     "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Replit",
+     "mult": 20.0,
+     "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Genspark",
+     "mult": 25.0,
+     "reason": "shares the language of agent; related type of business; same business function; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Lovable",
+     "mult": 33.0,
+     "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    },
+    {
+     "company": "Supabase",
+     "mult": 72.86,
+     "reason": "both do Open Source; related type of business; sold the same way",
+     "tier": "ADJACENT",
+     "transaction_type": "PRIMARY"
+    }
+   ],
    "positioning": [],
    "shared_words": [
     "agent",
@@ -762,14 +790,14 @@
     "open",
     "source"
    ],
-   "spread": 4.0,
+   "spread": 7.1,
    "table": [
     {
-     "company": "Notion",
-     "date": "Jan-26",
+     "company": "Oxylabs",
+     "date": "Jul-26",
      "growth_basis": "",
      "growth_pct": null,
-     "multiple": 18.3,
+     "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -836,7 +864,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of source; related type of business; sold the same way",
-    "score": 6.2,
+    "score": 6.1,
     "ticker": "NASDAQGS:GTLB"
    }
   ],
@@ -890,7 +918,7 @@
      "ticker": "NASDAQGS:GTLB"
     }
    ],
-   "tag_evidence": 0.7,
+   "tag_evidence": 0.6,
    "thin": true,
    "triangulated": true
   }

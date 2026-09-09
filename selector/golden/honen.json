@@ -174,7 +174,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 4.5,
+     "tag_evidence": 4.4,
      "thin": false,
      "triangulated": false
     },
@@ -259,7 +259,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.7,
+     "tag_evidence": 0.6,
      "thin": true,
      "triangulated": false
     }
@@ -271,7 +271,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of course, development, training; same type of business; same end market; same business function",
-    "score": 12.7,
+    "score": 12.5,
     "ticker": "NYSE:SKIL"
    },
    {
@@ -287,7 +287,7 @@
     "family": "consumer",
     "in_medians": true,
     "reason": "shares the language of course; same type of business; same end market; same revenue model",
-    "score": 9.2,
+    "score": 9.1,
     "ticker": "TSX:DTOL"
    },
    {
@@ -295,16 +295,8 @@
     "family": "software",
     "in_medians": true,
     "reason": "both do LMS, Corporate Training; related type of business; same end market; same business function",
-    "score": 7.4,
+    "score": 7.3,
     "ticker": "TSX:DCBO"
-   },
-   {
-    "company": "Nerdy Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same end market",
-    "score": 6.0,
-    "ticker": "NYSE:NRDY"
    },
    {
     "company": "Coursera, Inc.",
@@ -321,6 +313,14 @@
     "reason": "same type of business; same end market",
     "score": 6.0,
     "ticker": "NYSE:CHGG"
+   },
+   {
+    "company": "Nerdy Inc.",
+    "family": "consumer",
+    "in_medians": true,
+    "reason": "same type of business; same end market",
+    "score": 6.0,
+    "ticker": "NYSE:NRDY"
    }
   ],
   "core_range": {
@@ -360,14 +360,14 @@
    },
    "points": [
     {
-     "company": "Nerdy Inc.",
+     "company": "Chegg, Inc.",
      "mult": 0.4,
      "reason": "same type of business; same end market",
      "tier": "DIRECT",
      "transaction_type": ""
     },
     {
-     "company": "Chegg, Inc.",
+     "company": "Nerdy Inc.",
      "mult": 0.4,
      "reason": "same type of business; same end market",
      "tier": "DIRECT",
@@ -422,15 +422,6 @@
    "spread": 11.8,
    "table": [
     {
-     "company": "Nerdy Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.4,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:NRDY"
-    },
-    {
      "company": "Chegg, Inc.",
      "growth_basis": "CAGR_CY1_CY3",
      "growth_pct": -26.3,
@@ -438,6 +429,15 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": "NYSE:CHGG"
+    },
+    {
+     "company": "Nerdy Inc.",
+     "growth_basis": "CAGR_CY1_CY3",
+     "growth_pct": 3.4,
+     "multiple": 0.4,
+     "recurring_pct": null,
+     "retention_pct": null,
+     "ticker": "NYSE:NRDY"
     },
     {
      "company": "Coursera, Inc.",
@@ -710,7 +710,7 @@
     "in_medians": true,
     "mult": 1.29,
     "reason": "shares the language of course; same type of business; same end market; sold the same way",
-    "score": 11.7,
+    "score": 11.6,
     "type": "CONTROL"
    },
    {
@@ -721,7 +721,7 @@
     "in_medians": true,
     "mult": 1.52,
     "reason": "both do LMS, Workforce Development; same type of business; same end market; same business function",
-    "score": 17.0,
+    "score": 16.9,
     "type": "CONTROL"
    },
    {
@@ -862,20 +862,12 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 4.5,
+   "tag_evidence": 4.4,
    "thin": false,
    "triangulated": false
   },
   "private_window_months": 60,
   "secondary": [
-   {
-    "company": "Infomart Corporation",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "related type of business; same kind of customer; sold the same way",
-    "score": 6.1,
-    "ticker": "TSE:2492"
-   },
    {
     "company": "JustSystems Corporation",
     "family": "consumer",
@@ -886,56 +878,7 @@
    }
   ],
   "secondary_range": {
-   "anchor_dropped": false,
-   "band": "ADJACENT",
-   "basis_mix": {
-    "UNKNOWN": 1
-   },
-   "bounded": false,
-   "closeness": "THIN_OVERLAP",
-   "control_n": 0,
-   "control_names": [],
-   "denominator": "rev",
-   "dispersed": false,
-   "display": "DIAMOND",
-   "founder_basis_trailing_on_forward": false,
-   "high": 6.6,
-   "levered_names": [],
-   "listed_target_n": 0,
-   "listed_target_names": [],
-   "low": 6.6,
-   "mid": 6.6,
-   "n": 1,
-   "period_mix": {
-    "NTM": 1
-   },
-   "period_span": {
-    "NTM": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    }
-   },
-   "points": [],
-   "positioning": [],
-   "post_stated_n": 0,
-   "shared_words": [],
-   "show_retention": false,
-   "sole": "Infomart Corporation",
-   "spread": 1.0,
-   "table": [
-    {
-     "company": "Infomart Corporation",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 12.8,
-     "multiple": 6.6,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:2492"
-    }
-   ],
-   "tag_evidence": 0.1,
-   "thin": true,
-   "triangulated": true
+   "denominator": "rev"
   }
  },
  "label": "Turns company documents and recordings into structured courses with a 1:1 AI tutor"

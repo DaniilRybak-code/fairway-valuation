@@ -79,7 +79,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 0.3,
+     "tag_evidence": 0.2,
      "thin": true,
      "triangulated": false
     },
@@ -241,7 +241,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "NYSE:NET"
    },
    {
@@ -249,7 +249,7 @@
     "family": "software",
     "in_medians": true,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
-    "score": 8.7,
+    "score": 8.6,
     "ticker": "NASDAQGS:DDOG"
    }
   ],
@@ -311,7 +311,7 @@
      "ticker": "NYSE:NET"
     }
    ],
-   "tag_evidence": 0.2,
+   "tag_evidence": 0.1,
    "thin": true,
    "triangulated": true
   },
@@ -711,7 +711,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
-    "score": 11.7,
+    "score": 11.6,
     "type": "MIXED"
    },
    {
@@ -722,7 +722,7 @@
     "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of agent; related type of business; same kind of customer; same revenue model",
-    "score": 13.7,
+    "score": 13.6,
     "type": "PRIMARY"
    },
    {
@@ -733,7 +733,7 @@
     "in_medians": true,
     "mult": 105.3,
     "reason": "both do AI Agents; related type of business; same revenue model; same AI stance",
-    "score": 8.8,
+    "score": 8.7,
     "type": "PRIMARY"
    },
    {
@@ -755,7 +755,7 @@
     "in_medians": true,
     "mult": 50.0,
     "reason": "shares the language of agents; related type of business; same revenue model",
-    "score": 6.8,
+    "score": 6.7,
     "type": "SECONDARY"
    },
    {
@@ -777,7 +777,7 @@
     "in_medians": true,
     "mult": 20.0,
     "reason": "shares the language of agent; related type of business; same business function; same revenue model",
-    "score": 11.7,
+    "score": 11.6,
     "type": "PRIMARY"
    }
   ],

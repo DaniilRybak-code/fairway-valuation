@@ -116,7 +116,7 @@
        "ticker": ""
       }
      ],
-     "tag_evidence": 1.7,
+     "tag_evidence": 1.6,
      "thin": false,
      "triangulated": false
     }
@@ -647,7 +647,7 @@
     "in_medians": true,
     "mult": 10.3,
     "reason": "shares the language of agent; same type of business; same kind of customer; sold the same way",
-    "score": 11.7,
+    "score": 11.6,
     "type": "MIXED"
    },
    {
@@ -658,7 +658,7 @@
     "in_medians": true,
     "mult": 20.5,
     "reason": "shares the language of agent; same type of business; same kind of customer; same AI stance",
-    "score": 10.7,
+    "score": 10.6,
     "type": "PRIMARY"
    },
    {
@@ -702,7 +702,7 @@
     "in_medians": true,
     "mult": 14.9,
     "reason": "shares the language of deployment, evaluation, orchestration; same type of business; same AI stance",
-    "score": 8.7,
+    "score": 8.6,
     "type": "PRIMARY"
    },
    {
@@ -828,7 +828,7 @@
      "ticker": ""
     }
    ],
-   "tag_evidence": 1.7,
+   "tag_evidence": 1.6,
    "thin": false,
    "triangulated": false
   },

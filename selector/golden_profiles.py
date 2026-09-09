@@ -214,7 +214,11 @@ REAL = [
    industry='Horizontal', function='Content & Community', buyer='DEV', gtm_motion='PLG',
    revenue_model='SEATS', product_role='INFRA_LAYER', asset_intensity='', purchase_frequency='',
    ai_stance='AI_EXPOSED', growth=None, gm=None,
-   product_tags='Social Media Publishing API|MCP Server|Multi-Platform Post Scheduling|OAuth Abstraction Layer|Social Engagement API|Agency Workspaces')),
+   product_tags='Social Media Publishing API|MCP Server|Multi-Platform Post Scheduling|OAuth Abstraction Layer|Social Engagement API|Agency Workspaces',
+   # PINNED 9-Sep-2026 on Daniil: "Publora indeed seem to match with Buffer." Buffer is the best
+   # product match in the private pool (1.6 points, the words scheduling and publishing) and was cut
+   # by the seven-name cap because its one round is October 2014; a pin joins the lane past the cap.
+   also_compare={'Buffer': 'Daniil, 9 Sep 2026: a social publishing tool matches a social publishing API; its round is October 2014, which the caveat says'})),
  ('bluerails', 'Makes hotels discoverable and bookable by AI travel agents, bypassing OTA commission',
   dict(archetype='Vertical Software', archetype_secondary='Commerce & Payments Software',
    industry='Hospitality', function='Listings & Discovery', buyer='SMB', gtm_motion='PLG',
@@ -1043,7 +1047,13 @@ REAL_3 += [
    industry='Horizontal', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PLATFORM', product_role='INFRA_LAYER', asset_intensity='FLEET_OPS', purchase_frequency='EPISODIC',
    ai_stance='AI_NATIVE', growth=None, gm=None,
-   product_tags='Rocket Cargo Delivery|Autonomous Aerial Logistics|Defence Logistics|Rapid Resupply|Point To Point Transport')),
+   product_tags='Rocket Cargo Delivery|Autonomous Aerial Logistics|Defence Logistics|Rapid Resupply|Point To Point Transport',
+   # STRUCK 9-Sep-2026 on Daniil's ruling: "definitely should not be compared to FedEx and UPS. This
+   # is a US military contractor. Should be compared to such." It was passing the gate on FedEx,
+   # UPS, PostNL, SG Holdings (listed) and Flink, Glovo, Gopuff, Xpressbees (private). The pool has
+   # no defence contractor and no Aerospace & Defence end market (TAKEOVER 11); the names to look for
+   # are on the sourcing list in the status document.
+   struck='Daniil, 9 Sep 2026: a US military contractor, not a parcel carrier; shown FedEx, UPS, PostNL and SG Holdings (listed) and Flink, Glovo, Gopuff and Xpressbees (private) in the table he read, and FedEx, PKP Cargo, Grupo Traxion, Mitsubishi Logistics and Nippon Express once generic words stopped scoring: carriers either way, none of which flies cargo for a military. To be compared with defence contractors once the pool holds any.')),
  ('ultrasonium', 'Metal manufacturing, faster, cheaper and more versatile',
   # END MARKET SET 6-Sep-2026 on Daniil: "a high-end manufacturing company. Its end markets
   # (customers) are Aerospace & Defence, Compute & Data Centers, Energy Systems and Robotics."
@@ -1053,7 +1063,15 @@ REAL_3 += [
    industry='Manufacturing', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',
    revenue_model='PRODUCT_SALES', product_role='BRAND', asset_intensity='OWN_PRODUCT', purchase_frequency='EPISODIC',
    ai_stance='AI_NEUTRAL', growth=None, gm=None,
-   product_tags='Additive Manufacturing|Metal Fabrication|Industrial Production|Contract Manufacturing|Advanced Materials|Aerospace And Defence Components|Data Centre Components|Energy Systems Components|Robotics Components')),
+   product_tags='Additive Manufacturing|Metal Fabrication|Industrial Production|Contract Manufacturing|Advanced Materials|Aerospace And Defence Components|Data Centre Components|Energy Systems Components|Robotics Components',
+   # STRUCK 9-Sep-2026 on Daniil's question of the same day, read as a yes: "We did not find
+   # good peers for it, did we? So should it not be in no comps list?" It was passing on PTC,
+   # Dassault Systemes and Lectra (listed) and Octopus Energy, Berkshire Grey and Enpal
+   # (private, one priced). The three listed names sell design software TO manufacturers and
+   # this company IS a manufacturer, which is the customer-versus-company confusion the
+   # evaluator flagged six times on 8 September. The private lane already held one priced
+   # round, so the strike costs no pass. ONE LINE TO REVERSE: delete the struck= argument.
+   struck='Daniil, 9 Sep 2026: a metal manufacturer priced off design software. Shown PTC, Dassault Systemes and Lectra (listed) and Octopus Energy Group, Berkshire Grey and Enpal (private, one priced) on the Manufacturing end market and the Design & Engineering fallback. PTC, Dassault and Lectra sell CAD and PLM software to manufacturers; they answer what a vendor to this market is worth, not what this company is worth. To be compared with contract manufacturers and additive-manufacturing companies once the pool holds any; the names are on the sourcing list.')),
  ('apollo-atomics', 'We make the most compact nuclear reactors',
   dict(archetype='Owned-Inventory Retail', archetype_secondary='Design & Engineering',
    industry='Energy & Utilities', function='Operations', buyer='LOB', gtm_motion='ENT_SALES',

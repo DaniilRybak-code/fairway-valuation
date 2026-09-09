@@ -9,9 +9,9 @@
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
       "ARR_RUNRATE": 1,
-      "NET_REVENUE": 2
+      "NET_REVENUE": 1
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "SHARED_PRODUCT",
      "control_n": 0,
      "control_names": [],
@@ -21,23 +21,18 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 10.1,
+     "high": 5.0,
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2.75,
      "mid": 5.0,
-     "n": 3,
+     "n": 2,
      "period_mix": {
       "FY2025": 1,
-      "LTM": 1,
       "RUN_RATE": 1
      },
      "period_span": {
       "FY2025": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "LTM": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       },
@@ -56,7 +51,7 @@
       "ownership",
       "vehicle"
      ],
-     "spread": 3.7,
+     "spread": 1.8,
      "table": [
       {
        "company": "Spinny",
@@ -77,20 +72,10 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Quince",
-       "date": "Mar-26",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.1,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 10.2,
-     "thin": false,
+     "tag_evidence": 10.1,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -99,14 +84,14 @@
      "basis": "REVENUE_GROSS",
      "basis_label": "enterprise value to gross revenue",
      "basis_mix": {
-      "REVENUE_GROSS": 2
+      "REVENUE_GROSS": 1
      },
      "bounded": false,
      "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
      "dispersed": false,
-     "display": "RANGE",
+     "display": "DIAMOND",
      "founder_field": "revenue_gross",
      "founder_high": null,
      "founder_low": null,
@@ -114,11 +99,11 @@
      "high": 5.5,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 4.15,
+     "low": 5.5,
      "mid": 5.5,
-     "n": 2,
+     "n": 1,
      "period_mix": {
-      "LTM": 2
+      "LTM": 1
      },
      "period_span": {
       "LTM": {
@@ -131,18 +116,9 @@
      "shared_words": [
       "ev"
      ],
-     "spread": 1.3,
+     "sole": "Enpal",
+     "spread": 1.0,
      "table": [
-      {
-       "company": "Packable",
-       "date": "Sep-21",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 4.15,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
       {
        "company": "Enpal",
        "date": "Jan-23",
@@ -176,22 +152,6 @@
     "reason": "shares the language of car; same type of business; same end market; same business function",
     "score": 12.7,
     "ticker": "NYSE:KMX"
-   },
-   {
-    "company": "Coupang, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same AI stance",
-    "score": 9.6,
-    "ticker": "NYSE:CPNG"
-   },
-   {
-    "company": "JD.com, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer",
-    "score": 8.6,
-    "ticker": "NASDAQGS:JD"
    },
    {
     "company": "AUTO1 Group SE",
@@ -233,22 +193,7 @@
     }
    },
    "points": [],
-   "positioning": [
-    {
-     "company": "JD.com, Inc.",
-     "mult": 0.1,
-     "reason": "same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Coupang, Inc.",
-     "mult": 0.7,
-     "reason": "same type of business; same business function; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "positioning": [],
    "post_stated_n": 0,
    "shared_words": [
     "car"
@@ -558,7 +503,7 @@
     "n": 1
    }
   ],
-  "listed_proximity": "ADJACENT",
+  "listed_proximity": "DIRECT",
   "private": [
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -568,7 +513,7 @@
     "in_medians": true,
     "mult": 5.0,
     "reason": "both do Car Subscription, Owned Vehicle Fleet, EV Fleet; same type of business; same kind of customer; same revenue model",
-    "score": 24.7,
+    "score": 24.6,
     "type": "PRIMARY"
    },
    {
@@ -579,19 +524,8 @@
     "in_medians": true,
     "mult": 2.75,
     "reason": "both do Ownership Alternative; same type of business; same end market; same business function",
-    "score": 25.5,
+    "score": 25.4,
     "type": "MIXED"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Quince",
-    "date": "Mar-26",
-    "in_medians": true,
-    "mult": 10.1,
-    "reason": "related type of business; same business function; same kind of customer; sold the same way",
-    "score": 13.6,
-    "type": "PRIMARY"
    },
    {
     "basis": "DISCLOSED_ACTUAL",
@@ -603,17 +537,6 @@
     "reason": "shares the language of ev; same type of business; same kind of customer; sold the same way",
     "score": 14.6,
     "type": "PRIMARY"
-   },
-   {
-    "basis": "FY2020",
-    "bound": "",
-    "company": "Packable",
-    "date": "Sep-21",
-    "in_medians": true,
-    "mult": 4.15,
-    "reason": "same type of business; same kind of customer; sold the same way; same AI stance",
-    "score": 12.6,
-    "type": "PRIMARY"
    }
   ],
   "private_proximity": "ADJACENT",
@@ -624,31 +547,26 @@
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
     "ARR_RUNRATE": 1,
-    "NET_REVENUE": 2
+    "NET_REVENUE": 1
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "SHARED_PRODUCT",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 10.1,
+   "high": 5.0,
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 2.75,
    "mid": 5.0,
-   "n": 3,
+   "n": 2,
    "period_mix": {
     "FY2025": 1,
-    "LTM": 1,
     "RUN_RATE": 1
    },
    "period_span": {
     "FY2025": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "LTM": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -667,7 +585,7 @@
     "ownership",
     "vehicle"
    ],
-   "spread": 3.7,
+   "spread": 1.8,
    "table": [
     {
      "company": "Spinny",
@@ -688,88 +606,54 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Quince",
-     "date": "Mar-26",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.1,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 10.2,
-   "thin": false,
+   "tag_evidence": 10.1,
+   "thin": true,
    "triangulated": false
   },
-  "private_window_months": 59,
+  "private_window_months": 43,
   "secondary": [
    {
-    "company": "BARK, Inc.",
+    "company": "Naked Wines plc",
     "family": "consumer",
     "in_medians": true,
-    "reason": "related type of business; same business function; same kind of customer; same revenue model",
-    "score": 13.6,
-    "ticker": "NYSE:BARK"
+    "reason": "shares the language of monthly; same type of business; same business function; same kind of customer",
+    "score": 11.1,
+    "ticker": "LSE:WINE"
    },
    {
-    "company": "HelloFresh SE",
+    "company": "Viaplay Group AB (publ)",
     "family": "consumer",
     "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 13.1,
-    "ticker": "XTRA:HFG"
-   },
-   {
-    "company": "Oisix Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; same revenue model",
-    "score": 13.1,
-    "ticker": "TSE:3182"
-   },
-   {
-    "company": "Chewy, Inc.",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.6,
-    "ticker": "NYSE:CHWY"
-   },
-   {
-    "company": "Zalando SE",
-    "family": "consumer",
-    "in_medians": true,
-    "reason": "same type of business; same business function; same kind of customer; sold the same way",
-    "score": 11.6,
-    "ticker": "XTRA:ZAL"
+    "reason": "shares the language of alternative; same kind of customer; same revenue model; sold the same way",
+    "score": 9.5,
+    "ticker": "OM:VPLAY B"
    }
   ],
   "secondary_range": {
    "anchor_dropped": false,
    "band": "ADJACENT",
    "basis_mix": {
-    "UNKNOWN": 5
+    "UNKNOWN": 2
    },
    "bounded": false,
-   "closeness": "THIN_OVERLAP",
+   "closeness": "PARTIAL_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "denominator": "rev",
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "founder_basis_trailing_on_forward": false,
-   "high": 0.7,
+   "high": 0.5,
    "levered_names": [],
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 0.3,
+   "low": 0.1,
    "mid": 0.3,
-   "n": 5,
+   "n": 2,
    "period_mix": {
-    "NTM": 5
+    "NTM": 2
    },
    "period_span": {
     "NTM": {
@@ -777,98 +661,38 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "HelloFresh SE",
-     "mult": 0.1,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "BARK, Inc.",
-     "mult": 0.3,
-     "reason": "related type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Oisix Inc.",
-     "mult": 0.3,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Zalando SE",
-     "mult": 0.4,
-     "reason": "same type of business; same business function; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    },
-    {
-     "company": "Chewy, Inc.",
-     "mult": 0.7,
-     "reason": "same type of business; same business function; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": ""
-    }
-   ],
+   "points": [],
    "positioning": [],
    "post_stated_n": 0,
-   "shared_words": [],
+   "shared_words": [
+    "alternative",
+    "monthly"
+   ],
    "show_retention": false,
-   "spread": 7.0,
+   "spread": 5.0,
    "table": [
     {
-     "company": "HelloFresh SE",
+     "company": "Naked Wines plc",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 0.7,
+     "growth_pct": -7.5,
      "multiple": 0.1,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "XTRA:HFG"
+     "ticker": "LSE:WINE"
     },
     {
-     "company": "BARK, Inc.",
+     "company": "Viaplay Group AB (publ)",
      "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 3.1,
-     "multiple": 0.3,
+     "growth_pct": -0.7,
+     "multiple": 0.5,
      "recurring_pct": null,
      "retention_pct": null,
-     "ticker": "NYSE:BARK"
-    },
-    {
-     "company": "Oisix Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 4.2,
-     "multiple": 0.3,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "TSE:3182"
-    },
-    {
-     "company": "Zalando SE",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 5.4,
-     "multiple": 0.4,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "XTRA:ZAL"
-    },
-    {
-     "company": "Chewy, Inc.",
-     "growth_basis": "CAGR_CY1_CY3",
-     "growth_pct": 6.7,
-     "multiple": 0.7,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": "NYSE:CHWY"
+     "ticker": "OM:VPLAY B"
     }
    ],
-   "tag_evidence": 0.1,
-   "thin": false,
-   "triangulated": true
+   "tag_evidence": 0.6,
+   "thin": true,
+   "triangulated": false
   }
  },
  "label": "All-inclusive monthly car subscription on an owned fleet, delivered to the door"

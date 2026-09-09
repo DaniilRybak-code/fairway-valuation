@@ -1,0 +1,111 @@
+GOLDEN ATTRIBUTION, second batch, 9 September 2026 (Fable), written BEFORE the rebaseline.
+Cause: rule A14 widened from the closeness label to the score itself (GENERIC_WORDS_SCORE = False in
+selector/match_reference.py), on Daniil's ruling of 9 Sep: "generic words cannot be counted towards
+comparison analysis". Measured before applying: 108 lanes across 67 fixtures change a name. Plus one
+pin (Buffer for publora) and one strike (hop-aero), both his rulings of the same night.
+
+moved fixtures: 92
+  NAMES        generic words zeroed (A14 widened)   91  (hop-aero among them; its strike moves no name)
+  NAMES        Buffer pinned, and generic words zeroed   1  (publora)
+  of the 92: 66 changed a name in the listed core lane or the private lane; 18 changed a name in the
+  secondary lane only; 8 changed only the order of the same names or the shared-words sentence
+  (the lines below compare lists, so an order change prints as "+[] -[]"). The in-memory measurement
+  taken before the rule was applied (variant G, core and private lanes only) said 108 lanes across
+  67 fixtures; the one-fixture difference is the Buffer pin landing in the same run.
+
+Gate before the batch 130 of 142, after 125 of 142: acti, lyka, rainforest and tienda-pago now fail
+on the private lane (one priced round each, once the names that shared only a generic word fell out),
+hop-aero fails as struck. Nothing regressed on the listed lane.
+
+NAMES    generic words zeroed (A14 widened) 99minutos          core names (+['Deutsche Post AG'] -['SG Holdings Co., Ltd.']) | secondary names (+['S.F. Holding Co., Ltd.', 'SG Holdings Co., Ltd.'] -['Delivery Hero SE', 'DoorDash, Inc.']) | private names (+['Delhivery'] -['Flink', 'Gopuff', 'W
+NAMES    generic words zeroed (A14 widened) acti               core names (+[] -['Truecaller AB (publ)']) | private names (+[] -['Suno'])
+NAMES    generic words zeroed (A14 widened) airtop             core names (+[] -['HubSpot, Inc.', 'Snowflake Inc.']) | secondary names (+['GoDaddy Inc.'] -['Klaviyo, Inc.'])
+NAMES    generic words zeroed (A14 widened) akkari             core names (+[] -['Zeta Global Holdings Corp.', 'ZoomInfo Technologies Inc.']) | secondary names (+[] -['UiPath, Inc.']) | private names (+[] -['Salesloft'])
+NAMES    generic words zeroed (A14 widened) alloovium          secondary names (+['Similarweb Ltd.'] -['Intapp, Inc.']) | private names (+[] -['AuditBoard', 'Restaurant365'])
+NAMES    generic words zeroed (A14 widened) atlas-new          secondary names (+[] -['Zeta Global Holdings Corp.']) | private names (+['LangChain'] -['Sierra'])
+NAMES    generic words zeroed (A14 widened) auxos              core names (+['Amplitude, Inc.'] -['ZoomInfo Technologies Inc.']) | secondary names (+['Salesforce, Inc.'] -['Amplitude, Inc.']) | private names (+['Harvey'] -['Genspark'])
+NAMES    generic words zeroed (A14 widened) befreed            core names (+[] -[]) | secondary names (+[] -['Bumble Inc.', 'Grindr Inc.', 'Match Group, Inc.', 'The New York Times Company'])
+NAMES    generic words zeroed (A14 widened) bizmark            core names (+[] -['BlackLine, Inc.']) | secondary names (+[] -['HubSpot, Inc.', 'UiPath, Inc.', 'ZoomInfo Technologies Inc.']) | private names (+['Tipalti'] -['AuditBoard', 'FloQast', 'Restaurant365'])
+NAMES    generic words zeroed (A14 widened) blindspot          secondary names (+[] -['Lightspeed Commerce Inc.'])
+NAMES    generic words zeroed (A14 widened) bloomy             secondary names (+[] -['FedEx Corporation', 'PostNL N.V.', 'S.F. Holding Co., Ltd.', 'SG Holdings Co., Ltd.', 'United Parcel Service'])
+NAMES    generic words zeroed (A14 widened) bluerails          secondary names (+['Gen Digital Inc.'] -['Shoper S.A.', 'Wix.com Ltd.'])
+NAMES    generic words zeroed (A14 widened) brandjet           private names (+['Salesloft'] -['Jasper'])
+NAMES    generic words zeroed (A14 widened) browzer            core names (+['Qt Group Oyj'] -['Braze, Inc.', 'HubSpot, Inc.', 'Klaviyo, Inc.']) | secondary names (+[] -['Qt Group Oyj'])
+NAMES    generic words zeroed (A14 widened) byrd               core names (+[] -['Deutsche Post AG', 'J&T Global Express Limited', 'PostNL N.V.', 'United Parcel Service']) | secondary names (+['MercadoLibre, Inc.', 'Shoper S.A.'] -['Allegro.eu S.A.', 'Sea Limited']) | private names (+[] -['De
+NAMES    generic words zeroed (A14 widened) caution            secondary names (+['BlackBerry Limited'] -['Fortinet, Inc.'])
+NAMES    generic words zeroed (A14 widened) chromie            core names (+[] -['HubSpot, Inc.', 'Salesforce, Inc.']) | secondary names (+[] -['BILL Holdings, Inc.', 'BlackLine, Inc.']) | private names (+['Outreach', 'Pleo', 'Salesloft'] -['AuditBoard', 'FloQast', 'Restaurant365', 'Vanta'])
+NAMES    generic words zeroed (A14 widened) clarify            core names (+[] -['Klaviyo, Inc.']) | private names (+['Outreach', 'Salesloft'] -['Notion', 'Restaurant365'])
+NAMES    generic words zeroed (A14 widened) context-dev        core names (+[] -[])
+NAMES    generic words zeroed (A14 widened) denta              private names (+['Accolade'] -['Coalition'])
+NAMES    generic words zeroed (A14 widened) derya              private names (+['Tipalti'] -['Brex', 'FloQast', 'Restaurant365', 'Vanta'])
+NAMES    generic words zeroed (A14 widened) dif-sh             core names (+[] -['Snowflake Inc.']) | secondary names (+[] -['Twilio Inc.'])
+NAMES    generic words zeroed (A14 widened) edviro             secondary names (+['Alfa Financial Software Holdings PLC', 'Cass Information Systems'] -['BlackLine, Inc.', 'Intapp, Inc.']) | private names (+[] -['AuditBoard'])
+NAMES    generic words zeroed (A14 widened) ekho-labs          secondary names (+['SAP SE'] -['Salesforce, Inc.', 'Sprout Social, Inc.'])
+NAMES    generic words zeroed (A14 widened) elentaria          core names (+['SAP SE'] -['BlackLine, Inc.']) | secondary names (+['Appian Corporation'] -['SAP SE']) | private names (+['AuditBoard', 'Zuora'] -['Ramp', 'Verint Systems'])
+NAMES    generic words zeroed (A14 widened) emergent           core names (+['Atlassian Corporation', 'Datadog, Inc.', 'GitLab Inc.', 'JFrog Ltd.', 'MongoDB, Inc.', 'Qt Group Oyj', 'Unity Software Inc.'] -['Cadence Design Systems, Inc.', 'Synopsys, Inc.', 'Zeta Global Holdings Corp.']) | seco
+NAMES    generic words zeroed (A14 widened) fed10              secondary names (+['Bengo4.com, Inc.'] -['BlackLine, Inc.']) | private names (+[] -['Restaurant365'])
+NAMES    generic words zeroed (A14 widened) finn               core names (+[] -['Coupang, Inc.', 'JD.com, Inc.']) | secondary names (+['Naked Wines plc', 'Viaplay Group AB (publ)'] -['BARK, Inc.', 'Chewy, Inc.', 'HelloFresh SE', 'Oisix Inc.', 'Zalando SE']) | private names (+[] -['Packable',
+NAMES    generic words zeroed (A14 widened) floqer             core names (+['Red Violet, Inc.', 'ZoomInfo Technologies Inc.'] -['Klaviyo, Inc.', 'Zeta Global Holdings Corp.']) | secondary names (+[] -['Red Violet, Inc.', 'ZoomInfo Technologies Inc.']) | private names (+['Apollo.io', 'Outreac
+NAMES    generic words zeroed (A14 widened) florin             private names (+[] -['Devoted Health'])
+NAMES    generic words zeroed (A14 widened) foreman            private names (+[] -['Harvey', 'Legora'])
+NAMES    generic words zeroed (A14 widened) fyle               secondary names (+[] -['BARK, Inc.', 'YETI Holdings, Inc.'])
+NAMES    generic words zeroed (A14 widened) gigacatalyst       core names (+['Coveo Solutions Inc.', 'Planisware SAS', 'Qt Group Oyj'] -['Palantir Technologies Inc.', 'Red Violet, Inc.', 'Similarweb Ltd.', 'Teradata Corporation']) | secondary names (+['Pegasystems Inc.', 'Wix.com Ltd.'] -['Co
+NAMES    generic words zeroed (A14 widened) goldfish           core names (+[] -['Life360, Inc.', 'Truecaller AB (publ)']) | private names (+[] -['Suno'])
+NAMES    generic words zeroed (A14 widened) guideflow          core names (+[] -['Klaviyo, Inc.', 'Zeta Global Holdings Corp.']) | private names (+['Buffer'] -['Klaviyo', 'Mailchimp'])
+NAMES    generic words zeroed (A14 widened) hived              core names (+[] -[]) | private names (+[] -['Glovo', 'Wolt'])
+NAMES    generic words zeroed (A14 widened) honen              core names (+[] -[]) | secondary names (+[] -['Infomart Corporation'])
+NAMES    generic words zeroed (A14 widened) inato              core names (+['Phreesia, Inc.', 'Waystar Holding Corp.'] -['Freightos Limited', 'Full Truck Alliance Co. Ltd.']) | secondary names (+['AMN Healthcare Services, Inc.', 'CoStar Group, Inc.', 'Medley, Inc.', 'SEEK Limited'] -['Airbnb
+NAMES    generic words zeroed (A14 widened) insforge           secondary names (+[] -['Atlassian Corporation'])
+NAMES    generic words zeroed (A14 widened) kita               core names (+[] -[])
+NAMES    generic words zeroed (A14 widened) lambda-robotics    secondary names (+[] -['Palantir Technologies Inc.', 'Pegasystems Inc.', 'Pinewood Technologies Group PLC', 'Q2 Holdings, Inc.'])
+NAMES    generic words zeroed (A14 widened) lato               core names (+[] -[])
+NAMES    generic words zeroed (A14 widened) levocred           core names (+[] -[]) | private names (+['Restaurant365'] -['AuditBoard'])
+NAMES    generic words zeroed (A14 widened) lightfield         core names (+[] -['BILL Holdings, Inc.', 'Klaviyo, Inc.']) | secondary names (+[] -['BlackLine, Inc.']) | private names (+['6sense', 'Salesloft'] -['Brex', 'Restaurant365'])
+NAMES    generic words zeroed (A14 widened) lyka               core names (+[] -['Hims & Hers Health, Inc.']) | secondary names (+[] -['FIGS, Inc.', 'Warby Parker Inc.']) | private names (+[] -['AG1', 'Quince', 'SKIMS', 'Vuori'])
+NAMES    generic words zeroed (A14 widened) magicrew           core names (+[] -['ServiceNow, Inc.', 'Wix.com Ltd.']) | private names (+['Oxylabs'] -['Notion'])
+NAMES    generic words zeroed (A14 widened) manifold-robotics  secondary names (+[] -['Blue Dart Express Limited', 'PostNL N.V.'])
+NAMES    generic words zeroed (A14 widened) marble             secondary names (+[] -['HubSpot, Inc.', 'Intapp, Inc.'])
+NAMES    generic words zeroed (A14 widened) markov             core names (+[] -[]) | secondary names (+[] -[])
+NAMES    generic words zeroed (A14 widened) mondu              core names (+[] -['Regional Management Corp.']) | secondary names (+[] -['Humm Group Limited']) | private names (+[] -['Wayflyer'])
+NAMES    generic words zeroed (A14 widened) moov               core names (+['DLocal Limited', 'Fawry for Banking Technology'] -['GMO Payment Gateway, Inc.', 'Nexi S.p.A.']) | secondary names (+['GMO Payment Gateway, Inc.', 'Nexi S.p.A.', 'One97 Communications Limited'] -['PagSeguro Digital L
+NAMES    generic words zeroed (A14 widened) nebula-security    core names (+['Rapid7, Inc.', 'Tenable Holdings, Inc.'] -['Netskope, Inc.', 'Rubrik, Inc.']) | secondary names (+[] -['BlackLine, Inc.', 'Intapp, Inc.', 'UiPath, Inc.', 'ZoomInfo Technologies Inc.']) | private names (+['Vanta'] -[
+NAMES    generic words zeroed (A14 widened) numida             core names (+[] -[]) | secondary names (+['Rocket Companies, Inc.'] -['Merchants Bancorp'])
+NAMES    generic words zeroed (A14 widened) oda                core names (+['Eternal Limited'] -['JD.com, Inc.']) | secondary names (+['Delivery Hero SE', 'Swiggy Limited'] -['Revolve Group, Inc.', 'Zalando SE']) | private names (+['Flipkart', 'Glovo'] -['Quince', 'Spinny'])
+NAMES    generic words zeroed (A14 widened) open-wearables     core names (+[] -[]) | secondary names (+['Veeva Systems Inc.', 'Waystar Holding Corp.'] -['GitLab Inc.', 'Qt Group Oyj'])
+NAMES    generic words zeroed (A14 widened) openrelay          core names (+[] -['Backblaze, Inc.', 'Datadog, Inc.', 'IONOS Group SE']) | secondary names (+[] -['Snowflake Inc.']) | private names (+[] -['Bright Data (Luminati)', 'Confluent', 'Oxylabs', 'Replit', 'Turing'])
+NAMES    generic words zeroed (A14 widened) openseo            core names (+['GitLab Inc.'] -['Klaviyo, Inc.']) | secondary names (+[] -['GitLab Inc.', 'Snowflake Inc.', 'Twilio Inc.', 'Wix.com Ltd.']) | private names (+[] -['Klaviyo'])
+NAMES    generic words zeroed (A14 widened) opentag            core names (+['Text S.A.'] -['BlackLine, Inc.', 'HubSpot, Inc.', 'Salesforce, Inc.']) | secondary names (+[] -['Klaviyo, Inc.', 'Text S.A.']) | private names (+['Calendly', 'Pleo'] -['Brex', 'Restaurant365'])
+NAMES    generic words zeroed (A14 widened) orchids            core names (+['monday.com Ltd.'] -['Dropbox, Inc.']) | secondary names (+[] -['monday.com Ltd.'])
+NAMES    generic words zeroed (A14 widened) osmaura            core names (+[] -['HubSpot, Inc.', 'ZoomInfo Technologies Inc.']) | secondary names (+[] -['EverCommerce Inc.', 'Klaviyo, Inc.', 'Ooma, Inc.']) | private names (+[] -['Owner', 'Restaurant365', 'Semrush', 'TravelPerk'])
+NAMES    generic words zeroed (A14 widened) osseus             core names (+[] -['PTC Inc.']) | secondary names (+[] -['ZoomInfo Technologies Inc.'])
+NAMES    generic words zeroed (A14 widened) panacea            secondary names (+['Consensus Cloud Solutions, Inc.', 'Weave Communications, Inc.'] -['Amdocs Limited', 'Cass Information Systems', 'Intapp, Inc.']) | private names (+['Devoted Health'] -['Virta Health'])
+NAMES    generic words zeroed (A14 widened) payabli            core names (+['Adyen N.V.', 'Nayax Ltd.', 'Priority Technology Holdings'] -['DLocal Limited', 'Fawry for Banking Technology', 'GMO Payment Gateway, Inc.', 'Nexi S.p.A.', 'PayPoint plc', 'Usio, Inc.']) | secondary names (+[] -['Ady
+NAMES    generic words zeroed (A14 widened) paymentkit         core names (+[] -[]) | secondary names (+['NCR Atleos Corporation'] -['Paymentus Holdings'])
+NAMES    generic words zeroed (A14 widened) payna              secondary names (+[] -['BlackLine, Inc.', 'ZoomInfo Technologies Inc.']) | private names (+[] -['Restaurant365'])
+NAMES    generic words zeroed (A14 widened) pazi               core names (+[] -['HubSpot, Inc.', 'Pegasystems Inc.', 'SAP SE']) | secondary names (+[] -['Klaviyo, Inc.', 'Ooma, Inc.']) | private names (+['Jasper', 'Restaurant365'] -['Clay', 'Vanta'])
+NAMES    generic words zeroed (A14 widened) planeat            core names (+['HelloFresh SE', 'Oisix Inc.'] -['F-Secure Oyj', 'Gen Digital Inc.', 'Opera Limited', 'Truecaller AB (publ)']) | secondary names (+[] -['HelloFresh SE', 'Oisix Inc.'])
+NAMES    generic words zeroed (A14 widened) postiz             core names (+['GitLab Inc.'] -['Klaviyo, Inc.']) | secondary names (+['Datadog, Inc.'] -['GitLab Inc.', 'Salesforce, Inc.', 'Wix.com Ltd.']) | private names (+[] -['6sense', 'Klaviyo'])
+NAMES    generic words zeroed (A14 widened) praxis-robotics    core names (+['Dynatrace, Inc.', 'Elastic N.V.', 'GB Group plc', 'MongoDB, Inc.', 'Teradata Corporation'] -[]) | secondary names (+['Datadog, Inc.', 'ExlService Holdings, Inc.', 'Fair Isaac Corporation', 'Red Violet, Inc.', 'Sound
+NAMES    generic words zeroed (A14 widened) priori-legal       secondary names (+[] -['Freightos Limited'])
+NAMES    generic words zeroed (A14 widened) projectx           core names (+[] -['Backblaze, Inc.', 'DigitalOcean Holdings, Inc.', 'IONOS Group SE']) | secondary names (+[] -['Snowflake Inc.']) | private names (+['Decagon', 'Genspark'] -['Turing', 'Weights & Biases'])
+NAMES    generic words zeroed (A14 widened) qokedas            core names (+['Dynatrace, Inc.', 'Elastic N.V.', 'GB Group plc', 'MongoDB, Inc.', 'Teradata Corporation'] -[]) | secondary names (+['Datadog, Inc.', 'ExlService Holdings, Inc.', 'Fair Isaac Corporation', 'Red Violet, Inc.', 'Sound
+NAMES    generic words zeroed (A14 widened) quippy             core names (+[] -[]) | secondary names (+[] -['Peloton Interactive, Inc.', 'WW International, Inc.'])
+NAMES    generic words zeroed (A14 widened) rainforest         core names (+['Nayax Ltd.', 'Priority Technology Holdings'] -['Fawry for Banking Technology', 'GMO Payment Gateway, Inc.', 'Global Payments Inc.', 'Nexi S.p.A.', 'PayPoint plc', 'Tyro Payments Limited']) | secondary names (+['WEX 
+NAMES    generic words zeroed (A14 widened) raspire            core names (+['Akamai Technologies, Inc.', 'CrowdStrike Holdings, Inc.', 'OneSpan Inc.', 'Varonis Systems, Inc.'] -['Fortinet, Inc.', 'Netskope, Inc.', 'Rapid7, Inc.', 'Rubrik, Inc.']) | secondary names (+['Check Point Software Te
+NAMES    generic words zeroed (A14 widened) remix              core names (+['Wix.com Ltd.'] -['Xperi Inc.']) | secondary names (+['Text S.A.', 'Xperi Inc.'] -[]) | private names (+['Jasper'] -['Genspark'])
+NAMES    generic words zeroed (A14 widened) rybbit             core names (+['Adobe Inc.'] -['Elastic N.V.', 'Red Violet, Inc.', 'Snowflake Inc.']) | secondary names (+[] -['Adobe Inc.'])
+NAMES    generic words zeroed (A14 widened) simulithic         core names (+[] -['Palantir Technologies Inc.', 'Red Violet, Inc.', 'Similarweb Ltd.', 'Sprout Social, Inc.']) | secondary names (+[] -['Adobe Inc.']) | private names (+[] -['6sense', 'Buffer', 'Databricks'])
+NAMES    generic words zeroed (A14 widened) skybridge          private names (+['Turing', 'Weights & Biases'] -['Lovable', 'Replit'])
+NAMES    generic words zeroed (A14 widened) smol               secondary names (+[] -['Hims & Hers Health, Inc.', 'LifeMD, Inc.', 'On Holding AG', 'Warby Parker Inc.']) | private names (+['OLIPOP', 'Oura', 'WHOOP'] -['AG1', 'Huel', 'Vuori'])
+NAMES    generic words zeroed (A14 widened) tash               secondary names (+[] -[])
+NAMES    generic words zeroed (A14 widened) tienda-pago        core names (+['Medallion Financial Corp.', 'Sezzle Inc.'] -['Enova International, Inc.', 'LendingClub Corporation', 'Nu Holdings Ltd.']) | secondary names (+['Bread Financial Holdings, Inc.', 'Multitude AG', 'OppFi Inc.', 'Pathwar
+NAMES    generic words zeroed (A14 widened) trolley            core names (+['Nayax Ltd.'] -['CAB Payments Holdings plc', 'Corpay, Inc.', 'Flywire Corporation', 'Remitly Global, Inc.', 'The Western Union Company', 'Wise plc']) | secondary names (+[] -['DLocal Limited', 'Nayax Ltd.', 'Worldlin
+NAMES    generic words zeroed (A14 widened) turnstone          core names (+['Wix.com Ltd.'] -[]) | secondary names (+['TeamViewer SE'] -[]) | private names (+[] -['Suno'])
+NAMES    generic words zeroed (A14 widened) twelvelabs         core names (+['Sinch AB (publ)'] -['C3.ai, Inc.', 'LiveRamp Holdings, Inc.', 'Palantir Technologies Inc.', 'Qt Group Oyj', 'Snowflake Inc.']) | secondary names (+['Boku, Inc.'] -['Sinch AB (publ)'])
+NAMES    generic words zeroed (A14 widened) unifold            core names (+[] -[]) | secondary names (+[] -[])
+NAMES    generic words zeroed (A14 widened) veriad             core names (+['Box, Inc.'] -['Braze, Inc.', 'HubSpot, Inc.', 'Sprinklr, Inc.', 'Zeta Global Holdings Corp.', 'ZoomInfo Technologies Inc.']) | secondary names (+[] -['Adobe Inc.', 'Box, Inc.', 'Salesforce, Inc.'])
+NAMES    generic words zeroed (A14 widened) vorelios           core names (+[] -[]) | secondary names (+[] -[])
+NAMES    generic words zeroed (A14 widened) welltory           core names (+['Hims & Hers Health, Inc.', 'WW International, Inc.'] -['F-Secure Oyj', 'Gen Digital Inc.', 'Opera Limited', 'Truecaller AB (publ)']) | secondary names (+[] -['Hims & Hers Health, Inc.', 'WW International, Inc.'])
+NAMES    generic words zeroed (A14 widened) wondering          core names (+[] -[]) | secondary names (+[] -['Bumble Inc.', 'Grindr Inc.', 'Match Group, Inc.'])
+NAMES    generic words zeroed (A14 widened) hop-aero           core names (+['Grupo Traxion, S.A.B. de C.V.', 'Mitsubishi Logistics', 'Nippon Express Holdings', 'Pkp Cargo S.A.'] -['Blue Dart Express Limited', 'Deutsche Post AG', 'PostNL N.V.', 'S.F. Holding Co., Ltd.', 'SG Holdings Co., Ltd.  [struck the same night; a strike moves no name]
+NAMES    Buffer pinned, and generic words zeroed publora            core names (+[] -['GitLab Inc.', 'Qt Group Oyj']) | secondary names (+[] -[]) | private names (+['Algolia', 'Bright Data (Luminati)', 'Buffer', 'dbt Labs'] -['AlphaSense', 'Vercel', 'Writer'])

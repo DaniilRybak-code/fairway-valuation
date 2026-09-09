@@ -2,89 +2,14 @@
  "expected": {
   "all_ranges": {
    "private": {
-    "BUSINESS_CUSTOMERS": {
-     "anchor_dropped": false,
-     "band": "ADJACENT",
-     "basis": "BUSINESS_CUSTOMERS",
-     "basis_label": "dollars of enterprise value per business customer",
-     "basis_mix": {
-      "BUSINESS_CUSTOMERS": 3
-     },
-     "bounded": true,
-     "closeness": "THIN_OVERLAP",
-     "control_n": 0,
-     "control_names": [],
-     "dispersed": false,
-     "display": "RANGE",
-     "founder_field": "business_customers",
-     "founder_high": null,
-     "founder_low": null,
-     "founder_metric": null,
-     "high": 640000.0,
-     "listed_target_n": 0,
-     "listed_target_names": [],
-     "low": 306250.0,
-     "mid": 615384.62,
-     "n": 3,
-     "period_mix": {
-      "RUN_RATE": 3
-     },
-     "period_span": {
-      "RUN_RATE": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      }
-     },
-     "points": [],
-     "positioning": [],
-     "shared_words": [
-      "procurement"
-     ],
-     "spread": 2.1,
-     "table": [
-      {
-       "company": "Vanta",
-       "date": "Jul-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 306250.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "FloQast",
-       "date": "Apr-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 615384.62,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Ramp",
-       "date": "Nov-25",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 640000.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      }
-     ],
-     "tag_evidence": 0.7,
-     "thin": false,
-     "triangulated": true
-    },
     "REVENUE": {
      "anchor_dropped": false,
      "band": "ADJACENT",
      "basis": "REVENUE",
      "basis_label": "enterprise value to revenue",
      "basis_mix": {
-      "ARR": 4,
-      "ARR_RUNRATE": 2,
+      "ARR": 1,
+      "ARR_RUNRATE": 1,
       "NET_REVENUE": 1
      },
      "bounded": true,
@@ -99,25 +24,20 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 39.42,
+     "high": 32.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "E2open"
      ],
      "low": 3.46,
      "mid": 22.8,
-     "n": 7,
+     "n": 3,
      "period_mix": {
       "FY2025": 1,
-      "NOT STATED": 1,
-      "RUN_RATE": 5
+      "RUN_RATE": 2
      },
      "period_span": {
       "FY2025": {
-       "basis": "NO_REVENUE_GIVEN",
-       "founder_revenue": null
-      },
-      "NOT STATED": {
        "basis": "NO_REVENUE_GIVEN",
        "founder_revenue": null
       },
@@ -135,30 +55,9 @@
        "transaction_type": "CONTROL"
       },
       {
-       "company": "Restaurant365",
-       "mult": 10.0,
-       "reason": "related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "FloQast",
-       "mult": 16.0,
-       "reason": "related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
        "company": "Spendesk",
        "mult": 22.8,
        "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Vanta",
-       "mult": 24.5,
-       "reason": "related type of business; same kind of customer; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "PRIMARY"
       },
@@ -168,13 +67,6 @@
        "reason": "both do Procurement; related type of business; sold the same way",
        "tier": "ADJACENT",
        "transaction_type": "MIXED"
-      },
-      {
-       "company": "Brex",
-       "mult": 39.42,
-       "reason": "related type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
       }
      ],
      "positioning": [],
@@ -183,7 +75,7 @@
       "procurement",
       "supply"
      ],
-     "spread": 11.4,
+     "spread": 9.2,
      "table": [
       {
        "company": "E2open",
@@ -191,26 +83,6 @@
        "growth_basis": "",
        "growth_pct": null,
        "multiple": 3.46,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "Restaurant365",
-       "date": "May-23",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 10.0,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
-       "company": "FloQast",
-       "date": "Apr-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 16.0,
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
@@ -226,16 +98,6 @@
        "ticker": ""
       },
       {
-       "company": "Vanta",
-       "date": "Jul-24",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 24.5,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
-      },
-      {
        "company": "Ramp",
        "date": "Nov-25",
        "growth_basis": "",
@@ -244,19 +106,9 @@
        "recurring_pct": null,
        "retention_pct": null,
        "ticker": ""
-      },
-      {
-       "company": "Brex",
-       "date": "Jan-22",
-       "growth_basis": "",
-       "growth_pct": null,
-       "multiple": 39.42,
-       "recurring_pct": null,
-       "retention_pct": null,
-       "ticker": ""
       }
      ],
-     "tag_evidence": 1.0,
+     "tag_evidence": 0.9,
      "thin": false,
      "triangulated": false
     }
@@ -568,130 +420,6 @@
     ],
     "investor": "WiseTech Global",
     "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Sequoia",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Goldman Sachs Alternatives",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "J.P. Morgan",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Vanta",
-      "date": "Jul-24"
-     }
-    ],
-    "investor": "Atlassian Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     },
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "ICONIQ Growth",
-    "n": 2
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "BDT & MSD",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Meritech",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Sapphire",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "FloQast",
-      "date": "Apr-24"
-     }
-    ],
-    "investor": "Coupa Ventures",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "KKR",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "L Catterton (co-led)",
-    "n": 1
-   },
-   {
-    "backed": [
-     {
-      "company": "Restaurant365",
-      "date": "May-23"
-     }
-    ],
-    "investor": "Bessemer Venture Partners",
-    "n": 1
    }
   ],
   "listed_proximity": "DIRECT",
@@ -704,7 +432,7 @@
     "in_medians": true,
     "mult": 32.0,
     "reason": "both do Procurement; related type of business; sold the same way",
-    "score": 5.7,
+    "score": 5.6,
     "type": "MIXED"
    },
    {
@@ -715,41 +443,8 @@
     "in_medians": true,
     "mult": 3.46,
     "reason": "both do Procurement; same type of business; same business function",
-    "score": 8.0,
+    "score": 7.9,
     "type": "CONTROL"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "<=",
-    "company": "Vanta",
-    "date": "Jul-24",
-    "in_medians": true,
-    "mult": 24.5,
-    "reason": "related type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "FloQast",
-    "date": "Apr-24",
-    "in_medians": true,
-    "mult": 16.0,
-    "reason": "related type of business; sold the same way",
-    "score": 5.1,
-    "type": "PRIMARY"
-   },
-   {
-    "basis": "DISCLOSED_THRESHOLD",
-    "bound": "",
-    "company": "Restaurant365",
-    "date": "May-23",
-    "in_medians": true,
-    "mult": 10.0,
-    "reason": "related type of business; same kind of customer; sold the same way",
-    "score": 8.6,
-    "type": "PRIMARY"
    },
    {
     "basis": "ARR / revenue run-rate",
@@ -759,17 +454,17 @@
     "in_medians": true,
     "mult": 22.8,
     "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
-    "score": 9.2,
+    "score": 9.1,
     "type": "PRIMARY"
    },
    {
-    "basis": "Annualized revenue",
+    "basis": "Annual period not specified",
     "bound": "",
-    "company": "Brex",
-    "date": "Jan-22",
-    "in_medians": true,
-    "mult": 39.42,
-    "reason": "related type of business; same kind of customer",
+    "company": "Tipalti",
+    "date": "Dec-21",
+    "in_medians": false,
+    "mult": null,
+    "reason": "both do Procurement; related type of business; sold the same way",
     "score": 5.6,
     "type": "PRIMARY"
    }
@@ -781,8 +476,8 @@
    "basis": "REVENUE",
    "basis_label": "enterprise value to revenue",
    "basis_mix": {
-    "ARR": 4,
-    "ARR_RUNRATE": 2,
+    "ARR": 1,
+    "ARR_RUNRATE": 1,
     "NET_REVENUE": 1
    },
    "bounded": true,
@@ -793,25 +488,20 @@
    ],
    "dispersed": true,
    "display": "SCATTER",
-   "high": 39.42,
+   "high": 32.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "E2open"
    ],
    "low": 3.46,
    "mid": 22.8,
-   "n": 7,
+   "n": 3,
    "period_mix": {
     "FY2025": 1,
-    "NOT STATED": 1,
-    "RUN_RATE": 5
+    "RUN_RATE": 2
    },
    "period_span": {
     "FY2025": {
-     "basis": "NO_REVENUE_GIVEN",
-     "founder_revenue": null
-    },
-    "NOT STATED": {
      "basis": "NO_REVENUE_GIVEN",
      "founder_revenue": null
     },
@@ -829,30 +519,9 @@
      "transaction_type": "CONTROL"
     },
     {
-     "company": "Restaurant365",
-     "mult": 10.0,
-     "reason": "related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "FloQast",
-     "mult": 16.0,
-     "reason": "related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
      "company": "Spendesk",
      "mult": 22.8,
      "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Vanta",
-     "mult": 24.5,
-     "reason": "related type of business; same kind of customer; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "PRIMARY"
     },
@@ -862,13 +531,6 @@
      "reason": "both do Procurement; related type of business; sold the same way",
      "tier": "ADJACENT",
      "transaction_type": "MIXED"
-    },
-    {
-     "company": "Brex",
-     "mult": 39.42,
-     "reason": "related type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
     }
    ],
    "positioning": [],
@@ -877,7 +539,7 @@
     "procurement",
     "supply"
    ],
-   "spread": 11.4,
+   "spread": 9.2,
    "table": [
     {
      "company": "E2open",
@@ -885,26 +547,6 @@
      "growth_basis": "",
      "growth_pct": null,
      "multiple": 3.46,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "Restaurant365",
-     "date": "May-23",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 10.0,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
-     "company": "FloQast",
-     "date": "Apr-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 16.0,
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
@@ -920,16 +562,6 @@
      "ticker": ""
     },
     {
-     "company": "Vanta",
-     "date": "Jul-24",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 24.5,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
-    },
-    {
      "company": "Ramp",
      "date": "Nov-25",
      "growth_basis": "",
@@ -938,23 +570,13 @@
      "recurring_pct": null,
      "retention_pct": null,
      "ticker": ""
-    },
-    {
-     "company": "Brex",
-     "date": "Jan-22",
-     "growth_basis": "",
-     "growth_pct": null,
-     "multiple": 39.42,
-     "recurring_pct": null,
-     "retention_pct": null,
-     "ticker": ""
     }
    ],
-   "tag_evidence": 1.0,
+   "tag_evidence": 0.9,
    "thin": false,
    "triangulated": false
   },
-  "private_window_months": 55,
+  "private_window_months": 56,
   "secondary": [
    {
     "company": "IndiaMART InterMESH Limited",
