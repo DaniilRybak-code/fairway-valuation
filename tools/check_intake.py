@@ -65,6 +65,8 @@ ID_COLS = {
     # 9-Sep growth enrichment: the first four columns are source_file, transaction_id,
     # company_key, company_name, and a transaction_id is not a name the engine holds.
     '2026-09-09_private-growth-enrichment.csv': ('company_key', 'company_name'),
+    # 10-Sep growth enrichment round two: same shape as the 9-Sep file.
+    '2026-09-10_private-growth-round2.csv': ('company_key', 'company_name'),
 }
 
 
