@@ -126,8 +126,21 @@ var FIGURE_SOURCES = {
    * EVERY ONE OF THESE IS AN AMOUNT AND NONE OF THEM LEAVE (rule E9). They are multiplied here,
    * beside the founder, and reveal-request.js has never carried one of these keys.
    * ------------------------------------------------------------------------- */
-  REVENUE: forkMoney('net_revenue', 'net revenue',
-      'your net revenue over the last twelve months, in US dollar millions'),
+  /* REVENUE FALLS BACK TO THE STEP-3 FIGURE. The lanes price on REVENUE (EV to revenue) and only
+     the marketplace, exchange, e-commerce, payments and delivery forks ask for `net_revenue`; a
+     software founder answers step 3 ("ARR today, or your revenue run-rate if it does not recur")
+     and nothing else, so until 20-Sep-2026 their revenue lanes read "give us this figure" beside a
+     field that had just priced them on that very figure. Step 3 IS their revenue, so it stands in
+     where no fork asked for net revenue separately. Daniil, 20-Sep: "would generally apply those
+     multiples to current ARR given by the founder". A fork's own net revenue still wins. */
+  REVENUE: { label: 'net revenue', from: 'net_revenue',
+    note: 'your net revenue over the last twelve months, in US dollar millions, or your ARR from step 3 when no fork asked for net revenue separately',
+    value: function (r) {
+      var own = figureForkMusd(r, 'net_revenue');
+      if (own !== null) return own;
+      var arr = figureForkMusd(r, 'arr');
+      return arr !== null ? arr : figureArrMusd(r);
+    } },
   REVENUE_GROSS: forkMoney('gross_revenue', 'gross revenue',
       'your gross revenue over the same period, in US dollar millions'),
   BOOK: forkMoney('book_value', 'book value',
@@ -171,7 +184,25 @@ function founderFigures(responses) {
     var v = FIGURE_SOURCES[basis].value(responses);
     if (typeof v === 'number' && isFinite(v)) out[basis] = v;
   });
+  /* THE NEXT TWELVE MONTHS, carried beside the bases and not as one of them: it is not an engine
+     basis, it is the figure the LISTED revenue lane is priced on (EV to next-twelve-months
+     revenue), the same one the field uses for that row. The private lanes stay on ARR today. */
+  var ntm = figureNtmMusd(responses);
+  if (ntm !== null) out._ntm_musd = ntm;
   return out;
+}
+
+/* The founder's next twelve months in US dollar millions: their own target, or the sum the page
+   built from their monthly revenue and their plan (app.js, ntmForPricing). Null without revenue. */
+function figureNtmMusd(responses) {
+  if (typeof ntmForPricing !== 'function') return null;
+  var v = Number(ntmForPricing());
+  if (!isFinite(v) || v <= 0) return null;
+  var cur = (responses || {}).currency || 'USD';
+  if (cur === 'USD') return v / 1e6;
+  if (typeof fxConvert !== 'function') return null;
+  var usd = fxConvert(v, cur, 'USD');
+  return (typeof usd === 'number' && isFinite(usd)) ? usd / 1e6 : null;
 }
 
 /* ---------------------------------------------------------------------------
@@ -192,6 +223,11 @@ function ffRound2(n) {
 function priceBand(band, figures) {
   if (!band || !figures) return null;
   var v = figures[band.basis];
+  /* A LISTED REVENUE MULTIPLE IS EV OVER THE NEXT TWELVE MONTHS, so it multiplies the founder's
+     next twelve months where the page holds them, exactly as the field's core-peer row does. Every
+     other band, the private lanes above all, multiplies the figure for its own basis: ARR today.
+     A check that hands in {basis: v} alone gets v times the range, unchanged. */
+  if (band.lane === 'listed' && band.basis === 'REVENUE' && typeof figures._ntm_musd === 'number') v = figures._ntm_musd;
   if (typeof v !== 'number' || !isFinite(v)) return null;
   if (typeof band.low !== 'number' || typeof band.high !== 'number') return null;
   var out = {
@@ -203,10 +239,21 @@ function priceBand(band, figures) {
   return out;
 }
 
+/* One US dollar in the founder's currency, at the ECB rate the page already carries; 1 for USD,
+   null when there is no rate. `responses` is the page's own state and is absent under node. */
+function usdToLocalRate() {
+  var cur = (typeof responses !== 'undefined' && responses && responses.currency) || 'USD';
+  if (cur === 'USD') return 1;
+  if (typeof fxConvert !== 'function') return null;
+  var r = fxConvert(1, 'USD', cur);
+  return (typeof r === 'number' && isFinite(r)) ? r : null;
+}
+
 /* Every chart in the payload, priced where the browser holds the figure for it. The payload's own
    `priced` flag says whether the ENGINE had a figure, which on the free path it never does, so the
    page recomputes the flag from what it holds itself. */
 function priceCharts(charts, figures) {
+  var rate = usdToLocalRate();
   return (charts || []).map(function (c) {
     var p = priceBand(c, figures);
     var row = {};
@@ -215,6 +262,18 @@ function priceCharts(charts, figures) {
     row.founder_low = p ? p.low : null;
     row.founder_high = p ? p.high : null;
     row.founder_metric = p ? p.metric : null;
+    /* THE SAME PRODUCT IN THE FOUNDER'S OWN CURRENCY, IN MILLIONS, FOR THE PAGE. founder_low and
+       founder_high above are the raw product check 15 recomputes: US dollar millions for a money
+       basis, plain US dollars for a per-unit basis (a count times dollars per unit). Until
+       20-Sep-2026 the charts printed that raw product with the founder's currency sign in front,
+       so a subscriber count came out as "£1279992.0M". Null when the ECB has no rate. */
+    var perUnit = unitOf(c.basis) === 'per-user';
+    var toLocalM = function (v) { return (v === null || rate === null) ? null : ffRound2(v * rate / (perUnit ? 1e6 : 1)); };
+    row.founder_low_local_m = p ? toLocalM(p.low) : null;
+    row.founder_high_local_m = p ? toLocalM(p.high) : null;
+    row.founder_basis = !p ? null
+      : (c.lane === 'listed' && c.basis === 'REVENUE' && typeof figures._ntm_musd === 'number' ? 'on your next twelve months'
+        : (c.basis === 'REVENUE' || c.basis === 'ARR' ? 'on your ARR today' : null));
     row.unpriced_reason = p ? null : (BASIS_NOT_PRICED[c.basis] || null);
     return row;
   });

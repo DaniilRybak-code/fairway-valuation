@@ -15,12 +15,10 @@
  *      renderInvestors existed and nothing called them.
  *   4. It offers the consent button. Nothing sends a figure until the founder presses it.
  *
- * WHAT IT DELIBERATELY DOES NOT DO. It does not redraw the football field. field.js draws nine
- * METHOD rows (the last round marker, the stage anchor, the unrefined range, NTM, DCF and the paid
- * rows) and the payload carries PEER EVIDENCE per lane per basis. They are different objects, and
- * deciding which of the nine method rows survives contact with the engine is a product decision
- * rather than a privacy one. The peer charts are rendered in their own block under the field, and
- * merging the two is the named next piece of work.
+ * THE FIELD AND THE CHARTS READ THE SAME PAYLOAD. Since 7-Sep-2026 applyPayload hands the engine's
+ * answer to field.js, which draws the method rows from the lanes, and since 20-Sep-2026 both price
+ * the same way: the listed revenue lane on the founder's next twelve months, the private lanes on
+ * their ARR today (reveal-figures.js, priceBand). One run, one set of numbers, two views of it.
  *
  * Everything degrades. If the endpoint is missing, slow or unhappy, the founder keeps the field
  * that is already on screen and never sees an error.
@@ -148,7 +146,9 @@
     if (!gaveSomething) {
       hideField();
     } else if (typeof renderFieldFromPayload === 'function') {
-      renderFieldFromPayload(payload, figures);
+      /* The profiler's read goes with the payload, so the field can say which archetype the
+         peers were chosen for and let the founder say it is wrong (20-Sep-2026). */
+      renderFieldFromPayload(payload, figures, data.profiler || null);
     }
     mountConsent();
   }
@@ -252,8 +252,9 @@
       ? fx(c.low) + 'x, one comparable' + (c.sole ? ' (' + esc(c.sole) + ')' : '')
       : fx(c.low) + 'x to ' + fx(c.high) + 'x' + (kind === 'scatter' ? ', and they disagree' : '');
 
-    const price = (c.priced && c.founder_low != null)
-      ? '<span class="pc-price">' + money(c.founder_low) + ' to ' + money(c.founder_high) + '</span>'
+    const price = (c.priced && c.founder_low_local_m != null)
+      ? '<span class="pc-price">' + (kind === 'point' ? money(c.founder_low_local_m) : money(c.founder_low_local_m) + ' to ' + money(c.founder_high_local_m))
+        + (c.founder_basis ? ' <small>' + esc(c.founder_basis) + '</small>' : '') + '</span>'
       : '<span class="pc-nop" title="' + esc(c.unpriced_reason || '') + '">'
         + (c.unpriced_reason ? 'we do not have a figure of yours on this measure'
           : 'give us this figure and the bar carries a value') + '</span>';
@@ -311,7 +312,7 @@
     /* What is actually in the founder's answers right now, named one by one. A consent notice that
        says "your data" is not consent to anything. */
     const named = [];
-    if (responses.revenue_exact) named.push('your monthly revenue');
+    if (responses.revenue_exact) named.push('your ARR');
     if (responses.gross_margin != null) named.push('your gross margin');
     if (responses.ebitda_ltm) named.push('your last twelve months of EBITDA');
     if (responses.last_round_value || responses.last_round_amount) named.push('your last round');
@@ -332,6 +333,9 @@
         + 'nothing to send. The peer sets above were chosen on your growth rate and your margin.</p>';
       return false;
     }
+    /* THE REVIEWER'S MATERIAL LIVES HERE, since 20-Sep-2026: a note and a deck link used to be quiz
+       steps that said "read by a human" while the page also said nothing is sent, and the note only
+       ever left the browser with this button. Asking for it beside the button makes that true. */
     mount.innerHTML =
       '<div class="consent-card">'
       + '<b>Nothing above has been sent to us.</b>'
@@ -339,6 +343,10 @@
       + '<p class="consent-what">What goes with it: ' + esc(named.join(', ')) + '. '
       + 'It goes to the Fairway reviewer and to nobody else. It is not sent to any model, it is '
       + 'not sold, and it is not shared with investors.</p>'
+      + '<label class="field-label" for="consent-notes">Anything the reviewer should know <span class="optional">Optional</span></label>'
+      + '<textarea class="field" id="consent-notes" placeholder="e.g. two enterprise deals landed late in the year, so the trailing figure flatters us"></textarea>'
+      + '<label class="field-label" for="consent-link">A deck, model or data room <span class="optional">Optional</span></label>'
+      + '<input class="field" id="consent-link" type="url" placeholder="https://" autocomplete="off">'
       + '<button type="button" class="btn" id="consent-send">Send my figures for the banker review</button>'
       + '<p class="consent-note" id="consent-note"></p>'
       + '</div>';
@@ -350,6 +358,11 @@
   function sendForReview() {
     const btn = document.getElementById('consent-send');
     const note = document.getElementById('consent-note');
+    /* The note and the link are read at the moment of consent and at no other time. */
+    const notes = document.getElementById('consent-notes');
+    const link = document.getElementById('consent-link');
+    responses.concern_notes = (notes && notes.value.trim()) || null;
+    responses.context_link = (link && link.value.trim()) || null;
     if (btn) { btn.disabled = true; btn.textContent = 'Sending'; }
 
     /* THE ONE REQUEST IN THIS PRODUCT THAT CARRIES A FIGURE, and the founder pressed the button

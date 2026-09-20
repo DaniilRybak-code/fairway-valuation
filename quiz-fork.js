@@ -53,8 +53,11 @@ function qfQuestion(q) {
   out.push('<div class="qf-q" data-key="' + qfEsc(q.key) + '">');
   out.push('<label class="field-label" for="' + id + '">' + qfEsc(q.label));
   if (!q.required) out.push(' <span class="optional">Optional.</span>');
+  /* THE WHY SITS BEHIND AN "i", as every explanation in the quiz does since 20-Sep-2026 (Daniil:
+     one line per question, the rest one tap away). The text is the engine's own, unchanged. */
+  if (q.why) out.push(' <button type="button" class="info-btn" aria-expanded="false" aria-controls="' + id + '-why" onclick="toggleInfo(this)">i</button>');
   out.push('</label>');
-  if (q.why) out.push('<p class="q-help" style="margin:2px 0 8px;">' + qfEsc(q.why) + '</p>');
+  if (q.why) out.push('<p class="q-info" id="' + id + '-why" hidden>' + qfEsc(q.why) + '</p>');
 
   if (q.kind === 'choice' && q.options && q.options.length) {
     out.push('<div class="opt-grid">');
@@ -101,19 +104,13 @@ function qfPickChoice(btn) {
    questions on the wrong basis, so the read is printed above the questions in their own words. */
 function qfReadBack(spec) {
   var r = spec.read_as || {};
-  var sells = (r.sells || '').split('|').filter(Boolean).slice(0, 4).join(', ');
+  var sells = (r.sells || '').split('|').filter(Boolean).slice(0, 3).join(', ');
   var bits = [];
   if (sells) bits.push('you sell ' + sells.toLowerCase());
   if (r.industry && r.industry !== 'Horizontal') bits.push('into ' + r.industry.toLowerCase());
   if (!bits.length) return '';
-  var out = '<p class="q-help" style="margin:-6px 0 16px;">We read your site as: <b>' + qfEsc(bits.join(', '))
-          + '</b>. That decides what we ask and who you are compared against. '
-          + '<button type="button" class="link-btn" onclick="qfWrongRead()">That is not right</button></p>';
-  if (!spec.site_read && spec.site_note) {
-    out += '<p class="q-help" style="margin:-10px 0 16px;">We could not read your website ('
-         + qfEsc(spec.site_note) + '), so this is from your answers alone.</p>';
-  }
-  return out;
+  return '<p class="q-help" style="margin:0 0 10px;">We read your site as: <b>' + qfEsc(bits.join(', '))
+       + '</b>. <button type="button" class="link-btn" onclick="qfWrongRead()">Not right</button></p>';
 }
 
 /* If the read is wrong, we do not argue and we do not guess again. They get the plain revenue
@@ -123,11 +120,7 @@ function qfWrongRead() {
   track('quiz_profile_disputed', { fork: FORK_SPEC && FORK_SPEC.fork });
   FORK_SPEC = null;
   var mount = document.getElementById('qf-block');
-  if (mount) mount.style.display = 'none';
-  var plain = document.querySelector('.q-block[data-step="3"]');
-  if (plain) plain.setAttribute('data-qf-fallback', '1');
-  currentStep = 3;
-  renderStep();
+  if (mount) { mount.innerHTML = ''; mount.style.display = 'none'; }
 }
 
 /* NO FIGURE EVER BLOCKS THE BUTTON. Daniil, 7-Sep-2026: a founder who gives nothing still gets the
@@ -141,41 +134,42 @@ function qfWrongRead() {
    and the exchange fork's unit are labels, one tap each, and each one changes how the founder is
    priced rather than saying anything about their size. */
 function qfChanged() {
-  var btn = document.getElementById('qf-continue');
+  /* THE STEP'S OWN CONTINUE IS THE BUTTON, since 20-Sep-2026 the extras sit under the ARR box
+     rather than replacing the step. A missing figure never gates it; the two choice questions do,
+     because they are labels that change how the founder is priced. */
+  var btn = document.querySelector('.q-block[data-step="3"] .btn');
   if (!btn || !FORK_SPEC) return;
   var missingChoice = FORK_SPEC.questions.filter(function (q) {
     return q.required && q.kind === 'choice' && !responses[q.key];
   });
-  var given = FORK_SPEC.questions.filter(function (q) {
-    return q.kind !== 'choice' && qfNum('qf-' + q.key) !== null;
-  }).length;
   btn.disabled = missingChoice.length > 0;
-  btn.textContent = missingChoice.length ? 'Pick one above to continue'
-                  : (given ? 'Continue' : 'Continue without figures');
+  btn.textContent = missingChoice.length ? 'Pick one above to continue' : 'Continue';
 }
+
+/* THE EXTRAS, DRAWN UNDER THE ARR BOX. Until 20-Sep-2026 the fork REPLACED step 3, which dropped
+   the gross margin question (only the e-commerce fork asks it) and asked ARR a second way. Now the
+   step is ARR and margin for everyone, and the fork adds only the figures its business is priced
+   on beyond ARR: net revenue for a marketplace, the book for a lender, subscribers for a consumer
+   app. `arr` is skipped because the step already asked it. */
+var QF_ALREADY_ASKED = { arr: true };
 
 function qfRender(spec) {
   FORK_SPEC = spec;
   var mount = document.getElementById('qf-block');
-  if (!mount || !spec || !spec.questions || !spec.questions.length) return false;
-  var html = ['<h2 class="q-title">' + qfEsc(qfTitleFor(spec.fork)) + '</h2>'];
-  html.push(qfReadBack(spec));
-  spec.questions.forEach(function (q) { html.push(qfQuestion(q)); });
-  /* SAID OUT LOUD, because a page full of blank number boxes reads as a page that wants them all.
-     A founder who skips every one still gets what their peers trade at, which is most of the
-     argument, and they should know that before they decide how much to type. */
-  html.push('<p class="q-help" style="margin:14px 0 0;">Every figure here is optional. Give what you '
-          + 'have and we price on it. Give none and you still see what companies like yours trade '
-          + 'at, which is the part you can take to a meeting.</p>');
-  html.push('<button class="btn" id="qf-continue" style="width:100%; margin-top:12px;"'
-          + ' onclick="qfSubmit()">Continue</button>');
+  if (!mount || !spec || !spec.questions) return false;
+  var qs = spec.questions.filter(function (q) { return !QF_ALREADY_ASKED[q.key]; });
+  var html = [qfReadBack(spec)];
+  if (qs.length) {
+    html.push('<p class="field-label" style="margin:6px 0 8px;">' + qfEsc(qfTitleFor(spec.fork))
+            + ' <span class="optional">Optional. Give what you have.</span></p>');
+    qs.forEach(function (q) { html.push(qfQuestion(q)); });
+  }
   mount.innerHTML = html.join('');
-  mount.style.display = 'block';
-  /* Money questions are in the founder's own currency, the one they already picked. */
+  mount.style.display = html.join('').trim() ? 'block' : 'none';
   var cur = (typeof curSymbol === 'function') ? curSymbol() : '$';
   mount.querySelectorAll('[id$="-cur"]').forEach(function (e) { e.textContent = cur; });
   qfChanged();
-  track('quiz_fork_shown', { fork: spec.fork, questions: spec.questions.length });
+  track('quiz_fork_shown', { fork: spec.fork, questions: qs.length });
   return true;
 }
 
@@ -183,22 +177,24 @@ function qfRender(spec) {
    be greeted with the word "fork". */
 function qfTitleFor(fork) {
   return {
-    software: 'Your revenue, the way software is priced',
-    marketplace: 'What goes through your marketplace, and what you keep',
-    consumer_subscription: 'Your subscribers, and what they pay',
+    software: 'More on how software is priced',
+    marketplace: 'What goes through your marketplace',
+    consumer: 'Your subscribers and users',
+    consumer_subscription: 'Your subscribers and users',
     exchange: 'What you move, and what you earn on it',
-    ecommerce: 'Your sales, and what you keep after cost',
+    ecommerce: 'Your sales and what you keep',
     payments: 'What you keep after interchange',
     lending: 'Your book, and how it is funded',
     media: 'Your revenue and your audience',
     delivery: 'The basket, and your share of it'
-  }[fork] || 'Your numbers';
+  }[fork] || 'More figures';
 }
 
 function qfSubmit() {
   if (!FORK_SPEC) return;
   var answered = 0;
   FORK_SPEC.questions.forEach(function (q) {
+    if (QF_ALREADY_ASKED[q.key]) return;
     if (q.kind === 'choice') { if (responses[q.key]) answered++; return; }
     var v = qfNum('qf-' + q.key);
     if (v !== null) { responses[q.key] = v; answered++; }
@@ -207,19 +203,20 @@ function qfSubmit() {
   /* ANSWERED, NEVER THE ANSWERS. The event carries how many questions were filled in and which
      fork, because that is what tells us whether a fork is too long. It carries no figure. */
   track('quiz_answer', { step: 3, key: 'fork_answers', fork: FORK_SPEC.fork, answered: answered });
-  currentStep = 4;
-  renderStep();
 }
 
 /* ASKED ONCE, AFTER STEP 2, AND THE FOUNDER NEVER WAITS ON IT. The call is started as soon as the
    sector and website are in, and the page carries on. If it lands before they reach step 3 they get
    their fork; if it does not, they get the plain revenue question and the quiz is exactly what it
    was yesterday. Nothing about this is allowed to hold a founder up. */
+var QF_STATE = 'idle';         /* idle | asking | ready | failed */
+
 function qfAsk() {
   if (FORK_ASKED) return;
   FORK_ASKED = true;
   var body = (typeof buildRevealRequest === 'function') ? buildRevealRequest(responses) : null;
   if (!body) return;
+  QF_STATE = 'asking';
   fetch('/api/profile', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -227,26 +224,37 @@ function qfAsk() {
   })
     .then(function (r) { return r.json(); })
     .then(function (spec) {
-      if (!spec || !spec.questions || !spec.questions.length) return;
+      if (!spec || !spec.questions) { QF_STATE = 'failed'; qfShowIfReady(); return; }
       if (responses.profile_disputed) return;
       FORK_SPEC = spec;
+      QF_STATE = 'ready';
       if (currentStep === 3) qfShowIfReady();
     })
-    .catch(function (e) { console.warn('[fairway] fork unavailable', e); });
+    .catch(function (e) {
+      console.warn('[fairway] fork unavailable', e);
+      QF_STATE = 'failed';
+      qfShowIfReady();
+    });
 }
 
-/* Called by renderStep when step 3 comes up: draw the fork if we have one, otherwise leave the
-   page's own revenue question exactly where it is. */
+/* Called by renderStep when step 3 comes up, and again when the read lands. While the read is in
+   flight the step shows one line saying so (Daniil, 20-Sep-2026: he reached step 3 before the
+   profiler answered and never saw its read, so the reveal priced him on a set he was never shown).
+   Nothing waits: ARR and margin are answerable immediately, and if the read never lands the step
+   is exactly those two questions. */
 function qfShowIfReady() {
-  var plain = document.querySelector('.q-block[data-step="3"]');
   var mount = document.getElementById('qf-block');
-  if (!FORK_SPEC || responses.profile_disputed) {
-    if (mount) mount.style.display = 'none';
+  if (!mount) return false;
+  if (responses.profile_disputed) { mount.style.display = 'none'; return false; }
+  if (FORK_SPEC) return qfRender(FORK_SPEC);
+  if (QF_STATE === 'asking') {
+    mount.innerHTML = '<p class="q-help qf-wait" style="margin:0 0 8px;">Reading your website for the figures your business is priced on&hellip;</p>';
+    mount.style.display = 'block';
     return false;
   }
-  if (!qfRender(FORK_SPEC)) return false;
-  if (plain) plain.style.display = 'none';
-  return true;
+  mount.innerHTML = '';
+  mount.style.display = 'none';
+  return false;
 }
 
 if (typeof module !== 'undefined' && module.exports) {
