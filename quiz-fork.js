@@ -57,7 +57,7 @@ function qfQuestion(q) {
      one line per question, the rest one tap away). The text is the engine's own, unchanged. */
   if (q.why) out.push(' <button type="button" class="info-btn" aria-expanded="false" aria-controls="' + id + '-why" onclick="toggleInfo(this)">i</button>');
   out.push('</label>');
-  if (q.why) out.push('<p class="q-info" id="' + id + '-why" hidden>' + (QF_USED_FOR[q.key] ? '<b>Used for:</b> ' + qfEsc(QF_USED_FOR[q.key]) + ' ' : '') + qfEsc(q.why) + '</p>');
+  if (q.why) out.push('<p class="q-info" id="' + id + '-why" hidden>' + (qfUsedFor(q.key) ? '<b>Used for:</b> ' + qfEsc(qfUsedFor(q.key)) + ' ' : '') + qfEsc(q.why) + '</p>');
 
   if (q.kind === 'choice' && q.options && q.options.length) {
     out.push('<div class="opt-grid">');
@@ -181,7 +181,7 @@ var QF_REVENUE_LABEL = {
    engine's business (check 15), but a founder deciding whether to type a figure deserves to know
    what it changes. */
 var QF_USED_FOR = {
-  gross_revenue: 'one row of its own, EV to gross sales (the GMV-type multiple) on private rounds priced that way. It changes nothing else.',
+  gross_revenue: 'one row of its own, EV to gross revenue, on private rounds priced that way. It changes nothing else.',
   gmv: 'the rounds and listed names that are priced on what passes through the platform. It changes nothing else.',
   paying_subscribers: 'one row of its own, dollars of enterprise value per paying subscriber, from rounds that disclosed the count. It changes nothing else.',
   nrr_pct: 'the reviewer, with your figures. It prices no row today.',
@@ -195,6 +195,20 @@ var QF_USED_FOR = {
   throughput_volume: 'the EV-per-unit-of-throughput row, in the unit you pick.',
   throughput_unit: 'the unit the throughput row is priced in.'
 };
+
+/* THE SAME LINE IN THE FORK'S OWN WORD. A brand or retailer calls its gross figure GMV (Daniil,
+   20-Sep-2026: "gross sales is a misleading term, let's use GMV"), and the row it feeds is named
+   the same way on the field. Keyed by fork, then by question; falls back to QF_USED_FOR. */
+var QF_USED_FOR_BY_FORK = {
+  ecommerce: {
+    gross_revenue: 'one row of its own, EV to GMV, from private rounds priced on GMV. It changes nothing else.'
+  }
+};
+function qfUsedFor(key) {
+  var fork = (FORK_SPEC && FORK_SPEC.fork) || '';
+  var byFork = QF_USED_FOR_BY_FORK[fork] || {};
+  return byFork[key] || QF_USED_FOR[key] || '';
+}
 
 /* The read-back and the one-line "what these are for", drawn above the extras. */
 function qfIntro(qs) {
@@ -235,7 +249,7 @@ function qfTitleFor(fork) {
     consumer: 'Your subscribers and users',
     consumer_subscription: 'Your subscribers and users',
     exchange: 'What you move, and what you earn on it',
-    ecommerce: 'Your gross sales, if you track them',
+    ecommerce: 'Your GMV, if you track it',
     payments: 'Before interchange, if you report it',
     lending: 'Your book, and how it is funded',
     media: 'Your audience',

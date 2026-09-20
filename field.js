@@ -98,7 +98,10 @@ function ffPeerTip(rng, unit, header, note) {
   });
   if (!peers.length) return '';
   const rows = peers.slice(0, 12).map(function (p) {
-    const name = '<span>' + escapeHtml(p.company || p.ticker || '') + (p.date ? '<small>' + escapeHtml(p.date) + '</small>' : '') + '</span>';
+    /* The small print beside a name is the round's date on a private row and the peer's forecast
+       growth on the regression row (`sub`). */
+    const small = p.date || p.sub;
+    const name = '<span>' + escapeHtml(p.company || p.ticker || '') + (small ? '<small>' + escapeHtml(small) + '</small>' : '') + '</span>';
     const m = (typeof p.multiple === 'number') ? (unit === 'x' ? ffNum(p.multiple) + 'x' : ffPerUnit(p.multiple)) : '';
     return '<i>' + name + '<em>' + m + '</em></i>';
   }).join('');
@@ -220,26 +223,48 @@ function ffBuildRows(r) {
     }));
   }
 
+  /* ---- The growth regression. Daniil, 20-Sep-2026: read at the founder's FORWARD growth (the plan
+     from step 4; the trailing rate only stands in when no plan was given), drawn with a callout
+     when growth explains less than 40% of the spread (R-squared below 0.40), and named under the
+     field with the numbers when it cannot be read at all. selector/regression.py is the other half. */
   const reg = FF_PAYLOAD && FF_PAYLOAD.regression;
+  const regBasis = reg && reg.growth_basis === 'plan' ? 'planned' : 'trailing';
+  const regAt = reg ? 'your ' + Math.round(reg.growth) + '% ' + regBasis + ' growth' : '';
+  const regStandIn = reg && reg.growth_basis !== 'plan'
+    ? ' No plan was given at step 4, so your last twelve months stand in; your peers’ rates are forecasts, so a plan is the better match.'
+    : '';
   if (reg && typeof reg.low === 'number' && ntmM) {
     /* The points the line was fitted through, shown the way the peer sets are: name and multiple.
        The engine calls the multiple `mult` here and `multiple` in the lanes. */
-    const regPeers = (reg.peers || []).map(function (p) { return { company: p.company, ticker: p.ticker, multiple: p.mult }; });
+    const regPeers = (reg.peers || []).map(function (p) { return { company: p.company, ticker: p.ticker, multiple: p.mult, sub: (typeof p.growth === 'number' ? Math.round(p.growth) + '%' : '') }; });
+    const r2Text = 'R² ' + reg.r2.toFixed(2);
+    const weak = !!reg.weak_fit;
     rows.push(ffRow({
-      group: 'Public trading multiples',
-      parameter: 'Regression analysis', basis: 'Multiple vs growth, fitted on the peer set',
+      group: 'Public trading multiples', cls: weak ? 'weak' : '',
+      parameter: 'Regression analysis', basis: 'Multiple vs forward growth, read at ' + escapeHtml(regAt),
       metric: { value: ffMoney(ntmM), sub: 'NTM revenue', source: ffNtmSource(r) },
-      mult: { html: ffNum(reg.low) + 'x &ndash; ' + ffNum(reg.high) + 'x', sub: reg.n + ' peers, R&sup2; ' + reg.r2.toFixed(2),
-        tip: ffPeerTip({ peers: regPeers }, 'x', 'Fitted through &middot; own multiple. Read at your ' + Math.round(reg.growth) + '% growth, a tenth either side: ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x') },
+      mult: { html: ffNum(reg.low) + 'x &ndash; ' + ffNum(reg.high) + 'x', sub: reg.n + ' peers, ' + r2Text + (weak ? ', weak fit' : ''),
+        tip: ffPeerTip({ peers: regPeers }, 'x', 'Fitted through &middot; forecast growth &middot; own multiple. Read at ' + escapeHtml(regAt) + ', a tenth either side: ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x.',
+          'Their growth is a forecast, ' + reg.peer_growth_low + '% to ' + reg.peer_growth_high + '% a year.' + escapeHtml(regStandIn)) },
       low: ntmM * reg.low, high: ntmM * reg.high, bar: 'reg',
-      barTip: ffMoney(ntmM) + ' of NTM revenue at ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x off the regression: ' + ffMoney(ntmM * reg.low) + ' to ' + ffMoney(ntmM * reg.high) + '.'
+      barTip: ffMoney(ntmM) + ' of NTM revenue at ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x off the regression: ' + ffMoney(ntmM * reg.low) + ' to ' + ffMoney(ntmM * reg.high) + '.',
+      callout: weak
+        ? 'Weak fit: growth explains only ' + Math.round(reg.r2 * 100) + '% of the spread in these ' + reg.n + ' peers’ multiples (' + r2Text + '). Read this range as a rough guide, not a price.'
+        : null
     }));
-  } else if (reg && reg.refused === 'OUT_OF_RANGE') {
-    notDrawn.push('the growth regression (your ' + Math.round(reg.growth) + '% growth sits outside the ' + reg.peer_growth_low + '% to ' + reg.peer_growth_high + '% your listed peers grow at, so the fitted line would be an extrapolation)');
-  } else if (FF_PAYLOAD && r.trailingGrowth === null) {
+  } else if (reg && reg.refused) {
+    /* Every reason that applies, with the numbers: a founder who asks "why not?" gets a sentence,
+       not an adjective. A weak fit alone no longer refuses; it draws with the callout above. */
+    const why = [];
+    if (reg.refused === 'OUT_OF_RANGE') why.push(regAt + ' sits outside the ' + reg.peer_growth_low + '% to ' + reg.peer_growth_high + '% your ' + reg.n + ' listed peers are expected to grow at, so reading the line there would be a guess' + (reg.weak_fit ? ' (and growth explains only ' + Math.round((reg.r2 || 0) * 100) + '% of the spread in their multiples, R² ' + (typeof reg.r2 === 'number' ? reg.r2.toFixed(2) : '?') + ')' : ''));
+    if (reg.refused === 'TOO_FEW') why.push('only ' + reg.n + ' listed peers carry both a growth rate and a multiple, and a line needs six');
+    if (reg.refused === 'NEGATIVE') why.push('the line through your ' + reg.n + ' listed peers implies a multiple at or below zero at ' + regAt);
+    if (!why.length) why.push('the fitted line could not be published for this set');
+    notDrawn.push('the growth regression: ' + why.join('; and ') + (reg.growth_basis !== 'plan' ? '. No plan was given at step 4, so your last twelve months stood in' : ''));
+  } else if (FF_PAYLOAD && r.trailingGrowth === null && r.plannedGrowth === null) {
     notDrawn.push('the growth regression (no growth rate given)');
   } else if (FF_PAYLOAD) {
-    notDrawn.push('the growth regression (the fit across your peers is too weak to publish)');
+    notDrawn.push('the growth regression (too few listed peers carry both a growth rate and a multiple to fit a line)');
   }
 
   /* ---- Private rounds. */
@@ -273,8 +298,11 @@ function ffBuildRows(r) {
          the axis unit: a count times dollars per unit is dollars, hence the million for per-unit. */
       const metricM = c.founder_metric * usdToLocal / (perUnit ? 1e6 : 1);
       /* The engine's label is "dollars of enterprise value per paying subscriber" or "enterprise
-         value to gross revenue"; the row says the same in the landing's shorthand. */
-      const noun = String(c.label || '').replace(/^dollars of enterprise value per /, '').replace(/^enterprise value to /, '');
+         value to gross revenue"; the row says the same in the landing's shorthand. A brand's or
+         retailer's gross figure is called GMV, as the question that asked for it is (Daniil,
+         20-Sep-2026: "gross sales is a misleading term, let's use GMV"). */
+      let noun = String(c.label || '').replace(/^dollars of enterprise value per /, '').replace(/^enterprise value to /, '');
+      if (c.basis === 'REVENUE_GROSS' && responses.fork === 'ecommerce') noun = 'GMV';
       const basisText = perUnit ? 'EV per ' + noun : 'EV / ' + noun;
       const count = Math.round(c.founder_metric).toLocaleString('en-GB');
       const m = ffMultCell(rng, perUnit ? 'per ' + noun : 'same rounds', perUnit ? '$' : 'x', 'Round &middot; ' + (perUnit ? 'paid per ' + noun : 'multiple'), 'private');
@@ -434,6 +462,9 @@ function renderField(r) {
       + metric + mult
       + '<div class="ff-cell">' + cell + '</div>'
       + '</div>';
+    /* THE CALLOUT, under the row it disclaims (Daniil, 20-Sep-2026: a weak regression is drawn
+       and disclaimed "with a callout to that range on FF", not hidden). */
+    if (row.callout) html += '<p class="ff-callout">' + escapeHtml(row.callout) + '</p>';
   });
 
   html += '<div class="ffx-axis"><div></div><div></div><div></div><div class="ff-cell">'

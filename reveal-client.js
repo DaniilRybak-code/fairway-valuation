@@ -220,7 +220,11 @@
     const names = (c.peers || []).map(function (x) {
       return esc(x.company || x.ticker || '') + (x.date ? ', ' + esc(x.date) : '');
     }).filter(Boolean);
-    const title = esc(c.label || c.basis) + ' <span class="pc-lane">' + esc(c.lane) + '</span>';
+    /* A brand's or retailer's gross figure is called GMV on the chart, as it is in the question
+       and on the field (Daniil, 20-Sep-2026: "gross sales is a misleading term, let's use GMV"). */
+    const label = (c.basis === 'REVENUE_GROSS' && typeof responses !== 'undefined' && responses.fork === 'ecommerce')
+      ? 'enterprise value to GMV' : (c.label || c.basis);
+    const title = esc(label) + ' <span class="pc-lane">' + esc(c.lane) + '</span>';
     const count = c.n + (c.n === 1 ? ' comparable' : ' comparables');
 
     if (c.locked || typeof c.low !== 'number') {
