@@ -268,13 +268,17 @@ FORKS = {
     questions=[
       dict(key='net_revenue', label='Net revenue over the last twelve months', kind='money',
            required=True, maps_to='profile.revenue', peer_field='revenue_musd', basis='NET_REVENUE',
-           why='NET, not gross or retail sales. This is where OLIPOP went wrong: its $400m is gross '
+           why='NET, not GMV or retail sales. This is where OLIPOP went wrong: its $400m is gross '
                'sales, and it is the only priced consumer row in the file on a gross basis.'),
       # AND NOW WE ASK FOR OLIPOP'S NUMBER TOO, instead of only warning about it. Eight ecommerce
       # fixtures reach 14 gross rounds that a net-only answer cannot use. Retail sales before
       # returns, discounts and marketplace fees is a real measure a consumer brand knows; it is
-      # only wrong when it is handed over labelled as net.
-      _gross_q('Gross or retail sales over the same period, before returns and discounts'),
+      # only wrong when it is handed over labelled as net. CALLED GMV on the page since 20-Sep-2026
+      # (Daniil, after the D2C run: "gross sales is a misleading term, let's use GMV"); the key,
+      # the basis and the rounds it reaches are unchanged.
+      _gross_q('GMV (gross merchandise value) over the same period: your total sales before returns, discounts and marketplace fees',
+               why='For a brand or retailer the gross figure is GMV: every sale at the price paid, before '
+                   'returns, discounts and marketplace fees come off.'),
       dict(key='gross_margin', label='Gross margin', kind='percent', required=True,
            maps_to='profile.gm', peer_field='gross_margin_pct',
            why='Not optional for a consumer brand. Across our listed consumer set the revenue '
