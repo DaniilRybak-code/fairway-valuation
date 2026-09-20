@@ -207,9 +207,12 @@ def profile_from(request, ask, site_text=''):
     prof['_dropped'] = dropped
     if error:
         prof['_profiler_error'] = error
-    # THE NUMBERS, AND THERE ARE ONLY TWO. Both are ratios and both are already through the
-    # boundary allowlist. Neither ever reaches the model: they are attached here, after it.
-    for src, dst in (('growth_yoy', 'growth'), ('gross_margin', 'gm')):
+    # THE NUMBERS, AND THERE ARE ONLY THREE. All are ratios and all are already through the
+    # boundary allowlist. None ever reaches the model: they are attached here, after it.
+    # `growth_plan` joined on 20-Sep-2026 (Daniil: the regression is built on the peers' forecast
+    # growth, so "the user's FORWARD growth should be applied"). It was in the allowlist from the
+    # start and never copied onto the profile, so regression.py could only read the trailing rate.
+    for src, dst in (('growth_yoy', 'growth'), ('growth_plan', 'growth_plan'), ('gross_margin', 'gm')):
         v = (request or {}).get(src)
         try:
             prof[dst] = float(v) if v not in (None, '') else None

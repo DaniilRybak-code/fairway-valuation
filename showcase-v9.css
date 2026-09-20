@@ -243,3 +243,12 @@
   .ff-bench-row .ff-cell { padding:0 6px 0 56px; }
   .ff-bench-note.left { left:56px; }
 }
+
+/* the website read on step 2 (20 Sep): the same line quiz-fork.js prints on step 3, under the box */
+#qf-read2 { margin:-4px 0 10px; }
+#qf-read2 .q-help { margin:0; }
+
+/* the regression callout (20 Sep): a weak fit is drawn and disclaimed under its row, not hidden */
+#screen-result .ff-callout { font-size:12px; line-height:1.5; color:var(--ff-ink); background:var(--ff-panel);
+  border-left:2px solid var(--ff-rust); padding:7px 12px; margin:2px 0 10px; max-width:78ch; }
+#screen-result .ff-row.weak .ff-bar.reg { opacity:.55; }
