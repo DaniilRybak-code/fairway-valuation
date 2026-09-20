@@ -1,0 +1,3 @@
+# The engine (selector/*.py) and the two Python endpoints (api/payload.py, api/profile.py) use the
+# Python standard library only. No packages; this file exists so that Vercel builds the Python
+# functions in api/ beside the Node ones.
