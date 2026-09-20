@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2142.86,
+     "memo": [],
      "mid": 21428.57,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 1
@@ -106,8 +108,8 @@
      "control_names": [
       "Semrush"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -117,9 +119,18 @@
      "listed_target_names": [
       "Semrush"
      ],
-     "low": 4.3,
+     "low": 12.8,
+     "memo": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "multiple": 4.3,
+       "reason": "take-private"
+      }
+     ],
      "mid": 14.0,
-     "n": 4,
+     "n": 3,
+     "n_all": 4,
      "period_mix": {
       "LTM": 1,
       "NTM": 1,
@@ -139,36 +150,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Buffer",
-       "mult": 12.8,
-       "reason": "both do Social Media Scheduling, Publishing, Content Calendar; same type of business; same business function; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Yotpo",
-       "mult": 14.0,
-       "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Jasper",
-       "mult": 33.3,
-       "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "calendar",
@@ -177,7 +159,7 @@
       "scheduling",
       "social"
      ],
-     "spread": 7.7,
+     "spread": 2.6,
      "table": [
       {
        "company": "Semrush",
@@ -187,6 +169,7 @@
        "multiple": 4.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -369,7 +352,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -608,16 +591,25 @@
    "control_names": [
     "Semrush"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 33.3,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
-   "low": 4.3,
+   "low": 12.8,
+   "memo": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "multiple": 4.3,
+     "reason": "take-private"
+    }
+   ],
    "mid": 14.0,
-   "n": 4,
+   "n": 3,
+   "n_all": 4,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
@@ -637,36 +629,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Buffer",
-     "mult": 12.8,
-     "reason": "both do Social Media Scheduling, Publishing, Content Calendar; same type of business; same business function; same kind of customer",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Yotpo",
-     "mult": 14.0,
-     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "shares the language of content; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "calendar",
@@ -675,7 +638,7 @@
     "scheduling",
     "social"
    ],
-   "spread": 7.7,
+   "spread": 2.6,
    "table": [
     {
      "company": "Semrush",
@@ -685,6 +648,7 @@
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {

@@ -2542,6 +2542,56 @@ def _evidence(contributing, whole=None, prof=None):
 # genuine ranges from the non-ranges without catching anything healthy.
 DISPERSION_MAX = 6.0
 
+# THE RANGE AT SEED, AND THE EXTREMES. Daniil, 20-Sep-2026, after the Elentaria run drew one hatched
+# bar from 3.8x to 150x over six rounds: "for a seed company, take private data points are not
+# relevant and can be disregarded IF other data points exist (which they do in this case). Then
+# based on these data points we should exclude extremes (still show them as a memo) and build a
+# range." Two rules, both applied in _set_aside() below and only to the PRIVATE lane:
+#
+#   1. At pre-seed and seed, a round whose target was a listed company (a take-private, priced by
+#      the stock market rather than negotiated with one investor) is set aside, as long as at
+#      least MEMO_MIN_REMAINING other rounds remain. Elentaria's E2open (3.46x) and Zuora (3.81x).
+#   2. When EXTREMES_MIN or more rounds remain, the single highest and the single lowest are set
+#      aside as extremes. Both ends, on purpose: the 3-Sep note on range presentation found that
+#      the isolated point sits at the bottom at least as often as the top.
+#
+# NOTHING SET ASIDE DISAPPEARS. Every round stays in the hover table with the reason it is out of
+# the bar ("take-private" or "extreme"), the field draws it as a named mark on the row, and `memo`
+# on the range lists them. What changes is which rounds the bar runs between. When what remains
+# still spans more than DISPERSION_MAX the range is still SCATTER and still says "they disagree":
+# Elentaria's remaining four are two spend-software rounds at 15x to 16x and two AI-agent rounds
+# at 105x and 150x, and no rule turns that into one price. That case is the data gap named in the
+# launch-gate document (section 4): a seed founder priced off growth rounds.
+EARLY_STAGES = ('Pre-seed', 'Seed')
+MEMO_MIN_REMAINING = 3
+EXTREMES_MIN = 4
+
+
+def _set_aside(prof, priced, key):
+    """Split the priced private rows into the ones the bar runs between and the memo points.
+
+    Returns (in_bar, memo). `in_bar` is a list of (sw, row) in the input order; `memo` is a list
+    of dicts {company, date, multiple, reason} for the rows set aside, reason in
+    ('take-private', 'extreme'). Nothing is dropped: len(in_bar) + len(memo) == len(priced).
+    """
+    memo = []
+    rows = list(priced)
+    if (prof.get('stage') or '') in EARLY_STAGES:
+        tp = [(sw, r) for (sw, r) in rows if r.get('target_was_listed')]
+        rest = [(sw, r) for (sw, r) in rows if not r.get('target_was_listed')]
+        if tp and len(rest) >= MEMO_MIN_REMAINING:
+            memo += [{'company': r.get('company_name', ''), 'date': r.get('date', ''),
+                      'multiple': r[key], 'reason': 'take-private'} for (_sw, r) in tp]
+            rows = rest
+    if len(rows) >= EXTREMES_MIN:
+        by = sorted(rows, key=lambda z: z[1][key])
+        lo, hi = by[0], by[-1]
+        for (_sw, r) in (lo, hi):
+            memo.append({'company': r.get('company_name', ''), 'date': r.get('date', ''),
+                         'multiple': r[key], 'reason': 'extreme'})
+        rows = [x for x in rows if x is not lo and x is not hi]
+    return rows, memo
+
 def _control(rows):
     names = [r.get('company_name', '') for (_sw, r) in rows
              if (r.get('transaction_type') or '').strip() == 'CONTROL']
@@ -2839,7 +2889,11 @@ def private_range(prof, picked, tier, basis=None):
         allpriced.append((sw, r))
     if not allpriced: return {}
     band, priced, weaker = _bands(prof, allpriced)
-    v = sorted(r[key] for _sw, r in priced)
+    # THE BAR RUNS BETWEEN THE ROUNDS THAT REMAIN AFTER _set_aside (take-privates at seed, then
+    # the two extremes); the rounds set aside stay in the hover table and on the row as memo
+    # points. `n` counts the bar; `n_all` counts every priced round. Daniil, 20-Sep-2026.
+    in_bar, memo = _set_aside(prof, priced, key)
+    v = sorted(r[key] for _sw, r in in_bar)
     n = len(v)
     ev, close, dropped, shared = _evidence(priced, picked, prof)
     # A CEILING DRAWN AS A POINT IS THE DIAMOND'S OWN VERSION OF THE BAR PROBLEM. After the
@@ -2848,11 +2902,16 @@ def private_range(prof, picked, tier, basis=None):
     # that as a point is exactly the overstatement the ladder was built to stop, so the range
     # carries whether any contributing row is bounded and the copy must say "at most".
     dispersed = n >= 2 and v[0] > 0 and (v[-1] / v[0]) > DISPERSION_MAX
-    out = dict(n=n, low=min(v), mid=v[n // 2], high=max(v),
+    aside = {m['company']: m['reason'] for m in memo}
+    table = peer_table(prof, priced, key)
+    for row in table:
+        if row['company'] in aside:
+            row['set_aside'] = aside[row['company']]
+    out = dict(n=n, n_all=len(priced), memo=memo, low=min(v), mid=v[n // 2], high=max(v),
                display=('DIAMOND' if n == 1 else ('SCATTER' if dispersed else 'RANGE')),
                dispersed=dispersed, spread=round(v[-1] / v[0], 1) if v[0] else None,
                points=(_positioning(prof, priced, key) if dispersed else []), thin=n < 3,
-               bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in priced),
+               bounded=any((r.get('bound') or '').strip() == '<=' for _sw, r in in_bar),
                tag_evidence=ev, closeness=close, shared_words=shared,
                triangulated=(close == 'THIN_OVERLAP'), anchor_dropped=dropped,
                control_n=_control(priced)[0], control_names=_control(priced)[1],
@@ -2863,11 +2922,12 @@ def private_range(prof, picked, tier, basis=None):
                # The private lane never did, which nobody noticed while nothing read a payload.
                # Daniil's free-tier ruling of 6-Sep is what needed it: hovering a blurred private
                # range must show the comparable names, and there was no list to show.
-               table=peer_table(prof, priced, key),
+               # Every priced round is in it, the ones set aside carrying `set_aside`.
+               table=table,
                period_mix=_period_mix(priced), period_span=_period_span(prof, priced),
                band=band, positioning=_positioning(prof, weaker, key))
     if n == 1:
-        out['sole'] = priced[0][1].get('company_name', '')
+        out['sole'] = in_bar[0][1].get('company_name', '')
     return out
 
 
@@ -2930,35 +2990,12 @@ def _ols(xs, ys):
     ssr = sum((y-(a+b*x))**2 for x, y in zip(xs, ys))
     return a, b, 1 - ssr/sst
 
-def regression_range(prof, universe, which='rev', want=REGRESSION_N):
-    """Fit EV/denominator against growth across the founder's own extended peer set, then read the
-    range off the line at their growth rate. Returns None when the fit is too weak to publish."""
-    growth = prof.get('growth')
-    if growth is None: return None
-    univ = same_family(prof, universe)
-    scored = sorted(((score(prof, r), r) for r in univ), key=lambda z: -z[0][0])
-    scored = [x for x in scored if _relevant(prof, x[1], x[0][1])][:want]
-    key = 'mult' if which == 'rev' else 'gp_mult'
-    pts = [(r['g'], r[key], r) for _s, r in scored if r.get('g') is not None and r.get(key) is not None]
-    fit = _ols([p[0] for p in pts], [p[1] for p in pts])
-    if not fit: return None
-    a, b, r2 = fit
-    if r2 < REGRESSION_MIN_R2: return None
-    gs = [p[0] for p in pts]
-    lo_g, hi_g = growth*(1-REGRESSION_GROWTH_SPAN), growth*(1+REGRESSION_GROWTH_SPAN)
-    ceiling = max(gs) * (1 + EXTRAPOLATION_LIMIT)
-    floor = min(gs) - abs(min(gs)) * EXTRAPOLATION_LIMIT - 5.0
-    if hi_g > ceiling or lo_g < floor:
-        return dict(refused='OUT_OF_RANGE', n=len(pts), r2=round(r2, 3), growth=growth,
-                    peer_growth_low=round(min(gs), 1), peer_growth_high=round(max(gs), 1),
-                    denominator=which)
-    v = sorted([a + b*lo_g, a + b*hi_g])
-    if v[1] <= 0: return None                      # a downward line can imply a negative multiple
-    return dict(n=len(pts), r2=round(r2, 3), intercept=round(a, 3), slope=round(b, 4),
-                denominator=which, growth=growth, growth_low=round(lo_g, 1), growth_high=round(hi_g, 1),
-                low=round(max(0.0, v[0]), 1), mid=round((v[0]+v[1])/2, 1), high=round(v[1], 1),
-                peers=[{'company': r['company_name'], 'ticker': r.get('exchange_ticker', ''),
-                        'growth': r['g'], 'mult': r[key]} for _g, _m, r in pts])
+# regression_range() LIVED HERE FROM 4-Sep TO 20-Sep-2026 AND NOW LIVES IN selector/regression.py.
+# Daniil's rulings of 20-Sep changed what it does (read at the founder's forward growth; published
+# with a callout below R2 0.40 instead of hidden below 0.50; up to three names set aside to improve
+# the fit, named on the row; the extrapolation refusal kept). The constants above are still the
+# ones it reads (REGRESSION_N, REGRESSION_MIN_POINTS, REGRESSION_GROWTH_SPAN, EXTRAPOLATION_LIMIT),
+# and _ols() above is still the fit. REGRESSION_MIN_R2 is kept for the record and read by nothing.
 
 
 # ---------------------------------------------------------------------------

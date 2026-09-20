@@ -26,8 +26,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 188000.0,
+     "memo": [],
      "mid": 575000.0,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "RUN_RATE": 3
      },
@@ -101,12 +103,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.0,
+     "high": 47.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 18.3,
+     "low": 23.0,
+     "memo": [
+      {
+       "company": "Notion",
+       "date": "Jan-26",
+       "multiple": 18.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Glean",
+       "date": "Jun-25",
+       "multiple": 72.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 47.0,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "RUN_RATE": 4
      },
@@ -125,7 +142,7 @@
       "intelligence",
       "knowledge"
      ],
-     "spread": 3.9,
+     "spread": 2.0,
      "table": [
       {
        "company": "Notion",
@@ -135,6 +152,7 @@
        "multiple": 18.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -165,11 +183,12 @@
        "multiple": 72.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 1.0,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -382,7 +401,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -782,12 +801,27 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 72.0,
+   "high": 47.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 18.3,
+   "low": 23.0,
+   "memo": [
+    {
+     "company": "Notion",
+     "date": "Jan-26",
+     "multiple": 18.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Glean",
+     "date": "Jun-25",
+     "multiple": 72.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 47.0,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "RUN_RATE": 4
    },
@@ -806,7 +840,7 @@
     "intelligence",
     "knowledge"
    ],
-   "spread": 3.9,
+   "spread": 2.0,
    "table": [
     {
      "company": "Notion",
@@ -816,6 +850,7 @@
      "multiple": 18.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -846,11 +881,12 @@
      "multiple": 72.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 1.0,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 62,

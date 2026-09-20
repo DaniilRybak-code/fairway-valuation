@@ -62,7 +62,11 @@ function ffTicks(lo, hi) {
  *   3. The stage benchmark never sets the scale. The axis is scaled from the method rows only. If
  *      the benchmark falls inside that range it is a marker; if it falls outside, it is a note at
  *      the edge of the axis with the figure, and the bars keep their width (Daniil, 20-Sep: "it
- *      should not impact the perception of the rest of the football field").
+ *      should not impact the perception of the rest of the football field"). Since the evening of
+ *      20-Sep the last-round marker is treated the same way: it never sets the scale either, and
+ *      is named at the edge of its own row when it falls beyond the bars. (Daniil, on a D2C run
+ *      where a $4m cap pushed $0.8m of bars into the left quarter: "if there is any discreet value
+ *      that distorts the scale of the FF it should be shown outside of the perimiter of the FF".)
  *   4. The listed lane is priced on the founder's NEXT twelve months, because the listed multiples
  *      are enterprise value over next-twelve-months revenue. The private lane is priced on the
  *      founder's ARR TODAY, because the private multiples were computed on ARR or last-twelve-months
@@ -101,13 +105,45 @@ function ffPeerTip(rng, unit, header, note) {
     /* The small print beside a name is the round's date on a private row and the peer's forecast
        growth on the regression row (`sub`). */
     const small = p.date || p.sub;
-    const name = '<span>' + escapeHtml(p.company || p.ticker || '') + (small ? '<small>' + escapeHtml(small) + '</small>' : '') + '</span>';
+    /* A round set aside (a take-private at seed, or the highest or lowest of the set) stays in
+       the list with the reason, greyed: Daniil, 20-Sep-2026, "still show them as a memo". */
+    const aside = p.set_aside ? '<small class="aside">' + escapeHtml(p.set_aside === 'take-private' ? 'take-private, set aside' : 'extreme, set aside') + '</small>' : '';
+    const name = '<span>' + escapeHtml(p.company || p.ticker || '') + (small ? '<small>' + escapeHtml(small) + '</small>' : '') + aside + '</span>';
     const m = (typeof p.multiple === 'number') ? (unit === 'x' ? ffNum(p.multiple) + 'x' : ffPerUnit(p.multiple)) : '';
-    return '<i>' + name + '<em>' + m + '</em></i>';
+    return '<i' + (p.set_aside ? ' class="aside"' : '') + '>' + name + '<em>' + m + '</em></i>';
   }).join('');
   const more = peers.length > 12 ? '<u>and ' + (peers.length - 12) + ' more</u>' : '';
   return '<div class="peer-tip"><b>' + (header || 'Peer &middot; applied multiple') + '</b>' + rows + more
     + (note ? '<u>' + note + '</u>' : '') + '</div>';
+}
+
+/* "A, B and C". */
+function ffList(names) {
+  const n = names.slice();
+  if (n.length <= 1) return n.join('');
+  const last = n.pop();
+  return n.join(', ') + ' and ' + last;
+}
+
+/* THE REGRESSION'S HOVER: three columns (peer, forecast growth, own multiple), the names set aside
+   to improve the fit under their own heading with the same two figures, and the notes. Daniil,
+   20-Sep-2026: the hover "should include growth for each comp, next to the multiple". */
+function ffRegTip(reg, regAt, standIn) {
+  const fmt = function (p) {
+    return '<i><span>' + escapeHtml(p.company || p.ticker || '') + '</span><em>' + (typeof p.growth === 'number' ? Math.round(p.growth) + '%' : '') + '</em><em>' + (typeof p.mult === 'number' ? ffNum(p.mult) + 'x' : '') + '</em></i>';
+  };
+  const peers = (reg.peers || []).slice().sort(function (a, b) { return (b.mult || 0) - (a.mult || 0); });
+  const ex = (reg.excluded || []).slice().sort(function (a, b) { return (b.mult || 0) - (a.mult || 0); });
+  let html = '<div class="peer-tip reg"><b>Fitted through &middot; forecast growth &middot; own multiple</b>';
+  html += '<i class="head"><span>Peer</span><em>growth</em><em>multiple</em></i>';
+  html += peers.slice(0, 15).map(fmt).join('');
+  if (peers.length > 15) html += '<u>and ' + (peers.length - 15) + ' more</u>';
+  if (ex.length) {
+    html += '<b class="sub">Set aside to improve the fit</b>' + ex.map(fmt).join('');
+  }
+  html += '<u>Read at ' + escapeHtml(regAt) + ', a tenth either side: ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x. Their growth is a forecast, ' + reg.peer_growth_low + '% to ' + reg.peer_growth_high + '% a year.' + escapeHtml(standIn || '') + '</u>';
+  html += '</div>';
+  return html;
 }
 
 /* HOW THE RANGE IS CUT FROM THE NAMES, said under the list, because a founder who sees a peer at
@@ -118,7 +154,14 @@ function ffCutNote(rng, lane) {
   const n = (rng.peers || []).length;
   if (n < 2) return '';
   if (lane === 'listed') return 'The range is the middle of these ' + n + ': the top and the bottom are set aside.';
-  return 'The range is the full spread of these ' + n + ' rounds.';
+  const memo = rng.memo || [];
+  if (!memo.length) return 'The range is the full spread of these ' + n + ' rounds.';
+  const tp = memo.filter(function (m) { return m.reason === 'take-private'; }).length;
+  const ex = memo.filter(function (m) { return m.reason === 'extreme'; }).length;
+  const parts = [];
+  if (tp) parts.push(tp + ' take-private' + (tp > 1 ? 's' : '') + ' (a listed company bought at the price the stock market already paid, not a venture round; set aside at seed)');
+  if (ex) parts.push('the highest and the lowest');
+  return 'The bar runs between the ' + rng.n + ' rounds that remain after ' + parts.join(' and ') + ' are set aside. Every round is drawn as a mark on the row.';
 }
 
 function ffPerUnit(v) {
@@ -135,8 +178,18 @@ function ffMultCell(rng, subLabel, unit, header, lane) {
   const value = one ? fmt(rng.low) : fmt(rng.low) + ' &ndash; ' + fmt(rng.high);
   /* A round whose revenue was disclosed as "more than" gives a multiple that is a ceiling, so the
      top of the range is "at most" (the engine's `bounded`). */
-  const sub = subLabel + (rng.bounded ? ', top is a ceiling' : '') + (rng.display === 'SCATTER' ? ', they disagree' : '');
+  const aside = (rng.memo || []).length;
+  const sub = subLabel + (aside ? ', ' + aside + ' set aside' : '') + (rng.bounded ? ', top is a ceiling' : '') + (rng.display === 'SCATTER' ? ', they disagree' : '');
   return { html: value, sub: sub, tip: ffPeerTip(rng, u, header, ffCutNote(rng, lane)) };
+}
+
+/* EVERY ROUND AS A MARK ON THE ROW, in the axis unit: the founder's metric times each round's own
+   multiple. The ones set aside are hollow. Marks beyond the axis are named in the row's note
+   instead of stretching the scale, because the rounds set aside must not set the scale. */
+function ffMarks(rng, metric) {
+  return (rng.peers || []).filter(function (p) { return typeof p.multiple === 'number'; }).map(function (p) {
+    return { value: metric * p.multiple, name: (p.company || p.ticker || '') + ' ' + ffNum(p.multiple) + 'x', aside: p.set_aside || null };
+  });
 }
 
 /* ONE NAME IS NEVER A RANGE (rule A7). The engine says so with display DIAMOND; the field draws
@@ -225,32 +278,37 @@ function ffBuildRows(r) {
 
   /* ---- The growth regression. Daniil, 20-Sep-2026: read at the founder's FORWARD growth (the plan
      from step 4; the trailing rate only stands in when no plan was given), drawn with a callout
-     when growth explains less than 40% of the spread (R-squared below 0.40), and named under the
-     field with the numbers when it cannot be read at all. selector/regression.py is the other half. */
+     when growth explains less than 40% of the spread (R-squared below 0.40), up to three names
+     set aside to improve the fit and named on the row ("ok to remove the three names and increase
+     R2 ... important to include a note that that had been done"), and named under the field with
+     the numbers when it cannot be read at all. selector/regression.py is the other half. */
   const reg = FF_PAYLOAD && FF_PAYLOAD.regression;
   const regBasis = reg && reg.growth_basis === 'plan' ? 'planned' : 'trailing';
   const regAt = reg ? 'your ' + Math.round(reg.growth) + '% ' + regBasis + ' growth' : '';
   const regStandIn = reg && reg.growth_basis !== 'plan'
     ? ' No plan was given at step 4, so your last twelve months stand in; your peers’ rates are forecasts, so a plan is the better match.'
     : '';
+  const regEx = (reg && reg.excluded) || [];
+  const regExNames = regEx.map(function (p) { return p.company; });
+  const regExNote = regEx.length
+    ? regEx.length + ' of ' + reg.n_all + ' names set aside to improve the fit (' + ffList(regExNames) + '): with them R² ' + (typeof reg.r2_all === 'number' ? reg.r2_all.toFixed(2) : '?') + ' across ' + reg.n_all + ', without them R² ' + (typeof reg.r2 === 'number' ? reg.r2.toFixed(2) : '?') + ' across ' + reg.n + '. A judgement, made the way a banker makes it, and said here so it can be argued with.'
+    : '';
   if (reg && typeof reg.low === 'number' && ntmM) {
-    /* The points the line was fitted through, shown the way the peer sets are: name and multiple.
-       The engine calls the multiple `mult` here and `multiple` in the lanes. */
-    const regPeers = (reg.peers || []).map(function (p) { return { company: p.company, ticker: p.ticker, multiple: p.mult, sub: (typeof p.growth === 'number' ? Math.round(p.growth) + '%' : '') }; });
     const r2Text = 'R² ' + reg.r2.toFixed(2);
     const weak = !!reg.weak_fit;
+    const callout = [];
+    if (regEx.length) callout.push(regExNote);
+    if (weak) callout.push('Weak fit: growth explains only ' + Math.round(reg.r2 * 100) + '% of the spread in these ' + reg.n + ' peers’ multiples (' + r2Text + '). Read this range as a rough guide, not a price.');
     rows.push(ffRow({
       group: 'Public trading multiples', cls: weak ? 'weak' : '',
       parameter: 'Regression analysis', basis: 'Multiple vs forward growth, read at ' + escapeHtml(regAt),
       metric: { value: ffMoney(ntmM), sub: 'NTM revenue', source: ffNtmSource(r) },
-      mult: { html: ffNum(reg.low) + 'x &ndash; ' + ffNum(reg.high) + 'x', sub: reg.n + ' peers, ' + r2Text + (weak ? ', weak fit' : ''),
-        tip: ffPeerTip({ peers: regPeers }, 'x', 'Fitted through &middot; forecast growth &middot; own multiple. Read at ' + escapeHtml(regAt) + ', a tenth either side: ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x.',
-          'Their growth is a forecast, ' + reg.peer_growth_low + '% to ' + reg.peer_growth_high + '% a year.' + escapeHtml(regStandIn)) },
+      mult: { html: ffNum(reg.low) + 'x &ndash; ' + ffNum(reg.high) + 'x',
+        sub: (regEx.length ? reg.n + ' of ' + reg.n_all + ' peers' : reg.n + ' peers') + ', ' + r2Text + (weak ? ', weak fit' : ''),
+        tip: ffRegTip(reg, regAt, regStandIn) },
       low: ntmM * reg.low, high: ntmM * reg.high, bar: 'reg',
       barTip: ffMoney(ntmM) + ' of NTM revenue at ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x off the regression: ' + ffMoney(ntmM * reg.low) + ' to ' + ffMoney(ntmM * reg.high) + '.',
-      callout: weak
-        ? 'Weak fit: growth explains only ' + Math.round(reg.r2 * 100) + '% of the spread in these ' + reg.n + ' peers’ multiples (' + r2Text + '). Read this range as a rough guide, not a price.'
-        : null
+      callout: callout.length ? callout.join(' ') : null
     }));
   } else if (reg && reg.refused) {
     /* Every reason that applies, with the numbers: a founder who asks "why not?" gets a sentence,
@@ -258,9 +316,10 @@ function ffBuildRows(r) {
     const why = [];
     if (reg.refused === 'OUT_OF_RANGE') why.push(regAt + ' sits outside the ' + reg.peer_growth_low + '% to ' + reg.peer_growth_high + '% your ' + reg.n + ' listed peers are expected to grow at, so reading the line there would be a guess' + (reg.weak_fit ? ' (and growth explains only ' + Math.round((reg.r2 || 0) * 100) + '% of the spread in their multiples, R² ' + (typeof reg.r2 === 'number' ? reg.r2.toFixed(2) : '?') + ')' : ''));
     if (reg.refused === 'TOO_FEW') why.push('only ' + reg.n + ' listed peers carry both a growth rate and a multiple, and a line needs six');
+    if (reg.refused === 'DOWNWARD') why.push('every line through your ' + reg.n_all + ' listed peers slopes downward (faster growth, lower multiple), so it says nothing about growth');
     if (reg.refused === 'NEGATIVE') why.push('the line through your ' + reg.n + ' listed peers implies a multiple at or below zero at ' + regAt);
     if (!why.length) why.push('the fitted line could not be published for this set');
-    notDrawn.push('the growth regression: ' + why.join('; and ') + (reg.growth_basis !== 'plan' ? '. No plan was given at step 4, so your last twelve months stood in' : ''));
+    notDrawn.push('the growth regression: ' + why.join('; and ') + (regEx.length ? '; ' + regExNote.replace(/\. A judgement.*$/, '') : '') + (reg.growth_basis !== 'plan' ? '. No plan was given at step 4, so your last twelve months stood in' : ''));
   } else if (FF_PAYLOAD && r.trailingGrowth === null && r.plannedGrowth === null) {
     notDrawn.push('the growth regression (no growth rate given)');
   } else if (FF_PAYLOAD) {
@@ -270,13 +329,14 @@ function ffBuildRows(r) {
   /* ---- Private rounds. */
   const priv = ffLane('private', 'REVENUE');
   if (priv && arrM > 0) {
-    const m = ffMultCell(priv, priv.n + ' matched round' + (priv.n === 1 ? '' : 's'), 'x', 'Round &middot; revenue multiple', 'private');
+    const nAll = priv.n_all || priv.n;
+    const m = ffMultCell(priv, (nAll > priv.n ? priv.n + ' of ' + nAll : String(priv.n)) + ' matched round' + (nAll === 1 ? '' : 's'), 'x', 'Round &middot; revenue multiple', 'private');
     rows.push(ffRow({
       group: 'Private rounds',
       parameter: 'Precedent transactions', basis: 'Revenue multiple at pricing',
       metric: { value: ffMoney(arrM), sub: 'ARR today', source: 'Your ARR today, because these rounds were priced on the revenue the company had at the time of the round, not on a forecast.' },
-      mult: m, span: ffSpan(priv, arrM, 'priv'),
-      barTip: ffMoney(arrM) + ' of your ARR today, multiplied by the ' + ffMults(priv) + ' that investors paid in the ' + priv.n + ' matched round' + (priv.n === 1 ? '' : 's') + ': ' + ffMoneys(arrM, priv) + '.'
+      mult: m, span: ffSpan(priv, arrM, 'priv'), marks: ffMarks(priv, arrM),
+      barTip: ffMoney(arrM) + ' of your ARR today, multiplied by the ' + ffMults(priv) + ' that investors paid in the ' + priv.n + ' matched round' + (priv.n === 1 ? '' : 's') + (nAll > priv.n ? ' the bar runs between (' + (nAll - priv.n) + ' set aside, drawn as marks)' : '') + ': ' + ffMoneys(arrM, priv) + '.'
     }));
   } else if (FF_PAYLOAD) {
     notDrawn.push('the precedent transactions (' + (arrM > 0 ? 'no matched round with a usable multiple' : 'no revenue given') + ')');
@@ -290,10 +350,18 @@ function ffBuildRows(r) {
   const usdToLocal = cur === 'USD' ? 1 : ((typeof fxConvert === 'function') ? fxConvert(1, 'USD', cur) : null);
   if (FF_PAYLOAD && FF_FIGURES && typeof priceCharts === 'function' && usdToLocal) {
     priceCharts(FF_PAYLOAD.charts, FF_FIGURES).forEach(function (c) {
-      if (c.lane !== 'private' || c.basis === 'REVENUE' || !c.priced) return;
+      if (c.lane !== 'private' || c.basis === 'REVENUE') return;
+      const perUnit = (typeof unitOf === 'function' && unitOf(c.basis) !== 'multiple');
+      if (!c.priced) {
+        /* A basis the rounds price on and the founder gave no figure for is NAMED under the
+           field rather than drawn as a chart of multiples with nothing applied (Daniil,
+           20-Sep-2026: the peer charts add nothing over the field). */
+        const noun0 = String(c.label || c.basis).replace(/^dollars of enterprise value per /, '').replace(/^enterprise value to /, '');
+        if (c.n) notDrawn.push((perUnit ? 'EV per ' + noun0 : 'EV / ' + noun0) + ' (' + c.n + ' round' + (c.n === 1 ? '' : 's') + ' priced this way; ' + (c.unpriced_reason ? 'the quiz does not ask for it yet' : 'give your ' + noun0 + (perUnit ? ' count' : '') + ' and it draws') + ')');
+        return;
+      }
       const rng = ffLane('private', c.basis);
       if (!rng) return;
-      const perUnit = (typeof unitOf === 'function' && unitOf(c.basis) !== 'multiple');
       /* The metric in the founder's currency, in millions, so metric times multiple is the bar in
          the axis unit: a count times dollars per unit is dollars, hence the million for per-unit. */
       const metricM = c.founder_metric * usdToLocal / (perUnit ? 1e6 : 1);
@@ -310,7 +378,7 @@ function ffBuildRows(r) {
         group: 'Private rounds',
         parameter: 'Precedent transactions', basis: escapeHtml(basisText) + ' &middot; same rounds',
         metric: { value: perUnit ? count : ffMoney(c.founder_metric * usdToLocal), sub: escapeHtml(perUnit ? noun + 's today' : noun + ', same period as your ARR') },
-        mult: m, span: ffSpan(rng, metricM, 'priv2'),
+        mult: m, span: ffSpan(rng, metricM, 'priv2'), marks: ffMarks(rng, metricM),
         barTip: (perUnit ? count + ' ' + noun + 's' : ffMoney(c.founder_metric * usdToLocal) + ' of ' + noun) + ', times what the same rounds paid: ' + ffMoneys(metricM, rng) + '.'
       }));
     });
@@ -370,15 +438,25 @@ function renderField(r) {
   const built = ffBuildRows(r);
   const rows = built.rows;
 
-  /* AXIS FROM THE METHOD ROWS ONLY. The benchmark never contributes (rule 3 above). */
+  /* AXIS FROM THE METHOD ROWS ONLY. Neither the benchmark nor the last-round marker contributes
+     (rule 3 above). The marker sets the scale only when there is no method row at all, so that a
+     field with nothing else on it still has a scale to draw the marker on. */
   const plotted = [];
+  let markerM = null;
   rows.forEach(function (row) {
+    if (row.marker) { markerM = row.point; return; }
     if (typeof row.low === 'number') plotted.push(row.low, row.high);
     if (typeof row.point === 'number') plotted.push(row.point);
   });
-  if (!plotted.length) plotted.push(0, Math.max(1, r.raise * 4));
+  if (!plotted.length) plotted.push(0, markerM !== null ? markerM : Math.max(1, r.raise * 4));
   let lo = Math.min.apply(null, plotted);
   let hi = Math.max.apply(null, plotted);
+  /* The marker joins the scale only while the bars still fill at least half of it. A €4m cap over
+     bars ending at €3.2m is drawn as a diamond; over bars ending at $0.8m it is named at the edge. */
+  if (markerM !== null && hi > lo) {
+    if (markerM > hi && (hi - lo) / (markerM - lo) >= 0.5) hi = markerM;
+    else if (markerM < lo && (hi - lo) / (hi - markerM) >= 0.5) lo = markerM;
+  }
   if (hi - lo < hi * 0.05) { lo = 0; hi = hi * 1.6; }
   const span = Math.max(hi - lo, hi * 0.2, 0.1);
   const aLo = Math.max(0, lo - span * 0.14);
@@ -424,8 +502,16 @@ function renderField(r) {
         ? '<div class="ff-point-label' + (l < 12 ? ' anchor-l' : (h > 88 ? ' anchor-r' : '')) + '" style="left:' + ((l + h) / 2).toFixed(2) + '%">' + escapeHtml(ffNum(row.low) + ' – ' + ffNum(row.high)) + '</div>'
         : '<div class="ff-end lo" style="left:' + l.toFixed(2) + '%">' + escapeHtml(ffNum(row.low)) + '</div>'
           + '<div class="ff-end hi" style="left:' + h.toFixed(2) + '%">' + escapeHtml(ffNum(row.high)) + '</div>';
+      /* Every round as a mark (private rows). Marks beyond the axis are named beside the row
+         rather than drawn, so a round set aside never stretches the scale. */
+      let marks = '', offScale = [];
+      (row.marks || []).forEach(function (mk) {
+        if (mk.value >= aLo && mk.value <= aHi) marks += '<div class="ff-mark' + (mk.aside ? ' aside' : '') + '" style="left:' + pct(mk.value).toFixed(2) + '%" title="' + escapeHtml(mk.name + (mk.aside ? ', set aside' : '')) + '"></div>';
+        else offScale.push(mk.name + (mk.aside ? ', set aside' : '') + (mk.value > aHi ? ', beyond the right edge' : ', beyond the left edge'));
+      });
+      if (offScale.length) row.asideLine = 'Not on this scale: ' + offScale.join('; ') + '.';
       cell = '<div class="ff-track' + (row.barTip ? ' has-tip' : '') + '"' + (row.barTip ? ' data-tip="' + escapeHtml(row.barTip) + '"' : '') + '><div class="ff-line"></div>'
-        + '<div class="ff-bar ' + (row.bar || '') + '" style="left:' + l.toFixed(2) + '%;width:' + Math.max(1.5, h - l).toFixed(2) + '%"></div>' + labels + '</div>';
+        + '<div class="ff-bar ' + (row.bar || '') + '" style="left:' + l.toFixed(2) + '%;width:' + Math.max(1.5, h - l).toFixed(2) + '%"></div>' + marks + labels + '</div>';
     } else if (typeof row.point === 'number' && row.pointBar) {
       /* One name: a point on the scale, never a bar of no width. */
       const at = pct(row.point);
@@ -433,6 +519,13 @@ function renderField(r) {
       cell = '<div class="ff-track' + (row.barTip ? ' has-tip' : '') + '"' + (row.barTip ? ' data-tip="' + escapeHtml(row.barTip) + '"' : '') + '><div class="ff-line"></div>'
         + '<div class="ff-bar ' + (row.bar || '') + ' one" style="left:' + at.toFixed(2) + '%;width:4px"></div>'
         + '<div class="ff-point-label' + cls + '" style="left:' + at.toFixed(2) + '%">' + escapeHtml(ffNum(row.point)) + ', one name</div></div>';
+    } else if (typeof row.point === 'number' && row.marker && (row.point < aLo || row.point > aHi)) {
+      /* The last round beyond the bars' scale: named at the edge of its row, the bars keep their
+         width (rule 3 above). */
+      const side = row.point > aHi ? 'right' : 'left';
+      cell = '<div class="ff-track"><div class="ff-line"></div>'
+        + '<div class="ff-marker-note ' + side + '">' + (side === 'left' ? '&larr; ' : '')
+        + escapeHtml(row.parameter + ': ' + ffMoney(row.point) + ', off this scale') + (side === 'right' ? ' &rarr;' : '') + '</div></div>';
     } else if (typeof row.point === 'number') {
       const at = pct(row.point);
       const cls = at < 12 ? ' anchor-l' : (at > 88 ? ' anchor-r' : '');
@@ -465,6 +558,7 @@ function renderField(r) {
     /* THE CALLOUT, under the row it disclaims (Daniil, 20-Sep-2026: a weak regression is drawn
        and disclaimed "with a callout to that range on FF", not hidden). */
     if (row.callout) html += '<p class="ff-callout">' + escapeHtml(row.callout) + '</p>';
+    if (row.asideLine) html += '<p class="ff-aside-line">' + escapeHtml(row.asideLine) + '</p>';
   });
 
   html += '<div class="ffx-axis"><div></div><div></div><div></div><div class="ff-cell">'

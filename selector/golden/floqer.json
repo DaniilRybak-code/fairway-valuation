@@ -22,12 +22,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 1000000.0,
+     "high": 916666.67,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 357142.86,
+     "low": 575000.0,
+     "memo": [
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "multiple": 357142.86,
+       "reason": "extreme"
+      },
+      {
+       "company": "Gong",
+       "date": "Nov-25",
+       "multiple": 1000000.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 916666.67,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "RUN_RATE": 4
      },
@@ -46,7 +61,7 @@
       "research",
       "sales"
      ],
-     "spread": 2.8,
+     "spread": 1.6,
      "table": [
       {
        "company": "Clay",
@@ -56,6 +71,7 @@
        "multiple": 357142.86,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -86,11 +102,12 @@
        "multiple": 1000000.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 2.2,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE": {
@@ -110,8 +127,8 @@
       "Semrush",
       "Salesloft"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -121,9 +138,18 @@
      "listed_target_names": [
       "Semrush"
      ],
-     "low": 4.3,
+     "low": 23.0,
+     "memo": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "multiple": 4.3,
+       "reason": "take-private"
+      }
+     ],
      "mid": 50.0,
-     "n": 4,
+     "n": 3,
+     "n_all": 4,
      "period_mix": {
       "NTM": 1,
       "RUN_RATE": 3
@@ -138,36 +164,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "shares the language of research; same type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Salesloft",
-       "mult": 23.0,
-       "reason": "both do Outbound Automation; same type of business; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "both do Data Enrichment, Outbound Automation; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Perplexity",
-       "mult": 120.0,
-       "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "enrichment",
@@ -176,7 +173,7 @@
       "research",
       "sales"
      ],
-     "spread": 27.9,
+     "spread": 5.2,
      "table": [
       {
        "company": "Semrush",
@@ -186,6 +183,7 @@
        "multiple": 4.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -351,7 +349,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -802,16 +800,25 @@
     "Semrush",
     "Salesloft"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 120.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
-   "low": 4.3,
+   "low": 23.0,
+   "memo": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "multiple": 4.3,
+     "reason": "take-private"
+    }
+   ],
    "mid": 50.0,
-   "n": 4,
+   "n": 3,
+   "n_all": 4,
    "period_mix": {
     "NTM": 1,
     "RUN_RATE": 3
@@ -826,36 +833,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "shares the language of research; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Salesloft",
-     "mult": 23.0,
-     "reason": "both do Outbound Automation; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "both do Data Enrichment, Outbound Automation; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Perplexity",
-     "mult": 120.0,
-     "reason": "shares the language of research; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "enrichment",
@@ -864,7 +842,7 @@
     "research",
     "sales"
    ],
-   "spread": 27.9,
+   "spread": 5.2,
    "table": [
     {
      "company": "Semrush",
@@ -874,6 +852,7 @@
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {

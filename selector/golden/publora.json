@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10285.71,
+     "memo": [],
      "mid": 225000.0,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -101,12 +103,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 22.5,
+     "high": 20.5,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.3,
+     "low": 12.8,
+     "memo": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "multiple": 10.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Algolia",
+       "date": "Jul-21",
+       "multiple": 22.5,
+       "reason": "extreme"
+      }
+     ],
      "mid": 20.5,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "RUN_RATE": 4
      },
@@ -126,7 +143,7 @@
       "scheduling",
       "social"
      ],
-     "spread": 2.2,
+     "spread": 1.6,
      "table": [
       {
        "company": "Oxylabs",
@@ -136,6 +153,7 @@
        "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -166,11 +184,12 @@
        "multiple": 22.5,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 1.5,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -318,7 +337,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -863,12 +882,27 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 22.5,
+   "high": 20.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.3,
+   "low": 12.8,
+   "memo": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "multiple": 10.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Algolia",
+     "date": "Jul-21",
+     "multiple": 22.5,
+     "reason": "extreme"
+    }
+   ],
    "mid": 20.5,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "RUN_RATE": 4
    },
@@ -888,7 +922,7 @@
     "scheduling",
     "social"
    ],
-   "spread": 2.2,
+   "spread": 1.6,
    "table": [
     {
      "company": "Oxylabs",
@@ -898,6 +932,7 @@
      "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -928,11 +963,12 @@
      "multiple": 22.5,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 1.5,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 142,

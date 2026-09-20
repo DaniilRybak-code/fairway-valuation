@@ -18,20 +18,41 @@
      "control_names": [
       "Confluent"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.86,
+     "high": 20.5,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
-     "low": 9.88,
-     "mid": 19.8,
-     "n": 5,
+     "low": 19.8,
+     "memo": [
+      {
+       "company": "Confluent",
+       "date": "Dec-25",
+       "multiple": 9.88,
+       "reason": "take-private"
+      },
+      {
+       "company": "Turing",
+       "date": "Mar-25",
+       "multiple": 13.2,
+       "reason": "extreme"
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "multiple": 72.86,
+       "reason": "extreme"
+      }
+     ],
+     "mid": 20.5,
+     "n": 2,
+     "n_all": 5,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 4
@@ -46,43 +67,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Confluent",
-       "mult": 9.88,
-       "reason": "shares the language of developer; same type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Turing",
-       "mult": 13.2,
-       "reason": "shares the language of model; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Anysphere / Cursor",
-       "mult": 19.8,
-       "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Anthropic",
-       "mult": 20.5,
-       "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Supabase",
-       "mult": 72.86,
-       "reason": "both do Open Source; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "context",
@@ -93,7 +78,7 @@
       "protocol",
       "source"
      ],
-     "spread": 7.4,
+     "spread": 1.0,
      "table": [
       {
        "company": "Confluent",
@@ -103,6 +88,7 @@
        "multiple": 9.88,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -113,6 +99,7 @@
        "multiple": 13.2,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -143,11 +130,12 @@
        "multiple": 72.86,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 4.9,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -335,7 +323,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -691,16 +679,37 @@
    "control_names": [
     "Confluent"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 72.86,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 20.5,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
-   "low": 9.88,
-   "mid": 19.8,
-   "n": 5,
+   "low": 19.8,
+   "memo": [
+    {
+     "company": "Confluent",
+     "date": "Dec-25",
+     "multiple": 9.88,
+     "reason": "take-private"
+    },
+    {
+     "company": "Turing",
+     "date": "Mar-25",
+     "multiple": 13.2,
+     "reason": "extreme"
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "multiple": 72.86,
+     "reason": "extreme"
+    }
+   ],
+   "mid": 20.5,
+   "n": 2,
+   "n_all": 5,
    "period_mix": {
     "LTM": 1,
     "RUN_RATE": 4
@@ -715,43 +724,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Confluent",
-     "mult": 9.88,
-     "reason": "shares the language of developer; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Turing",
-     "mult": 13.2,
-     "reason": "shares the language of model; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Anysphere / Cursor",
-     "mult": 19.8,
-     "reason": "shares the language of developer; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Anthropic",
-     "mult": 20.5,
-     "reason": "both do MCP, Model Context Protocol; same type of business; same kind of customer; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Supabase",
-     "mult": 72.86,
-     "reason": "both do Open Source; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "context",
@@ -762,7 +735,7 @@
     "protocol",
     "source"
    ],
-   "spread": 7.4,
+   "spread": 1.0,
    "table": [
     {
      "company": "Confluent",
@@ -772,6 +745,7 @@
      "multiple": 9.88,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -782,6 +756,7 @@
      "multiple": 13.2,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -812,11 +787,12 @@
      "multiple": 72.86,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 4.9,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 17,

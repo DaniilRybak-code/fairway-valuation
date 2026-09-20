@@ -17,20 +17,41 @@
       "Berkshire Grey",
       "Wolt"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 44.12,
+     "high": 23.5,
      "listed_target_n": 1,
      "listed_target_names": [
       "Berkshire Grey"
      ],
-     "low": 5.69,
-     "mid": 8.94,
-     "n": 5,
+     "low": 8.94,
+     "memo": [
+      {
+       "company": "Berkshire Grey",
+       "date": "Mar-23",
+       "multiple": 5.69,
+       "reason": "take-private"
+      },
+      {
+       "company": "Delhivery",
+       "date": "May-21",
+       "multiple": 5.97,
+       "reason": "extreme"
+      },
+      {
+       "company": "Gopuff",
+       "date": "Jul-21",
+       "multiple": 44.12,
+       "reason": "extreme"
+      }
+     ],
+     "mid": 23.5,
+     "n": 2,
+     "n_all": 5,
      "period_mix": {
       "FY2022": 1,
       "LTM": 4
@@ -45,46 +66,10 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Berkshire Grey",
-       "mult": 5.69,
-       "reason": "related type of business; same business function; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Delhivery",
-       "mult": 5.97,
-       "reason": "same type of business; same business function; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Xpressbees",
-       "mult": 8.94,
-       "reason": "same type of business; same business function; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Wolt",
-       "mult": 23.5,
-       "reason": "same type of business; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Gopuff",
-       "mult": 44.12,
-       "reason": "same type of business; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [],
-     "spread": 7.8,
+     "spread": 2.6,
      "table": [
       {
        "company": "Berkshire Grey",
@@ -94,6 +79,7 @@
        "multiple": 5.69,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -104,6 +90,7 @@
        "multiple": 5.97,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -134,11 +121,12 @@
        "multiple": 44.12,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.0,
-     "thin": false,
+     "thin": true,
      "triangulated": true
     }
    }
@@ -791,16 +779,37 @@
     "Berkshire Grey",
     "Wolt"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 44.12,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 23.5,
    "listed_target_n": 1,
    "listed_target_names": [
     "Berkshire Grey"
    ],
-   "low": 5.69,
-   "mid": 8.94,
-   "n": 5,
+   "low": 8.94,
+   "memo": [
+    {
+     "company": "Berkshire Grey",
+     "date": "Mar-23",
+     "multiple": 5.69,
+     "reason": "take-private"
+    },
+    {
+     "company": "Delhivery",
+     "date": "May-21",
+     "multiple": 5.97,
+     "reason": "extreme"
+    },
+    {
+     "company": "Gopuff",
+     "date": "Jul-21",
+     "multiple": 44.12,
+     "reason": "extreme"
+    }
+   ],
+   "mid": 23.5,
+   "n": 2,
+   "n_all": 5,
    "period_mix": {
     "FY2022": 1,
     "LTM": 4
@@ -815,46 +824,10 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Berkshire Grey",
-     "mult": 5.69,
-     "reason": "related type of business; same business function; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Delhivery",
-     "mult": 5.97,
-     "reason": "same type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Xpressbees",
-     "mult": 8.94,
-     "reason": "same type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Wolt",
-     "mult": 23.5,
-     "reason": "same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Gopuff",
-     "mult": 44.12,
-     "reason": "same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [],
-   "spread": 7.8,
+   "spread": 2.6,
    "table": [
     {
      "company": "Berkshire Grey",
@@ -864,6 +837,7 @@
      "multiple": 5.69,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -874,6 +848,7 @@
      "multiple": 5.97,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -904,11 +879,12 @@
      "multiple": 44.12,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.0,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
   "private_window_months": 63,

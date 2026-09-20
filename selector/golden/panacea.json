@@ -29,8 +29,10 @@
       "Accolade"
      ],
      "low": 1.39,
+     "memo": [],
      "mid": 10.0,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 2
@@ -121,18 +123,33 @@
      "closeness": "THIN_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue_gross",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 66.0,
+     "high": 51.4,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 7.37,
+     "low": 32.0,
+     "memo": [
+      {
+       "company": "Aledade",
+       "date": "Jun-23",
+       "multiple": 7.37,
+       "reason": "extreme"
+      },
+      {
+       "company": "Incredible Health",
+       "date": "Aug-22",
+       "multiple": 66.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 51.4,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "LTM": 4
      },
@@ -142,41 +159,12 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Aledade",
-       "mult": 7.37,
-       "reason": "shares the language of based; same type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Doctolib",
-       "mult": 32.0,
-       "reason": "same type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Devoted Health",
-       "mult": 51.4,
-       "reason": "shares the language of based; related type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Incredible Health",
-       "mult": 66.0,
-       "reason": "same type of business; same end market; sold the same way",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "based"
      ],
-     "spread": 9.0,
+     "spread": 1.6,
      "table": [
       {
        "company": "Aledade",
@@ -186,6 +174,7 @@
        "multiple": 7.37,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -216,11 +205,12 @@
        "multiple": 66.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.1,
-     "thin": false,
+     "thin": true,
      "triangulated": true
     }
    }
@@ -491,7 +481,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -781,8 +771,10 @@
     "Accolade"
    ],
    "low": 1.39,
+   "memo": [],
    "mid": 10.0,
    "n": 3,
+   "n_all": 3,
    "period_mix": {
     "LTM": 1,
     "RUN_RATE": 2

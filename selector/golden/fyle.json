@@ -20,12 +20,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 10.1,
+     "high": 9.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 4.6,
+     "low": 5.0,
+     "memo": [
+      {
+       "company": "Harry's",
+       "date": "Mar-21",
+       "multiple": 4.6,
+       "reason": "extreme"
+      },
+      {
+       "company": "Quince",
+       "date": "Mar-26",
+       "multiple": 10.1,
+       "reason": "extreme"
+      }
+     ],
      "mid": 9.3,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "LTM": 3,
       "NTM": 1
@@ -45,7 +60,7 @@
      "shared_words": [
       "care"
      ],
-     "spread": 2.2,
+     "spread": 1.9,
      "table": [
       {
        "company": "Harry's",
@@ -55,6 +70,7 @@
        "multiple": 4.6,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -85,11 +101,12 @@
        "multiple": 10.1,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.2,
-     "thin": false,
+     "thin": true,
      "triangulated": true
     },
     "REVENUE_GROSS": {
@@ -114,8 +131,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2.61,
+     "memo": [],
      "mid": 2.61,
      "n": 1,
+     "n_all": 1,
      "period_mix": {
       "LTM": 1
      },
@@ -594,12 +613,27 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 10.1,
+   "high": 9.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.6,
+   "low": 5.0,
+   "memo": [
+    {
+     "company": "Harry's",
+     "date": "Mar-21",
+     "multiple": 4.6,
+     "reason": "extreme"
+    },
+    {
+     "company": "Quince",
+     "date": "Mar-26",
+     "multiple": 10.1,
+     "reason": "extreme"
+    }
+   ],
    "mid": 9.3,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "LTM": 3,
     "NTM": 1
@@ -619,7 +653,7 @@
    "shared_words": [
     "care"
    ],
-   "spread": 2.2,
+   "spread": 1.9,
    "table": [
     {
      "company": "Harry's",
@@ -629,6 +663,7 @@
      "multiple": 4.6,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -659,11 +694,12 @@
      "multiple": 10.1,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.2,
-   "thin": false,
+   "thin": true,
    "triangulated": true
   },
   "private_window_months": 87,

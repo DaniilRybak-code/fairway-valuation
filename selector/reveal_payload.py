@@ -59,11 +59,14 @@ import regression as G               # noqa: E402
 # from the screen.
 RANGE_FIELDS = ('n', 'low', 'mid', 'high', 'display', 'dispersed', 'spread', 'thin', 'bounded',
                 'closeness', 'triangulated', 'basis', 'basis_label', 'founder_metric',
-                'founder_field', 'founder_low', 'founder_high', 'sole', 'band')
+                'founder_field', 'founder_low', 'founder_high', 'sole', 'band',
+                # 20-Sep-2026: the rounds the bar does not run between, named with the reason
+                # (take-private at seed, or an extreme), and how many rounds there were in all.
+                'n_all', 'memo')
 
 # ONE LINE PER COMPARABLE, and the multiple is on it. A founder who cannot see which company
 # carries which multiple cannot argue with either.
-PEER_FIELDS = ('company', 'ticker', 'date', 'multiple', 'growth_pct', 'retention_pct')
+PEER_FIELDS = ('company', 'ticker', 'date', 'multiple', 'growth_pct', 'retention_pct', 'set_aside')
 
 
 def _range(rng):

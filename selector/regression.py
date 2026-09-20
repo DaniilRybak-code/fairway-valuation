@@ -26,13 +26,24 @@ RULED BY DANIIL, 20-Sep-2026, after the D2C run, and this file is those rulings:
    refusal carries the numbers (their growth, the peers' low and high, the count, the fit) so the
    field can say why in a sentence rather than an adjective.
 
-WHY A NEW FILE. match_reference.regression_range() (4-Sep) is the function this replaces, and it
-is the only caller-facing change. It could not be rewritten in place today: match_reference.py
-cannot be written from the session that made this change (no folder attached, and a 189 KB file
-is not retyped through the GitHub API by hand). It stays in match_reference.py, unreferenced,
-until that file is next written, and then it is deleted. NOTHING HERE IS A COPY: the peer
-selection is the engine's own, imported (same_family, score, _relevant, _ols and the constants),
-so the fifteen names fitted are the fifteen the engine would pick.
+  Later the same day, after the Elentaria run (fifteen names, R2 0.02): "ok to remove the three
+   names and increase R2. We do it every time. Important to include a note that that had been
+   done. This is often more of an art than science." So `_best_set()` below tries every way of
+   setting aside up to REGRESSION_MAX_EXCLUDED names, keeps at least REGRESSION_MIN_POINTS, and
+   takes the set with the highest R2. The names set aside travel on the result (`excluded`, with
+   each one's growth and multiple) together with the fit before (`r2_all`, `n_all`), and the field
+   prints both, because a fit improved by choosing the set is a different claim from a fit found
+   in the set. One guard of Fable's, flagged to him as such: the chosen line must slope upward.
+   The method's premise is that faster growth earns a higher multiple; a downward line read at a
+   founder's growth would price them lower for growing faster, which is the premise failing, not
+   evidence. If no set of REGRESSION_MIN_POINTS or more slopes upward, the row is refused
+   ('DOWNWARD').
+
+WHY A NEW FILE. match_reference.regression_range() (4-Sep) was the function this replaces. It was
+deleted from match_reference.py on 20-Sep-2026 once that file could be written again; a comment
+there points here. NOTHING HERE IS A COPY: the peer selection is the engine's own, imported
+(same_family, score, _relevant, _ols and the constants), so the fifteen names fitted are the
+fifteen the engine would pick.
 
 The founder's rates and the peers' `g` are both percentages (47 means 47%), as the profiler and
 the listed sheet carry them.
@@ -44,11 +55,40 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 if HERE not in sys.path:
     sys.path.insert(0, HERE)
 
+import itertools                     # noqa: E402
 import match_reference as M          # noqa: E402
 
 # Below this the row is drawn WITH A CALLOUT (Daniil, 20-Sep-2026: "when R2 is below 0.4, we should
 # disclaim that"). It replaces REGRESSION_MIN_R2 = 0.50, which hid the row instead.
 REGRESSION_WEAK_R2 = 0.40
+# At most this many names are set aside to improve the fit (Daniil, 20-Sep-2026: "remove the
+# three names"). With REGRESSION_N = 15 that is 15 + 105 + 455 = 575 candidate sets, fitted in
+# well under a second.
+REGRESSION_MAX_EXCLUDED = 3
+
+
+def _best_set(pts):
+    """The set of points that fits best with at most REGRESSION_MAX_EXCLUDED set aside.
+
+    Returns (kept, excluded, fit) with fit = (a, b, r2) for `kept`, or (pts, [], None) when no
+    set of REGRESSION_MIN_POINTS or more points slopes upward. Ties go to the set that sets fewer
+    names aside, because a name is only set aside for a reason the fit can show.
+    """
+    n = len(pts)
+    best = None
+    for k in range(0, REGRESSION_MAX_EXCLUDED + 1):
+        if n - k < M.REGRESSION_MIN_POINTS:
+            break
+        for drop in itertools.combinations(range(n), k):
+            kept = [p for i, p in enumerate(pts) if i not in drop]
+            fit = M._ols([p[0] for p in kept], [p[1] for p in kept])
+            if not fit or fit[1] <= 0:
+                continue
+            if best is None or fit[2] > best[2][2] + 1e-9:
+                best = (kept, [pts[i] for i in drop], fit)
+    if best is None:
+        return pts, [], None
+    return best
 
 
 def founder_growth(prof):
@@ -74,8 +114,10 @@ def regression_range(prof, universe, which='rev', want=M.REGRESSION_N):
 
     Returns None when no growth rate was given at all. Otherwise always a dict, and it is one of:
 
-      the fitted range      low / mid / high, r2, n, weak_fit, growth, growth_basis, the peers
+      the fitted range      low / mid / high, r2, n, weak_fit, growth, growth_basis, the peers,
+                            plus n_all, r2_all and `excluded` (the names set aside for the fit)
       a refusal             refused = 'TOO_FEW' (fewer than REGRESSION_MIN_POINTS usable peers),
+                            'DOWNWARD' (no set of six or more slopes upward),
                             'OUT_OF_RANGE' (their growth outside the peers' range, see above), or
                             'NEGATIVE' (the line implies a multiple at or below zero there)
 
@@ -90,10 +132,19 @@ def regression_range(prof, universe, which='rev', want=M.REGRESSION_N):
     key = 'mult' if which == 'rev' else 'gp_mult'
     pts = [(r['g'], r[key], r) for _s, r in scored
            if r.get('g') is not None and r.get(key) is not None]
-    out = dict(n=len(pts), growth=growth, growth_basis=basis, denominator=which)
-    fit = M._ols([p[0] for p in pts], [p[1] for p in pts])
-    if not fit:
+    out = dict(n=len(pts), n_all=len(pts), growth=growth, growth_basis=basis, denominator=which)
+    fit_all = M._ols([p[0] for p in pts], [p[1] for p in pts])
+    if not fit_all:
         out['refused'] = 'TOO_FEW'
+        return out
+    out['r2_all'] = round(fit_all[2], 3)
+    # THE SET, CHOSEN FOR THE FIT (Daniil, 20-Sep-2026), and every name set aside is named.
+    pts, excluded, fit = _best_set(pts)
+    out['excluded'] = [{'company': r['company_name'], 'ticker': r.get('exchange_ticker', ''),
+                        'growth': r['g'], 'mult': r[key]} for _g, _m, r in excluded]
+    out['n'] = len(pts)
+    if not fit:
+        out['refused'] = 'DOWNWARD'
         return out
     a, b, r2 = fit
     gs = [p[0] for p in pts]

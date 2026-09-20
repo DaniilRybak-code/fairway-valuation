@@ -68,6 +68,19 @@ function qfQuestion(q) {
              + '" onclick="qfPickChoice(this)">' + lab + '</button>');
     });
     out.push('</div>');
+  } else if (q.kind === 'percent' && q.key === 'nrr_pct') {
+    /* RETENTION AS A SLIDER (Daniil, 20-Sep-2026, Elentaria run: "why is revenue retention asked
+       as a window, not as a slider? ... and the user to disregard it if it is not available").
+       The box and the slider are the same value; the slider starts unset, so a founder who does
+       not measure it leaves it blank, and the link clears it if they moved it by mistake. */
+    out.push('<div class="num-row">');
+    out.push('<input class="field field-num" id="' + id + '" type="number" step="1" min="0" max="300"'
+           + ' inputmode="numeric" placeholder="e.g. 110" oninput="qfSyncSlider(\'' + qfEsc(q.key) + '\', \'box\')" aria-label="' + qfEsc(q.label) + '">');
+    out.push('<span class="unit">%</span></div>');
+    out.push('<input class="slider" id="' + id + '-slider" type="range" min="50" max="200" value="100" step="1"'
+           + ' oninput="qfSyncSlider(\'' + qfEsc(q.key) + '\', \'slider\')" aria-label="' + qfEsc(q.label) + ' slider">');
+    out.push('<p class="slider-read" id="' + id + '-read">Drag the slider or type the number. '
+           + '<button type="button" class="link-btn" onclick="qfClearPercent(\'' + qfEsc(q.key) + '\')">We do not measure it</button></p>');
   } else if (q.kind === 'percent') {
     out.push('<div class="num-row">');
     out.push('<input class="field field-num" id="' + id + '" type="number" step="1" min="-100" max="1000"'
@@ -89,6 +102,34 @@ function qfQuestion(q) {
   }
   out.push('</div>');
   return out.join('');
+}
+
+/* The retention slider and its box stay in step; the read-out says what is set. */
+function qfSyncSlider(key, from) {
+  var box = document.getElementById('qf-' + key);
+  var sl = document.getElementById('qf-' + key + '-slider');
+  var read = document.getElementById('qf-' + key + '-read');
+  if (!box || !sl) return;
+  if (from === 'slider') box.value = sl.value;
+  else if (box.value !== '' && isFinite(parseFloat(box.value))) sl.value = Math.max(50, Math.min(200, parseFloat(box.value)));
+  if (read) read.innerHTML = (box.value === '' ? 'Drag the slider or type the number. ' : '<strong>' + qfEsc(box.value) + '% net revenue retention.</strong> ')
+    + '<button type="button" class="link-btn" onclick="qfClearPercent(\'' + qfEsc(key) + '\')">We do not measure it</button>';
+  qfChanged();
+}
+function qfClearPercent(key) {
+  var box = document.getElementById('qf-' + key);
+  var sl = document.getElementById('qf-' + key + '-slider');
+  if (box) box.value = '';
+  if (sl) sl.value = 100;
+  responses[key] = null;
+  qfSyncSlider(key, 'box');
+}
+
+/* THE CURRENCY SIGN ON EVERY FORK MONEY BOX, refreshed when the founder changes currency after
+   the questions were drawn (Daniil, 20-Sep-2026: the gross box stayed in $ after EUR was picked). */
+function qfRefreshCurrency() {
+  var cur = (typeof curSymbol === 'function') ? curSymbol() : '$';
+  document.querySelectorAll('#qf-block [id$="-cur"], #qf-growth-block [id$="-cur"]').forEach(function (e) { e.textContent = cur; });
 }
 
 function qfPickChoice(btn) {
@@ -121,11 +162,12 @@ function qfWrongRead() {
   responses.profile_disputed = true;
   track('quiz_profile_disputed', { fork: FORK_SPEC && FORK_SPEC.fork });
   FORK_SPEC = null;
-  ['qf-block', 'qf-read2'].forEach(function (id) {
+  ['qf-block', 'qf-read2', 'qf-growth-block'].forEach(function (id) {
     var mount = document.getElementById(id);
     if (mount) { mount.innerHTML = ''; mount.style.display = 'none'; }
   });
   qfRelabelRevenue('software');
+  qfSectorState();
 }
 
 /* NO FIGURE EVER BLOCKS THE BUTTON. Daniil, 7-Sep-2026: a founder who gives nothing still gets the
@@ -193,7 +235,8 @@ var QF_USED_FOR = {
   borrowers: 'one row of its own, dollars of enterprise value per borrower.',
   funding_model: 'whether a lender may be priced on revenue at all.',
   throughput_volume: 'the EV-per-unit-of-throughput row, in the unit you pick.',
-  throughput_unit: 'the unit the throughput row is priced in.'
+  throughput_unit: 'the unit the throughput row is priced in.',
+  growth_3m_pct: 'your growth band. For an AI-native company a three-month rate, annualised, replaces the last twelve months, because an annual rate means little for a company doubling every two months.'
 };
 
 /* THE SAME LINE IN THE FORK'S OWN WORD. A brand or retailer calls its gross figure GMV (Daniil,
@@ -216,11 +259,18 @@ function qfIntro(qs) {
   return '<p class="q-help" style="margin:8px 0 6px;">The revenue above prices every revenue row. Each figure below adds a row of its own, and only if you give it. Tap an "i" to see what it feeds.</p>';
 }
 
+/* QUESTIONS THAT BELONG ON STEP 4, not under the revenue box: a growth question sits with the
+   growth question (Daniil, 20-Sep-2026: "And over the last three months? -> what are we asking
+   for?"; it was the AI-native growth question drawn under revenue with no context). */
+var QF_ON_GROWTH_STEP = { growth_3m_pct: true };
+
 function qfRender(spec) {
   FORK_SPEC = spec;
   var mount = document.getElementById('qf-block');
   if (!mount || !spec || !spec.questions) return false;
-  var qs = spec.questions.filter(function (q) { return !QF_ALREADY_ASKED[q.key]; });
+  var all = spec.questions.filter(function (q) { return !QF_ALREADY_ASKED[q.key]; });
+  var qs = all.filter(function (q) { return !QF_ON_GROWTH_STEP[q.key]; });
+  var gqs = all.filter(function (q) { return QF_ON_GROWTH_STEP[q.key]; });
   /* The read is shown on step 2 when it landed in time (qfShowRead2); on step 3 it is repeated
      only if the founder never saw it there. */
   var html = [QF_READ_SHOWN_ON_2 ? '' : qfReadBack(spec)];
@@ -233,11 +283,26 @@ function qfRender(spec) {
   }
   mount.innerHTML = html.join('');
   mount.style.display = html.join('').trim() ? 'block' : 'none';
-  var cur = (typeof curSymbol === 'function') ? curSymbol() : '$';
-  mount.querySelectorAll('[id$="-cur"]').forEach(function (e) { e.textContent = cur; });
+  var gm = document.getElementById('qf-growth-block');
+  if (gm) {
+    gm.innerHTML = gqs.map(qfQuestion).join('');
+    gm.style.display = gqs.length ? 'block' : 'none';
+  }
+  qfRefreshCurrency();
   qfChanged();
-  track('quiz_fork_shown', { fork: spec.fork, questions: qs.length });
+  track('quiz_fork_shown', { fork: spec.fork, questions: all.length });
   return true;
+}
+
+/* The step-4 fork answers, read when step 4 is submitted (qfSubmit runs at step 3, before they
+   are typed). */
+function qfSubmitGrowth() {
+  if (!FORK_SPEC) return;
+  FORK_SPEC.questions.forEach(function (q) {
+    if (!QF_ON_GROWTH_STEP[q.key]) return;
+    var v = qfNum('qf-' + q.key);
+    if (v !== null) responses[q.key] = v;
+  });
 }
 
 /* The heading. One line per fork, in the founder's language rather than ours: a lender should not
@@ -269,7 +334,7 @@ function qfSubmit() {
   if (!FORK_SPEC) return;
   var answered = 0;
   FORK_SPEC.questions.forEach(function (q) {
-    if (QF_ALREADY_ASKED[q.key]) return;
+    if (QF_ALREADY_ASKED[q.key] || QF_ON_GROWTH_STEP[q.key]) return;
     if (q.kind === 'choice') { if (responses[q.key]) answered++; return; }
     var v = qfNum('qf-' + q.key);
     if (v !== null) { responses[q.key] = v; answered++; }
@@ -289,22 +354,106 @@ var QF_ASKED_FOR = '';         /* the sector and website the last read was asked
 var QF_READ_SHOWN_ON_2 = false;
 var QF_TIMER = null;
 
-/* THE READ STARTS ON STEP 2, the moment a sector is picked and a website is typed (Daniil,
-   20-Sep: the read belongs where the website is entered, not one step later). Typing pauses for
-   three quarters of a second before the call goes, so a founder still typing is not asked
-   about "fyl" and then "fyle.i". A changed sector or website asks again; the same pair does not.
-   Continue never waits on it. */
+/* THE READ STARTS ON STEP 2, the moment a website is typed (Daniil, 20-Sep, second ruling of the
+   day: "ask for the website straight away ... the description should pop up in step 2, and then
+   step 2 could automatically suggest the vertical, and then the user could change it"). Typing
+   pauses for three quarters of a second before the call goes, so a founder still typing is not
+   asked about "fyl" and then "fyle.i". A changed website or sector asks again; the same pair does
+   not. The sector, when the founder has already picked one, goes with the ask as a hint. */
 function qfMaybeAsk() {
   var sel = document.getElementById('sector-select');
   var site = document.getElementById('site-url');
   var sector = sel ? sel.value : '';
   var url = site ? site.value.trim() : '';
-  if (!sector || !url || url.indexOf('.') < 0) return;
+  if (!url || url.indexOf('.') < 0) { qfSectorState(); return; }
   clearTimeout(QF_TIMER);
   QF_TIMER = setTimeout(function () {
-    responses.sector = sector; responses.sectors = [sector]; responses.website = url;
+    responses.sector = sector || null; responses.sectors = sector ? [sector] : []; responses.website = url;
     qfAsk();
   }, 750);
+}
+
+/* WHICH SECTOR THE READ SUGGESTS. A judgement table, in the page where the founder can see the
+   result and change it: the profiler returns an archetype (what the company is) and an industry
+   (who it sells to), and the sector dropdown is coarser than both. A software archetype takes its
+   sector from the industry it sells into; everything else maps straight. Unknown maps to nothing,
+   and the founder picks. */
+var QF_SECTOR_BY_INDUSTRY = {
+  'Healthcare & Life Sciences': 'Healthtech / Digital health', 'Financial Services': 'Fintech',
+  'Insurance': 'Insurtech', 'Real Estate': 'Proptech', 'Construction & Infrastructure': 'Proptech',
+  'Education': 'Edtech', 'Legal & Professional Services': 'Legaltech / Regtech',
+  'Recruitment & Work': 'HR tech / Future of work', 'Logistics & Mobility': 'Logistics / Supply chain',
+  'Hospitality': 'Travel / Hospitality', 'Travel': 'Travel / Hospitality', 'Government': 'Defence / Gov tech',
+  'Energy & Utilities': 'Climate / Energy', 'Automotive': 'Mobility / Automotive',
+  'Retail & E-commerce': 'E-commerce / Retail', 'Media & Gaming': 'Media / Content',
+  'Food & Grocery': 'Food / Beverage', 'Telecom': 'Telecoms / Connectivity',
+  'Security & Property': 'Cybersecurity', 'Semiconductors': 'Deeptech / Hardware',
+  'Manufacturing': 'Deeptech / Hardware'
+};
+var QF_SOFTWARE_ARCHETYPES = {
+  'Business Applications': 1, 'Vertical Software': 1, 'Communications & Collaboration': 1,
+  'Software Consolidator': 1, 'Design & Engineering': 1, 'Cloud & Infrastructure': 1
+};
+var QF_SECTOR_BY_ARCHETYPE = {
+  'Data, AI & Developer Tools': 'AI / ML', 'Cybersecurity': 'Cybersecurity',
+  'Marketing & Customer Engagement': 'Adtech / Martech',
+  'Consumer & Prosumer Software': 'Consumer / D2C', 'Consumer Brand': 'Consumer / D2C',
+  'Owned-Inventory Retail': 'E-commerce / Retail', 'Commerce Enablement & Fulfilment': 'E-commerce / Retail',
+  'Third-Party Marketplace': 'Marketplaces', 'Classifieds & Listings': 'Marketplaces',
+  'Freelance & Services Marketplace': 'Marketplaces', 'Travel Booking & OTA': 'Travel / Hospitality',
+  'Gaming & Virtual Economy': 'Gaming',
+  'Merchant Acquiring & PSP': 'Fintech', 'Payment Network': 'Fintech', 'Cross-Border & FX': 'Fintech',
+  'Commerce & Payments Software': 'Fintech', 'Card Issuing & BaaS': 'Fintech', 'Lending & Credit': 'Fintech',
+  'Digital Bank & Deposits': 'Fintech', 'Wealth & Capital Markets Platform': 'Fintech',
+  'Market Infrastructure & Exchange': 'Fintech', 'Financial Data & Index': 'Fintech',
+  'Crypto & Digital Assets': 'Web3 / Digital assets', 'Insurance Technology': 'Insurtech',
+  'Local Delivery & On-Demand': 'Logistics / Supply chain', 'Supply Chain & Logistics Software': 'Logistics / Supply chain',
+  'Online Learning': 'Edtech', 'Streaming & Digital Media': 'Media / Content',
+  'Dating & Social Network': 'Consumer / D2C'
+};
+function qfSectorFor(readAs) {
+  var a = (readAs && readAs.archetype) || '', i = (readAs && readAs.industry) || '';
+  if (QF_SOFTWARE_ARCHETYPES[a]) return QF_SECTOR_BY_INDUSTRY[i] || 'SaaS / B2B software';
+  return QF_SECTOR_BY_ARCHETYPE[a] || '';
+}
+
+/* The founder's own pick always wins over the suggestion. Set by onSectorPick (app.js). */
+var QF_SECTOR_TOUCHED = false;
+var QF_WAIT_MS = 15000;          /* how long Continue waits for the read; Daniil, 20-Sep: fine, as long as the user knows */
+var QF_WAIT_TIMER = null;
+var QF_WAIT_OVER = false;
+
+function qfSuggestSector(spec) {
+  var sel = document.getElementById('sector-select');
+  if (!sel) return;
+  var want = qfSectorFor(spec && spec.read_as);
+  var opts = Array.prototype.map.call(sel.options, function (o) { return o.value; });
+  if (!want || opts.indexOf(want) < 0) return;
+  if (QF_SECTOR_TOUCHED && sel.value) return;
+  sel.value = want;
+  responses.sector = want; responses.sectors = [want];
+  QF_ASKED_FOR = want + '|' + (responses.website || '');   /* the suggestion is not a change that re-asks */
+  if (typeof onSectorPick === 'function') onSectorPick(sel, true);
+}
+
+/* CONTINUE ON STEP 2: enabled once a sector is set (suggested or picked). While the read is in
+   flight and nothing is set, the button says what it is waiting for; after QF_WAIT_MS it stops
+   waiting and asks the founder to pick, and the read catches up on step 3 if it lands later. */
+function qfSectorState() {
+  var btn = document.getElementById('sector-continue');
+  var sel = document.getElementById('sector-select');
+  var note = document.getElementById('sector-note');
+  if (!btn || !sel) return;
+  var has = !!sel.value;
+  var reading = QF_STATE === 'asking' && !QF_WAIT_OVER;
+  btn.disabled = !has;
+  btn.textContent = (reading && !has) ? 'Reading your website\u2026' : 'Continue';
+  if (note) {
+    note.textContent = has && !QF_SECTOR_TOUCHED && QF_STATE === 'ready' ? 'Suggested from your website. Change it if it is wrong.'
+      : (reading && !has ? 'Filled in from your website in a few seconds, or pick it yourself.'
+      : (QF_WAIT_OVER && !has && QF_STATE === 'asking' ? 'The read is taking longer than usual. Pick your sector and continue; the read catches up on the next step.'
+      : 'Pick the closest.'));
+  }
 }
 
 function qfAsk() {
@@ -318,7 +467,11 @@ function qfAsk() {
   FORK_SPEC = null;
   QF_READ_SHOWN_ON_2 = false;
   responses.profile_disputed = false;
+  QF_WAIT_OVER = false;
+  clearTimeout(QF_WAIT_TIMER);
+  QF_WAIT_TIMER = setTimeout(function () { QF_WAIT_OVER = true; qfSectorState(); qfShowRead2(); }, QF_WAIT_MS);
   qfShowRead2();
+  qfSectorState();
   fetch('/api/profile', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -327,17 +480,21 @@ function qfAsk() {
     .then(function (r) { return r.json(); })
     .then(function (spec) {
       if (QF_ASKED_FOR !== key) return;          /* a later ask superseded this one */
-      if (!spec || !spec.questions) { QF_STATE = 'failed'; qfShowRead2(); qfShowIfReady(); return; }
+      if (!spec || !spec.questions) { QF_STATE = 'failed'; clearTimeout(QF_WAIT_TIMER); qfShowRead2(); qfSectorState(); qfShowIfReady(); return; }
       if (responses.profile_disputed) return;
       FORK_SPEC = spec;
       QF_STATE = 'ready';
-      if (currentStep === 2) qfShowRead2();
+      clearTimeout(QF_WAIT_TIMER);
+      if (currentStep === 2) { qfShowRead2(); qfSuggestSector(spec); }
+      qfSectorState();
       if (currentStep === 3) qfShowIfReady();
     })
     .catch(function (e) {
       console.warn('[fairway] fork unavailable', e);
       QF_STATE = 'failed';
+      clearTimeout(QF_WAIT_TIMER);
       qfShowRead2();
+      qfSectorState();
       qfShowIfReady();
     });
 }
@@ -356,7 +513,14 @@ function qfShowRead2() {
     return;
   }
   if (QF_STATE === 'asking') {
-    mount.innerHTML = '<p class="q-help qf-wait" style="margin:0 0 6px;">Reading your website&hellip;</p>';
+    mount.innerHTML = '<p class="q-help qf-wait" style="margin:0 0 6px;">' + (QF_WAIT_OVER
+      ? 'Still reading your website. You can carry on; what we read shows on the next step.'
+      : 'Reading your website to see what you sell and who buys it. This takes up to fifteen seconds.') + '</p>';
+    mount.style.display = 'block';
+    return;
+  }
+  if (QF_STATE === 'failed') {
+    mount.innerHTML = '<p class="q-help" style="margin:0 0 6px;">We could not read that website. Pick your sector below and carry on; your comparables are chosen from the sector and your answers.</p>';
     mount.style.display = 'block';
     return;
   }

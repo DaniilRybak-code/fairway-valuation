@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2700.0,
+     "memo": [],
      "mid": 2700.0,
      "n": 1,
+     "n_all": 1,
      "period_mix": {
       "RUN_RATE": 1
      },
@@ -80,8 +82,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 5.67,
+     "memo": [],
      "mid": 57.14,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "LTM": 3
      },
@@ -184,8 +188,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 18.0,
+     "memo": [],
      "mid": 40.0,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -240,18 +246,33 @@
      "closeness": "SHARED_PRODUCT",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue_gross",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 31.9,
+     "high": 23.4,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 5.05,
+     "low": 6.18,
+     "memo": [
+      {
+       "company": "Voodoo",
+       "date": "Aug-21",
+       "multiple": 5.05,
+       "reason": "extreme"
+      },
+      {
+       "company": "Roblox",
+       "date": "Jan-21",
+       "multiple": 31.9,
+       "reason": "extreme"
+      }
+     ],
      "mid": 23.4,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "LTM": 4
      },
@@ -261,36 +282,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Voodoo",
-       "mult": 5.05,
-       "reason": "shares the language of casual, games, gaming; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Epic Games",
-       "mult": 6.18,
-       "reason": "shares the language of creator, engine, game; same type of business; same end market; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Dream Sports",
-       "mult": 23.4,
-       "reason": "same type of business; same end market; same business function; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Roblox",
-       "mult": 31.9,
-       "reason": "both do User Generated Games; same type of business; same end market; same business function",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "casual",
@@ -303,7 +295,7 @@
       "monetisation",
       "user"
      ],
-     "spread": 6.3,
+     "spread": 3.8,
      "table": [
       {
        "company": "Voodoo",
@@ -313,6 +305,7 @@
        "multiple": 5.05,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -343,11 +336,12 @@
        "multiple": 31.9,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 5.1,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -531,7 +525,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -952,8 +946,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 18.0,
+   "memo": [],
    "mid": 40.0,
    "n": 2,
+   "n_all": 2,
    "period_mix": {
     "RUN_RATE": 2
    },

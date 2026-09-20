@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 30.0,
+     "memo": [],
      "mid": 175.0,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -91,12 +93,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 40.0,
+     "high": 33.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 12.7,
+     "low": 17.9,
+     "memo": [
+      {
+       "company": "Canva",
+       "date": "Aug-25",
+       "multiple": 12.7,
+       "reason": "extreme"
+      },
+      {
+       "company": "Framer",
+       "date": "Aug-25",
+       "multiple": 40.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 21.0,
-     "n": 5,
+     "n": 3,
+     "n_all": 5,
      "period_mix": {
       "RUN_RATE": 5
      },
@@ -117,7 +134,7 @@
       "slide",
       "templates"
      ],
-     "spread": 3.1,
+     "spread": 1.8,
      "table": [
       {
        "company": "Canva",
@@ -127,6 +144,7 @@
        "multiple": 12.7,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -167,6 +185,7 @@
        "multiple": 40.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -420,7 +439,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -686,12 +705,27 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 40.0,
+   "high": 33.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 12.7,
+   "low": 17.9,
+   "memo": [
+    {
+     "company": "Canva",
+     "date": "Aug-25",
+     "multiple": 12.7,
+     "reason": "extreme"
+    },
+    {
+     "company": "Framer",
+     "date": "Aug-25",
+     "multiple": 40.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 21.0,
-   "n": 5,
+   "n": 3,
+   "n_all": 5,
    "period_mix": {
     "RUN_RATE": 5
    },
@@ -712,7 +746,7 @@
     "slide",
     "templates"
    ],
-   "spread": 3.1,
+   "spread": 1.8,
    "table": [
     {
      "company": "Canva",
@@ -722,6 +756,7 @@
      "multiple": 12.7,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -762,6 +797,7 @@
      "multiple": 40.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

@@ -142,14 +142,17 @@ if (sectorSelect) {
   });
 }
 
-function onSectorPick(el) {
+/* `suggested` is true when quiz-fork.js filled the dropdown from the website read; a founder's own
+   pick marks the sector as touched so a later read never overwrites it. */
+function onSectorPick(el, suggested) {
   const v = el.value || '';
+  if (!suggested && typeof QF_SECTOR_TOUCHED !== 'undefined') QF_SECTOR_TOUCHED = true;
   const other = document.getElementById('sector-other-wrap');
   if (other) other.style.display = v === 'Other' ? 'block' : 'none';
-  const btn = document.getElementById('sector-continue');
-  if (btn) btn.disabled = !v;
-  /* The website read starts here, if a website is already typed (quiz-fork.js). */
-  if (typeof qfMaybeAsk === 'function') qfMaybeAsk();
+  if (typeof qfSectorState === 'function') qfSectorState();
+  else { const btn = document.getElementById('sector-continue'); if (btn) btn.disabled = !v; }
+  /* A founder's own change of sector asks the profiler again with the new hint (quiz-fork.js). */
+  if (!suggested && typeof qfMaybeAsk === 'function') qfMaybeAsk();
 }
 
 function submitSector() {
@@ -264,6 +267,9 @@ function setCurrency(code, source) {
 function onCurrencyChange(el) {
   setCurrency(el.value, 'user');
   paintRevenue(responses.revenue_exact || 0, null);
+  /* Every box that carries the sign follows: the fork's money boxes and the plan's target. */
+  if (typeof qfRefreshCurrency === 'function') qfRefreshCurrency();
+  if (typeof paintNtm === 'function') paintNtm();
   if (lastResult) renderResult(lastResult);
 }
 /* Kept so an older cached page does not break on the selector. */
@@ -276,6 +282,15 @@ function onCurrency() {
   /* USD BY DEFAULT. Daniil, 20-Sep-2026: the page guessed the currency from the browser and the
      visitor's country, and a London founder got GBP. The selector stays, one tap to change. */
   setCurrency('USD', 'boot');
+  /* THE COUNTRY STILL COMES FROM THE EDGE. When the currency guess went (above), the country
+     lookup went with it by mistake, and from 13:19 to 22:00 UK on 20-Sep-2026 every investor card
+     said "your location was not resolved". /api/geo returns a country code and nothing else that
+     identifies the visitor (no IP is read, stored or returned; docs/lead-capture.md). The
+     currency it guesses is ignored on purpose. */
+  fetch('/api/geo')
+    .then(function (r) { return r.json(); })
+    .then(function (g) { if (g && g.country) responses.country = g.country; })
+    .catch(function () {});
 })();
 
 /* The recurring-share and revenue-model questions left the quiz on 20-Sep-2026: neither reached
@@ -365,6 +380,10 @@ function paintPlan(pct) {
   responses.ntm_revenue_exact = null;            /* the rate was typed last, so the sum follows it */
   const box = document.getElementById('plan-exact');
   if (box && document.activeElement !== box) box.value = pct;
+  /* The slider follows the box (Daniil, 20-Sep-2026: the plan should have a slider like the
+     trailing rate does). Its range is the trailing slider's; a typed rate beyond it sits at the end. */
+  const sl = document.getElementById('plan-slider');
+  if (sl && document.activeElement !== sl) sl.value = Math.max(-50, Math.min(400, pct));
   paintNtm();
 }
 
@@ -373,6 +392,13 @@ function onPlanType() {
   const v = parseFloat(el.value);
   if (el.value.trim() === '' || isNaN(v)) { clearPlan(); return; }
   paintPlan(Math.max(-90, Math.min(1000, v)));
+}
+function onPlanSlide() {
+  const sl = document.getElementById('plan-slider');
+  if (!sl) return;
+  const box = document.getElementById('plan-exact');
+  if (box) box.value = sl.value;
+  paintPlan(parseFloat(sl.value));
 }
 
 function clearPlan() {
@@ -511,6 +537,8 @@ function pickRaise(v, btn) {
 function submitGrowth() {
   if (!responses.growth) responses.growth = 'Too early to measure';
   if (responses.growth_plan === undefined) responses.growth_plan = null;
+  /* The fork's growth question (three-month rate, AI-native companies) sits on this step. */
+  if (typeof qfSubmitGrowth === 'function') qfSubmitGrowth();
   track('quiz_answer', {
     step: 4, key: 'growth', value: responses.growth,
     yoy: responses.growth_yoy, plan: responses.growth_plan,

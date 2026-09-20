@@ -22,12 +22,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 33.0,
+     "high": 20.5,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.3,
+     "low": 14.9,
+     "memo": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "multiple": 10.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Lovable",
+       "date": "Dec-25",
+       "multiple": 33.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 20.0,
-     "n": 6,
+     "n": 4,
+     "n_all": 6,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 5
@@ -53,7 +68,7 @@
       "no",
       "orchestration"
      ],
-     "spread": 3.2,
+     "spread": 1.4,
      "table": [
       {
        "company": "Oxylabs",
@@ -63,6 +78,7 @@
        "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -113,6 +129,7 @@
        "multiple": 33.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -318,7 +335,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -734,12 +751,27 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 33.0,
+   "high": 20.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.3,
+   "low": 14.9,
+   "memo": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "multiple": 10.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Lovable",
+     "date": "Dec-25",
+     "multiple": 33.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 20.0,
-   "n": 6,
+   "n": 4,
+   "n_all": 6,
    "period_mix": {
     "LTM": 1,
     "RUN_RATE": 5
@@ -765,7 +797,7 @@
     "no",
     "orchestration"
    ],
-   "spread": 3.2,
+   "spread": 1.4,
    "table": [
     {
      "company": "Oxylabs",
@@ -775,6 +807,7 @@
      "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -825,6 +858,7 @@
      "multiple": 33.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

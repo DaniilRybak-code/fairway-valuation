@@ -11,7 +11,7 @@
       "ARR_RUNRATE": 2,
       "NET_REVENUE": 2
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
@@ -21,12 +21,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 48.0,
+     "high": 18.75,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 8.0,
+     "low": 16.34,
+     "memo": [
+      {
+       "company": "Airwallex",
+       "date": "Dec-25",
+       "multiple": 8.0,
+       "reason": "extreme"
+      },
+      {
+       "company": "dLocal",
+       "date": "Apr-21",
+       "multiple": 48.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 18.75,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "LTM": 2,
       "RUN_RATE": 2
@@ -49,7 +64,7 @@
       "payouts",
       "tax"
      ],
-     "spread": 6.0,
+     "spread": 1.1,
      "table": [
       {
        "company": "Airwallex",
@@ -59,6 +74,7 @@
        "multiple": 8.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -89,11 +105,12 @@
        "multiple": 48.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.5,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -118,8 +135,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 9.52,
+     "memo": [],
      "mid": 44.34,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "FY2024": 1,
       "LTM": 2
@@ -643,18 +662,33 @@
     "ARR_RUNRATE": 2,
     "NET_REVENUE": 2
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 48.0,
+   "high": 18.75,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 8.0,
+   "low": 16.34,
+   "memo": [
+    {
+     "company": "Airwallex",
+     "date": "Dec-25",
+     "multiple": 8.0,
+     "reason": "extreme"
+    },
+    {
+     "company": "dLocal",
+     "date": "Apr-21",
+     "multiple": 48.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 18.75,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "LTM": 2,
     "RUN_RATE": 2
@@ -677,7 +711,7 @@
     "payouts",
     "tax"
    ],
-   "spread": 6.0,
+   "spread": 1.1,
    "table": [
     {
      "company": "Airwallex",
@@ -687,6 +721,7 @@
      "multiple": 8.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -717,11 +752,12 @@
      "multiple": 48.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.5,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 64,

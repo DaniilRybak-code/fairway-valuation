@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10285.71,
+     "memo": [],
      "mid": 357142.86,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -100,20 +102,41 @@
      "control_names": [
       "Semrush"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 150.0,
+     "high": 50.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
-     "low": 4.3,
+     "low": 20.5,
+     "memo": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "multiple": 4.3,
+       "reason": "take-private"
+      },
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "multiple": 10.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "multiple": 150.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 25.0,
-     "n": 6,
+     "n": 3,
+     "n_all": 6,
      "period_mix": {
       "NTM": 1,
       "RUN_RATE": 5
@@ -128,50 +151,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "shares the language of analysis, intelligence; related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Oxylabs",
-       "mult": 10.3,
-       "reason": "shares the language of agent, api; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Anthropic",
-       "mult": 20.5,
-       "reason": "shares the language of agent, api; same type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "shares the language of intelligence; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Decagon",
-       "mult": 150.0,
-       "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "agent",
@@ -179,7 +159,7 @@
       "api",
       "intelligence"
      ],
-     "spread": 34.9,
+     "spread": 2.4,
      "table": [
       {
        "company": "Semrush",
@@ -189,6 +169,7 @@
        "multiple": 4.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -199,6 +180,7 @@
        "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -239,6 +221,7 @@
        "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -464,7 +447,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -917,16 +900,37 @@
    "control_names": [
     "Semrush"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 150.0,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 50.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
-   "low": 4.3,
+   "low": 20.5,
+   "memo": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "multiple": 4.3,
+     "reason": "take-private"
+    },
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "multiple": 10.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "multiple": 150.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 25.0,
-   "n": 6,
+   "n": 3,
+   "n_all": 6,
    "period_mix": {
     "NTM": 1,
     "RUN_RATE": 5
@@ -941,50 +945,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "shares the language of analysis, intelligence; related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Oxylabs",
-     "mult": 10.3,
-     "reason": "shares the language of agent, api; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Anthropic",
-     "mult": 20.5,
-     "reason": "shares the language of agent, api; same type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "shares the language of intelligence; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Decagon",
-     "mult": 150.0,
-     "reason": "shares the language of agent; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "agent",
@@ -992,7 +953,7 @@
     "api",
     "intelligence"
    ],
-   "spread": 34.9,
+   "spread": 2.4,
    "table": [
     {
      "company": "Semrush",
@@ -1002,6 +963,7 @@
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -1012,6 +974,7 @@
      "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -1052,6 +1015,7 @@
      "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

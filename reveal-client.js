@@ -126,7 +126,13 @@
     payload = (data && data.payload) || null;
     if (!payload) return;
 
-    renderPeerCharts(payload, figures);
+    /* THE PEER CHARTS ARE FOR A FOUNDER WHO GAVE NO FIGURES (Daniil, 6-Sep-2026). When the field
+       is drawn they repeat it, so they are not drawn beside it (Daniil, 20-Sep-2026: "does not add
+       much on top of the football field"); a basis the founder gave no figure for is named under
+       the field instead (field.js). */
+    var gaveFigures = figures && Object.keys(figures).length > 0;
+    if (gaveFigures) { var pc = document.getElementById('peer-charts'); if (pc) pc.innerHTML = ''; }
+    else renderPeerCharts(payload, figures);
     renderHonesty(payload);
     if (typeof renderRecommendations === 'function') {
       renderRecommendations(payload.recommendations, 'recommendation-blocks');
@@ -252,9 +258,13 @@
       : '<span class="pc-fill' + (kind === 'scatter' ? ' pc-scatter' : '') + '" style="left:'
         + left.toFixed(1) + '%;width:' + width.toFixed(1) + '%;"></span>';
 
+    /* A per-user reading is dollars per user, not a multiple: "$188k per business customer",
+       never "188000x" (the "533x" item carried since 20-Sep). */
+    const perUnit = (typeof unitOf === 'function') && unitOf(c.basis) === 'per-user';
+    const mu = function (v) { return perUnit ? perUnitMoney(v) : fx(v) + 'x'; };
     const mult = kind === 'point'
-      ? fx(c.low) + 'x, one comparable' + (c.sole ? ' (' + esc(c.sole) + ')' : '')
-      : fx(c.low) + 'x to ' + fx(c.high) + 'x' + (kind === 'scatter' ? ', and they disagree' : '');
+      ? mu(c.low) + ', one comparable' + (c.sole ? ' (' + esc(c.sole) + ')' : '')
+      : mu(c.low) + ' to ' + mu(c.high) + (kind === 'scatter' ? ', and they disagree' : '');
 
     const price = (c.priced && c.founder_low_local_m != null)
       ? '<span class="pc-price">' + (kind === 'point' ? money(c.founder_low_local_m) : money(c.founder_low_local_m) + ' to ' + money(c.founder_high_local_m))
@@ -458,6 +468,12 @@
   }
 
   function fx(n) { return (typeof n === 'number') ? (n >= 10 ? Math.round(n).toString() : n.toFixed(1)) : ''; }
+  function perUnitMoney(v) {
+    if (typeof v !== 'number') return '';
+    if (v >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'm';
+    if (v >= 1e3) return '$' + (v / 1e3).toFixed(1) + 'k';
+    return '$' + Math.round(v);
+  }
 
   function esc(v) {
     return String(v === undefined || v === null ? '' : v)

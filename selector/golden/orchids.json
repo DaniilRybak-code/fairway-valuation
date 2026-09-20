@@ -21,12 +21,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 40.0,
+     "high": 33.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 17.9,
+     "low": 19.8,
+     "memo": [
+      {
+       "company": "Figma",
+       "date": "Jul-24",
+       "multiple": 17.9,
+       "reason": "extreme"
+      },
+      {
+       "company": "Framer",
+       "date": "Aug-25",
+       "multiple": 40.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 20.0,
-     "n": 5,
+     "n": 3,
+     "n_all": 5,
      "period_mix": {
       "RUN_RATE": 5
      },
@@ -47,7 +62,7 @@
       "vibe",
       "web"
      ],
-     "spread": 2.2,
+     "spread": 1.7,
      "table": [
       {
        "company": "Figma",
@@ -57,6 +72,7 @@
        "multiple": 17.9,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -97,6 +113,7 @@
        "multiple": 40.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -300,7 +317,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -639,12 +656,27 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 40.0,
+   "high": 33.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 17.9,
+   "low": 19.8,
+   "memo": [
+    {
+     "company": "Figma",
+     "date": "Jul-24",
+     "multiple": 17.9,
+     "reason": "extreme"
+    },
+    {
+     "company": "Framer",
+     "date": "Aug-25",
+     "multiple": 40.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 20.0,
-   "n": 5,
+   "n": 3,
+   "n_all": 5,
    "period_mix": {
     "RUN_RATE": 5
    },
@@ -665,7 +697,7 @@
     "vibe",
     "web"
    ],
-   "spread": 2.2,
+   "spread": 1.7,
    "table": [
     {
      "company": "Figma",
@@ -675,6 +707,7 @@
      "multiple": 17.9,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -715,6 +748,7 @@
      "multiple": 40.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

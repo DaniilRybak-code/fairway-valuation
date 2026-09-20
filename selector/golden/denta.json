@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 19333.33,
+     "memo": [],
      "mid": 148648.65,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 1
@@ -104,8 +106,8 @@
      "control_names": [
       "Accolade"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -115,9 +117,18 @@
      "listed_target_names": [
       "Accolade"
      ],
-     "low": 1.39,
+     "low": 6.88,
+     "memo": [
+      {
+       "company": "Accolade",
+       "date": "Jan-25",
+       "multiple": 1.39,
+       "reason": "take-private"
+      }
+     ],
      "mid": 10.0,
-     "n": 4,
+     "n": 3,
+     "n_all": 4,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 3
@@ -132,42 +143,13 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Accolade",
-       "mult": 1.39,
-       "reason": "shares the language of benefits, claims; related type of business; same end market",
-       "tier": "DIRECT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Alan",
-       "mult": 6.88,
-       "reason": "both do Claims; same type of business; same end market; same kind of customer",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Thirty Madison",
-       "mult": 10.0,
-       "reason": "related type of business; same end market; same business function; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Cityblock Health",
-       "mult": 14.25,
-       "reason": "related type of business; same end market; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "benefits",
       "claims"
      ],
-     "spread": 10.3,
+     "spread": 2.1,
      "table": [
       {
        "company": "Accolade",
@@ -177,6 +159,7 @@
        "multiple": 1.39,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -770,16 +753,25 @@
    "control_names": [
     "Accolade"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 14.25,
    "listed_target_n": 1,
    "listed_target_names": [
     "Accolade"
    ],
-   "low": 1.39,
+   "low": 6.88,
+   "memo": [
+    {
+     "company": "Accolade",
+     "date": "Jan-25",
+     "multiple": 1.39,
+     "reason": "take-private"
+    }
+   ],
    "mid": 10.0,
-   "n": 4,
+   "n": 3,
+   "n_all": 4,
    "period_mix": {
     "LTM": 1,
     "RUN_RATE": 3
@@ -794,42 +786,13 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Accolade",
-     "mult": 1.39,
-     "reason": "shares the language of benefits, claims; related type of business; same end market",
-     "tier": "DIRECT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Alan",
-     "mult": 6.88,
-     "reason": "both do Claims; same type of business; same end market; same kind of customer",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Thirty Madison",
-     "mult": 10.0,
-     "reason": "related type of business; same end market; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Cityblock Health",
-     "mult": 14.25,
-     "reason": "related type of business; same end market; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "benefits",
     "claims"
    ],
-   "spread": 10.3,
+   "spread": 2.1,
    "table": [
     {
      "company": "Accolade",
@@ -839,6 +802,7 @@
      "multiple": 1.39,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {

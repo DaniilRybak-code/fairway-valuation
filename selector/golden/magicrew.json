@@ -15,18 +15,33 @@
      "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.86,
+     "high": 33.0,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.3,
+     "low": 19.8,
+     "memo": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "multiple": 10.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "multiple": 72.86,
+       "reason": "extreme"
+      }
+     ],
      "mid": 25.0,
-     "n": 6,
+     "n": 4,
+     "n_all": 6,
      "period_mix": {
       "RUN_RATE": 6
      },
@@ -36,50 +51,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Oxylabs",
-       "mult": 10.3,
-       "reason": "shares the language of agent; related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Anysphere / Cursor",
-       "mult": 19.8,
-       "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Replit",
-       "mult": 20.0,
-       "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "shares the language of agent; related type of business; same business function; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Lovable",
-       "mult": 33.0,
-       "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Supabase",
-       "mult": 72.86,
-       "reason": "both do Open Source; related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "agent",
@@ -87,7 +59,7 @@
       "open",
       "source"
      ],
-     "spread": 7.1,
+     "spread": 1.7,
      "table": [
       {
        "company": "Oxylabs",
@@ -97,6 +69,7 @@
        "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -147,6 +120,7 @@
        "multiple": 72.86,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -366,7 +340,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -722,14 +696,29 @@
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 72.86,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 33.0,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.3,
+   "low": 19.8,
+   "memo": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "multiple": 10.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "multiple": 72.86,
+     "reason": "extreme"
+    }
+   ],
    "mid": 25.0,
-   "n": 6,
+   "n": 4,
+   "n_all": 6,
    "period_mix": {
     "RUN_RATE": 6
    },
@@ -739,50 +728,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Oxylabs",
-     "mult": 10.3,
-     "reason": "shares the language of agent; related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Anysphere / Cursor",
-     "mult": 19.8,
-     "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "shares the language of agent; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "shares the language of agent; related type of business; same business function; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "shares the language of generation; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Supabase",
-     "mult": 72.86,
-     "reason": "both do Open Source; related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "agent",
@@ -790,7 +736,7 @@
     "open",
     "source"
    ],
-   "spread": 7.1,
+   "spread": 1.7,
    "table": [
     {
      "company": "Oxylabs",
@@ -800,6 +746,7 @@
      "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -850,6 +797,7 @@
      "multiple": 72.86,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

@@ -26,8 +26,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 357142.86,
+     "memo": [],
      "mid": 575000.0,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "RUN_RATE": 3
      },
@@ -102,12 +104,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 50.0,
+     "high": 47.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 12.8,
+     "low": 23.0,
+     "memo": [
+      {
+       "company": "Buffer",
+       "date": "Oct-14",
+       "multiple": 12.8,
+       "reason": "extreme"
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "multiple": 50.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 47.3,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "RUN_RATE": 4
      },
@@ -124,7 +141,7 @@
       "engagement",
       "sales"
      ],
-     "spread": 3.9,
+     "spread": 2.1,
      "table": [
       {
        "company": "Buffer",
@@ -134,6 +151,7 @@
        "multiple": 12.8,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -164,11 +182,12 @@
        "multiple": 50.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.6,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -298,7 +317,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -829,12 +848,27 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 50.0,
+   "high": 47.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 12.8,
+   "low": 23.0,
+   "memo": [
+    {
+     "company": "Buffer",
+     "date": "Oct-14",
+     "multiple": 12.8,
+     "reason": "extreme"
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "multiple": 50.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 47.3,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "RUN_RATE": 4
    },
@@ -851,7 +885,7 @@
     "engagement",
     "sales"
    ],
-   "spread": 3.9,
+   "spread": 2.1,
    "table": [
     {
      "company": "Buffer",
@@ -861,6 +895,7 @@
      "multiple": 12.8,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -891,11 +926,12 @@
      "multiple": 50.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.6,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 142,

@@ -11,7 +11,7 @@
       "ARR": 2,
       "NET_REVENUE": 2
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "PARTIAL_OVERLAP",
      "control_n": 1,
      "control_names": [
@@ -23,12 +23,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 20.0,
+     "high": 14.9,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 13.2,
+     "low": 14.5,
+     "memo": [
+      {
+       "company": "Turing",
+       "date": "Mar-25",
+       "multiple": 13.2,
+       "reason": "extreme"
+      },
+      {
+       "company": "AlphaSense",
+       "date": "Jun-24",
+       "multiple": 20.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 14.9,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "LTM": 1,
       "NTM": 1,
@@ -54,7 +69,7 @@
       "expert",
       "training"
      ],
-     "spread": 1.5,
+     "spread": 1.0,
      "table": [
       {
        "company": "Turing",
@@ -64,6 +79,7 @@
        "multiple": 13.2,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -94,11 +110,12 @@
        "multiple": 20.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.8,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -360,7 +377,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -795,7 +812,7 @@
     "ARR": 2,
     "NET_REVENUE": 2
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "PARTIAL_OVERLAP",
    "control_n": 1,
    "control_names": [
@@ -803,12 +820,27 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 20.0,
+   "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 13.2,
+   "low": 14.5,
+   "memo": [
+    {
+     "company": "Turing",
+     "date": "Mar-25",
+     "multiple": 13.2,
+     "reason": "extreme"
+    },
+    {
+     "company": "AlphaSense",
+     "date": "Jun-24",
+     "multiple": 20.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 14.9,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
@@ -834,7 +866,7 @@
     "expert",
     "training"
    ],
-   "spread": 1.5,
+   "spread": 1.0,
    "table": [
     {
      "company": "Turing",
@@ -844,6 +876,7 @@
      "multiple": 13.2,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -874,11 +907,12 @@
      "multiple": 20.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.8,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 108,

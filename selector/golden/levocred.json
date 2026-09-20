@@ -20,12 +20,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 56.0,
+     "high": 49.33,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.0,
+     "low": 15.0,
+     "memo": [
+      {
+       "company": "Restaurant365",
+       "date": "May-23",
+       "multiple": 10.0,
+       "reason": "extreme"
+      },
+      {
+       "company": "Legora",
+       "date": "Apr-26",
+       "multiple": 56.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 23.0,
-     "n": 6,
+     "n": 4,
+     "n_all": 6,
      "period_mix": {
       "NOT STATED": 1,
       "RUN_RATE": 5
@@ -49,7 +64,7 @@
       "operations",
       "servicing"
      ],
-     "spread": 5.6,
+     "spread": 3.3,
      "table": [
       {
        "company": "Restaurant365",
@@ -59,6 +74,7 @@
        "multiple": 10.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -109,6 +125,7 @@
        "multiple": 56.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -414,7 +431,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -764,12 +781,27 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 56.0,
+   "high": 49.33,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.0,
+   "low": 15.0,
+   "memo": [
+    {
+     "company": "Restaurant365",
+     "date": "May-23",
+     "multiple": 10.0,
+     "reason": "extreme"
+    },
+    {
+     "company": "Legora",
+     "date": "Apr-26",
+     "multiple": 56.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 23.0,
-   "n": 6,
+   "n": 4,
+   "n_all": 6,
    "period_mix": {
     "NOT STATED": 1,
     "RUN_RATE": 5
@@ -793,7 +825,7 @@
     "operations",
     "servicing"
    ],
-   "spread": 5.6,
+   "spread": 3.3,
    "table": [
     {
      "company": "Restaurant365",
@@ -803,6 +835,7 @@
      "multiple": 10.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -853,6 +886,7 @@
      "multiple": 56.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

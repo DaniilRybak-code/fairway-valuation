@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 142857.14,
+     "memo": [],
      "mid": 640000.0,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "NTM": 1,
       "RUN_RATE": 1
@@ -89,8 +91,8 @@
      "control_names": [
       "E2open"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
@@ -100,9 +102,18 @@
      "listed_target_names": [
       "E2open"
      ],
-     "low": 3.46,
+     "low": 32.0,
+     "memo": [
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "multiple": 3.46,
+       "reason": "take-private"
+      }
+     ],
      "mid": 33.3,
-     "n": 4,
+     "n": 3,
+     "n_all": 4,
      "period_mix": {
       "FY2025": 1,
       "NTM": 1,
@@ -122,36 +133,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "E2open",
-       "mult": 3.46,
-       "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
-       "tier": "DIRECT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Ramp",
-       "mult": 32.0,
-       "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Factorial",
-       "mult": 33.3,
-       "reason": "shares the language of planning; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Glean",
-       "mult": 72.0,
-       "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "agents",
@@ -163,7 +145,7 @@
       "supplier",
       "supply"
      ],
-     "spread": 20.8,
+     "spread": 2.2,
      "table": [
       {
        "company": "E2open",
@@ -173,6 +155,7 @@
        "multiple": 3.46,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -391,7 +374,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -736,16 +719,25 @@
    "control_names": [
     "E2open"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
+   "dispersed": false,
+   "display": "RANGE",
    "high": 72.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "E2open"
    ],
-   "low": 3.46,
+   "low": 32.0,
+   "memo": [
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "multiple": 3.46,
+     "reason": "take-private"
+    }
+   ],
    "mid": 33.3,
-   "n": 4,
+   "n": 3,
+   "n_all": 4,
    "period_mix": {
     "FY2025": 1,
     "NTM": 1,
@@ -765,36 +757,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "E2open",
-     "mult": 3.46,
-     "reason": "both do Supply Chain Planning, Supplier Management, Demand Planning; same type of business; same revenue model",
-     "tier": "DIRECT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Ramp",
-     "mult": 32.0,
-     "reason": "both do Procurement; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Factorial",
-     "mult": 33.3,
-     "reason": "shares the language of planning; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Glean",
-     "mult": 72.0,
-     "reason": "shares the language of agents; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "agents",
@@ -806,7 +769,7 @@
     "supplier",
     "supply"
    ],
-   "spread": 20.8,
+   "spread": 2.2,
    "table": [
     {
      "company": "E2open",
@@ -816,6 +779,7 @@
      "multiple": 3.46,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {

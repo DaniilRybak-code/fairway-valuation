@@ -18,20 +18,41 @@
      "control_names": [
       "Semrush"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 150.0,
+     "high": 120.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
-     "low": 4.3,
+     "low": 56.0,
+     "memo": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "multiple": 4.3,
+       "reason": "take-private"
+      },
+      {
+       "company": "Clay",
+       "date": "Jan-26",
+       "multiple": 50.0,
+       "reason": "extreme"
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "multiple": 150.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 105.3,
-     "n": 6,
+     "n": 3,
+     "n_all": 6,
      "period_mix": {
       "NTM": 1,
       "RUN_RATE": 5
@@ -46,57 +67,14 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "shares the language of research; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "shares the language of research; same type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Legora",
-       "mult": 56.0,
-       "reason": "shares the language of research; related type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Sierra",
-       "mult": 105.3,
-       "reason": "shares the language of customer, pricing; same type of business; same kind of customer; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Perplexity",
-       "mult": 120.0,
-       "reason": "both do Consumer AI; related type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Decagon",
-       "mult": 150.0,
-       "reason": "shares the language of customer; same type of business; same kind of customer; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "customer",
       "pricing",
       "research"
      ],
-     "spread": 34.9,
+     "spread": 2.1,
      "table": [
       {
        "company": "Semrush",
@@ -106,6 +84,7 @@
        "multiple": 4.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -116,6 +95,7 @@
        "multiple": 50.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -156,6 +136,7 @@
        "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -428,7 +409,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -822,16 +803,37 @@
    "control_names": [
     "Semrush"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 150.0,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 120.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
-   "low": 4.3,
+   "low": 56.0,
+   "memo": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "multiple": 4.3,
+     "reason": "take-private"
+    },
+    {
+     "company": "Clay",
+     "date": "Jan-26",
+     "multiple": 50.0,
+     "reason": "extreme"
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "multiple": 150.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 105.3,
-   "n": 6,
+   "n": 3,
+   "n_all": 6,
    "period_mix": {
     "NTM": 1,
     "RUN_RATE": 5
@@ -846,57 +848,14 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "shares the language of research; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "shares the language of research; same type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Legora",
-     "mult": 56.0,
-     "reason": "shares the language of research; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Sierra",
-     "mult": 105.3,
-     "reason": "shares the language of customer, pricing; same type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Perplexity",
-     "mult": 120.0,
-     "reason": "both do Consumer AI; related type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Decagon",
-     "mult": 150.0,
-     "reason": "shares the language of customer; same type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "customer",
     "pricing",
     "research"
    ],
-   "spread": 34.9,
+   "spread": 2.1,
    "table": [
     {
      "company": "Semrush",
@@ -906,6 +865,7 @@
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -916,6 +876,7 @@
      "multiple": 50.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -956,6 +917,7 @@
      "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

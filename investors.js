@@ -1,4 +1,5 @@
-/* Fairway investor blocks on the reveal. Draws the two layers the selector produces.
+/* Fairway investor table on the reveal. Draws the two layers the selector produces as one table
+ * (Daniil, 20-Sep-2026), the last column saying which layer each row came from.
  *
  * THE CONTRACT IS selector/investors.py reveal_payload(). Every field this file reads is on the
  * CARD_FIELDS whitelist there, and nothing else is passed through, so a column added to
@@ -118,6 +119,51 @@ function invRaiseMusd() {
   return null;
 }
 
+/* ONE TABLE, NOT TWO BLOCKS. Daniil, 20-Sep-2026 (Elentaria run): "Why do we have 2 different
+   blocks with suggested investors?? Should it not be 1 block, formatted as an accurate table, with
+   respective columns?" The two layers are still never blended in what they claim: the last column
+   says why each house is on the list (a first-cheque house matched on sector, stage and location;
+   or a house behind a round on the founder's own field, which is a map and not a call list). A
+   house that is only known from a round on the field carries "not held" in the cheque and
+   geography columns, because the investor table does not hold a row for it. */
+function invCell(text, isNone) {
+  return '<td' + (isNone ? ' class="ivt-none"' : '') + '>' + invEsc(text) + '</td>';
+}
+
+function invStageLine(card) {
+  const s = String(card.stage_bands || '').split(';').map(function (x) { return x.trim(); }).filter(Boolean);
+  return s.length ? s.join(', ') : '';
+}
+
+function invCallableRow(c) {
+  const none = (c.not_published || []);
+  const deal = c.recent_deal
+    ? (c.recent_deal_url
+        ? '<a class="ivt-deal" rel="nofollow noopener" target="_blank" href="' + invEsc(c.recent_deal_url) + '">' + invEsc(c.recent_deal) + '</a>'
+        : invEsc(c.recent_deal)) + ' <em>' + invEsc(invMonth(c.recent_deal_date)) + '</em>'
+      + (c.deal_note ? '<span class="ivt-note">' + invEsc(c.deal_note) + '</span>' : '')
+    : '';
+  const stage = invStageLine(c);
+  return '<tr>'
+    + '<td class="ivt-name">' + invEsc(c.investor) + '</td>'
+    + invCell(c.cheque_line, none.indexOf('cheque') > -1)
+    + invCell(stage || 'not stated', !stage)
+    + invCell(c.geography_line, none.indexOf('geography') > -1)
+    + '<td>' + deal + '</td>'
+    + '<td class="ivt-why">' + invEsc(c.reach || 'sector and stage') + '</td>'
+    + '</tr>';
+}
+
+function invEvidenceRow(e) {
+  const backed = e.backed ? invEsc(e.backed) + (e.n > 1 ? ' <em>+' + (e.n - 1) + ' more on your field</em>' : '') : '';
+  return '<tr class="ivt-ev">'
+    + '<td class="ivt-name">' + invEsc(e.investor) + '</td>'
+    + invCell('not held', true) + invCell('not held', true) + invCell('not held', true)
+    + '<td>' + backed + '</td>'
+    + '<td class="ivt-why">behind a round on your field; growth stage</td>'
+    + '</tr>';
+}
+
 function renderInvestors(payload, mountId) {
   const mount = document.getElementById(mountId || 'investor-blocks');
   if (!mount || !payload) return false;
@@ -136,39 +182,38 @@ function renderInvestors(payload, mountId) {
     }
     cards = cards.slice(0, rule.show || 8);
   }
-  const chips = ev.chips || [];
+  /* A house behind a round on the field that is also a first-cheque match is one row, not two. */
+  const named = {};
+  cards.forEach(function (c) { named[String(c.investor || '').toLowerCase()] = true; });
+  const chips = (ev.chips || []).filter(function (e) { return !named[String(e.investor || '').toLowerCase()]; });
   if (!cards.length && !chips.length) { mount.innerHTML = ''; return false; }
 
-  const html = [];
-  if (cards.length) {
-    html.push('<div class="rd wide"><b class="rd-t">' + invEsc(cal.heading) + '</b>');
-    html.push('<div class="inv-call">' + cards.map(invCallableCard).join('') + '</div>');
-    /* NEVER PADDED, and the page says so rather than looking thin by accident.
-
-       THE SERVER'S NOTE COUNTS WHAT IT SENT, NOT WHAT IS SHOWN. When the browser has done the
-       cheque filter the two differ, and printing "14 houses match" above eight cards would be a
-       plain untruth, so the note is rewritten here from the number actually on the screen. */
-    const shown = cards.length;
-    let note = cal.note;
-    if (rule && rule.apply) {
-      note = (shown < (rule.show || 8))
-        ? shown + ' houses write a cheque the size of your round. We do not pad the list: a shorter '
-          + 'list of houses that write your cheque is worth more than a longer one that does not.'
-        : rule.note;
-    }
-    if (note) html.push('<p class="microcopy" style="margin-top:10px;">' + invEsc(note) + '</p>');
-    html.push('</div>');
+  /* The server's two headings are kept: the first names the table, the second names the grey rows. */
+  const heading = cards.length ? cal.heading : ev.heading;
+  const html = ['<div class="rd wide"><b class="rd-t">' + invEsc(heading) + '</b>'];
+  html.push('<p class="microcopy" style="margin:-2px 0 12px;">'
+    + (cards.length ? 'The white rows write first cheques in your sector and at your stage. ' : '')
+    + (chips.length ? 'The grey rows are ' + invEsc(String(ev.heading || '').toLowerCase()) + ': ' + invEsc(ev.note || '') + ' ' : '')
+    + 'Every figure is what the house publishes; a blank is said as such.</p>');
+  html.push('<div class="ivt-wrap"><table class="ivt"><thead><tr>'
+    + '<th>Fund</th><th>First cheque</th><th>Stages</th><th>Where they invest</th><th>Latest deal in your space</th><th>Why it is here</th>'
+    + '</tr></thead><tbody>');
+  html.push(cards.map(invCallableRow).join(''));
+  html.push(chips.slice(0, 9).map(invEvidenceRow).join(''));
+  html.push('</tbody></table></div>');
+  /* NEVER PADDED, and the page says so rather than looking thin by accident. The server's note
+     counts what it sent, not what is shown; after the browser's cheque filter the two differ, so
+     it is rewritten here from the number on the screen. */
+  let note = cal.note;
+  if (rule && rule.apply) {
+    note = (cards.length < (rule.show || 8))
+      ? cards.length + ' houses write a cheque the size of your round. We do not pad the list: a shorter '
+        + 'list of houses that write your cheque is worth more than a longer one that does not.'
+      : rule.note;
   }
-  if (chips.length) {
-    html.push('<div class="rd wide"><b class="rd-t">' + invEsc(ev.heading) + '</b>');
-    /* THE HONEST LABEL, and it is the difference between our failure mode and vcconf's. It is
-       printed before the names, not after them, because a founder reads the heading and the
-       first row and then decides what this block is. */
-    html.push('<p class="microcopy" style="margin:-2px 0 12px;">' + invEsc(ev.note) + '</p>');
-    html.push('<div class="inv-cols">' + chips.slice(0, 9).map(invEvidenceChip).join('') + '</div>');
-    html.push('</div>');
-  }
-  /* ON EVERY RENDERING OF BOTH LAYERS. Not a page-level footer somebody can move. */
+  if (note) html.push('<p class="microcopy" style="margin-top:10px;">' + invEsc(note) + '</p>');
+  html.push('</div>');
+  /* ON EVERY RENDERING. Not a page-level footer somebody can move. */
   html.push('<p class="microcopy inv-footer">' + invEsc(payload.footer) + '</p>');
   mount.innerHTML = html.join('');
   return true;

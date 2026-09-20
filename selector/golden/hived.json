@@ -15,18 +15,33 @@
      "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 44.12,
+     "high": 10.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 5.97,
+     "low": 8.94,
+     "memo": [
+      {
+       "company": "Delhivery",
+       "date": "May-21",
+       "multiple": 5.97,
+       "reason": "extreme"
+      },
+      {
+       "company": "Gopuff",
+       "date": "Jul-21",
+       "multiple": 44.12,
+       "reason": "extreme"
+      }
+     ],
      "mid": 10.3,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "LTM": 3,
       "RUN_RATE": 1
@@ -41,36 +56,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Delhivery",
-       "mult": 5.97,
-       "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Xpressbees",
-       "mult": 8.94,
-       "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Gorillas",
-       "mult": 10.3,
-       "reason": "shares the language of own; same type of business; same end market; same AI stance",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Gopuff",
-       "mult": 44.12,
-       "reason": "shares the language of own; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "last",
@@ -79,7 +65,7 @@
       "parcel",
       "shipping"
      ],
-     "spread": 7.4,
+     "spread": 1.2,
      "table": [
       {
        "company": "Delhivery",
@@ -89,6 +75,7 @@
        "multiple": 5.97,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -119,11 +106,12 @@
        "multiple": 44.12,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 1.6,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -714,14 +702,29 @@
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 44.12,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 10.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 5.97,
+   "low": 8.94,
+   "memo": [
+    {
+     "company": "Delhivery",
+     "date": "May-21",
+     "multiple": 5.97,
+     "reason": "extreme"
+    },
+    {
+     "company": "Gopuff",
+     "date": "Jul-21",
+     "multiple": 44.12,
+     "reason": "extreme"
+    }
+   ],
    "mid": 10.3,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "LTM": 3,
     "RUN_RATE": 1
@@ -736,36 +739,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Delhivery",
-     "mult": 5.97,
-     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Xpressbees",
-     "mult": 8.94,
-     "reason": "both do Parcel Delivery, Last Mile; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Gorillas",
-     "mult": 10.3,
-     "reason": "shares the language of own; same type of business; same end market; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Gopuff",
-     "mult": 44.12,
-     "reason": "shares the language of own; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "last",
@@ -774,7 +748,7 @@
     "parcel",
     "shipping"
    ],
-   "spread": 7.4,
+   "spread": 1.2,
    "table": [
     {
      "company": "Delhivery",
@@ -784,6 +758,7 @@
      "multiple": 5.97,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -814,11 +789,12 @@
      "multiple": 44.12,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 1.6,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 63,

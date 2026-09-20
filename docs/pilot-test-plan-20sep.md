@@ -28,7 +28,7 @@ So the answer to "keep doing test runs?" is yes, but as G4, with a fixed set of 
 
 Every company below is a fixture. The expected columns come from tonight's run of check 8 (the peer-universe check) on the hand-written tags: how many listed peers the engine finds in the core set and how many private rounds carry a usable multiple. The live site reads the website with the profiler instead of using the hand tags, so a different count is itself a finding (section 4, check 1).
 
-Use each company's own website at step 2 (search the name; fyle.io is the one already used today). Pick the sector from the dropdown as the founder would.
+Use each company's own website at step 2 (search the name; fyle.io is the one already used today). From batch 3 the website comes first and the sector is filled in from the read; change it only if it is wrong, and write down when you did.
 
 | run | company | what it is | fork it should get | expected read (archetype) | listed core | private rounds | why it is in the set |
 |---|---|---|---|---|---|---|---|
@@ -78,14 +78,14 @@ Answer each one yes or no, and where it is no, one sentence and a screenshot. Th
 
 | # | screen | check | what "yes" looks like |
 |---|---|---|---|
-| 1 | step 2 | the read is right | "We read your site as ..." names what the company sells; on the field, "Compared as" shows the expected archetype from the table in section 2. If it differs, write both down: this is the profiler disagreeing with the hand tag, and it decides which peers the founder gets |
+| 1 | step 2 | the read is right | "We read your site as ..." lands under the website box within fifteen seconds and names what the company sells; the sector it fills in is the one you would have picked; on the field, "Compared as" shows the expected archetype from the table in section 2. If it differs, write both down: this is the profiler disagreeing with the hand tag, and it decides which peers the founder gets |
 | 2 | step 3 | the right questions | the extra questions match the fork column in section 2 (a lender is asked for its book; a marketplace for GMV; a brand for GMV and margin). Every "i" opens with "Used for:" and you can tell which figure feeds which row |
 | 3 | step 4 | the plan note reads right | the line leads with the annual figure, names the plan or the trailing rate, and the number matches: revenue times (1 + growth) is the run-rate; the twelve-month sum is a little below it |
 | 4 | field | the rows that should draw, draw | the core peer set on revenue, the gross-profit row where a margin was given, the private row, the gross or per-unit row where the figure was given; the "Not drawn" line under the field names every missing row with a reason you accept |
 | 5 | field | every bar is its own arithmetic | pick one bar: the metric beside it times the multiple beside it equals the ends of the bar (hover the bar; it says the sum). One bar per run is enough |
-| 6 | field | the peers are the right names | hover each multiple: would you put these names in front of an investor for this company? Write down any name that does not belong, with the reason. The count should be close to the "listed core" and "private rounds" columns |
-| 7 | field | the regression behaves | plan 20%: the row draws, reads "read at your 20% planned growth", and shows the callout when R² is under 0.40. Plan 100%: no row, and the "Not drawn" line says your growth sits outside the peers' range, with the range |
-| 8 | below the field | charts, caveats, fix list, investors | chart labels match the questions you answered (GMV where you gave GMV); the honesty lines say something true about this set; the fix list names this company's own numbers; the investors fit the sector and stage |
+| 6 | field | the peers are the right names | hover each multiple: would you put these names in front of an investor for this company? Write down any name that does not belong, with the reason. The count should be close to the "listed core" and "private rounds" columns. On the private row every round is a mark; the hollow marks are the rounds set aside (take-privates at seed, the highest and the lowest), and the bar runs between the rest |
+| 7 | field | the regression behaves | plan 20%: the row draws, reads "read at your 20% planned growth", says how many names were set aside to improve the fit and what R² was with and without them, and shows the weak-fit callout when R² is still under 0.40. Plan 100%: no row, and the "Not drawn" line says your growth sits outside the peers' range, with the range. Hover the multiple: three columns, peer, forecast growth, multiple, and the names set aside under their own heading |
+| 8 | below the field | caveats, fix list, investors | the honesty lines say something true about this set; the fix list names this company's own numbers; the investor table fits the sector and stage, the last column says why each house is there, and no card says your location was not resolved (it is read from where you are). The peer charts are drawn only for a founder who gave no figures |
 | 9 | the whole page | would you show this to the founder? | yes or no. If no, the one thing that stops you. This is the check that matters; the other eight explain it |
 
 ---

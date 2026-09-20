@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 321428.57,
+     "memo": [],
      "mid": 615384.62,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -86,21 +88,48 @@
       "E2open",
       "AuditBoard"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 33.3,
+     "high": 16.0,
      "listed_target_n": 2,
      "listed_target_names": [
       "Semrush",
       "E2open"
      ],
-     "low": 3.46,
-     "mid": 15.0,
-     "n": 6,
+     "low": 15.0,
+     "memo": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "multiple": 4.3,
+       "reason": "take-private"
+      },
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "multiple": 3.46,
+       "reason": "take-private"
+      },
+      {
+       "company": "OneTrust",
+       "date": "Jul-23",
+       "multiple": 11.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Jasper",
+       "date": "Oct-22",
+       "multiple": 33.3,
+       "reason": "extreme"
+      }
+     ],
+     "mid": 16.0,
+     "n": 2,
+     "n_all": 6,
      "period_mix": {
       "FY2025": 1,
       "LTM": 1,
@@ -125,50 +154,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "E2open",
-       "mult": 3.46,
-       "reason": "shares the language of compliance; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "both do Content Marketing; same type of business; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "OneTrust",
-       "mult": 11.3,
-       "reason": "shares the language of compliance, governance; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "AuditBoard",
-       "mult": 15.0,
-       "reason": "both do Compliance Workflow; related type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "FloQast",
-       "mult": 16.0,
-       "reason": "shares the language of compliance, workflow; related type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Jasper",
-       "mult": 33.3,
-       "reason": "shares the language of ad, content; same type of business; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "ad",
@@ -177,7 +163,7 @@
       "governance",
       "workflow"
      ],
-     "spread": 9.6,
+     "spread": 1.1,
      "table": [
       {
        "company": "E2open",
@@ -187,6 +173,7 @@
        "multiple": 3.46,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -197,6 +184,7 @@
        "multiple": 4.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -207,6 +195,7 @@
        "multiple": 11.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -237,11 +226,12 @@
        "multiple": 33.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.7,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -372,7 +362,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -823,17 +813,44 @@
     "E2open",
     "AuditBoard"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 33.3,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 16.0,
    "listed_target_n": 2,
    "listed_target_names": [
     "Semrush",
     "E2open"
    ],
-   "low": 3.46,
-   "mid": 15.0,
-   "n": 6,
+   "low": 15.0,
+   "memo": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "multiple": 4.3,
+     "reason": "take-private"
+    },
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "multiple": 3.46,
+     "reason": "take-private"
+    },
+    {
+     "company": "OneTrust",
+     "date": "Jul-23",
+     "multiple": 11.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Jasper",
+     "date": "Oct-22",
+     "multiple": 33.3,
+     "reason": "extreme"
+    }
+   ],
+   "mid": 16.0,
+   "n": 2,
+   "n_all": 6,
    "period_mix": {
     "FY2025": 1,
     "LTM": 1,
@@ -858,50 +875,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "E2open",
-     "mult": 3.46,
-     "reason": "shares the language of compliance; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "both do Content Marketing; same type of business; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "OneTrust",
-     "mult": 11.3,
-     "reason": "shares the language of compliance, governance; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "AuditBoard",
-     "mult": 15.0,
-     "reason": "both do Compliance Workflow; related type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "FloQast",
-     "mult": 16.0,
-     "reason": "shares the language of compliance, workflow; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "shares the language of ad, content; same type of business; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "ad",
@@ -910,7 +884,7 @@
     "governance",
     "workflow"
    ],
-   "spread": 9.6,
+   "spread": 1.1,
    "table": [
     {
      "company": "E2open",
@@ -920,6 +894,7 @@
      "multiple": 3.46,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -930,6 +905,7 @@
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -940,6 +916,7 @@
      "multiple": 11.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -970,11 +947,12 @@
      "multiple": 33.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.7,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 46,

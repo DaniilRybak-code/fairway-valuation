@@ -11,7 +11,7 @@
       "ARR": 3,
       "NET_REVENUE": 2
      },
-     "bounded": true,
+     "bounded": false,
      "closeness": "STRONG_OVERLAP",
      "control_n": 1,
      "control_names": [
@@ -23,12 +23,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 37.5,
+     "high": 14.9,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 10.3,
+     "low": 13.2,
+     "memo": [
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "multiple": 10.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Applied Intuition",
+       "date": "Jun-25",
+       "multiple": 37.5,
+       "reason": "extreme"
+      }
+     ],
      "mid": 14.5,
-     "n": 5,
+     "n": 3,
+     "n_all": 5,
      "period_mix": {
       "LTM": 1,
       "NTM": 1,
@@ -56,7 +71,7 @@
       "robotics",
       "training"
      ],
-     "spread": 3.6,
+     "spread": 1.1,
      "table": [
       {
        "company": "Oxylabs",
@@ -66,6 +81,7 @@
        "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -106,6 +122,7 @@
        "multiple": 37.5,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -423,7 +440,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -812,7 +829,7 @@
     "ARR": 3,
     "NET_REVENUE": 2
    },
-   "bounded": true,
+   "bounded": false,
    "closeness": "STRONG_OVERLAP",
    "control_n": 1,
    "control_names": [
@@ -820,12 +837,27 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 37.5,
+   "high": 14.9,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 10.3,
+   "low": 13.2,
+   "memo": [
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "multiple": 10.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Applied Intuition",
+     "date": "Jun-25",
+     "multiple": 37.5,
+     "reason": "extreme"
+    }
+   ],
    "mid": 14.5,
-   "n": 5,
+   "n": 3,
+   "n_all": 5,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
@@ -853,7 +885,7 @@
     "robotics",
     "training"
    ],
-   "spread": 3.6,
+   "spread": 1.1,
    "table": [
     {
      "company": "Oxylabs",
@@ -863,6 +895,7 @@
      "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -903,6 +936,7 @@
      "multiple": 37.5,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

@@ -231,6 +231,12 @@
 .ff-bench-note.left { left:26px; }
 .ff-bench-note.has-tip::after { bottom:auto; top:calc(100% + 6px); left:auto; right:0; }
 .ff-bench-note.left.has-tip::after { left:0; right:auto; }
+/* the last-round marker when it falls beyond the bars' scale (20 Sep): named at the edge of its
+   own row, in the marker's colour, the same treatment as the benchmark note above */
+.ff-marker-note { position:absolute; top:50%; transform:translateY(-50%); font-family:var(--mono);
+  font-size:10px; line-height:1.4; color:var(--ff-rust); white-space:nowrap; }
+.ff-marker-note.right { right:0; }
+.ff-marker-note.left { left:0; }
 
 #screen-result .ff-foot { margin-top:14px; }
 .peer-tip small { font-family:var(--mono); font-size:9px; color:var(--ff-mute); margin-left:5px; font-weight:400; }
@@ -252,3 +258,32 @@
 #screen-result .ff-callout { font-size:12px; line-height:1.5; color:var(--ff-ink); background:var(--ff-panel);
   border-left:2px solid var(--ff-rust); padding:7px 12px; margin:2px 0 10px; max-width:78ch; }
 #screen-result .ff-row.weak .ff-bar.reg { opacity:.55; }
+
+/* every private round as a mark on its row (20 Sep): the ones set aside are hollow; the marks
+   never set the scale, and a round beyond the axis is named under the row instead */
+.ff-mark { position:absolute; top:calc(50% - 6px); width:2px; height:12px; margin-left:-1px; background:var(--ff-ink); opacity:.7; z-index:2; }
+.ff-mark.aside { background:transparent; border-left:2px dotted var(--ff-mute); opacity:.9; }
+#screen-result .ff-aside-line { font-size:11.5px; line-height:1.45; color:var(--ff-soft); margin:-2px 0 10px; }
+.peer-tip i.aside > span, .peer-tip i.aside > em { color:var(--ff-mute); }
+.peer-tip small.aside { color:var(--ff-rust); }
+/* the regression hover: peer, forecast growth, own multiple */
+.peer-tip.reg { width:300px; }
+.peer-tip.reg i { display:grid; grid-template-columns:minmax(0,1fr) 52px 56px; gap:0 8px; }
+.peer-tip.reg i em { text-align:right; }
+.peer-tip.reg i.head { font-family:var(--sans); font-size:8.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ff-mute); font-weight:700; }
+.peer-tip.reg b.sub { margin-top:8px; }
+
+/* the investor table (20 Sep): one table, two layers told apart by the last column */
+.ivt-wrap { overflow-x:auto; }
+.ivt { width:100%; border-collapse:collapse; font-size:12.5px; line-height:1.4; }
+.ivt th { text-align:left; font-family:var(--sans); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ff-mute); font-weight:700; padding:6px 10px 8px 0; border-bottom:1px solid var(--ff-rule-hard); }
+.ivt td { padding:9px 10px 9px 0; border-bottom:1px solid var(--ff-rule); vertical-align:top; color:var(--ff-ink); }
+.ivt td.ivt-name { font-family:var(--serif); font-size:15px; font-weight:700; letter-spacing:-.02em; white-space:nowrap; }
+.ivt td.ivt-none { color:var(--ff-mute); font-style:italic; font-weight:400; }
+.ivt td em { font-style:normal; font-family:var(--mono); font-size:10px; color:var(--ff-mute); }
+.ivt td.ivt-why { font-size:10.5px; letter-spacing:.02em; text-transform:uppercase; color:var(--ff-mute); max-width:220px; }
+.ivt .ivt-note { display:block; font-size:11px; color:var(--ff-soft); }
+.ivt a.ivt-deal { color:var(--ff-ink); text-decoration:none; border-bottom:1px solid var(--ff-rule-hard); }
+.ivt tr.ivt-ev td { background:var(--ff-panel); }
+@media (max-width:900px) { .ivt { font-size:12px; } .ivt td.ivt-name { white-space:normal; } }

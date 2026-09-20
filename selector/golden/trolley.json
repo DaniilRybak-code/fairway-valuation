@@ -25,8 +25,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 8.0,
+     "memo": [],
      "mid": 16.34,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "LTM": 2,
       "RUN_RATE": 1
@@ -103,12 +105,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 54.17,
+     "high": 44.34,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 9.52,
+     "low": 25.0,
+     "memo": [
+      {
+       "company": "Cashfree Payments",
+       "date": "Feb-25",
+       "multiple": 9.52,
+       "reason": "extreme"
+      },
+      {
+       "company": "Mollie",
+       "date": "Jun-21",
+       "multiple": 54.17,
+       "reason": "extreme"
+      }
+     ],
      "mid": 44.34,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "FY2024": 1,
       "LTM": 3
@@ -129,7 +146,7 @@
       "global",
       "payouts"
      ],
-     "spread": 5.7,
+     "spread": 1.8,
      "table": [
       {
        "company": "Cashfree Payments",
@@ -139,6 +156,7 @@
        "multiple": 9.52,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -169,11 +187,12 @@
        "multiple": 54.17,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.5,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -609,8 +628,10 @@
    "listed_target_n": 0,
    "listed_target_names": [],
    "low": 8.0,
+   "memo": [],
    "mid": 16.34,
    "n": 3,
+   "n_all": 3,
    "period_mix": {
     "LTM": 2,
     "RUN_RATE": 1

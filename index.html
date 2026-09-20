@@ -398,13 +398,24 @@
         </div>
       </div>
 
+      <!-- STEP 2, WEBSITE FIRST. Daniil, 20-Sep-2026, after the Elentaria run: "Instead of giving
+           the drop-down menu, we could ask for the website straight away ... The description should
+           pop up in Step 2, and then Step 2 could automatically suggest the vertical, and then the
+           user could change it if required." quiz-fork.js asks /api/profile as the website is typed,
+           prints the read under the box, fills the sector from it, and Continue waits up to fifteen
+           seconds for the read (with the wait said on the button and under the box) before letting a
+           founder pick the sector themselves and carry on. -->
       <div class="q-block" data-step="2">
-        <h2 class="q-title">What do you do?</h2>
-        <p class="q-help">Pick the closest. Your website does the real work.
-          <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-sector" onclick="toggleInfo(this)">i</button></p>
-        <p class="q-info" id="info-sector" hidden>The sector sets the listed set and the funds we start from. What you actually sell is read from your website, and that is how the comparable set is chosen for your business rather than for a sector code. The field shows you which set was used.</p>
+        <h2 class="q-title">Your website</h2>
+        <p class="q-help">We read it to see what you sell and who buys it, and choose your comparables from that.
+          <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-site" onclick="toggleInfo(this)">i</button></p>
+        <p class="q-info" id="info-site" hidden>The read takes up to fifteen seconds. It names what you sell and the market you sell into, and that is how the comparable set is chosen for your business rather than for a sector code. If we read it wrong, say so and you get the plain questions. No website? Pick the sector below and carry on.</p>
 
-        <select class="field" id="sector-select" onchange="onSectorPick(this)" aria-label="What you do">
+        <input class="field" id="site-url" type="url" inputmode="url" placeholder="yourcompany.com" autocomplete="url" oninput="if (typeof qfMaybeAsk === 'function') qfMaybeAsk();">
+        <div id="qf-read2" style="display:none;"></div>
+
+        <label class="field-label" for="sector-select" style="margin-top:14px;">Your sector <span class="optional" id="sector-note">Pick the closest.</span></label>
+        <select class="field" id="sector-select" onchange="onSectorPick(this)" aria-label="Your sector">
           <option value="">Choose one</option>
         </select>
 
@@ -412,14 +423,7 @@
           <input class="field" id="sector-other" type="text" placeholder="In your own words, e.g. carbon accounting for shipping" autocomplete="off">
         </div>
 
-        <label class="field-label" for="site-url" style="margin-top:14px;">Your website <span class="optional">Optional</span></label>
-        <input class="field" id="site-url" type="url" inputmode="url" placeholder="yourcompany.com" autocomplete="url" oninput="if (typeof qfMaybeAsk === 'function') qfMaybeAsk();">
-        <!-- THE READ, HERE. Once a sector is picked and a website typed, quiz-fork.js asks
-             /api/profile and prints "We read your site as..." under the box, with "Not right"
-             (Daniil, 20-Sep: the read belongs where the website is entered). Continue never waits
-             on it; if it has not landed, it shows on step 3 instead. -->
-        <div id="qf-read2" style="display:none;"></div>
-        <button class="btn" style="width:100%; margin-top:6px;" id="sector-continue" onclick="submitSector()" disabled>Continue</button>
+        <button class="btn" style="width:100%; margin-top:14px;" id="sector-continue" onclick="submitSector()" disabled>Continue</button>
       </div>
 
       <div class="q-block" data-step="3">
@@ -480,6 +484,10 @@
         </p>
         <p class="q-annual" id="growth-annual"></p>
 
+        <!-- The fork's growth question, when the company has one (the three-month rate for an
+             AI-native company). Drawn here by quiz-fork.js, with the growth question it belongs to. -->
+        <div id="qf-growth-block" style="display:none; margin-top:14px;"></div>
+
         <!-- THE PLAN, TWO WAYS. Daniil, 20-Sep-2026: "give both options to the user, either input
              the next 12 month monetary target (and growth is back calculated), or give growth (and
              monetary target is calculated)". Whichever box was typed last wins, and the other one
@@ -496,6 +504,8 @@
                    placeholder="growth" oninput="onPlanType()" aria-label="Planned revenue growth for the next twelve months, percent">
             <span class="unit">% growth</span>
           </div>
+          <input class="slider" id="plan-slider" type="range" min="-50" max="400" value="0" step="5"
+                 oninput="onPlanSlide()" aria-label="Planned growth slider">
           <div class="num-row" style="margin-top:8px;">
             <span class="unit" id="ntm-cur">$</span>
             <input class="field field-num" id="ntm-exact" type="number" step="1000" min="0"

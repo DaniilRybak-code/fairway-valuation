@@ -18,20 +18,41 @@
      "control_names": [
       "Confluent"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.86,
+     "high": 25.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
-     "low": 9.88,
+     "low": 20.0,
+     "memo": [
+      {
+       "company": "Confluent",
+       "date": "Dec-25",
+       "multiple": 9.88,
+       "reason": "take-private"
+      },
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "multiple": 10.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "multiple": 72.86,
+       "reason": "extreme"
+      }
+     ],
      "mid": 20.5,
-     "n": 6,
+     "n": 3,
+     "n_all": 6,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 5
@@ -46,50 +67,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Confluent",
-       "mult": 9.88,
-       "reason": "shares the language of infrastructure; same type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Oxylabs",
-       "mult": 10.3,
-       "reason": "shares the language of agent, api; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Replit",
-       "mult": 20.0,
-       "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Anthropic",
-       "mult": 20.5,
-       "reason": "both do MCP; same type of business; same kind of customer; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Genspark",
-       "mult": 25.0,
-       "reason": "both do AI Search; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Supabase",
-       "mult": 72.86,
-       "reason": "shares the language of source; related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "agent",
@@ -99,7 +77,7 @@
       "search",
       "source"
      ],
-     "spread": 7.4,
+     "spread": 1.2,
      "table": [
       {
        "company": "Confluent",
@@ -109,6 +87,7 @@
        "multiple": 9.88,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -119,6 +98,7 @@
        "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -159,6 +139,7 @@
        "multiple": 72.86,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -415,7 +396,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -835,16 +816,37 @@
    "control_names": [
     "Confluent"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 72.86,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 25.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
-   "low": 9.88,
+   "low": 20.0,
+   "memo": [
+    {
+     "company": "Confluent",
+     "date": "Dec-25",
+     "multiple": 9.88,
+     "reason": "take-private"
+    },
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "multiple": 10.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "multiple": 72.86,
+     "reason": "extreme"
+    }
+   ],
    "mid": 20.5,
-   "n": 6,
+   "n": 3,
+   "n_all": 6,
    "period_mix": {
     "LTM": 1,
     "RUN_RATE": 5
@@ -859,50 +861,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Confluent",
-     "mult": 9.88,
-     "reason": "shares the language of infrastructure; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Oxylabs",
-     "mult": 10.3,
-     "reason": "shares the language of agent, api; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Replit",
-     "mult": 20.0,
-     "reason": "shares the language of agent; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Anthropic",
-     "mult": 20.5,
-     "reason": "both do MCP; same type of business; same kind of customer; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Genspark",
-     "mult": 25.0,
-     "reason": "both do AI Search; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Supabase",
-     "mult": 72.86,
-     "reason": "shares the language of source; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "agent",
@@ -912,7 +871,7 @@
     "search",
     "source"
    ],
-   "spread": 7.4,
+   "spread": 1.2,
    "table": [
     {
      "company": "Confluent",
@@ -922,6 +881,7 @@
      "multiple": 9.88,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -932,6 +892,7 @@
      "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -972,6 +933,7 @@
      "multiple": 72.86,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

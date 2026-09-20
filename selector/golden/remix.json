@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 2700.0,
+     "memo": [],
      "mid": 21428.57,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 1
@@ -103,18 +105,33 @@
      "closeness": "STRONG_OVERLAP",
      "control_n": 0,
      "control_names": [],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 40.0,
+     "high": 33.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 4.4,
+     "low": 18.0,
+     "memo": [
+      {
+       "company": "Strava",
+       "date": "May-25",
+       "multiple": 4.4,
+       "reason": "extreme"
+      },
+      {
+       "company": "Framer",
+       "date": "Aug-25",
+       "multiple": 40.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 21.0,
-     "n": 5,
+     "n": 3,
+     "n_all": 5,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 4
@@ -129,43 +146,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Strava",
-       "mult": 4.4,
-       "reason": "shares the language of social; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Suno",
-       "mult": 18.0,
-       "reason": "shares the language of creator, generation, tools; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Gamma",
-       "mult": 21.0,
-       "reason": "both do Social Content; same type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Jasper",
-       "mult": 33.3,
-       "reason": "both do Content Generation; related type of business; sold the same way; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Framer",
-       "mult": 40.0,
-       "reason": "shares the language of generation; same type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "content",
@@ -174,7 +155,7 @@
       "social",
       "tools"
      ],
-     "spread": 9.1,
+     "spread": 1.8,
      "table": [
       {
        "company": "Strava",
@@ -184,6 +165,7 @@
        "multiple": 4.4,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -224,6 +206,7 @@
        "multiple": 40.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -928,14 +911,29 @@
    "closeness": "STRONG_OVERLAP",
    "control_n": 0,
    "control_names": [],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 40.0,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 33.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 4.4,
+   "low": 18.0,
+   "memo": [
+    {
+     "company": "Strava",
+     "date": "May-25",
+     "multiple": 4.4,
+     "reason": "extreme"
+    },
+    {
+     "company": "Framer",
+     "date": "Aug-25",
+     "multiple": 40.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 21.0,
-   "n": 5,
+   "n": 3,
+   "n_all": 5,
    "period_mix": {
     "LTM": 1,
     "RUN_RATE": 4
@@ -950,43 +948,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Strava",
-     "mult": 4.4,
-     "reason": "shares the language of social; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Suno",
-     "mult": 18.0,
-     "reason": "shares the language of creator, generation, tools; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Gamma",
-     "mult": 21.0,
-     "reason": "both do Social Content; same type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "both do Content Generation; related type of business; sold the same way; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Framer",
-     "mult": 40.0,
-     "reason": "shares the language of generation; same type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "content",
@@ -995,7 +957,7 @@
     "social",
     "tools"
    ],
-   "spread": 9.1,
+   "spread": 1.8,
    "table": [
     {
      "company": "Strava",
@@ -1005,6 +967,7 @@
      "multiple": 4.4,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -1045,6 +1008,7 @@
      "multiple": 40.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

@@ -486,8 +486,13 @@ for _f in FORKS.values():
 # losing the retention and margin questions for them is a straight loss, and being AI-native tells
 # you nothing about which yardstick applies. So the archetype still picks the fork, and AI-native
 # adds one question on top.
+# The label stood on its own until 20-Sep-2026 ("And over the last three months?") because the
+# question followed the growth question in the old fork step; on the rebuilt quiz it was drawn under
+# the revenue box and Daniil asked what it was. It is drawn on step 4 now, under the growth box, and
+# the label says what it asks.
 AI_NATIVE_EXTRA = [
-  dict(key='growth_3m_pct', label='And over the last three months?', kind='percent', required=False,
+  dict(key='growth_3m_pct', label='Revenue growth over the last three months, if you track it',
+       kind='percent', required=False,
        maps_to='profile.growth_3m', peer_field='growth_pct_at_round',
        why='An annual rate means little for a company doubling every two months, which is what '
            'Cursor disclosed at its Series C. Where this is given we annualise it for the band.'),

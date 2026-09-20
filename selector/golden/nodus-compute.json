@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10285.71,
+     "memo": [],
      "mid": 357142.86,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -96,20 +98,41 @@
      "control_names": [
       "Confluent"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.86,
+     "high": 50.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Confluent"
      ],
-     "low": 9.88,
+     "low": 20.5,
+     "memo": [
+      {
+       "company": "Confluent",
+       "date": "Dec-25",
+       "multiple": 9.88,
+       "reason": "take-private"
+      },
+      {
+       "company": "Oxylabs",
+       "date": "Jul-26",
+       "multiple": 10.3,
+       "reason": "extreme"
+      },
+      {
+       "company": "Supabase",
+       "date": "Oct-25",
+       "multiple": 72.86,
+       "reason": "extreme"
+      }
+     ],
      "mid": 33.0,
-     "n": 6,
+     "n": 3,
+     "n_all": 6,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 5
@@ -124,56 +147,13 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Confluent",
-       "mult": 9.88,
-       "reason": "shares the language of execution, infrastructure; related type of business; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Oxylabs",
-       "mult": 10.3,
-       "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "MIXED"
-      },
-      {
-       "company": "Anthropic",
-       "mult": 20.5,
-       "reason": "related type of business; same kind of customer; same revenue model; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Lovable",
-       "mult": 33.0,
-       "reason": "related type of business; same business function; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Supabase",
-       "mult": 72.86,
-       "reason": "same type of business; same business function; same kind of customer; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "execution",
       "infrastructure"
      ],
-     "spread": 7.4,
+     "spread": 2.4,
      "table": [
       {
        "company": "Confluent",
@@ -183,6 +163,7 @@
        "multiple": 9.88,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -193,6 +174,7 @@
        "multiple": 10.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -233,6 +215,7 @@
        "multiple": 72.86,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -472,7 +455,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -852,16 +835,37 @@
    "control_names": [
     "Confluent"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 72.86,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 50.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Confluent"
    ],
-   "low": 9.88,
+   "low": 20.5,
+   "memo": [
+    {
+     "company": "Confluent",
+     "date": "Dec-25",
+     "multiple": 9.88,
+     "reason": "take-private"
+    },
+    {
+     "company": "Oxylabs",
+     "date": "Jul-26",
+     "multiple": 10.3,
+     "reason": "extreme"
+    },
+    {
+     "company": "Supabase",
+     "date": "Oct-25",
+     "multiple": 72.86,
+     "reason": "extreme"
+    }
+   ],
    "mid": 33.0,
-   "n": 6,
+   "n": 3,
+   "n_all": 6,
    "period_mix": {
     "LTM": 1,
     "RUN_RATE": 5
@@ -876,56 +880,13 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Confluent",
-     "mult": 9.88,
-     "reason": "shares the language of execution, infrastructure; related type of business; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Oxylabs",
-     "mult": 10.3,
-     "reason": "related type of business; same kind of customer; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "MIXED"
-    },
-    {
-     "company": "Anthropic",
-     "mult": 20.5,
-     "reason": "related type of business; same kind of customer; same revenue model; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Lovable",
-     "mult": 33.0,
-     "reason": "related type of business; same business function; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Supabase",
-     "mult": 72.86,
-     "reason": "same type of business; same business function; same kind of customer; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "execution",
     "infrastructure"
    ],
-   "spread": 7.4,
+   "spread": 2.4,
    "table": [
     {
      "company": "Confluent",
@@ -935,6 +896,7 @@
      "multiple": 9.88,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -945,6 +907,7 @@
      "multiple": 10.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -985,6 +948,7 @@
      "multiple": 72.86,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],

@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 357142.86,
+     "memo": [],
      "mid": 1000000.0,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -88,21 +90,48 @@
       "Zuora",
       "AuditBoard"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 150.0,
+     "high": 105.3,
      "listed_target_n": 2,
      "listed_target_names": [
       "E2open",
       "Zuora"
      ],
-     "low": 3.46,
-     "mid": 50.0,
-     "n": 6,
+     "low": 50.0,
+     "memo": [
+      {
+       "company": "E2open",
+       "date": "May-25",
+       "multiple": 3.46,
+       "reason": "take-private"
+      },
+      {
+       "company": "Zuora",
+       "date": "Oct-24",
+       "multiple": 3.81,
+       "reason": "take-private"
+      },
+      {
+       "company": "AuditBoard",
+       "date": "May-24",
+       "multiple": 15.0,
+       "reason": "extreme"
+      },
+      {
+       "company": "Decagon",
+       "date": "Jan-26",
+       "multiple": 150.0,
+       "reason": "extreme"
+      }
+     ],
+     "mid": 105.3,
+     "n": 2,
+     "n_all": 6,
      "period_mix": {
       "FY2025": 1,
       "LTM": 1,
@@ -122,50 +151,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "E2open",
-       "mult": 3.46,
-       "reason": "shares the language of planning; related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Zuora",
-       "mult": 3.81,
-       "reason": "shares the language of revenue; related type of business; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "AuditBoard",
-       "mult": 15.0,
-       "reason": "shares the language of workflow; same type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Clay",
-       "mult": 50.0,
-       "reason": "shares the language of gtm; related type of business; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "SECONDARY"
-      },
-      {
-       "company": "Sierra",
-       "mult": 105.3,
-       "reason": "both do Agentic AI; related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Decagon",
-       "mult": 150.0,
-       "reason": "shares the language of customer; related type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "agentic",
@@ -175,7 +161,7 @@
       "revenue",
       "workflow"
      ],
-     "spread": 43.4,
+     "spread": 2.1,
      "table": [
       {
        "company": "E2open",
@@ -185,6 +171,7 @@
        "multiple": 3.46,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -195,6 +182,7 @@
        "multiple": 3.81,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -205,6 +193,7 @@
        "multiple": 15.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -235,11 +224,12 @@
        "multiple": 150.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.8,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -543,7 +533,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -884,17 +874,44 @@
     "Zuora",
     "AuditBoard"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 150.0,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 105.3,
    "listed_target_n": 2,
    "listed_target_names": [
     "E2open",
     "Zuora"
    ],
-   "low": 3.46,
-   "mid": 50.0,
-   "n": 6,
+   "low": 50.0,
+   "memo": [
+    {
+     "company": "E2open",
+     "date": "May-25",
+     "multiple": 3.46,
+     "reason": "take-private"
+    },
+    {
+     "company": "Zuora",
+     "date": "Oct-24",
+     "multiple": 3.81,
+     "reason": "take-private"
+    },
+    {
+     "company": "AuditBoard",
+     "date": "May-24",
+     "multiple": 15.0,
+     "reason": "extreme"
+    },
+    {
+     "company": "Decagon",
+     "date": "Jan-26",
+     "multiple": 150.0,
+     "reason": "extreme"
+    }
+   ],
+   "mid": 105.3,
+   "n": 2,
+   "n_all": 6,
    "period_mix": {
     "FY2025": 1,
     "LTM": 1,
@@ -914,50 +931,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "E2open",
-     "mult": 3.46,
-     "reason": "shares the language of planning; related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Zuora",
-     "mult": 3.81,
-     "reason": "shares the language of revenue; related type of business; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "AuditBoard",
-     "mult": 15.0,
-     "reason": "shares the language of workflow; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Clay",
-     "mult": 50.0,
-     "reason": "shares the language of gtm; related type of business; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "SECONDARY"
-    },
-    {
-     "company": "Sierra",
-     "mult": 105.3,
-     "reason": "both do Agentic AI; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Decagon",
-     "mult": 150.0,
-     "reason": "shares the language of customer; related type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "agentic",
@@ -967,7 +941,7 @@
     "revenue",
     "workflow"
    ],
-   "spread": 43.4,
+   "spread": 2.1,
    "table": [
     {
      "company": "E2open",
@@ -977,6 +951,7 @@
      "multiple": 3.46,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -987,6 +962,7 @@
      "multiple": 3.81,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -997,6 +973,7 @@
      "multiple": 15.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -1027,11 +1004,12 @@
      "multiple": 150.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.8,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 27,

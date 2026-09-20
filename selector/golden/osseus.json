@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 75.0,
+     "memo": [],
      "mid": 3250.0,
      "n": 2,
+     "n_all": 2,
      "period_mix": {
       "RUN_RATE": 2
      },
@@ -103,12 +105,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 42.0,
+     "high": 37.5,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 20.0,
+     "low": 32.5,
+     "memo": [
+      {
+       "company": "Replit",
+       "date": "Sep-25",
+       "multiple": 20.0,
+       "reason": "extreme"
+      },
+      {
+       "company": "Docker",
+       "date": "Mar-22",
+       "multiple": 42.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 37.5,
-     "n": 4,
+     "n": 2,
+     "n_all": 4,
      "period_mix": {
       "RUN_RATE": 4
      },
@@ -130,7 +147,7 @@
       "test",
       "tooling"
      ],
-     "spread": 2.1,
+     "spread": 1.2,
      "table": [
       {
        "company": "Replit",
@@ -140,6 +157,7 @@
        "multiple": 20.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -170,11 +188,12 @@
        "multiple": 42.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 12.0,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     },
     "REVENUE_GROSS": {
@@ -199,8 +218,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 10.0,
+     "memo": [],
      "mid": 10.0,
      "n": 1,
+     "n_all": 1,
      "period_mix": {
       "NOT STATED": 1
      },
@@ -485,7 +506,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -864,12 +885,27 @@
    "control_names": [],
    "dispersed": false,
    "display": "RANGE",
-   "high": 42.0,
+   "high": 37.5,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 20.0,
+   "low": 32.5,
+   "memo": [
+    {
+     "company": "Replit",
+     "date": "Sep-25",
+     "multiple": 20.0,
+     "reason": "extreme"
+    },
+    {
+     "company": "Docker",
+     "date": "Mar-22",
+     "multiple": 42.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 37.5,
-   "n": 4,
+   "n": 2,
+   "n_all": 4,
    "period_mix": {
     "RUN_RATE": 4
    },
@@ -891,7 +927,7 @@
     "test",
     "tooling"
    ],
-   "spread": 2.1,
+   "spread": 1.2,
    "table": [
     {
      "company": "Replit",
@@ -901,6 +937,7 @@
      "multiple": 20.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -931,11 +968,12 @@
      "multiple": 42.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 12.0,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 53,

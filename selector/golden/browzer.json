@@ -18,20 +18,41 @@
      "control_names": [
       "Semrush"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 47.3,
+     "high": 42.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
-     "low": 4.3,
-     "mid": 33.3,
-     "n": 5,
+     "low": 33.3,
+     "memo": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "multiple": 4.3,
+       "reason": "take-private"
+      },
+      {
+       "company": "Anysphere / Cursor",
+       "date": "Jun-25",
+       "multiple": 19.8,
+       "reason": "extreme"
+      },
+      {
+       "company": "6sense",
+       "date": "Jan-22",
+       "multiple": 47.3,
+       "reason": "extreme"
+      }
+     ],
+     "mid": 42.0,
+     "n": 2,
+     "n_all": 5,
      "period_mix": {
       "LTM": 1,
       "NTM": 1,
@@ -51,43 +72,7 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "both do SEO; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Anysphere / Cursor",
-       "mult": 19.8,
-       "reason": "shares the language of developer, generation; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Jasper",
-       "mult": 33.3,
-       "reason": "both do Content Generation; same type of business; same business function; same kind of customer",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Docker",
-       "mult": 42.0,
-       "reason": "shares the language of developer; related type of business; same revenue model; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "6sense",
-       "mult": 47.3,
-       "reason": "shares the language of generation; same type of business; same business function; same revenue model",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "content",
@@ -95,7 +80,7 @@
       "generation",
       "seo"
      ],
-     "spread": 11.0,
+     "spread": 1.3,
      "table": [
       {
        "company": "Semrush",
@@ -105,6 +90,7 @@
        "multiple": 4.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -115,6 +101,7 @@
        "multiple": 19.8,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -145,11 +132,12 @@
        "multiple": 47.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.7,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -365,7 +353,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -826,16 +814,37 @@
    "control_names": [
     "Semrush"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 47.3,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 42.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
-   "low": 4.3,
-   "mid": 33.3,
-   "n": 5,
+   "low": 33.3,
+   "memo": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "multiple": 4.3,
+     "reason": "take-private"
+    },
+    {
+     "company": "Anysphere / Cursor",
+     "date": "Jun-25",
+     "multiple": 19.8,
+     "reason": "extreme"
+    },
+    {
+     "company": "6sense",
+     "date": "Jan-22",
+     "multiple": 47.3,
+     "reason": "extreme"
+    }
+   ],
+   "mid": 42.0,
+   "n": 2,
+   "n_all": 5,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
@@ -855,43 +864,7 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "both do SEO; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Anysphere / Cursor",
-     "mult": 19.8,
-     "reason": "shares the language of developer, generation; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Jasper",
-     "mult": 33.3,
-     "reason": "both do Content Generation; same type of business; same business function; same kind of customer",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Docker",
-     "mult": 42.0,
-     "reason": "shares the language of developer; related type of business; same revenue model; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "6sense",
-     "mult": 47.3,
-     "reason": "shares the language of generation; same type of business; same business function; same revenue model",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "content",
@@ -899,7 +872,7 @@
     "generation",
     "seo"
    ],
-   "spread": 11.0,
+   "spread": 1.3,
    "table": [
     {
      "company": "Semrush",
@@ -909,6 +882,7 @@
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -919,6 +893,7 @@
      "multiple": 19.8,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -949,11 +924,12 @@
      "multiple": 47.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.7,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 55,

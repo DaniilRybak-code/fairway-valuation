@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 46666.67,
+     "memo": [],
      "mid": 72846.15,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "LTM": 1,
       "RUN_RATE": 1,
@@ -118,20 +120,41 @@
      "control_names": [
       "Semrush"
      ],
-     "dispersed": true,
-     "display": "SCATTER",
+     "dispersed": false,
+     "display": "RANGE",
      "founder_field": "revenue",
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 32.6,
+     "high": 28.0,
      "listed_target_n": 1,
      "listed_target_names": [
       "Semrush"
      ],
-     "low": 4.3,
-     "mid": 14.0,
-     "n": 5,
+     "low": 14.0,
+     "memo": [
+      {
+       "company": "Semrush",
+       "date": "Nov-25",
+       "multiple": 4.3,
+       "reason": "take-private"
+      },
+      {
+       "company": "Buffer",
+       "date": "Oct-14",
+       "multiple": 12.8,
+       "reason": "extreme"
+      },
+      {
+       "company": "Klaviyo",
+       "date": "May-21",
+       "multiple": 32.6,
+       "reason": "extreme"
+      }
+     ],
+     "mid": 28.0,
+     "n": 2,
+     "n_all": 5,
      "period_mix": {
       "LTM": 1,
       "NTM": 1,
@@ -151,50 +174,14 @@
        "founder_revenue": null
       }
      },
-     "points": [
-      {
-       "company": "Semrush",
-       "mult": 4.3,
-       "reason": "shares the language of analysis; same type of business; same business function",
-       "tier": "ADJACENT",
-       "transaction_type": "CONTROL"
-      },
-      {
-       "company": "Buffer",
-       "mult": 12.8,
-       "reason": "shares the language of social; same type of business; same business function; same AI stance",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Yotpo",
-       "mult": 14.0,
-       "reason": "same type of business; same end market; same business function; same AI stance",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Contentsquare",
-       "mult": 28.0,
-       "reason": "shares the language of analysis, product; same type of business; same kind of customer; sold the same way",
-       "tier": "ADJACENT",
-       "transaction_type": "PRIMARY"
-      },
-      {
-       "company": "Klaviyo",
-       "mult": 32.6,
-       "reason": "same type of business; same end market; same business function; same AI stance",
-       "tier": "DIRECT",
-       "transaction_type": "PRIMARY"
-      }
-     ],
+     "points": [],
      "positioning": [],
      "shared_words": [
       "analysis",
       "product",
       "social"
      ],
-     "spread": 7.6,
+     "spread": 2.0,
      "table": [
       {
        "company": "Semrush",
@@ -204,6 +191,7 @@
        "multiple": 4.3,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "take-private",
        "ticker": ""
       },
       {
@@ -214,6 +202,7 @@
        "multiple": 12.8,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -244,11 +233,12 @@
        "multiple": 32.6,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
      "tag_evidence": 0.9,
-     "thin": false,
+     "thin": true,
      "triangulated": false
     }
    }
@@ -385,7 +375,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -621,16 +611,37 @@
    "control_names": [
     "Semrush"
    ],
-   "dispersed": true,
-   "display": "SCATTER",
-   "high": 32.6,
+   "dispersed": false,
+   "display": "RANGE",
+   "high": 28.0,
    "listed_target_n": 1,
    "listed_target_names": [
     "Semrush"
    ],
-   "low": 4.3,
-   "mid": 14.0,
-   "n": 5,
+   "low": 14.0,
+   "memo": [
+    {
+     "company": "Semrush",
+     "date": "Nov-25",
+     "multiple": 4.3,
+     "reason": "take-private"
+    },
+    {
+     "company": "Buffer",
+     "date": "Oct-14",
+     "multiple": 12.8,
+     "reason": "extreme"
+    },
+    {
+     "company": "Klaviyo",
+     "date": "May-21",
+     "multiple": 32.6,
+     "reason": "extreme"
+    }
+   ],
+   "mid": 28.0,
+   "n": 2,
+   "n_all": 5,
    "period_mix": {
     "LTM": 1,
     "NTM": 1,
@@ -650,50 +661,14 @@
      "founder_revenue": null
     }
    },
-   "points": [
-    {
-     "company": "Semrush",
-     "mult": 4.3,
-     "reason": "shares the language of analysis; same type of business; same business function",
-     "tier": "ADJACENT",
-     "transaction_type": "CONTROL"
-    },
-    {
-     "company": "Buffer",
-     "mult": 12.8,
-     "reason": "shares the language of social; same type of business; same business function; same AI stance",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Yotpo",
-     "mult": 14.0,
-     "reason": "same type of business; same end market; same business function; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Contentsquare",
-     "mult": 28.0,
-     "reason": "shares the language of analysis, product; same type of business; same kind of customer; sold the same way",
-     "tier": "ADJACENT",
-     "transaction_type": "PRIMARY"
-    },
-    {
-     "company": "Klaviyo",
-     "mult": 32.6,
-     "reason": "same type of business; same end market; same business function; same AI stance",
-     "tier": "DIRECT",
-     "transaction_type": "PRIMARY"
-    }
-   ],
+   "points": [],
    "positioning": [],
    "shared_words": [
     "analysis",
     "product",
     "social"
    ],
-   "spread": 7.6,
+   "spread": 2.0,
    "table": [
     {
      "company": "Semrush",
@@ -703,6 +678,7 @@
      "multiple": 4.3,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "take-private",
      "ticker": ""
     },
     {
@@ -713,6 +689,7 @@
      "multiple": 12.8,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -743,11 +720,12 @@
      "multiple": 32.6,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
    "tag_evidence": 0.9,
-   "thin": false,
+   "thin": true,
    "triangulated": false
   },
   "private_window_months": 142,

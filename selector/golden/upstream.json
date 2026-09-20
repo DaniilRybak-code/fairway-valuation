@@ -24,8 +24,10 @@
      "listed_target_n": 0,
      "listed_target_names": [],
      "low": 134615.38,
+     "memo": [],
      "mid": 142857.14,
      "n": 3,
+     "n_all": 3,
      "period_mix": {
       "NTM": 1,
       "RUN_RATE": 2
@@ -104,12 +106,27 @@
      "founder_high": null,
      "founder_low": null,
      "founder_metric": null,
-     "high": 72.0,
+     "high": 58.3,
      "listed_target_n": 0,
      "listed_target_names": [],
-     "low": 15.0,
+     "low": 18.3,
+     "memo": [
+      {
+       "company": "Mailchimp",
+       "date": "Sep-21",
+       "multiple": 15.0,
+       "reason": "extreme"
+      },
+      {
+       "company": "Glean",
+       "date": "Jun-25",
+       "multiple": 72.0,
+       "reason": "extreme"
+      }
+     ],
      "mid": 42.9,
-     "n": 7,
+     "n": 5,
+     "n_all": 7,
      "period_mix": {
       "LTM": 2,
       "NTM": 1,
@@ -138,7 +155,7 @@
       "team",
       "tracking"
      ],
-     "spread": 4.8,
+     "spread": 3.2,
      "table": [
       {
        "company": "Mailchimp",
@@ -148,6 +165,7 @@
        "multiple": 15.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       },
       {
@@ -208,6 +226,7 @@
        "multiple": 72.0,
        "recurring_pct": null,
        "retention_pct": null,
+       "set_aside": "extreme",
        "ticker": ""
       }
      ],
@@ -444,7 +463,7 @@
     "house_type": "Venture",
     "investor": "Connect Ventures",
     "not_published": null,
-    "recent_deal": "Zellify?",
+    "recent_deal": "Zellify",
     "recent_deal_date": "2026-05",
     "recent_deal_url": "https://www.connectventures.co/opinions/investing-in-zellify-the-missing-data-layer-for-consumer-growth",
     "stage_bands": "Seed; Series A",
@@ -854,12 +873,27 @@
    ],
    "dispersed": false,
    "display": "RANGE",
-   "high": 72.0,
+   "high": 58.3,
    "listed_target_n": 0,
    "listed_target_names": [],
-   "low": 15.0,
+   "low": 18.3,
+   "memo": [
+    {
+     "company": "Mailchimp",
+     "date": "Sep-21",
+     "multiple": 15.0,
+     "reason": "extreme"
+    },
+    {
+     "company": "Glean",
+     "date": "Jun-25",
+     "multiple": 72.0,
+     "reason": "extreme"
+    }
+   ],
    "mid": 42.9,
-   "n": 7,
+   "n": 5,
+   "n_all": 7,
    "period_mix": {
     "LTM": 2,
     "NTM": 1,
@@ -888,7 +922,7 @@
     "team",
     "tracking"
    ],
-   "spread": 4.8,
+   "spread": 3.2,
    "table": [
     {
      "company": "Mailchimp",
@@ -898,6 +932,7 @@
      "multiple": 15.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     },
     {
@@ -958,6 +993,7 @@
      "multiple": 72.0,
      "recurring_pct": null,
      "retention_pct": null,
+     "set_aside": "extreme",
      "ticker": ""
     }
    ],
