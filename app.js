@@ -148,6 +148,8 @@ function onSectorPick(el) {
   if (other) other.style.display = v === 'Other' ? 'block' : 'none';
   const btn = document.getElementById('sector-continue');
   if (btn) btn.disabled = !v;
+  /* The website read starts here, if a website is already typed (quiz-fork.js). */
+  if (typeof qfMaybeAsk === 'function') qfMaybeAsk();
 }
 
 function submitSector() {
@@ -421,11 +423,11 @@ function onNtmType() {
 }
 
 /* The annual rate g such that twelve months from `monthly`, compounding at (1+g)^(1/12) a month,
-   add up to `target`. Bisection on g in [-90%, +2000%]; null when the target cannot be reached
-   (below twelve flat months at minus 90 per cent, or above the cap). */
+   add up to `target`. Bisection on g in [-90%, +10,000%]; null when the target cannot be reached
+   (below twelve months at minus 90 per cent, or above a hundred times today's figure). */
 function impliedAnnualGrowth(monthly, target) {
   const sumAt = function (g) { return forwardRevenue(monthly, g / 100).ntmM * 1e6; };
-  let lo = -90, hi = 2000;
+  let lo = -90, hi = 10000;
   if (target < sumAt(lo) || target > sumAt(hi)) return null;
   for (let i = 0; i < 60; i++) {
     const mid = (lo + hi) / 2;
@@ -454,18 +456,31 @@ function paintNtm() {
   const basis = (typeof forwardGrowthBasis === 'function') ? forwardGrowthBasis() : '';
   /* forwardAnnualGrowth() is a fraction (0.6 for 60%); the note speaks in per cent. */
   const pct = (f === null) ? null : Math.round(f * 1000) / 10;
+  /* ANNUAL FIRST. Daniil, 20-Sep: step 3 asks for a yearly figure, so this line leads with the
+     yearly figure and names it; the monthly number is the working, not the headline. */
+  const annual = fmtPlain(monthly * 12);
+  /* The twelve-month SUM is what the listed multiples apply to (they are EV over the next twelve
+     months of revenue); the month-twelve run-rate is said beside it so a founder who expects
+     "$90,000 times 1.47" sees where that figure went. */
+  const exit = (f === null) ? null : fmtPlain(Math.round(monthly * 12 * (1 + f)));
+  const runrate = exit ? ' (a run-rate of ' + exit + ' by month twelve)' : '';
   if (overridden) {
+    /* The growth beside a typed target is the back-calculated one, never the trailing rate. */
+    const gp = responses.growth_plan;
+    const implied = (gp === null || gp === undefined) ? null : Math.round(gp * 10) / 10;
     note.textContent = fmtPlain(own) + ' over the next twelve months is your target and is what we price'
-      + (pct === null ? '.' : ', which is ' + pct + '% growth on ' + fmtPlain(monthly) + ' a month today.');
+      + (implied === null
+        ? ', which is beyond any growth rate we can put beside the ' + annual + ' of revenue you gave at step 3.'
+        : ', which is ' + implied + '% growth on the ' + annual + ' of revenue you gave at step 3.');
   } else if (basis === 'plan') {
-    note.textContent = fmtPlain(monthly) + ' a month growing at ' + pct + '% a year adds up to '
-      + fmtPlain(Math.round(sum)) + ' over the next twelve months. Your plan, used as given.';
+    note.textContent = 'Your ' + annual + ' of revenue today, growing at ' + pct + '% a year, gives '
+      + fmtPlain(Math.round(sum)) + ' over the next twelve months' + runrate + '. Your plan, used as given.';
   } else if (basis === 'trailing') {
-    note.textContent = 'Without a plan, your last twelve months carried forward: ' + fmtPlain(monthly)
-      + ' a month at ' + pct + '% a year adds up to ' + fmtPlain(Math.round(sum)) + '. Type either box to change it.';
+    note.textContent = 'Without a plan, your last twelve months carried forward: ' + annual
+      + ' today at ' + pct + '% a year gives ' + fmtPlain(Math.round(sum)) + ' over the next twelve months' + runrate + '. Type either box to change it.';
   } else {
-    note.textContent = fmtPlain(monthly) + ' a month carried forward flat adds up to '
-      + fmtPlain(Math.round(sum)) + '. Type either box to change it.';
+    note.textContent = 'Your ' + annual + ' of revenue today, carried forward flat, gives '
+      + fmtPlain(Math.round(sum)) + ' over the next twelve months. Type either box to change it.';
   }
 }
 
