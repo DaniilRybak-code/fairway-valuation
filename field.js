@@ -7,11 +7,11 @@
  *
  * THE RULE THIS FILE EXISTS TO SERVE: every bar must be reproducible from the
  * two columns beside it. Metric times multiple equals bar. If a row cannot show
- * its own arithmetic, it does not belong here.
+ * its own arithmetic, it does not belong here, and since 20-Sep-2026 it is not
+ * drawn at all: what is missing is named in one line under the field.
  *
- * Locked rows are drawn at a fixed decorative position, never their true one,
- * and the axis is scaled from visible rows only, so the hidden answer cannot be
- * read off the screen with a ruler.
+ * The axis is scaled from the method rows only. The stage benchmark sits under
+ * the axis and never sets the scale.
  *
  * Loaded after app.js and data-public-comps.js.
  */
@@ -24,26 +24,10 @@ function ffMoney(m) {
 }
 
 /* Bare number for the chart, where the currency is already stated on the axis. */
-function ffNum(m) { return m >= 10 ? Math.round(m).toString() : m.toFixed(1); }
-
-/* A cell value that carries a source becomes a button. */
-function ffCell(v, id, cls) {
-  if (!v) return '<div class="' + cls + '"><span class="ff-dash">&mdash;</span></div>';
-  const inner = v.source
-    ? '<button type="button" class="ffm-src" aria-expanded="false" aria-controls="' + id + '" ' +
-      'onclick="ffToggleSource(this)">' + escapeHtml(v.value) + '</button>'
-    : escapeHtml(v.value);
-  return '<div class="' + cls + '">' + inner +
-    (v.sub ? '<span class="sub">' + escapeHtml(v.sub) + '</span>' : '') + '</div>';
-}
-
-function ffToggleSource(btn) {
-  const box = document.getElementById(btn.getAttribute('aria-controls'));
-  if (!box) return;
-  const open = box.style.display !== 'none';
-  box.style.display = open ? 'none' : 'block';
-  btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-  if (typeof track === 'function' && !open) track('ff_source_opened', { metric: btn.textContent.slice(0, 40) });
+function ffNum(m) {
+  if (m >= 10) return Math.round(m).toString();
+  const t = Math.round(m * 10) / 10;
+  return Number.isInteger(t) ? String(t) : t.toFixed(1);
 }
 
 /* Round tick values across the axis, so the scale reads like a printed exhibit
@@ -62,271 +46,291 @@ function ffTicks(lo, hi) {
 
 /* THE ENGINE'S ANSWER, HELD HERE SO THE FIELD CAN READ IT.
  *
- * Until 7-Sep-2026 this file drew nine method rows entirely from figures typed into the HTML and
- * from `r`, the browser's own arithmetic, and four of them printed "in build" where a multiple
- * belongs. That was honest at the time and it was also a second source of truth: the peer charts
- * further down the page came from selector/reveal_payload.py and the field came from here, so one
- * screen could show a range from one run and a caveat from another.
+ * Until 7-Sep-2026 this file drew nine method rows from figures typed into the HTML and printed
+ * "in build" where a multiple belonged. From 7-Sep it read the engine's lanes. From 20-Sep-2026 it
+ * is the landing's field, drawn from the live payload: the same rows in the same order, the same
+ * bar colours, the peers behind each multiple on hover, four group rules and no line per row.
+ * Daniil, 20-Sep, on his first live run: "look at the way the football field looks on the landing
+ * page... that's how it should look."
  *
- * Now the field reads the SAME payload the charts do. reveal-client.js calls
- * renderFieldFromPayload() when the engine answers, and nothing else changes: the metric column is
- * still the founder's own figure held in the browser, the multiple column is the engine's lane, and
- * the bar is still the two multiplied. The rule this file exists to serve is unchanged and is now
- * enforceable, because both numbers come from somewhere nameable.
+ * THE RULES THIS FILE SERVES.
+ *   1. Every bar is the metric beside it times the multiple beside it. A row that cannot show its
+ *      own arithmetic is not drawn.
+ *   2. A row with no number is not drawn at all. Not hatched, not "in build", not "locked". What
+ *      was not drawn and why is said once, in one line under the field, so a missing method reads
+ *      as a method we could not run for this company rather than one we do not have.
+ *   3. The stage benchmark never sets the scale. The axis is scaled from the method rows only. If
+ *      the benchmark falls inside that range it is a marker; if it falls outside, it is a note at
+ *      the edge of the axis with the figure, and the bars keep their width (Daniil, 20-Sep: "it
+ *      should not impact the perception of the rest of the football field").
+ *   4. The listed lane is priced on the founder's NEXT twelve months, because the listed multiples
+ *      are enterprise value over next-twelve-months revenue. The private lane is priced on the
+ *      founder's ARR TODAY, because the private multiples were computed on ARR or last-twelve-months
+ *      revenue at the round (of 219 priced rounds, 93 on ARR or run-rate, 120 on LTM or annual
+ *      revenue, none forward). Daniil, 20-Sep: "would generally apply those multiples to current ARR
+ *      given by the founder". Until 20-Sep both rows multiplied the NTM figure and the private row
+ *      overstated by the forward growth.
  *
- * NULL IS THE NORMAL STATE, NOT AN ERROR. Before the engine answers, and on any deploy where it
- * does not answer at all, this stays null and every row prints "in build" exactly as before. The
- * page degrades to what it did yesterday rather than to a blank.
+ * NULL IS THE NORMAL STATE BEFORE THE ENGINE ANSWERS. With no payload the field shows the rows the
+ * page can draw on its own (the last round and the unrefined range) and nothing else.
  */
 var FF_PAYLOAD = null;
 var FF_LAST_R = null;
+var FF_PROFILER = null;
+var FF_FIGURES = null;
 
-/* The lane a row prices on, and null when the engine has not produced one. A locked lane on the
-   free tier carries its peer NAMES and no figures (rule E8), so `low` being null is the lock
-   speaking and the row stays locked, which is what it already was. */
+/* The lane a row prices on, and null when the engine has not produced one or the lane carries no
+   figures (a locked lane on the free tier keeps its names and loses its numbers, rule E8). */
 function ffLane(lane, basis) {
   if (!FF_PAYLOAD || !FF_PAYLOAD.ranges) return null;
   const l = FF_PAYLOAD.ranges[lane];
   if (!l) return null;
-  const r = l[basis] || l[Object.keys(l)[0]];
+  const r = basis ? l[basis] : l[Object.keys(l)[0]];
   if (!r || r.low === null || r.low === undefined) return null;
   return r;
 }
 
-/* The multiple cell for a lane, with the working printed beside it: how many names it is drawn
-   from and, where the payload carries them, which ones. */
-function ffLaneMult(rng, what) {
-  const names = (rng.peers || []).map(function (x) { return x.company || x; }).filter(Boolean);
-  return {
-    value: ffNum(rng.low) + 'x to ' + ffNum(rng.high) + 'x',
-    sub: 'median ' + ffNum(rng.mid) + 'x',
-    source: what + ' Drawn from ' + rng.n + ' priced ' + (rng.n === 1 ? 'name' : 'names')
-      + (names.length ? ': ' + names.join(', ') + '.' : '.')
-      + (rng.display === 'DIAMOND'
-        ? ' One name is not a range, so this is a marker rather than a spread.'
-        : (rng.display === 'SCATTER'
-          ? ' These names are comparable to you and not to each other, so they are shown as points rather than averaged.'
-          : ''))
-  };
+/* THE PEERS BEHIND A MULTIPLE, as the landing shows them: name and the multiple applied, one per
+   line, on hover. Rounds carry their date beside the name, because a 2022 multiple is a 2022 price. */
+function ffPeerTip(rng, unit, header, note) {
+  const peers = (rng.peers || []).slice().sort(function (a, b) {
+    return (Number(b.multiple) || 0) - (Number(a.multiple) || 0);
+  });
+  if (!peers.length) return '';
+  const rows = peers.slice(0, 12).map(function (p) {
+    const name = '<span>' + escapeHtml(p.company || p.ticker || '') + (p.date ? '<small>' + escapeHtml(p.date) + '</small>' : '') + '</span>';
+    const m = (typeof p.multiple === 'number') ? (unit === 'x' ? ffNum(p.multiple) + 'x' : ffPerUnit(p.multiple)) : '';
+    return '<i>' + name + '<em>' + m + '</em></i>';
+  }).join('');
+  const more = peers.length > 12 ? '<u>and ' + (peers.length - 12) + ' more</u>' : '';
+  return '<div class="peer-tip"><b>' + (header || 'Peer &middot; applied multiple') + '</b>' + rows + more
+    + (note ? '<u>' + note + '</u>' : '') + '</div>';
 }
+
+/* HOW THE RANGE IS CUT FROM THE NAMES, said under the list, because a founder who sees a peer at
+   8.2x above a range that stops at 6.3x deserves the reason. The listed lane runs from the lower
+   to the upper quartile of its peers (match_reference.py, the listed summary), the private lane
+   from its lowest to its highest round. */
+function ffCutNote(rng, lane) {
+  const n = (rng.peers || []).length;
+  if (n < 2) return '';
+  if (lane === 'listed') return 'The range is the middle of these ' + n + ': the top and the bottom are set aside.';
+  return 'The range is the full spread of these ' + n + ' rounds.';
+}
+
+function ffPerUnit(v) {
+  if (v >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'm';
+  if (v >= 1e3) return '$' + (v / 1e3).toFixed(1) + 'k';
+  return '$' + Math.round(v);
+}
+
+/* The multiple cell: the range, how many names, and the hover table. */
+function ffMultCell(rng, subLabel, unit, header, lane) {
+  const u = unit || 'x';
+  const one = ffOneName(rng);
+  const fmt = function (v) { return u === 'x' ? ffNum(v) + 'x' : ffPerUnit(v); };
+  const value = one ? fmt(rng.low) : fmt(rng.low) + ' &ndash; ' + fmt(rng.high);
+  /* A round whose revenue was disclosed as "more than" gives a multiple that is a ceiling, so the
+     top of the range is "at most" (the engine's `bounded`). */
+  const sub = subLabel + (rng.bounded ? ', top is a ceiling' : '') + (rng.display === 'SCATTER' ? ', they disagree' : '');
+  return { html: value, sub: sub, tip: ffPeerTip(rng, u, header, ffCutNote(rng, lane)) };
+}
+
+/* ONE NAME IS NEVER A RANGE (rule A7). The engine says so with display DIAMOND; the field draws
+   the row as a point and says whose. */
+function ffOneName(rng) { return rng.display === 'DIAMOND' || rng.n < 2; }
+/* The words for a range in a hover: "10x to 46x", or "10x" when it is one name. */
+function ffMults(rng) { return ffOneName(rng) ? ffNum(rng.low) + 'x' : ffNum(rng.low) + 'x to ' + ffNum(rng.high) + 'x'; }
+function ffMoneys(m, rng) { return ffOneName(rng) ? ffMoney(m * rng.low) : ffMoney(m * rng.low) + ' to ' + ffMoney(m * rng.high); }
+
+/* THE BAR FOR A METRIC TIMES A RANGE: a bar, a point when the range is one name, and a bar marked
+   `scatter` when the engine says the names disagree too much for a band (display SCATTER). */
+function ffSpan(rng, metric, bar) {
+  if (ffOneName(rng)) return { point: metric * rng.low, pointBar: true, bar: bar };
+  return { low: metric * rng.low, high: metric * rng.high, bar: bar + (rng.display === 'SCATTER' ? ' scatter' : '') };
+}
+
+/* One method row. `low`/`high` in $m draw a bar; `point` draws a marker; neither means the row is
+   not drawn and its `why` goes into the footnote. */
+function ffRow(o) { if (o.span) { Object.assign(o, o.span); delete o.span; } return o; }
 
 function ffBuildRows(r) {
   const rows = [];
   const sector = responses.sector === 'Other' ? 'Other' : (responses.sector || 'Other');
   const cur = responses.currency || 'USD';
-  const raiseM = r.raise;
+  const stage = responses.stage || '';
+  const notDrawn = [];
 
-  const IN_BUILD = 'Being wired to live comparable-company data. Until it is, this row shows the metric it will price rather than a number we invented.';
+  /* THE FOUNDER'S THREE FIGURES, and which row each one prices. */
+  const arrM = r.runRateM;                      /* ARR today: the private lane */
+  const ntmM = r.ntmM;                          /* next twelve months: the listed lane */
+  const gm = (responses.gross_margin === null || responses.gross_margin === undefined) ? null : responses.gross_margin / 100;
+  const ntmGpM = (ntmM !== null && gm !== null) ? ntmM * gm : null;
 
-  /* ---- 1. Last round. A marker, feeding nothing. */
+  /* ---- Last round. A marker, feeding nothing. */
   if (r.markerM) {
     const when = responses.last_round_date ? prettyMonth(responses.last_round_date) : 'date not given';
     const kind = responses.last_round_type === 'SAFE or note cap' ? 'cap' : 'pre-money';
-    rows.push({
-      group: 'Where you are today',
-      parameter: 'Last round',
-      basis: 'Marker only, feeds nothing',
-      metric: { value: ffMoney(r.markerM), sub: kind },
-      mult: null,
-      point: r.markerM, marker: true,
-      pointNote: when,
-      locked: false
-    });
+    rows.push(ffRow({
+      group: '', cls: 'lr-row', parameter: 'Last round', basis: 'Marker only, feeds nothing',
+      metric: { value: ffMoney(r.markerM), sub: kind + ', ' + when },
+      mult: null, point: r.markerM, marker: true, bar: ''
+    }));
   }
 
-  /* ---- 2. Stage benchmark, market context. */
-  const anchor = STAGE_ANCHOR[responses.stage];
-  if (anchor && anchor.post_median_m) {
-    const medianLocal = cur === 'USD' ? anchor.post_median_m : fxConvert(anchor.post_median_m, 'USD', cur);
-    rows.push({
-      group: 'Where you are today',
-      parameter: 'Stage benchmark',
-      basis: 'Market context, not a valuation of you',
-      metric: { value: '$' + anchor.post_median_m.toFixed(1) + 'm', sub: responses.stage + ' median',
-        source: anchor.source + '. ' + anchor.note + ' A cross-sector median is market context, not a valuation of your company: half the companies in it sit below this line.' +
-          (cur !== 'USD' && medianLocal ? ' Converted at ' + (FX.perEur[cur] / FX.perEur.USD).toFixed(4) + ' ' + cur + ' per USD, ' + FX.source + ', ' + FX.date + '.' : '') },
-      mult: { value: 'less ' + ffMoney(raiseM), sub: 'your raise' },
-      point: medianLocal ? medianLocal - raiseM : null,
-      unplotted: medianLocal ? null : 'No published ECB rate for ' + cur + ', so this is left unconverted rather than converted at a rate we cannot source.',
-      locked: false, context: true
-    });
-  }
-
-  /* ---- 3. The unrefined range. Kept, plotted, and labelled for what it is. */
+  /* ---- Public trading multiples. */
   const pc = PUBLIC_COMPS.sectors[sector];
-  const runRateM = r.runRateM;
-  if (pc && runRateM > 0 && r.ntmM) {
-    const a = runRateM * pc.ev_sales, b = r.ntmM * pc.ev_sales;
-    rows.push({
+  if (pc && arrM > 0 && ntmM) {
+    const a = arrM * pc.ev_sales, b = ntmM * pc.ev_sales;
+    rows.push(ffRow({
+      group: 'Public trading multiples', cls: 'unref',
+      parameter: 'Unrefined range', tag: 'Unrefined', basis: 'Before any comparable set is chosen',
+      metric: { value: ffMoney(arrM) + ' &middot; ' + ffMoney(ntmM), sub: 'ARR &middot; NTM revenue',
+        source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' + (pc.note ? ' ' + pc.note : '') },
+      mult: { html: pc.ev_sales.toFixed(1) + 'x', sub: pc.n + ' listed firms',
+        tipText: pc.industry + ': every listed company in the industry, from the largest in the world down, with no adjustment for the fact that you are private and small. The low end is ' + pc.ev_sales.toFixed(1) + 'x on your ARR today, the high end the same multiple on your next twelve months.' },
+      low: Math.min(a, b), high: Math.max(a, b), bar: 'unrefined',
+      barTip: ffMoney(arrM) + ' of ARR and ' + ffMoney(ntmM) + ' of NTM revenue, each times ' + pc.ev_sales.toFixed(1) + 'x: ' + ffMoney(Math.min(a, b)) + ' to ' + ffMoney(Math.max(a, b)) + '.'
+    }));
+  }
+
+  const listedRev = ffLane('listed', 'REVENUE');
+  if (listedRev && ntmM) {
+    const m = ffMultCell(listedRev, listedRev.n + ' core peer' + (listedRev.n === 1 ? '' : 's'), 'x', 'Peer &middot; EV / NTM revenue', 'listed');
+    rows.push(ffRow({
       group: 'Public trading multiples',
-      parameter: 'Unrefined range',
-      basis: 'Before any comparable set is chosen',
-      metric: { value: ffMoney(runRateM) + ' · ' + ffMoney(r.ntmM), sub: 'ARR · NTM revenue' },
-      mult: { value: pc.ev_sales.toFixed(1) + 'x', sub: pc.n + ' listed firms',
-        source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' +
-          (pc.note ? ' ' + pc.note : '') +
-          ' The low end is ' + pc.ev_sales.toFixed(1) + 'x on your ARR today, the high end is the same multiple on your next twelve months. This is every listed company in the industry, from the largest in the world down, with no adjustment for the fact that you are private and small. The rows below narrow it to companies actually like yours, which is the whole point.' },
-      low: Math.min(a, b), high: Math.max(a, b),
-      locked: false, unrefined: true
-    });
-  } else if (pc) {
-    rows.push({
+      parameter: 'Core peer set', basis: 'EV / NTM revenue &middot; ' + listedRev.n + ' named peer' + (listedRev.n === 1 ? '' : 's'),
+      metric: { value: ffMoney(ntmM), sub: 'next twelve months', source: ffNtmSource(r) },
+      mult: m, span: ffSpan(listedRev, ntmM, 'grey'),
+      barTip: ffMoney(ntmM) + ' of your NTM revenue, multiplied by the ' + ffMults(listedRev) + (ffOneName(listedRev) ? ' of your one core peer: ' : ' range implied by your ' + listedRev.n + ' core peers: ') + ffMoneys(ntmM, listedRev) + '.'
+    }));
+  } else if (FF_PAYLOAD) {
+    notDrawn.push('the core peer set on revenue (' + (ntmM ? 'no listed peer with a usable multiple' : 'no revenue given') + ')');
+  }
+
+  const listedGp = ffLane('listed', 'GROSS_PROFIT');
+  if (listedGp && ntmGpM) {
+    const m = ffMultCell(listedGp, 'same peers', 'x', 'Peer &middot; EV / gross profit', 'listed');
+    rows.push(ffRow({
       group: 'Public trading multiples',
-      parameter: 'Unrefined range',
-      basis: 'Before any comparable set is chosen',
-      metric: { value: 'no revenue yet' },
-      mult: { value: pc.ev_sales.toFixed(1) + 'x', sub: pc.n + ' listed firms',
-        source: PUBLIC_COMPS.source + ', ' + PUBLIC_COMPS.vintage + '. ' + PUBLIC_COMPS.universe + '.' },
-      unplotted: 'Nothing to apply the multiple to until there is a revenue figure.',
-      locked: false, unrefined: true
+      parameter: 'Core peer set', basis: 'EV / gross profit &middot; same peers',
+      metric: { value: ffMoney(ntmGpM), sub: 'NTM gross profit', source: 'Your next twelve months of revenue at your ' + Math.round(gm * 100) + '% gross margin.' },
+      mult: m, span: ffSpan(listedGp, ntmGpM, 'grey2'),
+      barTip: ffMoney(ntmGpM) + ' of NTM gross profit, multiplied by the ' + ffMults(listedGp) + ' implied by the same peers on gross profit: ' + ffMoneys(ntmGpM, listedGp) + '.'
+    }));
+  }
+
+  const reg = FF_PAYLOAD && FF_PAYLOAD.regression;
+  if (reg && typeof reg.low === 'number' && ntmM) {
+    /* The points the line was fitted through, shown the way the peer sets are: name and multiple.
+       The engine calls the multiple `mult` here and `multiple` in the lanes. */
+    const regPeers = (reg.peers || []).map(function (p) { return { company: p.company, ticker: p.ticker, multiple: p.mult }; });
+    rows.push(ffRow({
+      group: 'Public trading multiples',
+      parameter: 'Regression analysis', basis: 'Multiple vs growth, fitted on the peer set',
+      metric: { value: ffMoney(ntmM), sub: 'NTM revenue', source: ffNtmSource(r) },
+      mult: { html: ffNum(reg.low) + 'x &ndash; ' + ffNum(reg.high) + 'x', sub: reg.n + ' peers, R&sup2; ' + reg.r2.toFixed(2),
+        tip: ffPeerTip({ peers: regPeers }, 'x', 'Fitted through &middot; own multiple. Read at your ' + Math.round(reg.growth) + '% growth, a tenth either side: ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x') },
+      low: ntmM * reg.low, high: ntmM * reg.high, bar: 'reg',
+      barTip: ffMoney(ntmM) + ' of NTM revenue at ' + ffNum(reg.low) + 'x to ' + ffNum(reg.high) + 'x off the regression: ' + ffMoney(ntmM * reg.low) + ' to ' + ffMoney(ntmM * reg.high) + '.'
+    }));
+  } else if (reg && reg.refused === 'OUT_OF_RANGE') {
+    notDrawn.push('the growth regression (your ' + Math.round(reg.growth) + '% growth sits outside the ' + reg.peer_growth_low + '% to ' + reg.peer_growth_high + '% your listed peers grow at, so the fitted line would be an extrapolation)');
+  } else if (FF_PAYLOAD && r.trailingGrowth === null) {
+    notDrawn.push('the growth regression (no growth rate given)');
+  } else if (FF_PAYLOAD) {
+    notDrawn.push('the growth regression (the fit across your peers is too weak to publish)');
+  }
+
+  /* ---- Private rounds. */
+  const priv = ffLane('private', 'REVENUE');
+  if (priv && arrM > 0) {
+    const m = ffMultCell(priv, priv.n + ' matched round' + (priv.n === 1 ? '' : 's'), 'x', 'Round &middot; revenue multiple', 'private');
+    rows.push(ffRow({
+      group: 'Private rounds',
+      parameter: 'Precedent transactions', basis: 'Revenue multiple at pricing',
+      metric: { value: ffMoney(arrM), sub: 'ARR today', source: 'Your ARR today, because these rounds were priced on the revenue the company had at the time of the round, not on a forecast.' },
+      mult: m, span: ffSpan(priv, arrM, 'priv'),
+      barTip: ffMoney(arrM) + ' of your ARR today, multiplied by the ' + ffMults(priv) + ' that investors paid in the ' + priv.n + ' matched round' + (priv.n === 1 ? '' : 's') + ': ' + ffMoneys(arrM, priv) + '.'
+    }));
+  } else if (FF_PAYLOAD) {
+    notDrawn.push('the precedent transactions (' + (arrM > 0 ? 'no matched round with a usable multiple' : 'no revenue given') + ')');
+  }
+
+  /* Per-user and other private readings, wherever the browser holds the founder's own count. The
+     arithmetic is priceCharts() in reveal-figures.js, the same one check 15 recomputes. */
+  /* priceCharts works in US dollar millions (the figures are converted before they are multiplied);
+     the axis is in the founder's currency, so a per-unit row is brought back at the same ECB rate,
+     and left undrawn rather than mis-scaled when there is no rate. */
+  const usdToLocal = cur === 'USD' ? 1 : ((typeof fxConvert === 'function') ? fxConvert(1, 'USD', cur) : null);
+  if (FF_PAYLOAD && FF_FIGURES && typeof priceCharts === 'function' && usdToLocal) {
+    priceCharts(FF_PAYLOAD.charts, FF_FIGURES).forEach(function (c) {
+      if (c.lane !== 'private' || c.basis === 'REVENUE' || !c.priced) return;
+      const rng = ffLane('private', c.basis);
+      if (!rng) return;
+      const perUnit = (typeof unitOf === 'function' && unitOf(c.basis) !== 'multiple');
+      /* The metric in the founder's currency, in millions, so metric times multiple is the bar in
+         the axis unit: a count times dollars per unit is dollars, hence the million for per-unit. */
+      const metricM = c.founder_metric * usdToLocal / (perUnit ? 1e6 : 1);
+      /* The engine's label is "dollars of enterprise value per paying subscriber" or "enterprise
+         value to gross revenue"; the row says the same in the landing's shorthand. */
+      const noun = String(c.label || '').replace(/^dollars of enterprise value per /, '').replace(/^enterprise value to /, '');
+      const basisText = perUnit ? 'EV per ' + noun : 'EV / ' + noun;
+      const count = Math.round(c.founder_metric).toLocaleString('en-GB');
+      const m = ffMultCell(rng, perUnit ? 'per ' + noun : 'same rounds', perUnit ? '$' : 'x', 'Round &middot; ' + (perUnit ? 'paid per ' + noun : 'multiple'), 'private');
+      rows.push(ffRow({
+        group: 'Private rounds',
+        parameter: 'Precedent transactions', basis: escapeHtml(basisText) + ' &middot; same rounds',
+        metric: { value: perUnit ? count : ffMoney(c.founder_metric * usdToLocal), sub: escapeHtml(perUnit ? noun + 's today' : noun + ', same period as your ARR') },
+        mult: m, span: ffSpan(rng, metricM, 'priv2'),
+        barTip: (perUnit ? count + ' ' + noun + 's' : ffMoney(c.founder_metric * usdToLocal) + ' of ' + noun) + ', times what the same rounds paid: ' + ffMoneys(metricM, rng) + '.'
+      }));
     });
   }
 
-  /* ---- 4. NTM revenue. */
-  rows.push({
-    group: 'Public trading multiples',
-    parameter: 'NTM revenue',
-    basis: 'Median of your core peer set',
-    metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'next twelve months',
-      source: r.ntmM === null ? 'Give an exact monthly revenue figure and this becomes a number.'
-        : 'The sum of your next twelve months, built from ' + fmtPlain(responses.revenue_exact || 0) + ' a month growing at ' +
-          (r.forwardGrowth === null ? 'no assumed growth' : Math.round(r.forwardGrowth) + '% a year') + '. ' +
-          (r.forwardBasis === 'plan'
-            ? 'That is the growth you told us you plan, used exactly as you gave it. We apply no haircut and no coefficient of our own to it.'
-            : (r.forwardBasis === 'trailing'
-              ? 'You did not give a plan, so that is your last twelve months carried forward unchanged.'
-              : 'Derived from the growth band you chose. An exact figure replaces it.')) +
-          ' Forward consensus revenue is a sum, so ours is a sum.' },
-    mult: ffLane('listed', 'REVENUE')
-      ? ffLaneMult(ffLane('listed', 'REVENUE'), 'Enterprise value over next-twelve-months revenue, across your core listed peers.')
-      : { value: 'in build', source: IN_BUILD },
-    point: (r.ntmM !== null && ffLane('listed', 'REVENUE')) ? r.ntmM * ffLane('listed', 'REVENUE').mid : null,
-    low: (r.ntmM !== null && ffLane('listed', 'REVENUE')) ? r.ntmM * ffLane('listed', 'REVENUE').low : null,
-    high: (r.ntmM !== null && ffLane('listed', 'REVENUE')) ? r.ntmM * ffLane('listed', 'REVENUE').high : null,
-    locked: !(r.ntmM !== null && ffLane('listed', 'REVENUE')),
-    pending: !ffLane('listed', 'REVENUE')
-  });
-
-  /* ---- 5. Month-twelve ARR, same peers. */
-  rows.push({
-    group: 'Public trading multiples',
-    parameter: 'ARR, month 12',
-    basis: 'Same peers, forward run-rate',
-    metric: { value: r.exitArrM === null ? 'needs revenue' : ffMoney(r.exitArrM), sub: 'run-rate in a year',
-      source: r.exitArrM === null ? 'Give an exact monthly revenue figure and this becomes a number.'
-        : 'Your run-rate a year from now at the growth you gave us, not the twelve-month sum, which is why it is the larger of the two. This row values you at a future date. The more of your revenue that recurs, the better that basis holds.' },
-    mult: ffLane('listed', 'REVENUE')
-      ? ffLaneMult(ffLane('listed', 'REVENUE'), 'The same listed peers, applied to your run-rate a year out rather than to the twelve-month sum.')
-      : { value: 'in build', source: IN_BUILD },
-    point: (r.exitArrM !== null && ffLane('listed', 'REVENUE')) ? r.exitArrM * ffLane('listed', 'REVENUE').mid : null,
-    low: (r.exitArrM !== null && ffLane('listed', 'REVENUE')) ? r.exitArrM * ffLane('listed', 'REVENUE').low : null,
-    high: (r.exitArrM !== null && ffLane('listed', 'REVENUE')) ? r.exitArrM * ffLane('listed', 'REVENUE').high : null,
-    locked: !(r.exitArrM !== null && ffLane('listed', 'REVENUE')),
-    pending: !ffLane('listed', 'REVENUE')
-  });
-
-  /* ---- 6. Private rounds. A multiple, never a valuation. */
-  const revLabel = responses.revenue_exact > 0
-    ? ffMoney((responses.revenue_exact * 0.8) / 1e6) + ' to ' + ffMoney((responses.revenue_exact * 1.25) / 1e6)
-    : (responses.revenue || 'pre-revenue');
-  rows.push({
-    group: 'Private rounds',
-    parameter: 'Comparable private rounds',
-    basis: [responses.stage, sector].filter(Boolean).join(' · '),
-    metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'matched on ' + revLabel + ' MRR' },
-    /* THE PRIVATE LANE IS THE LOCKED ONE ON THE FREE TIER. ffLane returns null when the payload
-       carries names and no figures, so this row keeps saying "in build" for a free founder, which
-       is rule E8 doing exactly what it says: the figures are absent from the payload rather than
-       drawn and covered over. */
-    mult: ffLane('private', 'REVENUE')
-      ? ffLaneMult(ffLane('private', 'REVENUE'), 'The multiple, never the valuation. Another company’s post-money tells you nothing without the revenue underneath it, so every round in this set carries a revenue figure and a link to where it came from, or it is not in the set.')
-      : { value: 'in build',
-          source: 'The multiple, never the valuation. Another company’s post-money tells you nothing without the revenue underneath it, so every round in this set carries a revenue figure and a link to where it came from, or it is not in the set.' },
-    point: (r.ntmM !== null && ffLane('private', 'REVENUE')) ? r.ntmM * ffLane('private', 'REVENUE').mid : null,
-    low: (r.ntmM !== null && ffLane('private', 'REVENUE')) ? r.ntmM * ffLane('private', 'REVENUE').low : null,
-    high: (r.ntmM !== null && ffLane('private', 'REVENUE')) ? r.ntmM * ffLane('private', 'REVENUE').high : null,
-    locked: !(r.ntmM !== null && ffLane('private', 'REVENUE')),
-    pending: !ffLane('private', 'REVENUE')
-  });
-
-  /* ---- 7 to 10. The paid rows. These stay locked after launch. */
-  rows.push({
-    group: 'Public trading multiples',
-    parameter: 'Growth-adjusted',
-    basis: 'Fitted on the peer regression',
-    metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'NTM revenue' },
-    mult: null, locked: true, paid: true
-  });
-
-  rows.push({
-    group: 'Discounted cash flow',
-    parameter: 'Discounted cash flow',
-    basis: 'Cost of capital from peer beta',
-    metric: { value: 'your plan', sub: 'send a link and it opens',
-      source: 'Unlevered beta for each company in your peer set at its own capital structure, median taken, relevered. Risk-free rate from the government curve, equity risk premium from Damodaran, who publishes it monthly. The size and stage premium is the reviewer’s judgement, and it is the part you cannot get anywhere else.' },
-    mult: null, locked: true, paid: true
-  });
-
-  if (r.ebitdaM) {
-    rows.push({
-      group: 'Public trading multiples',
-      parameter: 'NTM EBITDA',
-      basis: 'Peer median, forward',
-      metric: { value: ffMoney(r.ebitdaM), sub: 'last twelve months' },
-      mult: { value: 'in build', source: IN_BUILD },
-      locked: true, pending: true
-    });
+  if (FF_PAYLOAD) {
+    notDrawn.push('the discounted cash flow and the reviewer band (both come with the banker read, once you share your figures)');
   }
 
-  rows.push({
-    group: 'Private rounds',
-    parameter: 'Precedents, growth-adjusted',
-    basis: 'Fitted across the matched rounds',
-    metric: { value: r.ntmM === null ? 'needs revenue' : ffMoney(r.ntmM), sub: 'NTM revenue' },
-    mult: null, locked: true, paid: true
-  });
-
-  rows.push({
-    group: "The reviewer's conclusion",
-    parameter: 'Reviewer band',
-    basis: 'Where inside these you actually sit',
-    metric: { value: 'all rows', sub: 'read by a banker' },
-    mult: null, locked: true, paid: true, conclusion: true
-  });
-
-  /* THE FIELD IS ORGANISED BY METHOD, and this is the part the landing page always showed and
-     the reveal did not. Daniil, 29-Aug: the reveal field "does not really look like the one we have
-     on first page, no split into public trading multiples vs private rounds vs DCF". A banker reads
-     a football field by method, because the question is never "what is the number" but "which
-     approaches agree and which do not". Four rows in a flat list do not answer that. Four rows
-     under three headings do.
-
-     THE DISCOUNTED CASH FLOW ROW STAYS IN THE FIELD EVEN THOUGH IT IS NOT DISPLAYED. It sits under
-     its own heading with a redacted bar, so a founder can see that the method is run and held back,
-     rather than concluding we cannot do it. A method missing from the exhibit reads as a method we
-     do not have. */
-  const order = ffGroupOrder();
-  return rows
-    .map(function (row, i) { return [order.indexOf(row.group || ''), i, row]; })
-    .sort(function (x, y) { return (x[0] - y[0]) || (x[1] - y[1]); })
-    .map(function (t) { return t[2]; });
+  return { rows: rows, notDrawn: notDrawn, stage: stage };
 }
 
-/* The reading order of the exhibit. Context first, then the two market-observed methods, then the
-   intrinsic one, then the human. A group not listed here sorts to the front, which is loud enough
-   to notice. */
-function ffGroupOrder() {
-  return ['Where you are today', 'Public trading multiples', 'Private rounds',
-          'Discounted cash flow', "The reviewer's conclusion"];
+function ffNtmSource(r) {
+  const monthly = responses.revenue_exact || 0;
+  if (!(monthly > 0) || r.ntmM === null) return 'Give a revenue figure and this becomes a number.';
+  const own = responses.ntm_revenue_exact;
+  if (own !== null && own !== undefined && own > 0) {
+    return 'Your own target for the next twelve months, ' + fmtPlain(own) + ', used as you gave it.';
+  }
+  return 'The sum of your next twelve months, built from ' + fmtPlain(monthly) + ' a month growing at '
+    + (r.forwardGrowth === null ? 'no assumed growth' : Math.round(r.forwardGrowth) + '% a year') + '. '
+    + (r.forwardBasis === 'plan' ? 'That is the growth you plan, used exactly as you gave it.'
+      : (r.forwardBasis === 'trailing' ? 'You gave no plan, so that is your last twelve months carried forward.'
+        : 'Derived from the growth band you chose.'))
+    + ' Forward consensus revenue is a sum, so ours is a sum.';
+}
+
+/* ---------------- the stage benchmark: a marker inside the scale, a note outside it ---------------- */
+function ffBenchmark(r) {
+  const anchor = STAGE_ANCHOR[responses.stage];
+  if (!anchor || !anchor.post_median_m) return null;
+  const cur = responses.currency || 'USD';
+  const medianLocal = cur === 'USD' ? anchor.post_median_m : fxConvert(anchor.post_median_m, 'USD', cur);
+  if (!medianLocal) return null;
+  return {
+    value: medianLocal - r.raise,
+    label: responses.stage + ' median, less your raise',
+    text: 'Median ' + responses.stage + ' post-money of $' + anchor.post_median_m.toFixed(1) + 'm (' + anchor.source + '), less the ' + ffMoney(r.raise) + ' you are raising: ' + ffMoney(medianLocal - r.raise) + '. A cross-sector median, market context and not a valuation of you.'
+  };
 }
 
 /* ---------------- render ---------------- */
 
-/* CALLED BY reveal-client.js WHEN THE ENGINE ANSWERS. Stores the payload and redraws the field
-   from it. Separate from renderField so that the page's own first draw, which happens before any
-   request comes back, is unchanged and still works with no engine at all. */
-function renderFieldFromPayload(payload, _figures) {
+/* CALLED BY reveal-client.js WHEN THE ENGINE ANSWERS. */
+function renderFieldFromPayload(payload, figures, profiler) {
   FF_PAYLOAD = payload || null;
+  FF_FIGURES = figures || null;
+  FF_PROFILER = profiler || null;
   if (FF_LAST_R) renderField(FF_LAST_R);
 }
 
@@ -335,12 +339,12 @@ function renderField(r) {
   const wrap = document.getElementById('ff');
   if (!wrap) return;
 
-  const rows = ffBuildRows(r);
+  const built = ffBuildRows(r);
+  const rows = built.rows;
 
-  /* Axis from visible values only. Locked rows never contribute. */
+  /* AXIS FROM THE METHOD ROWS ONLY. The benchmark never contributes (rule 3 above). */
   const plotted = [];
   rows.forEach(function (row) {
-    if (row.locked) return;
     if (typeof row.low === 'number') plotted.push(row.low, row.high);
     if (typeof row.point === 'number') plotted.push(row.point);
   });
@@ -354,74 +358,107 @@ function renderField(r) {
   const pct = v => Math.max(0, Math.min(100, ((v - aLo) / (aHi - aLo)) * 100));
 
   const ticks = ffTicks(aLo, aHi);
-  const grid = ticks.map(t => '<i style="left:' + pct(t).toFixed(2) + '%"></i>').join('');
-
   const cur = (typeof curSymbol === 'function') ? curSymbol().trim() : '$';
-  let html = '<div class="ffx-head"><div>Method</div><div>Metric</div><div>Multiple</div>' +
-    '<div>Implied pre-money, ' + escapeHtml(cur) + 'm</div></div>';
+
+  /* The card's head names the unit, as the landing's does. */
+  const cap = document.querySelector('#ff-card .cap');
+  if (cap) cap.innerHTML = 'Implied pre-money, ' + escapeHtml(cur) + 'm<span class="hover-hint">hover a figure, multiple or bar for the working</span>';
+  wrap.classList.add('ffx');
+
+  let html = '';
+
+  /* READ AS. The engine's read of the company, in one line, because the peers follow from it and
+     the founder is the person best placed to say it is wrong. */
+  if (FF_PROFILER && FF_PROFILER.archetype) {
+    const sells = String(FF_PROFILER.product_tags || '').split('|').filter(Boolean).slice(0, 3).join(', ');
+    html += '<p class="ff-readas">Compared as <b>' + escapeHtml(FF_PROFILER.archetype) + '</b>'
+      + (sells ? ', selling ' + escapeHtml(sells.toLowerCase()) : '') + '. '
+      + '<button type="button" class="link-btn" onclick="backToStart()">Not right? Start again</button></p>';
+  }
+
+  /* THE SAFE SENTENCE. Daniil, 20-Sep-2026: a founder at pre-seed or seed should be told that the
+     round is most likely a SAFE, so the bars are read as reference and not as a price. */
+  if (built.stage === 'Pre-seed' || built.stage === 'Seed') {
+    html += '<p class="ff-safe">At ' + escapeHtml(built.stage.toLowerCase()) + ', the round is most likely a SAFE with a cap: the cap is set by the round size and the ownership investors expect, not by comparables. Read the bars as what the market pays for revenue like yours, not as your price.</p>';
+  }
 
   let lastGroup = null;
   rows.forEach(function (row, i) {
-    if ((row.group || '') !== lastGroup) {
-      lastGroup = row.group || '';
-      html += '<div class="ff-group"><span>' + escapeHtml(lastGroup) + '</span></div>';
+    if (row.group && row.group !== lastGroup) {
+      lastGroup = row.group;
+      html += '<div class="ff-group">' + escapeHtml(lastGroup) + '</div>';
     }
     let cell;
-    if (row.locked) {
-      /* Neutral position, never the real one. */
-      const l = row.conclusion ? 34 : (24 + (i * 7) % 22);
-      const w = row.conclusion ? 24 : 30;
-      cell = '<div class="ff-track"><div class="ff-line"></div>' +
-        '<div class="ff-bar redacted" style="left:' + l + '%;width:' + w + '%"></div></div>';
-    } else if (typeof row.low === 'number') {
+    if (typeof row.low === 'number') {
       const l = pct(row.low), h = pct(row.high);
-      const labels = (h - l) < 16
-        ? '<div class="ff-point-label' + (l < 12 ? ' anchor-l' : (h > 88 ? ' anchor-r' : '')) + '" style="left:' +
-          ((l + h) / 2).toFixed(2) + '%">' + escapeHtml(ffNum(row.low) + ' – ' + ffNum(row.high)) + '</div>'
-        : '<div class="ff-end lo" style="left:' + l.toFixed(2) + '%">' + escapeHtml(ffNum(row.low)) + '</div>' +
-          '<div class="ff-end hi" style="left:' + h.toFixed(2) + '%">' + escapeHtml(ffNum(row.high)) + '</div>';
-      cell = '<div class="ff-track"><div class="ff-line"></div>' +
-        '<div class="ff-bar' + (row.unrefined ? ' unrefined' : '') + '" style="left:' + l.toFixed(2) +
-        '%;width:' + Math.max(1.5, h - l).toFixed(2) + '%"></div>' + labels + '</div>';
+      const narrow = (h - l) < 16;
+      const labels = narrow
+        ? '<div class="ff-point-label' + (l < 12 ? ' anchor-l' : (h > 88 ? ' anchor-r' : '')) + '" style="left:' + ((l + h) / 2).toFixed(2) + '%">' + escapeHtml(ffNum(row.low) + ' – ' + ffNum(row.high)) + '</div>'
+        : '<div class="ff-end lo" style="left:' + l.toFixed(2) + '%">' + escapeHtml(ffNum(row.low)) + '</div>'
+          + '<div class="ff-end hi" style="left:' + h.toFixed(2) + '%">' + escapeHtml(ffNum(row.high)) + '</div>';
+      cell = '<div class="ff-track' + (row.barTip ? ' has-tip' : '') + '"' + (row.barTip ? ' data-tip="' + escapeHtml(row.barTip) + '"' : '') + '><div class="ff-line"></div>'
+        + '<div class="ff-bar ' + (row.bar || '') + '" style="left:' + l.toFixed(2) + '%;width:' + Math.max(1.5, h - l).toFixed(2) + '%"></div>' + labels + '</div>';
+    } else if (typeof row.point === 'number' && row.pointBar) {
+      /* One name: a point on the scale, never a bar of no width. */
+      const at = pct(row.point);
+      const cls = at < 12 ? ' anchor-l' : (at > 88 ? ' anchor-r' : '');
+      cell = '<div class="ff-track' + (row.barTip ? ' has-tip' : '') + '"' + (row.barTip ? ' data-tip="' + escapeHtml(row.barTip) + '"' : '') + '><div class="ff-line"></div>'
+        + '<div class="ff-bar ' + (row.bar || '') + ' one" style="left:' + at.toFixed(2) + '%;width:4px"></div>'
+        + '<div class="ff-point-label' + cls + '" style="left:' + at.toFixed(2) + '%">' + escapeHtml(ffNum(row.point)) + ', one name</div></div>';
     } else if (typeof row.point === 'number') {
       const at = pct(row.point);
       const cls = at < 12 ? ' anchor-l' : (at > 88 ? ' anchor-r' : '');
-      cell = '<div class="ff-track"><div class="ff-line"></div>' +
-        (row.marker
-          ? '<div class="ff-diamond" style="left:' + at.toFixed(2) + '%"></div>'
-          : '<div class="ff-bar" style="left:' + at.toFixed(2) + '%;width:3px"></div>') +
-        '<div class="ff-point-label' + (row.marker ? ' marker' : '') + cls + '" style="left:' + at.toFixed(2) + '%">' +
-        escapeHtml(ffNum(row.point)) + '</div></div>';
+      cell = '<div class="ff-track"><div class="ff-line"></div>'
+        + '<div class="ff-diamond" style="left:' + at.toFixed(2) + '%"></div>'
+        + '<div class="ff-point-label marker' + cls + '" style="left:' + at.toFixed(2) + '%">' + escapeHtml(ffNum(row.point)) + '</div></div>';
     } else {
-      cell = '<div class="ff-track empty"><span>' + escapeHtml(row.unplotted || 'Not drawn') + '</span></div>';
+      return;
     }
 
-    const tag = row.paid ? '<span class="lock-tag paid-tag">Locked</span>'
-      : (row.pending ? '<span class="lock-tag">In build</span>'
-      : (row.unrefined ? '<span class="lock-tag unrefined-tag">Unrefined</span>' : ''));
+    const tag = row.tag ? '<span class="lock-tag unrefined-tag">' + escapeHtml(row.tag) + '</span>' : '';
+    const metric = row.metric
+      ? '<div class="ff-metric' + (row.metric.source ? ' has-tip' : '') + '"' + (row.metric.source ? ' data-tip="' + escapeHtml(row.metric.source) + '"' : '') + '>' + row.metric.value
+        + (row.metric.sub ? '<span class="sub">' + row.metric.sub + '</span>' : '') + '</div>'
+      : '<div class="ff-metric"></div>';
+    let mult;
+    if (!row.mult) {
+      mult = '<div class="ff-mult">&mdash;</div>';
+    } else if (row.mult.tip) {
+      mult = '<div class="ff-mult has-peers">' + row.mult.html + '<span class="sub">' + row.mult.sub + '</span>' + row.mult.tip + '</div>';
+    } else {
+      mult = '<div class="ff-mult' + (row.mult.tipText ? ' has-tip' : '') + '"' + (row.mult.tipText ? ' data-tip="' + escapeHtml(row.mult.tipText) + '"' : '') + '>' + row.mult.html + '<span class="sub">' + row.mult.sub + '</span></div>';
+    }
 
-    html += '<div class="ff-row' + (row.locked ? ' locked' : '') + (row.conclusion ? ' conclusion' : '') + '">' +
-      '<div class="ff-param"><strong>' + escapeHtml(row.parameter) + tag + '</strong>' +
-        '<span>' + escapeHtml(row.basis) + '</span></div>' +
-      ffCell(row.metric, 'ffs-m-' + i, 'ff-metric') +
-      ffCell(row.mult, 'ffs-x-' + i, 'ff-mult') +
-      '<div class="ff-cell">' + grid + cell + '</div>' +
-      (row.metric && row.metric.source ? '<div class="ffm-source" id="ffs-m-' + i + '" style="display:none">' + escapeHtml(row.metric.source) + '</div>' : '') +
-      (row.mult && row.mult.source ? '<div class="ffm-source" id="ffs-x-' + i + '" style="display:none">' + escapeHtml(row.mult.source) + '</div>' : '') +
-      '</div>';
+    html += '<div class="ff-row ' + (row.cls || '') + '">'
+      + '<div class="ff-param"><strong>' + escapeHtml(row.parameter) + tag + '</strong><span>' + row.basis + '</span></div>'
+      + metric + mult
+      + '<div class="ff-cell">' + cell + '</div>'
+      + '</div>';
   });
 
-  html += '<div class="ffx-axis"><div></div><div></div><div></div><div class="ff-cell">' +
-    ticks.map(t => '<b style="left:' + pct(t).toFixed(2) + '%">' + ffNum(t) + '</b>').join('') +
-    '</div></div>';
+  html += '<div class="ffx-axis"><div></div><div></div><div></div><div class="ff-cell">'
+    + ticks.map(t => '<b style="left:' + pct(t).toFixed(2) + '%">' + ffNum(t) + '</b>').join('')
+    + '</div></div>';
 
-  const drawn = rows.filter(x => !x.locked && (typeof x.low === 'number' || typeof x.point === 'number')).length;
-  const build = rows.filter(x => x.pending).length;
-  const paid = rows.filter(x => x.paid).length;
-  html += '<p class="ff-foot">Every drawn bar is the reference metric multiplied by the range beside it. ' +
-    'Tap any figure to see the publication it came from and its date. ' +
-    drawn + ' drawn, ' + build + ' being wired to live peer data, ' + paid +
-    ' in the reviewed report. Locked bars sit in a neutral position, never their real one.</p>';
+  /* THE STAGE BENCHMARK, in a row of its own under the axis: a marker where it falls inside the
+     scale, a note at the edge where it falls outside. Either way the bars above keep their width. */
+  const bench = ffBenchmark(r);
+  if (bench) {
+    let mark;
+    if (bench.value >= aLo && bench.value <= aHi) {
+      const at = pct(bench.value);
+      const cls = at < 14 ? ' anchor-l' : (at > 86 ? ' anchor-r' : '');
+      mark = '<div class="ff-bench has-tip' + cls + '" data-tip="' + escapeHtml(bench.text) + '" style="left:' + at.toFixed(2) + '%"><i></i><span>' + escapeHtml(bench.label) + ' ' + ffNum(bench.value) + '</span></div>';
+    } else {
+      const side = bench.value > aHi ? 'right' : 'left';
+      mark = '<div class="ff-bench-note ' + side + ' has-tip" data-tip="' + escapeHtml(bench.text) + '">' + (side === 'left' ? '&larr; ' : '') + escapeHtml(bench.label) + ': ' + escapeHtml(ffMoney(bench.value)) + ', off this scale' + (side === 'right' ? ' &rarr;' : '') + '</div>';
+    }
+    html += '<div class="ff-bench-row"><div></div><div></div><div></div><div class="ff-cell">' + mark + '</div></div>';
+  }
+
+  if (built.notDrawn.length) {
+    html += '<p class="ff-foot">Not drawn: ' + escapeHtml(built.notDrawn.join('; ')) + '.</p>';
+  }
 
   wrap.innerHTML = html;
   wrap.style.display = 'block';

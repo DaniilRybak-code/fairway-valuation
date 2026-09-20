@@ -67,7 +67,7 @@ renderMarquee('marquee-track-2');
 
 /* ---------------- quiz ---------------- */
 let currentStep = 1;
-const totalSteps = 9;
+const totalSteps = 6;   /* six since 20-Sep-2026; the step table is in docs/STATUS-2026-09.md */
 const responses = { variant: variant, started_at: new Date().toISOString() };
 
 function showScreen(id) {
@@ -83,15 +83,38 @@ function renderStep() {
   document.querySelectorAll('.q-block').forEach(b => {
     b.style.display = (parseInt(b.dataset.step) === currentStep ? 'block' : 'none');
   });
-  /* STEP 3 IS THE FORK, WHEN WE HAVE ONE. qfShowIfReady draws the founder's own questions and
-     hides the plain revenue block; with no fork it hides itself and the plain block stands, which
-     is the page exactly as it was before the forks were wired. */
+  /* STEP 3 CARRIES THE FORK'S EXTRAS, when we have them. qfShowIfReady draws the founder's own
+     questions under the ARR box (or one line saying the website is being read); with no fork it
+     hides itself and the step is ARR and margin, which every founder can answer. */
   if (currentStep === 3 && typeof qfShowIfReady === 'function') qfShowIfReady();
   else { const qf = document.getElementById('qf-block'); if (qf) qf.style.display = 'none'; }
   document.getElementById('step-label').textContent = 'Step ' + currentStep + ' of ' + totalSteps;
   document.getElementById('progress-fill').style.width = (currentStep / totalSteps * 100) + '%';
   document.getElementById('back-link').textContent = currentStep === 1 ? '← Back to start' : '← Back';
+  /* THE PRIVACY PARAGRAPH IS PRINTED ONCE, on step 1, and is one tap away on every other step.
+     Daniil, 20-Sep-2026: the same paragraph on every step was most of what made the quiz crowded. */
+  const priv = document.getElementById('privacy-line-quiz');
+  const privShort = document.getElementById('privacy-short');
+  if (priv && privShort) {
+    priv.style.display = currentStep === 1 ? '' : 'none';
+    privShort.style.display = currentStep === 1 ? 'none' : '';
+    const b = privShort.querySelector('.info-btn');
+    if (b) b.setAttribute('aria-expanded', 'false');
+  }
   track('quiz_step_view', { step: currentStep });
+}
+
+/* THE "i". Every explanation that used to sit under a question as a paragraph is behind one of
+   these now: the question, the input and one line are what a founder sees; the reasoning is a tap
+   away. One function, used by every step. */
+function toggleInfo(btn) {
+  const id = btn.getAttribute('aria-controls');
+  const box = id ? document.getElementById(id) : null;
+  if (!box) return;
+  const open = box.hasAttribute('hidden') ? false : (box.style.display !== 'none');
+  if (open) { box.setAttribute('hidden', ''); box.style.display = 'none'; }
+  else { box.removeAttribute('hidden'); box.style.display = ''; }
+  btn.setAttribute('aria-expanded', open ? 'false' : 'true');
 }
 
 function answer(key, value) {
@@ -105,60 +128,38 @@ function goBack() {
   else { backToStart(); }
 }
 
-/* ---------------- sector, multi-select ----------------
-   A company is rarely one box. Picking several is more informative than forcing
-   a single choice, and the first one picked leads: it decides which peer set and
-   which investor list we start from, and the rest sharpen the peer selection.
-   Nothing advances the step, so the website field below can actually be typed in. */
+/* ---------------- sector, one dropdown ----------------
+   Daniil, 20-Sep-2026: thirty chips cannot be scanned, so the sector is one dropdown. It still
+   leads the listed set and the investor list; what the company actually sells is read from the
+   website by the profiler. `sectors` stays a list of one so nothing downstream changes shape. */
 
-const chosenSectors = [];
-
-const sectorGrid = document.getElementById('sector-grid');
-if (sectorGrid) {
+const sectorSelect = document.getElementById('sector-select');
+if (sectorSelect) {
   SECTORS.forEach(function (s) {
-    const b = document.createElement('button');
-    b.className = 'opt';
-    b.type = 'button';
-    b.textContent = s;
-    b.onclick = function () { toggleSector(s, b); };
-    sectorGrid.appendChild(b);
+    const o = document.createElement('option');
+    o.value = s; o.textContent = s;
+    sectorSelect.appendChild(o);
   });
 }
 
-function toggleSector(s, btn) {
-  const i = chosenSectors.indexOf(s);
-  if (i === -1) {
-    if (chosenSectors.length >= 3) return;
-    chosenSectors.push(s); btn.classList.add('on');
-  } else {
-    chosenSectors.splice(i, 1); btn.classList.remove('on');
-  }
+function onSectorPick(el) {
+  const v = el.value || '';
   const other = document.getElementById('sector-other-wrap');
-  if (other) other.style.display = chosenSectors.indexOf('Other') !== -1 ? 'block' : 'none';
-  paintSectorState();
-}
-
-function paintSectorState() {
-  const read = document.getElementById('sector-read');
+  if (other) other.style.display = v === 'Other' ? 'block' : 'none';
   const btn = document.getElementById('sector-continue');
-  const n = chosenSectors.length;
-  if (read) {
-    read.textContent = n === 0
-      ? 'Pick the closest. You can pick up to three, and the first one leads.'
-      : (n === 1 ? chosenSectors[0] + '. Add a second if you straddle two.'
-        : chosenSectors.join(' · ') + '. The first one leads.');
-  }
-  if (btn) btn.disabled = n === 0;
+  if (btn) btn.disabled = !v;
 }
 
 function submitSector() {
-  if (!chosenSectors.length) return;
-  responses.sectors = chosenSectors.slice();
-  /* The first pick is the primary: peer set, investor list and copy tables all
-     key off it. The others go to the reviewer and to the peer selection. */
-  responses.sector = chosenSectors[0];
-  const v = document.getElementById('sector-other').value.trim();
-  responses.sector_detail = (chosenSectors.indexOf('Other') !== -1 ? (v || null) : (v || null));
+  const sel = document.getElementById('sector-select');
+  const v = sel ? sel.value : '';
+  if (!v) return;
+  responses.sectors = [v];
+  responses.sector = v;
+  const own = document.getElementById('sector-other');
+  responses.sector_detail = (own && own.value.trim()) || null;
+  const site = document.getElementById('site-url');
+  responses.website = (site && site.value.trim()) || null;
   track('quiz_answer', {
     step: 2, key: 'sector', value: responses.sector,
     all: responses.sectors, detail: responses.sector_detail, has_website: !!responses.website
@@ -166,8 +167,8 @@ function submitSector() {
   /* ASK WHO THIS FOUNDER IS, NOW. The fork is chosen from their archetype, the archetype comes
      from the profiler, and the profiler needs what they do and their website, which is exactly
      what step 2 just collected. The call is started here and NOT waited on: the founder moves to
-     step 3 immediately, and if the answer lands in time they get their fork's questions instead of
-     the plain revenue one. Nothing about this holds a founder up. */
+     step 3 immediately; step 3 shows a one-line "reading your website" until the answer lands, and
+     the fork's extra questions appear under the revenue box when it does. */
   if (typeof qfAsk === 'function') qfAsk();
   currentStep = 3; renderStep();
 }
@@ -207,32 +208,36 @@ function fmtPlain(n) {
   return curSymbol() + Math.round(n).toLocaleString('en-GB');
 }
 
+/* THE FIGURE IS ARR, TYPED ONCE. Daniil, 20-Sep-2026: ask for ARR and show the monthly figure as
+   a memo. Everything downstream (the bands, the run-rate, the "matched on" label, the ARR basis
+   in reveal-figures.js) reads `revenue_exact` as a MONTHLY figure, and it still does: ARR divided
+   by twelve lands there, and `arr` carries the annual figure the founder typed. Neither leaves
+   the browser (rule E9). */
 function paintRevenue(v, source) {
   responses.revenue_exact = v;
+  responses.arr = v > 0 ? v * 12 : null;
   responses.revenue = revenueBand(v);
   const read = document.getElementById('rev-read');
-  const follow = document.getElementById('rev-followups');
-  if (source !== 'type') document.getElementById('rev-exact').value = v || '';
-  if (source !== 'slide') document.getElementById('rev-slider').value = revenueToSlider(v);
+  if (source !== 'type') {
+    const box = document.getElementById('arr-exact');
+    if (box) box.value = v > 0 ? Math.round(v * 12) : '';
+  }
+  if (!read) return;
   if (v > 0) {
-    read.innerHTML = '<strong>' + fmtPlain(v) + ' a month, about ' + fmtPlain(v * 12) +
-      ' of ARR.</strong> <button type="button" class="link-btn" onclick="setPreRevenue()">We are pre-revenue</button>';
-    follow.style.display = 'block';
+    read.innerHTML = '<strong>' + fmtPlain(v * 12) + ' a year, about ' + fmtPlain(v) + ' a month.</strong> ' +
+      '<button type="button" class="link-btn" onclick="setPreRevenue()">We are pre-revenue</button>';
   } else {
-    read.innerHTML = 'Type the number or drag the slider. <button type="button" class="link-btn" onclick="setPreRevenue()">We are pre-revenue</button>';
-    follow.style.display = 'none';
+    read.innerHTML = 'Type the figure. <button type="button" class="link-btn" onclick="setPreRevenue()">We are pre-revenue</button>';
   }
 }
 
-function onRevType() {
-  const v = parseFloat(document.getElementById('rev-exact').value);
-  paintRevenue(isNaN(v) || v < 0 ? 0 : v, 'type');
-}
-function onRevSlide() {
-  paintRevenue(sliderToRevenue(parseInt(document.getElementById('rev-slider').value, 10)), 'slide');
+function onArrType() {
+  const v = parseFloat(document.getElementById('arr-exact').value);
+  paintRevenue(isNaN(v) || v < 0 ? 0 : v / 12, 'type');
 }
 function setPreRevenue() {
-  document.getElementById('rev-exact').value = '';
+  const box = document.getElementById('arr-exact');
+  if (box) box.value = '';
   paintRevenue(0, null);
   responses.recurring_pct = null;
   responses.revenue_model = null;
@@ -266,101 +271,37 @@ function onCurrency() {
 }
 
 (function bootCurrency() {
-  /* Best guess from the browser first, so nothing is ever blank, then the edge
-     header refines it. Anything outside the four we support falls back to USD. */
-  const lang = (navigator.language || '').toUpperCase();
-  const byLang = { GB: 'GBP', CA: 'CAD',
-    IE: 'EUR', DE: 'EUR', FR: 'EUR', ES: 'EUR', IT: 'EUR', NL: 'EUR',
-    BE: 'EUR', AT: 'EUR', PT: 'EUR', FI: 'EUR', GR: 'EUR', EE: 'EUR', LT: 'EUR', LV: 'EUR' };
-  setCurrency(byLang[lang.split('-')[1]] || 'USD', 'boot');
-  fetch('/api/geo')
-    .then(r => r.json())
-    .then(function (g) {
-      if (g && g.currency) { responses.country = g.country || null; setCurrency(g.currency, 'boot'); }
-    })
-    .catch(function () { /* keep the browser guess */ });
+  /* USD BY DEFAULT. Daniil, 20-Sep-2026: the page guessed the currency from the browser and the
+     visitor's country, and a London founder got GBP. The selector stays, one tap to change. */
+  setCurrency('USD', 'boot');
 })();
 
-function onRecurring() {
-  const v = parseInt(document.getElementById('rec-slider').value, 10);
-  responses.recurring_pct = v;
-  document.getElementById('rec-read').textContent = v + '% recurring';
-}
+/* The recurring-share and revenue-model questions left the quiz on 20-Sep-2026: neither reached
+   the engine (the profiler reads the revenue model from the website), and the page has one line per
+   step now. The fields stay on `responses` as null so nothing downstream has to change shape. */
 
-/* Revenue model is asked before the recurring share, because the model decides
-   whether the recurring question is worth asking at all and what it should default to. */
-const RECURRING_DEFAULT = {
-  'Subscription / SaaS': 90, 'Usage or consumption': 70, 'Transaction fee / take rate': 20,
-  'Marketplace commission': 20, 'One-off sales or licences': null, 'Services / retainer': 30,
-  'Advertising': 30, 'Hardware plus software': 30, 'Interest / spread': 60, 'Other': 50
-};
-
-const modelWrap = document.getElementById('model-chips');
-if (modelWrap) {
-  REVENUE_MODELS.forEach(function (m) {
-    const b = document.createElement('button');
-    b.className = 'chip'; b.type = 'button'; b.textContent = m;
-    b.onclick = function () {
-      responses.revenue_model = m;
-      modelWrap.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
-      b.classList.add('on');
-      applyModel(m);
-    };
-    modelWrap.appendChild(b);
-  });
-}
-
-function applyModel(m) {
-  const wrap = document.getElementById('rec-wrap');
-  const def = RECURRING_DEFAULT[m];
-  if (def === null) {
-    /* One-off revenue has no meaningful recurring share, so we do not ask. */
-    responses.recurring_pct = 0;
-    wrap.style.display = 'none';
-    return;
-  }
-  responses.recurring_pct = def;
-  document.getElementById('rec-slider').value = def;
-  document.getElementById('rec-read').textContent = def + '% recurring';
-  wrap.style.display = 'block';
-}
-
-/* Band fallbacks, for anyone who would rather not give a figure. */
-function showRevBands() {
-  document.getElementById('rev-bands').style.display = 'grid';
-  document.getElementById('rev-band-toggle').style.display = 'none';
-}
-function pickRevBand(band) {
-  responses.revenue = band;
-  responses.revenue_exact = null;
-  /* No exact monthly figure means no sum to show, so the third line goes away with it rather than
-     sitting there holding a stale number from a previous answer. */
-  responses.ntm_revenue_exact = null;
-  if (typeof paintNtm === 'function') paintNtm();
-  document.getElementById('rev-followups').style.display = 'block';
-  track('quiz_answer', { step: 3, key: 'revenue', value: band, exact: null, fallback: true });
-}
 function showGrowthBands() {
-  document.getElementById('growth-bands').style.display = 'grid';
-  document.getElementById('growth-band-toggle').style.display = 'none';
+  /* the band fallback left the page on 20-Sep-2026; kept null-safe for an older cached page */
+  const g = document.getElementById('growth-bands'); if (g) g.style.display = 'grid';
+  const t = document.getElementById('growth-band-toggle'); if (t) t.style.display = 'none';
 }
 function pickGrowthBand(band) {
   responses.growth = band;
   responses.growth_yoy = null;
   responses.growth_exact = null;
   if (typeof paintNtm === 'function') paintNtm();
-  document.getElementById('growth-detail-wrap').style.display = 'block';
   track('quiz_answer', { step: 4, key: 'growth', value: band, exact: null, fallback: true });
 }
 
 function submitRevenue() {
   if (!responses.currency) responses.currency = 'USD';
   if (responses.revenue_exact === undefined) paintRevenue(0, null);
-  if (responses.revenue_exact > 0 && responses.recurring_pct === undefined) responses.recurring_pct = 50;
+  if (responses.gross_margin === undefined) onGrossMargin();
+  /* The fork's extra figures, when the read landed and the founder filled any in. */
+  if (typeof qfSubmit === 'function') qfSubmit();
   track('quiz_answer', {
     step: 3, key: 'revenue', value: responses.revenue,
-    exact: responses.revenue_exact, currency: responses.currency,
-    recurring_pct: responses.recurring_pct, revenue_model: responses.revenue_model || null,
+    has_exact: responses.revenue_exact > 0, currency: responses.currency,
     gross_margin: responses.gross_margin
   });
   currentStep = 4; renderStep();
@@ -379,7 +320,8 @@ function paintGrowth(pct, source) {
   document.getElementById('growth-annual').textContent = pct < 0
     ? 'Revenue is contracting. That is priced, and the report is where it gets explained rather than hidden.'
     : '';
-  document.getElementById('growth-detail-wrap').style.display = 'block';
+  const pw = document.getElementById('plan-wrap');
+  if (pw) pw.style.display = responses.revenue_exact > 0 ? '' : 'none';
   paintPlanFallback();
 }
 
@@ -399,7 +341,9 @@ function setPreTraction() {
   document.getElementById('growth-annual').textContent = '';
   document.getElementById('growth-read').innerHTML =
     '<strong>Too early to measure.</strong> <button type="button" class="link-btn" onclick="onGrowthSlide()">Enter a rate instead</button>';
-  document.getElementById('growth-detail-wrap').style.display = 'block';
+  const pw = document.getElementById('plan-wrap');
+  if (pw) pw.style.display = responses.revenue_exact > 0 ? '' : 'none';
+  paintPlanFallback();
 }
 
 /* ---------------- planned growth, the founder's own forecast ----------------
@@ -408,61 +352,37 @@ function setPreTraction() {
    it. If the plan is not credible that is a conversation for the reviewer, not
    something to silently correct on the founder's behalf. */
 
+/* THE PLAN, TWO WAYS. Daniil, 20-Sep-2026: the founder gives EITHER a growth rate for the next
+   twelve months OR a money target for the next twelve months, and the page fills in the other one.
+   Whichever box was typed last wins. Both are the founder's own figure, used exactly as given, with
+   no haircut and no coefficient of ours. The money figure never leaves the browser (rule E9):
+   `ntm_revenue_exact` is named in tools/check_request_boundary.py as a refused figure. */
+
 function paintPlan(pct) {
   responses.growth_plan = pct;
-  document.getElementById('plan-exact').value = pct;
-  document.getElementById('plan-slider').value = pct;
-  document.getElementById('plan-read').innerHTML =
-    '<strong>' + pct + '% planned for the next twelve months.</strong> ' +
-    '<button type="button" class="link-btn" onclick="clearPlan()">Use my last twelve months instead</button>';
-  paintPlanNote();
+  responses.ntm_revenue_exact = null;            /* the rate was typed last, so the sum follows it */
+  const box = document.getElementById('plan-exact');
+  if (box && document.activeElement !== box) box.value = pct;
   paintNtm();
 }
 
-/* Says out loud what the two numbers imply about each other. A plan far above
-   the trailing rate is the single most common thing an investor pushes on, so
-   the page raises it here rather than letting it surface in the meeting. */
-function paintPlanNote() {
-  const el = document.getElementById('plan-note');
-  if (!el) return;
-  const p = responses.growth_plan, y = responses.growth_yoy;
-  if (p === null || p === undefined) { el.textContent = ''; return; }
-  if (y === null || y === undefined) { el.textContent = 'Everything forward on the next screen is built from this number, exactly as you gave it.'; return; }
-  if (y > 0 && p > y * 1.25) {
-    el.textContent = 'That is an acceleration on the ' + Math.round(y) + '% you just did. It is the first thing an investor will test, so bring what changes to make it happen: a channel, a hire, a price move.';
-  } else if (y > 0 && p < y * 0.6) {
-    el.textContent = 'That is a deceleration on the ' + Math.round(y) + '% you just did. Planning conservatively is fine, but say why, or the multiple gets read against the lower number without the reason attached.';
-  } else {
-    el.textContent = 'Broadly in line with the ' + Math.round(y) + '% you just did, which is the easiest version of this to defend.';
-  }
+function onPlanType() {
+  const el = document.getElementById('plan-exact');
+  const v = parseFloat(el.value);
+  if (el.value.trim() === '' || isNaN(v)) { clearPlan(); return; }
+  paintPlan(Math.max(-90, Math.min(1000, v)));
 }
 
-/* ---------------------------------------------------------------------------
- * THE THIRD LINE: THE FOUNDER'S OWN NEXT TWELVE MONTHS.
- *
- * Daniil, 6-Sep-2026: monthly revenue and the growth they plan give the next-twelve-months figure;
- * it is shown as a third editable line with a hover explaining how it is built; and the edited
- * figure is what the engine prices on.
- *
- * WHY THE EDIT IS THE POINT, not a courtesy. forwardRevenue() compounds one annual rate into a
- * monthly step and adds twelve months of it. That is a curve, and it is ours. A founder with a
- * contract landing in month three, or a seasonal business, or a price rise scheduled for April, has
- * a better answer than any curve fitted to a single percentage. So the sum is shown, the working is
- * printed under it, and an overwrite wins outright: ntmOverride() is read before the computed sum
- * everywhere the page prices.
- *
- * NET AND GROSS ALIKE. The live quiz collects one revenue figure; the eight forks in
- * selector/quiz_fork.py collect net and gross separately (rule B3a). The hover names which measure
- * the founder is looking at, so that when the forks reach the page the founder is never in doubt
- * which of their two numbers this line is twelve months of.
- *
- * IT IS AN AMOUNT AND IT NEVER LEAVES THE BROWSER. Rule E9: `ntm_revenue_exact` is not on the
- * allowlist in reveal-request.js, and tools/check_request_boundary.py names it as a refused figure
- * so the sentinel sweep proves it rather than the allowlist merely omitting it.
- * ------------------------------------------------------------------------- */
+function clearPlan() {
+  responses.growth_plan = null;
+  responses.ntm_revenue_exact = null;
+  const box = document.getElementById('plan-exact');
+  if (box && document.activeElement !== box) box.value = '';
+  paintNtm();
+}
 
-/* The sum, in whole units of the founder's own currency. Null when either input is missing, which
-   is the normal case for a founder who has given no revenue. */
+/* The twelve-month sum from the monthly figure and one annual rate: the plan if given, else the
+   trailing rate, else flat. Whole units of the founder's currency, or null without revenue. */
 function ntmComputed() {
   const monthly = responses.revenue_exact || 0;
   if (!(monthly > 0)) return null;
@@ -471,109 +391,97 @@ function ntmComputed() {
   return (r && r.ntmM !== null) ? r.ntmM * 1e6 : null;
 }
 
-/* What the page prices on: the founder's own figure if they typed one, otherwise our sum. */
+/* What the page prices on: the founder's own target if they typed one, otherwise our sum. */
 function ntmForPricing() {
   const o = responses.ntm_revenue_exact;
   if (o !== null && o !== undefined && o > 0) return o;
   return ntmComputed();
 }
 
+/* The target typed by the founder: keep it, and back-calculate the annual rate that produces it
+   as a twelve-month sum from today's monthly figure, so the growth box shows what the target
+   implies. Solved numerically because the sum is a geometric series in the monthly step. */
+function onNtmType() {
+  const el = document.getElementById('ntm-exact');
+  const v = parseFloat(el.value);
+  if (el.value.trim() === '' || !isFinite(v) || v <= 0) {
+    responses.ntm_revenue_exact = null;
+    paintNtm();
+    return;
+  }
+  responses.ntm_revenue_exact = v;
+  const monthly = responses.revenue_exact || 0;
+  if (monthly > 0) {
+    const g = impliedAnnualGrowth(monthly, v);
+    responses.growth_plan = g === null ? null : Math.round(g * 10) / 10;
+    const box = document.getElementById('plan-exact');
+    if (box) box.value = g === null ? '' : Math.round(g);
+  }
+  paintNtm();
+}
+
+/* The annual rate g such that twelve months from `monthly`, compounding at (1+g)^(1/12) a month,
+   add up to `target`. Bisection on g in [-90%, +2000%]; null when the target cannot be reached
+   (below twelve flat months at minus 90 per cent, or above the cap). */
+function impliedAnnualGrowth(monthly, target) {
+  const sumAt = function (g) { return forwardRevenue(monthly, g / 100).ntmM * 1e6; };
+  let lo = -90, hi = 2000;
+  if (target < sumAt(lo) || target > sumAt(hi)) return null;
+  for (let i = 0; i < 60; i++) {
+    const mid = (lo + hi) / 2;
+    if (sumAt(mid) < target) lo = mid; else hi = mid;
+  }
+  return (lo + hi) / 2;
+}
+
 function paintNtm() {
-  const wrap = document.getElementById('ntm-wrap');
+  const wrap = document.getElementById('plan-wrap');
   const box = document.getElementById('ntm-exact');
   const note = document.getElementById('ntm-note');
-  const edited = document.getElementById('ntm-edited');
   if (!wrap || !box || !note) return;
-  const sum = ntmComputed();
-  if (sum === null) { wrap.style.display = 'none'; return; }
+  const monthly = responses.revenue_exact || 0;
+  if (!(monthly > 0)) { wrap.style.display = 'none'; return; }
   wrap.style.display = '';
   const curEl = document.getElementById('ntm-cur');
   if (curEl && typeof curSymbol === 'function') curEl.textContent = curSymbol();
 
-  const overridden = responses.ntm_revenue_exact !== null
-                  && responses.ntm_revenue_exact !== undefined
-                  && responses.ntm_revenue_exact > 0;
-  if (!overridden) box.value = Math.round(sum);
-  if (edited) edited.style.display = overridden ? '' : 'none';
+  const own = responses.ntm_revenue_exact;
+  const overridden = own !== null && own !== undefined && own > 0;
+  const sum = ntmComputed();
+  if (!overridden && document.activeElement !== box) box.value = sum === null ? '' : Math.round(sum);
 
-  /* THE WORKING, PRINTED. The same four steps page 2's "How $0.78m is built" pop-up shows, and the
-     same arithmetic app-growth.js does, said in the order a person would do it by hand. */
-  const monthly = responses.revenue_exact || 0;
   const f = (typeof forwardAnnualGrowth === 'function') ? forwardAnnualGrowth() : null;
-  const pct = (f === null) ? null : Math.round(f * 1000) / 10;
-  const step = (f === null) ? 0 : (Math.pow(1 + f, 1 / 12) - 1) * 100;
   const basis = (typeof forwardGrowthBasis === 'function') ? forwardGrowthBasis() : '';
-  const measure = (responses.revenue_basis === 'GROSS_REVENUE') ? 'gross revenue' : 'net revenue';
-  note.textContent =
-    fmtPlain(monthly) + ' a month'
-    + (pct === null
-      ? ', carried forward flat because you have not given a growth rate. '
-      : ', growing at ' + pct + '% a year, which is ' + step.toFixed(2) + '% a month. ')
-    + 'Twelve months added up gives ' + fmtPlain(Math.round(sum)) + '. '
-    + (basis === 'plan' ? 'That is the growth you told us you plan, used exactly as you gave it. '
-      : (basis === 'trailing' ? 'That is your last twelve months carried forward unchanged. '
-        : 'Derived from the growth band you chose. '))
-    + 'It is your ' + measure + ', and it stays in this browser.'
-    + (overridden ? ' You have overwritten our sum, and yours is what we price.' : '');
+  /* forwardAnnualGrowth() is a fraction (0.6 for 60%); the note speaks in per cent. */
+  const pct = (f === null) ? null : Math.round(f * 1000) / 10;
+  if (overridden) {
+    note.textContent = fmtPlain(own) + ' over the next twelve months is your target and is what we price'
+      + (pct === null ? '.' : ', which is ' + pct + '% growth on ' + fmtPlain(monthly) + ' a month today.');
+  } else if (basis === 'plan') {
+    note.textContent = fmtPlain(monthly) + ' a month growing at ' + pct + '% a year adds up to '
+      + fmtPlain(Math.round(sum)) + ' over the next twelve months. Your plan, used as given.';
+  } else if (basis === 'trailing') {
+    note.textContent = 'Without a plan, your last twelve months carried forward: ' + fmtPlain(monthly)
+      + ' a month at ' + pct + '% a year adds up to ' + fmtPlain(Math.round(sum)) + '. Type either box to change it.';
+  } else {
+    note.textContent = fmtPlain(monthly) + ' a month carried forward flat adds up to '
+      + fmtPlain(Math.round(sum)) + '. Type either box to change it.';
+  }
 }
 
-function onNtmType() {
-  const v = parseFloat(document.getElementById('ntm-exact').value);
-  responses.ntm_revenue_exact = (isFinite(v) && v > 0) ? v : null;
-  paintNtm();
-}
-
-function clearNtm() {
-  responses.ntm_revenue_exact = null;
-  const box = document.getElementById('ntm-exact');
-  if (box) box.value = '';
-  paintNtm();
-}
-
-/* Prefill the plan with the trailing rate the first time, so the founder edits a
-   sensible starting point rather than facing an empty box. Never overwrites a
-   number they have already typed. */
+/* Painted whenever step 4 is shown, so a founder who typed revenue and a trailing rate sees their
+   next twelve months without touching the plan. */
 function paintPlanFallback() {
-  /* The third line is painted whenever this step is shown, so a founder who typed revenue and a
-     trailing rate and never touched the plan box still sees their own next twelve months. */
   if (typeof paintNtm === 'function') setTimeout(paintNtm, 0);
-  if (responses.growth_plan !== null && responses.growth_plan !== undefined) { paintPlanNote(); return; }
-  const y = responses.growth_yoy;
-  const el = document.getElementById('plan-exact');
-  if (!el || y === null || y === undefined) return;
-  if (el.value === '') { el.value = Math.round(y); document.getElementById('plan-slider').value = Math.round(y); }
-}
-
-function onPlanType() {
-  const v = parseFloat(document.getElementById('plan-exact').value);
-  if (isNaN(v)) return;
-  paintPlan(Math.max(-90, Math.min(1000, v)));
-}
-function onPlanSlide() { paintPlan(parseFloat(document.getElementById('plan-slider').value)); }
-
-function clearPlan() {
-  responses.growth_plan = null;
-  document.getElementById('plan-exact').value = '';
-  document.getElementById('plan-read').innerHTML =
-    'Type the number or drag the slider. <button type="button" class="link-btn" onclick="onPlanSlide()">Enter a plan</button>';
-  document.getElementById('plan-note').textContent =
-    'Without a plan we carry your last twelve months forward unchanged, and the row says that is what we did.';
-}
-
-function submitProfit(v) {
-  responses.profit = v;
-  onEbitda();
-  track('quiz_answer', { step: 5, key: 'profit', value: v, ebitda: responses.ebitda_ltm });
-  currentStep = 6; renderStep();
 }
 
 function submitRaise() {
   onLastRound();
   track('quiz_answer', {
-    step: 6, key: 'raise', value: responses.raise,
+    step: 5, key: 'raise', value: responses.raise,
     has_last_round: responses.last_round_value != null
   });
-  currentStep = 7; renderStep();
+  currentStep = 6; renderStep();
 }
 
 function pickRaise(v, btn) {
@@ -588,41 +496,19 @@ function pickRaise(v, btn) {
 function submitGrowth() {
   if (!responses.growth) responses.growth = 'Too early to measure';
   if (responses.growth_plan === undefined) responses.growth_plan = null;
-  responses.growth_detail = document.getElementById('growth-detail').value.trim() || null;
   track('quiz_answer', {
     step: 4, key: 'growth', value: responses.growth,
-    yoy: responses.growth_yoy, plan: responses.growth_plan, has_detail: !!responses.growth_detail
+    yoy: responses.growth_yoy, plan: responses.growth_plan,
+    has_target: !!responses.ntm_revenue_exact
   });
   currentStep = 5; renderStep();
 }
 
-/* concerns, multi-select */
-const chipWrap = document.getElementById('concern-chips');
-const chosenConcerns = new Set();
-if (chipWrap) {
-  CONCERNS.forEach(function (c) {
-    const b = document.createElement('button');
-    b.className = 'chip';
-    b.type = 'button';
-    b.textContent = c;
-    b.onclick = function () {
-      if (chosenConcerns.has(c)) { chosenConcerns.delete(c); b.classList.remove('on'); }
-      else { chosenConcerns.add(c); b.classList.add('on'); }
-    };
-    chipWrap.appendChild(b);
-  });
-}
-
-function submitConcerns(skipped) {
-  responses.concerns = skipped ? [] : Array.from(chosenConcerns);
-  responses.concern_notes = skipped ? null : (document.getElementById('concern-notes').value.trim() || null);
-  responses.context_link = skipped ? null : (document.getElementById('ctx-link').value.trim() || null);
-  track('concerns_step', {
-    skipped: !!skipped, count: responses.concerns.length,
-    has_notes: !!responses.concern_notes, has_link: !!responses.context_link
-  });
-  currentStep = 9; renderStep();
-}
+/* The investor-pushback step (chips, notes, link) left the quiz on 20-Sep-2026: the chips fed one
+   echo sentence and nothing in the engine. A note and a deck link are asked for beside the consent
+   button on the reveal (reveal-client.js), which is the only moment free text leaves the browser.
+   `concerns` stays an empty list so the result page's echo logic needs no change. */
+responses.concerns = [];
 
 /* contact */
 function validEmail(v) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); }
@@ -635,7 +521,7 @@ async function submitLead() {
 
   responses.email = email;
   responses.company = document.getElementById('lead-company').value.trim() || null;
-  responses.phone = document.getElementById('lead-phone').value.trim() || null;
+  responses.phone = null;   /* the phone box left the quiz on 20-Sep-2026 */
 
   const btn = document.getElementById('final-submit');
   btn.disabled = true; btn.textContent = 'Saving';
@@ -699,7 +585,8 @@ function monthsSince(ym) {
 }
 
 function onEbitda() {
-  const v = parseFloat(document.getElementById('ebitda-ltm').value);
+  const el = document.getElementById('ebitda-ltm');
+  const v = el ? parseFloat(el.value) : NaN;
   responses.ebitda_ltm = isNaN(v) ? null : v;
   const help = document.getElementById('ebitda-help');
   if (!help) return;
@@ -744,14 +631,18 @@ function computeResult() {
 
   const fwdRev = forwardRevenue(monthly, fwd);
 
-  /* THE FOUNDER'S OWN NEXT TWELVE MONTHS WINS. If they overwrote the third line, that figure is
-     the one every forward row prices on, and the run-rate row is rebuilt from it so the two do not
-     describe different businesses. Nothing here is a coefficient of ours: it is their number, or
-     our sum of their two numbers, and never a blend of the two. */
-  const ntmOwn = (typeof ntmForPricing === 'function') ? ntmForPricing() : null;
-  if (ntmOwn !== null && ntmOwn > 0) {
+  /* THE FOUNDER'S OWN TARGET WINS. If they typed a next-twelve-months figure, that figure is what
+     every forward row prices on. The month-twelve run-rate is monthly times (1 + g) times twelve
+     on the rate that stands (the plan, else the trailing rate), which is what app-growth.js
+     already returned.
+     BUG FIXED 20-Sep-2026: this block used to rebuild the run-rate from the twelve-month SUM
+     whenever a sum existed, override or not, so it grew the sum by a further year: at $10k a month
+     and 145% growth it printed $494k where $294k is right. Daniil's live run showed $49m for $29m.
+     The run-rate now comes from the rate alone; a typed target changes the sum and, through the
+     back-calculated rate, the run-rate with it. */
+  const ntmOwn = responses.ntm_revenue_exact;
+  if (ntmOwn !== null && ntmOwn !== undefined && ntmOwn > 0) {
     fwdRev.ntmM = ntmOwn / 1e6;
-    if (fwd !== null) fwdRev.exitArrM = (ntmOwn / 12) * (1 + fwd) * 12 / 1e6;
   }
 
   /* The last round is a MARKER. It is plotted so the founder can see where they
