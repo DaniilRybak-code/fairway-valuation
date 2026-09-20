@@ -139,40 +139,44 @@ def _ask():
     return mod._ask
 
 
-try:                                                           # pragma: no cover
-    from http.server import BaseHTTPRequestHandler
+# THE HANDLER IS DEFINED AT THE TOP LEVEL OF THE FILE, NOT INSIDE A try. Found 20-Sep-2026: Vercel
+# looks for a top-level `handler` (or `app`/`application`) when it builds a file-based Python
+# function, and this class sat inside a try/except ImportError, so both Python endpoints were
+# skipped at build time and answered 404 on production from the day they were written. The
+# import can never fail: http.server is the standard library.
+from http.server import BaseHTTPRequestHandler
 
-    class handler(BaseHTTPRequestHandler):                     # noqa: N801  (Vercel's contract)
-        def _send(self, code, obj):
-            raw = json.dumps(obj).encode('utf-8')
-            self.send_response(code)
-            self.send_header('content-type', 'application/json')
-            self.send_header('content-length', str(len(raw)))
-            self.end_headers()
-            self.wfile.write(raw)
 
-        def do_GET(self):                                      # noqa: N802
-            self._send(405, {'error': 'method_not_allowed'})
 
-        def do_POST(self):                                     # noqa: N802
-            try:
-                n = int(self.headers.get('content-length') or 0)
-            except ValueError:
-                n = 0
-            if n <= 0 or n > MAX_BODY:
-                self._send(413, {'error': 'body_size'})
-                return
-            try:
-                body = json.loads(self.rfile.read(n).decode('utf-8'))
-            except Exception:                                  # noqa: BLE001
-                self._send(400, {'error': 'bad_json'})
-                return
-            try:
-                self._send(200, build(body))
-            except Exception:                                  # noqa: BLE001
-                self._send(500, {'error': 'profile_failed'})
+class handler(BaseHTTPRequestHandler):                     # noqa: N801  (Vercel's contract)
+    def _send(self, code, obj):
+        raw = json.dumps(obj).encode('utf-8')
+        self.send_response(code)
+        self.send_header('content-type', 'application/json')
+        self.send_header('content-length', str(len(raw)))
+        self.end_headers()
+        self.wfile.write(raw)
 
-        def log_message(self, *_a):
+    def do_GET(self):                                      # noqa: N802
+        self._send(405, {'error': 'method_not_allowed'})
+
+    def do_POST(self):                                     # noqa: N802
+        try:
+            n = int(self.headers.get('content-length') or 0)
+        except ValueError:
+            n = 0
+        if n <= 0 or n > MAX_BODY:
+            self._send(413, {'error': 'body_size'})
             return
-except ImportError:                                            # pragma: no cover
-    pass
+        try:
+            body = json.loads(self.rfile.read(n).decode('utf-8'))
+        except Exception:                                  # noqa: BLE001
+            self._send(400, {'error': 'bad_json'})
+            return
+        try:
+            self._send(200, build(body))
+        except Exception:                                  # noqa: BLE001
+            self._send(500, {'error': 'profile_failed'})
+
+    def log_message(self, *_a):
+        return
