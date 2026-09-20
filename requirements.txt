@@ -1,0 +1,7 @@
+# The engine (selector/*.py) and the two Python endpoints (api/payload.py, api/profile.py) use the
+# Python standard library only. This file is deliberately empty of packages: it exists so that
+# Vercel treats the project as one that ships Python functions beside its Node ones.
+#
+# Found 20-Sep-2026: /api/payload and /api/profile answered 404 on production from the day they
+# were written (7 September) while /api/health, /api/geo and /api/reveal answered, so the field
+# printed "in build" on every engine row. See docs/STATUS-2026-09.md, entry of 20 September.

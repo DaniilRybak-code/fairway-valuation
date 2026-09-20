@@ -31,6 +31,8 @@
 #                     check 10 said the engine handled them and nothing asked whether the page did)
 #  17  the profiler   can the model, or a founder's own website, put anything in a profile that the
 #                     tag files did not already contain (added 7-Sep with the profiler itself)
+#  21  production     is the engine alive on the LIVE site (added 20-Sep: the only check that leaves
+#                     the clone; the other twenty were green while production answered 404)
 set -e
 cd "$(dirname "$0")/.."
 fail=0
@@ -70,6 +72,11 @@ run "16 TOKEN WEIGHTS   is the word-weight file fresh"                   python3
 run "17 THE PROFILER    can a website put anything into a profile"        python3 tools/check_profiler.py
 run "18 THE LANDING     do page 3 figures and investor rows come from the data" python3 tools/check_landing_page3.py
 run "20 THE FORK STEP   can a founder be asked their own questions"    python3 tools/check_fork_step.py
+# CHECK 21 IS THE ONLY CHECK THAT TOUCHES THE LIVE SITE. Added 20-Sep-2026 after twenty green checks
+# sat for thirteen days over a production where /api/payload and /api/profile answered 404 and every
+# founder's field printed "in build". FAIRWAY_SKIP_PRODUCTION=1 skips it, loudly, on a machine with no
+# network; FAIRWAY_URL points it at a preview deployment instead of production.
+run "21 PRODUCTION      is the engine alive on the live site"          python3 tools/check_production.py
 printf '\n'
 if [ "$fail" = "1" ]; then
   echo 'ONE OR MORE CHECKS FAILED. The stage that failed is where the data stopped.'
