@@ -234,6 +234,13 @@ def lead_range(prof, picked, private_tier):
     return M.private_range(prof, picked, private_tier) or {}
 
 
+def _regression(prof):
+    try:
+        return M.regression_range(prof, M.listed)
+    except Exception:                                          # noqa: BLE001
+        return None
+
+
 def build(prof, raise_musd=None, want_investors=8, tier='paid'):
     """The whole reveal for one profile, in one pass over the engine.
 
@@ -266,6 +273,13 @@ def build(prof, raise_musd=None, want_investors=8, tier='paid'):
                            else _range(lead))},
         'proximity': {'listed': listed_tier, 'private': private_tier,
                       'private_window_months': window_months},
+        # THE GROWTH-ADJUSTED ROW. M.regression_range() has existed since 4-Sep (gated at R2 >= 0.50
+        # with an extrapolation cap) and nothing served it, so the "Growth-adjusted" row on the
+        # field was locked with nothing behind the lock. Added 20-Sep-2026 for the test phase, in
+        # which everything the engine can produce is visible: None when the founder gave no growth
+        # rate, a dict with `refused` when their growth sits outside the peers' range, and the
+        # fitted range otherwise. Paid tier only, like the private lane, because it is the paid row.
+        'regression': (_regression(prof) if tier != 'free' else None),
         # HONESTY REACHES A FOUNDER FOR THE FIRST TIME HERE. Two lists, not one with a flag,
         # because inline and behind-the-disclosure are two different places on the page and the
         # split is already decided by severity in honesty.py.

@@ -66,7 +66,12 @@ const PUBLIC_COMPS = {
 const STAGE_ANCHOR = {
   'Pre-seed': { post_median_m: null, source: null },
   'Seed': { post_median_m: 24.0, currency: 'USD', source: 'Carta, Record-setting early-stage valuations, Q4 2025', note: 'US-weighted, all sectors. Median post-money.' },
-  'Series A': { post_median_m: 78.7, currency: 'USD', source: 'Carta, Record-setting early-stage valuations, Q4 2025', note: 'US-weighted, all sectors. Median post-money.' }
+  'Series A': { post_median_m: 78.7, currency: 'USD', source: 'Carta, Record-setting early-stage valuations, Q4 2025', note: 'US-weighted, all sectors. Median post-money.' },
+  /* Series B was added to the quiz on 20-Sep-2026. Carta's public write-ups for Q4 2025 state the
+     seed and Series A medians in the text and the Series B median only inside the interactive
+     benchmarking page, which could not be read from here. No figure is typed in until one is read
+     from the source; with null the field draws no benchmark for Series B. */
+  'Series B': { post_median_m: null, source: null }
 };
 
 /* Euro foreign exchange reference rates. Free, public, published daily, and

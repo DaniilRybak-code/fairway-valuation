@@ -20,9 +20,9 @@ WHAT IT DOES, in order:
 THE TIER IS THE SERVER'S TO DECIDE AND THE CLIENT MAY NOT CLAIM IT. Rule E8: the free and paid
 tiers are two different payload objects, and the private figures are simply absent from the free
 one. If the browser could ask for tier='paid' then the lock would be a suggestion. So the tier is
-'free' unless the request carries an entitlement the server can verify, and today nothing can
-verify one, so it is always 'free'. Wiring the paid tier to whatever proves payment is a named
-to-do and it is deliberately not a client field.
+one constant in this file, SERVED_TIER: 'paid' for the test phase on Daniil's ruling of
+20-Sep-2026, 'free' once the lock returns, and either way it is not a client field. Wiring the paid
+tier to whatever proves payment is a named to-do.
 
 NO KEY IS HANDLED IN PLAIN TEXT ANYWHERE IN THIS FILE. The model key is read from one environment
 variable at the moment of the call and is never assigned to a profile field, never written to a
@@ -46,6 +46,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 
 import profiler as PR                                          # noqa: E402
 import reveal_payload as RP                                    # noqa: E402
+import site_text as ST                                         # noqa: E402
 
 # THE ALLOWLIST, and it is the same list as reveal-request.js. If the two ever disagree, check 15
 # fails: it reads both and compares them name by name.
@@ -61,6 +62,14 @@ ALLOWED = (
 MAX_BODY = 64 * 1024
 MODEL_URL = 'https://api.anthropic.com/v1/messages'
 
+# THE TIER THE SERVER SERVES, AND THE CLIENT CANNOT MOVE IT EITHER WAY. Rule E8 says the lock is a
+# boundary in the data: a locked lane is absent from the payload rather than blurred. Daniil,
+# 20-Sep-2026, for the test phase: "let's make everything possible visible for the test runs, we
+# need to make sure the product works. We decide what we hide as very last step." So the served
+# tier is 'paid' until that last step, and flipping this one constant back to 'free' restores the
+# lock. Check 15 asserts that a body claiming either tier gets THIS one.
+SERVED_TIER = 'paid'
+
 
 def _ask(prompt):
     """One model call. The key is read here and nowhere else, and does not leave this function."""
@@ -70,6 +79,11 @@ def _ask(prompt):
     body = json.dumps({
         'model': os.environ.get('ANTHROPIC_MODEL', 'claude-sonnet-4-5'),
         'max_tokens': 1200,
+        # TEMPERATURE 0, so the read at step 2 (/api/profile) and the read at the reveal (this
+        # endpoint) are the same read for the same inputs. Found 20-Sep-2026: with the default
+        # sampling the two could disagree, and a founder would answer one fork's questions and be
+        # priced against another fork's peers.
+        'temperature': 0,
         'messages': [{'role': 'user', 'content': prompt}],
     }).encode('utf-8')
     req = urllib.request.Request(MODEL_URL, data=body, method='POST', headers={
@@ -107,10 +121,21 @@ def filtered(body):
     return out
 
 
-def build(body, ask=None, site_text=''):
-    """The whole endpoint minus the HTTP, so a check can drive it without a socket."""
+def build(body, ask=None, site_text=None, fetch=None):
+    """The whole endpoint minus the HTTP, so a check can drive it without a socket.
+
+    THE WEBSITE IS READ HERE TOO. Until 20-Sep-2026 this endpoint classified the founder from their
+    dropdown answers alone (site_text='') while /api/profile read the website, so the reveal could
+    be priced against a different read from the one the founder had just been shown at step 2.
+    Same fetch, same fence (selector/site_text.py: public hosts only, three seconds, markup
+    stripped); a check passes `site_text` or `fetch` to stay off the network."""
     req = filtered(body)
     note = ''
+    if site_text is None:
+        try:
+            site_text, _site_note = (fetch or ST.fetch)(req.get('website') or '')
+        except Exception:                                      # noqa: BLE001
+            site_text = ''
     try:
         prof = PR.profile_from(req, ask or _ask, site_text=site_text)
     except Exception as exc:                                   # noqa: BLE001
@@ -120,8 +145,8 @@ def build(body, ask=None, site_text=''):
         note = note or prof['_profiler_error']
     if not prof.get('archetype'):
         note = note or 'no_archetype: the profiler returned nothing the vocabulary recognises'
-    # TIER IS NOT A CLIENT FIELD. See the header.
-    payload = RP.build(prof, raise_musd=None, tier='free')
+    # TIER IS NOT A CLIENT FIELD. See SERVED_TIER above.
+    payload = RP.build(prof, raise_musd=None, tier=SERVED_TIER)
     return {
         'payload': payload,
         'profiler': {
