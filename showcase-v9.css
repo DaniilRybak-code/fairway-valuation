@@ -180,3 +180,66 @@
   .calc-tip { right:auto; left:0; }
   .or-grid { grid-template-columns:1fr; }
 }
+
+/* ================= THE REVEAL FIELD, 20 Sep 2026 =================
+   The landing's field drawn from the live payload (field.js). Same grid, same colours, same
+   hovers. What differs from the landing is only what a live run adds: the engine's read of the
+   company in one line above the rows, the SAFE sentence at pre-seed and seed, the stage benchmark
+   as a marker under the axis (never on the scale), and one line under the field naming the rows
+   that were not drawn. Daniil, 20-Sep: no line per row, only the group rules. */
+#screen-result .ff-row, #screen-result .ff-row:first-of-type { border-top-color:transparent; border-bottom:0; padding:0; }
+#screen-result .ff-group { border-top:1px solid var(--ff-rule-hard); color:var(--ff-rust); padding:16px 0 5px; }
+#screen-result .ff-row.unref { opacity:1; }
+#screen-result .ff-foot { border-top:0; padding-top:0; color:var(--ff-soft); }
+
+/* the engine's two other verdicts on a range, drawn as the peer charts draw them:
+   SCATTER (the names disagree too much for a band) is hatched in the row's own colour;
+   one name is a point, never a bar of no width */
+.ff-bar.scatter { opacity:.85; }
+.ff-bar.grey.scatter  { background:repeating-linear-gradient(-45deg,#8ea9dd 0 4px,#e6ecf8 4px 8px); }
+.ff-bar.grey2.scatter { background:repeating-linear-gradient(-45deg,#a9bde6 0 4px,#eaeff9 4px 8px); }
+.ff-bar.reg.scatter   { background:repeating-linear-gradient(-45deg,#8b5cf6 0 4px,#ede9fe 4px 8px); }
+.ff-bar.priv.scatter  { background:repeating-linear-gradient(-45deg,#7c3aed 0 4px,#ede9fe 4px 8px); }
+.ff-bar.priv2.scatter { background:repeating-linear-gradient(-45deg,#a78bfa 0 4px,#f1edfe 4px 8px); }
+.ff-bar.one { min-width:4px; height:22px; top:calc(50% - 11px); }
+
+.ff-readas { font-size:13px; line-height:1.5; color:var(--ff-soft); margin:2px 0 12px; }
+.ff-readas b { color:var(--ff-ink); font-weight:600; }
+.ff-readas .link-btn { margin-left:8px; font-size:12.5px; }
+
+.ff-safe { font-size:12.5px; line-height:1.55; color:var(--ff-ink); background:var(--ff-panel);
+  border-left:2px solid var(--ff-rust); padding:10px 14px; margin:0 0 6px; max-width:78ch; }
+
+/* the stage benchmark: its own row under the axis, so it can never stretch the scale */
+.ff-bench-row { display:grid;
+  grid-template-columns:minmax(150px,210px) minmax(72px,96px) minmax(84px,116px) minmax(0,1fr);
+  gap:0 18px; align-items:start; }
+.ff-bench-row .ff-cell { position:relative; height:34px; padding-left:26px; }
+.ff-bench { position:absolute; top:2px; transform:translateX(-50%); text-align:center; cursor:help; }
+.ff-bench i { display:block; width:0; height:0; margin:0 auto; border-left:5px solid transparent;
+  border-right:5px solid transparent; border-bottom:7px solid var(--ff-rust); }
+.ff-bench span { display:block; font-family:var(--mono); font-size:9.5px; line-height:1.3;
+  color:var(--ff-rust); white-space:nowrap; margin-top:2px; }
+.ff-bench.anchor-l { transform:none; text-align:left; }
+.ff-bench.anchor-l i { margin:0 0 0 2px; }
+.ff-bench.anchor-r { transform:translateX(-100%); text-align:right; }
+.ff-bench.anchor-r i { margin:0 2px 0 auto; }
+.ff-bench.has-tip::after { left:50%; transform:translateX(-50%); bottom:auto; top:calc(100% + 6px); }
+.ff-bench-note { position:absolute; top:6px; font-family:var(--mono); font-size:10px; line-height:1.4;
+  color:var(--ff-rust); white-space:nowrap; cursor:help; }
+.ff-bench-note.right { right:0; }
+.ff-bench-note.left { left:26px; }
+.ff-bench-note.has-tip::after { bottom:auto; top:calc(100% + 6px); left:auto; right:0; }
+.ff-bench-note.left.has-tip::after { left:0; right:auto; }
+
+#screen-result .ff-foot { margin-top:14px; }
+.peer-tip small { font-family:var(--mono); font-size:9px; color:var(--ff-mute); margin-left:5px; font-weight:400; }
+.peer-tip i > span { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+@media (max-width:900px) {
+  .ff-bench-row { grid-template-columns:minmax(0,82px) minmax(0,1fr); }
+  .ff-bench-row > div:not(.ff-cell) { display:none; }
+  .ff-bench-row > div:nth-child(3) { display:block; }
+  .ff-bench-row .ff-cell { padding:0 6px 0 56px; }
+  .ff-bench-note.left { left:56px; }
+}

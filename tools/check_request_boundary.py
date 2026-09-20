@@ -563,7 +563,7 @@ def main():                                                     # noqa: C901
         # The model may not be handed a figure, and the prompt may not carry a key. The profiler's
         # own check owns the vocabulary; this one owns the boundary.
         seen = {}
-        _api.build(hostile, ask=lambda pr: seen.setdefault('p', pr) and '')
+        _api.build(hostile, ask=lambda pr: seen.setdefault('p', pr) and '', site_text='')
         prompt = seen.get('p', '')
         for k in FIGURE_NAMES:
             if ('"%s"' % k) in prompt or ('123.45' in prompt):
@@ -574,15 +574,23 @@ def main():                                                     # noqa: C901
                     and _v in prompt:
                 bad.append('an environment secret appears in the profiler prompt')
                 break
-        # The tier is the server's. A browser claiming paid must still get free.
-        claimed = _api.build(dict(hostile, tier='paid'), ask=lambda _p: '')
-        if claimed['payload'].get('tier') != 'free':
-            bad.append('api/payload.py let the client choose its tier, so rule E8 is a suggestion')
+        # The tier is the server's (api/payload.SERVED_TIER), and a body claiming EITHER tier gets
+        # the server's one. Until 20-Sep the server's tier was 'free' and this asserted that a body
+        # claiming paid got free; the served tier is 'paid' for the test phase (Daniil, 20-Sep:
+        # everything visible until the hide decision is made last), and the assertion is now the
+        # general one: the client cannot move it in either direction.
+        served = getattr(_api, 'SERVED_TIER', 'free')
+        for claim in ('paid', 'free'):
+            claimed = _api.build(dict(hostile, tier=claim), ask=lambda _p: '', site_text='')
+            if claimed['payload'].get('tier') != served:
+                bad.append('api/payload.py let the client choose its tier (claimed %s, got %s, '
+                           'server serves %s), so rule E8 is a suggestion'
+                           % (claim, claimed['payload'].get('tier'), served))
         notes.append(('ENGINE', 'api/payload.py accepts the same %d names as the page, refused all '
                                 '%d figure and free-text fields off a hostile body, kept no figure '
-                                'out of the profiler prompt, and served tier=free to a body '
-                                'claiming paid'
-                      % (len(py_allow), len(FIGURE_NAMES) + len(FREE_TEXT_NAMES))))
+                                'out of the profiler prompt, and served tier=%s to bodies claiming '
+                                'paid and free alike'
+                      % (len(py_allow), len(FIGURE_NAMES) + len(FREE_TEXT_NAMES), served)))
 
     # ---- 10. THE CHEQUE FILTER RUNS IN THE BROWSER AND MUST GIVE THE ENGINE'S ANSWER ----
     #

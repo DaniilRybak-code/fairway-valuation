@@ -272,3 +272,14 @@ footer { padding:28px 0 46px; }
 .result-shell { max-width:none; }
 .result-shell .wrap { max-width:780px; }
 
+
+/* ---- the "i" (20-Sep-2026): the question, the input and one line are what a founder sees; the
+   explanation is a tap away. Used on every quiz step and on the privacy paragraph. ---- */
+.info-btn { display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px;
+  border-radius:50%; border:1.5px solid var(--line); background:#fff; color:var(--ink-soft);
+  font:700 11px/1 Georgia, serif; cursor:pointer; vertical-align:middle; margin-left:6px; padding:0; }
+.info-btn:hover, .info-btn[aria-expanded="true"] { border-color:var(--accent); color:var(--accent); }
+.q-info { font-size:13px; color:var(--ink-soft); background:var(--accent-soft); border-radius:8px;
+  padding:10px 12px; margin:0 0 14px; line-height:1.5; }
+.q-info[hidden] { display:none; }
+.qf-wait { color:var(--lock); font-style:italic; }
