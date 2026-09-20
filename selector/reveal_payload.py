@@ -236,7 +236,53 @@ def lead_range(prof, picked, private_tier):
 
 def _regression(prof):
     try:
-        return M.regression_range(prof, M.listed)
+        out = M.regression_range(prof, M.listed)
+        return out if out is not None else _regression_refusal(prof)
+    except Exception:                                          # noqa: BLE001
+        return None
+
+
+def _regression_refusal(prof):
+    """WHY THE REGRESSION WAS NOT PUBLISHED, with the numbers.
+
+    M.regression_range() returns None for a weak fit and says nothing else, so until 20-Sep-2026 the
+    page could only print "too weak to publish". Daniil's D2C run had two reasons at once (R2 0.18
+    across 14 listed consumer names that are expected to grow 1% to 24%, against his 80%) and he
+    asked why the row was missing. This walks the same points the engine fitted (same universe,
+    same scoring, same relevance cut, same count: match_reference.regression_range, from
+    `same_family` down to `_ols`) and reports the fit and the peers' growth range. It publishes
+    NOTHING: no range, no line. The gate and the range are the engine's and are unchanged.
+
+    TO FOLD INTO match_reference.regression_range() when that file is next written: the same
+    selection lives twice until then, and this copy names its source so the drift is caught.
+    """
+    try:
+        growth = prof.get('growth')
+        if growth is None:
+            return None
+        univ = M.same_family(prof, M.listed)
+        scored = sorted(((M.score(prof, r), r) for r in univ), key=lambda z: -z[0][0])
+        scored = [x for x in scored if M._relevant(prof, x[1], x[0][1])][:M.REGRESSION_N]
+        pts = [(r['g'], r['mult']) for _s, r in scored
+               if r.get('g') is not None and r.get('mult') is not None]
+        fit = M._ols([p[0] for p in pts], [p[1] for p in pts])
+        if not fit:
+            return {'refused': 'TOO_FEW', 'n': len(pts), 'growth': growth}
+        _a, _b, r2 = fit
+        gs = [p[0] for p in pts]
+        lo_g = growth * (1 - M.REGRESSION_GROWTH_SPAN)
+        hi_g = growth * (1 + M.REGRESSION_GROWTH_SPAN)
+        ceiling = max(gs) * (1 + M.EXTRAPOLATION_LIMIT)
+        floor = min(gs) - abs(min(gs)) * M.EXTRAPOLATION_LIMIT - 5.0
+        out_of_range = hi_g > ceiling or lo_g < floor
+        weak = r2 < M.REGRESSION_MIN_R2
+        if not (weak or out_of_range):
+            # The engine refused for a reason this walk does not see (a downward line, say).
+            return {'refused': 'OTHER', 'n': len(pts), 'r2': round(r2, 3), 'growth': growth}
+        return {'refused': ('OUT_OF_RANGE' if out_of_range else 'WEAK_FIT'),
+                'weak_fit': weak, 'out_of_range': out_of_range,
+                'n': len(pts), 'r2': round(r2, 3), 'growth': growth,
+                'peer_growth_low': round(min(gs), 1), 'peer_growth_high': round(max(gs), 1)}
     except Exception:                                          # noqa: BLE001
         return None
 

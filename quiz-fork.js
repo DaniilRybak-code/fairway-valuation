@@ -57,7 +57,7 @@ function qfQuestion(q) {
      one line per question, the rest one tap away). The text is the engine's own, unchanged. */
   if (q.why) out.push(' <button type="button" class="info-btn" aria-expanded="false" aria-controls="' + id + '-why" onclick="toggleInfo(this)">i</button>');
   out.push('</label>');
-  if (q.why) out.push('<p class="q-info" id="' + id + '-why" hidden>' + qfEsc(q.why) + '</p>');
+  if (q.why) out.push('<p class="q-info" id="' + id + '-why" hidden>' + (QF_USED_FOR[q.key] ? '<b>Used for:</b> ' + qfEsc(QF_USED_FOR[q.key]) + ' ' : '') + qfEsc(q.why) + '</p>');
 
   if (q.kind === 'choice' && q.options && q.options.length) {
     out.push('<div class="opt-grid">');
@@ -79,7 +79,9 @@ function qfQuestion(q) {
        have to guess which we meant. */
     out.push('<div class="num-row">');
     if (q.kind === 'money') out.push('<span class="unit" id="' + id + '-cur">$</span>');
-    out.push('<input class="field field-num" id="' + id + '" type="number" step="1" min="0"'
+    /* The arrows step by something a founder would type: ten thousand on money, a hundred on a
+       count (Daniil, 20-Sep: a net revenue box stepping by single dollars "is weird"). */
+    out.push('<input class="field field-num" id="' + id + '" type="number" step="' + (q.kind === 'money' ? '10000' : '100') + '" min="0"'
            + ' inputmode="numeric" placeholder="' + qfEsc(q.placeholder || '') + '"'
            + ' oninput="qfChanged()" aria-label="' + qfEsc(q.label) + '">');
     if (q.unit) out.push('<span class="unit">' + qfEsc(q.unit) + '</span>');
@@ -119,8 +121,11 @@ function qfWrongRead() {
   responses.profile_disputed = true;
   track('quiz_profile_disputed', { fork: FORK_SPEC && FORK_SPEC.fork });
   FORK_SPEC = null;
-  var mount = document.getElementById('qf-block');
-  if (mount) { mount.innerHTML = ''; mount.style.display = 'none'; }
+  ['qf-block', 'qf-read2'].forEach(function (id) {
+    var mount = document.getElementById(id);
+    if (mount) { mount.innerHTML = ''; mount.style.display = 'none'; }
+  });
+  qfRelabelRevenue('software');
 }
 
 /* NO FIGURE EVER BLOCKS THE BUTTON. Daniil, 7-Sep-2026: a founder who gives nothing still gets the
@@ -151,17 +156,65 @@ function qfChanged() {
    step is ARR and margin for everyone, and the fork adds only the figures its business is priced
    on beyond ARR: net revenue for a marketplace, the book for a lender, subscribers for a consumer
    app. `arr` is skipped because the step already asked it. */
-var QF_ALREADY_ASKED = { arr: true };
+var QF_ALREADY_ASKED = { arr: true, net_revenue: true, gross_margin: true };
+
+/* WHAT THE REVENUE BOX MEANS FOR THIS FORK, said in the fork's own words once the read has landed.
+   Daniil, 20-Sep, on the D2C run: four figures asked at step 3, two of them the same thing twice
+   (the fork's "net revenue" beside the revenue box, the fork's "gross margin" beside the slider).
+   The box is the one revenue figure; it prices every revenue row; the fork adds only the figures
+   that add a row of their own. */
+var QF_REVENUE_LABEL = {
+  software: 'Annual recurring revenue today, or your revenue run-rate if it does not recur.',
+  lending: 'Annual recurring revenue today, or your revenue run-rate if it does not recur.',
+  ecommerce: 'Your revenue over the last twelve months, net of returns and discounts.',
+  consumer: 'Your revenue over the last twelve months, net of refunds and app-store fees.',
+  consumer_subscription: 'Your revenue over the last twelve months, net of refunds and app-store fees.',
+  marketplace: 'Your own revenue over the last twelve months: your commission and fees, not what buyers paid in total.',
+  delivery: 'Your own revenue over the last twelve months: your fees and commission, not the basket.',
+  payments: 'Your net revenue over the last twelve months, after interchange and scheme fees.',
+  exchange: 'Your net revenue over the last twelve months.',
+  media: 'Your revenue over the last twelve months.'
+};
+
+/* WHAT EACH EXTRA FIGURE IS USED FOR, in one line, ahead of the engine's own explanation. Keyed
+   by the question, written here rather than sent by /api/profile: how an answer is used is the
+   engine's business (check 15), but a founder deciding whether to type a figure deserves to know
+   what it changes. */
+var QF_USED_FOR = {
+  gross_revenue: 'one row of its own, EV to gross sales (the GMV-type multiple) on private rounds priced that way. It changes nothing else.',
+  gmv: 'the rounds and listed names that are priced on what passes through the platform. It changes nothing else.',
+  paying_subscribers: 'one row of its own, dollars of enterprise value per paying subscriber, from rounds that disclosed the count. It changes nothing else.',
+  nrr_pct: 'the reviewer, with your figures. It prices no row today.',
+  free_users: 'the reviewer, with your figures. It prices no row today.',
+  book_value: 'the book-value rows, which is how listed lenders are priced.',
+  net_loan_book: 'the reviewer, with your figures. It prices no row.',
+  net_income: 'the price-to-earnings row, where listed lenders carry one.',
+  originations: 'the EV-to-originations row, from rounds priced on what was lent.',
+  borrowers: 'one row of its own, dollars of enterprise value per borrower.',
+  funding_model: 'whether a lender may be priced on revenue at all.',
+  throughput_volume: 'the EV-per-unit-of-throughput row, in the unit you pick.',
+  throughput_unit: 'the unit the throughput row is priced in.'
+};
+
+/* The read-back and the one-line "what these are for", drawn above the extras. */
+function qfIntro(qs) {
+  if (!qs.length) return '';
+  return '<p class="q-help" style="margin:8px 0 6px;">The revenue above prices every revenue row. Each figure below adds a row of its own, and only if you give it. Tap an "i" to see what it feeds.</p>';
+}
 
 function qfRender(spec) {
   FORK_SPEC = spec;
   var mount = document.getElementById('qf-block');
   if (!mount || !spec || !spec.questions) return false;
   var qs = spec.questions.filter(function (q) { return !QF_ALREADY_ASKED[q.key]; });
-  var html = [qfReadBack(spec)];
+  /* The read is shown on step 2 when it landed in time (qfShowRead2); on step 3 it is repeated
+     only if the founder never saw it there. */
+  var html = [QF_READ_SHOWN_ON_2 ? '' : qfReadBack(spec)];
+  qfRelabelRevenue(spec.fork);
   if (qs.length) {
-    html.push('<p class="field-label" style="margin:6px 0 8px;">' + qfEsc(qfTitleFor(spec.fork))
-            + ' <span class="optional">Optional. Give what you have.</span></p>');
+    html.push('<p class="field-label" style="margin:6px 0 2px;">' + qfEsc(qfTitleFor(spec.fork))
+            + ' <span class="optional">Optional.</span></p>');
+    html.push(qfIntro(qs));
     qs.forEach(function (q) { html.push(qfQuestion(q)); });
   }
   mount.innerHTML = html.join('');
@@ -177,17 +230,25 @@ function qfRender(spec) {
    be greeted with the word "fork". */
 function qfTitleFor(fork) {
   return {
-    software: 'More on how software is priced',
+    software: 'Also priced on, if you have it',
     marketplace: 'What goes through your marketplace',
     consumer: 'Your subscribers and users',
     consumer_subscription: 'Your subscribers and users',
     exchange: 'What you move, and what you earn on it',
-    ecommerce: 'Your sales and what you keep',
-    payments: 'What you keep after interchange',
+    ecommerce: 'Your gross sales, if you track them',
+    payments: 'Before interchange, if you report it',
     lending: 'Your book, and how it is funded',
-    media: 'Your revenue and your audience',
-    delivery: 'The basket, and your share of it'
+    media: 'Your audience',
+    delivery: 'The basket, if you book it'
   }[fork] || 'More figures';
+}
+
+/* The revenue box's own line, in the fork's words. Falls back to the generic line for a fork not
+   in the map, and never touches the figure already typed. */
+function qfRelabelRevenue(fork) {
+  var el = document.getElementById('rev-help-text');
+  if (!el) return;
+  el.textContent = QF_REVENUE_LABEL[fork] || QF_REVENUE_LABEL.software;
 }
 
 function qfSubmit() {
@@ -210,13 +271,40 @@ function qfSubmit() {
    their fork; if it does not, they get the plain revenue question and the quiz is exactly what it
    was yesterday. Nothing about this is allowed to hold a founder up. */
 var QF_STATE = 'idle';         /* idle | asking | ready | failed */
+var QF_ASKED_FOR = '';         /* the sector and website the last read was asked for */
+var QF_READ_SHOWN_ON_2 = false;
+var QF_TIMER = null;
+
+/* THE READ STARTS ON STEP 2, the moment a sector is picked and a website is typed (Daniil,
+   20-Sep: the read belongs where the website is entered, not one step later). Typing pauses for
+   three quarters of a second before the call goes, so a founder still typing is not asked
+   about "fyl" and then "fyle.i". A changed sector or website asks again; the same pair does not.
+   Continue never waits on it. */
+function qfMaybeAsk() {
+  var sel = document.getElementById('sector-select');
+  var site = document.getElementById('site-url');
+  var sector = sel ? sel.value : '';
+  var url = site ? site.value.trim() : '';
+  if (!sector || !url || url.indexOf('.') < 0) return;
+  clearTimeout(QF_TIMER);
+  QF_TIMER = setTimeout(function () {
+    responses.sector = sector; responses.sectors = [sector]; responses.website = url;
+    qfAsk();
+  }, 750);
+}
 
 function qfAsk() {
-  if (FORK_ASKED) return;
+  var key = (responses.sector || '') + '|' + (responses.website || '');
+  if (QF_ASKED_FOR === key && QF_STATE !== 'failed') return;
+  QF_ASKED_FOR = key;
   FORK_ASKED = true;
   var body = (typeof buildRevealRequest === 'function') ? buildRevealRequest(responses) : null;
   if (!body) return;
   QF_STATE = 'asking';
+  FORK_SPEC = null;
+  QF_READ_SHOWN_ON_2 = false;
+  responses.profile_disputed = false;
+  qfShowRead2();
   fetch('/api/profile', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -224,17 +312,42 @@ function qfAsk() {
   })
     .then(function (r) { return r.json(); })
     .then(function (spec) {
-      if (!spec || !spec.questions) { QF_STATE = 'failed'; qfShowIfReady(); return; }
+      if (QF_ASKED_FOR !== key) return;          /* a later ask superseded this one */
+      if (!spec || !spec.questions) { QF_STATE = 'failed'; qfShowRead2(); qfShowIfReady(); return; }
       if (responses.profile_disputed) return;
       FORK_SPEC = spec;
       QF_STATE = 'ready';
+      if (currentStep === 2) qfShowRead2();
       if (currentStep === 3) qfShowIfReady();
     })
     .catch(function (e) {
       console.warn('[fairway] fork unavailable', e);
       QF_STATE = 'failed';
+      qfShowRead2();
       qfShowIfReady();
     });
+}
+
+/* The read-back on step 2, under the website box. One line while the site is being read, the
+   read when it lands, nothing when it failed (the founder is not told about our plumbing). */
+function qfShowRead2() {
+  var mount = document.getElementById('qf-read2');
+  if (!mount) return;
+  if (responses.profile_disputed) { mount.style.display = 'none'; return; }
+  if (FORK_SPEC && QF_STATE === 'ready') {
+    var rb = qfReadBack(FORK_SPEC);
+    mount.innerHTML = rb;
+    mount.style.display = rb ? 'block' : 'none';
+    QF_READ_SHOWN_ON_2 = !!rb && currentStep === 2;
+    return;
+  }
+  if (QF_STATE === 'asking') {
+    mount.innerHTML = '<p class="q-help qf-wait" style="margin:0 0 6px;">Reading your website&hellip;</p>';
+    mount.style.display = 'block';
+    return;
+  }
+  mount.innerHTML = '';
+  mount.style.display = 'none';
 }
 
 /* Called by renderStep when step 3 comes up, and again when the read lands. While the read is in
