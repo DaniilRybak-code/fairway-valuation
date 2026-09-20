@@ -185,17 +185,28 @@ def profile_from(request, ask, site_text=''):
     `ask` is a callable taking the prompt and returning the model's text.
     """
     raw = {}
+    error = ''
     try:
         txt = ask(prompt_for(request, site_text)) or ''
         m = re.search(r'\{.*\}', txt, re.S)
         raw = json.loads(m.group(0)) if m else {}
+        if not m:
+            error = 'no_json_in_answer: ' + txt[:120].replace('\n', ' ')
     except Exception as exc:                                  # noqa: BLE001
         raw = {}
-        request = dict(request or {})
-        request['_profiler_error'] = type(exc).__name__
+        # THE ERROR TRAVELS ON THE PROFILE. Until 20-Sep-2026 it was written onto a local copy of
+        # the request that nothing returned, so a failed model call (a bad model name, an account
+        # with no credit, a timeout) was indistinguishable from a model that answered nothing: the
+        # endpoint reported "no_archetype" for both and the cause could not be read from outside.
+        # The text here is the exception's own message and never a key: api/payload.py builds it
+        # from the HTTP status and the API's error body, which names the model or the account
+        # state and nothing else.
+        error = '%s: %s' % (type(exc).__name__, str(exc)[:200])
     tags, dropped = sanitise(raw)
     prof = dict(tags)
     prof['_dropped'] = dropped
+    if error:
+        prof['_profiler_error'] = error
     # THE NUMBERS, AND THERE ARE ONLY TWO. Both are ratios and both are already through the
     # boundary allowlist. Neither ever reaches the model: they are attached here, after it.
     for src, dst in (('growth_yoy', 'growth'), ('gross_margin', 'gm')):

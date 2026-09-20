@@ -88,6 +88,14 @@ def main():
         bad = 1
     else:
         print('ok    profile: fork', p.get('fork'), 'with', len(p.get('questions') or []), 'questions')
+        if p.get('profiler_error'):
+            print('FAIL profile: the profiler reported', repr(p.get('profiler_error')))
+            bad = 1
+        elif not (p.get('read_as') or {}).get('archetype'):
+            print('FAIL profile: no archetype came back; dropped', p.get('dropped'))
+            bad = 1
+        else:
+            print('ok    profile: read as', (p.get('read_as') or {}).get('archetype'))
 
     code, out = call(base, '/api/payload', BODY)
     if code == 404:
@@ -102,7 +110,8 @@ def main():
         priced = [(lane, basis) for lane, bases in ranges.items() for basis, r in bases.items()
                   if isinstance(r, dict) and r.get('n')]
         if prof.get('note'):
-            print('FAIL payload: profiler note', repr(prof.get('note')), '(it fell back to an empty profile)')
+            print('FAIL payload: profiler note', repr(prof.get('note')))
+            print('      dropped by the vocabulary:', prof.get('dropped'))
             bad = 1
         if not priced:
             print('FAIL payload: no lane came back with comparables; the field would print "in build"')

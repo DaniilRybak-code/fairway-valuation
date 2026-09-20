@@ -38,6 +38,7 @@ tools/check_request_boundary.py asserts it against this endpoint as well as the 
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -76,8 +77,18 @@ def _ask(prompt):
         'anthropic-version': '2023-06-01',
         'x-api-key': key,
     })
-    with urllib.request.urlopen(req, timeout=30) as r:
-        out = json.loads(r.read().decode('utf-8'))
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            out = json.loads(r.read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        # The API's error body names the cause (an unknown model, an account without credit, a bad
+        # key) and never contains the key itself; the request that carried the key is not echoed.
+        # Re-raised as a plain message so the profiler can carry it to the endpoint's `note`.
+        try:
+            detail = e.read().decode('utf-8')[:200]
+        except Exception:                                      # noqa: BLE001
+            detail = ''
+        raise RuntimeError('model_http_%s %s' % (e.code, detail)) from None
     return ''.join(b.get('text', '') for b in out.get('content', []))
 
 
@@ -105,6 +116,8 @@ def build(body, ask=None, site_text=''):
     except Exception as exc:                                   # noqa: BLE001
         prof = PR.profile_from(req, lambda _p: '')
         note = type(exc).__name__
+    if prof.get('_profiler_error'):
+        note = note or prof['_profiler_error']
     if not prof.get('archetype'):
         note = note or 'no_archetype: the profiler returned nothing the vocabulary recognises'
     # TIER IS NOT A CLIENT FIELD. See the header.

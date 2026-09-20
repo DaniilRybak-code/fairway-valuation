@@ -124,6 +124,9 @@ def build(body, ask=None, fetch=None):
         },
         'site_read': not bool(site_note),
         'site_note': site_note,
+        # The profiler's own failure, if any (a model call that did not succeed), so check 21 and
+        # the page can tell a dead model from a thin answer. Never a key; see selector/profiler.py.
+        'profiler_error': prof.get('_profiler_error', ''),
         # Named so a bad profile is diagnosable rather than merely disappointing.
         'dropped': prof.get('_dropped', []),
     }
