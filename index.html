@@ -371,55 +371,57 @@
   <div class="wrap">
     <div class="quiz-shell">
       <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
-      <div class="step-label" id="step-label">Step 1 of 9</div>
+      <div class="step-label" id="step-label">Step 1 of 6</div>
       <!-- Repeated here because the hero can be skipped: /?hook= links and the nav button both
            land a founder on this screen without the sentence above ever being on their page. -->
+      <p class="q-help" id="privacy-short" style="display:none;">Your figures stay in your browser.
+        <button type="button" class="info-btn" aria-expanded="false" aria-controls="privacy-line-quiz" onclick="toggleInfo(this)">i</button></p>
       <p class="q-help" id="privacy-line-quiz">We do not receive your revenue figures. Your comparable companies are chosen on your growth rate and your gross margin, which are percentages and say nothing about the size of your business, and the multiplication happens in your browser. Your figures reach us only if you press the button at the end of your reveal.</p>
+
+      <!-- THE QUIZ, SIX STEPS. Rebuilt 20-Sep-2026 on Daniil's rulings after his first live run:
+           each step is the question, the input and at most one line; the longer explanations sit
+           behind an "i"; the privacy paragraph is printed once, on step 1, and is one tap away on
+           every other step; the steps that fed nothing in the engine are gone (profitability,
+           where-in-the-process, the investor-pushback chips), and the reviewer's material (a note
+           and a deck link) moved to the consent block on the reveal, which is the only moment any
+           free text leaves the browser. The step-by-step table with what each question feeds is in
+           docs/STATUS-2026-09.md, entries 5 and 6 of 20 September. -->
 
       <div class="q-block" data-step="1">
         <h2 class="q-title">What stage are you at?</h2>
-        <p class="q-help">Whatever you would call the round you are raising next.</p>
+        <p class="q-help">The round you are raising next.</p>
         <div class="opt-grid">
           <button class="opt" onclick="answer('stage','Pre-seed')">Pre-seed</button>
           <button class="opt" onclick="answer('stage','Seed')">Seed</button>
           <button class="opt" onclick="answer('stage','Series A')">Series A</button>
+          <button class="opt" onclick="answer('stage','Series B')">Series B</button>
         </div>
       </div>
 
       <div class="q-block" data-step="2">
         <h2 class="q-title">What do you do?</h2>
-        <p class="q-help">Pick up to three. The first one leads: it sets which listed comparables and which funds we start from, and the field shows you which set was used.</p>
+        <p class="q-help">Pick the closest. Your website does the real work.
+          <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-sector" onclick="toggleInfo(this)">i</button></p>
+        <p class="q-info" id="info-sector" hidden>The sector sets the listed set and the funds we start from. What you actually sell is read from your website, and that is how the comparable set is chosen for your business rather than for a sector code. The field shows you which set was used.</p>
 
-        <div class="opt-grid opt-cols" id="sector-grid"></div>
-        <p class="sector-read" id="sector-read">Pick the closest. You can pick up to three, and the first one leads.</p>
+        <select class="field" id="sector-select" onchange="onSectorPick(this)" aria-label="What you do">
+          <option value="">Choose one</option>
+        </select>
 
-        <div id="sector-other-wrap" style="display:none; margin-top:14px;">
-          <label class="field-label" for="sector-other">In your own words</label>
-          <input class="field" id="sector-other" type="text" placeholder="e.g. carbon accounting for shipping" autocomplete="off">
+        <div id="sector-other-wrap" style="display:none; margin-top:10px;">
+          <input class="field" id="sector-other" type="text" placeholder="In your own words, e.g. carbon accounting for shipping" autocomplete="off">
         </div>
 
-        <div class="site-row">
-          <label class="field-label" for="site-url">Your website
-            <span class="optional">Optional, and the single most useful box on this page. We read what you actually do from it, which is how the comparable set gets picked for your business rather than for your sector code.</span>
-          </label>
-          <input class="field" id="site-url" type="url" inputmode="url" placeholder="yourcompany.com" autocomplete="url">
-        </div>
+        <label class="field-label" for="site-url" style="margin-top:14px;">Your website <span class="optional">Optional</span></label>
+        <input class="field" id="site-url" type="url" inputmode="url" placeholder="yourcompany.com" autocomplete="url">
         <button class="btn" style="width:100%; margin-top:6px;" id="sector-continue" onclick="submitSector()" disabled>Continue</button>
       </div>
 
-      <!-- THE FORK STEP. Drawn by quiz-fork.js from what /api/profile returns: the fork this
-           founder routes to and its own questions. Empty in the markup on purpose. The questions
-           live in selector/quiz_fork.py, which is where they have always lived and where check 10
-           walks them; putting them in the HTML would be a second copy to keep in step.
-
-           When the profile call is slow, refused or missing this stays hidden and the plain revenue
-           question below is what the founder sees, which is what every founder saw before
-           7 September. -->
-      <div class="q-block" data-step="3" id="qf-block" style="display:none;"></div>
-
       <div class="q-block" data-step="3">
-        <h2 class="q-title">What is your current monthly revenue?</h2>
-        <p class="q-help">Exact, not a band. A band of 50k to 150k is a three times spread in ARR before any multiple touches it, which makes the answer wider than the method it came from.</p>
+        <h2 class="q-title">Your revenue</h2>
+        <p class="q-help">Annual recurring revenue today, or your revenue run-rate if it does not recur.
+          <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-arr" onclick="toggleInfo(this)">i</button></p>
+        <p class="q-info" id="info-arr" hidden>Exact, not a band. A band of 50k to 150k is a three times spread before any multiple touches it, which makes the answer wider than the method it came from. The figure stays in your browser: the multiplication happens here, and nothing you type on this page is sent to us unless you press the button at the end of your reveal.</p>
 
         <div class="num-row">
           <select class="field field-cur" id="rev-currency" onchange="onCurrencyChange(this)" aria-label="Reporting currency">
@@ -428,53 +430,38 @@
             <option value="GBP">GBP &pound;</option>
             <option value="CAD">CAD C$</option>
           </select>
-          <input class="field field-num" id="rev-exact" type="number" inputmode="numeric" min="0" step="500"
-                 placeholder="Monthly revenue" oninput="onRevType()" aria-label="Monthly revenue, exact">
+          <input class="field field-num" id="arr-exact" type="number" inputmode="numeric" min="0" step="10000"
+                 placeholder="ARR, e.g. 1200000" oninput="onArrType()" aria-label="Annual recurring revenue, exact">
         </div>
-        <p class="q-help" style="margin:0 0 4px;">Your own currency, picked from where you are. Change it if that is wrong. Nothing is converted anywhere.</p>
-        <input class="slider" id="rev-slider" type="range" min="0" max="100" value="0" step="1"
-               oninput="onRevSlide()" aria-label="Monthly revenue slider">
-        <p class="slider-read" id="rev-read">Type the number or drag the slider.
+        <p class="slider-read" id="rev-read">Type the figure.
           <button type="button" class="link-btn" onclick="setPreRevenue()">We are pre-revenue</button>
         </p>
-        <p class="slider-read"><button type="button" class="link-btn" id="rev-band-toggle" onclick="showRevBands()">I would rather give a range</button></p>
-        <div class="opt-grid" id="rev-bands" style="display:none; margin-top:10px;">
-          <button class="opt" onclick="pickRevBand('Under $10k/mo')">Under 10k/mo</button>
-          <button class="opt" onclick="pickRevBand('$10k&ndash;$50k/mo')">10k to 50k/mo</button>
-          <button class="opt" onclick="pickRevBand('$50k&ndash;$150k/mo')">50k to 150k/mo</button>
-          <button class="opt" onclick="pickRevBand('$150k+/mo')">Over 150k/mo</button>
-        </div>
 
-        <div id="rev-followups" style="display:none;">
-          <hr class="q-rule">
-          <label class="field-label">How is the revenue generated?</label>
-          <div class="chip-wrap" id="model-chips"></div>
-
-          <div id="rec-wrap" style="display:none; margin-top:18px;">
-            <label class="field-label" for="rec-slider">How much of that recurs without a new sale?
-              <span class="optional" id="rec-read">50% recurring</span>
-            </label>
-            <input class="slider" id="rec-slider" type="range" min="0" max="100" value="50" step="5"
-                   oninput="onRecurring()" aria-label="Percentage of revenue that is recurring">
-            <p class="q-help" id="rec-help">Revenue that renews without a new sale. Recurring revenue is a signal of how visible next year's performance is, and revenue an investor can see coming is consistently valued on a higher multiple than revenue that has to be won again. It also decides how much weight the month-twelve run-rate can carry.</p>
-          </div>
-        </div>
+        <!-- THE FORK'S EXTRA QUESTIONS, drawn here by quiz-fork.js when /api/profile has read the
+             site: the figures a marketplace, a lender or a subscription business is priced on
+             beyond ARR. Empty in the markup on purpose; the questions live in
+             selector/quiz_fork.py. Until the read lands this shows one line saying so, and if the
+             read never lands the step is ARR and margin, which every founder can answer. -->
+        <div id="qf-block" style="display:none;"></div>
 
         <div class="q-sub">
           <label class="field-label" for="gm-slider">Gross margin
             <span class="optional" id="gm-read">70%</span>
+            <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-gm" onclick="toggleInfo(this)">i</button>
           </label>
           <input class="slider" id="gm-slider" type="range" min="0" max="95" value="70" step="1"
                  oninput="onGrossMargin()" aria-label="Gross margin percent">
-          <p class="q-help">Revenue less the direct cost of delivering it. A 45% margin business does not get a software multiple however fast it grows, so this changes which peer set you belong to more than another month of revenue does.</p>
+          <p class="q-info" id="info-gm" hidden>Revenue less the direct cost of delivering it. Margin decides which peer set you belong to: companies are compared on how they make money, and a low-margin business is priced against low-margin peers whatever it sells.</p>
         </div>
 
         <button class="btn" style="width:100%; margin-top:18px;" onclick="submitRevenue()">Continue</button>
       </div>
 
       <div class="q-block" data-step="4">
-        <h2 class="q-title">How much has revenue grown over the last twelve months?</h2>
-        <p class="q-help">Two numbers: what you actually did, and what you plan to do. The forward multiples on the next screen are built from your plan, as you give it.</p>
+        <h2 class="q-title">How fast are you growing?</h2>
+        <p class="q-help">Revenue growth over the last twelve months.
+          <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-growth" onclick="toggleInfo(this)">i</button></p>
+        <p class="q-info" id="info-growth" hidden>Your growth rate is one of the two things the comparable set is chosen on (the other is your margin). It is a percentage and says nothing about your size. Your plan for the next twelve months is used exactly as you give it, with no haircut and no coefficient of ours.</p>
 
         <div class="num-row">
           <input class="field field-num" id="growth-exact" type="number" step="1" min="-90" max="1000"
@@ -487,92 +474,32 @@
           <button type="button" class="link-btn" onclick="setPreTraction()">Too early to measure</button>
         </p>
         <p class="q-annual" id="growth-annual"></p>
-        <p class="slider-read"><button type="button" class="link-btn" id="growth-band-toggle" onclick="showGrowthBands()">I would rather give a range</button></p>
-        <div class="opt-grid" id="growth-bands" style="display:none; margin-top:10px;">
-          <button class="opt" onclick="pickGrowthBand('Roughly flat')">Roughly flat</button>
-          <button class="opt" onclick="pickGrowthBand('Growing, under 100% a year')">Growing, under 100% a year</button>
-          <button class="opt" onclick="pickGrowthBand('Growing, 100% or more a year')">Growing, 100% a year or more</button>
-        </div>
 
-        <div id="growth-detail-wrap" style="display:none; margin-top:16px;">
-          <label class="field-label" for="growth-detail">Anything that distorts the trend? <span class="optional">Optional, and it is read by a human.</span></label>
-          <textarea class="field" id="growth-detail" placeholder="e.g. two enterprise deals landed late in the year, so the trailing figure flatters us. Net revenue retention 118%."></textarea>
-        </div>
-
-        <hr class="q-rule">
-
-        <label class="field-label" for="plan-exact">And what do you plan for the next twelve months?
-          <span class="optional">Your forecast, used exactly as you give it. We apply no haircut and no coefficient of our own to it.</span>
-        </label>
-        <div class="num-row">
-          <input class="field field-num" id="plan-exact" type="number" step="1" min="-90" max="1000"
-                 placeholder="e.g. 90" oninput="onPlanType()" aria-label="Planned revenue growth for the next twelve months, percent">
-          <span class="unit">% next year</span>
-        </div>
-        <input class="slider" id="plan-slider" type="range" min="-50" max="400" value="0" step="5"
-               oninput="onPlanSlide()" aria-label="Planned growth slider">
-        <p class="slider-read" id="plan-read">Type the number or drag the slider.
-          <button type="button" class="link-btn" onclick="clearPlan()">Use my last twelve months instead</button>
-        </p>
-        <p class="q-annual" id="plan-note"></p>
-
-        <!-- THE THIRD LINE. Daniil, 6-Sep-2026: monthly revenue times the growth they plan gives the
-             next-twelve-months figure, it is shown as an editable line, and the edited figure is
-             what the engine prices on.
-
-             WHY IT IS EDITABLE AND NOT JUST DISPLAYED. Compounding a single planned rate over twelve
-             months is a model, and it is our model, not the founder's. A founder with a signed
-             contract landing in month three, or a seasonal business, knows their own next twelve
-             months better than any curve we can fit to one percentage. So the sum is shown, the
-             working behind it is on the hover, and the founder can overwrite it. Overwriting is not
-             a correction to us; it is the answer.
-
-             IT IS AN AMOUNT, SO IT NEVER LEAVES THE BROWSER. Rule E9. It is not on the allowlist in
-             reveal-request.js and it is named in tools/check_request_boundary.py as a figure that is
-             refused, so the same sentinel sweep that guards revenue guards this. -->
-        <div id="ntm-wrap" style="display:none; margin-top:18px;">
-          <label class="field-label" for="ntm-exact">Which makes your next twelve months
-            <span class="optional">Our sum from the two numbers above. Change it if you know better, and the change is what we price.</span>
-          </label>
+        <!-- THE PLAN, TWO WAYS. Daniil, 20-Sep-2026: "give both options to the user, either input
+             the next 12 month monetary target (and growth is back calculated), or give growth (and
+             monetary target is calculated)". Whichever box was typed last wins, and the other one
+             is filled in from it. The money figure never leaves the browser (rule E9). -->
+        <div id="plan-wrap" style="display:none; margin-top:18px;">
+          <label class="field-label">Your plan for the next twelve months <span class="optional">Give either one</span></label>
           <div class="num-row">
+            <input class="field field-num" id="plan-exact" type="number" step="1" min="-90" max="1000"
+                   placeholder="growth" oninput="onPlanType()" aria-label="Planned revenue growth for the next twelve months, percent">
+            <span class="unit">% growth</span>
+          </div>
+          <div class="num-row" style="margin-top:8px;">
             <span class="unit" id="ntm-cur">$</span>
             <input class="field field-num" id="ntm-exact" type="number" step="1000" min="0"
-                   oninput="onNtmType()" aria-label="Your revenue over the next twelve months">
+                   placeholder="revenue target" oninput="onNtmType()" aria-label="Your revenue over the next twelve months">
             <span class="unit">over 12 months</span>
           </div>
           <p class="q-annual" id="ntm-note"></p>
-          <p class="slider-read" id="ntm-edited" style="display:none;">
-            <button type="button" class="link-btn" onclick="clearNtm()">Use our sum instead</button>
-          </p>
         </div>
 
         <button class="btn" style="width:100%; margin-top:16px;" onclick="submitGrowth()">Continue</button>
       </div>
 
       <div class="q-block" data-step="5">
-        <h2 class="q-title">Where are you on profitability?</h2>
-        <p class="q-help">This moves the multiple more than most founders expect, and it decides which concern you get first.</p>
-        <div class="opt-grid">
-          <button class="opt" onclick="submitProfit('Profitable')">Profitable</button>
-          <button class="opt" onclick="submitProfit('Around break-even')">Around break-even</button>
-          <button class="opt" onclick="submitProfit('Burning, 12+ months runway')">Burning, 12+ months runway</button>
-          <button class="opt" onclick="submitProfit('Burning, under 12 months runway')">Burning, under 12 months runway</button>
-        </div>
-
-        <div class="q-sub">
-          <label class="field-label" for="ebitda-ltm">EBITDA, last twelve months
-            <span class="optional">Optional. Only useful if it is positive, and most companies at this stage are not. Pick an answer above when you are done and it is saved with it.</span>
-          </label>
-          <div class="num-row">
-            <span class="cur-prefix" id="ebitda-cur-prefix">$</span>
-            <input class="field field-num" id="ebitda-ltm" type="number" step="1000" placeholder="e.g. 240000" oninput="onEbitda()">
-          </div>
-          <p class="q-help" id="ebitda-help">If you are profitable, an EBITDA multiple is a second independent lens and investors will run it whether or not you do. It opens its own row on the field, priced forward like the revenue rows.</p>
-        </div>
-      </div>
-
-      <div class="q-block" data-step="6">
-        <h2 class="q-title">How much are you looking to raise?</h2>
+        <h2 class="q-title">How much are you raising?</h2>
         <p class="q-help">The round size, not the valuation.</p>
         <div class="opt-grid">
           <button class="opt" onclick="pickRaise('Under $500k', this)">Under $500k</button>
@@ -584,15 +511,15 @@
         </div>
 
         <div class="q-sub">
-          <label class="field-label">Your last round <span class="optional">If you have raised before. Plotted on the field for comparison, and it feeds no calculation anywhere.</span></label>
+          <label class="field-label">Your last round <span class="optional">Optional. A marker on the field, feeds nothing.</span></label>
           <div class="lr-grid">
-            <div>
-              <label class="field-label field-label-sm" for="lr-amount">Amount raised</label>
-              <input class="field" id="lr-amount" type="number" min="0" step="10000" placeholder="e.g. 750000" oninput="onLastRound()">
-            </div>
             <div>
               <label class="field-label field-label-sm" for="lr-value">Pre-money or cap</label>
               <input class="field" id="lr-value" type="number" min="0" step="100000" placeholder="e.g. 4500000" oninput="onLastRound()">
+            </div>
+            <div>
+              <label class="field-label field-label-sm" for="lr-date">When</label>
+              <input class="field" id="lr-date" type="month" onchange="onLastRound()">
             </div>
           </div>
           <div class="lr-grid" style="margin-top:10px;">
@@ -605,8 +532,8 @@
               </select>
             </div>
             <div>
-              <label class="field-label field-label-sm" for="lr-date">When</label>
-              <input class="field" id="lr-date" type="month" onchange="onLastRound()">
+              <label class="field-label field-label-sm" for="lr-amount">Amount raised</label>
+              <input class="field" id="lr-amount" type="number" min="0" step="10000" placeholder="e.g. 750000" oninput="onLastRound()">
             </div>
           </div>
         </div>
@@ -614,38 +541,15 @@
         <button class="btn" style="width:100%; margin-top:16px;" id="raise-continue" onclick="submitRaise()" disabled>Continue</button>
       </div>
 
-      <div class="q-block" data-step="7">
-        <h2 class="q-title">Where are you in the process?</h2>
-        <div class="opt-grid">
-          <button class="opt" onclick="answer('timing','In conversations now')">In conversations with investors now</button>
-          <button class="opt" onclick="answer('timing','Opening within 90 days')">Opening a round within 90 days</button>
-          <button class="opt" onclick="answer('timing','Raising in 3 to 6 months')">Raising in three to six months</button>
-          <button class="opt" onclick="answer('timing','Not raising yet')">Not raising yet, I want the number</button>
-        </div>
-      </div>
-
-      <div class="q-block" data-step="8">
-        <h2 class="q-title">What have investors been pushing back on?</h2>
-        <p class="q-help">The single most useful answer on this page. Tap any that have come up, then add detail if you have it.</p>
-        <div class="chips" id="concern-chips"></div>
-        <label class="field-label" for="concern-notes">In their words, or yours <span class="optional">Optional</span></label>
-        <textarea class="field" id="concern-notes" placeholder="e.g. two funds said the market looks too small outside the UK, one said our CAC will not hold at scale"></textarea>
-        <label class="field-label" for="ctx-link">Link to a deck, model or data room <span class="optional">Optional. Read only by the reviewer, and it is what unlocks the discounted cash flow.</span></label>
-        <input class="field" id="ctx-link" type="url" placeholder="https://" autocomplete="off">
-        <button class="btn" style="width:100%; margin-top:4px;" onclick="submitConcerns()">Continue</button>
-        <div style="text-align:center;"><button class="btn-ghost" onclick="submitConcerns(true)">Skip, nothing specific yet</button></div>
-      </div>
-
-      <div class="q-block" data-step="9">
+      <div class="q-block" data-step="6">
         <h2 class="q-title">Where should the review go?</h2>
-        <p class="q-help">Everything you have answered is already saved. Add an email and the full field appears on the next screen.</p>
+        <p class="q-help">Add an email and the field appears on the next screen.</p>
         <label class="field-label" for="lead-email">Work email</label>
         <input class="field" id="lead-email" type="email" placeholder="you@company.com" autocomplete="email" inputmode="email">
         <label class="field-label" for="lead-company">Company <span class="optional">Optional</span></label>
         <input class="field" id="lead-company" type="text" placeholder="Company name" autocomplete="organization">
-        <label class="field-label" for="lead-phone">Phone <span class="optional">Optional. Only if you would rather talk than read.</span></label>
-        <input class="field" id="lead-phone" type="tel" placeholder="+44" autocomplete="tel">
-        <p class="microcopy">Your answers are used to produce your valuation and the review that follows, and for nothing else. They are never sold and never shared with investors. Your email and phone stay in our own records: the service that writes your commentary is sent the business figures alone and never sees who you are. Ask us to delete everything at any time and we will.</p>
+        <input class="field" id="lead-phone" type="hidden" value="">
+        <p class="microcopy">Your answers produce your valuation and the review that follows, and nothing else. Never sold, never shared with investors. Ask us to delete everything at any time and we will.</p>
         <button class="btn" style="width:100%;" id="final-submit" onclick="submitLead()">Show me the Football Field</button>
         <p class="microcopy" id="submit-error" style="color:#b42318; display:none;">Please enter a valid email address.</p>
       </div>
@@ -682,12 +586,12 @@
         </div>
       </div>
 
-      <p class="rv-lede">Each row is one method, with the reference metric it prices and the multiple applied to it. Multiply the metric by the multiple and you get the bar, every time. Tap any metric to see exactly where it came from. Rows marked in build are being wired to live comparable-company data now, and they say so rather than pretending to be a paywall.
+      <p class="rv-lede">Each row is one method: the metric it prices, the multiple applied to it, and the bar is the two multiplied. Hover a multiple for the peers behind it and a figure for where it came from.
         <span class="range-cur" style="display:block; margin-top:10px;">Shown in
           <select id="range-currency" onchange="onCurrencyChange(this)" aria-label="Reporting currency">
             <option value="USD">USD</option><option value="EUR">EUR</option>
             <option value="GBP">GBP</option><option value="CAD">CAD</option>
-          </select>, taken from where you are. Change it if that is wrong.</span>
+          </select>.</span>
       </p>
 
       <!-- THE PEER CHARTS AND THE HONESTY CAVEATS, both drawn by reveal-client.js from the one
@@ -749,7 +653,7 @@
           <li>All three concerns, with the evidence that answers each</li>
           <li>A ranked investor shortlist with a named contact and route for each</li>
         </ul>
-        <p class="cta-sub" style="margin-top:16px;">The free field works from nine multiple-choice answers. The report works from whatever you are willing to share, under NDA if you prefer, which is what makes it specific rather than typical.</p>
+        <p class="cta-sub" style="margin-top:16px;">The free field works from six short answers. The report works from whatever you are willing to share, under NDA if you prefer, which is what makes it specific rather than typical.</p>
         <a class="btn-light" href="#" id="unlock-cta">Unlock my full report, $750</a>
         <div class="cta-sub">Back in your inbox within 48 hours, reviewed by the team.</div>
         <div class="urgency" id="capacity-line">Every report is reviewed by hand. Five a week, two left this week.</div>
@@ -856,8 +760,8 @@
           <p>Tap any reference metric on the field and it tells you, with the publication and the date. Listed sector multiples come from Damodaran at NYU Stern, stage medians from Carta, exchange rates from the ECB. Anything we cannot source is drawn locked rather than filled in with something plausible.</p>
         </div>
         <div class="faq-item">
-          <h3>Why are some rows marked in build?</h3>
-          <p>Because they are. Those rows will be priced from a live set of comparable companies chosen for your business, with every peer named on hover. Until that is wired up they show the metric they will price rather than a number we made up. We would rather tell you than fill the gap.</p>
+          <h3>Why is a method missing from my field?</h3>
+          <p>Because we could not run it honestly for your company: no matched round with a usable multiple, a growth regression too weak to publish, or a figure you did not give. The line under the field says which and why. We would rather tell you than fill the gap with something plausible.</p>
         </div>
         <div class="faq-item">
           <h3>Who sees my numbers?</h3>
