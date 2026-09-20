@@ -413,15 +413,20 @@
         </div>
 
         <label class="field-label" for="site-url" style="margin-top:14px;">Your website <span class="optional">Optional</span></label>
-        <input class="field" id="site-url" type="url" inputmode="url" placeholder="yourcompany.com" autocomplete="url">
+        <input class="field" id="site-url" type="url" inputmode="url" placeholder="yourcompany.com" autocomplete="url" oninput="if (typeof qfMaybeAsk === 'function') qfMaybeAsk();">
+        <!-- THE READ, HERE. Once a sector is picked and a website typed, quiz-fork.js asks
+             /api/profile and prints "We read your site as..." under the box, with "Not right"
+             (Daniil, 20-Sep: the read belongs where the website is entered). Continue never waits
+             on it; if it has not landed, it shows on step 3 instead. -->
+        <div id="qf-read2" style="display:none;"></div>
         <button class="btn" style="width:100%; margin-top:6px;" id="sector-continue" onclick="submitSector()" disabled>Continue</button>
       </div>
 
       <div class="q-block" data-step="3">
         <h2 class="q-title">Your revenue</h2>
-        <p class="q-help">Annual recurring revenue today, or your revenue run-rate if it does not recur.
+        <p class="q-help"><span id="rev-help-text">Annual recurring revenue today, or your revenue run-rate if it does not recur.</span>
           <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-arr" onclick="toggleInfo(this)">i</button></p>
-        <p class="q-info" id="info-arr" hidden>Exact, not a band. A band of 50k to 150k is a three times spread before any multiple touches it, which makes the answer wider than the method it came from. The figure stays in your browser: the multiplication happens here, and nothing you type on this page is sent to us unless you press the button at the end of your reveal.</p>
+        <p class="q-info" id="info-arr" hidden><b>Used for:</b> every revenue row on your field. Listed peers are applied to the next twelve months built from it; private rounds to the figure itself. Exact, not a band: a band of 50k to 150k is a three times spread before any multiple touches it. The figure stays in your browser: the multiplication happens here, and nothing you type on this page is sent to us unless you press the button at the end of your reveal.</p>
 
         <div class="num-row">
           <select class="field field-cur" id="rev-currency" onchange="onCurrencyChange(this)" aria-label="Reporting currency">
@@ -451,7 +456,7 @@
           </label>
           <input class="slider" id="gm-slider" type="range" min="0" max="95" value="70" step="1"
                  oninput="onGrossMargin()" aria-label="Gross margin percent">
-          <p class="q-info" id="info-gm" hidden>Revenue less the direct cost of delivering it. Margin decides which peer set you belong to: companies are compared on how they make money, and a low-margin business is priced against low-margin peers whatever it sells.</p>
+          <p class="q-info" id="info-gm" hidden><b>Used for:</b> which peer set you belong to, and the gross-profit row. Revenue less the direct cost of delivering it. Companies are compared on how they make money, so a low-margin business is priced against low-margin peers whatever it sells.</p>
         </div>
 
         <button class="btn" style="width:100%; margin-top:18px;" onclick="submitRevenue()">Continue</button>
@@ -461,7 +466,7 @@
         <h2 class="q-title">How fast are you growing?</h2>
         <p class="q-help">Revenue growth over the last twelve months.
           <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-growth" onclick="toggleInfo(this)">i</button></p>
-        <p class="q-info" id="info-growth" hidden>Your growth rate is one of the two things the comparable set is chosen on (the other is your margin). It is a percentage and says nothing about your size. Your plan for the next twelve months is used exactly as you give it, with no haircut and no coefficient of ours.</p>
+        <p class="q-info" id="info-growth" hidden><b>Used for:</b> which peer set you belong to (with your margin). It is a percentage and says nothing about your size. The growth regression is read at your plan below; this rate stands in only if you give no plan. Your plan builds your next twelve months from the revenue you gave at step 3, used exactly as you give it, with no haircut and no coefficient of ours.</p>
 
         <div class="num-row">
           <input class="field field-num" id="growth-exact" type="number" step="1" min="-90" max="1000"
@@ -480,7 +485,12 @@
              monetary target is calculated)". Whichever box was typed last wins, and the other one
              is filled in from it. The money figure never leaves the browser (rule E9). -->
         <div id="plan-wrap" style="display:none; margin-top:18px;">
-          <label class="field-label">Your plan for the next twelve months <span class="optional">Give either one</span></label>
+          <label class="field-label">Your plan for the next twelve months <span class="optional">Give either one; applied to the revenue you gave at step 3</span>
+            <button type="button" class="info-btn" aria-expanded="false" aria-controls="info-plan" onclick="toggleInfo(this)">i</button></label>
+          <!-- Daniil, 20-Sep-2026: "highlight the benefit of providing forward growth in the questionnaire (in the
+               hover over)". The regression is fitted on the listed peers' FORECAST growth, so it is read at the
+               plan; without one the trailing rate stands in and the field says so. -->
+          <p class="q-info" id="info-plan" hidden><b>Used for:</b> your next twelve months of revenue, which every listed row prices on, and the growth regression, which is read at this rate. Your listed peers&rsquo; growth rates are forecasts, so the line through them is read at your forward growth, a tenth either side. Give no plan and your last twelve months stand in, which reads a forward line at a backward number; the field says so when it does.</p>
           <div class="num-row">
             <input class="field field-num" id="plan-exact" type="number" step="1" min="-90" max="1000"
                    placeholder="growth" oninput="onPlanType()" aria-label="Planned revenue growth for the next twelve months, percent">
